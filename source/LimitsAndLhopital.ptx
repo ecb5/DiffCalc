@@ -1,0 +1,3518 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="CHAlimits-lhop-rule">
+ <title>Limits and L'H\^o pital's Rule</title>
+
+<!-- \label{CHAlimits-lhop-rule} -->
+<section xml:id="sec:horiz-asympt-as">
+<title>Horizontal Asymptotes as Limits ``at Infinity''</title>
+<introduction>
+
+<p>
+\TLogo{PSP:lhopitals-rule}
+</p>
+<p>
+
+
+In our fishery model in the previous chapter we referred to the
+carrying capacity of the lake, <m>P=100</m>, as an ``asymptote.''
+Loosely speaking, an asymptote is a line that the graph of a function
+``gets close to.''  Any
+line can be an asymptote but we will be primarily interested in
+horizontal asymptotes (lines like the graph of <m>y=5</m>) and vertical
+asymptotes (lines like the graph of <m>x=5</m>).
+</p>
+
+
+
+<!-- \label{sec:horiz-asympt-as} -->
+<figure>
+<caption>
+<url href="https://mathshistory.st-andrews.ac.uk/Biographies/Bernoulli_Johann/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Bernoulli_Johann/">This figure needs a caption.</url>
+</caption>
+<image source="images/Witch10.png" width="50%"/>
+</figure>
+<!-- \begin{wrapfigure}[5]{r}{2in} -->
+<!--   \captionsetup{labelformat=empty} -->
+<!--     \centerline{\includegraphics*[height=.5in,width=2in]{../Figures/Witch10}} -->
+<!--   \label{fig:asymptote2} -->
+<!-- \end{wrapfigure} -->
+<p>
+Take another look at the graph of the  Witch of Agnesi at the right.  You can
+readily see that, as <m>x</m> moves to the right <m>y</m> gets ``closer and
+closer'' to zero. This is the essential idea but the phrase ``closer
+and closer'' is too vague for our purpose.
+</p>
+<p>
+
+Here's why. In the sketch below, <m>x</m> is moving to the right. As you
+can see <m>x</m> gets ``closer and closer'' to <m>a</m>. But it also gets
+``closer and closer''
+to both <m>b</m> and  <m>c</m>.
+</p>
+
+<image source="images/CloserCloser.png" width="60%" />
+<!-- \centerline{\includegraphics*[height=.3in,width=2in]{../Figures/CloserCloser}} -->
+<p>
+
+While <m>x</m> is getting ``closer and closer'' to all three of <m>a</m>, <m>b</m>,
+and <m>c</m> it is only getting ``arbitrarily close'' to <m>a</m>, and
+``arbitrarily close'' is what we usually mean when we say ``closer and
+closer.'' When <m>x</m> is getting ``arbitrarily close\aside{The phrase ``arbitrarily close'' will be adequate for our present
+purposes but eventually even that will not be sufficiently
+precise. The need for precise language is real and very delicate.  We
+will return to this matter <xref ref="SECLimitLaws">Chapter</xref>. For now be
+aware that we are not quite done perfecting the meaning of
+``arbitrarily close.''
+}'' to <m>a</m> we say that <m>x</m>
+approaches and we write <m>x\rightarrow a</m>. 
+</p>
+<p>
+
+
+It is clear that the graph of the Witch comes arbitrarily close to the
+line <m>y=0</m> so we write <m>y\rightarrow0</m> as <m>x\rightarrow\infty</m>. This
+is spoken aloud  as ``<m>y</m> approaches zero as <m>x</m> approaches infinity.''
+</p>
+</introduction>
+
+
+<subsection xml:id="digression:LimitNotation">
+<title>Limit Notation</title>
+<p>
+
+  <!-- \label{digression:LimitNotation} -->
+  Of course, the notion of ``approaching infinity'' is troublesome as
+  well. That we speak in this fashion has more to do with the
+  construction of the English language than with the mathematics being
+  represented. Since <m>y</m> is proceeding toward zero (an actual number)
+  it makes sense to say ``<m>y</m> approaches zero.'' The notation
+  ``<m>y\rightarrow0</m>'' captures this idea nicely. And since we usually
+  pronounce the symbol <m>\infty</m> as ``infinity'' it feels natural to
+  write <m>x\rightarrow\infty</m> and to speak this aloud as ``<m>x</m>
+  approaches infinity'' as if <m>\infty</m> is a place we could get to. But
+  as we've observed, this is absurd.  Properly speaking the symbols
+  ``<m>x\rightarrow\infty</m>'' should be spoken aloud as ``<m>x</m> increases
+  without bound,'' but nearly everyone says ``<m>x</m> approaches
+  infinity'' instead because it is a less cumbersome phrase. Like so
+  much of mathematics this is perfectly clear once the underlying
+  ideas have been internalized, but in the beginning it is can be
+  quite confusing. Be patient with this.
+</p>
+<p>
+    
+    An alternative, and more common notation is:
+    <m>
+    \tlimit{x}{\infty}{\frac{1}{1+x^2}}=0
+    </m>
+    which we read aloud as ``The limit as <m>x</m> approaches infinity of one
+    over one plus <m>x</m> squared is equal to zero'' but this also collides
+    with the construction of the English language.  From the discussion
+    above we know that ``<m>x\rightarrow\infty</m>" indicates that <m>x</m>
+    increases without bound, but when we write
+    <m>\tlimit{x}{\infty}{\frac{1}{1+x^2}}=0</m> what exactly does
+    ``<m>=0</m>'' mean? What is equal to zero? Certainly the Witch is never
+    equal to zero since its graph never crosses (or even touches) the
+    <m>x</m> axis.
+</p>
+<p>
+
+  The expression <m>\tlimit{x}{\infty}{\frac{1}{1+x^2}}=0</m> is making a
+  very specific statement, one that is difficult to capture in a
+  natural language like English. It says that the expression
+  <m>\frac{1}{1+x^2}</m> is approaching a particular value (zero) as
+  <m>x</m> approaches <m>\infty</m>. The equals sign doesn't indicate
+  that the function, <m>\frac{1}{1+x^2}</m> actually equals that
+  value.  Instead it is the <term>limit</term> of <m>\frac{1}{1+x^2}</m> which is
+  equal to zero.  Whether the function itself is ever equal to the
+  limit, or not, is irrelevant. We're interested in what it gets
+  arbitrarily close
+  to.
+</p>
+<p>
+  
+  We are treading at the edge of some very deep waters here so we will
+  not attempt to address all of the nuances yet. Instead we will
+  simply interpret the formula <m>\tlimit{x}{\infty}{\frac{1}{1+x^2}}=0</m>
+  to mean that as <m>x</m> approaches infinity (<m>x\rightarrow\infty</m>) the expression
+  <m>\frac{1}{1+x^2}</m> approaches zero  <m>\left(\frac{1}{1+x^2}\rightarrow0\right)</m>.
+</p>
+<p>
+
+  In <xref ref="CHAformal-limits">Chapter</xref> we will replace ``arbitrarily
+  close'' with something much more precise. Indeed, finding a better
+  way to say ``arbitrarily close'' will be the culmination of our
+  efforts. This is what will allow us to finally replace differentials
+  with a solid theoretical foundation. 
+</p>
+<p>
+
+  But for now, we have enough to give our first definition of the limit
+  concept.
+</p>
+<p>
+
+</p>
+
+
+
+
+<definition xml:id="DEFINITIONdef:LimitAtInfinity-Intuitive">
+<title>An Intuitive Definition of a Limit at \boldmath<m>\pm\infty</m></title>
+<statement>
+<p>
+  <!-- \label{def:LimitAtInfinity-Intuitive} -->
+  \begin{enumerate}
+  \item  If, as <m>x\rightarrow\infty</m>, <m>f(x)</m> gets arbitrarily
+    close to some number <m>A</m>, we write  
+    \centerline{<m> \limit{x}{\infty}{f(x)}=A.  </m>}
+  \item  If, as <m>x\rightarrow-\infty</m>, <m>f(x)</m> gets
+    arbitrarily close to some number <m>A</m>, we write  
+    \centerline{<m> \limit{x}{-\infty}{f(x)}=A.  </m>}
+  \end{enumerate}
+
+</p>
+</statement>
+</definition>
+
+
+
+<example xml:id="example:LimWitch">
+<p>
+  <!-- \label{example:LimWitch} -->
+As we've observed, for very large positive values of <m>x</m>, the function
+<m>W(x)=\frac{1}{1+x^2}</m> will be close to zero (the larger the <m>x</m>
+value, the closer <m>\frac{1}{1+x^2}</m> is to zero).
+
+Likewise, for very
+large, negative values of <m>x</m>, <m>W(x)</m> will also get close to zero so:
+  <me>\limit{x}{-\infty}{\frac{1}{1+x^2}}=\limit{x}{\infty}{\frac{1}{1+x^2}}=0.</me>
+</p>
+</example>
+
+<p>
+  We used the Witch for our first example because we are  quite
+  familiar with its properties from our earlier
+  investigations. However we needn't have started with so complex a
+  function.
+</p>
+
+  <exercise xml:id="drill:Limit1OverX">
+<statement>
+<p>
+    <!-- \label{drill:Limit1OverX} -->
+    Use the graph of <m>f(x)=\frac1x</m> to argue that
+    <m>\tlimit{x}{\infty}{\frac1x}=0</m> and
+    <m>\tlimit{x}{-\infty}{\frac1x}=0</m>.
+</p>
+</statement>
+</exercise>
+
+<p>
+
+The limit concept is deeply abstract.  We are
+introducing it here because, (1) the limit idea gives us a handy way to define
+asymptotes, and (2) when we return to in in
+<xref ref="CHAformal-limits">Chapter</xref> it will be helpful if you are
+comfortable with the notation and the essential underlying idea.
+</p>
+<p>
+
+We have the following definition.
+</p>
+
+<definition xml:id="DEFINITIONdef:HorizontalAsymptotes">
+<title>Horizontal Asymptotes</title>
+<statement>
+<p>
+  <!-- \label{def:HorizontalAsymptotes} -->
+         \begin{enumerate}[label={  (\alph*)}] 
+         \item   If <m>\limit{x}{\infty}{f(x)}=A</m> then the graph of the function <m>f(x)</m>
+           has the horizontal asymptote, <m>y=A.</m>
+         \item If <m>\limit{x}{-\infty}{f(x)}=B</m> then the graph of the
+           function <m>f(x)</m> has the horizontal asymptote, <m>y=B.</m>
+\end{enumerate}
+as in the next three theorems.
+
+</p>
+</statement>
+</definition>
+
+
+<p>
+In <xref ref="DEFHorizontalAsymptotes">Definition~\</xref> it will frequently be
+true that <m>A</m> and <m>B</m> are the same number. In that case we express
+both limits in the more compact form:
+<m>
+\limit{x}{\pm\infty}{f(x)}=A
+</m>.
+</p>
+
+  <problem xml:id="problem:LimConst">
+<introduction>
+<p>
+    <!-- \label{problem:LimConst} -->
+</p>
+</introduction>
+<task>
+<statement>
+<p>
+ Justify the following assertion as clearly and as carefully
+           as you can:
+           <m>
+           \tlimit{x}{\infty}{5}=5
+           </m>.
+         </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ Generalize the statement in part (a).
+       </p>
+</statement>
+</task>
+</problem>
+<!-- \begin{embeddedproblem-enumerate} -->
+  <!--   <!-\- \label{problem:LimConst} -\-> -->
+  <!--          \begin{enumerate}[label={  (\alph*)}]  -->
+  <!--        \item Justify the following assertion as clearly and as carefully -->
+  <!--          as you can: -->
+  <!--          <m> -->
+  <!--          \tlimit{x}{\infty}{5}=5 -->
+  <!--          </m>. -->
+  <!--        \item Generalize the statement in part (a). -->
+  <!--      \end{enumerate} -->
+  <!--    \end{embeddedproblem-enumerate} -->
+<p>
+     
+From <xref ref="PROBLEMLimConst">Problem~\</xref> we know
+<m>\tlimit{x}{\infty}{5}=5</m>  and from
+<xref ref="DRILLLimit1OverX">Drill~\</xref> we know that
+<m>\limitatinf{x}{\frac1x}=0.</m> Does it follow that
+<me>
+\limitatinf{x}{\left(5+\frac{1}{x}\right)} =
+\left(\limitatinf{x}{5}\right)+\left(\limitatinf{x}{\frac{1}{x}}\right)=
+5+0 = 5?
+</me>
+</p>
+<p>
+
+Yes, of course it does. In fact the following theorem is
+true.
+</p>
+
+<theorem xml:id="theorem:LimSum1">
+<title>The Limit of a Sum</title>
+<p>
+  <!-- \label{theorem:LimSum1} -->
+  If <m>\limit{x}{\pm\infty}{f(x)}=L</m> and
+  <m>\limit{x}{\pm\infty}{g(x)}=M,</m> then\vskip1mm
+  \centerline{<m>
+    \limit{x}{\pm\infty}{\left[f(x)+g(x)\right]}=L+M
+    =\limit{x}{\pm\infty}{f(x)}+\limit{x}{\pm\infty}{g(x)}.
+    </m>}
+</p>
+</theorem>
+<p>
+
+This can be expressed in words with the phrase, ``The limit of a sum is the sum
+of the limits.''
+</p>
+<p>
+
+The following two theorems are not quite as intuitive as <xref ref="THEOREMLimSum1">Theorem</xref>, but they are also true.
+</p>
+
+<theorem xml:id="theorem:LimProd1">
+<title>The Limit of a Product</title>
+<p>
+  <!-- \label{theorem:LimProd1} -->
+  If 
+  <m>\limit{x}{\pm\infty} {f(x)}=L</m> and <m>\limit{x}{\pm\infty}{g(x)}=M</m> then\vskip1mm
+  \centerline{<m>
+    \limit{x}{\pm\infty} {\left(f(x)\cdot g(x)\right)}=\left(\limit{x}{\pm\infty}{f(x)}\right)\cdot\left(\limit{x}{\pm\infty}{g(x)}\right)
+    = L\cdot M.
+    </m>}
+</p>
+</theorem>
+<p>
+This can be expressed in words with the phrase ``The limit of a product is the
+product of the limits.''
+</p>
+<theorem xml:id="theorem:LimQuot1">
+<title>The Limit of a Quotient</title>
+<p>
+  <!-- \label{theorem:LimQuot1} -->
+  If 
+  <m>\limit{x}{\pm\infty} {f(x)}=L</m> and <m>\limit{x}{\pm\infty}{g(x)}=M\neq0</m> then
+  <me>
+  \limit{x}{\pm\infty}
+  {\frac{f(x)}{g(x)}}=\frac{\tlimit{x}{\pm\infty}{f(x)}}{\tlimit{x}{\pm\infty}{g(x)}}
+  = \frac{L}{M}.
+  </me>
+</p>
+</theorem>
+<p>
+This can be expressed in words with the phrase ``The limit of a quotient is the
+quotient of the limits.''
+</p>
+
+<example xml:id="example:NonexistantLimits">
+<p>
+   <!-- \label{example:NonexistantLimits} -->
+   Notice that in Theorem~\ref{theorem:LimQuot1} we specifically
+   required that <m>\limit{x}{\infty}{g(x)}=M\neq0</m>. This is necessary
+   because, as we stated quite emphatically in
+   Digression~\#\ref{digression:DivideByZero}, division by zero is an
+   undefined concept. Thus if <m>\limit{x}{\infty} {f(x)}</m> is equal to,
+   say <m>1</m>, and <m>\limit{x}{\infty}{g(x)}=0</m> then
+  <me>
+      \frac{\tlimit{x}{\infty}{f(x)}}{\tlimit{x}{\infty}{g(x)}}
+  \text{ appears
+  to be equal to }
+  \frac{1}{0}.
+  </me>
+  But this is meaningless, so we say that
+  <m> \limit{x}{\infty} {\frac{f(x)}{g(x)}}</m> does not exist, or
+  equivalently that it is undefined.
+</p>
+</example>
+
+
+
+
+
+
+<p>
+Like the differentiation rules, when these limit theorems are used together
+they allow us to break a large problem into smaller, more tractable,
+pieces. Here are some examples.
+</p>
+<example xml:id="no-label">
+<p>
+  We'd like to find the horizontal asymptotes of
+  <m>y=\frac{2}{x}-\frac{3}{x^2}</m> if any exist.
+  
+  In this example we will write down all of the details of our
+  computation. As you get more comfortable, you will probably
+  abbreviate the process by doing much of this in your head. That's
+  good, but also be sure you can fill in all of the details when
+  needed. You will need to be able to do this when the problems get
+  more complex.
+  
+  From Definition~\#\ref{def:HorizontalAsymptotes} we see that if
+  horizontal asymptotes exist they will be the lines
+  <m>y=\limit{x}{\infty}{\left(\frac{2}{x}-\frac{3}{x^2}\right)}</m> and
+  <m>y=\limit{x}{-\infty}{\left(\frac{2}{x}-\frac{3}{x^2}\right)}</m> so we
+  need to evaluate these limits. For the first limit we see from
+  Theorem~\ref{theorem:LimSum1} that
+<me>
+\limit{x}{\infty}{\left(\frac{2}{x}-\frac{3}{x^2}\right)}=\limit{x}{\infty}{\frac{2}{x}}-\limit{x}{\infty}{\frac{3}{x^2}}.
+</me>
+Applying Theorem~\ref{theorem:LimProd1} (several times) we have
+<me>
+  \label{eq:LimConst} \limit{x}{\infty}{\left(\frac{2}{x}-\frac{3}{x^2}\right)}   =\underbrace{\left(\limit{x}{\infty}{2}\right)}_{=2}\cdot\underbrace{\left(\limit{x}{\infty}{\frac{1}{x}}\right)}_{=0}-\underbrace{\left(\limit{x}{\infty}{3}\right)}_{=3}\cdot\underbrace{\left(\limit{x}{\infty}{\frac{1}{x}}\right)}_{=0}\cdot\underbrace{\left(\limit{x}{\infty}{\frac{1}{x}}\right)}_{=0}=0.
+</me>
+  So the  horizontal asymptote will be <m>y=0.</m>
+
+
+  
+  \begin{ProficiencyDrill-1line}
+    Evaluate
+    <m>\tlimit{x}{-\infty}{\left(\frac{2}{x}-\frac{3}{x^2}\right)}</m>.
+    Justify each step by citing the appropriate theorem or fact.
+  \end{ProficiencyDrill-1line}
+</p>
+</example>
+
+
+<example xml:id="no-label">
+<p>
+  To find one horizontal asymptote of <m>y=\frac{x-1}{x}</m> we
+  evaluate:
+  <me>\limit{x}{-\infty}{\frac{x-1}{x}}=\limit{x}{-\infty}{\left(1-\frac{1}{x}\right)}=1.</me>
+
+
+  \begin{ProficiencyDrill-1line}
+    Evaluate
+    <m>\tlimit{x}{\infty}{\frac{x-1}{x}}</m>
+    to 
+    find the other asymptote, if it exists.
+  \end{ProficiencyDrill-1line}
+</p>
+</example>
+
+
+
+
+<problem xml:id="no-label">
+<introduction>
+<p>
+  Find the horizontal asymptotes of the graphs of the following
+  functions.
+</p>
+</introduction>
+<task>
+<statement>
+<p>
+ <m>y=5</m>
+      \solution{ <m>y=5</m> Yes, a horizontal line is its own asymptote.}
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+  <m>y=\frac{1}{x-2}+3</m>
+      \solution{ <m>y=3</m>}
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>y=\frac{3x-5}{x-2}</m>
+      \solution{ <m>y=3</m>}
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+  <m>y=\frac{\abs{x}}{x-1}</m>
+      \solution{ On the right: <m>y=1</m>, On the left: <m>y=-1</m>.}
+  </p>
+</statement>
+</task>
+</problem>
+<!-- \begin{embeddedproblem} -->
+<!--   Find the horizontal asymptotes of the graphs of the following -->
+<!--   functions. -->
+<!--   \begin{enumerate}[label={  (\alph*)}] -->
+<!--     \item <m>y=5</m> -->
+<!--       \solution{ <m>y=5</m> Yes, a horizontal line is its own asymptote.} -->
+<!--     \item  <m>y=\frac{1}{x-2}+3</m> -->
+<!--       \solution{ <m>y=3</m>} -->
+<!--     \item <m>y=\frac{3x-5}{x-2}</m> -->
+<!--       \solution{ <m>y=3</m>} -->
+<!--     \item  <m>y=\frac{\abs{x}}{x-1}</m> -->
+<!--       \solution{ On the right: <m>y=1</m>, On the left: <m>y=-1</m>.} -->
+<!--   \end{enumerate} -->
+<!-- \end{embeddedproblem} -->
+
+<figure>
+<caption>
+<url href="https://mathshistory.st-andrews.ac.uk/Biographies/Bernoulli_Johann/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Bernoulli_Johann/">This figure needs a caption.</url>
+</caption>
+<image source="images/asymptotes3.png" width="50%"/>
+</figure>
+<!-- \begin{wrapfigure}[]{r}{3in} -->
+<!--   \vskip-6mm  -->
+<!--   \captionsetup{labelformat=empty} -->
+<!--   \centerline{\includegraphics*[height=1.5in,width=3in]{../Figures/asymptotes3}} -->
+<!--   \label{fig:asymptotes3} -->
+<!-- \end{wrapfigure} -->
+
+
+<p>
+
+Of course, not every curve has a horizontal asymptote so not every
+function has a limit as <m>x</m> approaches <m>\pm\infty</m>.  For example,
+consider the curves <m>y=x^2</m> and <m>y=x^3.</m> % 
+Clearly these curves have no horizontal asymptotes because
+as\aside{Note that we have used the plus-or-minus (<m>\pm</m>) symbol to
+  combine two limits into a single expression.}
+<m>x\rightarrow\pm\infty</m> they don't get close to a real number. In fact
+they either continue to rise or continue to drop as <m>x\rightarrow\pm\infty</m>.
+</p>
+<p>
+
+We represent this with the notation:
+<me>
+\limit{x}{\infty}{x^2}=\infty,\ \ \limit{x}{-\infty}{x^2}=\infty,\ \
+\limit{x}{\infty}{x^3}=\infty,\ \ \limit{x}{-\infty}{x^3}=-\infty.
+</me>
+But once again we need to keep in mind that the symbol ``<m>\infty</m>''
+does not represent a number so saying that something is ``equal'' to
+<m>\infty</m> is meaningless\aside{Unless we define its meaning
+  ourselves. How would you define the phrase ``<m>x</m> equals
+  infinity?''}. What we mean when we write  
+<me>
+\limit{x}{\infty}{x^2}=\infty
+</me>
+is that ``as <m>x</m> increases without bound <m>x</m> squared increases without
+bound.''
+</p>
+
+<exercise xml:id="no-label">
+<statement>
+<p>
+  Similarly <m>\limit{x}{-\infty}{x^3}=-\infty</m> means
+  that as <m>x\rightarrow-\infty</m> <m>x^3\rightarrow-\infty</m>.
+  How would we say this in words?
+</p>
+</statement>
+</exercise>
+<p>
+
+It  is especially important to keep in mind that <m>\infty</m> is not a
+number when evaluating a limit like:
+<m>
+\limit{x}{\infty}{(x^3-21x^2)}.
+</m>
+</p>
+<p>
+
+It is very tempting to attack this problem by noticing that each term
+is increasing without bound and write <m>\infty-\infty=0,</m> but in fact
+this limit is not zero. Can you see what the limit is? Give it some
+thought and take your best guess. We'll come back to it shortly.
+</p>
+<p>
+
+It is very clear that the limit: <m>\limit{x}{\infty}{(x-x)}</m> is
+zero. After all, <m>x-x</m> is constantly equal to zero so we have
+<m> \limit{x}{\infty}{(x-x)} = \limit{x}{\infty}{0} = 0</m>. So it seems to
+be clear that <m>\limit{x}{\infty}{(x-x)} = \infty-\infty = 0</m>. Anything
+minus itself has to be zero doesn't it? Even grandmother -
+grandmother must be zero, right?
+</p>
+<p>
+
+
+
+But now consider this limit: <m>\limit{x}{\infty}{[(x+7)-(x-5)]}</m>. Both
+<m>(x+7)\rightarrow\infty</m> and <m>(x-5)\rightarrow\infty</m> so
+<m>\limit{x}{\infty}{\left[(x+7)-(x-5)\right]}</m> also has the form
+  <m>\infty-\infty</m> doesn't it? But <m>(x+7)-(x-5)</m> is constantly equal to
+  <m>12</m> so, we have
+<me>\limit{x}{\infty}{[(x+7)-(x-5)]}=\limit{x}{\infty}{12}=12.</me>
+Thus it appears that
+<m>\infty-\infty</m> can be zero, <alert>and</alert> that <m>\infty-\infty</m> can be
+<m>12</m>. But <m>0\neq12</m> so that can't be! Moreover there is nothing special about
+<m>12</m>. We could have chosen any number to make our point.  So we
+conclude that <m>\infty-\infty</m> is meaningless. Equivalently, we say it
+is undefined.
+</p>
+<p>
+
+The source of the difficulty here is that only numbers can be
+subtracted\aside{Your teacher will tell you, if you ask, that we
+  aren't being entirely honest here. Mathematicians routinely add,
+  subtract, multiply, and divide lots of things that you probably
+  would not recognize as numbers. But grandmothers, and infinities are
+  not among them.}. But neither <m>\infty</m> nor grandmother is a number
+so the expressions <m>\infty-\infty</m> and grandmother -
+grandmother are utter nonsense. 
+</p>
+
+<exercise xml:id="no-label">
+<introduction>
+<p>
+  Find two functions, <m>f(x)</m> and <m>g(x)</m> such that as
+  <m>x\rightarrow\infty</m> both <m>f(x)\rightarrow\infty</m> and
+  <m>g(x)\rightarrow\infty</m> but  <m>\limit{x}{\infty}{\left[f(x)-g(x)\right]}</m>
+  is equal to each of the following.
+</p>
+</introduction>
+<task>
+<statement>
+<p>
+ <m>10</m>
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>-21</m>
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>83,744</m>
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>\pi</m>
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>\sqrt{2}</m>
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ Any real number
+  </p>
+</statement>
+</task>
+</exercise>
+<!-- begin{ProficiencyDrill} -->
+<!--   Find two functions, <m>f(x)</m> and <m>g(x)</m> such that as -->
+<!--   <m>x\rightarrow\infty</m> both <m>f(x)\rightarrow\infty</m> and -->
+<!--   <m>g(x)\rightarrow\infty</m> but  <m>\limit{x}{\infty}{\left[f(x)-g(x)\right]}</m> -->
+<!--   is equal to each of the following. -->
+<!--   \begin{enumerate}[label={  (\alph*)}] -->
+<!--     \item <m>10</m> -->
+<!--     \item <m>-21</m> -->
+<!--     \item <m>83,744</m> -->
+<!--     \item <m>\pi</m> -->
+<!--     \item <m>\sqrt{2}</m> -->
+<!--     \item Any real number -->
+<!--   \end{enumerate} -->
+<!-- \end{ProficiencyDrill} -->
+<p>
+
+Limits can be deceptive so be careful. It can be helpful to have built
+in notational cues to remind ourselves that these are subtle
+problems. When we are working with limits we will use the notation
+<m>\approach{\infty}</m> to remind ourselves that <m>\infty</m> is not a
+number\aside{This is not a standard notation so you probably won't see
+  it anywhere except in this textbook.}.
+</p>
+<p>
+
+Returning to the limit
+<m> \limit{x}{\infty}{(x^3-21x^2)} </m> and using this notational cue we
+have
+<me>
+\limit{x}{\infty}{(x^3-21x^2)} = \approach{\infty} -
+\approach{\infty}.
+</me>
+This says that this limit consists of something which is
+approaching <m>\infty</m> (increasing without bound) minus something
+else which is approaching <m>\infty</m> (again, increasing without
+bound). When we say it like this -- more importantly when we think
+about it like this -- we can see that the value of the limit will
+depend upon precisely how the two parts increase without bound.
+</p>
+<p>
+
+We now know that this limit is not necessarily equal to zero, but how
+can we discover what it actually is equal to? As in much of Calculus we
+need to re-express our formulas algebraically to see what is going on.
+</p>
+<p>
+
+Rewriting <m>x^3-21x^2</m> as <m>x^3\left(1-\frac{21}{x}\right)</m> we have
+\begin{align*}
+  \limit{x}{\infty}{(x^3-21x^2)}
+  \amp=\limit{x}{\infty}{\left(x^3(1-21/x)\right)}
+    \amp=\limit{x}{\infty}{x^3\cdot\left(1-\CancelToRed{0}{21/x}\right)}
+  \amp=\approach{\infty}\cdot\approach{1}.
+\end{align*}
+This says that we have an expression which is increasing without bound
+multiplied by an expression which approaches the number one. Obviously
+the product  will also increase without bound so we write
+<m>\limit{x}{\infty}{(x^3-21x^2)}=\infty.</m>
+</p>
+<p>
+
+Similarly\aside{This is not the same limit. Look closely.}  evaluating
+<m>\limit{x}{-\infty}{(x^3+21x^2)}</m> gives 
+\begin{align*}
+  \limit{x}{-\infty}{(x^3+21x^2)} \amp= \limit{x}{-\infty}{\left(x^3(1+21/x)\right)}
+  \amp=\left[\limit{x}{-\infty}{x^3\cdot\left(1+\CancelToRed{0}{21/x}\right)}\right]
+  \amp=\approach{-\infty}\cdot\approach{1}
+  \amp=-\infty.
+\end{align*}
+This makes sense intuitively. We would expect that for large values of
+<m>x</m> (either positive or negative), <m>x^3</m> will continually outgrow
+(``approach infinity'' faster than) <m>21x^2</m>.
+</p>
+<p>
+
+We have established that, because <m>\infty</m> is not a number, the expression
+<m>\infty-\infty</m> does not make sense. What about
+<m>\frac{\infty}{\infty}</m>? Is it true that <m>\frac{\infty}{\infty}=1</m>?
+</p>
+<p>
+
+No, of course not. The expression <m>\frac{\infty}{\infty}</m> is
+meaningless for the same reason that  <m>\infty</m> - <m>\infty</m> is
+meaningless.
+</p>
+
+
+<example xml:id="example:IndetForm1">
+<title>\CancelToRed{=1}{\frac{x^4}{x^4}}\cdot\frac{1+\CancelToRed{0}{1/x^2}}{5-\CancelToRed{0}{100/x^3}}\right</title>
+<p>
+  <!-- \label{example:IndetForm1} -->
+ Consider <m> \limit{x}{\infty}{\frac{x^4+x^2}{5x^4-100x}}</m>. It is tempting to write
+  <m>\frac{\infty}{\infty}=1</m>, but as we have observed, <m>\infty</m>
+  is not a number so this makes no more sense than <m>\infty-\infty=0</m>.
+    
+  Once again, the key is to re-express the function
+  algebraically. Factoring out the highest power of the variable from
+  both the numerator and the denominator\aside{You may well ask, ``How
+    did we know to do that?'' The answer is very unsatisfying.  We
+    were taught this technique by our teachers, just as you are being
+    taught now. We'd have been hard pressed to come up with it on our
+    own.} we see that
+  \begin{align*}
+    \limit{x}{\infty}{\frac{x^4+x^2}{5x^4-100x}}
+    =\limit{x}{\infty}{\frac{x^4(1+1/x^2)}{x^4(5-100/x^3)}}
+    \amp=\limit{x}{\infty}{\left[\CancelToRed{=1}{\frac{x^4}{x^4}}\cdot\frac{1+\CancelToRed{0}{1/x^2}}{5-\CancelToRed{0}{100/x^3}}\right]}
+    \amp= 1\cdot\approach{\frac15}
+    \amp=\frac15.
+  \end{align*}
+</p>
+</example>
+
+
+
+<!-- \setcounter{TmpCtr2}{\value{myexample}} -->
+<!-- \setcounter{myexample}{\value{TmpCtr1}} -->
+<!-- \addtocounter{myexample}{-1} -->
+<example xml:id="example:Asym2">
+<title>(Continued from Section~\ref{sec:graph-with-form} )</title>
+<p>
+  <!-- \label{example:Asym2} -->
+  Recall that we did not complete Example~\ref{example:Asym1} because
+  we did not previously have any way to determine what happens to the
+  graph of <m>y(x)=\frac{2+2x^2+2x^4}{1+x^4}</m> as <m>x\rightarrow\infty</m> or
+  as <m>x\rightarrow-\infty</m>. We do now. Finding what happens to the graph of
+  <m>y(x)=\frac{2+2x^2+2x^4}{1+x^4}</m> as <m>x\rightarrow\infty</m> or as
+  <m>x\rightarrow-\infty</m> is equivalent to evaluating the following
+  limits:
+  <me>
+  \limit{x}{\infty}{\frac{2+2x^2+2x^4}{1+x^4}}\ \ \text{ and }
+  \limit{x}{-\infty}{\frac{2+2x^2+2x^4}{1+x^4.}}
+  </me>
+  We will evaluate the first one and leave the second as a drill.
+
+  Proceeding as in Example~\#\ref{example:IndetForm1} we see that
+  \begin{align*}
+      \limit{x}{\infty}{\frac{2+2x^2+2x^4}{1+x^4}} \amp =
+    \limit{x}{\infty}{\frac{x^4(2/x^4+2/x^2+2)}{x^4(1/x^4+1)}}
+    \amp =\limit{x}{\infty}{\CancelToRed{1}{\frac{x^4}{x^4}}\cdot\frac{\CancelToRed {2/x^4}+\CancelToRed{0}{2/x^2}+2}{\CancelToRed{0}{1/x^4}+1}}
+    \amp =2.
+  \end{align*}
+
+  \begin{ProficiencyDrill-1line}
+    Show that <m>\tlimit{x}{-\infty}{\frac{2+2x^2+2x^4}{1+x^4}}</m> is also
+    equal to two. 
+  \end{ProficiencyDrill-1line}
+  
+  We can now see that <m>y(x)=\frac{2+2x^2+2x^4}{1+x^4}</m>  has a \term{horizontal asymptote} at
+  <m>y=2</m>. If you haven't already done so consider graphing this
+  function to confirm.
+</p>
+</example>
+
+<!-- \setcounter{myexample}{\value{TmpCtr2}} -->
+
+<exercise xml:id="no-label">
+<introduction>
+<p>
+  Show that  each of the following statements is true.
+</p>
+</introduction>
+<task>
+<statement>
+<p>
+ <m>  \limit{x}{\infty}{\frac{x^5+x^3}{5x^5-100x}} =\frac15</m>
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>  \limit{x}{-\infty}{\frac{2x^5+x^3}{5x^5-x}} =\frac25</m>
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>  \limit{x}{\infty}{\frac{x^5+x^3}{5x^4-10x}} =\infty</m>
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>  \limit{x}{-\infty}{\frac{x^5+x^3}{5x^4-10x}} =-\infty</m>
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>  \limit{x}{\infty}{\frac{x-\frac{1}{x^3}}{5x-\frac{-8}{x^2}}} =\frac15</m>
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>  \limit{x}{-\infty}{\frac{x+\frac{1}{x^3}}{5x+\frac{-8}{x^2}}} =\frac15</m>
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>  \limit{x}{\infty}{\frac{x^5+2x^3}{5x^6-x}} =0</m>
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>  \limit{x}{-\infty}{\frac{x^5+2x^3}{5x^6-x}} =0</m>
+  </p>
+</statement>
+</task>
+</exercise>
+<!-- begin{ProficiencyDrill} -->
+<!--   Show that  each of the following statements is true. -->
+<!--   \begin{enumerate}[label={  (\alph*)}] -->
+<!--     \item <m>  \limit{x}{\infty}{\frac{x^5+x^3}{5x^5-100x}} =\frac15</m> -->
+<!--     \item <m>  \limit{x}{-\infty}{\frac{2x^5+x^3}{5x^5-x}} =\frac25</m> -->
+<!--     \item <m>  \limit{x}{\infty}{\frac{x^5+x^3}{5x^4-10x}} =\infty</m> -->
+<!--     \item <m>  \limit{x}{-\infty}{\frac{x^5+x^3}{5x^4-10x}} =-\infty</m> -->
+<!--     \item <m>  \limit{x}{\infty}{\frac{x-\frac{1}{x^3}}{5x-\frac{-8}{x^2}}} =\frac15</m> -->
+<!--     \item <m>  \limit{x}{-\infty}{\frac{x+\frac{1}{x^3}}{5x+\frac{-8}{x^2}}} =\frac15</m> -->
+<!--     \item <m>  \limit{x}{\infty}{\frac{x^5+2x^3}{5x^6-x}} =0</m> -->
+<!--     \item <m>  \limit{x}{-\infty}{\frac{x^5+2x^3}{5x^6-x}} =0</m> -->
+<!--   \end{enumerate} -->
+<!-- \end{ProficiencyDrill} -->
+
+<example xml:id="no-label">
+<title>\frac{\CancelToRed{0}{2/x}-1}{\sqrt{1+\CancelToRed{0}{2/x^2}}+\sqrt{1+\CancelToRed{0}{1/x}}}\right</title>
+<p>
+  Do you think the function <m>y(x) = \sqrt{x^2+2}-\sqrt{x^2+x}</m> has any
+  horizontal asymptotes? Take your best guess before we begin this
+  example.
+  
+  To find any horizontal asymptotes we have to evaluate the limits
+  <m>
+  \limit{x}{\pm\infty}{\left(\sqrt{x^2+2}-\sqrt{x^2+x}\right)}.
+  </m>
+  First we'll find the limit as <m>x\rightarrow\infty</m> and leave the limit as
+  <m>x\rightarrow-\infty</m> as a drill  for you.
+  
+  As always the trick is to rearrange this expression inside the limit
+  algebraically -- without changing its value -- until we can see
+  clearly what happens as <m>x\rightarrow\infty</m>.
+  
+  The square roots seem to be the difficulty here. So we'd like to find
+  a way to make them go away. The standard trick for this is to
+  multiply by the conjugate\aside{We are using the identity
+    <m>(A-B)(A+B)=A^2-B^2</m> to square both terms and get rid of the
+    square roots. The factors <m>A+B</m> and <m>A-B</m> are mutually conjugate.}
+  of <m>\sqrt{x^2+2}-\sqrt{x^2+x}</m>, namely
+  <m>\sqrt{x^2+2}+\sqrt{x^2+x}</m>.  Of course, if we do that
+  then we need to divide by the conjugate as well. That way we've
+  multiplied by <m>1</m> and have not  changed the value of the
+  expression. This won't actually eliminate the square roots as we
+  will still have them in the denominator. But let's see what happens.
+  \begin{align*}
+    \limit{x}{\infty}{\left(\sqrt{x^2+2}-\sqrt{x^2+x}\right)} 
+    \amp =
+    \limit{x}{\infty}{\left(\sqrt{x^2+2}-\sqrt{x^2+x}\right)}\textcolor{red}{\underbrace{\left(\frac{\sqrt{x^2+2}+\sqrt{x^2+x}}{\sqrt{x^2+2}+\sqrt{x^2+x}}\right)}_{=1}}
+    \amp = \limit{x}{\infty}{\left(\frac{(x^2+2)-
+    (x^2+x)}{\sqrt{x^2+2}+\sqrt{x^2+x}}\right)} 
+    =
+    \limit{x}{\infty}{\left(\frac{2-x}{\sqrt{x^2+2}+\sqrt{x^2+x}}\right)}.
+  \end{align*}
+  Factoring the highest power of <m>x</m> out of the
+    numerator and denominator gives
+    \begin{align*}
+      \limit{x}{\infty}{\left(\sqrt{x^2+2}-\sqrt{x^2+x}\right)}
+      \amp =\limit{x}{\infty}{\frac{\textcolor{red}{x}\left(2/x-1\right)}{\textcolor{red}{\sqrt{x^2}}\left(\sqrt{1+2/x^2}+\sqrt{1+1/x}\right)}}
+    \intertext{and since <m>\sqrt{x^2}=\abs{x}</m> we have}
+    \amp =\limit{x}{\infty}{\frac{\textcolor{red}{x}\left(2/x-1\right)}{\textcolor{red}{\abs{x}}\left(\sqrt{1+2/x^2}+\sqrt{1+1/x}\right)}}.
+    \intertext{But  we're evaluating a limit as
+    <m>x\rightarrow\infty</m>. So,  we're really only interested in large, positive
+    values of <m>x</m>. In this case <m>\abs{x}=x</m> so } 
+    \amp =\limit{x}{\infty}{\CancelToRed{=1}{\frac{x}{x}}\ \cdot\ \left[\frac{\CancelToRed{0}{2/x}-1}{\sqrt{1+\CancelToRed{0}{2/x^2}}+\sqrt{1+\CancelToRed{0}{1/x}}}\right]} 
+                \amp = -\frac12.
+  \end{align*}
+  Did you guess right? If you did, either you have a very strong
+  intuition for these kinds of problems or you just had a moment of
+  blind luck. So don't just pat yourself on the back and walk
+  away. Be sure to take a moment to figure out whether it was
+  intuition or luck. You don't want to confuse them.
+  
+  If you guessed wrong, or (most likely) were unable to come up
+  with a guess don't fret about it. You're normal. But be sure you
+  review and understand the steps to this solution so you can
+  begin to build some intuition about such problems.
+  
+  This problem looked pretty intimidating, but once we got going in
+  the right direction, it was all Algebra from there.  Notice how the
+  absolute value came into play. In this problem it wasn't an issue
+  since we were considering only positive values of <m>x</m>. But consider
+  what would happen if <m>x</m> was negative, if <m>x\rightarrow-\infty</m>.
+  In this case\aside{This is important. If you don't see why
+    <m>\abs{x}=-x</m> when <m>x\lt0</m> ask your teacher about it.},
+  <m>\abs{x}=-x.</m>
+  \begin{Digression}[\boldmath <m>\sqrt{x^2}=\abs{x}</m>]
+    \label{digression:AbsValSqrt}
+    It is not true that <m>\sqrt{x^2}=x</m>, although this is an easy
+    mistake to make. It is not true because the square root function,
+    <m>\sqrt{x}</m>, is the functional inverse of the function
+    <me>
+    f(x)=x^2, \text{ with domain } x\ge0.
+    </me>
+    Note that the domain restriction means that <m>\sqrt{x}</m>
+    always returns a positive number. Thus <m>\sqrt{2^2} = 2</m>, but
+    <m>\sqrt{(-2)^2} = 2</m>, also.
+    Similarly,
+    <me>
+    \sqrt{3^2}=\sqrt{(-3)^2}=3,\ 
+    \sqrt{10^2}=\sqrt{(-10)^2}=10, \text{ and in general }
+    \sqrt{x^2}=\abs{x}.
+    </me>
+    When <m>x</m> is negative <m>\sqrt{x^2}=-x</m> because when <m>x</m> negative
+    <m>-x</m> is positive. 
+  \end{Digression}
+  \begin{ProficiencyDrill}
+    Try to  guess the value of 
+    <m> \limit{x}{-\infty}{ \left( \sqrt{x^2+2}-\sqrt{x^2+x} \right)} </m>
+    and then evaluate the limit to see if you guessed correctly.
+  \end{ProficiencyDrill}
+</p>
+</example>
+
+
+<exercise xml:id="no-label">
+<introduction>
+<p>
+  Determine  the following limits.
+</p>
+</introduction>
+<task>
+<statement>
+<p>
+ <m>\limit{x}{\infty} {\sqrt{x^2+x}-x}</m>
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>\limit{x}{-\infty}{\sqrt{x^2+x}-x}</m>
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>\limit{x}{\infty}{\frac{1}{\sqrt{x+1} -\sqrt{4x+1}}}</m>
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>\limit{x}{\infty}{\frac{\sqrt{x^2+2}-\sqrt{x^2+x}}{\sqrt{x^2+2}-\sqrt{x^2-x}}}</m>
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>\limit{x}{-\infty}{\frac{\sqrt{x^2+2}-\sqrt{x^2+x}}{\sqrt{x^2+2}-\sqrt{x^2-x}}}</m>
+  </p>
+</statement>
+</task>
+</exercise>
+<!-- begin{ProficiencyDrill} -->
+<!--   Determine  the following limits. -->
+<!--   \begin{enumerate}[label={  (\alph*)}] -->
+<!--     \item <m>\limit{x}{\infty} {\sqrt{x^2+x}-x}</m> -->
+<!--     \item <m>\limit{x}{-\infty}{\sqrt{x^2+x}-x}</m> -->
+<!--     \item <m>\limit{x}{\infty}{\frac{1}{\sqrt{x+1} -\sqrt{4x+1}}}</m> -->
+<!--     \item <m>\limit{x}{\infty}{\frac{\sqrt{x^2+2}-\sqrt{x^2+x}}{\sqrt{x^2+2}-\sqrt{x^2-x}}}</m> -->
+<!--     \item <m>\limit{x}{-\infty}{\frac{\sqrt{x^2+2}-\sqrt{x^2+x}}{\sqrt{x^2+2}-\sqrt{x^2-x}}}</m> -->
+<!--   \end{enumerate} -->
+<!-- \end{ProficiencyDrill} -->
+
+
+
+</subsection>
+</section>
+<section xml:id="sec:squeeze-theorem-informal">
+<title>The Squeeze Theorem</title>
+
+<!-- \label{sec:squeeze-theorem-informal} -->
+
+<figure>
+<caption>
+<url href="https://mathshistory.st-andrews.ac.uk/Biographies/Bernoulli_Johann/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Bernoulli_Johann/">This figure needs a caption.</url>
+</caption>
+<image source="images/asymptotes44.png" width="50%"/>
+</figure>
+<!-- \begin{wrapfigure}[4]{r}{1.5in} -->
+<!-- \captionsetup{labelformat=empty} -->
+<!-- \centerline{\includegraphics*[height=.4in,width=1.5in]{../Figures/asymptotes44}} -->
+<!-- \label{fig:asymptotes44} -->
+<!-- \end{wrapfigure} -->
+<p>
+
+It is clear from the graph at the right that
+<m>\limit{x}{\infty}{\sin(x)}</m> does not exist since the <m>\sin(x)</m> has no
+horizontal asymptotes.  To say that this limit does not exist means
+that <m>y=\sin(x)</m> is not approaching any particular value as
+<m>x\rightarrow\infty</m>. It's not even ``approaching'' <m>+\infty</m> or
+<m>-\infty</m> since it is bounded both above and below.
+</p>
+<p>
+
+Now how about this limit: <m>\tlimit{x}{\infty}{\frac{\sin(x)}{x}}</m>?
+Since
+<m>\limit{x}{\infty}{\sin(x)}</m> does not exist we can't apply
+<xref ref="THEOREMLimQuot1">Theorem</xref>.  Neither is it of the form
+<m>\frac{\approach{\infty}}{\approach{\infty}},</m> so none of the
+techniques we've used before will help us.
+</p>
+<p>
+
+
+We need a new idea.
+</p>
+<p>
+
+
+Look at the graph of <m>f(x) = \frac{\sin(x)}{x}</m> below.
+</p>
+  
+<image source="images/asymptotes5.png" width="60%" />
+<!-- \centerline{\includegraphics*[height=1.2in,width=4.8in]{../Figures/asymptotes5}} -->
+<p>
+
+Can you  see that the
+horizontal asymptote is <m>y=0</m>?
+</p>
+<p>
+
+It certainly looks like <m>y=0</m> is an asymptote in both
+directions which seems to
+suggest that[1mm]
+\centerline{<m> \tlimit{x}{\infty}{\frac{\sin(x)}{x}} =
+  \tlimit{x}{-\infty}{\frac{\sin(x)}{x}} = 0.  </m>}[1mm]
+This is correct, but is there a way to see this algebraically? After
+all, this graph could just as easily support the conclusion that
+<m>y=0.00000001</m> (or <m>y=</m> any other number which is extremely close to
+zero) is the asymptote. We don't want to draw conclusions from a
+picture, but it is difficult to see what we can do, isn't it?
+</p>
+<p>
+
+
+
+We will analyze what happens when <m>x\rightarrow\infty</m> and leave the
+case <m>x\rightarrow-\infty</m> as a drill for you.
+</p>
+
+<figure>
+<caption>
+<url href="https://mathshistory.st-andrews.ac.uk/Biographies/Bernoulli_Johann/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Bernoulli_Johann/">This figure needs a caption.</url>
+</caption>
+<image source="images/asymptotes13.png" width="50%"/>
+</figure>
+<!-- \begin{wrapfigure}[]{r}{2.8in} -->
+<!--   \captionsetup{labelformat=empty} -->
+<!--   \vskip-2mm  -->
+<!-- \centerline{\includegraphics*[height=2.4in,width=2.8in]{../Figures/asymptotes13}} -->
+<!-- \label{fig:asymptotes13} -->
+<!-- \end{wrapfigure} -->
+<p>
+
+Let's ``disassemble'' our function in order to understand it
+better. The function <m>f(x)=\frac{\sin(x)}{x}</m> clearly comes in two
+parts: <m>\sin(x)</m> and <m>\frac{1}{x}</m>. Because  <m>-1\le\sin(x)\le1</m> we
+know that <m>-\frac{1}{x}\le\frac{\sin(x)}{x}\le\frac1x</m>. 
+If we graph <m>y=\frac{\sin(x)}{x}</m>, <m>y=\frac1x</m>, and <m>y=-\frac1x</m>
+together as in the sketch at the right
+we see that for positive values
+of <m>x</m> the graph of <m>y=\frac{\sin(x)}{x}</m> is always caught between the
+graph of <m>y=\frac1x</m> and <m>y=-\frac1x</m>.
+</p>
+<p>
+
+We know that both <m>\pm\frac1x\rightarrow0</m>
+as <m>x\rightarrow\infty</m>.  Since <m>\frac{\sin(x)}{x}</m> is caught between
+<m>\frac1x</m> and <m>-\frac1x</m> it follows that, for positive values of <m>x</m>, the highest
+points on the graph of <m>\frac{\sin(x)}{x}</m> must also approach zero as
+<m>x \rightarrow\infty</m>. Therefore
+<m>\tlimit{x}{\infty}{\frac{\sin(x)}{x}}=0</m>.
+</p>
+
+
+<exercise xml:id="no-label">
+<statement>
+<p>
+  Show that for negative values of <m>x</m>, <m>-\frac1x \le
+  \frac{\sin(x)}{x} \le \frac1x</m> also,  so that
+  <m>\tlimit{x}{-\infty}{\frac{\sin(x)}{x}=0}</m> as well.
+</p>
+</statement>
+</exercise>
+<p>
+This idea is often called the Squeeze Theorem or the Sandwich
+Theorem.
+</p>
+
+<theorem xml:id="thm:InfSqueeze">
+<title>\boldmath The Squeeze  Theorem, (when <m>x\rightarrow\pm\infty</m>)</title>
+<p>
+  <!-- \label{thm:InfSqueeze} -->
+  There are two cases:
+  \begin{enumerate}
+  \item 
+    If <m>\alpha(x)\le f(x)\le \beta(x)</m> on some
+    interval, <m>(c, \infty)</m> and
+    <me>
+    \limit{x}{\infty}{\alpha(x)} =
+    \limit{x}{\infty}{\beta(x)} = L
+    </me>
+    then <m>\limit{x}{\infty}{f(x)} = L
+    </m>
+    also.
+  \item   If <m>\alpha(x)\le f(x)\le \beta(x)</m> on some
+    interval, <m>(-\infty,c)</m> and 
+    <me>
+    \limit{x}{\infty}{\alpha(x)} =
+    \limit{x}{-\infty}{\beta(x)} = L
+    </me>
+    then <m>\limit{x}{\infty}{f(x)} = L</m>
+    also.
+\end{enumerate}
+</p>
+</theorem>
+
+
+<p>
+
+In the previous example, notice that we had
+<m>\frac{-1}{x}\le \frac{\sin(x)}{x}\le\frac1x</m> for all <m>x\neq0</m>, but
+this is more than is actually required. We only need for the
+inequality to be satisfied when <m>x</m> sufficiently large, in either the
+positive or negative direction. That's why we only require that
+<m>\alpha(x)\le f(x)\le \beta(x)</m> on the interval <m>(c,\infty)</m> (positive
+case) or <m>(-\infty,c)</m> (negative case) rather than for all values of
+<m>x</m>.
+
+</p>
+
+<problem xml:id="no-label">
+<introduction>
+<p>
+  Use the Squeeze Theorem to determine each of the following limits:
+</p>
+</introduction>
+<task>
+<statement>
+<p>
+ <m>\limit{x}{\infty}{\frac{x\cos(x)}{x^2+1}}</m>
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>\limit{x}{-\infty}{\frac{x\cos(x)}{x^2+1}}</m> 
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>\limit{x}{\infty}{\frac{\lfloor x\rfloor}{x^2}},</m> where
+      <m>\lfloor x\rfloor</m> represents the greatest integer\aside{This is
+        called the ``greatest integer'' function in mathematics, and
+        the ``floor'' function in computer science. It rounds down to
+        the greatest integer. For example
+        <m>\lfloor5.7\rfloor =5, \lfloor2\rfloor=2,
+        \lfloor\pi\rfloor=3</m>, etc.} less than or equal to <m>x</m>.
+  </p>
+</statement>
+</task>
+</problem>
+<!-- \begin{embeddedproblem} -->
+<!--   Use the Squeeze Theorem to determine each of the following limits: -->
+<!--   \begin{enumerate}[label={  (\alph*)}] -->
+<!--     \item <m>\limit{x}{\infty}{\frac{x\cos(x)}{x^2+1}}</m> -->
+<!--     \item <m>\limit{x}{-\infty}{\frac{x\cos(x)}{x^2+1}}</m>  -->
+<!--     \item <m>\limit{x}{\infty}{\frac{\lfloor x\rfloor}{x^2}},</m> where -->
+<!--       <m>\lfloor x\rfloor</m> represents the greatest integer\aside{This is -->
+<!--         called the ``greatest integer'' function in mathematics, and -->
+<!--         the ``floor'' function in computer science. It rounds down to -->
+<!--         the greatest integer. For example -->
+<!--         <m>\lfloor5.7\rfloor =5, \lfloor2\rfloor=2, -->
+<!--         \lfloor\pi\rfloor=3</m>, etc.} less than or equal to <m>x</m>. -->
+<!--   \end{enumerate} -->
+<!-- \end{embeddedproblem} -->
+<p>
+Back in <xref ref="SECleonh-euler-harm">Section</xref> you showed that
+<m>
+y(t)=e^{-\frac{t}{2}}\left[\cos\left(\frac{\sqrt{3}}{2}t\right)+\sin\left(\frac{\sqrt{3}}{2}t\right)\right]
+</m>
+satisfies the differential equation of damped oscillation (oscillation
+with resistance):
+<me>
+\dfdxn{y}{t}{2}+\dfdx{y}{t}+y=0.
+</me>
+  Since <m>y(t)</m> is called a damped oscillator what do you expect
+  <m>\limit{t}{\infty}{y(t)}</m> to be equal to? Guess, if you aren't sure.
+</p>  
+<problem xml:id="no-label">
+<statement>
+<p>
+   Use the squeeze theorem to compute
+   <me>
+   \limit{t}{\infty}{e^{-\frac{t}{2}}\left[\cos\left(\frac{\sqrt{3}}{2}t\right)+\sin\left(\frac{\sqrt{3}}{2}t\right)\right]}.
+   </me>
+   Is this consistent with your guess? Explain.
+ </p>
+</statement>
+</problem>
+ 
+
+</section>
+<section xml:id="subsec:vertical-asymptotes">
+<title>Vertical Asymptotes</title>
+
+<!-- \label{subsec:vertical-asymptotes} -->
+<figure>
+<caption>
+<url href="https://mathshistory.st-andrews.ac.uk/Biographies/Bernoulli_Johann/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Bernoulli_Johann/">This figure needs a caption.</url>
+</caption>
+<image source="images/VerticalAsymp3.png" width="50%"/>
+</figure>
+<!-- \begin{wrapfigure}[9]{r}{1.5in} -->
+<!--   \vskip-6mm  -->
+<!--   \captionsetup{labelformat=empty} -->
+<!--   \centerline{\includegraphics*[height=1.5in,width=1.5in]{../Figures/VerticalAsymp3}} -->
+<!--   \label{fig:VerticalAsymp2} -->
+<!-- \end{wrapfigure} -->
+<p>
+
+It should be clear from the sketch at the right that in addition to
+the horizontal asymptote <m>y=0</m>, the graph of <m>y=\frac1x</m> also
+has a vertical asymptote of <m>x=0</m>.
+</p>
+<p>
+
+We can extend the ideas and the notation we've developed for
+horizontal asymptotes to handle vertical asymptotes as well. First
+note that since the expression <m>\frac1x</m> is not defined for <m>x=0</m> we
+can't talk about the behavior of the function at zero. But we
+can talk about its behavior near zero.  But the graph is very
+different depending on whether <m>x\lt0</m> or <m>x\gt0</m>.  We will focus
+first on positive values of <m>x</m> .
+</p>
+<p>
+
+For <m>x</m> near zero, and positive, it is very clear what is happening.
+As <m>x\rightarrow0</m> the function continues to increase without bound.
+We capture this notationally\aside{This notation is not universal. The
+  standard notation is <m>\limit{x}{0^+}{\frac1x}</m>.} with
+<me>
+  \label{eq:RightHandLimit}
+  \limitX{x}{0}{\frac1x}{x\gt0}=\infty.
+</me>
+The limit in <xref ref="EQRightHandLimit">Equation~</xref>) is called a
+<term>right-hand limit</term> and is read aloud as ``the limit as <m>x</m>
+approaches zero from the right, of one over <m>x</m> equals infinity.''
+</p>
+<p>
+
+
+The expression
+<m>x\rightarrow0</m> means that <m>x</m>  is approaching the number zero. The
+qualification <m>x\gt0</m> specifies that it is approaching from the right.
+So writing <m>\limitX{x}{0}{\frac1x}{x\gt0}=\infty</m>  means 
+that as <m>x\rightarrow0</m> from the right, the function <m>\frac1x</m>
+increases without bound\aside{This should probably be written as
+  <m>\limitX{x}{0}{\frac1x}{x\gt0}\rightarrow \infty</m> but sadly, it has
+  become standard to say, and to write, that this limit ``equals
+  infinity,'' which is absurd.}.
+</p>
+<p>
+
+
+
+
+If we restrict <m>x</m>  to negative values then we see that\aside{Note
+  that the sense of the  inequality has changed from
+  <xref ref="EQRightHandLimit">Equation~</xref>). It is now ``less than.''}
+<me>
+  \label{eq:LeftHandLimit}
+  \limitX{x}{0}{\frac1x}{x\lt 0}=-\infty.
+</me>
+The limit in <xref ref="EQLeftHandLimit">Equation~</xref>) is called a
+<term>left-hand limit</term> and is read aloud as ``the limit as <m>x</m>
+approaches zero from the left, of one over <m>x</m> equals negative infinity.'' Right-
+and left-hand limits are generically called <term>one-sided
+  limits</term>. One-sided limits are important theoretical tools but their
+theoretical value is not important to us right now. We will
+discuss them in more depth in <xref ref="SECone-sided-deriv">Section</xref>.
+</p>
+<p>
+
+A function <m>f(x)</m>, will have a vertical asymptote as <m>x\rightarrow a</m>
+if either of the one-sided limits is <m>\infty</m> or <m>-\infty</m> (<m>f(x)</m> is
+increasing or decreasing without bound). We formalize this statement
+in the following definition.
+</p>
+<p>
+
+</p>
+
+<definition xml:id="DEFINITIONdef:VerticalAsymptotes">
+<title>Vertical Asymptotes</title>
+<statement>
+<p>
+  <!-- \label{def:VerticalAsymptotes} -->
+  If
+  <me>\rlimit{x}{a}{f(x)}=\pm\infty \text{ or
+  }\llimit{x}{a}{f(x)}=\pm\infty</me> then the line <m>x=a</m> is a vertical
+  asymptote of the graph of <m>y=f(x)</m>.
+
+</p>
+</statement>
+</definition>
+
+
+
+<exercise xml:id="no-label">
+<introduction>
+<p>
+  Compute each of the following limits. Read the notation
+  carefully.
+</p>
+</introduction>
+<task>
+<statement>
+<p>
+ <m>\rtlimit{x}{3}{\frac{1}{(x-1)(x-3)}}</m>
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>\rtlimit{x}{1}{\frac{1}{(x-1)(x-3)}}</m>
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>\rtlimit{x}{\frac{\pi}{2}}{\tan(x)}</m>
+  </p>
+</statement>
+</task>
+</exercise>
+<!-- begin{ProficiencyDrill} -->
+<!--   Compute each of the following limits. Read the notation -->
+<!--   carefully. -->
+<!--   \begin{enumerate}[label={  (\alph*)}] -->
+<!--     \item <m>\rtlimit{x}{3}{\frac{1}{(x-1)(x-3)}}</m> -->
+<!--     \item <m>\rtlimit{x}{1}{\frac{1}{(x-1)(x-3)}}</m> -->
+<!--     \item <m>\rtlimit{x}{\frac{\pi}{2}}{\tan(x)}</m> -->
+<!--   \end{enumerate} -->
+<!-- \end{ProficiencyDrill} -->
+
+
+<problem xml:id="no-label">
+<introduction>
+<p>
+  Find all vertical asymptotes of the graphs of each of the
+  following functions.
+</p>
+</introduction>
+<task>
+<statement>
+<p>
+ <m>f(x)= \frac{1}{x^2-1}</m>
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>f(x)= \frac{1}{(x^2-1)^2}</m>
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>f(x)= \frac{x-1}{x^2-4}</m>
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>f(x)= \frac{x-7}{x^2-5}</m>
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>f(x)= \tan(x)</m>
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>f(x)= \sec(x)</m>
+  </p>
+</statement>
+</task>
+</problem>
+<!-- \begin{embeddedproblem} -->
+<!--   Find all vertical asymptotes of the graphs of each of the -->
+<!--   following functions. -->
+<!--   \begin{enumerate}[label={  (\alph*)}] -->
+<!--     \item <m>f(x)= \frac{1}{x^2-1}</m> -->
+<!--     \item <m>f(x)= \frac{1}{(x^2-1)^2}</m> -->
+<!--     \item <m>f(x)= \frac{x-1}{x^2-4}</m> -->
+<!--     \item <m>f(x)= \frac{x-7}{x^2-5}</m> -->
+<!--     \item <m>f(x)= \tan(x)</m> -->
+<!--     \item <m>f(x)= \sec(x)</m> -->
+<!--   \end{enumerate} -->
+<!-- \end{embeddedproblem} -->
+
+
+
+
+
+</section>
+<section xml:id="sec:more-indet-forms">
+<title>Indeterminate Forms and L'H\^o pital's Rule</title>
+<introduction>
+<!-- \label{sec:more-indet-forms} -->
+<p>
+Based
+on our experience so far it is tempting to conclude that we can locate
+vertical asymptotes by simply  setting the denominator equal to zero
+and solving.  But this is a naive conclusion as we will see next.
+</p>
+
+<example xml:id="example:VertAsymp">
+<title>4</title>
+<p>
+  <!-- \label{example:VertAsymp} -->
+  Consider <m>y=\frac{x-2}{x^2-4}</m>.  Setting the denominator equal to
+  zero yields <m>x=-2</m> and <m>x=2</m>, but only one of these is a vertical
+  asymptote. Do you see which one?
+
+</p>
+<p>
+
+  Let's take a careful look at this example.  By
+  <xref ref="DEFVerticalAsymptotes">Definition</xref> we will have a vertical
+  asymptote when either one-sided limit of a function increases or
+  decreases without bound, so we must evaluate each one-sided limit.
+
+</p>
+<p>
+
+  For <m>x=-2</m>, we have
+<me>
+\limitX{x}{-2}{\frac{x-2}{x^2-4}}{x\gt -2}
+=\limitX{x}{-2}{\frac{x-2}{(x-2)(x+2)}}{x\gt -2}
+=\limitX{x}{-2}{\cancelto{=1}{\left(\frac{x-2}{x-2}\right)}}{x\gt -2}\,\,\cdot\,\,\limitX{x}{-2}{\frac{1}{x+2}}{x\gt -2}
+= 1\cdot\frac{1}{\approach{0}} =\infty
+</me>
+So the line <m>x=-2</m> is indeed a vertical asymptote.
+</p>
+</example>
+
+<exercise xml:id="no-label">
+<statement>
+<p>
+  Explain how you know the limit above is not <m>-\infty</m>.
+</p>
+</statement>
+</exercise>
+<p>
+Similarly
+<me>
+\limitX{x}{-2}{\frac{x-2}{x^2-4}}{x\lt -2}
+=\limitX{x}{-2}{\frac{x-2}{(x-2)(x+2)}}{x\lt -2}
+=\limitX{x}{-2}{\cancelto{=1}{\left(\frac{x-2}{x-2}\right)}}{x\lt -2}\,\,\cdot\,\,\limitX{x}{-2}{\frac{1}{x+2}}{x\lt -2}
+= 1\cdot\frac{1}{\approach{0}}=-\infty.
+</me>
+</p>
+
+<exercise xml:id="no-label">
+<statement>
+<p>
+  Explain how you know the limit above is not <m>\infty</m>.
+</p>
+</statement>
+</exercise>
+<p>
+
+We were careful to use one-sided limits to find the vertical asymptote
+at <m>x= -2</m> because this is what
+Definition~\#\ref{def:VerticalAsymptotes} calls for. Strictly speaking
+we only needed one of them, but since these limits were not equal we
+evaluated them both.
+</p>
+<p>
+
+However, for <m>x=2</m>, both one-sided limits are the same so we have
+<me>
+\limit{x}{2}{\frac{x-2}{x^2-4}}=\limit{x}{2}{\frac{x-2}{(x-2)(x+2)}}
+=\cancelto{=1}{\left(\limit{x}{2}{\frac{x-2}{x-2}}\right)}\,\,\cdot\,\,\left(\limit{x}{2}{\frac{1}{x+2}}\right)
+=\approach{1}\cdot\approach{\frac14}=\frac{1}{4}.
+</me>
+</p>
+
+<exercise xml:id="no-label">
+<statement>
+<p>
+  Confirm <m>\tlimitX{x}{2}{\frac{x-2}{x^2-4}}{x\gt2}=\frac14</m> and
+  <m>\tlimitX{x}{2}{\frac{x-2}{x^2-4}}{x\lt2}=\frac14</m>.
+</p>
+</statement>
+</exercise>
+<p>
+Observe that this limit has the form
+<m>\limit{x}{2}{\frac{x-2}{x^2-4}}=\frac{\approach{0}}{\approach{0}}</m>.
+A limit of this form is called an \term{Indeterminate
+  Form}\aside{There are other kinds of Indeterminate Forms. We will
+  encounter them later in this chapter.}.
+</p>
+
+<problem xml:id="problem:vertical-asymptotes">
+<introduction>
+<p>
+  <!-- \label{problem:vertical-asymptotes} -->
+  Find all vertical asymptotes of the graphs of each of the following
+  functions.
+</p>
+</introduction>
+<task>
+<statement>
+<p>
+ <m>f(x)= \frac{x+2}{x^2-4}</m>
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>f(x)= \frac{x-2}{x^2-4}</m>
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>f(x)= \frac{x-2}{x^2-5x+6}</m>
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>f(x)= \frac{x-3}{x^2-5x+6}</m>
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>f(x)= \frac{x}{x^3-1}</m>
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>f(x)= \frac{x^2-x}{x^4-1}</m>
+  </p>
+</statement>
+</task>
+</problem>
+<!-- \begin{embeddedproblem}  -->
+<!--   <!-\- \label{problem:vertical-asymptotes} -\-> -->
+<!--   Find all vertical asymptotes of the graphs of each of the following -->
+<!--   functions. -->
+<!--   \begin{enumerate}[label={  (\alph*)}] -->
+<!--     \item <m>f(x)= \frac{x+2}{x^2-4}</m> -->
+<!--     \item <m>f(x)= \frac{x-2}{x^2-4}</m> -->
+<!--     \item <m>f(x)= \frac{x-2}{x^2-5x+6}</m> -->
+<!--     \item <m>f(x)= \frac{x-3}{x^2-5x+6}</m> -->
+<!--     \item <m>f(x)= \frac{x}{x^3-1}</m> -->
+<!--     \item <m>f(x)= \frac{x^2-x}{x^4-1}</m> -->
+<!--   \end{enumerate} -->
+<!-- \end{embeddedproblem} -->
+<p>
+
+This example demonstrates that there is a difference between a
+function which does not exist at a point and a function with a
+vertical asymptote at a point. Notice that <m>g(x)=\frac{x-2}{x^2-4}</m> is
+undefined at both <m>x=2</m> and <m>x=-2</m>, but it only has an asymptote at
+<m>x=-2</m>.
+</p>
+<p>
+
+It also displays something subtle about limits.  One would be tempted
+to say that
+<me>
+\frac{x-2}{x^2-4}=\frac{x-2}{(x-2)(x+2)}=\frac{1}{x+2},
+</me>
+and this is true when <m>x\neq2</m>.   However, if we graph the two
+functions, <m>g(x)=\frac{x-2}{x^2-4}</m>  and <m>f(x)=\frac{1}{x+2}</m> we see
+that there is a small difference between them\aside{This discussion is
+also a cautionary tale about the use of graphing technology. These two
+graphs will appear to be identical if you use technology to graph
+them.}:
+\vskip2mm 
+\centerline{\includegraphics*[height=2.4in,width=5.4in]{../Figures/lhopital2}}
+\vskip2mm
+Do you see the difference?  The value of <m>g(2)</m> is not defined because
+<m>g(2)=\frac{2-2}{4-4}</m> and we get a zero denominator. But no such
+difficulty occurs with <m>f</m> because <m>f(2) = \frac{1}{2+2}=\frac14</m>.
+</p>
+<p>
+
+So, when <m>x\neq2</m>, <m>g(x)</m> and <m>f(x)</m> are the exactly the same. But
+they disagree when <m>x=2</m>. More precisely <m>x=2</m> is not in the domain of
+<m>g(x)</m> but it is in the domain of <m>f(x)</m>. Since the domains differ
+they must be different functions and  it is incorrect to write
+<m>\frac{x-2}{x^2-4}=\frac{1}{x+2}</m> even though it is true for all but
+one value of <m>x</m>.
+</p>
+
+
+
+<problem xml:id="problem:DiffSqLim">
+<introduction>
+<p>
+  <!-- \label{problem:DiffSqLim} -->
+  Suppose <m>a\neq0</m> is a real number.
+</p>
+</introduction>
+<task>
+<statement>
+<p>
+ Find all vertical asymptotes of
+    <m>f(x)=\frac{x-a}{x^2-a^2}</m>.
+  </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ Does your solution of part (a) still work when <m>a=0</m>?
+  </p>
+</statement>
+</task>
+</problem>
+<!-- \begin{embeddedproblem} -->
+<!--   <!-\- \label{problem:DiffSqLim} -\-> -->
+<!--   Suppose <m>a\neq0</m> is a real number. -->
+<!--     \begin{enumerate}[label={  (\alph*)}] -->
+<!--   \item Find all vertical asymptotes of -->
+<!--     <m>f(x)=\frac{x-a}{x^2-a^2}</m>. -->
+<!--   \item Does your solution of part (a) still work when <m>a=0</m>? -->
+<!--   \end{enumerate} -->
+<!-- \end{embeddedproblem} -->
+
+<problem xml:id="problem:FoliumOfDescartes2">
+<introduction>
+<p>
+  <!-- <!-\- \label{problem:FoliumOfDescartes2} -\-> -->
+  Recall that in Problem~\#\ref{problem:FoliumOfDescartes1} in
+  Section~\ref{subsec:Derivative}  looked at the Folium of
+  Descartes from Newton's dynamic point of view. 
+  \centerline{\includegraphics*[height=2in,width=2in]{../Figures/FoliumOfDescartes}}
+  
+  In that problem you showed that the fluents, <m>x(t) =
+  \frac{3t}{1+t^3}</m> and <m>y(t)=\frac{3t^2}{1+t^3}</m> satisfy the equation
+  of the Folium:
+  <me>
+  x^3+y^3=3xy
+  </me>
+  and that <m>t=0</m> is the only value of <m>t</m> where <m>\left(x(t), y(t)
+  \right)=(0,0)</m>. How then, can it be that the Folium crosses itself
+  at the origin?
+</p>
+</introduction>
+<task>
+<statement>
+<p>
+ In Problem~\#\ref{problem:FoliumOfDescartes1} you determined that
+    <m>y\ge0</m> when <m>t\gt-1</m>. Determine the values of <m>t</m> for which  <m>x\ge0</m>
+    and the which  <m>x\lt0</m>.
+  </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ Show that
+    <m>\limit{t}{\pm\infty}{x(t)}=\limit{t}{\pm\infty}{y(t)}=0.</m>
+  </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ Compute <m>\dfdx{y}{x} = \frac{\dot{y}}{\dot{x}}</m>  in
+    terms of <m>t</m> and compute <m>\limit{t}{\pm\infty}{\frac{\dot{y}}{\dot{x}}}</m>.  Is this consistent with what you
+    see on  the graph?
+  </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ Show that for <m>t\neq0</m>, <m>t=\frac{y}{x}</m> so that
+    geometrically, <m>t</m> represents the slope of the line joining
+    the origin to the point <m>(x,y)</m> on the graph of the Folium.
+    Is this consistent with what you obtained in part a? 
+    Explain.
+  </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ Compute each of the following:
+    
+<ol>
+    <li>
+<p>
+ <m>\rtlimit{t}{-1}{x(t)}</m>
+</p>
+</li>
+    <li>
+<p>
+ <m>\ltlimit{t}{-1}{x(t)}</m>
+</p>
+</li>
+    <li>
+<p>
+ <m>\rtlimit{t}{-1}{y(t)}</m>
+</p>
+</li>
+    <li>
+<p>
+ <m>\ltlimit{t}{-1}{y(t)}</m>
+</p>
+</li>
+    <li>
+<p>
+ <m>\rtlimit{t}{-1}{\dfdx{y}{x}}</m>
+</p>
+</li>
+    <li>
+<p>
+ <m>\ltlimit{t}{-1}{\dfdx{y}{x}}</m>
+</p>
+</li>
+    </ol>
+
+    Is this consistent with the graph and the fact that <m>t</m>
+    represents the slope from the origin to the point <m>(x,y)</m>?
+    Explain. 
+  </p>
+</statement>
+</task>
+</problem>
+<!-- \begin{embeddedproblem}[The Folium of Descartes and Limits]  ;;; MULTILEVEL PROBLEM -->
+<!--   <!-\- <!-\\- \label{problem:FoliumOfDescartes2} -\\-> -\-> -->
+<!--   Recall that in Problem~\#\ref{problem:FoliumOfDescartes1} in -->
+<!--   Section~\ref{subsec:Derivative}  looked at the Folium of -->
+<!--   Descartes from Newton's dynamic point of view.  -->
+<!--   \centerline{\includegraphics*[height=2in,width=2in]{../Figures/FoliumOfDescartes}} -->
+  
+<!--   In that problem you showed that the fluents, <m>x(t) = -->
+<!--   \frac{3t}{1+t^3}</m> and <m>y(t)=\frac{3t^2}{1+t^3}</m> satisfy the equation -->
+<!--   of the Folium: -->
+<!--   <me> -->
+<!--   x^3+y^3=3xy -->
+<!--   </me> -->
+<!--   and that <m>t=0</m> is the only value of <m>t</m> where <m>\left(x(t), y(t) -->
+<!--   \right)=(0,0)</m>. How then, can it be that the Folium crosses itself -->
+<!--   at the origin? -->
+<!--   \begin{enumerate}[label={  (\alph*)}] -->
+<!--   \item In Problem~\#\ref{problem:FoliumOfDescartes1} you determined that -->
+<!--     <m>y\ge0</m> when <m>t\gt-1</m>. Determine the values of <m>t</m> for which  <m>x\ge0</m> -->
+<!--     and the which  <m>x\lt0</m>. -->
+<!--   \item Show that -->
+<!--     <m>\limit{t}{\pm\infty}{x(t)}=\limit{t}{\pm\infty}{y(t)}=0.</m> -->
+<!--   \item Compute <m>\dfdx{y}{x} = \frac{\dot{y}}{\dot{x}}</m>  in -->
+<!--     terms of <m>t</m> and compute <m>\limit{t}{\pm\infty}{\frac{\dot{y}}{\dot{x}}}</m>.  Is this consistent with what you -->
+<!--     see on  the graph? -->
+<!--   \item Show that for <m>t\neq0</m>, <m>t=\frac{y}{x}</m> so that -->
+<!--     geometrically, <m>t</m> represents the slope of the line joining -->
+<!--     the origin to the point <m>(x,y)</m> on the graph of the Folium. -->
+<!--     Is this consistent with what you obtained in part a?  -->
+<!--     Explain. -->
+<!--   \item Compute each of the following: -->
+    
+<!-- <ol> -->
+<!--     <li> -->
+<!-- <p> -->
+<!--  <m>\rtlimit{t}{-1}{x(t)}</m> -->
+<!-- </p> -->
+<!-- </li> -->
+<!--     <li> -->
+<!-- <p> -->
+<!--  <m>\ltlimit{t}{-1}{x(t)}</m> -->
+<!-- </p> -->
+<!-- </li> -->
+<!--     <li> -->
+<!-- <p> -->
+<!--  <m>\rtlimit{t}{-1}{y(t)}</m>%{t\gt -1}<m> -->
+<!-- </p> -->
+<!-- </li> -->
+<!--     <li> -->
+<!-- <p> -->
+<!--  </m>\ltlimit{t}{-1}{y(t)}<m>%{t\gt -1}</m> -->
+<!-- </p> -->
+<!-- </li> -->
+<!--     <li> -->
+<!-- <p> -->
+<!--  <m>\rtlimit{t}{-1}{\dfdx{y}{x}}</m> -->
+<!-- </p> -->
+<!-- </li> -->
+<!--     <li> -->
+<!-- <p> -->
+<!--  <m>\ltlimit{t}{-1}{\dfdx{y}{x}}</m> -->
+<!-- </p> -->
+<!-- </li> -->
+<!--     </ol> -->
+
+<!--     Is this consistent with the graph and the fact that <m>t</m> -->
+<!--     represents the slope from the origin to the point <m>(x,y)</m>? -->
+<!--     Explain.  -->
+<!--   \end{enumerate} -->
+<!-- \end{embeddedproblem} -->
+</introduction>
+
+
+<subsection  xml:id="SUBSECTION">
+<title>L'H\^{o}pital's Rule</title>
+
+<p>
+We found earlier
+that <m>\tlimit{x}{\infty}{\frac{\sin(x)}{x}}=0</m>, so the function
+<m>y=\frac{\sin(x)}{x}</m> has a horizontal asymptote at <m>y=0</m>.
+</p>
+<p>
+
+Does the graph of <m>y=\frac{\sin(x)}{x}</m> have a vertical asymptote at <m>x=0</m>?
+To answer this question we need to evaluate the limit
+<m>\tlimit{x}{0}{\frac{\sin(x)}{x}}</m>. But  how can we do that?
+</p>
+<p>
+
+If we try the obvious ploy of just ``plugging in'' zero for <m>x</m> we get the
+indeterminate form <m>\frac{(\rightarrow0)}{(\rightarrow0)}</m>, and we
+know we need to proceed cautiously with an indeterminate form.
+</p>
+
+<figure>
+<caption>
+<url href="https://mathshistory.st-andrews.ac.uk/Biographies/Bernoulli_Johann/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Bernoulli_Johann/">This figure needs a caption.</url>
+</caption>
+<image source="images/lhopital3.png" width="50%"/>
+</figure>
+<!-- \begin{wrapfigure}[6]{r}{2in} -->
+<!--   \vskip-5mm  -->
+<!--   \captionsetup{labelformat=empty} -->
+<!--   \centerline{\includegraphics*[height=1in,width=2in]{../Figures/lhopital3}} -->
+<!--   \label{fig:lhopital3} -->
+<!-- \end{wrapfigure} -->
+<p>
+
+From the graph of <m>\frac{\sin(x) }{x}</m> in the sketch at the right it
+would appear that <m>\frac{\sin(x)}{x}\rightarrow1</m> as
+<m>x\rightarrow0</m>. This is correct, but we've learned to be wary of
+relying on graphs.  It would be best to evaluate the limit by another
+technique if possible.
+</p>
+<p>
+
+Can we apply some algebraic trick?
+</p>
+<p>
+
+It is hard to see what it would be.  There isn't much algebra we can
+do here.  If there were other trigonometric functions involved we
+might be able to employ some trigonometric identity in the numerator, but there just
+isn't much we can do with <m>\sin(x)</m>. This problem poses a bit more of a
+challenge than the indeterminate forms we have dealt with so far. We
+need a new idea.
+</p>
+<p>
+
+Since the <m>\sin(x)</m> isn't helping maybe we can replace
+it with something simpler. Seriously.
+Give some thought to what might be a valid replacement before reading
+on\aside{Remember that we're really only interested in values of <m>x</m>
+  that are very close (infinitely close?) to zero.}.
+</p>
+<p>
+
+The Principle of Local Linearity says that the graph of a function and
+its tangent line are locally indistinguishable.  We're only interested
+in values of <m>x</m> near zero -- locally around zero -- so let's try
+replacing <m>\sin(x)</m> with its tangent line.
+</p>
+
+<exercise xml:id="PD:Sync1">
+<statement>
+<p>
+  <!-- \label{PD:Sync1} -->
+  Show that the line tangent to <m>y=\sin(x)</m> at <m>x=0</m> is <m>y=x</m>.
+</p>
+</statement>
+</exercise>
+
+<p>
+Replacing <m>\sin(x)</m> with <m>x</m>, we have\aside{We've placed the question
+  mark over the equals sign because we don't (yet) actually know that
+  this is a valid approach. We're just trying out ideas at the moment.}
+<me>
+\limit{x}{0}{\frac{\sin(x)}{x}}\overset{?}{=}
+\limit{x}{0}{\frac{x}{x}}=1
+</me>
+which is consistent with what we see in the graph above. Our idea is
+showing some promise.
+</p>
+
+<example xml:id="no-label">
+<statement>
+<p>
+  Let's try it again with <m>\tlimit{x}{2}{\frac{x^3-8}{x^2-4}}</m> which
+  also has the indeterminate form <m>\frac{\approach{0}}{\approach{0}}</m>.
+</p>
+</statement>
+</example>
+<exercise xml:id="no-label">
+<introduction>
+<p>
+</p>
+</introduction>
+<task>
+<statement>
+<p>
+   Show that the equation of the line tangent to <m>f(x)=x^3-8</m> at
+  <m>(2,0)</m> is: <m>y=12(x-2)</m>.
+</p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ Show that the equation of the line tangent to
+  <m>g(x)=x^2-4</m> at <m>(2,0)</m> is: <m>y=4(x-2).</m>
+</p>
+</statement>
+</task>
+</exercise>
+<exercise xml:id="no-label">
+<introduction>
+<p>
+</p>
+</introduction>
+<task>
+<statement>
+<p>
+   Show that the equation of the line tangent to <m>f(x)=x^3-8</m> at
+  <m>(2,0)</m> is: <m>y=12(x-2)</m>.
+</p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ Show that the equation of the line tangent to
+  <m>g(x)=x^2-4</m> at <m>(2,0)</m> is: <m>y=4(x-2).</m>
+</p>
+</statement>
+</task>
+</exercise>
+<!-- begin{ProficiencyDrill-enumerate} -->
+<!--        \begin{enumerate}[label={  (\alph*)}] -->
+<!--          \item   Show that the equation of the line tangent to <m>f(x)=x^3-8</m> at -->
+<!--   <m>(2,0)</m> is: <m>y=12(x-2)</m>. -->
+<!-- \item Show that the equation of the line tangent to -->
+<!--   <m>g(x)=x^2-4</m> at <m>(2,0)</m> is: <m>y=4(x-2).</m> -->
+<!-- \end{enumerate} -->
+<!-- \end{ProficiencyDrill-enumerate} -->
+<p>
+
+<!-- Since we are evaluating the limit at <m>x=2</m> we will replace the -->
+<!-- numerator and denominator with their tangent lines at <m>x=2</m>: -->
+<!-- <me> -->
+<!-- \limit{x}{2}{\frac{x^3-8}{x^2-4}}\overset{?}{=}\limit{x}{2}{\frac{12(x-2)}{4(x-2)}}=\limit{x}{2}{\frac{12}{4}}=3. -->
+<!-- </me> -->
+</p>
+<p>
+
+<!-- For comparison we evaluate this one by methods we've used -->
+<!-- before. Specifically if we factor the numerator and denominator we -->
+<!-- get: -->
+<!-- <me> -->
+<!-- \limit{x}{2}{\frac{x^3-8}{x^2-4}}= -->
+<!-- \limit{x}{2}{\frac{\textcolor{red}{(x-2)}(x^2+2x+4)}{\textcolor{red}{(x-2)}(x+2)}}= -->
+<!-- \limit{x}{2}{\frac{x^2+2x+4}{x+2}}= -->
+<!-- \frac{2^2+2\cdot2+4}{2+2}=\frac{12}{4}=3. -->
+<!-- </me> -->
+<!-- which is consistent with what we found previously. Our idea seems to -->
+<!-- be holding up. -->
+</p>
+
+
+
+
+<example xml:id="no-label">
+<title>label={  (\alph*)}</title>
+<p>
+  Let's try one more. The limit
+  <m>\limit{x}{0}{\frac{\tan(3x)}{\sin(2x)}}</m> is also the
+  indeterminate form <m>\frac{(\rightarrow0)}{(\rightarrow0)}</m> so we'll
+  need the tangent lines of the numerator and denominator at <m>x=0</m>
+  again.
+</p>
+</example>
+  
+<exercise xml:id="no-label">
+  <introduction>
+    <p>
+    </p>
+  </introduction>
+  <task>
+    <statement>
+      <p>
+        Show that <m>y=3x</m> is the equation of the line tangent to <m>\tan(3x)</m>
+        at <m>x=0</m>.
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Show that <m>y=2x</m> is the equation of the line tangent to
+        <m>\sin{(2x)}</m> at <m>x=0</m>.
+      </p>
+    </statement>
+  </task>
+</exercise>
+<!-- begin{ProficiencyDrill-enumerate} -->
+  <!--   \begin{enumerate}[label={  (\alph*)}] -->
+  <!--   \item  Show that <m>y=3x</m> is the equation of the line tangent to <m>\tan(3x)</m> -->
+  <!--     at <m>x=0</m>. -->
+  <!--   \item Show that <m>y=2x</m> is the equation of the line tangent to -->
+  <!--     <m>\sin{(2x)}</m> at <m>x=0</m>. -->
+  <!--   \end{enumerate} -->
+  <!-- \end{ProficiencyDrill-enumerate} -->
+
+<p>
+Replacing the numerator and denominator by their tangent lines at
+  <m>x=0</m>, we get
+<me>
+\limit{x}{0}{\frac{\tan(3x)}{\sin(2x)}} \overset{?}{=}
+\limit{x}{0}{\frac{3x}{2x}} = \frac32.
+</me>
+</p>
+
+<exercise xml:id="no-label">
+<statement>
+<p>
+  Graph the equation <m>y=\frac{\tan(3x)}{\sin(2x)}</m>. Does it look
+  like we've found the correct limit?
+</p>
+</statement>
+</exercise>
+
+
+<p>
+
+The idea of replacing the numerator and denominator of indeterminate
+forms with their tangent lines has worked in all of our examples so
+let's look at this problem in a more general context. If <m>f(x)</m> and
+<m>g(x)</m> are differentiable functions such that <m>f(a)=g(a)=0</m> then
+<m>\limit{x}{a}{\frac{f(x)}{g(x)}}</m> is an indeterminate form.
+</p>
+<exercise xml:id="no-label">
+<statement>
+<p>
+  Show that the equations of the lines tangent to <m>f(x)</m> and <m>g(x)</m> at
+  <m>x=a</m> are <m>y=f(a)+f^\prime(a)(x-a)</m> and <m>y=g(a)+g^\prime(a)(x-a)</m>.
+</p>
+</statement>
+</exercise>
+
+
+
+<figure>
+<caption>
+<url href="https://mathshistory.st-andrews.ac.uk/Biographies/Bernoulli_Johann/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Bernoulli_Johann/">\centerline{Johann
+          Bernoulli} \centerline{1667-1748}</url>
+</caption>
+<image source="images/Bernoulli-Johann.png" width="50%"/>
+</figure>
+<!-- \begin{wrapfigure}[10]{r}{1.8in} -->
+<!--   \captionsetup{labelformat=empty} -->
+<!--   \vskip-6mm  -->
+<!--   \centerline{\href{https://mathshistory.st-andrews.ac.uk/Biographies/Bernoulli_Johann/}{\includegraphics*[height=2in,width=1.8in]{../Figures/Bernoulli-Johann}}} -->
+<!--   \label{fig:Bernoulli-Johann} -->
+<!--   \caption{\centerline{Johann -->
+<!--           Bernoulli} \centerline{1667-1748}} -->
+<!-- \end{wrapfigure} -->
+<p>
+If we replace <m>f(x)</m> and <m>g(x)</m> with their tangent lines at <m>x=a</m> we
+have\aside{We need to assume that <m>g^\prime(a)\neq0</m>. Do you see why?}
+\begin{align*}
+  \limit{x}{a}{\frac{f(x)}{g(x)}}
+  \amp =  \limit{x}{a}{\frac{f(a)+f^\prime(a)(x-a)}{g(a)+g^\prime(a)(x-a)}}
+  \amp =
+  \limit{x}{a}{\frac{0+f^\prime(a)(x-a)}{0+g^\prime(a)(x-a)}}
+  \label{eq:LHV1}    \limit{x}{a}{\frac{f(x)}{g(x)}}\amp = \frac{f^\prime(a)}{g^\prime(a)}
+                      \end{align*}
+This is consistent with all of our examples above so it appears that
+the Principle of Local Linearity has led us in the right direction.
+All of the evidence we've gathered so far suggests rather strongly
+that when we are faced with the indeterminate form
+<m>\frac{(\rightarrow0)}{(\rightarrow0)}</m> simply replacing the numerator
+and denominator with their tangent lines will work.
+</p>
+<figure>
+<caption>
+<url href="https://mathshistory.st-andrews.ac.uk/Biographies/De_LHopital/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/De_LHopital/">\centerline{The
+          Marquis de L'H\^o pital} \centerline{1661-1704}</url>
+</caption>
+<image source="images/De_LHopital.png" width="50%"/>
+</figure>
+<!-- \begin{wrapfigure}[16]{l}{1.8in} -->
+<!--   \vskip-2mm  -->
+<!--   \captionsetup{labelformat=empty} -->
+<!--   \centerline{\href{https://mathshistory.st-andrews.ac.uk/Biographies/De_LHopital/}{\includegraphics*[height=2in,width=1.8in]{../Figures/De_LHopital}}} -->
+<!--   \label{fig:De_LHopital} -->
+<!--   \caption{\centerline{The -->
+<!--           Marquis de L'H\^o pital} \centerline{1661-1704}} -->
+<!--     \end{wrapfigure} -->
+<p>
+This idea is due to the Swiss mathematician <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Bernoulli_Johann/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Bernoulli_Johann/">Johann Bernoulli</url>
+(<m>1667-1748</m>). Johann and his brother <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Bernoulli_Jacob/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Bernoulli_Jacob/">Jacob Bernoulli</url> (<m>1667-1748</m>) were taught Calculus
+by Leibniz himself, but soon showed themselves to be his equal, or
+nearly so.
+</p>
+<p>
+
+The Marquis de
+L'H\^o pital,
+<url href="https://mathshistory.st-andrews.ac.uk/Biographies/De_LHopital/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/De_LHopital/">Guillaume
+  Fran\c{c</url>ois Antoine de L'H\^{o}pital} (<m>1661-1704</m>). was keenly
+interested in the new Calculus so he struck a deal with Johann. The
+Marquis agreed to pay Bernoulli to tutor him and to keep L'H\^{o}pital
+abreast of new mathematical developments. This was done with the
+understanding that \lhop  would include some of Bernoulli's research
+results in the Calculus textbook L'H\^{o}pital was writing at the
+time. This turned out to be the very first Calculus
+textbook:
+<url href="https://www.maa.org/press/periodicals/convergence/mathematical-treasure-l-hospital-s-analyse-des-infiniment-petits" visual="https://www.maa.org/press/periodicals/convergence/mathematical-treasure-l-hospital-s-analyse-des-infiniment-petits">\pubtitle{Analyse
+    des Infiniment Petits pour l'Intelligence des Lignes Courbes
+    (Analysis of the Infinitely Small for the Understanding of Curved
+    Lines)</url>}.  It was published in <m>1696</m>.
+</p>
+<p>
+
+Even though \lhop \aside{Pronounced LOW-Pea-Tall, not
+  le-HOS-pital.}  acknowledged his indebtedness to Johann Bernoulli
+for this procedure it has always been known as <term>L'H\^{o</term>pital's
+  Rule}.
+</p>
+<p>
+
+As a mathematician L'H\^{o}pital was not in the same league as Leibniz,
+Newton, or the Bernoullis -- few are --
+but he was a very competent mathematician and his work helped to
+disseminate the ideas of Calculus just as Maria Ga\"{e}tana Agnesi's
+text would do in the following century.
+</p>
+<p>
+
+Now look back at the examples in this section and notice the following
+fact: In each case when the limit was finally evaluated it turned out
+to be the slope of the line tangent to the graph of the numerator
+divided by the slope of the line tangent to the graph of the
+denominator. But the slope of the line tangent to <m>f(x)</m> at <m>x=a</m> is
+simply\aside{Recall that in <xref ref="SUBSECDerivative">Section</xref> we
+  introduced Lagrange's prime notation: If <m>y=f(x)</m>
+  then <me>\dfdx{y}{x}=f^\prime(x).</me> We said at the time that we would
+  avoid using Lagrange's notation to avoid the confusion of multiple
+  overlapping notations, but that there would be times when Lagrange's
+  notation is much more convenient. This is such a time. In this
+  section we will be using Lagrange's notation exclusively to indicate
+  derivatives.  } <m>f^\prime(a)</m>. So we don't need to go to the trouble
+of finding the tangent lines. We can evaluate these indeterminate
+forms as follows:
+</p>
+
+
+<theorem xml:id="thm:LHRule1">
+<title>\lhop 's Rule, (First Special Case)</title>
+<p>
+  <!-- \label{thm:LHRule1} -->
+  Suppose <m>f(x)</m> and <m>g(x)</m> are differentiable on an open interval
+  containing <m>a</m> and that
+  <m>f(a)=g(a)=0</m>. Suppose also that
+  \centerline{<m>\limit{x}{a}{f^\prime(x)}=L</m> and
+    <m>\limit{x}{a}{g^\prime(x)}=M\ne0</m>}. Then\aside{We will use the
+    notation ``<m>A\lhopeq B</m>'' to indicate that <m>A</m> is equal to <m>B</m>
+    because of \lhop's Rule.}
+  <me>
+  \limit{x}{a}{\frac{f(x)}{g(x)}}\lhopeq\frac{L}{M}.
+  </me>
+</p>
+</theorem>
+
+<p>
+Because \lhop 's Rule applies directly to the indeterminate form
+<m>\frac{(\rightarrow0)}{(\rightarrow0)}</m> we will refer to this as a
+<term>\lhop  Indeterminate</term>. Not all indeterminate forms can be
+handled so easily.
+</p>
+
+<example xml:id="no-label">
+<p>
+  Consider <m>\limit{x}{0}{\frac{\tan{x}}{x}}.</m>
+  This is a   L'H\^o pital indeterminate so
+  <me>
+  \limit{x}{0}{\frac{\tan(x)}{x}}\lhopeq\frac{\sec^2(0)}{1}=1.
+  </me>
+  </p>
+</example>
+
+
+  <example xml:id="no-label">
+<p>
+    Consider <m>\tlimit{x}{0}{\frac{\cos(x)-1}{x}}.</m>
+    This is a   L'H\^o pital indeterminate so
+  <me>
+  \limit{x}{0}{\frac{\cos(x)-1}{x}}\lhopeq\frac{\sin(0)}{1}=0.
+  </me>
+</p>
+</example>
+<p>
+We  want to emphasize very strongly that L'H\^{o}pital's Rule
+requires a \lhop  indeterminate. If we don't have a \lhop{
+indeterminate we can not use L'H\^{o}pital's Rule.  If you
+try to use L'H\^o pital's Rule when it does not apply, you will
+probably not get the correct answer.  The difficulty here is that
+nothing in the computations will alert you that anything has gone
+wrong. You have to be watchful for this potential pitfall.
+</p>
+
+<example xml:id="no-label">
+<p>
+  For example, if we mistakenly try to use L'H\^o pital's Rule,
+  on
+  <m>
+  \limit{x}{1}{\frac{x+1}{x+2}}
+  </m> we
+  will obtain <m>\limit{x}{1}{1/1}=1</m>, but this  is obviously
+  incorrect.
+</p>
+</example>
+  <exercise xml:id="no-label">
+<statement>
+<p>
+    Show that <m>  \tlimit{x}{1}{\frac{x+1}{x+2}}=\frac23</m>.
+  </p>
+</statement>
+</exercise>
+
+
+
+
+
+<problem xml:id="no-label">
+<introduction>
+<p>
+  Compute each of the following limits:
+</p>
+</introduction>
+<task>
+<statement>
+<p>
+ <m>\tlimit{x}{\frac12}{\frac{6x^2+5x-4}{4x^2+16x-9}}</m>
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>\tlimit{x}{1}{\frac{x(x-1)}{x^2-1}}</m>
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>\tlimit{x}{2}{\frac{x(x-1)}{x^2-1}}</m>
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>\tlimit{x}{0}{\frac{\cos(x) -1}{x}}</m>
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>\tlimit{x}{1}{\frac{\ln(x) }{x-1}}</m>
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>\tlimit{x}{e}{\frac{\ln(x^2) }{x+e}}</m>
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>\tlimit{x}{1}{\frac{t^3-1}{t^4-1}}</m>
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>\tlimit{x}{0}{\frac{\sin(3 x)}{\sin(7 x)}}</m>
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>\tlimit{x}{0}{\frac{\cos(3 x)}{\cos(7 x)}}</m>
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>\tlimit{x}{0}{\frac{\sin(4 x)}{\tan(5 x)}}</m>
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>\tlimit{x}{0}{\frac{\inverse\tan(x)}{x}}</m>
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>\tlimit{x}{0}{\frac{\inverse\cot(x)}{x}}</m>
+  </p>
+</statement>
+</task>
+</problem>
+<!-- \begin{embeddedproblem} -->
+<!--   Compute each of the following limits: -->
+<!--   \begin{enumerate}[label={  (\alph*)}] -->
+<!--     \item <m>\tlimit{x}{\frac12}{\frac{6x^2+5x-4}{4x^2+16x-9}}</m> -->
+<!--     \item <m>\tlimit{x}{1}{\frac{x(x-1)}{x^2-1}}</m> -->
+<!--     \item <m>\tlimit{x}{2}{\frac{x(x-1)}{x^2-1}}</m> -->
+<!--     \item <m>\tlimit{x}{0}{\frac{\cos(x) -1}{x}}</m> -->
+<!--     \item <m>\tlimit{x}{1}{\frac{\ln(x) }{x-1}}</m> -->
+<!--     \item <m>\tlimit{x}{e}{\frac{\ln(x^2) }{x+e}}</m> -->
+<!--     \item <m>\tlimit{x}{1}{\frac{t^3-1}{t^4-1}}</m> -->
+<!--     \item <m>\tlimit{x}{0}{\frac{\sin(3 x)}{\sin(7 x)}}</m> -->
+<!--     \item <m>\tlimit{x}{0}{\frac{\cos(3 x)}{\cos(7 x)}}</m> -->
+<!--     \item <m>\tlimit{x}{0}{\frac{\sin(4 x)}{\tan(5 x)}}</m> -->
+<!--     \item <m>\tlimit{x}{0}{\frac{\inverse\tan(x)}{x}}</m> -->
+<!--     \item <m>\tlimit{x}{0}{\frac{\inverse\cot(x)}{x}}</m> -->
+<!--   \end{enumerate} -->
+<!-- \end{embeddedproblem} -->
+
+<example xml:id="no-label">
+<p>
+ Theorem~\ref{thm:LHRule1}  is useful but it is much too limited, so
+  to speak. For example, it does not help us with this limit:
+  <m>\tlimit{x}{0}{\frac{\cos(3x)-1}{\cos(5x)-1}}</m>. Even though it is a \lhop
+  indeterminate, when we apply   Theorem~\ref{thm:LHRule1}  we have
+  <me>
+  \limit{x}{0}{\frac{\cos(3x)-1}{\cos(5x)-1}} \lhopeq
+  {\frac{-3\sin(3\cdot0)}{-5\sin(5\cdot0)}} = \frac{0}{0}
+  </me>
+  This is useless because <m>\frac{0}{0}</m> is still not defined.
+
+</p>
+<p>
+  
+  We need to think about this again. It is true that <m>\frac{0}{0}</m> is
+  not defined, but if
+  <me>
+  f^\prime(a)=\limit{x}{a}{f^\prime(x)}=0
+  </me>
+  and
+<me>
+  g^\prime(a)=\limit{x}{a}{g^\prime(x)}=0.
+  </me>
+then <m>\limit{x}{a}{\frac{f^\prime(x)}{g^\prime(x)}}</m> is a \lhop
+  Indeterminate so we extend
+  Theorem~\#\ref{thm:LHRule1} as follows:
+</p>
+</example>
+
+
+
+
+
+
+  <theorem xml:id="thm:LHRule2">
+<title>L'H\^o pital's Rule, (Second Special Case)</title>
+<p>
+    <!-- \label{thm:LHRule2} -->
+    Suppose <m>\limit{x}{a}{\frac{f(x)}{g(x)}}</m> is the \lhop
+    Indeterminate form <m>\frac{(\rightarrow0)}{(\rightarrow0)}</m>. Then
+    <me>
+    \limit{x}{a}{\frac{f(x)}{g(x)}}=\limit{x}{a}{\frac{f^\prime(x)}{g^\prime(x)}}.
+    </me>
+  </p>
+</theorem>
+
+  
+<p>  
+  Our derivation of <xref ref="THMLHRule2">Theorem~\</xref> is not entirely
+  rigorous. We will not be providing a fully rigorous derivation of
+  L'H\^{o}pital's Rule because doing so is both difficult to produce
+  and to understand. There are deep foundational issues involved and
+  investigating these would take us too far from our primary purpose,
+  gaining proficiency with its use.
+
+  Returning to our example and using <xref ref="THMLHRule2">Theorem~\</xref> this time
+  we have
+<me>
+    \limit{x}{0}{\frac{\cos(3x)-1}{\cos(5x)-1}}
+    \lhopeq\limit{x}{0}{\frac{-3\sin(3x)}{-5\sin(5x)}}.
+    </me>
+    The limit on the right is yet another \lhop   Indeterminate so we apply L'H\^{o}pital's
+    Rule again.
+    <me>
+    \limit{x}{0}{\frac{\cos(3x)-1}{\cos(5x)-1}}
+    \lhopeq  \limit{x}{0}{\frac{-3\sin(3x)}{-5\sin(5x)}}
+    \lhopeq  \frac35\limit{x}{0}{\frac{3\cos(3x)}{5\cos(5x)}}
+    =  \frac35\cdot\frac{3\cos(0)}{5\cos(0)}
+    =  \frac{9}{25}.
+    </me>
+</p>
+<problem xml:id="no-label">
+<introduction>
+<p>
+  Use Theorem~\ref{thm:LHRule2} to compute each of the following
+  limits. If this limit given is not a \lhop  Indeterminate rearrange
+  it algebraically, without changing its value, until it is a \lhop
+  Indeterminate.
+</p>
+</introduction>
+<task>
+<statement>
+<p>
+ <m>\limit{x}{0}{\frac{e^x-1-x}{x^2}}</m>
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>\limit{x}{0}{\frac{\cos(mx)-\cos(nx)}{x^2}}</m> Assume that
+      <m>m\neq n</m>.)
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>\limit{x}{1}{\frac{x^a-ax+a-1}{(x-1)^2}}</m> Assume that
+      <m>a\neq 1</m>.
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>\limit{x}{0}{\frac{1-e^{-2x}}{\sin(x)}}</m>
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>\limit{x}{0}{(1-e^{-2x})\csc(x)}</m>
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>\limit{x}{0}{\frac{\ln(x)}{\frac1x}}</m>
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>\rlimit{x}{0}{x\ln(x)}</m>
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>\limit{x}{0}{\cot(2x)\sin(6x)}</m>
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>\rlimit{x}{0}{\sin(x)\ln(x)}</m>
+  </p>
+</statement>
+</task>
+</problem>
+<!-- \begin{embeddedproblem} -->
+<!--   Use Theorem~\ref{thm:LHRule2} to compute each of the following -->
+<!--   limits. If this limit given is not a \lhop  Indeterminate rearrange -->
+<!--   it algebraically, without changing its value, until it is a \lhop  -->
+<!--   Indeterminate. -->
+<!--   \begin{enumerate}[label={  (\alph*)}] -->
+<!--     \item <m>\limit{x}{0}{\frac{e^x-1-x}{x^2}}</m> -->
+<!--     \item <m>\limit{x}{0}{\frac{\cos(mx)-\cos(nx)}{x^2}}</m> Assume that -->
+<!--       <m>m\neq n</m>.) -->
+<!--     \item <m>\limit{x}{1}{\frac{x^a-ax+a-1}{(x-1)^2}}</m> Assume that -->
+<!--       <m>a\neq 1</m>. -->
+<!--     \item <m>\limit{x}{0}{\frac{1-e^{-2x}}{\sin(x)}}</m> -->
+<!--     \item <m>\limit{x}{0}{(1-e^{-2x})\csc(x)}</m> -->
+<!--     \item <m>\limit{x}{0}{\frac{\ln(x)}{\frac1x}}</m> -->
+<!--     \item <m>\rlimit{x}{0}{x\ln(x)}</m> -->
+<!--     \item <m>\limit{x}{0}{\cot(2x)\sin(6x)}</m> -->
+<!--     \item <m>\rlimit{x}{0}{\sin(x)\ln(x)}</m> -->
+<!--   \end{enumerate} -->
+<!-- \end{embeddedproblem} -->
+
+</subsection>
+<subsection xml:id="subsec:lhop-rule-horiz">
+<title>L'H\^o pital's Rule and Horizontal Asymptotes</title>
+
+<!-- \label{subsec:lhop-rule-horiz} -->
+<p>
+Our discovery of \lhop 's Rule grew from our investigation of
+vertical asymptotes.  Is there any way that we can extend
+L'H\^{o}pital's Rule to help us with horizontal asymptotes?  For
+example, consider
+<me>
+\tlimit{x}{\infty}{\frac{\sin\left(\frac{2}{x}\right)}{\sin\left(\frac{3}{x}\right)}}.
+</me>
+</p>
+<p>
+
+This limit is indeterminate of the form
+<m>\frac{(\rightarrow0)}{(\rightarrow0)}</m>, so it seems like
+L'H\^{o}pital's Rule would apply. But both versions of L'H\^{o}pital's
+Rule (so far) require that <m>x\rightarrow a,</m> where <m>a</m> is a real
+number. And of course, infinity still insists on not being a number,
+real or otherwise.  If we want to use \lhop 's Rule we'll have
+to find a way to modify this limit so that L'H\^{o}pital's Rule
+does apply.
+</p>
+<p>
+
+If we make the substitution <m>z=\frac{1}{x}</m> then as
+<m>x\rightarrow\infty</m>, <m>\underset{z>0}{z\rightarrow0}</m>. After
+substituting we have\aside{Since <m>x\rightarrow\infty</m> through positive
+  values we need to constrain <m>z</m> to do the same.}
+<me>
+\tlimit{x}{\infty}{\frac{\sin\left(\frac{2}{x}\right)}{\sin\left(\frac{3}{x}\right)}}=\limitX{z}{0}{\textstyle\frac{\sin(2z)}{\sin(3z)}}{z\gt 0}.
+</me>
+Now we apply L'H\^{o}pital's Rule and we see that <me>\tlimit{x}{\infty}{\frac{\sin\left(\frac{2}{x}\right)}{\sin\left(\frac{3}{x}\right)}}\lhopeq\limitX{z}{0}{\textstyle\frac{2\cos(2z)}{3\cos(3z)}}{z\gt 0}=\frac23.</me>
+</p>
+<p>
+                        
+Far more important than the answer in this example is the realization
+that we can use the same trick to extend L'H\^o pital's Rule to the
+case where <m>x</m> approaches both <m>\infty,</m> and <m>-\infty.</m>
+</p>
+<p>
+
+To see this in the general situation
+suppose that <m>\limit{x}{\infty}{f(x)}=0</m> and
+<m>\limit{x}{\infty}{g(x)}=0.</m>  Make the substitution <m>z=1/x</m>, so that
+when <m>x\rightarrow\infty</m>
+we would have the one-sided limit as <m>z</m> approaches zero from the
+right side. Now we can use \lhop's Rule with <m>z</m> as the variable.
+\begin{align*}
+\limit{x}{\infty}{\frac{f(x)}{g(x)} =
+  \rlimit{z}{0}{\frac{\cancelto{0}{f\left(\frac1z\right)}}{\cancelto{0}{g\left(\frac1z\right)}}}\ \ \ }
+  \amp \lhopeq
+\rlimit{z}{0}{\left(\frac{\cancelto{0}{f^\prime\left(\frac1z\right)}}
+  {\cancelto{0}{g^\prime\left(\frac1z\right)}}\ \
+  \cdot\cancelto{=1}{\frac{-z^{-2}}{-z^{-2}}}\ \ \ \ \ \ \right)}
+\amp =
+\rlimit{z}{0}{  \frac{f^\prime\left(\frac1z\right)}
+  {g^\prime\left(\frac1z\right)} }
+\amp =
+\limit{z}{\infty}{\frac{f^\prime(x)}{g^\prime(x)}}.
+\end{align*}
+A similar development would work for <m>x\rightarrow-\infty.</m>
+</p>
+<p>
+
+Although we have not discussed it, it is also true that \lhop  Rule
+applies directly to the indeterminate form
+<m>\frac{\approach{\pm\infty}}{\approach{\pm\infty}}</m>, so in addition to
+<m>\frac{\approach{0}}{\approach{0}}</m>, we will
+call these <term>\lhop  Indeterminates</term> as well.
+</p>
+<p>
+
+Putting this all together gives us the general statement of
+L'H\^{o}pital's Rule:
+</p>
+
+
+
+
+
+<theorem xml:id="thm:LHRuleGen">
+<title>L'H\^o pital's Rule</title>
+<p>
+  <!-- \label{thm:LHRuleGen} -->
+  Suppose <m>\limit{x}{a}{\frac{f(x)}{g(x)}}</m> is any
+\lhop   Indeterminate.  Then
+  <me>
+  \limit{x}{a}{\frac{f(x)}{g(x)}}=\limit{x}{a}{\frac{f^\prime(x)}{g^\prime(x)}}.
+  </me>
+  We allow the possibility that <m>a=\pm\infty</m> which we understand to
+  mean that <m>x</m> increases or decreases without bound.
+</p>
+</theorem>
+
+
+
+
+<problem xml:id="no-label">
+<introduction>
+<p>
+  Compute each of the following
+  limits. Use Theorem~\ref{thm:LHRuleGen} where appropriate.
+</p>
+</introduction>
+<task>
+<statement>
+<p>
+ <m>\tlimit{x}{0}{\frac{5x}{\tan(x)}}</m>
+     </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>\tlimit{x}{2}{\frac{2x^2-5x+2}{5x^2-7x-6}}</m>
+     </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>\tlimit{x}{-3}{\frac{x^2+2x-3}{2x^2+3x-9}}</m>
+     </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>\tlimit{x}{0}{\frac{x+1-e^x}{x^2}}</m>
+     </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>\tlimit{x}{\infty}{\frac{e^{nx}}{\ln(x)}}</m>, <m>n\gt0</m>
+     </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>\tlimit{x}{\infty}{\frac{5-5^x}{7-7^x}}</m>
+     </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>\tlimit{x}{\infty}{\frac{\ln(\ln(x))}{\ln(x^2)}}</m>
+     </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>\tlimit{x}{0}{\frac{\inverse\sin(x)}{x-\sin(x)}}</m>
+     </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>\tlimit{x}{\infty}{\frac{e^{x-2}}{1+e^{x+3}}}</m>
+     </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>\tlimit{x}{\infty}{\frac{e^{x-2}}{1+e^{x+3}}}</m>
+     </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>\tlimit{x}{0}{\frac{e^{x-2}}{1+e^{-x+3}}}</m>
+     </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>\tlimit{x}{\infty}{\frac{x}{\ln(1+2e^x)}}</m>
+  </p>
+</statement>
+</task>
+</problem>
+<!-- \begin{embeddedproblem} -->
+<!--   Compute each of the following -->
+<!--   limits. Use Theorem~\ref{thm:LHRuleGen} where appropriate. -->
+<!--   \begin{enumerate}[label={  (\alph*)}] -->
+<!--     \item <m>\tlimit{x}{0}{\frac{5x}{\tan(x)}}</m> -->
+<!--      \item <m>\tlimit{x}{2}{\frac{2x^2-5x+2}{5x^2-7x-6}}</m> -->
+<!--      \item <m>\tlimit{x}{-3}{\frac{x^2+2x-3}{2x^2+3x-9}}</m> -->
+<!--      \item <m>\tlimit{x}{0}{\frac{x+1-e^x}{x^2}}</m> -->
+<!--      \item <m>\tlimit{x}{\infty}{\frac{e^{nx}}{\ln(x)}}</m>, <m>n\gt0</m> -->
+<!--      \item <m>\tlimit{x}{\infty}{\frac{5-5^x}{7-7^x}}</m> -->
+<!--      \item <m>\tlimit{x}{\infty}{\frac{\ln(\ln(x))}{\ln(x^2)}}</m> -->
+<!--      \item <m>\tlimit{x}{0}{\frac{\inverse\sin(x)}{x-\sin(x)}}</m> -->
+<!--      \item <m>\tlimit{x}{\infty}{\frac{e^{x-2}}{1+e^{x+3}}}</m> -->
+<!--      \item <m>\tlimit{x}{\infty}{\frac{e^{x-2}}{1+e^{x+3}}}</m> -->
+<!--      \item <m>\tlimit{x}{0}{\frac{e^{x-2}}{1+e^{-x+3}}}</m> -->
+<!--      \item <m>\tlimit{x}{\infty}{\frac{x}{\ln(1+2e^x)}}</m> -->
+<!--   \end{enumerate} -->
+<!-- \end{embeddedproblem} -->
+
+
+<example xml:id="no-label">
+<title>3</title>
+<p>
+As <m>x\rightarrow\infty</m> both <m>f(x)=\ln(x)</m> and <m>g(x)=\sqrt[3]{x}</m>
+increase without bound, but which one increases faster?  Take a
+quick look at the graphs below.
+  \centerline{\includegraphics*[height=1.5in,width=2.5in]{../Figures/lhopital5}}
+As <m>x\rightarrow\infty</m> both graphs are flattening out, but it
+would appear that the natural logarithm function is outgrowing the
+cube root function. Is it?
+  
+  We can answer this question by looking at the limit,
+  <me>\limit{x}{\infty}{\frac{\ln(x)}{\sqrt[3]{x}}}.</me>
+  If the limit is <m>\infty</m> then <m>f(x)=\ln(x)</m> is growing faster. If it
+  is zero then <m>g(x) = \sqrt[3]{x}</m> is increasing faster than
+  <m>f(x)=\ln(x).</m> (Do you see why?)
+  
+  \begin{ProficiencyDrill}
+           \begin{enumerate}[label={  (\alph*)}]
+        \item Which of <m>f(x)=\ln(x)</m> and <m>g(x)=\sqrt[3]{x}</m> grows
+          faster?
+        \item Can we draw any conclusions about the rate of
+          increase if the limit is something other than <m>0</m> or
+          <m>\infty</m>?
+       \end{enumerate}
+  \end{ProficiencyDrill}
+</p>
+</example>
+
+
+<problem xml:id="no-label">
+<introduction>
+<p>
+  Use L'H\^{o}pital's Rule to determine which of the following
+  pairs of functions are growing faster as <m>x\rightarrow\infty</m>.
+</p>
+</introduction>
+<task>
+<statement>
+<p>
+ <m>f(x)=\ln(x)</m> <m>g(x)=x</m>
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>f(x)=\ln(x)</m> <m>g(x)=x^{1/2}</m>
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>f(x)=\ln(x)</m> <m>g(x)=x^{1/3}</m>
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>f(x)=\ln(x)</m> <m>g(x)=x^{2/3}</m>
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>f(x)=\ln(x)</m> <m>g(x)=x^{1/4}</m>
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>f(x)=\ln(x)</m> <m>g(x)=x^{3/4}</m>
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>f(x)=\ln(x)</m> <m>g(x)=x^{1/5}</m>
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>f(x)=\ln(x)</m> <m>g(x)=x^{4/5}</m>
+  </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ Based on the limits above write down a general conclusion
+    about the rate of change of the natural logarithm as compared
+    to roots.
+  </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ Prove that your statement is correct.
+  </p>
+</statement>
+</task>
+</problem>
+<!-- \begin{embeddedproblem}[Find the Pattern] -->
+<!--   Use L'H\^{o}pital's Rule to determine which of the following -->
+<!--   pairs of functions are growing faster as <m>x\rightarrow\infty</m>. -->
+<!--   \begin{enumerate}[label={  (\alph*)}] -->
+<!--     \item <m>f(x)=\ln(x)</m> <m>g(x)=x</m> -->
+<!--     \item <m>f(x)=\ln(x)</m> <m>g(x)=x^{1/2}</m> -->
+<!--     \item <m>f(x)=\ln(x)</m> <m>g(x)=x^{1/3}</m> -->
+<!--     \item <m>f(x)=\ln(x)</m> <m>g(x)=x^{2/3}</m> -->
+<!--     \item <m>f(x)=\ln(x)</m> <m>g(x)=x^{1/4}</m> -->
+<!--     \item <m>f(x)=\ln(x)</m> <m>g(x)=x^{3/4}</m> -->
+<!--     \item <m>f(x)=\ln(x)</m> <m>g(x)=x^{1/5}</m> -->
+<!--     \item <m>f(x)=\ln(x)</m> <m>g(x)=x^{4/5}</m> -->
+<!--   \item Based on the limits above write down a general conclusion -->
+<!--     about the rate of change of the natural logarithm as compared -->
+<!--     to roots. -->
+<!--   \item Prove that your statement is correct. -->
+<!--   \end{enumerate} -->
+<!-- \end{embeddedproblem} -->
+
+<p>
+To most people this phrase ``exponential growth'' just means that
+something is growing very fast, but it actually means the growth rate
+is described by an exponential function. For example neither
+<m>f(x)=x^2</m> nor <m>f(x)=x^{200}</m> grows exponentially. but <m>f(x) = e^x</m>,
+<m>f(x)=2^x</m>, and even <m>f(x)=1.0001^x</m> all do grow exponentially\aside{As we
+saw in <xref ref="SECexponential-growth">Section~</xref>
+<m>f(x)=\left(\frac12\right)^x</m> is said to ``decay exponentially.''}.  The
+next problem explores how ``exponential growth''  compares
+ ``polynomial growth.''
+</p>
+ 
+<problem xml:id="no-label">
+<introduction>
+<p>
+</p>
+</introduction>
+<task>
+<statement>
+<p>
+    Show that each of the following limits is zero.
+    
+<ol>
+      <li>
+<p>
+  <m>\limit{x}{\infty}{\frac{x^2}{e^x}}=0</m>
+</p>
+</li>
+      <li>
+<p>
+  <m>\limit{x}{\infty}{\frac{x^{20}}{e^x}}=0</m>
+</p>
+</li>
+      <li>
+<p>
+  <m>\limit{x}{\infty}{\frac{x^{200}}{e^x}}=0</m>
+</p>
+</li>
+    </ol>
+
+    Do you see that this means that <m>e^x</m> grows faster than <m>x^2</m>,
+    <m>x^{20}</m>, or even <m>x^{200}</m>?
+  </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ Would <m>\limit{x}{\infty}{\frac{x^p}{e^x}}=0</m> for any
+    positive integer <m>p?</m> Explain.
+  </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ Suppose that <m>P(x)</m> any polynomial and show that
+    <m>\limit{x}{\infty}{\frac{P(x)}{e^x}}=0</m>. Do you see that this
+    means that the natural exponential grows faster than any
+    polynomial?
+  </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ Suppose that <m>P(x)</m> any polynomial. Show that each of the
+    following limits is also zero. What do you conclude from this?
+    
+<ol>
+      <li>
+<p>
+ <m>\limit{x}{\infty}{\frac{P(x)}{10^x}}</m>
+</p>
+</li>
+      <li>
+<p>
+ <m>\limit{x}{\infty}{\frac{P(x)}{2^x}}</m>
+</p>
+</li>
+      <li>
+<p>
+ <m>\limit{x}{\infty}{\frac{P(x)}{1.1^x}}</m>
+</p>
+</li>
+      <li>
+<p>
+ <m>\limit{x}{\infty}{\frac{P(x)}{1.00001^x}}</m>
+</p>
+</li>
+    </ol>
+
+  </p>
+</statement>
+</task>
+</problem>
+<!-- \begin{embeddedproblem-enumerate}[Exponential vs. Polynomial Growth]  ;;; MULTILEVEL PROBLEM -->
+<!--   \begin{enumerate}[label={  (\alph*)}] -->
+<!--   \item    Show that each of the following limits is zero. -->
+    
+<!-- <ol> -->
+<!--       <li> -->
+<!-- <p> -->
+<!--   <m>\limit{x}{\infty}{\frac{x^2}{e^x}}=0</m> -->
+<!-- </p> -->
+<!-- </li> -->
+<!--       <li> -->
+<!-- <p> -->
+<!--   <m>\limit{x}{\infty}{\frac{x^{20}}{e^x}}=0</m> -->
+<!-- </p> -->
+<!-- </li> -->
+<!--       <li> -->
+<!-- <p> -->
+<!--   <m>\limit{x}{\infty}{\frac{x^{200}}{e^x}}=0</m> -->
+<!-- </p> -->
+<!-- </li> -->
+<!--     </ol> -->
+
+<!--     Do you see that this means that <m>e^x</m> grows faster than <m>x^2</m>, -->
+<!--     <m>x^{20}</m>, or even <m>x^{200}</m>? -->
+<!--   \item Would <m>\limit{x}{\infty}{\frac{x^p}{e^x}}=0</m> for any -->
+<!--     positive integer <m>p?</m> Explain. -->
+<!--   \item Suppose that <m>P(x)</m> any polynomial and show that -->
+<!--     <m>\limit{x}{\infty}{\frac{P(x)}{e^x}}=0</m>. Do you see that this -->
+<!--     means that the natural exponential grows faster than any -->
+<!--     polynomial? -->
+<!--   \item Suppose that <m>P(x)</m> any polynomial. Show that each of the -->
+<!--     following limits is also zero. What do you conclude from this? -->
+    
+<!-- <ol> -->
+<!--       <li> -->
+<!-- <p> -->
+<!--  <m>\limit{x}{\infty}{\frac{P(x)}{10^x}}</m> -->
+<!-- </p> -->
+<!-- </li> -->
+<!--       <li> -->
+<!-- <p> -->
+<!--  <m>\limit{x}{\infty}{\frac{P(x)}{2^x}}</m> -->
+<!-- </p> -->
+<!-- </li> -->
+<!--       <li> -->
+<!-- <p> -->
+<!--  <m>\limit{x}{\infty}{\frac{P(x)}{1.1^x}}</m> -->
+<!-- </p> -->
+<!-- </li> -->
+<!--       <li> -->
+<!-- <p> -->
+<!--  <m>\limit{x}{\infty}{\frac{P(x)}{1.00001^x}}</m> -->
+<!-- </p> -->
+<!-- </li> -->
+<!--     </ol> -->
+
+<!--   \end{enumerate} -->
+<!-- \end{embeddedproblem-enumerate} -->
+
+<example xml:id="example:MoreLHopRule">
+<title>More on \lhop 's Rule</title>
+<p>
+<!-- \label{example:MoreLHopRule} -->
+
+Consider the limit
+<me>
+\limit{x}{\infty}{ \left[ x \tan\left(\frac1x\right)
+  \right]}.
+</me>
+If we want to evaluate this limit (we do) we seem to have few
+options. This is not a \lhop  Indeterminate, nor is it obvious what
+the limit might be.
+            
+Simply letting <m>x\rightarrow\infty</m> we see that <m>x\rightarrow\infty</m>
+and <m>\tan\left(\frac1x\right)\rightarrow0</m> so our limit has the
+Indeterminate form <m>\approach{\infty}\cdot\approach{0}</m>.  There is a
+real temptation to say that this must be zero since anything
+multiplied by zero is zero.  But is it? Remember that the purpose of
+the arrow notation, <m>(\rightarrow0)</m>, is to remind us that the
+expression <m>\tan\left(\frac{1}{x}\right)</m> is never actually equal to
+zero. It merely approaches zero. At the same time <m>x</m> is increasing
+without bound (<m>x\rightarrow\infty</m>) so it seems that the value of the
+limit might depend on the relative speeds with which
+<m>x\rightarrow\infty</m> and <m>\tan\left(\frac{1}{x}\right)\rightarrow0</m>.
+But this reasoning feels very uncertain doesn't it? And, in any case,
+nothing we've said will help us evaluate the limit.
+
+We'll have to find a way to re-express this limit as a L'H\^{o}pital
+Indeterminate so that \lhop 's Rule does apply.  In the meantime,
+take your best guess as to the value of this limit and write it down
+for later reference.
+
+Suppose we rewrite this limit as
+<m>\limit{x}{\infty}{ \left[ x \tan\left(\frac1x\right) \right]} =
+\limit{x}{\infty}{\frac{\tan\left(\frac1x\right)}{\frac1x}} </m>.  This
+is a little scary to look at so we'll make it easier on our eyes with
+the substitution <m>z=\frac1x</m>.  As <m>x\rightarrow\infty</m> we see that
+<m>z\gt0</m> and <m>z\rightarrow0</m>. Since <m>\tan(0)=0</m> our limit is now
+<m>\rlimit{z}{0}{\frac{\tan\left(z\right)}{z}}</m> which is the \lhop
+Indeterminate <m>\frac{(\rightarrow0)}{(\rightarrow0)}</m>.
+
+Thus by <xref ref="THMLHRuleGen">Theorem</xref> we have
+<me>
+  \limit{x}{\infty}{x\tan\left(\frac1x\right)}
+  =
+  \rlimit{z}{0}{\frac{\tan\left(z\right)}{z}}
+  \lhopeq\rlimit{z}{0}{\frac{\sec^2\left(z\right)}{1}}= \frac{\sec^2(0)}{1}=1
+</me>
+since <m>\sec(0)=1</m>.
+
+</p>
+</example>
+<p>
+Did you guess correctly?
+</p>
+<p>
+Notice that the trick we used was a simple substitution much like the
+ones we have used in the past to make things ``easier on the eyes.''
+The difference here is that we're not making anything ``easier on the
+eyes.'' If anything we're making things harder to look at since
+re-writing <m>x</m> as <m>\frac{1}{\frac1x}</m> certainly doesn't seem like it's
+going to help much.  Until we try it. Always try your ideas out no
+matter how crazy they seem to be. Only after you try an idea can you
+tell if it will work or not.
+</p>
+<p>
+
+Recall that in <xref ref="SECexponential">Section</xref> where we defined the
+effective yield of an investment which is compounded continuously. We
+were led to examine the expression <m>\left(1+\frac{1}{m}\right)^m</m> for
+very large values of <m>m</m>.
+</p>
+
+<p>
+As a result of that investigation we accumulated considerable
+numerical evidence that in one year an investment of <m>1</m> growing at
+a nominal rate of <m>5%</m>, compounded continuously would grow to
+<m>\</m>e^{0.05}\approx \<m>1.0513</m>, but we were unable to do more than
+gather evidence. It was pretty convincing evidence but it was not
+proof since we didn't yet have the mathematical technique necessary to
+evaluate the expression <m>\left(1+\frac{1}{m}\right)^m</m> as
+<m>m\rightarrow\infty</m>.
+Now we do.
+</p>
+
+<example xml:id="example:LimComp1">
+  <p>
+    <!-- \label{example:LimComp1} -->
+    We need to evaluate the limit:
+    <me>
+    \limit{m}{\infty}{ \left( 1+\frac{1}{m} \right)^m}.
+    </me>
+    It is tempting to reason as follows. We see that
+    <m>1+\frac{1}{m}\rightarrow1</m> as <m>m\rightarrow\infty</m>. That is, we
+    have the indeterminate form <m>\approach{1}^{\approach{\infty}}</m> and
+    since one raised to any power is equal to one this limit must equal
+    <m>1</m>, right? Surely you know better than to jump to that conclusion by
+    now. Not only does all of the evidence of this chapter warn you that
+    limits are more subtle than that, but in our investigations in
+    Section~\ref{sec:exponential} we saw overwhelming evidence that this
+    limit is not equal to one.
+
+</p>
+<p>
+
+    Also, notice that we wrote
+    <m>\approach{1}^{\approach{\infty}}</m>, not <m>1^{\approach{\infty}}</m>. Why
+    do you think we did that?
+
+</p>
+<p>
+
+    The source of our difficulty here is that the variable <m>m</m> is in the
+    exponent where we can't get at it. We'd like to find a way to bring it
+    out of the exponent. The natural logarithm seems perfect for this task
+    since it has the property that <m>\ln\left(a^b\right)=b\ln(a)</m>.
+
+</p>
+<p>
+
+    Begin by setting <m>y=\left(1+\frac{1}{m}\right)^m</m>. Then
+    <me>
+    \ln(y)=
+    \ln\left(1+\frac{1}{m}\right)^m =
+    m\ln\left(1+\frac{1}{m}\right).
+    </me>
+    Rather than evaluating <m>\limit{t}{\infty}{y}</m> directly we evaluate the
+    limit of the logarithm of <m>y</m>. Thus
+    <me>\limit{m}{\infty}{\ln(y)} =
+    \limit{m}{\infty}{m\ln\left(1+\frac{1}{m}\right) }.
+    </me>
+    The limit on the right is an indeterminate form but unfortunately it
+    is not a \lhop  Indeterminate.  So, as before, we'll have to do some
+    algebraic manipulations first.  Set <m>\frac1m=z</m> so that
+    <me>
+    \limit{t}{\infty}{\ln(y)}
+    =\rlimit{z}{0}{\frac{\ln\left(1+z\right)}{z} }
+    \lhopeq\rlimit{z}{0}{\frac{\frac{1}{1+z}}{1}}=1.
+    </me>
+    Since <m>\limit{m}{\infty}{\ln(y)}=1</m> it seems intuitively clear that
+    <m>\limit{m}{\infty}{y}=\limit{m}{\infty}{\left(1+\frac1m\right)^m}=e^{1}</m>, doesn't it?
+
+    In fact it is not true generally that
+    <m>\textcolor{blue}{\tlimit{x}{a}{\textcolor{red}{f(g(x))}}}</m> is equal
+    to
+    <m>\textcolor{red}{f}\textcolor{blue}{\left(\tlimit{x}{a}{g(x)}\right)}</m>.
+    (We have not yet discussed values of <m>a</m> that are not either <m>0</m> or
+    <m>\infty</m>.) However this is true whenever <m>f</m> is continuous at
+    <m>g(a)</m>. Since <m>f(x)=\ln(x)</m> is continuous, for <m>x\gt0</m> this is a
+    detail that needn't trouble us for now so we will ignore it.  We will
+    return to it in Section~\ref{sec:LimitLaws}.
+</p>
+</example>
+
+
+<problem xml:id="no-label">
+<introduction>
+<p>
+</p>
+</introduction>
+<task>
+<statement>
+<p>
+ Show that
+    <m>\limit{m}{\infty}{\left(1+\frac{r}{m}\right)}^m=e^{r}</m>
+  </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ Show that
+    <m>\limit{m}{\infty}{\left(1+\frac{r}{m}\right)}^{mt}=e^{rt}</m> for
+    <m>t\ge0</m>.
+    \hint{Let <m>n=mt</m> and manipulate this limit until it looks
+      like the limit in part (a) (with different letters, of course.). }
+  </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ Suppose we have an investment of <m>10,000</m> compounded
+    continuously with a relative annual rate of <m>5%.</m> How much
+    would the investment be worth in <m>20</m> years?  How would this
+    compare to an investment which is compounded quarterly?
+    \hint{You may want to review similar problems in
+      Section~\ref{sec:exponential} before starting this problem.}
+  </p>
+</statement>
+</task>
+</problem>
+<!-- \begin{embeddedproblem-enumerate}  -->
+<!--   \begin{enumerate}[label={  (\alph*)}] -->
+<!--   \item Show that -->
+<!--     <m>\limit{m}{\infty}{\left(1+\frac{r}{m}\right)}^m=e^{r}</m> -->
+<!--   \item Show that -->
+<!--     <m>\limit{m}{\infty}{\left(1+\frac{r}{m}\right)}^{mt}=e^{rt}</m> for -->
+<!--     <m>t\ge0</m>. -->
+<!--     \hint{Let <m>n=mt</m> and manipulate this limit until it looks -->
+<!--       like the limit in part (a) (with different letters, of course.). } -->
+<!--   \item Suppose we have an investment of <m>\</m>10,000<m> compounded -->
+<!--     continuously with a relative annual rate of </m>5%.<m> How much -->
+<!--     would the investment be worth in </m>20</m> years?  How would this -->
+<!--     compare to an investment which is compounded quarterly? -->
+<!--     \hint{You may want to review similar problems in -->
+<!--       Section~\ref{sec:exponential} before starting this problem.} -->
+<!--   \end{enumerate} -->
+<!-- \end{embeddedproblem-enumerate} -->
+
+
+<example xml:id="no-label">
+<p>
+  Consider <m>\rlimit{t}{0}{t^t}</m>. Notice we are only considering
+  positive values of <m>t.</m> (Why?)  Proceeding in the same manner as before,
+  let <m>y=t^t,</m> so that <m>\ln{(y)}=\ln(t^t)=t\ln(t).</m> Thus
+  <me>
+  \limitX{t}{0}{\ln(y)}{t\gt0}= \limitX{t}{0}{t\ln(t)}{t\gt0}=
+  \limitX{t}{0}{\frac{\ln(t)}{\frac{1}{t}}}{t\gt0}.
+  </me>
+  This is a \lhop  Indeterminate so we
+  apply \lhop 's Rule:
+  <me>
+  \limitX{t}{0}{\ln(y)}{t\gt0} =
+  \limitX{t}{0}{\frac{\ln(t)}{t^{-1}}}{t\gt0} \lhopeq
+  \limitX{t}{0}{\frac{t^{-1}}{-t^{-2}}}{t\gt0} =
+  \limitX{t}{0}{(-t)}{t\gt0} = 0.
+  </me>
+Thus
+  <me>
+  \limitX{t}{0}{t^t}{t\gt0}  = e^0=1.
+  </me>
+</p>
+</example>
+
+
+
+<p>
+  We have seen the following indeterminate forms:
+  
+  <ol>
+    <li>
+      <p>
+        <m>\approach{\infty}-\approach{\infty}</m>
+      </p>
+    </li>
+    <li>
+      <p>
+        <m>\approach{0}\approach{\infty}</m>
+      </p>
+    </li>
+    <li>
+      <p>
+        <m>\approach{0}^{\approach{0}}</m>
+      </p>
+    </li>
+    <li>
+      <p>
+        <m>\approach{1}^{\approach{\infty}}</m>
+      </p>
+    </li>
+    <li>
+      <p>
+        <m>\frac{\approach{0}}{\approach{0}}</m>
+      </p>
+    </li>
+    <li>
+      <p>
+        <m>\frac{\approach{\infty}}{\approach{\infty}}</m>.
+      </p>
+    </li>
+  </ol>
+</p>
+<p>
+ Of these, only the
+last two are \lhop  Indeterminate forms. The others must be evaluated
+by some method other than directly applying \lhop's Rule. Often this
+simply means algebraically rearranging them into a \lhop
+Indeterminate.
+</p>
+<p>
+
+The following are not indeterminate forms. Don't try to use
+\lhop's  Rule on them\aside{In fact, you can evaluate each of these
+  without just by knowing the form. Try it.}.
+\begin{enumerate}
+  \begin{multicols}{3}
+  \item <m>\approach{\infty}+\approach{\infty}</m>
+  \item <m>\approach{1}^\approach{0}</m>
+  \item <m>\approach{0}^\approach{\infty}</m>.
+  \end{multicols}
+\end{enumerate}
+</p>
+
+                                                                                                                                        <problem xml:id="no-label">
+<introduction>
+<p>
+  Evaluate each of the following limits.
+</p>
+</introduction>
+<task>
+<statement>
+<p>
+
+      <m>\limit{t}{\infty}{\left(1+\frac{a}{t}\right)^{bt}}      </m>
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+             <m>\limit{t}{0}{\left(1+t\right)^{\frac{1 }{t}}}
+      </m>
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+             <m>\limit{t}{0}{(1-2t)^{1/t}}      </m>
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+             <m>\limit{t}{0}{\left(1+at\right)^{\frac{b }{t}}}
+      </m>
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+             <m>\rlimit{t}{0}{(\sin(t)+t)}      </m>
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+             <m>\limit{t}{\infty}{t^\frac{1}{\ln(t)}}</m>
+      \hint{Not every indeterminant form requires  \lhop's  Rule?}
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+
+      <m>\limit{t}{1}{\left(\frac{1}{\ln(t)}-\frac{1}{t-1}\right)} </m>
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>\limit{t}{0}{\left(\csc(t)-\cot(t)\right)} </m>
+    </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>\limit{t}{\infty}{\left(t-\ln(t)\right)} </m>
+      \hint{Set <m>y=t-\ln(t)</m> and consider <m>\lim(e^y)</m>.}
+  </p>
+</statement>
+</task>
+</problem>
+<!-- \begin{embeddedproblem} -->
+<!--   Evaluate each of the following limits. -->
+<!--   \begin{enumerate}[label={  (\alph*)}] -->
+<!--                             \item -->
+<!--       <m>\limit{t}{\infty}{\left(1+\frac{a}{t}\right)^{bt}}      </m> -->
+<!--     \item             <m>\limit{t}{0}{\left(1+t\right)^{\frac{1 }{t}}} -->
+<!--       </m> -->
+<!--     \item             <m>\limit{t}{0}{(1-2t)^{1/t}}      </m> -->
+<!--     \item             <m>\limit{t}{0}{\left(1+at\right)^{\frac{b }{t}}} -->
+<!--       </m> -->
+<!--     \item             <m>\rlimit{t}{0}{(\sin(t)+t)}      </m> -->
+<!--     \item             <m>\limit{t}{\infty}{t^\frac{1}{\ln(t)}}</m> -->
+<!--       \hint{Not every indeterminant form requires  \lhop's  Rule?} -->
+<!--     \item -->
+<!--       <m>\limit{t}{1}{\left(\frac{1}{\ln(t)}-\frac{1}{t-1}\right)} </m> -->
+<!--     \item <m>\limit{t}{0}{\left(\csc(t)-\cot(t)\right)} </m> -->
+<!--     \item <m>\limit{t}{\infty}{\left(t-\ln(t)\right)} </m> -->
+<!--       \hint{Set <m>y=t-\ln(t)</m> and consider <m>\lim(e^y)</m>.} -->
+<!--   \end{enumerate} -->
+<!-- \end{embeddedproblem} -->
+
+</subsection>
+</section>
+</chapter>

@@ -1,0 +1,639 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="CHPTwhen-deriv-doesnt">
+ <title>When the Derivative Doesn't Exist</title>
+
+\label{CHPTwhen-deriv-doesnt}
+
+<blockquote>
+<p>
+I turn away with fright and horror from the lamentable
+  evil of functions which do not have derivatives.
+</p>
+<attribution>
+<url href="https://mathshistory.st-andrews.ac.uk/Biographies/Hermite/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Hermite/">Charles
+    Hermite (<m>1822</m> - <m>1901</m>)</url>
+</attribution>
+</blockquote>
+
+
+<blockquote>
+<p>
+The brilliant Cerebron, .\ .\ .\ discovered three
+  distinct kinds of dragon: the mythical, the chimerical, and the
+  purely hypothetical. They were all, one might say, nonexistent, but
+  each non-existed in an entirely different
+  way.
+</p>
+<attribution>
+<url href="https://www.newworldencyclopedia.org/entry/Stanislaw_Lem" visual="https://www.newworldencyclopedia.org/entry/Stanislaw_Lem">Stanislaw Lem (<m>1921</m> - <m>2006</m>)</url>
+</attribution>
+</blockquote>
+
+
+In <xref ref="SUBSECunderl-deriv">Section</xref> we saw that those points where
+the derivative doesn't exist are possible optimal points but we didn't
+pursue this any further at the time. However we now need to re-examine
+the non-existence of derivatives.
+
+We also observed in <xref ref="SUBSECunderl-deriv">Section</xref> that derivatives
+fail to exist at points where the Principle of Local Linearity does
+not hold. This is true, but the only way we currently have to
+determine if the Principle of Local Linearity holds is to look at a
+graph. While graphs are useful, we have learned that we should not put
+all of our faith in what we  conclude from them.
+
+On the other hand, by <xref ref="DEFDerivative">Definition~\</xref> the derivative
+of a function is given by a limit, and from our work in
+<xref ref="CHAlimits-lhop-rule">Chapter</xref> we know that not all limits
+exist. For example, if we try to compute the value of <m>f^\prime(2)</m>
+for some function and we find that
+<m>\tlimit{h}{0}{\frac{f(2+h)-f(2)}{h}}</m> is meaningless then <m>f</m> is not
+differentiable at <m>x=2</m>. In other words, <m>f^\prime(2)</m> does not exist.
+
+So, the limit definition gives us a computational tool we can use to
+decide the question of differentiability which, as we saw in
+<xref ref="SUBSECoptim-abstr-probl">Chapter</xref>, is crucial to finding possible
+optimal transition points of a function.
+
+In our comments following
+<xref ref="EXAMPLEPOTP-WhereDerivIsUndef">Example~\</xref> we listed several
+functions which are not differentiable at <m>x=0</m>. Of these, the
+Absolute Value function, <m>f(x)=\abs{x}</m>, is probably the simplest to
+work with, so we will start there.
+
+
+<example xml:id="example:AbsValFunc">
+<title>The  Absolute Value Function</title>
+<p>
+  <!-- \label{example:AbsValFunc} -->
+  The Absolute Value function is usually introduced with some vague
+  statement like, 
+  \centerline{``The absolute value of a number is just the
+    positive version of the number,''}
+  or 
+  \centerline{``<m>\abs{x-a}</m> gives the length
+  of the line segment between <m>x</m> and <m>a</m>.''}
+
+These are both true statements and are OK as intuitive definitions,
+but we will need something more precise from now on. The formal
+definition of the Absolute Value function is:
+
+\begin{mydefinition}[The Absolute Value Function]
+  The Absolute Value of <m>x</m> is: <m>\abs{x}=
+  \begin{cases}
+    x\amp\text{ if } x\ge0
+    -x\amp\text{ if } x\lt 0
+  \end{cases}</m>.
+\end{mydefinition}
+
+  \begin{wrapfigure}[10]{r}{2in}
+    \vskip-3mm 
+    \captionsetup{labelformat=empty}
+    \centerline{\includegraphics*[height=1.5in,width=2in]{../Figures/AbsVal}}
+    \label{fig:AbsVal}
+  \end{wrapfigure}
+  The graph of the Absolute Value function is given at the right.
+  Notice that <m>f(x)=\abs{x}</m> is defined at <m>x=0</m> since <m>\abs{0}=0</m>,
+  but as we indicated in Section~\ref{subsec:underl-deriv} the
+  Principle of Local Linearity does not hold at <m>x=0</m> so we suspect
+  that the Absolute Value function is not differentiable at <m>x=0</m>.
+  
+  But we now have the ability to confirm our suspicion analytically so let's take a look at this
+  using the limit definition of the derivative. The derivative of
+  <m>\abs{x}</m> at <m>x</m> will be the value of the limit
+  <m>\tlimit{h}{0}{\frac{\abs{x+h}-\abs{x}}{h}}</m> so the derivative of
+  <m>\abs{x}</m> at <m>x=0</m> will be:
+  <me>
+  \limit{h}{0}{\frac{\abs{0+h}-\abs{0}}{h}}=
+  \limit{h}{0}{\frac{\abs{h}}{h}}.
+  </me>
+  OK, but what is this limit? Don't jump to conclusions. Think about
+  this carefully for a few minutes. What do you think
+  <m>\tlimit{h}{0}{\frac{\abs{h}}{h}}</m> is equal to?
+    
+  First suppose that <m>h</m> is approaching\aside{To say that <m>h</m> is
+    ``approaching'' <m>0</m> suggests that <m>h</m> is sliding along the
+    horizontal axis toward the origin. We encourage you to think of
+    limits this way. It is a good intuitive approach. However, as we
+    will see in Chapter~\ref{cha:formal-limits} it isn't quite what is
+    really happening.} zero from the positive side. Recall that in
+    Section~\ref{subsec:vertical-asymptotes} we invented the notation
+    <m>\rlimit{h}{0} </m> for exactly this
+    situation. In this case <m>h</m> is positive so <m>\abs{h}=h</m> and
+  <me>
+  \rlimit{h}{0}{\frac{\abs{h}}{h}}=\rlimit{h}{0}{\frac{h}{h}}=\rlimit{h}{0}{1}=1
+  </me>
+  which says that the right-hand limit will be one.  Now suppose <m>h</m>
+  is very small and negative. In this case <m>h</m> is negative so <m>\abs{h}=-h</m> and
+  <me>
+  \llimit{h}{0}{\frac{\abs{h}}{h}}=\llimit{h}{0}{\frac{-h}{h}}=\llimit{h}{0}{-1}=-1</me>
+  which says that the left-hand limit will be negative one.
+  
+  But since <m>\frac{\abs{h}}{h}</m> can't be close to <m>1</m> and close to  <m>-1</m>
+  simultaneously we can not find a value for
+  <m>
+  \tlimit{h}{0}{\frac{\abs{0+h}-\abs{0}}{h}}</m> which is
+  correct for both positive and negative values of <m>h</m>. In other words
+  this limit does not exist.
+
+  Therefore
+  <m>\eval{\dfdx{\abs{x}}{x}}{x}{0}</m> does not exist.
+
+\begin{ProficiencyDrill}
+  According to Definition~\ref{def:OptimalTransitionPoints}, since
+  <m>\dfdxat{(\abs{x})}{x}{0}</m> does not exist, the value <m>x=0</m> is a possible
+  transition point for the Absolute Value function. So there might be
+  a local extremum of <m>f(x)=\abs{x}</m> at <m>x=0</m>.  Is there?
+\end{ProficiencyDrill}
+</p>
+</example>
+
+
+
+  \begin{embeddedproblem-enumerate}  ;;; MULTILEVEL PROBLEM
+    <!-- \label{problem:AbsValDeriv} -->
+       \begin{enumerate}[label={  (\alph*)}] 
+       \item The Absolute Value function is not differentiable at
+         <m>x=0</m> but it is differentiable at every other value of <m>x</m>.
+         Let <m>f(x)=\abs{x}</m> and use Definition~\ref{def:Derivative} to
+         show that:
+         \begin{enumerate}[label={  (\roman*)}] 
+           \item If <m>x\gt0</m> then <m>f^\prime(x)=1</m>,
+           \item If  <m>x\lt0</m> then <m>f^\prime(x)=-1</m>.
+         \end{enumerate}
+       \item From the discussion in
+           Digression~\#\ref{digression:AbsValSqrt} we know that
+           <m>f(x)=\abs{x}=\sqrt{x^2}</m>. Use the differentiation rules
+           you learned in Part 1 of this text to show that if
+           <m>x\neq0</m>, then <m>f^\prime(x) = \frac{x}{\abs{x}}.</m> How does
+           this compare with your calculations in part (a)?
+       \end{enumerate}
+     \end{embeddedproblem-enumerate}
+
+
+ \begin{myexample}
+   A slightly less intuitive example is the function <m>f(x)=\frac{x}{x}</m>. It 
+      is tempting to claim that this is really just <m>f(x)=1</m> since
+      ``anything divided by itself is one'' but that claim is not true. As
+      we saw in <xref ref="DIGRESSIONDivideByZero">Digression</xref> division by
+      zero is undefined, regardless of the numerator. So the expression
+      <m>\frac00</m> is undefined, and  therefore the function
+      <m>f(x)=\frac{x}{x}</m> is not defined at <m>x=0</m>.
+      
+      It is also tempting to try to invoke \lhop 's Rule, since it is
+      true that 
+      <me>
+      \limit{x}{0}{f(x)}= \limit{x}{0}{\frac{x}{x}} = \limit{x}{0}{1}=1.
+      </me>
+      But this only says that the limit of <m>f(x)</m> is equal to one, not
+      that <m>f(x)</m> itself is equal to one, at <m>x=0</m>. The statement
+      <m>\limit{x}{0}{\frac{x}{x}} = \limit{x}{0}{1}</m> explicitly
+      excludes the point <m>x=0</m> from consideration. This is why when we
+      discussed indeterminate forms in
+      <xref ref="SECmore-indet-forms">Section</xref> we were very careful to write
+      <m>\frac{\approach{0}}{\approach{0}}</m> instead of <m>\frac00</m>. We
+      needed to emphasize that we specifically do not allow the
+      denominator to be equal to zero.
+
+      
+      <problem xml:id="no-label">
+<introduction>
+<p>
+</p>
+</introduction>
+<task>
+<statement>
+<p>
+ Use Definition~\#\ref{def:Derivative} to show that if
+          <m>f(x)=\frac{x}{x}</m> then <m>f^\prime(0)</m> is undefined.
+          \comment{It is pretty clear that <m>f^\prime(0)</m> is undefined, since
+            <m>f(0)</m> is undefined. We can't have a derivative where we don't
+            have a point. But this is the kind of vague reasoning we are
+            trying to avoid. The purpose of this exercise is to show
+            unequivocally that the limit which defines <m>f^\prime(0)</m> is undefined.}
+        </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ Use Definition~\#\ref{def:Derivative} to show that
+          if
+          <m>
+          f(x)=
+          \begin{cases}
+            \frac{x}{x}\amp  \text{ if }x\neq0
+            1\amp  \text{ if }x=0
+          \end{cases}
+          </m>
+          then <m>f^\prime(0)</m> is defined.
+          \comment{This time <m>f(0)</m> is defined but this is a silly way to do
+            it. We do this for emphasis.}
+        </p>
+</statement>
+</task>
+</problem>
+<!-- \begin{embeddedproblem-enumerate} -->
+      <!--   \begin{enumerate}[label={  (\alph*)}]  -->
+      <!--   \item Use Definition~\#\ref{def:Derivative} to show that if -->
+      <!--     <m>f(x)=\frac{x}{x}</m> then <m>f^\prime(0)</m> is undefined. -->
+      <!--     \comment{It is pretty clear that <m>f^\prime(0)</m> is undefined, since -->
+      <!--       <m>f(0)</m> is undefined. We can't have a derivative where we don't -->
+      <!--       have a point. But this is the kind of vague reasoning we are -->
+      <!--       trying to avoid. The purpose of this exercise is to show -->
+      <!--       unequivocally that the limit which defines <m>f^\prime(0)</m> is undefined.} -->
+      <!--   \item Use Definition~\#\ref{def:Derivative} to show that -->
+      <!--     if -->
+      <!--     <m> -->
+      <!--     f(x)= -->
+      <!--     \begin{cases} -->
+      <!--       \frac{x}{x}\amp  \text{ if }x\neq0 -->
+      <!--       1\amp  \text{ if }x=0 -->
+      <!--     \end{cases} -->
+      <!--     </m> -->
+      <!--     then <m>f^\prime(0)</m> is defined. -->
+      <!--     \comment{This time <m>f(0)</m> is defined but this is a silly way to do -->
+      <!--       it. We do this for emphasis.} -->
+      <!--   \end{enumerate} -->
+      <!-- \end{embeddedproblem-enumerate} -->
+    \end{myexample}
+
+    
+    <example xml:id="no-label">
+<title></title>
+<p>
+      \begin{wrapfigure}[]{r}{2in}
+        \captionsetup{labelformat=empty}
+        \centerline{\includegraphics*[height=1in,width=2in]{../Figures/AbsSqrtX}}
+        \label{fig:Astroid3}
+      \end{wrapfigure}
+      It is intuitively clear that derivative of the function
+      <m> f(x)=\sqrt{\abs{x}}</m> (at the right) is not
+      defined at <m>x=0</m>.  We will confirm our intuition using
+      Definition~\#\ref{def:Derivative}. That is, we'll try to compute the
+      derivative of <m>f(x)</m> at <m>x=0</m> using Definition~\#\ref{def:Derivative}
+      and see what goes wrong.
+
+      The existence of the derivative of <m>f(x)</m> at <m>x=0</m> is equivalent to
+      the existence of  the limit <m> \tlimit{h}{0}{\frac{f(0+h)-f(0)}{h}}</m>,
+      so we will try to compute this limit and see what happens.
+      <me>
+      f^\prime(0)  \stackrel{?}{=}
+      \limit{h}{0}{\frac{f(0+h)-f(0)}{h}}=\limit{h}{0}{\frac{\sqrt{\abs{h}}}{h}}.
+      </me>
+                                    
+      \begin{embeddedproblem-enumerate}
+        \label{problem:LRLim1overAbsh}
+        \begin{enumerate}[label={  (\alph*)}] 
+          \begin{multicols}{2}
+          \item Show that <m>\rlimit{h}{0}{\frac{\sqrt{\abs{h}}}{h}}=\infty</m>.
+          \item Show that <m>\llimit{h}{0}{\frac{\sqrt{\abs{h}}}{h}}=-\infty</m>.
+          \end{multicols}
+        \end{enumerate}
+      \end{embeddedproblem-enumerate}
+      Problem~\#\ref{problem:LRLim1overAbsh} shows, <m>\frac{\sqrt{\abs{h}}}{h}</m>
+      increases without bound as <m>h</m> approaches zero from the right, and
+      decreases without bound as <m>h</m> approaches zero from the left. Since
+      neither of these limits even exists it
+      follows that <m>\tlimit{h}{0}{\frac{\sqrt{\abs{h}}}{h}}</m> also does not
+      exist,
+            and therefore <m>f^\prime(0)</m> is not defined\aside{As a verbal shorthand
+        most people will just say that the right- and left-hand limits are
+        not equal and so <m>f^\prime(0)</m> does not exist. Be sure you
+        understand why this is, strictly speaking, incorrect.}.
+
+                            </p>
+</example>
+
+
+
+    <example xml:id="example:HeavisideFunction">
+<title>The Heaviside Function</title>
+<p>
+      <!-- \label{example:HeavisideFunction} -->
+      \begin{wrapfigure}[]{r}{2.5in}
+        \captionsetup{labelformat=empty} \vskip-3mm 
+        \centerline{\includegraphics*[height=1.7in,width=2.5in]{../Figures/Heaviside2}}
+        \label{fig:Heaviside2}
+      \end{wrapfigure}
+      Problem~\#\ref{problem:AbsValDeriv} shows that the derivative of the
+      Absolute Value function (shown at the right) is:
+      <me>H(x)=
+      \begin{cases}
+        1\amp x\gt0
+        -1\amp x\lt0
+      \end{cases}.
+      </me>
+      Notice that it is not defined at <m>x=0</m>.
+
+      We call <m>H(x)</m> the Heaviside function in honor
+      of
+      \href{https://mathshistory.st-andrews.ac.uk/Biographies/Heaviside/}{Oliver
+        Heaviside} (1850-1925). Simple as it is, Heaviside's function is a fundamental
+      tool in signal processing, control theory, and the solution of
+      differential equations.
+
+      \begin{embeddedproblem}
+        \label{problem:HeavisideDeriv}
+        \begin{enumerate}[label={  (\alph*)}] 
+                  \item Use Definition~\#\ref{def:Derivative} to show that
+          <m>H^\prime(x)=0</m> when <m>x\ne0</m>
+        \item Explain why the result in part (a) does not
+          contradict
+          Problem~\#\ref{problem:DervEqZeroImpliesConstant}
+                            \end{enumerate}
+
+      \end{embeddedproblem}
+    </p>
+</example>
+
+
+
+
+    We first introduced one-sided limits in
+    <xref ref="SUBSECvertical-asymptotes">Section</xref>. At the time our concern was
+    to locate vertical asymptotes so we only looked at limits that were
+    equal to either positive or negative infinity. We see now that these
+    limits can take any value and that they are more fundamental than they
+    first appeared to be. Since we didn't provide a formal definition
+    earlier we will do so now.
+
+    <definition xml:id="DEFINITIONdef:OneSidedLimits">
+<title>One-sided Limits</title>
+<statement>
+<p>
+      <!-- \label{def:OneSidedLimits} -->
+      If <m>R</m> is a  real number (or <m>\infty</m> or <m>-\infty</m>) and 
+      <me> \rlimit{x}{a}{f(x)} = R</me>
+      we say that <m>R</m> is the right-hand limit of <m>f(x)</m> at <m>x=a</m>.
+
+      If <m>L</m> is a  real number (or <m>-\infty</m> or <m>-\infty</m>) and 
+      <me>\llimit{x}{a}{f(x)} = L</me>
+      we say that <m>L</m> is the left-hand limit of <m>f(x)</m> at <m>x=a</m>.
+    
+</p>
+</statement>
+</definition>
+
+    Because <m>f(x)</m> can't simultaneously approach two different numbers, if
+    the left and right handed limits both exist but do not agree then
+    <m>\limit{x}{a}{f(x)}</m> doesn't exist. This fact will be a
+    useful tool for us later so we state it as a
+    theorem. 
+
+    <theorem xml:id="theorem:OneSideLim">
+<title>One Sided Derivatives</title>
+<p>
+      <!-- \label{theorem:OneSideLim} -->
+      <m>\limit{x}{a}{f(x)}</m> exists if and only if
+      <m>\rlimit{x}{a}{f(x)} = \llimit{x}{a}{f(x)}.</m> In that case all three
+      limits are equal.
+    \end{mytheorem-noname}
+    Theorem~\ref{theorem:OneSideLim} requires proof but we do not
+    have the tools to prove it here. The appropriate tools will be
+    developed in
+    Chapter~\ref{cha:formal-limits}. Proving this fact is the last problem
+    in this textbook.
+
+
+    \section{One Sided Derivatives}
+    \label{sec:one-sided-deriv}
+    \markright{\sc One Sided Derivatives}
+
+    Since limits may be right-hand or left-hand and the derivative is
+    defined as a limit, it follows that derivatives can be right- or
+    left-hand as well.  We will denote the right-hand and left-hand
+    derivatives at <m>x=a</m> with the notation: <m>\rprime{f}(a),</m> and
+    <m>\lprime{f}(a),</m> respect</p>
+</theorem>
+vely:
+
+    <definition xml:id="DEFINITIONdef:one-sided-deriv">
+<title>One Sided Derivatives</title>
+<statement>
+<p>
+      <!-- \label{def:one-sided-deriv} -->
+      Given a function, <m>f(x)</m>, defined at a point <m>a</m>:
+      \begin{enumerate}
+      \item <m>f</m> is said to have a right-hand derivative at <m>x=a</m> if the
+        limit
+        <me>
+        \rprime{f}(a)=\rlimit{h}{0}{\textstyle\frac{f(a+h)-f(a)}{h}}
+        </me>
+        exists.
+      \item <m>f</m> is said to have a left-hand derivative at <m>x=a</m> if the
+        limit
+        <me>
+        \lprime{f}(a)=\llimit{h}{0}{\textstyle\frac{f(a+h)-f(a)}{h}}
+        </me>
+        exists.
+      \end{enumerate}
+    
+</p>
+</statement>
+</definition>
+
+    From <xref ref="THEOREMOneSideLim">Theorem~\</xref> and
+    <xref ref="DEFone-sided-deriv">Definition~\</xref> we see that the derivative of a
+    function <m>f</m>, at a point <m>x</m> exists if and only if the right- and
+    left-hand derivatives both exist, and are equal.
+    \begin{mycorollary}
+      \label{corollary:Deriv=LRDeriv}
+      If <m>\rprime{f}(x)= \lprime{f}(x)</m>, then <m>f(x)</m> is differentiable at
+      <m>x</m> and <m>f^\prime(x)=\rprime{f}(x)= \lprime{f}(x)</m>.
+    \end{mycorollary}
+
+    At zero both the right- and left-hand derivatives of the Absolute
+    Value function <m>f(x)=\abs{x}</m>
+    exist since
+    <me>
+    \rprime{f}(0)=\rlimit{h}{0}{\frac{\abs{0+h}-\abs{0}}{h}}=\rlimit{h}{0}{\frac{h}{h}}=1,
+    </me>
+    and
+    <me>
+    \lprime{f}(0)=\llimit{h}{0}{\frac{\abs{0+h}-\abs{0}}{h}}=\llimit{h}{0}{\frac{-h}{h}}=-1.
+    </me>
+    but <m>f^\prime(0)</m> does not exist because <m>-1\neq1</m>.
+
+    <problem xml:id="no-label">
+<introduction>
+<p>
+      Notice that since the Heaviside function at <m>x=0</m> <m>H(0)</m>, is not defined, neither are
+      <m>\rprime{H}(0)</m>, <m>\lprime{H}(0)</m>, or <m>H^\prime(0)</m>. 
+</p>
+</introduction>
+<task>
+<statement>
+<p>
+ Which of these derivatives would be defined if we were
+        to arbitrarily  define <m>H(0)=1</m>?  Explain.
+      </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ Which of these derivatives would be defined if we were
+        to arbitrarily define <m>H(0)=-1</m>?
+        Explain.
+      </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ Is there a value we could assign to <m>H(0)</m> so that
+        <m>H^\prime(0)</m> is defined. Explain.
+        \hint{Review Lemma~\ref{lemma:DiffImpliesCont}.}
+              </p>
+</statement>
+</task>
+</problem>
+<!-- \begin{embeddedproblem} -->
+    <!--   Notice that since the Heaviside function at <m>x=0</m> <m>H(0)</m>, is not defined, neither are -->
+    <!--   <m>\rprime{H}(0)</m>, <m>\lprime{H}(0)</m>, or <m>H^\prime(0)</m>.  -->
+    <!--   \begin{enumerate}[label={  (\alph*)}]  -->
+    <!--           \item Which of these derivatives would be defined if we were -->
+    <!--     to arbitrarily  define <m>H(0)=1</m>?  Explain. -->
+    <!--   \item Which of these derivatives would be defined if we were -->
+    <!--     to arbitrarily define <m>H(0)=-1</m>? -->
+    <!--     Explain. -->
+    <!--   \item Is there a value we could assign to <m>H(0)</m> so that -->
+    <!--     <m>H^\prime(0)</m> is defined. Explain. -->
+    <!--     \hint{Review Lemma~\ref{lemma:DiffImpliesCont}.} -->
+    <!--           \end{enumerate} -->
+    <!-- \end{embeddedproblem} -->
+
+    <problem xml:id="no-label">
+<introduction>
+<p>
+      
+      Compute the right- and left-hand derivative, and the
+      derivative itself, if they exist, of each of the following
+      functions at the <m>x=-2, -1, 0, 1,</m> and <m> 2</m>. If any of these
+      derivatives don't exist explain why not.
+</p>
+</introduction>
+<task>
+<statement>
+<p>
+ <m>f(x)=\frac{1}{x}</m>
+        </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>f(x)=3\abs{x+1}</m>
+        </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>f(x)=x^{2/3}</m>
+        </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>f(x)=\sqrt{\abs{x}}</m>
+      </p>
+</statement>
+</task>
+</problem>
+<!-- \begin{embeddedproblem} -->
+      
+    <!--   Compute the right- and left-hand derivative, and the -->
+    <!--   derivative itself, if they exist, of each of the following -->
+    <!--   functions at the <m>x=-2, -1, 0, 1,</m> and <m> 2</m>. If any of these -->
+    <!--   derivatives don't exist explain why not. -->
+    <!--   \begin{enumerate}[label={  (\alph*)}] -->
+    <!--     \item <m>f(x)=\frac{1}{x}</m> -->
+    <!--     \item <m>f(x)=3\abs{x+1}</m> -->
+    <!--     \item <m>f(x)=x^{2/3}</m> -->
+    <!--     \item <m>f(x)=\sqrt{\abs{x}}</m> -->
+    <!--   \end{enumerate} -->
+    <!-- \end{embeddedproblem} -->
+
+
+    <problem xml:id="no-label">
+<statement>
+<p>
+      Use the limit definitions to compute the right- and left-hand
+      derivative, of the function, <m>f(x)</m>, at <m>x=-1</m>, <m>x=0</m>, and <m>x=2</m>. At
+      which of these points is <m>f(x)</m> differentiable?
+      <me>f(x)=
+      \begin{cases}
+        2\amp \text{ if }x\lt-1
+        -2(x+1)^2+2 \amp \text{ if }-1\le x \lt 0
+        x^4-4x \amp \text{ if }0\le x \lt 2
+        -14(x-3)^2+22 \amp \text{ if }2\le x
+      \end{cases}
+      </me>
+    </p>
+</statement>
+</problem>
+
+                                        
+    \begin{embeddedproblem}  ;;; MULTILEVEL PROBLEM
+      <!-- \label{problem:HeaviTranslate} -->
+      \begin{enumerate}[label={  (\alph*)}] 
+      \item Let <m>H(x)</m> be the Heaviside function and let <m>a</m> be a real
+        number.
+        \begin{enumerate}[label={  (\roman*)}] 
+        \item Sketch <m>H(x-a)</m>.
+        \item   Use
+          Theorem~\#\ref{theorem:OneSideLim} to show that <m>H(x-a)</m> is not
+          differentiable at <m>x=a</m>.
+        \end{enumerate}
+      \item Let <m>b</m> also be a real number, distinct from <m>a</m>, and define
+        <me>
+        f(x) =H(x-a) + H(x-b).
+        </me>
+        \begin{enumerate}[label={  (\roman*)}] 
+        \item Sketch <m>f(x)</m>.
+        \item Use Theorem~\#\ref{theorem:OneSideLim} to show that
+          is not differentiable at <m>x=a</m> or <m>x=b</m>.
+        \end{enumerate}
+      \end{enumerate}
+    \end{embeddedproblem}
+
+    In <xref ref="SECoptim-clos-interv">Section</xref> we found that the possible
+    transition points come in three ``flavors'': (1) points where the
+    derivative is zero, (2) points where the derivative is undefined,
+    and, (3) if the function is defined on a closed interval, the
+    endpoints of the interval. We remarked at the time that it seemed odd
+    that the third condition does not involve the derivative while the
+    other two do.
+
+    With our new, deeper understanding of differentiation we can show
+    that, in fact, there are really only two kinds of possible transition
+    points, and both can be identified using the derivative. It turns out
+    that the endpoints of an interval are really just points of
+    non-differentiability.
+
+    To see this consider any function, <m>f(x)</m> which is continuous on the
+    closed interval <m>[a,b]</m> and differentiable on the open interval
+    <m>(a,b)</m>. From <xref ref="COROLLARYDeriv=LRDeriv">Corollary~\</xref> we know that
+    <m>f^\prime(b)</m> only exists if <m>\rprime{f}(b)</m> and <m>\lprime{f}(b)</m> both
+    exist\aside{They also need to be equal, but that is irrelevant right
+      now.}.
+
+    But the right-hand limit at <m>b</m> doesn't exist. To see this, observe
+    that <m>f</m> is only defined on <m>[a,b]</m>. Therefore when <m>h>0</m> the
+    expression <m>f(b+h)</m> asks us to evaluate <m>f</m> at a point outside its
+    domain, which is meaningless. Thus
+    <me>
+    \rprime{f}(b)=\rlimit{h}{0}{\frac{\CancelToRed{\text{meaningless}}{f(b+h)}-f(b)}{h}}
+    </me> 
+    does not exist. A similar argument shows that <m>\lprime{f}(a)</m> does not
+    exist.
+
+    Therefore <m>f^\prime</m> does not exist at the endpoints of a closed
+    interval. As a result the possible transition points of <m>f</m> are only
+    those places where the derivative is zero, or undefined, because the
+    latter category includes the endpoints of closed intervals.
+
+
+</chapter>
