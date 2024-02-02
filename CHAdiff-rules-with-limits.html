@@ -1,0 +1,1378 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>The Differentiation Rules via Limits</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Differential Calculus">
+<meta property="book:author" content="Eugene Boman">
+<meta property="book:author" content="Robert Rogers">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.33/pretext_search.js"></script><link href="https://pretextbook.org/css/0.83/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.33</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.33/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.33/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.33/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<link href="https://pretextbook.org/css/0.83/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
+<h1 class="heading"><a href="DiffCalc.html"><span class="title">Differential Calculus:</span> <span class="subtitle">From Practice to Theory</span></a></h1>
+<p class="byline">Eugene Boman, Robert Rogers</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="meta_backmatter-5.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="WhasWrong.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ToTheory.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="CHAPTERFDT-Redux.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\def\abs#1{\left|#1\right|}
+\newcommand{\RR}{\mathbb {R}}
+\newcommand{\QQ}{\mathbb {Q}}
+\newcommand{\NN}{\mathbb {N}}
+\newcommand{\ZZ}{\mathbb {Z}}
+\newcommand{\ParamEqTwo}[2]
+{
+  \left\{
+    \begin{array}{c}
+    {#1}\\
+    {#2}
+    \end{array}
+  \right\}
+}
+\newcommand{\ParamEqThree}[3]
+{
+  \left\{
+    \begin{array}{c}
+    {#1}\\
+    {#2}\\
+    {#3}n
+    \end{array}
+  \right\}
+}
+
+
+\def\DD{{\bf{}D}}
+\def\ftceval#1#2#3{#1\hskip.5ex{\llap{\smash{\rule[-3ex]{0.5pt}{7ex}}}_{\raise{-3ex}{\hskip.5ex#2}}^{\raise{-5ex}{\hskip.5ex #3}}}}
+
+
+  \def\eval#1#2#3{#1\hskip.5ex{\llap{\rule[-1.5ex]{0.5pt}{4ex}}_{\raise{-1.5ex}{\hskip.5ex#2=#3}}}}
+\def\dispeval#1#2#3{#1\hskip.5ex{\llap{\smash{\rule[-2ex]{0.5pt}{5ex}}}_{\raise{-2ex}{\hskip.5ex#2=#3}}}}
+
+
+
+\def\bigeval#1#2#3{\eval{#2}{#2}{#3}}
+
+
+
+
+
+
+\def\inverse#1{#1^{-1}}
+
+
+
+
+\def\dx#1{\thinspace{\mathrm d}#1}
+\def\dfdx#1#2{\frac{\dx{#1}}{\dx{#2}}} 
+\def\partialfx#1#2{\frac{\partial{#1}}{\partial{#2}}} 
+\def\partialfxn#1#2#3{\frac{\partial^{#3}{#1}}{\partial{#2}^{#3}}} 
+\def\dfdxn#1#2#3{\frac{\text{d}^{#3}{#1}}{\text{d}{#2}^{#3}}} 
+\def\limit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}#3}}
+\def\tlimit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}}#3}
+\def\limitX#1#2#3#4{{\displaystyle\lim_{\underset{#4}{#1\rightarrow #2}}#3}}
+\def\rlimit#1#2#3{{\limitX{#1}{#2}{#3}{#1\gt{}#2}{}}}
+\def\llimit#1#2#3{{\limitX{#1}{#2}{#3}{#1\lt{}#2}{}}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth5 parts"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-dedication"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Dedication</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-5.html" class="internal"><span class="title">Relevant Quotes</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="SECinstructor.html" class="internal"><span class="title">To the Instructor: Read This First</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-part">
+<div class="toc-title-box"><a href="FromPractice.html" class="internal"><span class="codenumber">I</span> <span class="title">From Practice . . .</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="CalculusIsARock.html" class="internal"><span class="codenumber">1</span> <span class="title">Calculus is a Rock</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAproblem-solving.html" class="internal"><span class="codenumber">2</span> <span class="title">Introduction: Some  Advice on Problem Solving</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAproblem-solving.html#SECusing-lett-inst" class="internal"><span class="codenumber">2.1</span> <span class="title">Using Letters Instead of Numbers</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAproblem-solving.html#SECan-easy-problem-alg" class="internal"><span class="codenumber">2.2</span> <span class="title">Substitution, or Making Things “Easy on the Eyes”</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAproblem-solving.html#SECan-easy-problem-geo" class="internal"><span class="codenumber">2.3</span> <span class="title">An “Easy” Problem From Geometry</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAproblem-solving.html#subsection-digression-MakingMistakes" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Digression: Making Mistakes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAproblem-solving.html#SECan-easy-problem-geo-4" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Continuing our example</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAproblem-solving.html#SECour-advice-synopsis" class="internal"><span class="codenumber">2.4</span> <span class="title">Our advice, a synopsis</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html" class="internal"><span class="codenumber">3</span> <span class="title">Science Before Calculus</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#Apologia" class="internal"><span class="codenumber">3.1</span> <span class="title">Apologia</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#no-label" class="internal"><span class="codenumber">3.2</span> <span class="title">Some Preliminaries</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#sec-laziness-nature" class="internal"><span class="codenumber">3.3</span> <span class="title">The Laziness of Nature</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#subsection-" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Nature is Lazy</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#Digress-VarConstFunc-" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Digression: Variables, Constants, and Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#subsection-" class="internal"><span class="codenumber">3.3.3</span> <span class="title">After Digression</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#sec:ferm-meth-aedeq" class="internal"><span class="codenumber">3.4</span> <span class="title">Fermat’s Method of Adequality</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#sec:descartes-normals" class="internal"><span class="codenumber">3.5</span> <span class="title">Descartes’s Method of Normals</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#sec:roberv-conic-sect" class="internal"><span class="codenumber">3.6</span> <span class="title">Roberval, Conic Sections, and the Dynamic Approach</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#no-label" class="internal"><span class="codenumber">3.6.1</span> <span class="title">Speed, Velocity, and Rates of Change</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#no-label" class="internal"><span class="codenumber">3.6.2</span> <span class="title">The Tangent Lines of the Conic Sections</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#no-label" class="internal"><span class="codenumber">3.6.2.1</span> <span class="title">The Tangent to a Parabola</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#no-label" class="internal"><span class="codenumber">3.6.2.2</span> <span class="title">The Tangent to an Ellipse</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#TangentHyperbola" class="internal"><span class="codenumber">3.6.2.3</span> <span class="title">The Tangent to an Hyperbola</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#sec:snells-law-refr" class="internal"><span class="codenumber">3.7</span> <span class="title">Snell’s Law and the Limitations of Adequality:</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTdifferentials.html" class="internal"><span class="codenumber">4</span> <span class="title">Differentials, Differentiation, and the Derivative</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTdifferentials.html#sec:hist-intr" class="internal"><span class="codenumber">4.1</span> <span class="title">Historical Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTdifferentials.html#sec:some-rules-diff" class="internal"><span class="codenumber">4.2</span> <span class="title">The General Differentiation Rules</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTdifferentials.html#no-label" class="internal"><span class="codenumber">4.2.1</span> <span class="title">Warning: Be Sure You Understand  the Purpose of This Chapter.</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTdifferentials.html#no-label" class="internal"><span class="codenumber">4.2.2</span> <span class="title">Differentials</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="CHAPTdifferentials.html#no-label" class="internal"><span class="codenumber">4.2.3</span> <span class="title">The General Differentiation Rules</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTdifferentials.html#no-label-3" class="internal"><span class="codenumber">4.2.3.1</span> <span class="title">The Constant Rule</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTdifferentials.html#no-label-4" class="internal"><span class="codenumber">4.2.3.2</span> <span class="title">The Constant Multiple Rule</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTdifferentials.html#no-label-5" class="internal"><span class="codenumber">4.2.3.3</span> <span class="title">The Product Rule</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTdifferentials.html#no-label-6" class="internal"><span class="codenumber">4.2.3.4</span> <span class="title">The Power  Rule for Positive Integers</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTdifferentials.html#no-label" class="internal"><span class="codenumber">4.2.3.5</span> <span class="title">The General Power Rule</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTdifferentials.html#SUBSUBQuotRule" class="internal"><span class="codenumber">4.2.3.6</span> <span class="title">The Quotient Rule</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="SECveloc-slop-tang.html" class="internal"><span class="codenumber">5</span> <span class="title">Slopes, Tangents, and Rates of Change</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#sec:slopes-tangents" class="internal"><span class="codenumber">5.1</span> <span class="title">Slopes and Tangents</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#SECdefin-tang-line" class="internal"><span class="codenumber">5.2</span> <span class="title">Defining the Tangent Line</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#sec:vomit-comet" class="internal"><span class="codenumber">5.3</span> <span class="title">The Vomit Comet</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#sec:rates-change" class="internal"><span class="codenumber">5.4</span> <span class="title">Galileo Drops the Ball</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#no-label" class="internal"><span class="codenumber">5.5</span> <span class="title">Bringing in Calculus</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#subsec:Derivative" class="internal"><span class="codenumber">5.6</span> <span class="title">The Derivative</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#sec:newt-flux-dynam" class="internal"><span class="codenumber">5.7</span> <span class="title">Thinking Dynamically</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#sec:newt-meth-flux" class="internal"><span class="codenumber">5.8</span> <span class="title">Newton’s Method of Fluxions</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="SECveloc-slop-tang.html#sec:self-inters-curv" class="internal"><span class="codenumber">5.9</span> <span class="title">Self-intersecting Curves and Parametric Equations</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#no-label" class="internal"><span class="codenumber">5.9.1</span> <span class="title">Parametric Functions</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="SECveloc-slop-tang.html#sec:bridg-chains-telesc" class="internal"><span class="codenumber">5.10</span> <span class="title">Bridges, Chains, Domes, and Telescopes</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#no-label" class="internal"><span class="codenumber">5.10.1</span> <span class="title">Bridges</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#no-label" class="internal"><span class="codenumber">5.10.2</span> <span class="title">Chains</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#no-label" class="internal"><span class="codenumber">5.10.3</span> <span class="title">Domes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#no-label" class="internal"><span class="codenumber">5.10.4</span> <span class="title">Telescopes</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAcalc-trig.html" class="internal"><span class="codenumber">6</span> <span class="title">Calculus and Trigonometry</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAcalc-trig.html#subsec:trig-interl" class="internal"><span class="codenumber">6.1</span> <span class="title">A Trigonometric Interlude</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#subsec:radian-measure" class="internal"><span class="codenumber">6.1.1</span> <span class="title">Radian Measure</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="CHAcalc-trig.html#no-label" class="internal"><span class="codenumber">6.1.2</span> <span class="title">The Trigonometric Functions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#no-label" class="internal"><span class="codenumber">6.1.2.1</span> <span class="title">The Sine Function</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:model-with-trig" class="internal"><span class="codenumber">6.1.3</span> <span class="title">Modeling with Trigonometric Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#no-label" class="internal"><span class="codenumber">6.1.4</span> <span class="title">Phase Shifts</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:polar-coordinates" class="internal"><span class="codenumber">6.2</span> <span class="title">Polar Coordinates</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAcalc-trig.html#sec:diff-sine-cosine" class="internal"><span class="codenumber">6.3</span> <span class="title">The Differentials of the Sine and Cosine Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:polar-coord-calc" class="internal"><span class="codenumber">6.3.1</span> <span class="title">Polar Coordinates and Calculus</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#no-label" class="internal"><span class="codenumber">6.3.2</span> <span class="title">The Brachistochrone Problem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#no-label" class="internal"><span class="codenumber">6.3.3</span> <span class="title">Spin Casting, Redux</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:simple-harm-oscill" class="internal"><span class="codenumber">6.3.4</span> <span class="title">Simple Harmonic Oscillation</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAcalc-trig.html#subsec:diff-other-trig" class="internal"><span class="codenumber">6.4</span> <span class="title">The Differentials of the Other Trigonometric Functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:inverse-tan-and-cot" class="internal"><span class="codenumber">6.5</span> <span class="title">The Inverse Tangent and Cotangent Functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:witch-agnesi-inverse" class="internal"><span class="codenumber">6.6</span> <span class="title">The Witch of Agnesi and the Inverse Tangent Function</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAcalc-trig.html#SECTIONSECTIONdiff-inverse-tancot" class="internal"><span class="codenumber">6.7</span> <span class="title">The Differentials of the Inverse Tangent and Inverse Cotangent Functions</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAcalc-trig.html#sec:other-inverse-trig" class="internal"><span class="codenumber">6.8</span> <span class="title">The Other Inverse Trigonometric Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#no-label" class="internal"><span class="codenumber">6.8.1</span> <span class="title">The Inverse Sine Function: \boldmath <span class="process-math">\(\inverse\sin(x)\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#no-label" class="internal"><span class="codenumber">6.8.2</span> <span class="title">The Inverse Secant and Inverse Cosecant</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:curvature" class="internal"><span class="codenumber">6.9</span> <span class="title">Curvature</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTApproximation.html" class="internal"><span class="codenumber">7</span> <span class="title">Approximation Methods</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTApproximation.html#sec:newtons-method" class="internal"><span class="codenumber">7.1</span> <span class="title">Root Finding: Two  Pre-Calculus Approaches</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTApproximation.html#no-label" class="internal"><span class="codenumber">7.1.1</span> <span class="title">The Bisection Method</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTApproximation.html#no-label" class="internal"><span class="codenumber">7.1.2</span> <span class="title">The Babylonian Method for Square Roots</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTApproximation.html#sec:newtons-method-1" class="internal"><span class="codenumber">7.2</span> <span class="title">Newton’s Method</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTApproximation.html#no-label" class="internal"><span class="codenumber">7.2.1</span> <span class="title">Spectacular Failure</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTApproximation.html#no-label" class="internal"><span class="codenumber">7.2.2</span> <span class="title">Subtle Failure</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTApproximation.html#sec:eulers-method" class="internal"><span class="codenumber">7.3</span> <span class="title">Euler’s Method</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTApproximation.html#sec:more-high-deriv" class="internal"><span class="codenumber">7.4</span> <span class="title">Higher Derivatives, Lagrange, and Taylor</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAlast-elem-funct.html" class="internal"><span class="codenumber">8</span> <span class="title">Exponentials and Logarithms</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAlast-elem-funct.html#no-label" class="internal"><span class="codenumber">8.1</span> <span class="title">Introduction</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAlast-elem-funct.html#no-label" class="internal"><span class="codenumber">8.1.1</span> <span class="title">Initial Value Problems (IVPs)</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAlast-elem-funct.html#sec:exponential" class="internal"><span class="codenumber">8.2</span> <span class="title">The Natural Exponential</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAlast-elem-funct.html#sec:hyperb-trig-hang" class="internal"><span class="codenumber">8.2.1</span> <span class="title">Hyperbolic Trigonometry: The Hanging Chain</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAlast-elem-funct.html#no-label" class="internal"><span class="codenumber">8.2.2</span> <span class="title">The Gateway Arch</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAlast-elem-funct.html#sec:exponential-growth" class="internal"><span class="codenumber">8.3</span> <span class="title">Exponential Growth</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAlast-elem-funct.html#no-label" class="internal"><span class="codenumber">8.3.1</span> <span class="title">Exponential Functions and Compound Interest</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAlast-elem-funct.html#sec:natural-logarithm-1" class="internal"><span class="codenumber">8.4</span> <span class="title">The Natural Logarithm</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="CHAlast-elem-funct.html#no-label" class="internal"><span class="codenumber">8.4.1</span> <span class="title">John Napier Logs In</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAlast-elem-funct.html#subsec:radioactive-decay" class="internal"><span class="codenumber">8.4.1.1</span> <span class="title">Radioactive Dating</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAlast-elem-funct.html#subsec:newtons-law-cooling" class="internal"><span class="codenumber">8.4.1.2</span> <span class="title">\underline{Chillin’ with Newton: The Law of Cooling</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAlast-elem-funct.html#no-label" class="internal"><span class="codenumber">8.5</span> <span class="title">The Derivative of the Natural Logarithm</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAlast-elem-funct.html#sec:gener-logar-expon" class="internal"><span class="codenumber">8.6</span> <span class="title">General Logarithms and Exponentials</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAlast-elem-funct.html#no-label" class="internal"><span class="codenumber">8.6.1</span> <span class="title">General Exponentials</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAlast-elem-funct.html#no-label" class="internal"><span class="codenumber">8.6.2</span> <span class="title">General Logarithms</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAlast-elem-funct.html#no-label" class="internal"><span class="codenumber">8.6.3</span> <span class="title">Logarithmic Differentiation</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAlast-elem-funct.html#sec:leonh-euler-harm" class="internal"><span class="codenumber">8.7</span> <span class="title">Leonhard Euler, Harmonic Oscillators, and Complex Numbers</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAlast-elem-funct.html#no-label" class="internal"><span class="codenumber">8.7.1</span> <span class="title">How Euler Did It</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAwhat-deriv-tells.html" class="internal"><span class="codenumber">9</span> <span class="title">Optimization: Going to Extremes</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAwhat-deriv-tells.html#sec:introduction" class="internal"><span class="codenumber">9.1</span> <span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAwhat-deriv-tells.html#sec:five-simil-probl" class="internal"><span class="codenumber">9.2</span> <span class="title">Preliminaries: Some Simple Optimizations</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAwhat-deriv-tells.html#sec:refl-refr-rainb" class="internal"><span class="codenumber">9.3</span> <span class="title">Reflections, Refractions, and Rainbows</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAwhat-deriv-tells.html#subsec:reflection" class="internal"><span class="codenumber">9.3.1</span> <span class="title">Reflection</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAwhat-deriv-tells.html#subsec:refraction" class="internal"><span class="codenumber">9.3.2</span> <span class="title">Refraction: Snell’s Law</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAwhat-deriv-tells.html#subsec:rainbows" class="internal"><span class="codenumber">9.3.3</span> <span class="title">Rainbows</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAwhat-deriv-tells.html#no-label" class="internal"><span class="codenumber">9.3.4</span> <span class="title">The Colors of the Rainbow</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAwhat-deriv-tells.html#no-label" class="internal"><span class="codenumber">9.3.5</span> <span class="title">Double Rainbows</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAwhat-deriv-tells.html#sec:more-optimal-squares" class="internal"><span class="codenumber">9.4</span> <span class="title">Global vs. Local Extrema</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAwhat-deriv-tells.html#subsec:optim-abstr-probl" class="internal"><span class="codenumber">9.5</span> <span class="title">Optimization, the Abstract Problem</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAwhat-deriv-tells.html#no-label" class="internal"><span class="codenumber">9.5.1</span> <span class="title">Identifying and Distinguishing Maxima and Minima</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAwhat-deriv-tells.html#no-label" class="internal"><span class="codenumber">9.5.2</span> <span class="title">Transition Points, and Possible Transition Points on Open Intervals</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAwhat-deriv-tells.html#subsec:underl-deriv" class="internal"><span class="codenumber">9.5.3</span> <span class="title">Undefined Derivatives</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAwhat-deriv-tells.html#sec:conc-second-deriv-1" class="internal"><span class="codenumber">9.6</span> <span class="title">Concavity and the Second Derivative Test</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAwhat-deriv-tells.html#sec:conc-second-deriv" class="internal"><span class="codenumber">9.6.1</span> <span class="title">The Second Derivative Test</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAwhat-deriv-tells.html#sec:optim-probl" class="internal"><span class="codenumber">9.7</span> <span class="title">Optimization Problems</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAwhat-deriv-tells.html#no-label" class="internal"><span class="codenumber">9.7.1</span> <span class="title">Second Solution:</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTshape-things.html" class="internal"><span class="codenumber">10</span> <span class="title">Graphing with Calculus</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTshape-things.html#sec:graph-with-form" class="internal"><span class="codenumber">10.1</span> <span class="title">Graphing with a Formula for \boldmath <span class="process-math">\(y(x)\)</span></span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTshape-things.html#sec:graph-without-form" class="internal"><span class="codenumber">10.2</span> <span class="title">Graphing Without Formulas</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTshape-things.html#SECTION" class="internal"><span class="codenumber">10.3</span> <span class="title">Graphing with a Formula for  <span class="process-math">\(\dfdx{y}{x}\)</span></span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTshape-things.html#SUBSECTION" class="internal"><span class="codenumber">10.3.1</span> <span class="title">When  <span class="process-math">\(\dfdx{y}{x}\)</span> Depends on <span class="process-math">\(x\)</span> alone</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTshape-things.html#SUBSECTION" class="internal"><span class="codenumber">10.3.2</span> <span class="title">When  <span class="process-math">\(\dfdx{y}{t}\)</span> depends on <span class="process-math">\(y\)</span> alone</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAmodel-with-calc.html" class="internal"><span class="codenumber">11</span> <span class="title">Modeling with Calculus</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAmodel-with-calc.html#sec:population-dynamics" class="internal"><span class="codenumber">11.1</span> <span class="title">Population Dynamics</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAmodel-with-calc.html#no-label" class="internal"><span class="codenumber">11.1.1</span> <span class="title">Modeling a Trout Farm</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAmodel-with-calc.html#sec:little-healthy-comp" class="internal"><span class="codenumber">11.1.2</span> <span class="title">The Competing Species Model</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAmodel-with-calc.html#sec:select-model-probl" class="internal"><span class="codenumber">11.2</span> <span class="title">Selected Modeling Problems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAmodel-with-calc.html#sec:epidemic-blues:-sir" class="internal"><span class="codenumber">11.2.1</span> <span class="title">Epidemics, The SIR Model</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAmodel-with-calc.html#subsec:tractrix" class="internal"><span class="codenumber">11.2.2</span> <span class="title">The Tractrix</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAmodel-with-calc.html#subsec:pursuit" class="internal"><span class="codenumber">11.2.3</span> <span class="title">The  Pursuit Problem</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAlimits-lhop-rule.html" class="internal"><span class="codenumber">12</span> <span class="title">Limits and L’H\^o pital’s Rule</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAlimits-lhop-rule.html#sec:horiz-asympt-as" class="internal"><span class="codenumber">12.1</span> <span class="title">Horizontal Asymptotes as Limits ``at Infinity’’</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAlimits-lhop-rule.html#digression:LimitNotation" class="internal"><span class="codenumber">12.1.1</span> <span class="title">Limit Notation</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAlimits-lhop-rule.html#sec:squeeze-theorem-informal" class="internal"><span class="codenumber">12.2</span> <span class="title">The Squeeze Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAlimits-lhop-rule.html#subsec:vertical-asymptotes" class="internal"><span class="codenumber">12.3</span> <span class="title">Vertical Asymptotes</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAlimits-lhop-rule.html#sec:more-indet-forms" class="internal"><span class="codenumber">12.4</span> <span class="title">Indeterminate Forms and L’H\^o pital’s Rule</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAlimits-lhop-rule.html#SUBSECTION" class="internal"><span class="codenumber">12.4.1</span> <span class="title">L’H\^{o}pital’s Rule</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAlimits-lhop-rule.html#subsec:lhop-rule-horiz" class="internal"><span class="codenumber">12.4.2</span> <span class="title">L’H\^o pital’s Rule and Horizontal Asymptotes</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-part contains-active">
+<div class="toc-title-box"><a href="ToTheory.html" class="internal"><span class="codenumber">II</span> <span class="title">To Theory . . .</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="WhasWrong.html" class="internal"><span class="codenumber">13</span> <span class="title">What’s Wrong with Differentials?</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="WhasWrong.html#CalcAndBerkeley" class="internal"><span class="codenumber">13.1</span> <span class="title">Calculus and Bishop Berkeley</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-chapter active">
+<div class="toc-title-box"><a href="CHAdiff-rules-with-limits.html" class="internal"><span class="codenumber">14</span> <span class="title">The Differentiation Rules via Limits</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAdiff-rules-with-limits.html#sec:limit-theorems-laws" class="internal"><span class="codenumber">14.1</span> <span class="title">The Limit Rules (Theorems)</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAdiff-rules-with-limits.html#sec:limit-comp-cont" class="internal"><span class="codenumber">14.1.1</span> <span class="title">The Limit of a Composition and Continuity at a Point</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAdiff-rules-with-limits.html#sec:diff-rules-via" class="internal"><span class="codenumber">14.2</span> <span class="title">The General Differentiation Theorems, via Limits</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAdiff-rules-with-limits.html#no-label" class="internal"><span class="codenumber">14.3</span> <span class="title">The Chain Rule</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAdiff-rules-with-limits.html#subsec:product-rule-limits" class="internal"><span class="codenumber">14.4</span> <span class="title">The Product Rule</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAdiff-rules-with-limits.html#sec:other-gener-diff" class="internal"><span class="codenumber">14.5</span> <span class="title">The Other General Differentiation Rules</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAdiff-rules-with-limits.html#sec:diff-trig-funct" class="internal"><span class="codenumber">14.6</span> <span class="title">Derivatives of the Trigonometric Functions, via Limits</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAdiff-rules-with-limits.html#sec:inverse-functions" class="internal"><span class="codenumber">14.7</span> <span class="title">Inverse Functions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTERFDT-Redux.html" class="internal"><span class="codenumber">15</span> <span class="title">The First Derivative Test, Redux</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERFDT-Redux.html#sec:fermats-theorem" class="internal"><span class="codenumber">15.1</span> <span class="title">Fermat’s Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERFDT-Redux.html#sec:rolles-lemma-mean" class="internal"><span class="codenumber">15.2</span> <span class="title">Rolle’s Lemma and the Mean Value Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERFDT-Redux.html#sec:first-deriv-test" class="internal"><span class="codenumber">15.3</span> <span class="title">The Proof of the First Derivative Test</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHPTwhen-deriv-doesnt.html" class="internal"><span class="codenumber">16</span> <span class="title">When the Derivative Doesn’t Exist</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="CHPTwhen-deriv-doesnt.html#sec:one-sided-deriv" class="internal"><span class="codenumber">16.1</span> <span class="title">One Sided Derivatives</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAformal-limits.html" class="internal"><span class="codenumber">17</span> <span class="title">Formal Limits</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAformal-limits.html#sec:limits-at-infinity" class="internal"><span class="codenumber">17.1</span> <span class="title">Getting Around Infinity</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAformal-limits.html#SUBSECTIONEpsDelt1" class="internal"><span class="codenumber">17.1.1</span> <span class="title">The Infinitely Large</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAformal-limits.html#SUBSECTION" class="internal"><span class="codenumber">17.1.2</span> <span class="title">The Infinitely Small</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAformal-limits.html#sec:convincing-skeptic" class="internal"><span class="codenumber">17.1.3</span> <span class="title">Convincing Berkeley</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAformal-limits.html#no-label" class="internal"><span class="codenumber">17.1.4</span> <span class="title">Refining the Definition</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAformal-limits.html#sec:limits-at-real" class="internal"><span class="codenumber">17.2</span> <span class="title">Limits at a Real Number</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAformal-limits.html#sec:LimitLaws" class="internal"><span class="codenumber">17.3</span> <span class="title">Limit Laws (Theorems)</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAformal-limits.html#subsec:limit-sum-at" class="internal"><span class="codenumber">17.3.1</span> <span class="title">The Limit of a Sum</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAformal-limits.html#sec:squeeze-theorem" class="internal"><span class="codenumber">17.3.2</span> <span class="title">The Squeeze Theorem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAformal-limits.html#sec:limit-composition" class="internal"><span class="codenumber">17.3.3</span> <span class="title">The Limit of a Composition</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="CHAformal-limits.html#sec:limit-product-at" class="internal"><span class="codenumber">17.3.4</span> <span class="title">The Limit of a Product</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAformal-limits.html#no-label" class="internal"><span class="codenumber">17.3.4.1</span> <span class="title">Proving Lemma~\#\ref{lemma:LimProd1</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAformal-limits.html#no-label" class="internal"><span class="codenumber">17.3.4.2</span> <span class="title">Proving Lemma~\#\ref{lemma:LimProd2</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAformal-limits.html#no-label" class="internal"><span class="codenumber">17.3.5</span> <span class="title">The Function  \boldmath  <span class="process-math">\(f(x)=\frac1x\)</span> is Continuous Wherever  It Is Defined</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="meta_backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="meta_backmatter-2.html" class="internal"><span class="codenumber">A</span> <span class="title">Selected Hints</span></a></div></li>
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="meta_backmatter-3.html" class="internal"><span class="codenumber">B</span> <span class="title">Selected Solutions</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="meta_backmatter-4.html" class="internal"><span class="codenumber">C</span> <span class="title">List of Symbols</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="meta_backmatter-5.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="meta_backmatter-6.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="CHAdiff-rules-with-limits"><h2 class="heading">
+<span class="type">Chapter</span><span class="space"> </span><span class="codenumber">14</span><span class="space"> </span><span class="title">The Differentiation Rules via Limits</span>
+</h2>
+<section class="section" id="sec:limit-theorems-laws"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">14.1</span><span class="space"> </span><span class="title">The Limit Rules (Theorems)</span>
+</h3>
+<section class="introduction" id="sec:limit-theorems-laws-2"><blockquote class="blockquote" id="sec:limit-theorems-laws-2-1">
+<div class="para" id="sec:limit-theorems-laws-2-1-1">In the old days when people invented a new function they had something useful in mind. Now, they invent them deliberately just to invalidate our ancestors’ reasoning, and that is all they are ever going to get out of them.</div> <cite class="attribution">―<a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Poincare" target="_blank">Henri Poincarè (<span class="process-math">\(1854\)</span> -- <span class="process-math">\(1912\)</span>)</a><a class="xref" id="sec:limit-theorems-laws-2-1-2-2" href="" data-knowl="./knowl/fn/sec:limit-theorems-laws-2-1-2-2.html" title="Footnote 14.1"><sup> 1 </sup></a></cite>
+</blockquote> <div class="para" id="sec:limit-theorems-laws-2-2">In this section we will state several theorems about limits which we will need in the sections following.  The limit concept is very subtle and our understanding of it is still quite intuitive.  We are not yet quite prepared to prove these theorems so we will leave these theorems unproven for now. Our immediate goal is simply to understand what they say and learn how to use them.  In the next section we will begin using these theorems to show how the limit in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "DEFDerivative" missing or not unique]</code> allows us to recapture all of the major results we used in Part I of this text.</div> <div class="para" id="sec:limit-theorems-laws-2-3">In <a href="CHAformal-limits.html" class="internal" title="Chapter 17: Formal Limits">Chapter 17</a> we will finally discard our intuitive definition of a limit (<code class="code-inline tex2jax_ignore">[cross-reference to target(s) "DEFLimitAtInfinity-Intuitive" missing or not unique]</code>) and formally define both a limit at infinity (<code class="code-inline tex2jax_ignore">[cross-reference to target(s) "DEFlimit-at-neginfinity" missing or not unique]</code>) and a limit at a point (<code class="code-inline tex2jax_ignore">[cross-reference to target(s) "DEFlimits-at-real" missing or not unique]</code>). Then we will return to the theorems in this section and (finally) prove rigorously that they are, in fact, true. Until then any result which relies on the theorems in this section should be considered contingent.</div> <div class="para" id="sec:limit-theorems-laws-2-4">In <a href="CHAlimits-lhop-rule.html" class="internal" title="Chapter 12: Limits and L’H\^o pital’s Rule">Chapter 12</a> we stated the following three theorems about limits ``at infinity.’’ \begin{enumerate} \item the limit of a sum is the sum of the limits (<code class="code-inline tex2jax_ignore">[cross-reference to target(s) "THEOREMLimSum1" missing or not unique]</code>), \item  the limit of a product is the product of the limits (<code class="code-inline tex2jax_ignore">[cross-reference to target(s) "THEOREMLimProd1" missing or not unique]</code>) and, \item  the limit of a quotient  is the quotient of the limits (<code class="code-inline tex2jax_ignore">[cross-reference to target(s) "THEOREMLimQuot1" missing or not unique]</code>). \end{enumerate} All three of these theorems remain true if <span class="process-math">\(x\)</span> is approaching some finite number, <span class="process-math">\(a\text{,}\)</span> instead of infinity.</div> <article class="theorem theorem-like" id="theorem:LimSum2"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">14.1</span><span class="period">.</span><span class="space"> </span><span class="title">The Limit of a Sum is the Sum of the Limits.</span>
+</h4>
+<div class="para logical" id="theorem:LimSum2-2">
+<div class="para"> Let <span class="process-math">\(a\)</span> be some real number. Suppose that the functions <span class="process-math">\(f(x)\)</span> and <span class="process-math">\(g(x)\)</span> are defined on some open interval about <span class="process-math">\(a\)</span> except, possibly, at <span class="process-math">\(a\)</span> itself. Then if <span class="process-math">\(\limit{x}{a}{f(x)}=L\)</span> and <span class="process-math">\(\limit{x}{a}{g(x)}=M,\)</span> then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\limit{x}{a}{\left[f(x)+g(x)\right]}=L+M
+=\limit{x}{a}{f(x)}+\limit{x}{a}{g(x)}.
+\end{equation*}
+</div>
+</div></article> <article class="theorem theorem-like" id="theorem:LimProd2"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">14.2</span><span class="period">.</span><span class="space"> </span><span class="title">The Limit of a Product is the Product of the Limits.</span>
+</h4>
+<div class="para logical" id="theorem:LimProd2-2">
+<div class="para"> Let <span class="process-math">\(a\)</span> be some real number. Suppose  that the functions  <span class="process-math">\(f(x)\)</span> and <span class="process-math">\(g(x)\)</span> are defined on some open interval about <span class="process-math">\(a\)</span> except, possibly, at <span class="process-math">\(a\)</span> itself. If <span class="process-math">\(\limit{x}{a} {f(x)}=L\)</span> and <span class="process-math">\(\limit{x}{a}{g(x)}=M\)</span> then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\limit{x}{a} {\left(f(x)\cdot g(x)\right)}=\left(\limit{x}{a}{f(x)}\right)\cdot\left(\limit{x}{a}{g(x)}\right)
+= L\cdot M.
+\end{equation*}
+</div>
+</div></article> <article class="theorem theorem-like" id="theorem:LimQuot2"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">14.3</span><span class="period">.</span><span class="space"> </span><span class="title">The Limit of a Quotient is the Quotient of the Limits.</span>
+</h4>
+<div class="para logical" id="theorem:LimQuot2-2">
+<div class="para"> Let <span class="process-math">\(a\)</span> be some real number. Suppose  that the functions  <span class="process-math">\(f(x)\)</span> and <span class="process-math">\(g(x)\)</span> are defined on some open interval about <span class="process-math">\(a\)</span> except, possibly, at <span class="process-math">\(a\)</span> itself. Then if <span class="process-math">\(\limit{x}{a} {f(x)}=L\)</span> and <span class="process-math">\(\limit{x}{a}{g(x)}=M\neq0\)</span> then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\limit{x}{a}
+{\frac{f(x)}{g(x)}}=\frac{\limit{x}{a}{f(x)}}{\limit{x}{a}{g(x)}}
+= \frac{L}{M}.
+\end{equation*}
+</div>
+</div></article> <div class="para" id="sec:limit-theorems-laws-2-8">Notice that in addition to changing <span class="process-math">\(\infty\)</span> to some real number, <span class="process-math">\(a\text{,}\)</span> we have added two qualifications to the statement of each of these theorems from <a href="CHAlimits-lhop-rule.html" class="internal" title="Chapter 12: Limits and L’H\^o pital’s Rule">Chapter 12</a>: \begin{enumerate} \item ``Suppose that the functions <span class="process-math">\(f(x)\)</span> and <span class="process-math">\(g(x)\)</span> are defined on some open interval about <span class="process-math">\(a\)</span>’’ and, \item ``except, possibly, at <span class="process-math">\(a\)</span> itself’’ \end{enumerate} To see why these are necessary recall that we’re going to use limits to define the derivative as in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "DEFDerivative" missing or not unique]</code> so we’ll need to evaluate the limit <span class="process-math">\(f^\prime(x)=\tlimit{h}{0}{\frac{f(x+h)-f(x)}{h}}\)</span> . Clearly the expression <span class="process-math">\(\frac{f(x+h)-f(x)}{h}\)</span> is not defined at <span class="process-math">\(h=0\text{.}\)</span> But we’re only interested in its value <dfn class="terminology">in the limit</dfn> as <span class="process-math">\(h\rightarrow0\)</span> which means that <span class="process-math">\(h\)</span> must be able to get close to <span class="process-math">\(0\text{.}\)</span> That is, there must be an open interval around <span class="process-math">\(0\)</span> where the expression <span class="process-math">\(\frac{f(x+h)-f(x)}{h}\)</span> is defined.</div> <div class="para" id="sec:limit-theorems-laws-2-9">But we don’t care if <span class="process-math">\(\frac{f(x+h)-f(x)}{h}\)</span> is defined at <span class="process-math">\(h=0\)</span> or not. It is irrelevant to our purpose.  So we state explicitly that we do not consider whether <span class="process-math">\(h=0\text{.}\)</span>
+</div> <div class="para" id="sec:limit-theorems-laws-2-10">Ok, but why did we insert the word ``possibly’’? Wouldn’t it be enough to simply say ``except at <span class="process-math">\(a\)</span>’’?</div> <div class="para" id="sec:limit-theorems-laws-2-11">We need to say ``possibly’’ because these theorems, like all theorems, are stated with as much generality as possible.  For example, consider the function <span class="process-math">\(f(x)=2x\text{.}\)</span> Had we not included ``possibly’’ in the conditions of our theorems the limit: <span class="process-math">\(\tlimit{x}{3}{2x}\text{,}\)</span> which is clearly equal to <span class="process-math">\(6\text{,}\)</span> would have to be considered undefined because <span class="process-math">\(f(x)=2x\)</span> is defined at <span class="process-math">\(x=3\text{.}\)</span> This distinction\aside{In the eighteenth century there was a, public, protracted, and vitriolic argument between <a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Robins/" target="_blank">Benjamin Robins</a><a class="xref" id="sec:limit-theorems-laws-2-11-7" href="" data-knowl="./knowl/fn/sec:limit-theorems-laws-2-11-7.html" title="Footnote 14.2"><sup> 2 </sup></a> and <a class="external" href="https://en.wikipedia.org/wiki/James_Jurin" target="_blank">James Jurin</a><a class="xref" id="sec:limit-theorems-laws-2-11-9" href="" data-knowl="./knowl/fn/sec:limit-theorems-laws-2-11-9.html" title="Footnote 14.3"><sup> 3 </sup></a> over exactly this point. Jurin would have claimed that the statement <span class="process-math">\(\tlimit{x}{3}{2x} = 6\)</span> is meaningless. Robins would have said it has meaning because it is obviously true. The point here is not that either man was right or wrong, but rather that it depends on how we define limits. By one definition Robins was correct, by another Jurin was. Their controversy was the result of the incomplete understanding of limits that prevailed at the time.}  may seem like a very fussy, and unimportant detail right now, but it will be important when we discuss the meaning of continuity in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "SEClimit-comp-cont" missing or not unique]</code>.</div> <article class="example example-like" id="example:DiscontLimit1"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">14.4</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="example:DiscontLimit1-1">
+<div class="para"> Suppose</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(x)=
+\begin{cases}
+2x \amp  \text{if } x\neq3\\
+10  \amp  \text{if } x=3
+\end{cases}.
+\end{equation*}
+</div>
+<div class="para">Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\limit{x}{3}{f(x)}=  6.
+\end{equation*}
+</div>
+<div class="para">In particular the limit is not <span class="process-math">\(10\text{.}\)</span> Here is how we would evaluate this limit using the tools we currently have at our disposal. We’re interested in the limit as <span class="process-math">\(x\rightarrow3\)</span> so in particular we do not need to consider the case when <span class="process-math">\(x=3\text{.}\)</span> But as long as <span class="process-math">\(x\neq3\)</span> we have <span class="process-math">\(f(x)=2x\)</span> so</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\limit{x}{3}{f(x)}=   \limit{x}{3}{2x}.
+\end{equation*}
+</div>
+<div class="para">As <span class="process-math">\(x\)</span> gets close to <span class="process-math">\(3\)</span> it is clear that <span class="process-math">\(2x\)</span> gets close to <span class="process-math">\(6\text{.}\)</span> Therefore</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\limit{x}{3}{f(x)}=  6.
+\end{equation*}
+</div>
+<div class="para">Notice that our reasoning is a little vague in the last step because we had to resort to the phase ``gets close to,’’ and we know from our work in Chapter~\ref{sec:more-indet-forms} that this is not a precise phrase. This is the best we can do now because we have not yet rigorously defined a limit. We will do that in Chapter~\ref{cha:formal-limits}.</div>
+</div></article> <article class="problem example-like" id="no-label"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">14.5</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="no-label-1"><div class="para" id="no-label-1-1">By reasoning in a manner similar to Example~\#\ref{example:DiscontLimit1} show that <span class="process-math">\(\tlimit{x}{3}{f(x)}=9\)</span> for each function.</div></div>
+<article class="task exercise-like" id="no-label-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="no-label-2-1-1"><span class="process-math">\(f(x)=x^2\)</span></div></article><article class="task exercise-like" id="no-label-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="no-label-3-1-1"><span class="process-math">\(f(x)=
+\begin{cases}
+x^2 \amp  \text{if } x\neq3\\
+\text{undefined }  \amp  \text{if } x=3
+\end{cases}\)</span></div></article></article>              <div class="para" id="sec:limit-theorems-laws-2-14">It will be tedious to write (and to read) the phrase ``Suppose that <span class="process-math">\(f(x)\)</span> is defined on some open interval about <span class="process-math">\(a\)</span> except, possibly, at <span class="process-math">\(a\)</span> itself’’ every time we need it so it is customary to say something more like ``Suppose <span class="process-math">\(f(x)\)</span> is defined <dfn class="terminology">near</dfn> <span class="process-math">\(a\)</span>’’ instead. Because we are trying to be as precise, and rigorous as possible we will formalize this by redefining the word <dfn class="terminology">near</dfn>.</div> <article class="definition definition-like" id="DEFINITIONdef:near"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">14.6</span><span class="period">.</span><span class="space"> </span><span class="title">Near.</span>
+</h4> <div class="para" id="DEFINITIONdef:near-2-1"> We say that <span class="process-math">\(f(x)\)</span> has some property \term{near}\aside{Notice that this is not what ``near’’ means in ordinary speech.  This is one of the things that makes it difficult to read mathematics. We routinely co-opt words from natural languages (like English) and redefine them to fit our needs. In this case our purpose requires that we change the definition of ``near’’ slightly as you’ve seen.  Because ``near’’ is a common word and you have a lifetime of experience using it, it can be very difficult to cast off your preconceptions.  The familiar definition you learned in childhood will intrude and cause confusion. It is hard to overcome this. Refer back to the definition frequently until you have internalized the mathematical definition.  } <span class="process-math">\(x=a\)</span> if <span class="process-math">\(f(x)\)</span> has that property on an open interval about <span class="process-math">\(x=a\text{,}\)</span> except possibly at <span class="process-math">\(a\)</span> itself.</div></article> <div class="para" id="sec:limit-theorems-laws-2-16">We  have the following theorem.</div> <article class="theorem theorem-like" id="thm:ConstLimit"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">14.7</span><span class="period">.</span><span class="space"> </span><span class="title">The Limit of a Constant is the Constant.</span>
+</h4>
+<div class="para logical" id="thm:ConstLimit-2">
+<div class="para"> Suppose <span class="process-math">\(a\)</span> and  <span class="process-math">\(L\)</span> are real  numbers, and <span class="process-math">\(f(x)=L\)</span> near <span class="process-math">\(a\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\limit{x}{a}{f(x)}=L.
+\end{equation*}
+</div>
+</div></article> <div class="para logical" id="sec:limit-theorems-laws-2-18">
+<div class="para">Notice that <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "THMConstLimit" missing or not unique]</code> would be considerably less useful had we not required that <span class="process-math">\(f(x)=L\)</span> for <span class="process-math">\(x\)</span> near <span class="process-math">\(a\text{,}\)</span> rather than <span class="process-math">\(f(x)=L\)</span> on its entire domain. For example, as stated <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "THMConstLimit" missing or not unique]</code> allows us to conclude that if</div>
+<div class="displaymath process-math" data-contains-math-knowls=" ">
+\begin{equation*}
+H(x) =
+\begin{cases}
+1\amp  \text{ if } x\ge0\\
+-1\amp  \text{ if } x\lt0
+\end{cases}
+\end{equation*}
+</div>
+<div class="para">then</div>
+<div class="displaymath process-math" data-contains-math-knowls=" ">
+\begin{equation*}
+\limit{x}{5}{H(x)}=1
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math" data-contains-math-knowls=" ">
+\begin{equation*}
+\limit{x}{-5}{H(x)}=-1
+\end{equation*}
+</div>
+<div class="para">because there are open intervals about <span class="process-math">\(x=5\)</span> and <span class="process-math">\(x=-5\)</span> where <span class="process-math">\(H(x)=1\text{,}\)</span> and <span class="process-math">\(H(x)=-1\text{,}\)</span> respectively.</div>
+</div> <div class="para" id="sec:limit-theorems-laws-2-19">Since there is no such interval about <span class="process-math">\(x=0\text{,}\)</span> <span class="process-math">\(\tlimit{x}{0}{H(x)}\)</span> is undefined.</div> <article class="exercise exercise-like" id="no-label">
+
+<h5 class="heading"><span class="codenumber">(a)</span></h5>
+<h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="introduction" id="no-label-1"><div class="para" id="no-label-1-1"></div></div>
+<article class="task exercise-like" id="no-label-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="no-label-2-1-1">Find an open interval about <span class="process-math">\(5\)</span> where <span class="process-math">\(H(x)=1\text{.}\)</span>
+</div></article><article class="task exercise-like" id="no-label-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="no-label-3-1-1">Find an open interval about <span class="process-math">\(-5\)</span> where <span class="process-math">\(H(x)=-1\text{.}\)</span>
+</div></article></article>         <article class="exercise exercise-like" id="no-label">
+
+<h5 class="heading"><span class="codenumber">(a)</span></h5>
+<h5 class="heading"><span class="codenumber">(b)</span></h5>
+<h5 class="heading"><span class="codenumber">(c)</span></h5>
+<h5 class="heading"><span class="codenumber">(d)</span></h5>
+<h5 class="heading"><span class="codenumber">(e)</span></h5>
+<h5 class="heading"><span class="codenumber">(f)</span></h5>
+<div class="introduction" id="no-label-1"><div class="para logical" id="no-label-1-1">
+<div class="para">Suppose</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(x)=
+\begin{cases}
+\ \ 1;\amp  \text{ if } x\gt 1 \text{ or if } x=-2\\
+-2;\amp  \text{ if } x\le1 \text{ and } x=-2.
+\end{cases}
+\end{equation*}
+</div>
+<div class="para">Determine whether the following statements are true or false.</div>
+</div></div>
+<article class="task exercise-like" id="no-label-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="no-label-2-1-1">
+<span class="process-math">\(f(x)= 1\)</span> near <span class="process-math">\(x= 4\text{.}\)</span>
+</div></article><article class="task exercise-like" id="no-label-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="no-label-3-1-1">
+<span class="process-math">\(f(x)= 1\)</span> near <span class="process-math">\(x= 1\text{.}\)</span>
+</div></article><article class="task exercise-like" id="no-label-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="no-label-4-1-1">
+<span class="process-math">\(f(x)= -2\)</span> near <span class="process-math">\(x=1 \text{.}\)</span>
+</div></article><article class="task exercise-like" id="no-label-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="no-label-5-1-1">
+<span class="process-math">\(f(x)= 1\)</span> near <span class="process-math">\(x=-2 \text{.}\)</span>
+</div></article><article class="task exercise-like" id="no-label-6"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<div class="para" id="no-label-6-1-1">
+<span class="process-math">\(f(x)= -2\)</span> near <span class="process-math">\(x=-2 \text{.}\)</span>
+</div></article><article class="task exercise-like" id="no-label-7"><h5 class="heading"><span class="codenumber">(f)</span></h5>
+<div class="para" id="no-label-7-1-1">
+<span class="process-math">\(f(x)= 0\)</span> near <span class="process-math">\(x= 0\text{.}\)</span>
+</div></article></article>                    <article class="problem example-like" id="no-label"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">14.8</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="no-label-1"><div class="para" id="no-label-1-1">\noindent  Explain, that  the following statements are true by citing Theorem~\ref{theorem:LimSum2} through Theorem~\ref{thm:ConstLimit} as needed.</div></div>
+<article class="task exercise-like" id="no-label-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="no-label-2-1-1"><span class="process-math">\(\limit{x}{0}{\left(\frac{5x}{x}+\frac{\pi x}{x}\right)}=5+\pi\)</span></div></article><article class="task exercise-like" id="no-label-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="no-label-3-1-1"><span class="process-math">\(\limit{x}{2}{\left(\frac{x-2}{x-2}+\frac{3x-6}{x-2}\right)}=4\)</span></div></article><article class="task exercise-like" id="no-label-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="no-label-4-1-1"><span class="process-math">\(\limit{x}{5}{\left(2x+3x^2\right)}=85\)</span></div></article><article class="task exercise-like" id="no-label-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="no-label-5-1-1"><span class="process-math">\(\limit{x}{-1}{\left(\frac{x^2-1}{x+1}+\frac{x^2+3x+2}{x+1}\right)}=-1\)</span></div></article></article>              <article class="problem example-like" id="no-label"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">14.9</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="no-label-1-1">
+<div class="para">Notice that neither <span class="process-math">\(\tlimit{x}{0}{\frac{1}{x}}\)</span> nor <span class="process-math">\(\tlimit{x}{0}{\left(\frac{-1}{x}\right)}\)</span> exists. However their sum,</div>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\tlimit{x}{0}{\left(\frac{1}{x}+\frac{-1}{x}\right)}=\tlimit{x}{0}{0}=0
+\end{equation*}
+</div>
+<div class="para">does exist. Explain why this does not contradict <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "THEOREMLimSum2" missing or not unique]</code>.</div>
+</div></article> <article class="problem example-like" id="prob:DiffImpCont"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">14.10</span><span class="period">.</span>
+</h4>
+<div class="para" id="prob:DiffImpCont-1-1"> Suppose <span class="process-math">\(g(x)\neq0\)</span> near <span class="process-math">\(x=a\)</span> and <span class="process-math">\(\tlimit{x}{a}{\frac{f(x)}{g(x)}}\)</span> exists. Use <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "THEOREMLimProd2" missing or not unique]</code> to show that if <span class="process-math">\(\limit{x}{a}{g(x)}=0\)</span>         then <span class="process-math">\(\limit{x}{a}{f(x)}=0\text{.}\)</span>\\ \hint{Consider <span class="process-math">\(f(x)=\frac{f(x)}{g(x)}\cdot g(x)\)</span> for <span class="process-math">\(x\)</span> near <span class="process-math">\(a\text{.}\)</span>}\\ \comment{This problem shows that if <span class="process-math">\(\limit{x}{a}{g(x)}=0\)</span> then the only way that <span class="process-math">\(\limit{x}{a}{\frac{f(x)}{g(x)}}\)</span> can exist is if we have a \lhop  Indeterminate. It can also be used to prove <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "LEMMADiffImpliesCont" missing or not unique]</code> as you will see when we get to it.}</div></article> <div class="para" id="sec:limit-theorems-laws-2-25">The following Corollary says that if <span class="process-math">\(f(x)\)</span> is approaching <span class="process-math">\(L_f\)</span> and we multiply <span class="process-math">\(f(x)\)</span> by a number, <span class="process-math">\(k\text{,}\)</span> then the product <span class="process-math">\(kf(x)\)</span> approaches <span class="process-math">\(kL_f\text{.}\)</span> It follows from <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "THMConstLimit" missing or not unique]</code> and <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "THEOREMLimProd2" missing or not unique]</code>.</div> <article class="corollary theorem-like" id="cor:ConstMultLimit"><h4 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">14.11</span><span class="period">.</span>
+</h4>
+<div class="para" id="cor:ConstMultLimit-1"> If <span class="process-math">\(\limit{x}{a}{f(x)}=L_f\)</span> and <span class="process-math">\(k\)</span> is a real number then <span class="process-math">\(\limit{x}{a}{kf(x)}=k\limit{x}{a}{f(x)}=kL_f.\)</span>
+</div></article> <article class="exercise exercise-like" id="no-label">
+
+</article></section><section class="subsection" id="sec:limit-comp-cont"><h4 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">14.1.1</span><span class="space"> </span><span class="title">The Limit of a Composition and Continuity at a Point</span>
+</h4>
+<div class="para" id="sec:limit-comp-cont-2">The concept of <dfn class="terminology">continuity</dfn> is essential to Calculus, but you may have noticed that we have carefully avoided it as much as possible until now. This is because defining continuity is similar to defining the line tagent to a curve (<code class="code-inline tex2jax_ignore">[cross-reference to target(s) "DEFTangentLine" missing or not unique]</code>). We need to think carefully about what we want the term <dfn class="terminology">continuous</dfn> to mean, and then craft our definition to capture that meaning. This would have been very difficult to do without a fairly sophisticated understanding of the limit concept.</div>
+<div class="para" id="sec:limit-comp-cont-3">So stop and think about this for a moment. What do we mean when we say a curve is <dfn class="terminology">continuous</dfn>? A first, intuitive definition usually goes something like this: ``A function is continuous if you can draw its graph without lifting your pencil from the paper,’’ but this is unsatisfactory for a number of reasons. In particular, it is impossible to apply in most cases. Think about it. Have often have you seen the entire graph of any function? Usually we just draw the part neat the origin and put arrowheads on both ends of the graph. We need something more precise.</div>
+<div class="para" id="sec:limit-comp-cont-4">At the end of <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EXAMPLELimComp1" missing or not unique]</code> we remarked that it is only when <span class="process-math">\(f(x)\)</span> is continuous at <span class="process-math">\(x=g(a)\)</span> that <span class="process-math">\(\textcolor{blue}{\tlimit{x}{a}{\textcolor{red}{f(g(x))}}}\)</span> is equal to <span class="process-math">\(\textcolor{red}{f}\textcolor{blue}{\left(\tlimit{x}{a}{g(x)}\right)}\text{,}\)</span> but we did not discuss the matter any further. It is time for that discussion.</div>
+<div class="para" id="sec:limit-comp-cont-5">First, notice that when you think closely about the statement ``<span class="process-math">\(f(x)\)</span> is continuous at <span class="process-math">\(g(a)\)</span>’’ it appears to be nonsense, because <span class="process-math">\(g(a)\)</span> is the value of <span class="process-math">\(f\)</span> at the single value <span class="process-math">\(g(a)\)</span> but .  Does it make sense to you that a curve can be continuous at a single value of its domain? In ordinary usage  the concept of continuity requires an interval to be continuous on, doesn’t it?</div>
+<div class="para" id="sec:limit-comp-cont-6">Since we need the concept of ``continuity at a point,’’ we define it.</div>
+<article class="definition definition-like" id="DEFINITIONdef:continuity"><h5 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">14.12</span><span class="period">.</span><span class="space"> </span><span class="title">Continuity at a Point.</span>
+</h5> <div class="para" id="DEFINITIONdef:continuity-2-1"> A function <span class="process-math">\(f\text{,}\)</span> whose domain is an interval in <span class="process-math">\(\RR\text{,}\)</span> is continuous at <span class="process-math">\(x=a\)</span> in the interval, if and only if <span class="process-math">\(\limit{x}{a}{f(x)}=f(a)\text{,}\)</span> (alternatively, if <span class="process-math">\(\limit{h}{0}{f(a+h)}=f(a)\)</span>).</div></article><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/ContDiscExamp.png" class="contained"></div>
+<div class="para" id="sec:limit-comp-cont-9">If <span class="process-math">\(f\)</span> is continuous at every point in its domain we’ll just call it a continuous function.</div>
+<div class="para" id="sec:limit-comp-cont-10">The sketch at the right shows that Definition~\#\ref{def:continuity} recovers the intuitive notion that a function is continuous if we can draw its graph without lifting pen from page.  Both of the functions, <span class="process-math">\(f(x)\)</span> and <span class="process-math">\(g(x)\)</span> are identical everywhere except at <span class="process-math">\(x=1\text{.}\)</span> Clearly, to draw <span class="process-math">\(g(x)\text{,}\)</span> which is discontinuous at <span class="process-math">\(x=1\text{,}\)</span> we must lift our pen from the page. This is not true of the graph of <span class="process-math">\(f(x)\text{,}\)</span> which is continuous.</div>
+<div class="para" id="sec:limit-comp-cont-11">The following lemma is true and the proof will be valid once the limit theorems have been proven in Chapter~\ref{cha:formal-limits}.</div>
+<article class="lemma theorem-like" id="lemma:DiffImpliesCont"><h5 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">14.13</span><span class="period">.</span><span class="space"> </span><span class="title">Differentiability Implies Continuity.</span>
+</h5>
+<div class="para" id="lemma:DiffImpliesCont-2"> If <span class="process-math">\(f(x)\)</span> is differentiable at <span class="process-math">\(x=a\)</span> then <span class="process-math">\(f(x)\)</span> is also continuous at <span class="process-math">\(x=a.\)</span>
+</div></article><article class="problem example-like" id="no-label"><h5 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">14.14</span><span class="period">.</span>
+</h5>
+<div class="para" id="no-label-1-1">Use the result of Problem~\#\ref{prob:DiffImpCont} to prove Lemma~\ref{lemma:DiffImpliesCont}.</div></article><div class="para" id="sec:limit-comp-cont-14">When we were studying horizontal asymptotes in Section~\ref{subsec:lhop-rule-horiz} we encountered Theorem~\ref{thm:InfSqueeze} (the  Squeeze Theorem ``at’’ Infinity). But the Squeeze Theorem is also valid if <span class="process-math">\(x\rightarrow a\text{,}\)</span> where <span class="process-math">\(a\)</span> is a real number.</div>
+<article class="theorem theorem-like" id="thm:FiniteSqueeze"><h5 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">14.15</span><span class="period">.</span><span class="space"> </span><span class="title">The Squeeze Theorem (The Finite Case).</span>
+</h5>
+<div class="para logical" id="thm:FiniteSqueeze-2">
+<div class="para"> If <span class="process-math">\(\alpha(x)\le f(x)\le \beta(x)\)</span> for <span class="process-math">\(x\)</span> near <span class="process-math">\(a\)</span> and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\limit{x}{a}{\beta(x)} = \limit{x}{a}{\alpha(x)} = L
+\end{equation*}
+</div>
+<div class="para">then <span class="process-math">\(\limit{x}{a}{f(x)} = L\)</span> also.</div>
+</div></article><div class="para" id="sec:limit-comp-cont-16">Theorem~\ref{thm:FiniteSqueeze} is illustrated below, but a formal proof will not be given until Chapter~\ref{cha:formal-limits}.\\ \centerline{\includegraphics*[height=1.4in,width=2.6in]{../Figures/SqueezeThm1}}</div>
+<article class="problem example-like" id="no-label"><h5 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">14.16</span><span class="period">.</span>
+</h5>
+<div class="introduction" id="no-label-1"><div class="para" id="no-label-1-1">Consider the two functions defined in the sketch below:\\ \centerline{\includegraphics*[height=2.5in,width=5.5in]{../Figures/TopSinCurve}}</div></div>
+<article class="task exercise-like" id="no-label-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="para" id="no-label-2-1-1">Use Theorem~\ref{thm:FiniteSqueeze} to show that <span class="process-math">\(U(x)\)</span> is continuous at <span class="process-math">\(x=0\text{.}\)</span> \\ \hint{What functions is <span class="process-math">\(U(x)\)</span> caught between?}</div></article><article class="task exercise-like" id="no-label-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="para" id="no-label-3-1-1">Use Definition~\ref{def:continuity} to show that <span class="process-math">\(T(x)\)</span> is not continuous at <span class="process-math">\(x=0\text{.}\)</span>  \\ \hint{Try the substitution <span class="process-math">\(z=\frac1x\)</span> for <span class="process-math">\(x\neq0\text{.}\)</span>  What would <span class="process-math">\(\limit{x}{0}{T(x)}\)</span> look like in terms of <span class="process-math">\(z\text{?}\)</span>}</div></article></article><article class="theorem theorem-like" id="no-label"><h5 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">14.17</span><span class="period">.</span><span class="space"> </span><span class="title">The Limit of a Composition is the Composition of the Limits.</span>
+</h5>
+<div class="para logical" id="no-label-2">
+<div class="para">Limits] \label{thm:CompositionLimit} Suppose <span class="process-math">\(\limit{x}{a}{g(x)}=L_g\)</span> and that <span class="process-math">\(f(x)\)</span> is continuous at <span class="process-math">\(L_g\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\limit{x}{a}{f(g(x))}=f\left(\limit{x}{a}{g(x)}\right)=f(L_g).
+\end{equation*}
+</div>
+</div></article><div class="para" id="sec:limit-comp-cont-19">Essentially this says that we can interchange the function <span class="process-math">\(f\)</span> and the ``<span class="process-math">\(\lim\)</span>’’ symbols if <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(g(a)\text{.}\)</span>
+</div></section></section><section class="section" id="sec:diff-rules-via"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">14.2</span><span class="space"> </span><span class="title">The General Differentiation Theorems, via Limits</span>
+</h3>
+<blockquote class="blockquote" id="sec:diff-rules-via-2">
+<div class="para" id="sec:diff-rules-via-2-1">. . . one way in math to take care of destabilizing problems is to legislate them out of existence . . . by loading theorems with stipulations and exclusions designed to head off crazy results.</div> <cite class="attribution">―<a class="external" href="https://en.wikipedia.org/wiki/David_Foster_Wallace" target="_blank">David Foster Wallace (<span class="process-math">\(1962\)</span> - <span class="process-math">\(2008\)</span>)</a><a class="xref" id="sec:diff-rules-via-2-2-2" href="" data-knowl="./knowl/fn/sec:diff-rules-via-2-2-2.html" title="Footnote 14.4"><sup> 4 </sup></a></cite>
+</blockquote>
+<div class="para" id="sec:diff-rules-via-3">Since we will now be proving the the differentiation rules rigorously we will call them what they really are: Theorems. Because limits are much less intuitive than differentials we’ll want to be as efficient as possible when using them. The sooner we can build up some tools to make things easier, the better. %  Recall that in</div>
+<div class="para" id="sec:diff-rules-via-4">Also, in this section we will add a new differentiation rule (theorem): The Chain Rule. Or rather, we will give a name to an already familiar technique and elevate it’s status by providing a formal proof.  Proving the Chain, Product, and Quotient Differentiation Rules using limits will require a good deal of cleverness. These proofs will also uncover some unexpected subtleties along the way.</div>
+<div class="para" id="sec:diff-rules-via-5">Before we begin there is one more point that needs to be clear. Because differentiation is now defined via a limit and limits are defined at a point we can only differentiate a function at a point. We usually say that limit evaluation and differentiability are <dfn class="terminology">local properties</dfn>.  If we don’t specify the ``at <span class="process-math">\(x\)</span>’’ the convention is that the function is differentiable at every point in its domain.</div>
+<div class="para" id="sec:diff-rules-via-6">The proofs of the Constant, Sum, and Constant Multiple Differentiation Rules are all completely straightforward so we will leave them as exercises\aside{Frequently students will simply ignore problems that are described as straightforward. Don’t make that mistake. Straightforward does not mean easy, and it does not mean unimportant. We are leaving these problems for you so you can gain experience using limits in the simplest cases, not because they are unimportant.} for you.</div>
+<article class="theorem theorem-like" id="thm:LimConstantRule"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">14.18</span><span class="period">.</span><span class="space"> </span><span class="title">The Constant Rule for Differentiation.</span>
+</h4>
+<div class="para" id="thm:LimConstantRule-2"> If <span class="process-math">\(L\)</span> is some number and <span class="process-math">\(f(x)=L\)</span> for all real values of <span class="process-math">\(x\)</span> near\aside{``Near’’ means on an open interval about <span class="process-math">\(L\text{.}\)</span> Recall Definition~\ref{def:near}.  } <span class="process-math">\(L\text{,}\)</span> then <span class="process-math">\(f^\prime(x)=0\)</span> at every real number <span class="process-math">\(x\)</span> near\aside{On the same open interval.} <span class="process-math">\(L\)</span> . \begin{myproof} By Definition~\#\ref{eq:DefDerivative} \begin{align*} f^\prime(x)\amp =\limit{h}{0}{\frac{f(x+h)-f(x)}{h}}.\\ \intertext{But <span class="process-math">\(f(x+h)=L=f(x)\)</span> so} f^\prime(x)\amp =\limit{h}{0}{\frac{L-L}{h}}=\limit{h}{0}{\frac{0}{h}}=0. \end{align*} \end{myproof}</div></article><article class="theorem theorem-like" id="no-label"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">14.19</span><span class="period">.</span><span class="space"> </span><span class="title">The Sum Rule for Differentiation.</span>
+</h4>
+<div class="para logical" id="no-label-2">
+<div class="para">If <span class="process-math">\(\alpha(x)\)</span> and <span class="process-math">\(\beta(x)\)</span> are differentiable at <span class="process-math">\(x\)</span> and <span class="process-math">\(f(x)=\alpha(x)+\beta(x)\text{,}\)</span> then <span class="process-math">\(f(x)\)</span> is also differentiable at <span class="process-math">\(x\)</span> and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f^\prime(x)=\alpha^\prime(x)+ \beta^\prime(x).
+\end{equation*}
+</div>
+</div></article><article class="problem example-like" id="no-label"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">14.20</span><span class="period">.</span>
+</h4>
+<div class="para" id="no-label-1-1">Use <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "DEFDerivative" missing or not unique]</code> to prove the Sum Rule for Differentiation.</div></article><div class="para" id="sec:diff-rules-via-10">Recall that when we first established the  General Differentiation Rules using differentials in <a href="CHAPTdifferentials.html" class="internal" title="Chapter 4: Differentials, Differentiation, and the Derivative">Chapter 4</a> we said that the Constant Multiple,  Power and Quotient Rules for differentiation were just conveniences because they depend on the other rules.</div>
+<div class="para" id="sec:diff-rules-via-11">This is still true of course (except for the caveat in the point of rigor below) which means that we don’t have to prove any of them using limits. For example, since the Constant Rule and the Product Rule are now established theorems we can use these to prove the Constant Multiple Rule directly, without having to resort to using limits.</div>
+<article class="theorem theorem-like" id="no-label"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">14.21</span><span class="period">.</span><span class="space"> </span><span class="title">The Constant Multiple Rule for Differentiation.</span>
+</h4>
+<div class="para logical" id="no-label-2">
+<div class="para">If <span class="process-math">\(f(x)\)</span> is differentiable at <span class="process-math">\(x\)</span> and <span class="process-math">\(K\)</span> is a constant then <span class="process-math">\(\alpha(x)=Kf(x) \)</span> is also differentiable and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\alpha^\prime(x)=Kf^\prime(x).
+\end{equation*}
+</div>
+</div></article><article class="problem example-like" id="PIC:ConstMultRule"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">14.22</span><span class="period">.</span>
+</h4>
+<div class="para" id="PIC:ConstMultRule-1-1"> Use the <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "DEFDerivative" missing or not unique]</code> to prove the Constant Multiple Rule.</div></article></section><section class="section" id="no-label"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">14.3</span><span class="space"> </span><span class="title">The Chain Rule</span>
+</h3>
+<div class="para" id="no-label-2">To understand the Chain Rule we will need to slightly blur the distinction between function and variable.</div>
+<article class="example example-like" id="example:chain-rule1"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">14.23</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="example:chain-rule1-1">
+<div class="para"> Here’s what we mean: The formula <span class="process-math">\(y=(2x^2-6x)^3\text{,}\)</span> is given entirely in terms of the variables <span class="process-math">\(x\text{,}\)</span> and <span class="process-math">\(y\text{.}\)</span> To differentiate using differentials we would make the (variable) substitution <span class="process-math">\(z=3x^2+6x\)</span> so that <span class="process-math">\(y=z^3\text{.}\)</span> In that case, <span class="process-math">\(\dx{y}=3z\dx{z}=3\left(3x^2+6x\right)^2(6x+6)\dx{x}\text{,}\)</span> and dividing through by <span class="process-math">\(\dx{x}\)</span> gives us the derivative of <span class="process-math">\(y\)</span> with respect to <span class="process-math">\(x\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\label{eq:CR1}
+\dfdx{y}{x}=3z\dx{z}=3\left(3x^2+6x\right)^2(6x+6).% = \dfdx{y}{z}\cdot\dfdx{z}{x}.
+\end{equation*}
+</div>
+</div> <div class="para" id="example:chain-rule1-2">But Definition~\#\ref{def:Derivative} requires that we think about functions, not variables so let’s translate this problem into the language of functions. If <span class="process-math">\(y=\left(2x^2-6x\right)^3\text{,}\)</span> clearly <span class="process-math">\(y\)</span> is a function of (depends on) <span class="process-math">\(x\text{.}\)</span> Naming that function <span class="process-math">\(f\text{,}\)</span> we have <span class="process-math">\(y=f(x)\text{.}\)</span> Replacing <span class="process-math">\(y\)</span> with <span class="process-math">\(f(x)\text{,}\)</span> we get <span class="process-math">\(f(x)=(2x^2-6x)^3\text{.}\)</span>
+</div> <div class="para logical" id="example:chain-rule1-3">
+<div class="para">Similarly, if <span class="process-math">\(z=3x^2+6x\)</span> then <span class="process-math">\(z\)</span> is also a function of (depends on) <span class="process-math">\(x\text{,}\)</span> and naming that function <span class="process-math">\(\beta\)</span> we have <span class="process-math">\(z=\beta(x)\text{.}\)</span> Replacing <span class="process-math">\(z\)</span> with <span class="process-math">\(\beta(x)\)</span> we have <span class="process-math">\(f(x)=(\beta(x))^3\text{.}\)</span> If we suppress the ``<span class="process-math">\((x)\)</span>’’ part of <span class="process-math">\(\beta(x)\text{,}\)</span> we see that <span class="process-math">\(f\)</span> can also be thought of as a function of (depends on) <span class="process-math">\(\beta\)</span> so that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(\beta)= \beta^3
+\end{equation*}
+</div>
+<div class="para">is also a valid representation of our function. If we now define <span class="process-math">\(\alpha(\beta)=\beta^3\)</span> we see that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(x)= \alpha(\beta).
+\end{equation*}
+</div>
+</div> <div class="para logical" id="example:chain-rule1-4">
+<div class="para">Looking again at Equation~\ref{eq:CR1}, and mixing the differential and functional notations a bit we see that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f^\prime(x)=\dfdx{y}{x}=3z\dx{z}=\underbrace{3\left(3x^2+6x\right)^2}_{\dfdx{\alpha}{\beta}=\alpha^\prime(\beta)}\underbrace{(6x+6)}_{\dfdx{\beta}{x}=\beta^\prime(x)}=\alpha^\prime(\beta)\cdot\beta^\prime(x).
+\end{equation*}
+</div>
+</div> <div class="para logical" id="example:chain-rule1-5">
+<div class="para">Thus if <span class="process-math">\(f(x)=\alpha(\beta(x))\)</span> is the composition of <span class="process-math">\(\alpha(x)\)</span> and <span class="process-math">\(\beta(x)\)</span>  then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f^\prime(x)=\alpha^\prime(\beta(x))\beta^\prime(x).
+\end{equation*}
+</div>
+<div class="para">This is the Chain Rule.  We have expressed the Chain Rule in this form so that we can prove it rigorously, not so that we can use it. The substitution process using differentials still works so there is no reason to stop using substitution when you are actually computing derivatives.</div>
+</div></article><article class="theorem theorem-like" id="thm:ChainRule"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">14.24</span><span class="period">.</span><span class="space"> </span><span class="title">The Chain Rule.</span>
+</h4>
+<div class="para logical" id="thm:ChainRule-2">
+<div class="para"> Suppose that <span class="process-math">\(\beta(x)\)</span> is differentiable at <span class="process-math">\(x\text{,}\)</span> that <span class="process-math">\(\alpha(x)\)</span> is differentiable at <span class="process-math">\(\beta(x)\)</span> and that <span class="process-math">\(\Delta\beta\neq0\)</span> near <span class="process-math">\(x\text{.}\)</span> Then the composition,\\ \centerline{<span class="process-math">\(f(x) = \alpha(\beta(x)) \)</span>} is also differentiable, and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\label{eq:ChainRule}
+f^\prime(x) =\alpha^\prime(\beta(x))\cdot\beta^\prime(x).
+\end{equation*}
+</div>
+</div></article><aside class="aside aside-like" id="no-label-5"><h4 class="heading"><span class="title">Note to Self.</span></h4>
+<div class="para" id="no-label-5-2">Digression missing</div></aside><div class="para" id="no-label-6">Understanding the Chain Rule in this form requires that we blur the distinction between function and variable a bit. When we compute <span class="process-math">\(\dfdx{\alpha}{\beta}=\alpha^\prime(\beta)\)</span> (the derivative of <span class="process-math">\(\alpha\)</span> with with respect to <span class="process-math">\(\beta\)</span>)  we view <span class="process-math">\(\beta\)</span> as a variable, but when we compute <span class="process-math">\(\dfdx{\beta}{x}=\beta^\prime(x)\)</span> (the derivative of <span class="process-math">\(\beta\)</span> with respect to <span class="process-math">\(x\)</span>) we view it as a function.</div>
+<div class="para" id="no-label-7">As far as the Chain Rule is concerned it is both. \begin{myproof} Before we begin take specific notice of the assumption ``<span class="process-math">\(\Delta\beta\neq0\)</span> near <span class="process-math">\(x\)</span>’’ in the statement of the Chain Rule. We will have a few comments about this in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "DIGRESSIONDeltaBetaNotZero" missing or not unique]</code> after the proof is completed.</div>
+<div class="para logical" id="no-label-8">
+<div class="para">We will first establish that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\label{eq:DeltaBetaEq0}
+\limit{h}{0}{\Delta\beta}=0.
+\end{equation*}
+</div>
+</div>
+<div class="para logical" id="no-label-9">
+<div class="para">Suppose\aside{Because asserting the equality of non-existing objects would be meaningless we assume, implicitly that all limits in this argument exist.} that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\beta(x+h)-\beta(x)=\Delta\beta\label{eq:ChainRule1}.
+\end{equation*}
+</div>
+</div>
+<div class="para logical" id="no-label-10">
+<div class="para">Then \begin{align*} \limit{h}{0}{\beta(x+h)}\amp =\limit{h}{0}{(\beta(x)+\Delta\beta)}. \\ \intertext{By <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "THEOREMLimSum2" missing or not unique]</code> we have} \limit{h}{0}{\beta(x+h)}\amp =\limit{h}{0}{\beta(x)}+\limit{h}{0}{\Delta\beta}, \\ \intertext{and since <span class="process-math">\(\beta(x)\)</span> is differentiable at <span class="process-math">\(x\)</span> we see from <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "LEMMADiffImpliesCont" missing or not unique]</code> that} \beta(x)\amp =\beta(x) +\limit{h}{0}{\Delta\beta} \end{align*} from  which <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQDeltaBetaEq0" missing or not unique]</code>) follows. To prove the Chain Rule recall that \begin{align*} f^\prime(x)\amp =\limit{h}{0}{\frac{f(x+h)-f(x)}{h}}\\ \amp =\limit{h}{0}{\frac{\alpha(\beta(x+h))-\alpha(\beta(x))}{h}}. \end{align*} Multiplying  by <span class="process-math">\(1\)</span> in the form\aside{In the past we have called this ``uncancelling’’ <span class="process-math">\(\Delta\beta\text{.}\)</span> Also, notice that this is where we use the assumption, ``<span class="process-math">\(\Delta\beta\neq0\)</span> near <span class="process-math">\(x\text{.}\)</span>’’} \textcolor{red}{<span class="process-math">\(\frac{\Delta\beta}{\Delta\beta}\)</span>   gives} \begin{align} \label{eq:UncancelDeltaBeta}  f^\prime(x)    \amp =\limit{h}{0}{\left(\frac{\alpha(\beta(x+h))-\alpha(\beta(x))}{\textcolor{red}{\Delta\beta}}\cdot\frac{\textcolor{red}{\Delta\beta}}{h}\right)}.\\ \intertext{From <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQChainRule1" missing or not unique]</code>) we see that <span class="process-math">\(\textcolor{red}{\Delta\beta}=\textcolor{blue}{\beta(x+h)-\beta(x)}\)</span> so} \nonumber    \amp =\limit{h}{0}{\left(\frac{\alpha(\beta(x+h))-\alpha(\beta(x))}{\Delta\beta}\cdot\frac{\textcolor{blue}{\beta(x+h)-\beta(x)}}{h}\right)}.\\ \intertext{By <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "THEOREMLimProd2" missing or not unique]</code> we have:} \nonumber    \amp =\limit{h}{0}{\left(\frac{\alpha(\beta(x+h))-\alpha(\beta(x))}{\Delta\beta}\right)}\cdot\limit{h}{0}{\left(\frac{\beta(x+h)-\beta(x)}{h}\right)}.\\ \intertext{<code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQDeltaBetaEq0" missing or not unique]</code>) says that <span class="process-math">\(h\rightarrow 0\)</span> is equivalent to <span class="process-math">\(\Delta\beta\rightarrow 0\)</span> so we have} \nonumber    f^\prime(x)\amp =\lim_{\textcolor{red}{\underset{\Delta\beta\rightarrow0}{\cancel{h\rightarrow0}}}}{\left(\frac{\alpha(\beta+\Delta\beta)-\alpha(\beta)}{\Delta\beta}\right)}\cdot\limit{h}{0}{\left(\frac{\beta(x+h)-\beta(x)}{h}\right)},\\ \label{eq:ChainRuleProof1}    f^\prime(x)           \amp =\underbrace{\limit{\Delta\beta}{0}{\left(\frac{\alpha(\beta+\Delta\beta)-\alpha(\beta)}{\Delta\beta}\right)}}_{=\alpha^\prime(\beta)}\cdot\underbrace{\limit{h}{0}{\left(\frac{\beta(x+h)-\beta(x)}{h}\right)}}_{=\beta^\prime(x)}.\\ \label{eq:ChainRuleBetaIsVariable}    f^\prime(x) \amp =\alpha^\prime(\beta)\cdot\beta^\prime(x). \end{align} In <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQChainRuleBetaIsVariable" missing or not unique]</code> <span class="process-math">\(\beta\)</span> is first used as a variable in <span class="process-math">\(\alpha^\prime(\beta)\text{,}\)</span> and then as the function <span class="process-math">\(\beta(x)\text{.}\)</span> While this is correct, it is also poor form because it accentuates the dual use of <span class="process-math">\(\beta\text{.}\)</span> To avoid this we usually express the Chain Rule as</div>
+<div class="displaymath process-math" data-contains-math-knowls="      ">
+\begin{equation*}
+f^\prime(x) =\alpha^\prime(\beta(x))\cdot\beta^\prime(x)
+\end{equation*}
+</div>
+<div class="para">to emphasize that <span class="process-math">\(x\text{,}\)</span> not <span class="process-math">\(\beta\text{,}\)</span> is the variable. \end{myproof}</div>
+</div>
+<aside class="aside aside-like" id="no-label-11"><h4 class="heading"><span class="title">Note to self.</span></h4>
+<div class="para" id="no-label-11-2">Digression Missing</div></aside><article class="example example-like" id="example:DiffByCR"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">14.25</span><span class="period">.</span>
+</h4>
+<div class="para" id="example:DiffByCR-1"> Suppose that <span class="process-math">\(f(x)=\left(\sin(x)+\cos(x)\right)^2\text{.}\)</span> To use the Chain Rule to compute the derivative of <span class="process-math">\(f(x)\)</span> we need to recognize that <span class="process-math">\(f(x)\)</span> is the composition of <span class="process-math">\(\alpha(x)=x^2\text{,}\)</span> and <span class="process-math">\(\beta(x)=\sin(x)+\cos(x)\)</span> and then apply Theorem~\ref{thm:ChainRule} as follows. \begin{align*} f^\prime(x) \amp = \alpha^\prime(\beta(x))\cdot\beta^\prime(x)\\ \amp = \alpha^\prime(\beta(x))\cdot(\cos(x)-\sin(x))\\ \amp = \alpha^\prime(\sin(x)+\cos(x))\cdot(\cos(x)-\sin(x))\\ f^\prime(x)\amp = 2 (\sin(x)+\cos(x))\cdot(\cos(x)-\sin(x)). \end{align*}</div></article><div class="para" id="no-label-13">In our opinion the Chain Rule leaves a lot to be desired as a computational technique. But we don’t have to use it that way since Theorem~\ref{thm:ChainRule} validates the substitutions  we have always used.</div>
+<article class="exercise exercise-like" id="no-label"><h4 class="heading">
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">14.26</span><span class="period">.</span>
+</h4>
+<div class="para" id="no-label-1-1">Suppose <span class="process-math">\(y=f(x)=\left(\sin(x)+\cos(x)\right)^2\text{.}\)</span>  Compute the differential <span class="process-math">\(\dx{y}\)</span> and then divide through by <span class="process-math">\(\dx{x}\)</span> to find the derivative <span class="process-math">\(\dfdx{y}{x}\text{.}\)</span> Confirm that it is the same as the derivative we found in Example~\#\ref{example:DiffByCR}.</div></article><article class="problem example-like" id="PROBLEM"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">14.27</span><span class="period">.</span>
+</h4>
+<div class="para" id="PROBLEM-1-1">Compute <span class="process-math">\(\dfdx{y}{x}\)</span> for each of the following functions by identifying <span class="process-math">\(\alpha(x)\)</span> and <span class="process-math">\(\beta(x)\)</span> such that <span class="process-math">\(y(x) = \alpha(\beta(x))\)</span> and applying the Chain Rule. You may have to do this more than once for a given problem. In each case confirm that your computation is correct with an appropriate differential substitution. \begin{enumerate}[label={  (\alph*)}] \begin{multicols}{2} \item <span class="process-math">\(y=(3x+5)^6\)</span> \item <span class="process-math">\(y=\sec(\tan(x))\)</span> \item <span class="process-math">\(y=\sqrt[7]{\frac{1}{x} +x^3}\)</span> \item <span class="process-math">\(y=\left(\frac{x-x^{\frac12}}{x^3-1}\right)^2\)</span> \item <span class="process-math">\(y=e^{x-\cos^2(x)}+(2x^2-3)^{\frac15}\)</span> \item <span class="process-math">\(y=\sqrt{x+\sqrt[3]{2+\sqrt[4]{3-x^2}}}\)</span> \end{multicols} \end{enumerate}</div></article></section><section class="section" id="subsec:product-rule-limits"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">14.4</span><span class="space"> </span><span class="title">The Product Rule</span>
+</h3>
+<div class="para" id="subsec:product-rule-limits-2">A rigorous proof of the Product Rule is also fairly complex, but it does not suffer from the kind of technical problems we encountered in the proof of the Chain Rule.</div>
+<article class="theorem theorem-like" id="no-label"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">14.28</span><span class="period">.</span><span class="space"> </span><span class="title">The Product Rule for Differentiation.</span>
+</h4>
+<div class="para logical" id="no-label-2">
+<div class="para">If <span class="process-math">\(\alpha(x)\)</span> and <span class="process-math">\(\beta(x)\)</span> are differentiable at <span class="process-math">\(x\)</span> then <span class="process-math">\(f(x)=\alpha(x)\cdot\beta(x)\)</span> is differentiable and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\label{eq:PRviaLimit2}
+f^\prime(x)=\alpha(x)\cdot\beta^\prime(x)+\beta(x)\cdot\alpha^\prime(x).
+\end{equation*}
+</div>
+</div></article><details id="no-label" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="title">\textcolor{blue}{-\beta(x)\left(\alpha(x+h)-\alpha(x)\right)}\right.</span></h4></summary><article class="hiddenproof"> <div class="para logical" id="no-label-2">
+<div class="para">We start with the two observations. The first is that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f^\prime(x)=\limit{h}{0}{\frac{\textcolor{red}{f(x+h)}-\textcolor{blue}{f(x)}}{h}}
+=  \limit{h}{0}{\frac{\textcolor{red}
+{\alpha(x+h)\beta(x+h)}-\textcolor{blue}{\alpha(x)\beta(x)}}{h}}
+\label{eq:PRviaLimit}
+\end{equation*}
+</div>
+<div class="para">and the second is that, in limit form, Equation~(\ref{eq:PRviaLimit2}) is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\label{eq:PRviaLimit3}
+f^\prime(x)=\alpha(x)\left(\limit{h}{0}{\frac{\beta(x+h)-\beta(x)}{h}}\right)+\beta(x)\left(\limit{h}{0}{\frac{\alpha(x+h)-\alpha(x)}{h}}\right).
+\end{equation*}
+</div>
+<div class="para">It appears then that our goal is to simply reorganize Equation~(\ref{eq:PRviaLimit}) until it looks like Equation~(\ref{eq:PRviaLimit3}).  We say ``simply’’ but it will only appear to be simple after we have succeeded. We will proceed slowly. Observe that if we subtract <span class="process-math">\(\alpha(x+h)\beta(x)\)</span> from the blue part of the numerator in Equation~(\ref{eq:PRviaLimit}) we get</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\alpha(x)\beta(x)-\alpha(x+h)\beta(x)=
+\textcolor{blue}{-\beta(x)\left(\alpha(x+h)-\alpha(x)\right)},
+\end{equation*}
+</div>
+<div class="para">whereas if we add <span class="process-math">\(\alpha(x+h)\beta(x)\)</span> to the red part of the numerator in Equation~(\ref{eq:PRviaLimit})  we get</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\alpha(x+h)\beta(x+h)+\alpha(x+h)\beta(x) =
+\textcolor{red}{\alpha(x+h)\left(\beta(x+h)-\beta(x)\right)}.
+\end{equation*}
+</div>
+<div class="para">This suggests that we should both add and subtract the expression <span class="process-math">\(\alpha(x+h)\beta(x)\)</span> to the numerator of Equation~(\ref{eq:PRviaLimit}).  Doing this and factoring as we’ve indicated above we get</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f^\prime(x)=\limit{h}{0}{ \frac{ \textcolor {red}
+{\alpha(x+h)\left(\beta(x+h)-\beta(x)\right)} -
+\left[\textcolor{blue}{-\beta(x)\left(\alpha(x+h)-\alpha(x)\right)}\right]
+}{h} },
+\end{equation*}
+</div>
+<div class="para">By Theorem~\ref{theorem:LimSum2} we can separate this into the limit of the two fractions as follows:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f^\prime(x)=\tlimit{h}{0}{\left(\textcolor{red}{\frac{\textcolor{green}{\alpha(x+h)}\left(\beta(x+h)-{\beta(x)}\right)}{h}}\right)}
++
+\rlimit{h}{0}{\left(\textcolor{blue}{\frac{\textcolor{green}{\beta(x)}\left(\alpha(x+h)-\alpha(x)\right)}{h}}\right)},
+\end{equation*}
+</div>
+<div class="para">and by Theorem~\ref{theorem:LimProd2} we see that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f^\prime(x)=
+\underbrace{\left[ \tlimit{h}{0}{\textcolor{green}{\alpha(x+h)}}
+\right]}_{=\alpha(x)} \underbrace{\left[ \tlimit{h}{0}{ \left(
+\textcolor{red}{\frac{\beta(x+h)-\beta(x)}{h}} \right) }
+\right]}_{=\beta^{\prime}(x)} + \underbrace{\left[
+\tlimit{h}{0}{\textcolor{green}{\beta(x)}} \right]}_{\beta(x)}
+\underbrace{\left[ \limit{h}{0}{ \left(
+\textcolor{blue}{\frac{\alpha(x+h)-\alpha(x)}{h}} \right) },
+\right]}_{\alpha^\prime(x)}
+\end{equation*}
+</div>
+<div class="para">and therefore</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f^\prime(x)=\alpha(x)\beta^\prime(x)+\beta(x)\alpha^\prime(x).
+\end{equation*}
+</div>
+</div></article></details></section><section class="section" id="sec:other-gener-diff"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">14.5</span><span class="space"> </span><span class="title">The Other General Differentiation Rules</span>
+</h3>
+<article class="theorem theorem-like" id="thm:QuotientRuleLimit"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">14.29</span><span class="period">.</span><span class="space"> </span><span class="title">The Quotient Rule for Differentiation.</span>
+</h4>
+<div class="para logical" id="thm:QuotientRuleLimit-2">
+<div class="para"> We assume that <span class="process-math">\(\alpha(x)\text{,}\)</span> <span class="process-math">\(\beta(x)\text{,}\)</span> and <span class="process-math">\(f(x)=\frac{\alpha(x)}{\beta(x)}\)</span> are all differentiable functions\aside{Notice that we have explicitly assumed that the quotient }. Assume further that <span class="process-math">\(\beta(x)\neq0\text{.}\)</span>  Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f^\prime(x)=\frac{\beta(x)\alpha^\prime(x)-\alpha(x)\beta^\prime(x)}{\left[\beta(x)\right]^2}.
+\end{equation*}
+</div>
+</div></article><div class="para" id="sec:other-gener-diff-3">Proving this directly by using limits would be unpleasant, but as we observed in Chapter~\ref{chapt:differentials} the Quotient Rule can be viewed as a rearranged version of the Product Rule.</div>
+<article class="problem example-like" id="no-label"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">14.30</span><span class="period">.</span>
+</h4>
+<div class="para" id="no-label-1-1">Use the Product Rule to derive the Quotient Rule.\\ \hint{First solve <span class="process-math">\(f(x)=\frac{\alpha(x)}{\beta(x)}\)</span> for <span class="process-math">\(\alpha(x)\text{.}\)</span> }</div></article><div class="para" id="sec:other-gener-diff-5">With the Product Rule for Differentiation in place we now have the tools needed to prove the Power Rule for Positive Integer Exponents. The method of proof we outline in the following problem is called <dfn class="terminology">Mathematical Induction</dfn>\aside{We mentioned <dfn class="terminology">Mathematical Induction</dfn> In part (d) of <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "PROBLEMPR-integer" missing or not unique]</code> back in <a href="CHAPTdifferentials.html" class="internal" title="Chapter 4: Differentials, Differentiation, and the Derivative">Chapter 4</a>.}  and it can be used in other contexts as well. In fact, most of the ``Find the Pattern’’ problems in this text require an Induction argument for full rigor.</div>
+<article class="problem example-like" id="no-label"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">14.31</span><span class="period">.</span><span class="space"> </span><span class="title">The Power Rule for Positive Integer Exponents.</span>
+</h4>
+<div class="para logical" id="no-label-2-1">
+<div class="para">Assume  that <span class="process-math">\(\alpha(x)=x^n\)</span> is differentiable at <span class="process-math">\(x\)</span> for any positive integer <span class="process-math">\(n\text{.}\)</span>
+</div>
+<dl class="description-list">
+<dt id="no-label-2-1-4-1">Part 1:</dt>
+<dd><div class="para" id="no-label-2-1-4-1-2">Assume that <span class="process-math">\(n=1\text{.}\)</span>  Use the limit definition to    show that <span class="process-math">\(\alpha^\prime(x) = nx^{n-1}.\)</span> \\    \comment{This says, ``The Power Rule holds for <span class="process-math">\(k=1\text{.}\)</span>’’}</div></dd>
+<dt id="no-label-2-1-4-2">Part 2:</dt>
+<dd><div class="para" id="no-label-2-1-4-2-2">Now assume that the Power Rule for Positive  Integer Exponents holds for <span class="process-math">\(n=k\text{,}\)</span> where <span class="process-math">\(k\)</span> is an arbitrary, fixed  positive integer.        Let <span class="process-math">\(\beta(x)=x^{k+1}\)</span> and show that <span class="process-math">\(\beta^\prime(x)=(k+1)x^k.\)</span>\\    \comment{This says, ``If the Power Rule holds for <span class="process-math">\(k\)</span> then it    must also hold for <span class="process-math">\(k+1\text{.}\)</span>’’}</div></dd>
+</dl>
+<div class="para">           Do you see how this proves that the Power Rule holds for any positive integer, <span class="process-math">\(n\text{?}\)</span> Write a short paragraph explaining the logic behind this.</div>
+</div></article><div class="para" id="sec:other-gener-diff-7">With the  Power Rule for Positive Integer Exponents in place we can extend it to both negative and rational exponents in the same way we did it in Chapter~\ref{chapt:differentials}. The following problem is essentially a repeat of problems~\ref{EP:PRPosRat} <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EPPRRecip" missing or not unique]</code>, using Lagrange’s prime notation, and function notation, rather than differentials.</div>
+<article class="problem example-like" id="no-label"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">14.32</span><span class="period">.</span><span class="space"> </span><span class="title">The Power Rule for Rational and Negative Exponents.</span>
+</h4>
+<div class="introduction" id="no-label-2"><div class="para" id="no-label-2-1"></div></div>
+<article class="task exercise-like" id="no-label-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para logical" id="no-label-3-1-1">
+<div class="para">Assume <span class="process-math">\(n\)</span> is a positive integer and that <span class="process-math">\(\alpha(x)=x^{-n}\)</span> is differentiable.  Show that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\alpha^\prime(x) = -nx^{-(n+1)}.
+\end{equation*}
+</div>
+<div class="para">\hint{Rewrite <span class="process-math">\(\alpha(x)=x^{-n}\)</span> as <span class="process-math">\(\frac{1}{x^n}\)</span> and use the Quotient Rule for Differentiation and the Power Rule for positive integers.}</div>
+</div></article><article class="task exercise-like" id="no-label-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para logical" id="no-label-4-1-1">
+<div class="para">Assume that <span class="process-math">\(q\)</span> is a non-zero integer and that <span class="process-math">\(\alpha(x)=x^{1/q}\)</span> is differentiable at <span class="process-math">\(x\text{.}\)</span>  Show that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\alpha^\prime(x) = (1/q)x^{(1/q-1)}.
+\end{equation*}
+</div>
+<div class="para">\hint{Rewrite <span class="process-math">\(\alpha(x)=x^{1/q}\)</span> as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\left[\alpha(x)\right]^q=x
+\end{equation*}
+</div>
+<div class="para">and use the Chain Rule and the Power Rule for positive integers.}</div>
+</div></article><article class="task exercise-like" id="no-label-5"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para logical" id="no-label-5-1-1">
+<div class="para">Assume that <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> are integers,  <span class="process-math">\(q\neq0\text{,}\)</span> and that <span class="process-math">\(\alpha(x)=x^{p/q}\)</span> is differentiable at <span class="process-math">\(x\text{.}\)</span>  Show that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\alpha^\prime(x) = (p/q)x^{(p/q-1)}.
+\end{equation*}
+</div>
+<div class="para">\hint{Rewrite <span class="process-math">\(\alpha(x)=x^{p/q}\)</span> as <span class="process-math">\(\alpha(x)=\left(x^{1/q}\right)^p\)</span> and use the Chain Rule and part (b).}</div>
+</div></article></article><div class="para" id="sec:other-gener-diff-9">Together the previous two problems prove the Power Rule for rational exponents:</div>
+<article class="theorem theorem-like" id="thm:PowerRuleLimit"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">14.33</span><span class="period">.</span><span class="space"> </span><span class="title">The Power Rule for Rational Exponents.</span>
+</h4>
+<div class="para logical" id="thm:PowerRuleLimit-2">
+<div class="para"> Assume that <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> are integers, <span class="process-math">\(q\neq0\text{,}\)</span> and that <span class="process-math">\(\alpha(x)=x^{p/q}\)</span> is differentiable at <span class="process-math">\(x\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\alpha^\prime(x) = (p/q)x^{(p/q-1)}.
+\end{equation*}
+</div>
+</div></article><div class="para" id="sec:other-gener-diff-11">In the statement of Theorem~\#\ref{thm:QuotientRuleLimit} we explicitly assumed that the quotient, <span class="process-math">\(\frac{\alpha(x)}{\beta(x)}\text{,}\)</span> is differentiable at <span class="process-math">\(x\text{.}\)</span> This has the effect that the theorem does not necessarily apply to all possible quotients, in the same way that when we add <span class="process-math">\(\Delta\beta\neq0\)</span> to the statement of the Chain Rule, the theorem applies to fewer compositions. And just like the Chain Rule the functions that Theorem~\#\ref{thm:QuotientRuleLimit} does not apply to are mostly pathological, and of no use to us right now.</div>
+<div class="para" id="sec:other-gener-diff-12">We added the same assumption to Theorem~\#\ref{thm:PowerRuleLimit} for similar reasons.</div>
+<aside class="aside aside-like" id="sec:other-gener-diff-13"><h4 class="heading"><span class="title">Note to self.</span></h4>
+<div class="para" id="sec:other-gener-diff-13-2">Digression missing</div></aside></section><section class="section" id="sec:diff-trig-funct"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">14.6</span><span class="space"> </span><span class="title">Derivatives of the Trigonometric Functions, via Limits</span>
+</h3>
+<div class="para" id="sec:diff-trig-funct-2">\TLogo{PSP:deriv-sine-cosine}</div>
+<article class="theorem theorem-like" id="thm:SineDeriv"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">14.34</span><span class="period">.</span><span class="space"> </span><span class="title">\boldmath Derivative of <span class="process-math">\(\sin(x)\)</span>.</span>
+</h4>
+<div class="para" id="thm:SineDeriv-2"> Suppose <span class="process-math">\(\alpha(\theta)=\sin(\theta)\text{.}\)</span> Then <span class="process-math">\(\alpha^\prime(\theta)=\cos(\theta).  \)</span>
+</div></article><details id="no-label" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof"><div class="para logical" id="no-label-1">
+<div class="para">Showing that the derivative of <span class="process-math">\(\sin(\theta)\)</span> is <span class="process-math">\(\cos(\theta)\)</span> is mostly straightforward but we’re going to hit a snag partway through. We’ll proceed for a bit to see where the trouble is. Start with the limit definition:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\alpha^\prime(\theta) =
+\limit{h}{0} \frac{\sin(\theta+h)-\sin(\theta)}{h}
+\end{equation*}
+</div>
+<div class="para">In the numerator we see the expression <span class="process-math">\(\sin(\theta+h)\text{.}\)</span>  Recall the sum formula for the Sine:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sin(A+B)=\sin(A)\cos(B)+\cos(A)\sin(B).
+\end{equation*}
+</div>
+<div class="para">Taking <span class="process-math">\(A=\theta\)</span> and <span class="process-math">\(B=h\)</span> we have: \begin{align*} \alpha^\prime(x)  \amp = \limit{h}{0}{\frac{\textcolor{red}{\sin(\theta)}\cos(h)+\cos(\theta)\sin(h)-\textcolor{red}{\sin(\theta)}}{h}}\\ \intertext{Next, if we factor \textcolor{red}{<span class="process-math">\(\sin(\theta)\)</span>} out of the terms where it appears and rearrange the numerator a bit we have:} \amp = \limit{h}{0}{\frac{\textcolor{red}{\sin(\theta)}(\cos(h)-1)+\cos(\theta)\sin(h)}{h}}.\\ \amp = \limit{h}{0}{\left(\frac{\sin(\theta)(\cos(h)-1)}{h}+\frac{\cos(\theta)\sin(h)}{h}\right)}.\\ \intertext{By Theorem~\ref{theorem:LimSum2}:} \amp = \limit{h}{0}{\frac{\sin(\theta)(\cos(h)-1)}{h}}+\limit{h}{0}{\frac{\cos(\theta)\sin(h)}{h}}\\ \intertext{and by Corollary~\ref{cor:ConstMultLimit}:} \amp = \sin(\theta)\underbrace{\left(\limit{h}{0}{\frac{(\cos(h)-1)}{h}}\right)}_{=0}+\cos(\theta)\underbrace{\left(\limit{h}{0}{\frac{\sin(h)}{h}}\right)}_{=1}. \end{align*} If the values of the two limits are <span class="process-math">\(0\)</span> and <span class="process-math">\(1\)</span> respectively as we’ve indicated we can conclude that <span class="process-math">\(\alpha^\prime(\theta)=\cos(\theta)\text{.}\)</span> Unfortunately this proof cannot be considered complete until we have shown that these last two limits are what we claim they are. We will do this via the two  lemmas below.</div>
+</div></article></details><div class="para" id="sec:diff-trig-funct-5">It is tempting to use L’H\^o pital’s Rule to evaluate these limits, especially since it is so very easy to do.</div>
+<article class="exercise exercise-like" id="drill:CircularReasoning"><h4 class="heading">
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">14.35</span><span class="period">.</span>
+</h4>
+<div class="para" id="drill:CircularReasoning-1-1"> Use L’H\^o pitals Rule to show that <span class="process-math">\(\tlimit{h}{0}{\frac{(\cos(h)-1)}{h}}=0\)</span> and that <span class="process-math">\(\tlimit{h}{0}{\frac{\sin(h)}{h}}=1\text{.}\)</span>
+</div></article><div class="para" id="sec:diff-trig-funct-7">Sadly, using Drill~\#\ref{drill:CircularReasoning} to finish the proof of Theorem~\#\ref{thm:SineDeriv} is an example of circular reasoning. We can’t use the fact that the derivative of <span class="process-math">\(\sin(x)\)</span> is <span class="process-math">\(\cos(x)\)</span> to prove that the derivative of <span class="process-math">\(\sin(x)\)</span> is <span class="process-math">\(\cos(x)\text{.}\)</span> So we will have to find a way to evaluate these limits without using L’H\^o pital’s Rule.</div>
+<article class="lemma theorem-like" id="lemma:SinOverh"><h4 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">14.36</span><span class="period">.</span>
+</h4>
+<div class="para" id="lemma:SinOverh-1"> <span class="process-math">\(\limit{h}{0}{\frac{\sin(h)}{h}}=1\)</span>
+</div></article><details id="no-label" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="title">.</span></h4></summary><article class="hiddenproof"> <div class="para logical" id="no-label-2">
+<div class="para">\begin{wrapfigure}[]{r}{3in} \vskip-8mm \captionsetup{labelformat=empty} \centerline{\includegraphics*[height=2in,width=3in]{../Figures/SqueezeThm2}} \label{fig:SqueezeThm2} \end{wrapfigure} There are two cases:\\ \underline{  \boldmath Case 1, <span class="process-math">\(\theta\ge0\text{:}\)</span>} We will use the Squeeze Theorem.  Recall that in Section~\ref{subsec:trig-interl} we observed that the lengths of certain line segments associated with the unit circle in the first quadrant are equal to the trigonometric functions. The figure at the right shows the relationship between <span class="process-math">\(\theta\text{,}\)</span> <span class="process-math">\(\sin(\theta)\text{,}\)</span> and <span class="process-math">\(\tan(\theta)\text{.}\)</span> Notice in particular that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sin(\theta)\le\theta\le\tan(\theta).
+\end{equation*}
+</div>
+<div class="para">Dividing each expression in the inequality by <span class="process-math">\(\sin(\theta)\)</span> almost does the trick:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+1\le\frac{\theta}{\sin(\theta)}\le\frac{1}{\cos(\theta)}.
+\end{equation*}
+</div>
+<div class="para">In the center we now have the reciprocal of what we need, so we need to invert each expression. However, keep in mind that these are not equations they are inequalities. When we invert an inequality we must reverse its sense. This gives</div>
+<div class="displaymath process-math">
+\begin{equation*}
+1\ge\frac{\sin(\theta)}{\theta}\ge\frac{\cos(\theta)}{1},
+\end{equation*}
+</div>
+<div class="para">and this is true on the interval <span class="process-math">\(\left[0,\frac{\pi}{2}\right]\text{.}\)</span> Since</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\rlimit{\theta}{0}{1}=\rlimit{\theta}{0}{\cos(\theta)}=1
+\end{equation*}
+</div>
+<div class="para">the Squeeze Theorem applies, and we conclude that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\rlimit{\theta}{0}{\frac{\sin(\theta)}{\theta}}=1.
+\end{equation*}
+</div>
+<div class="para">\underline{  \boldmath Case 2, <span class="process-math">\(\theta\lt0\text{:}\)</span>} For this case notice that <span class="process-math">\(\sin(-\theta)=-\sin(\theta)\)</span> so that <span class="process-math">\(\frac{\sin(-\theta)}{-\theta}=\frac{\sin(\theta)}{\theta}\text{.}\)</span> We make the substitution <span class="process-math">\(\theta=-\phi\)</span> where <span class="process-math">\(\phi\gt0\text{.}\)</span>  Therefore when <span class="process-math">\(\theta\lt0\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\llimit{\theta}{0}{\frac{\sin(\theta)}{\theta}}
+=\rlimit{\phi}{0}{\frac{\sin(-\phi)}{-\phi}}
+=\rlimit{\phi}{0}{\frac{\sin(\phi)}{\phi}} =1
+\end{equation*}
+</div>
+<div class="para">by Case 1.</div>
+</div></article></details><article class="problem example-like" id="problem:CosM1Overh"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">14.37</span><span class="period">.</span>
+</h4>
+<div class="para" id="problem:CosM1Overh-1-1"> Show that <span class="process-math">\(\tlimit{h}{0}{\frac{(\cos(h)-1)}{h}}=0\text{.}\)</span>\\ \hint{It is tempting to model this proof on the proof of Lemma~\ref{lemma:SinOverh}. While this can be done, it is delicate. It is simpler to multiply by <span class="process-math">\(1\)</span> in the form <span class="process-math">\(\frac{\cos(h)+1}{\cos(h)+1}\text{.}\)</span> Try that instead.}</div></article><div class="para" id="sec:diff-trig-funct-11">Once Problem~(\ref{problem:CosM1Overh}) has been solved the proof that <span class="process-math">\(\dfdx{(\sin(x))}{x}= \cos(x)\)</span> is complete.</div>
+<article class="problem example-like" id="no-label"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">14.38</span><span class="period">.</span>
+</h4>
+<div class="para" id="no-label-1-1">Prove that <span class="process-math">\(\dfdx{(\cos(\theta))}{\theta} = -\sin(\theta)\text{,}\)</span> using the proof of Theorem~\ref{thm:SineDeriv} as a guide.</div></article><div class="para" id="sec:diff-trig-funct-13">Assuming that <span class="process-math">\(\tan(\theta)\text{,}\)</span> <span class="process-math">\(\cot(\theta)\text{,}\)</span> <span class="process-math">\(\sec(\theta)\text{,}\)</span> and <span class="process-math">\(\csc(\theta)\)</span> are differentiable we can now use Theorem~\ref{problem:QR-rigor} to find their derivatives as well. Since this is exactly what we did in Section~\ref{subsec:diff-other-trig} we have the derivatives of all of the trigonometric functions.</div></section><section class="section" id="sec:inverse-functions"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">14.7</span><span class="space"> </span><span class="title">Inverse Functions</span>
+</h3>
+<div class="para" id="sec:inverse-functions-2"> Although we have worked with the inverses of some specific functions we have not formally defined what we mean by an inverse. We will remedy that now. We have seen that not all functions can be inverted (see for example, Digression~\#\ref{Digression:TangentHasNoInverse}) so the first step is to define which functions are invertible.</div>
+<div class="para" id="sec:inverse-functions-3">Informally a function that never takes the same value twice is called a <dfn class="terminology">one-to-one function</dfn>\aside{They are also called <dfn class="terminology">injective</dfn>.}. Formally we have the following.</div>
+<article class="definition definition-like" id="DEFINITIONno-label"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">14.39</span><span class="period">.</span><span class="space"> </span><span class="title">One-To-One Functions.</span>
+</h4> <div class="para" id="DEFINITIONno-label-2-1">A function, <span class="process-math">\(f(x)\text{,}\)</span> defined on a domain, <span class="process-math">\(D\text{,}\)</span> is said to be one-to-one if, whenever <span class="process-math">\(x_1\)</span> and <span class="process-math">\(x_2\)</span> are in <span class="process-math">\(D\)</span> and <span class="process-math">\(x_1\neq
+x_2\)</span> then, <span class="process-math">\(f(x_1)\neq f(x_2)\text{.}\)</span>
+</div></article><div class="para" id="sec:inverse-functions-5">Recall that when we tried to invert <span class="process-math">\(\tan(x)\)</span> (which is not one-to-one) in Section~(\ref{sec:witch-agnesi-inverse}) we got the multifunction <span class="process-math">\(\arctan(x)\text{.}\)</span> We had to restrict the domain of the tangent function to <span class="process-math">\(\frac{-\pi}{2}\le x \le \frac{\pi}{2}\text{,}\)</span> in order to find an inverse. That restriction gave us a one-to-one function which we could invert because one-to-one functions are the only functions with inverses.</div>
+<article class="definition definition-like" id="DEFINITIONdef:FunctionInverse"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">14.40</span><span class="period">.</span><span class="space"> </span><span class="title">Inverse Functions.</span>
+</h4> <div class="para" id="DEFINITIONdef:FunctionInverse-2-1"> Suppose <span class="process-math">\(f(x)\text{,}\)</span> with domain <span class="process-math">\(D\)</span> and range, <span class="process-math">\(R\)</span> is a one-to-one function. Then the inverse of <span class="process-math">\(f(x)\)</span> is the function <span class="process-math">\(\inverse f(x)\)</span> with domain <span class="process-math">\(R\)</span> and range\aside{Notice that the domain and range have been swapped.} <span class="process-math">\(D\)</span> which satisfies the following properties: \begin{enumerate} \item <span class="process-math">\(f\left(\inverse f(x)\right)=x\)</span> \item <span class="process-math">\(\inverse f\left( f(x)\right)=x\)</span> \end{enumerate} for every value of <span class="process-math">\(x\)</span> in the domain of <span class="process-math">\(f\)</span> (equivalently, in the range of <span class="process-math">\(\inverse f\)</span>).</div></article><div class="para" id="sec:inverse-functions-7">Loosely speaking, Definition~\#\ref{def:FunctionInverse} says that two functions are mutually inverse if they ``undo’’ each other.</div>
+<div class="para" id="sec:inverse-functions-8">Our next task is to show that the derivatives of the in inverse trigonometric functions are what we expect them to be. Given that we have now obtained the derivatives of all of the trigonometric functions it appears that we could proceed just as we did in Section~\ref{sec:diff-inverse-tancot} and Section~\ref{sec:other-inverse-trig}.</div>
+<div class="para" id="sec:inverse-functions-9">But that would require that we explicitly assume that each of the inverse trigonometric functions is differentiable, similar to the way we found the derivative of a quotient. This is a valid approach of course, but proceeding in that manner would mask some issues that will be of interest to us later. So we will approach the derivatives of inverse functions abstractly by (rigorously) finding a formula for the derivative of the inverse of a generic, invertible function. After that we’ll only need to apply the formula to each of the inverse trigonmetric formulas.</div>
+<aside class="aside aside-like" id="sec:inverse-functions-10"><h4 class="heading"><span class="title">Note to self.</span></h4>
+<div class="para" id="sec:inverse-functions-10-2">Digression missing.</div></aside><div class="para logical" id="sec:inverse-functions-11">
+<div class="para">Our next task is to show that if <span class="process-math">\(f(x)\)</span> is invertible and differentiable, then <span class="process-math">\(\inverse{f}\)</span> is also differentiable\aside{<span class="process-math">\(\inverse{f}\)</span> is obviously invertible}. We do this by showing that the limit</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\label{eq:InvFuncDerivLimit}
+\DD\left(\inverse{f}(x)\right)=\limit{h}{0}{\frac{\inverse{f}(x+h)-\inverse{f}(x)}{h}}
+\end{equation*}
+</div>
+<div class="para">exists.</div>
+</div>
+<div class="para" id="sec:inverse-functions-12">In general this is true but there is one exception that has to be addressed. When <span class="process-math">\(f\)</span> is differentiable at <span class="process-math">\(a\)</span> and <span class="process-math">\(f^\prime(a) = 0\)</span> then the limit in Equation~(\ref{eq:InvFuncDerivLimit} does not exist. Hence <span class="process-math">\(\inverse f\)</span> is not differentiable at <span class="process-math">\(f(a)\text{.}\)</span> More formally, we have the following lemma.</div>
+<article class="lemma theorem-like" id="lemma:InvDerivAtZero"><h4 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">14.41</span><span class="period">.</span>
+</h4>
+<div class="para" id="lemma:InvDerivAtZero-1"> If  <span class="process-math">\(f\)</span> is an invertible function, <span class="process-math">\(f(a)=b\text{,}\)</span> <span class="process-math">\(f\)</span> is differentiable at <span class="process-math">\(x=a\text{,}\)</span> and <span class="process-math">\(f^\prime(a)=0\text{,}\)</span> then <span class="process-math">\(\inverse f\)</span> is not differentiable at  <span class="process-math">\(x=b\text{.}\)</span> That is <span class="process-math">\(\DD\left(\inverse f(b)\right)\)</span> does not exist.</div></article><div class="para" id="sec:inverse-functions-14">The following proof of this lemma is very challenging to read and understand for several reasons.</div>
+<div class="para" id="sec:inverse-functions-15">First, it is quite abstract. We don’t have a particular function to think about so we can’t simply write down formulas for the function and its inverse. Instead we have only the generic function, <span class="process-math">\(f\)</span> and its inverse <span class="process-math">\(\inverse{f}\text{,}\)</span> and we’ll need to remember what these symbols represent.</div>
+<div class="para" id="sec:inverse-functions-16">Second, we need to think about the functions <span class="process-math">\(f\)</span> and <span class="process-math">\(\inverse{f}\)</span> as well as their derivatives.</div>
+<div class="para" id="sec:inverse-functions-17">Third, instead of using the differential notation, <span class="process-math">\(\dfdx{f}{x}\)</span> that we’ve grown very comfortable with we’ll be using the less familiar Lagrange prime notation  and the operator notation we just introduced.</div>
+<div class="para" id="sec:inverse-functions-18">Finally, the nature of the problem forces us to mix these last two notations, using one here and the other there. This can make for difficult reading.</div>
+<div class="para" id="sec:inverse-functions-19">Read slowly. Remember that each symbol has meaning. Take time to understand that meaning and what each formula as a whole is telling you.</div>
+<div class="para logical" id="sec:inverse-functions-20">
+<div class="para">We include this proof in its full abstraction for two reasons:</div>
+<ol class="decimal">
+<li id="sec:inverse-functions-20-1-1"><div class="para" id="sec:inverse-functions-20-1-1-1">To be as precise and as rigorous and we can.</div></li>
+<li id="sec:inverse-functions-20-1-2"><div class="para" id="sec:inverse-functions-20-1-2-1">We want to give you practice with higher level abstract  reasoning in this (fairly) simple case.</div></li>
+</ol>
+</div>
+<div class="para" id="sec:inverse-functions-21">The strategy behind the following proof follows the same general scheme as the Sherlock Holmes Maxim that we referred to in Problem~\#\ref{problem:MaximalTriangle}. We will eliminate the impossible so that ``whatever remains, however improbable, must be the truth.’’</div>
+<div class="para logical" id="sec:inverse-functions-22">
+<div class="para">There are two possibilities: Either the derivative of <span class="process-math">\(\inverse{f}(b)\)</span> exists or it does not exist. There are two steps:</div>
+<ol class="decimal">
+<li id="sec:inverse-functions-22-2-1"><div class="para" id="sec:inverse-functions-22-2-1-1">Assume that the derivative of <span class="process-math">\(\inverse{f}\)</span> does exist at <span class="process-math">\(x=b\)</span> and calculate what <span class="process-math">\(\DD\left(\inverse{f}(b)\right)\)</span> must be.</div></li>
+<li id="sec:inverse-functions-22-2-2"><div class="para" id="sec:inverse-functions-22-2-2-1">Show that our computed value is impossible. Then \foreign{\’a la} Holme’s Maxim the only possibility left will be that the derivative of <span class="process-math">\(\inverse{f}\)</span> does not exist at <span class="process-math">\(x=b\text{.}\)</span>
+</div></li>
+</ol>
+</div>
+<details id="no-label" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof"><div class="para logical" id="no-label-1">
+<div class="para">Assume that <span class="process-math">\(\inverse{f}\)</span> is differentiable\aside{We don’t really believe this assumption. Be sure you are very clear on this point. We make this assumption so that we can use it to derive an absurd result; a contradiction. If there are no errors in our reasoning then the only possible conclusion will be that this assumption is false: <span class="process-math">\(\inverse{f}\)</span> is not differentiable at <span class="process-math">\(x=b\text{.}\)</span>} at <span class="process-math">\(x=b\text{.}\)</span> Because <span class="process-math">\(f\)</span> and <span class="process-math">\(\inverse{f}\)</span> are mutually inverse we know that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f\left(\inverse{f}(x)\right)=x.
+\end{equation*}
+</div>
+<div class="para">Therefore</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\DD\left(f\left(\inverse{f}(x)\right)\right)=\DD\left(x\right).
+\end{equation*}
+</div>
+<div class="para">On the right we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\DD(x)=1.
+\end{equation*}
+</div>
+<div class="para">On the left apply the Chain Rule:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\label{eq:InvDeriv2}
+f^\prime\left(\inverse{f}(x)\right)\cdot\DD\left(\inverse{f}(x)\right)=1.
+\end{equation*}
+</div>
+<div class="para">But when <span class="process-math">\(x=b\)</span> we find that <span class="process-math">\(f^\prime\left(\inverse{f}(b)\right)=f^\prime\left(a\right)=0\text{,}\)</span> so that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0=\underbrace{f^\prime\left(\inverse{f}(b)\right)}_{=0}\cdot\DD\left(\inverse{f}(b)\right)=1
+\end{equation*}
+</div>
+<div class="para">or</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0=1
+\end{equation*}
+</div>
+<div class="para">which is ridiculous or in Holmes’ word, impossible. Therefore our assumption cannot true so <span class="process-math">\(\inverse{f}\)</span> is not differentiable at <span class="process-math">\(x=b\text{.}\)</span>
+</div>
+</div></article></details><div class="para" id="sec:inverse-functions-24">While valid and correct, this proof is not very enlightening.  A well chosen sketch would be much more convincing, if less rigorous.</div>
+<article class="problem example-like" id="no-label"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">14.42</span><span class="period">.</span>
+</h4>
+<div class="para" id="no-label-1-1">Choose a function whose derivative is equal to zero at some point and sketch the graph of your function and its inverse on the same set of axes. Be sure to include the point where the derivative is zero. Use your graph to explain why the derivative of the inverse of your function does not exist.</div></article><div class="para" id="sec:inverse-functions-26">We now understand what conditions are necessary for an arbitrary function, <span class="process-math">\(f(x)\text{,}\)</span> to have a differentiable inverse.</div>
+<div class="para logical" id="sec:inverse-functions-27">
+<div class="para">Also, from Equation~(\ref{eq:InvDeriv2}) we know what the derivative of the inverse will be if it exists:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\DD\left(\inverse{f}(x)\right)=\frac{1}{f^\prime\left(\inverse{f}(x)\right)}.
+\end{equation*}
+</div>
+</div>
+<article class="exercise exercise-like" id="no-label"><h4 class="heading">
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">14.43</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="no-label-1-1">
+<div class="para">Let <span class="process-math">\(y=\inverse{f}(x)\)</span> and explain how the formula above is equivalent to</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dfdx{y}{x}=\frac{1}{\dfdx{x}{y}}\label{eq:InvDeriv}
+\end{equation*}
+</div>
+</div></article><div class="para" id="sec:inverse-functions-29">The only thing left is to show that under the conditions on <span class="process-math">\(f\)</span> in Lemma~\ref{lemma:InvDerivAtZero} the derivative (that is, the limit which defines the derivative) of the inverse does in fact exist.</div>
+<article class="theorem theorem-like" id="thm:DerivInvFunc"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">14.44</span><span class="period">.</span><span class="space"> </span><span class="title">The Derivative of Inverse Functions.</span>
+</h4>
+<div class="para logical" id="thm:DerivInvFunc-2">
+<div class="para"> Suppose that \begin{enumerate} \begin{multicols}{2} \item <span class="process-math">\(f\)</span> is differentiable at <span class="process-math">\(x=a\text{,}\)</span> \item <span class="process-math">\(f(a)=b\text{,}\)</span> \item <span class="process-math">\(f^\prime(a)\neq0\text{,}\)</span> \item <span class="process-math">\(\inverse{f}\)</span> is continuous at\aside{In fact, this follows from the continuity of <span class="process-math">\(f\)</span> at <span class="process-math">\(x=a\text{.}\)</span> We do not have all of the tools necessary to prove this so we must include it in the assumptions of our theorem.} <span class="process-math">\(x=b\text{.}\)</span> \end{multicols} \end{enumerate} Then the inverse of <span class="process-math">\(f\)</span> is differentiable at <span class="process-math">\(x=b\)</span> and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\DD\left(\inverse{f}(b)\right)=\frac{1}{f^\prime\left(\inverse{f}(b)\right)}.
+\end{equation*}
+</div>
+</div></article><div class="para" id="sec:inverse-functions-31">Reading and understanding the notation in Theorem~\ref{thm:DerivInvFunc} presents the same difficulties we saw in the proof of Lemma~\ref{lemma:InvDerivAtZero}. Read it carefully. Be patient with yourself and do not rush.</div>
+<details id="no-label" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="title">(a+k)-a\right.</span></h4></summary><article class="hiddenproof"> <div class="para logical" id="no-label-2">
+<div class="para">We want to show that the limit</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\DD\left(\inverse{f}(b)\right)=\limit{h}{0}{\frac{\inverse{f}(b+h)-\inverse{f}(b)}{h}}=\frac{1}{f^\prime\left(\inverse{f}(b)\right)}.
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(f(a)=b\)</span> we know that <span class="process-math">\(\textcolor{red}{\inverse{f}(b)=a}\)</span> so that \begin{align*} \limit{h}{0}{\frac{\inverse{f}(b+h)-\textcolor{red}{\inverse{f}(b)}}{h}} \amp = \limit{h}{0}{\frac{\inverse{f}(b+h)-\textcolor{red}{a}}{h}} \intertext{ Observe that if <span class="process-math">\(b+h\)</span> is in the domain of <span class="process-math">\(\inverse{f}\)</span> then it is in the range of <span class="process-math">\(f\text{.}\)</span> Thus there is some number in the domain   of <span class="process-math">\(f\)</span> (for convenience we’ll call it <span class="process-math">\(a+k\)</span>) such that <span class="process-math">\(\textcolor{blue}{b+h}=\textcolor{blue}{f(a+k)}\text{.}\)</span> Thus} \limit{h}{0}{\frac{\inverse{f}(\textcolor{blue}{b+h})-\inverse{f}(b)}{h}} \amp = \limit{h}{0} {\frac{\inverse{f}(\textcolor{blue}{f(a+k)})-a}{h}}.\\ \intertext{Again since <span class="process-math">\(f\)</span> and <span class="process-math">\(\inverse{f}\)</span> are mutually inverse they ``undo’’ each other, so  <span class="process-math">\(\inverse{f}(f(a+k))=a+k\)</span> so that } \limit{h}{0}{\frac{\inverse{f}(b+h)-\inverse{f}(b)}{h}}       \amp = \limit{h}{0}{\frac{k}{h}}.\\ \intertext{ Solving <span class="process-math">\({b+h=f(a+k)}\)</span> for <span class="process-math">\(h\)</span> gives <span class="process-math">\(\textcolor{blue}{h}=\textcolor{blue}{f(a+k)-b}\)</span> so  } \limit{h}{0}{\frac{k}{h}}\amp = \limit{h}{0}{\frac{k}{\textcolor{blue}{f(a+k)-b}}}\\ \intertext{and since <span class="process-math">\(b=f(a)\)</span> we have} \amp = \limit{h}{0}{\frac{k}{f(a+k)-f(a)}}\\ \amp = \limit{h}{0} {\frac{1} {\frac{f(a+k)-f(a)}{k}}}.\\ \amp =  \frac{1} {\limit{h}{0}{\frac{f(a+k)-f(a)}{k}}}.\\ \end{align*} The expression <span class="process-math">\(\limit{h}{0}{\frac{f(a+k)-f(a)}{k}}\)</span> would be <span class="process-math">\(f^\prime(a)\)</span> if only we had <span class="process-math">\(k\rightarrow0\)</span> instead of <span class="process-math">\(h\rightarrow0\text{.}\)</span>  What we need to show now is that if <span class="process-math">\(h\rightarrow0\)</span> then <span class="process-math">\(k\rightarrow0\text{.}\)</span> Then we could write</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\label{eq:InvProof}
+\DD\left(\inverse{f}(b)\right) = \frac{1}
+{\limit{k}{0}{\frac{f(a+k)-f(a)}{k}}}=\frac{1}{f^\prime(a)}
+\end{equation*}
+</div>
+<div class="para">and our proof would be complete Written a little more carefully, what we need to show is that <span class="process-math">\(\tlimit{h}{0}{k}=0\text{.}\)</span> Recall that <span class="process-math">\(a=\inverse{f}(b)\text{,}\)</span> and that <span class="process-math">\(a+k=\inverse{f}(b+h)\)</span> so we need to show  that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\tlimit{h}{0}{k}=\limit{h}{0}{\left[(a+k)-a\right]}=  \tlimit{h}{0}{\left[\inverse{f}(b+h)-\inverse{f}(b)\right]} = 0
+\end{equation*}
+</div>
+<div class="para">or But we assumed that <span class="process-math">\(\inverse{f}\)</span> is continuous at <span class="process-math">\(x=b\)</span> which means that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\tlimit{h}{0}{\left[\inverse{f}(b+h)-\inverse{f}(b)\right]}=0,
+\end{equation*}
+</div>
+<div class="para">and the proof is complete. One last point: On the left side of formula~(\ref{eq:InvProof}) the variable is <span class="process-math">\(b\)</span> and on the right it is <span class="process-math">\(a\text{.}\)</span> While this is not strictly wrong it is a more useful theorem if we state it in terms of <span class="process-math">\(b\)</span> alone. Since <span class="process-math">\(f(a)=b\)</span> we see that <span class="process-math">\(\inverse{f}(b)=a\)</span> so</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\DD\left(\inverse{f}(b)\right) =\frac{1}{f^\prime(\inverse{f}(b))}
+\end{equation*}
+</div>
+<div class="para">and the proof is complete.</div>
+</div></article></details><div class="para" id="sec:inverse-functions-33">Using Theorem~\ref{thm:DerivInvFunc} we can now show that the derivatives of the inverse trigonometric functions and the natural logarithm are exactly what we expect them to be. The difference is that now there is no uncertainty or vagueness in our foundations. No modern Bishop Berkeley can step in and sew doubt.</div>
+<article class="example example-like" id="no-label"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">14.45</span><span class="period">.</span><span class="space"> </span><span class="title">The Derivative of the Inverse Sine.</span>
+</h4> <div class="para" id="no-label-2">Suppose <span class="process-math">\(f(x)=\sin(x).\)</span> Then <span class="process-math">\(\inverse{f}(x)=\inverse{\sin}(x)\)</span> so \begin{align*} \DD\left(\inverse{f}(x)\right) =     \DD\left(\inverse\sin(x)\right) \amp = \frac{1}{\textcolor{red}{f^\prime}(\textcolor{blue}{\inverse{f}}(x))}\\ \amp = \frac{1}{\textcolor{red}{\cos}(\textcolor{blue}{\inverse\sin}(x))}\\ \DD\left(\inverse{f}(x)\right) \amp =  \frac{1}{\sqrt{1-x^2}}. \end{align*}</div></article><article class="problem example-like" id="no-label"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">14.46</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="no-label-1"><div class="para" id="no-label-1-1">Use Theorem~\ref{thm:DerivInvFunc} to show that each of the following differentiation rules is correct:</div></div>
+<article class="task exercise-like" id="no-label-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="no-label-2-1-1"><span class="process-math">\(\DD\left(\inverse{\cos}(x)\right) = \frac{-1}{\sqrt{1-x^2}}\)</span></div></article><article class="task exercise-like" id="no-label-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="no-label-3-1-1"><span class="process-math">\(\DD\left(\inverse{\tan}(x)\right) = \frac{1}{1+x^2}\)</span></div></article><article class="task exercise-like" id="no-label-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="no-label-4-1-1"><span class="process-math">\(\DD\left(\inverse{\cot}(x)\right) = \frac{-1}{1+x^2}\)</span></div></article><article class="task exercise-like" id="no-label-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="no-label-5-1-1"><span class="process-math">\(\DD\left(\inverse{\sec}(x)\right) =
+\frac{1}{\abs{x}\sqrt{x^2-1}}\)</span></div></article><article class="task exercise-like" id="no-label-6"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<div class="para" id="no-label-6-1-1"><span class="process-math">\(\DD\left(\inverse{\csc}(x)\right) =
+\frac{-1}{\abs{x}\sqrt{x^2-1}}\)</span></div></article><article class="task exercise-like" id="no-label-7"><h5 class="heading"><span class="codenumber">(f)</span></h5>
+<div class="para" id="no-label-7-1-1"><span class="process-math">\(\DD\left(\inverse{\ln}(x)\right) = e^x\)</span></div></article></article><div class="para" id="sec:inverse-functions-36">Wait a minute! Did we forget one? What about the natural exponential function?  Don’t we also have to show that <span class="process-math">\(\DD\left(e^x\right)=e^x\text{?}\)</span>
+</div>
+<article class="exercise exercise-like" id="no-label"><h4 class="heading">
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">14.47</span><span class="period">.</span>
+</h4>
+<div class="para" id="no-label-1-1">Look back at Definition~\ref{def:natural-exponential-ivp} and explain why it is not necessary to use limits to show that <span class="process-math">\(\DD\left(e^x\right)=e^x\text{.}\)</span>
+</div></article></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="WhasWrong.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="CHAPTERFDT-Redux.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>
