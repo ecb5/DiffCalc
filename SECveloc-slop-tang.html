@@ -137,7 +137,7 @@ window.MathJax = {
 \def\ftceval#1#2#3{#1\hskip.5ex{\llap{\smash{\rule[-3ex]{0.5pt}{7ex}}}_{\raise{-3ex}{\hskip.5ex#2}}^{\raise{-5ex}{\hskip.5ex #3}}}}
 
 
-  \def\eval#1#2#3{#1\hskip.5ex{\llap{\rule[-1.5ex]{0.5pt}{4ex}}_{\raise{-1.5ex}{\hskip.5ex#2=#3}}}}
+\def\eval#1#2#3{#1\hskip.5ex{\llap{\rule[-1.5ex]{0.5pt}{4ex}}_{\raise{-1.5ex}{\hskip.5ex#2=#3}}}}
 \def\dispeval#1#2#3{#1\hskip.5ex{\llap{\smash{\rule[-2ex]{0.5pt}{5ex}}}_{\raise{-2ex}{\hskip.5ex#2=#3}}}}
 
 
@@ -159,6 +159,9 @@ window.MathJax = {
 \def\partialfx#1#2{\frac{\partial{#1}}{\partial{#2}}} 
 \def\partialfxn#1#2#3{\frac{\partial^{#3}{#1}}{\partial{#2}^{#3}}} 
 \def\dfdxn#1#2#3{\frac{\text{d}^{#3}{#1}}{\text{d}{#2}^{#3}}} 
+
+\def\dfdxat#1#2#3{\eval{\dfdx{#1}{#2}}{#2}{#3}}
+
 \def\limit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}#3}}
 \def\tlimit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}}#3}
 \def\limitX#1#2#3#4{{\displaystyle\lim_{\underset{#4}{#1\rightarrow #2}}#3}}
@@ -176,9 +179,8 @@ window.MathJax = {
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
-<li class="toc-item toc-dedication"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Dedication</span></a></div></li>
-<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
-<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-5.html" class="internal"><span class="title">Relevant Quotes</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Epigraphs</span></a></div></li>
 <li class="toc-item toc-preface"><div class="toc-title-box"><a href="SECinstructor.html" class="internal"><span class="title">To the Instructor: Read This First</span></a></div></li>
 </ul>
 </li>
@@ -191,13 +193,7 @@ window.MathJax = {
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAproblem-solving.html#SECusing-lett-inst" class="internal"><span class="codenumber">2.1</span> <span class="title">Using Letters Instead of Numbers</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAproblem-solving.html#SECan-easy-problem-alg" class="internal"><span class="codenumber">2.2</span> <span class="title">Substitution, or Making Things “Easy on the Eyes”</span></a></div></li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAproblem-solving.html#SECan-easy-problem-geo" class="internal"><span class="codenumber">2.3</span> <span class="title">An “Easy” Problem From Geometry</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAproblem-solving.html#subsection-digression-MakingMistakes" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Digression: Making Mistakes</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAproblem-solving.html#SECan-easy-problem-geo-4" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Continuing our example</span></a></div></li>
-</ul>
-</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAproblem-solving.html#SECan-easy-problem-geo" class="internal"><span class="codenumber">2.3</span> <span class="title">An “Easy” Problem From Geometry</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAproblem-solving.html#SECour-advice-synopsis" class="internal"><span class="codenumber">2.4</span> <span class="title">Our advice, a synopsis</span></a></div></li>
 </ul>
 </li>
@@ -530,8 +526,8 @@ window.MathJax = {
 <li class="toc-item toc-subsection">
 <div class="toc-title-box"><a href="CHAformal-limits.html#sec:limit-product-at" class="internal"><span class="codenumber">17.3.4</span> <span class="title">The Limit of a Product</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAformal-limits.html#no-label" class="internal"><span class="codenumber">17.3.4.1</span> <span class="title">Proving Lemma~\#\ref{lemma:LimProd1</span></a></div></li>
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAformal-limits.html#no-label" class="internal"><span class="codenumber">17.3.4.2</span> <span class="title">Proving Lemma~\#\ref{lemma:LimProd2</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAformal-limits.html#no-label" class="internal"><span class="codenumber">17.3.4.1</span> <span class="title">Proving <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "LEMMAlemma:LimProd1" missing or not unique]</code></span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAformal-limits.html#no-label" class="internal"><span class="codenumber">17.3.4.2</span> <span class="title">Proving <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "LEMMAlemma:LimProd2" missing or not unique]</code></span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAformal-limits.html#no-label" class="internal"><span class="codenumber">17.3.5</span> <span class="title">The Function  \boldmath  <span class="process-math">\(f(x)=\frac1x\)</span> is Continuous Wherever  It Is Defined</span></a></div></li>
@@ -1063,7 +1059,7 @@ y=Ax^2+x+7000.
 <td class="c m b0 r0 l0 t0 lines">9.799</td>
 </tr>
 </table></div></figure><div class="para" id="sec:rates-change-29">Referring to the diagram above, it is clear that when <span class="process-math">\(\theta=\pi/2\)</span> --&gt; the ball won’t move at all. So its acceleration is zero. When <span class="process-math">\(\theta=0\)</span> the ball accelerates downward freely under the influence of gravity with no resistance Galileo measured the acceleration associated with steeper and steeper ramps (that is for <span class="process-math">\(\theta\)</span> closer and closer to zero) obtaining a table of values similar to the one at the left.</div>
-<aside class="aside aside-like" id="sec:rates-change-30"><div class="para" id="sec:rates-change-30-1">Notice that we are using radians to measure the angle. If you are unsure what a radian is we have a brief review of Trigonometry in Section~(\ref{subsec:trig-interl}).</div></aside><div class="para" id="sec:rates-change-31">For scientific computation radian measure is usually simplest, so we will use fairly consistently throughout this text. But degree measure is also common so it will occasionally make an appearance, like it did in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "PROBLEMFlightPath2" missing or not unique]</code>"&gt;.</div>
+<aside class="aside aside-like" id="sec:rates-change-30"><div class="para" id="sec:rates-change-30-1">Notice that we are using radians to measure the angle. If you are unsure what a radian is we have a brief review of Trigonometry in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "SECTIONsubsec:trig-interl" missing or not unique]</code>.</div></aside><div class="para" id="sec:rates-change-31">For scientific computation radian measure is usually simplest, so we will use fairly consistently throughout this text. But degree measure is also common so it will occasionally make an appearance, like it did in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "PROBLEMFlightPath2" missing or not unique]</code>"&gt;.</div>
 <aside class="aside aside-like" id="sec:rates-change-32"><div class="para" id="sec:rates-change-32-1">Or at least, very little.</div></aside><div class="para" id="sec:rates-change-33">From the table it is clear that as <span class="process-math">\(\theta\)</span> gets closer and closer to zero the acceleration is getting closer and closer to <span class="process-math">\(9.8.\)</span> Thus Galileo  deduced that when there is no ramp (when <span class="process-math">\(\theta =0\)</span>) the velocity will increase each second by <span class="process-math">\(9.8\frac{\text{meters}}{\text{second}}.\)</span>
 </div>
 <div class="para" id="sec:rates-change-34">That is, the velocity of an object falling under the influence of the earth’s gravity increases by <span class="process-math">\(9.8\)</span> meters per second, each second. This is usually abbreviated as <span class="process-math">\(9.8\frac{\text{meters}}{\text{second}^2}\text{,}\)</span> is commonly denoted by <span class="process-math">\(g\text{,}\)</span> and is called the <dfn class="terminology">constant of acceleration due to gravity</dfn>
@@ -1146,8 +1142,8 @@ v=9.8t
 </div>
 <article class="task exercise-like" id="problem:PositionVelocityAcceleration-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
 <div class="para logical" id="problem:PositionVelocityAcceleration-2-1-1">
-<div class="para">Show that <span class="process-math">\(p(t)=kt^2\)</span> satisfies Equation~(\ref{eq:GalileoDiffeq}) when</div>
-<div class="displaymath process-math">
+<div class="para">Show that <span class="process-math">\(p(t)=kt^2\)</span> satisfies <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQUATIONeq:GalileoDiffeq" missing or not unique]</code> when</div>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 k=4.9=\frac{g}{2}.
 \end{equation*}
@@ -1364,18 +1360,18 @@ y\amp =x^3\\
 <div class="para" id="no-label-4-1-1">
 <span class="process-math">\(y=\sqrt{x}\)</span> Compare this with part (b).</div></article><article class="task exercise-like" id="no-label-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
 <div class="para" id="no-label-5-1-1">
-<span class="process-math">\(xy=1\)</span> Compare this with Example~\#\ref{example:HighOrderDerivs}. Which method do you prefer?</div></article><article class="task exercise-like" id="no-label-6"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<span class="process-math">\(xy=1\)</span> Compare this with <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EXAMPLEexample:HighOrderDerivs" missing or not unique]</code>. Which method do you prefer?</div></article><article class="task exercise-like" id="no-label-6"><h5 class="heading"><span class="codenumber">(e)</span></h5>
 <div class="para" id="no-label-6-1-1"><span class="process-math">\(\frac{x^2+y}{3x+y^2}=x-y\)</span></div></article></article><article class="exercise exercise-like" id="EXERCISE"><h4 class="heading">
 <span class="type">Drill</span><span class="space"> </span><span class="codenumber">5.39</span><span class="period">.</span>
 </h4>
 <div class="introduction" id="EXERCISE-1"><div class="para logical" id="EXERCISE-1-1">
 <div class="para"> We know that it is not generally true that <span class="process-math">\(a^b=a\cdot b\)</span> even though there are certain exceptions, like <span class="process-math">\(a=b=1\text{,}\)</span> <span class="process-math">\(a=4\)</span> and <span class="process-math">\(b=1/2\text{,}\)</span> or <span class="process-math">\(a=b=2\text{.}\)</span> In the same way, even though the Product Rule makes it very clear that</div>
-<div class="displaymath process-math" id="EQUATIONNewbyError1">
+<div class="displaymath process-math" data-contains-math-knowls="" id="EQUATIONNewbyError1">
 \begin{equation}
 \dfdx{(y\cdot z)}{x}\neq  \dfdx{y}{x}\cdot\dfdx{z}{x}.\label{eq:NewbyError1}\tag{5.3}
 \end{equation}
 </div>
-<div class="para">there are certain pairs of functions which are exceptions; for which Equation~(\ref{eq:NewbyError1}) \emph{is} true. For example, show that for each of the following it is true that <span class="process-math">\(\dfdx{(y\cdot z)}{x}= \dfdx{y}{x}\cdot\dfdx{z}{x}\text{.}\)</span>
+<div class="para">there are certain pairs of functions which are exceptions; for which <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQUATIONeq:NewbyError1" missing or not unique]</code> \emph{is} true. For example, show that for each of the following it is true that <span class="process-math">\(\dfdx{(y\cdot z)}{x}= \dfdx{y}{x}\cdot\dfdx{z}{x}\text{.}\)</span>
 </div>
 </div></div>
 <article class="task exercise-like" id="EXERCISE-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
@@ -1428,7 +1424,8 @@ y\amp =x^3\\
 <div class="para" id="sec:newt-flux-dynam-8">We’d like to find the <em class="emphasis">speed</em> of the object in the direction it is moving.  Referring to the differential triangle in our sketch it is clear that this will be <span class="process-math">\(\abs{\dfdx{s}{t}}\text{.}\)</span>  But how do we find <span class="process-math">\(\dfdx{s}{t}\text{?}\)</span>
 </div>
 <aside class="aside aside-like" id="sec:newt-flux-dynam-9"><h4 class="heading"><span class="title">Mathematical Notation.</span></h4>
-<div class="para" id="sec:newt-flux-dynam-9-2">The absolute value bars here are correct.  This has more to do with our vocabulary (speed vs. velocity) than with this physical problem. In general speed is always a positive number, while velocity can be negative or positive. We will discuss this in more depth in Chapter~\ref{cha:calc-trig}</div></aside><div class="para logical" id="sec:newt-flux-dynam-10">
+<div class="para" id="sec:newt-flux-dynam-9-2">The absolute value bars here are correct.  This has more to do with our vocabulary (speed vs. velocity) than with this physical problem. In general speed is always a positive number, while velocity can be negative or positive. We will discuss this in more depth in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "CHAPTERcha:calc-trig" missing or not unique]</code>
+</div></aside><div class="para logical" id="sec:newt-flux-dynam-10">
 <div class="para">Since <span class="process-math">\(\dx{x}\)</span> and <span class="process-math">\(\dx{y}\)</span> are perpendicular (they are displacements in the horizontal and vertical directions, respectively)  by the Pythagorean Theorem  we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1455,8 +1452,8 @@ y\amp =x^3\\
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">5.43</span><span class="period">.</span>
 </h4>
 <div class="introduction" id="problem:AirlinerSpeed-1"> <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/Descent2.png" class="contained"></div>       <div class="para logical" id="problem:AirlinerSpeed-1-2">
-<div class="para">Recall that in Problem~\ref{problem:FlightPath1} we asked  you find the equation of this flight path from the data in the figure at the right. You should have found that</div>
-<div class="displaymath process-math">
+<div class="para">Recall that in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "PROBLEMproblem:FlightPath1" missing or not unique]</code> we asked  you find the equation of this flight path from the data in the figure at the right. You should have found that</div>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 y=\frac{-2h}{l^3}x^3+\frac{3h}{l^2}x^2.
 \end{equation*}
@@ -1507,7 +1504,7 @@ y=\frac{-2h}{l^3}x^3+\frac{3h}{l^2}x^2.
 <article class="problem example-like" id="no-label"><h4 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">5.45</span><span class="period">.</span>
 </h4>
-<div class="introduction" id="no-label-1"><div class="para" id="no-label-1-1">The flight path  obtained in Problem~\#\ref{problem:FlightPath1} was <span class="process-math">\(y=\frac{-2h}{l^3}x^3+\frac{3h}{l^2}x^2 \text{.}\)</span> We need to put some limitations on the vertical acceleration, <span class="process-math">\(\dfdxn{y}{t}{2}\text{,}\)</span> experienced by the passengers in a commercial airliner. For simplicity assume that the pilot must maintain a constant horizontal speed of <span class="process-math">\(v\frac{\text{
+<div class="introduction" id="no-label-1"><div class="para" id="no-label-1-1">The flight path  obtained <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "INproblem:FlightPath1" missing or not unique]</code> was <span class="process-math">\(y=\frac{-2h}{l^3}x^3+\frac{3h}{l^2}x^2 \text{.}\)</span> We need to put some limitations on the vertical acceleration, <span class="process-math">\(\dfdxn{y}{t}{2}\text{,}\)</span> experienced by the passengers in a commercial airliner. For simplicity assume that the pilot must maintain a constant horizontal speed of <span class="process-math">\(v\frac{\text{
 meters}}{\text{second}}\text{.}\)</span> (That is, set  <span class="process-math">\(\dfdx{x}{t}=-v\text{.}\)</span>)</div></div>
 <article class="task exercise-like" id="no-label-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
 <div class="para logical" id="no-label-2-1-1">
@@ -1839,7 +1836,7 @@ y(t)=\frac{3t^2}{1+t^3}
 x=\frac{3t}{1+t^3},\text{ and } y=\frac{3t^2}{1+t^3}.
 \end{equation*}
 </div>
-</div> <div class="para" id="no-label-1-2">The difference between this problem and Problem~\ref{problem:FoliumOfDescartes1} is this: In <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "PROBLEMFoliumOfDescartes1" missing or not unique]</code> we gave you <span class="process-math">\(x(t)\)</span> and <span class="process-math">\(y(t)\)</span> and asked you to show that it satisfies the equation of the Folium. Here we start with the equation of the Folium and you need to find <span class="process-math">\(x(t)\)</span> and <span class="process-math">\(y(t)\text{.}\)</span>
+</div> <div class="para" id="no-label-1-2">The difference between this problem and <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "PROBLEMproblem:FoliumOfDescartes1" missing or not unique]</code> is this: In <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "PROBLEMFoliumOfDescartes1" missing or not unique]</code> we gave you <span class="process-math">\(x(t)\)</span> and <span class="process-math">\(y(t)\)</span> and asked you to show that it satisfies the equation of the Folium. Here we start with the equation of the Folium and you need to find <span class="process-math">\(x(t)\)</span> and <span class="process-math">\(y(t)\text{.}\)</span>
 </div></article><div class="para" id="no-label-7">Of course, it is not wrong to also think of this parameter as time. We are just stipulating that the point is moving so that its position at time <span class="process-math">\(t\)</span> is such that the slope of the line joining the origin to the point matches <span class="process-math">\(t\text{.}\)</span>  Mathematically, what the parameter represents is usually not at issue. It is just a parameter.</div>
 <div class="para" id="no-label-8">Recall that when we looked at Roberval’s treatment of the conic sections in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "SECroberv-conic-sect" missing or not unique]</code> we found it handy to think of our curves as being traced out by the motion of a point and we created the notation <span class="process-math">\(\begin{ParamEq}
 {x(t)}{y(t)}
@@ -2179,7 +2176,7 @@ newtons }= -30W\)</span> newtons. If you were hoisting a person carrying a bucke
 <article class="problem example-like" id="PIC:catenary"><h5 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">5.72</span><span class="period">.</span>
 </h5>
-<div class="introduction" id="PIC:catenary-1"><div class="para" id="PIC:catenary-1-1"> The difficulty is that we have the wrong variable on the right side of Equation~\ref{eq:Catenary1}. Since <span class="process-math">\(y\)</span> depends on <span class="process-math">\(x\)</span> we’d like to have only the variables <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{,}\)</span> appearing in our equation. Instead we have <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(y\text{,}\)</span> and <span class="process-math">\(s\text{.}\)</span> And we really don’t know anything about <span class="process-math">\(s\text{.}\)</span> However, recall that we do know something about <span class="process-math">\(\dx{s}\text{.}\)</span>
+<div class="introduction" id="PIC:catenary-1"><div class="para" id="PIC:catenary-1-1"> The difficulty is that we have the wrong variable on the right side of <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQUATIONeq:Catenary1" missing or not unique]</code>. Since <span class="process-math">\(y\)</span> depends on <span class="process-math">\(x\)</span> we’d like to have only the variables <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{,}\)</span> appearing in our equation. Instead we have <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(y\text{,}\)</span> and <span class="process-math">\(s\text{.}\)</span> And we really don’t know anything about <span class="process-math">\(s\text{.}\)</span> However, recall that we do know something about <span class="process-math">\(\dx{s}\text{.}\)</span>
 </div></div>
 <article class="task exercise-like" id="PIC:catenary-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
 <div class="para logical" id="PIC:catenary-2-1-1">
@@ -2193,7 +2190,7 @@ newtons }= -30W\)</span> newtons. If you were hoisting a person carrying a bucke
 <div class="para">\hint{Recall the <span class="process-math">\(\d{s}\)</span> represents a differential along the direction of the curve. How is it related to <span class="process-math">\(\d{x}\)</span> and <span class="process-math">\(\d{y}\text{?}\)</span>}</div>
 </div></article><article class="task exercise-like" id="PIC:catenary-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>
 <div class="para" id="PIC:catenary-3-1-1">Show that the general parabola <span class="process-math">\(y=ax^2+bx+c\)</span> does \emph{not} satisfy this differential equation (and so Galileo was mistaken!)  .</div></article><article class="task exercise-like" id="PIC:catenary-4"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<div class="para" id="PIC:catenary-4-1-1">Show that, in fact no nonzero polynomial <span class="process-math">\(y=a_0+a_1x+a_2x^2+\ldots+a_nx^n\)</span> satisfies  Equation~\ref{eq:CatenaryDiffeq}. \hint{Suppose it did satisfy the equation.  If we were to square both sides of the equation, what would be the degree of each side?}</div></article></article><div class="para" id="no-label-13">Galileo’s brilliance is not at all diminished  by this error. As we said in <a href="CHAproblem-solving.html" class="internal" title="Chapter 2: Introduction: Some  Advice on Problem Solving">Chapter 2</a>, smart people make mistakes!  This is how they get to be smart. You should follow the example of Galileo (and Newton, and Leibniz) by making and embracing lots of mistakes. But don’t forget to learn from them as well. Also, in fairness to Galileo, he did not have access to  the Calculus tools that make this problem tractable. We do.</div></section><section class="subsection" id="no-label"><h4 class="heading hide-type">
+<div class="para" id="PIC:catenary-4-1-1">Show that, in fact no nonzero polynomial <span class="process-math">\(y=a_0+a_1x+a_2x^2+\ldots+a_nx^n\)</span> satisfies  <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQUATIONeq:CatenaryDiffeq" missing or not unique]</code>. \hint{Suppose it did satisfy the equation.  If we were to square both sides of the equation, what would be the degree of each side?}</div></article></article><div class="para" id="no-label-13">Galileo’s brilliance is not at all diminished  by this error. As we said in <a href="CHAproblem-solving.html" class="internal" title="Chapter 2: Introduction: Some  Advice on Problem Solving">Chapter 2</a>, smart people make mistakes!  This is how they get to be smart. You should follow the example of Galileo (and Newton, and Leibniz) by making and embracing lots of mistakes. But don’t forget to learn from them as well. Also, in fairness to Galileo, he did not have access to  the Calculus tools that make this problem tractable. We do.</div></section><section class="subsection" id="no-label"><h4 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">5.10.3</span><span class="space"> </span><span class="title">Domes</span>
 </h4>
 <div class="para" id="no-label-2">In <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "PICcatenary" missing or not unique]</code> we saw that the shape of a hanging chain is not a parabola as Galileo believed. But it actually shows much more than that. It shows that the shape of a hanging chain is not the graph of any polynomial regardless of its degree. (A parabola is the graph of a polynomial of degree <span class="process-math">\(2\text{.}\)</span>) This result tell us   that the set of polynomials is too small to model all of the phenomena we observe in the world. The solution of the hanging chain problem  will require a larger class of functions.</div>
@@ -2206,7 +2203,7 @@ newtons }= -30W\)</span> newtons. If you were hoisting a person carrying a bucke
 <figure class="figure figure-like" id="no-label-9"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/StPauls.png" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.74<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://en.wikipedia.org/wiki/St_Paul%27s_Cathedral" target="_blank">This figure needs a caption.</a><a class="xref" id="no-label-9-1-2" href="" data-knowl="./knowl/fn/no-label-9-1-2.html" title="Footnote 5.29"><sup> 29 </sup></a></figcaption></figure><div class="para" id="no-label-10">Wren was assisted in designing St.  by his good friend \href{https://mathshistory.st-andrews.ac.uk/Biographies/Hooke/}{Robert Hooke} (<span class="process-math">\(1635-1703\)</span>), who advised him that the cross section of the dome should be an inverted catenary: ``As hangs a flexible cable so, inverted, stand the touching pieces of an arch.’’</div>
 <aside class="aside aside-like" id="no-label-11"><h5 class="heading"><span class="title">Historical Background.</span></h5>
-<div class="para" id="no-label-11-2">Hooke is also famous for showing that the contracting force of a stretched spring is proportional to the amount of stretching. This is known as ``Hooke’s Law.’’ We will examine this in more depth in Section~\ref{sec:simple-harm-oscill</div></aside></section><section class="subsection" id="no-label"><h4 class="heading hide-type">
+<div class="para" id="no-label-11-2">Hooke is also famous for showing that the contracting force of a stretched spring is proportional to the amount of stretching. This is known as ``Hooke’s Law.’’ We will examine this in more depth in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "SECTIONsec:simple-harm-oscill" missing or not unique]</code>.</div></aside></section><section class="subsection" id="no-label"><h4 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">5.10.4</span><span class="space"> </span><span class="title">Telescopes</span>
 </h4>
 <div class="para" id="no-label-2">Though he didn’t invent the telescope, Galileo is usually cited as the first person to use a telescope to discover, for example, craters and mountains on the surface of the Moon, the phases Venus, and the moons of Jupiter. This work helped convince Galileo of the validity of <a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Copernicus/" target="_blank">Nicolaus Copernicus</a><a class="xref" id="no-label-2-2" href="" data-knowl="./knowl/fn/no-label-2-2.html" title="Footnote 5.30"><sup> 30 </sup></a>’s heliocentric (sun-centered) model of the solar system, for which he (Galileo) was eventually condemned by the Inquisition.</div>
@@ -2247,11 +2244,11 @@ newtons }= -30W\)</span> newtons. If you were hoisting a person carrying a bucke
 <article class="task exercise-like" id="problem:ParabolaDefinition-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
 <div class="para" id="problem:ParabolaDefinition-2-1-1">Show that <span class="process-math">\((x,y)\)</span> must satisfy the equation: <span class="process-math">\(x^2=4py.\)</span>
 </div></article><article class="task exercise-like" id="problem:ParabolaDefinition-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<div class="para" id="problem:ParabolaDefinition-3-1-1">In Problem~\#\ref{PIC:SpinCast1}, show that in order to spin a mirror with a focus\aside{Having the correct focus (and thus the correct focal length) is of paramount importance in the performance of the telescope.  To give you a notion of the precision required, it took <span class="process-math">\(3\)</span> months to polish the surface of one of the primary mirrors in the Large Binocular Telescope to a precision of <span class="process-math">\(30\)</span> nanometers (<span class="process-math">\(3,000\)</span> times thinner than a human hair).} at <span class="process-math">\((0,p)\)</span> the angular velocity must be <span class="process-math">\(\omega =\sqrt{\frac{g}{2p}}\text{.}\)</span>
+<div class="para" id="problem:ParabolaDefinition-3-1-1">In <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "PROBLEMPIC:SpinCast1" missing or not unique]</code>, show that in order to spin a mirror with a focus\aside{Having the correct focus (and thus the correct focal length) is of paramount importance in the performance of the telescope.  To give you a notion of the precision required, it took <span class="process-math">\(3\)</span> months to polish the surface of one of the primary mirrors in the Large Binocular Telescope to a precision of <span class="process-math">\(30\)</span> nanometers (<span class="process-math">\(3,000\)</span> times thinner than a human hair).} at <span class="process-math">\((0,p)\)</span> the angular velocity must be <span class="process-math">\(\omega =\sqrt{\frac{g}{2p}}\text{.}\)</span>
 </div></article></article><article class="problem example-like" id="problem:ParabolaReflectivity"><h5 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">5.78</span><span class="period">.</span>
 </h5>
-<div class="introduction" id="problem:ParabolaReflectivity-1"><div class="para" id="problem:ParabolaReflectivity-1-1"> \begin{wrapfigure}[9]{r}{2.5in} \vskip-10mm \captionsetup{labelformat=empty} \centerline{\includegraphics*[height=1.6in,width=2.5in]{../Figures/ParabReflectBobsStudentSolution}} \label{fig:RobervalProb2} \end{wrapfigure} Consider the parabola with equation <span class="process-math">\(y=\frac{x^2}{4p}\)</span> focus <span class="process-math">\(F=(0,p)\text{,}\)</span> and directrix <span class="process-math">\(y=-p\)</span> as in Problem~\ref{problem:ParabolaDefinition}.</div></div>
+<div class="introduction" id="problem:ParabolaReflectivity-1"><div class="para" id="problem:ParabolaReflectivity-1-1"> \begin{wrapfigure}[9]{r}{2.5in} \vskip-10mm \captionsetup{labelformat=empty} \centerline{\includegraphics*[height=1.6in,width=2.5in]{../Figures/ParabReflectBobsStudentSolution}} \label{fig:RobervalProb2} \end{wrapfigure} Consider the parabola with equation <span class="process-math">\(y=\frac{x^2}{4p}\)</span> focus <span class="process-math">\(F=(0,p)\text{,}\)</span> and directrix <span class="process-math">\(y=-p\)</span> as in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "PROBLEMproblem:ParabolaDefinition" missing or not unique]</code>.</div></div>
 <article class="task exercise-like" id="problem:ParabolaReflectivity-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
 <div class="para" id="problem:ParabolaReflectivity-2-1-1">Show that the tangent line (in red) is perpendicular to line segment <span class="process-math">\(FQ\text{.}\)</span>
 </div></article><article class="task exercise-like" id="problem:ParabolaReflectivity-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>

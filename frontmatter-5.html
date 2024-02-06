@@ -8,7 +8,7 @@
 <html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Relevant Quotes</title>
+<title>On Teaching Calculus</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
@@ -137,7 +137,7 @@ window.MathJax = {
 \def\ftceval#1#2#3{#1\hskip.5ex{\llap{\smash{\rule[-3ex]{0.5pt}{7ex}}}_{\raise{-3ex}{\hskip.5ex#2}}^{\raise{-5ex}{\hskip.5ex #3}}}}
 
 
-  \def\eval#1#2#3{#1\hskip.5ex{\llap{\rule[-1.5ex]{0.5pt}{4ex}}_{\raise{-1.5ex}{\hskip.5ex#2=#3}}}}
+\def\eval#1#2#3{#1\hskip.5ex{\llap{\rule[-1.5ex]{0.5pt}{4ex}}_{\raise{-1.5ex}{\hskip.5ex#2=#3}}}}
 \def\dispeval#1#2#3{#1\hskip.5ex{\llap{\smash{\rule[-2ex]{0.5pt}{5ex}}}_{\raise{-2ex}{\hskip.5ex#2=#3}}}}
 
 
@@ -159,6 +159,9 @@ window.MathJax = {
 \def\partialfx#1#2{\frac{\partial{#1}}{\partial{#2}}} 
 \def\partialfxn#1#2#3{\frac{\partial^{#3}{#1}}{\partial{#2}^{#3}}} 
 \def\dfdxn#1#2#3{\frac{\text{d}^{#3}{#1}}{\text{d}{#2}^{#3}}} 
+
+\def\dfdxat#1#2#3{\eval{\dfdx{#1}{#2}}{#2}{#3}}
+
 \def\limit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}#3}}
 \def\tlimit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}}#3}
 \def\limitX#1#2#3#4{{\displaystyle\lim_{\underset{#4}{#1\rightarrow #2}}#3}}
@@ -176,9 +179,9 @@ window.MathJax = {
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
-<li class="toc-item toc-dedication"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Dedication</span></a></div></li>
+<li class="toc-item toc-dedication"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">title</span></a></div></li>
 <li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
-<li class="toc-item toc-preface active"><div class="toc-title-box"><a href="frontmatter-5.html" class="internal"><span class="title">Relevant Quotes</span></a></div></li>
+<li class="toc-item toc-preface active"><div class="toc-title-box"><a href="frontmatter-5.html" class="internal"><span class="title">On Teaching Calculus</span></a></div></li>
 <li class="toc-item toc-preface"><div class="toc-title-box"><a href="SECinstructor.html" class="internal"><span class="title">To the Instructor: Read This First</span></a></div></li>
 </ul>
 </li>
@@ -191,13 +194,7 @@ window.MathJax = {
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAproblem-solving.html#SECusing-lett-inst" class="internal"><span class="codenumber">2.1</span> <span class="title">Using Letters Instead of Numbers</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAproblem-solving.html#SECan-easy-problem-alg" class="internal"><span class="codenumber">2.2</span> <span class="title">Substitution, or Making Things “Easy on the Eyes”</span></a></div></li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAproblem-solving.html#SECan-easy-problem-geo" class="internal"><span class="codenumber">2.3</span> <span class="title">An “Easy” Problem From Geometry</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAproblem-solving.html#subsection-digression-MakingMistakes" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Digression: Making Mistakes</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAproblem-solving.html#SECan-easy-problem-geo-4" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Continuing our example</span></a></div></li>
-</ul>
-</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAproblem-solving.html#SECan-easy-problem-geo" class="internal"><span class="codenumber">2.3</span> <span class="title">An “Easy” Problem From Geometry</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAproblem-solving.html#SECour-advice-synopsis" class="internal"><span class="codenumber">2.4</span> <span class="title">Our advice, a synopsis</span></a></div></li>
 </ul>
 </li>
@@ -530,8 +527,8 @@ window.MathJax = {
 <li class="toc-item toc-subsection">
 <div class="toc-title-box"><a href="CHAformal-limits.html#sec:limit-product-at" class="internal"><span class="codenumber">17.3.4</span> <span class="title">The Limit of a Product</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAformal-limits.html#no-label" class="internal"><span class="codenumber">17.3.4.1</span> <span class="title">Proving Lemma~\#\ref{lemma:LimProd1</span></a></div></li>
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAformal-limits.html#no-label" class="internal"><span class="codenumber">17.3.4.2</span> <span class="title">Proving Lemma~\#\ref{lemma:LimProd2</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAformal-limits.html#no-label" class="internal"><span class="codenumber">17.3.4.1</span> <span class="title">Proving <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "LEMMAlemma:LimProd1" missing or not unique]</code></span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAformal-limits.html#no-label" class="internal"><span class="codenumber">17.3.4.2</span> <span class="title">Proving <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "LEMMAlemma:LimProd2" missing or not unique]</code></span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAformal-limits.html#no-label" class="internal"><span class="codenumber">17.3.5</span> <span class="title">The Function  \boldmath  <span class="process-math">\(f(x)=\frac1x\)</span> is Continuous Wherever  It Is Defined</span></a></div></li>
@@ -553,7 +550,7 @@ window.MathJax = {
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="preface" id="frontmatter-5"><h2 class="heading hide-type">
-<span class="type">Preface</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Relevant Quotes</span>
+<span class="type">Preface</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">On Teaching Calculus</span>
 </h2>
 <blockquote class="blockquote" id="frontmatter-5-2">
 <div class="para" id="frontmatter-5-2-1">“Thus, a schism appeared between the theory and the practice of the calculus as the level of rigour in the calculus was raised: the foundationalists had one set of rules, the practitioners another. The situation has persisted to this day, with quite the unfortunate and unnecessary confusions for students.  It is common experience for them to learn in calculus lectures that infinitesimally small differentials do not exist, but to use them constantly in the mathematical physics lectures. While Eulerian calculus is not rigorous, it should be taught for what it is: a powerful tool for the analysis of physical and geometric phenomena, which has left its considerable mark on the conceptions, terminology, and notations of later presentations of the subject. As things are, the treatment in textbooks is unsatisfactory. Some basically follow Cauchy’s practice of notating the derivative by <span class="process-math">\(f^\prime\)</span> and defining the differential by some equivalent of this, while others notate the derivative by the single symbol <span class="process-math">\(\dfdx{y}{x}\)</span> and omit differentials altogether; and neither treatment warns the reader of the existence of the other. Further, both treatments give a prime place to limits without explaining why the standard of rigour and generality obtainable from this very difficult concept is desirable in the first place, or what kinds of less rigorous approaches are being superseded.”</div> <cite class="attribution">―<a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Grattan-Guinness/" target="_blank">Ivor Grattan-Guinness, (1941-2014)</a><a class="xref" id="frontmatter-5-2-2-2" href="" data-knowl="./knowl/fn/frontmatter-5-2-2-2.html" title="Footnote 0.0.2"><sup> 2 </sup></a></cite>

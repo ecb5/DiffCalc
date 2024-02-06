@@ -137,7 +137,7 @@ window.MathJax = {
 \def\ftceval#1#2#3{#1\hskip.5ex{\llap{\smash{\rule[-3ex]{0.5pt}{7ex}}}_{\raise{-3ex}{\hskip.5ex#2}}^{\raise{-5ex}{\hskip.5ex #3}}}}
 
 
-  \def\eval#1#2#3{#1\hskip.5ex{\llap{\rule[-1.5ex]{0.5pt}{4ex}}_{\raise{-1.5ex}{\hskip.5ex#2=#3}}}}
+\def\eval#1#2#3{#1\hskip.5ex{\llap{\rule[-1.5ex]{0.5pt}{4ex}}_{\raise{-1.5ex}{\hskip.5ex#2=#3}}}}
 \def\dispeval#1#2#3{#1\hskip.5ex{\llap{\smash{\rule[-2ex]{0.5pt}{5ex}}}_{\raise{-2ex}{\hskip.5ex#2=#3}}}}
 
 
@@ -159,6 +159,9 @@ window.MathJax = {
 \def\partialfx#1#2{\frac{\partial{#1}}{\partial{#2}}} 
 \def\partialfxn#1#2#3{\frac{\partial^{#3}{#1}}{\partial{#2}^{#3}}} 
 \def\dfdxn#1#2#3{\frac{\text{d}^{#3}{#1}}{\text{d}{#2}^{#3}}} 
+
+\def\dfdxat#1#2#3{\eval{\dfdx{#1}{#2}}{#2}{#3}}
+
 \def\limit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}#3}}
 \def\tlimit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}}#3}
 \def\limitX#1#2#3#4{{\displaystyle\lim_{\underset{#4}{#1\rightarrow #2}}#3}}
@@ -176,9 +179,8 @@ window.MathJax = {
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
-<li class="toc-item toc-dedication"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Dedication</span></a></div></li>
-<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
-<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-5.html" class="internal"><span class="title">Relevant Quotes</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Epigraphs</span></a></div></li>
 <li class="toc-item toc-preface"><div class="toc-title-box"><a href="SECinstructor.html" class="internal"><span class="title">To the Instructor: Read This First</span></a></div></li>
 </ul>
 </li>
@@ -191,13 +193,7 @@ window.MathJax = {
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAproblem-solving.html#SECusing-lett-inst" class="internal"><span class="codenumber">2.1</span> <span class="title">Using Letters Instead of Numbers</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAproblem-solving.html#SECan-easy-problem-alg" class="internal"><span class="codenumber">2.2</span> <span class="title">Substitution, or Making Things “Easy on the Eyes”</span></a></div></li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAproblem-solving.html#SECan-easy-problem-geo" class="internal"><span class="codenumber">2.3</span> <span class="title">An “Easy” Problem From Geometry</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAproblem-solving.html#subsection-digression-MakingMistakes" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Digression: Making Mistakes</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAproblem-solving.html#SECan-easy-problem-geo-4" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Continuing our example</span></a></div></li>
-</ul>
-</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAproblem-solving.html#SECan-easy-problem-geo" class="internal"><span class="codenumber">2.3</span> <span class="title">An “Easy” Problem From Geometry</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAproblem-solving.html#SECour-advice-synopsis" class="internal"><span class="codenumber">2.4</span> <span class="title">Our advice, a synopsis</span></a></div></li>
 </ul>
 </li>
@@ -205,13 +201,13 @@ window.MathJax = {
 <div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html" class="internal"><span class="codenumber">3</span> <span class="title">Science Before Calculus</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#Apologia" class="internal"><span class="codenumber">3.1</span> <span class="title">Apologia</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#no-label" class="internal"><span class="codenumber">3.2</span> <span class="title">Some Preliminaries</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#SECTIONSomePreliminaries" class="internal"><span class="codenumber">3.2</span> <span class="title">Some Preliminaries</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#sec-laziness-nature" class="internal"><span class="codenumber">3.3</span> <span class="title">The Laziness of Nature</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#subsection-" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Nature is Lazy</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#SUBSECTIONNatureLazy" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Nature is Lazy</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#Digress-VarConstFunc-" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Digression: Variables, Constants, and Functions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#subsection-" class="internal"><span class="codenumber">3.3.3</span> <span class="title">After Digression</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#sec-laziness-nature-4" class="internal"><span class="codenumber">3.3.3</span> <span class="title">After Digression</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#sec:ferm-meth-aedeq" class="internal"><span class="codenumber">3.4</span> <span class="title">Fermat’s Method of Adequality</span></a></div></li>
@@ -219,7 +215,7 @@ window.MathJax = {
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#sec:roberv-conic-sect" class="internal"><span class="codenumber">3.6</span> <span class="title">Roberval, Conic Sections, and the Dynamic Approach</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#no-label" class="internal"><span class="codenumber">3.6.1</span> <span class="title">Speed, Velocity, and Rates of Change</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#SUBSECTIONSpdVelRofC" class="internal"><span class="codenumber">3.6.1</span> <span class="title">Speed, Velocity, and Rates of Change</span></a></div></li>
 <li class="toc-item toc-subsection">
 <div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#no-label" class="internal"><span class="codenumber">3.6.2</span> <span class="title">The Tangent Lines of the Conic Sections</span></a></div>
 <ul class="structural toc-item-list">
@@ -258,27 +254,27 @@ window.MathJax = {
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="SECveloc-slop-tang.html" class="internal"><span class="codenumber">5</span> <span class="title">Slopes, Tangents, and Rates of Change</span></a></div>
+<div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html" class="internal"><span class="codenumber">5</span> <span class="title">Slopes, Tangents, and Rates of Change</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#sec:slopes-tangents" class="internal"><span class="codenumber">5.1</span> <span class="title">Slopes and Tangents</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#SECdefin-tang-line" class="internal"><span class="codenumber">5.2</span> <span class="title">Defining the Tangent Line</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#sec:vomit-comet" class="internal"><span class="codenumber">5.3</span> <span class="title">The Vomit Comet</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#sec:rates-change" class="internal"><span class="codenumber">5.4</span> <span class="title">Galileo Drops the Ball</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#no-label" class="internal"><span class="codenumber">5.5</span> <span class="title">Bringing in Calculus</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#subsec:Derivative" class="internal"><span class="codenumber">5.6</span> <span class="title">The Derivative</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#sec:newt-flux-dynam" class="internal"><span class="codenumber">5.7</span> <span class="title">Thinking Dynamically</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#sec:newt-meth-flux" class="internal"><span class="codenumber">5.8</span> <span class="title">Newton’s Method of Fluxions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html#sec:slopes-tangents" class="internal"><span class="codenumber">5.1</span> <span class="title">Slopes and Tangents</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html#SECTIONdefin-tang-line" class="internal"><span class="codenumber">5.2</span> <span class="title">Defining the Tangent Line</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html#sec:vomit-comet" class="internal"><span class="codenumber">5.3</span> <span class="title">The Vomit Comet</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html#sec:rates-change" class="internal"><span class="codenumber">5.4</span> <span class="title">Galileo Drops the Ball</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html#no-label" class="internal"><span class="codenumber">5.5</span> <span class="title">Bringing in Calculus</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html#subsec:Derivative" class="internal"><span class="codenumber">5.6</span> <span class="title">The Derivative</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html#sec:newt-flux-dynam" class="internal"><span class="codenumber">5.7</span> <span class="title">Thinking Dynamically</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html#SECTIONnewt-meth-flux" class="internal"><span class="codenumber">5.8</span> <span class="title">Newton’s Method of Fluxions</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="SECveloc-slop-tang.html#sec:self-inters-curv" class="internal"><span class="codenumber">5.9</span> <span class="title">Self-intersecting Curves and Parametric Equations</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#no-label" class="internal"><span class="codenumber">5.9.1</span> <span class="title">Parametric Functions</span></a></div></li></ul>
+<div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html#sec:self-inters-curv" class="internal"><span class="codenumber">5.9</span> <span class="title">Self-intersecting Curves and Parametric Equations</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html#no-label" class="internal"><span class="codenumber">5.9.1</span> <span class="title">Parametric Functions</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="SECveloc-slop-tang.html#sec:bridg-chains-telesc" class="internal"><span class="codenumber">5.10</span> <span class="title">Bridges, Chains, Domes, and Telescopes</span></a></div>
+<div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html#sec:bridg-chains-telesc" class="internal"><span class="codenumber">5.10</span> <span class="title">Bridges, Chains, Domes, and Telescopes</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#no-label" class="internal"><span class="codenumber">5.10.1</span> <span class="title">Bridges</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#no-label" class="internal"><span class="codenumber">5.10.2</span> <span class="title">Chains</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#no-label" class="internal"><span class="codenumber">5.10.3</span> <span class="title">Domes</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#no-label" class="internal"><span class="codenumber">5.10.4</span> <span class="title">Telescopes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html#no-label" class="internal"><span class="codenumber">5.10.1</span> <span class="title">Bridges</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html#no-label" class="internal"><span class="codenumber">5.10.2</span> <span class="title">Chains</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html#no-label" class="internal"><span class="codenumber">5.10.3</span> <span class="title">Domes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html#no-label" class="internal"><span class="codenumber">5.10.4</span> <span class="title">Telescopes</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -296,30 +292,30 @@ window.MathJax = {
 </li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:model-with-trig" class="internal"><span class="codenumber">6.1.3</span> <span class="title">Modeling with Trigonometric Functions</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#no-label" class="internal"><span class="codenumber">6.1.4</span> <span class="title">Phase Shifts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:polar-coordinates" class="internal"><span class="codenumber">6.1.5</span> <span class="title">Polar Coordinates</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:polar-coordinates" class="internal"><span class="codenumber">6.2</span> <span class="title">Polar Coordinates</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAcalc-trig.html#sec:diff-sine-cosine" class="internal"><span class="codenumber">6.3</span> <span class="title">The Differentials of the Sine and Cosine Functions</span></a></div>
+<div class="toc-title-box"><a href="CHAcalc-trig.html#sec:diff-sine-cosine" class="internal"><span class="codenumber">6.2</span> <span class="title">The Differentials of the Sine and Cosine Functions</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:polar-coord-calc" class="internal"><span class="codenumber">6.3.1</span> <span class="title">Polar Coordinates and Calculus</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#no-label" class="internal"><span class="codenumber">6.3.2</span> <span class="title">The Brachistochrone Problem</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#no-label" class="internal"><span class="codenumber">6.3.3</span> <span class="title">Spin Casting, Redux</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:simple-harm-oscill" class="internal"><span class="codenumber">6.3.4</span> <span class="title">Simple Harmonic Oscillation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:polar-coord-calc" class="internal"><span class="codenumber">6.2.1</span> <span class="title">Polar Coordinates and Calculus</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#no-label" class="internal"><span class="codenumber">6.2.2</span> <span class="title">The Brachistochrone Problem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#no-label" class="internal"><span class="codenumber">6.2.3</span> <span class="title">Spin Casting, Redux</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:simple-harm-oscill" class="internal"><span class="codenumber">6.2.4</span> <span class="title">Simple Harmonic Oscillation</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAcalc-trig.html#subsec:diff-other-trig" class="internal"><span class="codenumber">6.4</span> <span class="title">The Differentials of the Other Trigonometric Functions</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:inverse-tan-and-cot" class="internal"><span class="codenumber">6.5</span> <span class="title">The Inverse Tangent and Cotangent Functions</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:witch-agnesi-inverse" class="internal"><span class="codenumber">6.6</span> <span class="title">The Witch of Agnesi and the Inverse Tangent Function</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAcalc-trig.html#SECTIONSECTIONdiff-inverse-tancot" class="internal"><span class="codenumber">6.7</span> <span class="title">The Differentials of the Inverse Tangent and Inverse Cotangent Functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAcalc-trig.html#subsec:diff-other-trig" class="internal"><span class="codenumber">6.3</span> <span class="title">The Differentials of the Other Trigonometric Functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:inverse-tan-and-cot" class="internal"><span class="codenumber">6.4</span> <span class="title">The Inverse Tangent and Cotangent Functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:witch-agnesi-inverse" class="internal"><span class="codenumber">6.5</span> <span class="title">The Witch of Agnesi and the Inverse Tangent Function</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAcalc-trig.html#SECTIONSECTIONdiff-inverse-tancot" class="internal"><span class="codenumber">6.6</span> <span class="title">The Differentials of the Inverse Tangent and Inverse Cotangent Functions</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAcalc-trig.html#sec:other-inverse-trig" class="internal"><span class="codenumber">6.8</span> <span class="title">The Other Inverse Trigonometric Functions</span></a></div>
+<div class="toc-title-box"><a href="CHAcalc-trig.html#sec:other-inverse-trig" class="internal"><span class="codenumber">6.7</span> <span class="title">The Other Inverse Trigonometric Functions</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#no-label" class="internal"><span class="codenumber">6.8.1</span> <span class="title">The Inverse Sine Function: \boldmath <span class="process-math">\(\inverse\sin(x)\)</span></span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#no-label" class="internal"><span class="codenumber">6.8.2</span> <span class="title">The Inverse Secant and Inverse Cosecant</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#no-label" class="internal"><span class="codenumber">6.7.1</span> <span class="title">The Inverse Sine Function: \boldmath <span class="process-math">\(\inverse\sin(x)\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#no-label" class="internal"><span class="codenumber">6.7.2</span> <span class="title">The Inverse Secant and Inverse Cosecant</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:curvature" class="internal"><span class="codenumber">6.9</span> <span class="title">Curvature</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:curvature" class="internal"><span class="codenumber">6.8</span> <span class="title">Curvature</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -350,16 +346,15 @@ window.MathJax = {
 <div class="toc-title-box"><a href="CHAlast-elem-funct.html#no-label" class="internal"><span class="codenumber">8.1</span> <span class="title">Introduction</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAlast-elem-funct.html#no-label" class="internal"><span class="codenumber">8.1.1</span> <span class="title">Initial Value Problems (IVPs)</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAlast-elem-funct.html#sec:exponential" class="internal"><span class="codenumber">8.2</span> <span class="title">The Natural Exponential</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAlast-elem-funct.html#sec:hyperb-trig-hang" class="internal"><span class="codenumber">8.2.1</span> <span class="title">Hyperbolic Trigonometry: The Hanging Chain</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAlast-elem-funct.html#no-label" class="internal"><span class="codenumber">8.2.2</span> <span class="title">The Gateway Arch</span></a></div></li>
-</ul>
-</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAlast-elem-funct.html#sec:exponential" class="internal"><span class="codenumber">8.2</span> <span class="title">The Natural Exponential</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="CHAlast-elem-funct.html#sec:exponential-growth" class="internal"><span class="codenumber">8.3</span> <span class="title">Exponential Growth</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAlast-elem-funct.html#no-label" class="internal"><span class="codenumber">8.3.1</span> <span class="title">Exponential Functions and Compound Interest</span></a></div></li></ul>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAlast-elem-funct.html#sec:hyperb-trig-hang" class="internal"><span class="codenumber">8.3.1</span> <span class="title">Hyperbolic Trigonometry: The Hanging Chain</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAlast-elem-funct.html#no-label" class="internal"><span class="codenumber">8.3.2</span> <span class="title">The Gateway Arch</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAlast-elem-funct.html#sec:exponential-growth-5" class="internal"><span class="codenumber">8.3.3</span> <span class="title">Exponential Growth</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAlast-elem-funct.html#no-label" class="internal"><span class="codenumber">8.3.4</span> <span class="title">Exponential Functions and Compound Interest</span></a></div></li>
+</ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="CHAlast-elem-funct.html#sec:natural-logarithm-1" class="internal"><span class="codenumber">8.4</span> <span class="title">The Natural Logarithm</span></a></div>
@@ -458,7 +453,7 @@ window.MathJax = {
 <div class="toc-title-box"><a href="CHAlimits-lhop-rule.html" class="internal"><span class="codenumber">12</span> <span class="title">Limits and L’H\^o pital’s Rule</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAlimits-lhop-rule.html#sec:horiz-asympt-as" class="internal"><span class="codenumber">12.1</span> <span class="title">Horizontal Asymptotes as Limits ``at Infinity’’</span></a></div>
+<div class="toc-title-box"><a href="CHAlimits-lhop-rule.html#sec:horiz-asympt-as" class="internal"><span class="codenumber">12.1</span> <span class="title">Horizontal Asymptotes as Limits “at Infinity”</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAlimits-lhop-rule.html#digression:LimitNotation" class="internal"><span class="codenumber">12.1.1</span> <span class="title">Limit Notation</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAlimits-lhop-rule.html#sec:squeeze-theorem-informal" class="internal"><span class="codenumber">12.2</span> <span class="title">The Squeeze Theorem</span></a></div></li>
@@ -530,8 +525,8 @@ window.MathJax = {
 <li class="toc-item toc-subsection">
 <div class="toc-title-box"><a href="CHAformal-limits.html#sec:limit-product-at" class="internal"><span class="codenumber">17.3.4</span> <span class="title">The Limit of a Product</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAformal-limits.html#no-label" class="internal"><span class="codenumber">17.3.4.1</span> <span class="title">Proving Lemma~\#\ref{lemma:LimProd1</span></a></div></li>
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAformal-limits.html#no-label" class="internal"><span class="codenumber">17.3.4.2</span> <span class="title">Proving Lemma~\#\ref{lemma:LimProd2</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAformal-limits.html#no-label" class="internal"><span class="codenumber">17.3.4.1</span> <span class="title">Proving <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "LEMMAlemma:LimProd1" missing or not unique]</code></span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAformal-limits.html#no-label" class="internal"><span class="codenumber">17.3.4.2</span> <span class="title">Proving <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "LEMMAlemma:LimProd2" missing or not unique]</code></span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAformal-limits.html#no-label" class="internal"><span class="codenumber">17.3.5</span> <span class="title">The Function  \boldmath  <span class="process-math">\(f(x)=\frac1x\)</span> is Continuous Wherever  It Is Defined</span></a></div></li>
@@ -556,20 +551,20 @@ window.MathJax = {
 <span class="type">Chapter</span><span class="space"> </span><span class="codenumber">12</span><span class="space"> </span><span class="title">Limits and L’H\^o pital’s Rule</span>
 </h2>
 <section class="section" id="sec:horiz-asympt-as"><h3 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">12.1</span><span class="space"> </span><span class="title">Horizontal Asymptotes as Limits ``at Infinity’’</span>
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">12.1</span><span class="space"> </span><span class="title">Horizontal Asymptotes as Limits “at Infinity”</span>
 </h3>
-<section class="introduction" id="sec:horiz-asympt-as-2"><div class="para" id="sec:horiz-asympt-as-2-1">\TLogo{PSP:lhopitals-rule}</div> <div class="para" id="sec:horiz-asympt-as-2-2">In our fishery model in the previous chapter we referred to the carrying capacity of the lake, <span class="process-math">\(P=100\text{,}\)</span> as an ``asymptote.’’ Loosely speaking, an asymptote is a line that the graph of a function ``gets close to.’’  Any line can be an asymptote but we will be primarily interested in horizontal asymptotes (lines like the graph of <span class="process-math">\(y=5\)</span>) and vertical asymptotes (lines like the graph of <span class="process-math">\(x=5\)</span>).</div>  <figure class="figure figure-like" id="sec:horiz-asympt-as-2-3"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/Witch10.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">12.1<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Bernoulli_Johann/" target="_blank">This figure needs a caption.</a><a class="xref" id="sec:horiz-asympt-as-2-3-1-2" href="" data-knowl="./knowl/fn/sec:horiz-asympt-as-2-3-1-2.html" title="Footnote 12.1"><sup> 1 </sup></a></figcaption></figure>      <div class="para" id="sec:horiz-asympt-as-2-4">Take another look at the graph of the  Witch of Agnesi at the right.  You can readily see that, as <span class="process-math">\(x\)</span> moves to the right <span class="process-math">\(y\)</span> gets ``closer and closer’’ to zero. This is the essential idea but the phrase ``closer and closer’’ is too vague for our purpose.</div> <div class="para" id="sec:horiz-asympt-as-2-5">Here’s why. In the sketch below, <span class="process-math">\(x\)</span> is moving to the right. As you can see <span class="process-math">\(x\)</span> gets ``closer and closer’’ to <span class="process-math">\(a\text{.}\)</span> But it also gets ``closer and closer’’ to both <span class="process-math">\(b\)</span> and  <span class="process-math">\(c\text{.}\)</span>
-</div> <div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/images/CloserCloser.png" class="contained"></div>  <div class="para" id="sec:horiz-asympt-as-2-7">While <span class="process-math">\(x\)</span> is getting ``closer and closer’’ to all three of <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\)</span> it is only getting ``arbitrarily close’’ to <span class="process-math">\(a\text{,}\)</span> and ``arbitrarily close’’ is what we usually mean when we say ``closer and closer.’’ When <span class="process-math">\(x\)</span> is getting ``arbitrarily close\aside{The phrase ``arbitrarily close’’ will be adequate for our present purposes but eventually even that will not be sufficiently precise. The need for precise language is real and very delicate.  We will return to this matter <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "SECLimitLaws" missing or not unique]</code>. For now be aware that we are not quite done perfecting the meaning of ``arbitrarily close.’’ }’’ to <span class="process-math">\(a\)</span> we say that <span class="process-math">\(x\)</span> approaches and we write <span class="process-math">\(x\rightarrow a\text{.}\)</span>
-</div> <div class="para" id="sec:horiz-asympt-as-2-8">It is clear that the graph of the Witch comes arbitrarily close to the line <span class="process-math">\(y=0\)</span> so we write <span class="process-math">\(y\rightarrow0\)</span> as <span class="process-math">\(x\rightarrow\infty\text{.}\)</span> This is spoken aloud  as ``<span class="process-math">\(y\)</span> approaches zero as <span class="process-math">\(x\)</span> approaches infinity.’’</div></section><section class="subsection" id="digression:LimitNotation"><h4 class="heading hide-type">
+<section class="introduction" id="sec:horiz-asympt-as-2"><div class="para" id="sec:horiz-asympt-as-2-1">\TLogo{PSP:lhopitals-rule}</div> <div class="para" id="sec:horiz-asympt-as-2-2">In our fishery model in the previous chapter we referred to the carrying capacity of the lake, <span class="process-math">\(P=100\text{,}\)</span> as an “asymptote.” Loosely speaking, an asymptote is a line that the graph of a function “gets close to.”  Any line can be an asymptote but we will be primarily interested in horizontal asymptotes (lines like the graph of <span class="process-math">\(y=5\)</span>) and vertical asymptotes (lines like the graph of <span class="process-math">\(x=5\)</span>).</div>  <figure class="figure figure-like" id="sec:horiz-asympt-as-2-3"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/Witch10.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">12.1<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Bernoulli_Johann/" target="_blank">This figure needs a caption.</a><a class="xref" id="sec:horiz-asympt-as-2-3-1-2" href="" data-knowl="./knowl/fn/sec:horiz-asympt-as-2-3-1-2.html" title="Footnote 12.1"><sup> 1 </sup></a></figcaption></figure>      <div class="para" id="sec:horiz-asympt-as-2-4">Take another look at the graph of the  Witch of Agnesi at the right.  You can readily see that, as <span class="process-math">\(x\)</span> moves to the right <span class="process-math">\(y\)</span> gets “closer and closer” to zero. This is the essential idea but the phrase “closer and closer” is too vague for our purpose.</div> <div class="para" id="sec:horiz-asympt-as-2-5">Here’s why. In the sketch below, <span class="process-math">\(x\)</span> is moving to the right. As you can see <span class="process-math">\(x\)</span> gets “closer and closer” to <span class="process-math">\(a\text{.}\)</span> But it also gets “closer and closer” to both <span class="process-math">\(b\)</span> and  <span class="process-math">\(c\text{.}\)</span>
+</div> <div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/images/CloserCloser.png" class="contained"></div>  <div class="para" id="sec:horiz-asympt-as-2-7">While <span class="process-math">\(x\)</span> is getting “closer and closer” to all three of <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\)</span> it is only getting “arbitrarily close” to <span class="process-math">\(a\text{,}\)</span> and “arbitrarily close” is what we usually mean when we say “closer and closer.” When <span class="process-math">\(x\)</span> is getting “arbitrarily close\aside{The phrase “arbitrarily close” will be adequate for our present purposes but eventually even that will not be sufficiently precise. The need for precise language is real and very delicate.  We will return to this matter <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "SECLimitLaws" missing or not unique]</code>. For now be aware that we are not quite done perfecting the meaning of arbitrarily close.” }’’ to <span class="process-math">\(a\)</span> we say that <span class="process-math">\(x\)</span> approaches and we write <span class="process-math">\(x\rightarrow a\text{.}\)</span>
+</div> <div class="para" id="sec:horiz-asympt-as-2-8">It is clear that the graph of the Witch comes arbitrarily close to the line <span class="process-math">\(y=0\)</span> so we write <span class="process-math">\(y\rightarrow0\)</span> as <span class="process-math">\(x\rightarrow\infty\text{.}\)</span> This is spoken aloud  as “<span class="process-math">\(y\)</span> approaches zero as <span class="process-math">\(x\)</span> approaches infinity.”</div></section><section class="subsection" id="digression:LimitNotation"><h4 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">12.1.1</span><span class="space"> </span><span class="title">Limit Notation</span>
 </h4>
-<div class="para" id="digression:LimitNotation-2"> Of course, the notion of ``approaching infinity’’ is troublesome as well. That we speak in this fashion has more to do with the construction of the English language than with the mathematics being represented. Since <span class="process-math">\(y\)</span> is proceeding toward zero (an actual number) it makes sense to say ``<span class="process-math">\(y\)</span> approaches zero.’’ The notation ``<span class="process-math">\(y\rightarrow0\)</span>’’ captures this idea nicely. And since we usually pronounce the symbol <span class="process-math">\(\infty\)</span> as ``infinity’’ it feels natural to write <span class="process-math">\(x\rightarrow\infty\)</span> and to speak this aloud as ``<span class="process-math">\(x\)</span> approaches infinity’’ as if <span class="process-math">\(\infty\)</span> is a place we could get to. But as we’ve observed, this is absurd.  Properly speaking the symbols ``<span class="process-math">\(x\rightarrow\infty\)</span>’’ should be spoken aloud as ``<span class="process-math">\(x\)</span> increases without bound,’’ but nearly everyone says ``<span class="process-math">\(x\)</span> approaches infinity’’ instead because it is a less cumbersome phrase. Like so much of mathematics this is perfectly clear once the underlying ideas have been internalized, but in the beginning it is can be quite confusing. Be patient with this.</div>
-<div class="para" id="digression:LimitNotation-3">An alternative, and more common notation is: <span class="process-math">\(\tlimit{x}{\infty}{\frac{1}{1+x^2}}=0\)</span> which we read aloud as ``The limit as <span class="process-math">\(x\)</span> approaches infinity of one over one plus <span class="process-math">\(x\)</span> squared is equal to zero’’ but this also collides with the construction of the English language.  From the discussion above we know that ``<span class="process-math">\(x\rightarrow\infty\)</span>" indicates that <span class="process-math">\(x\)</span> increases without bound, but when we write <span class="process-math">\(\tlimit{x}{\infty}{\frac{1}{1+x^2}}=0\)</span> what exactly does ``<span class="process-math">\(=0\)</span>’’ mean? What is equal to zero? Certainly the Witch is never equal to zero since its graph never crosses (or even touches) the <span class="process-math">\(x\)</span> axis.</div>
+<div class="para" id="digression:LimitNotation-2"> Of course, the notion of “approaching infinity” is troublesome as well. That we speak in this fashion has more to do with the construction of the English language than with the mathematics being represented. Since <span class="process-math">\(y\)</span> is proceeding toward zero (an actual number) it makes sense to say “<span class="process-math">\(y\)</span> approaches zero.” The notation “<span class="process-math">\(y\rightarrow0\)</span>” captures this idea nicely. And since we usually pronounce the symbol <span class="process-math">\(\infty\)</span> as “infinity” it feels natural to write <span class="process-math">\(x\rightarrow\infty\)</span> and to speak this aloud as “<span class="process-math">\(x\)</span> approaches infinity” as if <span class="process-math">\(\infty\)</span> is a place we could get to. But as we’ve observed, this is absurd.  Properly speaking the symbols “<span class="process-math">\(x\rightarrow\infty\)</span>” should be spoken aloud as “<span class="process-math">\(x\)</span> increases without bound,” but nearly everyone says “<span class="process-math">\(x\)</span> approaches infinity” instead because it is a less cumbersome phrase. Like so much of mathematics this is perfectly clear once the underlying ideas have been internalized, but in the beginning it is can be quite confusing. Be patient with this.</div>
+<div class="para" id="digression:LimitNotation-3">An alternative, and more common notation is: <span class="process-math">\(\tlimit{x}{\infty}{\frac{1}{1+x^2}}=0\)</span> which we read aloud as “The limit as <span class="process-math">\(x\)</span> approaches infinity of one over one plus <span class="process-math">\(x\)</span> squared is equal to zero” but this also collides with the construction of the English language.  From the discussion above we know that <span class="process-math">\(x\rightarrow\infty\)</span>" indicates that <span class="process-math">\(x\)</span> increases without bound, but when we write <span class="process-math">\(\tlimit{x}{\infty}{\frac{1}{1+x^2}}=0\)</span> what exactly does “<span class="process-math">\(=0\)</span>” mean? What is equal to zero? Certainly the Witch is never equal to zero since its graph never crosses (or even touches) the <span class="process-math">\(x\)</span> axis.</div>
 <div class="para" id="digression:LimitNotation-4">The expression <span class="process-math">\(\tlimit{x}{\infty}{\frac{1}{1+x^2}}=0\)</span> is making a very specific statement, one that is difficult to capture in a natural language like English. It says that the expression <span class="process-math">\(\frac{1}{1+x^2}\)</span> is approaching a particular value (zero) as <span class="process-math">\(x\)</span> approaches <span class="process-math">\(\infty\text{.}\)</span> The equals sign doesn’t indicate that the function, <span class="process-math">\(\frac{1}{1+x^2}\)</span> actually equals that value.  Instead it is the <dfn class="terminology">limit</dfn> of <span class="process-math">\(\frac{1}{1+x^2}\)</span> which is equal to zero.  Whether the function itself is ever equal to the limit, or not, is irrelevant. We’re interested in what it gets arbitrarily close to.</div>
 <div class="para" id="digression:LimitNotation-5">We are treading at the edge of some very deep waters here so we will not attempt to address all of the nuances yet. Instead we will simply interpret the formula <span class="process-math">\(\tlimit{x}{\infty}{\frac{1}{1+x^2}}=0\)</span> to mean that as <span class="process-math">\(x\)</span> approaches infinity (<span class="process-math">\(x\rightarrow\infty\)</span>) the expression <span class="process-math">\(\frac{1}{1+x^2}\)</span> approaches zero  <span class="process-math">\(\left(\frac{1}{1+x^2}\rightarrow0\right)\text{.}\)</span>
 </div>
-<div class="para" id="digression:LimitNotation-6">In <a href="CHAformal-limits.html" class="internal" title="Chapter 17: Formal Limits">Chapter 17</a> we will replace ``arbitrarily close’’ with something much more precise. Indeed, finding a better way to say ``arbitrarily close’’ will be the culmination of our efforts. This is what will allow us to finally replace differentials with a solid theoretical foundation.</div>
+<div class="para" id="digression:LimitNotation-6">In <a href="CHAformal-limits.html" class="internal" title="Chapter 17: Formal Limits">Chapter 17</a> we will replace “arbitrarily close” with something much more precise. Indeed, finding a better way to say “arbitrarily close” will be the culmination of our efforts. This is what will allow us to finally replace differentials with a solid theoretical foundation.</div>
 <div class="para" id="digression:LimitNotation-7">But for now, we have enough to give our first definition of the limit concept.</div>
 <div class="para" id="digression:LimitNotation-8"></div>
 <article class="definition definition-like" id="DEFINITIONdef:LimitAtInfinity-Intuitive"><h5 class="heading">
@@ -619,13 +614,13 @@ window.MathJax = {
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">12.7</span><span class="period">.</span><span class="space"> </span><span class="title">The Limit of a Sum.</span>
 </h5>
 <div class="para" id="theorem:LimSum1-2"> If <span class="process-math">\(\limit{x}{\pm\infty}{f(x)}=L\)</span> and <span class="process-math">\(\limit{x}{\pm\infty}{g(x)}=M,\)</span> then\vskip1mm \centerline{<span class="process-math">\(\limit{x}{\pm\infty}{\left[f(x)+g(x)\right]}=L+M
-=\limit{x}{\pm\infty}{f(x)}+\limit{x}{\pm\infty}{g(x)}.\)</span>}</div></article><div class="para" id="digression:LimitNotation-21">This can be expressed in words with the phrase, ``The limit of a sum is the sum of the limits.’’</div>
+=\limit{x}{\pm\infty}{f(x)}+\limit{x}{\pm\infty}{g(x)}.\)</span>}</div></article><div class="para" id="digression:LimitNotation-21">This can be expressed in words with the phrase, “The limit of a sum is the sum of the limits.”</div>
 <div class="para" id="digression:LimitNotation-22">The following two theorems are not quite as intuitive as <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "THEOREMLimSum1" missing or not unique]</code>, but they are also true.</div>
 <article class="theorem theorem-like" id="theorem:LimProd1"><h5 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">12.8</span><span class="period">.</span><span class="space"> </span><span class="title">The Limit of a Product.</span>
 </h5>
 <div class="para" id="theorem:LimProd1-2"> If <span class="process-math">\(\limit{x}{\pm\infty} {f(x)}=L\)</span> and <span class="process-math">\(\limit{x}{\pm\infty}{g(x)}=M\)</span> then\vskip1mm \centerline{<span class="process-math">\(\limit{x}{\pm\infty} {\left(f(x)\cdot g(x)\right)}=\left(\limit{x}{\pm\infty}{f(x)}\right)\cdot\left(\limit{x}{\pm\infty}{g(x)}\right)
-= L\cdot M.\)</span>}</div></article><div class="para" id="digression:LimitNotation-24">This can be expressed in words with the phrase ``The limit of a product is the product of the limits.’’</div>
+= L\cdot M.\)</span>}</div></article><div class="para" id="digression:LimitNotation-24">This can be expressed in words with the phrase “The limit of a product is the product of the limits.”</div>
 <article class="theorem theorem-like" id="theorem:LimQuot1"><h5 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">12.9</span><span class="period">.</span><span class="space"> </span><span class="title">The Limit of a Quotient.</span>
 </h5>
@@ -638,13 +633,13 @@ window.MathJax = {
 = \frac{L}{M}.
 \end{equation*}
 </div>
-</div></article><div class="para" id="digression:LimitNotation-26">This can be expressed in words with the phrase ``The limit of a quotient is the quotient of the limits.’’</div>
+</div></article><div class="para" id="digression:LimitNotation-26">This can be expressed in words with the phrase “The limit of a quotient is the quotient of the limits.”</div>
 <article class="example example-like" id="example:NonexistantLimits"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">12.10</span><span class="period">.</span>
 </h5>
 <div class="para logical" id="example:NonexistantLimits-1">
-<div class="para"> Notice that in Theorem~\ref{theorem:LimQuot1} we specifically required that <span class="process-math">\(\limit{x}{\infty}{g(x)}=M\neq0\text{.}\)</span> This is necessary because, as we stated quite emphatically in Digression~\#\ref{digression:DivideByZero}, division by zero is an undefined concept. Thus if <span class="process-math">\(\limit{x}{\infty} {f(x)}\)</span> is equal to, say <span class="process-math">\(1\text{,}\)</span> and <span class="process-math">\(\limit{x}{\infty}{g(x)}=0\)</span> then</div>
-<div class="displaymath process-math">
+<div class="para"> Notice that in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "THEOREMtheorem:LimQuot1" missing or not unique]</code> we specifically required that <span class="process-math">\(\limit{x}{\infty}{g(x)}=M\neq0\text{.}\)</span> This is necessary because, as we stated quite emphatically in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "DIGRESSIONdigression:DivideByZero" missing or not unique]</code>, division by zero is an undefined concept. Thus if <span class="process-math">\(\limit{x}{\infty} {f(x)}\)</span> is equal to, say <span class="process-math">\(1\text{,}\)</span> and <span class="process-math">\(\limit{x}{\infty}{g(x)}=0\)</span> then</div>
+<div class="displaymath process-math" data-contains-math-knowls=" ">
 \begin{equation*}
 \frac{\tlimit{x}{\infty}{f(x)}}{\tlimit{x}{\infty}{g(x)}}
 \text{ appears
@@ -658,14 +653,14 @@ to be equal to }
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">12.11</span><span class="period">.</span>
 </h5>
 <div class="para logical" id="no-label-1">
-<div class="para">We’d like to find the horizontal asymptotes of <span class="process-math">\(y=\frac{2}{x}-\frac{3}{x^2}\)</span> if any exist. In this example we will write down all of the details of our computation. As you get more comfortable, you will probably abbreviate the process by doing much of this in your head. That’s good, but also be sure you can fill in all of the details when needed. You will need to be able to do this when the problems get more complex. From Definition~\#\ref{def:HorizontalAsymptotes} we see that if horizontal asymptotes exist they will be the lines <span class="process-math">\(y=\limit{x}{\infty}{\left(\frac{2}{x}-\frac{3}{x^2}\right)}\)</span> and <span class="process-math">\(y=\limit{x}{-\infty}{\left(\frac{2}{x}-\frac{3}{x^2}\right)}\)</span> so we need to evaluate these limits. For the first limit we see from Theorem~\ref{theorem:LimSum1} that</div>
-<div class="displaymath process-math">
+<div class="para">We’d like to find the horizontal asymptotes of <span class="process-math">\(y=\frac{2}{x}-\frac{3}{x^2}\)</span> if any exist. In this example we will write down all of the details of our computation. As you get more comfortable, you will probably abbreviate the process by doing much of this in your head. That’s good, but also be sure you can fill in all of the details when needed. You will need to be able to do this when the problems get more complex. From <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONdef:HorizontalAsymptotes.html" title="Definition 12.5: Horizontal Asymptotes">Definition 12.5</a> we see that if horizontal asymptotes exist they will be the lines <span class="process-math">\(y=\limit{x}{\infty}{\left(\frac{2}{x}-\frac{3}{x^2}\right)}\)</span> and <span class="process-math">\(y=\limit{x}{-\infty}{\left(\frac{2}{x}-\frac{3}{x^2}\right)}\)</span> so we need to evaluate these limits. For the first limit we see from <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "THEOREMtheorem:LimSum1" missing or not unique]</code> that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/DEFINITIONdef:HorizontalAsymptotes.html  ">
 \begin{equation*}
 \limit{x}{\infty}{\left(\frac{2}{x}-\frac{3}{x^2}\right)}=\limit{x}{\infty}{\frac{2}{x}}-\limit{x}{\infty}{\frac{3}{x^2}}.
 \end{equation*}
 </div>
-<div class="para">Applying Theorem~\ref{theorem:LimProd1} (several times) we have</div>
-<div class="displaymath process-math">
+<div class="para">Applying <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "THEOREMtheorem:LimProd1" missing or not unique]</code> (several times) we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/DEFINITIONdef:HorizontalAsymptotes.html  ">
 \begin{equation*}
 \label{eq:LimConst} \limit{x}{\infty}{\left(\frac{2}{x}-\frac{3}{x^2}\right)}   =\underbrace{\left(\limit{x}{\infty}{2}\right)}_{=2}\cdot\underbrace{\left(\limit{x}{\infty}{\frac{1}{x}}\right)}_{=0}-\underbrace{\left(\limit{x}{\infty}{3}\right)}_{=3}\cdot\underbrace{\left(\limit{x}{\infty}{\frac{1}{x}}\right)}_{=0}\cdot\underbrace{\left(\limit{x}{\infty}{\frac{1}{x}}\right)}_{=0}=0.
 \end{equation*}
@@ -705,13 +700,13 @@ to be equal to }
 \limit{x}{\infty}{x^3}=\infty,\ \ \limit{x}{-\infty}{x^3}=-\infty.
 \end{equation*}
 </div>
-<div class="para">But once again we need to keep in mind that the symbol ``<span class="process-math">\(\infty\)</span>’’ does not represent a number so saying that something is ``equal’’ to <span class="process-math">\(\infty\)</span> is meaningless\aside{Unless we define its meaning ourselves. How would you define the phrase ``<span class="process-math">\(x\)</span> equals infinity?’’}. What we mean when we write</div>
+<div class="para">But once again we need to keep in mind that the symbol “<span class="process-math">\(\infty\)</span>” does not represent a number so saying that something is “equal” to <span class="process-math">\(\infty\)</span> is meaningless\aside{Unless we define its meaning ourselves. How would you define the phrase “<span class="process-math">\(x\)</span> equals infinity?”}. What we mean when we write</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \limit{x}{\infty}{x^2}=\infty
 \end{equation*}
 </div>
-<div class="para">is that ``as <span class="process-math">\(x\)</span> increases without bound <span class="process-math">\(x\)</span> squared increases without bound.’’</div>
+<div class="para">is that “as <span class="process-math">\(x\)</span> increases without bound <span class="process-math">\(x\)</span> squared increases without bound.”</div>
 </div>
 <article class="exercise exercise-like" id="no-label"><h5 class="heading">
 <span class="type">Drill</span><span class="space"> </span><span class="codenumber">12.15</span><span class="period">.</span>
@@ -754,24 +749,24 @@ to be equal to }
 <div class="para" id="digression:LimitNotation-44">We now know that this limit is not necessarily equal to zero, but how can we discover what it actually is equal to? As in much of Calculus we need to re-express our formulas algebraically to see what is going on.</div>
 <div class="para" id="digression:LimitNotation-45">Rewriting <span class="process-math">\(x^3-21x^2\)</span> as <span class="process-math">\(x^3\left(1-\frac{21}{x}\right)\)</span> we have \begin{align*} \limit{x}{\infty}{(x^3-21x^2)} \amp=\limit{x}{\infty}{\left(x^3(1-21/x)\right)} \amp=\limit{x}{\infty}{x^3\cdot\left(1-\CancelToRed{0}{21/x}\right)} \amp=\approach{\infty}\cdot\approach{1}. \end{align*} This says that we have an expression which is increasing without bound multiplied by an expression which approaches the number one. Obviously the product  will also increase without bound so we write <span class="process-math">\(\limit{x}{\infty}{(x^3-21x^2)}=\infty.\)</span>
 </div>
-<div class="para" id="digression:LimitNotation-46">Similarly\aside{This is not the same limit. Look closely.}  evaluating <span class="process-math">\(\limit{x}{-\infty}{(x^3+21x^2)}\)</span> gives \begin{align*} \limit{x}{-\infty}{(x^3+21x^2)} \amp= \limit{x}{-\infty}{\left(x^3(1+21/x)\right)} \amp=\left[\limit{x}{-\infty}{x^3\cdot\left(1+\CancelToRed{0}{21/x}\right)}\right] \amp=\approach{-\infty}\cdot\approach{1} \amp=-\infty. \end{align*} This makes sense intuitively. We would expect that for large values of <span class="process-math">\(x\)</span> (either positive or negative), <span class="process-math">\(x^3\)</span> will continually outgrow (``approach infinity’’ faster than) <span class="process-math">\(21x^2\text{.}\)</span>
+<div class="para" id="digression:LimitNotation-46">Similarly\aside{This is not the same limit. Look closely.}  evaluating <span class="process-math">\(\limit{x}{-\infty}{(x^3+21x^2)}\)</span> gives \begin{align*} \limit{x}{-\infty}{(x^3+21x^2)} \amp= \limit{x}{-\infty}{\left(x^3(1+21/x)\right)} \amp=\left[\limit{x}{-\infty}{x^3\cdot\left(1+\CancelToRed{0}{21/x}\right)}\right] \amp=\approach{-\infty}\cdot\approach{1} \amp=-\infty. \end{align*} This makes sense intuitively. We would expect that for large values of <span class="process-math">\(x\)</span> (either positive or negative), <span class="process-math">\(x^3\)</span> will continually outgrow (“approach infinity” faster than) <span class="process-math">\(21x^2\text{.}\)</span>
 </div>
 <div class="para" id="digression:LimitNotation-47">We have established that, because <span class="process-math">\(\infty\)</span> is not a number, the expression <span class="process-math">\(\infty-\infty\)</span> does not make sense. What about <span class="process-math">\(\frac{\infty}{\infty}\text{?}\)</span> Is it true that <span class="process-math">\(\frac{\infty}{\infty}=1\text{?}\)</span>
 </div>
 <div class="para" id="digression:LimitNotation-48">No, of course not. The expression <span class="process-math">\(\frac{\infty}{\infty}\)</span> is meaningless for the same reason that  <span class="process-math">\(\infty\)</span> - <span class="process-math">\(\infty\)</span> is meaningless.</div>
 <article class="example example-like" id="example:IndetForm1"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">12.17</span><span class="period">.</span><span class="space"> </span><span class="title">\CancelToRed{=1}{\frac{x^4}{x^4}}\cdot\frac{1+\CancelToRed{0}{1/x^2}}{5-\CancelToRed{0}{100/x^3}}\right.</span>
-</h5> <div class="para" id="example:IndetForm1-2"> Consider <span class="process-math">\(\limit{x}{\infty}{\frac{x^4+x^2}{5x^4-100x}}\text{.}\)</span> It is tempting to write <span class="process-math">\(\frac{\infty}{\infty}=1\text{,}\)</span> but as we have observed, <span class="process-math">\(\infty\)</span> is not a number so this makes no more sense than <span class="process-math">\(\infty-\infty=0\text{.}\)</span> Once again, the key is to re-express the function algebraically. Factoring out the highest power of the variable from both the numerator and the denominator\aside{You may well ask, ``How did we know to do that?’’ The answer is very unsatisfying.  We were taught this technique by our teachers, just as you are being taught now. We’d have been hard pressed to come up with it on our own.} we see that \begin{align*} \limit{x}{\infty}{\frac{x^4+x^2}{5x^4-100x}} =\limit{x}{\infty}{\frac{x^4(1+1/x^2)}{x^4(5-100/x^3)}} \amp=\limit{x}{\infty}{\left[\CancelToRed{=1}{\frac{x^4}{x^4}}\cdot\frac{1+\CancelToRed{0}{1/x^2}}{5-\CancelToRed{0}{100/x^3}}\right]} \amp= 1\cdot\approach{\frac15} \amp=\frac15. \end{align*}</div></article><article class="example example-like" id="example:Asym2"><h5 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">12.18</span><span class="period">.</span><span class="space"> </span><span class="title">(Continued from Section~\ref{sec:graph-with-form} ).</span>
+</h5> <div class="para" id="example:IndetForm1-2"> Consider <span class="process-math">\(\limit{x}{\infty}{\frac{x^4+x^2}{5x^4-100x}}\text{.}\)</span> It is tempting to write <span class="process-math">\(\frac{\infty}{\infty}=1\text{,}\)</span> but as we have observed, <span class="process-math">\(\infty\)</span> is not a number so this makes no more sense than <span class="process-math">\(\infty-\infty=0\text{.}\)</span> Once again, the key is to re-express the function algebraically. Factoring out the highest power of the variable from both the numerator and the denominator\aside{You may well ask, “How did we know to do that?” The answer is very unsatisfying.  We were taught this technique by our teachers, just as you are being taught now. We’d have been hard pressed to come up with it on our own.} we see that \begin{align*} \limit{x}{\infty}{\frac{x^4+x^2}{5x^4-100x}} =\limit{x}{\infty}{\frac{x^4(1+1/x^2)}{x^4(5-100/x^3)}} \amp=\limit{x}{\infty}{\left[\CancelToRed{=1}{\frac{x^4}{x^4}}\cdot\frac{1+\CancelToRed{0}{1/x^2}}{5-\CancelToRed{0}{100/x^3}}\right]} \amp= 1\cdot\approach{\frac15} \amp=\frac15. \end{align*}</div></article><article class="example example-like" id="example:Asym2"><h5 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">12.18</span><span class="period">.</span><span class="space"> </span><span class="title">(Continued from <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "SECTIONsec:graph-with-form" missing or not unique]</code> ).</span>
 </h5> <div class="para logical" id="example:Asym2-2">
-<div class="para"> Recall that we did not complete Example~\ref{example:Asym1} because we did not previously have any way to determine what happens to the graph of <span class="process-math">\(y(x)=\frac{2+2x^2+2x^4}{1+x^4}\)</span> as <span class="process-math">\(x\rightarrow\infty\)</span> or as <span class="process-math">\(x\rightarrow-\infty\text{.}\)</span> We do now. Finding what happens to the graph of <span class="process-math">\(y(x)=\frac{2+2x^2+2x^4}{1+x^4}\)</span> as <span class="process-math">\(x\rightarrow\infty\)</span> or as <span class="process-math">\(x\rightarrow-\infty\)</span> is equivalent to evaluating the following limits:</div>
-<div class="displaymath process-math">
+<div class="para"> Recall that we did not complete <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EXAMPLEexample:Asym1" missing or not unique]</code> because we did not previously have any way to determine what happens to the graph of <span class="process-math">\(y(x)=\frac{2+2x^2+2x^4}{1+x^4}\)</span> as <span class="process-math">\(x\rightarrow\infty\)</span> or as <span class="process-math">\(x\rightarrow-\infty\text{.}\)</span> We do now. Finding what happens to the graph of <span class="process-math">\(y(x)=\frac{2+2x^2+2x^4}{1+x^4}\)</span> as <span class="process-math">\(x\rightarrow\infty\)</span> or as <span class="process-math">\(x\rightarrow-\infty\)</span> is equivalent to evaluating the following limits:</div>
+<div class="displaymath process-math" data-contains-math-knowls=" ">
 \begin{equation*}
 \limit{x}{\infty}{\frac{2+2x^2+2x^4}{1+x^4}}\ \ \text{ and }
 \limit{x}{-\infty}{\frac{2+2x^2+2x^4}{1+x^4.}}
 \end{equation*}
 </div>
-<div class="para">We will evaluate the first one and leave the second as a drill. Proceeding as in Example~\#\ref{example:IndetForm1} we see that \begin{align*} \limit{x}{\infty}{\frac{2+2x^2+2x^4}{1+x^4}} \amp = \limit{x}{\infty}{\frac{x^4(2/x^4+2/x^2+2)}{x^4(1/x^4+1)}} \amp =\limit{x}{\infty}{\CancelToRed{1}{\frac{x^4}{x^4}}\cdot\frac{\CancelToRed {2/x^4}+\CancelToRed{0}{2/x^2}+2}{\CancelToRed{0}{1/x^4}+1}} \amp =2. \end{align*} \begin{ProficiencyDrill-1line} Show that <span class="process-math">\(\tlimit{x}{-\infty}{\frac{2+2x^2+2x^4}{1+x^4}}\)</span> is also equal to two. \end{ProficiencyDrill-1line} We can now see that <span class="process-math">\(y(x)=\frac{2+2x^2+2x^4}{1+x^4}\)</span>  has a \term{horizontal asymptote} at <span class="process-math">\(y=2\text{.}\)</span> If you haven’t already done so consider graphing this function to confirm.</div>
+<div class="para">We will evaluate the first one and leave the second as a drill. Proceeding as in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EXAMPLEexample:IndetForm1" missing or not unique]</code> we see that \begin{align*} \limit{x}{\infty}{\frac{2+2x^2+2x^4}{1+x^4}} \amp = \limit{x}{\infty}{\frac{x^4(2/x^4+2/x^2+2)}{x^4(1/x^4+1)}} \amp =\limit{x}{\infty}{\CancelToRed{1}{\frac{x^4}{x^4}}\cdot\frac{\CancelToRed {2/x^4}+\CancelToRed{0}{2/x^2}+2}{\CancelToRed{0}{1/x^4}+1}} \amp =2. \end{align*} \begin{ProficiencyDrill-1line} Show that <span class="process-math">\(\tlimit{x}{-\infty}{\frac{2+2x^2+2x^4}{1+x^4}}\)</span> is also equal to two. \end{ProficiencyDrill-1line} We can now see that <span class="process-math">\(y(x)=\frac{2+2x^2+2x^4}{1+x^4}\)</span>  has a \term{horizontal asymptote} at <span class="process-math">\(y=2\text{.}\)</span> If you haven’t already done so consider graphing this function to confirm.</div>
 </div></article><article class="exercise exercise-like" id="no-label"><h5 class="heading">
 <span class="type">Drill</span><span class="space"> </span><span class="codenumber">12.19</span><span class="period">.</span>
 </h5>
@@ -815,7 +810,7 @@ f(x)=x^2, \text{ with domain } x\ge0.
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">12.2</span><span class="space"> </span><span class="title">The Squeeze Theorem</span>
 </h3>
 <figure class="figure figure-like" id="sec:squeeze-theorem-informal-2"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/asymptotes44.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">12.22<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Bernoulli_Johann/" target="_blank">This figure needs a caption.</a><a class="xref" id="sec:squeeze-theorem-informal-2-1-2" href="" data-knowl="./knowl/fn/sec:squeeze-theorem-informal-2-1-2.html" title="Footnote 12.3"><sup> 3 </sup></a></figcaption></figure><div class="para" id="sec:squeeze-theorem-informal-3">It is clear from the graph at the right that <span class="process-math">\(\limit{x}{\infty}{\sin(x)}\)</span> does not exist since the <span class="process-math">\(\sin(x)\)</span> has no horizontal asymptotes.  To say that this limit does not exist means that <span class="process-math">\(y=\sin(x)\)</span> is not approaching any particular value as <span class="process-math">\(x\rightarrow\infty\text{.}\)</span> It’s not even ``approaching’’ <span class="process-math">\(+\infty\)</span> or <span class="process-math">\(-\infty\)</span> since it is bounded both above and below.</div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">12.22<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Bernoulli_Johann/" target="_blank">This figure needs a caption.</a><a class="xref" id="sec:squeeze-theorem-informal-2-1-2" href="" data-knowl="./knowl/fn/sec:squeeze-theorem-informal-2-1-2.html" title="Footnote 12.3"><sup> 3 </sup></a></figcaption></figure><div class="para" id="sec:squeeze-theorem-informal-3">It is clear from the graph at the right that <span class="process-math">\(\limit{x}{\infty}{\sin(x)}\)</span> does not exist since the <span class="process-math">\(\sin(x)\)</span> has no horizontal asymptotes.  To say that this limit does not exist means that <span class="process-math">\(y=\sin(x)\)</span> is not approaching any particular value as <span class="process-math">\(x\rightarrow\infty\text{.}\)</span> It’s not even “approaching” <span class="process-math">\(+\infty\)</span> or <span class="process-math">\(-\infty\)</span> since it is bounded both above and below.</div>
 <div class="para" id="sec:squeeze-theorem-informal-4">Now how about this limit: <span class="process-math">\(\tlimit{x}{\infty}{\frac{\sin(x)}{x}}\text{?}\)</span> Since <span class="process-math">\(\limit{x}{\infty}{\sin(x)}\)</span> does not exist we can’t apply <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "THEOREMLimQuot1" missing or not unique]</code>.  Neither is it of the form <span class="process-math">\(\frac{\approach{\infty}}{\approach{\infty}},\)</span> so none of the techniques we’ve used before will help us.</div>
 <div class="para" id="sec:squeeze-theorem-informal-5">We need a new idea.</div>
 <div class="para" id="sec:squeeze-theorem-informal-6">Look at the graph of <span class="process-math">\(f(x) = \frac{\sin(x)}{x}\)</span> below.</div>
@@ -826,7 +821,7 @@ f(x)=x^2, \text{ with domain } x\ge0.
 \tlimit{x}{-\infty}{\frac{\sin(x)}{x}} = 0.  \)</span>}[1mm] This is correct, but is there a way to see this algebraically? After all, this graph could just as easily support the conclusion that <span class="process-math">\(y=0.00000001\)</span> (or <span class="process-math">\(y=\)</span> any other number which is extremely close to zero) is the asymptote. We don’t want to draw conclusions from a picture, but it is difficult to see what we can do, isn’t it?</div>
 <div class="para" id="sec:squeeze-theorem-informal-10">We will analyze what happens when <span class="process-math">\(x\rightarrow\infty\)</span> and leave the case <span class="process-math">\(x\rightarrow-\infty\)</span> as a drill for you.</div>
 <figure class="figure figure-like" id="sec:squeeze-theorem-informal-11"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/asymptotes13.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">12.23<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Bernoulli_Johann/" target="_blank">This figure needs a caption.</a><a class="xref" id="sec:squeeze-theorem-informal-11-1-2" href="" data-knowl="./knowl/fn/sec:squeeze-theorem-informal-11-1-2.html" title="Footnote 12.4"><sup> 4 </sup></a></figcaption></figure><div class="para" id="sec:squeeze-theorem-informal-12">Let’s ``disassemble’’ our function in order to understand it better. The function <span class="process-math">\(f(x)=\frac{\sin(x)}{x}\)</span> clearly comes in two parts: <span class="process-math">\(\sin(x)\)</span> and <span class="process-math">\(\frac{1}{x}\text{.}\)</span> Because  <span class="process-math">\(-1\le\sin(x)\le1\)</span> we know that <span class="process-math">\(-\frac{1}{x}\le\frac{\sin(x)}{x}\le\frac1x\text{.}\)</span> If we graph <span class="process-math">\(y=\frac{\sin(x)}{x}\text{,}\)</span> <span class="process-math">\(y=\frac1x\text{,}\)</span> and <span class="process-math">\(y=-\frac1x\)</span> together as in the sketch at the right we see that for positive values of <span class="process-math">\(x\)</span> the graph of <span class="process-math">\(y=\frac{\sin(x)}{x}\)</span> is always caught between the graph of <span class="process-math">\(y=\frac1x\)</span> and <span class="process-math">\(y=-\frac1x\text{.}\)</span>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">12.23<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Bernoulli_Johann/" target="_blank">This figure needs a caption.</a><a class="xref" id="sec:squeeze-theorem-informal-11-1-2" href="" data-knowl="./knowl/fn/sec:squeeze-theorem-informal-11-1-2.html" title="Footnote 12.4"><sup> 4 </sup></a></figcaption></figure><div class="para" id="sec:squeeze-theorem-informal-12">Let’s “disassemble” our function in order to understand it better. The function <span class="process-math">\(f(x)=\frac{\sin(x)}{x}\)</span> clearly comes in two parts: <span class="process-math">\(\sin(x)\)</span> and <span class="process-math">\(\frac{1}{x}\text{.}\)</span> Because  <span class="process-math">\(-1\le\sin(x)\le1\)</span> we know that <span class="process-math">\(-\frac{1}{x}\le\frac{\sin(x)}{x}\le\frac1x\text{.}\)</span> If we graph <span class="process-math">\(y=\frac{\sin(x)}{x}\text{,}\)</span> <span class="process-math">\(y=\frac1x\text{,}\)</span> and <span class="process-math">\(y=-\frac1x\)</span> together as in the sketch at the right we see that for positive values of <span class="process-math">\(x\)</span> the graph of <span class="process-math">\(y=\frac{\sin(x)}{x}\)</span> is always caught between the graph of <span class="process-math">\(y=\frac1x\)</span> and <span class="process-math">\(y=-\frac1x\text{.}\)</span>
 </div>
 <div class="para" id="sec:squeeze-theorem-informal-13">We know that both <span class="process-math">\(\pm\frac1x\rightarrow0\)</span> as <span class="process-math">\(x\rightarrow\infty\text{.}\)</span>  Since <span class="process-math">\(\frac{\sin(x)}{x}\)</span> is caught between <span class="process-math">\(\frac1x\)</span> and <span class="process-math">\(-\frac1x\)</span> it follows that, for positive values of <span class="process-math">\(x\text{,}\)</span> the highest points on the graph of <span class="process-math">\(\frac{\sin(x)}{x}\)</span> must also approach zero as <span class="process-math">\(x \rightarrow\infty\text{.}\)</span> Therefore <span class="process-math">\(\tlimit{x}{\infty}{\frac{\sin(x)}{x}}=0\text{.}\)</span>
 </div>
@@ -864,7 +859,7 @@ f(x)=x^2, \text{ with domain } x\ge0.
 <div class="para" id="no-label-2-1-1"><span class="process-math">\(\limit{x}{\infty}{\frac{x\cos(x)}{x^2+1}}\)</span></div></article><article class="task exercise-like" id="no-label-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
 <div class="para" id="no-label-3-1-1"><span class="process-math">\(\limit{x}{-\infty}{\frac{x\cos(x)}{x^2+1}}\)</span></div></article><article class="task exercise-like" id="no-label-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
 <div class="para" id="no-label-4-1-1">
-<span class="process-math">\(\limit{x}{\infty}{\frac{\lfloor x\rfloor}{x^2}},\)</span> where <span class="process-math">\(\lfloor x\rfloor\)</span> represents the greatest integer\aside{This is called the ``greatest integer’’ function in mathematics, and the ``floor’’ function in computer science. It rounds down to the greatest integer. For example <span class="process-math">\(\lfloor5.7\rfloor =5, \lfloor2\rfloor=2,
+<span class="process-math">\(\limit{x}{\infty}{\frac{\lfloor x\rfloor}{x^2}},\)</span> where <span class="process-math">\(\lfloor x\rfloor\)</span> represents the greatest integer\aside{This is called the “greatest integer” function in mathematics, and the “floor” function in computer science. It rounds down to the greatest integer. For example <span class="process-math">\(\lfloor5.7\rfloor =5, \lfloor2\rfloor=2,
 \lfloor\pi\rfloor=3\text{,}\)</span> etc.} less than or equal to <span class="process-math">\(x\text{.}\)</span>
 </div></article></article><div class="para logical" id="sec:squeeze-theorem-informal-19">
 <div class="para">Back in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "SECleonh-euler-harm" missing or not unique]</code> you showed that <span class="process-math">\(y(t)=e^{-\frac{t}{2}}\left[\cos\left(\frac{\sqrt{3}}{2}t\right)+\sin\left(\frac{\sqrt{3}}{2}t\right)\right]\)</span> satisfies the differential equation of damped oscillation (oscillation with resistance):</div>
@@ -901,18 +896,18 @@ f(x)=x^2, \text{ with domain } x\ge0.
 \limitX{x}{0}{\frac1x}{x\gt0}=\infty.
 \end{equation*}
 </div>
-<div class="para">The limit in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQRightHandLimit" missing or not unique]</code>) is called a <dfn class="terminology">right-hand limit</dfn> and is read aloud as ``the limit as <span class="process-math">\(x\)</span> approaches zero from the right, of one over <span class="process-math">\(x\)</span> equals infinity.’’</div>
+<div class="para">The limit in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQRightHandLimit" missing or not unique]</code>) is called a <dfn class="terminology">right-hand limit</dfn> and is read aloud as “the limit as <span class="process-math">\(x\)</span> approaches zero from the right, of one over <span class="process-math">\(x\)</span> equals infinity.”</div>
 </div>
-<div class="para" id="subsec:vertical-asymptotes-6">The expression <span class="process-math">\(x\rightarrow0\)</span> means that <span class="process-math">\(x\)</span>  is approaching the number zero. The qualification <span class="process-math">\(x\gt0\)</span> specifies that it is approaching from the right. So writing <span class="process-math">\(\limitX{x}{0}{\frac1x}{x\gt0}=\infty\)</span>  means that as <span class="process-math">\(x\rightarrow0\)</span> from the right, the function <span class="process-math">\(\frac1x\)</span> increases without bound\aside{This should probably be written as <span class="process-math">\(\limitX{x}{0}{\frac1x}{x\gt0}\rightarrow \infty\)</span> but sadly, it has become standard to say, and to write, that this limit ``equals infinity,’’ which is absurd.}.</div>
+<div class="para" id="subsec:vertical-asymptotes-6">The expression <span class="process-math">\(x\rightarrow0\)</span> means that <span class="process-math">\(x\)</span>  is approaching the number zero. The qualification <span class="process-math">\(x\gt0\)</span> specifies that it is approaching from the right. So writing <span class="process-math">\(\limitX{x}{0}{\frac1x}{x\gt0}=\infty\)</span>  means that as <span class="process-math">\(x\rightarrow0\)</span> from the right, the function <span class="process-math">\(\frac1x\)</span> increases without bound\aside{This should probably be written as <span class="process-math">\(\limitX{x}{0}{\frac1x}{x\gt0}\rightarrow \infty\)</span> but sadly, it has become standard to say, and to write, that this limit “equals infinity,” which is absurd.}.</div>
 <div class="para logical" id="subsec:vertical-asymptotes-7">
-<div class="para">If we restrict <span class="process-math">\(x\)</span>  to negative values then we see that\aside{Note that the sense of the  inequality has changed from <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQRightHandLimit" missing or not unique]</code>). It is now ``less than.’’}</div>
+<div class="para">If we restrict <span class="process-math">\(x\)</span>  to negative values then we see that\aside{Note that the sense of the  inequality has changed from <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQRightHandLimit" missing or not unique]</code>). It is now “less than.”}</div>
 <div class="displaymath process-math" data-contains-math-knowls="  ">
 \begin{equation*}
 \label{eq:LeftHandLimit}
 \limitX{x}{0}{\frac1x}{x\lt 0}=-\infty.
 \end{equation*}
 </div>
-<div class="para">The limit in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQLeftHandLimit" missing or not unique]</code>) is called a <dfn class="terminology">left-hand limit</dfn> and is read aloud as ``the limit as <span class="process-math">\(x\)</span> approaches zero from the left, of one over <span class="process-math">\(x\)</span> equals negative infinity.’’ Right- and left-hand limits are generically called <dfn class="terminology">one-sided limits</dfn>. One-sided limits are important theoretical tools but their theoretical value is not important to us right now. We will discuss them in more depth in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "SECone-sided-deriv" missing or not unique]</code>.</div>
+<div class="para">The limit in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQLeftHandLimit" missing or not unique]</code>) is called a <dfn class="terminology">left-hand limit</dfn> and is read aloud as “the limit as <span class="process-math">\(x\)</span> approaches zero from the left, of one over <span class="process-math">\(x\)</span> equals negative infinity.” Right- and left-hand limits are generically called <dfn class="terminology">one-sided limits</dfn>. One-sided limits are important theoretical tools but their theoretical value is not important to us right now. We will discuss them in more depth in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "SECone-sided-deriv" missing or not unique]</code>.</div>
 </div>
 <div class="para" id="subsec:vertical-asymptotes-8">A function <span class="process-math">\(f(x)\text{,}\)</span> will have a vertical asymptote as <span class="process-math">\(x\rightarrow a\)</span> if either of the one-sided limits is <span class="process-math">\(\infty\)</span> or <span class="process-math">\(-\infty\)</span> (<span class="process-math">\(f(x)\)</span> is increasing or decreasing without bound). We formalize this statement in the following definition.</div>
 <div class="para" id="subsec:vertical-asymptotes-9"></div>
@@ -975,7 +970,7 @@ f(x)=x^2, \text{ with domain } x\ge0.
 </div>
 </div> <article class="exercise exercise-like" id="no-label">
 
-</article> <div class="para" id="sec:more-indet-forms-2-6">We were careful to use one-sided limits to find the vertical asymptote at <span class="process-math">\(x= -2\)</span> because this is what Definition~\#\ref{def:VerticalAsymptotes} calls for. Strictly speaking we only needed one of them, but since these limits were not equal we evaluated them both.</div> <div class="para logical" id="sec:more-indet-forms-2-7">
+</article> <div class="para" id="sec:more-indet-forms-2-6">We were careful to use one-sided limits to find the vertical asymptote at <span class="process-math">\(x= -2\)</span> because this is what <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONdef:VerticalAsymptotes.html" title="Definition 12.29: Vertical Asymptotes">Definition 12.29</a> calls for. Strictly speaking we only needed one of them, but since these limits were not equal we evaluated them both.</div> <div class="para logical" id="sec:more-indet-forms-2-7">
 <div class="para">However, for <span class="process-math">\(x=2\text{,}\)</span> both one-sided limits are the same so we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1019,9 +1014,9 @@ f(x)=x^2, \text{ with domain } x\ge0.
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">12.35</span><span class="period">.</span>
 </h4>
 <div class="introduction" id="problem:FoliumOfDescartes2-1"><div class="para logical" id="problem:FoliumOfDescartes2-1-1">
-<div class="para"> Recall that in Problem~\#\ref{problem:FoliumOfDescartes1} in Section~\ref{subsec:Derivative}  looked at the Folium of Descartes from Newton’s dynamic point of view. \centerline{\includegraphics*[height=2in,width=2in]{../Figures/FoliumOfDescartes}} In that problem you showed that the fluents, <span class="process-math">\(x(t) =
+<div class="para"> Recall that in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "PROBLEMproblem:FoliumOfDescartes1" missing or not unique]</code> in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "SECTIONsubsec:Derivative" missing or not unique]</code>  looked at the Folium of Descartes from Newton’s dynamic point of view. \centerline{\includegraphics*[height=2in,width=2in]{../Figures/FoliumOfDescartes}} In that problem you showed that the fluents, <span class="process-math">\(x(t) =
 \frac{3t}{1+t^3}\)</span> and <span class="process-math">\(y(t)=\frac{3t^2}{1+t^3}\)</span> satisfy the equation of the Folium:</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls=" ">
 \begin{equation*}
 x^3+y^3=3xy
 \end{equation*}
@@ -1030,7 +1025,7 @@ x^3+y^3=3xy
 \right)=(0,0)\text{.}\)</span> How then, can it be that the Folium crosses itself at the origin?</div>
 </div></div>
 <article class="task exercise-like" id="problem:FoliumOfDescartes2-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="problem:FoliumOfDescartes2-2-1-1">In Problem~\#\ref{problem:FoliumOfDescartes1} you determined that <span class="process-math">\(y\ge0\)</span> when <span class="process-math">\(t\gt-1\text{.}\)</span> Determine the values of <span class="process-math">\(t\)</span> for which  <span class="process-math">\(x\ge0\)</span> and the which  <span class="process-math">\(x\lt0\text{.}\)</span>
+<div class="para" id="problem:FoliumOfDescartes2-2-1-1">In <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "PROBLEMproblem:FoliumOfDescartes1" missing or not unique]</code> you determined that <span class="process-math">\(y\ge0\)</span> when <span class="process-math">\(t\gt-1\text{.}\)</span> Determine the values of <span class="process-math">\(t\)</span> for which  <span class="process-math">\(x\ge0\)</span> and the which  <span class="process-math">\(x\lt0\text{.}\)</span>
 </div></article><article class="task exercise-like" id="problem:FoliumOfDescartes2-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
 <div class="para" id="problem:FoliumOfDescartes2-3-1-1">Show that <span class="process-math">\(\limit{t}{\pm\infty}{x(t)}=\limit{t}{\pm\infty}{y(t)}=0.\)</span>
 </div></article><article class="task exercise-like" id="problem:FoliumOfDescartes2-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
@@ -1053,7 +1048,7 @@ x^3+y^3=3xy
 <div class="para" id="SUBSECTION-2">We found earlier that <span class="process-math">\(\tlimit{x}{\infty}{\frac{\sin(x)}{x}}=0\text{,}\)</span> so the function <span class="process-math">\(y=\frac{\sin(x)}{x}\)</span> has a horizontal asymptote at <span class="process-math">\(y=0\text{.}\)</span>
 </div>
 <div class="para" id="SUBSECTION-3">Does the graph of <span class="process-math">\(y=\frac{\sin(x)}{x}\)</span> have a vertical asymptote at <span class="process-math">\(x=0\text{?}\)</span> To answer this question we need to evaluate the limit <span class="process-math">\(\tlimit{x}{0}{\frac{\sin(x)}{x}}\text{.}\)</span> But  how can we do that?</div>
-<div class="para" id="SUBSECTION-4">If we try the obvious ploy of just ``plugging in’’ zero for <span class="process-math">\(x\)</span> we get the indeterminate form <span class="process-math">\(\frac{(\rightarrow0)}{(\rightarrow0)}\text{,}\)</span> and we know we need to proceed cautiously with an indeterminate form.</div>
+<div class="para" id="SUBSECTION-4">If we try the obvious ploy of just “plugging in” zero for <span class="process-math">\(x\)</span> we get the indeterminate form <span class="process-math">\(\frac{(\rightarrow0)}{(\rightarrow0)}\text{,}\)</span> and we know we need to proceed cautiously with an indeterminate form.</div>
 <figure class="figure figure-like" id="SUBSECTION-5"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/lhopital3.png" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">12.36<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Bernoulli_Johann/" target="_blank">This figure needs a caption.</a><a class="xref" id="SUBSECTION-5-1-2" href="" data-knowl="./knowl/fn/SUBSECTION-5-1-2.html" title="Footnote 12.6"><sup> 6 </sup></a></figcaption></figure><div class="para" id="SUBSECTION-6">From the graph of <span class="process-math">\(\frac{\sin(x) }{x}\)</span> in the sketch at the right it would appear that <span class="process-math">\(\frac{\sin(x)}{x}\rightarrow1\)</span> as <span class="process-math">\(x\rightarrow0\text{.}\)</span> This is correct, but we’ve learned to be wary of relying on graphs.  It would be best to evaluate the limit by another technique if possible.</div>
 <div class="para" id="SUBSECTION-7">Can we apply some algebraic trick?</div>
@@ -1144,7 +1139,7 @@ x^3+y^3=3xy
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">12.47</span><span class="period">.</span><span class="space"> </span><span class="title">\lhop ’s Rule, (First Special Case).</span>
 </h5>
 <div class="para logical" id="thm:LHRule1-2">
-<div class="para"> Suppose <span class="process-math">\(f(x)\)</span> and <span class="process-math">\(g(x)\)</span> are differentiable on an open interval containing <span class="process-math">\(a\)</span> and that <span class="process-math">\(f(a)=g(a)=0\text{.}\)</span> Suppose also that \centerline{<span class="process-math">\(\limit{x}{a}{f^\prime(x)}=L\)</span> and <span class="process-math">\(\limit{x}{a}{g^\prime(x)}=M\ne0\)</span>}. Then\aside{We will use the notation ``<span class="process-math">\(A\lhopeq B\)</span>’’ to indicate that <span class="process-math">\(A\)</span> is equal to <span class="process-math">\(B\)</span> because of \lhop’s Rule.}</div>
+<div class="para"> Suppose <span class="process-math">\(f(x)\)</span> and <span class="process-math">\(g(x)\)</span> are differentiable on an open interval containing <span class="process-math">\(a\)</span> and that <span class="process-math">\(f(a)=g(a)=0\text{.}\)</span> Suppose also that \centerline{<span class="process-math">\(\limit{x}{a}{f^\prime(x)}=L\)</span> and <span class="process-math">\(\limit{x}{a}{g^\prime(x)}=M\ne0\)</span>}. Then\aside{We will use the notation “<span class="process-math">\(A\lhopeq B\)</span>” to indicate that <span class="process-math">\(A\)</span> is equal to <span class="process-math">\(B\)</span> because of \lhop’s Rule.}</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \limit{x}{a}{\frac{f(x)}{g(x)}}\lhopeq\frac{L}{M}.
@@ -1199,8 +1194,9 @@ x^3+y^3=3xy
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">12.53</span><span class="period">.</span>
 </h5>
 <div class="para logical" id="no-label-1">
-<div class="para">Theorem~\ref{thm:LHRule1}  is useful but it is much too limited, so to speak. For example, it does not help us with this limit: <span class="process-math">\(\tlimit{x}{0}{\frac{\cos(3x)-1}{\cos(5x)-1}}\text{.}\)</span> Even though it is a \lhop indeterminate, when we apply   Theorem~\ref{thm:LHRule1}  we have</div>
-<div class="displaymath process-math">
+<div class="para">
+<code class="code-inline tex2jax_ignore">[cross-reference to target(s) "THEOREMthm:LHRule1" missing or not unique]</code>  is useful but it is much too limited, so to speak. For example, it does not help us with this limit: <span class="process-math">\(\tlimit{x}{0}{\frac{\cos(3x)-1}{\cos(5x)-1}}\text{.}\)</span> Even though it is a \lhop indeterminate, when we apply   <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "THEOREMthm:LHRule1" missing or not unique]</code>  we have</div>
+<div class="displaymath process-math" data-contains-math-knowls=" ">
 \begin{equation*}
 \limit{x}{0}{\frac{\cos(3x)-1}{\cos(5x)-1}} \lhopeq
 {\frac{-3\sin(3\cdot0)}{-5\sin(5\cdot0)}} = \frac{0}{0}
@@ -1209,18 +1205,18 @@ x^3+y^3=3xy
 <div class="para">This is useless because <span class="process-math">\(\frac{0}{0}\)</span> is still not defined.</div>
 </div> <div class="para logical" id="no-label-2">
 <div class="para">We need to think about this again. It is true that <span class="process-math">\(\frac{0}{0}\)</span> is not defined, but if</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 f^\prime(a)=\limit{x}{a}{f^\prime(x)}=0
 \end{equation*}
 </div>
 <div class="para">and</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 g^\prime(a)=\limit{x}{a}{g^\prime(x)}=0.
 \end{equation*}
 </div>
-<div class="para">then <span class="process-math">\(\limit{x}{a}{\frac{f^\prime(x)}{g^\prime(x)}}\)</span> is a \lhop Indeterminate so we extend Theorem~\#\ref{thm:LHRule1} as follows:</div>
+<div class="para">then <span class="process-math">\(\limit{x}{a}{\frac{f^\prime(x)}{g^\prime(x)}}\)</span> is a \lhop Indeterminate so we extend <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "THEOREMthm:LHRule1" missing or not unique]</code> as follows:</div>
 </div></article><article class="theorem theorem-like" id="thm:LHRule2"><h5 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">12.54</span><span class="period">.</span><span class="space"> </span><span class="title">L’H\^o pital’s Rule, (Second Special Case).</span>
 </h5>
@@ -1253,7 +1249,7 @@ g^\prime(a)=\limit{x}{a}{g^\prime(x)}=0.
 <article class="problem example-like" id="no-label"><h5 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">12.55</span><span class="period">.</span>
 </h5>
-<div class="introduction" id="no-label-1"><div class="para" id="no-label-1-1">Use Theorem~\ref{thm:LHRule2} to compute each of the following limits. If this limit given is not a \lhop  Indeterminate rearrange it algebraically, without changing its value, until it is a \lhop Indeterminate.</div></div>
+<div class="introduction" id="no-label-1"><div class="para" id="no-label-1-1">Use <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "THEOREMthm:LHRule2" missing or not unique]</code> to compute each of the following limits. If this limit given is not a \lhop  Indeterminate rearrange it algebraically, without changing its value, until it is a \lhop Indeterminate.</div></div>
 <article class="task exercise-like" id="no-label-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
 <div class="para" id="no-label-2-1-1"><span class="process-math">\(\limit{x}{0}{\frac{e^x-1-x}{x^2}}\)</span></div></article><article class="task exercise-like" id="no-label-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>
 <div class="para" id="no-label-3-1-1">
@@ -1312,7 +1308,7 @@ g^\prime(a)=\limit{x}{a}{g^\prime(x)}=0.
 </div></article><article class="problem example-like" id="no-label"><h5 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">12.57</span><span class="period">.</span>
 </h5>
-<div class="introduction" id="no-label-1"><div class="para" id="no-label-1-1">Compute each of the following limits. Use Theorem~\ref{thm:LHRuleGen} where appropriate.</div></div>
+<div class="introduction" id="no-label-1"><div class="para" id="no-label-1-1">Compute each of the following limits. Use <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "THEOREMthm:LHRuleGen" missing or not unique]</code> where appropriate.</div></div>
 <article class="task exercise-like" id="no-label-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
 <div class="para" id="no-label-2-1-1"><span class="process-math">\(\tlimit{x}{0}{\frac{5x}{\tan(x)}}\)</span></div></article><article class="task exercise-like" id="no-label-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>
 <div class="para" id="no-label-3-1-1"><span class="process-math">\(\tlimit{x}{2}{\frac{2x^2-5x+2}{5x^2-7x-6}}\)</span></div></article><article class="task exercise-like" id="no-label-4"><h6 class="heading"><span class="codenumber">(c)</span></h6>
@@ -1368,7 +1364,7 @@ g^\prime(a)=\limit{x}{a}{g^\prime(x)}=0.
 <span class="process-math">\(f(x)=\ln(x)\)</span> <span class="process-math">\(g(x)=x^{4/5}\)</span>
 </div></article><article class="task exercise-like" id="no-label-10"><h6 class="heading"><span class="codenumber">(i)</span></h6>
 <div class="para" id="no-label-10-1-1">Based on the limits above write down a general conclusion about the rate of change of the natural logarithm as compared to roots.</div></article><article class="task exercise-like" id="no-label-11"><h6 class="heading"><span class="codenumber">(j)</span></h6>
-<div class="para" id="no-label-11-1-1">Prove that your statement is correct.</div></article></article><div class="para" id="subsec:lhop-rule-horiz-13">To most people this phrase ``exponential growth’’ just means that something is growing very fast, but it actually means the growth rate is described by an exponential function. For example neither <span class="process-math">\(f(x)=x^2\)</span> nor <span class="process-math">\(f(x)=x^{200}\)</span> grows exponentially. but <span class="process-math">\(f(x) = e^x\text{,}\)</span> <span class="process-math">\(f(x)=2^x\text{,}\)</span> and even <span class="process-math">\(f(x)=1.0001^x\)</span> all do grow exponentially\aside{As we saw in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "SECexponential-growth" missing or not unique]</code> <span class="process-math">\(f(x)=\left(\frac12\right)^x\)</span> is said to ``decay exponentially.’’}.  The next problem explores how ``exponential growth’’  compares ``polynomial growth.’’</div>
+<div class="para" id="no-label-11-1-1">Prove that your statement is correct.</div></article></article><div class="para" id="subsec:lhop-rule-horiz-13">To most people this phrase “exponential growth” just means that something is growing very fast, but it actually means the growth rate is described by an exponential function. For example neither <span class="process-math">\(f(x)=x^2\)</span> nor <span class="process-math">\(f(x)=x^{200}\)</span> grows exponentially. but <span class="process-math">\(f(x) = e^x\text{,}\)</span> <span class="process-math">\(f(x)=2^x\text{,}\)</span> and even <span class="process-math">\(f(x)=1.0001^x\)</span> all do grow exponentially\aside{As we saw in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "SECexponential-growth" missing or not unique]</code> <span class="process-math">\(f(x)=\left(\frac12\right)^x\)</span> is said to “decay exponentially.”  The next problem explores how “exponential growth”  compares “polynomial growth.”</div>
 <article class="problem example-like" id="no-label"><h5 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">12.60</span><span class="period">.</span>
 </h5>
@@ -1417,7 +1413,7 @@ g^\prime(a)=\limit{x}{a}{g^\prime(x)}=0.
 <div class="para">since <span class="process-math">\(\sec(0)=1\text{.}\)</span>
 </div>
 </div></article><div class="para" id="subsec:lhop-rule-horiz-16">Did you guess correctly?</div>
-<div class="para" id="subsec:lhop-rule-horiz-17">Notice that the trick we used was a simple substitution much like the ones we have used in the past to make things ``easier on the eyes.’’ The difference here is that we’re not making anything ``easier on the eyes.’’ If anything we’re making things harder to look at since re-writing <span class="process-math">\(x\)</span> as <span class="process-math">\(\frac{1}{\frac1x}\)</span> certainly doesn’t seem like it’s going to help much.  Until we try it. Always try your ideas out no matter how crazy they seem to be. Only after you try an idea can you tell if it will work or not.</div>
+<div class="para" id="subsec:lhop-rule-horiz-17">Notice that the trick we used was a simple substitution much like the ones we have used in the past to make things “easier on the eyes.” The difference here is that we’re not making anything “easier on the eyes.” If anything we’re making things harder to look at since re-writing <span class="process-math">\(x\)</span> as <span class="process-math">\(\frac{1}{\frac1x}\)</span> certainly doesn’t seem like it’s going to help much.  Until we try it. Always try your ideas out no matter how crazy they seem to be. Only after you try an idea can you tell if it will work or not.</div>
 <div class="para" id="subsec:lhop-rule-horiz-18">Recall that in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "SECexponential" missing or not unique]</code> where we defined the effective yield of an investment which is compounded continuously. We were led to examine the expression <span class="process-math">\(\left(1+\frac{1}{m}\right)^m\)</span> for very large values of <span class="process-math">\(m\text{.}\)</span>
 </div>
 <div class="para" id="subsec:lhop-rule-horiz-19">As a result of that investigation we accumulated considerable numerical evidence that in one year an investment of <span class="process-math">\(1\)</span> growing at a nominal rate of <span class="process-math">\(5%\text{,}\)</span> compounded continuously would grow to <span class="process-math">\(\\)</span>e^{0.05}\approx \<span class="process-math">\(1.0513\text{,}\)</span> but we were unable to do more than gather evidence. It was pretty convincing evidence but it was not proof since we didn’t yet have the mathematical technique necessary to evaluate the expression <span class="process-math">\(\left(1+\frac{1}{m}\right)^m\)</span> as <span class="process-math">\(m\rightarrow\infty\text{.}\)</span> Now we do.</div>
@@ -1426,16 +1422,16 @@ g^\prime(a)=\limit{x}{a}{g^\prime(x)}=0.
 </h5>
 <div class="para logical" id="example:LimComp1-1">
 <div class="para"> We need to evaluate the limit:</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \limit{m}{\infty}{ \left( 1+\frac{1}{m} \right)^m}.
 \end{equation*}
 </div>
-<div class="para">It is tempting to reason as follows. We see that <span class="process-math">\(1+\frac{1}{m}\rightarrow1\)</span> as <span class="process-math">\(m\rightarrow\infty\text{.}\)</span> That is, we have the indeterminate form <span class="process-math">\(\approach{1}^{\approach{\infty}}\)</span> and since one raised to any power is equal to one this limit must equal <span class="process-math">\(1\text{,}\)</span> right? Surely you know better than to jump to that conclusion by now. Not only does all of the evidence of this chapter warn you that limits are more subtle than that, but in our investigations in Section~\ref{sec:exponential} we saw overwhelming evidence that this limit is not equal to one.</div>
+<div class="para">It is tempting to reason as follows. We see that <span class="process-math">\(1+\frac{1}{m}\rightarrow1\)</span> as <span class="process-math">\(m\rightarrow\infty\text{.}\)</span> That is, we have the indeterminate form <span class="process-math">\(\approach{1}^{\approach{\infty}}\)</span> and since one raised to any power is equal to one this limit must equal <span class="process-math">\(1\text{,}\)</span> right? Surely you know better than to jump to that conclusion by now. Not only does all of the evidence of this chapter warn you that limits are more subtle than that, but in our investigations in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "SECTIONsec:exponential" missing or not unique]</code> we saw overwhelming evidence that this limit is not equal to one.</div>
 </div> <div class="para" id="example:LimComp1-2">Also, notice that we wrote <span class="process-math">\(\approach{1}^{\approach{\infty}}\text{,}\)</span> not <span class="process-math">\(1^{\approach{\infty}}\text{.}\)</span> Why do you think we did that?</div> <div class="para" id="example:LimComp1-3">The source of our difficulty here is that the variable <span class="process-math">\(m\)</span> is in the exponent where we can’t get at it. We’d like to find a way to bring it out of the exponent. The natural logarithm seems perfect for this task since it has the property that <span class="process-math">\(\ln\left(a^b\right)=b\ln(a)\text{.}\)</span>
 </div> <div class="para logical" id="example:LimComp1-4">
 <div class="para">Begin by setting <span class="process-math">\(y=\left(1+\frac{1}{m}\right)^m\text{.}\)</span> Then</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \ln(y)=
 \ln\left(1+\frac{1}{m}\right)^m =
@@ -1443,21 +1439,21 @@ m\ln\left(1+\frac{1}{m}\right).
 \end{equation*}
 </div>
 <div class="para">Rather than evaluating <span class="process-math">\(\limit{t}{\infty}{y}\)</span> directly we evaluate the limit of the logarithm of <span class="process-math">\(y\text{.}\)</span> Thus</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \limit{m}{\infty}{\ln(y)} =
 \limit{m}{\infty}{m\ln\left(1+\frac{1}{m}\right) }.
 \end{equation*}
 </div>
 <div class="para">The limit on the right is an indeterminate form but unfortunately it is not a \lhop  Indeterminate.  So, as before, we’ll have to do some algebraic manipulations first.  Set <span class="process-math">\(\frac1m=z\)</span> so that</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \limit{t}{\infty}{\ln(y)}
 =\rlimit{z}{0}{\frac{\ln\left(1+z\right)}{z} }
 \lhopeq\rlimit{z}{0}{\frac{\frac{1}{1+z}}{1}}=1.
 \end{equation*}
 </div>
-<div class="para">Since <span class="process-math">\(\limit{m}{\infty}{\ln(y)}=1\)</span> it seems intuitively clear that <span class="process-math">\(\limit{m}{\infty}{y}=\limit{m}{\infty}{\left(1+\frac1m\right)^m}=e^{1}\text{,}\)</span> doesn’t it? In fact it is not true generally that <span class="process-math">\(\textcolor{blue}{\tlimit{x}{a}{\textcolor{red}{f(g(x))}}}\)</span> is equal to <span class="process-math">\(\textcolor{red}{f}\textcolor{blue}{\left(\tlimit{x}{a}{g(x)}\right)}\text{.}\)</span> (We have not yet discussed values of <span class="process-math">\(a\)</span> that are not either <span class="process-math">\(0\)</span> or <span class="process-math">\(\infty\text{.}\)</span>) However this is true whenever <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(g(a)\text{.}\)</span> Since <span class="process-math">\(f(x)=\ln(x)\)</span> is continuous, for <span class="process-math">\(x\gt0\)</span> this is a detail that needn’t trouble us for now so we will ignore it.  We will return to it in Section~\ref{sec:LimitLaws}.</div>
+<div class="para">Since <span class="process-math">\(\limit{m}{\infty}{\ln(y)}=1\)</span> it seems intuitively clear that <span class="process-math">\(\limit{m}{\infty}{y}=\limit{m}{\infty}{\left(1+\frac1m\right)^m}=e^{1}\text{,}\)</span> doesn’t it? In fact it is not true generally that <span class="process-math">\(\textcolor{blue}{\tlimit{x}{a}{\textcolor{red}{f(g(x))}}}\)</span> is equal to <span class="process-math">\(\textcolor{red}{f}\textcolor{blue}{\left(\tlimit{x}{a}{g(x)}\right)}\text{.}\)</span> (We have not yet discussed values of <span class="process-math">\(a\)</span> that are not either <span class="process-math">\(0\)</span> or <span class="process-math">\(\infty\text{.}\)</span>) However this is true whenever <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(g(a)\text{.}\)</span> Since <span class="process-math">\(f(x)=\ln(x)\)</span> is continuous, for <span class="process-math">\(x\gt0\)</span> this is a detail that needn’t trouble us for now so we will ignore it.  We will return to it in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "SECTIONsec:LimitLaws" missing or not unique]</code>.</div>
 </div></article><article class="problem example-like" id="no-label"><h5 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">12.63</span><span class="period">.</span>
 </h5>
@@ -1466,7 +1462,7 @@ m\ln\left(1+\frac{1}{m}\right).
 <div class="para" id="no-label-2-1-1">Show that <span class="process-math">\(\limit{m}{\infty}{\left(1+\frac{r}{m}\right)}^m=e^{r}\)</span>
 </div></article><article class="task exercise-like" id="no-label-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>
 <div class="para" id="no-label-3-1-1">Show that <span class="process-math">\(\limit{m}{\infty}{\left(1+\frac{r}{m}\right)}^{mt}=e^{rt}\)</span> for <span class="process-math">\(t\ge0\text{.}\)</span> \hint{Let <span class="process-math">\(n=mt\)</span> and manipulate this limit until it looks like the limit in part (a) (with different letters, of course.). }</div></article><article class="task exercise-like" id="no-label-4"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<div class="para" id="no-label-4-1-1">Suppose we have an investment of <span class="process-math">\(10,000\)</span> compounded continuously with a relative annual rate of <span class="process-math">\(5%.\)</span> How much would the investment be worth in <span class="process-math">\(20\)</span> years?  How would this compare to an investment which is compounded quarterly? \hint{You may want to review similar problems in Section~\ref{sec:exponential} before starting this problem.}</div></article></article><article class="example example-like" id="no-label"><h5 class="heading">
+<div class="para" id="no-label-4-1-1">Suppose we have an investment of <span class="process-math">\(10,000\)</span> compounded continuously with a relative annual rate of <span class="process-math">\(5%.\)</span> How much would the investment be worth in <span class="process-math">\(20\)</span> years?  How would this compare to an investment which is compounded quarterly? \hint{You may want to review similar problems in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "SECTIONsec:exponential" missing or not unique]</code> before starting this problem.}</div></article></article><article class="example example-like" id="no-label"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">12.64</span><span class="period">.</span>
 </h5>
 <div class="para logical" id="no-label-1">

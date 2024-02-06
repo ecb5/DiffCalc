@@ -137,7 +137,7 @@ window.MathJax = {
 \def\ftceval#1#2#3{#1\hskip.5ex{\llap{\smash{\rule[-3ex]{0.5pt}{7ex}}}_{\raise{-3ex}{\hskip.5ex#2}}^{\raise{-5ex}{\hskip.5ex #3}}}}
 
 
-  \def\eval#1#2#3{#1\hskip.5ex{\llap{\rule[-1.5ex]{0.5pt}{4ex}}_{\raise{-1.5ex}{\hskip.5ex#2=#3}}}}
+\def\eval#1#2#3{#1\hskip.5ex{\llap{\rule[-1.5ex]{0.5pt}{4ex}}_{\raise{-1.5ex}{\hskip.5ex#2=#3}}}}
 \def\dispeval#1#2#3{#1\hskip.5ex{\llap{\smash{\rule[-2ex]{0.5pt}{5ex}}}_{\raise{-2ex}{\hskip.5ex#2=#3}}}}
 
 
@@ -159,6 +159,9 @@ window.MathJax = {
 \def\partialfx#1#2{\frac{\partial{#1}}{\partial{#2}}} 
 \def\partialfxn#1#2#3{\frac{\partial^{#3}{#1}}{\partial{#2}^{#3}}} 
 \def\dfdxn#1#2#3{\frac{\text{d}^{#3}{#1}}{\text{d}{#2}^{#3}}} 
+
+\def\dfdxat#1#2#3{\eval{\dfdx{#1}{#2}}{#2}{#3}}
+
 \def\limit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}#3}}
 \def\tlimit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}}#3}
 \def\limitX#1#2#3#4{{\displaystyle\lim_{\underset{#4}{#1\rightarrow #2}}#3}}
@@ -176,9 +179,8 @@ window.MathJax = {
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
-<li class="toc-item toc-dedication"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Dedication</span></a></div></li>
-<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
-<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-5.html" class="internal"><span class="title">Relevant Quotes</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Epigraphs</span></a></div></li>
 <li class="toc-item toc-preface"><div class="toc-title-box"><a href="SECinstructor.html" class="internal"><span class="title">To the Instructor: Read This First</span></a></div></li>
 </ul>
 </li>
@@ -191,13 +193,7 @@ window.MathJax = {
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAproblem-solving.html#SECusing-lett-inst" class="internal"><span class="codenumber">2.1</span> <span class="title">Using Letters Instead of Numbers</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAproblem-solving.html#SECan-easy-problem-alg" class="internal"><span class="codenumber">2.2</span> <span class="title">Substitution, or Making Things “Easy on the Eyes”</span></a></div></li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAproblem-solving.html#SECan-easy-problem-geo" class="internal"><span class="codenumber">2.3</span> <span class="title">An “Easy” Problem From Geometry</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAproblem-solving.html#subsection-digression-MakingMistakes" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Digression: Making Mistakes</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAproblem-solving.html#SECan-easy-problem-geo-4" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Continuing our example</span></a></div></li>
-</ul>
-</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAproblem-solving.html#SECan-easy-problem-geo" class="internal"><span class="codenumber">2.3</span> <span class="title">An “Easy” Problem From Geometry</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAproblem-solving.html#SECour-advice-synopsis" class="internal"><span class="codenumber">2.4</span> <span class="title">Our advice, a synopsis</span></a></div></li>
 </ul>
 </li>
@@ -205,13 +201,13 @@ window.MathJax = {
 <div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html" class="internal"><span class="codenumber">3</span> <span class="title">Science Before Calculus</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#Apologia" class="internal"><span class="codenumber">3.1</span> <span class="title">Apologia</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#no-label" class="internal"><span class="codenumber">3.2</span> <span class="title">Some Preliminaries</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#SECTIONSomePreliminaries" class="internal"><span class="codenumber">3.2</span> <span class="title">Some Preliminaries</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#sec-laziness-nature" class="internal"><span class="codenumber">3.3</span> <span class="title">The Laziness of Nature</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#subsection-" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Nature is Lazy</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#SUBSECTIONNatureLazy" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Nature is Lazy</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#Digress-VarConstFunc-" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Digression: Variables, Constants, and Functions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#subsection-" class="internal"><span class="codenumber">3.3.3</span> <span class="title">After Digression</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#sec-laziness-nature-4" class="internal"><span class="codenumber">3.3.3</span> <span class="title">After Digression</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#sec:ferm-meth-aedeq" class="internal"><span class="codenumber">3.4</span> <span class="title">Fermat’s Method of Adequality</span></a></div></li>
@@ -219,7 +215,7 @@ window.MathJax = {
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#sec:roberv-conic-sect" class="internal"><span class="codenumber">3.6</span> <span class="title">Roberval, Conic Sections, and the Dynamic Approach</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#no-label" class="internal"><span class="codenumber">3.6.1</span> <span class="title">Speed, Velocity, and Rates of Change</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#SUBSECTIONSpdVelRofC" class="internal"><span class="codenumber">3.6.1</span> <span class="title">Speed, Velocity, and Rates of Change</span></a></div></li>
 <li class="toc-item toc-subsection">
 <div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#no-label" class="internal"><span class="codenumber">3.6.2</span> <span class="title">The Tangent Lines of the Conic Sections</span></a></div>
 <ul class="structural toc-item-list">
@@ -258,27 +254,27 @@ window.MathJax = {
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="SECveloc-slop-tang.html" class="internal"><span class="codenumber">5</span> <span class="title">Slopes, Tangents, and Rates of Change</span></a></div>
+<div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html" class="internal"><span class="codenumber">5</span> <span class="title">Slopes, Tangents, and Rates of Change</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#sec:slopes-tangents" class="internal"><span class="codenumber">5.1</span> <span class="title">Slopes and Tangents</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#SECdefin-tang-line" class="internal"><span class="codenumber">5.2</span> <span class="title">Defining the Tangent Line</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#sec:vomit-comet" class="internal"><span class="codenumber">5.3</span> <span class="title">The Vomit Comet</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#sec:rates-change" class="internal"><span class="codenumber">5.4</span> <span class="title">Galileo Drops the Ball</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#no-label" class="internal"><span class="codenumber">5.5</span> <span class="title">Bringing in Calculus</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#subsec:Derivative" class="internal"><span class="codenumber">5.6</span> <span class="title">The Derivative</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#sec:newt-flux-dynam" class="internal"><span class="codenumber">5.7</span> <span class="title">Thinking Dynamically</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#sec:newt-meth-flux" class="internal"><span class="codenumber">5.8</span> <span class="title">Newton’s Method of Fluxions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html#sec:slopes-tangents" class="internal"><span class="codenumber">5.1</span> <span class="title">Slopes and Tangents</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html#SECTIONdefin-tang-line" class="internal"><span class="codenumber">5.2</span> <span class="title">Defining the Tangent Line</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html#sec:vomit-comet" class="internal"><span class="codenumber">5.3</span> <span class="title">The Vomit Comet</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html#sec:rates-change" class="internal"><span class="codenumber">5.4</span> <span class="title">Galileo Drops the Ball</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html#no-label" class="internal"><span class="codenumber">5.5</span> <span class="title">Bringing in Calculus</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html#subsec:Derivative" class="internal"><span class="codenumber">5.6</span> <span class="title">The Derivative</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html#sec:newt-flux-dynam" class="internal"><span class="codenumber">5.7</span> <span class="title">Thinking Dynamically</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html#SECTIONnewt-meth-flux" class="internal"><span class="codenumber">5.8</span> <span class="title">Newton’s Method of Fluxions</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="SECveloc-slop-tang.html#sec:self-inters-curv" class="internal"><span class="codenumber">5.9</span> <span class="title">Self-intersecting Curves and Parametric Equations</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#no-label" class="internal"><span class="codenumber">5.9.1</span> <span class="title">Parametric Functions</span></a></div></li></ul>
+<div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html#sec:self-inters-curv" class="internal"><span class="codenumber">5.9</span> <span class="title">Self-intersecting Curves and Parametric Equations</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html#no-label" class="internal"><span class="codenumber">5.9.1</span> <span class="title">Parametric Functions</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="SECveloc-slop-tang.html#sec:bridg-chains-telesc" class="internal"><span class="codenumber">5.10</span> <span class="title">Bridges, Chains, Domes, and Telescopes</span></a></div>
+<div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html#sec:bridg-chains-telesc" class="internal"><span class="codenumber">5.10</span> <span class="title">Bridges, Chains, Domes, and Telescopes</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#no-label" class="internal"><span class="codenumber">5.10.1</span> <span class="title">Bridges</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#no-label" class="internal"><span class="codenumber">5.10.2</span> <span class="title">Chains</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#no-label" class="internal"><span class="codenumber">5.10.3</span> <span class="title">Domes</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#no-label" class="internal"><span class="codenumber">5.10.4</span> <span class="title">Telescopes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html#no-label" class="internal"><span class="codenumber">5.10.1</span> <span class="title">Bridges</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html#no-label" class="internal"><span class="codenumber">5.10.2</span> <span class="title">Chains</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html#no-label" class="internal"><span class="codenumber">5.10.3</span> <span class="title">Domes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html#no-label" class="internal"><span class="codenumber">5.10.4</span> <span class="title">Telescopes</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -296,30 +292,30 @@ window.MathJax = {
 </li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:model-with-trig" class="internal"><span class="codenumber">6.1.3</span> <span class="title">Modeling with Trigonometric Functions</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#no-label" class="internal"><span class="codenumber">6.1.4</span> <span class="title">Phase Shifts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:polar-coordinates" class="internal"><span class="codenumber">6.1.5</span> <span class="title">Polar Coordinates</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:polar-coordinates" class="internal"><span class="codenumber">6.2</span> <span class="title">Polar Coordinates</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAcalc-trig.html#sec:diff-sine-cosine" class="internal"><span class="codenumber">6.3</span> <span class="title">The Differentials of the Sine and Cosine Functions</span></a></div>
+<div class="toc-title-box"><a href="CHAcalc-trig.html#sec:diff-sine-cosine" class="internal"><span class="codenumber">6.2</span> <span class="title">The Differentials of the Sine and Cosine Functions</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:polar-coord-calc" class="internal"><span class="codenumber">6.3.1</span> <span class="title">Polar Coordinates and Calculus</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#no-label" class="internal"><span class="codenumber">6.3.2</span> <span class="title">The Brachistochrone Problem</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#no-label" class="internal"><span class="codenumber">6.3.3</span> <span class="title">Spin Casting, Redux</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:simple-harm-oscill" class="internal"><span class="codenumber">6.3.4</span> <span class="title">Simple Harmonic Oscillation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:polar-coord-calc" class="internal"><span class="codenumber">6.2.1</span> <span class="title">Polar Coordinates and Calculus</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#no-label" class="internal"><span class="codenumber">6.2.2</span> <span class="title">The Brachistochrone Problem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#no-label" class="internal"><span class="codenumber">6.2.3</span> <span class="title">Spin Casting, Redux</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:simple-harm-oscill" class="internal"><span class="codenumber">6.2.4</span> <span class="title">Simple Harmonic Oscillation</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAcalc-trig.html#subsec:diff-other-trig" class="internal"><span class="codenumber">6.4</span> <span class="title">The Differentials of the Other Trigonometric Functions</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:inverse-tan-and-cot" class="internal"><span class="codenumber">6.5</span> <span class="title">The Inverse Tangent and Cotangent Functions</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:witch-agnesi-inverse" class="internal"><span class="codenumber">6.6</span> <span class="title">The Witch of Agnesi and the Inverse Tangent Function</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAcalc-trig.html#SECTIONSECTIONdiff-inverse-tancot" class="internal"><span class="codenumber">6.7</span> <span class="title">The Differentials of the Inverse Tangent and Inverse Cotangent Functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAcalc-trig.html#subsec:diff-other-trig" class="internal"><span class="codenumber">6.3</span> <span class="title">The Differentials of the Other Trigonometric Functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:inverse-tan-and-cot" class="internal"><span class="codenumber">6.4</span> <span class="title">The Inverse Tangent and Cotangent Functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:witch-agnesi-inverse" class="internal"><span class="codenumber">6.5</span> <span class="title">The Witch of Agnesi and the Inverse Tangent Function</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAcalc-trig.html#SECTIONSECTIONdiff-inverse-tancot" class="internal"><span class="codenumber">6.6</span> <span class="title">The Differentials of the Inverse Tangent and Inverse Cotangent Functions</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAcalc-trig.html#sec:other-inverse-trig" class="internal"><span class="codenumber">6.8</span> <span class="title">The Other Inverse Trigonometric Functions</span></a></div>
+<div class="toc-title-box"><a href="CHAcalc-trig.html#sec:other-inverse-trig" class="internal"><span class="codenumber">6.7</span> <span class="title">The Other Inverse Trigonometric Functions</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#no-label" class="internal"><span class="codenumber">6.8.1</span> <span class="title">The Inverse Sine Function: \boldmath <span class="process-math">\(\inverse\sin(x)\)</span></span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#no-label" class="internal"><span class="codenumber">6.8.2</span> <span class="title">The Inverse Secant and Inverse Cosecant</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#no-label" class="internal"><span class="codenumber">6.7.1</span> <span class="title">The Inverse Sine Function: \boldmath <span class="process-math">\(\inverse\sin(x)\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#no-label" class="internal"><span class="codenumber">6.7.2</span> <span class="title">The Inverse Secant and Inverse Cosecant</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:curvature" class="internal"><span class="codenumber">6.9</span> <span class="title">Curvature</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:curvature" class="internal"><span class="codenumber">6.8</span> <span class="title">Curvature</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -350,16 +346,15 @@ window.MathJax = {
 <div class="toc-title-box"><a href="CHAlast-elem-funct.html#no-label" class="internal"><span class="codenumber">8.1</span> <span class="title">Introduction</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAlast-elem-funct.html#no-label" class="internal"><span class="codenumber">8.1.1</span> <span class="title">Initial Value Problems (IVPs)</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAlast-elem-funct.html#sec:exponential" class="internal"><span class="codenumber">8.2</span> <span class="title">The Natural Exponential</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAlast-elem-funct.html#sec:hyperb-trig-hang" class="internal"><span class="codenumber">8.2.1</span> <span class="title">Hyperbolic Trigonometry: The Hanging Chain</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAlast-elem-funct.html#no-label" class="internal"><span class="codenumber">8.2.2</span> <span class="title">The Gateway Arch</span></a></div></li>
-</ul>
-</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAlast-elem-funct.html#sec:exponential" class="internal"><span class="codenumber">8.2</span> <span class="title">The Natural Exponential</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="CHAlast-elem-funct.html#sec:exponential-growth" class="internal"><span class="codenumber">8.3</span> <span class="title">Exponential Growth</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAlast-elem-funct.html#no-label" class="internal"><span class="codenumber">8.3.1</span> <span class="title">Exponential Functions and Compound Interest</span></a></div></li></ul>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAlast-elem-funct.html#sec:hyperb-trig-hang" class="internal"><span class="codenumber">8.3.1</span> <span class="title">Hyperbolic Trigonometry: The Hanging Chain</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAlast-elem-funct.html#no-label" class="internal"><span class="codenumber">8.3.2</span> <span class="title">The Gateway Arch</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAlast-elem-funct.html#sec:exponential-growth-5" class="internal"><span class="codenumber">8.3.3</span> <span class="title">Exponential Growth</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAlast-elem-funct.html#no-label" class="internal"><span class="codenumber">8.3.4</span> <span class="title">Exponential Functions and Compound Interest</span></a></div></li>
+</ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="CHAlast-elem-funct.html#sec:natural-logarithm-1" class="internal"><span class="codenumber">8.4</span> <span class="title">The Natural Logarithm</span></a></div>
@@ -458,7 +453,7 @@ window.MathJax = {
 <div class="toc-title-box"><a href="CHAlimits-lhop-rule.html" class="internal"><span class="codenumber">12</span> <span class="title">Limits and L’H\^o pital’s Rule</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAlimits-lhop-rule.html#sec:horiz-asympt-as" class="internal"><span class="codenumber">12.1</span> <span class="title">Horizontal Asymptotes as Limits ``at Infinity’’</span></a></div>
+<div class="toc-title-box"><a href="CHAlimits-lhop-rule.html#sec:horiz-asympt-as" class="internal"><span class="codenumber">12.1</span> <span class="title">Horizontal Asymptotes as Limits “at Infinity”</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAlimits-lhop-rule.html#digression:LimitNotation" class="internal"><span class="codenumber">12.1.1</span> <span class="title">Limit Notation</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAlimits-lhop-rule.html#sec:squeeze-theorem-informal" class="internal"><span class="codenumber">12.2</span> <span class="title">The Squeeze Theorem</span></a></div></li>
@@ -530,8 +525,8 @@ window.MathJax = {
 <li class="toc-item toc-subsection">
 <div class="toc-title-box"><a href="CHAformal-limits.html#sec:limit-product-at" class="internal"><span class="codenumber">17.3.4</span> <span class="title">The Limit of a Product</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAformal-limits.html#no-label" class="internal"><span class="codenumber">17.3.4.1</span> <span class="title">Proving Lemma~\#\ref{lemma:LimProd1</span></a></div></li>
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAformal-limits.html#no-label" class="internal"><span class="codenumber">17.3.4.2</span> <span class="title">Proving Lemma~\#\ref{lemma:LimProd2</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAformal-limits.html#no-label" class="internal"><span class="codenumber">17.3.4.1</span> <span class="title">Proving <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "LEMMAlemma:LimProd1" missing or not unique]</code></span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAformal-limits.html#no-label" class="internal"><span class="codenumber">17.3.4.2</span> <span class="title">Proving <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "LEMMAlemma:LimProd2" missing or not unique]</code></span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAformal-limits.html#no-label" class="internal"><span class="codenumber">17.3.5</span> <span class="title">The Function  \boldmath  <span class="process-math">\(f(x)=\frac1x\)</span> is Continuous Wherever  It Is Defined</span></a></div></li>
@@ -599,7 +594,7 @@ f(1) =
 </h5>
 <div class="para" id="drill:BoundedGrowth-1-1"> Suppose <span class="process-math">\(B\)</span> is a positive real number, and that <span class="process-math">\(x(0)=0\text{.}\)</span> Find a formula for <span class="process-math">\(x\)</span> as a function of time <span class="process-math">\(t\)</span> (in seconds), such that at each integer <span class="process-math">\(t&gt;0\text{,}\)</span> the distance from <span class="process-math">\(x(t)\)</span> to <span class="process-math">\(B\)</span> is half of the distance from <span class="process-math">\(x(t-1)\)</span> to <span class="process-math">\(B\text{.}\)</span>
 </div></article><div class="para" id="SUBSECTIONEpsDelt1-6">In this situation <span class="process-math">\(x\)</span> is said to be \term{bounded above} because there is an upper bound on how large <span class="process-math">\(x\)</span> can be, despite the fact that <span class="process-math">\(x\)</span> is growing ``larger and larger.’’</div>
-<div class="para" id="SUBSECTIONEpsDelt1-7">Recall that in Section~\ref{sec:horiz-asympt-as} we mentioned that the notation <span class="process-math">\(x\rightarrow\infty\)</span> should be read aloud as ``<span class="process-math">\(x\)</span> increases without bound,’’ so we rephrase our question as \begin{center} \begin{minipage}{.7\textwidth} \it If <span class="process-math">\(y=\frac1x\text{,}\)</span> what does <span class="process-math">\(y\)</span> get close to as <span class="process-math">\(x\)</span> increases without bound? \end{minipage} \end{center}</div></section><section class="subsection" id="SUBSECTION"><h4 class="heading hide-type">
+<div class="para" id="SUBSECTIONEpsDelt1-7">Recall that in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "SECTIONsec:horiz-asympt-as" missing or not unique]</code> we mentioned that the notation <span class="process-math">\(x\rightarrow\infty\)</span> should be read aloud as ``<span class="process-math">\(x\)</span> increases without bound,’’ so we rephrase our question as \begin{center} \begin{minipage}{.7\textwidth} \it If <span class="process-math">\(y=\frac1x\text{,}\)</span> what does <span class="process-math">\(y\)</span> get close to as <span class="process-math">\(x\)</span> increases without bound? \end{minipage} \end{center}</div></section><section class="subsection" id="SUBSECTION"><h4 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">17.1.2</span><span class="space"> </span><span class="title">The Infinitely Small</span>
 </h4>
 <div class="para" id="SUBSECTION-2">The answer is very clear: <span class="process-math">\(y\)</span> gets closer and closer to zero.  But of course, the phrase ``closer and closer’’ is also too vague, and for essentially the same reason that ``larger and larger’’ is too vague to be useful.</div>
@@ -625,7 +620,7 @@ f(1) =
 <div class="para" id="no-label-5-1-1"><span class="process-math">\(y\lt 1/1000000\)</span></div></article></article><div class="para" id="SUBSECTION-12">It should be clear that we needn’t have stopped at one millionth (<span class="process-math">\(10^{-6}\)</span>). The same argument will show that if we want <span class="process-math">\(y=\frac1x\lt 10^{-10},\)</span> we need <span class="process-math">\(x\gt 10^{10}.\)</span> And that if we want <span class="process-math">\(y=\frac1x\lt 10^{-1000},\)</span> we need <span class="process-math">\(x\gt 10^{1000}.\)</span>
 </div>
 <div class="para" id="SUBSECTION-13">So, by an appropriate choice of <span class="process-math">\(x\)</span> we can make <span class="process-math">\(y=\frac1x\)</span> as close to <span class="process-math">\(0\)</span> as we choose. To be a little more precise we say that  we can make <span class="process-math">\(y\)</span> arbitrarily close to zero, even if it never actually is zero. And this is what we really intended when we said that <span class="process-math">\(y\)</span> gets ``closer and closer’’ (or ``goes to’’) zero.</div>
-<div class="para" id="SUBSECTION-14">This idea is exactly what the limit notation we introduced in Chapter~\ref{cha:limits-lhop-rule} was intended to capture, so  here, at last, are our question and answer precisely stated: \begin{center} \begin{minipage}{.8\linewidth} \noindent \underline{  Question:}   If <span class="process-math">\(y(x)=\frac1x\text{,}\)</span> what is <span class="process-math">\(\tlimit{x}{\infty}{y(x)}\text{?}\)</span> \noindent \underline{  Answer:} <span class="process-math">\(\tlimit{x}{\infty}{y(x)}=0\text{?}\)</span> \end{minipage} \end{center}</div></section><section class="subsection" id="sec:convincing-skeptic"><h4 class="heading hide-type">
+<div class="para" id="SUBSECTION-14">This idea is exactly what the limit notation we introduced in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "CHAPTERcha:limits-lhop-rule" missing or not unique]</code> was intended to capture, so  here, at last, are our question and answer precisely stated: \begin{center} \begin{minipage}{.8\linewidth} \noindent \underline{  Question:}   If <span class="process-math">\(y(x)=\frac1x\text{,}\)</span> what is <span class="process-math">\(\tlimit{x}{\infty}{y(x)}\text{?}\)</span> \noindent \underline{  Answer:} <span class="process-math">\(\tlimit{x}{\infty}{y(x)}=0\text{?}\)</span> \end{minipage} \end{center}</div></section><section class="subsection" id="sec:convincing-skeptic"><h4 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">17.1.3</span><span class="space"> </span><span class="title">Convincing Berkeley</span>
 </h4>
 <div class="para" id="sec:convincing-skeptic-2">Is the use of these more precise terms enough to convince Bishop Berkeley?</div>
@@ -659,7 +654,7 @@ f(x)= \frac{1}{x^2}\lt \eps.
 </div></article><article class="problem example-like" id="no-label"><h5 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">17.7</span><span class="period">.</span>
 </h5>
-<div class="introduction" id="no-label-1"><div class="para" id="no-label-1-1">Use Definition~\ref{def:second-inad-limit-at-infinity} to prove that for each of the functions below <span class="process-math">\(\limit{x}{\infty}{f(x)}=0\text{.}\)</span>  That is, assume <span class="process-math">\(\eps\gt0\)</span> is given and find a lower bound <span class="process-math">\(B\)</span> such that if <span class="process-math">\(x\gt B\)</span> then <span class="process-math">\(f(x)\lt\eps\text{.}\)</span>
+<div class="introduction" id="no-label-1"><div class="para" id="no-label-1-1">Use <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONdef:second-inad-limit-at-infinity.html" title="Definition 17.5: Positive Function With Limit Zero at Infinity">~ 17.5</a> to prove that for each of the functions below <span class="process-math">\(\limit{x}{\infty}{f(x)}=0\text{.}\)</span>  That is, assume <span class="process-math">\(\eps\gt0\)</span> is given and find a lower bound <span class="process-math">\(B\)</span> such that if <span class="process-math">\(x\gt B\)</span> then <span class="process-math">\(f(x)\lt\eps\text{.}\)</span>
 </div></div>
 <article class="task exercise-like" id="no-label-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
 <div class="para" id="no-label-2-1-1"><span class="process-math">\(f(x)=\frac1{x^3}\)</span></div></article><article class="task exercise-like" id="no-label-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>
@@ -677,12 +672,12 @@ f(x)= \frac{1}{x^2}\lt \eps.
 </h5>
 <div class="para logical" id="ex:limit1-1">
 <div class="para"> Suppose <span class="process-math">\(f(x) = -2-\frac{1}{x}.\)</span> Can you guess the value of <span class="process-math">\(\limit{x}{\infty}{f(x)}\text{?}\)</span> Let <span class="process-math">\(\eps\gt 0\)</span> be given. Then when <span class="process-math">\(B\)</span> has any positive value,  if <span class="process-math">\(x\gt B\)</span> we have</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/DEFINITIONdef:second-inad-limit-at-infinity.html ./knowl/xref/DEFINITIONdef:second-inad-limit-at-infinity.html">
 \begin{equation*}
 f(x) = -2-\frac1x \lt  0 \lt  \eps,
 \end{equation*}
 </div>
-<div class="para">and by Definition~\ref{def:second-inad-limit-at-infinity} we conclude that <span class="process-math">\(\tlimit{x}{\infty}{f(x)} =0\)</span> since all of the requirements of our definition have been met (except, of course, <span class="process-math">\(f(x)\gt0\)</span>). Of course, this is nonsense. As we have noted  as <span class="process-math">\(x\)</span> increases without bound <span class="process-math">\(\frac1x\)</span> gets arbitrarily close to zero. So clearly <span class="process-math">\(\tlimit{x}{\infty}{f(x)}=-2\text{.}\)</span> That we are able to ``prove’’ that <span class="process-math">\(f(x)\)</span> goes to zero simply means that Definition~\ref{def:second-inad-limit-at-infinity} doesn’t capture everything we need. We need a more encompassing definition of a limit.</div>
+<div class="para">and by <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONdef:second-inad-limit-at-infinity.html" title="Definition 17.5: Positive Function With Limit Zero at Infinity">~ 17.5</a> we conclude that <span class="process-math">\(\tlimit{x}{\infty}{f(x)} =0\)</span> since all of the requirements of our definition have been met (except, of course, <span class="process-math">\(f(x)\gt0\)</span>). Of course, this is nonsense. As we have noted  as <span class="process-math">\(x\)</span> increases without bound <span class="process-math">\(\frac1x\)</span> gets arbitrarily close to zero. So clearly <span class="process-math">\(\tlimit{x}{\infty}{f(x)}=-2\text{.}\)</span> That we are able to ``prove’’ that <span class="process-math">\(f(x)\)</span> goes to zero simply means that <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONdef:second-inad-limit-at-infinity.html" title="Definition 17.5: Positive Function With Limit Zero at Infinity">~ 17.5</a> doesn’t capture everything we need. We need a more encompassing definition of a limit.</div>
 </div></article><div class="para" id="no-label-4">Based on our experience in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EXlimit1" missing or not unique]</code> with <span class="process-math">\(f(x) = -2-\frac1x\text{,}\)</span> what would you say needs to be changed in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "DEFsecond-inad-limit-at-infinity" missing or not unique]</code> to allow <span class="process-math">\(f(x)\le0\)</span> as well?</div>
 <div class="para" id="no-label-5">The problem of course, is that if <span class="process-math">\(\eps\gt 0\)</span> is given the statement <span class="process-math">\(f(x) \lt  \eps\)</span> doesn’t really capture the idea that <span class="process-math">\(f(x)\)</span> is near the number zero, only that it is less than the number <span class="process-math">\(\eps\text{.}\)</span> For example,  <span class="process-math">\(-1000\)</span> is less than <span class="process-math">\(\eps\)</span> but it is nowhere near zero. What we need is a way to measure how far <span class="process-math">\(f(x)\)</span> is from zero, regardless of whether in the positive or the negative direction.</div>
 <div class="para" id="no-label-6">That is exactly what the absolute value function measures. For example, both <span class="process-math">\(3\)</span> and <span class="process-math">\(-3\)</span> are the same distance from zero, the first  one in the positive and the second one in the negative direction. That is <span class="process-math">\(\abs{3}=\abs{-3}=3\text{.}\)</span>
@@ -698,8 +693,8 @@ f(x) = -2-\frac1x \lt  0 \lt  \eps,
 </div></article><article class="investigation project-like" id="no-label-10"><h5 class="heading">
 <span class="type">Scrapwork</span><span class="space"> </span><span class="codenumber">17.1</span><span class="period">.</span>
 </h5>
-<div class="para" id="no-label-10-1">Let <span class="process-math">\(\eps\gt0\)</span> be given.</div> <div class="para" id="no-label-10-2">As we did in Example~\#\ref{example:LimPosFuncInf} we find the bound <span class="process-math">\(B\)</span> by working the problem backwards. We want to end with <span class="process-math">\(\abs{f(x)}\lt\eps\text{,}\)</span> so that’s where we start. \begin{align*} \abs{f(x)}\amp \lt\eps \abs{-1/x}\amp \lt\eps. \intertext{Since we are only interested in what happens to <span class="process-math">\(f(x)\)</span> as <span class="process-math">\(x\rightarrow\infty\text{,}\)</span> we can safely assume that <span class="process-math">\(x\gt0\text{.}\)</span> Therefore <span class="process-math">\(\abs{\frac{-1}{x}}=\frac{1}{x}\text{,}\)</span> so} \frac1x\amp \lt\eps x\amp \gt\frac1\eps. \end{align*} Apparently to make <span class="process-math">\(\abs{f(x)}\lt\eps\)</span> we need <span class="process-math">\(x\gt\frac1\eps\text{,}\)</span> so we take <span class="process-math">\(B=\frac1\eps\text{.}\)</span>
-</div></article><details id="no-label" class="hiddenproof born-hidden-knowl"><summary><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></summary><article class="hiddenproof"><div class="para" id="no-label-1">Let <span class="process-math">\(\eps\gt0\)</span> be given. Take <span class="process-math">\(B\gt\frac1\eps\text{.}\)</span> If <span class="process-math">\(x\gt B\)</span> then \begin{align*} x\amp \gt\frac{1}{\eps}. \intertext{Therefore} \frac1x\amp \lt \eps \intertext{and} \abs{-\frac1x}\amp \lt \eps. \intertext{So} \abs{f(x)}\amp \lt \eps. \end{align*} Therefore, by Definition~\#\ref{def:limit-at-infinity-nearly-adequate} <span class="process-math">\(\tlimit{x}{\infty}{f(x)}=0\text{.}\)</span>
+<div class="para" id="no-label-10-1">Let <span class="process-math">\(\eps\gt0\)</span> be given.</div> <div class="para" id="no-label-10-2">As we did in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EXAMPLEexample:LimPosFuncInf" missing or not unique]</code> we find the bound <span class="process-math">\(B\)</span> by working the problem backwards. We want to end with <span class="process-math">\(\abs{f(x)}\lt\eps\text{,}\)</span> so that’s where we start. \begin{align*} \abs{f(x)}\amp \lt\eps \abs{-1/x}\amp \lt\eps. \intertext{Since we are only interested in what happens to <span class="process-math">\(f(x)\)</span> as <span class="process-math">\(x\rightarrow\infty\text{,}\)</span> we can safely assume that <span class="process-math">\(x\gt0\text{.}\)</span> Therefore <span class="process-math">\(\abs{\frac{-1}{x}}=\frac{1}{x}\text{,}\)</span> so} \frac1x\amp \lt\eps x\amp \gt\frac1\eps. \end{align*} Apparently to make <span class="process-math">\(\abs{f(x)}\lt\eps\)</span> we need <span class="process-math">\(x\gt\frac1\eps\text{,}\)</span> so we take <span class="process-math">\(B=\frac1\eps\text{.}\)</span>
+</div></article><details id="no-label" class="hiddenproof born-hidden-knowl"><summary><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></summary><article class="hiddenproof"><div class="para" id="no-label-1">Let <span class="process-math">\(\eps\gt0\)</span> be given. Take <span class="process-math">\(B\gt\frac1\eps\text{.}\)</span> If <span class="process-math">\(x\gt B\)</span> then \begin{align*} x\amp \gt\frac{1}{\eps}. \intertext{Therefore} \frac1x\amp \lt \eps \intertext{and} \abs{-\frac1x}\amp \lt \eps. \intertext{So} \abs{f(x)}\amp \lt \eps. \end{align*} Therefore, by <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONdef:limit-at-infinity-nearly-adequate.html" title="Definition 17.9: Zero Limit at Infinity">Definition 17.9</a> <span class="process-math">\(\tlimit{x}{\infty}{f(x)}=0\text{.}\)</span>
 </div></article></details><div class="para logical" id="no-label-12">
 <div class="para">This example displays the format of a limit proof that you need to adhere to. Below is an outline of the format. This is not a course in creative writing. Do not depart from this format.</div>
 <dl class="description-list">
@@ -721,7 +716,7 @@ f(x) = -2-\frac1x \lt  0 \lt  \eps,
 <div class="para" id="no-label-1-1">Identify which statements in the proof in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EXAMPLEFormalLimitProof1" missing or not unique]</code> correspond to the first, second, third, and fourth parts of the format presented above.</div></article><article class="example example-like" id="example:FormalLimitProof2"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">17.12</span><span class="period">.</span>
 </h5>
-<div class="para" id="example:FormalLimitProof2-1"> Our previous examples and problems in this section were fairly simple as formal limit problems go. This one is more complex.</div> <div class="para" id="example:FormalLimitProof2-2">Use  Definition~\#\ref{def:limit-at-infinity-nearly-adequate} to show that <span class="process-math">\(\tlimit{x}{\infty}{\frac{1}{5x-x^2}}=0\text{.}\)</span>
+<div class="para" id="example:FormalLimitProof2-1"> Our previous examples and problems in this section were fairly simple as formal limit problems go. This one is more complex.</div> <div class="para" id="example:FormalLimitProof2-2">Use  <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONdef:limit-at-infinity-nearly-adequate.html" title="Definition 17.9: Zero Limit at Infinity">Definition 17.9</a> to show that <span class="process-math">\(\tlimit{x}{\infty}{\frac{1}{5x-x^2}}=0\text{.}\)</span>
 </div></article><article class="investigation project-like" id="no-label-15"><h5 class="heading">
 <span class="type">Scrapwork</span><span class="space"> </span><span class="codenumber">17.2</span><span class="period">.</span>
 </h5>
@@ -736,21 +731,21 @@ f(x) = -2-\frac1x \lt  0 \lt  \eps,
 </div> <div class="para" id="no-label-15-2">First, since we are only concerned about what happens as <span class="process-math">\(x\rightarrow\infty\)</span> it  is safe to assume that <span class="process-math">\(x\gt0\text{.}\)</span> In that case, <span class="process-math">\(x=\abs{x}\text{.}\)</span> Next, observe that if  <span class="process-math">\(x\gt 5\)</span> also, then <span class="process-math">\(x^2\gt 5x\text{.}\)</span> Thus <span class="process-math">\(5x-x^2\lt0\text{,}\)</span> so that <span class="process-math">\(\abs{\frac{1}{5x-x^2}}=\frac{1}{x^2-5x}\text{.}\)</span> We could now work backwards like before, and solve for <span class="process-math">\(\frac{1}{x^2-5x}\lt\eps\text{.}\)</span> This will work fine, but the Algebra gets very messy. Try it and see.</div> <div class="para" id="no-label-15-3">There is a sneaky way to do this that avoids some of the Algebra. Notice that <span class="process-math">\(\frac{1}{x^2-5x}=\left(\frac{1}{x-5}\right)\cdot\left(\frac1x\right)\text{.}\)</span> Notice further that if <span class="process-math">\(x\gt6\text{,}\)</span> then <span class="process-math">\(x-5\gt1\)</span> so that <span class="process-math">\(\frac{1}{x-5}\lt1\text{.}\)</span>  Putting all of this together we we that for <span class="process-math">\(x\gt6\text{,}\)</span> \begin{align*} \abs{\frac{1}{5x-x^2}}\amp =\abs{\frac{1}{5-x}}\cdot\abs{\frac1x}</div> <div class="para" id="no-label-15-4">\amp =\left(\frac{1}{x-5}\right)\cdot\left(\frac1x\right) \amp \lt 1\cdot\left(\frac1x\right)=\frac1x. \end{align*}</div> <div class="para" id="no-label-15-5">Thus to guarantee that <span class="process-math">\(\abs{\frac{1}{5x-x^2}}\lt\eps\)</span> we need <span class="process-math">\(\frac1x\lt\eps\text{,}\)</span> or <span class="process-math">\(x\gt\frac{1}{\eps}\text{.}\)</span>
 </div></article><details id="no-label" class="hiddenproof born-hidden-knowl"><summary><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></summary><article class="hiddenproof"><div class="para logical" id="no-label-1">
 <div class="para">Let <span class="process-math">\(\eps\gt0\)</span> be given. Let <span class="process-math">\(B\)</span> be the larger of <span class="process-math">\(6\)</span> and <span class="process-math">\(\frac1\eps\text{.}\)</span> If <span class="process-math">\(x\gt B\)</span> then <span class="process-math">\(x\gt6\)</span> so <span class="process-math">\(x-5\gt1\text{.}\)</span> Therefore</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/DEFINITIONdef:limit-at-infinity-nearly-adequate.html">
 \begin{equation*}
 \label{eq:ProofPractice1}
 \abs{\frac{1}{5-x}}=\frac{1}{x-5}\lt1.
 \end{equation*}
 </div>
 <div class="para">Since <span class="process-math">\(x\gt\frac1\eps\gt0\text{,}\)</span> we see that  <span class="process-math">\(\abs{\frac{1}{x}}=\frac{1}{\abs{x}}=\frac1x\lt\eps\text{.}\)</span>  Thus</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/DEFINITIONdef:limit-at-infinity-nearly-adequate.html">
 \begin{equation*}
 \label{eq:ProofPractice2}
 \abs{\frac{1}{5x-x^2}}=\abs{\frac{1}{5-x}}\cdot\abs{\frac1x}\lt1\cdot\frac1x\lt\eps.
 \end{equation*}
 </div>
-<div class="para">Therefore by Definition~\#\ref{def:limit-at-infinity-nearly-adequate},</div>
-<div class="displaymath process-math">
+<div class="para">Therefore by <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONdef:limit-at-infinity-nearly-adequate.html" title="Definition 17.9: Zero Limit at Infinity">Definition 17.9</a>,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/DEFINITIONdef:limit-at-infinity-nearly-adequate.html">
 \begin{equation*}
 \limit{x}{\infty}{\frac{1}{5x-x^2}}=0.
 \end{equation*}
@@ -758,7 +753,7 @@ f(x) = -2-\frac1x \lt  0 \lt  \eps,
 </div></article></details><article class="problem example-like" id="problem:ProofPractice1"><h5 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">17.13</span><span class="period">.</span>
 </h5>
-<div class="para" id="problem:ProofPractice1-1-1"> Explain carefully, and in detail, the reasoning that supports the claims made in Equations~\ref{eq:ProofPractice1} and~\ref{eq:ProofPractice2}.</div></article><div class="para" id="no-label-18">Notice that in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EXAMPLEFormalLimitProof1" missing or not unique]</code> <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EXAMPLEFormalLimitProof2" missing or not unique]</code> the scrapwork was an essential part of the solution, but in the formal proof the results of the scrapwork were so abbreviated as to almost not be present. This is part of the formalism of mathematical writing. We try to make sure that everything that needs to be said is said --- and absolutely nothing more.  In this instance in particular, we are not obligated to explain where the bound <span class="process-math">\(B\)</span> came from, only that it works. It can take time to become comfortable with this presentation style.</div>
+<div class="para" id="problem:ProofPractice1-1-1"> Explain carefully, and in detail, the reasoning that supports the claims made in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQUATIONSeq:ProofPractice1" missing or not unique]</code> <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "ANDeq:ProofPractice2" missing or not unique]</code>.</div></article><div class="para" id="no-label-18">Notice that in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EXAMPLEFormalLimitProof1" missing or not unique]</code> <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EXAMPLEFormalLimitProof2" missing or not unique]</code> the scrapwork was an essential part of the solution, but in the formal proof the results of the scrapwork were so abbreviated as to almost not be present. This is part of the formalism of mathematical writing. We try to make sure that everything that needs to be said is said --- and absolutely nothing more.  In this instance in particular, we are not obligated to explain where the bound <span class="process-math">\(B\)</span> came from, only that it works. It can take time to become comfortable with this presentation style.</div>
 <div class="para" id="no-label-19">Even with practice very few people can read a formal proof without doing the computations necessary to show that all of the claims made are actually true. Keep paper and pencil handy at all times to help you follow the argument.</div>
 <article class="problem example-like" id="no-label"><h5 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">17.14</span><span class="period">.</span>
@@ -780,12 +775,12 @@ f(x) = -2-\frac1x \lt  0 \lt  \eps,
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">17.15</span><span class="period">.</span><span class="space"> </span><span class="title">A Limit at <span class="process-math">\(+\infty\)</span>.</span>
 </h5> <div class="para logical" id="DEFINITIONdef:limit-at-posinfinity-2-1">
 <div class="para"> Suppose that <span class="process-math">\(L\)</span> is a real number and that <span class="process-math">\(f(x)\)</span> is defined for all <span class="process-math">\(x\gt 0\text{.}\)</span> Then we say that</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/DEFINITIONdef:limit-at-infinity-nearly-adequate.html">
 \begin{equation*}
 \limit{x}{\infty}{f(x)}=L
 \end{equation*}
 </div>
-<div class="para">if and only if for every <span class="process-math">\(\eps\gt 0\)</span> there is a real number <span class="process-math">\(B\)</span> with the property that whenever\aside{Notice that if <span class="process-math">\(L=0\)</span> this reduces to  Definition~\#\ref{def:limit-at-infinity-nearly-adequate}. } <span class="process-math">\(x\gt B,\)</span> <span class="process-math">\(\abs{f(x)-L}\lt \eps.\)</span>
+<div class="para">if and only if for every <span class="process-math">\(\eps\gt 0\)</span> there is a real number <span class="process-math">\(B\)</span> with the property that whenever\aside{Notice that if <span class="process-math">\(L=0\)</span> this reduces to  <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONdef:limit-at-infinity-nearly-adequate.html" title="Definition 17.9: Zero Limit at Infinity">Definition 17.9</a>. } <span class="process-math">\(x\gt B,\)</span> <span class="process-math">\(\abs{f(x)-L}\lt \eps.\)</span>
 </div>
 </div></article><article class="example example-like" id="no-label"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">17.16</span><span class="period">.</span>
@@ -804,8 +799,8 @@ f(x) = -2-\frac1x \lt  0 \lt  \eps,
 \end{align*}
 </div>
 </div> <div class="para" id="no-label-24-2">Thus <span class="process-math">\(x\gt \tfrac{1}{\eps}\text{,}\)</span> and it appears that <span class="process-math">\(\abs{f(x)-1}\lt\eps\)</span> as long as <span class="process-math">\(x\)</span> is greater than <span class="process-math">\(\frac{1}{\eps}.\)</span> % Do you see that <span class="process-math">\(B\)</span> can be any</div></article><details id="no-label" class="hiddenproof born-hidden-knowl"><summary><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></summary><article class="hiddenproof"><div class="para logical" id="no-label-1">
-<div class="para">Let <span class="process-math">\(\eps&gt;0\)</span> be given.  Take <span class="process-math">\(x&gt;B=1/\eps\text{.}\)</span> Then \begin{align*} \abs{\tfrac{1}{x}}\amp \lt \eps \abs{\tfrac{-1}{x}}\amp\lt \eps \abs{\left(1-\tfrac{1}{x}\right)-1}\amp\lt \eps \abs{f(x)-1}\amp\lt \eps. \end{align*} Therefore by Definition~\#\ref{def:limit-at-posinfinity},</div>
-<div class="displaymath process-math">
+<div class="para">Let <span class="process-math">\(\eps&gt;0\)</span> be given.  Take <span class="process-math">\(x&gt;B=1/\eps\text{.}\)</span> Then \begin{align*} \abs{\tfrac{1}{x}}\amp \lt \eps \abs{\tfrac{-1}{x}}\amp\lt \eps \abs{\left(1-\tfrac{1}{x}\right)-1}\amp\lt \eps \abs{f(x)-1}\amp\lt \eps. \end{align*} Therefore by <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONdef:limit-at-posinfinity.html" title="Definition 17.15: A Limit at +\infty">Definition 17.15</a>,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/DEFINITIONdef:limit-at-posinfinity.html">
 \begin{equation*}
 \limit{x}{\infty}{f(x)}=1.
 \end{equation*}
@@ -813,8 +808,8 @@ f(x) = -2-\frac1x \lt  0 \lt  \eps,
 </div></article></details><article class="example example-like" id="no-label"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">17.17</span><span class="period">.</span><span class="space"> </span><span class="title">label={  (\alph*)}.</span>
 </h5> <div class="para logical" id="no-label-2">
-<div class="para">In Section~\ref{sec:horiz-asympt-as} we approached the problem of finding  a horizontal asymptote of <span class="process-math">\(f(x)=\frac{5x}{x+1}\)</span> in the following highly intuitive manner, using the ``<span class="process-math">\(\approach{\infty}\)</span>’’ notation.</div>
-<div class="displaymath process-math">
+<div class="para">In <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "SECTIONsec:horiz-asympt-as" missing or not unique]</code> we approached the problem of finding  a horizontal asymptote of <span class="process-math">\(f(x)=\frac{5x}{x+1}\)</span> in the following highly intuitive manner, using the ``<span class="process-math">\(\approach{\infty}\)</span>’’ notation.</div>
+<div class="displaymath process-math" data-contains-math-knowls=" ./knowl/xref/DEFINITIONdef:limit-at-posinfinity.html">
 \begin{equation*}
 \limit{x}{\infty}{\frac{5x}{x+1}} =
 \limit{x}{\infty}{\frac{5x}{x\left(1+\frac1x\right)}} =
@@ -822,11 +817,12 @@ f(x) = -2-\frac1x \lt  0 \lt  \eps,
 \frac{5}{1+\frac{1}{\approach{\infty}}}=\frac{5}{1+0}=5.
 \end{equation*}
 </div>
-<div class="para">So we see that this limit must be equal to five. To prove this rigorously, without referring to infinity, we use Definition~\ref{def:limit-at-posinfinity}</div>
+<div class="para">So we see that this limit must be equal to five. To prove this rigorously, without referring to infinity, we use <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONdef:limit-at-posinfinity.html" title="Definition 17.15: A Limit at +\infty">~ 17.15</a>
+</div>
 </div></article><article class="investigation project-like" id="no-label-27"><h5 class="heading">
 <span class="type">Scrapwork</span><span class="space"> </span><span class="codenumber">17.4</span><span class="period">.</span>
 </h5>
-<div class="para" id="no-label-27-1">Let <span class="process-math">\(\eps\gt0 \)</span> be given. As before we work backwards from our goal, <span class="process-math">\(\abs{\frac{5x}{x+1}-5}\lt\eps\text{.}\)</span> \begin{align} \nonumber    \abs{\frac{5x}{x+1}-5}\amp\lt\eps \nonumber    \abs{\frac{5x-5(x+1)}{x+1}}\amp\lt \eps \nonumber    \abs{\frac{-5}{x+1}}\amp\lt\eps \nonumber  \frac{\abs{-5}}{\abs{x+1}}\amp\lt\eps. \intertext{As long as <span class="process-math">\(x\gt-1\)</span> this is the same as } \frac{5}{x+1}\amp\lt\eps.    \label{eq:LimAtInfExample1} \end{align} so we will stipulate that <span class="process-math">\(B\)</span> (and therefore <span class="process-math">\(x\)</span>) must be  at least greater than <span class="process-math">\(-1\text{.}\)</span> Solving inequality~\ref{eq:LimAtInfExample1} for <span class="process-math">\(x\)</span> we see that <span class="process-math">\(x\gt \frac5\eps-1\)</span> also. So we take <span class="process-math">\(B\)</span> to be the greater of <span class="process-math">\(-1\)</span> and <span class="process-math">\(\frac5\eps-1\text{.}\)</span> We capture this idea with the notation,  <span class="process-math">\(B=\max\left(-1, \frac5\eps-1\right)\text{.}\)</span>
+<div class="para" id="no-label-27-1">Let <span class="process-math">\(\eps\gt0 \)</span> be given. As before we work backwards from our goal, <span class="process-math">\(\abs{\frac{5x}{x+1}-5}\lt\eps\text{.}\)</span> \begin{align} \nonumber    \abs{\frac{5x}{x+1}-5}\amp\lt\eps \nonumber    \abs{\frac{5x-5(x+1)}{x+1}}\amp\lt \eps \nonumber    \abs{\frac{-5}{x+1}}\amp\lt\eps \nonumber  \frac{\abs{-5}}{\abs{x+1}}\amp\lt\eps. \intertext{As long as <span class="process-math">\(x\gt-1\)</span> this is the same as } \frac{5}{x+1}\amp\lt\eps.    \label{eq:LimAtInfExample1} \end{align} so we will stipulate that <span class="process-math">\(B\)</span> (and therefore <span class="process-math">\(x\)</span>) must be  at least greater than <span class="process-math">\(-1\text{.}\)</span> Solving <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "INEQUALITYeq:LimAtInfExample1" missing or not unique]</code> for <span class="process-math">\(x\)</span> we see that <span class="process-math">\(x\gt \frac5\eps-1\)</span> also. So we take <span class="process-math">\(B\)</span> to be the greater of <span class="process-math">\(-1\)</span> and <span class="process-math">\(\frac5\eps-1\text{.}\)</span> We capture this idea with the notation,  <span class="process-math">\(B=\max\left(-1, \frac5\eps-1\right)\text{.}\)</span>
 </div></article><article class="problem example-like" id="no-label"><h5 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">17.18</span><span class="period">.</span>
 </h5>
@@ -1200,7 +1196,7 @@ f\left(\tlimit{x}{-\infty}{g(x)}\right).
 g(x)}=\limit{x}{\infty}{f(x)}\cdot\limit{x}{\infty}{g(x)}\text{.}\)</span>
 </div>
 </div></article></details></section><section class="subsubsection" id="no-label"><h5 class="heading hide-type">
-<span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">17.3.4.1</span><span class="space"> </span><span class="title">Proving Lemma~\#\ref{lemma:LimProd1</span>
+<span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">17.3.4.1</span><span class="space"> </span><span class="title">Proving <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "LEMMAlemma:LimProd1" missing or not unique]</code></span>
 </h5>
 <div class="para logical" id="no-label-2">
 <div class="para">To prove <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "LEMMALimProd1" missing or not unique]</code> we need to guarantee that if <span class="process-math">\(x\)</span> is large enough then</div>
@@ -1240,7 +1236,7 @@ g(x)}=\limit{x}{\infty}{f(x)}\cdot\limit{x}{\infty}{g(x)}\text{.}\)</span>
 <div class="para">Take <span class="process-math">\(B = \max(\beta, B_g)\text{.}\)</span> Then for all <span class="process-math">\(x\gt B\)</span> we have \begin{align*} \abs{f(x)(g(x) - L_g)}\amp =\abs{f(x)}\abs{g(x) - L_g} \amp \lt N\abs{g(x) - L_g} \amp \lt N\frac{\eps}{N} \amp = \eps. \end{align*} Therefore    <span class="process-math">\(\tlimit{x}{\infty}{\left(f(x)\cdot g(x)-f(x)\cdot L_g\right)}=0.\)</span>
 </div>
 </div></article></details></section><section class="subsubsection" id="no-label"><h5 class="heading hide-type">
-<span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">17.3.4.2</span><span class="space"> </span><span class="title">Proving Lemma~\#\ref{lemma:LimProd2</span>
+<span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">17.3.4.2</span><span class="space"> </span><span class="title">Proving <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "LEMMAlemma:LimProd2" missing or not unique]</code></span>
 </h5>
 <div class="para logical" id="no-label-2">
 <div class="para">To prove <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "LEMMALimProd2" missing or not unique]</code> we need to guarantee that if <span class="process-math">\(x\)</span> is large enough then</div>
@@ -1265,11 +1261,11 @@ g(x)}=\limit{x}{\infty}{f(x)}\cdot\limit{x}{\infty}{g(x)}\text{.}\)</span>
 <article class="problem example-like" id="no-label"><h6 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">17.53</span><span class="period">.</span>
 </h6>
-<div class="introduction" id="no-label-1"><div class="para" id="no-label-1-1">As you’ve seen using the limit definition (using <span class="process-math">\(\eps\)</span> and <span class="process-math">\(\delta\)</span>) to prove theorems is hard. But, as we said in Digression~\#\ref{digression:WhyProveTheorems}, the whole point of proving theorems is to give ourselves more refined tools that we can use instead of resorting to definitions.</div></div>
+<div class="introduction" id="no-label-1"><div class="para" id="no-label-1-1">As you’ve seen using the limit definition (using <span class="process-math">\(\eps\)</span> and <span class="process-math">\(\delta\)</span>) to prove theorems is hard. But, as we said in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "DIGRESSIONdigression:WhyProveTheorems" missing or not unique]</code>, the whole point of proving theorems is to give ourselves more refined tools that we can use instead of resorting to definitions.</div></div>
 <article class="task exercise-like" id="no-label-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
 <div class="para logical" id="no-label-2-1-1">
-<div class="para">Now that we have Lemma~\#\ref{lemma:LimProd1} and Lemma~\#\ref{lemma:LimProd2} there is actually a simpler way to prove Theorem~\#\ref{thm:limit-product-infinity}. Observe that</div>
-<div class="displaymath process-math">
+<div class="para">Now that we have <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "LEMMAlemma:LimProd1" missing or not unique]</code> and <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "LEMMAlemma:LimProd2" missing or not unique]</code> there is actually a simpler way to prove <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "THEOREMthm:limit-product-infinity" missing or not unique]</code>. Observe that</div>
+<div class="displaymath process-math" data-contains-math-knowls="     ">
 \begin{equation*}
 \label{eq:LimProd3}
 \underbrace{f(x)\cdot g(x) - L_g\cdot L_f}_{\Gamma(x)} = \underbrace{\left[f(x)\cdot g(x)-f(x)\cdot
@@ -1277,9 +1273,10 @@ L_g\right]}_{\alpha(x)}+\underbrace{\left[f(x)\cdot L_g - L_f\cdot
 L_g\right]}_{\beta(x)}
 \end{equation*}
 </div>
-<div class="para">and complete the proof by citing Lemma~\#\ref{lemma:LimProd1} and Lemma~\#\ref{lemma:LimProd2} and the appropriate, previously proven, limit theorem. \hint{The right side of Equation~(\ref{eq:LimProd3}) is a sum.}</div>
+<div class="para">and complete the proof by citing <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "LEMMAlemma:LimProd1" missing or not unique]</code> and <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "LEMMAlemma:LimProd2" missing or not unique]</code> and the appropriate, previously proven, limit theorem. \hint{The right side of <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQUATIONeq:LimProd3" missing or not unique]</code> is a sum.}</div>
 </div></article><article class="task exercise-like" id="no-label-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<div class="para" id="no-label-3-1-1">Lemma~\#\ref{lemma:LimProd2} can also be proved without resorting to the limit definition (using <span class="process-math">\(\eps\)</span> and <span class="process-math">\(\delta\)</span>).  Prove it by citing Lemma~\ref{lemma:LimProd1} and the appropriate, previously proved, limit theorems.</div></article></article><div class="para" id="no-label-10">If you find yourself becoming completely absorbed in, and possibly even enjoying the details of these arguments you are surely a mathematician by inclination, if not by training (yet). There are more, and more interesting, results where these came from.  Change your major and come join us. Sometimes we bring cookies.</div>
+<div class="para" id="no-label-3-1-1">
+<code class="code-inline tex2jax_ignore">[cross-reference to target(s) "LEMMAlemma:LimProd2" missing or not unique]</code> can also be proved without resorting to the limit definition (using <span class="process-math">\(\eps\)</span> and <span class="process-math">\(\delta\)</span>).  Prove it by citing <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "LEMMAlemma:LimProd1" missing or not unique]</code> and the appropriate, previously proved, limit theorems.</div></article></article><div class="para" id="no-label-10">If you find yourself becoming completely absorbed in, and possibly even enjoying the details of these arguments you are surely a mathematician by inclination, if not by training (yet). There are more, and more interesting, results where these came from.  Change your major and come join us. Sometimes we bring cookies.</div>
 <article class="problem example-like" id="no-label"><h6 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">17.54</span><span class="period">.</span>
 </h6>
@@ -1412,9 +1409,9 @@ L_g\right]}_{\beta(x)}
 </h5>
 <div class="introduction" id="problem:coda:-one-sided-1"><div class="para" id="problem:coda:-one-sided-1-1"></div></div>
 <article class="task exercise-like" id="problem:coda:-one-sided-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<div class="para" id="problem:coda:-one-sided-2-1-1">Use Definition~\ref{def:OneSidedLimits-Formal} as a model to state a similar definition for <span class="process-math">\(\ltlimit{x}{a}{f(x)}=L\)</span>
+<div class="para" id="problem:coda:-one-sided-2-1-1">Use <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONdef:OneSidedLimits-Formal.html" title="Definition 17.62: Right-Hand Limit">~ 17.62</a> as a model to state a similar definition for <span class="process-math">\(\ltlimit{x}{a}{f(x)}=L\)</span>
 </div></article><article class="task exercise-like" id="problem:coda:-one-sided-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<div class="para" id="problem:coda:-one-sided-3-1-1">Prove   Theorem~\#\ref{theorem:OneSideLim} from Chapter~\ref{chpt:when-deriv-doesnt}.</div></article></article><div class="para" id="no-label-12">As you can see, rigorous demonstrations, as necessary as they are, can become complicated and tedious.  Perhaps this explains why the practice of Calculus predated its theory.</div>
+<div class="para" id="problem:coda:-one-sided-3-1-1">Prove   <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "THEOREMtheorem:OneSideLim" missing or not unique]</code> from <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "CHAPTERchpt:when-deriv-doesnt" missing or not unique]</code>.</div></article></article><div class="para" id="no-label-12">As you can see, rigorous demonstrations, as necessary as they are, can become complicated and tedious.  Perhaps this explains why the practice of Calculus predated its theory.</div>
 <div class="para" id="no-label-13">We have defined the derivative by <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "DEFDerivative" missing or not unique]</code>; derived all of our differentiation rules via this definition, and shown -- rigorously -- that founding Calculus on the theory of limits gives us all of the properties we found useful in Part 1 of this textbook. At long last, this places a solid, logical, and rigorous foundation underneath the Differential Calculus of Newton and Leibniz.</div>
 <div class="para" id="no-label-14">And Bishop Berkeley has nothing left to criticize.</div></section></section></section></div>
 <div class="ptx-content-footer">

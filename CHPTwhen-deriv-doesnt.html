@@ -137,7 +137,7 @@ window.MathJax = {
 \def\ftceval#1#2#3{#1\hskip.5ex{\llap{\smash{\rule[-3ex]{0.5pt}{7ex}}}_{\raise{-3ex}{\hskip.5ex#2}}^{\raise{-5ex}{\hskip.5ex #3}}}}
 
 
-  \def\eval#1#2#3{#1\hskip.5ex{\llap{\rule[-1.5ex]{0.5pt}{4ex}}_{\raise{-1.5ex}{\hskip.5ex#2=#3}}}}
+\def\eval#1#2#3{#1\hskip.5ex{\llap{\rule[-1.5ex]{0.5pt}{4ex}}_{\raise{-1.5ex}{\hskip.5ex#2=#3}}}}
 \def\dispeval#1#2#3{#1\hskip.5ex{\llap{\smash{\rule[-2ex]{0.5pt}{5ex}}}_{\raise{-2ex}{\hskip.5ex#2=#3}}}}
 
 
@@ -159,6 +159,9 @@ window.MathJax = {
 \def\partialfx#1#2{\frac{\partial{#1}}{\partial{#2}}} 
 \def\partialfxn#1#2#3{\frac{\partial^{#3}{#1}}{\partial{#2}^{#3}}} 
 \def\dfdxn#1#2#3{\frac{\text{d}^{#3}{#1}}{\text{d}{#2}^{#3}}} 
+
+\def\dfdxat#1#2#3{\eval{\dfdx{#1}{#2}}{#2}{#3}}
+
 \def\limit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}#3}}
 \def\tlimit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}}#3}
 \def\limitX#1#2#3#4{{\displaystyle\lim_{\underset{#4}{#1\rightarrow #2}}#3}}
@@ -176,9 +179,8 @@ window.MathJax = {
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
-<li class="toc-item toc-dedication"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Dedication</span></a></div></li>
-<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
-<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-5.html" class="internal"><span class="title">Relevant Quotes</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Epigraphs</span></a></div></li>
 <li class="toc-item toc-preface"><div class="toc-title-box"><a href="SECinstructor.html" class="internal"><span class="title">To the Instructor: Read This First</span></a></div></li>
 </ul>
 </li>
@@ -191,13 +193,7 @@ window.MathJax = {
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAproblem-solving.html#SECusing-lett-inst" class="internal"><span class="codenumber">2.1</span> <span class="title">Using Letters Instead of Numbers</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAproblem-solving.html#SECan-easy-problem-alg" class="internal"><span class="codenumber">2.2</span> <span class="title">Substitution, or Making Things “Easy on the Eyes”</span></a></div></li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAproblem-solving.html#SECan-easy-problem-geo" class="internal"><span class="codenumber">2.3</span> <span class="title">An “Easy” Problem From Geometry</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAproblem-solving.html#subsection-digression-MakingMistakes" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Digression: Making Mistakes</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAproblem-solving.html#SECan-easy-problem-geo-4" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Continuing our example</span></a></div></li>
-</ul>
-</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAproblem-solving.html#SECan-easy-problem-geo" class="internal"><span class="codenumber">2.3</span> <span class="title">An “Easy” Problem From Geometry</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAproblem-solving.html#SECour-advice-synopsis" class="internal"><span class="codenumber">2.4</span> <span class="title">Our advice, a synopsis</span></a></div></li>
 </ul>
 </li>
@@ -205,13 +201,13 @@ window.MathJax = {
 <div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html" class="internal"><span class="codenumber">3</span> <span class="title">Science Before Calculus</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#Apologia" class="internal"><span class="codenumber">3.1</span> <span class="title">Apologia</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#no-label" class="internal"><span class="codenumber">3.2</span> <span class="title">Some Preliminaries</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#SECTIONSomePreliminaries" class="internal"><span class="codenumber">3.2</span> <span class="title">Some Preliminaries</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#sec-laziness-nature" class="internal"><span class="codenumber">3.3</span> <span class="title">The Laziness of Nature</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#subsection-" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Nature is Lazy</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#SUBSECTIONNatureLazy" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Nature is Lazy</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#Digress-VarConstFunc-" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Digression: Variables, Constants, and Functions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#subsection-" class="internal"><span class="codenumber">3.3.3</span> <span class="title">After Digression</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#sec-laziness-nature-4" class="internal"><span class="codenumber">3.3.3</span> <span class="title">After Digression</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#sec:ferm-meth-aedeq" class="internal"><span class="codenumber">3.4</span> <span class="title">Fermat’s Method of Adequality</span></a></div></li>
@@ -219,7 +215,7 @@ window.MathJax = {
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#sec:roberv-conic-sect" class="internal"><span class="codenumber">3.6</span> <span class="title">Roberval, Conic Sections, and the Dynamic Approach</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#no-label" class="internal"><span class="codenumber">3.6.1</span> <span class="title">Speed, Velocity, and Rates of Change</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#SUBSECTIONSpdVelRofC" class="internal"><span class="codenumber">3.6.1</span> <span class="title">Speed, Velocity, and Rates of Change</span></a></div></li>
 <li class="toc-item toc-subsection">
 <div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#no-label" class="internal"><span class="codenumber">3.6.2</span> <span class="title">The Tangent Lines of the Conic Sections</span></a></div>
 <ul class="structural toc-item-list">
@@ -258,27 +254,27 @@ window.MathJax = {
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="SECveloc-slop-tang.html" class="internal"><span class="codenumber">5</span> <span class="title">Slopes, Tangents, and Rates of Change</span></a></div>
+<div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html" class="internal"><span class="codenumber">5</span> <span class="title">Slopes, Tangents, and Rates of Change</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#sec:slopes-tangents" class="internal"><span class="codenumber">5.1</span> <span class="title">Slopes and Tangents</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#SECdefin-tang-line" class="internal"><span class="codenumber">5.2</span> <span class="title">Defining the Tangent Line</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#sec:vomit-comet" class="internal"><span class="codenumber">5.3</span> <span class="title">The Vomit Comet</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#sec:rates-change" class="internal"><span class="codenumber">5.4</span> <span class="title">Galileo Drops the Ball</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#no-label" class="internal"><span class="codenumber">5.5</span> <span class="title">Bringing in Calculus</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#subsec:Derivative" class="internal"><span class="codenumber">5.6</span> <span class="title">The Derivative</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#sec:newt-flux-dynam" class="internal"><span class="codenumber">5.7</span> <span class="title">Thinking Dynamically</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#sec:newt-meth-flux" class="internal"><span class="codenumber">5.8</span> <span class="title">Newton’s Method of Fluxions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html#sec:slopes-tangents" class="internal"><span class="codenumber">5.1</span> <span class="title">Slopes and Tangents</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html#SECTIONdefin-tang-line" class="internal"><span class="codenumber">5.2</span> <span class="title">Defining the Tangent Line</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html#sec:vomit-comet" class="internal"><span class="codenumber">5.3</span> <span class="title">The Vomit Comet</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html#sec:rates-change" class="internal"><span class="codenumber">5.4</span> <span class="title">Galileo Drops the Ball</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html#no-label" class="internal"><span class="codenumber">5.5</span> <span class="title">Bringing in Calculus</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html#subsec:Derivative" class="internal"><span class="codenumber">5.6</span> <span class="title">The Derivative</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html#sec:newt-flux-dynam" class="internal"><span class="codenumber">5.7</span> <span class="title">Thinking Dynamically</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html#SECTIONnewt-meth-flux" class="internal"><span class="codenumber">5.8</span> <span class="title">Newton’s Method of Fluxions</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="SECveloc-slop-tang.html#sec:self-inters-curv" class="internal"><span class="codenumber">5.9</span> <span class="title">Self-intersecting Curves and Parametric Equations</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#no-label" class="internal"><span class="codenumber">5.9.1</span> <span class="title">Parametric Functions</span></a></div></li></ul>
+<div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html#sec:self-inters-curv" class="internal"><span class="codenumber">5.9</span> <span class="title">Self-intersecting Curves and Parametric Equations</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html#no-label" class="internal"><span class="codenumber">5.9.1</span> <span class="title">Parametric Functions</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="SECveloc-slop-tang.html#sec:bridg-chains-telesc" class="internal"><span class="codenumber">5.10</span> <span class="title">Bridges, Chains, Domes, and Telescopes</span></a></div>
+<div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html#sec:bridg-chains-telesc" class="internal"><span class="codenumber">5.10</span> <span class="title">Bridges, Chains, Domes, and Telescopes</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#no-label" class="internal"><span class="codenumber">5.10.1</span> <span class="title">Bridges</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#no-label" class="internal"><span class="codenumber">5.10.2</span> <span class="title">Chains</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#no-label" class="internal"><span class="codenumber">5.10.3</span> <span class="title">Domes</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#no-label" class="internal"><span class="codenumber">5.10.4</span> <span class="title">Telescopes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html#no-label" class="internal"><span class="codenumber">5.10.1</span> <span class="title">Bridges</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html#no-label" class="internal"><span class="codenumber">5.10.2</span> <span class="title">Chains</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html#no-label" class="internal"><span class="codenumber">5.10.3</span> <span class="title">Domes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html#no-label" class="internal"><span class="codenumber">5.10.4</span> <span class="title">Telescopes</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -296,30 +292,30 @@ window.MathJax = {
 </li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:model-with-trig" class="internal"><span class="codenumber">6.1.3</span> <span class="title">Modeling with Trigonometric Functions</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#no-label" class="internal"><span class="codenumber">6.1.4</span> <span class="title">Phase Shifts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:polar-coordinates" class="internal"><span class="codenumber">6.1.5</span> <span class="title">Polar Coordinates</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:polar-coordinates" class="internal"><span class="codenumber">6.2</span> <span class="title">Polar Coordinates</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAcalc-trig.html#sec:diff-sine-cosine" class="internal"><span class="codenumber">6.3</span> <span class="title">The Differentials of the Sine and Cosine Functions</span></a></div>
+<div class="toc-title-box"><a href="CHAcalc-trig.html#sec:diff-sine-cosine" class="internal"><span class="codenumber">6.2</span> <span class="title">The Differentials of the Sine and Cosine Functions</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:polar-coord-calc" class="internal"><span class="codenumber">6.3.1</span> <span class="title">Polar Coordinates and Calculus</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#no-label" class="internal"><span class="codenumber">6.3.2</span> <span class="title">The Brachistochrone Problem</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#no-label" class="internal"><span class="codenumber">6.3.3</span> <span class="title">Spin Casting, Redux</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:simple-harm-oscill" class="internal"><span class="codenumber">6.3.4</span> <span class="title">Simple Harmonic Oscillation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:polar-coord-calc" class="internal"><span class="codenumber">6.2.1</span> <span class="title">Polar Coordinates and Calculus</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#no-label" class="internal"><span class="codenumber">6.2.2</span> <span class="title">The Brachistochrone Problem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#no-label" class="internal"><span class="codenumber">6.2.3</span> <span class="title">Spin Casting, Redux</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:simple-harm-oscill" class="internal"><span class="codenumber">6.2.4</span> <span class="title">Simple Harmonic Oscillation</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAcalc-trig.html#subsec:diff-other-trig" class="internal"><span class="codenumber">6.4</span> <span class="title">The Differentials of the Other Trigonometric Functions</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:inverse-tan-and-cot" class="internal"><span class="codenumber">6.5</span> <span class="title">The Inverse Tangent and Cotangent Functions</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:witch-agnesi-inverse" class="internal"><span class="codenumber">6.6</span> <span class="title">The Witch of Agnesi and the Inverse Tangent Function</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAcalc-trig.html#SECTIONSECTIONdiff-inverse-tancot" class="internal"><span class="codenumber">6.7</span> <span class="title">The Differentials of the Inverse Tangent and Inverse Cotangent Functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAcalc-trig.html#subsec:diff-other-trig" class="internal"><span class="codenumber">6.3</span> <span class="title">The Differentials of the Other Trigonometric Functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:inverse-tan-and-cot" class="internal"><span class="codenumber">6.4</span> <span class="title">The Inverse Tangent and Cotangent Functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:witch-agnesi-inverse" class="internal"><span class="codenumber">6.5</span> <span class="title">The Witch of Agnesi and the Inverse Tangent Function</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAcalc-trig.html#SECTIONSECTIONdiff-inverse-tancot" class="internal"><span class="codenumber">6.6</span> <span class="title">The Differentials of the Inverse Tangent and Inverse Cotangent Functions</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAcalc-trig.html#sec:other-inverse-trig" class="internal"><span class="codenumber">6.8</span> <span class="title">The Other Inverse Trigonometric Functions</span></a></div>
+<div class="toc-title-box"><a href="CHAcalc-trig.html#sec:other-inverse-trig" class="internal"><span class="codenumber">6.7</span> <span class="title">The Other Inverse Trigonometric Functions</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#no-label" class="internal"><span class="codenumber">6.8.1</span> <span class="title">The Inverse Sine Function: \boldmath <span class="process-math">\(\inverse\sin(x)\)</span></span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#no-label" class="internal"><span class="codenumber">6.8.2</span> <span class="title">The Inverse Secant and Inverse Cosecant</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#no-label" class="internal"><span class="codenumber">6.7.1</span> <span class="title">The Inverse Sine Function: \boldmath <span class="process-math">\(\inverse\sin(x)\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#no-label" class="internal"><span class="codenumber">6.7.2</span> <span class="title">The Inverse Secant and Inverse Cosecant</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:curvature" class="internal"><span class="codenumber">6.9</span> <span class="title">Curvature</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:curvature" class="internal"><span class="codenumber">6.8</span> <span class="title">Curvature</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -350,16 +346,15 @@ window.MathJax = {
 <div class="toc-title-box"><a href="CHAlast-elem-funct.html#no-label" class="internal"><span class="codenumber">8.1</span> <span class="title">Introduction</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAlast-elem-funct.html#no-label" class="internal"><span class="codenumber">8.1.1</span> <span class="title">Initial Value Problems (IVPs)</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAlast-elem-funct.html#sec:exponential" class="internal"><span class="codenumber">8.2</span> <span class="title">The Natural Exponential</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAlast-elem-funct.html#sec:hyperb-trig-hang" class="internal"><span class="codenumber">8.2.1</span> <span class="title">Hyperbolic Trigonometry: The Hanging Chain</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAlast-elem-funct.html#no-label" class="internal"><span class="codenumber">8.2.2</span> <span class="title">The Gateway Arch</span></a></div></li>
-</ul>
-</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAlast-elem-funct.html#sec:exponential" class="internal"><span class="codenumber">8.2</span> <span class="title">The Natural Exponential</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="CHAlast-elem-funct.html#sec:exponential-growth" class="internal"><span class="codenumber">8.3</span> <span class="title">Exponential Growth</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAlast-elem-funct.html#no-label" class="internal"><span class="codenumber">8.3.1</span> <span class="title">Exponential Functions and Compound Interest</span></a></div></li></ul>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAlast-elem-funct.html#sec:hyperb-trig-hang" class="internal"><span class="codenumber">8.3.1</span> <span class="title">Hyperbolic Trigonometry: The Hanging Chain</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAlast-elem-funct.html#no-label" class="internal"><span class="codenumber">8.3.2</span> <span class="title">The Gateway Arch</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAlast-elem-funct.html#sec:exponential-growth-5" class="internal"><span class="codenumber">8.3.3</span> <span class="title">Exponential Growth</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAlast-elem-funct.html#no-label" class="internal"><span class="codenumber">8.3.4</span> <span class="title">Exponential Functions and Compound Interest</span></a></div></li>
+</ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="CHAlast-elem-funct.html#sec:natural-logarithm-1" class="internal"><span class="codenumber">8.4</span> <span class="title">The Natural Logarithm</span></a></div>
@@ -458,7 +453,7 @@ window.MathJax = {
 <div class="toc-title-box"><a href="CHAlimits-lhop-rule.html" class="internal"><span class="codenumber">12</span> <span class="title">Limits and L’H\^o pital’s Rule</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAlimits-lhop-rule.html#sec:horiz-asympt-as" class="internal"><span class="codenumber">12.1</span> <span class="title">Horizontal Asymptotes as Limits ``at Infinity’’</span></a></div>
+<div class="toc-title-box"><a href="CHAlimits-lhop-rule.html#sec:horiz-asympt-as" class="internal"><span class="codenumber">12.1</span> <span class="title">Horizontal Asymptotes as Limits “at Infinity”</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAlimits-lhop-rule.html#digression:LimitNotation" class="internal"><span class="codenumber">12.1.1</span> <span class="title">Limit Notation</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAlimits-lhop-rule.html#sec:squeeze-theorem-informal" class="internal"><span class="codenumber">12.2</span> <span class="title">The Squeeze Theorem</span></a></div></li>
@@ -530,8 +525,8 @@ window.MathJax = {
 <li class="toc-item toc-subsection">
 <div class="toc-title-box"><a href="CHAformal-limits.html#sec:limit-product-at" class="internal"><span class="codenumber">17.3.4</span> <span class="title">The Limit of a Product</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAformal-limits.html#no-label" class="internal"><span class="codenumber">17.3.4.1</span> <span class="title">Proving Lemma~\#\ref{lemma:LimProd1</span></a></div></li>
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAformal-limits.html#no-label" class="internal"><span class="codenumber">17.3.4.2</span> <span class="title">Proving Lemma~\#\ref{lemma:LimProd2</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAformal-limits.html#no-label" class="internal"><span class="codenumber">17.3.4.1</span> <span class="title">Proving <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "LEMMAlemma:LimProd1" missing or not unique]</code></span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAformal-limits.html#no-label" class="internal"><span class="codenumber">17.3.4.2</span> <span class="title">Proving <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "LEMMAlemma:LimProd2" missing or not unique]</code></span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAformal-limits.html#no-label" class="internal"><span class="codenumber">17.3.5</span> <span class="title">The Function  \boldmath  <span class="process-math">\(f(x)=\frac1x\)</span> is Continuous Wherever  It Is Defined</span></a></div></li>
@@ -562,49 +557,49 @@ window.MathJax = {
 </blockquote> <div class="para" id="CHPTwhen-deriv-doesnt-2-3">In <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "SUBSECunderl-deriv" missing or not unique]</code> we saw that those points where the derivative doesn’t exist are possible optimal points but we didn’t pursue this any further at the time. However we now need to re-examine the non-existence of derivatives.</div> <div class="para" id="CHPTwhen-deriv-doesnt-2-4">We also observed in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "SUBSECunderl-deriv" missing or not unique]</code> that derivatives fail to exist at points where the Principle of Local Linearity does not hold. This is true, but the only way we currently have to determine if the Principle of Local Linearity holds is to look at a graph. While graphs are useful, we have learned that we should not put all of our faith in what we  conclude from them.</div> <div class="para" id="CHPTwhen-deriv-doesnt-2-5">On the other hand, by <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "DEFDerivative" missing or not unique]</code> the derivative of a function is given by a limit, and from our work in <a href="CHAlimits-lhop-rule.html" class="internal" title="Chapter 12: Limits and L’H\^o pital’s Rule">Chapter 12</a> we know that not all limits exist. For example, if we try to compute the value of <span class="process-math">\(f^\prime(2)\)</span> for some function and we find that <span class="process-math">\(\tlimit{h}{0}{\frac{f(2+h)-f(2)}{h}}\)</span> is meaningless then <span class="process-math">\(f\)</span> is not differentiable at <span class="process-math">\(x=2\text{.}\)</span> In other words, <span class="process-math">\(f^\prime(2)\)</span> does not exist.</div> <div class="para" id="CHPTwhen-deriv-doesnt-2-6">So, the limit definition gives us a computational tool we can use to decide the question of differentiability which, as we saw in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "SUBSECoptim-abstr-probl" missing or not unique]</code>, is crucial to finding possible optimal transition points of a function.</div> <div class="para" id="CHPTwhen-deriv-doesnt-2-7">In our comments following <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EXAMPLEPOTP-WhereDerivIsUndef" missing or not unique]</code> we listed several functions which are not differentiable at <span class="process-math">\(x=0\text{.}\)</span> Of these, the Absolute Value function, <span class="process-math">\(f(x)=\abs{x}\text{,}\)</span> is probably the simplest to work with, so we will start there.</div> <article class="example example-like" id="example:AbsValFunc"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">16.1</span><span class="period">.</span><span class="space"> </span><span class="title">The  Absolute Value Function.</span>
 </h3> <div class="para logical" id="example:AbsValFunc-2">
-<div class="para"> The Absolute Value function is usually introduced with some vague statement like, \centerline{``The absolute value of a number is just the positive version of the number,’’} or \centerline{``<span class="process-math">\(\abs{x-a}\)</span> gives the length of the line segment between <span class="process-math">\(x\)</span> and <span class="process-math">\(a\text{.}\)</span>’’} These are both true statements and are OK as intuitive definitions, but we will need something more precise from now on. The formal definition of the Absolute Value function is: \begin{mydefinition}[The Absolute Value Function] The Absolute Value of <span class="process-math">\(x\)</span> is: <span class="process-math">\(\abs{x}=
+<div class="para"> The Absolute Value function is usually introduced with some vague statement like, \centerline{“The absolute value of a number is just the positive version of the number,”} or \centerline{“<span class="process-math">\(\abs{x-a}\)</span> gives the length of the line segment between <span class="process-math">\(x\)</span> and <span class="process-math">\(a\text{.}\)</span>”} These are both true statements and are OK as intuitive definitions, but we will need something more precise from now on. The formal definition of the Absolute Value function is: \begin{mydefinition}[The Absolute Value Function] The Absolute Value of <span class="process-math">\(x\)</span> is: <span class="process-math">\(\abs{x}=
 \begin{cases}
 x\amp\text{ if } x\ge0
 -x\amp\text{ if } x\lt 0
-\end{cases}\text{.}\)</span> \end{mydefinition} \begin{wrapfigure}[10]{r}{2in} \vskip-3mm \captionsetup{labelformat=empty} \centerline{\includegraphics*[height=1.5in,width=2in]{../Figures/AbsVal}} \label{fig:AbsVal} \end{wrapfigure} The graph of the Absolute Value function is given at the right. Notice that <span class="process-math">\(f(x)=\abs{x}\)</span> is defined at <span class="process-math">\(x=0\)</span> since <span class="process-math">\(\abs{0}=0\text{,}\)</span> but as we indicated in Section~\ref{subsec:underl-deriv} the Principle of Local Linearity does not hold at <span class="process-math">\(x=0\)</span> so we suspect that the Absolute Value function is not differentiable at <span class="process-math">\(x=0\text{.}\)</span> But we now have the ability to confirm our suspicion analytically so let’s take a look at this using the limit definition of the derivative. The derivative of <span class="process-math">\(\abs{x}\)</span> at <span class="process-math">\(x\)</span> will be the value of the limit <span class="process-math">\(\tlimit{h}{0}{\frac{\abs{x+h}-\abs{x}}{h}}\)</span> so the derivative of <span class="process-math">\(\abs{x}\)</span> at <span class="process-math">\(x=0\)</span> will be:</div>
-<div class="displaymath process-math">
+\end{cases}\text{.}\)</span> \end{mydefinition} \begin{wrapfigure}[10]{r}{2in} \vskip-3mm \captionsetup{labelformat=empty} \centerline{\includegraphics*[height=1.5in,width=2in]{../Figures/AbsVal}} \label{fig:AbsVal} \end{wrapfigure} The graph of the Absolute Value function is given at the right. Notice that <span class="process-math">\(f(x)=\abs{x}\)</span> is defined at <span class="process-math">\(x=0\)</span> since <span class="process-math">\(\abs{0}=0\text{,}\)</span> but as we indicated in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "SECTIONsubsec:underl-deriv" missing or not unique]</code> the Principle of Local Linearity does not hold at <span class="process-math">\(x=0\)</span> so we suspect that the Absolute Value function is not differentiable at <span class="process-math">\(x=0\text{.}\)</span> But we now have the ability to confirm our suspicion analytically so let’s take a look at this using the limit definition of the derivative. The derivative of <span class="process-math">\(\abs{x}\)</span> at <span class="process-math">\(x\)</span> will be the value of the limit <span class="process-math">\(\tlimit{h}{0}{\frac{\abs{x+h}-\abs{x}}{h}}\)</span> so the derivative of <span class="process-math">\(\abs{x}\)</span> at <span class="process-math">\(x=0\)</span> will be:</div>
+<div class="displaymath process-math" data-contains-math-knowls="   ./knowl/xref/DEFINITIONdef:OptimalTransitionPoints.html">
 \begin{equation*}
 \limit{h}{0}{\frac{\abs{0+h}-\abs{0}}{h}}=
 \limit{h}{0}{\frac{\abs{h}}{h}}.
 \end{equation*}
 </div>
-<div class="para">OK, but what is this limit? Don’t jump to conclusions. Think about this carefully for a few minutes. What do you think <span class="process-math">\(\tlimit{h}{0}{\frac{\abs{h}}{h}}\)</span> is equal to? First suppose that <span class="process-math">\(h\)</span> is approaching\aside{To say that <span class="process-math">\(h\)</span> is ``approaching’’ <span class="process-math">\(0\)</span> suggests that <span class="process-math">\(h\)</span> is sliding along the horizontal axis toward the origin. We encourage you to think of limits this way. It is a good intuitive approach. However, as we will see in Chapter~\ref{cha:formal-limits} it isn’t quite what is really happening.} zero from the positive side. Recall that in Section~\ref{subsec:vertical-asymptotes} we invented the notation <span class="process-math">\(\rlimit{h}{0} \)</span> for exactly this situation. In this case <span class="process-math">\(h\)</span> is positive so <span class="process-math">\(\abs{h}=h\)</span> and</div>
-<div class="displaymath process-math">
+<div class="para">OK, but what is this limit? Don’t jump to conclusions. Think about this carefully for a few minutes. What do you think <span class="process-math">\(\tlimit{h}{0}{\frac{\abs{h}}{h}}\)</span> is equal to? First suppose that <span class="process-math">\(h\)</span> is approaching\aside{To say that <span class="process-math">\(h\)</span> is “approaching” <span class="process-math">\(0\)</span> suggests that <span class="process-math">\(h\)</span> is sliding along the horizontal axis toward the origin. We encourage you to think of limits this way. It is a good intuitive approach. However, as we will see in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "CHAPTERcha:formal-limits" missing or not unique]</code> it isn’t quite what is really happening.} zero from the positive side. Recall that in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "SECTIONsubsec:vertical-asymptotes" missing or not unique]</code> we invented the notation <span class="process-math">\(\rlimit{h}{0} \)</span> for exactly this situation. In this case <span class="process-math">\(h\)</span> is positive so <span class="process-math">\(\abs{h}=h\)</span> and</div>
+<div class="displaymath process-math" data-contains-math-knowls="   ./knowl/xref/DEFINITIONdef:OptimalTransitionPoints.html">
 \begin{equation*}
 \rlimit{h}{0}{\frac{\abs{h}}{h}}=\rlimit{h}{0}{\frac{h}{h}}=\rlimit{h}{0}{1}=1
 \end{equation*}
 </div>
 <div class="para">which says that the right-hand limit will be one.  Now suppose <span class="process-math">\(h\)</span> is very small and negative. In this case <span class="process-math">\(h\)</span> is negative so <span class="process-math">\(\abs{h}=-h\)</span> and</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="   ./knowl/xref/DEFINITIONdef:OptimalTransitionPoints.html">
 \begin{equation*}
 \llimit{h}{0}{\frac{\abs{h}}{h}}=\llimit{h}{0}{\frac{-h}{h}}=\llimit{h}{0}{-1}=-1
 \end{equation*}
 </div>
-<div class="para">which says that the left-hand limit will be negative one. But since <span class="process-math">\(\frac{\abs{h}}{h}\)</span> can’t be close to <span class="process-math">\(1\)</span> and close to  <span class="process-math">\(-1\)</span> simultaneously we can not find a value for <span class="process-math">\(\tlimit{h}{0}{\frac{\abs{0+h}-\abs{0}}{h}}\)</span> which is correct for both positive and negative values of <span class="process-math">\(h\text{.}\)</span> In other words this limit does not exist. Therefore <span class="process-math">\(\eval{\dfdx{\abs{x}}{x}}{x}{0}\)</span> does not exist. \begin{ProficiencyDrill} According to Definition~\ref{def:OptimalTransitionPoints}, since <span class="process-math">\(\dfdxat{(\abs{x})}{x}{0}\)</span> does not exist, the value <span class="process-math">\(x=0\)</span> is a possible transition point for the Absolute Value function. So there might be a local extremum of <span class="process-math">\(f(x)=\abs{x}\)</span> at <span class="process-math">\(x=0\text{.}\)</span>  Is there? \end{ProficiencyDrill}</div>
+<div class="para">which says that the left-hand limit will be negative one. But since <span class="process-math">\(\frac{\abs{h}}{h}\)</span> can’t be close to <span class="process-math">\(1\)</span> and close to  <span class="process-math">\(-1\)</span> simultaneously we can not find a value for <span class="process-math">\(\tlimit{h}{0}{\frac{\abs{0+h}-\abs{0}}{h}}\)</span> which is correct for both positive and negative values of <span class="process-math">\(h\text{.}\)</span> In other words this limit does not exist. Therefore <span class="process-math">\(\eval{\dfdx{\abs{x}}{x}}{x}{0}\)</span> does not exist. \begin{ProficiencyDrill} According to <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONdef:OptimalTransitionPoints.html" title="Definition 9.58: Possible Optimal Transition Points (POTPs)">~ 9.58</a>, since <span class="process-math">\(\dfdxat{(\abs{x})}{x}{0}\)</span> does not exist, the value <span class="process-math">\(x=0\)</span> is a possible transition point for the Absolute Value function. So there might be a local extremum of <span class="process-math">\(f(x)=\abs{x}\)</span> at <span class="process-math">\(x=0\text{.}\)</span>  Is there? \end{ProficiencyDrill}</div>
 </div></article> <article class="problem example-like" id="problem:AbsValDeriv"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">16.2</span><span class="period">.</span>
 </h3>
 <div class="introduction" id="problem:AbsValDeriv-1"><div class="para" id="problem:AbsValDeriv-1-1"></div></div>
 <article class="task exercise-like" id="problem:AbsValDeriv-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para logical" id="problem:AbsValDeriv-2-1-1">
-<div class="para">The Absolute Value function is not differentiable at <span class="process-math">\(x=0\)</span> but it is differentiable at every other value of <span class="process-math">\(x\text{.}\)</span> Let <span class="process-math">\(f(x)=\abs{x}\)</span> and use Definition~\ref{def:Derivative} to show that:</div>
+<div class="para">The Absolute Value function is not differentiable at <span class="process-math">\(x=0\)</span> but it is differentiable at every other value of <span class="process-math">\(x\text{.}\)</span> Let <span class="process-math">\(f(x)=\abs{x}\)</span> and use <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "DEFINITIONdef:Derivative" missing or not unique]</code> to show that:</div>
 <ol class="decimal">
-<li id="problem:AbsValDeriv-2-1-1-4-1"><div class="para" id="problem:AbsValDeriv-2-1-1-4-1-1">If <span class="process-math">\(x\gt0\)</span> then <span class="process-math">\(f^\prime(x)=1\text{,}\)</span>
+<li id="problem:AbsValDeriv-2-1-1-5-1"><div class="para" id="problem:AbsValDeriv-2-1-1-5-1-1">If <span class="process-math">\(x\gt0\)</span> then <span class="process-math">\(f^\prime(x)=1\text{,}\)</span>
 </div></li>
-<li id="problem:AbsValDeriv-2-1-1-4-2"><div class="para" id="problem:AbsValDeriv-2-1-1-4-2-1">If  <span class="process-math">\(x\lt0\)</span> then <span class="process-math">\(f^\prime(x)=-1\text{.}\)</span>
+<li id="problem:AbsValDeriv-2-1-1-5-2"><div class="para" id="problem:AbsValDeriv-2-1-1-5-2-1">If  <span class="process-math">\(x\lt0\)</span> then <span class="process-math">\(f^\prime(x)=-1\text{.}\)</span>
 </div></li>
 </ol>
 </div></article><article class="task exercise-like" id="problem:AbsValDeriv-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="problem:AbsValDeriv-3-1-1">From the discussion in Digression~\#\ref{digression:AbsValSqrt} we know that <span class="process-math">\(f(x)=\abs{x}=\sqrt{x^2}\text{.}\)</span> Use the differentiation rules you learned in Part 1 of this text to show that if <span class="process-math">\(x\neq0\text{,}\)</span> then <span class="process-math">\(f^\prime(x) = \frac{x}{\abs{x}}.\)</span> How does this compare with your calculations in part (a)?</div></article></article>                            <article class="example example-like" id="no-label"><h3 class="heading">
+<div class="para" id="problem:AbsValDeriv-3-1-1">From the discussion in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "DIGRESSIONdigression:AbsValSqrt" missing or not unique]</code> we know that <span class="process-math">\(f(x)=\abs{x}=\sqrt{x^2}\text{.}\)</span> Use the differentiation rules you learned in Part 1 of this text to show that if <span class="process-math">\(x\neq0\text{,}\)</span> then <span class="process-math">\(f^\prime(x) = \frac{x}{\abs{x}}.\)</span> How does this compare with your calculations in part (a)?</div></article></article>                            <article class="example example-like" id="no-label"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">16.3</span><span class="period">.</span>
 </h3>
 <div class="para logical" id="no-label-1">
-<div class="para">A slightly less intuitive example is the function <span class="process-math">\(f(x)=\frac{x}{x}\text{.}\)</span> It is tempting to claim that this is really just <span class="process-math">\(f(x)=1\)</span> since ``anything divided by itself is one’’ but that claim is not true. As we saw in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "DIGRESSIONDivideByZero" missing or not unique]</code> division by zero is undefined, regardless of the numerator. So the expression <span class="process-math">\(\frac00\)</span> is undefined, and  therefore the function <span class="process-math">\(f(x)=\frac{x}{x}\)</span> is not defined at <span class="process-math">\(x=0\text{.}\)</span> It is also tempting to try to invoke \lhop ’s Rule, since it is true that</div>
+<div class="para">A slightly less intuitive example is the function <span class="process-math">\(f(x)=\frac{x}{x}\text{.}\)</span> It is tempting to claim that this is really just <span class="process-math">\(f(x)=1\)</span> since “anything divided by itself is one” but that claim is not true. As we saw in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "DIGRESSIONDivideByZero" missing or not unique]</code> division by zero is undefined, regardless of the numerator. So the expression <span class="process-math">\(\frac00\)</span> is undefined, and  therefore the function <span class="process-math">\(f(x)=\frac{x}{x}\)</span> is not defined at <span class="process-math">\(x=0\text{.}\)</span> It is also tempting to try to invoke \lhop ’s Rule, since it is true that</div>
 <div class="displaymath process-math" data-contains-math-knowls=" ">
 \begin{equation*}
 \limit{x}{0}{f(x)}= \limit{x}{0}{\frac{x}{x}} = \limit{x}{0}{1}=1.
@@ -616,27 +611,27 @@ x\amp\text{ if } x\ge0
 </h3>
 <div class="introduction" id="no-label-1"><div class="para" id="no-label-1-1"></div></div>
 <article class="task exercise-like" id="no-label-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="no-label-2-1-1">Use Definition~\#\ref{def:Derivative} to show that if <span class="process-math">\(f(x)=\frac{x}{x}\)</span> then <span class="process-math">\(f^\prime(0)\)</span> is undefined. \comment{It is pretty clear that <span class="process-math">\(f^\prime(0)\)</span> is undefined, since <span class="process-math">\(f(0)\)</span> is undefined. We can’t have a derivative where we don’t have a point. But this is the kind of vague reasoning we are trying to avoid. The purpose of this exercise is to show unequivocally that the limit which defines <span class="process-math">\(f^\prime(0)\)</span> is undefined.}</div></article><article class="task exercise-like" id="no-label-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="no-label-3-1-1">Use Definition~\#\ref{def:Derivative} to show that if <span class="process-math">\(f(x)=
+<div class="para" id="no-label-2-1-1">Use <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "DEFINITIONdef:Derivative" missing or not unique]</code> to show that if <span class="process-math">\(f(x)=\frac{x}{x}\)</span> then <span class="process-math">\(f^\prime(0)\)</span> is undefined. \comment{It is pretty clear that <span class="process-math">\(f^\prime(0)\)</span> is undefined, since <span class="process-math">\(f(0)\)</span> is undefined. We can’t have a derivative where we don’t have a point. But this is the kind of vague reasoning we are trying to avoid. The purpose of this exercise is to show unequivocally that the limit which defines <span class="process-math">\(f^\prime(0)\)</span> is undefined.}</div></article><article class="task exercise-like" id="no-label-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="no-label-3-1-1">Use <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "DEFINITIONdef:Derivative" missing or not unique]</code> to show that if <span class="process-math">\(f(x)=
 \begin{cases}
 \frac{x}{x}\amp  \text{ if }x\neq0
 1\amp  \text{ if }x=0
 \end{cases}\)</span> then <span class="process-math">\(f^\prime(0)\)</span> is defined. \comment{This time <span class="process-math">\(f(0)\)</span> is defined but this is a silly way to do it. We do this for emphasis.}</div></article></article>                        <article class="example example-like" id="no-label"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">16.5</span><span class="period">.</span><span class="space"> </span><span class="title">.</span>
 </h3> <div class="para logical" id="no-label-2">
-<div class="para">\begin{wrapfigure}[]{r}{2in} \captionsetup{labelformat=empty} \centerline{\includegraphics*[height=1in,width=2in]{../Figures/AbsSqrtX}} \label{fig:Astroid3} \end{wrapfigure} It is intuitively clear that derivative of the function <span class="process-math">\(f(x)=\sqrt{\abs{x}}\)</span> (at the right) is not defined at <span class="process-math">\(x=0\text{.}\)</span>  We will confirm our intuition using Definition~\#\ref{def:Derivative}. That is, we’ll try to compute the derivative of <span class="process-math">\(f(x)\)</span> at <span class="process-math">\(x=0\)</span> using Definition~\#\ref{def:Derivative} and see what goes wrong. The existence of the derivative of <span class="process-math">\(f(x)\)</span> at <span class="process-math">\(x=0\)</span> is equivalent to the existence of  the limit <span class="process-math">\(\tlimit{h}{0}{\frac{f(0+h)-f(0)}{h}}\text{,}\)</span> so we will try to compute this limit and see what happens.</div>
-<div class="displaymath process-math">
+<div class="para">\begin{wrapfigure}[]{r}{2in} \captionsetup{labelformat=empty} \centerline{\includegraphics*[height=1in,width=2in]{../Figures/AbsSqrtX}} \label{fig:Astroid3} \end{wrapfigure} It is intuitively clear that derivative of the function <span class="process-math">\(f(x)=\sqrt{\abs{x}}\)</span> (at the right) is not defined at <span class="process-math">\(x=0\text{.}\)</span>  We will confirm our intuition using <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "DEFINITIONdef:Derivative" missing or not unique]</code>. That is, we’ll try to compute the derivative of <span class="process-math">\(f(x)\)</span> at <span class="process-math">\(x=0\)</span> using <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "DEFINITIONdef:Derivative" missing or not unique]</code> and see what goes wrong. The existence of the derivative of <span class="process-math">\(f(x)\)</span> at <span class="process-math">\(x=0\)</span> is equivalent to the existence of  the limit <span class="process-math">\(\tlimit{h}{0}{\frac{f(0+h)-f(0)}{h}}\text{,}\)</span> so we will try to compute this limit and see what happens.</div>
+<div class="displaymath process-math" data-contains-math-knowls="  ">
 \begin{equation*}
 f^\prime(0)  \stackrel{?}{=}
 \limit{h}{0}{\frac{f(0+h)-f(0)}{h}}=\limit{h}{0}{\frac{\sqrt{\abs{h}}}{h}}.
 \end{equation*}
 </div>
-<div class="para">\begin{embeddedproblem-enumerate} \label{problem:LRLim1overAbsh} \begin{enumerate}[label={  (\alph*)}] \begin{multicols}{2} \item Show that <span class="process-math">\(\rlimit{h}{0}{\frac{\sqrt{\abs{h}}}{h}}=\infty\text{.}\)</span> \item Show that <span class="process-math">\(\llimit{h}{0}{\frac{\sqrt{\abs{h}}}{h}}=-\infty\text{.}\)</span> \end{multicols} \end{enumerate} \end{embeddedproblem-enumerate} Problem~\#\ref{problem:LRLim1overAbsh} shows, <span class="process-math">\(\frac{\sqrt{\abs{h}}}{h}\)</span> increases without bound as <span class="process-math">\(h\)</span> approaches zero from the right, and decreases without bound as <span class="process-math">\(h\)</span> approaches zero from the left. Since neither of these limits even exists it follows that <span class="process-math">\(\tlimit{h}{0}{\frac{\sqrt{\abs{h}}}{h}}\)</span> also does not exist, and therefore <span class="process-math">\(f^\prime(0)\)</span> is not defined\aside{As a verbal shorthand most people will just say that the right- and left-hand limits are not equal and so <span class="process-math">\(f^\prime(0)\)</span> does not exist. Be sure you understand why this is, strictly speaking, incorrect.}.</div>
+<div class="para">\begin{embeddedproblem-enumerate} \label{problem:LRLim1overAbsh} \begin{enumerate}[label={  (\alph*)}] \begin{multicols}{2} \item Show that <span class="process-math">\(\rlimit{h}{0}{\frac{\sqrt{\abs{h}}}{h}}=\infty\text{.}\)</span> \item Show that <span class="process-math">\(\llimit{h}{0}{\frac{\sqrt{\abs{h}}}{h}}=-\infty\text{.}\)</span> \end{multicols} \end{enumerate} \end{embeddedproblem-enumerate} <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "PROBLEMproblem:LRLim1overAbsh" missing or not unique]</code> shows, <span class="process-math">\(\frac{\sqrt{\abs{h}}}{h}\)</span> increases without bound as <span class="process-math">\(h\)</span> approaches zero from the right, and decreases without bound as <span class="process-math">\(h\)</span> approaches zero from the left. Since neither of these limits even exists it follows that <span class="process-math">\(\tlimit{h}{0}{\frac{\sqrt{\abs{h}}}{h}}\)</span> also does not exist, and therefore <span class="process-math">\(f^\prime(0)\)</span> is not defined\aside{As a verbal shorthand most people will just say that the right- and left-hand limits are not equal and so <span class="process-math">\(f^\prime(0)\)</span> does not exist. Be sure you understand why this is, strictly speaking, incorrect.}.</div>
 </div></article> <article class="example example-like" id="example:HeavisideFunction"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">16.6</span><span class="period">.</span><span class="space"> </span><span class="title">The Heaviside Function.</span>
 </h3> <div class="para logical" id="example:HeavisideFunction-2">
-<div class="para"> \begin{wrapfigure}[]{r}{2.5in} \captionsetup{labelformat=empty} \vskip-3mm \centerline{\includegraphics*[height=1.7in,width=2.5in]{../Figures/Heaviside2}} \label{fig:Heaviside2} \end{wrapfigure} Problem~\#\ref{problem:AbsValDeriv} shows that the derivative of the Absolute Value function (shown at the right) is:</div>
-<div class="displaymath process-math">
+<div class="para"> \begin{wrapfigure}[]{r}{2.5in} \captionsetup{labelformat=empty} \vskip-3mm \centerline{\includegraphics*[height=1.7in,width=2.5in]{../Figures/Heaviside2}} \label{fig:Heaviside2} \end{wrapfigure} <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "PROBLEMproblem:AbsValDeriv" missing or not unique]</code> shows that the derivative of the Absolute Value function (shown at the right) is:</div>
+<div class="displaymath process-math" data-contains-math-knowls="  ">
 \begin{equation*}
 H(x)=
 \begin{cases}
@@ -645,7 +640,7 @@ H(x)=
 \end{cases}.
 \end{equation*}
 </div>
-<div class="para">Notice that it is not defined at <span class="process-math">\(x=0\text{.}\)</span> We call <span class="process-math">\(H(x)\)</span> the Heaviside function in honor of \href{https://mathshistory.st-andrews.ac.uk/Biographies/Heaviside/}{Oliver Heaviside} (1850-1925). Simple as it is, Heaviside’s function is a fundamental tool in signal processing, control theory, and the solution of differential equations. \begin{embeddedproblem} \label{problem:HeavisideDeriv} \begin{enumerate}[label={  (\alph*)}] \item Use Definition~\#\ref{def:Derivative} to show that <span class="process-math">\(H^\prime(x)=0\)</span> when <span class="process-math">\(x\ne0\)</span> \item Explain why the result in part (a) does not contradict Problem~\#\ref{problem:DervEqZeroImpliesConstant} \end{enumerate} \end{embeddedproblem}</div>
+<div class="para">Notice that it is not defined at <span class="process-math">\(x=0\text{.}\)</span> We call <span class="process-math">\(H(x)\)</span> the Heaviside function in honor of \href{https://mathshistory.st-andrews.ac.uk/Biographies/Heaviside/}{Oliver Heaviside} (1850-1925). Simple as it is, Heaviside’s function is a fundamental tool in signal processing, control theory, and the solution of differential equations. \begin{embeddedproblem} \label{problem:HeavisideDeriv} \begin{enumerate}[label={  (\alph*)}] \item Use <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "DEFINITIONdef:Derivative" missing or not unique]</code> to show that <span class="process-math">\(H^\prime(x)=0\)</span> when <span class="process-math">\(x\ne0\)</span> \item Explain why the result in part (a) does not contradict <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "PROBLEMproblem:DervEqZeroImpliesConstant" missing or not unique]</code> \end{enumerate} \end{embeddedproblem}</div>
 </div></article> <div class="para" id="CHPTwhen-deriv-doesnt-2-14">We first introduced one-sided limits in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "SUBSECvertical-asymptotes" missing or not unique]</code>. At the time our concern was to locate vertical asymptotes so we only looked at limits that were equal to either positive or negative infinity. We see now that these limits can take any value and that they are more fundamental than they first appeared to be. Since we didn’t provide a formal definition earlier we will do so now.</div> <article class="definition definition-like" id="DEFINITIONdef:OneSidedLimits"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">16.7</span><span class="period">.</span><span class="space"> </span><span class="title">One-sided Limits.</span>
 </h3> <div class="para logical" id="DEFINITIONdef:OneSidedLimits-2-1">
@@ -667,7 +662,7 @@ H(x)=
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">16.8</span><span class="period">.</span><span class="space"> </span><span class="title">One Sided Derivatives.</span>
 </h3>
 <div class="para" id="theorem:OneSideLim-2"> <span class="process-math">\(\limit{x}{a}{f(x)}\)</span> exists if and only if <span class="process-math">\(\rlimit{x}{a}{f(x)} = \llimit{x}{a}{f(x)}.\)</span> In that case all three limits are equal.</div></article> <div class="para" id="CHPTwhen-deriv-doesnt-2-18">
-<code class="code-inline tex2jax_ignore">[cross-reference to target(s) "THEOREMOneSideLim" missing or not unique]</code> requires proof but we do not have the tools to prove it here. The appropriate tools will be developed in Chapter~\ref{cha:formal-limits}. Proving this fact is the last problem in this textbook.</div></section><section class="section" id="sec:one-sided-deriv"><h3 class="heading hide-type">
+<code class="code-inline tex2jax_ignore">[cross-reference to target(s) "THEOREMOneSideLim" missing or not unique]</code> requires proof but we do not have the tools to prove it here. The appropriate tools will be developed in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "CHAPTERcha:formal-limits" missing or not unique]</code>. Proving this fact is the last problem in this textbook.</div></section><section class="section" id="sec:one-sided-deriv"><h3 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">16.1</span><span class="space"> </span><span class="title">One Sided Derivatives</span>
 </h3>
 <div class="para" id="sec:one-sided-deriv-2">Since limits may be right-hand or left-hand and the derivative is defined as a limit, it follows that derivatives can be right- or left-hand as well.  We will denote the right-hand and left-hand derivatives at <span class="process-math">\(x=a\)</span> with the notation: <span class="process-math">\(\rprime{f}(a),\)</span> and <span class="process-math">\(\lprime{f}(a),\)</span> respectively:</div>
@@ -727,7 +722,7 @@ H(x)=
 <article class="task exercise-like" id="no-label-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
 <div class="para" id="no-label-2-1-1">Which of these derivatives would be defined if we were to arbitrarily  define <span class="process-math">\(H(0)=1\text{?}\)</span>  Explain.</div></article><article class="task exercise-like" id="no-label-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
 <div class="para" id="no-label-3-1-1">Which of these derivatives would be defined if we were to arbitrarily define <span class="process-math">\(H(0)=-1\text{?}\)</span> Explain.</div></article><article class="task exercise-like" id="no-label-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<div class="para" id="no-label-4-1-1">Is there a value we could assign to <span class="process-math">\(H(0)\)</span> so that <span class="process-math">\(H^\prime(0)\)</span> is defined. Explain. \hint{Review Lemma~\ref{lemma:DiffImpliesCont}.}</div></article></article><article class="problem example-like" id="no-label"><h4 class="heading">
+<div class="para" id="no-label-4-1-1">Is there a value we could assign to <span class="process-math">\(H(0)\)</span> so that <span class="process-math">\(H^\prime(0)\)</span> is defined. Explain. \hint{Review <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "LEMMAlemma:DiffImpliesCont" missing or not unique]</code>.}</div></article></article><article class="problem example-like" id="no-label"><h4 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">16.12</span><span class="period">.</span>
 </h4>
 <div class="introduction" id="no-label-1"><div class="para" id="no-label-1-1">Compute the right- and left-hand derivative, and the derivative itself, if they exist, of each of the following functions at the <span class="process-math">\(x=-2, -1, 0, 1,\)</span> and <span class="process-math">\(2\text{.}\)</span> If any of these derivatives don’t exist explain why not.</div></div>
@@ -761,13 +756,13 @@ x^4-4x \amp \text{ if }0\le x \lt 2
 <ol class="decimal">
 <li id="problem:HeaviTranslate-2-1-1-3-1"><div class="para" id="problem:HeaviTranslate-2-1-1-3-1-1">Sketch <span class="process-math">\(H(x-a)\text{.}\)</span>
 </div></li>
-<li id="problem:HeaviTranslate-2-1-1-3-2"><div class="para" id="problem:HeaviTranslate-2-1-1-3-2-1">Use Theorem~\#\ref{theorem:OneSideLim} to show that <span class="process-math">\(H(x-a)\)</span> is not differentiable at <span class="process-math">\(x=a\text{.}\)</span>
+<li id="problem:HeaviTranslate-2-1-1-3-2"><div class="para" id="problem:HeaviTranslate-2-1-1-3-2-1">Use <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "THEOREMtheorem:OneSideLim" missing or not unique]</code> to show that <span class="process-math">\(H(x-a)\)</span> is not differentiable at <span class="process-math">\(x=a\text{.}\)</span>
 </div></li>
 </ol>
 </div></article><article class="task exercise-like" id="problem:HeaviTranslate-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
 <div class="para logical" id="problem:HeaviTranslate-3-1-1">
 <div class="para">Let <span class="process-math">\(b\)</span> also be a real number, distinct from <span class="process-math">\(a\text{,}\)</span> and define</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 f(x) =H(x-a) + H(x-b).
 \end{equation*}
@@ -775,10 +770,10 @@ f(x) =H(x-a) + H(x-b).
 <ol class="decimal">
 <li id="problem:HeaviTranslate-3-1-1-4-1"><div class="para" id="problem:HeaviTranslate-3-1-1-4-1-1">Sketch <span class="process-math">\(f(x)\text{.}\)</span>
 </div></li>
-<li id="problem:HeaviTranslate-3-1-1-4-2"><div class="para" id="problem:HeaviTranslate-3-1-1-4-2-1">Use Theorem~\#\ref{theorem:OneSideLim} to show that is not differentiable at <span class="process-math">\(x=a\)</span> or <span class="process-math">\(x=b\text{.}\)</span>
+<li id="problem:HeaviTranslate-3-1-1-4-2"><div class="para" id="problem:HeaviTranslate-3-1-1-4-2-1">Use <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "THEOREMtheorem:OneSideLim" missing or not unique]</code> to show that is not differentiable at <span class="process-math">\(x=a\)</span> or <span class="process-math">\(x=b\text{.}\)</span>
 </div></li>
 </ol>
-</div></article></article><div class="para" id="sec:one-sided-deriv-11">In <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "SECoptim-clos-interv" missing or not unique]</code> we found that the possible transition points come in three ``flavors’’: (1) points where the derivative is zero, (2) points where the derivative is undefined, and, (3) if the function is defined on a closed interval, the endpoints of the interval. We remarked at the time that it seemed odd that the third condition does not involve the derivative while the other two do.</div>
+</div></article></article><div class="para" id="sec:one-sided-deriv-11">In <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "SECoptim-clos-interv" missing or not unique]</code> we found that the possible transition points come in three “flavors:” (1) points where the derivative is zero, (2) points where the derivative is undefined, and, (3) if the function is defined on a closed interval, the endpoints of the interval. We remarked at the time that it seemed odd that the third condition does not involve the derivative while the other two do.</div>
 <div class="para" id="sec:one-sided-deriv-12">With our new, deeper understanding of differentiation we can show that, in fact, there are really only two kinds of possible transition points, and both can be identified using the derivative. It turns out that the endpoints of an interval are really just points of non-differentiability.</div>
 <div class="para" id="sec:one-sided-deriv-13">To see this consider any function, <span class="process-math">\(f(x)\)</span> which is continuous on the closed interval <span class="process-math">\([a,b]\)</span> and differentiable on the open interval <span class="process-math">\((a,b)\text{.}\)</span> From <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "COROLLARYDeriv=LRDeriv" missing or not unique]</code> we know that <span class="process-math">\(f^\prime(b)\)</span> only exists if <span class="process-math">\(\rprime{f}(b)\)</span> and <span class="process-math">\(\lprime{f}(b)\)</span> both exist\aside{They also need to be equal, but that is irrelevant right now.}.</div>
 <div class="para logical" id="sec:one-sided-deriv-14">

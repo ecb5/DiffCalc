@@ -137,7 +137,7 @@ window.MathJax = {
 \def\ftceval#1#2#3{#1\hskip.5ex{\llap{\smash{\rule[-3ex]{0.5pt}{7ex}}}_{\raise{-3ex}{\hskip.5ex#2}}^{\raise{-5ex}{\hskip.5ex #3}}}}
 
 
-  \def\eval#1#2#3{#1\hskip.5ex{\llap{\rule[-1.5ex]{0.5pt}{4ex}}_{\raise{-1.5ex}{\hskip.5ex#2=#3}}}}
+\def\eval#1#2#3{#1\hskip.5ex{\llap{\rule[-1.5ex]{0.5pt}{4ex}}_{\raise{-1.5ex}{\hskip.5ex#2=#3}}}}
 \def\dispeval#1#2#3{#1\hskip.5ex{\llap{\smash{\rule[-2ex]{0.5pt}{5ex}}}_{\raise{-2ex}{\hskip.5ex#2=#3}}}}
 
 
@@ -159,6 +159,9 @@ window.MathJax = {
 \def\partialfx#1#2{\frac{\partial{#1}}{\partial{#2}}} 
 \def\partialfxn#1#2#3{\frac{\partial^{#3}{#1}}{\partial{#2}^{#3}}} 
 \def\dfdxn#1#2#3{\frac{\text{d}^{#3}{#1}}{\text{d}{#2}^{#3}}} 
+
+\def\dfdxat#1#2#3{\eval{\dfdx{#1}{#2}}{#2}{#3}}
+
 \def\limit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}#3}}
 \def\tlimit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}}#3}
 \def\limitX#1#2#3#4{{\displaystyle\lim_{\underset{#4}{#1\rightarrow #2}}#3}}
@@ -176,9 +179,8 @@ window.MathJax = {
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
-<li class="toc-item toc-dedication"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Dedication</span></a></div></li>
-<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
-<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-5.html" class="internal"><span class="title">Relevant Quotes</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Epigraphs</span></a></div></li>
 <li class="toc-item toc-preface"><div class="toc-title-box"><a href="SECinstructor.html" class="internal"><span class="title">To the Instructor: Read This First</span></a></div></li>
 </ul>
 </li>
@@ -191,13 +193,7 @@ window.MathJax = {
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAproblem-solving.html#SECusing-lett-inst" class="internal"><span class="codenumber">2.1</span> <span class="title">Using Letters Instead of Numbers</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAproblem-solving.html#SECan-easy-problem-alg" class="internal"><span class="codenumber">2.2</span> <span class="title">Substitution, or Making Things “Easy on the Eyes”</span></a></div></li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAproblem-solving.html#SECan-easy-problem-geo" class="internal"><span class="codenumber">2.3</span> <span class="title">An “Easy” Problem From Geometry</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAproblem-solving.html#subsection-digression-MakingMistakes" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Digression: Making Mistakes</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAproblem-solving.html#SECan-easy-problem-geo-4" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Continuing our example</span></a></div></li>
-</ul>
-</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAproblem-solving.html#SECan-easy-problem-geo" class="internal"><span class="codenumber">2.3</span> <span class="title">An “Easy” Problem From Geometry</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAproblem-solving.html#SECour-advice-synopsis" class="internal"><span class="codenumber">2.4</span> <span class="title">Our advice, a synopsis</span></a></div></li>
 </ul>
 </li>
@@ -205,13 +201,13 @@ window.MathJax = {
 <div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html" class="internal"><span class="codenumber">3</span> <span class="title">Science Before Calculus</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#Apologia" class="internal"><span class="codenumber">3.1</span> <span class="title">Apologia</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#no-label" class="internal"><span class="codenumber">3.2</span> <span class="title">Some Preliminaries</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#SECTIONSomePreliminaries" class="internal"><span class="codenumber">3.2</span> <span class="title">Some Preliminaries</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#sec-laziness-nature" class="internal"><span class="codenumber">3.3</span> <span class="title">The Laziness of Nature</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#subsection-" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Nature is Lazy</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#SUBSECTIONNatureLazy" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Nature is Lazy</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#Digress-VarConstFunc-" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Digression: Variables, Constants, and Functions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#subsection-" class="internal"><span class="codenumber">3.3.3</span> <span class="title">After Digression</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#sec-laziness-nature-4" class="internal"><span class="codenumber">3.3.3</span> <span class="title">After Digression</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#sec:ferm-meth-aedeq" class="internal"><span class="codenumber">3.4</span> <span class="title">Fermat’s Method of Adequality</span></a></div></li>
@@ -219,7 +215,7 @@ window.MathJax = {
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#sec:roberv-conic-sect" class="internal"><span class="codenumber">3.6</span> <span class="title">Roberval, Conic Sections, and the Dynamic Approach</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#no-label" class="internal"><span class="codenumber">3.6.1</span> <span class="title">Speed, Velocity, and Rates of Change</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#SUBSECTIONSpdVelRofC" class="internal"><span class="codenumber">3.6.1</span> <span class="title">Speed, Velocity, and Rates of Change</span></a></div></li>
 <li class="toc-item toc-subsection">
 <div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#no-label" class="internal"><span class="codenumber">3.6.2</span> <span class="title">The Tangent Lines of the Conic Sections</span></a></div>
 <ul class="structural toc-item-list">
@@ -258,27 +254,27 @@ window.MathJax = {
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="SECveloc-slop-tang.html" class="internal"><span class="codenumber">5</span> <span class="title">Slopes, Tangents, and Rates of Change</span></a></div>
+<div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html" class="internal"><span class="codenumber">5</span> <span class="title">Slopes, Tangents, and Rates of Change</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#sec:slopes-tangents" class="internal"><span class="codenumber">5.1</span> <span class="title">Slopes and Tangents</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#SECdefin-tang-line" class="internal"><span class="codenumber">5.2</span> <span class="title">Defining the Tangent Line</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#sec:vomit-comet" class="internal"><span class="codenumber">5.3</span> <span class="title">The Vomit Comet</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#sec:rates-change" class="internal"><span class="codenumber">5.4</span> <span class="title">Galileo Drops the Ball</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#no-label" class="internal"><span class="codenumber">5.5</span> <span class="title">Bringing in Calculus</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#subsec:Derivative" class="internal"><span class="codenumber">5.6</span> <span class="title">The Derivative</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#sec:newt-flux-dynam" class="internal"><span class="codenumber">5.7</span> <span class="title">Thinking Dynamically</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#sec:newt-meth-flux" class="internal"><span class="codenumber">5.8</span> <span class="title">Newton’s Method of Fluxions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html#sec:slopes-tangents" class="internal"><span class="codenumber">5.1</span> <span class="title">Slopes and Tangents</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html#SECTIONdefin-tang-line" class="internal"><span class="codenumber">5.2</span> <span class="title">Defining the Tangent Line</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html#sec:vomit-comet" class="internal"><span class="codenumber">5.3</span> <span class="title">The Vomit Comet</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html#sec:rates-change" class="internal"><span class="codenumber">5.4</span> <span class="title">Galileo Drops the Ball</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html#no-label" class="internal"><span class="codenumber">5.5</span> <span class="title">Bringing in Calculus</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html#subsec:Derivative" class="internal"><span class="codenumber">5.6</span> <span class="title">The Derivative</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html#sec:newt-flux-dynam" class="internal"><span class="codenumber">5.7</span> <span class="title">Thinking Dynamically</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html#SECTIONnewt-meth-flux" class="internal"><span class="codenumber">5.8</span> <span class="title">Newton’s Method of Fluxions</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="SECveloc-slop-tang.html#sec:self-inters-curv" class="internal"><span class="codenumber">5.9</span> <span class="title">Self-intersecting Curves and Parametric Equations</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#no-label" class="internal"><span class="codenumber">5.9.1</span> <span class="title">Parametric Functions</span></a></div></li></ul>
+<div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html#sec:self-inters-curv" class="internal"><span class="codenumber">5.9</span> <span class="title">Self-intersecting Curves and Parametric Equations</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html#no-label" class="internal"><span class="codenumber">5.9.1</span> <span class="title">Parametric Functions</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="SECveloc-slop-tang.html#sec:bridg-chains-telesc" class="internal"><span class="codenumber">5.10</span> <span class="title">Bridges, Chains, Domes, and Telescopes</span></a></div>
+<div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html#sec:bridg-chains-telesc" class="internal"><span class="codenumber">5.10</span> <span class="title">Bridges, Chains, Domes, and Telescopes</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#no-label" class="internal"><span class="codenumber">5.10.1</span> <span class="title">Bridges</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#no-label" class="internal"><span class="codenumber">5.10.2</span> <span class="title">Chains</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#no-label" class="internal"><span class="codenumber">5.10.3</span> <span class="title">Domes</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#no-label" class="internal"><span class="codenumber">5.10.4</span> <span class="title">Telescopes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html#no-label" class="internal"><span class="codenumber">5.10.1</span> <span class="title">Bridges</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html#no-label" class="internal"><span class="codenumber">5.10.2</span> <span class="title">Chains</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html#no-label" class="internal"><span class="codenumber">5.10.3</span> <span class="title">Domes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONveloc-slop-tang.html#no-label" class="internal"><span class="codenumber">5.10.4</span> <span class="title">Telescopes</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -296,30 +292,30 @@ window.MathJax = {
 </li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:model-with-trig" class="internal"><span class="codenumber">6.1.3</span> <span class="title">Modeling with Trigonometric Functions</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#no-label" class="internal"><span class="codenumber">6.1.4</span> <span class="title">Phase Shifts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:polar-coordinates" class="internal"><span class="codenumber">6.1.5</span> <span class="title">Polar Coordinates</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:polar-coordinates" class="internal"><span class="codenumber">6.2</span> <span class="title">Polar Coordinates</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAcalc-trig.html#sec:diff-sine-cosine" class="internal"><span class="codenumber">6.3</span> <span class="title">The Differentials of the Sine and Cosine Functions</span></a></div>
+<div class="toc-title-box"><a href="CHAcalc-trig.html#sec:diff-sine-cosine" class="internal"><span class="codenumber">6.2</span> <span class="title">The Differentials of the Sine and Cosine Functions</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:polar-coord-calc" class="internal"><span class="codenumber">6.3.1</span> <span class="title">Polar Coordinates and Calculus</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#no-label" class="internal"><span class="codenumber">6.3.2</span> <span class="title">The Brachistochrone Problem</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#no-label" class="internal"><span class="codenumber">6.3.3</span> <span class="title">Spin Casting, Redux</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:simple-harm-oscill" class="internal"><span class="codenumber">6.3.4</span> <span class="title">Simple Harmonic Oscillation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:polar-coord-calc" class="internal"><span class="codenumber">6.2.1</span> <span class="title">Polar Coordinates and Calculus</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#no-label" class="internal"><span class="codenumber">6.2.2</span> <span class="title">The Brachistochrone Problem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#no-label" class="internal"><span class="codenumber">6.2.3</span> <span class="title">Spin Casting, Redux</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:simple-harm-oscill" class="internal"><span class="codenumber">6.2.4</span> <span class="title">Simple Harmonic Oscillation</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAcalc-trig.html#subsec:diff-other-trig" class="internal"><span class="codenumber">6.4</span> <span class="title">The Differentials of the Other Trigonometric Functions</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:inverse-tan-and-cot" class="internal"><span class="codenumber">6.5</span> <span class="title">The Inverse Tangent and Cotangent Functions</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:witch-agnesi-inverse" class="internal"><span class="codenumber">6.6</span> <span class="title">The Witch of Agnesi and the Inverse Tangent Function</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAcalc-trig.html#SECTIONSECTIONdiff-inverse-tancot" class="internal"><span class="codenumber">6.7</span> <span class="title">The Differentials of the Inverse Tangent and Inverse Cotangent Functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAcalc-trig.html#subsec:diff-other-trig" class="internal"><span class="codenumber">6.3</span> <span class="title">The Differentials of the Other Trigonometric Functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:inverse-tan-and-cot" class="internal"><span class="codenumber">6.4</span> <span class="title">The Inverse Tangent and Cotangent Functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:witch-agnesi-inverse" class="internal"><span class="codenumber">6.5</span> <span class="title">The Witch of Agnesi and the Inverse Tangent Function</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAcalc-trig.html#SECTIONSECTIONdiff-inverse-tancot" class="internal"><span class="codenumber">6.6</span> <span class="title">The Differentials of the Inverse Tangent and Inverse Cotangent Functions</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAcalc-trig.html#sec:other-inverse-trig" class="internal"><span class="codenumber">6.8</span> <span class="title">The Other Inverse Trigonometric Functions</span></a></div>
+<div class="toc-title-box"><a href="CHAcalc-trig.html#sec:other-inverse-trig" class="internal"><span class="codenumber">6.7</span> <span class="title">The Other Inverse Trigonometric Functions</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#no-label" class="internal"><span class="codenumber">6.8.1</span> <span class="title">The Inverse Sine Function: \boldmath <span class="process-math">\(\inverse\sin(x)\)</span></span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#no-label" class="internal"><span class="codenumber">6.8.2</span> <span class="title">The Inverse Secant and Inverse Cosecant</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#no-label" class="internal"><span class="codenumber">6.7.1</span> <span class="title">The Inverse Sine Function: \boldmath <span class="process-math">\(\inverse\sin(x)\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#no-label" class="internal"><span class="codenumber">6.7.2</span> <span class="title">The Inverse Secant and Inverse Cosecant</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:curvature" class="internal"><span class="codenumber">6.9</span> <span class="title">Curvature</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:curvature" class="internal"><span class="codenumber">6.8</span> <span class="title">Curvature</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -350,16 +346,15 @@ window.MathJax = {
 <div class="toc-title-box"><a href="CHAlast-elem-funct.html#no-label" class="internal"><span class="codenumber">8.1</span> <span class="title">Introduction</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAlast-elem-funct.html#no-label" class="internal"><span class="codenumber">8.1.1</span> <span class="title">Initial Value Problems (IVPs)</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAlast-elem-funct.html#sec:exponential" class="internal"><span class="codenumber">8.2</span> <span class="title">The Natural Exponential</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAlast-elem-funct.html#sec:hyperb-trig-hang" class="internal"><span class="codenumber">8.2.1</span> <span class="title">Hyperbolic Trigonometry: The Hanging Chain</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAlast-elem-funct.html#no-label" class="internal"><span class="codenumber">8.2.2</span> <span class="title">The Gateway Arch</span></a></div></li>
-</ul>
-</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAlast-elem-funct.html#sec:exponential" class="internal"><span class="codenumber">8.2</span> <span class="title">The Natural Exponential</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="CHAlast-elem-funct.html#sec:exponential-growth" class="internal"><span class="codenumber">8.3</span> <span class="title">Exponential Growth</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAlast-elem-funct.html#no-label" class="internal"><span class="codenumber">8.3.1</span> <span class="title">Exponential Functions and Compound Interest</span></a></div></li></ul>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAlast-elem-funct.html#sec:hyperb-trig-hang" class="internal"><span class="codenumber">8.3.1</span> <span class="title">Hyperbolic Trigonometry: The Hanging Chain</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAlast-elem-funct.html#no-label" class="internal"><span class="codenumber">8.3.2</span> <span class="title">The Gateway Arch</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAlast-elem-funct.html#sec:exponential-growth-5" class="internal"><span class="codenumber">8.3.3</span> <span class="title">Exponential Growth</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAlast-elem-funct.html#no-label" class="internal"><span class="codenumber">8.3.4</span> <span class="title">Exponential Functions and Compound Interest</span></a></div></li>
+</ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="CHAlast-elem-funct.html#sec:natural-logarithm-1" class="internal"><span class="codenumber">8.4</span> <span class="title">The Natural Logarithm</span></a></div>
@@ -458,7 +453,7 @@ window.MathJax = {
 <div class="toc-title-box"><a href="CHAlimits-lhop-rule.html" class="internal"><span class="codenumber">12</span> <span class="title">Limits and L’H\^o pital’s Rule</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAlimits-lhop-rule.html#sec:horiz-asympt-as" class="internal"><span class="codenumber">12.1</span> <span class="title">Horizontal Asymptotes as Limits ``at Infinity’’</span></a></div>
+<div class="toc-title-box"><a href="CHAlimits-lhop-rule.html#sec:horiz-asympt-as" class="internal"><span class="codenumber">12.1</span> <span class="title">Horizontal Asymptotes as Limits “at Infinity”</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAlimits-lhop-rule.html#digression:LimitNotation" class="internal"><span class="codenumber">12.1.1</span> <span class="title">Limit Notation</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAlimits-lhop-rule.html#sec:squeeze-theorem-informal" class="internal"><span class="codenumber">12.2</span> <span class="title">The Squeeze Theorem</span></a></div></li>
@@ -530,8 +525,8 @@ window.MathJax = {
 <li class="toc-item toc-subsection">
 <div class="toc-title-box"><a href="CHAformal-limits.html#sec:limit-product-at" class="internal"><span class="codenumber">17.3.4</span> <span class="title">The Limit of a Product</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAformal-limits.html#no-label" class="internal"><span class="codenumber">17.3.4.1</span> <span class="title">Proving Lemma~\#\ref{lemma:LimProd1</span></a></div></li>
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAformal-limits.html#no-label" class="internal"><span class="codenumber">17.3.4.2</span> <span class="title">Proving Lemma~\#\ref{lemma:LimProd2</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAformal-limits.html#no-label" class="internal"><span class="codenumber">17.3.4.1</span> <span class="title">Proving <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "LEMMAlemma:LimProd1" missing or not unique]</code></span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAformal-limits.html#no-label" class="internal"><span class="codenumber">17.3.4.2</span> <span class="title">Proving <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "LEMMAlemma:LimProd2" missing or not unique]</code></span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAformal-limits.html#no-label" class="internal"><span class="codenumber">17.3.5</span> <span class="title">The Function  \boldmath  <span class="process-math">\(f(x)=\frac1x\)</span> is Continuous Wherever  It Is Defined</span></a></div></li>
@@ -557,7 +552,7 @@ window.MathJax = {
 </h2>
 <section class="introduction" id="CHAPTERFDT-Redux-2"><blockquote class="blockquote" id="CHAPTERFDT-Redux-2-1">
 <div class="para" id="CHAPTERFDT-Redux-2-1-1">Geometry has always been considered as an exact science, and indeed as the source of the exactness which is widespread among other parts of mathematics.\ .\ . But it seems that this feature of exactness does not reign anymore in geometry since the new system of infinitely small quantities has been mixed to it. I do not see that this system has produced anything for the truth and it would seem to me that it often conceals mistakes.</div> <cite class="attribution">―<a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Rolle/" target="_blank">Michel Rolle (1652-1719)</a><a class="xref" id="CHAPTERFDT-Redux-2-1-2-2" href="" data-knowl="./knowl/fn/CHAPTERFDT-Redux-2-1-2-2.html" title="Footnote 15.1"><sup> 1 </sup></a></cite>
-</blockquote> <div class="para" id="CHAPTERFDT-Redux-2-2">Assuming that all of the properties of limits we talked about in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "SEClimit-theorems-laws" missing or not unique]</code> can be proved, we have seen that all of the differentiation rules we developed intuitively using differentials in <a href="CHAPTdifferentials.html" class="internal" title="Chapter 4: Differentials, Differentiation, and the Derivative">Chapter 4</a> can be made rigorous using limits.</div> <div class="para" id="CHAPTERFDT-Redux-2-3">The question we need to address now is this: Does the need for rigor, which prompted our definition of the <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "DEFDerivative" missing or not unique]</code>), get in the way of practical applications such as, say, the First Derivative Test? We will show that such a practical result can still be achieved while maintaining rigor. To do this, we will need a theorem that allows us to relate instantaneous changes to finite changes. The French name for this theorem is ``le théorème des accroissements finis’’ (translated literally as ``the Theorem of Finite Increments’’). In English it is called the the Mean Value Theorem. We will see how this powerful theorem can be used to transition from theoretical to practical.</div></section><section class="section" id="sec:fermats-theorem"><h3 class="heading hide-type">
+</blockquote> <div class="para" id="CHAPTERFDT-Redux-2-2">Assuming that all of the properties of limits we talked about in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "SEClimit-theorems-laws" missing or not unique]</code> can be proved, we have seen that all of the differentiation rules we developed intuitively using differentials in <a href="CHAPTdifferentials.html" class="internal" title="Chapter 4: Differentials, Differentiation, and the Derivative">Chapter 4</a> can be made rigorous using limits.</div> <div class="para" id="CHAPTERFDT-Redux-2-3">The question we need to address now is this: Does the need for rigor, which prompted our definition of the <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "DEFDerivative" missing or not unique]</code>), get in the way of practical applications such as, say, the First Derivative Test? We will show that such a practical result can still be achieved while maintaining rigor. To do this, we will need a theorem that allows us to relate instantaneous changes to finite changes. The French name for this theorem is “le théorème des accroissements finis” (translated literally as “the Theorem of Finite Increments”). In English it is called the the Mean Value Theorem. We will see how this powerful theorem can be used to transition from theoretical to practical.</div></section><section class="section" id="sec:fermats-theorem"><h3 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">15.1</span><span class="space"> </span><span class="title">Fermat’s Theorem</span>
 </h3>
 <blockquote class="blockquote" id="sec:fermats-theorem-2">
@@ -571,7 +566,7 @@ window.MathJax = {
 </div></article><div class="para" id="sec:fermats-theorem-5">Recall that Fermat’s Theorem does not say that if <span class="process-math">\(f^\prime(a)=0\)</span> then <span class="process-math">\(f(a)\)</span> is an extremum. In fact, we know that this is not true. Rather, it states the converse: If we know that <span class="process-math">\(f(a)\)</span> is an extremum and <span class="process-math">\(f^\prime(a)\)</span> exists, then <span class="process-math">\(f^\prime(a) =0\text{.}\)</span>
 </div>
 <div class="para" id="sec:fermats-theorem-6">It is very rare that we can develop a proof of a theorem by directly writing down the logical steps in order.  Usually the process takes a lot of trying, backtracking, trying again, and so on much as we described in our analogy in <a href="CHAproblem-solving.html" class="internal" title="Chapter 2: Introduction: Some  Advice on Problem Solving">Chapter 2</a> about finding your way out of a forest.</div>
-<div class="para" id="sec:fermats-theorem-7">Of course, in a textbook it is not practical to list all of the bad ideas we might have just to see that they are, in fact, bad ideas. So we will use the following \underline{  Scrapwork} construct when we are just ``thinking about’’ a problem. The scrapwork is not the proof. The purpose of scrapwork is to engage our intuition and to begin organizing our intuitive understanding so that a rigorous proof will emerge. So, not every statement we make inside a scrapwork construct will necessarily be fully rigorous. If you see a gap in the logic inside a scrapwork construct watch to see how it gets filled in the proof.</div>
+<div class="para" id="sec:fermats-theorem-7">Of course, in a textbook it is not practical to list all of the bad ideas we might have just to see that they are, in fact, bad ideas. So we will use the following \underline{  Scrapwork} construct when we are just “thinking about” a problem. The scrapwork is not the proof. The purpose of scrapwork is to engage our intuition and to begin organizing our intuitive understanding so that a rigorous proof will emerge. So, not every statement we make inside a scrapwork construct will necessarily be fully rigorous. If you see a gap in the logic inside a scrapwork construct watch to see how it gets filled in the proof.</div>
 <article class="investigation project-like" id="sec:fermats-theorem-8"><h4 class="heading">
 <span class="type">Scrapwork</span><span class="space"> </span><span class="codenumber">15.1</span><span class="period">.</span>
 </h4>
@@ -610,7 +605,7 @@ f^\prime(a)=\limit{h}{0}{\frac{f(a+h)-f(a)}{h}}\le0.\label{eq:Rolle2}
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">15.2</span><span class="space"> </span><span class="title">Rolle’s Lemma and the Mean Value Theorem</span>
 </h3>
 <figure class="figure figure-like" id="sec:rolles-lemma-mean-2"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/Rolle.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">15.5<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Rolle/" target="_blank">\centerline{Michel Rolle} \centerline{(1659-1719)}</a><a class="xref" id="sec:rolles-lemma-mean-2-1-2" href="" data-knowl="./knowl/fn/sec:rolles-lemma-mean-2-1-2.html" title="Footnote 15.4"><sup> 4 </sup></a></figcaption></figure><div class="para" id="sec:rolles-lemma-mean-3">Were he alive today <a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Rolle/" target="_blank">Michel Rolle</a><a class="xref" id="sec:rolles-lemma-mean-3-2" href="" data-knowl="./knowl/fn/sec:rolles-lemma-mean-3-2.html" title="Footnote 15.5"><sup> 5 </sup></a> might be horrified to know that his lemma has become a fundamental part of the modern development of Calculus.  Like Bishop Berkeley, he was an early critic of Calculus, having once described it as a ``collection of ingenious fallacies.’’</div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">15.5<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Rolle/" target="_blank">\centerline{Michel Rolle} \centerline{(1659-1719)}</a><a class="xref" id="sec:rolles-lemma-mean-2-1-2" href="" data-knowl="./knowl/fn/sec:rolles-lemma-mean-2-1-2.html" title="Footnote 15.4"><sup> 4 </sup></a></figcaption></figure><div class="para" id="sec:rolles-lemma-mean-3">Were he alive today <a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Rolle/" target="_blank">Michel Rolle</a><a class="xref" id="sec:rolles-lemma-mean-3-2" href="" data-knowl="./knowl/fn/sec:rolles-lemma-mean-3-2.html" title="Footnote 15.5"><sup> 5 </sup></a> might be horrified to know that his lemma has become a fundamental part of the modern development of Calculus.  Like Bishop Berkeley, he was an early critic of Calculus, having once described it as a “collection of ingenious fallacies.”</div>
 <div class="para" id="sec:rolles-lemma-mean-4">The distinction between a theorem and a lemma is very slight and rather arbitrary. Typically we call a statement\aside{Technically speaking, a statement is not a theorem until it has actually been proved. Until then it is a conjecture.} a theorem if it is important and requires proof. We call it a lemma if it requires proof itself, and is used to simply the proof of a theorem.  This is not a hard-and-fast rule by any means. Sometimes we first prove a lemma as an aid to proving a theorem, only to find that the lemma is actually more important. However, having been originally dubbed a lemma the result is known ever after as a lemma.  For example, in the present instance we will be using the Extreme Value\aside{We will not be proving the Extreme Value Theorem in this text. Although it appears to be obviously true (read it again and see), it is remarkably hard to prove in a fully rigorous fashion. If you feel that you must see the proof you should change your major to mathematics and take a course in Real Analysis.}, and Fermat’s <em class="emphasis">Theorems</em> to prove what often called Rolle’s <em class="emphasis">Lemma</em>, and then use use Rolle’s <em class="emphasis">Lemma</em> to prove the Mean Value <em class="emphasis">Theorem</em>.  Then we will use the Mean Value <em class="emphasis">Theorem</em> to prove the First Derivative <em class="emphasis">Test</em>. It is all very chaotic.</div>
 <article class="lemma theorem-like" id="lemma:rolles-lemma"><h4 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">15.6</span><span class="period">.</span><span class="space"> </span><span class="title">Rolle’s Lemma.</span>
@@ -682,10 +677,10 @@ f^\prime(c) = \frac{f(b)-f(a)}{b-a},
 \end{equation*}
 </div>
 <div class="para">which completes the proof.</div>
-</div></article></details><div class="para" id="sec:rolles-lemma-mean-16">As we mentioned at the beginning of this chapter in French the Mean Value Theorem is known as the <i class="foreign">théorème des accroissements finis</i> or literally the ``theorem of the finite increments.’’</div>
+</div></article></details><div class="para" id="sec:rolles-lemma-mean-16">As we mentioned at the beginning of this chapter in French the Mean Value Theorem is known as the <i class="foreign">théorème des accroissements finis</i> or literally the “theorem of the finite increments.”</div>
 <div class="para" id="sec:rolles-lemma-mean-17">To see why this is an accurate description let <span class="process-math">\(y=f(x)\text{.}\)</span> Then <span class="process-math">\(f(b)-f(a) = \Delta y\)</span> and <span class="process-math">\(b-a=\Delta x\text{.}\)</span> So we can re-express <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQMVT" missing or not unique]</code>) as <span class="process-math">\(\Delta y=f^\prime(c)\Delta x\text{.}\)</span> In this form it is clear that the Mean Value Theorem relates the finite increments <span class="process-math">\(\Delta y\)</span> and <span class="process-math">\(\Delta x\)</span> to the instantaneous rate of change <span class="process-math">\(f^\prime(c)\text{.}\)</span>
 </div>
-<div class="para" id="sec:rolles-lemma-mean-18">The English name, ``Mean Value Theorem’’ comes from interpreting the derivative as an instantaneous velocity. If <span class="process-math">\(t\)</span> represents time and <span class="process-math">\(p(t)\)</span> represents position at time <span class="process-math">\(t\text{,}\)</span> then <span class="process-math">\(\frac{p(b)-p(a)}{b-a}\)</span> is the average velocity in the time interval <span class="process-math">\([a,b]\text{.}\)</span> Since <span class="process-math">\(p^\prime(c)\)</span> is instantaneous velocity at time <span class="process-math">\(c\text{,}\)</span> the conclusion of the Mean Value Theorem is that at some point in that interval, instantaneous velocity must match average (mean) velocity. For example, if you travel <span class="process-math">\(50\)</span> miles in one hour then your average velocity is <span class="process-math">\(50\frac{\text{miles}}{\text{hour}}\text{.}\)</span> But it is unlikely that you traveled at exactly <span class="process-math">\(50\frac{\text{miles}}{\text{hour}}\)</span> for the entire hour. However, at one instant (possibly more) you had to have been traveling at exactly <span class="process-math">\(50\frac{\text{miles}}{\text{hour}}\text{.}\)</span> This is the Mean Value Theorem. It provides the bridge we need to get from infinitesimals to finite intervals.</div></section><section class="section" id="sec:first-deriv-test"><h3 class="heading hide-type">
+<div class="para" id="sec:rolles-lemma-mean-18">The English name, “Mean Value Theorem” comes from interpreting the derivative as an instantaneous velocity. If <span class="process-math">\(t\)</span> represents time and <span class="process-math">\(p(t)\)</span> represents position at time <span class="process-math">\(t\text{,}\)</span> then <span class="process-math">\(\frac{p(b)-p(a)}{b-a}\)</span> is the average velocity in the time interval <span class="process-math">\([a,b]\text{.}\)</span> Since <span class="process-math">\(p^\prime(c)\)</span> is instantaneous velocity at time <span class="process-math">\(c\text{,}\)</span> the conclusion of the Mean Value Theorem is that at some point in that interval, instantaneous velocity must match average (mean) velocity. For example, if you travel <span class="process-math">\(50\)</span> miles in one hour then your average velocity is <span class="process-math">\(50\frac{\text{miles}}{\text{hour}}\text{.}\)</span> But it is unlikely that you traveled at exactly <span class="process-math">\(50\frac{\text{miles}}{\text{hour}}\)</span> for the entire hour. However, at one instant (possibly more) you had to have been traveling at exactly <span class="process-math">\(50\frac{\text{miles}}{\text{hour}}\text{.}\)</span> This is the Mean Value Theorem. It provides the bridge we need to get from infinitesimals to finite intervals.</div></section><section class="section" id="sec:first-deriv-test"><h3 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">15.3</span><span class="space"> </span><span class="title">The Proof of the First Derivative Test</span>
 </h3>
 <div class="para" id="sec:first-deriv-test-2">We stated <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "THMFDT" missing or not unique]</code> in <a href="CHAwhat-deriv-tells.html" class="internal" title="Chapter 9: Optimization: Going to Extremes">Chapter 9</a> without stating the conditions that make it true, because at the time our attention was primarily on using it.</div>
@@ -733,14 +728,14 @@ f(x)=g(x)+c
 <div class="introduction" id="no-label-1"><div class="para" id="no-label-1-1"></div></div>
 <article class="task exercise-like" id="no-label-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
 <div class="para logical" id="no-label-2-1-1">
-<div class="para">Under the conditions of Theorem\ref{thm:LHRule1} explain why</div>
-<div class="displaymath process-math">
+<div class="para">Under the conditions of <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "THEOREMthm:LHRule1" missing or not unique]</code> explain why</div>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \limit{x}{a}{\frac{f(x)}{g(x)}}=\limit{x}{a}{\frac{f(x)-f(a)}{g(x)-g(a)}}
 \end{equation*}
 </div>
 </div></article><article class="task exercise-like" id="no-label-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="no-label-3-1-1">Apply the Mean Value Theorem to the numerator and denominator in part (a) and then prove Theorem~\ref{thm:LHRule1}. \hint{Use the fact that  in the statement of Theorem~\ref{thm:MVT} <span class="process-math">\(c\)</span> is between <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{.}\)</span>}</div></article></article></section></section></div>
+<div class="para" id="no-label-3-1-1">Apply the Mean Value Theorem to the numerator and denominator in part (a) and then prove <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "THEOREMthm:LHRule1" missing or not unique]</code>. \hint{Use the fact that  in the statement of <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "THEOREMthm:MVT" missing or not unique]</code> <span class="process-math">\(c\)</span> is between <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{.}\)</span>}</div></article></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="CHAdiff-rules-with-limits.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="CHPTwhen-deriv-doesnt.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
