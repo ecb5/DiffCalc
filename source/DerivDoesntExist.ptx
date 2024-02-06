@@ -76,11 +76,11 @@ work with, so we will start there.
   <!-- \label{example:AbsValFunc} -->
   The Absolute Value function is usually introduced with some vague
   statement like, 
-  \centerline{``The absolute value of a number is just the
-    positive version of the number,''}
+  \centerline{<q>The absolute value of a number is just the
+    positive version of the number,</q>}
   or 
-  \centerline{``<m>\abs{x-a}</m> gives the length
-  of the line segment between <m>x</m> and <m>a</m>.''}
+  \centerline{<q><m>\abs{x-a}</m> gives the length
+  of the line segment between <m>x</m> and <m>a</m>.</q>}
 
 These are both true statements and are OK as intuitive definitions,
 but we will need something more precise from now on. The formal
@@ -102,7 +102,7 @@ definition of the Absolute Value function is:
   \end{wrapfigure}
   The graph of the Absolute Value function is given at the right.
   Notice that <m>f(x)=\abs{x}</m> is defined at <m>x=0</m> since <m>\abs{0}=0</m>,
-  but as we indicated in Section~\ref{subsec:underl-deriv} the
+  but as we indicated in <xref ref="SECTIONsubsec:underl-deriv">~</xref> the
   Principle of Local Linearity does not hold at <m>x=0</m> so we suspect
   that the Absolute Value function is not differentiable at <m>x=0</m>.
   
@@ -120,12 +120,12 @@ definition of the Absolute Value function is:
   <m>\tlimit{h}{0}{\frac{\abs{h}}{h}}</m> is equal to?
     
   First suppose that <m>h</m> is approaching\aside{To say that <m>h</m> is
-    ``approaching'' <m>0</m> suggests that <m>h</m> is sliding along the
+    <q>approaching</q> <m>0</m> suggests that <m>h</m> is sliding along the
     horizontal axis toward the origin. We encourage you to think of
     limits this way. It is a good intuitive approach. However, as we
-    will see in Chapter~\ref{cha:formal-limits} it isn't quite what is
+    will see in <xref ref="CHAPTERcha:formal-limits">~</xref> it isn't quite what is
     really happening.} zero from the positive side. Recall that in
-    Section~\ref{subsec:vertical-asymptotes} we invented the notation
+    <xref ref="SECTIONsubsec:vertical-asymptotes">~</xref> we invented the notation
     <m>\rlimit{h}{0} </m> for exactly this
     situation. In this case <m>h</m> is positive so <m>\abs{h}=h</m> and
   <me>
@@ -148,7 +148,7 @@ definition of the Absolute Value function is:
   <m>\eval{\dfdx{\abs{x}}{x}}{x}{0}</m> does not exist.
 
 \begin{ProficiencyDrill}
-  According to Definition~\ref{def:OptimalTransitionPoints}, since
+  According to <xref ref="DEFINITIONdef:OptimalTransitionPoints">~</xref>, since
   <m>\dfdxat{(\abs{x})}{x}{0}</m> does not exist, the value <m>x=0</m> is a possible
   transition point for the Absolute Value function. So there might be
   a local extremum of <m>f(x)=\abs{x}</m> at <m>x=0</m>.  Is there?
@@ -169,7 +169,7 @@ definition of the Absolute Value function is:
 <p>
  The Absolute Value function is not differentiable at
          <m>x=0</m> but it is differentiable at every other value of <m>x</m>.
-         Let <m>f(x)=\abs{x}</m> and use Definition~\ref{def:Derivative} to
+         Let <m>f(x)=\abs{x}</m> and use <xref ref="DEFINITIONdef:Derivative">~</xref> to
          show that:
          
 <ol>
@@ -192,7 +192,7 @@ definition of the Absolute Value function is:
 <statement>
 <p>
  From the discussion in
-           Digression~\#\ref{digression:AbsValSqrt} we know that
+           <xref ref="DIGRESSIONdigression:AbsValSqrt"></xref> we know that
            <m>f(x)=\abs{x}=\sqrt{x^2}</m>. Use the differentiation rules
            you learned in Part 1 of this text to show that if
            <m>x\neq0</m>, then <m>f^\prime(x) = \frac{x}{\abs{x}}.</m> How does
@@ -206,7 +206,7 @@ definition of the Absolute Value function is:
 <!--        \begin{enumerate}[label={  (\alph*)}]  -->
 <!--        \item The Absolute Value function is not differentiable at -->
 <!--          <m>x=0</m> but it is differentiable at every other value of <m>x</m>. -->
-<!--          Let <m>f(x)=\abs{x}</m> and use Definition~\ref{def:Derivative} to -->
+<!--          Let <m>f(x)=\abs{x}</m> and use <xref ref="DEFINITIONdef:Derivative">~</xref> to -->
 <!--          show that: -->
          
 <!-- <ol> -->
@@ -223,7 +223,7 @@ definition of the Absolute Value function is:
 <!--          </ol> -->
 
 <!--        \item From the discussion in -->
-<!--            Digression~\#\ref{digression:AbsValSqrt} we know that -->
+<!--            <xref ref="DIGRESSIONdigression:AbsValSqrt"></xref> we know that -->
 <!--            <m>f(x)=\abs{x}=\sqrt{x^2}</m>. Use the differentiation rules -->
 <!--            you learned in Part 1 of this text to show that if -->
 <!--            <m>x\neq0</m>, then <m>f^\prime(x) = \frac{x}{\abs{x}}.</m> How does -->
@@ -236,7 +236,7 @@ definition of the Absolute Value function is:
 <p>
    A slightly less intuitive example is the function <m>f(x)=\frac{x}{x}</m>. It 
       is tempting to claim that this is really just <m>f(x)=1</m> since
-      ``anything divided by itself is one'' but that claim is not true. As
+      <q>anything divided by itself is one</q> but that claim is not true. As
       we saw in <xref ref="DIGRESSIONDivideByZero">Digression</xref> division by
       zero is undefined, regardless of the numerator. So the expression
       <m>\frac00</m> is undefined, and  therefore the function
@@ -268,7 +268,7 @@ definition of the Absolute Value function is:
 <task>
 <statement>
 <p>
- Use Definition~\#\ref{def:Derivative} to show that if
+ Use <xref ref="DEFINITIONdef:Derivative"></xref> to show that if
           <m>f(x)=\frac{x}{x}</m> then <m>f^\prime(0)</m> is undefined.
           \comment{It is pretty clear that <m>f^\prime(0)</m> is undefined, since
             <m>f(0)</m> is undefined. We can't have a derivative where we don't
@@ -281,7 +281,7 @@ definition of the Absolute Value function is:
 <task>
 <statement>
 <p>
- Use Definition~\#\ref{def:Derivative} to show that
+ Use <xref ref="DEFINITIONdef:Derivative"></xref> to show that
           if
           <m>
           f(x)=
@@ -299,14 +299,14 @@ definition of the Absolute Value function is:
 </problem>
 <!-- \begin{embeddedproblem-enumerate} -->
       <!--   \begin{enumerate}[label={  (\alph*)}]  -->
-      <!--   \item Use Definition~\#\ref{def:Derivative} to show that if -->
+      <!--   \item Use <xref ref="DEFINITIONdef:Derivative"></xref> to show that if -->
       <!--     <m>f(x)=\frac{x}{x}</m> then <m>f^\prime(0)</m> is undefined. -->
       <!--     \comment{It is pretty clear that <m>f^\prime(0)</m> is undefined, since -->
       <!--       <m>f(0)</m> is undefined. We can't have a derivative where we don't -->
       <!--       have a point. But this is the kind of vague reasoning we are -->
       <!--       trying to avoid. The purpose of this exercise is to show -->
       <!--       unequivocally that the limit which defines <m>f^\prime(0)</m> is undefined.} -->
-      <!--   \item Use Definition~\#\ref{def:Derivative} to show that -->
+      <!--   \item Use <xref ref="DEFINITIONdef:Derivative"></xref> to show that -->
       <!--     if -->
       <!--     <m> -->
       <!--     f(x)= -->
@@ -334,8 +334,8 @@ definition of the Absolute Value function is:
       It is intuitively clear that derivative of the function
       <m> f(x)=\sqrt{\abs{x}}</m> (at the right) is not
       defined at <m>x=0</m>.  We will confirm our intuition using
-      Definition~\#\ref{def:Derivative}. That is, we'll try to compute the
-      derivative of <m>f(x)</m> at <m>x=0</m> using Definition~\#\ref{def:Derivative}
+      <xref ref="DEFINITIONdef:Derivative"></xref>. That is, we'll try to compute the
+      derivative of <m>f(x)</m> at <m>x=0</m> using <xref ref="DEFINITIONdef:Derivative"></xref>
       and see what goes wrong.
 
       The existence of the derivative of <m>f(x)</m> at <m>x=0</m> is equivalent to
@@ -355,7 +355,7 @@ definition of the Absolute Value function is:
           \end{multicols}
         \end{enumerate}
       \end{embeddedproblem-enumerate}
-      Problem~\#\ref{problem:LRLim1overAbsh} shows, <m>\frac{\sqrt{\abs{h}}}{h}</m>
+      <xref ref="PROBLEMproblem:LRLim1overAbsh"></xref> shows, <m>\frac{\sqrt{\abs{h}}}{h}</m>
       increases without bound as <m>h</m> approaches zero from the right, and
       decreases without bound as <m>h</m> approaches zero from the left. Since
       neither of these limits even exists it
@@ -380,7 +380,7 @@ definition of the Absolute Value function is:
         \centerline{\includegraphics*[height=1.7in,width=2.5in]{../Figures/Heaviside2}}
         \label{fig:Heaviside2}
       \end{wrapfigure}
-      Problem~\#\ref{problem:AbsValDeriv} shows that the derivative of the
+      <xref ref="PROBLEMproblem:AbsValDeriv"></xref> shows that the derivative of the
       Absolute Value function (shown at the right) is:
       <me>H(x)=
       \begin{cases}
@@ -400,11 +400,11 @@ definition of the Absolute Value function is:
       \begin{embeddedproblem}
         \label{problem:HeavisideDeriv}
         \begin{enumerate}[label={  (\alph*)}] 
-                  \item Use Definition~\#\ref{def:Derivative} to show that
+                  \item Use <xref ref="DEFINITIONdef:Derivative"></xref> to show that
           <m>H^\prime(x)=0</m> when <m>x\ne0</m>
         \item Explain why the result in part (a) does not
           contradict
-          Problem~\#\ref{problem:DervEqZeroImpliesConstant}
+          <xref ref="PROBLEMproblem:DervEqZeroImpliesConstant"></xref>
                             \end{enumerate}
 
       \end{embeddedproblem}
@@ -458,7 +458,7 @@ definition of the Absolute Value function is:
     <xref ref="THEOREMOneSideLim">Theorem~</xref> requires proof but we do not
     have the tools to prove it here. The appropriate tools will be
     developed in
-    Chapter~\ref{cha:formal-limits}. Proving this fact is the last problem
+    <xref ref="CHAPTERcha:formal-limits">~</xref>. Proving this fact is the last problem
     in this textbook.
 </p>
 </introduction>
@@ -554,7 +554,7 @@ definition of the Absolute Value function is:
 <p>
  Is there a value we could assign to <m>H(0)</m> so that
         <m>H^\prime(0)</m> is defined. Explain.
-        \hint{Review Lemma~\ref{lemma:DiffImpliesCont}.}
+        \hint{Review <xref ref="LEMMAlemma:DiffImpliesCont">~</xref>.}
               </p>
 </statement>
 </task>
@@ -570,7 +570,7 @@ definition of the Absolute Value function is:
     <!--     Explain. -->
     <!--   \item Is there a value we could assign to <m>H(0)</m> so that -->
     <!--     <m>H^\prime(0)</m> is defined. Explain. -->
-    <!--     \hint{Review Lemma~\ref{lemma:DiffImpliesCont}.} -->
+    <!--     \hint{Review <xref ref="LEMMAlemma:DiffImpliesCont">~</xref>.} -->
     <!--           \end{enumerate} -->
     <!-- \end{embeddedproblem} -->
 
@@ -668,7 +668,7 @@ definition of the Absolute Value function is:
         <li>
 <p>
    Use
-          Theorem~\#\ref{theorem:OneSideLim} to show that <m>H(x-a)</m> is not
+          <xref ref="THEOREMtheorem:OneSideLim"></xref> to show that <m>H(x-a)</m> is not
           differentiable at <m>x=a</m>.
 </p>
 </li>
@@ -693,7 +693,7 @@ definition of the Absolute Value function is:
 </li>
         <li>
 <p>
- Use Theorem~\#\ref{theorem:OneSideLim} to show that
+ Use <xref ref="THEOREMtheorem:OneSideLim"></xref> to show that
           is not differentiable at <m>x=a</m> or <m>x=b</m>.
 </p>
 </li>
@@ -720,7 +720,7 @@ definition of the Absolute Value function is:
 <!--    Use -->
 <!-- </p> -->
 <!-- </li> -->
-<!--           Theorem~\#\ref{theorem:OneSideLim} to show that <m>H(x-a)</m> is not -->
+<!--           <xref ref="THEOREMtheorem:OneSideLim"></xref> to show that <m>H(x-a)</m> is not -->
 <!--           differentiable at <m>x=a</m>. -->
 <!--         </ol> -->
 
@@ -737,7 +737,7 @@ definition of the Absolute Value function is:
 <!-- </li> -->
 <!--         <li> -->
 <!-- <p> -->
-<!--  Use Theorem~\#\ref{theorem:OneSideLim} to show that -->
+<!--  Use <xref ref="THEOREMtheorem:OneSideLim"></xref> to show that -->
 <!-- </p> -->
 <!-- </li> -->
 <!--           is not differentiable at <m>x=a</m> or <m>x=b</m>. -->
@@ -748,7 +748,7 @@ definition of the Absolute Value function is:
 <p>
 
     In <xref ref="SECoptim-clos-interv">Section</xref> we found that the possible
-    transition points come in three ``flavors'': (1) points where the
+    transition points come in three <q>flavors:</q> (1) points where the
     derivative is zero, (2) points where the derivative is undefined,
     and, (3) if the function is defined on a closed interval, the
     endpoints of the interval. We remarked at the time that it seemed odd

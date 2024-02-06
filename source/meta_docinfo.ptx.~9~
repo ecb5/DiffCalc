@@ -52,7 +52,7 @@
 %%\def\eval#1#2#3{#1\hskip.5ex{\llap{\smash{\rule[-3ex]{0.5pt}{7ex}}}_{\raise{-3ex}{\hskip.5ex#2=#3}}}}
 %%  \def\eval#1#2#3{#1\hskip.5ex{\llap{\smash{\rule[-1.5ex]{0.5pt}{4ex}}}_{\raise{-1.5ex}{\hskip.5ex#2=#3}}}}
 
-\def\eval#1#2#3{#1\hskip.5ex{\llap{\rule[-1.5ex]{0.5pt}{4ex}}_{\raise{-1.5ex}{\hskip.5ex#2=#3}}}}
+  \def\eval#1#2#3{#1\hskip.5ex{\llap{\rule[-1.5ex]{0.5pt}{4ex}}_{\raise{-1.5ex}{\hskip.5ex#2=#3}}}}
 \def\dispeval#1#2#3{#1\hskip.5ex{\llap{\smash{\rule[-2ex]{0.5pt}{5ex}}}_{\raise{-2ex}{\hskip.5ex#2=#3}}}}
 
 <!-- \def\geneval#1#2{\left.#1\right|_{#2}} -->
@@ -74,9 +74,6 @@
 \def\partialfx#1#2{\frac{\partial{#1}}{\partial{#2}}} 
 \def\partialfxn#1#2#3{\frac{\partial^{#3}{#1}}{\partial{#2}^{#3}}} 
 \def\dfdxn#1#2#3{\frac{\text{d}^{#3}{#1}}{\text{d}{#2}^{#3}}} 
-
-\def\dfdxat#1#2#3{\eval{\dfdx{#1}{#2}}{#2}{#3}}
-
 \def\limit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}#3}}%display style
 \def\tlimit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}}#3}%text style
 \def\limitX#1#2#3#4{{\displaystyle\lim_{\underset{#4}{#1\rightarrow #2}}#3}}
@@ -103,8 +100,6 @@
   <rename element="investigation" xml:lang="en-US">Scrapwork</rename>
   <rename element="observation">Digression</rename>
   <rename element="inlineexercise" xml:lang="en-US">Drill</rename>
-  <!-- <rename element="inlineexercise" xml:lang="en-US">Problem</rename> -->
-  <!-- <rename element="problem" xml:lang="en-US">Drill</rename> -->
 <!-- Specify the default type of cross reference:           -->
   <cross-references text="type-global" />
   
