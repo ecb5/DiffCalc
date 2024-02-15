@@ -79,7 +79,7 @@ f(1) =
  =\frac1\pi\inverse\tan(0)=0.
  </me>
 </p> 
-<exercise xml:id="no-label">
+<exercise>
 <statement>
 <p>
 Use your favorite computational tool to find a value of <m>x</m> near <m>1</m> such that
@@ -345,7 +345,7 @@ that if <m>x\gt 3</m>, then <m>y=\frac1x\lt \frac13</m>, or if <m>x\gt 4</m>, th
 </p>
 
 
-<problem xml:id="no-label">
+<problem>
 <introduction>
 <p>
   If <m>y=\frac1x</m> how large must <m>x</m> be in order to guarantee that
@@ -582,7 +582,7 @@ finding <m>B</m> is the whole problem. This is easier to see in an example.
 </example>
 
 
-<problem xml:id="no-label">
+<problem>
 <introduction>
 <p>
   Use <xref ref="DEFINITIONdef:second-inad-limit-at-infinity">~</xref> to prove that
@@ -653,7 +653,7 @@ finding <m>B</m> is the whole problem. This is easier to see in an example.
 
 </subsection>
 
-<subsection xml:id="no-label">
+<subsection>
 <title>Refining the Definition</title>
 
 <p>
@@ -768,7 +768,7 @@ that <m>\tlimit{x}{\infty}{f(x)}=0</m>.
 
 
 
-<proof xml:id="no-label">
+<proof>
 <p>
   Let <m>\eps\gt0</m> be given. Take <m>B\gt\frac1\eps</m>.
 
@@ -822,7 +822,7 @@ State your conclusion.
 
 </p>
 
-<exercise xml:id="no-label">
+<exercise>
 <statement>
 <p>
   Identify which statements in the proof in
@@ -890,7 +890,7 @@ State your conclusion.
     <m>\frac1x\lt\eps</m>, or <m>x\gt\frac{1}{\eps}</m>.
 </p>
   </investigation>
-  <proof xml:id="no-label">
+  <proof>
 <p>
     Let <m>\eps\gt0</m> be given. Let <m>B</m> be the larger of <m>6</m> and
     <m>\frac1\eps</m>. If <m>x\gt B</m> then <m>x\gt6</m> so <m>x-5\gt1</m>. Therefore
@@ -942,7 +942,7 @@ are actually true. Keep paper and pencil handy at all times to help
 you follow the argument.
 </p>
 
-<problem xml:id="no-label">
+<problem>
 <introduction>
 <p>
   For each of the following show that <m>\tlimit{x}{\infty}{f(x)}=0</m>.
@@ -1049,7 +1049,7 @@ follows.
 </statement>
 </definition>
 
-<example xml:id="no-label">
+<example>
 <p>
   Suppose <m>f(x)=1-\frac1x</m>. Intuitively, it is clear that
   <m>\tlimit{x}{\infty}{f(x)}=1</m> but we need to prove that this is so.
@@ -1080,7 +1080,7 @@ follows.
 </p>
       </investigation>
 
-  <proof xml:id="no-label">
+  <proof>
 <p>
       Let <m>\eps>0</m> be given.  Take <m>x>B=1/\eps</m>. Then
       \begin{align*}
@@ -1096,7 +1096,7 @@ follows.
     </p>
 </proof>
 
-<example xml:id="no-label">
+<example>
 <title>label={  (\alph*)}</title>
 <p>
 In <xref ref="SECTIONsec:horiz-asympt-as">~</xref> we approached the problem of
@@ -1139,7 +1139,7 @@ the ``<m>\approach{\infty}</m>'' notation.
 </p>
 </investigation>
 
-<problem xml:id="no-label">
+<problem>
   <introduction>
     <p>
     </p>
@@ -1161,7 +1161,7 @@ the ``<m>\approach{\infty}</m>'' notation.
     </statement>
   </task>
 </problem>
-<problem xml:id="no-label">
+<problem>
 <introduction>
 <p>
 </p>
@@ -1195,7 +1195,7 @@ the ``<m>\approach{\infty}</m>'' notation.
 
 
 
-<problem xml:id="no-label">
+<problem>
 <introduction>
 <p>
    We want to give a  rigorous proof that
@@ -1239,7 +1239,7 @@ the ``<m>\approach{\infty}</m>'' notation.
 
 <!-- \end{embeddedproblem} -->
 
-<problem xml:id="no-label">
+<problem>
 <introduction>
 <p>
   Do the scrapwork, and provide a rigorous proof of each of the
@@ -1302,7 +1302,7 @@ bound.
 </statement>
 </definition>
 
-<problem xml:id="no-label">
+<problem>
 <introduction>
 <p>
   Do the scrapwork, and provide a rigorous proof of each of the
@@ -1349,6 +1349,13 @@ bound.
 <title>Limits at a Real Number</title>
 
 <!-- <!-\- \label{sec:limits-at-real} -\-> -->
+<aside>
+<title>Note to self</title>
+<p>
+This whole section needs to be formatted. 
+</p>
+</aside>
+
 <p>
 In the previous section we
 were focused on the relatively simple limits associated with
@@ -1405,421 +1412,421 @@ Digression missing
 
         
 
-<!-- We use  <xref ref="DEFlimits-at-real">Definition~\</xref> the same way we used -->
-<!-- <xref ref="DEFlimit-at-posinfinity">Definition</xref>: We take <m>\eps\gt0</m> as a -->
-<!-- challenge and find conditions which guarantee that -->
-<!-- <m>\abs{f(x)-L}\lt\eps</m>. Previously we were interested in the behavior -->
-<!-- of <m>f(x)</m> ``close to infinity'' so the condition was that <m>x\gt B</m> -->
-<!-- (that <m>x</m> was large enough, loosely speaking). Now we are interested -->
-<!-- in the behavior of <m>f(x)</m> ``close to <m>a</m>'' so we -->
-<!-- need to  -->
-<!-- indicate how close <m>x</m> has to be to <m>a</m>.  The <m>\delta\gt0</m> in -->
-<!-- <xref ref="DEFlimits-at-real">Definition~\</xref> plays the same role that the -->
-<!-- upper bound <m>B</m> played in <xref ref="DEFlimit-at-posinfinity">Definitions~\</xref> -->
-<!-- <xref ref="DEFlimit-at-neginfinity">and~\</xref>. It locates where <m>x</m> must be in -->
-<!-- order to guarantee that <m>\abs{f(x)-L}\lt\eps</m>. -->
+<!-- <!-\- We use  <xref ref="DEFlimits-at-real">Definition~\</xref> the same way we used -\-> -->
+<!-- <!-\- <xref ref="DEFlimit-at-posinfinity">Definition</xref>: We take <m>\eps\gt0</m> as a -\-> -->
+<!-- <!-\- challenge and find conditions which guarantee that -\-> -->
+<!-- <!-\- <m>\abs{f(x)-L}\lt\eps</m>. Previously we were interested in the behavior -\-> -->
+<!-- <!-\- of <m>f(x)</m> ``close to infinity'' so the condition was that <m>x\gt B</m> -\-> -->
+<!-- <!-\- (that <m>x</m> was large enough, loosely speaking). Now we are interested -\-> -->
+<!-- <!-\- in the behavior of <m>f(x)</m> ``close to <m>a</m>'' so we -\-> -->
+<!-- <!-\- need to  -\-> -->
+<!-- <!-\- indicate how close <m>x</m> has to be to <m>a</m>.  The <m>\delta\gt0</m> in -\-> -->
+<!-- <!-\- <xref ref="DEFlimits-at-real">Definition~\</xref> plays the same role that the -\-> -->
+<!-- <!-\- upper bound <m>B</m> played in <xref ref="DEFlimit-at-posinfinity">Definitions~\</xref> -\-> -->
+<!-- <!-\- <xref ref="DEFlimit-at-neginfinity">and~\</xref>. It locates where <m>x</m> must be in -\-> -->
+<!-- <!-\- order to guarantee that <m>\abs{f(x)-L}\lt\eps</m>. -\-> -->
 
 
-<!-- <figure> -->
-<!-- <caption> -->
-<!-- <url href="https://en.wikipedia.org/wiki/Q.E.D." visual="https://en.wikipedia.org/wiki/Q.E.D.">This figure needs a caption.</url> -->
-<!-- </caption> -->
-<!-- <image source="images/EpsDelta2.png" width="50%"/> -->
-<!-- </figure> -->
-<!-- <!-\- \begin{wrapfigure}[6]{r}{1.2in} -\-> -->
-<!-- <!-\-   \captionsetup{labelformat=empty} -\-> -->
-<!-- <!-\-   \vskip-6mm -\-> -->
-<!-- <!-\-   \centerline{\includegraphics*[height=1in,width=1.2in]{../Figures/EpsDelta2}} -\-> -->
-<!-- <!-\-   \label{fig:EpsDelta2} -\-> -->
-<!-- <!-\- \end{wrapfigure} -\-> -->
-<!-- The sketch at the right depicts the situation when -->
-<!-- <m>\limit{x}{a}{f(x)}=L</m> visually. (The graph -->
-<!-- of <m>f(x)</m> appears to be a straight line because we are zoomed in very -->
-<!-- close to the point <m>(a,L)</m> and the Principle of Local Linearity is in -->
-<!-- play.) We have indicated that <m>f(x)</m> is not defined at <m>a</m>, but it -->
-<!-- could be. Limits don't care what happens at <m>a</m>, only what -->
-<!-- happens near <m>a</m>. To emphasize this point we will usually say that -->
-<!-- <m>0\lt\abs{x-a}\lt\delta</m>, rather than <m>\abs{x-a}\lt\delta</m>. Because -->
-<!-- the inequality on the left is strict, we do not consider what happens -->
-<!-- when <m>x=a</m>. -->
+<!-- <!-\- <figure> -\-> -->
+<!-- <!-\- <caption> -\-> -->
+<!-- <!-\- <url href="https://en.wikipedia.org/wiki/Q.E.D." visual="https://en.wikipedia.org/wiki/Q.E.D.">This figure needs a caption.</url> -\-> -->
+<!-- <!-\- </caption> -\-> -->
+<!-- <!-\- <image source="images/EpsDelta2.png" width="50%"/> -\-> -->
+<!-- <!-\- </figure> -\-> -->
+<!-- <!-\- <!-\\- \begin{wrapfigure}[6]{r}{1.2in} -\\-> -\-> -->
+<!-- <!-\- <!-\\-   \captionsetup{labelformat=empty} -\\-> -\-> -->
+<!-- <!-\- <!-\\-   \vskip-6mm -\\-> -\-> -->
+<!-- <!-\- <!-\\-   \centerline{\includegraphics*[height=1in,width=1.2in]{../Figures/EpsDelta2}} -\\-> -\-> -->
+<!-- <!-\- <!-\\-   \label{fig:EpsDelta2} -\\-> -\-> -->
+<!-- <!-\- <!-\\- \end{wrapfigure} -\\-> -\-> -->
+<!-- <!-\- The sketch at the right depicts the situation when -\-> -->
+<!-- <!-\- <m>\limit{x}{a}{f(x)}=L</m> visually. (The graph -\-> -->
+<!-- <!-\- of <m>f(x)</m> appears to be a straight line because we are zoomed in very -\-> -->
+<!-- <!-\- close to the point <m>(a,L)</m> and the Principle of Local Linearity is in -\-> -->
+<!-- <!-\- play.) We have indicated that <m>f(x)</m> is not defined at <m>a</m>, but it -\-> -->
+<!-- <!-\- could be. Limits don't care what happens at <m>a</m>, only what -\-> -->
+<!-- <!-\- happens near <m>a</m>. To emphasize this point we will usually say that -\-> -->
+<!-- <!-\- <m>0\lt\abs{x-a}\lt\delta</m>, rather than <m>\abs{x-a}\lt\delta</m>. Because -\-> -->
+<!-- <!-\- the inequality on the left is strict, we do not consider what happens -\-> -->
+<!-- <!-\- when <m>x=a</m>. -\-> -->
 
-<!-- As before <m>\eps </m> is the challenge. To show that the limit exists and -->
-<!-- is equal to <m>L</m> as claimed our task is to: -->
-<!-- Find a value of <m>\delta</m> such that, as long\aside{More succinctly: -->
-<!--   <m>0\lt\abs{x-a}\lt\delta</m>.} as -->
-<!-- <m>\overbrace{x \text{ is between } a-\delta \text{ and }a+\delta}^{x -->
-<!--   \text{ is  within } \delta \text{ of } a, x\neq a}</m> -->
-<!-- the corresponding\aside{More succinctly: <m>\abs{f(x)-L}\lt\eps</m>.} -->
-<!-- <m>\overbrace{f(x) \text{ will be between } -->
-<!--    L-\eps \text{ and }L+\eps}^{f(x) \text{ is within } \eps \text{ of } -->
-<!--    L} -->
-<!-- </m>. -->
-<!-- Visually, this means that  the graph of <m>f(x)</m> will be -->
-<!-- between the dashed horizontal lines as long as <m>x</m> is between the -->
-<!-- dotted vertical lines. -->
-
-
-<!-- <xref ref="DEFlimits-at-real">Definition~\</xref> is the culmination of -->
-<!-- approximately <m>200</m> years of attempts by some very brilliant people to -->
-<!-- provide a rigorous foundation for Calculus. Don't expect to absorb -->
-<!-- this easily. It will take time and effort to fully understand and be -->
-<!-- able to use it.  We will start simply. -->
-
-<!-- <exercise xml:id="drill:LimAtZero-LimAtA"> -->
-<!-- <statement> -->
-<!-- <p> -->
-<!--   <!-\- \label{drill:LimAtZero-LimAtA} -\-> -->
-<!--   Use  -->
-<!--   <xref ref="DEFlimit-at-infinity-nearly-adequate">Definitions~\</<xref ref="DEFlimit-at-posinfinity">xref>, -->
-<!--   \</<xref ref="DEFlimit-at-neginfinity">xref>, -->
-<!--   \</xref>, <xref ref="DEFlimits-at-real">and~\</xref> to -->
-<!--   explain that the following are ``obviously'' true. -->
-<!--  <me>\limit{x}{\infty}{f(x)}=L \text{ if and only if } -->
-<!--  \limit{x}{\infty}{(f(x)-L)}=0.</me> -->
-<!--  <me>\limit{x}{-\infty}{f(x)}=L\text{ if and only if -->
-<!--  }\limit{x}{-\infty}{(f(x)-L)}=0.</me> -->
-<!--  <me>\limit{x}{a}{f(x)}=L\text{ if and only if -->
-<!--  }\limit{x}{a}{(f(x)-L)}=0.</me> -->
-<!--  \comment{We are not looking for a formal proof, just a reasonable -->
-<!--    explanation.} -->
-<!-- </p> -->
-<!-- </statement> -->
-<!-- </exercise> -->
+<!-- <!-\- As before <m>\eps </m> is the challenge. To show that the limit exists and -\-> -->
+<!-- <!-\- is equal to <m>L</m> as claimed our task is to: -\-> -->
+<!-- <!-\- Find a value of <m>\delta</m> such that, as long\aside{More succinctly: -\-> -->
+<!-- <!-\-   <m>0\lt\abs{x-a}\lt\delta</m>.} as -\-> -->
+<!-- <!-\- <m>\overbrace{x \text{ is between } a-\delta \text{ and }a+\delta}^{x -\-> -->
+<!-- <!-\-   \text{ is  within } \delta \text{ of } a, x\neq a}</m> -\-> -->
+<!-- <!-\- the corresponding\aside{More succinctly: <m>\abs{f(x)-L}\lt\eps</m>.} -\-> -->
+<!-- <!-\- <m>\overbrace{f(x) \text{ will be between } -\-> -->
+<!-- <!-\-    L-\eps \text{ and }L+\eps}^{f(x) \text{ is within } \eps \text{ of } -\-> -->
+<!-- <!-\-    L} -\-> -->
+<!-- <!-\- </m>. -\-> -->
+<!-- <!-\- Visually, this means that  the graph of <m>f(x)</m> will be -\-> -->
+<!-- <!-\- between the dashed horizontal lines as long as <m>x</m> is between the -\-> -->
+<!-- <!-\- dotted vertical lines. -\-> -->
 
 
+<!-- <!-\- <xref ref="DEFlimits-at-real">Definition~\</xref> is the culmination of -\-> -->
+<!-- <!-\- approximately <m>200</m> years of attempts by some very brilliant people to -\-> -->
+<!-- <!-\- provide a rigorous foundation for Calculus. Don't expect to absorb -\-> -->
+<!-- <!-\- this easily. It will take time and effort to fully understand and be -\-> -->
+<!-- <!-\- able to use it.  We will start simply. -\-> -->
 
-<!-- <example xml:id="no-label"> -->
-<!-- <p> -->
-<!--  Observe that it is intuitively clear that if <m>f(x)=-x^2+2</m> then -->
-<!--  <m>\limit{x}{0}{f(x)}=2</m>. We wish to prove this rigorously. -->
+<!-- <!-\- <exercise xml:id="drill:LimAtZero-LimAtA"> -\-> -->
+<!-- <!-\- <statement> -\-> -->
+<!-- <!-\- <p> -\-> -->
+<!-- <!-\-   <!-\\- \label{drill:LimAtZero-LimAtA} -\\-> -\-> -->
+<!-- <!-\-   Use  -\-> -->
+<!-- <!-\-   <xref ref="DEFlimit-at-infinity-nearly-adequate">Definitions~\</<xref ref="DEFlimit-at-posinfinity">xref>, -\-> -->
+<!-- <!-\-   \</<xref ref="DEFlimit-at-neginfinity">xref>, -\-> -->
+<!-- <!-\-   \</xref>, <xref ref="DEFlimits-at-real">and~\</xref> to -\-> -->
+<!-- <!-\-   explain that the following are ``obviously'' true. -\-> -->
+<!-- <!-\-  <me>\limit{x}{\infty}{f(x)}=L \text{ if and only if } -\-> -->
+<!-- <!-\-  \limit{x}{\infty}{(f(x)-L)}=0.</me> -\-> -->
+<!-- <!-\-  <me>\limit{x}{-\infty}{f(x)}=L\text{ if and only if -\-> -->
+<!-- <!-\-  }\limit{x}{-\infty}{(f(x)-L)}=0.</me> -\-> -->
+<!-- <!-\-  <me>\limit{x}{a}{f(x)}=L\text{ if and only if -\-> -->
+<!-- <!-\-  }\limit{x}{a}{(f(x)-L)}=0.</me> -\-> -->
+<!-- <!-\-  \comment{We are not looking for a formal proof, just a reasonable -\-> -->
+<!-- <!-\-    explanation.} -\-> -->
+<!-- <!-\- </p> -\-> -->
+<!-- <!-\- </statement> -\-> -->
+<!-- <!-\- </exercise> -\-> -->
 
 
-<!--   <investigation> -->
-<!--     Suppose <m>\eps\gt0</m> is given. -->
-<!--     Our goal is to find a <m>\delta\gt0</m> such that if -->
-<!--     <m>0\lt\abs{x-0}\lt\delta</m> (or just <m>0\lt\abs{x}\lt\delta</m>) then <m> -->
-<!--     \abs{f(x)-2}\lt \eps.</m>  -->
-<!--     \begin{align*} -->
-<!--       \intertext{Solving this for <m>x</m> we have} -->
-<!--       \abs{-x^2+2-2}\amp \lt \eps -->
-<!--       \abs{-x^2}\amp \lt \eps -->
-<!--       \abs{x^2}\amp \lt \eps. -->
-<!--     \end{align*} -->
-<!--     Recall from <xref ref="DIGRESSIONdigression:AbsValSqrt"></xref> that -->
-<!--     <m>\sqrt{x^2}=\abs{x}</m>, so we see that <m> \abs{x}\lt \sqrt{\eps} </m> -->
-<!--     or, equivalently -->
-<!--     <me> -->
-<!--       -\sqrt{\eps}\lt x\lt \sqrt{\eps}. -->
-<!--       </me> -->
+
+<!-- <!-\- <example> -->
+<!-- <!-\- <p> -\-> -->
+<!-- <!-\-  Observe that it is intuitively clear that if <m>f(x)=-x^2+2</m> then -\-> -->
+<!-- <!-\-  <m>\limit{x}{0}{f(x)}=2</m>. We wish to prove this rigorously. -\-> -->
+
+
+<!-- <!-\-   <investigation> -\-> -->
+<!-- <!-\-     Suppose <m>\eps\gt0</m> is given. -\-> -->
+<!-- <!-\-     Our goal is to find a <m>\delta\gt0</m> such that if -\-> -->
+<!-- <!-\-     <m>0\lt\abs{x-0}\lt\delta</m> (or just <m>0\lt\abs{x}\lt\delta</m>) then <m> -\-> -->
+<!-- <!-\-     \abs{f(x)-2}\lt \eps.</m>  -\-> -->
+<!-- <!-\-     \begin{align*} -\-> -->
+<!-- <!-\-       \intertext{Solving this for <m>x</m> we have} -\-> -->
+<!-- <!-\-       \abs{-x^2+2-2}\amp \lt \eps -\-> -->
+<!-- <!-\-       \abs{-x^2}\amp \lt \eps -\-> -->
+<!-- <!-\-       \abs{x^2}\amp \lt \eps. -\-> -->
+<!-- <!-\-     \end{align*} -\-> -->
+<!-- <!-\-     Recall from <xref ref="DIGRESSIONdigression:AbsValSqrt"></xref> that -\-> -->
+<!-- <!-\-     <m>\sqrt{x^2}=\abs{x}</m>, so we see that <m> \abs{x}\lt \sqrt{\eps} </m> -\-> -->
+<!-- <!-\-     or, equivalently -\-> -->
+<!-- <!-\-     <me> -\-> -->
+<!-- <!-\-       -\sqrt{\eps}\lt x\lt \sqrt{\eps}. -\-> -->
+<!-- <!-\-       </me> -\-> -->
       
-<!--       It appears that <m> \abs{f(x)-2}\lt \eps</m> as long as -->
-<!--       <m> \abs{x}\lt \sqrt{\eps}</m>, so we take <m> \delta=\sqrt{\eps}</m>. -->
-<!--    </investigation> -->
+<!-- <!-\-       It appears that <m> \abs{f(x)-2}\lt \eps</m> as long as -\-> -->
+<!-- <!-\-       <m> \abs{x}\lt \sqrt{\eps}</m>, so we take <m> \delta=\sqrt{\eps}</m>. -\-> -->
+<!-- <!-\-    </investigation> -\-> -->
 
-<!--    This was the scrapwork. The proof consists of showing that the -->
-<!--    condition we found, <m>\abs{x}\lt\delta(=\sqrt{\eps})</m>, actually -->
-<!--    works. -->
+<!-- <!-\-    This was the scrapwork. The proof consists of showing that the -\-> -->
+<!-- <!-\-    condition we found, <m>\abs{x}\lt\delta(=\sqrt{\eps})</m>, actually -\-> -->
+<!-- <!-\-    works. -\-> -->
 
-<!--   \begin{myproof} -->
-<!--     Let <m>\eps\gt 0</m> be given. Take <m>\delta=\sqrt{\eps}\gt0</m>. -->
+<!-- <!-\-   \begin{myproof} -\-> -->
+<!-- <!-\-     Let <m>\eps\gt 0</m> be given. Take <m>\delta=\sqrt{\eps}\gt0</m>. -\-> -->
 
-<!--     Assume that <m>0\lt \abs{x}\lt \delta</m>.  Then -->
-<!--     \begin{align*} -->
-<!--       \abs{x}\amp \lt \delta -->
-<!--       \sqrt{x^2}\amp \lt \sqrt{\eps} -->
-<!--       x^2 \amp \lt \eps -->
-<!--       \abs{-x^2} \amp \lt \eps -->
-<!--       \abs{-x^2+2-2} \amp \lt \eps -->
-<!--       \abs{f(x)-2} \amp \lt \eps. -->
-<!--     \end{align*} -->
-<!--     Therefore <m>\limit{x}{0}{f(x)}=2</m>. -->
-<!--   \end{myproof} -->
+<!-- <!-\-     Assume that <m>0\lt \abs{x}\lt \delta</m>.  Then -\-> -->
+<!-- <!-\-     \begin{align*} -\-> -->
+<!-- <!-\-       \abs{x}\amp \lt \delta -\-> -->
+<!-- <!-\-       \sqrt{x^2}\amp \lt \sqrt{\eps} -\-> -->
+<!-- <!-\-       x^2 \amp \lt \eps -\-> -->
+<!-- <!-\-       \abs{-x^2} \amp \lt \eps -\-> -->
+<!-- <!-\-       \abs{-x^2+2-2} \amp \lt \eps -\-> -->
+<!-- <!-\-       \abs{f(x)-2} \amp \lt \eps. -\-> -->
+<!-- <!-\-     \end{align*} -\-> -->
+<!-- <!-\-     Therefore <m>\limit{x}{0}{f(x)}=2</m>. -\-> -->
+<!-- <!-\-   \end{myproof} -\-> -->
 
-<!--   Notice that our proof does not give us any new information since -->
-<!--     it is intuitively clear that <m>\limit{x}{0}{(-x^2+2)}=2</m>. The formalism of -->
-<!--     a limit merely confirms, in a manner even Bishop Berkeley would -->
-<!--     accept, what we already know to be true. -->
+<!-- <!-\-   Notice that our proof does not give us any new information since -\-> -->
+<!-- <!-\-     it is intuitively clear that <m>\limit{x}{0}{(-x^2+2)}=2</m>. The formalism of -\-> -->
+<!-- <!-\-     a limit merely confirms, in a manner even Bishop Berkeley would -\-> -->
+<!-- <!-\-     accept, what we already know to be true. -\-> -->
  
-<!--     Incidentally, since <m>f(0)=-0^2+2=2</m> we have also just proved that -->
-<!--     <m>f(x)</m> is continuous at <m>x=0</m>. <xref ref="SEEdef:continuity"> -->
-<!--    </xref>. -->
+<!-- <!-\-     Incidentally, since <m>f(0)=-0^2+2=2</m> we have also just proved that -\-> -->
+<!-- <!-\-     <m>f(x)</m> is continuous at <m>x=0</m>. <xref ref="SEEdef:continuity"> -\-> -->
+<!-- <!-\-    </xref>. -\-> -->
 
 
 
-<!--   For simple problems like this one the proof consisted of writing the -->
-<!--   algebraic steps from our \scrpwrk  backwards, as you see. This -->
-<!--   worked because every algebraic step in the \scrpwrk  was -->
-<!--   reversible. But don't jump to conclusions. This will not always be -->
-<!--   the case. -->
+<!-- <!-\-   For simple problems like this one the proof consisted of writing the -\-> -->
+<!-- <!-\-   algebraic steps from our \scrpwrk  backwards, as you see. This -\-> -->
+<!-- <!-\-   worked because every algebraic step in the \scrpwrk  was -\-> -->
+<!-- <!-\-   reversible. But don't jump to conclusions. This will not always be -\-> -->
+<!-- <!-\-   the case. -\-> -->
 
-<!--   Clearly the \scrpwrk  is the most important part of the solution -->
-<!--   process for this problem. In a very real sense it actually is the -->
-<!--   solution. We call it \scrpwrk  because it is the part of the work -->
-<!--   that you don't show anyone else because it is messy and not well -->
-<!--   organized\aside{We kept it clean and orderly here so you could see -->
-<!--     the reasoning.}.  The scrapwork is like the scaffolding used to -->
-<!--   construct a building. The proof is the building. -->
+<!-- <!-\-   Clearly the \scrpwrk  is the most important part of the solution -\-> -->
+<!-- <!-\-   process for this problem. In a very real sense it actually is the -\-> -->
+<!-- <!-\-   solution. We call it \scrpwrk  because it is the part of the work -\-> -->
+<!-- <!-\-   that you don't show anyone else because it is messy and not well -\-> -->
+<!-- <!-\-   organized\aside{We kept it clean and orderly here so you could see -\-> -->
+<!-- <!-\-     the reasoning.}.  The scrapwork is like the scaffolding used to -\-> -->
+<!-- <!-\-   construct a building. The proof is the building. -\-> -->
 
-<!--   It is absolutely necessary to have the scaffolding while -->
-<!--   construction is ongoing but you tear it down and clean everything up -->
-<!--   before you move in. In the same way your proof should be a cleaned -->
-<!--   up version of your scrapwork.  If this example were a homework -->
-<!--   problem, your solution would be the part that appears between -->
-<!--   {\alert{\underline{Proof:}}} and the little black\aside{When Latin -->
-<!--     was the language of scholarship a mathematical proof ended with -->
-<!--     the -->
-<!--     letters -->
-<!--     \href{https://en.wikipedia.org/wiki/Q.E.D.}{\foreign{Q.E.D.}}, -->
-<!--     which are the initials of the phrase \foreign{quod erat -->
-<!--       demonstrandum}, meaning ``which was to be demonstrated.'' -->
-<!--     Contrary to a popular myth it does not mean ``Quite Easily Done.'' -->
-<!--     In the late twentieth century this traditional ending began to be -->
-<!--     replaced by the black square we're using (or some variation of -->
-<!--     it). It is called a ``Halmos'' in honor -->
-<!--     of -->
-<!--     \href{https://mathshistory.st-andrews.ac.uk/Biographies/Halmos/}{Paul -->
-<!--       Halmos}, a preeminent mathematician of the <m>20</m>th century, who -->
-<!--     popularized it. } square, <m>\halmos</m>, at the end. -->
-<!-- </p> -->
-<!-- </example> -->
-
-
-<!-- <example xml:id="example:DiscontLimit2"> -->
-<!-- <p> -->
-<!--   <!-\- \label{example:DiscontLimit2} -\-> -->
-<!-- Returning <xref ref="TOexample:DiscontLimit1"></xref> from -->
-<!-- <xref ref="SECTIONsec:limit-theorems-laws">~</xref>   recall that we had -->
-<!-- <me> -->
-<!--   f(x)= -->
-<!--   \begin{cases} -->
-<!--     3x \amp  \text{if } x\neq2 -->
-<!--     10  \amp  \text{if } x=2. -->
-<!--   \end{cases} -->
-<!--   </me> -->
-<!--   We had shown by an intuitive argument that <m>\limit{x}{2}{f(x)}= 6</m>. -->
-<!--   Our previous proof lacked rigor, especially in the last step. We -->
-<!--   will provide a fully rigorous proof now. -->
-
-<!--   \begin{myproof} -->
-<!--     Let <m>\eps>0</m> be given and take <m>0\lt\delta\lt\frac{\eps}{3}</m>. Then if -->
-<!--     <m>0\lt \abs{x-2}\lt\delta</m> we have -->
-<!--     \begin{align*} -->
-<!--       -\delta\amp \lt x-2 \lt\delta -->
-<!--       -\frac{\eps}{3}\amp \lt x-2 \lt\frac{\eps}{3} -->
-<!--       -\eps\amp \lt 3x-6 \lt\eps. -->
-<!--       \intertext{Observe that <m>f(x)=3x</m> since <m>x\neq2</m>. Therefore } -->
-<!--       -\eps\amp \lt f(x)-6 \lt\eps -->
-<!--     \end{align*} -->
-<!--     and so -->
-<!--     <me>\abs{f(x)-6}\lt\eps.</me> -->
-<!-- Therefore <m>\tlimit{x}{2}{f(x)}=6.</m> -->
-<!-- \end{myproof} -->
-<!-- \noindent Notice that it is again irrelevant that <m>f(2)=10</m>. -->
-
-<!-- \begin{embeddedproblem} -->
-<!--   Use the proof above to recreate the scrapwork that we did before we -->
-<!--   wrote the proof. -->
-<!-- \end{embeddedproblem} -->
-<!-- </p> -->
-<!-- </example> -->
+<!-- <!-\-   It is absolutely necessary to have the scaffolding while -\-> -->
+<!-- <!-\-   construction is ongoing but you tear it down and clean everything up -\-> -->
+<!-- <!-\-   before you move in. In the same way your proof should be a cleaned -\-> -->
+<!-- <!-\-   up version of your scrapwork.  If this example were a homework -\-> -->
+<!-- <!-\-   problem, your solution would be the part that appears between -\-> -->
+<!-- <!-\-   {\alert{\underline{Proof:}}} and the little black\aside{When Latin -\-> -->
+<!-- <!-\-     was the language of scholarship a mathematical proof ended with -\-> -->
+<!-- <!-\-     the -\-> -->
+<!-- <!-\-     letters -\-> -->
+<!-- <!-\-     \href{https://en.wikipedia.org/wiki/Q.E.D.}{\foreign{Q.E.D.}}, -\-> -->
+<!-- <!-\-     which are the initials of the phrase \foreign{quod erat -\-> -->
+<!-- <!-\-       demonstrandum}, meaning ``which was to be demonstrated.'' -\-> -->
+<!-- <!-\-     Contrary to a popular myth it does not mean ``Quite Easily Done.'' -\-> -->
+<!-- <!-\-     In the late twentieth century this traditional ending began to be -\-> -->
+<!-- <!-\-     replaced by the black square we're using (or some variation of -\-> -->
+<!-- <!-\-     it). It is called a ``Halmos'' in honor -\-> -->
+<!-- <!-\-     of -\-> -->
+<!-- <!-\-     \href{https://mathshistory.st-andrews.ac.uk/Biographies/Halmos/}{Paul -\-> -->
+<!-- <!-\-       Halmos}, a preeminent mathematician of the <m>20</m>th century, who -\-> -->
+<!-- <!-\-     popularized it. } square, <m>\halmos</m>, at the end. -\-> -->
+<!-- <!-\- </p> -\-> -->
+<!-- <!-\- </example> -\-> -->
 
 
+<!-- <!-\- <example xml:id="example:DiscontLimit2"> -\-> -->
+<!-- <!-\- <p> -\-> -->
+<!-- <!-\-   <!-\\- \label{example:DiscontLimit2} -\\-> -\-> -->
+<!-- <!-\- Returning <xref ref="TOexample:DiscontLimit1"></xref> from -\-> -->
+<!-- <!-\- <xref ref="SECTIONsec:limit-theorems-laws">~</xref>   recall that we had -\-> -->
+<!-- <!-\- <me> -\-> -->
+<!-- <!-\-   f(x)= -\-> -->
+<!-- <!-\-   \begin{cases} -\-> -->
+<!-- <!-\-     3x \amp  \text{if } x\neq2 -\-> -->
+<!-- <!-\-     10  \amp  \text{if } x=2. -\-> -->
+<!-- <!-\-   \end{cases} -\-> -->
+<!-- <!-\-   </me> -\-> -->
+<!-- <!-\-   We had shown by an intuitive argument that <m>\limit{x}{2}{f(x)}= 6</m>. -\-> -->
+<!-- <!-\-   Our previous proof lacked rigor, especially in the last step. We -\-> -->
+<!-- <!-\-   will provide a fully rigorous proof now. -\-> -->
 
-<!-- <example xml:id="example:Concrete1"> -->
-<!-- <title>4</title> -->
-<!-- <p> -->
-<!--   <!-\- \label{example:Concrete1} -\-> -->
+<!-- <!-\-   \begin{myproof} -\-> -->
+<!-- <!-\-     Let <m>\eps>0</m> be given and take <m>0\lt\delta\lt\frac{\eps}{3}</m>. Then if -\-> -->
+<!-- <!-\-     <m>0\lt \abs{x-2}\lt\delta</m> we have -\-> -->
+<!-- <!-\-     \begin{align*} -\-> -->
+<!-- <!-\-       -\delta\amp \lt x-2 \lt\delta -\-> -->
+<!-- <!-\-       -\frac{\eps}{3}\amp \lt x-2 \lt\frac{\eps}{3} -\-> -->
+<!-- <!-\-       -\eps\amp \lt 3x-6 \lt\eps. -\-> -->
+<!-- <!-\-       \intertext{Observe that <m>f(x)=3x</m> since <m>x\neq2</m>. Therefore } -\-> -->
+<!-- <!-\-       -\eps\amp \lt f(x)-6 \lt\eps -\-> -->
+<!-- <!-\-     \end{align*} -\-> -->
+<!-- <!-\-     and so -\-> -->
+<!-- <!-\-     <me>\abs{f(x)-6}\lt\eps.</me> -\-> -->
+<!-- <!-\- Therefore <m>\tlimit{x}{2}{f(x)}=6.</m> -\-> -->
+<!-- <!-\- \end{myproof} -\-> -->
+<!-- <!-\- \noindent Notice that it is again irrelevant that <m>f(2)=10</m>. -\-> -->
 
-<!--  We would like to find the value of  -->
-<!--   <m>\limit{x}{\frac12}{\frac{4x^2-1}{2x-1}}</m>, and prove that the value -->
-<!--   we find is correct. -->
+<!-- <!-\- \begin{embeddedproblem} -\-> -->
+<!-- <!-\-   Use the proof above to recreate the scrapwork that we did before we -\-> -->
+<!-- <!-\-   wrote the proof. -\-> -->
+<!-- <!-\- \end{embeddedproblem} -\-> -->
+<!-- <!-\- </p> -\-> -->
+<!-- <!-\- </example> -\-> -->
+
+
+
+<!-- <!-\- <example xml:id="example:Concrete1"> -\-> -->
+<!-- <!-\- <title>4</title> -\-> -->
+<!-- <!-\- <p> -\-> -->
+<!-- <!-\-   <!-\\- \label{example:Concrete1} -\\-> -\-> -->
+
+<!-- <!-\-  We would like to find the value of  -\-> -->
+<!-- <!-\-   <m>\limit{x}{\frac12}{\frac{4x^2-1}{2x-1}}</m>, and prove that the value -\-> -->
+<!-- <!-\-   we find is correct. -\-> -->
    
-<!--  Remember that none of our limit definitions tell us how to find the -->
-<!--   value of a limit, only how to prove that it has a particular value -->
-<!--   after we've found it. In our examples so far the value of the limits -->
-<!--   have been intuitively clear so we haven't concerned ourselves with -->
-<!--   this part of the problem.  But before we can prove that a limit has -->
-<!--   a particular value we obviously need to decide what we believe the -->
-<!--   limit value is. -->
+<!-- <!-\-  Remember that none of our limit definitions tell us how to find the -\-> -->
+<!-- <!-\-   value of a limit, only how to prove that it has a particular value -\-> -->
+<!-- <!-\-   after we've found it. In our examples so far the value of the limits -\-> -->
+<!-- <!-\-   have been intuitively clear so we haven't concerned ourselves with -\-> -->
+<!-- <!-\-   this part of the problem.  But before we can prove that a limit has -\-> -->
+<!-- <!-\-   a particular value we obviously need to decide what we believe the -\-> -->
+<!-- <!-\-   limit value is. -\-> -->
 
-<!--   We have several options for doing this. The simplest is guessing, -->
-<!--   but guessing works best if we have some intuition about the problem. -->
-<!--   Guessing blindly is usually a waste of time. Nevertheless, guessing is -->
-<!--   always an option. Can you guess the value of this limit? -->
+<!-- <!-\-   We have several options for doing this. The simplest is guessing, -\-> -->
+<!-- <!-\-   but guessing works best if we have some intuition about the problem. -\-> -->
+<!-- <!-\-   Guessing blindly is usually a waste of time. Nevertheless, guessing is -\-> -->
+<!-- <!-\-   always an option. Can you guess the value of this limit? -\-> -->
   
-<!--   Another simple option is to use a calculator and plug the value of -->
-<!--   the limit point, in this case <m>x=\frac12</m>, and see what the -->
-<!--   calculator comes up with. This will work if the function is -->
-<!--   continuous at the limit point. But <m>\frac{4x^2-1}{2x-1}</m> is not -->
-<!-- continuous at <m>x=\frac12</m> so that won't help with this problem. Try it -->
-<!-- and see. -->
+<!-- <!-\-   Another simple option is to use a calculator and plug the value of -\-> -->
+<!-- <!-\-   the limit point, in this case <m>x=\frac12</m>, and see what the -\-> -->
+<!-- <!-\-   calculator comes up with. This will work if the function is -\-> -->
+<!-- <!-\-   continuous at the limit point. But <m>\frac{4x^2-1}{2x-1}</m> is not -\-> -->
+<!-- <!-\- continuous at <m>x=\frac12</m> so that won't help with this problem. Try it -\-> -->
+<!-- <!-\- and see. -\-> -->
 
 
-<!-- \pagebreak[4] -->
-<!-- \begin{wrapfigure}[]{r}{1.8in} -->
-<!--     \captionsetup{labelformat=empty} -->
-<!--     \vskip-3mm  -->
-<!--     \centerline{\includegraphics*[height=1.8in,width=1.8in]{../Figures/EpsDelta4}} -->
-<!--     \label{fig:EpsDelta4} -->
-<!--   \end{wrapfigure} -->
-<!-- A third, and much more useful option is to sketch the graph of <m>f(x)</m> -->
-<!-- to see what <m>f(x)</m> is close to near the limit point.  The graph of -->
-<!-- <m>f(x)=\frac{4x^2-1}{2x-1}</m> is given at the right. It is not defined at -->
-<!-- <m>x=1/2</m> because when <m>x=1/2</m> we get zero in the -->
-<!-- denominator. Nevertheless the limit at <m>x=1/2</m> seems to exist. As you -->
-<!-- can see as <m>x</m> approaches <m>1/2</m>, <m>f(x)</m> appears to approach <m>2</m>. Based -->
-<!-- on this graph it seems likely that the value of the limit is <m>2</m>. -->
+<!-- <!-\- \pagebreak[4] -\-> -->
+<!-- <!-\- \begin{wrapfigure}[]{r}{1.8in} -\-> -->
+<!-- <!-\-     \captionsetup{labelformat=empty} -\-> -->
+<!-- <!-\-     \vskip-3mm  -\-> -->
+<!-- <!-\-     \centerline{\includegraphics*[height=1.8in,width=1.8in]{../Figures/EpsDelta4}} -\-> -->
+<!-- <!-\-     \label{fig:EpsDelta4} -\-> -->
+<!-- <!-\-   \end{wrapfigure} -\-> -->
+<!-- <!-\- A third, and much more useful option is to sketch the graph of <m>f(x)</m> -\-> -->
+<!-- <!-\- to see what <m>f(x)</m> is close to near the limit point.  The graph of -\-> -->
+<!-- <!-\- <m>f(x)=\frac{4x^2-1}{2x-1}</m> is given at the right. It is not defined at -\-> -->
+<!-- <!-\- <m>x=1/2</m> because when <m>x=1/2</m> we get zero in the -\-> -->
+<!-- <!-\- denominator. Nevertheless the limit at <m>x=1/2</m> seems to exist. As you -\-> -->
+<!-- <!-\- can see as <m>x</m> approaches <m>1/2</m>, <m>f(x)</m> appears to approach <m>2</m>. Based -\-> -->
+<!-- <!-\- on this graph it seems likely that the value of the limit is <m>2</m>. -\-> -->
 
-<!-- As we saw in <xref ref="CHAPTERcha:limits-lhop-rule">~</xref>, Algebra can also be -->
-<!-- very helpful. In this case we see that -->
-<!--   <me> -->
-<!--   \frac{4x^2-1}{2x-1}= {\frac{(2x+1)(2x-1)}{2x-1}}= -->
-<!--   (2x+1)\cdot\CancelToRed{=1}{\frac{2x-1}{2x-1}}= -->
-<!--   (2x+1) -->
-<!--   </me> -->
-<!--   where the cancellation in red is only valid when <m>x\neq\frac12</m>, -->
-<!--   our limit point is <m>x=\frac12</m> so it is not under consideration. -->
+<!-- <!-\- As we saw in <xref ref="CHAPTERcha:limits-lhop-rule">~</xref>, Algebra can also be -\-> -->
+<!-- <!-\- very helpful. In this case we see that -\-> -->
+<!-- <!-\-   <me> -\-> -->
+<!-- <!-\-   \frac{4x^2-1}{2x-1}= {\frac{(2x+1)(2x-1)}{2x-1}}= -\-> -->
+<!-- <!-\-   (2x+1)\cdot\CancelToRed{=1}{\frac{2x-1}{2x-1}}= -\-> -->
+<!-- <!-\-   (2x+1) -\-> -->
+<!-- <!-\-   </me> -\-> -->
+<!-- <!-\-   where the cancellation in red is only valid when <m>x\neq\frac12</m>, -\-> -->
+<!-- <!-\-   our limit point is <m>x=\frac12</m> so it is not under consideration. -\-> -->
 
-<!--   In fact, once we have rigorously proved\aside{We will do this in -->
-<!--     <xref ref="SECTIONsec:LimitLaws">~</<xref ref="XREFtheorem:LimSum2">>.} -->
-<!--  </<xref ref="XREFtheorem:LimProd2">>, -->
-<!--  </xref>, -->
-<!--   <xref ref="ANDthm:ConstLimit"></xref> from -->
-<!--   <xref ref="SECTIONsec:limit-theorems-laws">~</xref> the following will be a valid -->
-<!--   proof: -->
-<!--   \begin{align*} -->
-<!--   \limit{x}{\frac12}{\frac{4x^2-1}{2x-1}}\amp = -->
-<!--     \limit{x}{\frac12}{\frac{(2x+1)(2x-1)}{2x-1}} -->
-<!--     \amp = -->
-<!--   \left[\limit{x}{\frac12}{(2x+1)}\right]\left[\limit{x}{\frac12}{\CancelToRed{=1}{\frac{2x-1}{2x-1}}}\ -->
-<!--     \ \ \ \ \ \right] -->
-<!--     \amp = -->
-<!--     \limit{x}{\frac12}{(2x+1)} -->
-<!--     \amp = 2. -->
-<!--   \end{align*} -->
+<!-- <!-\-   In fact, once we have rigorously proved\aside{We will do this in -\-> -->
+<!-- <!-\-     <xref ref="SECTIONsec:LimitLaws">~</<xref ref="XREFtheorem:LimSum2">>.} -\-> -->
+<!-- <!-\-  </<xref ref="XREFtheorem:LimProd2">>, -\-> -->
+<!-- <!-\-  </xref>, -\-> -->
+<!-- <!-\-   <xref ref="ANDthm:ConstLimit"></xref> from -\-> -->
+<!-- <!-\-   <xref ref="SECTIONsec:limit-theorems-laws">~</xref> the following will be a valid -\-> -->
+<!-- <!-\-   proof: -\-> -->
+<!-- <!-\-   \begin{align*} -\-> -->
+<!-- <!-\-   \limit{x}{\frac12}{\frac{4x^2-1}{2x-1}}\amp = -\-> -->
+<!-- <!-\-     \limit{x}{\frac12}{\frac{(2x+1)(2x-1)}{2x-1}} -\-> -->
+<!-- <!-\-     \amp = -\-> -->
+<!-- <!-\-   \left[\limit{x}{\frac12}{(2x+1)}\right]\left[\limit{x}{\frac12}{\CancelToRed{=1}{\frac{2x-1}{2x-1}}}\ -\-> -->
+<!-- <!-\-     \ \ \ \ \ \right] -\-> -->
+<!-- <!-\-     \amp = -\-> -->
+<!-- <!-\-     \limit{x}{\frac12}{(2x+1)} -\-> -->
+<!-- <!-\-     \amp = 2. -\-> -->
+<!-- <!-\-   \end{align*} -\-> -->
 
-<!--   \begin{embeddedproblem} -->
-<!--     Identify where we used <xref ref="THEOREMtheorem:LimSum2"></xref>, -->
-<!--     <xref ref="THEOREMtheorem:LimProd2"></xref>, and -->
-<!--     <xref ref="THEOREMthm:ConstLimit">~\#~</xref> in the development above. -->
-<!--   \end{embeddedproblem} -->
-<!--   Because we haven't yet rigorously proved -->
-<!--   <xref ref="THEOREMStheorem:LimSum2"></xref>, \#\ref{theorem:LimProd2} or~\#\ref{thm:ConstLimit} we -->
-<!--   can't use them to construct a rigorous proof. Until they are proved -->
-<!--   they are not known, they are just believed. Belief is not knowledge. -->
+<!-- <!-\-   \begin{embeddedproblem} -\-> -->
+<!-- <!-\-     Identify where we used <xref ref="THEOREMtheorem:LimSum2"></xref>, -\-> -->
+<!-- <!-\-     <xref ref="THEOREMtheorem:LimProd2"></xref>, and -\-> -->
+<!-- <!-\-     <xref ref="THEOREMthm:ConstLimit">~\#~</xref> in the development above. -\-> -->
+<!-- <!-\-   \end{embeddedproblem} -\-> -->
+<!-- <!-\-   Because we haven't yet rigorously proved -\-> -->
+<!-- <!-\-   <xref ref="THEOREMStheorem:LimSum2"></xref>, \#\ref{theorem:LimProd2} or~\#\ref{thm:ConstLimit} we -\-> -->
+<!-- <!-\-   can't use them to construct a rigorous proof. Until they are proved -\-> -->
+<!-- <!-\-   they are not known, they are just believed. Belief is not knowledge. -\-> -->
 
-<!--   But there is no problem with using them to gather evidence. -->
-<!--   So far we have strong evidence that this limit is <m>2</m>. -->
+<!-- <!-\-   But there is no problem with using them to gather evidence. -\-> -->
+<!-- <!-\-   So far we have strong evidence that this limit is <m>2</m>. -\-> -->
 
-<!-- Having gathered our evidence, we now believe that <m> -->
-<!-- \limit{x}{\frac12}{\frac{4x^2-1}{2x-1}}=2</m>. Next we need to do the -->
-<!-- scrapwork for our proof. -->
+<!-- <!-\- Having gathered our evidence, we now believe that <m> -\-> -->
+<!-- <!-\- \limit{x}{\frac12}{\frac{4x^2-1}{2x-1}}=2</m>. Next we need to do the -\-> -->
+<!-- <!-\- scrapwork for our proof. -\-> -->
 
-<!-- <investigation> -->
-<!-- As always we work backwards from our -->
-<!-- goal. We need to show that   <m>\abs{f(x)-2}\lt \eps</m> so -->
-<!-- \begin{align*} -->
-<!--     \abs{\frac{4x^2-1}{2x-1}-2}\amp \lt \eps. -->
-<!--    \intertext{Since we're not interested in the value of anything -->
-<!--   at <m>x=\frac12</m> (where the denominator is zero) we can factor and cancel, giving} -->
-<!--     \abs{\frac{(2x+1)\cancel{(2x-1)}}{\cancel{2x-1}}-2}\amp \lt \eps -->
-<!--     \abs{2x+1-2}\amp \lt \eps -->
-<!--     \abs{2x-1}  \amp \lt \eps. -->
-<!--   \end{align*} -->
-<!--   We see that if  <m>\abs{2x-1}  \lt \eps</m> then -->
-<!--     <me> -->
-<!--     -\eps \lt 2x-1  \lt \eps -->
-<!--     </me> -->
-<!--     or -->
-<!--     <me> -->
-<!--     \frac12-\frac{\eps}{2}\lt x\lt \frac12+\frac{\eps}{2}. -->
-<!--     </me> -->
-<!--     So  taking <m>\delta=\frac{\eps}{2}</m> will work for this problem. -->
-<!-- </investigation> -->
+<!-- <!-\- <investigation> -\-> -->
+<!-- <!-\- As always we work backwards from our -\-> -->
+<!-- <!-\- goal. We need to show that   <m>\abs{f(x)-2}\lt \eps</m> so -\-> -->
+<!-- <!-\- \begin{align*} -\-> -->
+<!-- <!-\-     \abs{\frac{4x^2-1}{2x-1}-2}\amp \lt \eps. -\-> -->
+<!-- <!-\-    \intertext{Since we're not interested in the value of anything -\-> -->
+<!-- <!-\-   at <m>x=\frac12</m> (where the denominator is zero) we can factor and cancel, giving} -\-> -->
+<!-- <!-\-     \abs{\frac{(2x+1)\cancel{(2x-1)}}{\cancel{2x-1}}-2}\amp \lt \eps -\-> -->
+<!-- <!-\-     \abs{2x+1-2}\amp \lt \eps -\-> -->
+<!-- <!-\-     \abs{2x-1}  \amp \lt \eps. -\-> -->
+<!-- <!-\-   \end{align*} -\-> -->
+<!-- <!-\-   We see that if  <m>\abs{2x-1}  \lt \eps</m> then -\-> -->
+<!-- <!-\-     <me> -\-> -->
+<!-- <!-\-     -\eps \lt 2x-1  \lt \eps -\-> -->
+<!-- <!-\-     </me> -\-> -->
+<!-- <!-\-     or -\-> -->
+<!-- <!-\-     <me> -\-> -->
+<!-- <!-\-     \frac12-\frac{\eps}{2}\lt x\lt \frac12+\frac{\eps}{2}. -\-> -->
+<!-- <!-\-     </me> -\-> -->
+<!-- <!-\-     So  taking <m>\delta=\frac{\eps}{2}</m> will work for this problem. -\-> -->
+<!-- <!-\- </investigation> -\-> -->
 
-<!-- \begin{myproof} -->
-<!--   Let <m>\eps>0</m> be given. Take <m>\delta=\frac{\eps}{2}\gt0</m>.  Then if <m>0\lt\abs{x-\frac12}\lt\delta</m> we have -->
-<!--   \begin{align*} -->
-<!--     \abs{x-\frac12}\amp \lt\frac{\eps}{2} -->
-<!--     -\frac{\eps}{2}\lt    x-\frac12\amp \lt\frac{\eps}{2} -->
-<!--     -\eps \lt 2x-1  \amp \lt \eps -->
-<!--     -\eps \lt 2x+1-2  \amp \lt \eps. -->
-<!--     \intertext{Since <m>x\neq\frac12</m> we see that} -->
-<!--     -\eps \lt \frac{(2x+1)(2x-1)}{2x-1} -2 \amp \lt \eps -->
-<!--     -\eps \lt \frac{4x^2-1}{2x+1} -2 \amp \lt \eps -->
-<!--     -\eps \lt f(x) -2 \amp \lt \eps, -->
-<!--   \end{align*} -->
-<!--   and so -->
-<!--   <me> -->
-<!--   \abs{f(x)-2}\lt\eps. -->
-<!--   </me> -->
+<!-- <!-\- \begin{myproof} -\-> -->
+<!-- <!-\-   Let <m>\eps>0</m> be given. Take <m>\delta=\frac{\eps}{2}\gt0</m>.  Then if <m>0\lt\abs{x-\frac12}\lt\delta</m> we have -\-> -->
+<!-- <!-\-   \begin{align*} -\-> -->
+<!-- <!-\-     \abs{x-\frac12}\amp \lt\frac{\eps}{2} -\-> -->
+<!-- <!-\-     -\frac{\eps}{2}\lt    x-\frac12\amp \lt\frac{\eps}{2} -\-> -->
+<!-- <!-\-     -\eps \lt 2x-1  \amp \lt \eps -\-> -->
+<!-- <!-\-     -\eps \lt 2x+1-2  \amp \lt \eps. -\-> -->
+<!-- <!-\-     \intertext{Since <m>x\neq\frac12</m> we see that} -\-> -->
+<!-- <!-\-     -\eps \lt \frac{(2x+1)(2x-1)}{2x-1} -2 \amp \lt \eps -\-> -->
+<!-- <!-\-     -\eps \lt \frac{4x^2-1}{2x+1} -2 \amp \lt \eps -\-> -->
+<!-- <!-\-     -\eps \lt f(x) -2 \amp \lt \eps, -\-> -->
+<!-- <!-\-   \end{align*} -\-> -->
+<!-- <!-\-   and so -\-> -->
+<!-- <!-\-   <me> -\-> -->
+<!-- <!-\-   \abs{f(x)-2}\lt\eps. -\-> -->
+<!-- <!-\-   </me> -\-> -->
 
-<!--   Therefore <me>\limit{x}{\frac12}{\frac{4x^2-1}{2x+1}}=2</me>. -->
-<!-- \end{myproof} -->
+<!-- <!-\-   Therefore <me>\limit{x}{\frac12}{\frac{4x^2-1}{2x+1}}=2</me>. -\-> -->
+<!-- <!-\- \end{myproof} -\-> -->
 
-<!--   A long list of inequalities like those above can be a little -->
-<!--   intimidating. Don't let that stop you. Verify each transition from -->
-<!--   one inequality to the other. If you don't see why a particular -->
-<!--   transition  is valid refer back to the scrapwork. -->
-<!-- </p> -->
-<!-- </example> -->
+<!-- <!-\-   A long list of inequalities like those above can be a little -\-> -->
+<!-- <!-\-   intimidating. Don't let that stop you. Verify each transition from -\-> -->
+<!-- <!-\-   one inequality to the other. If you don't see why a particular -\-> -->
+<!-- <!-\-   transition  is valid refer back to the scrapwork. -\-> -->
+<!-- <!-\- </p> -\-> -->
+<!-- <!-\- </example> -\-> -->
 
 
 
-<!-- \begin{Digression}[Why We Prove Theorems] -->
-<!--   \label{digression:WhyProveTheorems} -->
-<!--   The proof of any theorem will follow logically from the relevant -->
-<!--   definitions. However, as we've seen proving that -->
-<!--   <m>\limit{x}{\frac12}{\frac{4x^2-1}{2x+1}}=2</m> from -->
-<!--   <xref ref="DEFlimits-at-real">Definition~\</xref> was very delicate and -->
-<!--   troublesome. We'd really like to avoid this if we can. -->
+<!-- <!-\- \begin{Digression}[Why We Prove Theorems] -\-> -->
+<!-- <!-\-   \label{digression:WhyProveTheorems} -\-> -->
+<!-- <!-\-   The proof of any theorem will follow logically from the relevant -\-> -->
+<!-- <!-\-   definitions. However, as we've seen proving that -\-> -->
+<!-- <!-\-   <m>\limit{x}{\frac12}{\frac{4x^2-1}{2x+1}}=2</m> from -\-> -->
+<!-- <!-\-   <xref ref="DEFlimits-at-real">Definition~\</xref> was very delicate and -\-> -->
+<!-- <!-\-   troublesome. We'd really like to avoid this if we can. -\-> -->
 
-<!--   We prove general theorems so that we can use them as tools. Do we -->
-<!--   have any tools (theorems) that would have made the proof of -->
-<!--   <me>\limit{x}{\frac12}{\frac{4x^2-1}{2x+1}}=2</me> simpler? -->
+<!-- <!-\-   We prove general theorems so that we can use them as tools. Do we -\-> -->
+<!-- <!-\-   have any tools (theorems) that would have made the proof of -\-> -->
+<!-- <!-\-   <me>\limit{x}{\frac12}{\frac{4x^2-1}{2x+1}}=2</me> simpler? -\-> -->
                   
-<!--   <problem xml:id="no-label"> -->
-<!-- <introduction> -->
-<!-- <p> -->
-<!-- </p> -->
-<!-- </introduction> -->
-<!-- <task> -->
-<!-- <statement> -->
-<!-- <p> -->
-<!--  Show that <m>\tlimit{x}{\frac12}{\frac{4x^2-1}{2x+1}}</m> -->
-<!--       satisfies all of the conditions of <xref ref="THEOREMthm:<xref ref="LHRULEGENthm:<xref ref="LHRULEGENx">">"</xref>{\frac12}{\frac{4x^2-1}{2x+1}}=2</m>. -->
-<!--     </p> -->
-<!-- </statement> -->
-<!-- </task> -->
-<!-- <task> -->
-<!-- <statement> -->
-<!-- <p> -->
-<!--  Explain your proof in part (b) is rigorous. -->
-<!--     </p> -->
-<!-- </statement> -->
-<!-- </task> -->
-<!-- </problem> -->
-<!-- <!-\- \begin{embeddedproblem-enumerate} -\-> -->
-<!--   <!-\-   \begin{enumerate}[label={  (\alph*)}]  -\-> -->
-<!--   <!-\-   \item Show that <m>\tlimit{x}{\frac12}{\frac{4x^2-1}{2x+1}}</m> -\-> -->
-<!--   <!-\-     satisfies all of the conditions of <xref ref="THEOREMthm:LHRuleGen">~</xref>. -\-> -->
-<!--   <!-\-   \item Use Theorem~\ref{thm:LHRuleGen} to prove that -\-> -->
-<!--   <!-\-     <m>\tlimit{x}{\frac12}{\frac{4x^2-1}{2x+1}}=2</m>. -\-> -->
-<!--   <!-\-   \item Explain your proof in part (b) is rigorous. -\-> -->
-<!--   <!-\-   \end{enumerate} -\-> -->
-<!--   <!-\- \end{embeddedproblem-enumerate} -\-> -->
+<!-- <!-\-   <problem> -->
+<!-- <!-\- <introduction> -\-> -->
+<!-- <!-\- <p> -\-> -->
+<!-- <!-\- </p> -\-> -->
+<!-- <!-\- </introduction> -\-> -->
+<!-- <!-\- <task> -\-> -->
+<!-- <!-\- <statement> -\-> -->
+<!-- <!-\- <p> -\-> -->
+<!-- <!-\-  Show that <m>\tlimit{x}{\frac12}{\frac{4x^2-1}{2x+1}}</m> -\-> -->
+<!-- <!-\-       satisfies all of the conditions of <xref ref="THEOREMthm:<xref ref="LHRULEGENthm:<xref ref="LHRULEGENx">">"</xref>{\frac12}{\frac{4x^2-1}{2x+1}}=2</m>. -\-> -->
+<!-- <!-\-     </p> -\-> -->
+<!-- <!-\- </statement> -\-> -->
+<!-- <!-\- </task> -\-> -->
+<!-- <!-\- <task> -\-> -->
+<!-- <!-\- <statement> -\-> -->
+<!-- <!-\- <p> -\-> -->
+<!-- <!-\-  Explain your proof in part (b) is rigorous. -\-> -->
+<!-- <!-\-     </p> -\-> -->
+<!-- <!-\- </statement> -\-> -->
+<!-- <!-\- </task> -\-> -->
+<!-- <!-\- </problem> -\-> -->
+<!-- <!-\- <!-\\- \begin{embeddedproblem-enumerate} -\\-> -\-> -->
+<!-- <!-\-   <!-\\-   \begin{enumerate}[label={  (\alph*)}]  -\\-> -\-> -->
+<!-- <!-\-   <!-\\-   \item Show that <m>\tlimit{x}{\frac12}{\frac{4x^2-1}{2x+1}}</m> -\\-> -\-> -->
+<!-- <!-\-   <!-\\-     satisfies all of the conditions of <xref ref="THEOREMthm:LHRuleGen">~</xref>. -\\-> -\-> -->
+<!-- <!-\-   <!-\\-   \item Use Theorem~\ref{thm:LHRuleGen} to prove that -\\-> -\-> -->
+<!-- <!-\-   <!-\\-     <m>\tlimit{x}{\frac12}{\frac{4x^2-1}{2x+1}}=2</m>. -\\-> -\-> -->
+<!-- <!-\-   <!-\\-   \item Explain your proof in part (b) is rigorous. -\\-> -\-> -->
+<!-- <!-\-   <!-\\-   \end{enumerate} -\\-> -\-> -->
+<!-- <!-\-   <!-\\- \end{embeddedproblem-enumerate} -\\-> -\-> -->
 
-<!--   \lhop 's Rule is a very powerful tool which simultaneously -->
-<!--   evaluates a limit and provides a rigorous proof of the result. And -->
-<!--   it is much easier to use than -->
-<!--   <xref ref="DEFlimits-at-real">Definition~\</xref>. -->
+<!-- <!-\-   \lhop 's Rule is a very powerful tool which simultaneously -\-> -->
+<!-- <!-\-   evaluates a limit and provides a rigorous proof of the result. And -\-> -->
+<!-- <!-\-   it is much easier to use than -\-> -->
+<!-- <!-\-   <xref ref="DEFlimits-at-real">Definition~\</xref>. -\-> -->
 
-<!--   But sadly, it will be of no use to us for the remainder of this -->
-<!--   chapter. \lhop's  Rule relies on knowing that our differentiation rules -->
-<!--   are valid, and we don't know that yet. That the differentiation rules -->
-<!--   are valid is  exactly what  we are trying to show. To use  -->
-<!--   \lhop 's Rule would be to engage in  circular reasoning, which is invalid.   -->
-<!-- \end{Digression} -->
+<!-- <!-\-   But sadly, it will be of no use to us for the remainder of this -\-> -->
+<!-- <!-\-   chapter. \lhop's  Rule relies on knowing that our differentiation rules -\-> -->
+<!-- <!-\-   are valid, and we don't know that yet. That the differentiation rules -\-> -->
+<!-- <!-\-   are valid is  exactly what  we are trying to show. To use  -\-> -->
+<!-- <!-\-   \lhop 's Rule would be to engage in  circular reasoning, which is invalid.   -\-> -->
+<!-- <!-\- \end{Digression} -\-> -->
 
         
 
@@ -1835,40 +1842,40 @@ Digression missing
  
 
 
-<!-- <example xml:id="no-label"> -->
-<!-- <p> -->
-<!--   In this example we will show rigorously that the derivative of -->
-<!--   <m>f(x)=x^2</m> is <m>f^\prime(x)=2x</m>. To do that we need to show that -->
-<!--   <me> -->
-<!--   \limit{h}{0}{\frac{f(x+h)-f(x)}{h}} = 2x. -->
-<!--   </me> -->
-<!--   Recall that differentiation is a local property so we are thinking -->
-<!--   of <m>x</m> as a fixed, but unspecified real number. The variable in this -->
-<!--   example is <m>h</m>. -->
+<!-- <!-\- <example> -->
+<!-- <!-\- <p> -\-> -->
+<!-- <!-\-   In this example we will show rigorously that the derivative of -\-> -->
+<!-- <!-\-   <m>f(x)=x^2</m> is <m>f^\prime(x)=2x</m>. To do that we need to show that -\-> -->
+<!-- <!-\-   <me> -\-> -->
+<!-- <!-\-   \limit{h}{0}{\frac{f(x+h)-f(x)}{h}} = 2x. -\-> -->
+<!-- <!-\-   </me> -\-> -->
+<!-- <!-\-   Recall that differentiation is a local property so we are thinking -\-> -->
+<!-- <!-\-   of <m>x</m> as a fixed, but unspecified real number. The variable in this -\-> -->
+<!-- <!-\-   example is <m>h</m>. -\-> -->
   
               
-<!--   <investigation> -->
-<!--     For <m>\eps\gt0</m> we need to find <m>\delta\gt 0</m> such that if -->
-<!--     <m>0\lt\abs{h}\lt\delta</m>, then <m>\abs{\frac{f(x+h)-f(x)}{h}-2x}\lt -->
-<!--     \eps</m>. -->
-<!--     Working backwards from this we have -->
-<!--     \begin{align*} -->
-<!--       \abs{\frac{(x+h)^2-x^2}{h}-2x}\amp\lt\eps -->
-<!--       \abs{\frac{x^2+2xh+h^2-x^2}{h}-2x}\amp\lt\eps -->
-<!--       \abs{\frac{2xh+h^2}{h}-2x}\amp\lt\eps -->
-<!--       \abs{2x+h-2x}\amp\lt\eps -->
-<!--       \abs{h}      \amp\lt\eps -->
-<!--       -\eps\lt h      \amp\lt\eps, -->
-<!--     \end{align*} -->
-<!--     so we choose <m>\delta=\eps</m>. -->
-<!--       </investigation> -->
+<!-- <!-\-   <investigation> -\-> -->
+<!-- <!-\-     For <m>\eps\gt0</m> we need to find <m>\delta\gt 0</m> such that if -\-> -->
+<!-- <!-\-     <m>0\lt\abs{h}\lt\delta</m>, then <m>\abs{\frac{f(x+h)-f(x)}{h}-2x}\lt -\-> -->
+<!-- <!-\-     \eps</m>. -\-> -->
+<!-- <!-\-     Working backwards from this we have -\-> -->
+<!-- <!-\-     \begin{align*} -\-> -->
+<!-- <!-\-       \abs{\frac{(x+h)^2-x^2}{h}-2x}\amp\lt\eps -\-> -->
+<!-- <!-\-       \abs{\frac{x^2+2xh+h^2-x^2}{h}-2x}\amp\lt\eps -\-> -->
+<!-- <!-\-       \abs{\frac{2xh+h^2}{h}-2x}\amp\lt\eps -\-> -->
+<!-- <!-\-       \abs{2x+h-2x}\amp\lt\eps -\-> -->
+<!-- <!-\-       \abs{h}      \amp\lt\eps -\-> -->
+<!-- <!-\-       -\eps\lt h      \amp\lt\eps, -\-> -->
+<!-- <!-\-     \end{align*} -\-> -->
+<!-- <!-\-     so we choose <m>\delta=\eps</m>. -\-> -->
+<!-- <!-\-       </investigation> -\-> -->
 
-<!-- \begin{embeddedproblem} -->
-<!--   Use the scrapwork above to write down a rigorous proof  that if <m>f(x)=x^2</m> then -->
-<!--   <m>f^\prime(x)=2x</m>. -->
-<!-- \end{embeddedproblem} -->
-<!-- </p> -->
-<!-- </example> -->
+<!-- <!-\- \begin{embeddedproblem} -\-> -->
+<!-- <!-\-   Use the scrapwork above to write down a rigorous proof  that if <m>f(x)=x^2</m> then -\-> -->
+<!-- <!-\-   <m>f^\prime(x)=2x</m>. -\-> -->
+<!-- <!-\- \end{embeddedproblem} -\-> -->
+<!-- <!-\- </p> -\-> -->
+<!-- <!-\- </example> -\-> -->
 
 
 </section>
@@ -1910,7 +1917,7 @@ Triangle Inequality here so that we can cite it as needed.
   <xref ref="DIGRESSIONAbsoluteValue2">Digression~\</xref>.
 </p>
 
-<proof xml:id="no-label">
+<proof  xml:id="PROOF:TriIneq">
 <title>Proof of the Triangle Inequality</title>
 <p>
   Clearly <m>-\abs{x}\leq x \leq \abs{x}</m> and <m>-\abs{y}\leq y \leq
@@ -1978,7 +1985,7 @@ we provide.
 </p>
 </theorem>
 
-<proof xml:id="no-label">
+<proof>
 <p>
   Let <m>\eps\gt 0</m> be given. Take <m>B=L.</m> Then if <m>x\gt B</m> we see that
   <me>
@@ -2003,7 +2010,7 @@ for <m>B\ge L</m> would have worked as well.
 </theorem>
 
 
-<problem xml:id="no-label">
+<problem>
 <statement>
 <p>
   Use the proof of <xref ref="THMLimConstInf">Theorem</xref> as a model to construct
@@ -2024,7 +2031,7 @@ then <m>\limit{x}{a}{f(x)}=K.</m>
 </theorem>
 
 
-<problem xml:id="no-label">
+<problem>
 <statement>
 <p>
   Use the proof of <xref ref="THMLimConstInf">Theorem</xref> as a model to construct
@@ -2102,7 +2109,7 @@ value of <m>x</m> is one where <m>x\gt B_f</m> and <m>x\gt B_g</m>.
 </p>
 </investigation>
 
-<proof xml:id="no-label">
+<proof>
 <p>
   Let <m>\eps\gt 0</m> be given.
 
@@ -2128,7 +2135,7 @@ value of <m>x</m> is one where <m>x\gt B_f</m> and <m>x\gt B_g</m>.
 </proof>
 
 
-<problem xml:id="no-label">
+<problem>
 <statement>
 <p>
   Use the proof of <xref ref="THEOREMLimSumInf">Theorem</xref> as a model to construct
@@ -2150,7 +2157,7 @@ value of <m>x</m> is one where <m>x\gt B_f</m> and <m>x\gt B_g</m>.
 
 
 
-<problem xml:id="no-label">
+<problem>
 <statement>
 <p>
   Use the proof of <xref ref="THEOREMLimSumInf">Theorem</xref> as a model to construct
@@ -2196,7 +2203,7 @@ Suppose that <m>a</m> is some real number, <m>\limit{x}{a}{f(x)}=L_f</m> and
 </theorem>
 
 
-<proof xml:id="no-label">
+<proof>
 <p>
   Let <m>\eps\gt0</m> be given.
 
@@ -2223,7 +2230,7 @@ Suppose that <m>a</m> is some real number, <m>\limit{x}{a}{f(x)}=L_f</m> and
 
 
 
-<problem xml:id="no-label">
+<problem>
 <statement>
 <p>
   Use  the proof of <xref ref="THMSqThmInfinity">Theorem</xref> as a model
@@ -2248,7 +2255,7 @@ Suppose that <m>a</m> is some real number, <m>\limit{x}{a}{f(x)}=L_f</m> and
 
 
 
-<problem xml:id="no-label">
+<problem>
 <statement>
 <p>
   Use  the proof of <xref ref="THMSqThmInfinity">Theorem</xref> as a model
@@ -2392,7 +2399,7 @@ From the continuity of <m>f</m> at <m>L_g</m> we know  that
 </p>
 </investigation>
 
-<proof xml:id="no-label">
+<proof>
 <p>
   Let <m>\eps\gt 0</m> be given.
   
@@ -2428,7 +2435,7 @@ From the continuity of <m>f</m> at <m>L_g</m> we know  that
 
 
 
-<problem xml:id="no-label">
+<problem>
 <statement>
 <p>
   Use the proof of <xref ref="THEOREMLimCompInf">Theorem</xref> as a model to
@@ -2452,7 +2459,7 @@ From the continuity of <m>f</m> at <m>L_g</m> we know  that
 
 
 
-<problem xml:id="no-label">
+<problem>
 <statement>
 <p>
   Use the proof of <xref ref="THEOREMLimCompInf">Theorem</xref> as a model to
@@ -2506,7 +2513,7 @@ straightforward once the following two lemmas have been proved. We
  </p>
 </lemma>
 
- <lemma xml:id="lemma:LimProd2">
+ <lemma xml:id="LEMMALimProd2">
 <p>
    <!-- \label{lemma:LimProd2} -->
      If <m>\limit{x}{\infty}{f(x)}=L_f</m> and <m>\limit{x}{\infty}{g(x)}=L_g</m> then
@@ -2515,7 +2522,7 @@ straightforward once the following two lemmas have been proved. We
 </lemma>
 
 
-<proof xml:id="no-label">
+<proof xml:id="PROOFLemmaLimProd2">
 <title><xref ref="THMlimit-product-infinity">Theorem</xref></title>
 <p>
     Let <m>\eps \gt 0</m> be given.
@@ -2565,7 +2572,7 @@ Therefore <m>\limit{x}{\infty}{f(x)\cdot
 </proof>
 
 </introduction>
-<subsubsection xml:id="no-label">
+<subsubsection>
 <title>Proving <xref ref="LEMMAlemma:LimProd1"></xref></title>
 <p>
 
@@ -2609,7 +2616,7 @@ of <xref ref="LEMMALimProd1">Lemma~\</xref>.
   </p>
 </lemma>
 
-<proof xml:id="no-label">
+<proof>
 <p>
     Since <m>\tlimit{x}{\infty}{f(x) = L_f}</m> there is a positive number
       <m>\beta</m> such that if <m>x\gt \beta</m> then <m>\abs{f(x)-L_f}\lt 1</m>. So
@@ -2625,7 +2632,7 @@ and it follows that if <m>x\gt\beta</m> then <m>\abs{f(x)}\lt N</m>.
 </proof>
 
 
-  <exercise xml:id="no-label">
+  <exercise>
 <statement>
 <p>
     Draw a convincing diagram of <xref ref="LEMMABounded1">Lemma~\</xref> and its proof.
@@ -2634,7 +2641,7 @@ and it follows that if <m>x\gt\beta</m> then <m>\abs{f(x)}\lt N</m>.
 </exercise>
   
 
-  <proof xml:id="no-label">
+  <proof>
 <title><xref ref="LEMMALimProd1">Lemma~\</xref></title>
 <p>
     From <xref ref="LEMMABounded1">Lemma~\</xref>) we see that there are positive
@@ -2666,8 +2673,8 @@ Therefore    <m>\tlimit{x}{\infty}{\left(f(x)\cdot g(x)-f(x)\cdot L_g\right)}=0.
 
 
 </subsubsection>
-<subsubsection xml:id="no-label">
-<title>Proving <xref ref="LEMMAlemma:LimProd2"></xref></title>
+<subsubsection xml:id="SUBSECTIONLemmaLimProd2">
+<title>Proving <xref ref="LEMMALimProd2"></xref></title>
 <p>
 
   To prove <xref ref="LEMMALimProd2">Lemma~\</xref> we need to guarantee that if <m>x</m>
@@ -2687,10 +2694,10 @@ Therefore    <m>\tlimit{x}{\infty}{\left(f(x)\cdot g(x)-f(x)\cdot L_g\right)}=0.
   guarantee that
   <m>\abs{f(x)-L_f}\lt \frac{\eps}{\abs{L_g}}</m>.
 </p>
-<p>  
+<p>
   We will need to handle the case <m>L_g=0</m> separately.
 </p>
-  <proof xml:id="no-label">
+  <proof xml:id="PROOFLemmaLimProd2">
 <title><xref ref="LEMMALimProd2">Lemma~\</xref></title>
 <p>
     Let <m>\eps\gt0</m> be given.
@@ -2746,7 +2753,7 @@ Therefore    <m>\tlimit{x}{\infty}{\left(f(x)\cdot g(x)-f(x)\cdot L_g\right)}=0.
   the next drill shows.
 </p>
 
-  <problem xml:id="no-label">
+  <problem>
 <introduction>
 <p>
     As you've seen using the limit definition (using <m>\eps</m> and
@@ -2826,7 +2833,7 @@ Therefore    <m>\tlimit{x}{\infty}{\left(f(x)\cdot g(x)-f(x)\cdot L_g\right)}=0.
        these came from.  Change your major and come join us.
        Sometimes we bring cookies.
 </p>
-<problem xml:id="no-label">
+<problem>
 <statement>
 <p>
   Use our proof of <xref ref="THMlimit-product-infinity">Theorem</xref> as a model
@@ -2845,7 +2852,7 @@ Therefore    <m>\tlimit{x}{\infty}{\left(f(x)\cdot g(x)-f(x)\cdot L_g\right)}=0.
 </theorem>
 
 
-<problem xml:id="no-label">
+<problem>
 <statement>
 <p>
   Use our proof of <xref ref="THMlimit-product-infinity">Theorem</xref> as a model
@@ -2892,7 +2899,7 @@ However we will need to dispose of the following small detail.
 
 </subsubsection>
 </subsection>
-<subsection xml:id="no-label">
+<subsection xml:id="SUBSECTIONOneOverXIsCont">
 <title>The Function  \boldmath  <m>f(x)=\frac1x</m> is Continuous
   Wherever  It Is Defined</title>
 
@@ -3023,7 +3030,7 @@ However we will need to dispose of the following small detail.
 Armed with this and our Limit Theorems, we can tackle the proof of
 the next theorem without resorting back to definitions.
 </p>
-<theorem xml:id="no-label">
+<theorem xml:id="THEOREMLimQuot">
 <title>The Limit of a Quotient is the Quotient of the
   Limits</title>
 <p>

@@ -19,7 +19,7 @@
 
     <figure>
       <caption>
-        <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Newton/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Newton/">\textcolor{black}{  {Woolsthorpe Manor today}}</url>
+        <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Newton/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Newton/">Woolsthorpe Manor as it appears today</url>
       </caption>
       <image source="images/WoolsthorpeManor.png" width="50%"/>
     </figure>
@@ -70,7 +70,7 @@
 
     <figure>
       <caption>
-        <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Newton/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Newton/">\centerline{Isaac Newton}\centerline{ 1642-1727}</url>
+        <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Newton/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Newton/">Isaac Newton</url> (1642-1727)
       </caption>
       <image source="images/Newton.png" width="30%"/>
     </figure>
@@ -128,8 +128,7 @@
 
     <figure>
       <caption>
-        <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Leibniz/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Leibniz/"> \centerline{Gottfried Wilhelm Leibniz}
-        \centerline{1646-1716}</url>
+        <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Leibniz/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Leibniz/"> Gottfried Wilhelm Leibniz</url>(1646-1716)
       </caption>
       <image source="images/Leibniz.png" width="30%"/>
     </figure>
@@ -287,7 +286,7 @@
 
     <figure>
       <caption>
-        <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Robinson/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Robinson/">\centerline{Abraham Robinson,}\centerline{1918-1974}</url>
+        <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Robinson/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Robinson/">Abraham Robinson</url> (1918-1974)
       </caption>
       <image source="images/Robinson_4.png" width="50%"/>
     </figure>
@@ -390,7 +389,7 @@
       </blockquote>
     </introduction>
 
-    <subsection xml:id="no-label">
+    <subsection xml:id="SUBSECTIONPurposeOfChapter">
       <title>Warning: Be Sure You Understand  the
       Purpose of This Chapter.</title>
       <p>
@@ -522,7 +521,7 @@
       </p>
 
     </subsection>
-    <subsection xml:id="no-label">
+    <subsection xml:id="SUBSECTIONDifferentials">
       <title>Differentials</title>
 
       <blockquote>
@@ -600,7 +599,7 @@
       </p>
     </subsection>
 
-    <subsection xml:id="no-label"> 
+    <subsection xml:id="SUBSECTIONGenDiffRules"> 
       <title>The General Differentiation Rules</title> 
       <introduction>
         <p>
@@ -625,14 +624,20 @@
             <men  xml:id="THEOREMconstRule">\dx{x}=0</men>.
           </p>
         </theorem>
-        <exercise xml:id="drill:ConstantRule">
+
+        <p>
+          This first rule was particularly simple since only one quantity was
+          involved and it was unchanging. The second is only slightly more
+          complex. Suppose we have two  variable quantities, <m>x</m> and <m>y</m>.
+          Then:
+        </p>
+
+        <exercise xml:id="DRILLConstantRule">
           <introduction>
             <p>
-              <!-- \label{drill:ConstantRule} -->
-              Compute the differential, <m>\dx{y}</m>, of each of the following:
             </p>
           </introduction>
-          <task>
+<task>
             <statement>
               <p>
                 <m>y=1</m>
@@ -641,7 +646,7 @@
             <answer>
               <p> <m>\dx{y}=0</m></p>
             </answer>
-          </task>
+</task>
           <task>
             <statement>
               <p>
@@ -693,7 +698,7 @@
               <p> <m>\dx{y}=0</m></p>
             </answer>
           </task>
-        </exercise>
+          </exercise>
 
         <problem xml:id="PROBLEMConstRuleName">
           <statement>
@@ -706,12 +711,7 @@
           </statement>
         </problem>
 
-        <p>
-          This first rule was particularly simple since only one quantity was
-          involved and it was unchanging. The second is only slightly more
-          complex. Suppose we have two  variable quantities, <m>x</m> and <m>y</m>.
-          Then:
-        </p>
+
       </subsubsection>
 
       <subsubsection>     
@@ -752,24 +752,26 @@
               From the Sum Rule and the Constant Rule we have,
               <me>\dx{(3x)}+\dx{(2y)}=0</me> and from the Constant Multiple
               Rule we see that,
-              <me>
-                3\dx{x}+2\dx{y}=0.\label{eq:slope}
-              </me>
+              <men  xml:id="EQUATIONSlope">
+                3\dx{x}+2\dx{y}=0.
+              </men>
           </p>
-          <p>        Notice that <xref ref="EQslope">Equation~</xref>) can be rearranged as follows:
-          <m> \dfdx{y}{x} = -\frac32.  </m>
-
-          So it appears that the <term>differential ratio</term> <m>\dfdx{y}{x}</m> is
-          the slope of our line. This makes sense since <m>\dfdx{y}{x}</m> is the
-          (infinitesimal) change in <m>y</m> divided by the (infinitesimal) change
-          in <m>x</m>. From your study of lines in Algebra you know that the change
-          in <m>y</m> divided by the change in <m>x</m> is the definition of slope. It
-          continues to be the slope even if the changes in <m>x</m> and <m>y</m> are
-          infinitesimal.
+          <p>
+            Notice that <xref ref="EQUATIONSlope">equation</xref> can be
+            rearranged as follows: <m> \dfdx{y}{x} = -\frac32.  </m>
+            So it appears that the <term>differential ratio</term>
+            <m>\dfdx{y}{x}</m> is the slope of our line. This makes
+            sense since <m>\dfdx{y}{x}</m> is the (infinitesimal)
+            change in <m>y</m> divided by the (infinitesimal) change
+            in <m>x</m>. From your study of lines in Algebra you know
+            that the change in <m>y</m> divided by the change in
+            <m>x</m> is the definition of slope. It continues to be
+            the slope even if the changes in <m>x</m> and <m>y</m> are
+            infinitesimal.
           </p>
         </example>
 
-        <exercise xml:id="no-label">
+        <exercise>
           <introduction>
             <p>
               Compute <m>\dx{y}</m> for each of the following:
@@ -975,27 +977,22 @@
           <m>y\dx{x}</m> and the area of the yellow region is
           <m>\dx{x}\dx{y}</m>.  Since <m>\dx{A}</m> is the sum of these
           three regions we have
-          <me>
+          <men  xml:id="EQUATIONDifferentialProductRule">
             \dx{A} =x\dx{y}+y\dx{x}+\dx{x}\dx{y}.
-          </me>
+          </men>
         </p>
         <p>
           But remember that <m>\dx{x}</m> and <m>\dx{y}</m> represent
           infinitely small changes.  Thus, their product
           <m>\dx{x}\dx{y}</m> is even more infinitely small than they
-          are.
+          are. (Quadratically infinitely small?)
         </p>
-        <aside>
-          <title>Comment</title>
-          <p>
-            Quadratically infinitely small?
-          </p>
-        </aside>
+
         <p>
-          In fact, the product <m>\dx{x}\dx{y}</m> is so small compared
-          to any of the that other terms in <xref
-          ref="EQDifferentialProductRule">Equation</xref> that it simply
-          doesn't matter. So we will ignore it.
+          In fact, the product <m>\dx{x}\dx{y}</m> is so small
+          compared to any of the other terms in <xref
+          ref="EQUATIONDifferentialProductRule">Equation</xref> that
+          it simply doesn't matter. So we will ignore it.
         </p>
         <p>
           This leaves us with <m>\dx{A}=\dx(xy)=x\dx{y}+y\dx{x}</m> verifying the
@@ -1157,8 +1154,8 @@
             think of the ``d'' as ``operating on'' the expression <m>\pi
             r^2.</m> Thus when <m>\dx{}</m> ``operates on'' the expression
             <m>\pi r^2</m> it returns the expression <m>2\pi r\dx{r}</m>
-            and we have\centerline{<m>\dx{A}=\dx(\pi r^2) = 2\pi r
-            \dx{r}.</m>} This is actually consistent with our previous
+            and we have <m>\dx{A}=\dx(\pi r^2) = 2\pi r
+            \dx{r}.</m> This is actually consistent with our previous
             usage if we think of <m>\dx(A)</m> as ``operating on'' the
             area <m>A</m> and returning the differential <m>\dx{A}.</m>
           </p>
@@ -2501,7 +2498,7 @@
         <!-- <!-\- \end{ProficiencyDrill} -\-> -->
 
 </subsubsection>
-<subsubsection xml:id="no-label">
+<subsubsection xml:id="SUBSUBSECTIONGenPowerRule">
   <title>The General Power Rule</title>
   <p>
 
@@ -2630,7 +2627,7 @@
       <m>\dx{\left(\dfrac{x}{y}\right)}=\dfrac{y\dx{x}-x\dx{y}}{y^2}.</m>
     </p>
   </theorem>
-  <problem xml:id="no-label">
+  <problem>
     <introduction>
       <p>
         Derive the Quotient Rule, <m>\dx{z}=\dfrac{y\dx{x}-x\dx{y}}{y^2}</m>,
@@ -2667,7 +2664,7 @@
     </md>
   </p>
 
-  <exercise xml:id="no-label">
+  <exercise>
     <statement>
       <p>
         Show this is the same as  your solution of
@@ -2677,7 +2674,7 @@
   </exercise>
 
 
-  <exercise xml:id="no-label">
+  <exercise>
     <introduction>
       <p>
         Compute <m>\dx{y}</m> for each of the following:
@@ -2748,7 +2745,7 @@
     </task>
   </exercise>
 
-<problem xml:id="no-label">
+<problem>
 <introduction>
 <p>
 </p>
@@ -2863,7 +2860,7 @@
     Rule by finding algebraic simplifications of the original expression, as
     demonstrated by the next problem.
   </p>
-  <problem xml:id="no-label">
+  <problem>
     <introduction>
       <p>
         First compute each of the following using the Quotient Rule, and
