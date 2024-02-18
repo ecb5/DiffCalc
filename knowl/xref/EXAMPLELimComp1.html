@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h5 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">12.62</span><span class="period">.</span>
+</h5>
+<div class="para logical">
+<div class="para">We need to evaluate the limit:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/SECTIONexponential.html">
+\begin{equation*}
+\limit{m}{\infty}{ \left( 1+\frac{1}{m} \right)^m}.
+\end{equation*}
+</div>
+<div class="para">It is tempting to reason as follows. We see that <span class="process-math">\(1+\frac{1}{m}\rightarrow1\)</span> as <span class="process-math">\(m\rightarrow\infty\text{.}\)</span> That is, we have the indeterminate form <span class="process-math">\(\approach{1}^{\approach{\infty}}\)</span> and since one raised to any power is equal to one this limit must equal <span class="process-math">\(1\text{,}\)</span> right? Surely you know better than to jump to that conclusion by now. Not only does all of the evidence of this chapter warn you that limits are more subtle than that, but in our investigations in <a href="CHAlast-elem-funct.html#SECTIONexponential" class="internal" title="Section 8.2: The Natural Exponential">~ 8.2</a> we saw overwhelming evidence that this limit is not equal to one.</div>
+</div> <div class="para">Also, notice that we wrote <span class="process-math">\(\approach{1}^{\approach{\infty}}\text{,}\)</span> not <span class="process-math">\(1^{\approach{\infty}}\text{.}\)</span> Why do you think we did that?</div> <div class="para">The source of our difficulty here is that the variable <span class="process-math">\(m\)</span> is in the exponent where we can’t get at it. We’d like to find a way to bring it out of the exponent. The natural logarithm seems perfect for this task since it has the property that <span class="process-math">\(\ln\left(a^b\right)=b\ln(a)\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">Begin by setting <span class="process-math">\(y=\left(1+\frac{1}{m}\right)^m\text{.}\)</span> Then</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/SECTIONLimitLaws.html">
+\begin{equation*}
+\ln(y)=
+\ln\left(1+\frac{1}{m}\right)^m =
+m\ln\left(1+\frac{1}{m}\right).
+\end{equation*}
+</div>
+<div class="para">Rather than evaluating <span class="process-math">\(\limit{t}{\infty}{y}\)</span> directly we evaluate the limit of the logarithm of <span class="process-math">\(y\text{.}\)</span> Thus</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/SECTIONLimitLaws.html">
+\begin{equation*}
+\limit{m}{\infty}{\ln(y)} =
+\limit{m}{\infty}{m\ln\left(1+\frac{1}{m}\right) }.
+\end{equation*}
+</div>
+<div class="para">The limit on the right is an indeterminate form but unfortunately it is not a \lhop  Indeterminate.  So, as before, we’ll have to do some algebraic manipulations first.  Set <span class="process-math">\(\frac1m=z\)</span> so that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/SECTIONLimitLaws.html">
+\begin{equation*}
+\limit{t}{\infty}{\ln(y)}
+=\rlimit{z}{0}{\frac{\ln\left(1+z\right)}{z} }
+\lhopeq\rlimit{z}{0}{\frac{\frac{1}{1+z}}{1}}=1.
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(\limit{m}{\infty}{\ln(y)}=1\)</span> it seems intuitively clear that <span class="process-math">\(\limit{m}{\infty}{y}=\limit{m}{\infty}{\left(1+\frac1m\right)^m}=e^{1}\text{,}\)</span> doesn’t it? In fact it is not true generally that <span class="process-math">\(\textcolor{blue}{\tlimit{x}{a}{\textcolor{red}{f(g(x))}}}\)</span> is equal to <span class="process-math">\(\textcolor{red}{f}\textcolor{blue}{\left(\tlimit{x}{a}{g(x)}\right)}\text{.}\)</span> (We have not yet discussed values of <span class="process-math">\(a\)</span> that are not either <span class="process-math">\(0\)</span> or <span class="process-math">\(\infty\text{.}\)</span>) However this is true whenever <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(g(a)\text{.}\)</span> Since <span class="process-math">\(f(x)=\ln(x)\)</span> is continuous, for <span class="process-math">\(x\gt0\)</span> this is a detail that needn’t trouble us for now so we will ignore it.  We will return to it in <a href="CHAformal-limits.html#SECTIONLimitLaws" class="internal" title="Section 17.3: Limit Laws (Theorems)">~ 17.3</a>.</div>
+</div></article><span class="incontext"><a class="internal" href="CHAlimits-lhop-rule.html#EXAMPLELimComp1">in-context</a></span>
+</body>
+</html>

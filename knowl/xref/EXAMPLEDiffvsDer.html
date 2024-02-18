@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">9.13</span><span class="period">.</span><span class="space"> </span><span class="title">Differentials vs. Derivatives.</span>
+</h4> <div class="para">But take a moment to consider this. Is it clear to you that there must be such a maximal rectangle?  If so then, as before, setting the derivative of the objective function equal to zero and solving for the variable will provide all of the values of the variable where the maximal rectangle might occur. If we’re lucky there will only be a few such and we can check them one at a time.</div> <div class="para logical">
+<div class="para">Finding the objective function is easy. The area, <span class="process-math">\(A\text{,}\)</span> of any rectangle is its length, <span class="process-math">\(l\text{,}\)</span> times its width, <span class="process-math">\(w\text{,}\)</span> so</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A=lw\label{eq:SquareObjFun}
+\end{equation*}
+</div>
+<div class="para">is the objective function.</div>
+</div> <div class="para logical">
+<div class="para">The perimeter, <span class="process-math">\(P\)</span> is</div>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+P=2l +2w\label{eq:SquareConst}
+\end{equation*}
+</div>
+<div class="para">and is constrained to be a constant (fixed) value so <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQSquareConst" missing or not unique]</code>) is the constraint. Throughout this example keep in mind that <span class="process-math">\(P\)</span> is a fixed constant, not a function of <span class="process-math">\(l\)</span> and <span class="process-math">\(w\text{.}\)</span>
+</div>
+</div> <div class="para logical">
+<div class="para">At this point we can complete the problem using Calculus in either of two equivalent ways.</div>
+<dl class="description-list">
+<dt>Using Differentials:</dt>
+<dd><div class="para logical">
+<div class="para">In our opinion this is how Leibniz intended for his Calculus to be used so we tend to favor it.</div>
+<ol class="decimal">
+<li><div class="para">Compute <span class="process-math">\(\dx{A} = l\dx{w}+w\dx{l}\text{,}\)</span> from the objective      function.</div></li>
+<li><div class="para">Differentiate the constraint, giving the differential form      of the constraint: <span class="process-math">\(2\dx{l}+2\dx{w}=0.\)</span>
+</div></li>
+<li><div class="para logical">
+<div class="para">Set <span class="process-math">\(\dx{A}=0\)</span> and solve this equation using the constraint      and its differential form as needed. In this problem we have      <span class="process-math">\(\dx{l}=-\dx{w}\)</span> so</div>
+<div class="displaymath process-math">
+\begin{align*}
+l\dx{w}+w\dx{l} \amp = 0\\\\
+l\dx{w}-w\dx{w} \amp = 0\\
+(l-w)\dx{w}\amp =0.
+\end{align*}
+</div>
+<div class="para">Since <span class="process-math">\(\dx{w}\neq0\)</span> we have <span class="process-math">\(l=w\)</span> and thus the square encloses the most area.</div>
+</div></li>
+</ol>
+</div></dd>
+<dt>Using Derivatives:</dt>
+<dd><div class="para logical">
+<div class="para">The modern approach emphasizes the use of functions and derivatives rather than curves and differentials.</div>
+<ol class="decimal">
+<li><div class="para">Solve the constraint for either <span class="process-math">\(w\)</span> or <span class="process-math">\(l\)</span> in terms of the      other. For example, <span class="process-math">\(l=\frac12(P-2w).\)</span>
+</div></li>
+<li><div class="para logical">
+<div class="para">Substitute this into the objective function to rewrite it in      terms of a single variable:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A(w)=\frac12(P-2w)\cdot w = \frac12(Pw-w^2).
+\end{equation*}
+</div>
+</div></li>
+<li>
+<div class="para">Now think of the objective function, <span class="process-math">\(A(w)\text{,}\)</span> as an abstract      function and find its maximum point by setting <span class="process-math">\(\dfdx{A}{w}=0\)</span>      and solving for <span class="process-math">\(w\text{.}\)</span>
+</div>
+<div class="para logical">
+<div class="para">Proceeding, we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dfdx{A}{w}=\dfdx {w}\left(\frac12(Pw-2w^2)\right)=\frac12(P-4w)=0
+\end{equation*}
+</div>
+<div class="para">so <span class="process-math">\(w=\frac{P}{4}\text{.}\)</span> Putting this back into our constraint gives <span class="process-math">\(P=2\cdot\frac{P}{4}+2l\)</span> we see that <span class="process-math">\(l\)</span> is also equal to <span class="process-math">\(\frac{P}{4}\text{.}\)</span> Since <span class="process-math">\(l=w=\frac{P}{4}\)</span> the square encloses the most area.</div>
+</div>
+</li>
+</ol>
+</div></dd>
+</dl>
+</div> <div class="para">As we said, the two approaches are completely equivalent.  Use whichever feels most comfortable to you.</div></article><span class="incontext"><a class="internal" href="CHAwhat-deriv-tells.html#EXAMPLEDiffvsDer">in-context</a></span>
+</body>
+</html>
