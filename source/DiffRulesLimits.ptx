@@ -1,10 +1,9 @@
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="CHAdiff-rules-with-limits">
  <title>The Differentiation Rules via Limits</title>
 
-<section xml:id="sec:limit-theorems-laws">
+<section xml:id="SECTIONlimit-theorems-laws">
 <title>The Limit Rules (Theorems)</title>
 
-<!-- \label{sec:limit-theorems-laws} -->
 <introduction>
 <blockquote>
 <p>
@@ -169,9 +168,8 @@ important when we discuss the meaning of continuity in
 <xref ref="SEClimit-comp-cont">Section</xref>.
 </p>
 
-<example xml:id="example:DiscontLimit1">
+<example xml:id="EXAMPLEDiscontLimit1">
 <p>
-  <!-- \label{example:DiscontLimit1} -->
 Suppose
   <me>
   f(x)=
@@ -203,7 +201,7 @@ We're interested in the limit as <m>x\rightarrow3</m> so
 
   Notice that our reasoning is a little vague in the last step because
   we had to resort to the phase <q>gets close to,</q> and we know from
-  our work in <xref ref="CHAPTERsec:more-indet-forms">~</xref> that this is not a
+  our work in <xref ref="SECTIONmore-indet-forms">~</xref> that this is not a
   precise phrase. This is the best we can do now because we have not
   yet rigorously defined a limit. We will do that in
   <xref ref="CHAPTERcha:formal-limits">~</xref>.
@@ -217,7 +215,7 @@ We're interested in the limit as <m>x\rightarrow3</m> so
 <introduction>
 <p>
   By reasoning in a manner similar to
-  <xref ref="EXAMPLEexample:DiscontLimit1"></xref> show that
+  <xref ref="EXAMPLEDiscontLimit1"></xref> show that
   <m>\tlimit{x}{3}{f(x)}=9</m> for each function.
 </p>
 </introduction>
@@ -508,10 +506,9 @@ undefined.
 </problem>
 
 
-<problem xml:id="prob:DiffImpCont">
+<problem xml:id="PROBLEMDiffImpCont">
 <statement>
 <p>
-  <!-- \label{prob:DiffImpCont} -->
   Suppose <m>g(x)\neq0</m> near <m>x=a</m> and
   <m>\tlimit{x}{a}{\frac{f(x)}{g(x)}}</m> exists. Use
   <xref ref="THEOREMLimProd2">Theorem~\</xref> to show that if
@@ -552,11 +549,10 @@ approaches <m>kL_f</m>. It follows from <xref ref="THMConstLimit">Theorem</xref>
 </statement>
 </exercise>
 </introduction>
-<subsection xml:id="sec:limit-comp-cont">
+<subsection xml:id="SUBSECTIONlimit-comp-cont">
 <title>The Limit of a Composition and Continuity at a Point</title>
-<!-- \label{sec:limit-comp-cont} -->
-<p>
 
+<p>
 The concept of <term>continuity</term> is essential to Calculus, but you may
 have noticed that we have carefully avoided it as much as possible
 until now. This is because defining continuity is similar to defining
@@ -663,15 +659,15 @@ theorems have been proven in <xref ref="CHAPTERcha:formal-limits">~</xref>.
  <problem>
 <statement>
 <p>
-    Use the result of <xref ref="PROBLEMprob:DiffImpCont"></xref> to prove
+    Use the result of <xref ref="PROBLEMDiffImpCont"></xref> to prove
     <xref ref="LEMMAlemma:DiffImpliesCont">~</xref>.
   </p>
 </statement>
 </problem>
 <p>  
   When we were studying horizontal asymptotes in
-  <xref ref="SECTIONsubsec:lhop-rule-horiz">~</xref> we encountered
-  <xref ref="THEOREMthm:InfSqueeze">~</xref> (the  Squeeze
+  <xref ref="SUBSECTIONlhop-rule-horiz">~</xref> we encountered
+  <xref ref="THEOREMInfSqueeze">~</xref> (the  Squeeze
   Theorem <q>at</q> Infinity). But the Squeeze Theorem is also valid if
   <m>x\rightarrow a</m>, where <m>a</m> is a real number.
 </p>    
@@ -762,10 +758,8 @@ the <q><m>\lim</m></q> symbols if <m>f</m> is continuous at <m>g(a)</m>.
 
 </subsection>
 </section>
-<section xml:id="sec:diff-rules-via">
+<section xml:id="SECTIONdiff-rules-via">
 <title>The General Differentiation Theorems, via Limits</title>
-
-<!-- \label{sec:diff-rules-via} -->
 
 <blockquote>
 <p>
@@ -919,9 +913,8 @@ Multiple Rule directly, without having to resort to using limits.
 To understand the Chain Rule we will need to slightly blur the
 distinction between function and variable.
 </p>
-<example xml:id="example:chain-rule1">
+<example xml:id="EXAMPLEchain-rule1">
 <p>
-  <!-- \label{example:chain-rule1} -->
   Here's what we mean: The formula <m>y=(2x^2-6x)^3</m>, is given
     entirely in terms of the variables <m>x</m>, and <m>y</m>. To differentiate
     using differentials we would make the (variable) substitution
@@ -1331,9 +1324,8 @@ END OF DIGRESSION
 </p>
 </paragraphs>
 
-<example xml:id="example:DiffByCR">
+<example xml:id="EXAMPLEDiffByCR">
 <p>
-  <!-- \label{example:DiffByCR} -->
   Suppose that <m>f(x)=\left(\sin(x)+\cos(x)\right)^2</m>. To use the Chain
   Rule to compute the derivative of <m>f(x)</m> we need to recognize that
   <m>f(x)</m> is the composition of <m>\alpha(x)=x^2</m>, and
@@ -1362,7 +1354,7 @@ always used.
   Suppose <m>y=f(x)=\left(\sin(x)+\cos(x)\right)^2</m>.  Compute the
   differential <m>\dx{y}</m> and then divide through by <m>\dx{x}</m> to find the
   derivative <m>\dfdx{y}{x}</m>. Confirm that it is the same as the
-  derivative we found in <xref ref="EXAMPLEexample:DiffByCR"></xref>.
+  derivative we found in <xref ref="EXAMPLEDiffByCR"></xref>.
 </p>
 </statement>
 </exercise>
@@ -1417,10 +1409,9 @@ always used.
 
 
 </section>
-<section xml:id="subsec:product-rule-limits">
+<section xml:id="SECTIONproduct-rule-limits">
 <title>The Product Rule</title>
 
-<!-- \label{subsec:product-rule-limits} -->
 <p>
 A rigorous proof of the Product Rule is also fairly complex, but it
 does not suffer from the kind of technical problems we encountered in
@@ -1576,18 +1567,9 @@ the proof of the Chain Rule.
 <!--   <me> f^\prime(x)=\alpha(x)\beta^\prime(x)+\beta(x)\alpha^\prime(x).</me> -->
 <!-- \end{myproof} -->
 
-
-
-
 </section>
-<section xml:id="sec:other-gener-diff">
+<section xml:id="SECTIONother-gener-diff">
 <title>The Other General Differentiation Rules</title>
-
-<!-- \label{sec:other-gener-diff} -->
-
-
-
-
 
 <theorem xml:id="thm:QuotientRuleLimit">
 <title>The Quotient Rule for Differentiation</title>
@@ -1800,16 +1782,15 @@ similar reasons.
 </p>
 <p>
 
-  <xref ref="PROBLEMproblem:QR-rigor"></xref>  will lead
+  <xref ref="PROBLEMQR-rigor"></xref>  will lead
   you through the steps necessary to prove the Quotient
   Rule for Differentiation without the assumption that
   <m>\frac{\alpha(x)}{\beta(x)}</m> is differentiable. Have fun!
 </p>
   
-<problem xml:id="problem:QR-rigor">
+<problem xml:id="PROBLEMQR-rigor">
 <introduction>
 <p>
-  <!-- \label{problem:QR-rigor} -->
   Assume that <m>\alpha(x)</m> and <m>\beta(x)</m> are
   differentiable and that <m>\beta(x)\neq0</m>, but we make no assumption
   about the differentiability of <m>f(x)=\frac{\alpha(x)}{\beta(x)}</m>.
@@ -1886,17 +1867,16 @@ similar reasons.
 <!--   \end{enumerate} -->
 <!-- \end{embeddedproblem} -->
 <p>
-  <xref ref="PROBLEMproblem:PR-rigor2"></xref> will lead
+  <xref ref="PROBLEMPR-rigor2"></xref> will lead
   you through the steps necessary to prove the Product
   Rule for Rational Exponents without the assumption that
   <m>x^{\frac{p}{q}}</m> is differentiable. It relies on the result of
-    <xref ref="PROBLEMproblem:PR-rigor1"></xref>.
+    <xref ref="PROBLEMPR-rigor1"></xref>.
     Have fun!
 </p>  
-  <problem xml:id="problem:PR-rigor1">
+  <problem xml:id="PROBLEMPR-rigor1">
 <introduction>
 <p>
-        <!-- \label{problem:PR-rigor1} -->
     To prove  <xref ref="THEOREMthm:PowerRuleLimit">~</xref> we will first focus
     on the special case of <m>\beta(x)=x^{\frac{1}{q}}</m>, <m>q</m> is a
     non-negative integer.
@@ -1947,10 +1927,9 @@ similar reasons.
   <!--     \end{embeddedproblem} -->
   
 
-  <problem xml:id="problem:PR-rigor2">
+  <problem xml:id="PROBLEMPR-rigor2">
 <introduction>
 <p>
-    <!-- \label{problem:PR-rigor2} -->
     Assume that <m>p</m> and <m>q</m> are integers and that <m>q\neq0</m>. If we
     apply <xref ref="DEFINITIONdef:Derivative"></xref> to <m>f(x)=x^\frac{1}{q}</m>, we
     get\\
@@ -2025,10 +2004,9 @@ END OF DIGRESSION
 
 
 </section>
-<section xml:id="sec:diff-trig-funct">
+<section xml:id="SECTIONdiff-trig-funct">
 <title>Derivatives of the Trigonometric Functions, via Limits</title>
 
-<!-- \label{sec:diff-trig-funct} -->
 <p>
 \TLogo{PSP:deriv-sine-cosine}
 </p>
@@ -2092,10 +2070,9 @@ It is tempting to use L'H\^o pital's Rule to evaluate these limits,
 especially since it is so very easy to do.
 </p>
 
-<exercise xml:id="drill:CircularReasoning">
+<exercise xml:id="DRILLCircularReasoning">
 <statement>
 <p>
-  <!-- \label{drill:CircularReasoning} -->
   Use L'H\^o pitals Rule to show that
   <m>\tlimit{h}{0}{\frac{(\cos(h)-1)}{h}}=0</m> and that
   <m>\tlimit{h}{0}{\frac{\sin(h)}{h}}=1</m>.
@@ -2103,7 +2080,7 @@ especially since it is so very easy to do.
 </statement>
 </exercise>
 <p>
-Sadly, using <xref ref="DRILLdrill:CircularReasoning"></xref> to finish the proof
+Sadly, using <xref ref="DRILLCircularReasoning"></xref> to finish the proof
 of <xref ref="THEOREMthm:SineDeriv"></xref> is an example of circular
 reasoning. We can't use the fact that the derivative of <m>\sin(x)</m> is
 <m>\cos(x)</m> to prove that the derivative of <m>\sin(x)</m> is <m>\cos(x)</m>. So
@@ -2129,7 +2106,7 @@ L'H\^o pital's Rule.
   \end{wrapfigure}
   There are two cases:\\
   \underline{  \boldmath Case 1, <m>\theta\ge0</m>:} We will use the
-  Squeeze Theorem.  Recall that in <xref ref="SECTIONsubsec:trig-interl">~</xref> we
+  Squeeze Theorem.  Recall that in <xref ref="SUBSECTIONtrig-interl">~</xref> we
   observed that the lengths of certain line segments associated with
   the unit circle in the first quadrant are equal to the trigonometric
   functions. The figure at the right shows the relationship between
@@ -2178,10 +2155,9 @@ L'H\^o pital's Rule.
 </proof>
 
 
-<problem xml:id="problem:CosM1Overh">
+<problem xml:id="PROBLEMCosM1Overh">
 <statement>
 <p>
-  <!-- \label{problem:CosM1Overh} -->
   Show that <m>\tlimit{h}{0}{\frac{(\cos(h)-1)}{h}}=0</m>.\\
   \hint{It is tempting to model this proof on the proof of
     <xref ref="LEMMAlemma:SinOverh">~</xref>. While this can be done, it is 
@@ -2191,7 +2167,7 @@ L'H\^o pital's Rule.
 </statement>
 </problem>
 <p>
-Once <xref ref="PROBLEMproblem:CosM1Overh"></xref> has been solved the 
+Once <xref ref="PROBLEMCosM1Overh"></xref> has been solved the 
 proof that <m>\dfdx{(\sin(x))}{x}= \cos(x)</m> is complete.
 </p>
 
@@ -2206,18 +2182,17 @@ proof that <m>\dfdx{(\sin(x))}{x}= \cos(x)</m> is complete.
 <p>
 Assuming that <m>\tan(\theta)</m>, <m>\cot(\theta)</m>, <m>\sec(\theta)</m>, and
 <m>\csc(\theta)</m> are differentiable we can now use
-<xref ref="THEOREMproblem:QR-rigor">~</xref> to find their derivatives as
+<xref ref="THEOREMQR-rigor">~</xref> to find their derivatives as
 well. Since this is exactly what we did in
-<xref ref="SECTIONsubsec:diff-other-trig">~</xref> we have the derivatives of all of
+<xref ref="SUBSECTIONdiff-other-trig">~</xref> we have the derivatives of all of
 the trigonometric functions.
 </p>
 
 </section>
-<section xml:id="sec:inverse-functions">
+<section xml:id="SECTIONinverse-functions">
 <title>Inverse Functions</title>
-<p>
 
-<!-- \label{sec:inverse-functions} -->
+<p>
 Although we have worked with the inverses of some specific functions
 we have not formally defined what we mean by an inverse. We will
 remedy that now. We have seen that not all functions can be inverted
@@ -2245,7 +2220,7 @@ a <term>one-to-one function</term>\aside{They are also called
 <p>
 Recall that
 when we tried to invert <m>\tan(x)</m> (which is not one-to-one) in
-<xref ref="SECTIONsec:witch-agnesi-inverse"></xref> we got the multifunction
+<xref ref="SECTIONwitch-agnesi-inverse"></xref> we got the multifunction
 <m>\arctan(x)</m>. We had to restrict the domain of the tangent function to
 <m>\frac{-\pi}{2}\le x \le \frac{\pi}{2}</m>, in order to find an
 inverse. That restriction gave us a one-to-one function which we could
@@ -2282,8 +2257,8 @@ Our next task is to show that the derivatives of the in inverse
 trigonometric functions are what we expect them to be. Given that we
 have now obtained the derivatives of all of the trigonometric
 functions it appears that we could proceed just as we did in
-<xref ref="SECTIONsec:diff-inverse-tancot">~</xref> and
-<xref ref="SECTIONsec:other-inverse-trig">~</xref>.
+<xref ref="SECTIONdiff-inverse-tancot">~</xref> and
+<xref ref="SECTIONother-inverse-trig">~</xref>.
 </p>
 <p>
 
@@ -2366,7 +2341,7 @@ trigonmetric formulas.
   to find <m>y=8</m>. If we then take <m>y=8</m> and use
   <xref ref="EQUATIONeq:Inv2"></xref> we find that <m>x=2</m>. That is, <m>x(y)</m> has
   <q>undone</q> <m>y(x)</m> for the single
-  pair <m>(2,8)</m>. <xref ref="DRILLdrill:CubeRoot"></xref> asks you to show that it is
+  pair <m>(2,8)</m>. <xref ref="DRILLCubeRoot"></xref> asks you to show that it is
   true for every pair <m>(x, y(x))</m>. This <q>undoing</q> makes <m>y(x)</m> and
   <m>x(y)</m> a pair of mutually inverse functions.
 </p>
@@ -2395,7 +2370,7 @@ trigonmetric formulas.
   relation.
 </p>
 
-    <exercise xml:id="drill:CubeRoot">
+    <exercise xml:id="DRILLCubeRoot">
 <statement>
 <p>
     <!-- \label{drill:CubeRoot} -->
@@ -2507,7 +2482,7 @@ We include this proof in its full abstraction for two reasons:
 
 The strategy behind the following proof follows the same general
 scheme as the Sherlock Holmes Maxim that we referred to in
-<xref ref="PROBLEMproblem:MaximalTriangle"></xref>. We will eliminate the
+<xref ref="PROBLEMMaximalTriangle"></xref>. We will eliminate the
 impossible so that <q>whatever remains, however improbable, must be the
 truth.</q>
 </p>

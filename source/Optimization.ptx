@@ -1,11 +1,8 @@
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="CHAwhat-deriv-tells">
  <title>Optimization: Going to Extremes</title>
 
-<section xml:id="sec:introduction">
+<section xml:id="SECTIONintroduction">
 <title>Introduction</title>
-
-
-<!-- <!-\- \label{sec:introduction} -\-> -->
 
 <p>
 While it would not be correct to say that Calculus was invented solely
@@ -133,10 +130,9 @@ how to find it.  In this chapter we will build up some tools to help
 us find extrema.
 </p>
 
-<exercise xml:id="drill:NonTrivialMaxExample">
+<exercise xml:id="DRILLNonTrivialMaxExample">
 <introduction>
 <p>
-  <!-- \label{drill:NonTrivialMaxExample} -->
   Let <m> p(t)=(t-1)^4+(t-1)^3+5.</m>
 </p>
 </introduction>
@@ -166,10 +162,8 @@ us find extrema.
 
 
 </section>
-<section xml:id="sec:five-simil-probl">
+<section xml:id="SECTIONfive-simil-probl">
 <title>Preliminaries: Some Simple Optimizations</title>
-
-<!-- \label{sec:five-simil-probl} -->
 
 <p>
 To begin we will consider problems that will allow us to use our
@@ -191,10 +185,9 @@ means to that end, not an end in themselves.
 </p>
 
 
-<example xml:id="example:SqOnLine">
+<example xml:id="EXAMPLESqOnLine">
 <title>Constructing A Square on a Line</title>
 <p>
-  <!-- \label{example:SqOnLine} -->
   What is the area of the smallest possible square having one corner
   at the point <m>(2,3)</m> and an adjacent corner on the line
   <me>
@@ -372,10 +365,9 @@ means to that end, not an end in themselves.
   <!-- \end{embeddedproblem-enumerate} -->
 
   
-  <problem xml:id="problem:MinSqLine">
+  <problem xml:id="PROBLEMMinSqLine">
 <introduction>
 <p>
-    <!-- \label{problem:MinSqLine} -->
     It seems fairly intuitively clear that the minimal square occurs
     when the line through <m>(2,3)</m> is orthogonal\aside{<q>Orthogonal</q>
       is the word mathematicians use when everyone else would say
@@ -498,11 +490,9 @@ We were very careful to write out, in detail, every algebraic
 </p>
 
 
-<example xml:id="example:CircleDist">
+<example xml:id="EXAMPLECircleDist">
 <title>Constructing A Square on a Circle</title>
 <p>
-
-  <!-- \label{example:CircleDist} -->
   We want to find the area of the largest and the smallest squares
   that can be constructed with one corner at the point <m>(2,3)</m> and an
   adjacent corner on the unit circle: <m> x^2+y^2=1</m>.
@@ -516,10 +506,9 @@ We were very careful to write out, in detail, every algebraic
 </p>
 </example>
   
-<exercise xml:id="drill:IntuitiveSquareOnCircle">
+<exercise xml:id="DRILLIntuitiveSquareOnCircle">
 <introduction>
 <p>
-    <!-- \label{drill:IntuitiveSquareOnCircle} -->
 </p>
 </introduction>
 <task>
@@ -648,10 +637,9 @@ We were very careful to write out, in detail, every algebraic
   distinguish between them by evaluating <m>A(x)</m> for each.
 </p>
 
-  <exercise xml:id="drill:ExtremalSquareCircle">
+  <exercise xml:id="DRILLExtremalSquareCircle">
 <introduction>
 <p>
-    <!-- \label{drill:ExtremalSquareCircle} -->
 </p>
 </introduction>
 <task>
@@ -688,91 +676,91 @@ is a slight generalization of
 trickier.
 </p>
 
-<problem xml:id="problem:EllipseDist">
-<introduction>
-<p>
-  <!-- \label{problem:EllipseDist} -->
-  There are two extremal squares with one corner at <m>(2,3)</m> and an
-  adjacent corner on the ellipse:
-  <me>
-  x^2+\frac14y^2=2.
-  </me>
-  Find the area of each one of them.
-  
-  Steps (a) through (g) will guide you through the process. \\
-  \hint{Not all of the problems in these steps are easily solved
-    algebraically. Use Newton's Method or computational software as
-    needed to find approximations.}
-</p>
-</introduction>
-<task>
-<statement>
-<p>
- Draw a sketch of this problem. Explain how you can tell from
-    the sketch that there is one maximal, and one minimal square.
-  </p>
-</statement>
-</task>
-<task>
-<statement>
-<p>
- The objective function for this problem is, once again:
-    <m> A(x) = (x-2)^2+(y-3)^2.  </m>
-    
-    What is the constraint?
-  </p>
-</statement>
-</task>
-<task>
-<statement>
-<p>
- Use the constraint to show that <m>\dx{y} = -\frac{4x}{y}\dx{x}</m>
-    and that <m>y=\pm2\sqrt{2-x^2}</m>.
-  </p>
-</statement>
-</task>
-<task>
-<statement>
-<p>
- Show that <m>\dfdx{A}{x}=-6x-4+\frac{24x}{y}</m>.
-  </p>
-</statement>
-</task>
-<task>
-<statement>
-<p>
- Show that if we choose <m> y=2\sqrt{2-x^2}</m> then the only root
-    of <m>\dfdx{A}{x}=0</m> is <m>x\approx0.86</m>.
-  </p>
-</statement>
-</task>
-<task>
-<statement>
-<p>
- Show that if we choose <m> y=-2\sqrt{2-x^2}</m> then the only root
-    of <m>\dfdx{A}{x}=0</m> is <m>x\approx-0.28</m>.
-  </p>
-</statement>
-</task>
-<task>
-<statement>
-<p>
- Find (approximately) the area of the square associated with
-    both of these points. Which one is the maximal and which is the
-    minimal square?
-  </p>
-</statement>
-</task>
+
+<problem xml:id="PROBLEMEllipseDist">
+  <introduction>
+    <p>
+      There are two extremal squares with one corner at <m>(2,3)</m> and an
+      adjacent corner on the ellipse:
+      <me>
+        x^2+\frac14y^2=2.
+      </me>
+      Find the area of each one of them.
+      
+      Steps (a) through (g) will guide you through the process. \\
+      \hint{Not all of the problems in these steps are easily solved
+      algebraically. Use Newton's Method or computational software as
+      needed to find approximations.}
+    </p>
+  </introduction>
+  <task>
+    <statement>
+      <p>
+        Draw a sketch of this problem. Explain how you can tell from
+        the sketch that there is one maximal, and one minimal square.
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        The objective function for this problem is, once again:
+        <m> A(x) = (x-2)^2+(y-3)^2.  </m>
+        
+        What is the constraint?
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Use the constraint to show that <m>\dx{y} = -\frac{4x}{y}\dx{x}</m>
+        and that <m>y=\pm2\sqrt{2-x^2}</m>.
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Show that <m>\dfdx{A}{x}=-6x-4+\frac{24x}{y}</m>.
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Show that if we choose <m> y=2\sqrt{2-x^2}</m> then the only root
+        of <m>\dfdx{A}{x}=0</m> is <m>x\approx0.86</m>.
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Show that if we choose <m> y=-2\sqrt{2-x^2}</m> then the only root
+        of <m>\dfdx{A}{x}=0</m> is <m>x\approx-0.28</m>.
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Find (approximately) the area of the square associated with
+        both of these points. Which one is the maximal and which is the
+        minimal square?
+      </p>
+    </statement>
+  </task>
 </problem>
 <!-- \begin{embeddedproblem}[Extremal Squares on an Ellipse] -->
-<!--   <!-\- \label{problem:EllipseDist} -\-> -->
+<!--   <!-\- <!-\\- \label{problem:EllipseDist} -\\-> -\-> -->
 <!--   There are two extremal squares with one corner at <m>(2,3)</m> and an -->
 <!--   adjacent corner on the ellipse: -->
 <!--   <me> -->
 <!--   x^2+\frac14y^2=2. -->
 <!--   </me> -->
 <!--   Find the area of each one of them. -->
-  
+
 <!--   Steps (a) through (g) will guide you through the process. \\ -->
 <!--   \hint{Not all of the problems in these steps are easily solved -->
 <!--     algebraically. Use Newton's Method or computational software as -->
@@ -782,7 +770,7 @@ trickier.
 <!--     the sketch that there is one maximal, and one minimal square. -->
 <!--   \item The objective function for this problem is, once again: -->
 <!--     <m> A(x) = (x-2)^2+(y-3)^2.  </m> -->
-    
+
 <!--     What is the constraint? -->
 <!--   \item Use the constraint to show that <m>\dx{y} = -\frac{4x}{y}\dx{x}</m> -->
 <!--     and that <m>y=\pm2\sqrt{2-x^2}</m>. -->
@@ -798,82 +786,16 @@ trickier.
 <!-- \end{embeddedproblem} -->
 
 
-<problem xml:id="problem:MaxOrth1">
+
+<problem xml:id="PROBLEMMaxOrth1">
 <introduction>
 <p>
-  <!-- <!-\- \label{problem:MaxOrth1} -\-> -->
-  Here is a   sketch of the optimal squares in <xref ref="PROBLEMproblem:EllipseDist"></xref>:\\
-  \centerline{\centerline{\includegraphics*[height=2in,width=2.8in]{../Figures/EllipseWithSquares}}}
+  Here is a   sketch of the optimal squares in <xref ref="PROBLEMEllipseDist"></xref>.
   Notice that for both the maximal and the minimal square one of the
   sides appears to be orthogonal to (the line tangent to) the ellipse.
 </p>
-</introduction>
-<task>
-<statement>
-<p>
- Show that they actually are orthogonal.
-  </p>
-</statement>
-</task>
-<task>
-<statement>
-<p>
- It is generally true that the shortest (or longest) line
-    segment from a point <m>(a,b)</m> to a curve, <m>C</m>, will be orthogonal
-    to the line tangent to the curve at their point of intersection.
-    The figure below shows an arbitrary, differentiable curve,
-    <m>C</m>, and an arbitrary point <m>(a,b)</m>.\\
-    \centerline{\includegraphics*[height=1in,width=1.5in]{../Figures/MaxOrth1}}
-    Suppose that the area of a square with one corner at <m>(a,b)</m> and
-    an adjacent corner on the curve at <m>(x,y)</m> is optimal (minimal or
-    maximal) at <m>(x_0, y_0)</m>. Show that the line joining <m>(a,b)</m> and
-    <m>(x_0,y_0)</m> is orthogonal to the tangent line of <m>C</m> at
-    <m>(x_0,y_0)</m> .
-
-    Try to solve this problem completely on your own, but if you get
-    stuck here is an outline you can follow:
-    
-    <ol>
-    <li>
-    <p>
-    Find the objective function, <m>A(x)</m>. (This will be the area      of the square on the line from <m>(a,b)</m> to <m>(x,y)</m>.)
-    </p>
-    </li>
-    <li>
-    <p>
-    Use the fact that <m>\geneval{\dfdx{A}{x}}{(x_0,y_0)}=0</m> to      find the slope of <m>C</m> at <m>(x_0,y_0)</m>.% That
-    </p>
-    </li>
-    <li>
-    <p>
-    Find the slope of the line from <m>(a,b)</m> to <m>(x_0,y_0)</m>.
-    </p>
-    </li>
-    <li>
-    <p>
-    Compare the two slopes.
-    </p>
-    </li>
-    <li>
-    <p>
-    What happens if the tangent line is horizontal? If it is      vertical?
-    </p>
-    </li>
-    </ol>
-
-  </p>
-</statement>
-</task>
-</problem>
-<problem xml:id="problem:MaxOrth1">
-<introduction>
-<p>
-  <!-- <!-\- <!-\\- \label{problem:MaxOrth1} -\\-> -\-> -->
-  Here is a   sketch of the optimal squares in <xref ref="PROBLEMproblem:EllipseDist"></xref>:\\
-  \centerline{\centerline{\includegraphics*[height=2in,width=2.8in]{../Figures/EllipseWithSquares}}}
-  Notice that for both the maximal and the minimal square one of the
-  sides appears to be orthogonal to (the line tangent to) the ellipse.
-</p>
+  <image source="images/EllipseWithSquares.png" width="60%" />
+<!-- \centerline{\includegraphics*[height=2in,width=2.8in]{../Figures/EllipseWithSquares}} -->
 </introduction>
 <task>
 <statement>
@@ -933,7 +855,7 @@ trickier.
 </task>
 </problem>
 <!-- \begin{embeddedproblem}  ;;; MULTILEVEL PROBLEM -->
-<!--   <!-\- <!-\\- <!-\\\- \label{problem:MaxOrth1} -\\\-> -\\-> -\-> -->
+<!--   <!-\- <!-\\- <!-\\\- <!-\\\\- \label{problem:MaxOrth1} -\\\\-> -\\\-> -\\-> -\-> -->
 <!--   Here is a   sketch of the optimal squares in <xref ref="PROBLEMproblem:EllipseDist"></xref>:\\ -->
 <!--   \centerline{\centerline{\includegraphics*[height=2in,width=2.8in]{../Figures/EllipseWithSquares}}} -->
 <!--   Notice that for both the maximal and the minimal square one of the -->
@@ -987,11 +909,9 @@ trickier.
 <!-- \end{embeddedproblem} -->
 
 
-<example xml:id="example:DiffvsDer">
+<example xml:id="EXAMPLEDiffvsDer">
 <title>Differentials vs. Derivatives</title>
 <p>
-
-  <!-- \label{example:DiffvsDer} -->
  But take a moment to consider
   this. Is it clear to you that there must be such a maximal
   rectangle?  If so then, as before, setting the derivative of the
@@ -1110,10 +1030,9 @@ In <xref ref="CHAPTERScienceBeforeCalc">Chapter</xref> we used Fermat's Method o
 Adequality to solve the following problem which is closely related to
 <xref ref="EXAMPLEDiffvsDer">Example~\</xref>.
 </p>
-<problem xml:id="problem:MaximalSquareRedux1">
+<problem xml:id="PROBLEMMaximalSquareRedux1">
 <statement>
 <p>
-  <!-- \label{problem:MaximalSquareRedux1} -->
   Find the dimensions of the rectangle having the smallest perimeter,
   given that the area is fixed.
 
@@ -1312,10 +1231,9 @@ Adequality to solve the following problem which is closely related to
 <!-- \end{ProficiencyDrill} -->
 
 
-<problem xml:id="problem:RectInscEll">
+<problem xml:id="PROBLEMRectInscEll">
 <introduction>
 <p>
-  <!-- \label{problem:RectInscEll} -->
 </p>
 </introduction>
 <task>
@@ -1573,10 +1491,9 @@ Digression missing
 
 </section>
 
-<section xml:id="sec:refl-refr-rainb">
+<section xml:id="SECTIONrefl-refr-rainb">
 <title>Reflections, Refractions, and Rainbows</title>
 
-<!-- \label{sec:refl-refr-rainb} -->
 <introduction>
   <p>
     Because they are called <q>Optimization Problems</q> it is natural to assume that such
@@ -1609,10 +1526,9 @@ Digression missing
     </ol>
   </p>
 </introduction>
-<subsection xml:id="subsec:reflection">
+<subsection xml:id="SUBSECTIONreflection">
 <title>Reflection</title>
 
-<!-- <!-\- \label{subsec:reflection} -\-> -->
 <figure>
 <caption>
 <url href="https://echengphoto.com/" visual="https://echengphoto.com/">This figure needs a caption.</url>
@@ -1778,10 +1694,10 @@ Algebra which is straightforward though not necessarily easy.
 
 
 </subsection>
-<subsection xml:id="subsec:refraction">
+<subsection xml:id="SUBSECTIONrefraction">
 <title>Refraction: Snell's Law</title>
-<p>
 
+<p>
 We began the derivation of Snell's Law in
 <xref ref="SECsnells-law-refr">Section</xref>, using the following sketch
 and assuming that the velocity of light in Medium 1 is <m>v_1</m>, and the
@@ -1827,10 +1743,9 @@ want to show that the tie traveled along the path from <m>A</m> to <m>C</m> to
 carefully.
 </p>
 
-<problem xml:id="problem:SnellsLawWithCalculus">
+<problem xml:id="PROBLEMSnellsLawWithCalculus">
 <introduction>
 <p>
-  <!-- \label{problem:SnellsLawWithCalculus} -->
 </p>
 </introduction>
 <task>
@@ -1937,10 +1852,9 @@ The solution to the following problem will rely on a derivation
 similar to the one we used to prove Snell's Law.
 </p>
 
-<problem xml:id="problem:snells-law-variation">
+<problem xml:id="PROBLEMsnells-law-variation">
 <introduction>
 <p>
-  <!-- \label{problem:snells-law-variation} -->
   Suppose that the cost to run a fiber optic cable underwater is
   <m>k</m> (<m>k\ge1</m>) times the cost to run it on land.  We wish to run a
   fiber optic cable from point <m>A</m> <m>1</m> km from the river, to point <m>B</m>
@@ -2040,10 +1954,8 @@ similar to the one we used to prove Snell's Law.
 
 
 </subsection>
-<subsection xml:id="subsec:rainbows">
+<subsection xml:id="SUBSECTIONrainbows">
 <title>Rainbows</title>
-
-
 
 <p>
 Look carefully at the double rainbow in the pictures below and notice
@@ -2623,10 +2535,8 @@ why the secondary rainbow is not as bright as the primary.
 
 </subsection>
 </section>
-<section xml:id="sec:more-optimal-squares">
+<section xml:id="SECTIONmore-optimal-squares">
 <title>Global vs. Local Extrema</title>
-
-<!-- \label{sec:more-optimal-squares} -->
 
 <p>
 So far in this chapter we've relied heavily on our intuition. For
@@ -2649,10 +2559,9 @@ Unfortunately things are rarely this straightforward.  Consider the
 following example.
 </p>
 
-<example xml:id="example:ParabolaOptSqr">
+<example xml:id="EXAMPLEParabolaOptSqr">
 <title>Constructing a Square on a Parabola</title>
 <p>
-  <!-- \label{example:ParabolaOptSqr} -->
   We would like to find the area of the smallest square which can be
   constructed with one corner at the point <m>(2,3)</m> and an adjacent
   corner on the graph of <m> y = x^2</m>.  This example is very similar to
@@ -2684,10 +2593,9 @@ following example.
   the other.
 </p>
 </example>
-  <exercise xml:id="drill:SqParab">
+  <exercise xml:id="DRILLSqParab">
 <statement>
 <p>
-    <!-- \label{drill:SqParab} -->
     Show that <m>\dfdx{A}{x}=0</m> when <m>x \approx1.75</m>, <m>x \approx-1.32</m>
     and <m>x \approx-0.43</m>.  Getting three distinct solutions of
     <m>\dfdx{A}{x}=0</m> is quite unexpected in light of our previous work.
@@ -2880,10 +2788,9 @@ We have the following definitions.
 </statement>
 </definition>
 
-<problem xml:id="problem:MaximaDefinition">
+<problem xml:id="PROBLEMMaximaDefinition">
 <statement>
 <p>
-  <!-- \label{problem:MaximaDefinition} -->
   Provide a definition of Global Maximum modeled on
   <xref ref="DEFGlobalMin">Definition~\</xref>.
 </p>
@@ -3019,10 +2926,9 @@ Now we can define local extrema.
 </statement>
 </definition>
 
-<problem xml:id="problem:LocalMaximaDefinition">
+<problem xml:id="PROBLEMLocalMaximaDefinition">
 <statement>
 <p>
-  <!-- \label{problem:LocalMaximaDefinition} -->
   Provide a definition of Local Maximum modeled on
   <xref ref="DEFLocalMin">Definition~\</xref>.
 </p>
@@ -3045,10 +2951,8 @@ Now we can define local extrema.
 
 
 </section>
-<section xml:id="subsec:optim-abstr-probl">
+<section xml:id="SUBSECTIONoptim-abstr-probl">
 <title>Optimization, the Abstract Problem</title>
-
-<!-- \label{subsec:optim-abstr-probl} -->
 
 <introduction>
 <p>
@@ -3208,7 +3112,7 @@ graph how could we tell which is the maximum and which is the minimum?
 
 </p>
 
-  <exercise xml:id="drill:TransitionQuestion">
+  <exercise xml:id="DRILLTransitionQuestion">
 <statement>
 <p>
     <!-- \label{drill:TransitionQuestion} In the paragraph above we used -->
@@ -3227,18 +3131,14 @@ graph how could we tell which is the maximum and which is the minimum?
   well. We will address that possibility once we have thoroughly
   examined this simpler case.
 </p>
-  <example xml:id="example:PPT">
-    <!-- \label{example:PPT} -->
+  <example xml:id="EXAMPLEPPT">
 <p>
-
     Let <m>O(x)=x^3-3x</m>.  The solutions of <m>\dfdx{O}{x}=3x^2-3=0</m> are
     <m>x=-1</m> and <m>x=1</m> so these are the POTPs.  Sketch the graph of
     <m>O(x)</m> and follow along with our reasoning below, confirming our
     conclusions visually.
 </p>
 <p>
-
-
     To determine if they actually are transition points we proceed as
     follows:
     \begin{description}
@@ -3360,9 +3260,7 @@ graph how could we tell which is the maximum and which is the minimum?
   optimum, as the next example demonstrates.
 </p>
 
-<example xml:id="example:x^5">
-
-  <!-- \label{example:x^5} -->
+<example xml:id="EXAMPLEx^5">
 <p>
 
   Find all extrema of the graph of <m>O(x)=x^5</m>.
@@ -3397,13 +3295,12 @@ graph how could we tell which is the maximum and which is the minimum?
 
 
 
-  <example xml:id="example:ParabolaSquare-Redux">
+  <example xml:id="EXAMPLEParabolaSquare-Redux">
 <title>Constructing a Parabola on a Square   (<xref ref="EXAMPLEexample:ParabolaOptSqr"></xref>), Revisited</title>
 <p>
-    <!-- \label{example:ParabolaSquare-Redux} -->
     Given our new understanding of the distinction between local and
     global extrema we will revisit
-    <xref ref="EXAMPLEexample:ParabolaOptSqr"></xref>. Recall the problem:
+    <xref ref="EXAMPLEParabolaOptSqr"></xref>. Recall the problem:
     \begin{center}
       \begin{minipage}{.8\linewidth}
         Find the area of the smallest square which can be constructed
@@ -3431,17 +3328,16 @@ graph how could we tell which is the maximum and which is the minimum?
 <p>
 
     Now pretend that you don't already know the solution of this
-    problem.  Just as in <xref ref="EXAMPLEexample:PPT"></xref> we can use the
+    problem.  Just as in <xref ref="EXAMPLEPPT"></xref> we can use the
     First Derivative Test to determine which of the POTPs we've
     identified corresponds to a local minimum or maximum.
   </p>
 </example>
 
 
-<problem xml:id="drill:FDT1">
+<problem xml:id="DRILLFDT1">
   <introduction>
     <p>
-      <!-- \label{drill:FDT1} -->
       Choose a point in each interval and confirm that the following
       statements are true.
       <dl>
@@ -3540,10 +3436,9 @@ graph how could we tell which is the maximum and which is the minimum?
 <!--     \end{embeddedproblem} -->
 
 
-  <exercise xml:id="drill:FDT2">
+  <exercise xml:id="DRILLFDT2">
 <introduction>
 <p>
-    <!-- \label{drill:FDT2} -->
     Identify all possible optimal transition points, and identify the
     intervals on which each function is increasing and
     decreasing. Label each possible optimal transition point as a local or
@@ -3627,10 +3522,9 @@ graph how could we tell which is the maximum and which is the minimum?
      
 
 </subsection>
-<subsection xml:id="subsec:underl-deriv">
+<subsection xml:id="SUBSECTIONunderl-deriv">
 <title>Undefined Derivatives</title>
 
-  <!-- \label{subsec:underl-deriv} -->
   <blockquote>
 <p>
 Happy families are all alike; every unhappy family is
@@ -3657,9 +3551,9 @@ Happy families are all alike; every unhappy family is
   possible transition points?
 </p>
 
-  <example xml:id="example:POTP-WhereDerivIsUndef">
-    <!-- \label{example:POTP-WhereDerivIsUndef} -->
-<p>    No, they won't.  We can also have a transition point wherever
+  <example xml:id="EXAMPLEPOTP-WhereDerivIsUndef">
+<p>
+    No, they won't.  We can also have a transition point wherever
     <m>\dfdxat{O}{x}{a}</m> is meaningless. That is, when
     <m>\eval{\dfdx{O}{x}}{x}{a}</m> is
    <term>undefined</term>. <xref ref="DRILLCubeRoot2"></xref> below demonstrates
@@ -3668,10 +3562,9 @@ Happy families are all alike; every unhappy family is
       </example>
 
     
-    <exercise xml:id="drill:CubeRoot2">
+    <exercise xml:id="DRILLCubeRoot2">
 <introduction>
 <p>
-      <!-- \label{drill:CubeRoot2} -->
       Suppose <me>
             y(x)=x^\frac13
       </me>
@@ -3806,10 +3699,9 @@ Happy families are all alike; every unhappy family is
 
 
 
-  <exercise xml:id="drill:FDT3">
+  <exercise xml:id="DRILLFDT3">
 <introduction>
 <p>
-    <!-- \label{drill:FDT3} -->
     For each function identify all POTPs, and identify the intervals
     on which the function is increasing and decreasing. Label each
     POTP as a local or global minimum, maximum, or neither.\\
@@ -3931,11 +3823,11 @@ Happy families are all alike; every unhappy family is
 
 
 </subsection>
-<subsection xml:id="sec:optim-clos-interv">
+<subsection xml:id="SUBSECTIONoptim-clos-interv">
 <title>Transition Points on a Closed Interval; the Problem of Endpoints</title>
-  <!-- \label{sec:optim-clos-interv} -->
-<p>
 
+
+<p>
   Real world optimization problems will have a natural domain on which
   the objective function is defined.  It is pointless to consider
   values of <m>x</m> outside of that domain. We actually saw this in
@@ -3954,9 +3846,7 @@ Happy families are all alike; every unhappy family is
   occur at one of those endpoints.
 </p>
 
-  <example xml:id="example:SqrClosed">
-
-    <!-- \label{example:SqrClosed} -->
+  <example xml:id="EXAMPLESqrClosed">
   <figure>
 <caption>
 <url href="https://en.wikipedia.org/wiki/Achilles%27_heel" visual="https://en.wikipedia.org/wiki/Achilles%27_heel">This figure needs a caption.</url>
@@ -4066,10 +3956,9 @@ We formalize all of this in <xref ref="THMmax-min">Theorem</xref> below.
 </theorem>
 
 
-<problem xml:id="problem:ParabolaSquare-Redux">
+<problem xml:id="PROBLEMParabolaSquare-Redux">
 <statement>
 <p>
-  <!-- \label{problem:ParabolaSquare-Redux} -->
   We ended <xref ref="EXAMPLEParabolaOptSqr">Example~\</xref> after posing the
   problem of finding the global extrema of
   <me>
@@ -4116,10 +4005,9 @@ We formalize all of this in <xref ref="THMmax-min">Theorem</xref> below.
 <!-- \end{embeddedproblem-enumerate}  -->
 
 
-<problem xml:id="problem:SquareOnCircle">
+<problem xml:id="PROBLEMSquareOnCircle">
 <statement>
 <p>
-  <!-- \label{problem:SquareOnCircle} -->
   If we had known <xref ref="THMmax-min">Theorem</xref> when we first looked at
   <xref ref="EXAMPLECircleDist">Example~\</xref> it would have saved us some time.
   Redo <xref ref="EXAMPLECircleDist">Example~\</xref>, using the knowledge that
@@ -4559,18 +4447,17 @@ We formalize all of this in <xref ref="THMmax-min">Theorem</xref> below.
 </subsection>
 
 </section>
-<section xml:id="sec:conc-second-deriv-1">
+<section xml:id="SECTIONconc-second-deriv-1">
 <title>Concavity and the Second Derivative Test</title>
 <introduction>
-<!-- \label{sec:conc-second-deriv-1} -->
+
 <p>
 <xref ref="THMmax-min">Theorem</xref> explicitly assumed that the domain of our
 function consisted of closed (and bounded) intervals. This assumption was
 crucial. Without this assumption even simple functions that you would
 expect to have extrema do not.
 </p>
-<example xml:id="example:OpenNoExtrema">
-  <!-- \label{example:OpenNoExtrema} -->
+<example xml:id="EXAMPLEOpenNoExtrema">
 <p>
   For example, suppose our objective function is <m>O(x)=x</m>, and that
   the domain is the open interval <m>(-1,1)</m>.  Do you see why the graph
@@ -4617,10 +4504,8 @@ extrema, if they exist, can only occur at optimal transition points or
 at endpoints. So finding these is still the first step.
 </p>
 
-<example xml:id="example:FDT1">
-  <!-- \label{example:FDT1} -->
+<example xml:id="EXAMPLEFDT1">
 <p>
-
   For this example we strongly suggest that you do not graph the
   objective functions first. Yes, we know this goes directly against
   our previous advice to always visualize your problem when you can,
@@ -4688,10 +4573,9 @@ at endpoints. So finding these is still the first step.
 
 
 
-<problem xml:id="drill:O1O2">
+<problem xml:id="DRILLO1O2">
   <introduction>
     <p>
-      <!-- \label{drill:O1O2} -->
     </p>
   </introduction>
   <task>
@@ -4765,11 +4649,8 @@ at endpoints. So finding these is still the first step.
 
 
 
-<subsection xml:id="sec:conc-second-deriv">
+<subsection xml:id="SUBSECTIONconc-second-deriv">
 <title>The Second Derivative Test</title>
-
-<!-- \label{sec:conc-second-deriv} -->
-
 
 <image source="images/ConcaveUpDown1.png" width="50%"/>
 <!-- \begin{wrapfigure}[7]{r}{1.6in} -->
@@ -4986,10 +4867,9 @@ concave upward and concave downward.
 
 
 
-<problem xml:id="problem:EvenFuncConcavity">
+<problem xml:id="PROBLEMEvenFuncConcavity">
 <introduction>
 <p>
-  \label{problem:EvenFuncConcavity}
   Suppose that <m>y(x)=x^4-x^2</m>.
 </p>
 </introduction>
@@ -5136,10 +5016,9 @@ We formalize this idea in the Second Derivative Test, stated below.
 
 
 
-<exercise xml:id="drill:SecondDerivativeTest">
+<exercise xml:id="DRILLSecondDerivativeTest">
 <introduction>
 <p>
-  \label{drill:SecondDerivativeTest}
   Use the Second Derivative Test to find the local maxima and minima
   of each function. Also identify any global maxima and minima.
 </p>
@@ -5631,10 +5510,8 @@ you understand a lot about the real world.
 </subsection>
 </section>
 
-<section xml:id="sec:optim-probl">
+<section xml:id="SECTIONoptim-probl">
 <title>Optimization Problems</title>
-
-<!-- \label{sec:optim-probl} -->
 
 <introduction>
 
@@ -5645,312 +5522,312 @@ was to show you the subtleties involved one at a time so you could
 understand them separately.
 </p>
 
-<!-- <p> -->
-<!-- Of course, this is entirely unrealistic. Real problems rarely tell you -->
-<!-- where the difficulties will lie, so in this final section we offer you -->
-<!-- a selection of problems. It is up to you to -->
-<!-- </p> -->
-<!-- <p> -->
-<!-- <ol> -->
-<!--   <li> -->
-<!--     <p> -->
-<!--       Find an appropriate objective function. -->
-<!--     </p> -->
-<!--   </li> -->
-<!--   <li> -->
-<!--     <p> -->
-<!--       Identify the constraints. -->
-<!--     </p> -->
-<!--   </li> -->
-<!--   <li> -->
-<!--     <p> -->
-<!--       Decide whether the natural domain of the problem consists closed  intervals or not. -->
-<!--     </p> -->
-<!--   </li> -->
-<!--   <li> -->
-<!--     <p> -->
-<!--       Identify any POTPs.  If the problem domain consists only of closed intervals use  <xref ref="SECoptim-probl">Theorem</xref>. Otherwise use the First or the  Second Derivative Test. -->
-<!--     </p> -->
-<!--   </li> -->
-<!--   <li> -->
-<!--     <p> -->
-<!--       Identify which, if any, of the POTPs are global optima. -->
-<!--     </p> -->
-<!--   </li> -->
-<!--   <li> -->
-<!--     <p> -->
-<!--       Re-read the problem and confirm that you have solved it.  In the process of finding an optimum it is easy to lose track of the  question and stop too soon. Always make sure you have actually  solved the problem as stated. -->
-<!--     </p> -->
-<!--   </li> -->
-<!-- </ol> -->
-<!-- </p> -->
-<!-- <p> -->
-<!-- Recall that in <xref ref="EXfixed-perimeter">Example~\</xref> we observed that -->
-<!-- most people can see intuitively that of all rectangles with a fixed -->
-<!-- perimeter the one that encloses the greatest area will be a square. We -->
-<!-- gave an algebraic demonstration of this in -->
-<!-- <xref ref="CHAPTERScienceBeforeCalc">Chapter</xref> but now that we know how to -->
-<!-- use Calculus to optimize let's revisit this problem. -->
-<!-- </p> -->
-<!-- <example xml:id="example:RectangleFixedPerimeter"> -->
-<!-- <title><xref ref="EXAMPLEex:fixed-perimeter"></xref> revisited again</title> -->
-<!--   \label{example:RectangleFixedPerimeter} -->
-<!-- <p> -->
-<!--   We first solved this problem in <xref ref="EXfixed-perimeter">Example~\</xref> -->
-<!--   where we solved it algebraically.  We revisited it the first time in -->
-<!--   <xref ref="PROBLEMMaximalSquareRedux1">Problem~\</xref> where we solved it again -->
-<!--   analytically (using Calculus) twice. But to do this we relied on -->
-<!--   Fermat's Theorem and Fermat's Theorem only allows us to find a -->
-<!--   maximum that we already know exists. At that time we did not have -->
-<!--   the tools to show that we actually had a maximum. We do now so we -->
-<!--   will solve this problem one last time before we move on. -->
-<!-- </p> -->
-<!-- <p> -->
-<!--   Show that of all rectangles with a fixed perimeter, <m>P</m>, -->
-<!--   the one with the greatest area is a square.\\ -->
-<!-- </p> -->
+<p>
+Of course, this is entirely unrealistic. Real problems rarely tell you
+where the difficulties will lie, so in this final section we offer you
+a selection of problems. It is up to you to
+</p>
+<p>
+<ol>
+  <li>
+    <p>
+      Find an appropriate objective function.
+    </p>
+  </li>
+  <li>
+    <p>
+      Identify the constraints.
+    </p>
+  </li>
+  <li>
+    <p>
+      Decide whether the natural domain of the problem consists closed  intervals or not.
+    </p>
+  </li>
+  <li>
+    <p>
+      Identify any POTPs.  If the problem domain consists only of closed intervals use  <xref ref="SECoptim-probl">Theorem</xref>. Otherwise use the First or the  Second Derivative Test.
+    </p>
+  </li>
+  <li>
+    <p>
+      Identify which, if any, of the POTPs are global optima.
+    </p>
+  </li>
+  <li>
+    <p>
+      Re-read the problem and confirm that you have solved it.  In the process of finding an optimum it is easy to lose track of the  question and stop too soon. Always make sure you have actually  solved the problem as stated.
+    </p>
+  </li>
+</ol>
+</p>
+<p>
+Recall that in <xref ref="EXfixed-perimeter">Example~\</xref> we observed that
+most people can see intuitively that of all rectangles with a fixed
+perimeter the one that encloses the greatest area will be a square. We
+gave an algebraic demonstration of this in
+<xref ref="CHAPTERScienceBeforeCalc">Chapter</xref> but now that we know how to
+use Calculus to optimize let's revisit this problem.
+</p>
+<example xml:id="EXAMPLERectangleFixedPerimeter">
+<title><xref ref="EXAMPLEex:fixed-perimeter"></xref> revisited again</title>
+  <!-- \label{example:RectangleFixedPerimeter} -->
+<p>
+  We first solved this problem in <xref ref="EXfixed-perimeter">Example~\</xref>
+  where we solved it algebraically.  We revisited it the first time in
+  <xref ref="PROBLEMMaximalSquareRedux1">Problem~\</xref> where we solved it again
+  analytically (using Calculus) twice. But to do this we relied on
+  Fermat's Theorem and Fermat's Theorem only allows us to find a
+  maximum that we already know exists. At that time we did not have
+  the tools to show that we actually had a maximum. We do now so we
+  will solve this problem one last time before we move on.
+</p>
+<p>
+  Show that of all rectangles with a fixed perimeter, <m>P</m>,
+  the one with the greatest area is a square.\\
+</p>
       
-<!-- <image source="images/PerimeterArea.png" width="60%" /> -->
+<image source="images/PerimeterArea.png" width="60%" />
 <!-- \centerline{\includegraphics*[height=1.3in,width=2.6in]{../Figures/PerimeterArea}} -->
-<!-- <p>       -->
-<!--   We will follow the outline above. -->
-<!-- </p> -->
-<!-- <p> -->
-<!-- <ol> -->
-<!--   <li> -->
-<!--     <p> -->
-<!--       The objective function is <me> -->
-<!--       \label{eq:FixedPerimeterObjective} A=xy, </me> -->
-<!--     </p> -->
-<!--   </li> -->
-<!--   <li> -->
-<!--     <p> -->
-<!--       The only constraint is <me> \label{eq:FixedPerimeterConstraint} -->
-<!--       P=2x+2y </me> where <m>P</m> is constant. -->
-<!--     </p> -->
-<!--   </li> -->
-<!--   <li> -->
-<!--     <p> -->
-<!--       Since we are talking about a length it must be that -->
-<!--       <m>x\ge0</m>. From <xref -->
-<!--       ref="EQFixedPerimeterConstraint">Equation~</xref>) we see that -->
-<!--       <m>x</m> must be less that or equal to <m>\frac{P}{2}</m>. Otherwise the -->
-<!--       perimeter will be greater than <m>P</m>. So the domain\aside{Strictly -->
-<!--       speaking if <m>x=0</m> or <m>x=\frac{P}{2}</m> we don't actually have a -->
-<!--       rectangle. But it is simpler to use the Extreme Value Theorem -->
-<!--       (<xref ref="THMmax-min">Theorem~\</xref>) than to find the -->
-<!--       increasing and decreasing intervals using the First Derivative -->
-<!--       Test. Since the Extreme Value Theorem requires a closed domain -->
-<!--       we make things simpler by allowing <q>zero width</q> rectangles.} -->
-<!--       of our problem is <m>0\le x\le \frac{P}{2}</m>. -->
-<!--     </p> -->
-<!--   </li> -->
-<!--   <li> -->
-<!--     <p> -->
-<!--       Since the problem domain is a closed interval we will use the -->
-<!--       Extreme Value Theorem (<xref ref="THMmax-min">Theorem~\</xref>). -->
-<!--       To find the POTPs we will need <m>\dfdx{A}{x}</m>. From -->
+<p>
+  We will follow the outline above.
+</p>
+<p>
+<ol>
+  <li>
+    <p>
+      The objective function is <me>
+      \label{eq:FixedPerimeterObjective} A=xy, </me>
+    </p>
+  </li>
+  <li>
+    <p>
+      The only constraint is <me> \label{eq:FixedPerimeterConstraint}
+      P=2x+2y </me> where <m>P</m> is constant.
+    </p>
+  </li>
+  <li>
+    <p>
+      Since we are talking about a length it must be that
+      <m>x\ge0</m>. From <xref
+      ref="EQFixedPerimeterConstraint">Equation~</xref>) we see that
+      <m>x</m> must be less that or equal to <m>\frac{P}{2}</m>. Otherwise the
+      perimeter will be greater than <m>P</m>. So the domain\aside{Strictly
+      speaking if <m>x=0</m> or <m>x=\frac{P}{2}</m> we don't actually have a
+      rectangle. But it is simpler to use the Extreme Value Theorem
+      (<xref ref="THMmax-min">Theorem~\</xref>) than to find the
+      increasing and decreasing intervals using the First Derivative
+      Test. Since the Extreme Value Theorem requires a closed domain
+      we make things simpler by allowing <q>zero width</q> rectangles.}
+      of our problem is <m>0\le x\le \frac{P}{2}</m>.
+    </p>
+  </li>
+  <li>
+    <p>
+      Since the problem domain is a closed interval we will use the
+      Extreme Value Theorem (<xref ref="THMmax-min">Theorem~\</xref>).
+      To find the POTPs we will need <m>\dfdx{A}{x}</m>. From
 
-<!-- <xref ref="EQFixedPerimeterObjective">Equation~</xref>) we see that     -->
-<!-- <me>      \label{eq:MaxAreaDiffeq}      \dx{A}=x\dx{y}+y\dx{x}.    </me> -->
-<!--     </p> -->
-<!-- <p> -->
-<!--     From <xref ref="EQFixedPerimeterConstraint">Equation~</xref>) we have     -->
-<!-- <me>      \label{eq:FixedPerimeterDiffConstraint}      \dx{y}=-\dx{x}    </me> -->
-<!--     and also     -->
-<!-- <me>      \label{eq:FixedPerimeterConstraintDiffeq}      y=\frac12\left(P-2x\right)    </me> -->
-<!-- </p> -->
-<!-- <p> -->
-<!--     Combining     -->
-<!-- <xref ref="EQFixedPerimeterConstraint"></xref>, -->
-<!-- <xref ref="EQMaxAreaDiffeq">xref>),~</xref>,     -->
-<!-- and -->
-<!-- <xref ref="EQFixedPerimeterConstraintDiffeq"></xref>  -->
-<!-- we see that    <me>    \dfdx{A}{x}=\frac{P}{2}-2x.    </me>    The only solution of <m>\dfdx{A}{x}=0</m> is <m>x=\frac{P}{4}</m>, so the    POTPs for this problem are the end points, <m>x=0</m> and    <m>x=\frac{P}{2}</m>, and <m>x=\frac{P}{4}</m>. -->
-<!--     </p> -->
-<!--   </li> -->
-<!--   <li> -->
-<!--     <p> -->
-<!--       The area, <m>A=xy</m>, will be zero when <m>x=0</m> and when    <m>x=\frac{P}{2}</m> (why?) so by the Extreme Value Theorem the maximum    occurs when <m>x=\frac{P}{4}</m>. -->
-<!--     </p> -->
-<!--   </li> -->
-<!--   <li> -->
-<!--     <p> -->
-<!--       This problem asks us to show that the maximal rectangle must    be a square, so we need to show that <m>x=y</m>. We know that the    maximum occurs when <m>x=\frac{P}{4}</m>. Plugging this value into    <xref ref="EQFixedPerimeterConstraintDiffeq">Equation~\</xref> we see that <m>y</m>    is also equal to <m>\frac{P}{4}</m>. Thus the maximal rectangle is a    square as stated. -->
-<!--     </p> -->
-<!--   </li> -->
-<!-- </ol> -->
-<!-- </p> -->
-<!-- <p>   -->
-<!--   <ol> -->
-<!--     <li> -->
-<!--       <p> -->
-<!--         The objective function is -->
-<!--         <me> -->
-<!--           \label{eq:FixedPerimeterObjective} -->
-<!--           A=xy, -->
-<!--         </me> -->
-<!--       </p> -->
-<!--     </li> -->
-<!--     <li> -->
-<!--       <p> -->
-<!--         The only constraint is -->
-<!--     <me> -->
-<!--       \label{eq:FixedPerimeterConstraint} -->
-<!--       P=2x+2y -->
-<!--     </me> -->
-<!--     where <m>P</m> is constant. -->
-<!--       </p> -->
-<!--     </li> -->
-<!--     <li> -->
-<!--       <p> -->
-<!--         Since we are talking about a length it must be that -->
-<!--     <m>x\ge0</m>. From <xref ref="EQFixedPerimeterConstraint">Equation~</xref>) we see -->
-<!--     that <m>x</m> must be less that or equal to <m>\frac{P}{2}</m>. Otherwise -->
-<!--     the perimeter will be greater than <m>P</m>. So the -->
-<!--     domain\aside{Strictly speaking if <m>x=0</m> or <m>x=\frac{P}{2}</m> we -->
-<!--     don't actually have a rectangle. But it is simpler to use the -->
-<!--     Extreme Value Theorem (<xref ref="THMmax-min">Theorem~\</xref>) than to find the -->
-<!--     increasing and decreasing intervals using the First Derivative -->
-<!--     Test. Since the Extreme Value Theorem requires a closed domain we make -->
-<!--     things simpler by allowing <q>zero width</q> rectangles.} of our -->
-<!--     problem is <m>0\le x\le \frac{P}{2}</m>. -->
-<!--       </p> -->
-<!--     </li> -->
-<!--     <li> -->
-<!--       <p> -->
-<!--         Since the problem domain is a closed interval we will use the -->
-<!--     Extreme Value Theorem (<xref ref="THMmax-min">Theorem~\</xref>). -->
-<!--     To find the POTPs we will need <m>\dfdx{A}{x}</m>. From -->
-<!--     <xref ref="EQFixedPerimeterObjective">Equation~</xref>) we see that -->
-<!--     <me> -->
-<!--       \label{eq:MaxAreaDiffeq} -->
-<!--       \dx{A}=x\dx{y}+y\dx{x}. -->
-<!--     </me> -->
-<!--     From <xref ref="EQFixedPerimeterConstraint">Equation~</xref>) we have -->
-<!--     <me> -->
-<!--       \label{eq:FixedPerimeterDiffConstraint} -->
-<!--       \dx{y}=-\dx{x} -->
-<!--     </me> -->
-<!--     and also -->
-<!--     <me> -->
-<!--       \label{eq:FixedPerimeterConstraintDiffeq} -->
-<!--       y=\frac12\left(P-2x\right) -->
-<!--     </me> -->
-<!--     Combining -->
-<!--     <xref ref="EQFixedPerimeterConstraint"></xref> -->
-<!--     <xref ref="EQMaxAreaDiffeq"></xref>),  -->
-<!--     and -->
-<!--     <xref ref="EQFixedPerimeterConstraintDiffeq"></xref>) we see that -->
-<!--     <me> -->
-<!--     \dfdx{A}{x}=\frac{P}{2}-2x. -->
-<!--     </me> -->
-<!--     The only solution of <m>\dfdx{A}{x}=0</m> is <m>x=\frac{P}{4}</m>, so the -->
-<!--     POTPs for this problem are the end points, <m>x=0</m> and -->
-<!--     <m>x=\frac{P}{2}</m>, and <m>x=\frac{P}{4}</m>. -->
-<!--       </p> -->
-<!--     </li> -->
-<!--     <li> -->
-<!--       <p> -->
-<!--         The area, <m>A=xy</m>, will be zero when <m>x=0</m> and when -->
-<!--     <m>x=\frac{P}{2}</m> (why?) so by the Extreme Value Theorem the maximum -->
-<!--     occurs when <m>x=\frac{P}{4}</m>. -->
-<!--       </p> -->
-<!--     </li> -->
-<!--     <li> -->
-<!--       <p> -->
-<!--         This problem asks us to show that the maximal rectangle must -->
-<!--     be a square, so we need to show that <m>x=y</m>. We know that the -->
-<!--     maximum occurs when <m>x=\frac{P}{4}</m>. Plugging this value into -->
-<!--     <xref ref="EQFixedPerimeterConstraintDiffeq">Equation~\</xref> we see that <m>y</m> -->
-<!--     is also equal to <m>\frac{P}{4}</m>. Thus the maximal rectangle is a -->
-<!--     square as stated. -->
-<!--       </p> -->
-<!--     </li> -->
-<!--   </ol> -->
-<!-- </p> -->
+<xref ref="EQFixedPerimeterObjective">Equation~</xref>) we see that
+<me>      \label{eq:MaxAreaDiffeq}      \dx{A}=x\dx{y}+y\dx{x}.    </me>
+    </p>
+<p>
+    From <xref ref="EQFixedPerimeterConstraint">Equation~</xref>) we have
+<me>      \label{eq:FixedPerimeterDiffConstraint}      \dx{y}=-\dx{x}    </me>
+    and also
+<me>      \label{eq:FixedPerimeterConstraintDiffeq}      y=\frac12\left(P-2x\right)    </me>
+</p>
+<p>
+    Combining
+<xref ref="EQFixedPerimeterConstraint"></xref>,
+<xref ref="EQMaxAreaDiffeq">xref>),~</xref>,
+and
+<xref ref="EQFixedPerimeterConstraintDiffeq"></xref>
+we see that    <me>    \dfdx{A}{x}=\frac{P}{2}-2x.    </me>    The only solution of <m>\dfdx{A}{x}=0</m> is <m>x=\frac{P}{4}</m>, so the    POTPs for this problem are the end points, <m>x=0</m> and    <m>x=\frac{P}{2}</m>, and <m>x=\frac{P}{4}</m>.
+    </p>
+  </li>
+  <li>
+    <p>
+      The area, <m>A=xy</m>, will be zero when <m>x=0</m> and when    <m>x=\frac{P}{2}</m> (why?) so by the Extreme Value Theorem the maximum    occurs when <m>x=\frac{P}{4}</m>.
+    </p>
+  </li>
+  <li>
+    <p>
+      This problem asks us to show that the maximal rectangle must    be a square, so we need to show that <m>x=y</m>. We know that the    maximum occurs when <m>x=\frac{P}{4}</m>. Plugging this value into    <xref ref="EQFixedPerimeterConstraintDiffeq">Equation~\</xref> we see that <m>y</m>    is also equal to <m>\frac{P}{4}</m>. Thus the maximal rectangle is a    square as stated.
+    </p>
+  </li>
+</ol>
+</p>
+<p>
+  <ol>
+    <li>
+      <p>
+        The objective function is
+        <me>
+          \label{eq:FixedPerimeterObjective}
+          A=xy,
+        </me>
+      </p>
+    </li>
+    <li>
+      <p>
+        The only constraint is
+    <me>
+      \label{eq:FixedPerimeterConstraint}
+      P=2x+2y
+    </me>
+    where <m>P</m> is constant.
+      </p>
+    </li>
+    <li>
+      <p>
+        Since we are talking about a length it must be that
+    <m>x\ge0</m>. From <xref ref="EQFixedPerimeterConstraint">Equation~</xref>) we see
+    that <m>x</m> must be less that or equal to <m>\frac{P}{2}</m>. Otherwise
+    the perimeter will be greater than <m>P</m>. So the
+    domain\aside{Strictly speaking if <m>x=0</m> or <m>x=\frac{P}{2}</m> we
+    don't actually have a rectangle. But it is simpler to use the
+    Extreme Value Theorem (<xref ref="THMmax-min">Theorem~\</xref>) than to find the
+    increasing and decreasing intervals using the First Derivative
+    Test. Since the Extreme Value Theorem requires a closed domain we make
+    things simpler by allowing <q>zero width</q> rectangles.} of our
+    problem is <m>0\le x\le \frac{P}{2}</m>.
+      </p>
+    </li>
+    <li>
+      <p>
+        Since the problem domain is a closed interval we will use the
+    Extreme Value Theorem (<xref ref="THMmax-min">Theorem~\</xref>).
+    To find the POTPs we will need <m>\dfdx{A}{x}</m>. From
+    <xref ref="EQFixedPerimeterObjective">Equation~</xref>) we see that
+    <me>
+      \label{eq:MaxAreaDiffeq}
+      \dx{A}=x\dx{y}+y\dx{x}.
+    </me>
+    From <xref ref="EQFixedPerimeterConstraint">Equation~</xref>) we have
+    <me>
+      \label{eq:FixedPerimeterDiffConstraint}
+      \dx{y}=-\dx{x}
+    </me>
+    and also
+    <me>
+      \label{eq:FixedPerimeterConstraintDiffeq}
+      y=\frac12\left(P-2x\right)
+    </me>
+    Combining
+    <xref ref="EQFixedPerimeterConstraint"></xref>
+    <xref ref="EQMaxAreaDiffeq"></xref>),
+    and
+    <xref ref="EQFixedPerimeterConstraintDiffeq"></xref>) we see that
+    <me>
+    \dfdx{A}{x}=\frac{P}{2}-2x.
+    </me>
+    The only solution of <m>\dfdx{A}{x}=0</m> is <m>x=\frac{P}{4}</m>, so the
+    POTPs for this problem are the end points, <m>x=0</m> and
+    <m>x=\frac{P}{2}</m>, and <m>x=\frac{P}{4}</m>.
+      </p>
+    </li>
+    <li>
+      <p>
+        The area, <m>A=xy</m>, will be zero when <m>x=0</m> and when
+    <m>x=\frac{P}{2}</m> (why?) so by the Extreme Value Theorem the maximum
+    occurs when <m>x=\frac{P}{4}</m>.
+      </p>
+    </li>
+    <li>
+      <p>
+        This problem asks us to show that the maximal rectangle must
+    be a square, so we need to show that <m>x=y</m>. We know that the
+    maximum occurs when <m>x=\frac{P}{4}</m>. Plugging this value into
+    <xref ref="EQFixedPerimeterConstraintDiffeq">Equation~\</xref> we see that <m>y</m>
+    is also equal to <m>\frac{P}{4}</m>. Thus the maximal rectangle is a
+    square as stated.
+      </p>
+    </li>
+  </ol>
+</p>
 
-<!-- </example> -->
-<!-- <p> -->
-<!-- In <xref ref="EXAMPLERectangleFixedPerimeter">Example~\</xref> we were careful to -->
-<!-- follow the steps we listed at the beginning of this section in the -->
-<!-- sequence given. That list is helpful. That's why we wrote it -->
-<!-- out. However, it would be a mistake to think of it as a recipe to be -->
-<!-- followed blindly. Think of it as an outline. An outline is a guide, -->
-<!-- not a recipe and it is not necessary to follow it rigidly, -->
-<!-- step-by-step. If you find it simpler to do these steps in a different -->
-<!-- order for some problem there is no reason that you shouldn't. But -->
-<!-- before you declare the problem solved look back at this outline and -->
-<!-- make sure that you have done everything that needs to be done. This is -->
-<!-- what an outline is for. -->
-<!-- </p> -->
-<!-- <p> -->
-<!-- In <xref ref="EXAMPLESquareMinimalPerimeter">Example~\</xref> in -->
-<!-- <xref ref="CHAPTERScienceBeforeCalc">Chapter</xref> we considered the related -->
-<!-- problem of minimizing the perimeter when the area is fixed. The -->
-<!-- following problem asks you to solve this problem using -->
-<!-- Calculus. Notice that just as above we have -->
-<!-- <me>A=xy</me> and <me>P=2x+2y</me> but this time <m>A</m> is constant, not <m>P</m>. -->
-<!-- </p> -->
-<!-- <problem xml:id="problem:MaxPerimeter"> -->
-<!-- <introduction> -->
-<!-- <p> -->
-<!--   <!-\- \label{problem:MaxPerimeter} -\-> -->
-<!--   Out of all rectangles with a fixed area, find the dimensions of the -->
-<!--   one with the smallest perimeter. -->
-<!-- </p> -->
-<!-- </introduction> -->
-<!-- <task> -->
-<!-- <statement> -->
-<!-- <p> -->
-<!--  Identify the objective function and the constraint for this -->
-<!--     problem. -->
-<!--   </p> -->
-<!-- </statement> -->
-<!-- </task> -->
-<!-- <task> -->
-<!-- <statement> -->
-<!-- <p> -->
-<!--  Find the natural domain of this problem and show that it is -->
-<!--     not a closed interval. -->
-<!--   </p> -->
-<!-- </statement> -->
-<!-- </task> -->
-<!-- <task> -->
-<!-- <statement> -->
-<!-- <p> -->
-<!--  Show that we have a POTP when <m>x=y</m>. -->
-<!--   </p> -->
-<!-- </statement> -->
-<!-- </task> -->
-<!-- <task> -->
-<!-- <statement> -->
-<!-- <p> -->
-<!--  Show that when <m>x=y</m> we have a minimum by: -->
+</example>
+<p>
+In <xref ref="EXAMPLERectangleFixedPerimeter">Example~\</xref> we were careful to
+follow the steps we listed at the beginning of this section in the
+sequence given. That list is helpful. That's why we wrote it
+out. However, it would be a mistake to think of it as a recipe to be
+followed blindly. Think of it as an outline. An outline is a guide,
+not a recipe and it is not necessary to follow it rigidly,
+step-by-step. If you find it simpler to do these steps in a different
+order for some problem there is no reason that you shouldn't. But
+before you declare the problem solved look back at this outline and
+make sure that you have done everything that needs to be done. This is
+what an outline is for.
+</p>
+<p>
+In <xref ref="EXAMPLESquareMinimalPerimeter">Example~\</xref> in
+<xref ref="CHAPTERScienceBeforeCalc">Chapter</xref> we considered the related
+problem of minimizing the perimeter when the area is fixed. The
+following problem asks you to solve this problem using
+Calculus. Notice that just as above we have
+<me>A=xy</me> and <me>P=2x+2y</me> but this time <m>A</m> is constant, not <m>P</m>.
+</p>
+
+<problem xml:id="PROBLEMMaxPerimeter">
+<introduction>
+<p>
+  Out of all rectangles with a fixed area, find the dimensions of the
+  one with the smallest perimeter.
+</p>
+</introduction>
+<task>
+<statement>
+<p>
+ Identify the objective function and the constraint for this
+    problem.
+  </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ Find the natural domain of this problem and show that it is
+    not a closed interval.
+  </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ Show that we have a POTP when <m>x=y</m>.
+  </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ Show that when <m>x=y</m> we have a minimum by:
   
-<!--   <ol> -->
-<!--     <li> -->
-<!--       <p> -->
-<!--         Using the first derivative test. -->
-<!--       </p> -->
-<!--     </li> -->
-<!--     <li> -->
-<!--       <p> -->
-<!--         Using the second derivative test. -->
-<!--       </p> -->
-<!--     </li> -->
-<!--   </ol> -->
+  <ol>
+    <li>
+      <p>
+        Using the first derivative test.
+      </p>
+    </li>
+    <li>
+      <p>
+        Using the second derivative test.
+      </p>
+    </li>
+  </ol>
 
-<!--     Note that both tests will require you to use the constraint to -->
-<!--     reduce the number of variables in the objective to one. -->
+    Note that both tests will require you to use the constraint to
+    reduce the number of variables in the objective to one.
 
-<!--     Which test was easier to use? -->
-<!--   </p> -->
-<!-- </statement> -->
-<!-- </task> -->
-<!-- </problem> -->
+    Which test was easier to use?
+  </p>
+</statement>
+</task>
+</problem>
 <!-- \begin{embeddedproblem}  ;;; MULTILEVEL PROBLEM -->
-<!--   <!-\- <!-\\- \label{problem:MaxPerimeter} -\\-> -\-> -->
+<!--   <!-\- <!-\\- <!-\\\- \label{problem:MaxPerimeter} -\\\-> -\\-> -\-> -->
 <!--   Out of all rectangles with a fixed area, find the dimensions of the -->
 <!--   one with the smallest perimeter. -->
 <!--   \begin{enumerate}[label={  (\alph*)}] -->
@@ -5981,187 +5858,181 @@ understand them separately.
 <!--   \end{enumerate} -->
 <!-- \end{embeddedproblem} -->
 
-<!-- <problem xml:id="no-label"> -->
-<!-- <statement> -->
-<!-- <p> -->
-<!--   Redo <xref ref="PROBLEMprob:science-before-calc-1"></xref> from -->
-<!--   <xref ref="CHAPTERScienceBeforeCalc">Chapter</xref> using Calculus. Verify that -->
-<!--   you get the same answer as before. -->
-<!-- </p> -->
-<!-- </statement> -->
-<!-- </problem> -->
-<!-- <p> -->
-<!-- The following example demonstrates how different approaches to the -->
-<!-- same problem can lead to different challenges. In this case just -->
-<!-- changing the labels on the diagram makes a big difference. -->
-<!-- </p> -->
-<!-- <example xml:id="example:PageOfText"> -->
-<!--   \label{example:PageOfText} -->
-<!-- <introduction> -->
-<!-- <p> -->
+<problem>
+<statement>
+<p>
+  Redo <xref ref="PROBLEMscience-before-calc-1"></xref> from
+  <xref ref="CHAPTERScienceBeforeCalc">Chapter</xref> using Calculus. Verify that
+  you get the same answer as before.
+</p>
+</statement>
+</problem>
+<p>
+The following example demonstrates how different approaches to the
+same problem can lead to different challenges. In this case just
+changing the labels on the diagram makes a big difference.
+</p>
+<example xml:id="EXAMPLEPageOfText">
+<introduction>
+<p>
 
-<!--   The pages of a book are to have an area of <m>90</m> square -->
-<!--   centimeters. The side and bottom margins are to be <m>1</m> centimeter in -->
-<!--   width and the top margin is to be <m>1/2</m> centimeter in width. -->
-<!-- </p> -->
-<!-- <p> -->
+  The pages of a book are to have an area of <m>90</m> square
+  centimeters. The side and bottom margins are to be <m>1</m> centimeter in
+  width and the top margin is to be <m>1/2</m> centimeter in width.
+</p>
+<p>
 
-<!--   Find the dimensions of the page that has the largest possible -->
-<!--   printed area, <m>P_A</m>. -->
-<!-- </p> -->
-<!-- </introduction> -->
+  Find the dimensions of the page that has the largest possible
+  printed area, <m>P_A</m>.
+</p>
+</introduction>
 
-<!-- <task xml:id="no-label"> -->
-<!-- <title>First Solution:</title> -->
+<task>
+<title>First Solution:</title>
 <!--   <figure> -->
 <!-- <caption> -->
 <!-- <url href="https://en.wikipedia.org/wiki/Candela" visual="https://en.wikipedia.org/wiki/Candela">This figure needs a caption.</url> -->
 <!-- </caption> -->
-<!-- <image source="images/LoremIpsum1.png" width="50%"/> -->
+<image source="images/LoremIpsum1.png" width="50%"/>
 <!-- </figure> -->
-<!-- \begin{wrapfigure}[]{l}{2.5in} -->
-<!--         \captionsetup{labelformat=empty} -->
-<!--     \centerline{\includegraphics*[height=3in,width=2.5in]{../Figures/LoremIpsum1}} -->
-<!--     \label{fig:LoremIpsum1} -->
-<!--   \end{wrapfigure} -->
 
-<!-- <p> -->
-<!--   This problem can be visualized as in the diagram at the left.  Since -->
-<!--   it is the printed area that is to be maximized it seems natural to -->
-<!--   label the width of the printed area, <m>x</m>, and the height, <m>y</m>, as -->
-<!--   shown. If we call the printed area <m>P_A</m> then our objective function -->
-<!--   is, -->
-<!--   <me> -->
-<!--     P_A=xy.\label{eq:BookPage1} -->
-<!-- </me> -->
-<!-- </p> -->
-<!-- <p> -->
-<!--   The width of the entire page will be <m>x+2</m>, and the height will be -->
-<!--   <m>y+3/2</m>. The area of each page is constrained to be <m>90</m> square -->
-<!--   centimeters so our constraint is, -->
-<!--   <me> -->
-<!--     \label{eq:BookPage2} -->
-<!--     (x+2)(y+3/2)=90. -->
-<!--   </me> -->
-<!--   Differentiating <xref ref="EQBookPage1">Equation~</xref>) we see -->
-<!--   that -->
-<!--   <me> -->
-<!--     \label{eq:BookPage5} -->
-<!--     \dx{(P_A)}=x{\color{red}{\dx{y}}}+{\color{blue}{y}}\dx{x} -->
-<!--   </me> -->
-<!--   Solving <xref ref="EQBookPage2">Equation~</xref>) for <m>y</m> we have -->
-<!--   <me> -->
-<!--     \label{eq:BookPage3} -->
-<!--     {\color{blue}{y=\frac{90}{x+2}-3/2}} -->
-<!--   </me> -->
-<!--   Differentiating <xref ref="EQBookPage2">Equation~\</xref> and solving for -->
-<!--   <m>\dx{y}</m> gives -->
-<!-- <me> -->
-<!-- {\color{red}{\dx{y}}=-\left(\frac{\textcolor{blue}{y}+3/2}{x+2}\right)\dx{x}}. -->
-<!-- </me> -->
-<!-- Substituting these into <xref ref="EQBookPage5">Equation~\</xref> we have -->
-<!-- \begin{align*} -->
-<!--       \dx{(P_A)}\amp =-x\textcolor{red}{\left(\frac{\textcolor{blue}{\frac{90}{x+2}-3/2}+3/2}{x+2}\right)}\dx{x}+\left(\textcolor{blue}{\frac{90}{x+2}-3/2}\right)\dx{x}. -->
-<!--     \end{align*} -->
-<!-- Since we'll have to set this equal to zero and to find any POTPs it is -->
-<!-- clearly in our interest to reduce this algebraically to -->
-<!-- \begin{align} -->
-<!--   \dfdx{(P_A)}{x}\amp =\frac{-90x}{(x+2)^2}+\frac{90}{x+2}-3/2.\label{eq:BookPage4} -->
-<!-- \end{align} -->
-<!-- Adding the fractions we see that we must solve -->
-<!-- <me> -->
-<!-- \dfdx{(P_A)}{x}=\frac{-90x+90(x+2)-3/2(x+2)^2}{(x+2)^2}=\frac{180-3/2(x+2)^2}{(x+2)^2}=0. -->
-<!-- </me> -->
-<!-- At this point it is tempting to expand <m>(x+2)^2</m>, but recall that our -->
-<!-- goal is to solve for <m>x</m>. Multiplying through by <m>(x+2)^2</m> gives -->
-<!-- <me> -->
-<!-- 0=180-\frac{3}{2}(x+2)^2 -->
-<!--   </me> -->
-<!--   so that -->
-<!--   <me> -->
-<!--   (x+2)^2=120. -->
-<!-- </me> -->
-<!-- Solving this gives\aside{You can <q>simplify</q> <m>x=\pm\sqrt{120}-2</m> to -->
-<!--   <m>x=\pm2\sqrt{30}-2</m> if you like, but there is no real advantage to -->
-<!--   doing so. We prefer to leave it as <m>x=\pm\sqrt{120}-2</m>.  } -->
-<!-- <m>x=\pm\sqrt{120}-2</m>. But the width of a page can't be negative so a -->
-<!-- negative solution is meaningless for this problem.  Thus -->
-<!-- <m>x=\sqrt{120}-2</m> is our one and only POTP, and we conclude that we can -->
-<!-- maximize the printed area by taking <m>x=\sqrt{120}-2\approx 8.95</m> -->
-<!-- centimeters. -->
-<!-- </p> -->
-<!-- <p> -->
+<p>
+  This problem can be visualized as in the diagram above.  Since
+  it is the printed area that is to be maximized it seems natural to
+  label the width of the printed area, <m>x</m>, and the height, <m>y</m>, as
+  shown. If we call the printed area <m>P_A</m> then our objective function
+  is,
+  <me>
+    P_A=xy.\label{eq:BookPage1}
+</me>
+</p>
+<p>
+  The width of the entire page will be <m>x+2</m>, and the height will be
+  <m>y+3/2</m>. The area of each page is constrained to be <m>90</m> square
+  centimeters so our constraint is,
+  <me>
+    \label{eq:BookPage2}
+    (x+2)(y+3/2)=90.
+  </me>
+  Differentiating <xref ref="EQBookPage1">Equation~</xref>) we see
+  that
+  <me>
+    \label{eq:BookPage5}
+    \dx{(P_A)}=x{\color{red}{\dx{y}}}+{\color{blue}{y}}\dx{x}
+  </me>
+  Solving <xref ref="EQBookPage2">Equation~</xref>) for <m>y</m> we have
+  <me>
+    \label{eq:BookPage3}
+    {\color{blue}{y=\frac{90}{x+2}-3/2}}
+  </me>
+  Differentiating <xref ref="EQBookPage2">Equation~\</xref> and solving for
+  <m>\dx{y}</m> gives
+<me>
+{\color{red}{\dx{y}}=-\left(\frac{\textcolor{blue}{y}+3/2}{x+2}\right)\dx{x}}.
+</me>
+Substituting these into <xref ref="EQBookPage5">Equation~\</xref> we have
+\begin{align*}
+      \dx{(P_A)}\amp =-x\textcolor{red}{\left(\frac{\textcolor{blue}{\frac{90}{x+2}-3/2}+3/2}{x+2}\right)}\dx{x}+\left(\textcolor{blue}{\frac{90}{x+2}-3/2}\right)\dx{x}.
+    \end{align*}
+Since we'll have to set this equal to zero and to find any POTPs it is
+clearly in our interest to reduce this algebraically to
+\begin{align}
+  \dfdx{(P_A)}{x}\amp =\frac{-90x}{(x+2)^2}+\frac{90}{x+2}-3/2.\label{eq:BookPage4}
+\end{align}
+Adding the fractions we see that we must solve
+<me>
+\dfdx{(P_A)}{x}=\frac{-90x+90(x+2)-3/2(x+2)^2}{(x+2)^2}=\frac{180-3/2(x+2)^2}{(x+2)^2}=0.
+</me>
+At this point it is tempting to expand <m>(x+2)^2</m>, but recall that our
+goal is to solve for <m>x</m>. Multiplying through by <m>(x+2)^2</m> gives
+<me>
+0=180-\frac{3}{2}(x+2)^2
+  </me>
+  so that
+  <me>
+  (x+2)^2=120.
+</me>
+Solving this gives\aside{You can <q>simplify</q> <m>x=\pm\sqrt{120}-2</m> to
+  <m>x=\pm2\sqrt{30}-2</m> if you like, but there is no real advantage to
+  doing so. We prefer to leave it as <m>x=\pm\sqrt{120}-2</m>.  }
+<m>x=\pm\sqrt{120}-2</m>. But the width of a page can't be negative so a
+negative solution is meaningless for this problem.  Thus
+<m>x=\sqrt{120}-2</m> is our one and only POTP, and we conclude that we can
+maximize the printed area by taking <m>x=\sqrt{120}-2\approx 8.95</m>
+centimeters.
+</p>
+<p>
 
-<!-- That was a lot of work but we are not finished The problem asks us to -->
-<!-- find the dimensions (plural) of the page.  To find <m>y</m> we use -->
-<!-- <xref ref="EQBookPage3">Equation~</xref>) to compute -->
-<!-- <me>y\approx\frac{90}{\sqrt{120}-2+2}-3/2 -->
-<!-- =\frac{90}{\sqrt{120}}-3/2\approx 8.08.</me> -->
-<!-- </p> -->
-<!-- <p> -->
+That was a lot of work but we are not finished The problem asks us to
+find the dimensions (plural) of the page.  To find <m>y</m> we use
+<xref ref="EQBookPage3">Equation~</xref>) to compute
+<me>y\approx\frac{90}{\sqrt{120}-2+2}-3/2
+=\frac{90}{\sqrt{120}}-3/2\approx 8.08.</me>
+</p>
+<p>
 
-<!-- But we're still not finished. The problem asks for the dimensions of -->
-<!-- the page, but we've only  found the dimensions of the printed -->
-<!--   area. The dimensions of the page are -->
-<!-- <md> -->
-<!-- <mrow> -->
-<!--   \text{Width of page} \amp  = \text{\textcolor{blue}{width of text}} + \text{\textcolor{red}{margins}} =\textcolor{blue}{\sqrt{120} -2} +\textcolor{red}{2} =\sqrt{120} \approx 10.95 \text{ cm}\\ -->
-<!-- </mrow> -->
-<!-- <mrow> -->
-<!--   \text{Height of page} \amp = \text{\textcolor{blue}{height of  text}} + \text{\textcolor{red}{margins}} -->
-<!--   =\textcolor{blue}{\frac{90}{\sqrt{120}}-3/2} + \textcolor{red}{3/2}  = \frac{90}{\sqrt{120}}\approx 8.22 \text{ cm}. -->
-<!-- </mrow> -->
-<!-- </md> -->
+But we're still not finished. The problem asks for the dimensions of
+the page, but we've only  found the dimensions of the printed
+  area. The dimensions of the page are
+<md>
+<mrow>
+  \text{Width of page} \amp  = \text{\textcolor{blue}{width of text}} + \text{\textcolor{red}{margins}} =\textcolor{blue}{\sqrt{120} -2} +\textcolor{red}{2} =\sqrt{120} \approx 10.95 \text{ cm}\\
+</mrow>
+<mrow>
+  \text{Height of page} \amp = \text{\textcolor{blue}{height of  text}} + \text{\textcolor{red}{margins}}
+  =\textcolor{blue}{\frac{90}{\sqrt{120}}-3/2} + \textcolor{red}{3/2}  = \frac{90}{\sqrt{120}}\approx 8.22 \text{ cm}.
+</mrow>
+</md>
 
-<!-- </p> -->
-<!-- <p> -->
+</p>
+<p>
 
-<!-- Finally, the last item in our outline says to make sure we have done -->
-<!-- everything that needs to be done to solve the problem. Have we? -->
-<!-- </p> -->
-<!-- <p> -->
+Finally, the last item in our outline says to make sure we have done
+everything that needs to be done to solve the problem. Have we?
+</p>
+<p>
 
-<!-- No, clearly not. We never did step \#3: Identify the natural domain of -->
-<!-- the problem. As a result we don't know for certain that we have a -->
-<!-- maximum. It may be that the critical point we've identified is not in -->
-<!-- the problem domain. It may be that it is in the domain, but that we -->
-<!-- have a minimum instead of a maximum. Or that we have neither. The -->
-<!-- point is that we can't know until we have found the natural domain of -->
-<!-- the objective function, and verified that there is a global maximum at -->
-<!-- <m>x=\sqrt{120}-2\approx8.95</m> centimeters. -->
-<!-- </p> -->
-<!-- <p> -->
+No, clearly not. We never did step \#3: Identify the natural domain of
+the problem. As a result we don't know for certain that we have a
+maximum. It may be that the critical point we've identified is not in
+the problem domain. It may be that it is in the domain, but that we
+have a minimum instead of a maximum. Or that we have neither. The
+point is that we can't know until we have found the natural domain of
+the objective function, and verified that there is a global maximum at
+<m>x=\sqrt{120}-2\approx8.95</m> centimeters.
+</p>
+<p>
 
-<!-- We mentioned earlier that the width of the page can't be negative so -->
-<!-- the smallest possible value of <m>x</m>, the left endpoint of our interval, -->
-<!-- is zero. -->
-<!-- </p> -->
-<!-- </task> -->
-<!-- </example> -->
+We mentioned earlier that the width of the page can't be negative so
+the smallest possible value of <m>x</m>, the left endpoint of our interval,
+is zero.
+</p>
+</task>
+</example>
 
-<!-- <problem xml:id="no-label"> -->
-<!-- <introduction> -->
-<!-- <p> -->
-<!-- </p> -->
-<!-- </introduction> -->
-<!-- <task> -->
-<!-- <statement> -->
-<!-- <p> -->
-<!--  Show that the largest possible value of <m>x</m> is <m>x=58</m> and thus -->
-<!--     the natural domain for this problem is the closed interval -->
-<!--     <m>[0,58]</m>. -->
-<!--   </p> -->
-<!-- </statement> -->
-<!-- </task> -->
-<!-- <task> -->
-<!-- <statement> -->
-<!-- <p> -->
-<!--  Show that the maximal printed area occurs when -->
-<!--     <m>x=2\sqrt{30}-2</m>. -->
-<!--   </p> -->
-<!-- </statement> -->
-<!-- </task> -->
-<!-- </problem> -->
+<problem xml:id="no-label">
+<introduction>
+<p>
+</p>
+</introduction>
+<task>
+<statement>
+<p>
+ Show that the largest possible value of <m>x</m> is <m>x=58</m> and thus
+    the natural domain for this problem is the closed interval
+    <m>[0,58]</m>.
+  </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ Show that the maximal printed area occurs when
+    <m>x=2\sqrt{30}-2</m>.
+  </p>
+</statement>
+</task>
+</problem>
 <!--   \begin{enumerate}[label={  (\alph*)}] -->
 <!--   \item Show that the largest possible value of <m>x</m> is <m>x=58</m> and thus -->
 <!--     the natural domain for this problem is the closed interval -->
@@ -6816,10 +6687,9 @@ Find the dimensions of the box that minimize the amount of material
 
 
 
-<problem xml:id="problem:RodAroundACorner">
+<problem xml:id="PROBLEMRodAroundACorner">
 <introduction>
 <p>
-  <!-- \label{problem:RodAroundACorner} -->
   \begin{wrapfigure}[5]{r}{2.5in}
     \vskip-10mm  \captionsetup{labelformat=empty}
     \centerline{\includegraphics*[height=1in,width=2.5in]{../Figures/RodRoundCorner5}}

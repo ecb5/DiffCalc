@@ -70,10 +70,9 @@ work with, so we will start there.
 </p>
 
 
-<example xml:id="example:AbsValFunc">
+<example xml:id="EXAMPLEAbsValFunc">
 <title>The  Absolute Value Function</title>
 <p>
-  <!-- \label{example:AbsValFunc} -->
   The Absolute Value function is usually introduced with some vague
   statement like, 
   \centerline{<q>The absolute value of a number is just the
@@ -102,7 +101,7 @@ definition of the Absolute Value function is:
   \end{wrapfigure}
   The graph of the Absolute Value function is given at the right.
   Notice that <m>f(x)=\abs{x}</m> is defined at <m>x=0</m> since <m>\abs{0}=0</m>,
-  but as we indicated in <xref ref="SECTIONsubsec:underl-deriv">~</xref> the
+  but as we indicated in <xref ref="SECTIONunderl-deriv">~</xref> the
   Principle of Local Linearity does not hold at <m>x=0</m> so we suspect
   that the Absolute Value function is not differentiable at <m>x=0</m>.
   
@@ -125,7 +124,7 @@ definition of the Absolute Value function is:
     limits this way. It is a good intuitive approach. However, as we
     will see in <xref ref="CHAPTERcha:formal-limits">~</xref> it isn't quite what is
     really happening.} zero from the positive side. Recall that in
-    <xref ref="SECTIONsubsec:vertical-asymptotes">~</xref> we invented the notation
+    <xref ref="SECTIONvertical-asymptotes">~</xref> we invented the notation
     <m>\rlimit{h}{0} </m> for exactly this
     situation. In this case <m>h</m> is positive so <m>\abs{h}=h</m> and
   <me>
@@ -158,10 +157,9 @@ definition of the Absolute Value function is:
 
 
 
-  <problem xml:id="problem:AbsValDeriv">
+  <problem xml:id="PROBLEMAbsValDeriv">
 <introduction>
 <p>
-    <!-- <!-\- \label{problem:AbsValDeriv} -\-> -->
 </p>
 </introduction>
 <task>
@@ -347,7 +345,7 @@ definition of the Absolute Value function is:
       </me>
                                     
       \begin{embeddedproblem-enumerate}
-        \label{problem:LRLim1overAbsh}
+        \label{PROBLEMLRLim1overAbsh}
         \begin{enumerate}[label={  (\alph*)}] 
           \begin{multicols}{2}
           \item Show that <m>\rlimit{h}{0}{\frac{\sqrt{\abs{h}}}{h}}=\infty</m>.
@@ -355,7 +353,7 @@ definition of the Absolute Value function is:
           \end{multicols}
         \end{enumerate}
       \end{embeddedproblem-enumerate}
-      <xref ref="PROBLEMproblem:LRLim1overAbsh"></xref> shows, <m>\frac{\sqrt{\abs{h}}}{h}</m>
+      <xref ref="PROBLEMLRLim1overAbsh"></xref> shows, <m>\frac{\sqrt{\abs{h}}}{h}</m>
       increases without bound as <m>h</m> approaches zero from the right, and
       decreases without bound as <m>h</m> approaches zero from the left. Since
       neither of these limits even exists it
@@ -371,16 +369,15 @@ definition of the Absolute Value function is:
 
 
 
-    <example xml:id="example:HeavisideFunction">
+    <example xml:id="EXAMPLEHeavisideFunction">
 <title>The Heaviside Function</title>
 <p>
-      <!-- \label{example:HeavisideFunction} -->
       \begin{wrapfigure}[]{r}{2.5in}
         \captionsetup{labelformat=empty} \vskip-3mm 
         \centerline{\includegraphics*[height=1.7in,width=2.5in]{../Figures/Heaviside2}}
         \label{fig:Heaviside2}
       \end{wrapfigure}
-      <xref ref="PROBLEMproblem:AbsValDeriv"></xref> shows that the derivative of the
+      <xref ref="PROBLEMAbsValDeriv"></xref> shows that the derivative of the
       Absolute Value function (shown at the right) is:
       <me>H(x)=
       \begin{cases}
@@ -396,20 +393,43 @@ definition of the Absolute Value function is:
         Heaviside} (1850-1925). Simple as it is, Heaviside's function is a fundamental
       tool in signal processing, control theory, and the solution of
       differential equations.
-
-      \begin{embeddedproblem}
-        \label{problem:HeavisideDeriv}
-        \begin{enumerate}[label={  (\alph*)}] 
-                  \item Use <xref ref="DEFINITIONdef:Derivative"></xref> to show that
-          <m>H^\prime(x)=0</m> when <m>x\ne0</m>
-        \item Explain why the result in part (a) does not
-          contradict
-          <xref ref="PROBLEMproblem:DervEqZeroImpliesConstant"></xref>
-                            \end{enumerate}
-
-      \end{embeddedproblem}
     </p>
-</example>
+    </example>
+      <problem xml:id="PROBLEMHeavisideDeriv">
+<introduction>
+<p>
+      <!-- \label{PROBLEMHeavisideDeriv} -->
+</p>
+</introduction>
+<task>
+<statement>
+<p>
+ Use <xref ref="DEFINITIONdef:Derivative"></xref> to show that
+      <m>H^\prime(x)=0</m> when <m>x\ne0</m>
+      </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ Explain why the result in part (a) does not
+      contradict
+      <xref ref="PROBLEMDervEqZeroImpliesConstant"></xref>
+      </p>
+</statement>
+</task>
+</problem>
+<!-- \begin{embeddedproblem} -->
+      <!-- <!-\- \label{PROBLEMHeavisideDeriv} -\-> -->
+      <!-- \begin{enumerate}[label={  (\alph*)}]  -->
+      <!-- \item Use <xref ref="DEFINITIONdef:Derivative"></xref> to show that -->
+      <!-- <m>H^\prime(x)=0</m> when <m>x\ne0</m> -->
+      <!-- \item Explain why the result in part (a) does not -->
+      <!-- contradict -->
+      <!-- <xref ref="PROBLEMproblem:DervEqZeroImpliesConstant"></xref> -->
+      <!-- \end{enumerate} -->
+
+      <!-- \end{embeddedproblem} -->
 
 
 
@@ -462,10 +482,9 @@ definition of the Absolute Value function is:
     in this textbook.
 </p>
 </introduction>
-<section xml:id="sec:one-sided-deriv">
+<section xml:id="SECTIONone-sided-deriv">
 <title>One Sided Derivatives</title>
 
-    <!-- \label{sec:one-sided-deriv} -->
 <p>
     Since limits may be right-hand or left-hand and the derivative is
     defined as a limit, it follows that derivatives can be right- or
@@ -647,10 +666,9 @@ definition of the Absolute Value function is:
 </problem>
 
                                         
-    <problem xml:id="problem:HeaviTranslate">
+    <problem xml:id="PROBLEMHeaviTranslate">
 <introduction>
 <p>
-      <!-- <!-\- \label{problem:HeaviTranslate} -\-> -->
 </p>
 </introduction>
 <task>
