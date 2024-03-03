@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="CHAPTERVelocitySlopeTangent">
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="CHAPTERPTERVelocitySlopeTangent">
   <title>Slopes, Tangents, and Rates of Change</title>
 
 
@@ -298,12 +298,12 @@
     </exercise>
 
 
-    <problem xml:id="embedded:Deri">
+    <problem xml:id="PROBLEMDeri">
       <introduction>
         <p>
-          <!-- \label{embedded:Deri} -->
-          Evaluate <m>\eval{\dfdx{y}{x}}{x}{a}</m> for each of the following
-          functions at each of the given values of <m>x</m>.
+           Evaluate <m>\eval{\dfdx{y}{x}}{x}{a}</m> for each of the
+           following functions at each of the given values of
+           <m>x</m>.
         </p>
       </introduction>
       <task>
@@ -467,14 +467,14 @@
     </p>
 
 
-    <definition xml:id="DEFINITIONdef:TangentLine">
+    <definition xml:id="DEFINITIONTangentLine">
       <title>The Line Tangent to a Curve  at a Point</title>
       <statement>
         <p>
-          <!-- \label{def:TangentLine} -->
           The <term>line tangent to a curve</term>, at the point
-          <m>(a,b)</m> is the line which passes through the point <m>(a,b)</m>
-          with slope <m>m=\eval{\dfdx{y}{x}}{(x,y)}{(a,b)}</m>.
+          <m>(a,b)</m> is the line which passes through the point
+          <m>(a,b)</m> with slope
+          <m>m=\eval{\dfdx{y}{x}}{(x,y)}{(a,b)}</m>.
 
         </p>
       </statement>
@@ -499,11 +499,10 @@
       Local Linearity</term> can be formalized a bit more.
     </p>
 
-    <definition xml:id="DEFINITIONdef:LocalLinearity">
+    <definition xml:id="DEFINITIONLocalLinearity">
       <title>The Principle of Local Linearity</title>
       <statement>
         <p>
-          <!-- \label{def:LocalLinearity} -->
           Sufficiently close to a given point every smooth curve is
           indistinguishable from the line tangent at that point.
 
@@ -523,7 +522,7 @@
       devise definitions that gave back what intuition had led us to. This
       is part of why we are not yet overly concerned about our inability to
       precisely define a differential. When we finally address this issue in
-      <xref ref="CHAPTwhats-wrong-with">Chapter</xref> we will not be devising any new
+      <xref ref="CHAPTERPTwhats-wrong-with">Chapter</xref> we will not be devising any new
       differentiation techniques. We will be providing logical underpinnings
       for the techniques our intuition has led us to and that our experience
       has shown to be useful.
@@ -2306,7 +2305,7 @@ If we read the  abbreviated notation <m>\dfdxn{p}{t}{2}</m> literally it seems t
 <m>\dx^2p=\dx(\dx{p})</m> is meaningful but it is not. The notion of
 taking the differential of a differential is fraught with logical
 difficulties which we will address in
-<xref ref="CHAPTwhats-wrong-with">Chapter</xref>. For now we can avoid pitfalls
+<xref ref="CHAPTERPTwhats-wrong-with">Chapter</xref>. For now we can avoid pitfalls
 by recognizing that the expression <m>\dfdxn{y}{x}{n}</m> is the result
 of differentiating and dividing by <m>\dx{x}</m> <m>n</m> times. We will
 explore this bit further in the next section.
@@ -2452,7 +2451,7 @@ is not the flight path of the ball.
   and philosophical questions (Like, <q>What are they?</q>) that are
   very difficult to address. When we come
   back to these matters in
-  <xref ref="CHAPTwhats-wrong-with">Chapter</xref> you'll see what we mean. For all
+  <xref ref="CHAPTERPTwhats-wrong-with">Chapter</xref> you'll see what we mean. For all
   of these reasons and more the concept of differentials should be
   regarded as a convenient fiction and nothing more.
 </p>
@@ -2765,13 +2764,13 @@ so
   <m>\dx(\dx{y})</m> is not equal to zero? Or, at a more fundamental level,
   what do we mean by <q>the infinitely small change of an infinitely
   small change?</q> As we will see in
-  <xref ref="CHAPTwhats-wrong-with">Chapter</xref> the early critics of Calculus
+  <xref ref="CHAPTERPTwhats-wrong-with">Chapter</xref> the early critics of Calculus
   cited this question specifically to argue that Calculus was invalid.
 </p>
 <p>
 
   We will address these issues beginning in
-  <xref ref="CHAPTwhats-wrong-with">Chapter</xref>. For now we will make the
+  <xref ref="CHAPTERPTwhats-wrong-with">Chapter</xref>. For now we will make the
   following compromise: We will only differentiate finite quantities,
   be they functions, or derivatives.  Since our ultimate goal is to
   compute some derivative
@@ -2956,7 +2955,7 @@ makes it very clear that
   
 </men>
 there are certain pairs of functions which are exceptions; for which
-<xref ref="EQUATIONeq:NewbyError1"></xref> \emph{is} true.
+<xref ref="EQUATIONeq:NewbyError1"></xref>  <em>is</em> true.
 
 For example, show that for each of the following it is true that
 <m> \dfdx{(y\cdot z)}{x}= \dfdx{y}{x}\cdot\dfdx{z}{x}</m>.
@@ -3179,7 +3178,7 @@ and <m>\dfdx{x}{t}</m>.
   vs. velocity) than with this physical problem. In general speed is
   always a positive number, while velocity can be negative or
   positive. We will discuss this in more depth in
-  <xref ref="CHAPTERcha:calc-trig">~</xref>
+  <xref ref="CHAPTERPTERcha:calc-trig">~</xref>
 </p>
 </aside>
 <p>
@@ -3391,7 +3390,7 @@ occurs.
 </me>
 for some constant <m>k</m>.  Show that with this restriction,
 <m>
-  l\ge\sqrt{\frac{6Hv^2}{k}}
+  l\ge\sqrt{\frac{6hv^2}{k}}
   </m>.
 </p>
 </statement>
@@ -3461,16 +3460,20 @@ underlying theme for both was motion.
   (moving). Such quantities he called <term>fluents</term>, from
   <foreign>fluere</foreign>, the Latin word which means <q>to flow.</q>  As he put
   it himself in his book
-  <url href="https://www.maa.org/press/periodicals/convergence/mathematical-treasure-newton-on-quadrature-of-curves" visual="https://www.maa.org/press/periodicals/convergence/mathematical-treasure-newton-on-quadrature-of-curves">\foreign{Quadratura
-  Curvarum</url>} (On the Quadrature of Curves),
-  <em>    I sought a method of determining quantities from the velocities
+  <url href="https://www.maa.org/press/periodicals/convergence/mathematical-treasure-newton-on-quadrature-of-curves" visual="https://www.maa.org/press/periodicals/convergence/mathematical-treasure-newton-on-quadrature-of-curves"><foreign>Quadratura
+  Curvarum</foreign></url> (On the Quadrature of Curves),
+</p>
+<blockquote>
+<p>
+  I sought a method of determining quantities from the velocities
   of the motions or [of the] increments, with which they are
   generated; and calling these velocities of the motions, or [of
-  the] increments, \emph{fluxions</em>, and generated quantities
+  the] increments, <em>fluxions</em>, and generated quantities
   <em>fluents</em>, I fell by degrees, in the years <m>1665</m> and
   <m>1666</m>, upon the method of fluxions, which I have made use of
-  here in the quadrature of curves.}
+  here in the quadrature of curves.
 </p>
+</blockquote>
 <p>
 
   For a given fluent <m>x</m>, Newton used the <q>dotted letter,</q>
@@ -4452,17 +4455,15 @@ make intuitive sense to you?
 
 <exercise xml:id="PROBLEMClassicalCurves3">
   <introduction>
-    <p>
-</p>
+<image source="images/FoliumOfDescartes.png" width="60%" />
+<!-- \centerline{\includegraphics*[height=2in,width=2in]{../Figures/FoliumOfDescartes}} -->
 </introduction>
 <task>
   <statement>
     <p>
       For the Folium of Descartes:
 <m>x^3+y^3=3xy</m>
-\centerline{\includegraphics*[height=2in,width=2in]{../Figures/FoliumOfDescartes}}
-
-<ol>
+<ol marker="i">
   <li>
     <p>
       Show that <m>\dfdx{y}{x}=\frac{y-x^2}{y^2-x}</m>.
@@ -6035,11 +6036,9 @@ his book
 </p>
 
 
-<problem xml:id="PIC:catenary">
+<problem xml:id="PROBLEMcatenary">
 <introduction>
 <p>
-  <!-- \label{PIC:catenary} -->
-
   The difficulty is that we have the wrong variable on the right side
   of <xref ref="EQUATIONeq:Catenary1">~</xref>. Since <m>y</m> depends on <m>x</m> we'd like
   to have only the variables <m>x</m> and <m>y</m>, appearing in our
@@ -6121,7 +6120,7 @@ his book
 
 <p>
 Galileo's brilliance is not at all diminished  by this error.
-As we said in <xref ref="CHAproblem-solving">Chapter</xref>, smart people make
+As we said in <xref ref="CHAPTERproblem-solving">Chapter</xref>, smart people make
 mistakes!  This is how they get to be smart. You should follow the
 example of Galileo (and Newton, and Leibniz) by making and embracing
 lots of mistakes. But don't forget to learn from them as well.
@@ -6501,15 +6500,14 @@ force is <m>mg</m>, where <m>g</m> is the acceleration due to gravity.  This is
 the force needed to counter the weight of the particle.  The only
 horizontal force is the centripetal force due to the spinning of the
 furnace, which is <m>mx\omega^2</m>.  (We will derive this formula
-analytically in <xref ref="CHAcalc-trig">Chapte</xref> when we have extended the
+analytically in <xref ref="CHAPTERcalc-trig">Chapte</xref> when we have extended the
 scope of our differentiation rules.  For now we will assume this is
 correct and proceed.)
 </p>
 
-<problem xml:id="PIC:SpinCast1">
+<problem xml:id="PROBLEMSpinCast1">
 <introduction>
 <p>
-     <!-- \label{PIC:SpinCast1}  -->
 </p>
 </introduction>
 <task>
@@ -6572,7 +6570,7 @@ correct and proceed.)
 
   In antiquity the reflective properties of all of the conic sections
   (parabola, ellipse and hyperbola) were worked out via very laborious
-  geometric arguments. In <xref ref="CHAPTERScienceBeforeCalc">Chapter</xref> we
+  geometric arguments. In <xref ref="CHAPTERPTERScienceBeforeCalc">Chapter</xref> we
   saw that Roberval reestablished these properties using his more
   dynamic (if somewhat questionable) approach.  The next two problems
   will reestablish the reflective property of the parabola once more
@@ -6580,7 +6578,7 @@ correct and proceed.)
 </p>
 <p>
 
-  Recall from <xref ref="CHAPTERScienceBeforeCalc">Chapter</xref> that any light
+  Recall from <xref ref="CHAPTERPTERScienceBeforeCalc">Chapter</xref> that any light
   ray  parallel to the axis of a parabola will reflect to a
   single point (the focus of the parabola).
 </p>
@@ -6614,7 +6612,7 @@ correct and proceed.)
 <task>
 <statement>
 <p>
- In <xref ref="PROBLEMPIC:SpinCast1"></xref>, show that in order to spin
+ In <xref ref="PROBLEMSpinCast1"></xref>, show that in order to spin
       a mirror with a focus\aside{Having the correct focus (and thus
         the correct focal length) is of paramount importance in the
         performance of the telescope.  To give you a notion of the

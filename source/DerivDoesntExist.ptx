@@ -47,7 +47,7 @@ all of our faith in what we  conclude from them.
 
 On the other hand, by <xref ref="DEFDerivative">Definition~\</xref> the derivative
 of a function is given by a limit, and from our work in
-<xref ref="CHAlimits-lhop-rule">Chapter</xref> we know that not all limits
+<xref ref="CHAPTERlimits-lhop-rule">Chapter</xref> we know that not all limits
 exist. For example, if we try to compute the value of <m>f^\prime(2)</m>
 for some function and we find that
 <m>\tlimit{h}{0}{\frac{f(2+h)-f(2)}{h}}</m> is meaningless then <m>f</m> is not
@@ -147,7 +147,7 @@ definition of the Absolute Value function is:
   <m>\eval{\dfdx{\abs{x}}{x}}{x}{0}</m> does not exist.
 
 \begin{ProficiencyDrill}
-  According to <xref ref="DEFINITIONdef:OptimalTransitionPoints">~</xref>, since
+  According to <xref ref="DEFINITIONOptimalTransitionPoints">~</xref>, since
   <m>\dfdxat{(\abs{x})}{x}{0}</m> does not exist, the value <m>x=0</m> is a possible
   transition point for the Absolute Value function. So there might be
   a local extremum of <m>f(x)=\abs{x}</m> at <m>x=0</m>.  Is there?
@@ -167,7 +167,7 @@ definition of the Absolute Value function is:
 <p>
  The Absolute Value function is not differentiable at
          <m>x=0</m> but it is differentiable at every other value of <m>x</m>.
-         Let <m>f(x)=\abs{x}</m> and use <xref ref="DEFINITIONdef:Derivative">~</xref> to
+         Let <m>f(x)=\abs{x}</m> and use <xref ref="DEFINITIONDerivative">~</xref> to
          show that:
          
 <ol>
@@ -204,7 +204,7 @@ definition of the Absolute Value function is:
 <!--        \begin{enumerate}[label={  (\alph*)}]  -->
 <!--        \item The Absolute Value function is not differentiable at -->
 <!--          <m>x=0</m> but it is differentiable at every other value of <m>x</m>. -->
-<!--          Let <m>f(x)=\abs{x}</m> and use <xref ref="DEFINITIONdef:Derivative">~</xref> to -->
+<!--          Let <m>f(x)=\abs{x}</m> and use <xref ref="DEFINITIONDerivative">~</xref> to -->
 <!--          show that: -->
          
 <!-- <ol> -->
@@ -266,7 +266,7 @@ definition of the Absolute Value function is:
 <task>
 <statement>
 <p>
- Use <xref ref="DEFINITIONdef:Derivative"></xref> to show that if
+ Use <xref ref="DEFINITIONDerivative"></xref> to show that if
           <m>f(x)=\frac{x}{x}</m> then <m>f^\prime(0)</m> is undefined.
           \comment{It is pretty clear that <m>f^\prime(0)</m> is undefined, since
             <m>f(0)</m> is undefined. We can't have a derivative where we don't
@@ -297,7 +297,7 @@ definition of the Absolute Value function is:
 </problem>
 <!-- \begin{embeddedproblem-enumerate} -->
       <!--   \begin{enumerate}[label={  (\alph*)}]  -->
-      <!--   \item Use <xref ref="DEFINITIONdef:Derivative"></xref> to show that if -->
+      <!--   \item Use <xref ref="DEFINITIONDerivative"></xref> to show that if -->
       <!--     <m>f(x)=\frac{x}{x}</m> then <m>f^\prime(0)</m> is undefined. -->
       <!--     \comment{It is pretty clear that <m>f^\prime(0)</m> is undefined, since -->
       <!--       <m>f(0)</m> is undefined. We can't have a derivative where we don't -->
@@ -332,8 +332,8 @@ definition of the Absolute Value function is:
       It is intuitively clear that derivative of the function
       <m> f(x)=\sqrt{\abs{x}}</m> (at the right) is not
       defined at <m>x=0</m>.  We will confirm our intuition using
-      <xref ref="DEFINITIONdef:Derivative"></xref>. That is, we'll try to compute the
-      derivative of <m>f(x)</m> at <m>x=0</m> using <xref ref="DEFINITIONdef:Derivative"></xref>
+      <xref ref="DEFINITIONDerivative"></xref>. That is, we'll try to compute the
+      derivative of <m>f(x)</m> at <m>x=0</m> using <xref ref="DEFINITIONDerivative"></xref>
       and see what goes wrong.
 
       The existence of the derivative of <m>f(x)</m> at <m>x=0</m> is equivalent to
@@ -404,7 +404,7 @@ definition of the Absolute Value function is:
 <task>
 <statement>
 <p>
- Use <xref ref="DEFINITIONdef:Derivative"></xref> to show that
+ Use <xref ref="DEFINITIONDerivative"></xref> to show that
       <m>H^\prime(x)=0</m> when <m>x\ne0</m>
       </p>
 </statement>
@@ -442,7 +442,7 @@ definition of the Absolute Value function is:
     first appeared to be. Since we didn't provide a formal definition
     earlier we will do so now.
 </p>
-    <definition xml:id="DEFINITIONdef:OneSidedLimits">
+    <definition xml:id="DEFINITIONOneSidedLimits">
 <title>One-sided Limits</title>
 <statement>
 <p>
@@ -465,10 +465,10 @@ definition of the Absolute Value function is:
     useful tool for us later so we state it as a
     theorem. 
 </p>
-    <theorem xml:id="theorem:OneSideLim">
+    <theorem xml:id="THEOREMOneSideLim">
 <title>One Sided Derivatives</title>
 <p>
-      <!-- \label{theorem:OneSideLim} -->
+      <!-- \label{THEOREMOneSideLim} -->
       <m>\limit{x}{a}{f(x)}</m> exists if and only if
       <m>\rlimit{x}{a}{f(x)} = \llimit{x}{a}{f(x)}.</m> In that case all three
       limits are equal.
@@ -493,7 +493,7 @@ definition of the Absolute Value function is:
     <m>\lprime{f}(a),</m> respectively:
 </p>
 
-    <definition xml:id="DEFINITIONdef:one-sided-deriv">
+    <definition xml:id="DEFINITIONone-sided-deriv">
 <title>One Sided Derivatives</title>
 <statement>
 <p>
@@ -523,9 +523,9 @@ definition of the Absolute Value function is:
     function <m>f</m>, at a point <m>x</m> exists if and only if the right- and
     left-hand derivatives both exist, and are equal.
 </p>
-    <corollary xml:id="corollary:Deriv=LRDeriv">
+    <corollary xml:id="COROLLARYDerivEqualLRDeriv">
 <p>
-      <!-- \label{corollary:Deriv=LRDeriv} -->
+      <!-- \label{COROLLARYDerivEqualLRDeriv} -->
       If <m>\rprime{f}(x)= \lprime{f}(x)</m>, then <m>f(x)</m> is differentiable at
       <m>x</m> and <m>f^\prime(x)=\rprime{f}(x)= \lprime{f}(x)</m>.
     </p>
@@ -573,7 +573,7 @@ definition of the Absolute Value function is:
 <p>
  Is there a value we could assign to <m>H(0)</m> so that
         <m>H^\prime(0)</m> is defined. Explain.
-        \hint{Review <xref ref="LEMMAlemma:DiffImpliesCont">~</xref>.}
+        \hint{Review <xref ref="LEMMADiffImpliesCont">~</xref>.}
               </p>
 </statement>
 </task>
@@ -686,7 +686,7 @@ definition of the Absolute Value function is:
         <li>
 <p>
    Use
-          <xref ref="THEOREMtheorem:OneSideLim"></xref> to show that <m>H(x-a)</m> is not
+          <xref ref="THEOREMOneSideLim"></xref> to show that <m>H(x-a)</m> is not
           differentiable at <m>x=a</m>.
 </p>
 </li>
@@ -711,7 +711,7 @@ definition of the Absolute Value function is:
 </li>
         <li>
 <p>
- Use <xref ref="THEOREMtheorem:OneSideLim"></xref> to show that
+ Use <xref ref="THEOREMOneSideLim"></xref> to show that
           is not differentiable at <m>x=a</m> or <m>x=b</m>.
 </p>
 </li>
@@ -738,7 +738,7 @@ definition of the Absolute Value function is:
 <!--    Use -->
 <!-- </p> -->
 <!-- </li> -->
-<!--           <xref ref="THEOREMtheorem:OneSideLim"></xref> to show that <m>H(x-a)</m> is not -->
+<!--           <xref ref="THEOREMOneSideLim"></xref> to show that <m>H(x-a)</m> is not -->
 <!--           differentiable at <m>x=a</m>. -->
 <!--         </ol> -->
 
@@ -755,7 +755,7 @@ definition of the Absolute Value function is:
 <!-- </li> -->
 <!--         <li> -->
 <!-- <p> -->
-<!--  Use <xref ref="THEOREMtheorem:OneSideLim"></xref> to show that -->
+<!--  Use <xref ref="THEOREMOneSideLim"></xref> to show that -->
 <!-- </p> -->
 <!-- </li> -->
 <!--           is not differentiable at <m>x=a</m> or <m>x=b</m>. -->
@@ -785,7 +785,7 @@ definition of the Absolute Value function is:
 
     To see this consider any function, <m>f(x)</m> which is continuous on the
     closed interval <m>[a,b]</m> and differentiable on the open interval
-    <m>(a,b)</m>. From <xref ref="COROLLARYDeriv=LRDeriv">Corollary~\</xref> we know that
+    <m>(a,b)</m>. From <xref ref="COROLLARYDerivEqualLRDeriv">Corollary~\</xref> we know that
     <m>f^\prime(b)</m> only exists if <m>\rprime{f}(b)</m> and <m>\lprime{f}(b)</m> both
     exist\aside{They also need to be equal, but that is irrelevant right
       now.}.

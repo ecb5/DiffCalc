@@ -1,7 +1,7 @@
-<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="CHAformal-limits">
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="CHAPTERformal-limits">
  <title>Formal Limits</title>
 
-<!-- \label{CHAformal-limits} -->
+<!-- \label{CHAPTERformal-limits} -->
 <introduction>
 
 <blockquote>
@@ -20,7 +20,7 @@
  
 <p>
 
-We began our treatment of limits in <xref ref="CHAlimits-lhop-rule">Chapter</xref>
+We began our treatment of limits in <xref ref="CHAPTERlimits-lhop-rule">Chapter</xref>
 informally because it can take time to develop a mindset appropriate
 to a thorough understanding of limits. However, by proving theorems
 using properties of limits which we have not yet shown to be true
@@ -528,7 +528,7 @@ We have only begun, but this is enough for us to offer a first
 definition of the limit concept. We generalize slightly.
 </p>
 
-<definition xml:id="DEFINITIONdef:second-inad-limit-at-infinity">
+<definition xml:id="DEFINITIONsecond-inad-limit-at-infinity">
 <title>Positive Function With Limit Zero at Infinity</title>
 <statement>
 <p>
@@ -581,7 +581,7 @@ finding <m>B</m> is the whole problem. This is easier to see in an example.
 <problem>
 <introduction>
 <p>
-  Use <xref ref="DEFINITIONdef:second-inad-limit-at-infinity">~</xref> to prove that
+  Use <xref ref="DEFINITIONsecond-inad-limit-at-infinity">~</xref> to prove that
   for each of the functions below <m>\limit{x}{\infty}{f(x)}=0</m>.  That
   is, assume <m>\eps\gt0</m> is given and find a lower bound <m>B</m> such that
   if <m>x\gt B</m> then <m>f(x)\lt\eps</m>.
@@ -658,9 +658,8 @@ finding <m>B</m> is the whole problem. This is easier to see in an example.
 next example shows:
 </p>
 
-<example xml:id="ex:limit1">
+<example xml:id="EXAMPLElimit1">
 <p>
-  <!-- \label{ex:limit1} -->
   Suppose <m>f(x) = -2-\frac{1}{x}.</m> Can you guess the value of <m>\limit{x}{\infty}{f(x)}</m>?
 
   Let <m>\eps\gt 0</m> be given. Then when <m>B</m> has any positive
@@ -668,7 +667,7 @@ next example shows:
   <me>
   f(x) = -2-\frac1x \lt  0 \lt  \eps,
   </me>
-  and by <xref ref="DEFINITIONdef:second-inad-limit-at-infinity">~</xref> we
+  and by <xref ref="DEFINITIONsecond-inad-limit-at-infinity">~</xref> we
   conclude that <m>\tlimit{x}{\infty}{f(x)} =0</m> since all of the requirements
   of our definition have been met (except, of course, <m>f(x)\gt0</m>).
 
@@ -676,7 +675,7 @@ next example shows:
   <m>\frac1x</m> gets arbitrarily close to zero. So clearly
   <m>\tlimit{x}{\infty}{f(x)}=-2</m>. That we are able to ``prove'' that
   <m>f(x)</m> goes to zero simply means that
-  <xref ref="DEFINITIONdef:second-inad-limit-at-infinity">~</xref> doesn't capture
+  <xref ref="DEFINITIONsecond-inad-limit-at-infinity">~</xref> doesn't capture
   everything we need.
 
   We need a more encompassing definition of a limit.
@@ -715,7 +714,7 @@ is less than <m>\eps</m>. We want <m>\abs{y}\lt \eps,</m> not just
 <m>y\lt \eps</m>.
 </p>
 
-<definition xml:id="DEFINITIONdef:limit-at-infinity-nearly-adequate">
+<definition xml:id="DEFINITIONlimit-at-infinity-nearly-adequate">
 <title>Zero Limit at Infinity</title>
 <statement>
 <p>
@@ -779,7 +778,7 @@ that <m>\tlimit{x}{\infty}{f(x)}=0</m>.
   \end{align*}
 
   Therefore, by
-  <xref ref="DEFINITIONdef:limit-at-infinity-nearly-adequate"></xref>
+  <xref ref="DEFINITIONlimit-at-infinity-nearly-adequate"></xref>
   <m>\tlimit{x}{\infty}{f(x)}=0</m>.
 </p>
 </proof>
@@ -836,7 +835,7 @@ State your conclusion.
 </p>
 <p>
   
-  Use  <xref ref="DEFINITIONdef:limit-at-infinity-nearly-adequate"></xref> to show that
+  Use  <xref ref="DEFINITIONlimit-at-infinity-nearly-adequate"></xref> to show that
   <m>\tlimit{x}{\infty}{\frac{1}{5x-x^2}}=0</m>.
 </p>
 </example>
@@ -898,7 +897,7 @@ State your conclusion.
       \abs{\frac{1}{5x-x^2}}=\abs{\frac{1}{5-x}}\cdot\abs{\frac1x}\lt1\cdot\frac1x\lt\eps.
   </me>
     Therefore by
-    <xref ref="DEFINITIONdef:limit-at-infinity-nearly-adequate"></xref>,
+    <xref ref="DEFINITIONlimit-at-infinity-nearly-adequate"></xref>,
     <me>
     \limit{x}{\infty}{\frac{1}{5x-x^2}}=0.
     </me>
@@ -1023,7 +1022,7 @@ generalize <xref ref="DEFlimit-at-infinity-nearly-adequate">Definition~\</xref> 
 follows.
 </p>
 
-<definition xml:id="DEFINITIONdef:limit-at-posinfinity">
+<definition xml:id="DEFINITIONlimit-at-posinfinity">
 <title>A Limit at <m>+\infty</m></title>
 <statement>
 <p>
@@ -1035,7 +1034,7 @@ follows.
   </me>
   if and only if for every <m>\eps\gt 0</m> there is a real number <m>B</m>
   with the property that whenever\aside{Notice that if <m>L=0</m> this
-    reduces to  <xref ref="DEFINITIONdef:limit-at-infinity-nearly-adequate"></xref>. } <m>x\gt B,</m>
+    reduces to  <xref ref="DEFINITIONlimit-at-infinity-nearly-adequate"></xref>. } <m>x\gt B,</m>
   <m>\abs{f(x)-L}\lt \eps.</m>
 
 </p>
@@ -1082,7 +1081,7 @@ follows.
         \abs{\left(1-\tfrac{1}{x}\right)-1}\amp\lt \eps
         \abs{f(x)-1}\amp\lt \eps.
       \end{align*}
-      Therefore by <xref ref="DEFINITIONdef:limit-at-posinfinity"></xref>,
+      Therefore by <xref ref="DEFINITIONlimit-at-posinfinity"></xref>,
       <me>
       \limit{x}{\infty}{f(x)}=1.
       </me>
@@ -1104,7 +1103,7 @@ the ``<m>\approach{\infty}</m>'' notation.
   </me>
   So we see that this limit must be equal to five. To prove this
   rigorously, without referring to infinity, we use
-  <xref ref="DEFINITIONdef:limit-at-posinfinity">~</xref>
+  <xref ref="DEFINITIONlimit-at-posinfinity">~</xref>
 </p>
 </example>
 <investigation>
@@ -1279,7 +1278,7 @@ here as well. The only difference is that we have to change the sense
 of our inequalities to reflect that <m>x</m> is decreasing without
 bound.
 </p>
-<definition xml:id="DEFINITIONdef:limit-at-neginfinity">
+<definition xml:id="DEFINITIONlimit-at-neginfinity">
 <title>A Limit at <m>-\infty</m></title>
 <statement>
 <p>
@@ -1358,7 +1357,7 @@ Rules we've been using are valid. To do that we will use the following
 precise, rigorous definition of a limit as <m>x\rightarrow a</m> where <m>a</m>
 is some real number.
 </p>
-<definition xml:id="DEFINITIONdef:limits-at-real">
+<definition xml:id="DEFINITIONlimits-at-real">
 <title>The Limit at a Point</title>
 <statement>
 <p>
@@ -1681,8 +1680,8 @@ Digression missing
 <!-- <!-\-   our limit point is <m>x=\frac12</m> so it is not under consideration. -\-> -->
 
 <!-- <!-\-   In fact, once we have rigorously proved\aside{We will do this in -\-> -->
-<!-- <!-\-     <xref ref="SECTIONsec:LimitLaws">~</<xref ref="XREFtheorem:LimSum2">>.} -\-> -->
-<!-- <!-\-  </<xref ref="XREFtheorem:LimProd2">>, -\-> -->
+<!-- <!-\-     <xref ref="SECTIONsec:LimitLaws">~</<xref ref="XREFTHEOREMLimSum2">>.} -\-> -->
+<!-- <!-\-  </<xref ref="XREFTHEOREMLimProd2">>, -\-> -->
 <!-- <!-\-  </xref>, -\-> -->
 <!-- <!-\-   <xref ref="ANDthm:ConstLimit"></xref> from -\-> -->
 <!-- <!-\-   <xref ref="SECTIONsec:limit-theorems-laws">~</xref> the following will be a valid -\-> -->
@@ -1699,12 +1698,12 @@ Digression missing
 <!-- <!-\-   \end{align*} -\-> -->
 
 <!-- <!-\-   \begin{embeddedproblem} -\-> -->
-<!-- <!-\-     Identify where we used <xref ref="THEOREMtheorem:LimSum2"></xref>, -\-> -->
-<!-- <!-\-     <xref ref="THEOREMtheorem:LimProd2"></xref>, and -\-> -->
+<!-- <!-\-     Identify where we used <xref ref="THEOREMLimSum2"></xref>, -\-> -->
+<!-- <!-\-     <xref ref="THEOREMLimProd2"></xref>, and -\-> -->
 <!-- <!-\-     <xref ref="THEOREMthm:ConstLimit">~\#~</xref> in the development above. -\-> -->
 <!-- <!-\-   \end{embeddedproblem} -\-> -->
 <!-- <!-\-   Because we haven't yet rigorously proved -\-> -->
-<!-- <!-\-   <xref ref="THEOREMStheorem:LimSum2"></xref>, \#\ref{theorem:LimProd2} or~\#\ref{thm:ConstLimit} we -\-> -->
+<!-- <!-\-   <xref ref="THEOREMSTHEOREMLimSum2"></xref>, \#\ref{THEOREMLimProd2} or~\#\ref{thm:ConstLimit} we -\-> -->
 <!-- <!-\-   can't use them to construct a rigorous proof. Until they are proved -\-> -->
 <!-- <!-\-   they are not known, they are just believed. Belief is not knowledge. -\-> -->
 
@@ -1882,7 +1881,7 @@ Digression missing
 
 <p>
 If we can prove each of the limit laws in
-<xref ref="CHAdiff-rules-with-limits">Chapter</xref> rigorously (i.e, using
+<xref ref="CHAPTERdiff-rules-with-limits">Chapter</xref> rigorously (i.e, using
 <xref ref="DEFlimits-at-real">Definition~\</xref>) we will have provided a
 rigorous foundation for Differential Calculus. We will address these
 now.
@@ -1894,10 +1893,10 @@ called the <term>Triangle Inequality</term>. We  state and prove the
 Triangle Inequality here so that we can cite it as needed.
 </p>
 
-  <theorem xml:id="theorem:TriangIneq">
+  <theorem xml:id="THEOREMTriangIneq">
 <title>The Triangle Inequality</title>
 <p>
-    <!-- \label{theorem:TriangIneq} -->
+    <!-- \label{THEOREMTriangIneq} -->
     For any real numbers <m>x</m>, and <m>y</m>, <m>\abs{x+y} \leq
     \abs{x}+\abs{y}</m>.
   </p>
@@ -1909,7 +1908,7 @@ Triangle Inequality here so that we can cite it as needed.
   <xref ref="DIGRESSIONAbsoluteValue2">Digression~\</xref>.
 </p>
 
-<proof  xml:id="PROOF:TriIneq">
+<proof  xml:id="PROOFTriIneq">
 <title>Proof of the Triangle Inequality</title>
 <p>
   Clearly <m>-\abs{x}\leq x \leq \abs{x}</m> and <m>-\abs{y}\leq y \leq
@@ -1968,10 +1967,9 @@ using the <xref ref="DEFlimits-at-real">Definition~\</xref> as an exercise for
 you.  In every case you can model your scrapwork and proof on the ones
 we provide.
 </p>
-<theorem xml:id="thm:LimConstInf">
+<theorem xml:id="THEOREMLimConstInf">
 <title>The Limit at Infinity of a Constant Function is the Constant</title>
 <p>
-  <!-- \label{thm:LimConstInf} -->
   Suppose <m>L</m> and <m>K</m> are real numbers.  If <m>f(x)=K</m> for all <m>x\gt L</m>
   then <m>\limit{x}{\infty}{f(x)}=K</m>.
 </p>
@@ -1992,10 +1990,9 @@ The formalism we're using requires that we specify some value for
 for <m>B\ge L</m> would have worked as well.
 </p>
 
-<theorem xml:id="thm:LimConstNegInf">
+<theorem xml:id="THEOREMLimConstNegInf">
 <title>The Limit at Negative Infinity of a Constant Function is the Constant</title>
 <p>
-  <!-- \label{thm:LimConstNegInf} -->
   Suppose <m>U</m> and <m>K</m> are real numbers.  If <m>f(x)=K</m> for all <m>x\lt U</m>
   then <m>\limit{x}{-\infty}{f(x)}=K.</m>
 </p>
@@ -2012,10 +2009,9 @@ for <m>B\ge L</m> would have worked as well.
 </problem>
 
 
-<theorem xml:id="thm:LimConstPoint">
+<theorem xml:id="THEOREMLimConstPoint">
 <title>The Limit at a Point of a Constant Function is the Constant</title>
 <p>
-<!-- \label{thm:LimConstPoint} -->
 Suppose <m>K</m> is a real number and <m>a</m> is a point in the domain of
 <m>f(x)</m> .  If <m>f(x)=K</m> near <m>a</m>
 then <m>\limit{x}{a}{f(x)}=K.</m>
@@ -2046,10 +2042,10 @@ then <m>\limit{x}{a}{f(x)}=K.</m>
 <subsection xml:id="SUBSECTIONlimit-sum-at">
 <title>The Limit of a Sum</title>
 
-  <theorem xml:id="theorem:LimSumInf">
+  <theorem xml:id="THEOREMLimSumInf">
 <title>The Limit of a Sum at Infinity</title>
 <p>
-    <!-- \label{theorem:LimSumInf} -->
+    <!-- \label{THEOREMLimSumInf} -->
   If <m>\limit{x}{\infty}{f(x)}=L_f</m> and <m>\limit{x}{\infty}{g(x)}=L_g</m> then
   <m>\limit{x}{\infty}{\left(f(x)+g(x)\right)}=L_f+L_g.</m>
 </p>
@@ -2133,10 +2129,10 @@ value of <m>x</m> is one where <m>x\gt B_f</m> and <m>x\gt B_g</m>.
 </statement>
 </problem>
 
-  <theorem xml:id="theorem:LimSumNegInf">
+  <theorem xml:id="THEOREMLimSumNegInf">
 <title>The Limit of a Sum at Negative Infinity</title>
 <p>
-    <!-- \label{theorem:LimSumNegInf} -->
+    <!-- \label{THEOREMLimSumNegInf} -->
   If <m>\limit{x}{-\infty}{f(x)}=L_f</m> and <m>\limit{x}{-\infty}{g(x)}=L_g</m> then
   <m>\limit{x}{-\infty}{\left(f(x)+g(x)\right)}=L_f+L_g.</m>
 </p>
@@ -2156,10 +2152,9 @@ value of <m>x</m> is one where <m>x\gt B_f</m> and <m>x\gt B_g</m>.
 </problem>
 
 
-<theorem xml:id="thm:LimSumPoint">
+<theorem xml:id="THEOREMLimSumPoint">
 <title>Limit of a Sum at a Point</title>
 <p>
-<!-- \label{thm:LimSumPoint} -->
 Suppose that <m>a</m> is some real number, <m>\limit{x}{a}{f(x)}=L_f</m> and
 <m>\limit{x}{a}{g(x)}=L_g</m>. Then
   <me>
@@ -2175,10 +2170,9 @@ Suppose that <m>a</m> is some real number, <m>\limit{x}{a}{f(x)}=L_f</m> and
 <subsection xml:id="SUBSECTIONsqueeze-theorem">
 <title>The Squeeze Theorem</title>
 
-  <theorem xml:id="thm:SqThmInfinity">
+  <theorem xml:id="THEOREMSqThmInfinity">
 <title>The Squeeze  Theorem at Infinity</title>
 <p>
-    <!-- \label{thm:SqThmInfinity} -->
   If <m>\alpha(x)\le f(x)\le \beta(x)</m> on some
   interval, <m>(c, \infty)</m> and
   <me>
@@ -2226,10 +2220,9 @@ Suppose that <m>a</m> is some real number, <m>\limit{x}{a}{f(x)}=L_f</m> and
 </statement>
 </problem>
 
-  <theorem xml:id="thm:SqThmNegInfinity">
+  <theorem xml:id="THEOREMSqThmNegInfinity">
 <title>The Squeeze  Theorem at Negative Infinity</title>
 <p>
-    <!-- \label{thm:SqThmNegInfinity} -->
   If <m>\alpha(x)\le f(x)\le \beta(x)</m> on some
   interval, <m>(-\infty,c)</m> and
   <me>
@@ -2251,10 +2244,9 @@ Suppose that <m>a</m> is some real number, <m>\limit{x}{a}{f(x)}=L_f</m> and
 </statement>
 </problem>
 
-  <theorem xml:id="thm:SqThmFinite">
+  <theorem xml:id="THEOREMSqThmFinite">
 <title>The Squeeze  Theorem, at a Point</title>
 <p>
-    <!-- \label{thm:SqThmFinite} -->
     If <m>\alpha(x)\le f(x)\le \beta(x)</m> near  <m>a</m> and
     <m>\limit{x}{a}{\alpha(x)} = \limit{x}{a}{\beta(x)} = L</m> then
     <m>\limit{x}{a}{f(x)} = L</m> also.
@@ -2303,10 +2295,10 @@ continuous at  <m>g(a)</m>.
 </example>
 
 
-<theorem xml:id="theorem:LimCompInf">
+<theorem xml:id="THEOREMLimCompInf">
 <title>The Limit of a Composition at Infinity</title>
 <p>
-  <!-- \label{theorem:LimCompInf}  -->
+  <!-- \label{THEOREMLimCompInf}  -->
   Suppose <m>\tlimit{x}{\infty}{g(x)}=L_g</m> and <m>f(y)</m> is continuous at
   <m>y=L_g</m>. Then
   <me>
@@ -2428,10 +2420,10 @@ From the continuity of <m>f</m> at <m>L_g</m> we know  that
 </statement>
 </problem>
 
-<theorem xml:id="theorem:LimCompNegInf">
+<theorem xml:id="THEOREMLimCompNegInf">
 <title>The Limit of a Composition at Negative Infinity</title>
 <p>
-  <!-- \label{theorem:LimCompNegInf}  -->
+  <!-- \label{THEOREMLimCompNegInf}  -->
   Suppose <m>\tlimit{x}{-\infty}{g(x)}=L_g</m> and <m>f(y)</m> is continuous at
   <m>y=L_g</m>. Then
   <me>
@@ -2452,10 +2444,9 @@ From the continuity of <m>f</m> at <m>L_g</m> we know  that
 </statement>
 </problem>
 
-<theorem xml:id="thm:LimCompPoint">
+<theorem xml:id="THEOREMLimCompPoint">
 <title>The Limit of a Composition at a Point</title>
 <p>
-  <!-- \label{thm:LimCompPoint} -->
   Suppose
   <m>\limit{x}{a}{g(x)}=L_g</m>, and that <m>f(y)</m> is continuous at <m>y=L_g</m>.
   Then
@@ -2472,25 +2463,23 @@ From the continuity of <m>f</m> at <m>L_g</m> we know  that
 <title>The Limit of a Product</title>
 
 <introduction>
-  <theorem xml:id="thm:limit-product-infinity">
+  <theorem xml:id="THEOREMlimit-product-infinity">
 <title>The Limit of a Product at Infinity</title>
 <p>
-    <!-- \label{thm:limit-product-infinity} -->
   If <m>\limit{x}{\infty}{f(x)}=L_f</m> and <m>\limit{x}{\infty}{g(x)}=L_g</m> then
   <m>\limit{x}{\infty}{\left(f(x)\cdot g(x)\right)}=L_f\cdot L_g.</m>
 </p>
 </theorem>
 <p>
-The proof of <xref ref="THMlimit-product-infinity">Theorem</xref> is very
+The proof of <xref ref="THEOREMMlimit-product-infinity">Theorem</xref> is very
 straightforward once the following two lemmas have been proved. We
  state these lemmas here so that we can refer to them in the proof of
- <xref ref="THMlimit-product-infinity">Theorem</xref>
-    but the proof of <xref ref="THMlimit-product-infinity">Theorem~</xref>) is not
+ <xref ref="THEOREMlimit-product-infinity">Theorem</xref>
+    but the proof of <xref ref="THEOREMlimit-product-infinity">Theorem~</xref>) is not
  complete until these lemmas have been proved.
 </p>
- <lemma xml:id="lemma:LimProd1">
+ <lemma xml:id="LEMMALimProd1">
 <p>
-   <!-- \label{lemma:LimProd1} -->
      If <m>\limit{x}{\infty}{f(x)}=L_f</m> and <m>\limit{x}{\infty}{g(x)}=L_g</m> then
    <m>\tlimit{x}{\infty}{\left(f(x)\cdot g(x)-f(x)\cdot L_g\right)}=0.</m>
  </p>
@@ -2498,7 +2487,6 @@ straightforward once the following two lemmas have been proved. We
 
  <lemma xml:id="LEMMALimProd2">
 <p>
-   <!-- \label{lemma:LimProd2} -->
      If <m>\limit{x}{\infty}{f(x)}=L_f</m> and <m>\limit{x}{\infty}{g(x)}=L_g</m> then
    <m>\tlimit{x}{\infty}{\left(f(x)\cdot L_g-L_f\cdot L_g\right)}=0</m>
  </p>
@@ -2506,7 +2494,7 @@ straightforward once the following two lemmas have been proved. We
 
 
 <proof xml:id="PROOFLemmaLimProd1">
-<title><xref ref="THMlimit-product-infinity">Theorem</xref></title>
+<title><xref ref="THEOREMlimit-product-infinity">Theorem</xref></title>
 <p>
     Let <m>\eps \gt 0</m> be given.
 
@@ -2556,7 +2544,7 @@ Therefore <m>\limit{x}{\infty}{f(x)\cdot
 
 </introduction>
 <subsubsection>
-<title>Proving <xref ref="LEMMAlemma:LimProd1"></xref></title>
+<title>Proving <xref ref="LEMMALimProd1"></xref></title>
 <p>
 
 To prove <xref ref="LEMMALimProd1">Lemma~\</xref> we need to guarantee that if <m>x</m>
@@ -2591,9 +2579,8 @@ finite limit, it must be bounded. This will allow us to replace
 of <xref ref="LEMMALimProd1">Lemma~\</xref>.
 </p>
 
-   <lemma xml:id="lemma:Bounded1">
+   <lemma xml:id="LEMMABounded1">
 <p>
-     <!-- \label{lemma:Bounded1} -->
   If <m>\tlimit{x}{\infty}{f(x)} = L_f</m>  then there are positive real numbers
     <m>N</m> and <m>\beta</m>, such that if <m>x\gt \beta</m>, then <m>\abs{f(x)} \lt N</m>.
   </p>
@@ -2720,7 +2707,7 @@ Therefore    <m>\tlimit{x}{\infty}{\left(f(x)\cdot g(x)-f(x)\cdot L_g\right)}=0.
   
   Having completed the proofs of <xref ref="LEMMALimProd1">Lemma~\</xref> and
   <xref ref="LEMMALimProd1">Lemma~\</xref> our proof of
-  <xref ref="THMlimit-product-infinity">Theorem~\</xref> is now also complete.
+  <xref ref="THEOREMlimit-product-infinity">Theorem~\</xref> is now also complete.
 </p>
 <p>
   
@@ -2732,7 +2719,7 @@ Therefore    <m>\tlimit{x}{\infty}{\left(f(x)\cdot g(x)-f(x)\cdot L_g\right)}=0.
 
   On the other hand, once <xref ref="LEMMALimProd1">Lemmas~\</xref>
   <xref ref="LEMMALimProd2">and~\</xref> are known the proof of
-  <xref ref="THMlimit-product-infinity">Theorem~\</xref> becomes even simpler as
+  <xref ref="THEOREMlimit-product-infinity">Theorem~\</xref> becomes even simpler as
   the next drill shows.
 </p>
 
@@ -2749,10 +2736,10 @@ Therefore    <m>\tlimit{x}{\infty}{\left(f(x)\cdot g(x)-f(x)\cdot L_g\right)}=0.
 <task>
 <statement>
 <p>
- Now that we have <xref ref="LEMMAlemma:LimProd1"></xref> and
-           <xref ref="LEMMAlemma:LimProd2"></xref> there is actually a simpler
+ Now that we have <xref ref="LEMMALimProd1"></xref> and
+           <xref ref="LEMMALimProd2"></xref> there is actually a simpler
            way to prove
-           <xref ref="THEOREMthm:limit-product-infinity"></xref>. Observe that
+           <xref ref="THEOREMlimit-product-infinity"></xref>. Observe that
            <me>
              \label{eq:LimProd3}
              \underbrace{f(x)\cdot g(x) - L_g\cdot L_f}_{\Gamma(x)} = \underbrace{\left[f(x)\cdot g(x)-f(x)\cdot
@@ -2760,8 +2747,8 @@ Therefore    <m>\tlimit{x}{\infty}{\left(f(x)\cdot g(x)-f(x)\cdot L_g\right)}=0.
                  L_g\right]}_{\beta(x)}
            </me>
            and complete the proof by
-           citing <xref ref="LEMMAlemma:LimProd1"></xref> and
-           <xref ref="LEMMAlemma:LimProd2"></xref> and the appropriate, previously
+           citing <xref ref="LEMMALimProd1"></xref> and
+           <xref ref="LEMMALimProd2"></xref> and the appropriate, previously
            proven, limit theorem.
            \hint{The right side of <xref ref="EQUATIONeq:LimProd3"></xref> is a
              sum.}
@@ -2771,9 +2758,9 @@ Therefore    <m>\tlimit{x}{\infty}{\left(f(x)\cdot g(x)-f(x)\cdot L_g\right)}=0.
 <task>
 <statement>
 <p>
- <xref ref="LEMMAlemma:LimProd2"></xref> can also be proved without
+ <xref ref="LEMMALimProd2"></xref> can also be proved without
            resorting to the limit definition (using <m>\eps</m> and
-           <m>\delta</m>).  Prove it by citing <xref ref="LEMMAlemma:LimProd1">~</xref>
+           <m>\delta</m>).  Prove it by citing <xref ref="LEMMALimProd1">~</xref>
            and the appropriate, previously proved, limit theorems.
          </p>
 </statement>
@@ -2819,16 +2806,15 @@ Therefore    <m>\tlimit{x}{\infty}{\left(f(x)\cdot g(x)-f(x)\cdot L_g\right)}=0.
 <problem>
 <statement>
 <p>
-  Use our proof of <xref ref="THMlimit-product-infinity">Theorem</xref> as a model
-  to prove <xref ref="THMlimit-product-negative-infinity">Theorem</xref> below.
+  Use our proof of <xref ref="THEOREMlimit-product-infinity">Theorem</xref> as a model
+  to prove <xref ref="THEOREMlimit-product-negative-infinity">Theorem</xref> below.
 </p>
 </statement>
 </problem>
 
-<theorem xml:id="thm:limit-product-negative-infinity">
+<theorem xml:id="THEOREMlimit-product-negative-infinity">
 <title>The Limit of a Product at Negative Infinity</title>
 <p>
-    <!-- \label{thm:limit-product-negative-infinity} -->
   If <m>\limit{x}{-\infty}{f(x)}=L_f</m> and <m>\limit{x}{-\infty}{g(x)}=L_g</m> then
   <m>\limit{x}{-\infty}{\left(f(x)\cdot g(x)\right)}=L_f\cdot L_g.</m>
 </p>
@@ -2838,16 +2824,15 @@ Therefore    <m>\tlimit{x}{\infty}{\left(f(x)\cdot g(x)-f(x)\cdot L_g\right)}=0.
 <problem>
 <statement>
 <p>
-  Use our proof of <xref ref="THMlimit-product-infinity">Theorem</xref> as a model
-  to prove <xref ref="THMLimProdPoint">Theorem</xref> below.
+  Use our proof of <xref ref="THEOREMlimit-product-infinity">Theorem</xref> as a model
+  to prove <xref ref="THEOREMLimProdPoint">Theorem</xref> below.
 </p>
 </statement>
 </problem>
 
-<theorem xml:id="thm:LimProdPoint">
+<theorem xml:id="THEOREMLimProdPoint">
 <title>Limit of a Product at a Point</title>
 <p>
-  <!-- \label{thm:LimProdPoint} -->
   Suppose that
   <m>\limit{x}{a}{f(x)}=L_f</m> and <m>\limit{x}{a}{g(x)}=L_g</m> for some real
   number <m>a</m>.
@@ -2886,9 +2871,8 @@ However we will need to dispose of the following small detail.
 <title>The Function  \boldmath  <m>f(x)=\frac1x</m> is Continuous
   Wherever  It Is Defined</title>
 
-<lemma xml:id="lemma:1overxIsCont">
+<lemma xml:id="LEMMA1overxIsCont">
 <p>
-  <!-- \label{lemma:1overxIsCont} -->
     The function <m>f(x)=\frac1x</m> is continuous at <m>a\neq0</m>.
   </p>
 </lemma>
@@ -3105,7 +3089,7 @@ the next theorem without resorting back to definitions.
  the formal
  Definition of a right-hand limit.
 </p>
- <definition xml:id="DEFINITIONdef:OneSidedLimits-Formal">
+ <definition xml:id="DEFINITIONOneSidedLimits-Formal">
 <title>Right-Hand Limit</title>
 <statement>
 <p>
@@ -3119,7 +3103,7 @@ number. We say that <me>\rtlimit{x}{a}{f(x)}=L</me> provided that for each
 </statement>
 </definition>
 
- <problem xml:id="PROBLEMcoda:-one-sided">
+ <problem xml:id="PROBLEMCodaOneSided">
 <introduction>
 <p>
 </p>
@@ -3127,7 +3111,7 @@ number. We say that <me>\rtlimit{x}{a}{f(x)}=L</me> provided that for each
 <task>
 <statement>
 <p>
- Use <xref ref="DEFINITIONdef:OneSidedLimits-Formal">~</xref> as a model
+ Use <xref ref="DEFINITIONOneSidedLimits-Formal">~</xref> as a model
          to state a similar definition for <m>\ltlimit{x}{a}{f(x)}=L</m>
        </p>
 </statement>
@@ -3135,7 +3119,7 @@ number. We say that <me>\rtlimit{x}{a}{f(x)}=L</me> provided that for each
 <task>
 <statement>
 <p>
- Prove   <xref ref="THEOREMtheorem:OneSideLim"></xref> from
+ Prove   <xref ref="THEOREMOneSideLim"></xref> from
          <xref ref="CHAPTERchpt:when-deriv-doesnt">~</xref>.
        </p>
 </statement>
@@ -3146,7 +3130,7 @@ number. We say that <me>\rtlimit{x}{a}{f(x)}=L</me> provided that for each
  <!--       \begin{enumerate}[label={  (\alph*)}]  -->
  <!--       \item Use <xref ref="DEFINITIONdef:OneSidedLimits-Formal">~</xref> as a model -->
  <!--         to state a similar definition for <m>\ltlimit{x}{a}{f(x)}=L</m> -->
- <!--       \item Prove   <xref ref="THEOREMtheorem:OneSideLim"></xref> from -->
+ <!--       \item Prove   <xref ref="THEOREMOneSideLim"></xref> from -->
  <!--         <xref ref="CHAPTERchpt:when-deriv-doesnt">~</xref>. -->
  <!--       \end{enumerate} -->
  <!-- \end{embeddedproblem-enumerate} -->

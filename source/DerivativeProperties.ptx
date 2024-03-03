@@ -64,15 +64,14 @@ how much effort it takes to prove the First Derivative Test.  We
 will start by proving some  preliminary results that will make it
 a little easier to follow the logic behind the proof of the First
 Derivative Test.
-We'll begin with Fermat's Theorem (<xref ref="THMFermatsTheorem">Theorem</xref>)
+We'll begin with Fermat's Theorem (<xref ref="THEOREMFermatsTheorem">Theorem</xref>)
 which says that if <m>f</m> attains a maximum (or minimum) at <m>x=a</m> then
 <m>f^\prime(a)=0.</m> More formally:
 </p>
 
-<theorem xml:id="thm:FermatsTheorem2">
+<theorem xml:id="THEOREMFermatsTheorem2">
 <title>Fermat's Theorem</title>
 <p>
-  <!-- \label{thm:FermatsTheorem2} -->
   If <m>f(a)</m> is a local extremum (either a maximum or a minimum) of
   <m>f(x)</m> at <m>x=a</m>, and <m>f(x)</m> is differentiable at <m>x=a</m> then
   <m>f^\prime(a)=0</m>.
@@ -91,7 +90,7 @@ and <m>f^\prime(a)</m> exists, then <m>f^\prime(a) =0</m>.
 It is very rare that we can develop a proof of a theorem by directly
 writing down the logical steps in order.  Usually the process takes a
 lot of trying, backtracking, trying again, and so on much as we
-described in our analogy in <xref ref="CHAproblem-solving">Chapter</xref> about
+described in our analogy in <xref ref="CHAPTERproblem-solving">Chapter</xref> about
 finding your way out of a forest.
 </p>
 <p>
@@ -236,10 +235,9 @@ very chaotic.
 
 
 
-<lemma xml:id="lemma:rolles-lemma">
+<lemma xml:id="LEMMArolles-lemma">
 <title>Rolle's Lemma</title>
 <p>
-  <!-- \label{lemma:rolles-lemma} -->
   Suppose <m>f</m> is continuous on the closed interval <m>[a,b]</m> and
   differentiable on the open interval <m>(a,b)</m>. Suppose further that
   <m>f(a)=f(b)</m>. Then there is at least one number <m>c</m>, in the interval
@@ -339,7 +337,7 @@ that Rolle's Lemma  can manifest. This is demonstrated in
 <proof>
 <title>Proof of Roll<rsq/>s Lemma</title>
 <p>
-  By The Extreme Value Theorem (<xref ref="THMmax-min">Theorem</xref>) there is are points 
+  By The Extreme Value Theorem (<xref ref="THEOREMmax-min">Theorem</xref>) there is are points 
   <m>\alpha</m> and <m>\beta</m> in the interval <m>[a,b]</m>, such that  <m>f(\alpha)</m> is a global
   maximum, and  <m>f(\beta)</m> is a global minimum.
   
@@ -362,10 +360,9 @@ that Rolle's Lemma  can manifest. This is demonstrated in
 </p>
 </proof>
 
-<theorem xml:id="thm:MVT">
+<theorem xml:id="THEOREMMVT">
 <title>The Mean Value Theorem</title>
 <p>
-  <!-- \label{thm:MVT} -->
   Suppose <m>f(x)</m> is continuous on some closed interval, <m>[a,b]</m>, and
 <m>f</m> is  differentiable on <m>(a,b)</m>. Then there is at least one number
   <m>c</m> in the open interval <m>(a,b)</m> such that
@@ -518,7 +515,7 @@ infinitesimals to finite intervals.
 
 <p>
 
-We stated <xref ref="THMFDT">Theorem</xref> in <xref ref="CHAwhat-deriv-tells">Chapter</xref>
+We stated <xref ref="THEOREMFDT">Theorem</xref> in <xref ref="CHAPTERwhat-deriv-tells">Chapter</xref>
 without stating the conditions that make it true, because at the time
 our attention was primarily on using it.
 </p>
@@ -530,10 +527,9 @@ deeper, understanding. Notice that the conclusion is the same, only
 the conditions have changed.
 </p>
 
-<theorem xml:id="thm:FDTproved">
+<theorem xml:id="THEOREMFDTproved">
 <title>First Derivative Test</title>
 <p>
-  <!-- \label{thm:FDTproved} -->
   Suppose <m>f(x)</m> is continuous on the interval <m>[\alpha,\beta]</m>, and
   differentiable on the interval <m>(\alpha,\beta)</m>. Suppose further
   that  both <m>a</m> and <m>b</m> are in the interval
@@ -677,10 +673,10 @@ manner similar to the proof above.
 <!-- \end{embeddedproblem-enumerate} -->
 <p>
 We did not prove  \lhop 's Rule
-(<xref ref="THMLHRuleGen">Theorem</xref>) in <xref ref="CHAlimits-lhop-rule">Chapter</xref>
+(<xref ref="THEOREMLHRuleGen">Theorem</xref>) in <xref ref="CHAPTERlimits-lhop-rule">Chapter</xref>
 because the general theorem is slightly beyond the scope of this
 text. But the somewhat simpler first special case,
-<xref ref="THMLHRule1">Theorem</xref>, is a straightforward consequence of  the
+<xref ref="THEOREMLHRule1">Theorem</xref>, is a straightforward consequence of  the
 Mean Value Theorem.
 </p>
 
@@ -692,7 +688,7 @@ Mean Value Theorem.
 <task>
 <statement>
 <p>
- Under the conditions of <xref ref="THEOREMthm:LHRule1"></xref>
+ Under the conditions of <xref ref="THEOREMLHRule1"></xref>
     explain why
     <me>
     \limit{x}{a}{\frac{f(x)}{g(x)}}=\limit{x}{a}{\frac{f(x)-f(a)}{g(x)-g(a)}}
@@ -704,8 +700,8 @@ Mean Value Theorem.
 <statement>
 <p>
  Apply the Mean Value Theorem to the numerator and
-    denominator in part (a) and then prove <xref ref="THEOREMthm:LHRule1">~</xref>.
-    \hint{Use the fact that  in the statement of <xref ref="THEOREMthm:MVT">~</xref> <m>c</m> is between
+    denominator in part (a) and then prove <xref ref="THEOREMLHRule1">~</xref>.
+    \hint{Use the fact that  in the statement of <xref ref="THEOREMMVT">~</xref> <m>c</m> is between
       <m>a</m> and <m>b</m>.}
   </p>
 </statement>
@@ -713,14 +709,14 @@ Mean Value Theorem.
 </problem>
 <!-- \begin{embeddedproblem-enumerate} -->
 <!--   \begin{enumerate}[label={  (\alph*)}]  -->
-<!--   \item Under the conditions of <xref ref="THEOREMthm:LHRule1"></xref> -->
+<!--   \item Under the conditions of <xref ref="THEOREMLHRule1"></xref> -->
 <!--     explain why -->
 <!--     <me> -->
 <!--     \limit{x}{a}{\frac{f(x)}{g(x)}}=\limit{x}{a}{\frac{f(x)-f(a)}{g(x)-g(a)}} -->
 <!--     </me> -->
 <!--   \item Apply the Mean Value Theorem to the numerator and -->
-<!--     denominator in part (a) and then prove <xref ref="THEOREMthm:LHRule1">~</xref>. -->
-<!--     \hint{Use the fact that  in the statement of <xref ref="THEOREMthm:MVT">~</xref> <m>c</m> is between -->
+<!--     denominator in part (a) and then prove <xref ref="THEOREMLHRule1">~</xref>. -->
+<!--     \hint{Use the fact that  in the statement of <xref ref="THEOREMMVT">~</xref> <m>c</m> is between -->
 <!--       <m>a</m> and <m>b</m>.} -->
 <!--   \end{enumerate} -->
 <!-- \end{embeddedproblem-enumerate} -->

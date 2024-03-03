@@ -1,4 +1,4 @@
-<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="CHAwhat-deriv-tells">
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="CHAPTERwhat-deriv-tells">
  <title>Optimization: Going to Extremes</title>
 
 <section xml:id="SECTIONintroduction">
@@ -41,9 +41,8 @@ an extremum the graph of the function is practically horizontal. More
 formally we have:
 </p>
 
-<theorem xml:id="thm:FermatsTheorem">
+<theorem xml:id="THEOREMFermatsTheorem">
 <title>Fermat's Theorem</title>
-  <!-- <!-\- <!-\\- \label{thm:FermatsTheorem} -\\-> -\-> -->
 <p>
   If a function, <m>f(x)</m>, is differentiable at <m>x=a</m> and
   <m>f(a)</m> is either a maximum or a minimum then
@@ -1026,7 +1025,7 @@ trickier.
 </p>
 </example>
 <p>
-In <xref ref="CHAPTERScienceBeforeCalc">Chapter</xref> we used Fermat's Method of
+In <xref ref="CHAPTERPTERScienceBeforeCalc">Chapter</xref> we used Fermat's Method of
 Adequality to solve the following problem which is closely related to
 <xref ref="EXAMPLEDiffvsDer">Example~\</xref>.
 </p>
@@ -1332,7 +1331,7 @@ Digression missing
 <!-- <!-\-   If we hold <m>b</m> fixed minimizing the area, <m>A=\frac12bh</m>, is -\-> -->
 <!-- <!-\-   equivalent to maximizing <m>h</m>. So the length of <m>h</m> is the natural -\-> -->
 <!-- <!-\-   objective function for this problem. Also if <m>h</m> is at its maximum -\-> -->
-<!-- <!-\-   then by Fermat's Theorem (<xref ref="THMFermatsTheorem">Theorem~\</xref>), <m>\dx{h}=0</m>. Notice that -\-> -->
+<!-- <!-\-   then by Fermat's Theorem (<xref ref="THEOREMFermatsTheorem">Theorem~\</xref>), <m>\dx{h}=0</m>. Notice that -\-> -->
 <!-- <!-\-   there are two right triangles in our sketch and <m>h</m> is the height of -\-> -->
 <!-- <!-\-   both of them. -\-> -->
 
@@ -1543,7 +1542,7 @@ Digression missing
 <p>
 
 Another example of this second type is the problem of reflecting light
-we looked at in <xref ref="CHAPTERScienceBeforeCalc">Chapter</xref>. Recall that
+we looked at in <xref ref="CHAPTERPTERScienceBeforeCalc">Chapter</xref>. Recall that
 we showed that light bounces off of a mirror in such a manner that the
 angle of incidence equals the angle of reflection.  We did this by
 reasoning geometrically from the figure at the right to show that the
@@ -1640,7 +1639,7 @@ that <m>\alpha=\beta</m>.
 <p>
 
 This Calculus based argument is not as elegant as the geometric
-argument we used in <xref ref="CHAPTERScienceBeforeCalc">Chapter</xref>. In the
+argument we used in <xref ref="CHAPTERPTERScienceBeforeCalc">Chapter</xref>. In the
 geometric argument we could easily visualize what was happening.  Our
 Calculus based argument wasn't at all visual and it involved a lot of
 computation. But, believe it or not, this is a strength not a
@@ -2208,7 +2207,7 @@ can substitute specific values as needed.
 <p>
   Differentiate the objective function, <m>D(\alpha)</m>, and the
   constraint, <xref ref="EQUATIONeq:SnellConstraint"></xref>, and use Fermat's
-  Theorem (<xref ref="THEOREMthm:FermatsTheorem">~</xref>) to show that when <m>D</m> is
+  Theorem (<xref ref="THEOREMFermatsTheorem">~</xref>) to show that when <m>D</m> is
   a minimum
   <me>
     \label{eq:MinimumDeflect}
@@ -2296,7 +2295,7 @@ sums of the squares of sines and cosines.
 <p>
   Differentiate the objective function, <m>D(\alpha)</m>, and the
   constraint, <xref ref="EQUATIONeq:SnellConstraint"></xref>, and use Fermat's
-  Theorem (<xref ref="THEOREMthm:FermatsTheorem">~</xref>) to show that when <m>D</m> is
+  Theorem (<xref ref="THEOREMFermatsTheorem">~</xref>) to show that when <m>D</m> is
   a minimum
   <me>
     \label{eq:MinimumDeflect}
@@ -2773,11 +2772,10 @@ need to reference the function's domain. It is easy to get lost in the technical
 We have the following definitions.
 </p>
 
-<definition xml:id="DEFINITIONdef:GlobalMin">
+<definition xml:id="DEFINITIONGlobalMin">
 <title>Global Minimum</title>
 <statement>
 <p>
-  <!-- \label{def:GlobalMin} -->
   Suppose that <m>g</m> is a number in the domain of <m>y</m> such
   that\aside{The phrase <q>such that</q> is a term of art in
     mathematics. It means, <q>with the following property.</q>}
@@ -2912,7 +2910,7 @@ Digression missing.
 Now we can define local extrema.
 </p>
 
-<definition xml:id="DEFINITIONdef:LocalMin">
+<definition xml:id="DEFINITIONLocalMin">
 <title>Local Minimum</title>
 <statement>
 <p>
@@ -3001,10 +2999,8 @@ graph how could we tell which is the maximum and which is the minimum?
   To that end, consider the following theorem from elementary Algebra.
 </p>
 
-<theorem xml:id="thm:FDT-lines">
+<theorem xml:id="THEOREMFDT-lines">
 <p>
-<!-- \label{thm:FDT-lines} -->
-
 <ol>
   <li>
     <p>
@@ -3025,14 +3021,13 @@ graph how could we tell which is the maximum and which is the minimum?
   is constant. If the slope of a line is <m>5</m> here, then it is also <m>5</m>
   over there, and way back there too. But we know that the slope of a
   curve can change from point to point so we will need to generalize
-  <xref ref="THMFDT-lines">Theorem</xref> to a statement about curves.
-  <xref ref="THMFDT-lines">Theorem~\</xref> generalizes to curves as follows.
+  <xref ref="THEOREMFDT-lines">Theorem</xref> to a statement about curves.
+  <xref ref="THEOREMFDT-lines">Theorem~\</xref> generalizes to curves as follows.
 </p>
 
-<theorem xml:id="thm:FDT">
+<theorem xml:id="THEOREMFDT">
   <title>The First Derivative Test</title>
   <p>
-    <!-- \label{thm:FDT} -->
     Suppose <m>f</m> is a function of <m>x</m>.  The following statements are
     true\aside{This is a rather naive statement of this theorem, but
     it will suffice for our current purposes. We will revisit,
@@ -3077,7 +3072,7 @@ graph how could we tell which is the maximum and which is the minimum?
 </p>
 <p>
   
-  From <xref ref="THMFDT">Theorem</xref> we see that if the derivative of <m>O(x)</m>
+  From <xref ref="THEOREMFDT">Theorem</xref> we see that if the derivative of <m>O(x)</m>
   is positive then <m>O(x)</m> is increasing and if the derivative of
   <m>O(x)</m> is negative then <m>O(x)</m> is decreasing. So, at a maximum
   <m>O(x)</m> will transition from increasing to decreasing, and
@@ -3201,9 +3196,8 @@ graph how could we tell which is the maximum and which is the minimum?
 </statement>
 </exercise>
 
-<lemma xml:id="lemma:AdjRoots">
+<lemma xml:id="LEMMAAdjRoots">
   <p>
-    <!-- \label{lemma:AdjRoots} -->
     Let <m>f(x)</m> be a differentiable function.
     
     <ol>
@@ -3260,7 +3254,7 @@ graph how could we tell which is the maximum and which is the minimum?
   optimum, as the next example demonstrates.
 </p>
 
-<example xml:id="EXAMPLEx^5">
+<example xml:id="EXAMPLEx5">
 <p>
 
   Find all extrema of the graph of <m>O(x)=x^5</m>.
@@ -3296,7 +3290,7 @@ graph how could we tell which is the maximum and which is the minimum?
 
 
   <example xml:id="EXAMPLEParabolaSquare-Redux">
-<title>Constructing a Parabola on a Square   (<xref ref="EXAMPLEexample:ParabolaOptSqr"></xref>), Revisited</title>
+<title>Constructing a Parabola on a Square   (<xref ref="EXAMPLEParabolaOptSqr"></xref>), Revisited</title>
 <p>
     Given our new understanding of the distinction between local and
     global extrema we will revisit
@@ -3670,7 +3664,7 @@ Happy families are all alike; every unhappy family is
 
   We formalize this observation with the following definition.
 </p>
-<definition xml:id="DEFINITIONdef:OptimalTransitionPoints">
+<definition xml:id="DEFINITIONOptimalTransitionPoints">
   <title>Possible Optimal Transition Points (POTPs)</title>
   <statement>
     <p>
@@ -3706,7 +3700,7 @@ Happy families are all alike; every unhappy family is
     on which the function is increasing and decreasing. Label each
     POTP as a local or global minimum, maximum, or neither.\\
     \comment{For some of these you will have to rely on their
-      graphs to find the POTPs. In <xref ref="CHAPTERchpt:when-deriv-doesnt">~</xref> you will learn
+      graphs to find the POTPs. In <xref ref="CHAPTERPTERchpt:when-deriv-doesnt">~</xref> you will learn
       how  to find them by computing.}
 </p>
 </introduction>
@@ -3801,7 +3795,7 @@ Happy families are all alike; every unhappy family is
   <!--   on which the function is increasing and decreasing. Label each -->
   <!--   POTP as a local or global minimum, maximum, or neither.\\ -->
   <!--   \comment{For some of these you will have to rely on their -->
-  <!--     graphs to find the POTPs. In <xref ref="CHAPTERchpt:when-deriv-doesnt">~</xref> you will learn -->
+  <!--     graphs to find the POTPs. In <xref ref="CHAPTERPTERchpt:when-deriv-doesnt">~</xref> you will learn -->
   <!--     how  to find them by computing.} -->
   <!--   \begin{enumerate}[label={  (\alph*)}]  -->
   <!--     \item <m>f(x) = \frac{x}{x^2+9}</m> -->
@@ -3933,13 +3927,12 @@ straightforward\aside{Remember that <q>straightforward</q> does not mean
 </p>
 <p>
 
-We formalize all of this in <xref ref="THMmax-min">Theorem</xref> below.
+We formalize all of this in <xref ref="THEOREMmax-min">Theorem</xref> below.
 </p>
 
-<theorem xml:id="thm:max-min">
+<theorem xml:id="THEOREMmax-min">
 <title>Extreme Value Theorem</title>
 <p>
-  <!-- \label{thm:max-min} -->
   If <m>f(x)</m> is a continuous function whose domain consists entirely of
   closed, bounded intervals then:
   \begin{enumerate}[label={  (\alph*)}]
@@ -4008,7 +4001,7 @@ We formalize all of this in <xref ref="THMmax-min">Theorem</xref> below.
 <problem xml:id="PROBLEMSquareOnCircle">
 <statement>
 <p>
-  If we had known <xref ref="THMmax-min">Theorem</xref> when we first looked at
+  If we had known <xref ref="THEOREMmax-min">Theorem</xref> when we first looked at
   <xref ref="EXAMPLECircleDist">Example~\</xref> it would have saved us some time.
   Redo <xref ref="EXAMPLECircleDist">Example~\</xref>, using the knowledge that
   the domain of the problem is <m>-1\le x\le1</m> because the constraint is
@@ -4452,7 +4445,7 @@ We formalize all of this in <xref ref="THMmax-min">Theorem</xref> below.
 <introduction>
 
 <p>
-<xref ref="THMmax-min">Theorem</xref> explicitly assumed that the domain of our
+<xref ref="THEOREMmax-min">Theorem</xref> explicitly assumed that the domain of our
 function consisted of closed (and bounded) intervals. This assumption was
 crucial. Without this assumption even simple functions that you would
 expect to have extrema do not.
@@ -4773,10 +4766,9 @@ its second derivative, <m>\dfdxn{y}{x}{2}</m>. More formally we have the
 following theorem.
 </p>
 
-<theorem xml:id="thm:what-second-deriv">
+<theorem xml:id="THEOREMwhat-second-deriv">
   <title>Concavity</title>
   <p>
-    \label{thm:what-second-deriv}
     Suppose <m>y=y(x)</m> is a differentiable function of <m>x.</m> The following
     statements are true:
     
@@ -4982,10 +4974,10 @@ curve <m>y(x)</m>, if
 We formalize this idea in the Second Derivative Test, stated below.
 </p>
 
-<theorem xml:id="theorem:SecondDerivativeTest">
+<theorem xml:id="THEOREMSecondDerivativeTest">
   <title>The Second Derivative Test</title>
   <p>
-    \label{theorem:SecondDerivativeTest}
+    \label{THEOREMSecondDerivativeTest}
     Suppose <m>y</m> is some differentiable function and that at some point
     <m>a</m> in its domain
     <me>
@@ -5566,11 +5558,11 @@ Recall that in <xref ref="EXfixed-perimeter">Example~\</xref> we observed that
 most people can see intuitively that of all rectangles with a fixed
 perimeter the one that encloses the greatest area will be a square. We
 gave an algebraic demonstration of this in
-<xref ref="CHAPTERScienceBeforeCalc">Chapter</xref> but now that we know how to
+<xref ref="CHAPTERPTERScienceBeforeCalc">Chapter</xref> but now that we know how to
 use Calculus to optimize let's revisit this problem.
 </p>
 <example xml:id="EXAMPLERectangleFixedPerimeter">
-<title><xref ref="EXAMPLEex:fixed-perimeter"></xref> revisited again</title>
+<title><xref ref="EXAMPLEFixedPerimeter"></xref> revisited again</title>
   <!-- \label{example:RectangleFixedPerimeter} -->
 <p>
   We first solved this problem in <xref ref="EXfixed-perimeter">Example~\</xref>
@@ -5615,7 +5607,7 @@ use Calculus to optimize let's revisit this problem.
       perimeter will be greater than <m>P</m>. So the domain\aside{Strictly
       speaking if <m>x=0</m> or <m>x=\frac{P}{2}</m> we don't actually have a
       rectangle. But it is simpler to use the Extreme Value Theorem
-      (<xref ref="THMmax-min">Theorem~\</xref>) than to find the
+      (<xref ref="THEOREMmax-min">Theorem~\</xref>) than to find the
       increasing and decreasing intervals using the First Derivative
       Test. Since the Extreme Value Theorem requires a closed domain
       we make things simpler by allowing <q>zero width</q> rectangles.}
@@ -5625,7 +5617,7 @@ use Calculus to optimize let's revisit this problem.
   <li>
     <p>
       Since the problem domain is a closed interval we will use the
-      Extreme Value Theorem (<xref ref="THMmax-min">Theorem~\</xref>).
+      Extreme Value Theorem (<xref ref="THEOREMmax-min">Theorem~\</xref>).
       To find the POTPs we will need <m>\dfdx{A}{x}</m>. From
 
 <xref ref="EQFixedPerimeterObjective">Equation~</xref>) we see that
@@ -5687,7 +5679,7 @@ we see that    <me>    \dfdx{A}{x}=\frac{P}{2}-2x.    </me>    The only solution
     the perimeter will be greater than <m>P</m>. So the
     domain\aside{Strictly speaking if <m>x=0</m> or <m>x=\frac{P}{2}</m> we
     don't actually have a rectangle. But it is simpler to use the
-    Extreme Value Theorem (<xref ref="THMmax-min">Theorem~\</xref>) than to find the
+    Extreme Value Theorem (<xref ref="THEOREMmax-min">Theorem~\</xref>) than to find the
     increasing and decreasing intervals using the First Derivative
     Test. Since the Extreme Value Theorem requires a closed domain we make
     things simpler by allowing <q>zero width</q> rectangles.} of our
@@ -5697,7 +5689,7 @@ we see that    <me>    \dfdx{A}{x}=\frac{P}{2}-2x.    </me>    The only solution
     <li>
       <p>
         Since the problem domain is a closed interval we will use the
-    Extreme Value Theorem (<xref ref="THMmax-min">Theorem~\</xref>).
+    Extreme Value Theorem (<xref ref="THEOREMmax-min">Theorem~\</xref>).
     To find the POTPs we will need <m>\dfdx{A}{x}</m>. From
     <xref ref="EQFixedPerimeterObjective">Equation~</xref>) we see that
     <me>
@@ -6010,7 +6002,7 @@ is zero.
 </task>
 </example>
 
-<problem xml:id="no-label">
+<problem>
 <introduction>
 <p>
 </p>
