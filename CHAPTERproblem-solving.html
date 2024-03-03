@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Introduction: Some  Advice on Problem Solving</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Differential Calculus">
+<meta property="book:author" content="Eugene Boman">
+<meta property="book:author" content="Robert Rogers">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.33/pretext_search.js"></script><link href="https://pretextbook.org/css/0.83/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.33</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.33/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.33/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.33/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<link href="https://pretextbook.org/css/0.83/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
+<h1 class="heading"><a href="DiffCalc.html"><span class="title">Differential Calculus:</span> <span class="subtitle">From Practice to Theory</span></a></h1>
+<p class="byline">Eugene Boman, Robert Rogers</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="meta_backmatter-5.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="CalculusIsARock.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="FromPractice.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="CHAPTERPTERScienceBeforeCalc.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\def\abs#1{\left|#1\right|}
+\newcommand{\RR}{\mathbb {R}}
+\newcommand{\QQ}{\mathbb {Q}}
+\newcommand{\NN}{\mathbb {N}}
+\newcommand{\ZZ}{\mathbb {Z}}
+\newcommand{\ParamEqTwo}[2]
+{
+  \left\{
+    \begin{array}{c}
+    {#1}\\
+    {#2}
+    \end{array}
+  \right\}
+}
+\newcommand{\ParamEqThree}[3]
+{
+  \left\{
+    \begin{array}{c}
+    {#1}\\
+    {#2}\\
+    {#3}n
+    \end{array}
+  \right\}
+}
+
+\def\sech{{\rm{}sech}{}}
+\def\csch{{\rm{}csch}{}}
+
+
+\def\DD{{\bf{}D}}
+\def\ftceval#1#2#3{#1\hskip.5ex{\llap{\smash{\rule[-3ex]{0.5pt}{7ex}}}_{\raise{-3ex}{\hskip.5ex#2}}^{\raise{-5ex}{\hskip.5ex #3}}}}
+
+
+\def\eval#1#2#3{#1\hskip.5ex{\llap{\rule[-1.5ex]{0.5pt}{4ex}}_{\raise{-1.5ex}{\hskip.5ex#2=#3}}}}
+\def\dispeval#1#2#3{#1\hskip.5ex{\llap{\smash{\rule[-2ex]{0.5pt}{5ex}}}_{\raise{-2ex}{\hskip.5ex#2=#3}}}}
+
+
+
+\def\bigeval#1#2#3{\eval{#2}{#2}{#3}}
+
+
+
+
+
+
+\def\inverse#1{#1^{-1}}
+
+
+
+
+\def\dx#1{\thinspace{\mathrm d}#1}
+\def\dfdx#1#2{\frac{\dx{#1}}{\dx{#2}}} 
+\def\partialfx#1#2{\frac{\partial{#1}}{\partial{#2}}} 
+\def\partialfxn#1#2#3{\frac{\partial^{#3}{#1}}{\partial{#2}^{#3}}} 
+\def\dfdxn#1#2#3{\frac{\text{d}^{#3}{#1}}{\text{d}{#2}^{#3}}} 
+
+\def\dfdxat#1#2#3{\eval{\dfdx{#1}{#2}}{#2}{#3}}
+
+\def\limit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}#3}}
+\def\tlimit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}}#3}
+\def\limitX#1#2#3#4{{\displaystyle\lim_{\underset{#4}{#1\rightarrow #2}}#3}}
+\def\rlimit#1#2#3{{\limitX{#1}{#2}{#3}{#1\gt{}#2}{}}}
+\def\llimit#1#2#3{{\limitX{#1}{#2}{#3}{#1\lt{}#2}{}}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth5 parts"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Epigraphs</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="SECinstructor.html" class="internal"><span class="title">To the Instructor: Read This First</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-part contains-active">
+<div class="toc-title-box"><a href="FromPractice.html" class="internal"><span class="codenumber">I</span> <span class="title">From Practice . . .</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="CalculusIsARock.html" class="internal"><span class="codenumber">1</span> <span class="title">Calculus is a Rock</span></a></div></li>
+<li class="toc-item toc-chapter active">
+<div class="toc-title-box"><a href="CHAPTERproblem-solving.html" class="internal"><span class="codenumber">2</span> <span class="title">Introduction: Some  Advice on Problem Solving</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERproblem-solving.html#SECusing-lett-inst" class="internal"><span class="codenumber">2.1</span> <span class="title">Using Letters Instead of Numbers</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERproblem-solving.html#SECan-easy-problem-alg" class="internal"><span class="codenumber">2.2</span> <span class="title">Substitution, or Making Things “Easy on the Eyes”</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERproblem-solving.html#SECan-easy-problem-geo" class="internal"><span class="codenumber">2.3</span> <span class="title">An “Easy” Problem From Geometry</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERproblem-solving.html#SECour-advice-synopsis" class="internal"><span class="codenumber">2.4</span> <span class="title">Our advice, a synopsis</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTERPTERScienceBeforeCalc.html" class="internal"><span class="codenumber">3</span> <span class="title">Science Before Calculus</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERScienceBeforeCalc.html#Apologia" class="internal"><span class="codenumber">3.1</span> <span class="title">Apologia</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERScienceBeforeCalc.html#SECTIONSomePreliminaries" class="internal"><span class="codenumber">3.2</span> <span class="title">Some Preliminaries</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERPTERScienceBeforeCalc.html#sec-laziness-nature" class="internal"><span class="codenumber">3.3</span> <span class="title">The Laziness of Nature</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERScienceBeforeCalc.html#SUBSECTIONNatureLazy" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Nature is Lazy</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERScienceBeforeCalc.html#Digress-VarConstFunc-" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Digression: Variables, Constants, and Functions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERScienceBeforeCalc.html#SECTIONFermMethAedeq" class="internal"><span class="codenumber">3.4</span> <span class="title">Fermat’s Method of Adequality</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERScienceBeforeCalc.html#SECTIONdescartes-normals" class="internal"><span class="codenumber">3.5</span> <span class="title">Descartes’s Method of Normals</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERPTERScienceBeforeCalc.html#SECTIONroberv-conic-sect" class="internal"><span class="codenumber">3.6</span> <span class="title">Roberval, Conic Sections, and the Dynamic Approach</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERScienceBeforeCalc.html#SUBSECTIONSpdVelRofC" class="internal"><span class="codenumber">3.6.1</span> <span class="title">Speed, Velocity, and Rates of Change</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="CHAPTERPTERScienceBeforeCalc.html#SUBSECTIONTanConicSect" class="internal"><span class="codenumber">3.6.2</span> <span class="title">The Tangent Lines of the Conic Sections</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERPTERScienceBeforeCalc.html#SUBSECTIONTanParab" class="internal"><span class="codenumber">3.6.2.1</span> <span class="title">The Tangent to a Parabola</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERPTERScienceBeforeCalc.html#SUBSECTIONTanEllipse" class="internal"><span class="codenumber">3.6.2.2</span> <span class="title">The Tangent to an Ellipse</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERPTERScienceBeforeCalc.html#TangentHyperbola" class="internal"><span class="codenumber">3.6.2.3</span> <span class="title">The Tangent to an Hyperbola</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERScienceBeforeCalc.html#SECTIONsnells-law-refr" class="internal"><span class="codenumber">3.7</span> <span class="title">Snell’s Law and the Limitations of Adequality:</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTdifferentials.html" class="internal"><span class="codenumber">4</span> <span class="title">Differentials, Differentiation, and the Derivative</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTdifferentials.html#SECTIONHist-intr" class="internal"><span class="codenumber">4.1</span> <span class="title">Historical Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTdifferentials.html#SECTIONsome-rules-diff" class="internal"><span class="codenumber">4.2</span> <span class="title">The General Differentiation Rules</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTdifferentials.html#SUBSECTIONPurposeOfChapter" class="internal"><span class="codenumber">4.2.1</span> <span class="title">Warning: Be Sure You Understand  the Purpose of This Chapter.</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTdifferentials.html#SUBSECTIONDifferentials" class="internal"><span class="codenumber">4.2.2</span> <span class="title">Differentials</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="CHAPTdifferentials.html#SUBSECTIONGenDiffRules" class="internal"><span class="codenumber">4.2.3</span> <span class="title">The General Differentiation Rules</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTdifferentials.html#SUBSECTIONGenDiffRules-3" class="internal"><span class="codenumber">4.2.3.1</span> <span class="title">The Constant Rule</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTdifferentials.html#SUBSUBSECTIONSumRule" class="internal"><span class="codenumber">4.2.3.2</span> <span class="title">The Sum Rule</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTdifferentials.html#SUBSECTIONGenDiffRules-5" class="internal"><span class="codenumber">4.2.3.3</span> <span class="title">The Constant Multiple Rule</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTdifferentials.html#SUBSECTIONGenDiffRules-6" class="internal"><span class="codenumber">4.2.3.4</span> <span class="title">The Product Rule</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTdifferentials.html#SUBSECTIONGenDiffRules-7" class="internal"><span class="codenumber">4.2.3.5</span> <span class="title">The Power  Rule for Positive Integers</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTdifferentials.html#SUBSUBSECTIONGenPowerRule" class="internal"><span class="codenumber">4.2.3.6</span> <span class="title">The General Power Rule</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTdifferentials.html#SUBSUBQuotRule" class="internal"><span class="codenumber">4.2.3.7</span> <span class="title">The Quotient Rule</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html" class="internal"><span class="codenumber">5</span> <span class="title">Slopes, Tangents, and Rates of Change</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONVelocitySlopeTangent" class="internal"><span class="codenumber">5.1</span> <span class="title">Slopes and Tangents</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONdefin-tang-line" class="internal"><span class="codenumber">5.2</span> <span class="title">Defining the Tangent Line</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONvomit-comet" class="internal"><span class="codenumber">5.3</span> <span class="title">The Vomit Comet</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONrates-change" class="internal"><span class="codenumber">5.4</span> <span class="title">Galileo Drops the Ball</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECONDBringCalc" class="internal"><span class="codenumber">5.5</span> <span class="title">Bringing in Calculus</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONDerivative" class="internal"><span class="codenumber">5.6</span> <span class="title">The Derivative</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONnewt-flux-dynam" class="internal"><span class="codenumber">5.7</span> <span class="title">Thinking Dynamically</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONnewt-meth-flux" class="internal"><span class="codenumber">5.8</span> <span class="title">Newton’s Method of Fluxions</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONself-inters-curv" class="internal"><span class="codenumber">5.9</span> <span class="title">Self-intersecting Curves and Parametric Equations</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONParametricFunctions" class="internal"><span class="codenumber">5.9.1</span> <span class="title">Parametric Functions</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONbridg-chains-telesc" class="internal"><span class="codenumber">5.10</span> <span class="title">Bridges, Chains, Domes, and Telescopes</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONBridges" class="internal"><span class="codenumber">5.10.1</span> <span class="title">Bridges</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONChains" class="internal"><span class="codenumber">5.10.2</span> <span class="title">Chains</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONDomes" class="internal"><span class="codenumber">5.10.3</span> <span class="title">Domes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONTelescopes" class="internal"><span class="codenumber">5.10.4</span> <span class="title">Telescopes</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTERcalc-trig.html" class="internal"><span class="codenumber">6</span> <span class="title">Calculus and Trigonometry</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERcalc-trig.html#Sectiontrig-interl" class="internal"><span class="codenumber">6.1</span> <span class="title">A Trigonometric Interlude</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SUBSECTIONradian-measure" class="internal"><span class="codenumber">6.1.1</span> <span class="title">Radian Measure</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="CHAPTERcalc-trig.html#Sectiontrig-interl-4" class="internal"><span class="codenumber">6.1.2</span> <span class="title">The Trigonometric Functions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#Sectiontrig-interl-4-3" class="internal"><span class="codenumber">6.1.2.1</span> <span class="title">The Sine Function</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SUBSECTIONmodel-with-trig" class="internal"><span class="codenumber">6.1.3</span> <span class="title">Modeling with Trigonometric Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#Sectiontrig-interl-6" class="internal"><span class="codenumber">6.1.4</span> <span class="title">Phase Shifts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SECTIONpolar-coordinates" class="internal"><span class="codenumber">6.1.5</span> <span class="title">Polar Coordinates</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SECTIONdiff-sine-cosine" class="internal"><span class="codenumber">6.2</span> <span class="title">The Differentials of the Sine and Cosine Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SUBSETIONpolar-coord-calc" class="internal"><span class="codenumber">6.2.1</span> <span class="title">Polar Coordinates and Calculus</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SECTIONdiff-sine-cosine-4" class="internal"><span class="codenumber">6.2.2</span> <span class="title">The Brachistochrone Problem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SECTIONdiff-sine-cosine-5" class="internal"><span class="codenumber">6.2.3</span> <span class="title">Spin Casting, Redux</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SUBSECTIONsimple-harm-oscill" class="internal"><span class="codenumber">6.2.4</span> <span class="title">Simple Harmonic Oscillation</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SECTIONdiff-other-trig" class="internal"><span class="codenumber">6.3</span> <span class="title">The Differentials of the Other Trigonometric Functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SECTIONinverse-tan-and-cot" class="internal"><span class="codenumber">6.4</span> <span class="title">The Inverse Tangent and Cotangent Functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SECTIONwitch-agnesi-inverse" class="internal"><span class="codenumber">6.5</span> <span class="title">The Witch of Agnesi and the Inverse Tangent Function</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SECTIONSECTIONdiff-inverse-tancot" class="internal"><span class="codenumber">6.6</span> <span class="title">The Differentials of the Inverse Tangent and Inverse Cotangent Functions</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SECTIONother-inverse-trig" class="internal"><span class="codenumber">6.7</span> <span class="title">The Other Inverse Trigonometric Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#InverseSine" class="internal"><span class="codenumber">6.7.1</span> <span class="title">The Inverse Sine Function: \boldmath <span class="process-math">\(\inverse\sin(x)\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#InverseSecCsc" class="internal"><span class="codenumber">6.7.2</span> <span class="title">The Inverse Secant and Inverse Cosecant</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SECTIONcurvature" class="internal"><span class="codenumber">6.8</span> <span class="title">Curvature</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTApproximation.html" class="internal"><span class="codenumber">7</span> <span class="title">Approximation Methods</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTApproximation.html#SECTIONnewtons-method" class="internal"><span class="codenumber">7.1</span> <span class="title">Root Finding: Two  Pre-Calculus Approaches</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTApproximation.html#SUBSECTIONBisectionMethod" class="internal"><span class="codenumber">7.1.1</span> <span class="title">The Bisection Method</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTApproximation.html#SUBSECTIONBabylonianMethod" class="internal"><span class="codenumber">7.1.2</span> <span class="title">The Babylonian Method for Square Roots</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTApproximation.html#SECTIONnewtons-method-1" class="internal"><span class="codenumber">7.2</span> <span class="title">Newton’s Method</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTApproximation.html#SUBSECTIONSpectacularFailure" class="internal"><span class="codenumber">7.2.1</span> <span class="title">Spectacular Failure</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTApproximation.html#SUBSECTIONSubtleFailure" class="internal"><span class="codenumber">7.2.2</span> <span class="title">Subtle Failure</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTApproximation.html#SECTIONeulers-method" class="internal"><span class="codenumber">7.3</span> <span class="title">Euler’s Method</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTApproximation.html#SECTIONmore-high-deriv" class="internal"><span class="codenumber">7.4</span> <span class="title">Higher Derivatives, Lagrange, and Taylor</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html" class="internal"><span class="codenumber">8</span> <span class="title">Exponentials and Logarithms</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#CHAPTERlast-elem-funct-2" class="internal"><span class="codenumber">8.1</span> <span class="title">Introduction</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONIvps" class="internal"><span class="codenumber">8.1.1</span> <span class="title">Initial Value Problems (IVPs)</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONexponential" class="internal"><span class="codenumber">8.2</span> <span class="title">The Natural Exponential</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONexponential-growth" class="internal"><span class="codenumber">8.3</span> <span class="title">Exponential Growth</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONSUBSECTIONExpNotation" class="internal"><span class="codenumber">8.3.1</span> <span class="title">Exponential Notation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONhyperb-trig-hang" class="internal"><span class="codenumber">8.3.2</span> <span class="title">Hyperbolic Trigonometry: The Hanging Chain</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONGatewayArch" class="internal"><span class="codenumber">8.3.3</span> <span class="title">The Gateway Arch</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONexponential-growth-6" class="internal"><span class="codenumber">8.3.4</span> <span class="title">Exponential Growth</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONExpAndCmpndInt" class="internal"><span class="codenumber">8.3.5</span> <span class="title">Exponential Functions and Compound Interest</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONnatural-logarithm-1" class="internal"><span class="codenumber">8.4</span> <span class="title">The Natural Logarithm</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONNapier" class="internal"><span class="codenumber">8.4.1</span> <span class="title">John Napier Logs In</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSUBSECTIONradioactive-decay" class="internal"><span class="codenumber">8.4.1.1</span> <span class="title">Radioactive Dating</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSUBSECTIONnewtons-law-cooling" class="internal"><span class="codenumber">8.4.1.2</span> <span class="title">\underline{Chillin’ with Newton: The Law of Cooling</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONDerivNatLog" class="internal"><span class="codenumber">8.5</span> <span class="title">The Derivative of the Natural Logarithm</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONgener-logar-expon" class="internal"><span class="codenumber">8.6</span> <span class="title">General Logarithms and Exponentials</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONGenExp" class="internal"><span class="codenumber">8.6.1</span> <span class="title">General Exponentials</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONGenLog" class="internal"><span class="codenumber">8.6.2</span> <span class="title">General Logarithms</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONLogDiff" class="internal"><span class="codenumber">8.6.3</span> <span class="title">Logarithmic Differentiation</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONleonh-euler-harm" class="internal"><span class="codenumber">8.7</span> <span class="title">Leonhard Euler, Harmonic Oscillators, and Complex Numbers</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONHowEulerDidIt" class="internal"><span class="codenumber">8.7.1</span> <span class="title">How Euler Did It</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html" class="internal"><span class="codenumber">9</span> <span class="title">Optimization: Going to Extremes</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SECTIONintroduction" class="internal"><span class="codenumber">9.1</span> <span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SECTIONfive-simil-probl" class="internal"><span class="codenumber">9.2</span> <span class="title">Preliminaries: Some Simple Optimizations</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SECTIONrefl-refr-rainb" class="internal"><span class="codenumber">9.3</span> <span class="title">Reflections, Refractions, and Rainbows</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSECTIONreflection" class="internal"><span class="codenumber">9.3.1</span> <span class="title">Reflection</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSECTIONrefraction" class="internal"><span class="codenumber">9.3.2</span> <span class="title">Refraction: Snell’s Law</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSECTIONrainbows" class="internal"><span class="codenumber">9.3.3</span> <span class="title">Rainbows</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSECTIONRainbow" class="internal"><span class="codenumber">9.3.4</span> <span class="title">The Colors of the Rainbow</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSECTIONDoubleRainbows" class="internal"><span class="codenumber">9.3.5</span> <span class="title">Double Rainbows</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SECTIONmore-optimal-squares" class="internal"><span class="codenumber">9.4</span> <span class="title">Global vs. Local Extrema</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSECTIONoptim-abstr-probl" class="internal"><span class="codenumber">9.5</span> <span class="title">Optimization, the Abstract Problem</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSECTIONoptim-abstr-probl-3" class="internal"><span class="codenumber">9.5.1</span> <span class="title">Identifying and Distinguishing Maxima and Minima</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSECTIONTransitionPoints" class="internal"><span class="codenumber">9.5.2</span> <span class="title">Transition Points, and Possible Transition Points on Open Intervals</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSECTIONunderl-deriv" class="internal"><span class="codenumber">9.5.3</span> <span class="title">Undefined Derivatives</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSECTIONoptim-clos-interv" class="internal"><span class="codenumber">9.5.4</span> <span class="title">Transition Points on a Closed Interval; the Problem of Endpoints</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SECTIONconc-second-deriv-1" class="internal"><span class="codenumber">9.6</span> <span class="title">Concavity and the Second Derivative Test</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSECTIONconc-second-deriv" class="internal"><span class="codenumber">9.6.1</span> <span class="title">The Second Derivative Test</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SECTIONoptim-probl" class="internal"><span class="codenumber">9.7</span> <span class="title">Optimization Problems</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSECTIONOptSecondSolution" class="internal"><span class="codenumber">9.7.1</span> <span class="title">Second Solution:</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTERPTshape-things.html" class="internal"><span class="codenumber">10</span> <span class="title">Graphing with Calculus</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTshape-things.html#SECTIONgraph-with-form" class="internal"><span class="codenumber">10.1</span> <span class="title">Graphing with a Formula for \boldmath <span class="process-math">\(y(x)\)</span></span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTshape-things.html#SECTIONgraph-without-form" class="internal"><span class="codenumber">10.2</span> <span class="title">Graphing Without Formulas</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERPTshape-things.html#SECTIONGraphingWithDeriv" class="internal"><span class="codenumber">10.3</span> <span class="title">Graphing with a Formula for  <span class="process-math">\(\dfdx{y}{x}\)</span></span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTshape-things.html#SUBSECTIONDerivDepOnxAlone" class="internal"><span class="codenumber">10.3.1</span> <span class="title">When  <span class="process-math">\(\dfdx{y}{x}\)</span> Depends on <span class="process-math">\(x\)</span> alone</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTshape-things.html#SUBSECTIONDfdxDependsOnYAlone" class="internal"><span class="codenumber">10.3.2</span> <span class="title">When  <span class="process-math">\(\dfdx{y}{t}\)</span> depends on <span class="process-math">\(y\)</span> alone</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTERmodel-with-calc.html" class="internal"><span class="codenumber">11</span> <span class="title">Modeling with Calculus</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERmodel-with-calc.html#SECTIONpopulation-dynamics" class="internal"><span class="codenumber">11.1</span> <span class="title">Population Dynamics</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERmodel-with-calc.html#SUBSECTIONModelingTrout" class="internal"><span class="codenumber">11.1.1</span> <span class="title">Modeling a Trout Farm</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERmodel-with-calc.html#SECTIONlittle-healthy-comp" class="internal"><span class="codenumber">11.1.2</span> <span class="title">The Competing Species Model</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERmodel-with-calc.html#SECTIONselect-model-probl" class="internal"><span class="codenumber">11.2</span> <span class="title">Selected Modeling Problems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERmodel-with-calc.html#SECTIONepidemic-blues" class="internal"><span class="codenumber">11.2.1</span> <span class="title">Epidemics, The SIR Model</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERmodel-with-calc.html#subSECTIONtractrix" class="internal"><span class="codenumber">11.2.2</span> <span class="title">The Tractrix</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERmodel-with-calc.html#SUBSECTIONPURSUIT" class="internal"><span class="codenumber">11.2.3</span> <span class="title">The  Pursuit Problem</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTERlimits-lhop-rule.html" class="internal"><span class="codenumber">12</span> <span class="title">Limits and L’H\^o pital’s Rule</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERlimits-lhop-rule.html#SECTIONhoriz-asympt-as" class="internal"><span class="codenumber">12.1</span> <span class="title">Horizontal Asymptotes as Limits “at Infinity”</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlimits-lhop-rule.html#DIGRESSIONLimitNotation" class="internal"><span class="codenumber">12.1.1</span> <span class="title">Limit Notation</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlimits-lhop-rule.html#SECTIONsqueeze-theorem-informal" class="internal"><span class="codenumber">12.2</span> <span class="title">The Squeeze Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlimits-lhop-rule.html#SECTIONvertical-asymptotes" class="internal"><span class="codenumber">12.3</span> <span class="title">Vertical Asymptotes</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERlimits-lhop-rule.html#SECTIONmore-indet-forms" class="internal"><span class="codenumber">12.4</span> <span class="title">Indeterminate Forms and L’H\^o pital’s Rule</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlimits-lhop-rule.html#SUBSECTIONLHopitalsRule" class="internal"><span class="codenumber">12.4.1</span> <span class="title">L’H\^{o}pital’s Rule</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlimits-lhop-rule.html#SUBSECTIONlhop-rule-horiz" class="internal"><span class="codenumber">12.4.2</span> <span class="title">L’H\^o pital’s Rule and Horizontal Asymptotes</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-part">
+<div class="toc-title-box"><a href="ToTheory.html" class="internal"><span class="codenumber">II</span> <span class="title">To Theory . . .</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTERPTERWhatsWrong.html" class="internal"><span class="codenumber">13</span> <span class="title">What’s Wrong with Differentials?</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERWhatsWrong.html#CalcAndBerkeley" class="internal"><span class="codenumber">13.1</span> <span class="title">Calculus and Bishop Berkeley</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTERdiff-rules-with-limits.html" class="internal"><span class="codenumber">14</span> <span class="title">The Differentiation Rules via Limits</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERdiff-rules-with-limits.html#SECTIONlimit-theorems-laws" class="internal"><span class="codenumber">14.1</span> <span class="title">The Limit Rules (Theorems)</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERdiff-rules-with-limits.html#SUBSECTIONlimit-comp-cont" class="internal"><span class="codenumber">14.1.1</span> <span class="title">The Limit of a Composition and Continuity at a Point</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERdiff-rules-with-limits.html#SECTIONdiff-rules-via" class="internal"><span class="codenumber">14.2</span> <span class="title">The General Differentiation Theorems, via Limits</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERdiff-rules-with-limits.html#SECTIONChainRule" class="internal"><span class="codenumber">14.3</span> <span class="title">The Chain Rule</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERdiff-rules-with-limits.html#SECTIONproduct-rule-limits" class="internal"><span class="codenumber">14.4</span> <span class="title">The Product Rule</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERdiff-rules-with-limits.html#SECTIONother-gener-diff" class="internal"><span class="codenumber">14.5</span> <span class="title">The Other General Differentiation Rules</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERdiff-rules-with-limits.html#SECTIONdiff-trig-funct" class="internal"><span class="codenumber">14.6</span> <span class="title">Derivatives of the Trigonometric Functions, via Limits</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERdiff-rules-with-limits.html#SECTIONinverse-functions" class="internal"><span class="codenumber">14.7</span> <span class="title">Inverse Functions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTERFDT-Redux.html" class="internal"><span class="codenumber">15</span> <span class="title">The First Derivative Test, Redux</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERFDT-Redux.html#SECTIONfermats-theorem" class="internal"><span class="codenumber">15.1</span> <span class="title">Fermat’s Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERFDT-Redux.html#SECTIONrolles-lemma-mean" class="internal"><span class="codenumber">15.2</span> <span class="title">Rolle’s Lemma and the Mean Value Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERFDT-Redux.html#SECTIONfirst-deriv-test" class="internal"><span class="codenumber">15.3</span> <span class="title">The Proof of the First Derivative Test</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHPTwhen-deriv-doesnt.html" class="internal"><span class="codenumber">16</span> <span class="title">When the Derivative Doesn’t Exist</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="CHPTwhen-deriv-doesnt.html#SECTIONone-sided-deriv" class="internal"><span class="codenumber">16.1</span> <span class="title">One Sided Derivatives</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTERformal-limits.html" class="internal"><span class="codenumber">17</span> <span class="title">Formal Limits</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERformal-limits.html#SECTIONlimits-at-infinity" class="internal"><span class="codenumber">17.1</span> <span class="title">Getting Around Infinity</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONEpsDelt1" class="internal"><span class="codenumber">17.1.1</span> <span class="title">The Infinitely Large</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONFormalLimits" class="internal"><span class="codenumber">17.1.2</span> <span class="title">The Infinitely Small</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONconvincing-skeptic" class="internal"><span class="codenumber">17.1.3</span> <span class="title">Convincing Berkeley</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SECTIONlimits-at-infinity-6" class="internal"><span class="codenumber">17.1.4</span> <span class="title">Refining the Definition</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SECTIONlimits-at-real" class="internal"><span class="codenumber">17.2</span> <span class="title">Limits at a Real Number</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERformal-limits.html#SECTIONLimitLaws" class="internal"><span class="codenumber">17.3</span> <span class="title">Limit Laws (Theorems)</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONlimit-sum-at" class="internal"><span class="codenumber">17.3.1</span> <span class="title">The Limit of a Sum</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONsqueeze-theorem" class="internal"><span class="codenumber">17.3.2</span> <span class="title">The Squeeze Theorem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SECTIONlimit-composition" class="internal"><span class="codenumber">17.3.3</span> <span class="title">The Limit of a Composition</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONlimit-product-at" class="internal"><span class="codenumber">17.3.4</span> <span class="title">The Limit of a Product</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONlimit-product-at-3" class="internal"><span class="codenumber">17.3.4.1</span> <span class="title">Proving Lemma 17.49</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONLemmaLimProd2" class="internal"><span class="codenumber">17.3.4.2</span> <span class="title">Proving Lemma 17.50</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONOneOverXIsCont" class="internal"><span class="codenumber">17.3.5</span> <span class="title">The Function  \boldmath  <span class="process-math">\(f(x)=\frac1x\)</span> is Continuous Wherever  It Is Defined</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="meta_backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="meta_backmatter-2.html" class="internal"><span class="codenumber">A</span> <span class="title">Selected Hints</span></a></div></li>
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="meta_backmatter-3.html" class="internal"><span class="codenumber">B</span> <span class="title">Selected Solutions</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="meta_backmatter-4.html" class="internal"><span class="codenumber">C</span> <span class="title">List of Symbols</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="meta_backmatter-5.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="meta_backmatter-6.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="CHAPTERproblem-solving"><h2 class="heading">
+<span class="type">Chapter</span><span class="space"> </span><span class="codenumber">2</span><span class="space"> </span><span class="title">Introduction: Some  Advice on Problem Solving</span>
+</h2>
+<section class="introduction" id="CHAPTERproblem-solving-2"><blockquote class="blockquote" id="CHAPTERproblem-solving-2-1">
+<div class="para" id="CHAPTERproblem-solving-2-1-1">The most difficult thing is the decision to act, the rest is merely tenacity.</div> <cite class="attribution">―<a class="external" href="https://en.wikipedia.org/wiki/Amelia_Earhart" target="_blank">Amelia Earhart (1897-1937</a><a class="xref" id="CHAPTERproblem-solving-2-1-2-2" href="" data-knowl="./knowl/fn/CHAPTERproblem-solving-2-1-2-2.html" title="Footnote 2.1"><sup> 1 </sup></a></cite>
+</blockquote> <blockquote class="blockquote" id="CHAPTERproblem-solving-2-2">
+<div class="para" id="CHAPTERproblem-solving-2-2-1">You just keep pushing. You just keep pushing. I made every mistake that could be made. But I just kept pushing.</div> <cite class="attribution">―<a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Descartes/" target="_blank">Renè  Descartes} (<span class="process-math">\(1596-1650\)</span>)</a><a class="xref" id="CHAPTERproblem-solving-2-2-2-2" href="" data-knowl="./knowl/fn/CHAPTERproblem-solving-2-2-2-2.html" title="Footnote 2.2"><sup> 2 </sup></a></cite>
+</blockquote> <div class="para" id="CHAPTERproblem-solving-2-3">Our purpose here is to give you our very best advice on how to succeed in this course and a realistic impression of the level of difficulty of the course material. Please read this carefully and take our advice. We know what we are talking about. Believe us.</div> <div class="para" id="CHAPTERproblem-solving-2-4">Because the topic we will be studying is called <dfn class="terminology">Calculus</dfn> there is a strong tendency to assume that only the concepts and techniques of Calculus are needed to solve the problems you will encounter in this course. That is not true. You will need all of the mathematics you know. And probably more. Really.</div></section><section class="section" id="SECusing-lett-inst"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">2.1</span><span class="space"> </span><span class="title">Using Letters Instead of Numbers</span>
+</h3>
+<div class="para" id="SECusing-lett-inst-2">Before we begin, a few comments on notation are apropos.</div>
+<div class="para" id="SECusing-lett-inst-3">Suppose your teacher starts a lecture with the statement, “Suppose <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are two positive numbers. Then <span class="process-math">\(a \lt{} a+b\)</span> and <span class="process-math">\(b \lt{} a+b\text{.}\)</span>” A common complaint is that we’re making the problem harder. This is often accompanied with a request to replace <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> with numbers, just to make it easier to understand. For example, if <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are numbers why not just say that <span class="process-math">\(a\)</span> is <span class="process-math">\(23\)</span> and <span class="process-math">\(b\)</span> is <span class="process-math">\(17\text{?}\)</span> In that case it is clear that <span class="process-math">\(23 \lt{} 40\ (=23+17)\)</span> and <span class="process-math">\(17 \lt{} 40\text{.}\)</span> Why do we have to make it more complicated?</div>
+<div class="para" id="SECusing-lett-inst-4">Suppose your teacher starts a lecture with the statement, “Suppose <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are two positive numbers. Then <span class="process-math">\(a \lt{} a+b\)</span> and <span class="process-math">\(b \lt{} a+b\text{.}\)</span>” A common complaint is that we’re making the problem harder. This is often accompanied with a request to replace <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> with numbers, just to make it easier to understand. For example, if <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are numbers why not just say that <span class="process-math">\(a\)</span> is <span class="process-math">\(23\)</span> and <span class="process-math">\(b\)</span> is <span class="process-math">\(17\text{?}\)</span> In that case it is clear that <span class="process-math">\(23 \lt{} 40\ (=23+17)\)</span> and <span class="process-math">\(17 \lt{} 40\text{.}\)</span> Why do we have to make it more complicated?</div>
+<div class="para logical" id="SECusing-lett-inst-5">
+<div class="para">This seems like a reasonable point until you think about it a bit more. Suppose we use the numbers <span class="process-math">\(a=\frac{\sqrt{11}-\pi}{4}\)</span> and <span class="process-math">\(b=2.93\times 10^{1000}\)</span> instead? Is it obvious to you that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{\sqrt{11}-\pi}{4}\lt{}\left(\frac{\sqrt{11}-\pi}{4}\right)+\left(2.93\times
+10^{1000}\right)
+\end{equation*}
+</div>
+<div class="para">or</div>
+<div class="displaymath process-math">
+\begin{equation*}
+2.93\times
+10^{1000}\lt{}\left(\frac{\sqrt{11}-\pi}{4}\right)+\left(2.93\times
+10^{1000}\right)?
+\end{equation*}
+</div>
+</div>
+<div class="para logical" id="SECusing-lett-inst-6">
+<div class="para">Our point here is that the symbol <span class="process-math">\(a\)</span> is no different than the symbol <span class="process-math">\(23\text{.}\)</span>  Or the symbol <span class="process-math">\(\frac{\sqrt{11}-\pi}{4}\text{.}\)</span>  These are all valid symbols representing numbers. So we treat them all the same. For example, all of the following are valid statements:</div>
+<div class="displaymath process-math" id="SECusing-lett-inst-6-4">
+\begin{align*}
+a+b &amp;= b+a\\
+23+17 &amp;=17+23, \text{ and }\\
+\left(\frac{\sqrt{11}-\pi}{4}\right) +\left(2.93\times 10^{1000}\right) &amp;= \left(2.93\times 10^{1000}\right) +\left(\frac{\sqrt{11}-\pi}{4}\right).
+\end{align*}
+</div>
+<div class="para">The difference is this: If <span class="process-math">\(a=23\)</span> and <span class="process-math">\(b=17\)</span> the first statement includes the second as a specific case. Similarly if <span class="process-math">\(a=\frac{(\sqrt{11}-\pi)}{4}\)</span> and <span class="process-math">\(b=2.93\times 10^{1000}\)</span> the first statement includes the third.  The first statement is more general. It is true no matter what <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are.</div>
+</div>
+<article class="exercise exercise-like" id="exercise-problem-calculator"><h4 class="heading">
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">2.1</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="exercise-problem-calculator-1"><div class="para" id="exercise-problem-calculator-1-1"></div></div>
+<article class="task exercise-like" id="exercise-problem-calculator-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="exercise-problem-calculator-2-1-1">Use the fact that <span class="process-math">\(\sqrt{7}\lt{}\sqrt{9}\)</span> to show that <span class="process-math">\(\frac{\sqrt{7}-\pi}{5}\lt{}0\text{.}\)</span> Do not use a calculator.</div></article><article class="task exercise-like" id="exercise-problem-calculator-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para logical" id="exercise-problem-calculator-3-1-1">
+<div class="para">Check the validity of the following statements. Are they true?</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{\sqrt{7}-\pi}{5}\lt{}\left(\frac{\sqrt{7}-\pi}{5}\right)+2.93\times 10^{1000}
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+2.93\times 10^{1000}\lt{}\left(\frac{\sqrt{7}-\pi}{5}\right)+2.93\times
+10^{1000}
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+2.93\times 10^{1000}\lt{}\left(\frac{\sqrt{7}-\pi}{5}\right)+2.93\times
+10^{1000}
+\end{equation*}
+</div>
+</div>
+<div class="solutions"><details id="exercise-problem-calculator-3-2" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="exercise-problem-calculator-3-2-1">Using a calculator on <span class="process-math">\(2.93\times 10^{1000}\)</span> would be rather pointless. Try it and see.</div></div></details></div></article><article class="task exercise-like" id="exercise-problem-calculator-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para logical" id="exercise-problem-calculator-4-1-1">
+<div class="para">Show that it is not always true that if <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are numbers then</div>
+<div class="displaymath process-math" id="EQTriIneq">
+\begin{equation}
+a\le a+b.\tag{2.1}
+\end{equation}
+</div>
+</div></article><article class="task exercise-like" id="exercise-problem-calculator-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="exercise-problem-calculator-5-1-1">Find a restriction on the possible values of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> that will guarantee that <a href="" class="xref" data-knowl="./knowl/xref/EQTriIneq.html" title="Equation 2.1">inequality (2.1)</a>) is true.</div></article></article><div class="para" id="SECusing-lett-inst-8">Keeping things simple is laudable as a goal and we don’t want to suggest that you shouldn’t do it.  It can be very useful to look at a special case of a general statement just to get a sense of the problem. For example, a good way to “trick yourself into abstraction” is to think <span class="process-math">\(23\)</span> and <span class="process-math">\(17\text{,}\)</span> but write down <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{.}\)</span>  As long as you don’t try to do anything that relies on the particular properties of <span class="process-math">\(23\)</span> and <span class="process-math">\(17\text{,}\)</span> you should be fine. But you wouldn’t want to say something like <span class="process-math">\(a+b\)</span> is an even integer (even though <span class="process-math">\(23+17\)</span> is). The sum <span class="process-math">\(23+17\)</span> is an even integer because both <span class="process-math">\(23\)</span> and <span class="process-math">\(17\)</span> are odd integers, but this is special to these numbers and won’t be true for <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> in general.</div>
+<article class="problem example-like" id="SECusing-lett-inst-9"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">2.2</span><span class="period">.</span>
+</h4>
+<article class="task exercise-like" id="SECusing-lett-inst-9-1"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="SECusing-lett-inst-9-1-1-1">Suppose <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are both integers.  Find restrictions on the possible values of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> that will guarantee that <span class="process-math">\(a+b\)</span> is an even, positive integer.</div></article><article class="task exercise-like" id="SECusing-lett-inst-9-2"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="SECusing-lett-inst-9-2-1-1">Now suppose <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are both numbers. Find restrictions on the possible values of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> that will guarantee that <span class="process-math">\(a+b\)</span> is an even, positive integer.  (This is not the same problem as part (a). Read it carefully.)</div></article></article><div class="para" id="SECusing-lett-inst-10">When looking at <span class="process-math">\(23\times17\)</span> most people are inclined to compute this to get <span class="process-math">\(391\text{.}\)</span> If the problem is: Find the value of <span class="process-math">\(23\times17\text{,}\)</span> then sure, doing the arithmetic is the correct thing to do. But the last time you were asked to do multiplication for its own sake you were probably <span class="process-math">\(11\)</span> years old. Elementary computations like this will only come up in the context of a more advanced problem.  Before doing this calculation, you should ask yourself if it will help you solve the more advanced problem.</div>
+<div class="para" id="SECusing-lett-inst-11">Now suppose the problem is: Determine  if the number <span class="process-math">\(23\times17\)</span> is divisible by <span class="process-math">\(17\text{.}\)</span> Do you see that computing <span class="process-math">\(23\times17=391\)</span> will only make the problem harder?</div>
+<div class="para" id="SECusing-lett-inst-12">Your college professors will never ask you to do an arithmetic calculation for its own sake. Instead arithmetic problems will come up in the context of a more advanced problem and you will need to use your arithmetic skill to uncover patterns. But doing the arithmetic, boiling everything down to a single number usually hides the patterns!</div>
+<div class="para logical" id="SECusing-lett-inst-13">
+<div class="para">For example, is it easier to see the pattern in the following list of numbers when they are presented like this:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+1, 2, 10, 110, 220, 1100, 12100, 24200, 121000, 1331000, \ldots 
+\end{equation*}
+</div>
+<div class="para">or like this:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(2^05^011^0), (2^15^011^0),
+(2^15^111^0), (2^15^111^1),
+(2^25^111^1),
+(2^25^211^1), (2^25^211^2), \ldots\text{.}
+\end{equation*}
+</div>
+</div>
+<article class="exercise exercise-like" id="exercise-liberating"><h4 class="heading">
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">2.3</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="exercise-liberating-1"><div class="para" id="exercise-liberating-1-1"> Actually, there is something rather liberating about using letters to represent a broad class of numbers. Consider the following questions:</div></div>
+<article class="task exercise-like" id="exercise-liberating-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="exercise-liberating-2-1-1">Is the number <span class="process-math">\(2^{24}5^{49}11^{1002}\)</span> a perfect square?  If so, what is its square root?</div></article><article class="task exercise-like" id="exercise-liberating-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="exercise-liberating-3-1-1">What about <span class="process-math">\(2^{24}5^{50}11^{1002}\text{?}\)</span>  Was your calculator of any use on this?  Notice that these numbers were completely factored into their prime factorizations.  Did that help? How?</div></article><article class="task exercise-like" id="exercise-liberating-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="exercise-liberating-4-1-1">Now suppose that <span class="process-math">\(n\)</span> is a positive integer. Is <span class="process-math">\(2^{2n}5^{3n}11^{4n}\)</span> always a perfect square? If not, for which values of <span class="process-math">\(n\)</span> will it be a perfect square?</div></article><article class="task exercise-like" id="exercise-liberating-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="exercise-liberating-5-1-1">What can you say, in general, about whether or not an integer greater than one is a perfect square in terms of its prime factorization?</div></article></article></section><section class="section" id="SECan-easy-problem-alg"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">2.2</span><span class="space"> </span><span class="title">Substitution, or Making Things “Easy on the Eyes”</span>
+</h3>
+<blockquote class="blockquote" id="SECan-easy-problem-alg-2">
+<div class="para" id="SECan-easy-problem-alg-2-1">Mathematicians do not study objects, but relations between objects. Thus, they are free to replace some objects by others so long as the relations remain unchanged.</div> <cite class="attribution">―<a class="external" href="https:/mathshistory.st-andrews.ac.uk/Biographies/Poincare/" target="_blank">Henri Poincarè (1854-1912)</a><a class="xref" id="SECan-easy-problem-alg-2-2-2" href="" data-knowl="./knowl/fn/SECan-easy-problem-alg-2-2-2.html" title="Footnote 2.3"><sup> 3 </sup></a></cite>
+</blockquote>
+<div class="para" id="SECan-easy-problem-alg-3">It is a common misconception is mathematicians love complicated formulas. In fact, the opposite is true. We really very much prefer to keep things as simple as possible. We only accept complexity when we are forced to. Moreover, with experience we have learned that complexity is usually borne of an inadequate understanding of the problem.  Better understanding usually results in a simpler formulation.</div>
+<div class="para" id="SECan-easy-problem-alg-4">This works in reverse too. If we can find a simple way to express what appears to be a complex problem we can usually gain a deeper understanding of the problem and its solution. A judicious substitution is one way to re-express a complex problem.</div>
+<article class="example example-like" id="example-Sub1"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.4</span><span class="period">.</span><span class="space"> </span><span class="title">A Horrible Formula.</span>
+</h4> <div class="para logical" id="example-Sub1-2">
+<div class="para">For example, suppose you were asked to solve the following equation for <span class="process-math">\(x\text{:}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{\frac{\pi x}{\sqrt{(28-\sqrt[3]{26})^{\frac{1}{3}}}}}{\pi^2-\sqrt{3}}
+- \sqrt[21]{2^{\frac{11}{2}}}= (\pi^3-\sqrt{2})x.
+\end{equation*}
+</div>
+<div class="para">At first glance this looks horribly complicated.  But look at it again.  On the right the coefficient of <span class="process-math">\(x\)</span> is <span class="process-math">\(\pi^3-\sqrt{2}.\)</span> That’s just a number. It is approximately <span class="process-math">\(29.6\)</span> but who cares? For purposes of algebraically isolating <span class="process-math">\(x\)</span> all we need to know is that it is a number. Rather than calling it <span class="process-math">\(\pi^3-\sqrt{2}\text{,}\)</span> let’s just call it something simple, like <span class="process-math">\(A\text{.}\)</span> Think of it as giving the expression <span class="process-math">\(\pi^3-\sqrt{2}\)</span> a nickname; something shorter, and easier to remember.</div>
+</div> <div class="para logical" id="example-Sub1-3">
+<div class="para">If we make that substitution our equation is now</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{\frac{\pi x}{\sqrt{(28-\sqrt[3]{26})^{\frac{1}{3}}}}}{\pi^2-\sqrt{3}}
+- \sqrt[21]{2^{\frac{11}{2}}}= Ax.
+\end{equation*}
+</div>
+<div class="para">which is a bit “easier on the eyes.”</div>
+</div> <div class="para logical" id="example-Sub1-4">
+<div class="para">But wait. The expression <span class="process-math">\(\sqrt[21]{2^{\frac{11}{2}}}\)</span> is also just a number. Let’s make it “easier on the eyes,” too. If we let <span class="process-math">\(B=\sqrt[21]{2^{\frac{11}{2}}}\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{\frac{\pi x}{\sqrt{(28-\sqrt[3]{26})^{\frac{1}{3}}}}}{\pi^2-\sqrt{3}}
+- B= Ax.
+\end{equation*}
+</div>
+<div class="para">which is even easier to look at. By now you see where this is going. If we let <span class="process-math">\(C=\frac{\frac{\pi}{\sqrt{(28-\sqrt[3]{26})^{\frac{1}{3}}}}}{\pi^2-\sqrt{3}}\)</span> then our equation is <span class="process-math">\(Cx-B=Ax\)</span> which is much “easier on the eyes” than the original equation was. In fact, we can now see that this is really a very simple equation and the solution is <span class="process-math">\(x=\frac{B}{C-A}\text{.}\)</span> Of course we inserted <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(B\text{,}\)</span> and <span class="process-math">\(C\)</span> into the problem so now we need to unwind our substitutions. When we do that we get</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x=\frac{\sqrt[21]{2^{\frac{11}{2}}}}{\frac{\frac{\pi}{\sqrt{(28-\sqrt[3]{26})^{\frac{1}{3}}}}}{\pi^2-\sqrt{3}}
+- (\pi^3-\sqrt{2})}.
+\end{equation*}
+</div>
+<div class="para">If a decimal number is required we could enter this formula into whatever computational tool we’re using. Good luck with that.</div>
+</div></article><div class="para" id="SECan-easy-problem-alg-6">The previous example was clearly contrived.  Obviously we went out of our way to make a simple problem look complicated just so we could simplify it. As a result it would be easy to dismiss this as a silly example. But it is not. There is a serious lesson to be learned here. One that we will use over and over again in the near future.  By its very nature mathematical notation is not easy to read. It is so dense, with so much information packed into a few symbols, that it is easy to misinterpret. Making a formula easier to read can be very helpful.  A well chosen substitution can make a complex looking formula much easier to work with.</div>
+<article class="example example-like" id="example-Sub2"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.5</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="example-Sub2-1">
+<div class="para">When you were learning Algebra you almost certainly encountered problems like this: Given</div>
+<div class="displaymath process-math" id="EQQuadInForm1">
+\begin{equation}
+x^{\frac{2}{3}}-4x^{\frac{1}{3}}+3=0\tag{2.2}
+\end{equation}
+</div>
+<div class="para">solve for <span class="process-math">\(x\text{.}\)</span>
+</div>
+</div> <div class="para logical" id="example-Sub2-2">
+<div class="para">At first glance, this looks like a formidable problem.  However, if we look closer we see that it actually has a very familiar form. Because <span class="process-math">\(x^{\frac{2}{3}}=\left(x^{\frac{1}{3}}\right)^2\)</span> we can rewrite <a href="" class="xref" data-knowl="./knowl/xref/EQQuadInForm1.html" title="Equation 2.2">Equation (2.2)</a> as</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQQuadInForm1.html ./knowl/xref/EQQuadInForm2.html ./knowl/xref/EQQuadInForm2.html ./knowl/xref/example-Sub1.html ./knowl/xref/EQQuadInForm2.html" id="EQQuadInForm2">
+\begin{equation}
+\left(x^{\frac{1}{3}}\right)^2-4x^{\frac{1}{3}}+3=0\tag{2.3}
+\end{equation}
+</div>
+<div class="para">and if you look closely you’ll see that <a href="" class="xref" data-knowl="./knowl/xref/EQQuadInForm2.html" title="Equation 2.3">Equation~ (2.3)</a>) is “quadratic in form.” That is, it is really a quadratic equation — which we know how to solve — in disguise. However it is still rather difficult to see the quadratic nature of <a href="" class="xref" data-knowl="./knowl/xref/EQQuadInForm2.html" title="Equation 2.3">Equation (2.3)</a>. To make this very clear we let</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQQuadInForm1.html ./knowl/xref/EQQuadInForm2.html ./knowl/xref/EQQuadInForm2.html ./knowl/xref/example-Sub1.html ./knowl/xref/EQQuadInForm2.html">
+\begin{equation*}
+z=x^{\frac{1}{3}}.
+\end{equation*}
+</div>
+<div class="para">That is, just as in <a href="" class="xref" data-knowl="./knowl/xref/example-Sub1.html" title="Example 2.4: A Horrible Formula">Example 2.4</a> we give the expression <span class="process-math">\(x^{\frac{1}{3}}\)</span> the nickname, <span class="process-math">\(z\text{,}\)</span> which is shorter, easier to remember, and “easier on the eyes.” Then <a href="" class="xref" data-knowl="./knowl/xref/EQQuadInForm2.html" title="Equation 2.3">Equation (2.3)</a> becomes the quadratic equation:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQQuadInForm1.html ./knowl/xref/EQQuadInForm2.html ./knowl/xref/EQQuadInForm2.html ./knowl/xref/example-Sub1.html ./knowl/xref/EQQuadInForm2.html">
+\begin{equation*}
+z^2-4z+3=0.
+\end{equation*}
+</div>
+<div class="para">Our problem is not solved. Indeed, we haven’t even tried to solve it yet.  But it is much more simply expressed. And because it is more simply expressed we can now see how to solve it. Factoring, we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQQuadInForm1.html ./knowl/xref/EQQuadInForm2.html ./knowl/xref/EQQuadInForm2.html ./knowl/xref/example-Sub1.html ./knowl/xref/EQQuadInForm2.html">
+\begin{equation*}
+0=z^2-4z+3=(z-1)(z-3)
+\end{equation*}
+</div>
+<div class="para">so we have <span class="process-math">\(z=1\)</span> and <span class="process-math">\(z=3\text{.}\)</span> But, of course, these are not solutions of our problem. We have found <span class="process-math">\(z\)</span> (which we inserted into the problem) not <span class="process-math">\(x\)</span> (which is what we need to find). To complete the solution we need to unwind the substitution we made and solve the two equations</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQQuadInForm1.html ./knowl/xref/EQQuadInForm2.html ./knowl/xref/EQQuadInForm2.html ./knowl/xref/example-Sub1.html ./knowl/xref/EQQuadInForm2.html">
+\begin{equation*}
+x^{\frac{1}{3}}=1 \text{ and }
+x^{\frac{1}{3}}=3,
+\end{equation*}
+</div>
+<div class="para">yielding the solutions <span class="process-math">\(x=1\)</span> and <span class="process-math">\(x=27\text{,}\)</span> respectively.</div>
+</div></article><div class="para" id="SECan-easy-problem-alg-8">In making a substitution our goal is always to make the formulas we are dealing with simpler to understand and easier to read.  In <a href="" class="xref" data-knowl="./knowl/xref/example-Sub1.html" title="Example 2.4: A Horrible Formula">Examples 2.4</a> <a href="" class="xref" data-knowl="./knowl/xref/example-Sub2.html" title="Example 2.5">and 2.5</a> it was straightforward to see how to do that.  There were expressions that were hard to read so we simply replaced a complicated part of the problem with something simple. It isn’t always that easy.  Sometimes just finding a good substitution presents challenges of its own.</div>
+<aside class="aside aside-like" id="SECan-easy-problem-alg-9"><div class="para" id="SECan-easy-problem-alg-9-1">“Straightforward” is not the same as “easy.”</div></aside><div class="para logical" id="SECan-easy-problem-alg-10">
+<div class="para">For example,  the Quadratic Formula can be derived by making a very simple substitution that allows us to solve the general quadratic equation</div>
+<div class="displaymath process-math" id="EQQuadEq">
+\begin{equation}
+ax^2+bx+c=0.\tag{2.4}
+\end{equation}
+</div>
+<div class="para">Once the substitution is found it is very easy to work through the algebra, but finding the right substitution in the first place is not straightforward at all.</div>
+</div>
+<article class="exercise exercise-like" id="PROBLEMQSub"><h4 class="heading">
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">2.6</span><span class="period">.</span>
+</h4>
+<div class="para" id="PROBLEMQSub-1-1"> Before reading any further see if you can come up with the right substitution for <a href="" class="xref" data-knowl="./knowl/xref/EQQuadEq.html" title="Equation 2.4">Equation (2.4)</a>).</div>
+<div class="solutions"><details id="PROBLEMQSub-2" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="PROBLEMQSub-2-1">The goal is to eliminate the linear term, <span class="process-math">\(bx\text{.}\)</span> You can see how this would help. If <span class="process-math">\(bx\)</span> were not present in <a href="" class="xref" data-knowl="./knowl/xref/EQQuadEq.html" title="Equation 2.4">Equation (2.4)</a> we could easily solve <span class="process-math">\(ax^2+c=0.\)</span>
+</div></div></details></div></article><div class="para" id="SECan-easy-problem-alg-12">Were you able to solve <a href="" class="xref" data-knowl="./knowl/xref/PROBLEMQSub.html" title="Drill 2.6">Problem 2.6</a>? It’s actually very hard to do without some guidance. Here’s another hint. Try the substitution <span class="process-math">\(x=y-\frac{b}{ka}\)</span> where <span class="process-math">\(k\)</span> is a parameter to be determined.  That is, make this substitution and find the value of <span class="process-math">\(k\)</span> that eliminates the linear term.</div>
+<div class="para" id="SECan-easy-problem-alg-13">After making this substitution the problem will be given in terms of <span class="process-math">\(y\text{,}\)</span> not <span class="process-math">\(x\text{.}\)</span> That’s OK. Solve the problem in this form, and then unwind your substitution back to the original <span class="process-math">\(x\)</span> variable.</div>
+<article class="exercise exercise-like" id="SECan-easy-problem-alg-14"><h4 class="heading">
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">2.7</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="SECan-easy-problem-alg-14-1-1">
+<div class="para"> Notice that after making our substitution we get:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+a\left(y-\frac{b}{k a}\right)^2+b\left(y-\frac{b}{k
+a}\right)+c=0.  
+\end{equation*}
+</div>
+<div class="para">which is more complicated, not less. Of course it is. Sometimes you have to complicate before you can simplify.  Don’t give up. Multiply everything out to see what you’ve got.</div>
+</div> <div class="para" id="SECan-easy-problem-alg-14-1-2">Once you’ve found <span class="process-math">\(k\)</span> make the substitution and eliminate the linear term — that was the objective, remember? At that point you should see the Quadratic Formula starting to emerge.  Don’t forget to unwind the substitution and solve for <span class="process-math">\(x\text{.}\)</span>
+</div></article></section><section class="section" id="SECan-easy-problem-geo"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">2.3</span><span class="space"> </span><span class="title">An “Easy” Problem From Geometry</span>
+</h3>
+<blockquote class="blockquote" id="SECan-easy-problem-geo-2">
+<div class="para" id="SECan-easy-problem-geo-2-1">Ideas are like rabbits. You get a couple and learn how to handle them, and pretty soon you have a dozen.</div> <cite class="attribution">―<a class="external" href="https://www.nobelprize.org/prizes/literature/1962/steinbeck/biographical/" target="_blank">John Steinbeck (1902-1968)</a><a class="xref" id="SECan-easy-problem-geo-2-2-2" href="" data-knowl="./knowl/fn/SECan-easy-problem-geo-2-2-2.html" title="Footnote 2.4"><sup> 4 </sup></a></cite>
+</blockquote>
+<div class="para" id="SECan-easy-problem-geo-3">We’ve chosen the following example because it is neither particularly easy nor particularly difficult. It is typical of the kinds of medium level problems that appear in most Calculus textbooks.</div>
+<article class="example example-like" id="example-MaxTriangle"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.8</span><span class="period">.</span>
+</h4>
+<div class="para" id="example-MaxTriangle-1-1">The lengths of two sides of a triangle are <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{.}\)</span> If the third side is chosen in such a way that the area of the triangle is as large as possible what is the length of the third side?</div> <div class="para" id="example-MaxTriangle-1-2">You may be able to intuit the correct answer to this problem. That’s OK, but you should try to solve it, too. By “solve” we mean that you should be able to explain to someone with the same mathematical skills you have at the moment why your answer is correct.</div> <aside class="aside aside-like" id="example-MaxTriangle-1-3"><div class="para" id="example-MaxTriangle-1-3-1">No, really. Give this problem a serious shot before you go on. It is not important that you succeed. Only that you try.</div></aside> <div class="para" id="example-MaxTriangle-1-4">Before reading further do your best to solve this problem in <a href="" class="xref" data-knowl="./knowl/xref/example-MaxTriangle.html" title="Example 2.8">Example 2.8</a>. We’ll wait.</div> <div class="para" id="example-MaxTriangle-1-5">At first it is difficult to see where to begin. (That’s why it’s called a problem.) Don’t let this stop you! In our experience the most common mistake is giving up too soon.</div> <div class="para" id="example-MaxTriangle-1-6">Don’t. Do. That.  Keep thinking.</div>
+<div class="solutions"><details id="example-MaxTriangle-2" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span><span class="space"> </span><span class="title">Partial Solution</span></summary><div class="solution solution-like"> <div class="para" id="example-MaxTriangle-2-2">Since we know the lengths of the sides <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> of our triangle let’s draw it. The sketch at the right would be typical. The question is, what length for side <span class="process-math">\(c\)</span> makes the total area enclosed by the triangle as large as it can possibly be?</div> <div class="para" id="example-MaxTriangle-2-3">Now what?</div> <div class="para" id="example-MaxTriangle-2-4">Well, this looks like a right triangle doesn’t it? If it is a right triangle, then we can find the length of <span class="process-math">\(c\)</span> via the Pythagorean Theorem: <span class="process-math">\(c=\sqrt{a^2+b^2},\)</span> right?</div> <div class="para" id="example-MaxTriangle-2-5">Before you go on take a moment and really think about this problem. Can it really be that simple? Can you find any flaws in our reasoning.</div> <div class="para" id="example-MaxTriangle-2-6">Once you think about it you see that we have no reason to believe that the triangle we seek must be a right triangle. It was completely accidental that we drew our diagram that way. If this seems like a simple-minded mistake, the sort of mistake that you would never make, be careful. It is a mistake to rely too heavily on the diagrams we draw. But it is an easy mistake to make, especially when the problems are more complicated, because as problems get complex we will need to rely on visualization more and more. This was not a dumb mistake. It was just a bit careless, and it is easy to be careless, especially when we first start thinking about a problem.</div>
+</div></details></div></article><article class="observation remark-like" id="subsection-digression-MakingMistakes"><h4 class="heading">
+<span class="type">Digression</span><span class="space"> </span><span class="codenumber">2.9</span><span class="period">.</span><span class="space"> </span><span class="title">Making Mistakes.</span>
+</h4> <blockquote class="blockquote" id="subsection-digression-MakingMistakes-2">
+<div class="para" id="subsection-digression-MakingMistakes-2-1">Being wrong isn’t a bad thing like they teach you in school.  It is an opportunity to learn something.</div> <cite class="attribution">―<a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Feynman/" target="_blank">Richard Feynman (1918-1988)</a><a class="xref" id="subsection-digression-MakingMistakes-2-2-2" href="" data-knowl="./knowl/fn/subsection-digression-MakingMistakes-2-2-2.html" title="Footnote 2.5"><sup> 5 </sup></a></cite>
+</blockquote> <aside class="aside aside-like" id="subsection-digression-MakingMistakes-3"><h5 class="heading"><span class="title">Note to self.</span></h5>
+<div class="para" id="subsection-digression-MakingMistakes-3-2">This needs do be done differently.</div></aside> <blockquote class="blockquote" id="subsection-digression-MakingMistakes-4">
+<div class="para" id="subsection-digression-MakingMistakes-4-1">Experience is the name everyone gives to their mistakes.</div> <cite class="attribution">―<a class="external" href="http://www.cmgww.com/historic/wilde/" target="_blank">Oscar Wilde (1854-1900)</a><a class="xref" id="subsection-digression-MakingMistakes-4-2-2" href="" data-knowl="./knowl/fn/subsection-digression-MakingMistakes-4-2-2.html" title="Footnote 2.6"><sup> 6 </sup></a></cite>
+</blockquote> <div class="para" id="subsection-digression-MakingMistakes-5">By definition, mistakes are wrong. A mistake is always obvious after you recognize it as a mistake.  Everyone makes mistakes in the course of solving a problem. The process of making mistakes, recognizing them as mistakes, and figuring out why they are mistakes is called learning. The very smartest people, for example <a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Newton/" target="_blank">Isaac Newton</a><a class="xref" id="subsection-digression-MakingMistakes-5-2" href="" data-knowl="./knowl/fn/subsection-digression-MakingMistakes-5-2.html" title="Footnote 2.7"><sup> 7 </sup></a>, <a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Leibniz/" target="_blank">Gottfried Leibniz</a><a class="xref" id="subsection-digression-MakingMistakes-5-4" href="" data-knowl="./knowl/fn/subsection-digression-MakingMistakes-5-4.html" title="Footnote 2.8"><sup> 8 </sup></a>, <a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Galileo/" target="_blank">Galileo</a><a class="xref" id="subsection-digression-MakingMistakes-5-6" href="" data-knowl="./knowl/fn/subsection-digression-MakingMistakes-5-6.html" title="Footnote 2.9"><sup> 9 </sup></a>, <a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Fermat/" target="_blank">Pierre Fermat</a><a class="xref" id="subsection-digression-MakingMistakes-5-8" href="" data-knowl="./knowl/fn/subsection-digression-MakingMistakes-5-8.html" title="Footnote 2.10"><sup> 10 </sup></a>, <a class="external" href="https://www.smithsonianmag.com/history/madame-curies-passion-74183598/" target="_blank">Marie Curie</a><a class="xref" id="subsection-digression-MakingMistakes-5-10" href="" data-knowl="./knowl/fn/subsection-digression-MakingMistakes-5-10.html" title="Footnote 2.11"><sup> 11 </sup></a>, <a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Noether_Emmy/" target="_blank">Emmy Nöther</a><a class="xref" id="subsection-digression-MakingMistakes-5-12" href="" data-knowl="./knowl/fn/subsection-digression-MakingMistakes-5-12.html" title="Footnote 2.12"><sup> 12 </sup></a>, <a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Einstein/" target="_blank">Albert Einstein</a><a class="xref" id="subsection-digression-MakingMistakes-5-14" href="" data-knowl="./knowl/fn/subsection-digression-MakingMistakes-5-14.html" title="Footnote 2.13"><sup> 13 </sup></a>, or <a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Feynman/" target="_blank">Richard Feynman</a><a class="xref" id="subsection-digression-MakingMistakes-5-16" href="" data-knowl="./knowl/fn/subsection-digression-MakingMistakes-5-16.html" title="Footnote 2.14"><sup> 14 </sup></a>, made lots of mistakes. Making mistakes is how they got to be smart.</div> <div class="para" id="subsection-digression-MakingMistakes-6">Isaac Newton was once asked how he had been able to solve problems that no one before him had solved. His reply: “By thinking, and thinking, and thinking about them.” Of course, when he described his solutions he left out all of the errors like anyone would do, because, who cares about those? Making mistakes doesn’t typically get the attention it deserves.   An expert is someone who has made every possible mistake. This is why your teacher, an expert, will seldom err.</div> <aside class="aside aside-like" id="subsection-digression-MakingMistakes-7"><div class="para" id="subsection-digression-MakingMistakes-7-1">And will be embarrassed when they do.</div></aside> <div class="para" id="subsection-digression-MakingMistakes-8">Each mistake you make reflects the level of your current understanding of the problem. Each mistake you make takes you a little closer to expertise.  Embrace your mistakes and make lots of them!  They are proof that you are making progress.  But make no mistake (Gasp!) about it,  making and embracing a mistake is just the first step. You also have to figure out what went wrong.</div> <div class="para" id="subsection-digression-MakingMistakes-9">Sadly, mistakes are too often seen as a source of embarrassment. Too many students will berate themselves as stupid every time they make a mistake. Don’t do that. It is pointless and counter-productive. All it will do is destroy your self confidence. Don’t do it. Learning Calculus can be hard, but you would not have made it this far if you couldn’t do it. So keep making mistakes. Ask for help when you need it. And don’t give up. You have not failed until you stop trying.</div> <aside class="aside aside-like" id="subsection-digression-MakingMistakes-10"><div class="para" id="subsection-digression-MakingMistakes-10-1">Did we mention that you shouldn’t berate yourself when you make a mistake?  You really shouldn’t.</div></aside></article><div class="para" id="SECan-easy-problem-geo-6">Let’s look at this problem again.  The triangle we seek might look like the first one we drew, or it might look like either of the ones drawn in the diagram below, or myriad others. We simply don’t have enough information to decide at this point.</div>
+<div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="external/images/Advice3.png" class="contained"></div>
+<div class="para" id="SECan-easy-problem-geo-8">But from the diagrams we’ve drawn so far we can see that one end of side <span class="process-math">\(a\)</span> must be pinned to one end of side <span class="process-math">\(b\)</span> and for each angle between <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> we have a different possible triangle.  We don’t have to think of both of them as in motion. We can think of one of them, say <span class="process-math">\(b\text{,}\)</span> as fixed while the other swings around their common endpoint. The circle in our diagram indicates all of the possible positions <span class="process-math">\(a\text{.}\)</span>
+</div>
+<div class="para" id="SECan-easy-problem-geo-9">Do you see how that worked? Our first attempt was simple-minded, but by drawing our first, simple-minded sketch, making a stab at a solution, and figuring out why our simple-minded approach won’t work, we were led to this insight: We can think of <span class="process-math">\(b\)</span> as static, and we can think of <span class="process-math">\(a\)</span> as swinging freely while pinned to the end of <span class="process-math">\(b.\)</span>
+</div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="external/images/Advice4.png" class="contained"></div>
+<div class="para" id="SECan-easy-problem-geo-11">Clearly we need to find the angle between <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> —- call it <span class="process-math">\(\phi\)</span> as in the sketch at the right —- that maximizes the area of the triangle.  But which angle does that?</div>
+<div class="para" id="SECan-easy-problem-geo-12">Whenever triangles are involved it is a good idea to recall your Trigonometry. After all, that’s what Trigonometry is about, isn’t it? Since we are thinking of <span class="process-math">\(b\)</span> as fixed, we may as well use it as the base. This makes the height equal to <span class="process-math">\(a\sin(\phi).\)</span> Also, since we’re trying to maximize the area we should probably write down the area formula: <span class="process-math">\(A=\frac12\text{(b)ase}\times\text{(h)eight}.\)</span> Thus the area of the triangle is <span class="process-math">\(A=\frac{1}{2}ab\sin(\phi).\)</span>
+</div>
+<div class="para" id="SECan-easy-problem-geo-13">Is it clear that our initial guess was correct? The angle, <span class="process-math">\(\phi,\)</span> that maximizes the area will be the one whose sine is as large as possible. That would be <span class="process-math">\(\phi=90^\circ\)</span> so <span class="process-math">\(c=\sqrt{a^2+b^2}\)</span> provides the maximum area.</div>
+<div class="para" id="SECan-easy-problem-geo-14">You might be a little uncomfortable with our argument that <span class="process-math">\(a\sin(\phi)\)</span> is maximized when <span class="process-math">\(\phi=90^\circ\text{.}\)</span> If so, then for you, this problem is not finished. Possibly we’ve made a mistake. Let’s follow our own advice and see why it is a mistake, if it is.</div>
+<article class="exercise exercise-like" id="exercise-"><h4 class="heading">
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">2.10</span><span class="period">.</span>
+</h4>
+<div class="para" id="exercise--1-1"> Replace <span class="process-math">\(a\sin(\phi)\)</span> with <span class="process-math">\(h\)</span> in the diagram above. Use the Pythagorean Theorem to reason that if <span class="process-math">\(\phi\lt{}90^\circ\)</span> then <span class="process-math">\(h\lt{}a\text{.}\)</span> How does this apply to the problem of maximizing the area of the triangle?</div></article><div class="para" id="SECan-easy-problem-geo-16">Until we can demonstrate that <span class="process-math">\(c=\sqrt{a^2+b^2}\)</span> with a convincing and rigorous argument, this problem is not solved. Instead it is only a conjecture; an educated guess. Our evidence so far is very convincing so it is a very well educated guess, but it is still only a guess.</div></section><section class="section" id="SECour-advice-synopsis"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">2.4</span><span class="space"> </span><span class="title">Our advice, a synopsis</span>
+</h3>
+<blockquote class="blockquote" id="SECour-advice-synopsis-2">
+<div class="para" id="SECour-advice-synopsis-2-1">There are times when I feel like I’m in a big forest and don’t know where I’m going. But then somehow I come to the top of a hill and can see everything more clearly. When that happens it’s really exciting.</div> <cite class="attribution">―<a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Mirzakhani/" target="_blank">Maryam Mirzakhani (1977-2017)</a><a class="xref" id="SECour-advice-synopsis-2-2-2" href="" data-knowl="./knowl/fn/SECour-advice-synopsis-2-2-2.html" title="Footnote 2.15"><sup> 15 </sup></a></cite>
+</blockquote>
+<blockquote class="blockquote" id="SECour-advice-synopsis-3">
+<div class="para" id="SECour-advice-synopsis-3-1">If you see a whole thing — it seems that it’s always beautiful. Planets, lives  . . .  But up close a world’s all dirt and rocks. And day to day, life’s a hard job, you get tired, you lose the pattern.</div> <cite class="attribution">―<a class="external" href="https://www.ursulakleguin.com/biography" target="_blank">Ursula K. Le Guin (1929-2018)</a><a class="xref" id="SECour-advice-synopsis-3-2-2" href="" data-knowl="./knowl/fn/SECour-advice-synopsis-3-2-2.html" title="Footnote 2.16"><sup> 16 </sup></a></cite>
+</blockquote>
+<div class="para logical" id="SECour-advice-synopsis-4">
+<div class="para">In order to solve a problem, any problem, you must:</div>
+<dl class="description-list">
+<dt id="SECour-advice-synopsis-4-1-1">Have an idea</dt>
+<dd>
+<div class="para" id="SECour-advice-synopsis-4-1-1-2">Solving a mathematical problem is a bit like getting dropped in the woods without a map or any GPS technology and being told to find your way out. First you have to find a path. Once a path is found, you have to follow it. Nothing else really has a chance of working. Following your path will eventually lead you to another path. Now you have to decide which path to follow, so you look around and make your best guess. If you guess right, great! If not you will have to backtrack and take the other path. And so it goes. Guess. Backtrack. Guess again. As you learn the terrain and get familiar with the network of paths your guesses get better.  Sometimes none of the paths you’ve found seem to be getting you closer to your destination. So you have to try something different, like getting off of the path completely.</div>
+<div class="para" id="SECour-advice-synopsis-4-1-1-3">Eventually you’ll get where you’re going but the one thing you can’t do is give up. You will never get anywhere if you don’t keep trying.</div>
+<div class="para" id="SECour-advice-synopsis-4-1-1-4">Having an idea is like following a path in the woods. It’s a start, but that’s all it is. You still have to follow it. After you’ve taken it as far as you can you need to look for another idea; a new path to follow.</div>
+<div class="para" id="SECour-advice-synopsis-4-1-1-5">Finding your way out of the woods takes patience, diligence, and a lot of hard work. So does solving a mathematics problem.  Except, of course, that you won’t die of exposure if you don’t solve the math problem.</div>
+<div class="para" id="SECour-advice-synopsis-4-1-1-6">If an idea occurs to you, follow it. Most likely you will not hit on a good, or even a workable approach the first time. Or the first three times. That’s OK. Keep thinking about the problem anyway. It is frustrating and it doesn’t feel like progress, but it is. As long as you are having and discarding ideas you are making progress.</div>
+</dd>
+<dt id="SECour-advice-synopsis-4-1-2">Really, have an idea. If you don’t have a good idea, then use a bad one.</dt>
+<dd>
+<div class="para" id="SECour-advice-synopsis-4-1-2-2">OK, we hear you say, but what if I don’t have any good ideas? What do I do then?</div>
+<div class="para" id="SECour-advice-synopsis-4-1-2-3">Easy. Use a not-so-good idea.</div>
+<div class="para" id="SECour-advice-synopsis-4-1-2-4">This is what you’ve been doing all of your life anyway isn’t it? You just didn’t tell anyone because you were sure you were doing something wrong, right?  You weren’t.</div>
+<div class="para" id="SECour-advice-synopsis-4-1-2-5">The most important thing you can do is get started. That’s what having an idea is for, getting started. All we did to start the problem in <a href="" class="xref" data-knowl="./knowl/xref/example-MaxTriangle.html" title="Example 2.8">Example 2.8</a> was draw the lines <span class="process-math">\(a\)</span> and <span class="process-math">\(b.\)</span> Look back up at  our partial solution and see. The first thing we did was make the drawing below:</div>
+<div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="external/images/Advice1.png" class="contained"></div>
+<div class="para" id="SECour-advice-synopsis-4-1-2-7">Can you think of anything more simple-minded? And yet it worked. It didn’t work right away, but it got us moving in the right direction.</div>
+</dd>
+<dt id="SECour-advice-synopsis-4-1-3">Have another idea.</dt>
+<dd>
+<div class="para" id="SECour-advice-synopsis-4-1-3-2">Because this is a textbook we couldn’t really waste time and pages by running down blind alleys, so we started off with an idea that we knew would take us in the right direction. In real life this usually won’t happen. Most often your first (two or three or four) ideas aren’t going to take you in the right direction. That’s OK. Figure out what is wrong with them. You had some intuition about the problem that led you to your idea. Figuring out why it didn’t work will clarify things for you just a bit. That will help.</div>
+<div class="para" id="SECour-advice-synopsis-4-1-3-3">So, have another idea that is based on what you learned from your first idea. And another. And another after that. Keep having ideas until you find one that works. Another way to say this is: Don’t give up.</div>
+</dd>
+<dt id="SECour-advice-synopsis-4-1-4">Ask for help when you get stuck, not before.</dt>
+<dd>
+<div class="para" id="SECour-advice-synopsis-4-1-4-2">Sometimes ideas just won’t come to you. That’s OK. Sometimes you will need help. Ask for it. Ask your teacher, another student, a tutor, your Mom, your Dad, a former teacher. Ask. For. Help.</div>
+<div class="para" id="SECour-advice-synopsis-4-1-4-3">But ask constructively. If you are asking another student, a peer, it is fine to ask, “How do I do this problem?” But if you are asking your teacher, or a tutor, this sounds a lot like, “This problem looks hard, my friends are meeting up in half an hour and, besides, I don’t really want to spend any more time on it. Please, do this problem and let me watch so I can turn it in and go have fun with my friends.” This is not usually effective. Moreover some teachers will get a little testy about it. Instead ask something like, “I’ve tried this, and this, and this, but I keep getting stuck here. Can you give me some direction?”  That shows that you have already put real effort into solving the problem and are willing to continue working on it.</div>
+<div class="para" id="SECour-advice-synopsis-4-1-4-4">To be clear, your teacher knows that a serious student does not mean this, that you really just want to learn how to do the problem. The difficulty is that there are always some students who have no qualms about asking their instructor to do problem after problem with no intention of learning anything. They just want to copy the answers down and quit. Teachers quickly learn to identify these students from the way they ask questions. If you approach your instructor in the same fashion that a non-serious student does the response you get won’t be as helpful as you would like. Teachers <em class="emphasis">want</em> to help serious students, but non-serious students are a waste of time. Be a serious student. Just as importantly, <em class="emphasis">act</em> like a serious student.</div>
+<div class="para" id="SECour-advice-synopsis-4-1-4-5">Or, if you find the problem so mystifying that you can’t even think of a first idea ask, “I really don’t know where to begin on this problem. Can you point me in the right direction to get me started?”</div>
+</dd>
+<dt id="SECour-advice-synopsis-4-1-5">Keep thinking about the problem after you solve it.</dt>
+<dd>
+<div class="para" id="SECour-advice-synopsis-4-1-5-2">After you’ve solved a problem, pause for a moment, take a sip of coffee, or tea, or whatever and think about the problem you just solved. This is like the difference between looking at a mountain from its base, when all you can see is the tangle of brush in your way, and looking at it from the peak. From the peak all of the obstacles you overcame getting there look small and unimportant. You can see the broad outlines of the mountain and the path you took climbing it. Frequently you will also see a better path than the one you took.</div>
+<div class="para" id="SECour-advice-synopsis-4-1-5-3">This kind of reflection is the most neglected aspect of problem solving. After you’ve been struggling with a problem you probably don’t ever want to see it again.  This is a natural response. However, before you put the problem away reflect on your solution and make this part of your knowledge base. Think about which ideas you had that worked, and which ideas you had that didn’t work. Think about why they did, or didn’t work. Do this immediately, while the problem is still in your mind. Later, if something reminds you of this problem, think about it some more to see why you were reminded of it.</div>
+<div class="para" id="SECour-advice-synopsis-4-1-5-4">The difference between the teacher and the student is not intelligence, but experience.  The more problems you solve, the more experience you gain. But you need to be able to use that experience for subsequent problems. Reflecting on a problem after you solve it is how you make the knowledge you gained from the problem available for later use.</div>
+<div class="para" id="SECour-advice-synopsis-4-1-5-5">For example, see if you can use what you learned from the triangle problem to solve <a href="" class="xref" data-knowl="./knowl/xref/DRILLMaxPara.html" title="Drill 2.11">Drill 2.11</a>.</div>
+</dd>
+<dt id="SECour-advice-synopsis-4-1-6">Use your intuition, but don’t trust it.</dt>
+<dd>
+<div class="para" id="SECour-advice-synopsis-4-1-6-2">Finally, because many problems in Calculus are about motion and you are very familiar with how things move, you will often have a good deal of intuition into their solution. Paradoxically you need to learn to use, but not to trust, your intuition.</div>
+<div class="para" id="SECour-advice-synopsis-4-1-6-3">When approaching a problem intuitively, there is a tendency to add assumptions to familiar looking problems. Notice how easy it was to believe that our triangle must be a right triangle just because our first drawing looked like a right triangle.</div>
+<div class="para" id="SECour-advice-synopsis-4-1-6-4">As we said, you will have some intuition into many problems, and intuition can be very helpful, but it can also lead you astray. You need to learn to support your intuition with reasoning.</div>
+</dd>
+</dl>
+</div>
+<article class="exercise exercise-like" id="DRILLMaxPara"><h4 class="heading">
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">2.11</span><span class="period">.</span>
+</h4>
+<div class="para" id="DRILLMaxPara-1-1"> Out of all parallelograms with sides <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{,}\)</span> which would have the largest area?</div></article><article class="exercise exercise-like" id="exercise-IntuitionDeceivers"><h4 class="heading">
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">2.12</span><span class="period">.</span><span class="space"> </span><span class="title">Some possibly deceptive problems.</span>
+</h4>
+<div class="introduction" id="exercise-IntuitionDeceivers-2">
+<div class="para" id="exercise-IntuitionDeceivers-2-1"> All of the problems below refer to the following diagram:</div> <div class="para" id="exercise-IntuitionDeceivers-2-2">You will probably have a strong insight, or intuition, about each of the following claims. Do your best to explain why each is true, or why it is false. Read each problem carefully and take care not to add assumptions that are not in the problem. Back up your claim with reasoning, not intuition.</div>
+</div>
+<article class="task exercise-like" id="exercise-IntuitionDeceivers-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="exercise-IntuitionDeceivers-3-1-1">Given a regular polygon inscribed in a fixed circle, if you double the number of sides, then the area inside the polygon becomes larger.</div></article><article class="task exercise-like" id="exercise-IntuitionDeceivers-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="exercise-IntuitionDeceivers-4-1-1">Given a polygon inscribed in a fixed circle, the more sides there are, the bigger the area inside the polygon is.</div></article><article class="task exercise-like" id="exercise-IntuitionDeceivers-5"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="exercise-IntuitionDeceivers-5-1-1">Given a polygon inscribed in a fixed circle, the more sides there are, the bigger the perimeter is.</div></article><article class="task exercise-like" id="exercise-IntuitionDeceivers-6"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="exercise-IntuitionDeceivers-6-1-1">Given the following parabola with axis <span class="process-math">\(\overline{AM}\text{,}\)</span> <span class="process-math">\(M\)</span> is the midpoint of <span class="process-math">\(\overline{BC}\text{.}\)</span>
+</div></article><article class="task exercise-like" id="exercise-IntuitionDeceivers-7"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<div class="para" id="exercise-IntuitionDeceivers-7-1-1">In part (d), what if we insist that <span class="process-math">\(\overline{BC}\)</span> is perpendicular to <span class="process-math">\(\overline{AM}\text{?}\)</span>
+</div></article></article></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="CalculusIsARock.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="CHAPTERPTERScienceBeforeCalc.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>
