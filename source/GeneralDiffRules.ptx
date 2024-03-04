@@ -417,8 +417,8 @@
             <cell halign="left">
             <alert>The Constant Rule</alert></cell>
             <cell halign="center">
-              <p>If <m>a</m> is a constant then </p>
-              <p><m>\dx{a}=0</m></p>
+              <line>If <m>a</m> is a constant then </line>
+              <line><m>\dx{a}=0</m></line>
             </cell>
           </row>
 
@@ -433,20 +433,20 @@
 
           <row bottom="minor">
             <cell halign="left">
-              <p>
+<line>
                 <alert>The Constant </alert>
-              </p>
-              <p>
+</line>
+<line>
                 <alert>Multiple Rule</alert>
-              </p>
+</line>
             </cell>
             <cell halign="center">
-              <p>
+<line>
                 If <m>a</m> is a constant then
-              </p>
-              <p>
+</line>
+<line>
                 <m>\dx(ax)=a\dx{x}</m>
-              </p>
+</line>
             </cell>
           </row>
 
@@ -464,8 +464,8 @@
               <alert>The Power Rule</alert>
             </cell>
             <cell halign="center">
-              <p>If <m>n</m> is a rational number then</p>
-              <p><m>\dx(x^n)=n\dx{x^{n-1}}\dx{x}</m></p>
+              <line>If <m>n</m> is a rational number then</line>
+              <line><m>\dx(x^n)=n\dx{x^{n-1}}\dx{x}</m></line>
             </cell>
           </row>
 
@@ -4394,8 +4394,8 @@ solve for <m>\dx{y}</m>.
       <statement>
         <p>
           The Product Rule can be rearranged as:
-          <m>\displaystyle \dx\left(xy\right) =
-          xy\left(\frac{\dx{x}}{x}+\frac{\dx{y}}{y}\right)</m>.
+          <me>\displaystyle \dx\left(xy\right) =
+          xy\left(\frac{\dx{x}}{x}+\frac{\dx{y}}{y}\right).</me>
         </p>
       </statement>
     </task>
@@ -4404,8 +4404,8 @@ solve for <m>\dx{y}</m>.
         <p>
           The Quotient Rule can be rearranged
           as:
-          <m>\displaystyle \dx\left(\frac{x}{y}\right) =
-          \frac{x}{y}\left(\frac{\dx{x}}{x}-\frac{\dx{y}}{y}\right)</m>.
+          <me>\displaystyle \dx\left(\frac{x}{y}\right) =
+          \frac{x}{y}\left(\frac{\dx{x}}{x}-\frac{\dx{y}}{y}\right).</me>
         </p>
       </statement>
     </task>
@@ -4424,6 +4424,7 @@ solve for <m>\dx{y}</m>.
     Rule by finding algebraic simplifications of the original expression, as
     demonstrated by the next problem.
   </p>
+
   <problem>
     <introduction>
       <p>
@@ -4505,48 +4506,50 @@ solve for <m>\dx{y}</m>.
   </problem>
 
   <p>
-    We now have all six of the General Differentiation Rules in our toolbox:
-    <dl>
-      <li>
-        <title>The Constant Rule:</title>
-        <p>
-          If <m>a</m> is a constant, then <m>\dx{a}=0.</m>
-        </p>
-      </li>
-      <li>
-        <title>The Sum Rule:</title>
-        <p>
-          <m>\dx(x+y)=\dx x+\dx y.</m>
-        </p>
-      </li>
-      <li>
-        <title>The Constant Multiple Rule:</title>
-        <p>
-          If <m>a</m> is a constant, then <m>\dx(ax)=a\dx x.</m>
-        </p>
-      </li>
-      <li>
-        <title>The Product Rule:</title>
-        <p>
-          <m>\dx{(xy)}=x\dx{y}+y\dx{x}.</m> -
-        </p>
-      </li>
-      <li>
-        <title>The Power Rule:</title>
-        <p>
-          If <m>n</m> is any real number then, <m>\dx(x^n)=nx^{n-1}\dx{x}</m>.
-        </p>
-      </li>
-      <li>
-        <title>The Quotient Rule:</title>
-        <p>
-          <m>\dx{\left(\dfrac{x}{y}\right)}=\dfrac{y\dx{x}-x\dx{y}}{y^2}.</m>
-        </p>
-      </li>
-    </dl>
-    We have not yet shown that the Power Rule works when <m>n</m> is
-    irrational but we will do that in
-    <xref ref="CHAPTERlast-elem-funct">Chapter</xref>.
+    We now have all six of the General Differentiation Rules in from <xref ref="TABLEGenDiffRules"></xref> in our toolbox
+    <!-- <dl> -->
+    <!--   <li> -->
+    <!--     <title>The Constant Rule:</title> -->
+    <!--     <p> -->
+    <!--       If <m>a</m> is a constant, then <m>\dx{a}=0.</m> -->
+    <!--     </p> -->
+    <!--   </li> -->
+    <!--   <li> -->
+    <!--     <title>The Sum Rule:</title> -->
+    <!--     <p> -->
+    <!--       <m>\dx(x+y)=\dx x+\dx y.</m> -->
+    <!--     </p> -->
+    <!--   </li> -->
+    <!--   <li> -->
+    <!--     <title>The Constant Multiple Rule:</title> -->
+    <!--     <p> -->
+    <!--       If <m>a</m> is a constant, then <m>\dx(ax)=a\dx x.</m> -->
+    <!--     </p> -->
+    <!--   </li> -->
+    <!--   <li> -->
+    <!--     <title>The Product Rule:</title> -->
+    <!--     <p> -->
+    <!--       <m>\dx{(xy)}=x\dx{y}+y\dx{x}.</m> - -->
+    <!--     </p> -->
+    <!--   </li> -->
+    <!--   <li> -->
+    <!--     <title>The Power Rule:</title> -->
+    <!--     <p> -->
+    <!--       If <m>n</m> is any rational number then, <m>\dx(x^n)=nx^{n-1}\dx{x}</m>. -->
+    <!--     </p> -->
+    <!--   </li> -->
+    <!--   <li> -->
+    <!--     <title>The Quotient Rule:</title> -->
+    <!--     <p> -->
+    <!--       <m>\dx{\left(\dfrac{x}{y}\right)}=\dfrac{y\dx{x}-x\dx{y}}{y^2}.</m> -->
+    <!--     </p> -->
+    <!--   </li> -->
+    <!-- </dl> -->
+    Notice that in the statement of the Power Rule we have assumed
+    that <m>n</m> is rational. This is too restrictive. In fact,
+    <m>n</m> can be any real number, but we have not yet shown that
+    the Power Rule works when <m>n</m> is irrational. We will do that
+    in <xref ref="CHAPTERlast-elem-funct">Chapter</xref>.
   </p>
   <p>
     Of these, the Constant Multiple Rule, the Power Rule and the

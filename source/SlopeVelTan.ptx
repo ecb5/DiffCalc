@@ -26,7 +26,7 @@
 
 
     <p>
-      As we observed in <xref ref="SECsome-rules-diff">Chapter</xref> Newton, Leibniz,
+      As we observed in <xref ref="SECTIONsome-rules-diff"></xref> Newton, Leibniz,
       and their contemporaries extended the Principle of Local Linearity to
       its logical limit. They said if you cut out an infinitely small
       section of a curve then the section actually is an infinitely short
@@ -72,13 +72,12 @@
 
     <p>
       Notice that from the Pythagorean Theorem we have
-      <me>
-
-        \label{eq:PythTheorDiff}
+      <men  xml:id="EQUATIONPythTheorDiff">
+        <!-- \label{eq:PythTheorDiff} -->
         (\dx{s})^2=(\dx{x})^2+(\dx{y})^2.
         
-      </me>
-      We will find <xref ref="EQPythTheorDiff">Equation</xref> very useful.
+      </men>
+      We will find <xref ref="EQUATIONPythTheorDiff">Equation</xref> very useful.
     </p>
 
 
@@ -86,13 +85,13 @@
       The differentials <m>\dx{x}</m>, and <m>\dx{y}</m>, don't really tell us much
       about the graph of <m>y=x^2</m>, but the <term>differential ratio</term>,
       <m>\dfdx{y}{x}</m>, does. At each point, <m>(a, a^2)</m>, <m>\dfdx{y}{x}</m> gives us
-      the slope of <m>\d{s}</m> and the line tangent to the curve at that point.
+      the slope of <m>\dx{s}</m> and the line tangent to the curve at that point.
       Loosely speaking, the differential ratio <m>\dfdx{y}{x}</m> gives the slope
       of the curve at each point.
     </p>
     <p>
       If we want to find the slope of the curve <m>y=x^2</m> at the point
-      <m>(a,a^2)</m> we simply find <m>\d{y}</m>  as usual:<m> \dx{y}=2x\dx{x}</m>.  Then
+      <m>(a,a^2)</m> we simply find <m>\dx{y}</m>  as usual:<m> \dx{y}=2x\dx{x}</m>.  Then
       we take the extra step of dividing through by <m>\dx{x}</m> to get
       <m>\dfdx{y}{x}=2x</m>.  Evaluating this at the point <m>x=a</m>, <m>y=a^2</m>, and
       <m>\dfdx{y}{x}=2a</m> which will give us
@@ -144,30 +143,33 @@
       <conclusion>
         <p>
           Compare these results to those obtained using Fermat's Method in
-          <xref ref="PROBLEMFermMethX2">Problem~\</xref>
+          <xref ref="PROBLEMFermMethX2">\</xref>
         </p>
       </conclusion>
     </exercise>
 
-    <aside>
-      <title>Note to self</title>
-      <p>
-        Missing Digression
-      </p>
-    </aside>
+    <!-- <aside> -->
+    <!--   <title>Note to self</title> -->
+    <!--   <p> -->
+    <!--     Missing Digression -->
+    <!--   </p> -->
+    <!-- </aside> -->
 
-    <!-- \begin{Digression}[Evaluation Notation] -->
-    <!--   We will frequently need to evaluate the expression <m>\dfdx{y}{x}</m> at -->
-    <!--   different points. This can quickly become very confusing unless we -->
-    <!--   have some way of indicating which point is under -->
-    <!--   consideration. To avoid  confusion, we  use the notation  -->
-    <!--   \centerline{ <m>\eval{\dfdx{y}{x}}{(x,y)}{(a,b)}</m> or -->
-    <!--     <m>\geneval{\dfdx{y}{x}}{(a,b)}</m>.  } This notation is very -->
-    <!--   flexible. Frequently the <m>y</m> coordinate will not -->
-    <!--   be in play. In that case we write  -->
-    <!--   \centerline{<m>\eval{\dfdx{y}{x}}{x}{a}</m>} to indicate that we are -->
-    <!--   evaluating <m>\dfdx{y}{x}</m> at the point <m>x=a</m>. -->
-    <!-- \end{Digression} -->
+<paragraphs  xml:id="EvaluationNotation">
+<title>DIGRESSION: Evaluation Notation</title>
+<p>
+      We will frequently need to evaluate the expression
+      <m>\dfdx{y}{x}</m> at different points. This can quickly become
+      very confusing unless we have some way of indicating which point
+      is under consideration. To avoid confusion, we use the notation
+      <me>\eval{\dfdx{y}{x}}{(x,y)}{(a,b)}</me> or just <me>
+      \geneval{\dfdx{y}{x}}{(a,b)}</me> when there is no
+      ambiguity. This notation is very flexible. Frequently the
+      <m>y</m> coordinate will not be in play. In that case we write
+      <m>\eval{\dfdx{y}{x}}{x}{a}</m> to indicate that we are
+      evaluating <m>\dfdx{y}{x}</m> at the point <m>x=a</m>.
+</p>
+</paragraphs>
 
     <example xml:id="EXAMPLEEvaluationNotation">
       <introduction> 
@@ -291,7 +293,7 @@
       <statement>
         <p>
           Find <m>\eval{\dfdx{y}{x}}{(x,y)}{(2,2)}</m> if <m>y=\sqrt{2x}</m> and compare this with the slope
-          we obtained in <xref ref="PROBDescartesNormals2"></xref> using
+          we obtained in <xref ref="EXERCISEDescartesNormals2"></xref> using
           Descartes' Method of Normals.
         </p>
       </statement>
@@ -310,7 +312,7 @@
         <statement>
           <p>
             <m>y=x^3</m>, <m>a=0,\pm1,\pm2</m> (Compare with
-            <xref ref="PROBLEMFermMethX2">Problem~\</xref>.)
+            <xref ref="PROBLEMFermMethX2">Problem</xref>.)
           </p>
         </statement>
       </task>
@@ -318,7 +320,7 @@
         <statement>
           <p>
             <m>y=x^3+2x^2</m>, <m>a=0,\pm1,\pm2</m> (Compare with
-            <xref ref="PROBferm-meth-aedeq-1">Problem~\</xref>.)
+            <xref ref="PROBLEMferm-meth-aedeq-1">Problem</xref>.)
           </p>
         </statement>
       </task>
@@ -326,7 +328,7 @@
         <statement>
           <p>
             <m>y=\sqrt{x}</m>, <m>a=4</m> (Compare with
-            <xref ref="PROBDescartesNormals1">Problem~\</xref>.)
+            <xref ref="PROBLEMDescartesNormals1">Problem</xref>.)
           </p>
         </statement>
       </task>
@@ -363,7 +365,7 @@
     <title>Defining the Tangent Line</title>
 
 
-    <image source="images/TangentLineDef6.png" width="50%"/>
+    <image source="images/TangentLineDef6.png" width="20%"/>
 
 
     <p>
@@ -384,7 +386,7 @@
       at the point <m>(1,1)</m> and its corresponding tangent line as seen at
       the left.
     </p>
-    <image source="images/TangentLineDef7.png" width="50%"/>
+    <image source="images/TangentLineDef7.png" width="20%"/>
     <p>
 
       While this certainly fits our notion of a tangent line touching a
@@ -397,9 +399,8 @@
     </p>
     <p>
 
-      In view of what we've just seen, what do you think the definition of a
-      tangent line
-      <em>ought</em> to be?
+      In view of what we've just seen, what do you think the
+      definition of a tangent line <em>ought</em> to be?
     </p>
     <p>
 
@@ -424,7 +425,7 @@
 
     <exercise>
       <statement>
-        <image source="images/TangentLineDef4.png" width="50%"/>
+        <image source="images/TangentLineDef4.png" width="30%"/>
         <p>
           Show that <m> y=\frac12x+\frac14</m> is the equation of the
           line tangent to the graph of
@@ -438,7 +439,7 @@
     </exercise>
 
 
-    <image source="images/DifferentialTriangle3.png" width="50%"/>
+    <image source="images/DifferentialTriangle3.png" width="20%"/>
 
     <p>
 
@@ -1425,8 +1426,12 @@
           Suppose the following graph depicts the parabolic flight path
           followed by the Vomit Comet as it starts its maneuver at an altitude
           of <m>7000</m> meters and an initial angle of elevation of <m>45^\circ</m>.
-          \centerline{\includegraphics*[height=2in,width=2in]{../Figures/VomitComet2}}
-          If the equation of this parabola is <m> y=Ax^2+Bx+C,</m> then  determine the values of <m>B</m> and <m>C</m>.
+        </p>
+
+<image source="images/VomitComet2.png" width="60%" />
+<!-- \centerline{\includegraphics*[height=2in,width=2in]{../Figures/VomitComet2}} -->
+<p>
+         If the equation of this parabola is <m> y=Ax^2+Bx+C,</m> then  determine the values of <m>B</m> and <m>C</m>.
         </p>
       </statement>
     </problem>
@@ -1506,8 +1511,10 @@
           starting initially at the point <m>P(l,h)</m> and ending at the airport
           <m>Q</m> which we will
           arbitrarily designate as  the origin.
-          \centerline{\includegraphics*[height=2in,width=4.5in]{../Figures/Descent1}}
         </p>
+<image source="images/Descent1.png" width="60%" />
+<!-- \centerline{\includegraphics*[height=2in,width=4.5in]{../Figures/Descent1}} -->
+
       </introduction>
       <task>
         <statement>
@@ -1605,7 +1612,7 @@
 
   <figure>
     <caption>
-      <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Galileo/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Galileo/">\centerline{Galileo Galilei} \centerline{1564-1642}</url>
+      <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Galileo/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Galileo/">Galileo Galilei {1564-1642}</url>
     </caption>
     <image source="images/Galileo.png" width="50%"/>
   </figure>
@@ -2434,7 +2441,7 @@ is not the flight path of the ball.
 
 <figure>
   <caption>
-<url href="https://mathshistory.st-andrews.ac.uk/Biographies/Lagrange/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Lagrange/">\centerline{Joseph Louis Lagrange} \centerline{1736-1813}</url>
+<url href="https://mathshistory.st-andrews.ac.uk/Biographies/Lagrange/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Lagrange/">Joseph Louis Lagrange {1736-1813}</url>
 </caption>
 <image source="images/LagrangePortrait.png" width="50%"/>
 </figure>
@@ -2940,7 +2947,7 @@ and <m>y</m>:
 </task>
 </exercise>
 
-<exercise xml:id="EXERCISE">
+<exercise xml:id="EXERCISEDerivProdNEProdDeriv">
   <introduction>
     <p>
 <idx><h>Problem</h></idx>
@@ -3411,6 +3418,7 @@ for some constant <m>k</m>.  Show that with this restriction,
 
 <section xml:id="SECTIONnewt-meth-flux">
 <title>Newton's Method of Fluxions</title>
+<introduction>
 <blockquote>
   <p>
     The method of Fluxions is the general key by help
@@ -3420,7 +3428,7 @@ for some constant <m>k</m>.  Show that with this restriction,
 </p>
 <attribution>
   <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Berkeley/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Berkeley/">George
-Berkley, from \pubtitle{The Analyst (1685-1753)</url>
+Berkeley, from <pubtitle>The Analyst</pubtitle> (1685-1753)</url>
 </attribution>
 </blockquote>
 <p>
@@ -3450,7 +3458,7 @@ underlying theme for both was motion.
 <!-- \includegraphics*[height=2.25in,width=3in]{../Figures/BraheKepler} -->
 <!-- \label{fig:Kepler} -->
 <!-- \end{wrapfigure} -->
-<p> 
+<p>
   Through experimentation Galileo had accurately described the motion of
   falling objects near
 </p>
@@ -3460,8 +3468,8 @@ underlying theme for both was motion.
   (moving). Such quantities he called <term>fluents</term>, from
   <foreign>fluere</foreign>, the Latin word which means <q>to flow.</q>  As he put
   it himself in his book
-  <url href="https://www.maa.org/press/periodicals/convergence/mathematical-treasure-newton-on-quadrature-of-curves" visual="https://www.maa.org/press/periodicals/convergence/mathematical-treasure-newton-on-quadrature-of-curves"><foreign>Quadratura
-  Curvarum</foreign></url> (On the Quadrature of Curves),
+  <url href="https://www.maa.org/press/periodicals/convergence/mathematical-treasure-newton-on-quadrature-of-curves" visual="https://www.maa.org/press/periodicals/convergence/mathematical-treasure-newton-on-quadrature-of-curves"><pubtitle>Quadratura
+  Curvarum</pubtitle></url> (<pubtitle>On the Quadrature of Curves</pubtitle>),
 </p>
 <blockquote>
 <p>
@@ -3497,10 +3505,8 @@ underlying theme for both was motion.
     \dot{x} = \dfdx{x}{t}.
 </me>
 </p>
+
 <p>
-
-
-
 From Newton's point of view differentiating the spatial coordinate <m>y</m>
 with respect to the spatial coordinate <m>x</m> to get <m>\dfdx{y}{x}</m> is
 simply not meaningful.  On the
@@ -3508,8 +3514,8 @@ other hand, if <m>P=(x,y)</m> is a point moving along some curve in the
 plane then both <m>x</m> and <m>y</m> are fluents with corresponding fluxions
 <m>\dot{y}</m> and <m>\dot{x}</m>.
 </p>
-<p>
 
+<p>
   What Leibniz's notation expresses as
   <m>\dfdx{y}{x}</m> Newton's notation expresses as
   <m>\frac{\dot{y}}{\dot{x}}</m>. But they are the same thing.
@@ -3519,9 +3525,8 @@ plane then both <m>x</m> and <m>y</m> are fluents with corresponding fluxions
     \frac{\dx{y}}{\cancel{\dx{t}}}\frac{\cancel{\dx{t}}}{\dx{x}}=\dfdx{y}{x}.
 </me>
 </p>
-<p>
 
-  
+<p>
   Although the two formulations are equivalent Leibniz' notation has
   become dominant in mathematics. But  in fields where velocity is a
   fundamental concept, like physics and engineering, Newton's dot
@@ -3538,8 +3543,8 @@ To get the slope, we divide by <m>d{x}</m> to get
   \dfdx{y}{x}=2x.
 </me>
 </p>
-<p>
 
+<p>
 Using his Method of Fluxions, Newton would have considered both <m>x</m>
 and <m>y</m> to be fluents and <m>P=(x,y)</m> to be a point moving along a
 curve.  His version of Calculus would have started with the same
@@ -3549,917 +3554,24 @@ related by the equation
   \dot{y}=2x\dot{x}.
 </me>
 </p>
-<p>
 
+<p>
   To get the slope of the curve <m>y=x^2</m>, we simply  need to recognize
   that this is the same as
 <me>\frac{\dot{y}}{\dot{x}}=2x=\frac{\dfdx{y}{t}}{\dfdx{x}{t}}=\dfdx{y}{x}.</me>
 </p>
+
 <p>
-
-
   Although Newton's dot notation has fallen out of favor in
   mathematics you
-  will likely see it being used in your physics or engineering courses
-  (if you take any). We would be remiss if we failed to recognize this
-  fact.
-  So when appropriate, we will sometimes couch our problems in the
-  dynamical language and dot notation of Newton. We will even
-  sometimes refer to the derivatives <m>\dfdx{y}{t}</m>, or <m>\dfdx{x}{t}</m> as
-fluxions. After all when  <m>t</m>
-represents time that's what they are. Only the notation has changed.
-</p>
-<p>
-
-  If you prefer the Leibnizian terms and notation it is easy to
-  translate between Newton and Leibniz. If <m>x</m> is changing in time then
-  <m>\dot{x}=\dfdx{x}{t}</m> is the fluxion of <m>x</m>.
+  will likely see it being used in your physics or engineering courses.
 </p>
 
-
-<exercise>
-  <introduction>
-    <p>
-      For each of the following equations, find an equation relating
-      their differentials and use this to relate their fluxions
-      (instantaneous rates of change with respect to time).
-</p>
-</introduction>
+<problem  xml:id="PROBLEMadfj">
 <task>
   <statement>
-    <p>
-<m>\displaystyle x^{\frac12}+y^{\frac12}=1</m>
-</p>
-</statement>
-</task>
-<task>
-  <statement>
-    <p>
-<m>\displaystyle \frac{y}{x}=z^2</m>
-</p>
-</statement>
-</task>
-<task>
-  <statement>
-    <p>
-<m>\displaystyle \sqrt{z^3}=x^2+y^2</m>
-</p>
-</statement>
-</task>
-<task>
-  <statement>
-    <p>
-<m>\displaystyle xyz=1</m>
-</p>
-</statement>
-</task>
-</exercise>
-<!-- begin{ProficiencyDrill}  -->
-<!--   For each of the following equations, find an equation relating -->
-<!--   their differentials and use this to relate their fluxions -->
-<!--   (instantaneous rates of change with respect to time). -->
-<!--   \begin{enumerate}[label={  (\alph*)}]  -->
-<!--     \item <m>\displaystyle x^{\frac12}+y^{\frac12}=1</m> -->
-<!--     \item <m>\displaystyle \frac{y}{x}=z^2</m> -->
-<!--     \item <m>\displaystyle \sqrt{z^3}=x^2+y^2</m> -->
-<!--     \item <m>\displaystyle xyz=1</m> -->
-<!--   \end{enumerate} -->
-<!-- \end{ProficiencyDrill} -->
-
-<example xml:id="EXAMPLECartPulley">
-  <p>
-    Consider two carts joined by a <m>100</m> foot length of rope passing
-    through a pulley <m>P</m>, which
-    is held at a fixed height of <m>10</m> feet
-    above where the rope attaches to the carts.
-    
-    Suppose cart <m>A</m> is being
-    pulled to the left at a constant speed of
-<m>1 \frac{\text{ foot}}{\text{second}}.</m>
-</p>
-<image source="images/PulleyProblem.png" width="60%" />
-<!-- \centerline{\includegraphics*[height=1.4in,width=4in]{../Figures/PulleyProblem}} -->
-</example>
-<exercise>
-  <statement>
-    <p>
-      Make a guess: Is cart <m>B</m> moving at a constant speed?
-</p>
-</statement>
-</exercise>
-<p>
-
-  Let's check your guess.  The general approach is to find the
-  relationships between all of the fluents involved then
-  differentiate and divide by <m>\dx{t}</m> to see how their fluxions are
-  related.  Below we have redrawn the essential features of the
-  problem schematically and labeled all of the fluents.
-</p>
-
-<image source="images/TetheredCarts.png" width="60%" />
-<!-- \centerline{\includegraphics*[height=1.2in,width=3.5in]{../Figures/TetheredCarts}} -->
-<p>
-
-  We have the following relationships between the fluents:
-  <me>
-    x^2+10^2=z^2,\hskip3 mm y^2+10^2=w^2,\text{ and } z+w=100.
-</me>
-</p>
-<problem xml:id="PROBLEMTwoCarts">
-  <introduction>
-    <p>
-</p>
-</introduction>
-<task>
-  <statement>
-    <p>
-      Differentiate the above equations to obtain relationships
-      between the differentials <m>\dx{x}</m>, <m>\dx{y}</m>, <m>\dx{z}</m>, and
-      <m>\dx{w}</m>.
-</p>
-</statement>
-</task>
-<task>
-  <statement>
-    <p>
-      Determine the relationship between the fluxions
-      <m>\dfdx{x}{t}</m> and <m>\dfdx{y}{t}</m>. Recall that
-      <m>\dfdx{x}{t}=1\frac{\text{ foot}}{\text{second}}</m>. Is
-      <m>\dfdx{y}{t}</m> constant? How does this compare with your guess
-      earlier?
-</p>
-</statement>
-</task>
-<task>
-  <statement>
-    <p>
-      Translate your solution into Newton's dot notation.
-</p>
-</statement>
-</task>
-</problem>
-<!-- begin{embeddedproblem-enumerate} -->
-<!--   <!-\- \label{problem:TwoCarts} -\-> -->
-<!--   \begin{enumerate}[label={  (\alph*)}] -->
-<!--   \item Differentiate the above equations to obtain relationships -->
-<!--     between the differentials <m>\dx{x}</m>, <m>\dx{y}</m>, <m>\dx{z}</m>, and -->
-<!--     <m>\dx{w}</m>. -->
-<!--   \item Determine the relationship between the fluxions -->
-<!--     <m>\dfdx{x}{t}</m> and <m>\dfdx{y}{t}</m>. Recall that -->
-<!--     <m>\dfdx{x}{t}=1\frac{\text{ foot}}{\text{second}}</m>. Is -->
-<!--     <m>\dfdx{y}{t}</m> constant? How does this compare with your guess -->
-<!--     earlier? -->
-<!--   \item  Translate your solution into Newton's dot notation. -->
-<!--   \end{enumerate} -->
-<!-- \end{embeddedproblem-enumerate} -->
-
-
-
-
-<problem xml:id="PROBLEMsnell1">
-  <introduction>
-    <p>
-</p>
-</introduction>
-<task>
-  <statement>
-    <p>
-      In the following diagram suppose the point <m>P</m> is moving on the
-      <m>x</m>-axis from left to right with horizontal velocity
-      <m>\dfdx{x}{t} = 1 \frac{\text{ unit}}{\text{second}}</m>.
-
-      Find the distance, <m>D</m> from  <m>A</m> to <m>P</m> to <m>B</m> as a
-      single function of <m>x</m> and use this to compute
-<me>\eval{\dfdx{D}{t}}{\dfdx{x}{t}}{1}.</me>
-</p>
-
-<image source="images/PulleyProblem2.png" width="60%" />
-<!-- \centerline{\includegraphics*[height=1.3in,width=2in]{../Figures/PulleyProblem2}} -->
-</statement>
-</task>
-<task>
-  <statement>
-    <p>
-      
-      As an alternative approach, we re-label the diagram as follows:
-      \centerline{\includegraphics*[height=1.5in,width=2in]{../Figures/PulleyProblem3}}
-      Define <m> D=z+w.</m> From  this diagram we have
-      \begin{align*}
-      w^2\amp =9+y^2,
-      5\amp =x+y, \text{ and}
-      z^2\amp = 1+x^2.
-      \end{align*}
-</p>
-</statement>
-</task>
-<task>
-  <statement>
-    <p>
-      
-      Differentiate each of these equations and use the results to
-      show  that
-      <me>
-        \dx{D}=\left(\frac{x}{z}-\frac{y}{w}\right)\dx{x}.
-</me>
-</p>
-</statement>
-</task>
-<task>
-  <statement>
-    <p>
-      Compute <m>\eval{\dfdx{D}{t}}{x}{1}</m>.
-</p>
-</statement>
-</task>
-</problem>
-<!-- begin{embeddedproblem-enumerate}  -->
-<!--   <!-\- \label{problem:snell1} -\-> -->
-<!--     \begin{enumerate}[label={  (\alph*)}] -->
-<!--     \item   In the following diagram suppose the point <m>P</m> is moving on the -->
-<!--   <m>x</m>-axis from left to right with horizontal velocity -->
-<!--   <m>\dfdx{x}{t} = 1 \frac{\text{ unit}}{\text{second}}</m>. -->
-<!--   \centerline{\includegraphics*[height=1.3in,width=2in]{../Figures/PulleyProblem2}} -->
-
-<!--   Find the distance, <m>D</m> from  <m>A</m> to <m>P</m> to <m>B</m> as a -->
-<!--     single function of <m>x</m> and use this to compute -->
-<!--     <me>\eval{\dfdx{D}{t}}{\dfdx{x}{t}}{1}.</me> -->
-<!--   \item  -->
-<!--    As an alternative approach, we re-label the diagram as follows: -->
-<!--     \centerline{\includegraphics*[height=1.5in,width=2in]{../Figures/PulleyProblem3}} -->
-<!--  Define <m> D=z+w.</m> From  this diagram we have -->
-<!--     \begin{align*} -->
-<!--       w^2\amp =9+y^2, -->
-<!--       5\amp =x+y, \text{ and} -->
-<!--       z^2\amp = 1+x^2. -->
-<!--     \end{align*} -->
-<!--   \item  -->
-<!--     Differentiate each of these equations and use the results to -->
-<!--     show  that -->
-<!--     <me> -->
-<!--     \dx{D}=\left(\frac{x}{z}-\frac{y}{w}\right)\dx{x}. -->
-<!--     </me> -->
-<!--   \item  Compute <m>\eval{\dfdx{D}{t}}{x}{1}</m>. -->
-<!-- \end{enumerate} -->
-<!-- \end{embeddedproblem-enumerate} -->
-
-<p>
-
-  <xref ref="PROBLEMsnell1">Problem\</xref> demonstrates that you have alternatives
-  when solve any problem.  Consciously try to avoid getting locked in to
-  a single solution scheme.  One alternative is to try to determine a
-  single function of a single variable before differentiating.  At the
-  other extreme we can just assign variable names to all of the
-  important quantities in our problem and differentiate the equations
-  relating these variables.
-</p>
-<p>
-
-  The best approach will depend upon the problem. In fact, most of the
-  time you'll find yourself using a mixture of the two. Keep in mind
-  that it is always good to have alternatives.
-</p>
-
-<problem>
-  <introduction>
-    <p>
-</p>
-</introduction>
-<task>
-  <statement>
-    <p>
-      Suppose the length of a rectangle is increasing at a rate of
-      <m>1 \frac{\text{ unit}}{\text{second}}</m> and the width is decreasing
-      at a rate of <m>1 \frac{\text{unit}}{\text{second}}</m>.  Make a guess: Will the area
-      remain constant?
-</p>
-</statement>
-</task>
-<task>
-  <statement>
-    <p>
-      Let the length be denoted by the fluent <m>L</m> and the width
-      denoted by the fluent
-      <m>W</m>. The fluxions of <m>L</m> and <m>W</m> are <m>\dfdx{L}{t}=1</m> and
-      <m>\dfdx{W}{t}=-1</m>, respectively.  Let <m>A</m> denote the area of the
-      rectangle and compute the fluxion <m>\dfdx{A}{t}</m>.
-</p>
-</statement>
-</task>
-<task>
-  <statement>
-    <p>
-      How does your solution in part (b) compare to your guess
-      in part (a)?
-</p>
-</statement>
-</task>
-<task>
-  <statement>
-    <p>
-      Translate your solution into Newton's dot notation.
-</p>
-</statement>
-</task>
-</problem>
-<!-- begin{embeddedproblem-enumerate} -->
-<!--   \begin{enumerate}[label={  (\alph*)}] -->
-<!--   \item Suppose the length of a rectangle is increasing at a rate of -->
-<!--     <m>1 \frac{\text{ unit}}{\text{second}}</m> and the width is decreasing -->
-<!--       at a rate of <m>1 \frac{\text{unit}}{\text{second}}</m>.  Make a guess: Will the area -->
-<!--       remain constant? -->
-<!--   \item Let the length be denoted by the fluent <m>L</m> and the width -->
-<!--     denoted by the fluent -->
-<!--     <m>W</m>. The fluxions of <m>L</m> and <m>W</m> are <m>\dfdx{L}{t}=1</m> and -->
-<!--     <m>\dfdx{W}{t}=-1</m>, respectively.  Let <m>A</m> denote the area of the -->
-<!--     rectangle and compute the fluxion <m>\dfdx{A}{t}</m>.  -->
-<!--   \item How does your solution in part (b) compare to your guess -->
-<!--     in part (a)? -->
-<!--   \item  Translate your solution into Newton's dot notation. -->
-<!--   \end{enumerate} -->
-<!-- \end{embeddedproblem-enumerate} -->
-
-
-
-<problem>
-  <introduction>
-    <p>
-      \begin{wrapfigure}[]{r}{1.5in}
-      \vskip-6mm
-      \captionsetup{labelformat=empty}
-      \centerline{\includegraphics*[height=1.5in,width=1.5in]{../Figures/SlidingLadder}}
-      \label{fig:SlidingLadder}
-      \end{wrapfigure}
-      The sketch at the right represents a <m>15</m> foot long ladder leaning
-      against a vertical wall.  Suppose that the bottom is sliding to the
-      right at a constant rate.
-</p>
-</introduction>
-<task>
-  <statement>
-    <p>
-      Make a guess: Is the top sliding down at a constant rate?
-</p>
-</statement>
-</task>
-<task>
-  <statement>
-    <p>
-      Find <m>\dfdx{a}{t}</m> in terms of <m>\dfdx{b}{t}</m>, and use this to
-      check your guess in part (a).
-</p>
-</statement>
-</task>
-<task>
-  <statement>
-    <p>
-      Translate your solution into Newton's dot notation.
-</p>
-</statement>
-</task>
-</problem>
-<!-- begin{embeddedproblem} -->
-<!--   \begin{wrapfigure}[]{r}{1.5in} -->
-<!--     \vskip-6mm  -->
-<!-- \captionsetup{labelformat=empty} -->
-<!--     \centerline{\includegraphics*[height=1.5in,width=1.5in]{../Figures/SlidingLadder}} -->
-<!-- \label{fig:SlidingLadder} -->
-<!-- \end{wrapfigure} -->
-<!-- The sketch at the right represents a <m>15</m> foot long ladder leaning -->
-<!-- against a vertical wall.  Suppose that the bottom is sliding to the -->
-<!-- right at a constant rate. -->
-<!--   \begin{enumerate}[label={  (\alph*)}] -->
-<!--   \item Make a guess: Is the top sliding down at a constant rate? -->
-<!--   \item  Find <m>\dfdx{a}{t}</m> in terms of <m>\dfdx{b}{t}</m>, and use this to -->
-<!--     check your guess in part (a). -->
-<!--   \item  Translate your solution into Newton's dot notation. -->
-<!--   \end{enumerate} -->
-<!-- \end{embeddedproblem} -->
-
-
-
-
-<problem>
-  <statement>
-    <p>
-      Suppose that at a certain instant of time the price of a certain commodity is increasing at a
-      rate of 5\% per month and the quantity sold is decreasing at a rate of
-      3\% per month. Would the revenue increase at a rate of 2\% per month?  Explain.
-</p>
-</statement>
-</problem>
-
-
-
-<problem>
-  <introduction>
-    <p>
-      The strength of a signal from a cell tower, measured in
-      decibels is inversely
-      proportional to the square of the distance between the tower and
-      the cell phone.  Suppose you have a <m>200</m> foot tall cell tower and
-      a car driving away from the tower at a rate of <m>100 \frac{\text{
-ft}}{\text{second}}</m>
-(approximately <m>68</m> mph).
-</p>
-
-
-
-<aside>
-<title>Comment</title>
-
-<p>
-  The icon on your cell phone probably uses bars,
-  but there is no universally agreed upon standard for what <q>one
-  bar</q> means. There is a standard for decibels. 
-</p>
-</aside>
-
-
-
-</introduction>
-<task>
-  <statement>
-    <p>
-      Find a formula for the rate at which the signal is
-      decreasing in terms of the distance <m>x</m> from the car to the base
-      of the tower.  (Use <m>k</m> to denote the constant of
-      proportionality.)
-</p>
-</statement>
-</task>
-<task>
-  <statement>
-    <p>
-      Plot a graph of the formula in part (a) with <m>x \ge 0</m> and
-      use this to approximate the distance from the base of the
-      tower where the signal decreases fastest. (Use <m>k = 1000000</m>.
-      You’ll see why we chose this scale once you’ve plotted it.)
-</p>
-</statement>
-</task>
-<task>
-  <statement>
-    <p>
-      Based on the graph, what is happening to the rate at which
-      the signal is decreasing as the car moves farther away from
-      the tower?
-</p>
-</statement>
-</task>
-</problem>
-<!-- begin{embeddedproblem}  -->
-<!--   The strength of a signal from a cell tower, measured in -->
-<!--   decibels\aside{The icon on your cell phone probably uses bars, -->
-<!--     but there is no universally agreed upon standard for what <q>one -->
-<!--     bar</q> means. There is a standard for decibels. } is inversely -->
-<!--   proportional to the square of the distance between the tower and -->
-<!--   the cell phone.  Suppose you have a <m>200</m> foot tall cell tower and -->
-<!--   a car driving away from the tower at a rate of <m>100 \frac{\text{ -->
-<!--       ft}}{\text{second}}</m> -->
-<!--   (approximately <m>68</m> mph). -->
-<!--   \begin{enumerate}[label={  (\alph*)}]  -->
-<!--     \item Find a formula for the rate at which the signal is -->
-<!--       decreasing in terms of the distance <m>x</m> from the car to the base -->
-<!--       of the tower.  (Use <m>k</m> to denote the constant of -->
-<!--       proportionality.)  -->
-<!--     \item Plot a graph of the formula in part (a) with <m>x \ge 0</m> and -->
-<!--       use this to approximate the distance from the base of the -->
-<!--       tower where the signal decreases fastest. (Use <m>k = 1000000</m>. -->
-<!--       You’ll see why we chose this scale once you’ve plotted it.) -->
-<!--     \item Based on the graph, what is happening to the rate at which -->
-<!--       the signal is decreasing as the car moves farther away from -->
-<!--       the tower? -->
-<!--     \end{enumerate} -->
-<!-- \end{embeddedproblem} -->
-
-<problem>
-  <statement>
-    <p>
-      It is reasonable to assume that the rate at which the volume of a
-      spherical raindrop is increasing as it forms is proportional to
-      the surface area of the raindrop.  Show that under this
-      assumption, the radius (surprisingly?) grows at a constant rate.
-</p>
-</statement>
-</problem>
-
-
-<problem>
-  <statement>
-    <p>
-      Suppose we have a rectangular box whose length is increasing by
-      <m>3 \frac{\text{centimeters}}{\text{second}}</m>, whose width is
-      increasing by <m>2 \frac{\text{centimeters}}{\text{second}}</m> and
-      whose height is decreasing by
-      <m>3 \frac{\text{centimeters}}{\text{second}}</m>.  How fast are the
-      volume and surface area of the box changing when the length is
-<m>25</m> centimeters, width is <m>20</m> centimeters, and height is <m>10</m>
-centimeters?  Are they increasing or decreasing?
-</p>
-</statement>
-</problem>
-
-
-
-
-<problem>
-  <statement>
-    <p>
-      Suppose a point <m>P</m> is moving along the curve <m>y=x^2</m> so that its
-      horizontal velocity is
-      <m>\dfdx{x}{t}=1\frac{\text{ unit}}{\text{second}}</m>.  For which
-values of <m>x</m> is the distance from <m>P</m> to the point <m>(0,1)</m>
-increasing and for what values is it decreasing?  What can you say
-about the points where the distance transitions from increasing to
-decreasing or decreasing to increasing?
-</p>
-</statement>
-</problem>
-
-
-
-<problem xml:id="PROBLEMIdealGas">
-  <introduction>
-    <p>
-      The ideal gas law (\href{https://mathshistory.st-andrews.ac.uk/Biographies/Boyle/}{Boyle}'s Law) states that the pressure <m>P</m> (in pascals),
-      volume <m>V</m> (in cubic meters), and temperature <m>T</m> (in degrees
-      \href{https://mathshistory.st-andrews.ac.uk/Biographies/Thomson/}{Kelvin}) of an ideal gas are related by the formula <m>PV=kNT</m> where
-      <m>N</m> is the number of gas molecules and <m>k</m> is the \href{https://mathshistory.st-andrews.ac.uk/Biographies/Boltzmann/}{Boltzmann}
-      constant. What this says is that for a fixed amount of gas, if the
-      volume is held fixed, then the pressure is proportional to the
-      temperature and if the temperature is held fixed, then the
-      pressure is inversely proportional to the volume.
-</p>
-</introduction>
-<task>
-  <statement>
-    <p>
-      Assuming that we have an enclosed gas, and that <m>N</m> is held
-      constant. Find an equation that relates <m>\dx{P}</m>, <m>\dx{V}</m>, and
-      <m>\dx{T}</m>, and use this to find <m>\dfdx{T}{t}</m> in terms of
-      <m>\dfdx{P}{t}</m> and <m>\dfdx{V}{t}</m>.
-</p>
-</statement>
-</task>
-<task>
-  <statement>
-    <p>
-
-      Suppose we have a piston compressing the gas in a
-      cylinder as in the following sketch.
-      \vskip2mm
-      \centerline{\includegraphics*[height=2.1in,width=2.8in]{../Figures/PistonProblem2}}
-      \vskip2mm
-      Show that for the pressure to be held fixed <m>\dfdx{T}{t}</m> must
-      satisfy
-      <me>
-        \dfdx{T}{t} = \frac{T}{h}\dfdx{h}{t}.
-</me>
-\comment{Notice that this is independent of the radius of the
-cylinder.}
-</p>
-</statement>
-</task>
-<task>
-  <statement>
-    <p>
-      Suppose that when <m>h=0.2</m> meters the temperature is
-      <m>300^\circ K</m>.  If the piston is moving to the right at a rate
-      of <m>0.001 \frac{\text{meters}}{\text{second}}</m>, how fast should
-      the temperature be decreasing at that instant to maintain
-      a constant pressure?
-</p>
-</statement>
-</task>
-</problem>
-<!-- begin{embeddedproblem}  -->
-<!--    <!-\- \label{problem:IdealGas} -\-> -->
-<!--    The ideal gas law (\href{https://mathshistory.st-andrews.ac.uk/Biographies/Boyle/}{Boyle}'s Law) states that the pressure <m>P</m> (in pascals), -->
-<!--    volume <m>V</m> (in cubic meters), and temperature <m>T</m> (in degrees -->
-<!--    \href{https://mathshistory.st-andrews.ac.uk/Biographies/Thomson/}{Kelvin}) of an ideal gas are related by the formula <m>PV=kNT</m> where -->
-<!--    <m>N</m> is the number of gas molecules and <m>k</m> is the \href{https://mathshistory.st-andrews.ac.uk/Biographies/Boltzmann/}{Boltzmann} -->
-<!--    constant. What this says is that for a fixed amount of gas, if the -->
-<!--    volume is held fixed, then the pressure is proportional to the -->
-<!--    temperature and if the temperature is held fixed, then the -->
-<!--    pressure is inversely proportional to the volume. -->
-<!--    \begin{enumerate}[label={  (\alph*)}] -->
-<!--          \item Assuming that we have an enclosed gas, and that <m>N</m> is held -->
-<!--      constant. Find an equation that relates <m>\dx{P}</m>, <m>\dx{V}</m>, and -->
-<!--      <m>\dx{T}</m>, and use this to find <m>\dfdx{T}{t}</m> in terms of -->
-<!--      <m>\dfdx{P}{t}</m> and <m>\dfdx{V}{t}</m>. -->
-<!--    \item -->
-<!--      Suppose we have a piston compressing the gas in a -->
-<!--      cylinder as in the following sketch. -->
-<!--      \vskip2mm  -->
-<!--      \centerline{\includegraphics*[height=2.1in,width=2.8in]{../Figures/PistonProblem2}} -->
-<!--      \vskip2mm  -->
-<!--      Show that for the pressure to be held fixed <m>\dfdx{T}{t}</m> must -->
-<!--      satisfy -->
-<!--      <me> -->
-<!--      \dfdx{T}{t} = \frac{T}{h}\dfdx{h}{t}. -->
-<!--      </me> -->
-<!--      \comment{Notice that this is independent of the radius of the -->
-<!--        cylinder.} -->
-<!--    \item Suppose that when <m>h=0.2</m> meters the temperature is -->
-<!--      <m>300^\circ K</m>.  If the piston is moving to the right at a rate -->
-<!--      of <m>0.001 \frac{\text{meters}}{\text{second}}</m>, how fast should -->
-<!--      the temperature be decreasing at that instant to maintain -->
-<!--      a constant pressure?  -->
-<!--          \end{enumerate} -->
-<!--  \end{embeddedproblem} -->
-
-<problem>
-  <introduction>
-    <p>
-A streetlamp is mounted at the top of a <m>20</m> foot pole.  A <m>6</m>
-foot tall person is walking away from the base of the pole at a
-constant speed.
-</p>
-</introduction>
-<task>
-  <statement>
-    <p>
-      Make a guess: Is the length of this person's shadow
-      increasing at a constant rate?
-</p>
-</statement>
-</task>
-<task>
-  <statement>
-    <p>
-      Now compute the rate at which the person's shadow is
-      increasing.
-</p>
-</statement>
-</task>
-</problem>
-<!-- begin{embeddedproblem}  -->
-<!--   A streetlamp is mounted at the top of a <m>20</m> foot pole.  A <m>6</m> -->
-<!--   foot tall person is walking away from the base of the pole at a -->
-<!--   constant speed. -->
-<!--   \begin{enumerate}[label={  (\alph*)}] -->
-<!--   \item Make a guess: Is the length of this person's shadow -->
-<!--     increasing at a constant rate? -->
-<!--   \item Now compute the rate at which the person's shadow is -->
-<!--     increasing. -->
-<!--   \end{enumerate} -->
-<!-- \end{embeddedproblem} -->
-
-
-
-
-<problem>
-<title>Find the Pattern</title>
-<introduction>
-  <p>
-    Suppose the position of a point, <m>P_x</m>, on the <m>x</m>-axis is given
-    by <m>(x(t),0)</m> and the position of another point, <m>P_y</m>, on the
-    <m>y</m>-axis is given by <m>(0,y(t))</m>. Let <m>S(t)</m> represent the distance
-    between <m>P_x</m> and <m>P_y</m>.
-</p>
-</introduction>
-<task>
-  <statement>
-
-    <p>
-      <ol>
-        <li>
-          <p>
-            If <m>x(t)=t</m>, and <m>y(t)=t</m> show that
-            <m>\dfdx{S}{t}=\sqrt{2}</m>.
-</p>
-</li>
-<li>
-  <p>
-    If <m>x(t)=2t</m>, and <m>y(t)=2t</m> show that
-    <m>\dfdx{S}{t}=\sqrt{8}</m>.
-</p>
-</li>
-<li>
-  <p>
-    If <m>x(t)=t</m>, and <m>y(t)=3t</m> show that
-    <m>\dfdx{S}{t}=\sqrt{10}</m>.
-</p>
-</li>
-<li>
-  <p>
-    If <m>x(t)=5t</m>, and <m>y(t)=3t</m> show that
-    <m>\dfdx{S}{t}=\sqrt{34}</m>.
-</p>
-</li>
-<li>
-  <p>
-    Do you see a pattern yet? If you do, write it down and try
-    to show that it always holds. If you don't, make up some more
-    simple examples and solve them to gather more evidence. when
-    you believe you have see it conjecture a pattern and then show
-    that the pattern always holds.
-</p>
-</li>
-</ol>
-</p>
-</statement>
-</task>
-<task>
-  <statement>
-    <p>
-      <ol>
-        <li>
-          <p>
-Show that if <m>x(t)=t^{\frac12}</m>, and <m>y(t)=t^{\frac12}</m>
-then <m>\displaystyle\dfdx{S}{t}=\frac{1}{\sqrt{2t}}</m>. Does this
-make intuitive sense to you?
-</p>
-</li>
-<li>
-  <p>
-    Show that if <m>x(t)=t^{\frac13}</m>, and <m>y(t)=t^{\frac13}</m>,
-    then
-    <m>\displaystyle\dfdx{S}{t}=\frac{\sqrt{2}}{3\sqrt[3]{t^2}}</m>.
-</p>
-</li>
-<li>
-  <p>
-    Show that if <m>x(t)=t^{\frac14}</m>, and <m>y(t)=t^{\frac14}</m>,
-    then
-    <m>\displaystyle\dfdx{S}{t}=\frac{\sqrt{2}}{4\sqrt[4]{t^3}}</m>.
-</p>
-</li>
-<li>
-  <p>
-    Do you see a pattern yet? If you do, write it down and try
-    to show that it always holds. If you don't make up some more,
-    simple examples, and solve them to gather more evidence. when
-    you believe you have see it conjecture a pattern and then show
-    that the pattern always holds.
-</p>
-</li>
-</ol>
-</p>
-</statement>
-</task>
-<task>
-  <statement>
-    <p>
-      Finally, given \emph{any} <m>x(t)</m> and \emph{any} <m>y(t)</m>, find
-      a completely general formula for <m>\dfdx{S}{t}</m>.
-</p>
-</statement>
-</task>
-</problem>
-<!-- \begin{embeddedproblem}[Find the Patterns]  ;;; MULTILEVEL PROBLEM -->
-<!-- Suppose the position of a point, <m>P_x</m>, on the <m>x</m>-axis is given -->
-<!-- by <m>(x(t),0)</m> and the position of another point, <m>P_y</m>, on the -->
-<!-- <m>y</m>-axis is given by <m>(0,y(t))</m>. Let <m>S(t)</m> represent the distance -->
-<!-- between <m>P_x</m> and <m>P_y</m>. -->
-<!-- \begin{enumerate}[label={  (\alph*)}] -->
-<!-- \item -->
-<!-- <p> -->
-<!--   <ol> -->
-<!--     <li> -->
-<!--       <p> -->
-<!--         If <m>x(t)=t</m>, and <m>y(t)=t</m> show that -->
-<!--       </p> -->
-<!--     </li> -->
-<!--     <m>\dfdx{S}{t}=\sqrt{2}</m>. -->
-<!--     <li> -->
-<!--       <p> -->
-<!--         If <m>x(t)=2t</m>, and <m>y(t)=2t</m> show that -->
-<!--       </p> -->
-<!--     </li> -->
-<!--     <m>\dfdx{S}{t}=\sqrt{8}</m>. -->
-<!--     <li> -->
-<!--       <p> -->
-<!--         If <m>x(t)=t</m>, and <m>y(t)=3t</m> show that -->
-<!--       </p> -->
-<!--     </li> -->
-<!--     <m>\dfdx{S}{t}=\sqrt{10}</m>. -->
-<!--     <li> -->
-<!--       <p> -->
-<!--         If <m>x(t)=5t</m>, and <m>y(t)=3t</m> show that -->
-<!--       </p> -->
-<!--     </li> -->
-<!--     <m>\dfdx{S}{t}=\sqrt{34}</m>. -->
-<!--     <li> -->
-<!--       <p> -->
-<!--         Do you see a pattern yet? If you do, write it down and try -->
-<!--       </p> -->
-<!--     </li> -->
-<!--     to show that it always holds. If you don't, make up some more -->
-<!--     simple examples and solve them to gather more evidence. when -->
-<!--     you believe you have see it conjecture a pattern and then show -->
-<!--     that the pattern always holds. -->
-<!--   </ol> -->
-<!-- </p> -->
-<!-- \item -->
-<!-- <p> -->
-<!--   <ol> -->
-<!--     <li> -->
-<!--       <p> -->
-<!--         Show that if <m>x(t)=t^{\frac12}</m>, and <m>y(t)=t^{\frac12}</m> -->
-<!--       </p> -->
-<!--     </li> -->
-<!--     then <m>\displaystyle\dfdx{S}{t}=\frac{1}{\sqrt{2t}}</m>. Does this -->
-<!--     make intuitive sense to you? -->
-<!--     <li> -->
-<!--       <p> -->
-<!--         Show that if <m>x(t)=t^{\frac13}</m>, and <m>y(t)=t^{\frac13}</m>, -->
-<!--       </p> -->
-<!--     </li> -->
-<!--     then -->
-<!--     <m>\displaystyle\dfdx{S}{t}=\frac{\sqrt{2}}{3\sqrt[3]{t^2}}</m>. -->
-<!--     <li> -->
-<!--       <p> -->
-<!--         Show that if <m>x(t)=t^{\frac14}</m>, and <m>y(t)=t^{\frac14}</m>, -->
-<!--       </p> -->
-<!--     </li> -->
-<!--     then -->
-<!--     <m>\displaystyle\dfdx{S}{t}=\frac{\sqrt{2}}{4\sqrt[4]{t^3}}</m>. -->
-<!--     <li> -->
-<!--       <p> -->
-<!--         Do you see a pattern yet? If you do, write it down and try -->
-<!--       </p> -->
-<!--     </li> -->
-<!--     to show that it always holds. If you don't make up some more, -->
-<!--     simple examples, and solve them to gather more evidence. when -->
-<!--     you believe you have see it conjecture a pattern and then show -->
-<!--     that the pattern always holds. -->
-<!--   </ol> -->
-<!-- </p> -->
-<!-- \item Finally, given \emph{any} <m>x(t)</m> and \emph{any} <m>y(t)</m>, find -->
-<!-- a completely general formula for <m>\dfdx{S}{t}</m>. -->
-<!-- \end{enumerate} -->
-<!-- \end{embeddedproblem} -->
-
-<!-- \begin{embeddedproblem}[Find the Patterns]  ;;; MULTILEVEL PROBLEM -->
-<!--     Suppose the position of a point, <m>P_x</m>, on the <m>x</m>-axis is given -->
-<!--     by <m>(x(t),0)</m> and the position of another point, <m>P_y</m>, on the -->
-<!--     <m>y</m>-axis is given by <m>(0,y(t))</m>. Let <m>S(t)</m> represent the distance -->
-<!--     between <m>P_x</m> and <m>P_y</m>. -->
-<!--     \begin{enumerate}[label={  (\alph*)}] -->
-<!--     \item -->
-<!--       \begin{enumerate}[label={  \roman*.}] -->
-<!--               \item If <m>x(t)=t</m>, and <m>y(t)=t</m> show that -->
-<!--         <m>\dfdx{S}{t}=\sqrt{2}</m>. -->
-<!--       \item If <m>x(t)=2t</m>, and <m>y(t)=2t</m> show that -->
-<!--         <m>\dfdx{S}{t}=\sqrt{8}</m>. -->
-<!--       \item If <m>x(t)=t</m>, and <m>y(t)=3t</m> show that -->
-<!--         <m>\dfdx{S}{t}=\sqrt{10}</m>. -->
-<!--       \item If <m>x(t)=5t</m>, and <m>y(t)=3t</m> show that -->
-<!--         <m>\dfdx{S}{t}=\sqrt{34}</m>. -->
-<!--       \item Do you see a pattern yet? If you do, write it down and try -->
-<!--         to show that it always holds. If you don't, make up some more -->
-<!--         simple examples and solve them to gather more evidence. when -->
-<!--         you believe you have see it conjecture a pattern and then show -->
-<!--         that the pattern always holds. -->
-<!--               \end{enumerate} -->
-<!--     \item -->
-<!--       \begin{enumerate}[label={  (\roman*)}] -->
-<!--       \item Show that if <m>x(t)=t^{\frac12}</m>, and <m>y(t)=t^{\frac12}</m> -->
-<!--         then <m>\displaystyle\dfdx{S}{t}=\frac{1}{\sqrt{2t}}</m>. Does this -->
-<!--         make intuitive sense to you? -->
-<!--       \item Show that if <m>x(t)=t^{\frac13}</m>, and <m>y(t)=t^{\frac13}</m>, -->
-<!--         then -->
-<!--         <m>\displaystyle\dfdx{S}{t}=\frac{\sqrt{2}}{3\sqrt[3]{t^2}}</m>. -->
-<!--       \item Show that if <m>x(t)=t^{\frac14}</m>, and <m>y(t)=t^{\frac14}</m>, -->
-<!--         then -->
-<!--         <m>\displaystyle\dfdx{S}{t}=\frac{\sqrt{2}}{4\sqrt[4]{t^3}}</m>. -->
-<!--       \item Do you see a pattern yet? If you do, write it down and try -->
-<!--         to show that it always holds. If you don't make up some more, -->
-<!--         simple examples, and solve them to gather more evidence. when -->
-<!--         you believe you have see it conjecture a pattern and then show -->
-<!--         that the pattern always holds. -->
-<!--       \end{enumerate} -->
-<!--     \item Finally, given \emph{any} <m>x(t)</m> and \emph{any} <m>y(t)</m>, find -->
-<!--       a completely general formula for <m>\dfdx{S}{t}</m>. -->
-<!--     \end{enumerate} -->
-<!--   \end{embeddedproblem} -->
-
-</section>
-
-<section xml:id="SECTIONself-inters-curv">
-<title>Self-intersecting Curves and Parametric Equations</title>
-<introduction>
-  <p>
-    In <xref ref="PROBLEMClassicalCurves1">Problem~\</xref> we asked  you to find the line
-    tangent to several interesting curves.  However, we were careful to ask
-    only about relatively simple curves. In particular, none of the curves
-    in <xref ref="PROBLEMClassicalCurves1">Problem~\</xref> intersected themselves. We
-    avoided self-intersecting curves earlier because we didn't have the
-    techniques necessary to address the problem of tangent lines at points
-    where a curve crosses itself. We do now.
-
-    But we need to broaden our thinking a bit.
-</p>
-
-
-<exercise xml:id="PROBLEMClassicalCurves3">
-  <introduction>
 <image source="images/FoliumOfDescartes.png" width="60%" />
 <!-- \centerline{\includegraphics*[height=2in,width=2in]{../Figures/FoliumOfDescartes}} -->
-</introduction>
-<task>
-  <statement>
     <p>
       For the Folium of Descartes:
 <m>x^3+y^3=3xy</m>
@@ -4488,10 +3600,12 @@ make intuitive sense to you?
 </task>
 <task>
   <statement>
+<image source="images/TschirnhausenCubic3.png" width="60%" />
+<!-- \centerline{\includegraphics*[height=1.5in,width=3in]{../Figures/TschirnhausenCubic3}} -->
     <p>
       The Tschirnhausen cubic:
 <m>27{y}^{2}=\left(1-x\right){\left(8+x\right)}^{2}</m>
-\centerline{\includegraphics*[height=1.5in,width=3in]{../Figures/TschirnhausenCubic3}}
+
 
 <ol>
 
@@ -4517,90 +3631,9 @@ Show that <m>\dfdx{y}{x} = \frac{-(8+x)(3x+6)}{54y}.</m>
 </p>
 </statement>
 </task>
-</exercise>
-<!-- begin{ProficiencyDrill-enumerate}  ;;; MULTILEVEL DRILL -->
-<!--   <!-\- <!-\\- \label{problem:ClassicalCurves3} -\\-> -\-> -->
-<!--   \begin{enumerate}[label={  (\alph*)}] -->
-<!--     \item For the Folium of Descartes: -->
-<!--       <m>x^3+y^3=3xy</m> -->
-<!--       \centerline{\includegraphics*[height=2in,width=2in]{../Figures/FoliumOfDescartes}} -->
+</problem>
 
-<!-- <ol> -->
-<!--       <li> -->
-<!-- <p> -->
-<!--  Show that <m>\dfdx{y}{x}=\frac{y-x^2}{y^2-x}</m>. -->
-<!-- </p> -->
-<!-- </li> -->
-<!--       <li> -->
-<!-- <p> -->
-<!--  Locate all of the points <m>(x,y)\neq (0,0)</m> where the line -->
-<!-- </p> -->
-<!-- </li> -->
-<!--         tangent to the Folium of Descartes is horizontal. -->
-<!--       <li> -->
-<!-- <p> -->
-<!--  Locate all of the points <m>(x,y)\neq (0,0)</m> where the line -->
-<!-- </p> -->
-<!-- </li> -->
-<!--         tangent to the Folium of Descartes is  vertical. -->
-<!--       </ol> -->
-
-<!--     \item The Tschirnhausen cubic: -->
-<!--       <m>27{y}^{2}=\left(1-x\right){\left(8+x\right)}^{2}</m> -->
-<!--       \centerline{\includegraphics*[height=1.5in,width=3in]{../Figures/TschirnhausenCubic3}} -->
-
-<!-- <ol> -->
-
-<!--     <li> -->
-<!-- <p> -->
-<!--  Show that <m>\dfdx{y}{x} = \frac{-(8+x)(3x+6)}{54y}.</m> -->
-<!-- </p> -->
-<!-- </li> -->
-<!--     <li> -->
-<!-- <p> -->
-<!--  Locate all of the points <m>(x,y)\neq (-8,0)</m> where the line -->
-<!-- </p> -->
-<!-- </li> -->
-<!--       tangent to the Tschirnhausen cubic is horizontal. -->
-<!--     <li> -->
-<!-- <p> -->
-<!--  Locate all of the points <m>(x,y)\neq (-8,0)</m> where the line -->
-<!-- </p> -->
-<!-- </li> -->
-<!--       tangent to the Tschirnhausen cubic is  vertical. -->
-<!--           </ol> -->
-
-<!--   \end{enumerate} -->
-<!-- \end{ProficiencyDrill-enumerate} -->
-
-<!-- \begin{ProficiencyDrill-enumerate}  ;;; MULTILEVEL DRILL -->
-<!--   <!-\- \label{problem:ClassicalCurves3} -\-> -->
-<!--   \begin{enumerate}[label={  (\alph*)}] -->
-<!--     \item For the Folium of Descartes: -->
-<!--       <m>x^3+y^3=3xy</m> -->
-<!--       \centerline{\includegraphics*[height=2in,width=2in]{../Figures/FoliumOfDescartes}} -->
-<!--       \begin{enumerate}[label={  (\roman*)}] -->
-<!--       \item Show that <m>\dfdx{y}{x}=\frac{y-x^2}{y^2-x}</m>. -->
-<!--       \item Locate all of the points <m>(x,y)\neq (0,0)</m> where the line -->
-<!--         tangent to the Folium of Descartes is horizontal. -->
-<!--       \item Locate all of the points <m>(x,y)\neq (0,0)</m> where the line -->
-<!--         tangent to the Folium of Descartes is  vertical. -->
-<!--       \end{enumerate} -->
-<!--     \item The Tschirnhausen cubic: -->
-<!--       <m>27{y}^{2}=\left(1-x\right){\left(8+x\right)}^{2}</m> -->
-<!--       \centerline{\includegraphics*[height=1.5in,width=3in]{../Figures/TschirnhausenCubic3}} -->
-<!--      \begin{enumerate}[label={  (\roman*)}] -->
-
-<!--     \item Show that <m>\dfdx{y}{x} = \frac{-(8+x)(3x+6)}{54y}.</m> -->
-<!--     \item Locate all of the points <m>(x,y)\neq (-8,0)</m> where the line -->
-<!--       tangent to the Tschirnhausen cubic is horizontal. -->
-<!--     \item Locate all of the points <m>(x,y)\neq (-8,0)</m> where the line -->
-<!--       tangent to the Tschirnhausen cubic is  vertical. -->
-<!--           \end{enumerate} -->
-<!--   \end{enumerate} -->
-<!-- \end{ProficiencyDrill-enumerate} -->
 <p>
-
   If we try to compute <m>\eval{\dfdx{y}{x}}{(x,y)}{(0,0)}</m> for the Folium
   of Descartes we find that
   <m>\eval{\dfdx{y}{x}}{(x,y)}{(0,0)}=\frac{0}{0}</m> which is very strange.
@@ -4608,15 +3641,15 @@ Show that <m>\dfdx{y}{x} = \frac{-(8+x)(3x+6)}{54y}.</m>
   and a vertical tangent line, so it seems to make some sort of
   sense.
 </p>
-<p>
 
+<p>
   You might be thinking that we have stumbled upon a new rule about tangent
   lines: If we ever obtain <m>\dfdx{y}{x}=\frac{0}{0}</m>, at some point then
   the curve has both a vertical and horizontal tangent at that point.
   It would be nice if things were that simple, but they aren't.
 </p>
-<p>
 
+<p>
   But now consider the Tschirnhausen Cubic at the self-intersection
   point <m>(-8,0)</m>.  As long as we stay away from the self-intersection
   point there are no difficulties. But from the graph we can see that
@@ -4624,15 +3657,15 @@ Show that <m>\dfdx{y}{x} = \frac{-(8+x)(3x+6)}{54y}.</m>
   neither vertical nor horizontal despite the fact that once again we
 have <me>\eval{\dfdx{y}{x}}{(x,y)}{(-8,0)}=\frac{0}{0}.</me>
 </p>
-<p>
 
+<p>
   If nothing else, these examples illustrate that using Calculus is much
   more subtle than simply computing a derivative. A cavalier attitude
   can lead to some very strange anomalies.  As is true of any powerful
   tool, to avoid disaster we must be careful.
 </p>
-<p>
 
+<p>
   The safest approach is to avoid points of self-intersection and
   fractions such as <m>\frac00</m>. But we won't be able to avoid them
   forever so we might as well address the issue now.  Adopting Newton's
@@ -4640,9 +3673,8 @@ have <me>\eval{\dfdx{y}{x}}{(x,y)}{(-8,0)}=\frac{0}{0}.</me>
   horizontal and vertical coordinates as Newton's fluents; things
   changing in time.
 </p>
+
 <p>
-
-
   Using the static approach to find a tangent line at a
   self-intersection point is very much like standing in the center of
   the intersection of two roads and trying to decide if the road goes
@@ -4650,13 +3682,13 @@ have <me>\eval{\dfdx{y}{x}}{(x,y)}{(-8,0)}=\frac{0}{0}.</me>
   just sits there. Likewise, a curve is not dynamic. It just sits there,
   like a road.
 </p>
-<p>
 
+<p>
   It is the travelers on the road and the point that traces a curve
   which move.
 </p>
-<p>
 
+<p>
   If instead we ask, <q>Which way are we going as we
   <em>pass through the intersection</em>?</q> there is only one answer. We're
   going in the direction we were traveling when we entered the
@@ -4664,13 +3696,13 @@ have <me>\eval{\dfdx{y}{x}}{(x,y)}{(-8,0)}=\frac{0}{0}.</me>
   statically, we always have both a position on the curve and a
   direction we are traveling.
 </p>
-<p>
 
+<p>
   So if we adopt Newton's viewpoint and think of the curve as being
   generated by the motion of a point things change.
 </p>
-<p>
 
+<p>
   If we are traveling along a curve our direction of travel is always
   tangent to the curve. By changing our question from <q>What is the
   tangent line at this point?</q> to <q>What is the tangent line at this
@@ -4688,14 +3720,14 @@ have <me>\eval{\dfdx{y}{x}}{(x,y)}{(-8,0)}=\frac{0}{0}.</me>
   <statement>
     <p>
       Show that if <m>x(t)</m> and <m>y(t)</m> satisfy
-      \begin{align*}
-      x(t)\amp=1-3t^2
-      y(t)\amp=t(3-t^2)
-      \end{align*}
+      <md>
+        <mrow>x(t)\amp{}=1-3t^2</mrow>
+        <mrow>y(t)\amp{}=t(3-t^2)</mrow>
+      </md>
       then <m>x</m> and <m>y</m> satisfy the equation of the Tschirnhausen
       Cubic: <m>27{y}^{2}=\left(1-x\right){\left(8+x\right)}^{2}</m>.
-</p>
-</statement>
+    </p>
+  </statement>
 </task>
 <task>
   <statement>
@@ -4822,7 +3854,7 @@ when it is quite clear from the graph that there must be two?
 </statement>
 </task>
 </problem>
-<!-- begin{embeddedproblem} -->
+<!-- \begin{embeddedproblem} -->
 <!--   <!-\- \label{problem:FoliumOfDescartes1} -\-> -->
 <!--   Recall that the Folium of Descartes, <m>x^3+y^3=3xy</m>,  crosses itself at the origin. -->
 <!--     \begin{enumerate}[label={  (\alph*)}] -->
@@ -4839,8 +3871,8 @@ when it is quite clear from the graph that there must be two?
 <!--     when it is quite clear from the graph that there must be two? -->
 <!--   \end{enumerate} -->
 <!-- \end{embeddedproblem} -->
-<p>
 
+<p>
   What comes along with this change in interpretation is this: We no
   longer want to think of a differential ratio <em>only</em> as a
   slope.  If <m>y</m> and <m>x</m> happen to represent the vertical
@@ -4848,8 +3880,8 @@ when it is quite clear from the graph that there must be two?
   respect to <m>x</m>, <m>\dfdx{y}{x}</m>, will be the slope of the curve
   <m>y=y(x)</m>.
 </p>
-<p>
 
+<p>
 If <m>y</m> represents the vertical position of an object and <m>t</m>
 represents the time when the object is at position <m>y(t)</m>, then the
 change of <m>y</m> with respect to <m>t</m>, <m>\dfdx{y}{t}=\dot{y}</m>, is the
@@ -4858,8 +3890,8 @@ if <m>x(t)</m> represents the horizontal position of an object then
 <m>\dfdx{x}{t}=\dot{x}</m> is the horizontal velocity of the object as it
 passes through <m>x</m>.
 </p>
-<p>
 
+<p>
   In general, if <m>\alpha</m> and <m>\beta</m> are two related quantities  then
   <m>\dfdx{\alpha}{\beta}</m> is the <term>rate of change of <m>\alpha</m> with respect to
   <m>\beta</m>.</term> The physical (or geometric) interpretation of
@@ -4928,7 +3960,7 @@ work with functions.
   <xref ref="PROBLEMFoliumOfDescartes1">Problem</xref> we gave you <m>x(t)</m> and
   <m>y(t)</m> and asked you to show that it satisfies the equation of the
   Folium. Here we start with the equation of the Folium and you need
-  to find <m>x(t)</m> and <m>y(t)</m>. 
+  to find <m>x(t)</m> and <m>y(t)</m>.
 </p>
 
 </statement>
@@ -5790,11 +4822,18 @@ Now suppose the graph of <m>y=y(x)</m> represents the cable between two
 upright towers located at <m>x=-U</m> and <m>x=U.</m> Remember, though we
 suspect that <m>y(x)</m> is a parabola we don't yet know if this
 is true.
-\centerline{\includegraphics*[height=1in,width=5in]{../Figures/Bridge1}}
+</p>
+<image source="images/Bridge1.png" width="60%" />
+<!-- \centerline{\includegraphics*[height=1in,width=5in]{../Figures/Bridge1}} -->
+<p>
 We choose an arbitrary point <m>(x,y)</m> on the curve with
 <m>0\lt x\lt U</m> and
 focus on the portion of the bridge between <m>(-x,y)</m> and <m>(x,y)</m>.
-\centerline{\includegraphics*[height=1in,width=5in]{../Figures/Bridge2}}
+</p>
+
+<image source="images/Bridge2.png" width="60%" />
+<!-- \centerline{\includegraphics*[height=1in,width=5in]{../Figures/Bridge2}} -->
+<p>
 These are the two points that are holding up the section of the bridge
 on the interval from <m>-x</m> to <m>x</m>.  The arrows represent the tangential
 forces felt on the cable at the points.
@@ -5803,7 +4842,11 @@ forces felt on the cable at the points.
 
 We'll examine the the horizontal and vertical components of the
 tangential force at various points on the bridge.
-\centerline{\includegraphics*[height=1.7in,width=6in]{../Figures/Bridge6}}
+</p>
+
+<image source="images/Bridge6.png" width="60%" />
+<!-- \centerline{\includegraphics*[height=1.7in,width=6in]{../Figures/Bridge6}} -->
+<p>
 Since the curve is symmetric, we only draw the half where <m>x\ge
 0</m>.
 </p>
@@ -6394,6 +5437,7 @@ known as <q>Hooke's Law.</q> We will examine this in more depth in
      the Inquisition.
 </p>
 <aside>
+<title>Historical Background</title>
 <p>
 <xref ref="https://mathshistory.st-andrews.ac.uk/Biographies/Harriot/">Thomas
 Harriot</xref> did it before Galileo but Harriot didn't publish his
@@ -6405,7 +5449,7 @@ observations.
      All telescopes follow one of two basic designs, refractive and
      reflective. Refractive telescopes us the refractive property of
      light described by Snell's Law (see
-     <xref ref="SECsnells-law-refr">Section</xref>) to reduce the large image
+     <xref ref="SECTIONsnells-law-refr">Section</xref>) to reduce the large image
      entering the telescope to a smaller area, thus focusing the image
      for the observer. Galileo used a refractive telescope
 </p>
@@ -6418,7 +5462,7 @@ observations.
 
 <figure>
 <caption>
-<url href="https://www.lbto.org/" visual="https://www.lbto.org/">\textcolor{black}{{\centerline{The Large Binocular Telescope}} \centerline{Mt. Graham, Arizona}}</url>
+<url href="https://www.lbto.org/" visual="https://www.lbto.org/">The Large Binocular Telescope, Mt. Graham, Arizona</url>
 </caption>
 <image source="images/MountGraham.png" width="50%"/>
 </figure>
@@ -6476,12 +5520,12 @@ its focal
   To begin to answer that question we will need to think about a typical point
   mass at a point on the surface of the molten glass as shown below.
   Suppose the glass is spinning at an angular
-velocity of <m>\omega</m>~<m>\frac{\text{radians}}{\text{second}}</m>.  Our task
+velocity of <m>\omega\frac{\text{radians}}{\text{second}}</m>.  Our task
 is to find the function <m>y=y(x)</m> whose graph is shape of a
 cross-section of the surface of the liquid glass.
 </p>
   
-<image source="images/Spincasting8.png" width="60%" />
+<image source="images/SpinCasting8.png" width="60%" />
 <!-- \centerline{\includegraphics*[height=1.8in,width=4.2in]{../Figures/Spincasting8}} -->
 
 <p>
@@ -6500,7 +5544,7 @@ force is <m>mg</m>, where <m>g</m> is the acceleration due to gravity.  This is
 the force needed to counter the weight of the particle.  The only
 horizontal force is the centripetal force due to the spinning of the
 furnace, which is <m>mx\omega^2</m>.  (We will derive this formula
-analytically in <xref ref="CHAPTERcalc-trig">Chapte</xref> when we have extended the
+analytically in <xref ref="CHAPTERcalc-trig"></xref> when we have extended the
 scope of our differentiation rules.  For now we will assume this is
 correct and proceed.)
 </p>
@@ -6613,13 +5657,13 @@ correct and proceed.)
 <statement>
 <p>
  In <xref ref="PROBLEMSpinCast1"></xref>, show that in order to spin
-      a mirror with a focus\aside{Having the correct focus (and thus
+      a mirror with a focus<fn>Having the correct focus (and thus
         the correct focal length) is of paramount importance in the
         performance of the telescope.  To give you a notion of the
         precision required, it took <m>3</m> months to polish the surface
         of one of the primary mirrors in the Large Binocular Telescope
         to a precision of <m>30</m> nanometers (<m>3,000</m> times
-        thinner than a human hair).} at <m>(0,p)</m> the angular velocity
+        thinner than a human hair).</fn> at <m>(0,p)</m> the angular velocity
       must be <m>\omega =\sqrt{\frac{g}{2p}}</m>.
     </p>
 </statement>
@@ -6667,7 +5711,7 @@ correct and proceed.)
 <p>
     Consider the parabola with equation <m>y=\frac{x^2}{4p}</m> focus
     <m>F=(0,p)</m>, and directrix <m>y=-p</m> as in
-    <xref ref="PROBLEMParabolaDefinition">~</xref>.
+    <xref ref="PROBLEMParabolaDefinition"></xref>.
 </p>
 </introduction>
 <task>
@@ -6682,9 +5726,14 @@ correct and proceed.)
 <statement>
 <p>
  Show that <m>\angle \alpha = \angle\beta</m>.
-           \hint{What do you know about <m>\triangle FPQ</m>?}
-        </p>
+</p>
 </statement>
+<hint>
+<p>
+What do you know about <m>\triangle FPQ</m>?
+</p>
+</hint>
+
 </task>
 </problem>
 <!-- begin{embeddedproblem}[Parabolic Reflectivity] -->

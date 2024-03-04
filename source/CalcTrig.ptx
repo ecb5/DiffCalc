@@ -1630,11 +1630,18 @@ Use the results of <xref ref="DRILLPolRectConvert">Drill\</xref>
 
 </subsection>
 </section>
+
 <section xml:id="SECTIONdiff-sine-cosine">
 <title>The Differentials of the Sine and Cosine Functions</title>
-
-
 <introduction>
+<p>
+
+</p>
+</introduction>
+
+<subsection  xml:id="SUBSECTIONCircularMotion">
+<title>Circular Motion</title>
+
 <figure>
 <caption>
 <url href="https://mathshistory.st-andrews.ac.uk/HistTopics/Brachistochrone/" visual="https://mathshistory.st-andrews.ac.uk/HistTopics/Brachistochrone/">This figure needs a caption.</url>
@@ -1674,25 +1681,24 @@ so the label on the blue triangle is <m>-\dx{x}</m>.
 </statement>
 </exercise>
 
-<figure>
-<caption>
-<url href="https://mathshistory.st-andrews.ac.uk/HistTopics/Brachistochrone/" visual="https://mathshistory.st-andrews.ac.uk/HistTopics/Brachistochrone/">This figure needs a caption.</url>
-</caption>
-<image source="images/DiffSinCos4.png" width="50%"/>
-</figure>
+<p>
+The relevant portion of the diagram above are the two similar
+triangles shown in  the diagram below.
+</p>
+<!-- <figure> -->
+<!-- <caption> -->
+<!-- <url href="https://mathshistory.st-andrews.ac.uk/HistTopics/Brachistochrone/" visual="https://mathshistory.st-andrews.ac.uk/HistTopics/Brachistochrone/">This figure needs a caption.</url> -->
+<!-- </caption> -->
+<image source="images/DiffSinCos4.png" width="30%"/>
+<!-- </figure> -->
 <!-- \begin{wrapfigure}[]{r}{2in} -->
 <!--   \captionsetup{labelformat=empty} -->
 <!--   \vskip-8mm  -->
 <!-- \centerline{\includegraphics*[height=2in,width=2in]{../Figures/DiffSinCos4}} -->
 <!-- \label{fig:DiffSinCos4} -->
 <!-- \end{wrapfigure} -->
-<p>
 
-The relevant portion of the diagram above are the two similar
-triangles shown in  the diagram below.
-</p>
 <p>
-
 Using the two similar triangles we have
 <me> \dfdx{(\sin(\theta))}{\theta}=\frac{\cos(\theta)}{1}, \text{ and }
 -\dfdx{(\cos(\theta))}{\theta}=\frac{\sin(\theta)}{1}.
@@ -1710,7 +1716,7 @@ them.
 </me>
 </p>
 
-<example xml:id="TrigDerivExamples">
+<example xml:id="EXAMPLETrigDerivExamples">
 <introduction>
 <p>
   <!-- \label{TrigDerivExamples} -->
@@ -1731,11 +1737,12 @@ them.
 <statement>
 <p>
  Suppose
- <md>
- <mrow>
+ <m>
     y=\textcolor{blue}{(t^3-2t^2)}\textcolor{red}{\cos(t^2-t)}.
-    \text{Letting } \textcolor{red}{\theta=t^2-t}\text{  we have}
- </mrow>
+ </m>
+Letting 
+<m>\textcolor{red}{\theta=t^2-t}</m>  we have
+ <md>
  <mrow>
    \dx{y} \amp = \textcolor{blue}{(t^3-2t^2)}\textcolor{red}{\dx{(\cos(\theta)})}+\textcolor{red}{\cos(\theta)}\textcolor{blue}{\dx{(t^3-2t^2)}}
  </mrow>
@@ -1772,7 +1779,7 @@ them.
 </p>
 </statement>
 </task>
-<task>
+<task xml:id="EXAMPLETrigDerivExamplesE">
 <statement>
 <p>
  Suppose <m>y=\sin(k-\theta),</m> where <m>k</m> is constant.  Then
@@ -1790,13 +1797,16 @@ them.
 <problem>
 <introduction>
 <p>
-  Part (e) of  <xref ref="EXAMPLETrigDerivExamples"></xref> is more useful than is immediately
+   <xref ref="EXAMPLETrigDerivExamplesE">Problem</xref> is more useful than is immediately
   apparent
   because the complementary angle identities:
-  <m>
-  \cos(\theta) = \sin\left(\pi/2-\theta\right) \text{ and }
-  \sin(\theta) = \cos\left(\pi/2-\theta\right)
-  </m>
+  <me>
+  \cos(\theta) = \sin\left(\pi/2-\theta\right)
+  </me>
+ and
+<me> 
+ \sin(\theta) = \cos\left(\pi/2-\theta\right)
+</me>
   allow us to obtain the differential of either <m>\sin(\theta)</m> or
   <m>\cos(\theta)</m> provided only that we have the differential of the
   other.
@@ -1842,77 +1852,43 @@ them.
 <!--       \end{enumerate} -->
 <!-- \end{embeddedproblem} -->
 
-
-<exercise>
-<introduction>
+<exercise xml:id="EXERCISEDiffPractice1">
+<statement>
 <p>
-  Compute the differential, <m>\dx{y},</m> for each of the following
+<idx><h></h></idx>
+  Compute the differential, <m>\dx{y}</m>, of each of the following
   functions:
-</p>
-</introduction>
-<task>
-<statement>
-<p>
+<ol cols="2" marker="i">
+<li>
  <m>y=\cos(-3\theta)</m>
-    </p>
-</statement>
-</task>
-<task>
-<statement>
-<p>
+</li>
+<li>
  <m>y=\sin(\theta)\cos(\theta)</m>
-                </p>
-</statement>
-</task>
-<task>
-<statement>
-<p>
- <m>y=\cos^2(\theta)</m>
-    </p>
-</statement>
-</task>
-<task>
-<statement>
-<p>
+</li>
+<li> 
+<m>y=\cos^2(\theta)</m>
+</li>
+<li>
  <m>y=\cos(\theta^2)</m>
-     </p>
-</statement>
-</task>
-<task>
-<statement>
-<p>
+</li>
+<li>
  <m>y=\cos^2(\theta)+\sin^2(\theta)</m>
-    </p>
-</statement>
-</task>
-<task>
-<statement>
-<p>
+</li>
+<li>
  <m>y=\cos^2(\theta)-\sin^2(\theta)</m>
-    </p>
-</statement>
-</task>
-<task>
-<statement>
-<p>
+</li>
+<li>
  <m>y=\cos^4(\theta)-\sin^4(\theta)</m>
-      </p>
-</statement>
-</task>
-<task>
-<statement>
-<p>
+</li>
+<li>
  <m>y=\cos(5\theta^3-2\theta^2-3\theta+12)</m>
-    </p>
-</statement>
-</task>
-<task>
-<statement>
-<p>
+</li>
+<li>
  <m>y=\sin^2(7\pi \theta) + \cos^2(7\pi \theta)</m>
-  </p>
+</li>
+</ol>
+</p>
 </statement>
-</task>
 </exercise>
 <!-- begin{ProficiencyDrill} -->
 <!--   Compute the differential, <m>\dx{y},</m> for each of the following -->
@@ -2164,7 +2140,8 @@ them.
 </p>
 </statement>
 </problem>
-</introduction>
+</subsection>
+
 
 <subsection xml:id="SUBSETIONpolar-coord-calc">
 <title>Polar Coordinates and Calculus</title>
@@ -2795,9 +2772,11 @@ the centripetal acceleration is given by <m>r\omega^2</m>.
   \end{ParamEq}
   </m>
   as seen below.
-    \centerline{\includegraphics*[height=2in,width=2.3in]{../Figures/Centripetal1}}
-  
 </p>
+    
+<image source="images/Centripetal1.png" width="60%" />
+<!-- \centerline{\includegraphics*[height=2in,width=2.3in]{../Figures/Centripetal1}} -->
+  
 </introduction>
 <task>
 <statement>

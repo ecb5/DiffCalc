@@ -232,9 +232,9 @@
         <p>
           <!-- \label{def:natural-exponential-ivp} -->
           The function which satisfies the IVP
-          <me>
-            \dfdx{y}{x}=y,\ \ y(0)=1.\label{IVP:ExpDiffeq}
-          </me>
+          <men  xml:id="IVPExpDiffeq">
+            \dfdx{y}{x}=y,\ \ y(0)=1.
+          </men>
           is called the <term>natural exponential function</term>, denoted
           <m>\exp(x)</m>.
         </p>
@@ -298,12 +298,9 @@
     </problem>
   </section>
   <section xml:id="SECTIONexponential-growth">
-    <title>Exponential Growth</title>
-    <introduction>
-      <title>The Art of Guessing Effectively</title>
-      <idx><h>Guessing</h><h>The Art of Guessing Effectively</h></idx>
+    <title>Exponential Growth and Exponential Notation</title>
       <p>
-        It is now time to solve <xref ref="IVPExpDiffeq">IVP~</xref>) by finding an
+        It is now time to solve <xref ref="IVPExpDiffeq">IVP</xref>) by finding an
         explicit formula for <m>\exp(x)</m>.
       </p>
 
@@ -312,6 +309,10 @@
         what should we do?  Since we don't seem to have any better options,
         let's see if we can guess a solution.
       </p>
+
+    <paragraphs  xml:id="DIGRESSIONGuessingEffectively">
+      <title>DIGRESSION: The Art of Guessing Effectively</title>
+      <idx><h>Guessing</h><h>The Art of Guessing Effectively</h></idx>
 
       <p>
         No, really.  Guessing can be surprisingly effective.
@@ -781,11 +782,11 @@
             <p>
               Replacing <m>\dx{x}</m> with <m>0.0000001</m> on the right side of
               <xref ref="EQd(2^x)">Equation~</xref>) we get
-              <me>
+              <men  xml:id="EQUATIONExp2">
                 \dfdx{y}{x}=\dfdx{(2^x)}{x}\approx
                 2^x\left[\frac{(2^{\dx{x}}-1)}{\dx{x}}\right]_{\dx{x}=0.0000001} \approx
-                2^x(0.7).\label{eq:Exp2}
-              </me>
+                2^x(0.7).
+              </men>
             </p>
 
             <exercise>
@@ -828,12 +829,15 @@
         \exp(x)=e^x.
       </me>
       </p>
-    </introduction>
-
-<subsection  xml:id="SUBSECTIONSUBSECTIONExpNotation">
-<title>Exponential Notation</title>
+<p>
+<alert>END OF DIGRESSION</alert>
+</p>
+    </paragraphs>
+<!--   </section> -->
+<!-- <section  xml:id="SUBSECTIONExpNotation"> -->
+<!-- <title>Exponential Notation</title> -->
 <p> 
-       We originally named this function <m>\exp(x)</m>, and this is still a
+       We originally named this function <m>\exp(x)</m>.That is still a
         valid name for it, just as sqr(<m>x</m>) is a valid name for the function
         sqr<m>(x)=x^2</m>. However, just as the formula <m>y(x)=x^2</m>
         better represents the way we usually think about the squaring
@@ -851,12 +855,13 @@
         <me>e^x=\exp(x)=1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+ \cdots.</me>
 </p>
 <p>
-        To see why this is, ask yourself what the expression <m>e^{1/2}</m>
-        means.
+        To see why we define it this way, ask yourself what the
+        expression <m>e^{1/2}</m> means.
 </p>
 <p>
         That's easy enough. Since <m>x^{1/2}=\sqrt{x}</m> clearly
-        <m>e^{1/2}=\sqrt{e}.</m> It would not necessarily be easy to compute the
+        <m>e^{1/2}</m> is the square root of this funny number
+        <m>e</m>: <me>e^{1/2}=\sqrt{e}.</me> It would not necessarily be easy to compute the
         square root of <m>e</m> but we're only asking about the meaning of our
         symbols here. Since <m>e</m> is a positive number we can take its square
         root and that is what <m>\sqrt{e}</m> means, even if we can't
@@ -877,24 +882,34 @@
 <p>
         And this is not just a matter of not knowing the value of <m>e</m>.  The
         difficulty is built into the real numbers. Recall that we saw the
-        same issue come up in <xref ref="SECsome-rules-diff">Section</xref> when we
+        same issue come up in <xref ref="SECTIONsome-rules-diff">Section</xref> when we
         tried to extend the Power Rule to irrational exponents.
         This is weird.
 </p>
+<aside>
+<title>Comment</title>
+<p>
+Many people are repelled when they encounter this
+          situation. Especially in mathematics. After all, mathematics is
+          about having the answers to mathematical problems isn't it? 
+</p>
+<p>
+          Well,
+          no. Actually it isn't. You're thinking of engineering. 
+          Mathematics is about finding the answers to mathematical
+          problems, not having them.
+
+</p>
+</aside>
 <p>
         Even if we can't compute it we need to find a way to give
-        meaning\aside{Many people are repelled when they encounter this
-          situation. Especially in mathematics. After all, mathematics is
-          about having the answers to mathematical problems isn't it? \\
-          Well,
-          no. Actually it isn't. You're thinking of engineering. \\
-          Mathematics is about finding the answers to mathematical
-          problems, not having them.} to the expression <m>e^x</m> that works when <m>x</m> is
+        meaning
+  to the expression <m>e^x</m> that works when <m>x</m> is
         irrational.  Ideally, we'd like our interpretation to be consistent
         with our understanding that <m>e^3= e\cdot e\cdot e.</m>
 
         This is precisely why we define natural exponential as an infinite
-        series.    It can be shown that if <m>m</m>, and <m>n</m> are integers
+        series.    It can be shown (though we will not show it here) that if <m>m</m>, and <m>n</m> are integers
         (<m>n\gt0</m>)  then
         <me>
         \exp(m/n)=\left(\sqrt[n]{e}\right)^m=1+(m/n)+\frac{(m/n)^n}{n!}+\frac{(m/n)^3}{3!}+\frac{(m/n)^4}{4!}+\ldots,\label{eq:ExpSeries4}
@@ -904,9 +919,9 @@
         If there is only one solution to the IVP (there is) then
         <m>y(x) = e^x</m> and <m>y(x)=1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\ldots</m>
         must be the same solution.  Defining <m>\exp(x)</m> as
-        <me>
-          \exp(x)=1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\frac{x^4}{4!}+\ldots,\label{eq:ExpSeries3}
-      </me>
+        <men  xml:id="EQUATIONExpSeries3">
+          \exp(x)=1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\frac{x^4}{4!}+\ldots,
+        </men>
         rather than <m>\exp(x)=e^x</m> addresses all of these issues. For example
         <m>e^\pi</m> means
         <me>
@@ -924,30 +939,30 @@
  <introduction>
       <p>
           For this problem use the approximation
-          <me>
-
-            \label{eq:ExpApprox}
+          <men  xml:id="EQUATIONExpApprox">
             e^x\approx 1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+ \frac{x^4}{4!}+ \frac{x^5}{5!}+ \frac{x^6}{6!}+ \frac{x^7}{7!}+ \frac{x^8}{8!}
-
-      </me>
+      </men>
       </p>
       </introduction>
       <task>
       <statement>
       <p>
-       Use <xref ref="EQExpApprox">Equation~</xref>) to show that
+       Use <xref ref="EQUATIONExpApprox">equation</xref>) to show that
             <m>\inverse{e} \approx 0.36788</m>. Compare this with the numerical
             value of
-            <m>\frac1e\approx\frac{1}{2.71828}</m> you get from a calculator. \\
-            \hint{In
-              <xref ref="EQExpApprox">equation~</xref>) take <m>x=-1.</m>}
+            <m>\frac1e\approx\frac{1}{2.71828}</m> you get from a calculator.
           </p>
       </statement>
+<hint>
+<p>
+In <xref ref="EQUATIONExpApprox">equation</xref>) take <m>x=-1.</m>
+</p>
+</hint>
       </task>
       <task>
       <statement>
       <p>
-       Use <xref ref="EQExpApprox">Equation~</xref>) to show that
+       Use <xref ref="EQUATIONExpApprox">equation</xref>) to show that
             <m>\sqrt{e} \approx 1.64872</m>. Compare this with the numerical
             value of <m>\sqrt{e}\approx \sqrt{2.71828}</m> you get from a
             calculator.
@@ -960,30 +975,27 @@
       <introduction>
       <p>
           For this problem use the approximation
-          <me>
-
-            \label{eq:ExpApprox}
+          <men  xml:id="EQUATIONExpApprox">
             e^x\approx 1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+ \frac{x^4}{4!}+ \frac{x^5}{5!}+ \frac{x^6}{6!}+ \frac{x^7}{7!}+ \frac{x^8}{8!}
-
-      </me>
+          </men>
       </p>
       </introduction>
       <task>
       <statement>
       <p>
-       Use <xref ref="EQUATIONeq:ExpApprox"></xref> to show that -->
+       Use <xref ref="EQUATIONExpApprox"></xref> to show that -->
             <m>\inverse{e} \approx 0.36788</m>. Compare this with the numerical
             value of
             <m>\frac1e\approx\frac{1}{2.71828}</m> you get from a calculator. \\
             \hint{In
-              <xref ref="EQUATIONeq:ExpApprox"></xref> take <m>x=-1.</m>}
+              <xref ref="EQUATIONExpApprox"></xref> take <m>x=-1.</m>}
           </p>
       </statement>
       </task>
       <task>
       <statement>
       <p>
-       Use <xref ref="EQUATIONeq:ExpApprox"></xref> to show that
+       Use <xref ref="EQUATIONExpApprox"></xref> to show that
             <m>\sqrt{e} \approx 1.64872</m>. Compare this with the numerical
             value of <m>\sqrt{e}\approx \sqrt{2.71828}</m> you get from a
             calculator.
@@ -1050,19 +1062,21 @@ You can decide for yourself how natural this really
         e\approx 1+1+\frac{1^2}{2!}+\frac{1^3}{3!}+ \cdots +
         \frac{1^{50}}{50!}.
       </me>
-      Compute this approximation using your favorite computing technology
-      to confirm  that <m>e\approx 2.718</m>.  \\
-      \comment{If you don't have any computing technology available just
-      compute the sum of the first six terms.}
+      Compute this approximation using your favorite computing
+      technology to confirm that <m>e\approx 2.718</m>.  (If you don't
+      have any computing technology available just compute the sum of
+      the first six terms.)
       </p>
       </statement>
       </exercise>
 
       <p>
-      The upshot of <xref ref="DRILLComputingE"></xref> is that if we replace <m>2</m>
-      with <m>e\approx 2.718</m> in <xref ref="EQExp2">Equation</xref>, or if we replace <m>3</m>
-      in <xref ref="EQExp3">Equation</xref> the constant we get should be closer to <m>1</m>
-      than either <m>0.7</m> or <m>1.1</m>.
+      The upshot of <xref ref="DRILLComputingE"></xref> is that if we
+      replace <m>2</m> with <m>e\approx 2.718</m> in <xref
+      ref="EQUATIONExp2">Equation</xref>, or if we replace <m>3</m> in
+      <xref ref="EQUATIONExp3">Equation</xref> the constant the result
+      should be closer to <m>1</m> than if we use  <m>0.7</m> or
+      <m>1.1</m>, respectively.
       </p>
 
       <p>
@@ -1093,7 +1107,7 @@ You can decide for yourself how natural this really
       </p>
 <p>
         But the evidence is compelling that <m>\exp(x)=e^x</m> is the solution of
-        the <xref ref="IVPExpDiffeq">IVP~</xref>).  Henceforth then, we will reserve the
+        the <xref ref="IVPExpDiffeq">IVP</xref>).  Henceforth then, we will reserve the
         letter <m>e</m> to designate the base of the natural exponential function.
       </p>
 
@@ -1120,7 +1134,7 @@ You can decide for yourself how natural this really
       Find the derivative of <m>y=e^{x}\sin(3x).</m>
       </p>
       <p>
-        Using the product rule, we have
+        Using the Product Rule, we have
         <md>
           <mrow>
             \dx{\left(e^{x}\sin(3x)\right)}\amp =e^{x}\dx{(\sin(3x))} + \sin(3x)\dx{(e^{x})}
@@ -1141,181 +1155,124 @@ You can decide for yourself how natural this really
 
 
       <exercise>
-        <introduction>
-          <p>
-            Compute <m>\dx{y}</m> for each of the following, and use this to find the IVP
-            that each one solves. \\
-            \hint{Use a substitution to make each one easier on your eyes.}
-      </p>
-      </introduction>
-      <task>
-        <statement>
-          <p>
-      <m>y=e^{2x}</m>
-      </p>
-      </statement>
-      </task>
-      <task>
-        <statement>
-          <p>
-      <m>y=e^{\pi x}</m>
-      </p>
-      </statement>
-      </task>
-      <task>
-        <statement>
-          <p>
-      <m>y=e^{\sqrt{2}x}</m>
-      </p>
-      </statement>
-      </task>
-      <task>
-        <statement>
-          <p>
+        <p>
+          Compute <m>\dx{y}</m> for each of the following, and use
+          this to find the IVP that each one solves. (Use a
+          substitution to make each one easier on your eyes.)
+        </p>
+        <ol cols="2" marker="i">
+          <li>
+            <m>y=e^{2x}</m>
+          </li>
+          <li>
+            <m>y=e^{\pi x}</m>
+          </li>
+          <li>
+            <m>y=e^{\sqrt{2}x}</m>
+          </li>
+          <li>
             <m>y=e^{rx}</m> where <m>r</m> is an unknown constant.
-      </p>
-      </statement>
-      </task>
+          </li>
+        </ol>
       </exercise>
 
       <exercise>
-        <introduction>
           <p>
             For each of the following find <m>\dfdx{y}{x}</m>:
       </p>
-      </introduction>
-      <task>
-        <statement>
-          <p>
-      <m>\displaystyle y=\sin(e^x)</m>
-      \solution{<m> \dx{y} = e^x\cos(e^x)\dx{x}</m>}
-      </p>
-      </statement>
-      </task>
-      <task>
-        <statement>
-          <p>
-      <m>\displaystyle y=e^{\sin(x)}</m>
-      \solution{<m> \dx{y} = e^{\sin(x)}\cos(x)\dx{x}</m>}
-      </p>
-      </statement>
-      </task>
-      <task>
-        <statement>
-          <p>
-      <m>\displaystyle y=\cos(e^x)</m>
-      \solution{<m> \dx{y} = -e^x\sin(e^x)\dx{x}</m>}
-      </p>
-      </statement>
-      </task>
-      <task>
-        <statement>
-          <p>
-      <m>\displaystyle y=e^{\cos(x)}</m>
-      </p>
-      </statement>
-      </task>
-      <task>
-        <statement>
-          <p>
+<ol cols="3" marker="i">
+<li>
+      <m> y=\sin(e^x)</m>
+</li>
+<li>
+  <m> y=e^{\sin(x)}</m>
+</li>
+<li>
+      <m> y=\cos(e^x)</m>
+</li>
+<li>
+      <m> y=e^{\cos(x)}</m>
+</li>
+<li>
       <m>y=e^{5x}\sin(\pi x)</m>
-      </p>
-      </statement>
-      </task>
-      <task>
-        <statement>
-          <p>
+</li>
+<li>
       <m>y=e^{x}\cos(3x)</m>
-      </p>
-      </statement>
-      </task>
-      <task>
-        <statement>
-          <p>
+</li>
+<li>
       <m>y= \dfrac{x}{e^x}</m>
-      \solution{<m> \dx{y}=\frac{1+x}{e^x}\dx{x}</m>}
-      </p>
-      </statement>
-      </task>
-      <task>
-        <statement>
-          <p>
+</li>
+<li>
       <m>y=\frac{e^x-1}{e^x+1}</m>
-      </p>
-      </statement>
-      </task>
-      <task>
-        <statement>
-          <p>
+</li>
+<li>
       <m>y= \dfrac{e^x}{4x^2+3x-5}</m>
-      \solution{<m>\displaystyle \dx{y} =
-      \dfrac{e^x(4x^2-5x-8)}{(4x^2+3x-5)^2}</m>}
-      </p>
-      </statement>
-      </task>
-      <task>
-        <statement>
-          <p>
+</li>
+<li>
       <m>y=e^{x^2+\sin(x)}</m>
-      </p>
-      </statement>
-      </task>
-      <task>
-        <statement>
-          <p>
+</li>
+<li>
       <m>y= \frac{3\sqrt{x}+1}{e^x}</m>
-      </p>
-      </statement>
-      </task>
-      <task>
-        <statement>
-          <p>
+</li>
+<li>
       <m>y= \tan(e^x)</m>
-      </p>
-      </statement>
-      </task>
+</li>
+</ol>
       </exercise>
 
 
 
       <exercise>
-        <introduction>
-          <p>
-            Find an equation of the line tangent to each function below at the
-            given point.
-      </p>
-      </introduction>
-      <task>
-        <statement>
-          <p>
-            <m>y= \dfrac{x}{e^x}</m>, <m>(0,0)</m> \solution{<m> y = x</m>}
-      </p>
-      </statement>
-      </task>
-      <task>
-        <statement>
-          <p>
-      <m>y= \dfrac{x}{e^x}</m>, <m>\left(1,1/e\right)</m>
-      \solution{<m> y = 1/e</m>}
-      </p>
-      </statement>
-      </task>
-      <task>
-        <statement>
-          <p>
-      <m>y= \dfrac{e^x}{4x^2+3x-5}</m>, <m>\left(0,-1/5\right)</m>
-      \solution{<m> y = \frac{8}{25}x-\frac{1}{5}</m>}
-      </p>
-      </statement>
-      </task>
-      <task>
-        <statement>
-          <p>
-      <m>y= \dfrac{e^x}{4x^2+3x-5}</m>, <m>(1,e/2)</m>
-      \solution{<m> y -\dfrac{e}{2}= -\dfrac{9e}{4}(x-1)</m>}
-      </p>
-      </statement>
-      </task>
+        <p>
+          Show that the  equation of the line tangent to each function below at the
+          given point is the given line.
+        </p>
+        <ol cols="2" marker="i">
+          <li>
+            <p>
+              Function: <m>y= \dfrac{x}{e^x}</m>,
+</p>
+<p>
+ Point: <m>(0,0)</m> 
+            </p>
+            <p>
+              Tangent line: <m> y = x</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              Function: <m>y= \dfrac{x}{e^x}</m>,
+</p>
+<p>
+ Point: <m>\left(1,1/e\right)</m>
+            </p>
+            <p>
+              Tangent line: <m> y = 1/e</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              Function: <m>y= \dfrac{e^x}{4x^2+3x-5}</m>,
+</p>
+<p>
+ Point: <m>\left(0,-1/5\right)</m>
+            </p>
+            <p>
+              Tangent line: <m> y = \frac{8}{25}x-\frac{1}{5}</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              Function: <m>y= \dfrac{e^x}{4x^2+3x-5}</m>, 
+</p>
+<p>
+Point: <m>(1,e/2)</m>
+            </p>
+            <p>
+              Tangent line: <m> y -\dfrac{e}{2}= -\dfrac{9e}{4}(x-1)</m>
+            </p>
+          </li>
+        </ol>
       </exercise>
 
 
@@ -1386,7 +1343,7 @@ You can decide for yourself how natural this really
         <statement>
           <p>
             Compute <m>\dfdx{y}{t}</m> for each of the following:
-            <ol>
+            <ol cols="2" marker="i">
               <li>
                 <p>
       <m>y=te^t</m>
@@ -1489,9 +1446,9 @@ You can decide for yourself how natural this really
         <statement>
           <p>
             Show that <m>y=e^{t+a}</m> satisfies <m>\dfdx{y}{t}=y</m> for any
-            constant <m>a</m>.\\
-            \comment{This problem is not the same as
-            <xref ref="IVPExpDiffeq">IVP~</xref>). How does it differ?}
+            constant <m>a</m>.
+            How does this problem differ from 
+            <xref ref="IVPExpDiffeq">IVP</xref>.
       </p>
       </statement>
       </task>
@@ -1516,41 +1473,6 @@ You can decide for yourself how natural this really
       </task>
       </problem>
 
-      <problem>
-        <introduction>
-          <p>
-      </p>
-      </introduction>
-      <task>
-        <statement>
-          <p>
-            Show that <m>y=e^{t+a}</m> satisfies <m>\dfdx{y}{t}=y</m> for any -->
-            constant <m>a</m>.\\
-            \comment{This problem is not the same as
-            <xref ref="IVPIVP:ExpDiffeq"></xref>. How does it differ?}
-      </p>
-      </statement>
-      </task>
-      <task>
-        <statement>
-          <p>
-      Show that <m>y=Ae^t</m> also satisfies <m>\dfdx{y}{t}=y</m>
-      for any constant <m>A</m>.
-      </p>
-      </statement>
-      </task>
-      <task>
-        <statement>
-          <p>
-            Parts (a) and (b) imply that <m>e^{t+a}=Ae^t</m>. Use this
-            knowledge to to show that
-            <me>
-              e^{t+a}=e^t\cdot e^a.
-      </me>
-      </p>
-      </statement>
-      </task>
-      </problem>
 
       <problem>
         <introduction>
@@ -1561,9 +1483,9 @@ You can decide for yourself how natural this really
         <statement>
           <p>
             Show that <m>y=e^{t+a}</m> satisfies <m>\dfdx{y}{t}=y</m> for any
-            constant <m>a</m>.\\
-            \comment{This problem is not the same as
-            <xref ref="IVPExpDiffeq"></xref>. How does it differ?}
+            constant <m>a</m>.
+            (This problem is not the same as
+            <xref ref="IVPExpDiffeq"></xref>. How does it differ?)
       </p>
       </statement>
       </task>
@@ -1596,60 +1518,55 @@ You can decide for yourself how natural this really
 
 
       <problem>
-        <introduction>
-          <p>
-      </p>
-      </introduction>
-      <task>
-        <statement>
-          <p>
-            For <m>y=e^x</m>, <m>y=\sin(x)</m>, and <m>y=\cos(x)</m> compute
-      
-            <ol>
-              <li>
-                <p>
-      <m>\displaystyle\dfdx{y}{x}</m>
-      </p>
-      </li>
-      <li>
-        <p>
-      <m>\displaystyle\dfdxn{y}{x}{2}</m>
-      </p>
-      </li>
-      <li>
-        <p>
-      <m>\displaystyle\dfdxn{y}{x}{3}</m>
-      </p>
-      </li>
-      <li>
-        <p>
-      <m>\displaystyle\dfdxn{y}{x}{4}</m>
-      </p>
-      </li>
-      </ol>
-
-      </p>
-      </statement>
-      </task>
-      <task>
-        <statement>
-          <p>
-            Does it seem significant that <m>\dfdxn{y}{x}{4}=y</m> for all
-            three functions? What does your intuition say?
-      </p>
-      </statement>
-      </task>
+        <task>
+          <statement>
+            <p>
+              For <m>y=e^x</m>, <m>y=\sin(x)</m>, and <m>y=\cos(x)</m> compute
+              <ol cols="2" marker="i">
+                <li>
+                  <p>
+                    <m>\dfdx{y}{x}</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <m>\dfdxn{y}{x}{2}</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <m>\dfdxn{y}{x}{3}</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <m>\dfdxn{y}{x}{4}</m>
+                  </p>
+                </li>
+              </ol>
+              
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Does it seem significant that <m>\dfdxn{y}{x}{4}=y</m> for all
+              three functions? What does your intuition say?
+            </p>
+          </statement>
+        </task>
       </problem>
-</subsection>
+    </section>
 
-    <subsection xml:id="SUBSECTIONhyperb-trig-hang">
+    <section xml:id="SECTIONhyperb-trig-hang">
       <title>Hyperbolic Trigonometry: The Hanging Chain</title>
 
       <p>
-        We commented in <xref ref="SECbridg-chains-telesc">Section</xref> that Galileo
+        We commented in <xref ref="SECTIONbridg-chains-telesc">Section</xref> that Galileo
         believed erroneously that a chain hanging from two pegs falls
         naturally into the shape of a parabola. In
-        <xref ref="PICcatenary">Problem~\</xref> we showed that Galileo was wrong but we
+        <xref ref="PROBLEMcatenary">Problem</xref> we showed that Galileo was wrong but we
         have not
         yet addressed the question: What is the shape of a hanging chain?
       </p>
@@ -1666,6 +1583,73 @@ You can decide for yourself how natural this really
         natural exponential function <m>y=e^x</m> is not the solution itself,
         it is the key to the solution.
       </p>
+
+<problem  xml:id="PROBLEMHangingChain">
+<title>The Shape of a Hanging Chain</title>
+<introduction>
+<p>
+        The Calculus in this problem is pretty straightforward but the
+        Algebra gets a bit messy. To avoid some of this mess in parts (a),
+        (b), and (c) we will solve the special case where <m>\frac{w}{H}=1</m>.
+        In part (d) we'll use our solution of this special case to solve
+        the original problem.
+</p>
+<p>
+        So assume that <m>\frac{w}{H}=1</m>.  For this special case we will call
+        our variables <m>X</m> and <m>Y</m>, rather than <m>x</m> and <m>y</m>. The reasons for
+        this will become clear in part (d).
+</p>
+</introduction>
+<task>
+<statement>
+<p>
+     Show that
+        <m>1+\left(\frac{e^X-e^{-X}}{2}\right)^2=\left(\frac{e^X+e^{-X}}{2}\right)^2.</m>
+        \hint{It might help to make the substitution <m>e^X=a</m> just to make
+        things <q>easier on the eyes.</q> That makes <m>e^{-X}=\frac1a.</m>}
+</p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+     Show that
+        <m>1+\left(\frac{e^X-e^{-X}}{2}\right)^2=\left(\frac{e^X+e^{-X}}{2}\right)^2.</m>
+        \hint{It might help to make the substitution <m>e^X=a</m> just to make
+        things <q>easier on the eyes.</q> That makes <m>e^{-X}=\frac1a.</m>}
+</p>
+</statement>
+</task>
+<task>
+<p>
+     Now let's tackle the original problem.
+  Show that
+      <men  xml:id="EQUATIONCatSol}">
+        y=\frac{H}{w}
+        \left(\frac{e^{\frac{wx}{H}}+e^{-\frac{wx}{H}}}{2}\right)
+      </men>
+      satisfies the equation
+      <me>
+        \dfdxn{y}{x}{2}=\frac{w}{H} \sqrt{1+\left(\dfdx{y}{x}\right)^2}
+      </me>
+      where <m>w</m> is the weight density of the chain, and <m>H</m> is the
+      constant (magnitude of the) horizontal tension.\\
+      \hint{This is essentially the same computation you did for the
+      special case, but the Algebra is messier. Consider making
+      it <q>easier on the eyes</q> with the
+      substitutions <me>X=\frac{wx}{H} \text{ and }
+      Y(X)=\frac12\left(e^X+e^{-X}\right).</me>
+      We already know from part (c) that
+      <m>\dfdxn{Y}{X}{2}=\sqrt{1+\left(\dfdx{Y}{X}\right)^2}</m>.
+      Notice that <m>y=\frac{H}{w}Y(X)</m> and use this to show that
+      <m>
+        \dfdx{y}{x}=\dfdx{Y}{X}\text{ and that }
+        \dfdxn{y}{x}{2}=\frac{w}{H}\dfdxn{Y}{X}{2}.
+      </m>
+      }
+</p>
+</task>
+</problem>
 
       <!--   \begin{embeddedproblem}[The Shape of a Hanging Chain]  ;;; MULTILEVEL PROBLEM -->
       <!--   <!-\- <!-\\- \label{problem:HangingChain} -\\-> -\-> -->
@@ -1729,26 +1713,32 @@ You can decide for yourself how natural this really
       <!-- \end{embeddedproblem} -->
 
       <p>
-
         The expressions <m>\frac12\left(e^x+e^{-x}\right)</m> and
         <m>\frac12\left(e^x-e^{-x}\right)</m> arise frequently in many scientific
         and engineering problems and have been named the <term>hyberbolic
         cosine</term> and <term>hyberbolic sine</term> and are denoted <m>\cosh(x)</m>
-        and\aside{Traditionally, <m>\sinh</m> is read as <q>cinch</q>.}  <m>\sinh(x)</m>,
+        and  <m>\sinh(x)</m>,
         respectively. As you see these names break with the longstanding
         mathematical tradition of giving important functions three letter
         names. Why do you suppose we would do that?
       </p>
-      <p>
 
+      <aside>
+<title>Mathematical Notation</title>
+<p>
+Traditionally, <m>\sinh</m> is read aloud as <q>cinch</q> and <m>\cosh{}</m> is read aloud as, well 
+<q>cosh</q>.
+</p>
+</aside>
+
+      <p>
         Recall that the unit circle, <m>x^2+y^2=1</m>, is parameterized by
         <me>
           P(t)=
-          \begin{ParamEq}
+          \ParamEqThree
           {\cos(t)}
           {\sin(t)}
           {  0\leq t\lt 2\pi}
-          \end{ParamEq}
         </me>
         since <me> x^2+y^2= \cos^2(t)+\sin^2(t)=1.
       </me>
@@ -1782,8 +1772,8 @@ You can decide for yourself how natural this really
         why they are  called <term>Hyperbolic Trigonometric
         Functions</term>.
       </p>
-      <p>
 
+      <p>
         The many scientific and engineering problems that involve the
         hyperbolic functions are slightly outside the scope of this text. So
         we will only examine some of their more elementary properties in the
@@ -1799,78 +1789,132 @@ You can decide for yourself how natural this really
             definitions of the trigonometric functions:
 
             <md>
-              <mrow>\tanh(x) &amp;=\frac{\sinh(x)}{\cosh{(x)}},</mrow>
-              <mrow>\coth(x) &amp;=\frac{\cosh(x)}{\sinh{(x)}},</mrow>
-              <mrow>\sech(x) &amp;=\frac{1}{\cosh(x)},</mrow>
-              <mrow>\csch(x) &amp;=\frac{1}{\sinh(x)}.</mrow>
+              <mrow>\tanh(x) \amp{}=\frac{\sinh(x)}{\cosh{(x)}}, \amp{}\coth(x)\amp{} =\frac{\cosh(x)}{\sinh{(x)}},</mrow>
+              <mrow>\sech(x) \amp{}=\frac{1}{\cosh(x)},\amp{}\csch(x) \amp{}=\frac{1}{\sinh(x)}.</mrow>
             </md>
           </p>
         </statement>
       </definition>
 
-      <!-- <problem  xml:id="PROBLEMPROBLEMHyperbolicTrig"> -->
-      <!-- <introduction> -->
-      <!-- <p> -->
-      <!-- Show that -->
-      <!-- </p> -->
-      <!-- </introduction> -->
-      <!-- <task> -->
-      <!-- <statement> -->
-      <!-- <p> -->
-      <!-- <m>\displaystyle \cosh(x\pm y)=\cosh(x)\cosh(y) \pm \sinh(x)\sinh(y).</m> -->
-      <!-- </p> -->
-      <!-- </statement> -->
-      <!-- </task> -->
-      <!-- <task> -->
-      <!-- <statement> -->
-      <!-- <p> -->
 
-      <!-- </p> -->
-      <!-- </statement> -->
-      <!-- </task> -->
-      <!-- </problem> -->
-      <aside>
-        <title>Note to self</title>
-        <p>
-          This problem needs formatting
-        </p>
-      </aside>
+<problem xml:id="PROBLEMHyperbolicTrig">
+<introduction>
+<p>
 
-      <p>
-        \begin{embeddedproblem}  ;;; MULTILEVEL PROBLEM  
-        <!-- <!-\- \label{problem:HyperbolicTrig} -\-> -->
-        In addition to <m>\cosh(x)</m> and <m>\sinh(x)</m> we make the following
-        definitions which are clearly modeled on the
-        definitions of the trigonometric functions:
-        \begin{description}%[label={  (\alph*)}]
-        \item[<m>\tanh(x)</m>] <m>\displaystyle=\frac{\sinh(x)}{\cosh{(x)}},</m>
-        \item[<m>\coth(x)</m>] <m>\displaystyle=\frac{\cosh{(x)}}{\sinh(x)},</m>
-        \item[<m>\sech(x)</m>] <m>\displaystyle=\frac{1}{\cosh{(x)}},</m>
-        \item[<m>\csch(x)</m>] <m>\displaystyle=\frac{1}{\sinh(x)}.</m>
-        \end{description}
-        \begin{enumerate}[label={  (\alph*)}]
-        \item Show that
-        \begin{enumerate}[label={  (\roman*)}]
-        \item <m>\displaystyle\dfdx{(\cosh(x))}{x} = \sinh(x)</m>
-        \item <m>\displaystyle\dfdx{(\sinh(x))}{x} = \cosh(x)</m>.
-        \item <m>\displaystyle\dfdx{(\tanh(x))}{x} = \sech^2(x)</m>.
-        \item <m>\displaystyle\dfdx{(\coth(x))}{x} = -\csch^2(x)</m>.
-        \item <m>\displaystyle\dfdx{(\sech(x))}{x} = -\sech(x)\tanh(x)</m>.
-        \item <m>\displaystyle\dfdx{(\csch(x))}{x} = -\csch(x)\coth(x)</m>.
-        \end{enumerate}
-        \item Show that: <m>\sinh(-x)=-\sinh(x)</m>
-        \item Show that: <m>\cosh(-x)=\cosh(x)</m>
-        \item Show that:
-        <m>\displaystyle \sinh(x\pm y)=\sinh(x)\cosh(y)\pm \cosh(x)\sinh(y).
-        </m>
-        \item Show that:
-        <m>\displaystyle \cosh(x\pm y)=\cosh(x)\cosh(y) \pm \sinh(x)\sinh(y).
-        </m>
-        \item Compare each of the identities above with the corresponding
-        trigonometric identity.
-        \end{enumerate}
-        \end{embeddedproblem}
-      </p>
+</p>
+</introduction>
+<task>
+<statement>
+<p>
+ Show that
+<ol  marker="i">
+<li>
+<p>
+ <m>\dfdx{(\cosh(x))}{x} = \sinh(x)</m>
+</p>
+</li>
+<li>
+<p>
+ <m>\dfdx{(\sinh(x))}{x} = \cosh(x)</m>.
+</p>
+</li>
+<li>
+<p>
+ <m>\dfdx{(\tanh(x))}{x} = \sech^2(x)</m>.
+</p>
+</li>
+<li>
+<p>
+ <m>\dfdx{(\coth(x))}{x} = -\csch^2(x)</m>.
+</p>
+</li>
+<li>
+<p>
+ <m>\dfdx{(\sech(x))}{x} = -\sech(x)\tanh(x)</m>.
+</p>
+</li>
+<li>
+<p>
+ <m>\dfdx{(\csch(x))}{x} = -\csch(x)\coth(x)</m>.
+</p>
+</li>
+</ol>
+
+</p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ Show that: <m>\sinh(-x)=-\sinh(x)</m>
+</p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ Show that: <m>\cosh(-x)=\cosh(x)</m>
+</p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ Show that: <m> \sinh(x\pm y)=\sinh(x)\cosh(y)\pm \cosh(x)\sinh(y).</m>
+</p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ Show that: <m> \cosh(x\pm y)=\cosh(x)\cosh(y) \pm \sinh(x)\sinh(y).</m>
+</p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ Compare each of the identities above with the corresponding trigonometric identity.
+</p>
+</statement>
+</task>
+</problem>
+
+      <!-- <p> -->
+      <!--   \begin{embeddedproblem}  ;;; MULTILEVEL PROBLEM   -->
+      <!--   <!-\- <!-\\- \label{problem:HyperbolicTrig} -\\-> -\-> -->
+      <!--   In addition to <m>\cosh(x)</m> and <m>\sinh(x)</m> we make the following -->
+      <!--   definitions which are clearly modeled on the -->
+      <!--   definitions of the trigonometric functions: -->
+      <!--   \begin{description}%[label={  (\alph*)}] -->
+      <!--   \item[<m>\tanh(x)</m>] <m>\displaystyle=\frac{\sinh(x)}{\cosh{(x)}},</m> -->
+      <!--   \item[<m>\coth(x)</m>] <m>\displaystyle=\frac{\cosh{(x)}}{\sinh(x)},</m> -->
+      <!--   \item[<m>\sech(x)</m>] <m>\displaystyle=\frac{1}{\cosh{(x)}},</m> -->
+      <!--   \item[<m>\csch(x)</m>] <m>\displaystyle=\frac{1}{\sinh(x)}.</m> -->
+      <!--   \end{description} -->
+      <!--   \begin{enumerate}[label={  (\alph*)}] -->
+      <!--   \item Show that -->
+      <!--   \begin{enumerate}[label={  (\roman*)}] -->
+      <!--   \item <m>\displaystyle\dfdx{(\cosh(x))}{x} = \sinh(x)</m> -->
+      <!--   \item <m>\displaystyle\dfdx{(\sinh(x))}{x} = \cosh(x)</m>. -->
+      <!--   \item <m>\displaystyle\dfdx{(\tanh(x))}{x} = \sech^2(x)</m>. -->
+      <!--   \item <m>\displaystyle\dfdx{(\coth(x))}{x} = -\csch^2(x)</m>. -->
+      <!--   \item <m>\displaystyle\dfdx{(\sech(x))}{x} = -\sech(x)\tanh(x)</m>. -->
+      <!--   \item <m>\displaystyle\dfdx{(\csch(x))}{x} = -\csch(x)\coth(x)</m>. -->
+      <!--   \end{enumerate} -->
+      <!--   \item Show that: <m>\sinh(-x)=-\sinh(x)</m> -->
+      <!--   \item Show that: <m>\cosh(-x)=\cosh(x)</m> -->
+      <!--   \item Show that: -->
+      <!--   <m>\displaystyle \sinh(x\pm y)=\sinh(x)\cosh(y)\pm \cosh(x)\sinh(y). -->
+      <!--   </m> -->
+      <!--   \item Show that: -->
+      <!--   <m>\displaystyle \cosh(x\pm y)=\cosh(x)\cosh(y) \pm \sinh(x)\sinh(y). -->
+      <!--   </m> -->
+      <!--   \item Compare each of the identities above with the corresponding -->
+      <!--   trigonometric identity. -->
+      <!--   \end{enumerate} -->
+      <!--   \end{embeddedproblem} -->
+      <!-- </p> -->
 
       <problem xml:id="PROBLEMSinhCoshDiffeq">
         <statement>
@@ -1880,20 +1924,20 @@ You can decide for yourself how natural this really
             <me>
               \dfdxn{y}{x}{2} = y
             </me>
-            and compare this with <xref ref="PROBLEMSinCosDiffeq">Problem~\</xref>.
+            and compare this with <xref ref="PROBLEMSinCosDiffeq"></xref>.
           </p>
         </statement>
       </problem>
 
-    </subsection>
+    </section>
 
 
-    <subsection xml:id="SUBSECTIONGatewayArch">
+    <section xml:id="SECTIONGatewayArch">
       <title>The Gateway Arch</title>
 
       <figure>
         <caption>
-          <url href="https://link.springer.com/content/pdf/10.1007/s00004-010-0030-8.pdf" visual="https://link.springer.com/content/pdf/10.1007/s00004-010-0030-8.pdf">\textcolor{black}{The Gateway Arch in St. Louis}</url>
+          <url href="https://link.springer.com/content/pdf/10.1007/s00004-010-0030-8.pdf" visual="https://link.springer.com/content/pdf/10.1007/s00004-010-0030-8.pdf">The Gateway Arch in St. Louis</url>
         </caption>
         <image source="images/GatewayArch.png" width="50%"/>
       </figure>
@@ -1905,7 +1949,7 @@ You can decide for yourself how natural this really
       <!--  <!-\-    </caption> -\-> -->
       <!--  <!-\-    <image source="images/GatewayArch.png" width="50%"/> -\-> -->
       <!--  <!-\-    </figure> -\-> -->
-      <!-- <!-\- \begin{wrapfigure}[]{l}{3in} -\-> -->
+      <!-- <!-\- \begin{wrapfigure}[{]{l}{3in} -\-> -->
       <!-- <!-\-   \captionsetup{labelformat=empty} -\-> -->
       <!-- <!-\-   \centerline{\includegraphics*[height=2in,width=3in]{../Figures/GatewayArch}} -\-> -->
       <!-- <!-\-   \label{fig:GatewayArch} -\-> -->
@@ -1949,7 +1993,7 @@ You can decide for yourself how natural this really
         <task>
           <statement>
             <p>
-              Plot the graph of <xref ref="EQUATIONeq:GatewayArch1"></xref>, and
+              Plot the graph of <xref ref="EQUATIONGatewayArch1">equation</xref>, and
               determine the <m>x</m> and <m>y</m> intercepts.
             </p>
           </statement>
@@ -1959,20 +2003,21 @@ You can decide for yourself how natural this really
             <p>
               Notice that the answers in part (b) do not determine an arch
               whose height and width are exactly <m>630</m> feet.  This is because
-              this curve represents the centers\aside{Actually the
+              this curve represents the centers <fn>Actually the
               centroids. You will learn about centroids when you take Integral
-              Calculus.} of the triangular cross sections.
-              <ol>
+              Calculus.</fn> of the triangular cross sections.
+              <ol marker="i">
                 <li>
                   <p>
-                    The sketch below represents the cross-section of the
+                    The sketch below represents the cross-sectional slice of
                     the arch, which is an equilateral triangle. In the sketch
                     each side is equal to <m>s</m>, and the point <m>P</m> is
                     equidistant from <m>A</m>, <m>B</m>, and <m>C</m>. Show that the
                     perpendicular distance from <m>P</m> to one side is
-                    <m>\frac{s}{2\sqrt{3}}</m>.\\
-                    \centerline{\includegraphics*[height=.8in,width=1in]{../Figures/CentroidArch}}
+                    <m>\frac{s}{2\sqrt{3}}</m>.
                   </p>
+<image source="images/CentroidArch.png" width="30%" />
+<!-- \centerline{\includegraphics*[height=.8in,width=1in]{../Figures/CentroidArch}} -->
                 </li>
                 <li>
                   <p>
@@ -1987,27 +2032,27 @@ You can decide for yourself how natural this really
         <task>
           <statement>
             <p>
-              The curve Saarinen used is called a \term{weighted catenary}.
+              The curve Saarinen used is called a <term>weighted catenary</term>.
               It is the shape of a hanging chain whose density is not uniform.
               Saarinen decided to go with this since the size of the triangles
               was decreasing as they approached the apex of the arch.  A true
               catenary arch would be something of the form
-              <me>
+              <men  xml:id="EQUATIONGatewayArch2">
                 y=\left(625.0925
                 +\frac{1}{0.00842976}\right)-\frac{1}{0.00842976}\cosh(0.00842976x)
-                \label{eq:GatewayArch2}
-              </me>
-              Graph <xref ref="EQUATIONeq:GatewayArch1"></xref>
-              and <xref ref="EQUATIONeq:GatewayArch2"></xref> on the same set of axes and use
-              this to show that they both have the same requisite height
-              and width.
+              </men>
+              Plot the graphs of <xref
+              ref="EQUATIONGatewayArch1">equation</xref> and <xref
+              ref="EQUATIONGatewayArch2">equation</xref> on the same
+              set of axes and use this to show that they both have the
+              same requisite height and width.
             </p>
           </statement>
         </task>
       </problem>
-    </subsection>
+    </section>
 
-    <subsection>
+    <section>
       <title>Exponential Growth</title>
 
       <example xml:id="EXAMPLEpopulation-growth">
@@ -2024,10 +2069,9 @@ You can decide for yourself how natural this really
           rate of growth from day <m>n</m> to day <m>n+1</m> is proportional to how many
           bacteria we have on day <m>n</m>. Thus from any one day to the next we
           see that the change in <m>P</m> (<m>\Delta P</m>) is given by
-          <me>
-            \label{eq:DiscBacterModel}
-            \Delta P = 0.3 P\Delta t
-          </me>
+          <men  xml:id="EQUATIONDiscBacterModel">
+                        \Delta P = 0.3 P\Delta t
+          </men>
           where <m>\Delta t = 1</m> day, and <m>\Delta P</m> is the change in population
           on that day.
 
@@ -2039,21 +2083,32 @@ You can decide for yourself how natural this really
           next that enough of them divide during any one hour so that at the
           end of one day the population has still grown by <m>30</m>\%. Then from
           any one hour to the next we again have
-          <xref ref="EQDiscBacterModel">Equation~</xref>) but this time <m>\Delta t</m> is
+          <xref ref="EQUATIONDiscBacterModel">Equation</xref>) but this time <m>\Delta t</m> is
           equal to one hour, or <m>\frac{1}{24}</m> day.  However, we don't have to
           measure time in days. If we measure it in hours instead we again
           have <m>\Delta t=1 \text{ hour } = \frac{1}{24} \text{ day}</m>. The constant factor is still <m>0.3</m> because we assumed that the
           population was growing at <m>30\%</m> per day, and this is still
-          true. That factor is called the <term>nominal</term>\aside{The word
+          true. That factor is called the <term>nominal</term> growth rate.
+        </p>
+
+
+<aside>
+<title>Mathematical Terminology</title>
+
+<p>
+The word
           nominal means <q>in name or thought</q> so this is the named
           growth rate. It is not always the actual growth rate as we will
-          see soon.} growth rate.
-        </p>
+          see soon.
+</p>
+</aside>
+
+
         <p>
           If we measure time in seconds the same reasoning will give us
-          <xref ref="EQDiscBacterModel">Equation~</xref>), with <m>\Delta t=1 \text{ second }
+          <xref ref="EQUATIONDiscBacterModel">Equation</xref>), with <m>\Delta t=1 \text{ second }
           = 1.15741\times 10^{-5} \text{ day}</m>. If we
-          measure in nanoseconds we get <xref ref="EQDiscBacterModel">Equation~</xref>),
+          measure in nanoseconds we get <xref ref="EQUATIONDiscBacterModel">Equation</xref>),
           with <m>\Delta t=1 \text{ nanosecond } = 1.15741\times 10^{-14} \text{ day}</m>. If we measure time in
           infinitesimal increments we  get
           <me>
@@ -2071,13 +2126,14 @@ You can decide for yourself how natural this really
 
           Since we started with <m>10</m> grams of
           bacteria we have the initial condition <m>P(0)=10</m>. This says that the
-          amount of bacteria at time <m>t</m> must satisfy the IVP% \aside{Notice that our units are consistent:
-
-          <me>
-            \dfdx{P}{t}= 0.3P,\ P(0)=10.\label{eq:BacteriaIVP}
-          </me>
+          amount of bacteria at time <m>t</m> must satisfy the IVP:
+          <mdn>
+            <mrow xml:id="EQUATIONBacteriaIVP">
+            \dfdx{P}{t}\amp{}= 0.3P,\amp{} P(0)\amp{}=10.
+            </mrow>
+          </mdn>
           Take specific notice that the differential equation in
-          <xref ref="EQBacteriaIVP">IVP~</xref>) expresses the idea
+          <xref ref="EQUATIONBacteriaIVP">IVP</xref>) expresses the idea
           that the rate of change of the population, <m>\dfdx{P}{t}</m>, is
           proportional to the size of the population, <m>P</m>. The constant of
           proportionality is <m>0.3</m>, or <m>30\%</m>.
@@ -2097,9 +2153,9 @@ You can decide for yourself how natural this really
       <exercise xml:id="DRILLExpGrowth1">
         <statement>
           <p>
-            To begin solving <xref ref="EQBacteriaIVP">IVP~</xref> show that one solution of
+            To begin solving <xref ref="EQUATIONBacteriaIVP">IVP</xref> show that one solution of
             the <term>differential equation</term> <m> \dfdx{P}{t}=0.3P</m>, from
-            <xref ref="EQBacteriaIVP">IVP~</xref>) is: <me>\rho(t)=e^{0.3t}.</me> There are other
+            <xref ref="EQUATIONBacteriaIVP">IVP</xref>) is: <me>\rho(t)=e^{0.3t}.</me> There are other
             solutions.  Find one of them.
           </p>
         </statement>
@@ -2107,7 +2163,7 @@ You can decide for yourself how natural this really
       <p>
         From <xref ref="DRILLExpGrowth1"></xref> we see that a solution of the
         differential equation in our bacterial growth problem,
-        <xref ref="EQBacteriaIVP">IVP~</xref>), is <m>\rho(t)= e^{0.3t}</m>. But <m>\rho(t)</m> does
+        <xref ref="EQUATIONBacteriaIVP">IVP</xref>), is <m>\rho(t)= e^{0.3t}</m>. But <m>\rho(t)</m> does
         not satisfy the initial condition since
         \begin{align*}
         \rho(0)\amp =e^{(0.3)0}\\
@@ -2115,7 +2171,7 @@ You can decide for yourself how natural this really
         \amp =1\neq10,
         \end{align*}
         so <m>\rho(t)</m> can't be the solution of our bacterial growth problem,
-        <xref ref="EQBacteriaIVP">IVP~</xref>).
+        <xref ref="EQUATIONBacteriaIVP">IVP</xref>).
       </p>
       <p>
         We've found that <m>P(t)= e^{0.3t}</m> satisfies the differential equation
@@ -2179,7 +2235,7 @@ You can decide for yourself how natural this really
               <me>
                 P(t)=10e^{0.3t}
               </me>
-              is the solution of <xref ref="IVPeq:BacteriaIVP"></xref>.
+              is the solution of <xref ref="EQUATIONBacteriaIVP">equation</xref>.
             </p>
           </statement>
         </task>
@@ -2207,16 +2263,12 @@ You can decide for yourself how natural this really
               per day.  Would the bacteria have grown half as
               much in the first day as it did when the growth rate was <m>30\%</m>
               per day?
-              <ol>
+              <ol cols="2" marker="i">
                 <li>
-                  <p>
                     Make your best  guess.
-                  </p>
                 </li>
                 <li>
-                  <p>
                     Use Calculus to test your guess.
-                  </p>
                 </li>
               </ol>
             </p>
@@ -2228,9 +2280,11 @@ You can decide for yourself how natural this really
         In general, if we start with a population of, say <m>P_0</m>, and the rate
         of change of <m>P(t)</m> is proportional to <m>P</m> itself then it will satisfy
         an IVP of the form:
-        <me>
-          \dfdx{P}{t}=rP, \  P(0)=P_0.\label{eq:ExpGen}
-        </me>
+        <mdn>
+          <mrow xml:id="IVPExpSpecial">
+            \dfdx{P}{t}\amp{}=rP, \amp{}  P(0)\amp{}=P_0.
+          </mrow>
+        </mdn>
         The constant <m>r</m> is called the <term>nominal</term> growth rate as we've
         seen.  Because <m>r=\frac{\dfdx{P}{t}}{P}</m> it is also called the <term>
         relative</term> growth rate of the population and is often given as a
@@ -2238,41 +2292,37 @@ You can decide for yourself how natural this really
       </p>
 
       <p>
-        The <xref ref="EQExpGen">IVP~</xref>) should look familiar to you.  Notice that when
-        <m>r=1</m> and <m>P_0=1</m> it is  the same as <xref ref="IVPExpDiffeq">IVP~</xref>)
-        <me>
-          \dfdx{y}{x}=y,\ \ y(0)=1,
-        </me>
+        The <xref ref="IVPExpSpecial">IVP</xref>) should look familiar to you.  Notice that when
+        <m>r=1</m> and <m>P_0=1</m> it is  the same as <xref ref="IVPExpDiffeq">IVP</xref>
         which we used to define the the natural exponential. Except, of
         course, for the names of the variables. To put it another
-        way <xref ref="IVPExpDiffeq">IVP~</xref>) is the special case of
-        <xref ref="EQExpGen">IVP~</xref>) when <m>r=1.</m> Since these are so similar it is not
-        surprising  that the solution of <xref ref="EQExpGen">IVP~</xref>)
+        way <xref ref="IVPExpSpecial">IVP</xref>) is the special case of
+        <xref ref="IVPExpDiffeq">IVP</xref>) when <m>r=1.</m> Since these are so similar it is not
+        surprising  that the solution of <xref ref="IVPExpSpecial">IVP</xref>
         involves the natural exponential.
       </p>
 
       <p>
-        <xref ref="PROBLEMExpGrowth2">Problems~\</xref> <xref ref="PROBLEMBacteriaIVP1">and~\</xref>
+        <xref ref="PROBLEMExpGrowth2">Problems</xref> <xref ref="PROBLEMBacteriaIVP1">and</xref>
         suggest, rather convincingly, that the general solution of
-        <xref ref="EQExpGen">IVP~</xref>) is
-        <me>
-          \label{eq:GeneralExponentialSolution}
+        <xref ref="IVPExpSpecial">IVP</xref>) is
+        <men  xml:id="EQUATIONGeneralExponentialSolution">
           P(t)=P_0e^{rt}.
-        </me>
+        </men>
       </p>
 
       <exercise>
         <statement>
           <p>
             Show that <m>P(t)=P_0e^{rt}</m> is a
-            solution of <xref ref="EQExpGen">IVP~</xref>).
+            solution of <xref ref="IVPExpSpecial">IVP</xref>).
           </p>
         </statement>
       </exercise>
 
       <p>
-        Part (c) in <xref ref="PROBLEMBacteriaIVP1">Problem~\</xref> indicates that there
-        are limitations to the usefulness of <xref ref="EQBacteriaIVP">IVP~</xref>) and
+        Part (c) in <xref ref="PROBLEMBacteriaIVP1">Problem</xref> indicates that there
+        are limitations to the usefulness of <xref ref="EQUATIONBacteriaIVP">IVP</xref>) and
         its solution, <m>P(t)=10e^{0.3 t}</m>. If we use it to
         predict how much bacteria there would be after one year we get
         <m>P(365)=10e^{0.3\times365}\approx3.59\times10^{48}</m> grams.  Since
@@ -2289,17 +2339,20 @@ You can decide for yourself how natural this really
         within its limitations.
       </p>
 
-      <figure>
-        <caption>
-          <url href="https://www.youtube.com/watch?v=wlbuGdoAFek" visual="https://www.youtube.com/watch?v=wlbuGdoAFek">This figure needs a caption.</url>
-        </caption>
-        <image source="images/AlgaeBloomNOAA2.png" width="50%"/>
-      </figure>
-
       <p>
         But in the short term this is actually a very good model. The picture
-        at the right shows the surface of Lake Erie during  what is called
-        an algal bloom. The green discoloration on the western side of the
+below  shows the surface of Lake Erie during  what is called
+        an algal bloom. 
+      </p>
+
+      <!-- <figure> -->
+      <!--   <caption> -->
+      <!--     <url href="https://www.youtube.com/watch?v=wlbuGdoAFek" visual="https://www.youtube.com/watch?v=wlbuGdoAFek">This figure needs a caption.</url> -->
+      <!--   </caption> -->
+        <image source="images/AlgaeBloomNOAA2.png" width="80%"/>
+      <!-- </figure> -->
+<p>
+The green discoloration on the western side of the
         lake is from an explosive (exponential) growth of algae.  When the
         conditions for algae growth are nearly optimum -- if there is abundant
         food, there is room for the population to expand into, and the water
@@ -2341,8 +2394,8 @@ You can decide for yourself how natural this really
         poppas now, means proportionally more babies later. This is all that
         is required for exponential growth to occur.
       </p>
-    </subsection>
-    <subsection xml:id="SUBSECTIONExpAndCmpndInt">
+    </section>
+    <section xml:id="SECTIONExpAndCmpndInt">
       <title>Exponential Functions and Compound Interest</title>
 
       <p>
@@ -2543,7 +2596,7 @@ You can decide for yourself how natural this really
         <statement>
           <p>
             The function <m>A(t)</m> has the same form as our solution of
-            <xref ref="EQBacteriaIVP">IVP~\</xref> so it must satisfy the differential
+            <xref ref="EQBacteriaIVP">IVP\</xref> so it must satisfy the differential
             equation: <m>\dfdx{A}{t}= 0.05A</m>.
             Confirm that it does.
           </p>
@@ -2551,7 +2604,7 @@ You can decide for yourself how natural this really
       </exercise>
 
       <p>
-        This is interesting. It appears that  <xref ref="EQExpGen">IVP~\</xref> models
+        This is interesting. It appears that  <xref ref="EQExpGen">IVP\</xref> models
         continuously compounded investments as well as population growth. Does
         this make sense to you?
       </p>
@@ -2631,8 +2684,8 @@ You can decide for yourself how natural this really
       </p>
 
 
-    </subsection>
-  </section>
+    </section>
+
   <section xml:id="SECTIONnatural-logarithm-1">
     <title>The Natural Logarithm</title>
     <introduction>
@@ -2777,7 +2830,7 @@ You can decide for yourself how natural this really
 
         The graph of the natural exponential is very similar to the graph of
         <m>y=3^x</m>. As we saw in
-        <xref ref="SECTIONinverse-tan-and-cot">~</xref> if we have the  graph of some
+        <xref ref="SECTIONinverse-tan-and-cot"></xref> if we have the  graph of some
         function we can find the graph of its inverse by interchanging the
         horizontal and vertical axes. As a practical matter, this is the same
         as reflecting the graph across the line, <m>y=x</m>. The graph of the
@@ -3097,7 +3150,7 @@ You can decide for yourself how natural this really
         <m>
           \ln(2x-4)=0
         </m>
-        we would  take advantage of Property~\#2. Taking the exponential
+        we would  take advantage of Property #2. Taking the exponential
         of both side we see that:
         <md>
           <mrow>
@@ -4046,7 +4099,7 @@ You can decide for yourself how natural this really
             \dfdx{D}{t}=rD\ \ D(0)=40-5=35.\label{eq:CoolingIVP1}
           </me>
           Do you recognize this equation? This has the same form as
-          <xref ref="IVPeq:BacteriaIVP">~</xref> so the solution is
+          <xref ref="IVPeq:BacteriaIVP"></xref> so the solution is
           <me>
             D(t)=D(0) e^{rt}=35e^{rt}.
           </me>
@@ -4469,8 +4522,8 @@ need to memorize. Memorize it.
 <problem>
   <introduction>
     <p>
-Recall that in <xref ref="SUBSECTIONcurvature">~</xref>
-(<xref ref="PROBLEMeq:CurvatureDef">~</xref>) we showed the curvature of the graph
+Recall that in <xref ref="SUBSECTIONcurvature"></xref>
+(<xref ref="PROBLEMeq:CurvatureDef"></xref>) we showed the curvature of the graph
 of a function <m>y=y(x)</m> is given by
 <me>
   \kappa=\frac{\abs{\dfdxn{y}{x}{2}}}{\left(1+\left(\dfdx{y}{x}\right)^2\right)^{\frac32}}.
@@ -4508,8 +4561,8 @@ of a function <m>y=y(x)</m> is given by
 </task>
 </problem>
 <!-- \begin{embeddedproblem} -->
-<!--   Recall that in Section~\ref{SECTIONcurvature} -->
-<!--   (Problem~\ref{eq:CurvatureDef}) we showed the curvature of the graph -->
+<!--   Recall that in Section\ref{SECTIONcurvature} -->
+<!--   (Problem\ref{eq:CurvatureDef}) we showed the curvature of the graph -->
 <!--   of a function </m>y=y(x)<m> is given by -->
 <!--   <me> -->
 <!--   \kappa=\frac{\abs{\dfdxn{y}{x}{2}}}{\left(1+\left(\dfdx{y}{x}\right)^2\right)^{\frac32}}. -->
@@ -5139,7 +5192,7 @@ where <m>P</m> is the sound power of the source measured in watts and
 <subsection xml:id="SUBSECTIONLogDiff">
 <title>Logarithmic Differentiation</title>
 <p>
-  Recall that in <xref ref="SECTIONsome-rules-diff">~</xref> we observed that the
+  Recall that in <xref ref="SECTIONsome-rules-diff"></xref> we observed that the
   Power Rule does not easily extend to <m>y=x^\alpha</m>, where <m>\alpha</m> is
   an irrational number. The properties of the natural exponential and
   the natural logarithm functions will (finally) allow us to make this
@@ -5163,7 +5216,7 @@ Solving for <m>x</m> we see that
 </men>
 which  is the Power Rule. Since we did not constraint <m>\alpha</m> except
 to say that it is a real number the different versions of the Power Rule
-that we saw in <xref ref="SECTIONsome-rules-diff">~</xref> are all special
+that we saw in <xref ref="SECTIONsome-rules-diff"></xref> are all special
 cases of <xref ref="EQUATIONeq:GeneralPowerRule"></xref>.
 </p>
 <p>
@@ -5535,7 +5588,7 @@ If we multiply by <m>y</m> we get
 
       </me>
       where <m>k</m> is the spring constant.  The solution of
-      <xref ref="EQSHO6">Equation~</xref>) is
+      <xref ref="EQSHO6">Equation</xref>) is
       <me>
 
         y(t)=A\sin\sqrt{\frac{k}{m}}t+B\cos\sqrt{\frac{k}{m}}t\label{eq:SHOSpringSolution}
@@ -5545,7 +5598,7 @@ If we multiply by <m>y</m> we get
     </p>
     <p>
 
-      <xref ref="EQSHOSpringSolution">Equation~</xref>) is unrealisitic because the
+      <xref ref="EQSHOSpringSolution">Equation</xref>) is unrealisitic because the
       oscillations described never vary.  In the real world, as a result of
       friction, the spring's oscillations will get shorter and shorter,
       eventually stopping altogether. How could we modify this model in
@@ -5569,7 +5622,7 @@ If we multiply by <m>y</m> we get
 
   Putting the words <q>resistance is proportional to velocity</q> into
   symbols means we need to add the term <m>-b\dfdx{y}{t}</m> to
-  <xref ref="EQSHO6">Equation~</xref>) where <m>b\gt0</m> is a constant which depends on
+  <xref ref="EQSHO6">Equation</xref>) where <m>b\gt0</m> is a constant which depends on
   the viscosity of the ambient medium (air, in this case).  (Why must
   this proportionality be negative?)
 </p>
@@ -5583,7 +5636,7 @@ or
 <me>
   \dfdxn{y}{t}{2}+\frac{b}{m}\dfdx{y}{t}+\frac{k}{m}y = 0.\label{eq:DampedOscillator1}
 </me>
-<xref ref="EQDampedOscillator1">Equation~</xref>) is a little scary to look at, let alone
+<xref ref="EQDampedOscillator1">Equation</xref>) is a little scary to look at, let alone
 try to solve.  We'll begin with a simplified version where
 <m>b=k=m</m>:
 <me>
@@ -5631,7 +5684,7 @@ try to solve.  We'll begin with a simplified version where
 <!-- \end{embeddedproblem-enumerate} -->
 <p>
   It is one thing to confirm a given solution as in
-  <xref ref="PROBLEMDampedOscillator1">Problem~\</xref>,  but  quite another to
+  <xref ref="PROBLEMDampedOscillator1">Problem\</xref>,  but  quite another to
   find the
   solution in the first place.  A natural question to ask is
 <q>How was this problem solved the first time?</q>
@@ -5680,13 +5733,13 @@ Sandifer, of Western Connecticut State University
   once asked by a novice how best to learn Calculus. Laplace told him
   <q>Read Euler, read Euler, he is the master of us all.</q>}
   <m>(1707-1783)</m> solved the differential
-  <xref ref="EQDampedProblem1">Equation~</xref>) by guessing that for some
+  <xref ref="EQDampedProblem1">Equation</xref>) by guessing that for some
 carefully chosen  value of <m>c</m>
 <me>
   y(t)=e^{ct}
 </me>
 would be a solution. In view of the
-results of <xref ref="PROBLEMDampedOscillator1">Problem~\</xref> this guess looks
+results of <xref ref="PROBLEMDampedOscillator1">Problem\</xref> this guess looks
 completely crazy. Where is the sine? Where is the cosine? Nothing
 seems to be oscillating!
 </p>
@@ -5732,13 +5785,13 @@ differential equation.}
 </problem>
 <p>
 
-  Solving  <xref ref="EQImagSolution">Equation~</xref> we see that
+  Solving  <xref ref="EQImagSolution">Equation</xref> we see that
   <m>
     c=\frac{-1}{2}\pm\frac{\sqrt{-3}}{2},
 </m>
 so we conclude that if <m>c=-\frac12+\frac{\sqrt{-3}}{2}</m> or
 <m>c=-\frac12-\frac{\sqrt{-3}}{2}</m> then <m>y=e^{ct}</m> satisfies
-<xref ref="EQDampedProblem1">Equation~</xref>).
+<xref ref="EQDampedProblem1">Equation</xref>).
 </p>
 <p>
 
@@ -5766,7 +5819,7 @@ so we conclude that if <m>c=-\frac12+\frac{\sqrt{-3}}{2}</m> or
 </p>
 <p>
 
-  Euler now had two solutions of <xref ref="EQDampedProblem1">Equation~</xref>), one
+  Euler now had two solutions of <xref ref="EQDampedProblem1">Equation</xref>), one
   for each possible value of <m>c</m>:
   <me>
     y_1(t) =e^{\left(-\frac12+\frac{\sqrt{3}}{2}i\right)t} =
@@ -5832,7 +5885,7 @@ is also a solution of <xref ref="EQUATIONeq:DampedProblem1"></xref>.
 
 <p>
   To find meaning in his solutions he returned to the simpler
-  <xref ref="EQSHO6">Equation~</xref>),
+  <xref ref="EQSHO6">Equation</xref>),
   <me>  m\dfdxn{y}{t}{2}= -ky,</me> which he
   already knew how to solve. To make things simpler still he assumed
   that <m>m=k=1</m> and tried his crazy guess, <m>y=e^{ct}</m> again on
@@ -5844,18 +5897,18 @@ is also a solution of <xref ref="EQUATIONeq:DampedProblem1"></xref>.
   <statement>
     <p>
       Show that <m>y=e^{ct}</m> is a solution of the differential
-      <xref ref="EQEulerSimpleSHO-1">Equation~</xref>) when <m>c=i</m> or <m>c=-i</m>.
+      <xref ref="EQEulerSimpleSHO-1">Equation</xref>) when <m>c=i</m> or <m>c=-i</m>.
 </p>
 </statement>
 </problem>
 <p>
 
-  <xref ref="PROBLEMDampedOscillation1">Problem~\</xref> shows that <m>y=e^{it}</m> and
+  <xref ref="PROBLEMDampedOscillation1">Problem\</xref> shows that <m>y=e^{it}</m> and
   <m>y=e^{-it}</m> are both solutions of
-  <xref ref="EQEulerSimpleSHO-1">Equation~</xref>),
+  <xref ref="EQEulerSimpleSHO-1">Equation</xref>),
   but Euler knew (as we do\aside{See
-  <xref ref="SECmore-high-deriv">Section~</xref>).}) that the solution of
-  <xref ref="EQEulerSimpleSHO-1">Equation~</xref>) is
+  <xref ref="SECmore-high-deriv">Section</xref>).}) that the solution of
+  <xref ref="EQEulerSimpleSHO-1">Equation</xref>) is
   <m>
     y(t)=a\cos(t)+b\sin(t)
 </m>
@@ -5864,7 +5917,7 @@ where <m>a</m> and <m>b</m> are constants.
 <p>
 
   He now had  very different looking solutions of
-  <xref ref="EQEulerSimpleSHO-1">Equation~</xref>). Euler guessed that somehow
+  <xref ref="EQEulerSimpleSHO-1">Equation</xref>). Euler guessed that somehow
   these  must be the same, so he set
   <me>
     e^{it}=a\cos(t)+b\sin(t)
@@ -5908,12 +5961,12 @@ first.}
 <!-- \end{embeddedproblem-enumerate} -->
 <p>
 
-  From part (a) of <xref ref="PROBLEMEulersFormula">Problem~\</xref> we get the
+  From part (a) of <xref ref="PROBLEMEulersFormula">Problem\</xref> we get the
   formula,
   <me>
     e^{it}=\cos(t)+ i\sin(t).\label{eq:EulerIdentity}
 </me>
-<xref ref="EQEulerIdentity">Equation~</xref> is known as <term>Euler's Identity</term> and it
+<xref ref="EQEulerIdentity">Equation</xref> is known as <term>Euler's Identity</term> and it
 is foundational to electrical engineering, and physics (especially
 Quantum Mechanics). For mathematicians it is the key to
 understanding the geometry of the <term>Complex Numbers</term> (numbers of
@@ -5976,8 +6029,8 @@ Show that <m> \cosh(it)=\frac{e^{it}+e^{-it}}{2}=\cos(t)</m>
 <!--       \end{enumerate} -->
 <!--     \end{embeddedproblem} -->
 <p>
-  Finally, we return to <xref ref="EQDampedProblem1">Equation~</xref>). In
-  <xref ref="PROBLEMDampedOscillator1">Problem~\</xref> we saw that
+  Finally, we return to <xref ref="EQDampedProblem1">Equation</xref>). In
+  <xref ref="PROBLEMDampedOscillator1">Problem\</xref> we saw that
   <me> z(t)=e^{-\frac{t}{2}} \left[
   A\cos\left(\frac{\sqrt{3}}{2}t\right)+B\sin\left(\frac{\sqrt{3}}{2}t\right)
   \right]</me> and  in part (c) of <xref ref="PROBLEMDampOscExpSol"></xref> we saw that
