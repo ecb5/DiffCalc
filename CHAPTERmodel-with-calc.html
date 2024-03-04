@@ -143,7 +143,7 @@ window.MathJax = {
 \def\eval#1#2#3{#1\hskip.5ex{\llap{\rule[-1.5ex]{0.5pt}{4ex}}_{\raise{-1.5ex}{\hskip.5ex#2=#3}}}}
 \def\dispeval#1#2#3{#1\hskip.5ex{\llap{\smash{\rule[-2ex]{0.5pt}{5ex}}}_{\raise{-2ex}{\hskip.5ex#2=#3}}}}
 
-
+\def\geneval#1#2{\left.#1\right|_{#2}}
 
 \def\bigeval#1#2#3{\eval{#2}{#2}{#3}}
 
@@ -266,18 +266,17 @@ window.MathJax = {
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECONDBringCalc" class="internal"><span class="codenumber">5.5</span> <span class="title">Bringing in Calculus</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONDerivative" class="internal"><span class="codenumber">5.6</span> <span class="title">The Derivative</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONnewt-flux-dynam" class="internal"><span class="codenumber">5.7</span> <span class="title">Thinking Dynamically</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONnewt-meth-flux" class="internal"><span class="codenumber">5.8</span> <span class="title">Newton’s Method of Fluxions</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONself-inters-curv" class="internal"><span class="codenumber">5.9</span> <span class="title">Self-intersecting Curves and Parametric Equations</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONParametricFunctions" class="internal"><span class="codenumber">5.9.1</span> <span class="title">Parametric Functions</span></a></div></li></ul>
+<div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONnewt-meth-flux" class="internal"><span class="codenumber">5.8</span> <span class="title">Newton’s Method of Fluxions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONParametricFunctions" class="internal"><span class="codenumber">5.8.1</span> <span class="title">Parametric Functions</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONbridg-chains-telesc" class="internal"><span class="codenumber">5.10</span> <span class="title">Bridges, Chains, Domes, and Telescopes</span></a></div>
+<div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONbridg-chains-telesc" class="internal"><span class="codenumber">5.9</span> <span class="title">Bridges, Chains, Domes, and Telescopes</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONBridges" class="internal"><span class="codenumber">5.10.1</span> <span class="title">Bridges</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONChains" class="internal"><span class="codenumber">5.10.2</span> <span class="title">Chains</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONDomes" class="internal"><span class="codenumber">5.10.3</span> <span class="title">Domes</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONTelescopes" class="internal"><span class="codenumber">5.10.4</span> <span class="title">Telescopes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONBridges" class="internal"><span class="codenumber">5.9.1</span> <span class="title">Bridges</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONChains" class="internal"><span class="codenumber">5.9.2</span> <span class="title">Chains</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONDomes" class="internal"><span class="codenumber">5.9.3</span> <span class="title">Domes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONTelescopes" class="internal"><span class="codenumber">5.9.4</span> <span class="title">Telescopes</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -301,10 +300,11 @@ window.MathJax = {
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SECTIONdiff-sine-cosine" class="internal"><span class="codenumber">6.2</span> <span class="title">The Differentials of the Sine and Cosine Functions</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SUBSETIONpolar-coord-calc" class="internal"><span class="codenumber">6.2.1</span> <span class="title">Polar Coordinates and Calculus</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SECTIONdiff-sine-cosine-4" class="internal"><span class="codenumber">6.2.2</span> <span class="title">The Brachistochrone Problem</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SECTIONdiff-sine-cosine-5" class="internal"><span class="codenumber">6.2.3</span> <span class="title">Spin Casting, Redux</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SUBSECTIONsimple-harm-oscill" class="internal"><span class="codenumber">6.2.4</span> <span class="title">Simple Harmonic Oscillation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SUBSECTIONCircularMotion" class="internal"><span class="codenumber">6.2.1</span> <span class="title">Circular Motion</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SUBSETIONpolar-coord-calc" class="internal"><span class="codenumber">6.2.2</span> <span class="title">Polar Coordinates and Calculus</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SECTIONdiff-sine-cosine-5" class="internal"><span class="codenumber">6.2.3</span> <span class="title">The Brachistochrone Problem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SECTIONdiff-sine-cosine-6" class="internal"><span class="codenumber">6.2.4</span> <span class="title">Spin Casting, Redux</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SUBSECTIONsimple-harm-oscill" class="internal"><span class="codenumber">6.2.5</span> <span class="title">Simple Harmonic Oscillation</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SECTIONdiff-other-trig" class="internal"><span class="codenumber">6.3</span> <span class="title">The Differentials of the Other Trigonometric Functions</span></a></div></li>
@@ -334,8 +334,9 @@ window.MathJax = {
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="CHAPTApproximation.html#SECTIONnewtons-method-1" class="internal"><span class="codenumber">7.2</span> <span class="title">Newton’s Method</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTApproximation.html#SUBSECTIONSpectacularFailure" class="internal"><span class="codenumber">7.2.1</span> <span class="title">Spectacular Failure</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTApproximation.html#SUBSECTIONSubtleFailure" class="internal"><span class="codenumber">7.2.2</span> <span class="title">Subtle Failure</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTApproximation.html#SUBSECTIONNewtonsMethodBasic" class="internal"><span class="codenumber">7.2.1</span> <span class="title">The Idea Behind Newton’s Method</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTApproximation.html#SUBSECTIONSpectacularFailure" class="internal"><span class="codenumber">7.2.2</span> <span class="title">Spectacular Failure</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTApproximation.html#SUBSECTIONSubtleFailure" class="internal"><span class="codenumber">7.2.3</span> <span class="title">Subtle Failure</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTApproximation.html#SECTIONeulers-method" class="internal"><span class="codenumber">7.3</span> <span class="title">Euler’s Method</span></a></div></li>
@@ -350,38 +351,33 @@ window.MathJax = {
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONIvps" class="internal"><span class="codenumber">8.1.1</span> <span class="title">Initial Value Problems (IVPs)</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONexponential" class="internal"><span class="codenumber">8.2</span> <span class="title">The Natural Exponential</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONexponential-growth" class="internal"><span class="codenumber">8.3</span> <span class="title">Exponential Growth and Exponential Notation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONhyperb-trig-hang" class="internal"><span class="codenumber">8.4</span> <span class="title">Hyperbolic Trigonometry: The Hanging Chain</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONGatewayArch" class="internal"><span class="codenumber">8.5</span> <span class="title">The Gateway Arch</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#CHAPTERlast-elem-funct-7" class="internal"><span class="codenumber">8.6</span> <span class="title">Exponential Growth</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONExpAndCmpndInt" class="internal"><span class="codenumber">8.7</span> <span class="title">Exponential Functions and Compound Interest</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONexponential-growth" class="internal"><span class="codenumber">8.3</span> <span class="title">Exponential Growth</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONSUBSECTIONExpNotation" class="internal"><span class="codenumber">8.3.1</span> <span class="title">Exponential Notation</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONhyperb-trig-hang" class="internal"><span class="codenumber">8.3.2</span> <span class="title">Hyperbolic Trigonometry: The Hanging Chain</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONGatewayArch" class="internal"><span class="codenumber">8.3.3</span> <span class="title">The Gateway Arch</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONexponential-growth-6" class="internal"><span class="codenumber">8.3.4</span> <span class="title">Exponential Growth</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONExpAndCmpndInt" class="internal"><span class="codenumber">8.3.5</span> <span class="title">Exponential Functions and Compound Interest</span></a></div></li>
-</ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONnatural-logarithm-1" class="internal"><span class="codenumber">8.4</span> <span class="title">The Natural Logarithm</span></a></div>
+<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONnatural-logarithm-1" class="internal"><span class="codenumber">8.8</span> <span class="title">The Natural Logarithm</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection">
-<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONNapier" class="internal"><span class="codenumber">8.4.1</span> <span class="title">John Napier Logs In</span></a></div>
+<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONNapier" class="internal"><span class="codenumber">8.8.1</span> <span class="title">John Napier Logs In</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSUBSECTIONradioactive-decay" class="internal"><span class="codenumber">8.4.1.1</span> <span class="title">Radioactive Dating</span></a></div></li>
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSUBSECTIONnewtons-law-cooling" class="internal"><span class="codenumber">8.4.1.2</span> <span class="title">\underline{Chillin’ with Newton: The Law of Cooling</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSUBSECTIONradioactive-decay" class="internal"><span class="codenumber">8.8.1.1</span> <span class="title">Radioactive Dating</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSUBSECTIONnewtons-law-cooling" class="internal"><span class="codenumber">8.8.1.2</span> <span class="title">\underline{Chillin’ with Newton: The Law of Cooling</span></a></div></li>
 </ul>
 </li></ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONDerivNatLog" class="internal"><span class="codenumber">8.5</span> <span class="title">The Derivative of the Natural Logarithm</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONDerivNatLog" class="internal"><span class="codenumber">8.9</span> <span class="title">The Derivative of the Natural Logarithm</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONgener-logar-expon" class="internal"><span class="codenumber">8.6</span> <span class="title">General Logarithms and Exponentials</span></a></div>
+<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONgener-logar-expon" class="internal"><span class="codenumber">8.10</span> <span class="title">General Logarithms and Exponentials</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONGenExp" class="internal"><span class="codenumber">8.6.1</span> <span class="title">General Exponentials</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONGenLog" class="internal"><span class="codenumber">8.6.2</span> <span class="title">General Logarithms</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONLogDiff" class="internal"><span class="codenumber">8.6.3</span> <span class="title">Logarithmic Differentiation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONGenExp" class="internal"><span class="codenumber">8.10.1</span> <span class="title">General Exponentials</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONGenLog" class="internal"><span class="codenumber">8.10.2</span> <span class="title">General Logarithms</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONLogDiff" class="internal"><span class="codenumber">8.10.3</span> <span class="title">Logarithmic Differentiation</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONleonh-euler-harm" class="internal"><span class="codenumber">8.7</span> <span class="title">Leonhard Euler, Harmonic Oscillators, and Complex Numbers</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONHowEulerDidIt" class="internal"><span class="codenumber">8.7.1</span> <span class="title">How Euler Did It</span></a></div></li></ul>
+<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONleonh-euler-harm" class="internal"><span class="codenumber">8.11</span> <span class="title">Leonhard Euler, Harmonic Oscillators, and Complex Numbers</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONHowEulerDidIt" class="internal"><span class="codenumber">8.11.1</span> <span class="title">How Euler Did It</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -587,7 +583,7 @@ window.MathJax = {
 \end{equation*}
 </div>
 </div>
-<div class="para" id="SUBSECTIONModelingTrout-8">This IVP should look familiar. When we were modeling the growth of a bacteria colony in <a href="" class="xref" data-knowl="./knowl/xref/EXAMPLEpopulation-growth.html" title="Example 8.30: Population Growth">Example~\ 8.30</a> <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "SECexponential-growth" missing or not unique]</code> we got <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQBacteriaIVP" missing or not unique]</code>), which is almost the same equation, remember? The only difference between them is that in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQFishery1" missing or not unique]</code>) the coefficient of <span class="process-math">\(P\)</span> is <span class="process-math">\(0.1\)</span> and in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQBacteriaIVP" missing or not unique]</code>) the coefficient of <span class="process-math">\(y\)</span> is <span class="process-math">\(0.3\text{.}\)</span>
+<div class="para" id="SUBSECTIONModelingTrout-8">This IVP should look familiar. When we were modeling the growth of a bacteria colony in <a href="" class="xref" data-knowl="./knowl/xref/EXAMPLEpopulation-growth.html" title="Example 8.32: Population Growth">Example~\ 8.32</a> <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "SECexponential-growth" missing or not unique]</code> we got <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQBacteriaIVP" missing or not unique]</code>), which is almost the same equation, remember? The only difference between them is that in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQFishery1" missing or not unique]</code>) the coefficient of <span class="process-math">\(P\)</span> is <span class="process-math">\(0.1\)</span> and in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQBacteriaIVP" missing or not unique]</code>) the coefficient of <span class="process-math">\(y\)</span> is <span class="process-math">\(0.3\text{.}\)</span>
 </div>
 <div class="para logical" id="SUBSECTIONModelingTrout-9">
 <div class="para">Since the solution of <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQBacteriaIVP" missing or not unique]</code>) was <span class="process-math">\(y(t)=10e^{0.3t}\)</span> it seems reasonable to conclude that the solution of <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQFishery1" missing or not unique]</code>}) is:</div>
@@ -914,11 +910,11 @@ P(t)=10e^{0.1t}.
 <div class="para" id="subSECTIONtractrix-2-1">Truckin’, got my chips cashed in Keep truckin’, like the do-dah man Together, more or less in line Just keep truckin’ on.</div> <cite class="attribution">―<a class="external" href="https://en.wikipedia.org/wiki/Grateful_Dead" target="_blank">The Grateful Dead (1967-1995)</a><a class="xref" id="subSECTIONtractrix-2-2-2" href="" data-knowl="./knowl/fn/subSECTIONtractrix-2-2-2.html" title="Footnote 11.8"><sup> 8 </sup></a></cite>
 </blockquote>
 <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/Tractrix.png" class="contained"></div>
-<div class="para" id="subSECTIONtractrix-4">We first looked at the curve called the tractrix <a href="" class="xref" data-knowl="./knowl/xref/PROBLEMTractrix.html" title="Problem 7.39">Problem 7.39</a> of <a href="CHAPTApproximation.html#SECTIONeulers-method" class="internal" title="Section 7.3: Euler’s Method">~ 7.3</a>. Consider reviewing that problem  before you proceed.</div>
+<div class="para" id="subSECTIONtractrix-4">We first looked at the curve called the tractrix <a href="" class="xref" data-knowl="./knowl/xref/PROBLEMTractrix.html" title="Problem 7.41">Problem 7.41</a> of <a href="CHAPTApproximation.html#SECTIONeulers-method" class="internal" title="Section 7.3: Euler’s Method">~ 7.3</a>. Consider reviewing that problem  before you proceed.</div>
 <div class="para" id="subSECTIONtractrix-5">Recall that initially the center of the rear axle of the tractor is at the origin and the center of the rear axle of the trailer is at the point <span class="process-math">\((1,0)\)</span> Also we assumed that the tractor pulls the front wheels vertically up the <span class="process-math">\(y\)</span>-axis and that the rear wheels don’t slip.</div>
 <div class="para logical" id="subSECTIONtractrix-6">
 <div class="para">
-<a href="" class="xref" data-knowl="./knowl/xref/PROBLEMTractrix.html" title="Problem 7.39">Problem 7.39</a> we showed that the path followed by the center of the rear axle of the trailer follows, <span class="process-math">\(y=y(t)\text{,}\)</span> must satisfy the IVP:</div>
+<a href="" class="xref" data-knowl="./knowl/xref/PROBLEMTractrix.html" title="Problem 7.41">Problem 7.41</a> we showed that the path followed by the center of the rear axle of the trailer follows, <span class="process-math">\(y=y(t)\text{,}\)</span> must satisfy the IVP:</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/PROBLEMTractrix.html">
 \begin{equation*}
 \label{eq:TractrixIVP-2}
