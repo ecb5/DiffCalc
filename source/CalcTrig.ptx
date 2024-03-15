@@ -4,14 +4,14 @@
 <!-- \label{CHAPTERcalc-trig} -->
 
 <!--   Trigonometry} -->
-<section xml:id="Sectiontrig-interl">
+<section xml:id="SECTIONtrig-interl">
 <title>A Trigonometric Interlude</title>
 
 <introduction>
 <p>
 
 \TLogo{PSP:how-calculate-pi} Recall that in <xref
-ref="PICSpinCast1">Problem</xref> we did not explain how we knew that
+ref="PROBLEMSpinCast1">Problem</xref> we did not explain how we knew that
 the centripetal force was <men
 xml:id="FORMULACentripetalForce">mx\omega^2</men>.  We said that we
 would be able to show that this is the correct formula for the
@@ -128,9 +128,10 @@ In general we have the following result:
 
 More succinctly, if we let <m>s</m> represent the arclength and measure
 <m>\theta</m> in radians we have
-<me>
-  s=r\theta.\label{eq:arclength}
-</me>
+<men  xml:id="EQUATIONarclength">
+  s=r\theta.
+<!-- \label{eq:arclength} -->
+</men>
 </p>
 <p>
 
@@ -331,7 +332,7 @@ means clockwise. The absolute value of the angular velocity,
 </p>
 <p>
 
-As we saw in <xref ref="SECnewt-flux-dynam">Section</xref> the velocity in the
+As we saw in <xref ref="SECTIONnewt-flux-dynam">Section</xref> the velocity in the
 direction of motion is denoted, <m>\dfdx{s}{t}</m> where the length of
 <m>\dx{s}</m> is the (infinitesimal) hypotenuse of the differential
 triangle in our diagram. Thus <m>\dfdx{s}{t}</m> denotes the <term>linear
@@ -627,14 +628,17 @@ cosecant (<m>\csc</m>).
 
 <exercise>
 <introduction>
+
+    <!-- \begin{wrapfigure}[]{r}{2in} -->
+    <!-- \vskip5mm  -->
+    <!-- \captionsetup{labelformat=empty} -->
+    
+<image source="images/RightTriTrig2.png" width="60%" />
+<!-- \centerline{\includegraphics*[height=1.3in,width=2in]{../Figures/RightTriTrig2}} -->
+    <!-- \label{fig:RightTriTrig2} -->
+    <!-- \end{wrapfigure} -->
   <p>
-    \begin{wrapfigure}[]{r}{2in}
-    \vskip5mm 
-    \captionsetup{labelformat=empty}
-    \centerline{\includegraphics*[height=1.3in,width=2in]{../Figures/RightTriTrig2}}
-    \label{fig:RightTriTrig2}
-    \end{wrapfigure}
-    In the diagram at the right arc <m>ADF</m> is the unit quarter-circle in the
+    In the diagram above arc <m>ADF</m> is the unit quarter-circle in the
     first quadrant.
   </p>
 </introduction>
@@ -1081,7 +1085,7 @@ There is one more aspect of periodic functions we need to address
 before we put all of this together, and that is the <term>phase
   shift</term>.  To illustrate phase shift, consider the graph at the
 right. We last saw this graph when we introduced Fermat's Method of
-Adequality in <xref ref="SECferm-meth-aedeq">Section</xref>.  It represents the
+Adequality in <xref ref="SECTIONFermMethAedeq">Section</xref>.  It represents the
 number of hours of daylight in Santa Barbara, CA over a given year.
             The graph of <m>y(t)</m> represents a full cycle (one year) but it is not
 quite the graph of <m>y(t)=12+2.26\sin\left(\frac{2\pi t}{365}\right)</m>
@@ -1262,7 +1266,7 @@ We usually restrict the phase shift to values between <m>0</m> and
 When we say that the coordinates of point <m>P</m> in the plane are
 <m>(x,y)</m>.  These coordinates are called <term>Cartesian (or
   rectangular) coordinates</term> in honor of Ren\'e Descartes who, as we
-mentioned in <xref ref="SECroberv-conic-sect">Section</xref>, was one of the
+mentioned in <xref ref="SECTIONroberv-conic-sect">Section</xref>, was one of the
 pioneers in applying algebra to geometry. The geometric picture that
 goes with this is shown at the right.
 </p>
@@ -2072,12 +2076,10 @@ Letting
 <p>
  Show that, if <m>a</m> is constant then <m>y(\theta)=a\sin(\theta)</m>
     satisfies the equation
-    <me>
-
-      \label{eq:SHO-prelude}
+    <men  xml:id="EQUATIONSHO-prelude">
+      <!-- \label{eq:SHO-prelude} -->
       \dfdxn{y}{\theta}{2}=-y.
-    
-</me>
+    </men>
   </p>
 </statement>
 </task>
@@ -2085,7 +2087,7 @@ Letting
 <statement>
 <p>
  Show that, if <m>b</m> is constant then <m>y(\theta)=b\cos(\theta)</m>
-    also satisfies <xref ref="EQUATIONeq:SHO-prelude">~</xref>
+    also satisfies <xref ref="EQUATIONSHO-prelude">~</xref>
   </p>
 </statement>
 </task>
@@ -2102,7 +2104,7 @@ Letting
     
 <!-- </me> -->
 <!--   \item Show that, if <m>b</m> is constant then <m>y(\theta)=b\cos(\theta)</m> -->
-<!--     also satisfies <xref ref="EQUATIONeq:SHO-prelude">~</xref> -->
+<!--     also satisfies <xref ref="EQUATIONSHO-prelude">~</xref> -->
 <!--   \end{enumerate} -->
 <!-- \end{embeddedproblem-enumerate} -->
 
@@ -2143,15 +2145,15 @@ Letting
 </subsection>
 
 
-<subsection xml:id="SUBSETIONpolar-coord-calc">
+<subsection xml:id="SUBSECTIONpolar-coord-calc">
 <title>Polar Coordinates and Calculus</title>
 
 <p>
-In <xref ref="SECpolar-coordinates">Section</xref> we introduced the polar
+In <xref ref="SECTIONpolar-coordinates">Section</xref> we introduced the polar
 coordinates and the equations
 <mdn>
-<mrow> xml:id="EQUATIONpolarX"}   x=r\cos(\theta),</mrow>
-<mrow  xml:id="EQUATIONpolary">   y=r\sin(\theta)</mrow>
+<mrow xml:id="EQUATIONpolarx">   x=r\cos(\theta),</mrow>
+<mrow xml:id="EQUATIONpolary">   y=r\sin(\theta)</mrow>
 </mdn>
 which allow us to convert from polar to rectangular coordinates.
 </p>
@@ -2180,7 +2182,7 @@ from the origin, <m>r</m>, with respect to a change of the angle, <m>\theta</m>.
 <task>
 <statement>
 <p>
- Use <xref ref="EQpolarx">equations</xref> and <xref ref="EQUATIONeq:polary"></xref> to find
+ Use <xref ref="EQUATIONpolarx">equations</xref> and <xref ref="EQUATIONpolary"></xref> to find
     <m>\dx{x}</m> and <m>\dx{y}</m> in terms of <m>\dx{r}</m> and <m>\dx{\theta}.</m>
   </p>
 </statement>
@@ -2231,7 +2233,7 @@ from the origin, <m>r</m>, with respect to a change of the angle, <m>\theta</m>.
 <!-- \begin{embeddedproblem-enumerate}  -->
 <!--   <!-\- \label{problem:DiffPolar} -\-> -->
 <!--   \begin{enumerate}[label={  (\alph*)}] -->
-<!--       \item Use <xref ref="EQpolarx">equations</xref> and <xref ref="EQUATIONeq:polary"></xref> to find -->
+<!--       \item Use <xref ref="EQUATIONpolarx">equations</xref> and <xref ref="EQUATIONpolary"></xref> to find -->
 <!--     <m>\dx{x}</m> and <m>\dx{y}</m> in terms of <m>\dx{r}</m> and <m>\dx{\theta}.</m> -->
 <!--   \item Show that the slope of the line tangent to the graph of -->
 <!--     <m>r=r(\theta)</m> (in polar coordinates) is given by -->
@@ -2547,11 +2549,20 @@ will take the same length of time to reach the bottom regardless of
 their starting position. This is known as the Tautochrone
 Problem. <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Huygens/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Huygens/">Christiaan
   Huygens</url> used this fact to design a better pendulum clock than had
-previously existed. This is explored in more depth in
-<xref ref="APPENDIXradi-curv-accord">Appendix</xref>.
+previously existed. This is explored in more depth in 
 </p>
+<aside>
+<title>Note to self</title>
 <p>
+Reference to TRIUMPHS PSP on curvature should be here. Commented out for now
+</p>
+</aside>
 
+<!-- <url href="https://digitalcommons.ursinus.edu/cgi/viewcontent.cgi?article=1004&context=triumphs_calculus" visual="https://digitalcommons.ursinus.edu/cgi/viewcontent.cgi?article=1004&context=triumphs_calculus">The Radius of Curvature According to Christiaan Huygens</url> -->
+<!-- <xref ref="APPENDIXradi-curv-accord">Appendix</xref>. -->
+
+
+<p>
 It would be difficult to express the cycloid as the graph of some
 curve: <m>y=y(x)</m>. But it is fairly simple to parameterize it, as we
 will see in <xref ref="PROBLEMcycloid2">Problem~\</xref>. In our parameterization
@@ -2586,7 +2597,21 @@ of <m>\theta</m> is shown schematically in the next problem.
       <p>
         Use the diagram above to show that the parameterization of
     <m>P(\theta)</m> is given by
-    <me>        \label{eq:CycloidParameterization}        P(\theta) =        \begin{ParamEq}          {x(\theta)} {y(\theta)} {-\infty\lt \theta \lt \infty}        \end{ParamEq}        =        \begin{ParamEq}          {a\theta-a\sin(\theta)} {a-a\cos(\theta)} {-\infty\lt \theta            \lt \infty}        \end{ParamEq}. </me>
+    <men  xml:id="EQUATIONCycloidParameterization">        
+<!-- \label{eq:CycloidParameterization} -->
+        P(\theta) =        
+        \begin{ParamEq}  
+        {x(\theta)} 
+        {y(\theta)} 
+        {-\infty\lt \theta \lt \infty}
+        \end{ParamEq}    
+        =        
+        \begin{ParamEq}
+        {a\theta-a\sin(\theta)}
+        {a-a\cos(\theta)}
+        {-\infty\lt \theta \lt \infty}
+        \end{ParamEq}. 
+</men>
       </p>
     </li>
     <li>
@@ -2623,7 +2648,7 @@ of <m>\theta</m> is shown schematically in the next problem.
   <ol>
     <li>
       <p>
-        Suppose the circle is rolling at an angular speed of      <m>2\frac{\text{units}}{\text{second}}</m> and compute the tangential      speed,      <me>      \abs{\dfdx{s}{t}}= \frac{\sqrt{(\dx{x})^2+(\dx{y})^2}}{\dx{t}}      </me>      of <m>P</m>. What do you notice about the speed of <m>P</m> in relation to      the      circle's radius? Do you find this surprising?      \hint{Consider using <xref ref="EQUATIONeq:PythTheorDiff">~</xref>.}
+        Suppose the circle is rolling at an angular speed of      <m>2\frac{\text{units}}{\text{second}}</m> and compute the tangential      speed,      <me>      \abs{\dfdx{s}{t}}= \frac{\sqrt{(\dx{x})^2+(\dx{y})^2}}{\dx{t}}      </me>      of <m>P</m>. What do you notice about the speed of <m>P</m> in relation to      the      circle's radius? Do you find this surprising?      \hint{Consider using <xref ref="EQUATIONPythTheorDiff">~</xref>.}
       </p>
     </li>
     <li>
@@ -2686,7 +2711,7 @@ of <m>\theta</m> is shown schematically in the next problem.
 <!--   <ol> -->
 <!--     <li> -->
 <!--       <p> -->
-<!--         Suppose the circle is rolling at an angular speed of      <m>2\frac{\text{units}}{\text{second}}</m> and compute the tangential      speed,      <me>      \abs{\dfdx{s}{t}}= \frac{\sqrt{(\dx{x})^2+(\dx{y})^2}}{\dx{t}}      </me>      of <m>P</m>. What do you notice about the speed of <m>P</m> in relation to      the      circle's radius? Do you find this surprising?      \hint{Consider using <xref ref="EQUATIONeq:PythTheorDiff">~</xref>.} -->
+<!--         Suppose the circle is rolling at an angular speed of      <m>2\frac{\text{units}}{\text{second}}</m> and compute the tangential      speed,      <me>      \abs{\dfdx{s}{t}}= \frac{\sqrt{(\dx{x})^2+(\dx{y})^2}}{\dx{t}}      </me>      of <m>P</m>. What do you notice about the speed of <m>P</m> in relation to      the      circle's radius? Do you find this surprising?      \hint{Consider using <xref ref="EQUATIONPythTheorDiff">~</xref>.} -->
 <!--       </p> -->
 <!--     </li> -->
 <!--     <li> -->
@@ -2705,7 +2730,7 @@ of <m>\theta</m> is shown schematically in the next problem.
 <subsection>
 <title>Spin Casting, Redux</title>
 <p>
-In <xref ref="SECself-inters-curv">Section</xref> we saw how Newton's fluxional
+In <xref ref="SUBSECTIONParametricFunctions">Section</xref> we saw how Newton's fluxional
 approach to Calculus led us naturally to the notion of parametric
 equations, <m> P(t)=\begin{ParamEq} { x=x(t)} { y=y(t)} { a\lt t \lt b}
 \end{ParamEq}
@@ -2724,7 +2749,7 @@ equations, <m> P(t)=\begin{ParamEq} { x=x(t)} { y=y(t)} { a\lt t \lt b}
 <!--   \label{fig:Centripetal2} -->
 <!-- \end{wrapfigure} -->
 <p>
-Recall that in the <xref ref="PICSpinCast1">Problem~\</xref> we asserted, without
+Recall that in the <xref ref="PROBLEMSpinCast1">Problem~\</xref> we asserted, without
 justification, that the centripetal force holding the spinning, molten
 glass in its circular path is given by the formula <m>mr\omega^2</m>. We
 now have the tools we need to justify this claim.
@@ -2888,7 +2913,7 @@ the centripetal acceleration is given by <m>r\omega^2</m>.
 <!--     <me> -->
 <!--     \sqrt{\left(\dfdxn{x}{t}{2}\right)^2+\left(\dfdxn{y}{t}{2}\right)^2}=r\omega^2, -->
 <!--     </me> -->
-<!--     which is what we said it was in <xref ref="PROBLEMPIC:SpinCast1"></xref>. -->
+<!--     which is what we said it was in <xref ref="PROBLEMPROBLEM:SpinCast1"></xref>. -->
 <!--   </p> -->
 <!-- </statement> -->
 <!-- </task> -->
@@ -2947,7 +2972,7 @@ the centripetal acceleration is given by <m>r\omega^2</m>.
 <!--     <me> -->
 <!--     \sqrt{\left(\dfdxn{x}{t}{2}\right)^2+\left(\dfdxn{y}{t}{2}\right)^2}=r\omega^2, -->
 <!--     </me> -->
-<!--     which is what we said it was in <xref ref="PROBLEMPIC:SpinCast1"></xref>. -->
+<!--     which is what we said it was in <xref ref="PROBLEMPROBLEM:SpinCast1"></xref>. -->
 <!--   \end{enumerate} -->
 <!-- \end{embeddedproblem} -->
 
@@ -2998,12 +3023,20 @@ the centripetal acceleration is given by <m>r\omega^2</m>.
     <m>\dfdx{\theta}{t}</m> is no longer constant,  then the
     horizontal acceleration <m>\left(\dfdxn{x}{t}{2}\right)</m> and the
     vertical acceleration   <m>\left(\dfdxn{y}{t}{2}\right)</m> are given by,
-    \begin{align}
-      \label{eq:HorizAccel}    \dfdxn{x}{t}{2}\amp =
-      \textcolor{blue}{-r\dfdxn{\theta}{t}{2}\sin(\theta)}\textcolor{red}{-r\left(\dfdx{\theta}{t}\right)^2\cos(\theta)}
-            \label{eq:VertAccel}    \dfdxn{y}{t}{2}\amp =
-      \textcolor{blue}{r\dfdxn{\theta}{t}{2}\cos(\theta)}\textcolor{red}{-r\left(\dfdx{\theta}{t}\right)^2\sin(\theta)}.
-    \end{align}
+
+<mdn>
+<mrow  xml:id="EQUATIONHorizAccel">
+\dfdxn{x}{t}{2}\amp =      \textcolor{blue}{-r\dfdxn{\theta}{t}{2}\sin(\theta)}\textcolor{red}{-r\left(\dfdx{\theta}{t}\right)^2\cos(\theta)}
+</mrow>
+<mrow  xml:id="EQUATIONVertAccel">      \textcolor{blue}{r\dfdxn{\theta}{t}{2}\cos(\theta)}\textcolor{red}{-r\left(\dfdx{\theta}{t}\right)^2\sin(\theta)}.</mrow>
+</mdn>
+
+<!--     \begin{align} -->
+<!--       \label{eq:HorizAccel}     -->
+<!-- \dfdxn{x}{t}{2}\amp =      \textcolor{blue}{-r\dfdxn{\theta}{t}{2}\sin(\theta)}\textcolor{red}{-r\left(\dfdx{\theta}{t}\right)^2\cos(\theta)} -->
+<!--             \label{eq:VertAccel}    \dfdxn{y}{t}{2}\amp = -->
+<!--       \textcolor{blue}{r\dfdxn{\theta}{t}{2}\cos(\theta)}\textcolor{red}{-r\left(\dfdx{\theta}{t}\right)^2\sin(\theta)}. -->
+<!--     \end{align} -->
   </p>
 </statement>
 </problem>
@@ -3018,8 +3051,8 @@ the centripetal acceleration is given by <m>r\omega^2</m>.
   <exercise xml:id="DRILLCentripetaAcclDecomposition">
 <statement>
 <p>
-    Show that the red terms in <xref ref="EQHorizAccel">equations</xref>
-    <xref ref="EQVertAccel">and</xref> are the horizontal and vertical components
+    Show that the red terms in <xref ref="EQUATIONHorizAccel">equations</xref>
+    <xref ref="EQUATIONVertAccel">and</xref> are the horizontal and vertical components
     of the centripetal acceleration by confirming that they are the
     same as the <m>\dfdxn{x}{t}{2}</m> and <m>\dfdxn{x}{t}{2}</m> that you
     computed for part (b) of
@@ -3043,7 +3076,7 @@ the centripetal acceleration is given by <m>r\omega^2</m>.
 <p>
 <xref ref="DRILLCentripetaAcclDecomposition">
 </xref> suggests that the red
-terms in <xref ref="EQHorizAccel">equations</xref> <xref ref="EQVertAccel">and</xref> are the
+terms in <xref ref="EQUATIONHorizAccel">equations</xref> <xref ref="EQUATIONVertAccel">and</xref> are the
 horizontal and vertical components of the centripetal acceleration.
 If that is true (it is) then the blue terms must represent the
 tangential acceleration.  Thus, by Newton's Second Law, we obtain the
@@ -3080,8 +3113,8 @@ gives us
   <me>
   \dfdxn{s}{t}{2}=\dfdxn{(r\theta)}{t}{2} =r\dfdxn{\theta}{t}{2}.
   </me> is the tangential acceleration.  So <xref
-  ref="EQHorizAccel">equations</xref> <xref
-  ref="EQVertAccel">and</xref> can be expressed as \begin{align*}
+  ref="EQUATIONHorizAccel">equations</xref> <xref
+  ref="EQUATIONVertAccel">and</xref> can be expressed as \begin{align*}
   \dfdxn{x}{t}{2}\amp =
   \textcolor{blue}{-\dfdxn{s}{t}{2}\sin(\theta)}\textcolor{red}{-r\left(\dfdx{\theta}{t}\right)^2\cos(\theta)}
   \dfdxn{y}{t}{2}\amp =
@@ -3146,10 +3179,11 @@ this text.  We'll keep things simple.
 
 A function <m>y(t)</m> is said to be a <term>Simple Harmonic Oscillator
   (SHO)</term> if it satisfies the <term>second order differential equation</term>
-<men>
-  \dfdxn{y}{t}{2}=-\omega^2y,\label{eq:SHO}
+<men  xml:id="EQUATIONSHO">
+  \dfdxn{y}{t}{2}=-\omega^2y,
+<!-- \label{eq:SHO} -->
 </men>
-for some constant <m>\omega</m>. <xref ref="EQSHO">Equation</xref> is a little scary at
+for some constant <m>\omega</m>. <xref ref="EQUATIONSHO">Equation</xref> is a little scary at
 first but it really isn't that bad. To simplify things suppose for a
 moment that <m>\omega=1</m>. Then we have <m>\dfdxn{y}{t}{2}=-y</m> which says
 simply that <m>y(t)</m> is a function whose second derivative is equal the
@@ -3158,10 +3192,10 @@ negative of <m>y</m> itself.
 <p>
 
 Of course, you already know two such functions. Since
-<me>
-\dfdxn{\left(\sin(x)\right)}{x}{2}=-\sin(x) \text{\ \ and\ \ }
-\dfdxn{\left(\cos(x)\right)}{x}{2}=-\cos(\theta),
-</me>
+<md>
+<mrow>\dfdxn{\left(\sin(x)\right)}{x}{2}\amp{}=-\sin(x) \amp{}\text{ and }\amp{}\amp{}
+\dfdxn{\left(\cos(x)\right)}{x}{2}\amp{}=-\cos(\theta),</mrow>
+</md>
 <m>\sin(x)</m> and <m>\cos(x)</m> are
 both SHOs.
 </p>
@@ -3174,16 +3208,16 @@ both SHOs.
 </statement>
 <hint>
 <p>
-Don't overthink this. Build on the two that you already know.}
+Don't overthink this. Build on the two that you already know.
 </p>
 </hint>
 </exercise>
 
 <p>
-<xref ref="EQSHO">Equation</xref> is used to model vibrations of buildings,
+<xref ref="EQUATIONSHO">Equation</xref> is used to model vibrations of buildings,
 acoustics, AC circuits, molecular, and crystal vibrations; basically
 anything that oscillates, but where the effects of air resistance are
-negligible. In <xref ref="SECleonh-euler-harm">Section~</xref>), after we have
+negligible. In <xref ref="SECTIONleonh-euler-harm"></xref>, after we have
 expanded our repertoire of functions a bit, we will look at one way we
 can incorporate the role of air resistance into our computations so
 that we can extend the usefulness of our analysis.
@@ -3198,7 +3232,7 @@ that we can extend the usefulness of our analysis.
 <statement>
 <p>
  Show that <m>y=A\sin(\omega t) + B\cos(\omega t)</m> satisfies
-    <xref ref="EQSHO">Equation</xref>.  for any constants <m>A</m> and <m>B</m>.
+    <xref ref="EQUATIONSHO">Equation</xref>.  for any constants <m>A</m> and <m>B</m>.
   </p>
 </statement>
 </task>
@@ -3217,7 +3251,7 @@ that we can extend the usefulness of our analysis.
 <!--   <!-\- \label{PROBLEMHarmonicOscillator} -\-> -->
 <!--   \begin{enumerate}[label={  (\alph*)}]  -->
 <!--   \item Show that <m>y=A\sin(\omega t) + B\cos(\omega t)</m> satisfies -->
-<!--     <xref ref="EQSHO">Equation</xref>.  for any constants <m>A</m> and <m>B</m>. -->
+<!--     <xref ref="EQUATIONSHO">Equation</xref>.  for any constants <m>A</m> and <m>B</m>. -->
 <!--   \item Determine the values of the constants <m>A</m> and <m>B</m> if -->
 <!--     <m>y ( 0 )=-2</m> and -->
 <!--     <m>\left.\dfdx{y}{t}\right|_{t=0}=0.</m> % What would this mean -->
@@ -3247,7 +3281,7 @@ the restoring force of the spring balance exactly we say that they are
 in equilibrium as illustrated by the leftmost spring in our sketch.
 <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Hooke/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Hooke/">Robert
   Hooke</url> (<m>1635-1703</m>), who we encountered back in
-<xref ref="SECbridg-chains-telesc">Section</xref>, was a leading elder
+<xref ref="SECTIONbridg-chains-telesc">Section</xref>, was a leading elder
 scientist when Newton was young and a rising star in English science.
 Hooke was the first to show that the restoring force exerted by a
 spring (the force back toward equilibrium) is directly proportional to
@@ -3299,16 +3333,16 @@ Law, we see that the vertical displacement of our mass must satisfy
 the equation
 <men  xml:id="EQUATIONSHO2">
   m\dfdxn{y}{t}{2}=-ky
-  \label{eq:SHO2}
+  <!-- \label{eq:SHO2} -->
 </men>
-which is equivalent to <xref ref="EQSHO">Equation~</xref>).
+which is equivalent to <xref ref="EQUATIONSHO">Equation~</xref>).
 </p>
 <exercise>
 <statement>
 <p>
-  Show that <xref ref="EQSHO">Equation</xref> and <xref ref="EQSHO2">equation</xref> are
+  Show that <xref ref="EQUATIONSHO">Equation</xref> and <xref ref="EQUATIONSHO2">equation</xref> are
   equivalent as we've claimed.
-  \hint{What is <m>\omega</m> in <xref ref="EQSHO2">Equation</xref>?}
+  \hint{What is <m>\omega</m> in <xref ref="EQUATIONSHO2">Equation</xref>?}
 </p>
 </statement>
 </exercise>
@@ -3369,7 +3403,7 @@ Notice that the downward force is the weight of the object and the
 <p>
  Use the fact that when the object is at rest, <m>y=0</m> to
       conclude that <m>ky_0=mg</m> and use this to conclude that the
-      spring-object system still satisfies <xref ref="EQUATIONeq:SHO2">~</xref>
+      spring-object system still satisfies <xref ref="EQUATIONSHO2">~</xref>
     </p>
 </statement>
 </task>
@@ -3390,7 +3424,7 @@ Notice that the downward force is the weight of the object and the
   <!--     </me> -->
   <!--   \item Use the fact that when the object is at rest, <m>y=0</m> to -->
   <!--     conclude that <m>ky_0=mg</m> and use this to conclude that the -->
-  <!--     spring-object system still satisfies <xref ref="EQUATIONeq:SHO2">~</xref> -->
+  <!--     spring-object system still satisfies <xref ref="EQUATIONSHO2">~</xref> -->
 <!--   <!-\-   \end{enumerate} -\-> -->
 <!--   <!-\-     \end{embeddedproblem} -\-> -->
 <p>
@@ -3402,7 +3436,7 @@ END OF DIGRESSION
   <introduction>
     <p>
       Show that <m> y(t)=2\cos\left(\sqrt{k/m}\cdot t\right) </m> will satisfy
-      <xref ref="EQUATIONeq:SHO2"></xref>.
+      <xref ref="EQUATIONSHO2"></xref>.
     </p>
   </introduction>
   <task>
@@ -3467,7 +3501,7 @@ END OF DIGRESSION
 </problem>
 <!-- \begin{embeddedproblem}  ;;; MULTILEVEL PROBLEM -->
 <!--   Show that <m> y(t)=2\cos\left(\sqrt{k/m}\cdot t\right) </m> will satisfy -->
-<!--   <xref ref="EQUATIONeq:SHO2"></xref>. -->
+<!--   <xref ref="EQUATIONSHO2"></xref>. -->
 <!--                     \begin{enumerate}[label={  (\alph*)}] -->
 <!--   \item Compute <m>y(0)</m> and <m>\eval{\dfdx{y}{t}}{t}{0}</m>.  If we are -->
 <!--     modeling a mass-spring system, what do these values represent -->
@@ -3498,6 +3532,7 @@ END OF DIGRESSION
 
 </subsection>
 </section>
+
 <section xml:id="SECTIONdiff-other-trig">
 <title>The Differentials of the Other Trigonometric Functions</title>
 
@@ -3574,9 +3609,10 @@ another identity!
   Consider the double angle formula for the sine function:
   <m> \sin(2x)=2\sin(x)\cos(x)</m>.  Differentiating gives
   <m> \cos(2x)\dx x = \cos^2(x)\dx x -\sin^2(x)\dx x</m> or
-  <men>
+  <men  xml:id="EQUATIONCosDouble">
     \cos(2x)
-    =\cos^2(x)-\sin^2(x).\label{eq:CosDouble}
+    =\cos^2(x)-\sin^2(x).
+<!-- \label{eq:CosDouble} -->
 </men>
   which is the double angle formula for the cosine function.
 </p>
@@ -4050,13 +4086,16 @@ them.
 
 <problem>
 <introduction>
+
+  <image source="images/RocketProblem1.png" width="50%"/>
+<!-- \begin{wrapfigure}[]{r}{.75in} -->
+<!--     \vskip-14mm -->
+<!-- \captionsetup{labelformat=empty} -->
+<!--   \centerline{\includegraphics*[height=1.5in,width=.75in]{../Figures/RocketProblem1}} -->
+<!-- \label{fig:RocketProblem1} -->
+<!-- \end{wrapfigure} -->  
 <p>
-  \begin{wrapfigure}[]{r}{.75in}
-    \vskip-14mm
-\captionsetup{labelformat=empty}
-  \centerline{\includegraphics*[height=1.5in,width=.75in]{../Figures/RocketProblem1}}
-\label{fig:RocketProblem1}
-\end{wrapfigure}  A camera located at <m>C</m> at ground level is tracking a rocket <m>R</m>
+A camera located at <m>C</m> at ground level is tracking a rocket <m>R</m>
   which is traveling vertically and took off from a spot <m>500</m> meters
   from
   the camera.
@@ -4201,8 +4240,9 @@ them.
 <!--  \end{enumerate} -->
 <!-- \end{embeddedproblem-enumerate} -->
 
-
 </section>
+
+
 <section xml:id="SECTIONinverse-tan-and-cot">
 <title>The Inverse Tangent and Cotangent Functions </title>
 
@@ -4281,19 +4321,19 @@ notation used to indicate function inversion. Unfortunately, from the
 standpoint of a student it is also probably the worst notation we
 could have possibly invented because It is so very easily confused
 with reciprocation. While it is true that
-  <me>
+  <men  xml:id="EQUATIONNegOneRecip">
 
-    \label{eq:NegOneRecip}
+    <!-- \label{eq:NegOneRecip} -->
     2^{-1} = \frac12,
   
-</me>
+</men>
   it is important to remember that
-  <me>
+  <men  xml:id="EQUATIONNegOneInv">
 
-    \label{eq:NegOneInv}
+    <!-- \label{eq:NegOneInv} -->
     \inverse{\tan}(x) \text{ is not equal to } \frac{1}{\tan(x)}.
   
-</me>
+</men>
 </p>
 <p>
 
@@ -4315,9 +4355,9 @@ with reciprocation. While it is true that
 </p>
 <p>
 
-  In <xref ref="EQNegOneRecip">Equation</xref> you can think of the <m>-1</m> in the
+  In <xref ref="EQUATIONNegOneRecip">Equation</xref> you can think of the <m>-1</m> in the
   exponent as an operator. It operates on <m>2</m> by taking its
-  reciprocal: <m>\inverse{2}=\frac12</m>. In <xref ref="EQNegOneInv">Equation</xref>
+  reciprocal: <m>\inverse{2}=\frac12</m>. In <xref ref="EQUATIONNegOneInv">Equation</xref>
   the <m>-1</m> is not an operator. It is part of the symbol,
   <m>\inverse\tan</m>, that we use to denote the inverse tangent.
 </p>
@@ -4542,6 +4582,7 @@ is a bit simpler to once again use a trigonometric identity.
 
 
 </section>
+
 <section xml:id="SECTIONwitch-agnesi-inverse">
 <title>The Witch of Agnesi and the Inverse Tangent Function </title>
 
@@ -4801,7 +4842,7 @@ Witch of Agnesi. (Except the black one, of course. That's the Witch.)
 
 This graph should look very familiar to you. It looks very much like
 the graph of the arctangent function we discussed in
-<xref ref="SECinverse-tan-and-cot">Section</xref>, doesn't it? Do you suppose it
+<xref ref="SECTIONinverse-tan-and-cot">Section</xref>, doesn't it? Do you suppose it
 is possible that the derivative of the arctangent function is the
 Witch of Agnesi?
 </p>
@@ -4819,7 +4860,7 @@ related to the Witch of Agnesi. We include it so that you can get
 practice relating the graphs of functions, there derivatives, and
 their antiderivatives, as this is a very useful skill. We will need it
 in a far more substantial way in
-<xref ref="SECgraph-without-form">Section~\</xref> when we get there.
+<xref ref="SECTIONgraph-without-form">Section~\</xref> when we get there.
 </p>
 
 <problem>
@@ -4875,7 +4916,8 @@ in a far more substantial way in
 
 
 </section>
-<section  xml:id="SECTIONSECTIONdiff-inverse-tancot">
+
+<section  xml:id="SECTIONdiff-inverse-tancot">
 <title>The Differentials of the Inverse Tangent and Inverse Cotangent Functions</title>
 
 
@@ -5158,6 +5200,7 @@ arccotangent.
 <!--   \end{enumerate} -->
 <!-- \end{embeddedproblem} -->
 </section>
+
 <section xml:id="SECTIONother-inverse-trig">
 <title>The Other Inverse Trigonometric Functions</title>
 
@@ -5220,12 +5263,12 @@ proceed just as we did with the <m>\arctan(x)</m> and <m>\arccot(x)</m>. If
   Use the diagram below,
       \centerline{\includegraphics*[height=1.4in,width=2.24in]{../Figures/CosInvSin1}}
   to show that
-  <me>
+  <men  xml:id="EQUATIONInvSin11">
 
-    \label{eq:InvSin11}
+    <!-- \label{eq:InvSin11} -->
     \dx(\arcsin(x))=\frac{\pm 1}{\sqrt{1-x^2}}\dx{x}.
   
-</me>
+</men>
 </p>
 </statement>
 </exercise>
@@ -5241,14 +5284,14 @@ proceed just as we did with the <m>\arctan(x)</m> and <m>\arccot(x)</m>. If
 <p>
  Use the fact that <m>y=\arccos(x)</m> if and only if <m>\cos(y)=x</m>
     and proceed as we did in <xref ref="DRILLInvSin1"></xref> to show that
-    <me>
+    <men  xml:id="EQUATIONInvCos1">
 
-      \label{eq:InvCos1}
+      <!-- \label{eq:InvCos1} -->
       \dx\left(\arccos(x)\right)= \frac{\mp 1}{\sqrt{1-x^2}}\dx{x}.
     
-</me>
-    \comment{Notice how this formula differs from the one you found in
-      <xref ref="DRILLInvSin1">~</xref>.}
+</men>
+    (Notice how this formula differs from the one you found in
+      <xref ref="DRILLInvSin1">~</xref>.)
   </p>
 </statement>
 </task>
@@ -5297,7 +5340,7 @@ proceed just as we did with the <m>\arctan(x)</m> and <m>\arccot(x)</m>. If
 <p>
 
 The plus/minus and minus/plus that appear in
-<xref ref="EQInvSin11">equations</xref> <xref ref="EQInvCos1">and</xref>, respectively, are
+<xref ref="EQUATIONInvSin11">equations</xref> <xref ref="EQUATIONInvCos1">and</xref>, respectively, are
 present because, <m>\arcsin(x)</m> and <m>\arccos(x)</m> are both multifunctions
 like <m>\arctan(x)</m>.
 </p>
@@ -5381,7 +5424,7 @@ inverse sine as follows.
 <statement>
 <p>
   What function is <m>\inverse\sin(x)</m>, as defined in
-  <xref ref="DEFInvSin">Definition</xref> the inverse off?
+  <xref ref="DEFINITIONInvSin">Definition</xref> the inverse off?
   \hint{Naturally, <m>\inverse\sin(x)</m> is the inverse of <m>\sin(x)</m>, but
     with which domain?}
 </p>
@@ -6130,6 +6173,7 @@ Table missing
 <!-- \end{embeddedproblem-enumerate} -->
 </subsection>
 </section>
+
 <section xml:id="SECTIONcurvature">
 <title>Curvature</title>
 
@@ -6251,9 +6295,10 @@ infinitely small changes in both the angle <m>\theta</m> and in arclength
   </p>
   <p>
     Then the curvature is defined to be
-  <me>
-  \kappa=\abs{\dfdx{\theta}{s}}.\label{eq:CurvatureDef}
-  </me>
+  <men  xml:id="EQUATIONCurvatureDef">
+  \kappa=\abs{\dfdx{\theta}{s}}.
+<!-- \label{eq:CurvatureDef} -->
+  </men>
   </p>
 </statement>
   </definition>
@@ -6264,7 +6309,7 @@ angle the tangent line forms with a horizontal line.
 </p>
 <p>
 
-It can be difficult at first to see how <xref ref="EQCurvatureDef">formula</xref>
+It can be difficult at first to see how <xref ref="EQUATIONCurvatureDef">formula</xref>
 measures curvature but think carefully for a moment about the meaning
 of the expression <m>\dfdx{\theta}{s}</m>. Loosely put <q>the rate of change
 of <m>\theta</m> (the angle of our curve with the horizontal) with respect
@@ -6283,9 +6328,10 @@ decreasing), but just how fast it bends.
 <p>
 
 Also note, for later reference, that
-<me>
-  \tan(\theta)=\dfdx{y}{x}.\label{eq:TanEqDeriv}
-</me>
+<men  xml:id="EQUATIONTanEqDeriv">
+  \tan(\theta)=\dfdx{y}{x}.
+<!-- \label{eq:TanEqDeriv} -->
+</men>
 </p>
 <p>
 
@@ -6313,53 +6359,84 @@ curvature of a straight line would still be zero. (Why?)
 <!--   \end{wrapfigure} -->
 <p>
   Use the sketch at the right of a quarter-circle with radius <m>r</m> to
-  show that <xref ref="DEFcurvature-1">Definition</xref> yields a curvature of
+  show that <xref ref="DEFINITIONCurvature-1">Definition</xref> yields a curvature of
   <m>\kappa =\frac{1}{r}</m>.
 </p>
 </statement>
 </problem>
 <p>
 
-In <xref ref="PROBCircleCurvature">problem </xref>) it was helpful to know that
+In <xref ref="PROBLEMCircleCurvature">problem </xref>) it was helpful to know that
 the line tangent to a circle is always perpendicular to its
 radius. But for an arbitrary curve this is not necessarily true. Let's
 look at the general situation.
 </p>
 <p>
 
-First recall from <xref ref="EQTanEqDeriv">Equation~</xref>) that
+First recall from <xref ref="EQUATIONTanEqDeriv">Equation~</xref>) that
 <m> \tan(\theta) = \dfdx{y}{x}</m>.  Rewrite this as
 <m>\theta=\inverse\tan\left(\dfdx{y}{x}\right)</m> and differentiate so that
 </p>
 <p>
 
-Dividing both sides of <xref ref="EQDiffTheta">Equation</xref> by <m>\dx{s}</m> we
+Dividing both sides of <xref ref="EQUATIONDiffTheta">Equation</xref> by <m>\dx{s}</m> we
 have,
-\begin{align}
-  \dx{\theta}\amp =\frac{1}{1+\left(\dfdx{y}{x}\right)^2}\cdot\dx\left(\hskip-1mm\dfdx{y}{x}\right).\label{eq:DiffTheta}
-  \nonumber  \dfdx{\theta}{s}\amp =\frac{1}{1+\left(\dfdx{y}{x}\right)^2}\cdot\dfdx{\left(\dfdx{y}{x}\right)}{s}.
-  \intertext{Next we <q>uncancel</q> a \textcolor{red}{<m>\frac{1}{\dx{x}}</m>}}
-\nonumber  \dfdx{\theta}{s}\amp =\frac{1}{1+\left(\dfdx{y}{x}\right)^2}\cdot\dfdx{\left(\dfdx{y}{x}\right)}{s}\cdot\textcolor{red}{\frac{\frac{1}{\dx{x}}}{\frac{1}{\dx{x}}}}
-  \intertext{which gives}
-  \dfdx{\theta}{s}\amp =\frac{1}{1+\left(\dfdx{y}{x}\right)^2}\cdot\frac{\textcolor{blue}{\dfdx{\left(\dfdx{y}{x}\right)}{x}}}{\dfdx{s}{x}}\label{eq:SecondDifferentials}
-  \intertext{or}
-  \dfdx{\theta}{s}
-                  \amp =\frac{\textcolor{blue}{\dfdxn{y}{x}{2}}}{\left[1+\left(\dfdx{y}{x}\right)^2\right]\dfdx{s}{x}}.\label{eq:CurvaturePreamble}
-\end{align}
+
+<mdn>
+<mrow  xml:id="EQUATIONDiffTheta">
+  \dx{\theta}\amp =\frac{1}{1+\left(\dfdx{y}{x}\right)^2}\cdot\dx\left(\hskip-1mm\dfdx{y}{x}\right).
+  </mrow>
+<mrow>\dfdx{\theta}{s}\amp =\frac{1}{1+\left(\dfdx{y}{x}\right)^2}\cdot\dfdx{\left(\dfdx{y}{x}\right)}{s}.</mrow>  
+</mdn>
+Next we <q>uncancel</q> a \textcolor{red}{<m>\frac{1}{\dx{x}}</m>}
+<me>
+\dfdx{\theta}{s}\amp =\frac{1}{1+\left(\dfdx{y}{x}\right)^2}\cdot\dfdx{\left(\dfdx{y}{x}\right)}{s}\cdot\textcolor{red}{\frac{\frac{1}{\dx{x}}}{\frac{1}{\dx{x}}}}
+</me>
+which gives
+<men  xml:id="EQUATIONSecondDifferentials">
+\dfdx{\theta}{s}\amp =\frac{1}{1+\left(\dfdx{y}{x}\right)^2}\cdot\frac{\textcolor{blue}{\dfdx{\left(\dfdx{y}{x}\right)}{x}}}{\dfdx{s}{x}}
+<!-- \label{eq:SecondDifferentials} -->
+</men>
+or
+<men  xml:id="EQUATIONCurvaturePreamble">
+dfdx{\theta}{s}
+                  \amp =\frac{\textcolor{blue}{\dfdxn{y}{x}{2}}}{\left[1+\left(\dfdx{y}{x}\right)^2\right]\dfdx{s}{x}}.
+<!-- \label{eq:CurvaturePreamble} -->
+</men>
+
+<!-- \begin{align} -->
+<!--   \dx{\theta}\amp =\frac{1}{1+\left(\dfdx{y}{x}\right)^2}\cdot\dx\left(\hskip-1mm\dfdx{y}{x}\right).\label{eq:DiffTheta} -->
+<!--   \nonumber  \dfdx{\theta}{s}\amp =\frac{1}{1+\left(\dfdx{y}{x}\right)^2}\cdot\dfdx{\left(\dfdx{y}{x}\right)}{s}. -->
+<!--   \intertext{Next we <q>uncancel</q> a \textcolor{red}{<m>\frac{1}{\dx{x}}</m>}} -->
+<!-- \nonumber  \dfdx{\theta}{s}\amp =\frac{1}{1+\left(\dfdx{y}{x}\right)^2}\cdot\dfdx{\left(\dfdx{y}{x}\right)}{s}\cdot\textcolor{red}{\frac{\frac{1}{\dx{x}}}{\frac{1}{\dx{x}}}} -->
+<!--   \intertext{which gives} -->
+<!--   \dfdx{\theta}{s}\amp =\frac{1}{1+\left(\dfdx{y}{x}\right)^2}\cdot\frac{\textcolor{blue}{\dfdx{\left(\dfdx{y}{x}\right)}{x}}}{\dfdx{s}{x}}\label{eq:SecondDifferentials} -->
+<!--   \intertext{or} -->
+<!--   \dfdx{\theta}{s} -->
+<!--                   \amp =\frac{\textcolor{blue}{\dfdxn{y}{x}{2}}}{\left[1+\left(\dfdx{y}{x}\right)^2\right]\dfdx{s}{x}}.\label{eq:CurvaturePreamble} -->
+<!-- \end{align} -->
 </p>
 
 <problem>
 <statement>
 <p>
-  Use <xref ref="EQCurvaturePreamble">Equation~</xref>) to show that
-  <me>
+  Use <xref ref="EQUATIONCurvaturePreamble">Equation~</xref>) to show that
+  <men  xml:id="EQUATIONCurvatureDef2">
 
-    \kappa=\frac{\abs{\dfdxn{y}{x}{2}}}{\left[1+\left(\dfdx{y}{x}\right)^2\right]^{\frac32}}.\label{eq:CurvatureDef2}
+    <!-- \kappa=\frac{\abs{\dfdxn{y}{x}{2}}}{\left[1+\left(\dfdx{y}{x}\right)^2\right]^{\frac32}}.\label{eq:CurvatureDef2} -->
   
-</me>
-  \hint{<m>\dx{s}=\sqrt{(\dx{x})^2+(\dx{y})^2}</m>.}
-      </p>
+</men>
+</p>
 </statement>
+  
+
+<hint>
+<p>
+<m>\dx{s}=\sqrt{(\dx{x})^2+(\dx{y})^2}</m>.}
+     
+</p>
+</hint>
+
 </problem>
 
 
@@ -6404,8 +6481,8 @@ other mythological beasts. The Lennox
 </p>
 <p>
 
-  If the entire development from <xref ref="EQDiffTheta">Equation~</xref>) to
-  <xref ref="EQCurvaturePreamble">Equation~</xref>) feels contrived, it's because
+  If the entire development from <xref ref="EQUATIONDiffTheta">Equation~</xref>) to
+  <xref ref="EQUATIONCurvaturePreamble">Equation~</xref>) feels contrived, it's because
   it is contrived. In particular the <q>uncancelling</q> step is clearly
   a trick in the sense that nothing we did before that step seems to
   motivate the uncancelling. We just pulled it out of the air, and it
@@ -6416,8 +6493,8 @@ other mythological beasts. The Lennox
 
   Since everything we did hinged on the observation that  
   \textcolor{blue}{<m>\dfdxn{y}{x}{2}=\dfdx{\left(\dfdx{y}{x}\right)}{x}</m>}  
-  (from <xref ref="EQSecondDifferentials">Equation~</xref>) and  
-  <xref ref="EQCurvaturePreamble">Equation</xref>) it would seem more  
+  (from <xref ref="EQUATIONSecondDifferentials">Equation~</xref>) and  
+  <xref ref="EQUATIONCurvaturePreamble">Equation</xref>) it would seem more  
   natural to simply apply the Quotient Rule to  
   <m>\dx{\left(\dfdx{y}{x}\right)}</m>, wouldn't it?  
 </p>
@@ -6441,7 +6518,7 @@ other mythological beasts. The Lennox
 <p>
   
   But the expressions <m>\dx(\dx{x}) =\dx^2x</m> and <m>\dx(\dx{y}) =\dx^2y</m>  
-  are a problem because to get <xref ref="EQCurvaturePreamble">Equation~</xref>)  
+  are a problem because to get <xref ref="EQUATIONCurvaturePreamble">Equation~</xref>)  
   when we are finished we need to have <m>\dx^2x =0</m>, but <m>\dx^2y\neq0</m>,  
   which seems inconsistent. Why would <m>\dx^2y</m> be something, but  
   <m>\dx^2x</m> be nothing? This is very troubling.  
@@ -6549,7 +6626,7 @@ other mythological beasts. The Lennox
 
   As a practical matter we will rarely be interested in second order
   differentials like <m>\dx^2x</m> or <m>\dx^2y</m>. As we indicated in
-  <xref ref="SEChist-intr">Section</xref> differentials are really just an aid to
+  <xref ref="SECTIONHist-intr">Section</xref> differentials are really just an aid to
   computation; a convenient fiction. They are a helpful aid but the
   more important and useful concept is the derivative.  Differentials
   only serve as a step along the way to finding derivatives.
@@ -6579,7 +6656,7 @@ other mythological beasts. The Lennox
   When we are done, when we stand at the top of the Calculus mountain
   we will be able to see the paths that Newton and Leibniz each took
   to get to the top.  We will begin our own trek to the summit in
-  <xref ref="CHAPTwhats-wrong-with">Chapter</xref>.
+  <xref ref="CHAPTERWhatsWrong">Chapter</xref>.
 </p>
 <p>
 END OF DIGRESSION
@@ -6588,13 +6665,13 @@ END OF DIGRESSION
 
 <p>
 Since the equation of a straight line is <m>y=mx+b</m> it is clear that
-<xref ref="EQCurvatureDef2">formula~</xref>) recovers Oresme's assertion that the
+<xref ref="EQUATIONCurvatureDef2">formula~</xref>) recovers Oresme's assertion that the
 curvature of a straight line must be zero. (Why?)
 </p>
 
 <example>
 <p>
-  Let's apply <xref ref="EQCurvatureDef2">formula~</xref>) to a circle to see if
+  Let's apply <xref ref="EQUATIONCurvatureDef2">formula~</xref>) to a circle to see if
   this agrees with Oresme's definition of the curvature of a circle.
   Consider the circle of radius <m>r</m> given by the graph of
   <m>x^2+y^2=r^2</m>.
@@ -6625,7 +6702,7 @@ curvature of a straight line must be zero. (Why?)
 
 <p>
 As we said earlier, the curvature of a general curve need not be
-constant, but we can still apply <xref ref="EQCurvatureDef2">formula~</xref>).
+constant, but we can still apply <xref ref="EQUATIONCurvatureDef2">formula~</xref>).
 </p>
 <problem>
 <introduction>
@@ -6775,7 +6852,7 @@ constant, but we can still apply <xref ref="EQCurvatureDef2">formula~</xref>).
 <!--       \end{embeddedproblem} -->
 <p>
 We observed earlier that if we define curvature using
-<xref ref="EQCurvatureDef">Equation~</xref>) then the curvature of a straight line
+<xref ref="EQUATIONCurvatureDef">Equation~</xref>) then the curvature of a straight line
 will be zero as Oresme said it should be. The converse is also
 true. Specifically, if <m>\abs{\dfdx{\theta}{s}}=\kappa=0</m> then <m>\theta</m>
 must be a constant and so <m>\dfdx{y}{x}=\tan(\theta)</m> must also be a

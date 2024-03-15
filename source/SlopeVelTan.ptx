@@ -523,7 +523,7 @@
       devise definitions that gave back what intuition had led us to. This
       is part of why we are not yet overly concerned about our inability to
       precisely define a differential. When we finally address this issue in
-      <xref ref="CHAPTERPTwhats-wrong-with">Chapter</xref> we will not be devising any new
+      <xref ref="CHAPTERWhatsWrong">Chapter</xref> we will not be devising any new
       differentiation techniques. We will be providing logical underpinnings
       for the techniques our intuition has led us to and that our experience
       has shown to be useful.
@@ -719,7 +719,7 @@
     <problem>
       <statement>
         <p>
-          Use <xref ref="DEFTangentLine">Definition</xref> to find the equation of the
+          Use <xref ref="DEFINITIONTangentLine">Definition</xref> to find the equation of the
           line tangent to the graph of the straight line <m>y=mx+b</m> at the point
           <m>(a, y(a))</m>. Show that this is in fact, the original line.
         </p>
@@ -1498,11 +1498,10 @@
     
     <p>
       The next simplest curve we could use would be a cubic polynomial
-      <me>
-
-        y=Ax^3+Bx^2+Cx+D.\label{eq:FlightPath}
-        
-      </me>
+      <men  xml:id="EQUATIONFlightPath">
+        y=Ax^3+Bx^2+Cx+D.
+        <!-- \label{eq:FlightPath} -->
+      </men>
     </p>
     <problem xml:id="PROBLEMFlightPath1">
       <introduction>
@@ -1520,7 +1519,7 @@
         <statement>
           <p>
             Assuming that the flight path is the graph of
-            <xref ref="EQFlightPath">Equation</xref>, compute <m>\dx{y}</m>. Then divide by
+            <xref ref="EQUATIONFlightPath">Equation</xref>, compute <m>\dx{y}</m>. Then divide by
             <m>\dx{x}</m> to obtain <m>\dfdx{y}{x}</m>.
           </p>
         </statement>
@@ -1528,7 +1527,7 @@
       <task>
         <statement>
           <p>
-            Show that <m>D=0</m> in <xref ref="EQFlightPath">Equation~</xref>).
+            Show that <m>D=0</m> in <xref ref="EQUATIONFlightPath">Equation~</xref>).
             
 
 
@@ -1537,7 +1536,7 @@
         <hint>
           <p>
             The point    <m>(0,0)</m> is on the graph
-            of <xref ref="EQFlightPath">Equation</xref>.}
+            of <xref ref="EQUATIONFlightPath">Equation</xref>.}
 
           </p>
         </hint>
@@ -1545,7 +1544,7 @@
       <task>
         <statement>
           <p>
-            Show that <m>C=0</m>  in <xref ref="EQFlightPath">Equation~</xref>).
+            Show that <m>C=0</m>  in <xref ref="EQUATIONFlightPath">Equation~</xref>).
             
 
           </p>
@@ -1562,7 +1561,7 @@
         <statement>
           <p>
             Determine the values of <m>A</m> and <m>B</m>  in
-            <xref ref="EQFlightPath">Equation~</xref>) in terms of <m>l</m> and
+            <xref ref="EQUATIONFlightPath">Equation~</xref>) in terms of <m>l</m> and
             <m>h</m>.
             
 
@@ -1887,7 +1886,7 @@
       Notice
       that we are using radians to measure the angle. If you are unsure
       what a radian is we have a brief review of Trigonometry in
-      <xref ref="SUBSECTIONtrig-interl"></xref>.
+      <xref ref="SECTIONtrig-interl"></xref>.
     </p>
   </aside>
 
@@ -1990,7 +1989,7 @@
       \frac{\text{meters}}{\text{second}^2}\cdot \text{second} = \frac{\text{meters}}{\text{second}\cdot \cancel{\text{second}}}\cdot \cancel{\text{second}} = \frac{\text{meters}}{\text{second}}
     </me>
     or meters per second; the units used to measure velocity. Notice that
-    <xref ref="EQVelocity">Equation</xref> is independent of the weight of the falling
+    <xref ref="EQUATIONVelocity">Equation</xref> is independent of the weight of the falling
     object. Under the influence of gravity alone all objects accelerate
     downward at the same rate.
   </p>
@@ -2114,7 +2113,7 @@
 
 
   If we had an expression for the ball's position, <m>p</m>, similar
-  to <xref ref="EQVelocity">Equation~</xref>), we would be in much better shape.
+  to <xref ref="EQUATIONVelocity">Equation~</xref>), we would be in much better shape.
   Galileo was able to determine the distance the ball fell without the
   tools of Calculus, but since learning to use those tools is why we're
   here, we will use them.
@@ -2138,7 +2137,7 @@ that <m>g=9.8\frac{m}{s^2}</m> to find a formula for <m>p(t)</m>.
   virtually constant so during that instant of time, <m>\dx{t}</m>, the
   infinitesimal change in position, <m>\dx{p}</m> is given by
 <me>\dx{p}=\text{velocity }\times\text{ change in time} =v\dx{t}.</me>
-But from <xref ref="EQVelocity">Equation~</xref>) we also know that <m>v=9.8t</m>, so
+But from <xref ref="EQUATIONVelocity">Equation~</xref>) we also know that <m>v=9.8t</m>, so
 <m> \dx{p}=9.8t\dx{t}</m>.
 </p>
 
@@ -2166,7 +2165,7 @@ But from <xref ref="EQVelocity">Equation~</xref>) we also know that <m>v=9.8t</m
   <statement>
     <p>
       Show that <m>p(t)=kt^2</m> satisfies
-<xref ref="EQUATIONeq:GalileoDiffeq"></xref> when <me>k=4.9=\frac{g}{2}.</me>
+<xref ref="EQUATIONGalileoDiffeq"></xref> when <me>k=4.9=\frac{g}{2}.</me>
 </p>
 </statement>
 </task>
@@ -2312,7 +2311,7 @@ If we read the  abbreviated notation <m>\dfdxn{p}{t}{2}</m> literally it seems t
 <m>\dx^2p=\dx(\dx{p})</m> is meaningful but it is not. The notion of
 taking the differential of a differential is fraught with logical
 difficulties which we will address in
-<xref ref="CHAPTERPTwhats-wrong-with">Chapter</xref>. For now we can avoid pitfalls
+<xref ref="CHAPTERWhatsWrong">Chapter</xref>. For now we can avoid pitfalls
 by recognizing that the expression <m>\dfdxn{y}{x}{n}</m> is the result
 of differentiating and dividing by <m>\dx{x}</m> <m>n</m> times. We will
 explore this bit further in the next section.
@@ -2458,7 +2457,7 @@ is not the flight path of the ball.
   and philosophical questions (Like, <q>What are they?</q>) that are
   very difficult to address. When we come
   back to these matters in
-  <xref ref="CHAPTERPTwhats-wrong-with">Chapter</xref> you'll see what we mean. For all
+  <xref ref="CHAPTERWhatsWrong">Chapter</xref> you'll see what we mean. For all
   of these reasons and more the concept of differentials should be
   regarded as a convenient fiction and nothing more.
 </p>
@@ -2695,15 +2694,15 @@ differential ratio <m>\dfdx{y}{x}</m> with the more modern
       y(x)=z^\frac12.
 </me> 
 By the Power Rule we have
-<me>
+<men  xml:id="EQUATIONPrimeVSDiff">
   <!-- \label{eq:PrimeVSDiff} -->
   y^\prime(x)=\frac12z^{-\frac12}.
-</me>
+</men>
 This would seem to be correct but it is not. Do you see the
 problem?
 </p>
 <p> 
-  The left side of <xref ref="EQPrimeVSDiff">equation~</xref>) indicates that
+  The left side of <xref ref="EQUATIONPrimeVSDiff">equation~</xref>) indicates that
   the variable is <m>x</m> but there is no <m>x</m> on the right side, only
   <m>z</m>. So this can't be right. But what went wrong?
 
@@ -2715,19 +2714,19 @@ problem?
     
 </me>
 At this point if we divide by <m>\dx{z}</m> we recover
-<xref ref="EQPrimeVSDiff">equation~</xref> in the form:
+<xref ref="EQUATIONPrimeVSDiff">equation~</xref> in the form:
 <me>
   \dfdx{y}{z}=\frac12z^{-\frac12}.
 </me>
 Thus we see  the left side of
-<xref ref="EQPrimeVSDiff">equation~</xref>) should have been <m>y^\prime(z)</m>
+<xref ref="EQUATIONPrimeVSDiff">equation~</xref>) should have been <m>y^\prime(z)</m>
 not  <m>y^\prime(x)</m>.
 </p>
 </example>
 <exercise>
   <statement>
     <p>
-      Starting with <xref ref="EQPrimeVSDiff">equation~</xref>) complete the
+      Starting with <xref ref="EQUATIONPrimeVSDiff">equation~</xref>) complete the
       computation of <m>y^\prime(x)</m>.
     </p>
 </statement>
@@ -2771,13 +2770,13 @@ so
   <m>\dx(\dx{y})</m> is not equal to zero? Or, at a more fundamental level,
   what do we mean by <q>the infinitely small change of an infinitely
   small change?</q> As we will see in
-  <xref ref="CHAPTERPTwhats-wrong-with">Chapter</xref> the early critics of Calculus
+  <xref ref="CHAPTERWhatsWrong">Chapter</xref> the early critics of Calculus
   cited this question specifically to argue that Calculus was invalid.
 </p>
 <p>
 
   We will address these issues beginning in
-  <xref ref="CHAPTERPTwhats-wrong-with">Chapter</xref>. For now we will make the
+  <xref ref="CHAPTERWhatsWrong">Chapter</xref>. For now we will make the
   following compromise: We will only differentiate finite quantities,
   be they functions, or derivatives.  Since our ultimate goal is to
   compute some derivative
@@ -2962,7 +2961,7 @@ makes it very clear that
   
 </men>
 there are certain pairs of functions which are exceptions; for which
-<xref ref="EQUATIONeq:NewbyError1"></xref>  <em>is</em> true.
+<xref ref="EQUATIONNewbyError1"></xref>  <em>is</em> true.
 
 For example, show that for each of the following it is true that
 <m> \dfdx{(y\cdot z)}{x}= \dfdx{y}{x}\cdot\dfdx{z}{x}</m>.
@@ -3185,7 +3184,7 @@ and <m>\dfdx{x}{t}</m>.
   vs. velocity) than with this physical problem. In general speed is
   always a positive number, while velocity can be negative or
   positive. We will discuss this in more depth in
-  <xref ref="CHAPTERPTERcha:calc-trig">~</xref>
+  <xref ref="CHAPTERcalc-trig">~</xref>
 </p>
 </aside>
 <p>
@@ -3416,7 +3415,7 @@ for some constant <m>k</m>.  Show that with this restriction,
 </problem>
 </section>
 
-<section xml:id="SECTIONnewt-meth-flux">
+<section xml:id="SECTIONFluxions">
 <title>Newton's Method of Fluxions</title>
 <introduction>
 <blockquote>
@@ -3978,7 +3977,7 @@ work with functions.
 
 
   Recall that when we looked at Roberval's treatment of the conic
-  sections in <xref ref="SECroberv-conic-sect">Section</xref> we found it handy
+  sections in <xref ref="SECTIONroberv-conic-sect">Section</xref> we found it handy
   to think of our curves as being traced out by the motion of a
   point and we created the notation
   <m>
@@ -4534,7 +4533,6 @@ following example.
 
 <aside>
 <title>Comment</title>
-
 <p>
 Not necessarily the best.  In general there is no best
   way.
@@ -4545,7 +4543,7 @@ Not necessarily the best.  In general there is no best
 
 <problem xml:id="PROBLEMParametricIVP">
 <introduction>
-  <image source="images/Parametric4.png" width="50%"/>
+  <image source="images/Parametric4.png" width="30%"/>
 <!-- \begin{wrapfigure}[]{r}{2in} -->
 <!--   \vskip-8mm -->
 <!--     \captionsetup{labelformat=empty} -->
@@ -4556,12 +4554,9 @@ Not necessarily the best.  In general there is no best
   The red curve  in the sketch at the right
   is  parameterized by
   <me>P(t)=
-  \begin{Bmatrix}
-    \frac{1}{\sqrt{t^2-1}}[6pt]
-    \frac{t^2-2\sqrt{t^2-1}}{\sqrt{t^2-1}}[6pt]
-    1\lt  t\lt \infty
-  \end{Bmatrix}
-  .
+\ParamEqThree{\frac{1}{\sqrt{t^2-1}}}
+    {\frac{t^2-2\sqrt{t^2-1}}{\sqrt{t^2-1}}}
+    {1\lt  t\lt \infty}.
   </me>
   Differentiating <m>x</m> and <m>y</m> gives
   <me>\dfdx{x}{t}= \frac{-t}{(t^2-1)^{\frac32}}</me>
@@ -4594,7 +4589,7 @@ so that
 <task>
 <statement>
 <p>
- Sketch the graph of <m>y(x)= x+\frac1x</m> to see that this is \emph{not} the
+ Sketch the graph of <m>y(x)= x+\frac1x</m> to see that this is <em>not</em> the
     same as the parameterized curve above.  Can you tell what went
     wrong?
   </p>
@@ -4660,7 +4655,7 @@ so that
       For each of the given parameterizations find <m>\dfdx{y}{x}</m> two
       different ways:
       
-      <ol>
+      <ol marker="i">
         <li>
           <p>
             Compute <m>\dx{x}</m> and <m>\dx{y}</m> and find their ratio,
@@ -4669,8 +4664,9 @@ so that
         </li>
         <li>
           <p>
-            Solve for <m>t</m> in terms of <m>x</m> (or <m>y</m>).  Substitute this
-        into <m>y</m> (or <m>x</m>).\  Compute <m>\dfdx{y}{x}</m> directly.
+            Solve for <m>t</m> in terms of <m>x</m> (or <m>y</m>),
+            substitute the result into <m>y</m> (or <m>x</m>), and
+            then compute <m>\dfdx{y}{x}</m> directly.
           </p>
         </li>
 </ol>
@@ -4682,11 +4678,10 @@ so that
     <statement>
       <p>
         <m>P(t)=
-        \begin{ParamEq}
+        \ParamEqThree
         {t-1}
         {t+1}
         {t\in\RR}
-        \end{ParamEq}
         </m>
       </p>
     </statement>
@@ -4695,11 +4690,10 @@ so that
     <statement>
       <p>
         <m>P(t)=
-        \begin{ParamEq}
+        \ParamEqThree
         {        3t-2}
         {        -5t+7}
         {        t\in\RR}
-        \end{ParamEq}
         </m>
       </p>
     </statement>
@@ -4708,11 +4702,10 @@ so that
     <statement>
       <p>
         <m> P(t)=
-        \begin{ParamEq}
+        \ParamEqThree
         {        1/\sqrt{t}}
         {        \sqrt{t}}
         {        0\lt t}
-        \end{ParamEq}
         </m>
       </p>
     </statement>
@@ -4924,10 +4917,17 @@ you see why we used negatives before.)
     involved to show that the curve  representing the cable must
     satisfy the differential equation
     <me>\dfdx{y}{x}=\frac{Wx}{H}.</me>
-    \hint{Notice that <m>T</m> is pulling in the direction tangent to the
-      cable.}
   </p>
 </statement>
+    
+
+<hint>
+<p>
+Notice that <m>T</m>  is pulling in the direction tangent to the
+      cable. 
+</p>
+</hint>
+
 </task>
 <task>
 <statement>
@@ -5039,15 +5039,16 @@ his book
     meter and <m>s</m> represent the length of the chain from the lowest
     point to a point <m>P=(x,y)</m> on the chain.  Show that the curve
     represented by the chain must satisfy the differential equation
-    <me>
-      \dfdx{y}{x}=\frac{ws}{H}.\label{eq:Catenary1}
-</me>
+    <men  xml:id="EQUATIONCatenary1">
+      \dfdx{y}{x}=\frac{ws}{H}.
+<!-- \label{eq:Catenary1} -->
+</men>
 </p>
 </statement>
 </problem>
 <p>
 
-  OK, but so what? All <xref ref="EQCatenary1">Equation~</xref>) says is that the
+  OK, but so what? All <xref ref="EQUATIONCatenary1">Equation~</xref>) says is that the
   proportion <m>\dfdx{y}{x}</m> is equal to the proportion <m>\frac{ws}{H}</m>.
 </p>
 <p>
@@ -5059,7 +5060,7 @@ his book
 <p>
 
   So why did we bother writing down
-  <xref ref="EQCatenary1">Equation~</xref>) at all? Does this tell us anything
+  <xref ref="EQUATIONCatenary1">Equation~</xref>) at all? Does this tell us anything
   about the shape of the hanging chain?
 </p>
 <p>
@@ -5072,7 +5073,7 @@ his book
   using mathematics we can't actually solve <em>most</em> of the
   equations we write down. Real world phenomena are just too
   complex. But just writing them down is a step forward.
-  Although we can't (yet) solve <xref ref="EQCatenary1">Equation~</xref>), and
+  Although we can't (yet) solve <xref ref="EQUATIONCatenary1">Equation~</xref>), and
   thereby find the shape of a hanging chain, we can use it to
   eliminate some shapes.  In particular, we can now show that Galileo
   was wrong about the shape of a hanging chain.
@@ -5083,7 +5084,7 @@ his book
 <introduction>
 <p>
   The difficulty is that we have the wrong variable on the right side
-  of <xref ref="EQUATIONeq:Catenary1">~</xref>. Since <m>y</m> depends on <m>x</m> we'd like
+  of <xref ref="EQUATIONCatenary1">~</xref>. Since <m>y</m> depends on <m>x</m> we'd like
   to have only the variables <m>x</m> and <m>y</m>, appearing in our
   equation. Instead we have <m>x</m>, <m>y</m>, and <m>s</m>. And we really don't
   know anything about <m>s</m>.
@@ -5097,12 +5098,13 @@ his book
 <p>
  Use a differential triangle to show that the hanging chain
     curve must satisfy the differential equation
-    <me>
+    <men  xml:id="EQUATIONCatenaryDiffeq">
 
     \dfdxn{y}{x}{2}=\frac{w}{H}  \dfdx{s}{x}=\frac{w}{H}
-    \sqrt{1+\left(\dfdx{y}{x}\right)^2 }.\label{eq:CatenaryDiffeq}
+    \sqrt{1+\left(\dfdx{y}{x}\right)^2 }.
+<!-- \label{eq:CatenaryDiffeq} -->
 
-</me>
+</men>
   \hint{Recall the <m>\d{s}</m> represents a differential along the
     direction of the curve. How is it related to <m>\d{x}</m> and <m>\d{y}</m>?}
   </p>
@@ -5120,7 +5122,7 @@ his book
 <statement>
 <p>
  Show that, in fact no nonzero polynomial
-    <m>y=a_0+a_1x+a_2x^2+\ldots+a_nx^n</m> satisfies  <xref ref="EQUATIONeq:CatenaryDiffeq">~</xref>.
+    <m>y=a_0+a_1x+a_2x^2+\ldots+a_nx^n</m> satisfies  <xref ref="EQUATIONCatenaryDiffeq">~</xref>.
     \hint{Suppose it did satisfy the equation.  If we were
       to square both sides of the equation, what would be the degree of
       each side?}
@@ -5129,10 +5131,10 @@ his book
 </task>
 </problem>
 <!-- begin{embeddedproblem}[Galileo was wrong!] -->
-<!--   <!-\- \label{PIC:catenary} -\-> -->
+<!--   <!-\- \label{PROBLEM:catenary} -\-> -->
 
 <!--   The difficulty is that we have the wrong variable on the right side -->
-<!--   of <xref ref="EQUATIONeq:Catenary1">~</xref>. Since <m>y</m> depends on <m>x</m> we'd like -->
+<!--   of <xref ref="EQUATIONCatenary1">~</xref>. Since <m>y</m> depends on <m>x</m> we'd like -->
 <!--   to have only the variables <m>x</m> and <m>y</m>, appearing in our -->
 <!--   equation. Instead we have <m>x</m>, <m>y</m>, and <m>s</m>. And we really don't -->
 <!--   know anything about <m>s</m>. -->
@@ -5153,7 +5155,7 @@ his book
 <!--   \item Show that the general parabola <m>y=ax^2+bx+c</m> does \emph{not} satisfy this -->
 <!--     differential equation (and so Galileo was mistaken!)  . -->
 <!--   \item Show that, in fact no nonzero polynomial -->
-<!--     <m>y=a_0+a_1x+a_2x^2+\ldots+a_nx^n</m> satisfies  <xref ref="EQUATIONeq:CatenaryDiffeq">~</xref>.  -->
+<!--     <m>y=a_0+a_1x+a_2x^2+\ldots+a_nx^n</m> satisfies  <xref ref="EQUATIONCatenaryDiffeq">~</xref>.  -->
 <!--     \hint{Suppose it did satisfy the equation.  If we were -->
 <!--       to square both sides of the equation, what would be the degree of -->
 <!--       each side?} -->
@@ -5177,7 +5179,7 @@ make this problem tractable. We do.
 <title>Domes</title>
 <p>
 
- In <xref ref="PICcatenary">Problem\</xref> we saw that the shape of a hanging chain is not a
+ In <xref ref="PROBLEMcatenary">Problem\</xref> we saw that the shape of a hanging chain is not a
 parabola as Galileo believed. But it actually shows much more than
 that. It shows that the shape of a hanging chain is not the graph of
 any polynomial regardless of its degree. (A parabola is the
@@ -5190,7 +5192,7 @@ functions.
 <p>
 
 The curve which <em>does</em> satisfy
-<xref ref="EQCatenary1">equation~</xref>), and thus is the shape of a hanging
+<xref ref="EQUATIONCatenary1">equation~</xref>), and thus is the shape of a hanging
 chain is called the catenary. This is
 not especially illuminating since
 the word <q>catenary</q> is derived from the Latin word {\it catena}
@@ -5285,7 +5287,7 @@ arch) as well.
 Hooke is also famous for showing that the contracting force of a
 stretched spring is proportional to the amount of stretching. This is
 known as <q>Hooke's Law.</q> We will examine this in more depth in
-<xref ref="SECTION:simple-harm-oscill">~</xref>.
+<xref ref="SUBSECTIONsimple-harm-oscill">~</xref>.
 </p>
 </aside>
 
@@ -5373,7 +5375,7 @@ known as <q>Hooke's Law.</q> We will examine this in more depth in
 <!-- <p> -->
 <!-- Hooke is also famous for showing that the contracting force of a -->
 <!-- stretched spring is proportional to the amount of stretching. This is -->
-<!-- known as <q>Hooke's Law.</q> We will examine this in more depth in<xref ref="SECsimple-harm-oscill"></xref> -->
+<!-- known as <q>Hooke's Law.</q> We will examine this in more depth in<xref ref="SUBSECTIONsimple-harm-oscill"></xref> -->
 <!-- </p> -->
 <!-- </aside> -->
 
@@ -5432,16 +5434,18 @@ known as <q>Hooke's Law.</q> We will examine this in more depth in
      Venus, and the moons of Jupiter. This work helped convince
      Galileo of the validity
      of
-     <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Copernicus/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Copernicus/">Nicolaus Copernicus</url>'s heliocentric (sun-centered) model of the
+     <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Copernicus/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Copernicus/">Nicolaus Copernicus<rsq/>s</url> heliocentric (sun-centered) model of the
      solar system, for which he (Galileo) was eventually condemned by
      the Inquisition.
 </p>
 <aside>
 <title>Historical Background</title>
 <p>
-<xref ref="https://mathshistory.st-andrews.ac.uk/Biographies/Harriot/">Thomas
-Harriot</xref> did it before Galileo but Harriot didn't publish his
-observations.
+<!-- <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Harriot/">Thomas -->
+<!-- Harriot</url> did it before Galileo but Harriot didn't publish his -->
+<!-- observations. -->
+The Englilshman Thomas Harriot did it before Galileo but Harriot
+didn't publish his observations.
 </p>
 </aside>
 
@@ -5590,7 +5594,7 @@ correct and proceed.)
 </task>
 </problem>
 <!-- begin{embeddedproblem-enumerate} -->
-  <!--    <!-\- \label{PIC:SpinCast1}  -\-> -->
+  <!--    <!-\- \label{PROBLEM:SpinCast1}  -\-> -->
   <!--   \begin{enumerate}[label={  (\alph*)}] -->
   <!--   \item -->
   <!--     Use the diagram above to show that the curve <m>y=y(x)</m> must satisfy the -->
@@ -5614,7 +5618,7 @@ correct and proceed.)
 
   In antiquity the reflective properties of all of the conic sections
   (parabola, ellipse and hyperbola) were worked out via very laborious
-  geometric arguments. In <xref ref="CHAPTERPTERScienceBeforeCalc">Chapter</xref> we
+  geometric arguments. In <xref ref="CHAPTERScienceBeforeCalc">Chapter</xref> we
   saw that Roberval reestablished these properties using his more
   dynamic (if somewhat questionable) approach.  The next two problems
   will reestablish the reflective property of the parabola once more
@@ -5622,7 +5626,7 @@ correct and proceed.)
 </p>
 <p>
 
-  Recall from <xref ref="CHAPTERPTERScienceBeforeCalc">Chapter</xref> that any light
+  Recall from <xref ref="CHAPTERScienceBeforeCalc">Chapter</xref> that any light
   ray  parallel to the axis of a parabola will reflect to a
   single point (the focus of the parabola).
 </p>
@@ -5685,7 +5689,7 @@ correct and proceed.)
   <!-- directrix <m>y=-p</m> as in the diagram at the right. -->
   <!--   \begin{enumerate}[label={  (\alph*)}]  -->
   <!--   \item Show that <m>(x,y)</m> must satisfy the equation: <m>x^2=4py.</m> -->
-  <!--   \item In <xref ref="PROBLEMPIC:SpinCast1"></xref>, show that in order to spin -->
+  <!--   \item In <xref ref="PROBLEMPROBLEM:SpinCast1"></xref>, show that in order to spin -->
   <!--     a mirror with a focus\aside{Having the correct focus (and thus -->
   <!--       the correct focal length) is of paramount importance in the -->
   <!--       performance of the telescope.  To give you a notion of the -->

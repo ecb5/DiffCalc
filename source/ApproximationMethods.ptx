@@ -606,9 +606,10 @@
 
           Here's another idea. If we rearrange the equation just a little we
           get
-          <me>
-            x^3-3x^2-(5x+6)=0.\label{eq:NewtonMethod1}
-          </me>
+          <men  xml:id="EQUATIONNewtonMethod1">
+            x^3-3x^2-(5x+6)=0.
+<!-- \label{eq:NewtonMethod1} -->
+          </men>
           Now define <m>f(x)</m> to be the expression on the left of
           <xref ref="EQUATIONNewtonMethod1">Equation~</xref>): <m>f(x) = x^3-3x^2-(5x+6)</m>. The graph
           of this function, seen at the left, will cross the <m>x</m>-axis (that is
@@ -1032,7 +1033,7 @@
             Start with <m>r_1=4</m> and use Newton's Method to compute the next four
             approximations (<m>r_2</m>, <m>r_3</m>, <m>r_4</m>, and <m>r_5</m>) of the roots of each
             of the following functions. Compare these with your results in
-            <xref ref="PROBbisect-meth">Problem~\#</xref>. Which algorithm seems to be more
+            <xref ref="PROBLEMbisect-meth">Problem~\#</xref>. Which algorithm seems to be more
             accurate after four iterations?
           </p>
         </introduction>
@@ -1800,7 +1801,7 @@
     </men>
     A problem like the one stated in <xref ref="IVPExpDiffeq1">Formula</xref> is
     called an <term>Initial Value Problem</term>, or IVP. We will give a formal
-    definition below (<xref ref="DEFIVP">Definition</xref>).
+    definition below (<xref ref="DEFINITIONIVP">Definition</xref>).
   </p>
   <p>
 
@@ -2050,8 +2051,8 @@ set of axes so you can compare them.
     <p>
       Use Euler's Method to approximate the solutions of the given IVPs
       by constructing a table like the ones in
-<xref ref="EMBEDEulerSine">Problems</xref>
-<xref ref="EMBEDEulerCosine">and</xref>. Then plot the points you found,
+<xref ref="PROBLEMEulerSine">Problems</xref>
+<xref ref="PROBLEMEulerCosine">and</xref>. Then plot the points you found,
 connecting them with straight line segments.
 </p>
 </introduction>
@@ -2087,8 +2088,8 @@ connecting them with straight line segments.
 <!-- \begin{embeddedproblem} -->
 <!--   Use Euler's Method to approximate the solutions of the given IVPs -->
 <!--   by constructing a table like the ones in -->
-<!--   <xref ref="EMBEDEulerSine">Problems</xref> -->
-<!--   <xref ref="EMBEDEulerCosine">and</xref>. Then plot the points you found, -->
+<!--   <xref ref="PROBLEMEulerSine">Problems</xref> -->
+<!--   <xref ref="PROBLEMEulerCosine">and</xref>. Then plot the points you found, -->
 <!--   connecting them with straight line segments. -->
 <!--   \begin{enumerate}[label={  (\alph*)}] -->
 <!--     \item <m>\dfdx{y}{x}=y^2,\ \ \ y(0)=1</m> -->
@@ -2103,8 +2104,8 @@ connecting them with straight line segments.
     <p>
       Use Euler's Method to approximate the solutions of the given IVPs
       by constructing a table like the ones in
-<xref ref="EMBEDEulerSine">Problems</xref>
-<xref ref="EMBEDEulerCosine">and</xref>. Then plot the points you found,
+<xref ref="PROBLEMEulerSine">Problems</xref>
+<xref ref="PROBLEMEulerCosine">and</xref>. Then plot the points you found,
 connecting them with straight line segments.
 </p>
 </introduction>
@@ -2140,8 +2141,8 @@ connecting them with straight line segments.
 <!-- \begin{embeddedproblem} -->
 <!--   Use Euler's Method to approximate the solutions of the given IVPs -->
 <!--   by constructing a table like the ones in -->
-<!--   <xref ref="EMBEDEulerSine">Problems</xref> -->
-<!--   <xref ref="EMBEDEulerCosine">and</xref>. Then plot the points you found, -->
+<!--   <xref ref="PROBLEMEulerSine">Problems</xref> -->
+<!--   <xref ref="PROBLEMEulerCosine">and</xref>. Then plot the points you found, -->
 <!--   connecting them with straight line segments. -->
 <!--   \begin{enumerate}[label={  (\alph*)}] -->
 <!--     \item <m>\dfdx{y}{x}=\frac{1}{y},\ \ \ y(1)=1</m> -->
@@ -2157,8 +2158,8 @@ connecting them with straight line segments.
     <p>
       Use Euler's Method to approximate the solutions of the given IVPs
       by constructing a table like the ones in
-<xref ref="EMBEDEulerSine">Problems</xref>
-<xref ref="EMBEDEulerCosine">and</xref>. Then plot the points you found,
+<xref ref="PROBLEMEulerSine">Problems</xref>
+<xref ref="PROBLEMEulerCosine">and</xref>. Then plot the points you found,
 connecting them with straight line segments.
 </p>
 </introduction>
@@ -2229,8 +2230,8 @@ connecting them with straight line segments.
 <!-- \begin{embeddedproblem}  -->
 <!--   Use Euler's Method to approximate the solutions of the given IVPs -->
 <!--   by constructing a table like the ones in -->
-<!--   <xref ref="EMBEDEulerSine">Problems</xref> -->
-<!--   <xref ref="EMBEDEulerCosine">and</xref>. Then plot the points you found, -->
+<!--   <xref ref="PROBLEMEulerSine">Problems</xref> -->
+<!--   <xref ref="PROBLEMEulerCosine">and</xref>. Then plot the points you found, -->
 <!--   connecting them with straight line segments. -->
 <!--   \begin{enumerate}[label={  (\alph*)}] -->
 <!--     \item <m>\dfdx{y}{x}=xy,\ \ \ y(0)=1</m> -->
@@ -2273,12 +2274,12 @@ pull.</q>
   <statement>
     <p>
       Show that the tractrix must satisfy the Initial Value Problem
-      <me>
+      <men  xml:id="EQUATIONTractrixIVP">
 
-        \label{eq:TractrixIVP}
+        <!-- \label{eq:TractrixIVP} -->
         \dfdx{y}{x}=-\frac{\sqrt{1-x^2 }}{x}\ \ y(1)=0.
         
-</me>
+</men>
 \hint{Find a differential triangle and an ordinary triangle which
 are proportional..}
 </p>
@@ -2304,7 +2305,7 @@ are proportional..}
 </task>
 </problem>
 
-<problem xml:id="PROBLEMpursuit1">
+<problem xml:id="PROBLEMPursuit1">
   <introduction>
     <figure>
       <caption>
@@ -2371,7 +2372,7 @@ This figure needs a caption.</caption>
       path you think the missile would follow.
 </p>
 <p>
-  We will re-visit this problem and find the exact solution in <xref ref="SUBSECTIONpursuit"></xref>.
+  We will re-visit this problem and find the exact solution in <xref ref="SUBSECTIONPursuit"></xref>.
 </p>
 </statement>
 </task>
@@ -2436,12 +2437,12 @@ This figure needs a caption.</caption>
   forth. If we disregard  friction the angle <m>\theta</m>, that the pendulum forms
   with a vertical line would oscillate in a
 manner very like the motion of the <term>Simple Harmonic Oscillators</term>
-(SHO) that we saw in <xref ref="SECsimple-harm-oscill">Section</xref>.
+(SHO) that we saw in <xref ref="SUBSECTIONsimple-harm-oscill">Section</xref>.
 </p>
 <p>
 
   If the motion of the pendulum actually is an SHO then it will
-  necessarily satisfy <xref ref="EQSHO">Equation</xref>. In this case that means
+  necessarily satisfy <xref ref="EQUATIONSHO">Equation</xref>. In this case that means
   that
   <me>
     \dfdxn{\theta}{t}{2}=-\omega^2\theta,
@@ -2478,10 +2479,11 @@ We'll investigate to see if that is true.
 Finally, since <m>s=l\theta</m> we have
 <m>\dfdxn{s}{t}{2}=\dfdxn{(l\theta)}{t}{2}</m>. Using the Constant Rule
 (twice) we see that <m>\dfdxn{s}{t}{2}=l\dfdxn{\theta}{t}{2}</m>. Thus
-<me>
-  \dfdxn{\theta}{t}{2}=\frac{g}{l}\sin(\theta).\label{eq:SHO3}
-</me>
-But it does not satisfy <xref ref="EQSHO">Equation~</xref>). Therefore a
+<men  xml:id="EQUATIONSHO3">
+  \dfdxn{\theta}{t}{2}=\frac{g}{l}\sin(\theta).
+<!-- \label{eq:SHO3} -->
+</men>
+But it does not satisfy <xref ref="EQUATIONSHO">Equation~</xref>). Therefore a
 swinging pendulum is not a Simple Harmonic Oscillator. Its
 motion is slightly more complex.
 </p>
@@ -2508,13 +2510,13 @@ motion is slightly more complex.
   for values of <m>x</m> close to zero the graphs are nearly identical. Thus,
   when the angle <m>\theta</m> is very small <m>\sin(\theta)</m> and <m>\theta</m> are
   very nearly equal.  In that case if we replace <m>\sin(\theta)</m> with
-  <m>\theta</m> in <xref ref="EQSHO3">Equation~</xref>) we see the the motion of a
+  <m>\theta</m> in <xref ref="EQUATIONSHO3">Equation~</xref>) we see the the motion of a
   pendulum approximately satisfies the equation
-  <me>
+  <men  xml:id="EQUATIONSHO4">
     <!-- \label{eq:SHO4} -->
     \dfdxn{\theta}{t}{2}=-\frac{g}{l}\theta,
-</me>
-which we recognize as <xref ref="EQSHO">Equation~</xref>) with <m>\omega^2 =
+</men>
+which we recognize as <xref ref="EQUATIONSHO">Equation~</xref>) with <m>\omega^2 =
 \frac{g}{l}.</m>
 </p>
 
@@ -2544,7 +2546,7 @@ is <m>y=x</m>.
   Approximating <m>\sin(x)</m> by its tangent line at <m>x=0</m> works well for
   values of <m>x</m> close to zero. We have not been very precise about the
 meaning of <q>close to zero</q> but it should be clear that if <m>\theta</m>
-is too large <xref ref="EQSHO3">Equation~</xref>) will no longer serve as a good
+is too large <xref ref="EQUATIONSHO3">Equation~</xref>) will no longer serve as a good
 model.
 </p>
 <p>
@@ -2568,14 +2570,14 @@ model.
 <p>
 
   So it seems reasonable to suppose that the differential equation
-  <me>
+  <men  xml:id="EQUATIONSHO5">
     <!-- \label{eq:SHO5} -->
     \dfdxn{\theta}{t}{2}=-\frac{g}{l}\left(\theta-\frac{\theta^3}{6}\right),\
     \theta(t)=0,
-</me>
+</men>
 if we can solve it, would serve as a better model for the motion of a
-pendulum than <xref ref="EQSHO4">Equation</xref>. Unfortunately we do not yet have
-the tools to solve <xref ref="EQSHO5">Equation</xref>, but the notion of
+pendulum than <xref ref="EQUATIONSHO4">Equation</xref>. Unfortunately we do not yet have
+the tools to solve <xref ref="EQUATIONSHO5">Equation</xref>, but the notion of
 approximating a complex function, like <m>\sin(x)</m>, with a polynomial  will turn out
 to be very useful so we will explore it for a bit before we go on.
 We will again switch to Lagrange's prime notation because in this
@@ -2611,7 +2613,7 @@ notation in the first place.
   </statement>
 </exercise>
 <p>
-  Applying the result of <xref ref="PROBGenTan">Drill</xref> to <m>f(x)=\sin(x)
+  Applying the result of <xref ref="EXERCISEGenTan">Drill</xref> to <m>f(x)=\sin(x)
   </m> we see that the equation of the line tangent to the graph of
   <m>y=\sin(x)</m> at <m>(0,0)</m> is given by
   <me>
@@ -2764,7 +2766,7 @@ notation in the first place.
   <introduction>
     <p>
       This is the process we used to generate our cubic approximation to the
-      sine function just before <xref ref="EQSHO5">Equation~\#</xref>.
+      sine function just before <xref ref="EQUATIONSHO5">Equation~\#</xref>.
     </p>
   </introduction>
   <task>
@@ -2806,7 +2808,7 @@ notation in the first place.
 </problem>
 <!-- \begin{embeddedproblem} -->
 <!--   This is the process we used to generate our cubic approximation to the -->
-<!--   sine function just before <xref ref="EQSHO5">Equation~\#</xref>. -->
+<!--   sine function just before <xref ref="EQUATIONSHO5">Equation~\#</xref>. -->
 <!--   \begin{enumerate}[label={  (\alph*)}] -->
 <!--   \item Show that using this process on <m>y=\sin(x)</m> will generate -->
 <!--     the polynomial that we showed you earlier: -->

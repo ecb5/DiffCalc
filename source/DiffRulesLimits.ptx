@@ -4,7 +4,9 @@
 <section xml:id="SECTIONlimit-theorems-laws">
 <title>The Limit Rules (Theorems)</title>
 
-<introduction>
+<subsection xml:id="SUBSECTIONlimit-comp-cont">
+<title>The Limit of a Composition and Continuity at a Point</title>
+
 <blockquote>
 <p>
 In the old days when people invented a new
@@ -546,15 +548,13 @@ approaches <m>kL_f</m>. It follows from <xref ref="THEOREMConstLimit">Theorem</x
 </p>
 </statement>
 </exercise>
-</introduction>
-<subsection xml:id="SUBSECTIONlimit-comp-cont">
-<title>The Limit of a Composition and Continuity at a Point</title>
+
 
 <p>
 The concept of <term>continuity</term> is essential to Calculus, but you may
 have noticed that we have carefully avoided it as much as possible
 until now. This is because defining continuity is similar to defining
-the line tagent to a curve (<xref ref="DEFTangentLine">Definition~\</xref>). We
+the line tagent to a curve (<xref ref="DEFINITIONTangentLine">Definition~\</xref>). We
 need to think carefully about what we want the term <term>continuous</term>
 to mean, and then craft our definition to capture that meaning. This
 would have been very difficult to do without a fairly sophisticated
@@ -952,7 +952,7 @@ distinction between function and variable.
 </p>
 <p>
 
-        Looking again at <xref ref="EQUATIONeq:CR1">~</xref>, and mixing the
+        Looking again at <xref ref="EQUATIONCR1">~</xref>, and mixing the
         differential and functional notations a bit we see that 
         <me>
         f^\prime(x)=\dfdx{y}{x}=3z\dx{z}=\underbrace{3\left(3x^2+6x\right)^2}_{\dfdx{\alpha}{\beta}=\alpha^\prime(\beta)}\underbrace{(6x+6)}_{\dfdx{\beta}{x}=\beta^\prime(x)}=\alpha^\prime(\beta)\cdot\beta^\prime(x).
@@ -1058,7 +1058,7 @@ Putting this all together we see that
 <p>
 
 The substitutions we used to make things <q>easier on your eyes</q> in
-<xref ref="SECan-easy-problem-alg">Section</xref> is equivalent this chain of
+<xref ref="SECTIONAn-easy-problem-alg">Section</xref> is equivalent this chain of
 cancellations.  With the invention of Calculus the older Chain Rule
 for unit conversion was extended to the differentiation by
 substitution technique using differentials. Eventually it became the
@@ -1431,26 +1431,26 @@ the proof of the Chain Rule.
     \label{eq:PRviaLimit}
   </me>
   and the second is that, in limit form,
-  <xref ref="EQUATIONeq:PRviaLimit2"></xref> is
+  <xref ref="EQUATIONPRviaLimit2"></xref> is
   <me>
     \label{eq:PRviaLimit3}
     f^\prime(x)=\alpha(x)\left(\limit{h}{0}{\frac{\beta(x+h)-\beta(x)}{h}}\right)+\beta(x)\left(\limit{h}{0}{\frac{\alpha(x+h)-\alpha(x)}{h}}\right).
   </me>
   It appears then that our goal is to simply reorganize
-  <xref ref="EQUATIONeq:PRviaLimit"></xref> until it looks like
-  <xref ref="EQUATIONeq:PRviaLimit3"></xref>.  We say <q>simply</q> but it will only
+  <xref ref="EQUATIONPRviaLimit"></xref> until it looks like
+  <xref ref="EQUATIONPRviaLimit3"></xref>.  We say <q>simply</q> but it will only
   appear to be simple after we have succeeded. We will proceed slowly.
   
   Observe that if we subtract <m>\alpha(x+h)\beta(x)</m> from the blue part
   of the numerator
-  in <xref ref="EQUATIONeq:PRviaLimit"></xref> we get
+  in <xref ref="EQUATIONPRviaLimit"></xref> we get
   <me>
   \alpha(x)\beta(x)-\alpha(x+h)\beta(x)=
   \textcolor{blue}{-\beta(x)\left(\alpha(x+h)-\alpha(x)\right)},
   </me>
   whereas if we add <m>\alpha(x+h)\beta(x)</m> to the red part of
   the numerator in
-  <xref ref="EQUATIONeq:PRviaLimit"></xref>  we get
+  <xref ref="EQUATIONPRviaLimit"></xref>  we get
   <me>
   \alpha(x+h)\beta(x+h)+\alpha(x+h)\beta(x) =
   \textcolor{red}{\alpha(x+h)\left(\beta(x+h)-\beta(x)\right)}.
@@ -1458,7 +1458,7 @@ the proof of the Chain Rule.
   
   This suggests that we should both add and subtract the expression
   <m>\alpha(x+h)\beta(x)</m> to the numerator of
-  <xref ref="EQUATIONeq:PRviaLimit"></xref>.  Doing this and factoring as we've
+  <xref ref="EQUATIONPRviaLimit"></xref>.  Doing this and factoring as we've
   indicated above we get
   <me>
   f^\prime(x)=\limit{h}{0}{ \frac{ \textcolor {red}
@@ -1500,26 +1500,26 @@ the proof of the Chain Rule.
 <!--     \label{eq:PRviaLimit} -->
 <!--   </me> -->
 <!--   and the second is that, in limit form, -->
-<!--   <xref ref="EQUATIONeq:PRviaLimit2"></xref> is -->
+<!--   <xref ref="EQUATIONPRviaLimit2"></xref> is -->
 <!--   <me> -->
 <!--     \label{eq:PRviaLimit3} -->
 <!--     f^\prime(x)=\alpha(x)\left(\limit{h}{0}{\frac{\beta(x+h)-\beta(x)}{h}}\right)+\beta(x)\left(\limit{h}{0}{\frac{\alpha(x+h)-\alpha(x)}{h}}\right). -->
 <!--   </me> -->
 <!--   It appears then that our goal is to simply reorganize -->
-<!--   <xref ref="EQUATIONeq:PRviaLimit"></xref> until it looks like -->
-<!--   <xref ref="EQUATIONeq:PRviaLimit3"></xref>.  We say <q>simply</q> but it will only -->
+<!--   <xref ref="EQUATIONPRviaLimit"></xref> until it looks like -->
+<!--   <xref ref="EQUATIONPRviaLimit3"></xref>.  We say <q>simply</q> but it will only -->
 <!--   appear to be simple after we have succeeded. We will proceed slowly. -->
   
 <!--   Observe that if we subtract <m>\alpha(x+h)\beta(x)</m> from the blue part -->
 <!--   of the numerator -->
-<!--   in <xref ref="EQUATIONeq:PRviaLimit"></xref> we get -->
+<!--   in <xref ref="EQUATIONPRviaLimit"></xref> we get -->
 <!--   <me> -->
 <!--   \alpha(x)\beta(x)-\alpha(x+h)\beta(x)= -->
 <!--   \textcolor{blue}{-\beta(x)\left(\alpha(x+h)-\alpha(x)\right)}, -->
 <!--   </me> -->
 <!--   whereas if we add <m>\alpha(x+h)\beta(x)</m> to the red part of -->
 <!--   the numerator in -->
-<!--   <xref ref="EQUATIONeq:PRviaLimit"></xref>  we get -->
+<!--   <xref ref="EQUATIONPRviaLimit"></xref>  we get -->
 <!--   <me> -->
 <!--   \alpha(x+h)\beta(x+h)+\alpha(x+h)\beta(x) = -->
 <!--   \textcolor{red}{\alpha(x+h)\left(\beta(x+h)-\beta(x)\right)}. -->
@@ -1527,7 +1527,7 @@ the proof of the Chain Rule.
   
 <!--   This suggests that we should both add and subtract the expression -->
 <!--   <m>\alpha(x+h)\beta(x)</m> to the numerator of -->
-<!--   <xref ref="EQUATIONeq:PRviaLimit"></xref>.  Doing this and factoring as we've -->
+<!--   <xref ref="EQUATIONPRviaLimit"></xref>.  Doing this and factoring as we've -->
 <!--   indicated above we get -->
 <!--   <me> -->
 <!--   f^\prime(x)=\limit{h}{0}{ \frac{ \textcolor {red} -->
@@ -2095,7 +2095,7 @@ L'H\^o pital's Rule.
   \end{wrapfigure}
   There are two cases:\\
   \underline{  \boldmath Case 1, <m>\theta\ge0</m>:} We will use the
-  Squeeze Theorem.  Recall that in <xref ref="SUBSECTIONtrig-interl">~</xref> we
+  Squeeze Theorem.  Recall that in <xref ref="SECTIONtrig-interl">~</xref> we
   observed that the lengths of certain line segments associated with
   the unit circle in the first quadrant are equal to the trigonometric
   functions. The figure at the right shows the relationship between
@@ -2305,7 +2305,7 @@ trigonmetric formulas.
   <me>
     y(x)=x^3.\label{eq:Inv1}
   </me>
-  <xref ref="EQUATIONeq:Inv1">~</xref> defines <m>y</m> as a function of <m>x</m>.
+  <xref ref="EQUATIONInv1">~</xref> defines <m>y</m> as a function of <m>x</m>.
 </p>
 <p>
   
@@ -2326,9 +2326,9 @@ trigonmetric formulas.
 </p>
 <p>
 
-  For example suppose we choose <m>x=2</m> and use <xref ref="EQUATIONeq:Inv1"></xref>
+  For example suppose we choose <m>x=2</m> and use <xref ref="EQUATIONInv1"></xref>
   to find <m>y=8</m>. If we then take <m>y=8</m> and use
-  <xref ref="EQUATIONeq:Inv2"></xref> we find that <m>x=2</m>. That is, <m>x(y)</m> has
+  <xref ref="EQUATIONInv2"></xref> we find that <m>x=2</m>. That is, <m>x(y)</m> has
   <q>undone</q> <m>y(x)</m> for the single
   pair <m>(2,8)</m>. <xref ref="DRILLCubeRoot"></xref> asks you to show that it is
   true for every pair <m>(x, y(x))</m>. This <q>undoing</q> makes <m>y(x)</m> and
@@ -2396,7 +2396,7 @@ exists.
 
 In general this is true but there is one exception that has to be
 addressed. When <m>f</m> is differentiable at <m>a</m> and <m>f^\prime(a) = 0</m>
-then the limit in <xref ref="EQUATIONeq:InvFuncDerivLimit">~(</xref> does not
+then the limit in <xref ref="EQUATIONInvFuncDerivLimit">~(</xref> does not
 exist. Hence <m>\inverse f</m> is not differentiable at <m>f(a)</m>.
 More formally, we have the following lemma.
 </p>
@@ -2559,7 +2559,7 @@ function, <m>f(x)</m>, to have a differentiable inverse.
 </p>
 <p>
 
- Also, from <xref ref="EQUATIONeq:InvDeriv2"></xref> we know what
+ Also, from <xref ref="EQUATIONInvDeriv2"></xref> we know what
 the derivative of the inverse will be if it exists:
 <me>
 \DD\left(\inverse{f}(x)\right)=\frac{1}{f^\prime\left(\inverse{f}(x)\right)}.

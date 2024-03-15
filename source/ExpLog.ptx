@@ -80,7 +80,7 @@
         Functions which require Calculus for their definition are (usually)
         called <term>analytic</term> functions\aside{The precise definition
         of <term>analytic</term> actually comes directly from the work we did in
-        <xref ref="SECmore-high-deriv">Section</xref> on approximating functions with
+        <xref ref="SECTIONmore-high-deriv">Section</xref> on approximating functions with
         polynomials. But one way or another the definition of
         <term>analytic</term> is tied to Calculus.}.
       </p>
@@ -130,14 +130,15 @@
       <example>
         <p>  We've seen that when we differentiate the formula <m>y=x^2</m> we get the
         <term>differential equation</term> <m>\dx{y} = 2x\dx{x},</m> or
-        <me>
-          \dfdx{y}{x}=2x.\label{eq:x2diffeq}
-        </me>
+        <men  xml:id="EQUATIONx2diffeq">
+          \dfdx{y}{x}=2x.
+<!-- \label{eq:x2diffeq} -->
+        </men>
         If we did not already know that the function <m>y(x)=x^2</m> satisfies
-        <xref ref="EQx2diffeq">Equation~</xref>) we could give a name to the solution
+        <xref ref="EQUATIONx2diffeq">Equation~</xref>) we could give a name to the solution
         (sqr<m>(x)</m>, perhaps?) and by fiat, define sqr<m>(x)</m> to be
         whatever function solves this equation.
-        But there is a problem. The solution of <xref ref="EQx2diffeq">Equation~</xref>)
+        But there is a problem. The solution of <xref ref="EQUATIONx2diffeq">Equation~</xref>)
         is a multifunction, remember? To choose a single branch we need to
         impose an initial condition.
         </p>
@@ -247,7 +248,7 @@
     </p>
 
     <p>
-      In <xref ref="SECeulers-method">Section</xref>
+      In <xref ref="SECTIONeulers-method">Section</xref>
       we investigated this IVP in some detail and we were able to draw an
       approximate graph of the natural exponential (at least near the
       initial value, <m>\exp(0)</m>). We will explore this function further here.
@@ -255,7 +256,7 @@
 
     <p>
       Recall that the Taylor Polynomial of a function, as described in
-      <xref ref="SECmore-high-deriv">Section</xref>, <xref ref="EQTaylorFormula">Equation</xref>,
+      <xref ref="SECTIONmore-high-deriv">Section</xref>, <xref ref="EQUATIONTaylorFormula">Equation</xref>,
       given by\aside{Recall that the parenthetical superscript, <m>(n)</m>, indicates the <m>n</m>th
       derivative. Thus <m>y^{(2)}(x)</m> represents the second  derivative of
       <m>y(x)</m>, <m>y^{(3)}</m> represents the  third derivative,  and so on.}
@@ -278,7 +279,7 @@
         <mrow number="no">       \exp^{(2)}(x)=\exp^\prime(x)\amp =\exp(x)</mrow>
         <mrow number="no">  \exp^{(3)}(x)=\exp^{(2)}(x)=\exp^\prime(x)\amp =\exp(x)</mrow>
         <mrow number="no">       \amp \ \ \vdots</mrow>
-        <mrow  xml:id="EQUATIONExpDerivs">  \exp^{(n)}(x)=\cdots = \exp^{(2)}(x) =  \exp^\prime(x)\amp =\exp(x)\label{}</mrow>
+        <mrow  xml:id="EQUATIONExpDerivs">  \exp^{(n)}(x)=\cdots = \exp^{(2)}(x) =  \exp^\prime(x)\amp =\exp(x)</mrow>
       </mdn>
     </p>
 
@@ -286,7 +287,7 @@
       <statement>
         <p>
           Let <m>T_n(x)</m> be the <m>n</m>th degree Taylor polynomial approximation of
-          <m>\exp(x)</m> and use <xref ref="EQExpDerivs">Equation~</xref>) and the initial
+          <m>\exp(x)</m> and use <xref ref="EQUATIONExpDerivs">Equation~</xref>) and the initial
           value,
           <m>\exp(0)=1</m>  to show that
           <me>
@@ -379,7 +380,7 @@
         <introduction>
           <p>
             Show that none of the following is a solution of
-            <xref ref="DEFnatural-exponential-ivp">IVP~</xref>).\\
+            <xref ref="DEFINITIONnatural-exponential-ivp">IVP~</xref>).\\
             \hint{Observe that if
             <m>y(x)</m> is a solution then <m>y-\dfdx{y}{x}=0</m>.}
           </p>
@@ -431,7 +432,7 @@
                   read <q>three factorial</q> and means <m>3\cdot2\cdot1.</m>
                   Similarly <m>4!=4\cdot3\cdot2\cdot1</m> and in general
                   <m>n!=n(n-1)(n-2)\ldots3\cdot2\cdot1</m>} is a solution of
-                  <xref ref="IVPdef:natural-exponential-ivp"></xref>.\\
+                  <xref ref="DEFINITIONnatural-exponential-ivp"></xref>.\\
                   \hint{Observe that if
                   <m>y(x)</m> is a solution then <m>y-\dfdx{y}{x}=0</m>.}
                 </p>
@@ -569,12 +570,13 @@
 
             <p>
               This is a startling idea but before we dismiss it, let's take our own
-              advice from <xref ref="DIGRESSEffectiveGuessing">Digression~\</xref>. We'll trust
+              advice from our <xref ref="DIGRESSIONGuessingEffectively" text="custom">Digression</xref> on effective guessing. We'll trust
               our intuition, but also examine it closely. What we're saying is that
               the solution of <xref ref="IVPExpDiffeq">Equation~</xref>) is:
-              <me>
-                y= 1+x+\frac{x^2}{2!}+\frac{x^3}{3!} + \cdots\label{eq:ExpSeries1}
-              </me>
+              <men  xml:id="EQUATIONExpSeries1">
+                y= 1+x+\frac{x^2}{2!}+\frac{x^3}{3!} + \cdots
+                <!-- \label{eq:ExpSeries1} -->
+              </men>
               where the dots at the end mean that the summation goes on
               forever. There is no last term.
             </p>
@@ -681,7 +683,7 @@
             <p>
               At the left is the graph of the polynomial
               <m>y= 1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+ \cdots + \frac{x^{50}}{50!}</m>
-              which we believe, from our work in <xref ref="SECmore-high-deriv">Section</xref>,
+              which we believe, from our work in <xref ref="SECTIONmore-high-deriv">Section</xref>,
               should be a good approximation to <m>\exp(x)</m>, at least when <m>x</m> is near
               zero. When we zoom in on the part of the graph which is near <m>x=0</m> we
               see that the following
@@ -759,16 +761,18 @@
               \dx{y} \amp =2^{x+\dx{x}}-2^x.\\
               \end{align*}
               Thus
-              <me>
-                \dx{y} =2^x(2^{\dx{x}}-1).  \label{eq:2^x}
-              </me>
+              <men  xml:id="EQUATIONExp2-1">
+                \dx{y} =2^x(2^{\dx{x}}-1).
+                <!-- \label{eq:2^x} -->
+              </men>
             </p>
             <p>
-              We want to form <m>\dfdx{y}{x}</m> so we divide <xref ref="EQ2^x">Equation~</xref>) by
+              We want to form <m>\dfdx{y}{x}</m> so we divide <xref ref="EQUATIONExp2-1">Equation~</xref>) by
               <m>\dx{x}</m>, giving
-              <me>
-                \dfdx{y}{x}=\frac{2^x(2^{\dx{x}}-1)}{\dx{x}}.\label{eq:d(2^x)}
-              </me>
+              <men  xml:id="EQUATIONDEXP2">
+                \dfdx{y}{x}=\frac{2^x(2^{\dx{x}}-1)}{\dx{x}}.
+                <!-- \label{eq:d(2^x)} -->
+              </men>
               The differential in the exponent is a bit concerning. We will have to
               be clever.
             </p>
@@ -776,13 +780,13 @@
               We have become comfortable thinking of <m>\dx{x}</m> as infinitely small,
               but it should be clear that if we take <m>\dx{x}</m> to be a very
               small, but finite number, say <m>\dx{x}= 0.0000001,</m> we can use
-              <xref ref="EQd(2^x)">Equation~</xref>) to approximate <m>\dfdx{y}{x}</m> as
+              <xref ref="EQUATIONDEXP2">Equation~</xref>) to approximate <m>\dfdx{y}{x}</m> as
               accurately as we wish.
             </p>
             <p>
               Replacing <m>\dx{x}</m> with <m>0.0000001</m> on the right side of
-              <xref ref="EQd(2^x)">Equation~</xref>) we get
-              <men  xml:id="EQUATIONExp2">
+              <xref ref="EQUATIONDEXP2">Equation~</xref>) we get
+              <men  xml:id="EQUATIONExp2-2">
                 \dfdx{y}{x}=\dfdx{(2^x)}{x}\approx
                 2^x\left[\frac{(2^{\dx{x}}-1)}{\dx{x}}\right]_{\dx{x}=0.0000001} \approx
                 2^x(0.7).
@@ -792,7 +796,7 @@
             <exercise>
               <statement>
                 <p>
-                  Confirm  <xref ref="EQExp2">Equation</xref>.
+                  Confirm  <xref ref="EQUATIONExp2-2">Equation</xref>.
                 </p>
               </statement>
             </exercise>
@@ -911,9 +915,10 @@ Many people are repelled when they encounter this
         This is precisely why we define natural exponential as an infinite
         series.    It can be shown (though we will not show it here) that if <m>m</m>, and <m>n</m> are integers
         (<m>n\gt0</m>)  then
-        <me>
-        \exp(m/n)=\left(\sqrt[n]{e}\right)^m=1+(m/n)+\frac{(m/n)^n}{n!}+\frac{(m/n)^3}{3!}+\frac{(m/n)^4}{4!}+\ldots,\label{eq:ExpSeries4}
-        </me>
+        <men  xml:id="EQUATIONExpSeries4">
+        \exp(m/n)=\left(\sqrt[n]{e}\right)^m=1+(m/n)+\frac{(m/n)^n}{n!}+\frac{(m/n)^3}{3!}+\frac{(m/n)^4}{4!}+\ldots,
+<!-- \label{eq:ExpSeries4} -->
+        </men>
 </p>
 <p>
         If there is only one solution to the IVP (there is) then
@@ -939,7 +944,7 @@ Many people are repelled when they encounter this
  <introduction>
       <p>
           For this problem use the approximation
-          <men  xml:id="EQUATIONExpApprox">
+          <men  xml:id="EQUATIONExpApprox1">
             e^x\approx 1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+ \frac{x^4}{4!}+ \frac{x^5}{5!}+ \frac{x^6}{6!}+ \frac{x^7}{7!}+ \frac{x^8}{8!}
       </men>
       </p>
@@ -947,7 +952,7 @@ Many people are repelled when they encounter this
       <task>
       <statement>
       <p>
-       Use <xref ref="EQUATIONExpApprox">equation</xref>) to show that
+       Use <xref ref="EQUATIONExpApprox1">equation</xref>) to show that
             <m>\inverse{e} \approx 0.36788</m>. Compare this with the numerical
             value of
             <m>\frac1e\approx\frac{1}{2.71828}</m> you get from a calculator.
@@ -955,14 +960,14 @@ Many people are repelled when they encounter this
       </statement>
 <hint>
 <p>
-In <xref ref="EQUATIONExpApprox">equation</xref>) take <m>x=-1.</m>
+In <xref ref="EQUATIONExpApprox1">equation</xref>) take <m>x=-1.</m>
 </p>
 </hint>
       </task>
       <task>
       <statement>
       <p>
-       Use <xref ref="EQUATIONExpApprox">equation</xref>) to show that
+       Use <xref ref="EQUATIONExpApprox1">equation</xref>) to show that
             <m>\sqrt{e} \approx 1.64872</m>. Compare this with the numerical
             value of <m>\sqrt{e}\approx \sqrt{2.71828}</m> you get from a
             calculator.
@@ -975,7 +980,7 @@ In <xref ref="EQUATIONExpApprox">equation</xref>) take <m>x=-1.</m>
       <introduction>
       <p>
           For this problem use the approximation
-          <men  xml:id="EQUATIONExpApprox">
+          <men  xml:id="EQUATIONExpApprox2">
             e^x\approx 1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+ \frac{x^4}{4!}+ \frac{x^5}{5!}+ \frac{x^6}{6!}+ \frac{x^7}{7!}+ \frac{x^8}{8!}
           </men>
       </p>
@@ -983,19 +988,19 @@ In <xref ref="EQUATIONExpApprox">equation</xref>) take <m>x=-1.</m>
       <task>
       <statement>
       <p>
-       Use <xref ref="EQUATIONExpApprox"></xref> to show that -->
+       Use <xref ref="EQUATIONExpApprox2"></xref> to show that -->
             <m>\inverse{e} \approx 0.36788</m>. Compare this with the numerical
             value of
             <m>\frac1e\approx\frac{1}{2.71828}</m> you get from a calculator. \\
             \hint{In
-              <xref ref="EQUATIONExpApprox"></xref> take <m>x=-1.</m>}
+              <xref ref="EQUATIONExpApprox2"></xref> take <m>x=-1.</m>}
           </p>
       </statement>
       </task>
       <task>
       <statement>
       <p>
-       Use <xref ref="EQUATIONExpApprox"></xref> to show that
+       Use <xref ref="EQUATIONExpApprox2"></xref> to show that
             <m>\sqrt{e} \approx 1.64872</m>. Compare this with the numerical
             value of <m>\sqrt{e}\approx \sqrt{2.71828}</m> you get from a
             calculator.
@@ -1016,8 +1021,8 @@ In <xref ref="EQUATIONExpApprox">equation</xref>) take <m>x=-1.</m>
       <!--       value of -->
       <!--       <m>\frac1e\approx\frac{1}{2.71828}</m> you get from a calculator. \\ -->
       <!--       \hint{In -->
-      <!--         <xref ref="EQUATIONeq:ExpApprox"></xref> take <m>x=-1.</m>} -->
-      <!--     \item Use <xref ref="EQUATIONeq:ExpApprox"></xref> to show that -->
+      <!--         <xref ref="EQUATIONExpApprox"></xref> take <m>x=-1.</m>} -->
+      <!--     \item Use <xref ref="EQUATIONExpApprox"></xref> to show that -->
       <!--       <m>\sqrt{e} \approx 1.64872</m>. Compare this with the numerical -->
       <!--       value of <m>\sqrt{e}\approx \sqrt{2.71828}</m> you get from a -->
       <!--       calculator. -->
@@ -1073,7 +1078,7 @@ You can decide for yourself how natural this really
       <p>
       The upshot of <xref ref="DRILLComputingE"></xref> is that if we
       replace <m>2</m> with <m>e\approx 2.718</m> in <xref
-      ref="EQUATIONExp2">Equation</xref>, or if we replace <m>3</m> in
+      ref="EQUATIONExp2-1">Equation</xref>, or if we replace <m>3</m> in
       <xref ref="EQUATIONExp3">Equation</xref> the constant the result
       should be closer to <m>1</m> than if we use  <m>0.7</m> or
       <m>1.1</m>, respectively.
@@ -1624,7 +1629,7 @@ Point: <m>(1,e/2)</m>
 <p>
      Now let's tackle the original problem.
   Show that
-      <men  xml:id="EQUATIONCatSol}">
+      <men  xml:id="EQUATIONCatSol">
         y=\frac{H}{w}
         \left(\frac{e^{\frac{wx}{H}}+e^{-\frac{wx}{H}}}{2}\right)
       </men>
@@ -1673,7 +1678,7 @@ Point: <m>(1,e/2)</m>
       <!--   <m>\dfdx{ \left(\frac{1}{2}(e^X- e^{-X})\right)}{X}= -->
       <!-- \frac{1}{2}(e^X+ e^{-X})</m> -->
       <!-- \item Show that the curve <m>Y=\frac12\left(e^X+e^{-X}\right)</m> -->
-      <!-- satisfies differential <xref ref="EQUATIONeq:CatenaryDiffeq"></xref>: -->
+      <!-- satisfies differential <xref ref="EQUATIONCatenaryDiffeq"></xref>: -->
       <!-- <me> -->
       <!--   \dfdxn{Y}{X}{2}=\sqrt{1+\left(\dfdx{Y}{X}\right)^2} -->
       <!-- </me> -->
@@ -1706,7 +1711,7 @@ Point: <m>(1,e/2)</m>
       <!-- </m> -->
       <!-- } -->
       <!-- \item Assume <m>w=1,</m> and <m>H=1</m> and graph the curve given by -->
-      <!-- <xref ref="EQUATIONeq:CatSol"></xref>.  Does it look like a hanging chain? -->
+      <!-- <xref ref="EQUATIONCatSol"></xref>.  Does it look like a hanging chain? -->
       <!-- What happens to the graph if we use <m>w=1, H=2</m> or <m>w=2, H=1.</m> Does -->
       <!-- this make sense physically?  Why or why not?\\ -->
       <!-- \end{enumerate} -->
@@ -2281,7 +2286,7 @@ The word
         of change of <m>P(t)</m> is proportional to <m>P</m> itself then it will satisfy
         an IVP of the form:
         <mdn>
-          <mrow xml:id="IVPExpSpecial">
+          <mrow xml:id="IVPExpGeneral">
             \dfdx{P}{t}\amp{}=rP, \amp{}  P(0)\amp{}=P_0.
           </mrow>
         </mdn>
@@ -2292,20 +2297,20 @@ The word
       </p>
 
       <p>
-        The <xref ref="IVPExpSpecial">IVP</xref>) should look familiar to you.  Notice that when
+        The <xref ref="IVPExpGeneral">IVP</xref>) should look familiar to you.  Notice that when
         <m>r=1</m> and <m>P_0=1</m> it is  the same as <xref ref="IVPExpDiffeq">IVP</xref>
         which we used to define the the natural exponential. Except, of
         course, for the names of the variables. To put it another
-        way <xref ref="IVPExpSpecial">IVP</xref>) is the special case of
+        way <xref ref="IVPExpGeneral">IVP</xref>) is the special case of
         <xref ref="IVPExpDiffeq">IVP</xref>) when <m>r=1.</m> Since these are so similar it is not
-        surprising  that the solution of <xref ref="IVPExpSpecial">IVP</xref>
+        surprising  that the solution of <xref ref="IVPExpGeneral">IVP</xref>
         involves the natural exponential.
       </p>
 
       <p>
-        <xref ref="PROBLEMExpGrowth2">Problems</xref> <xref ref="PROBLEMBacteriaIVP1">and</xref>
+        <xref ref="PROBLEMExpGrowth2">Problems</xref> and <xref ref="PROBLEMBacteriaIVP1"></xref>
         suggest, rather convincingly, that the general solution of
-        <xref ref="IVPExpSpecial">IVP</xref>) is
+        <xref ref="IVPExpGeneral">IVP</xref>) is
         <men  xml:id="EQUATIONGeneralExponentialSolution">
           P(t)=P_0e^{rt}.
         </men>
@@ -2315,7 +2320,7 @@ The word
         <statement>
           <p>
             Show that <m>P(t)=P_0e^{rt}</m> is a
-            solution of <xref ref="IVPExpSpecial">IVP</xref>).
+            solution of <xref ref="IVPExpGeneral">IVP</xref>).
           </p>
         </statement>
       </exercise>
@@ -2369,7 +2374,7 @@ The green discoloration on the western side of the
         are common in alpine lakes in the early spring when nutrients are
         released by the melting snow, but the fish and insects that feed on
         the algae have not yet emerged in large numbers.  We will return to
-        this problem in <xref ref="SECpopulation-dynamics">Section</xref> where we will
+        this problem in <xref ref="SECTIONpopulation-dynamics">Section</xref> where we will
         tweak this model to extend its usefulness to longer periods of
         time. But for now we will continue to use this exponential growth
         model with the understanding that for large values of <m>t</m> it is
@@ -2380,14 +2385,14 @@ The green discoloration on the western side of the
         <statement>
           <p>
             Suppose our bacteria population is increasing at a nominal rate of
-            10\% per day.  If we started with 100 grams, how much would there be
+            10% per day.  If we started with 100 grams, how much would there be
             after one, two, and three days?
           </p>
         </statement>
       </problem>
 
       <p>
-        Speaking loosely, the observation that lead us to <xref ref="EQExpGen">IVP</xref>
+        Speaking loosely, the observation that lead us to <xref ref="IVPExpGeneral">IVP</xref>
         is that the number of baby bacteria in a given generation is
         proportional to how many parental bacteria were present in the
         previous generation. Speaking very loosely, more mamas and
@@ -2570,33 +2575,33 @@ The green discoloration on the western side of the
       </p>
 
       <p>
-        In <xref ref="SECexponential">Section</xref> we saw that <m>e\approx2.7182</m>. From
+        In <xref ref="SECTIONexponential">Section</xref> we saw that <m>e\approx2.7182</m>. From
         this table it would appear that <m>\left(1+\frac{1}{m}\right)^m</m>
         approaches the number <m>e</m> as <m>m</m> grows larger -- that is, as we
         compound the interest more frequently.  We will show that this is in
-        fact the case in <xref ref="SECmore-indet-forms">Section</xref>.
+        fact the case in <xref ref="SECTIONmore-indet-forms">Section</xref>.
       </p>
       <p>
         If this is true (it is) then if we compound the interest
         continuously we have
-        <me>
-          \label{eq:ContinuouslyCompoundedInterest1}
+        <men  xml:id="EQUATIONContinuouslyCompoundedInterest1">
+          <!-- \label{eq:ContinuouslyCompoundedInterest1} -->
           A(t)=1\cdot\left(e\right)^{0.05t}.
-        </me>
+        </men>
         This equation was derived under the assumption that our initial
         investment was only <m>1</m>. In general if the initial
         investment is <m>A_0</m> we have
-        <me>
-          \label{eq:ContinuouslyCompoundedInterest2}
+        <men  xml:id="EQUATIONContinuouslyCompoundedInterest2">
+          <!-- \label{eq:ContinuouslyCompoundedInterest2} -->
           A(t)=A_0e^{0.05t}.
-        </me>
+        </men>
         Does this look familiar?
       </p>
       <exercise>
         <statement>
           <p>
             The function <m>A(t)</m> has the same form as our solution of
-            <xref ref="EQBacteriaIVP">IVP\</xref> so it must satisfy the differential
+            <xref ref="EQUATIONBacteriaIVP">IVP\</xref> so it must satisfy the differential
             equation: <m>\dfdx{A}{t}= 0.05A</m>.
             Confirm that it does.
           </p>
@@ -2604,7 +2609,7 @@ The green discoloration on the western side of the
       </exercise>
 
       <p>
-        This is interesting. It appears that  <xref ref="EQExpGen">IVP\</xref> models
+        This is interesting. It appears that  <xref ref="EQUATIONGeneralExponentialSolution">IVP\</xref> models
         continuously compounded investments as well as population growth. Does
         this make sense to you?
       </p>
@@ -2695,28 +2700,27 @@ The green discoloration on the western side of the
     </introduction>
     <subsection xml:id="SUBSECTIONNapier">
       <title>John Napier Logs In</title>
-      <introduction><p>
-        In the <m>16</m>th and <m>17</m>th centuries the computational needs of science,
-        introduction  engineering, finance and navigation were growing increasingly complex,
-        time-consuming, and error prone. The problem of navigating at sea
-        using only the stars as a guide was particularly vexing.  It became
-        increasingly important to find very accurate methods of computation
-        that were also as simple as they could possibly be; that could be
-        broken down into simple steps that anyone could do without necessarily
-        understanding the underlying concepts.
-        The Scottish
-        mathematician
-        <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Napier/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Napier/">John
-        Napier</url> (<m>1550-1617</m>) invented logarithms specifically to address
-        this problem.
+      <subsubsection>
+<title>A Short Introduction to Logarithms</title>
+
+        <p>
+        In the <m>16</m>th and <m>17</m>th centuries the computational
+        needs of science, introduction engineering, finance and
+        navigation were growing increasingly complex, time-consuming,
+        and error prone. The problem of navigating at sea using only
+        the stars as a guide was particularly vexing.  It became
+        increasingly important to find very accurate methods of
+        computation that were also as simple as they could possibly
+        be; that could be broken down into simple steps that anyone
+        could do without necessarily understanding the underlying
+        concepts.  The Scottish mathematician <url
+        href="https://mathshistory.st-andrews.ac.uk/Biographies/Napier/"
+        visual="https://mathshistory.st-andrews.ac.uk/Biographies/Napier/">John
+        Napier</url>.
       </p>
       <figure>
         <caption>
-          <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Napier/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Napier/">\centerline{John Napier} \centerline{1555-1617}}
-          \end{wrapfigure}
-          Napier described logarithms in
-          \foreign{\href{https://www.maa.org/press/periodicals/convergence/mathematical-treasure-john-napier-s-mirifici-logarithmorum}{Mirifici
-          logarithmorum canonis descriptio}}, published in</url>
+          <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Napier/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Napier/">John Napier (<m>1555-1617</m>)</url>
         </caption>
         <image source="images/Napier.png" width="50%"/>
       </figure>
@@ -2728,16 +2732,17 @@ The green discoloration on the western side of the
       <!-- \end{wrapfigure} -->
       <p>
         Napier described logarithms in
-        \foreign{\href{https://www.maa.org/press/periodicals/convergence/mathematical-treasure-john-napier-s-mirifici-logarithmorum}{Mirifici
-        logarithmorum canonis descriptio}}, published in <m>1614</m>, well
+        <url href="https://www.maa.org/press/periodicals/convergence/mathematical-treasure-john-napier-s-mirifici-logarithmorum" visual="https://www.maa.org/press/periodicals/convergence/mathematical-treasure-john-napier-s-mirifici-logarithmorum"><foreign>Mirifici  logarithmorum canonis descriptio</foreign></url>, published in <m>1614</m>, well
         before Newton or Leibniz were born so logarithms actually predate the
         invention of Calculus by several decades.  He coined the term
-        <q>logarithm</q> from the Greek words logos meaning <q>reasoning,</q> or <q>reckoning</q> and arithmos meaning <q>number.</q>  To Napier logarithms
-        were <q>reckoning numbers</q> which seems an apt description, given their
-        original purpose.
+        <q>logarithm</q> from the Greek words logos meaning
+        <q>reasoning,</q> or <q>reckoning</q> and arithmos meaning
+        <q>number.</q>  To Napier logarithms were <q>reckoning
+        numbers</q> which seems an apt description, given their
+        original purpose.  
       </p>
-      <p>
 
+      <p>
         To see how logarithms work we start with the observation that
         <me>10^8=(10\cdot10\cdot10)\cdot(10\cdot10\cdot10\cdot10\cdot10)=10^{3+5}.</me>
         More generally, if <m>a</m> is any positive number and <m>m</m> and <m>n</m> are
@@ -2772,23 +2777,29 @@ The green discoloration on the western side of the
         multiplication is <m>10^{3.7325}\approx5401</m>.  The way to make this a
         workable scheme is to compile a large table of numbers and their
         associated exponents. This is, essentially, what Napier
-        did\aside{We're taking liberties with the history here. Napier's
+        did.
+              </p>
+<aside>
+<title>A Little History</title>
+<p>
+We're taking liberties with the history here. Napier's
         original scheme was not based on <m>10^x</m>.  We explain how Napier
         actually defined his logarithms in
-        <xref ref="DIGRESSIONdigress:BriggsAndNapier"></xref>.  For now it is useful to
+        <xref ref="DIGRESSIONBriggsAndNapier" text="custom">Digression</xref>.  For now it is useful to
         pretend that he used <m>10^x</m>. Also, although Napier started compiling
         a table of logarithms, sadly he died before finishing.  It fell to
-        his friend and colleague Henry Briggs to complete the task.}
-      </p>
-      <p>
+        his friend and colleague Henry Briggs to complete the task.
+</p>
+</aside>
 
-        Today we call <m>2.0907</m> and <m>1.6418</m> the \term{base 10}, or
-        \term{common logarithms}, of <m>123.2387</m> , and <m>43.8378</m>,
+      <p>
+        Today we call <m>2.0907</m> and <m>1.6418</m> the <term>base 10</term>, or
+        <term>common logarithms</term>, of <m>123.2387</m> , and <m>43.8378</m>,
         respectively. Notationally we have
-        \begin{align*}
-        \log_{10}(123.2387)\amp =2.0907\\
-        \log_{10}(43.8378)\amp =1.6418
-        \end{align*}
+<md>
+<mrow>        \log_{10}(123.2387)\amp =2.0907</mrow>
+<mrow>        \log_{10}(43.8378)\amp =1.6418</mrow>
+</md>
         which is  simply a way to say
         <m>10^{2.0907} =123.2387</m> and <m>10^{1.6418}=43.8378</m> backwards.
       </p>
@@ -2812,8 +2823,9 @@ The green discoloration on the western side of the
         invention of modern computing technology the original purpose of base
         <m>10</m> logarithms -- simplifying numerical computations -- is completely
         obsolete. So
-        \href{https://www.maa.org/press/periodicals/convergence/mathematical-treasure-babbage-s-tables-of-logarithms}{tables
-        of base <m>10</m> logarithms are rarely seen in the wild anymore}.
+
+<url href="https://www.maa.org/press/periodicals/convergence/mathematical-treasure-babbage-s-tables-of-logarithms" visual="https://www.maa.org/press/periodicals/convergence/mathematical-treasure-babbage-s-tables-of-logarithms">tables
+        of base <m>10</m> logarithms</url> are rarely seen in the wild anymore
         On the other hand the \term{natural exponential} function
         <m>\exp(x)=e^x</m> and its functional inverse, the \term{natural logarithm}
         are both still quite useful in a variety of contexts, both scientific
@@ -2845,111 +2857,183 @@ The green discoloration on the western side of the
         natural exponential, <m>e^x</m>.
         This inverse relationship allows us to immediately observe two
         important properties of the natural logarithm.
-        \begin{center}
-        \begin{minipage}[h]{.6\linewidth}
-        \centerline{  \underline{Two Immediate Properties of the Natural Logarithm}}
-        \begin{enumerate}
-        \item <m>\ln(e^x)=x</m>.
-        \item <m>e^{\ln(x)}=x</m>.
-        \end{enumerate}
-        \end{minipage}
-        \end{center}
+      </p>
+
+      <table  xml:id="TABLEPropLog">
+        <title>
+        Properties of Logarithms</title>
+        <idx><h>Table</h><h>Properties of the Natural Logarithm</h></idx>
+        <tabular>
+
+          <row>
+            <cell halign="right">
+            <alert>Property 1:</alert></cell>
+            <cell halign="left">
+              <line><m>\ln(e^x)=x</m></line>
+            </cell>
+          </row>        
+          <row>
+            <cell halign="right">
+            <alert>Property 2:</alert></cell>
+            <cell halign="left">
+              <m>e^{\ln(x)}=x</m>
+            </cell>
+          </row>
+
+          <row>
+            <cell halign="right">
+            <alert>Property 3:</alert></cell>
+            <cell halign="left">
+              <line><m>\ln(e)=1</m></line>
+            <line>Notice that this is  a special case of Property \#1.</line></cell>
+          </row>
+
+          <row>
+            <cell halign=
+                  "right"><alert>Property 4:</alert></cell>
+            <cell halign=
+                  "left"><m>\ln(ab)=\ln(a)+\ln(b)</m></cell>
+          </row>
+
+          <row>
+            <cell halign=
+                  "right"><alert>Property 5:</alert></cell>
+            <cell halign=
+                  "left"><m>\ln\left(\frac{a}{b}\right)=\ln(a)-\ln(b)</m></cell>
+          </row>
+
+          <row>
+            <cell halign=
+                  "right"><alert>Property 6:</alert></cell>
+            <cell halign=
+                  "left"><m>\ln(a^b)=b\ln(a)</m></cell>
+          </row>
+        </tabular>
+      </table>
+
+<p>
+        <!-- <dl> -->
+        <!--   <li> -->
+        <!--     <title>Property 1:</title> -->
+        <!--     <p><m>\ln(e^x)=x</m>.</p> -->
+        <!--   </li> -->
+        <!--   <li> -->
+        <!--     <title>Property 2:</title> -->
+        <!--     <p> -->
+        <!--       <m>e^{\ln(x)}=x</m>. -->
+        <!--     </p> -->
+        <!--   </li> -->
+        <!-- </dl> -->
       </p>
       <p>
 
         The properties that make the natural logarithm useful as a theoretical
         tool are the same properties that made <m>\log_{10}(x)</m> useful as a
-        computational\aside{In fact if we replace the base <m>10</m> with the base
+        computational tool. In fact if we replace the base <m>10</m> with the base
         <m>e</m> and <q><m>\ln</m></q> with <q><m>\log_{10}</m></q> all of the properties in this
-        list remain true.} tool:
-        \begin{center}
-        \begin{minipage}[h]{.6\linewidth}
-        \centerline{  \underline{Four More Properties of the Natural Logarithm}}
-        \begin{enumerate}[start=3]
-        \item <m>\ln(e)=1</m>.\\  Notice that this is  a special case
-        of Property \#1.
-        \item <m>\ln(ab)=\ln(a)+\ln(b).</m>
-        \item <m>\ln\left(\frac{a}{b}\right)=\ln(a)-\ln(b).</m>
-        \item <m>\ln\left(a^b\right)=b\ln(a).</m>
-        \end{enumerate}
-        \end{minipage}
-        \end{center}
+        list remain true.
+        <!-- \begin{center} -->
+        <!-- \begin{minipage}[h]{.6\linewidth} -->
+        <!-- \centerline{  \underline{Four More Properties of the Natural Logarithm}} -->
+        <!-- \begin{enumerate}[start=3] -->
+        <!-- \item <m>\ln(e)=1</m>.\\  Notice that this is  a special case -->
+        <!-- of Property \#1. -->
+        <!-- \item <m>\ln(ab)=\ln(a)+\ln(b).</m> -->
+        <!-- \item <m>\ln\left(\frac{a}{b}\right)=\ln(a)-\ln(b).</m> -->
+        <!-- \item <m>\ln\left(a^b\right)=b\ln(a).</m> -->
+        <!-- \end{enumerate} -->
+        <!-- \end{minipage} -->
+        <!-- \end{center} -->
       </p>
 
-      <aside>
-        <title>Note to Self</title>
-        <p>
-          Digression missing
-        </p>
-      </aside>
 
-
+<paragraphs>
       <!-- \begin{Digression}[Exponential and Logarithmic Notation] -->
-      <!-- Consider reviewing -->
-      <!-- <xref ref="DIGRESSIONdigression:inverse-function-notation"></xref> before -->
-      <!-- reading this one. It will probably help. -->
+<title>DIGRESSION: Exponential and Logarithmic Notation</title>
+<p>
+      Consider reviewing
+      <xref ref="DIGRESSIONdigression:inverse-function-notation"></xref> before
+      reading this one. It will probably help.
+</p>
+<p>
 
-      <!-- As we've observed the \term{natural logarithm} function is, by -->
-      <!-- definition, the inverse of the \term{natural exponential} in -->
-      <!-- precisely the same way that <m>\inverse\tan(x)</m> is, by definition, the -->
-      <!-- inverse of <m>\tan(x)</m> .  Unfortunately the notation that is used for -->
-      <!-- the \term{natural exponential} and the \term{natural logarithm} is -->
-      <!-- not helpful. -->
+      As we've observed the \term{natural logarithm} function is, by
+      definition, the inverse of the \term{natural exponential} in
+      precisely the same way that <m>\inverse\tan(x)</m> is, by definition, the
+      inverse of <m>\tan(x)</m> .  Unfortunately the notation that is used for
+      the \term{natural exponential} and the \term{natural logarithm} is
+      not helpful.
+</p>
+<p>
 
-      <!-- It has become standard practice to notate a function using the first -->
-      <!-- three letters of its name. That is why the trigonometric functions -->
-      <!-- are denoted <m>\sin</m>, <m>\cos</m>, <m>\tan</m>, <m>\cot</m>, <m>\sec</m>, and <m>\csc</m>. By -->
-      <!-- that standard we should properly denote the natural exponential with -->
-      <!-- <m>\exp(x)</m>. We have used this notation in the past and will continue -->
-      <!-- to use it when we want to emphasize the functional nature of the -->
-      <!-- natural exponential, but most of the time it is more helpful to -->
-      <!-- think of it as the number <q><m>e</m> raised to a power</q> and to denote it -->
-      <!-- with <m>e^x</m> which, unfortunately, doesn't look like the name of a -->
-      <!-- function at all. -->
+      It has become standard practice to notate a function using the first
+      three letters of its name. That is why the trigonometric functions
+      are denoted <m>\sin</m>, <m>\cos</m>, <m>\tan</m>, <m>\cot</m>, <m>\sec</m>, and <m>\csc</m>. By
+      that standard we should properly denote the natural exponential with
+      <m>\exp(x)</m>. We have used this notation in the past and will continue
+      to use it when we want to emphasize the functional nature of the
+      natural exponential, but most of the time it is more helpful to
+      think of it as the number <q><m>e</m> raised to a power</q> and to denote it
+      with <m>e^x</m> which, unfortunately, doesn't look like the name of a
+      function at all.
+</p>
+<p>
 
-      <!-- As we saw in <xref ref="DIGRESSIONdigression:inverse-function-notation"></xref> -->
-      <!-- before it is also fairly standard practice to denote the inverse of -->
-      <!-- a given function with the exponent <m>-1</m>.  By that standard we should -->
-      <!-- properly denote the natural logarithm by <m>\inverse\exp</m>, -->
-      <!-- but this is extremely rare. -->
+      As we saw in <xref ref="DIGRESSIONdigression:inverse-function-notation"></xref>
+      before it is also fairly standard practice to denote the inverse of
+      a given function with the exponent <m>-1</m>.  By that standard we should
+      properly denote the natural logarithm by <m>\inverse\exp</m>,
+      but this is extremely rare.
+</p>
+<p>
 
-      <!-- By the <q>three letter name</q> standard the next best name for the -->
-      <!-- natural logarithm should be <q><m>\log(x)</m></q> but that has been used for -->
-      <!-- over <m>400</m> years to denote the base <m>10</m> logarithm.  As a result for -->
-      <!-- historical reasons we are stuck with symbol <q><m>\ln(x)</m></q> to denote -->
-      <!-- the natural logarithm. This notation comes from the initials of the -->
-      <!-- Latin name of the function: \foreign{logarithms naturali}. This is -->
-      <!-- unfortunate for the student because it adheres to no standard naming -->
-      <!-- scheme whatsoever. But once you get used to it, it isn't so bad. -->
+      By the <q>three letter name</q> standard the next best name for the
+      natural logarithm should be <q><m>\log(x)</m></q> but that has been used for
+      over <m>400</m> years to denote the base <m>10</m> logarithm.  As a result for
+      historical reasons we are stuck with symbol <q><m>\ln(x)</m></q> to denote
+      the natural logarithm. This notation comes from the initials of the
+      Latin name of the function: \foreign{logarithms naturali}. This is
+      unfortunate for the student because it adheres to no standard naming
+      scheme whatsoever. But once you get used to it, it isn't so bad.
+</p>
+<p>
 
-      <!-- Sometimes there are reasons to use logarithms with bases other than -->
-      <!-- <m>10</m> or <m>e</m>. For example, computer scientists frequently use -->
-      <!-- logarithms with a base of <m>2</m> which they denote <m>\text{lb}(x)</m> -->
-      <!-- (binary logarithm).  Even worse, when we talk among ourselves -->
-      <!-- mathematicians tend to use the natural logarithm (because for us it -->
-      <!-- is the most important), but we often denote it as <q><m>\log(x)</m>.</q> -->
-      <!-- When we are talking to scientists and engineers we use whatever is -->
-      <!-- appropriate to their discipline. -->
+      Sometimes there are reasons to use logarithms with bases other than
+      <m>10</m> or <m>e</m>. For example, computer scientists frequently use
+      logarithms with a base of <m>2</m> which they denote <m>\text{lb}(x)</m>
+      (binary logarithm).  Even worse, when we talk among ourselves
+      mathematicians tend to use the natural logarithm (because for us it
+      is the most important), but we often denote it as <q><m>\log(x)</m>.</q>
+      When we are talking to scientists and engineers we use whatever is
+      appropriate to their discipline.
+</p>
+<p>
 
 
-      <!-- None of this affects what the natural logarithm is, how we use it, -->
-      <!-- or how we think about it. Only how we write it. We only bring this -->
-      <!-- up to warn you that because of this wide variation in usage -->
-      <!-- logarithmic notation can be hard to get comfortable with. Be -->
-      <!-- careful. The generic notation is <m>\log_b(x)</m> where <m>b</m> indicates the -->
-      <!-- base. In this scheme the natural logarithm is <m>\log_{e}(x)</m>, the common -->
-      <!-- logarithm is <m>\log_{10}(x)</m>, and the binary logarithm is -->
-      <!-- <m>\log_{2}(x)</m>. If you find yourself getting confused it can help to -->
-      <!-- revert to this generic notation. -->
+      None of this affects what the natural logarithm is, how we use it,
+      or how we think about it. Only how we write it. We only bring this
+      up to warn you that because of this wide variation in usage
+      logarithmic notation can be hard to get comfortable with. Be
+      careful. The generic notation is <m>\log_b(x)</m> where <m>b</m> indicates the
+      base. In this scheme the natural logarithm is <m>\log_{e}(x)</m>, the common
+      logarithm is <m>\log_{10}(x)</m>, and the binary logarithm is
+      <m>\log_{2}(x)</m>. If you find yourself getting confused it can help to
+      revert to this generic notation.
+</p>
+<p>
 
-      <!-- It is, after all, just notation. Do not confuse the name of a -->
-      <!-- concept with the the concept itself. Conceptually the natural -->
-      <!-- logarithm (<m>\ln(x)</m>) is the inverse of the natural exponential -->
-      <!-- (<m>e^x</m>) and you should think of it as such. -->
+      It is, after all, just notation. Do not confuse the name of a
+      concept with the concept itself. Conceptually the natural
+      logarithm (<m>\ln(x)</m>) is the inverse of the natural exponential
+      (<m>e^x</m>) and you should think of it as such.
+</p>
+<p>
 
-      <!-- It is often helpful to think of <m>\ln(x)</m> as the function that peels -->
-      <!-- the exponent off of <m>e^x</m> as in Property \#1: <m>\ln(e^x)=x</m>. -->
-      <!-- \end{Digression} -->
+      It is often helpful to think of <m>\ln(x)</m> as the function that peels
+      the exponent off of <m>e^x</m> as in Property \#1: <m>\ln(e^x)=x</m>.
+</p>
+<p><alert>END OF DIGRESSION</alert></p>
+</paragraphs>
 
       <exercise>
         <introduction>
@@ -3273,12 +3357,11 @@ The green discoloration on the western side of the
                 x(t) = \sin(e^t).
               </me>
 
-              <ol>
+              <ol marker="i">
                 <li>
                   <p>
                     When is the first time the particle stops moving forward
-                    and starts moving backward?% achieve its maximum
-                    position?
+                    and starts moving backward?
                   </p>
                 </li>
                 <li>
@@ -3294,11 +3377,10 @@ The green discoloration on the western side of the
         <task>
           <statement>
             <p>
-              A particle is moving on the <m>x</m>-axis so that its position at
-              time <m>t\ge 0</m> is given by <m>y(t) = e^t-\cos(e^t)</m>. Show that this
-              particle either moves forward or stops momentarily and then
-              continues moving forward, but never moves backward.  At which
-              times does it stop?
+              A particle is moving on the <m>x</m>-axis so that its
+              position at time <m>t\ge 0</m> is given by <m>y(t) =
+              e^t-\cos(e^t)</m>. Show that this particle never moves
+              backward.  At which times does it stop moving forward?
             </p>
           </statement>
         </task>
@@ -3429,20 +3511,19 @@ The green discoloration on the western side of the
           our model is
           <md>
             <mrow>
-              \dfdx{B}{t}\amp =rB, \text{ (The growth rate is proportional tothe amount of bacteria present.)} \\
+              \dfdx{B}{t}\amp =rB, \text{ (The growth rate is proportional to the amount of bacteria present.)} 
             </mrow>
             <mrow>
               B(0)\amp =2, \text{ (Initially we have }2 \text{ grams of bacteria.)}\\
             </mrow>
             <mrow>
               B(24)\amp =3.\text{ (There are} 3 \text{ grams of bacteria
-              presentafter }24 \text{ hours.)}}
+              presentafter }24 \text{ hours.)}
             </mrow>
           </md>
         </p>
-
-
       </example>
+
       <exercise xml:id="DRILLBacteriaGuess1">
         <statement>
           <p>
@@ -3455,14 +3536,14 @@ The green discoloration on the western side of the
         </statement>
       </exercise>
       <p>
-
-        Note that our model is an IVP plus the extra datum: <m>B(24)=3</m>. The first
+ 
+       Note that our model is an IVP plus the extra datum: <m>B(24)=3</m>. The first
         two pieces of our model, <m> \dfdx{B}{t}=rB</m>, and <m> B(0)=2</m>, define an
         IVP very similar to <xref ref="IVPeq:BacteriaIVP"></xref> which we repeat here
         for convenience:
-        <me>
-          \dfdx{y}{t}= 0.3y,\  y(0)=10.
-        </me>
+        <md>
+          <mrow> \dfdx{y}{t}\amp{}= 0.3y,\amp{} y(0)\amp{}=10.</mrow>
+        </md>
         In fact the only difference is that where we had <m>0.3</m> before, we
         now have the unknown parameter, <m>r</m>.  In
         <xref ref="PROBLEMBacteriaIVP1"></xref> we saw that
@@ -3611,7 +3692,7 @@ The green discoloration on the western side of the
       <!-- \end{enumerate} -->
       <!-- \end{embeddedproblem} -->
 
-    </introduction>
+    </subsubsection>
     <subsubsection xml:id="SUBSUBSECTIONradioactive-decay">
       <title>Radioactive Dating</title>
 
@@ -3654,10 +3735,10 @@ The green discoloration on the western side of the
           isotope is decaying (shrinking) at a \term{relative}
           (<term>nominal</term>) rate of  <m>25\%</m>. Then if we start
           with <m>20</m>Kg, the IVP to be solved is
-          <me>
-            \label{IVP:RadioactiveDecay-Wrong}
+          <men  xml:id="IVPRadioactiveDecay-Wrong">
+            <!-- \label{IVPRadioactiveDecay-Wrong} -->
             \dfdx{A}{t}= 0.25A,\ A(0)=20.
-          </me>
+          </men>
           which we recognize as a special case of <xref ref="IVPeq:ExpGen"></xref>, so
           the solution will be
           <me>
@@ -3680,18 +3761,18 @@ The green discoloration on the western side of the
           decreasing then its rate of change will be negative. We seem to have
           committed one of the classic blunders of mathematics. We got the
           sign wrong. We should have been solving  the IVP
-          <me>
-            \label{IVP:RadioactiveDecay-Correct}
+          <men  xml:id="EQUATIONIVPRadioactiveDecay-Correct">
+            <!-- \label{IVP:RadioactiveDecay-Correct} -->
             \dfdx{A}{t}= -0.25A,\ A(0)=20.
-          </me>
+          </men>
           instead of
-          <xref ref="IVPIVP:RadioactiveDecay-Wrong"></xref>. Since <xref ref="IVPIVP:RadioactiveDecay-Correct"></xref>
+          <xref ref="IVPRadioactiveDecay-Wrong"></xref>. Since <xref ref="IVPIVP:RadioactiveDecay-Correct"></xref>
           also has the same form as <xref ref="IVeq:ExpGen"></xref>),  the correct
           solution is
-          <me>
-            \label{eq:NuclearDecay-Wrong}
+          <men  xml:id="EQUATIONNuclearDecay-Wrong">
+            <!-- \label{eq:NuclearDecay-Wrong} -->
             A(t)=20e^{-0.25t}
-          </me>
+          </men>
         </p>
       </example>
 
@@ -4095,9 +4176,10 @@ The green discoloration on the western side of the
           problem <q>easier on the eyes</q> with the substitution <m>D=T-5</m>.
           Notice that <m>\dfdx{D}{t}=\dfdx{(T-5)}{t}=\dfdx{T}{t}</m> so we have the
           IVP
-          <me>
-            \dfdx{D}{t}=rD\ \ D(0)=40-5=35.\label{eq:CoolingIVP1}
-          </me>
+          <men  xml:id="EQUATIONCoolingIVP1">
+            \dfdx{D}{t}=rD\ \ D(0)=40-5=35.
+            <!-- \label{eq:CoolingIVP1} -->
+          </men>
           Do you recognize this equation? This has the same form as
           <xref ref="IVPeq:BacteriaIVP"></xref> so the solution is
           <me>
@@ -4306,6 +4388,8 @@ The green discoloration on the western side of the
 
     </subsubsection>
   </subsection>
+
+
 </section>
 <section xml:id="SECTIONDerivNatLog">
 <title>The Derivative of the Natural Logarithm</title>
@@ -4619,7 +4703,8 @@ of a function <m>y=y(x)</m> is given by
 <section xml:id="SECTIONgener-logar-expon">
 <title>General Logarithms and Exponentials</title>
 
-<introduction>
+<subsection xml:id="SUBSECTIONGenExp">
+<title>General Exponentials</title>
   <blockquote>
     <p>
       You have no idea how much poetry there is in the
@@ -4704,9 +4789,8 @@ Friederich Gauss (1777-1855)</url>
   so, what are the derivatives of the other exponentials and
   logarithms?
 </p>
-</introduction>
-<subsection xml:id="SUBSECTIONGenExp">
-<title>General Exponentials</title>
+
+
 <p>
 
   It is not as hard to differentiate <m>y=a^x</m> as you might think. Since
@@ -4869,9 +4953,10 @@ as a natural logarithm. This is a bit more difficult, but only a bit.
   <m>y=\frac{\ln(x)}{\ln(a)}</m>.
   Since <m>y=\log_a(x)</m> we have successfully re-expressed the
   base-<m>a</m> logarithm as a natural logarithm:
-  <me>
-    \log_a(x)=\frac{\ln(x)}{\ln(a)}.\label{eq:GenLogConversion}
-</me>
+  <men  xml:id="EQUATIONGenLogConversion">
+    \log_a(x)=\frac{\ln(x)}{\ln(a)}.
+<!-- \label{eq:GenLogConversion} -->
+</men>
 This is why many scientific calculators don't bother including a
 <m>\log_a(x)</m> button.
 </p>
@@ -4991,52 +5076,132 @@ where <m>P</m> is the sound power of the source measured in watts and
 </p>
 </aside>
 
+<paragraphs xml:id="DIGRESSIONBriggsAndNapier">
+<title>DIGRESSION: Common and Napierian Logarithms</title>
+
 <!-- \begin{Digression}[Common and Napierian Logarithms] -->
 <!--   \label{digress:BriggsAndNapier} -->
-<!--   It is a well worn truism among research mathematicians that the -->
-<!--   first solution of a substantial problem is frequently both very hard -->
-<!--   to understand and very hard to convey to others, even to other -->
-<!--   mathematicians. We publish our solutions, in part, so that others can -->
-<!--   look at the problem, consider the approach used,  and find simplifications that the original -->
-<!--   investigator missed. -->
+<p>  
+It is a well worn truism among research mathematicians that the
+  first solution of a substantial problem is frequently both very hard
+  to understand and very hard to convey to others, even to other
+  mathematicians. We publish our solutions, in part, so that others can
+  look at the problem, consider the approach used,  and find simplifications that the original
+  investigator missed.
+</p>
+<p>
+ This is what happened to Napier. Although his original scheme
+  allowed him to convert multiplication to addition it was more
+  complicated than necessary.  Shortly after Napier published his work
+  in
+  <m>1614</m>,
+  <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Briggs/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Briggs/">Henry
+    Briggs</url> (<m>1561 - 1630</m>), Professor of Geometry at Gresham College
+  in London, visited Napier and suggested that a few simple changes to
+  his logarithm table would make it more practical. In particular it
+  was Briggs who suggested that since our number system is in
+  base-<m>10</m>, creating a table of base-<m>10</m> logarithms might be more
+  useful.
+</p>
+<p>
 
-<!--   This is what happened to Napier. Although his original scheme -->
-<!--   allowed him to convert multiplication to addition it was more -->
-<!--   complicated than necessary.  Shortly after Napier published his work -->
-<!--   in -->
-<!--   <m>1614</m>, -->
-<!--   \href{https://mathshistory.st-andrews.ac.uk/Biographies/Briggs/}{Henry -->
-<!--     Briggs} (<m>1561 - 1630</m>), Professor of Geometry at Gresham College -->
-<!--   in London, visited Napier and suggested that a few simple changes to -->
-<!--   his logarithm table would make it more practical. In particular it -->
-<!--   was Briggs who suggested that since our number system is in -->
-<!--   base-<m>10</m>, creating a table of base-<m>10</m> logarithms might be more -->
-<!--   useful. -->
+  Napier had had the same idea himself, but was unable to pursue it
+  <q>on account of ill-health.</q> As a result, Briggs took on the task
+  of computing tables of base-<m>10</m> logarithms, collaborating with
+  Napier until the latter's death two years later. The results of
+  their collaboration are known as the Briggsian or \term{Common
+    Logarithms}. Common Logarithms are the base <m>10</m> logarithms we
+  discussed earlier and were an important computational aid for nearly
+  <m>400</m> years until the invention of modern computational
+  technologies.
+</p>
+<p>
 
-<!--   Napier had had the same idea himself, but was unable to pursue it -->
-<!--   <q>on account of ill-health.</q> As a result, Briggs took on the task -->
-<!--   of computing tables of base-<m>10</m> logarithms, collaborating with -->
-<!--   Napier until the latter's death two years later. The results of -->
-<!--   their collaboration are known as the Briggsian or \term{Common -->
-<!--     Logarithms}. Common Logarithms are the base <m>10</m> logarithms we -->
-<!--   discussed earlier and were an important computational aid for nearly -->
-<!--   <m>400</m> years until the invention of modern computational -->
-<!--   technologies. -->
+  As the mathematical historian Howard Eves put it, the invention of
+  (common) logarithms literally <q>doubled the life of the
+  astronomer,</q> because they so drastically reduced the time spent
+  doing arithmetic.
+</p>
+<p>
 
-<!--   As the mathematical historian Howard Eves put it, the invention of -->
-<!--   (common) logarithms literally <q>doubled the life of the -->
-<!--   astronomer,</q> because they so drastically reduced the time spent -->
-<!--   doing arithmetic. -->
+Most modern scientific calculators have both the natural and the
+common logarithms built in.  The <q><term>ln</term></q> button on a calculator
+computes natural logarithms while the <q><term>log</term></q> computes common
+logarithms.
+</p>
 
+<exercise>
+<introduction>
+<p>
+</p>
+</introduction>
+<task>
+<statement>
+<p>
+ Use whatever technology you prefer to compute the natural
+    logarithms of the numbers <m>21.2343</m> and <m>5689.121343</m> and their
+    product. Confirm that
+    <m>\ln(21.2343) + \ln(5689.121343) =
+    \ln(21.2343\times5689.121343)</m>. \\
+    \comment{If you don't like these
+      numbers use others. We just picked these at random.}
+  </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ Do the same using common logarithms.
+  </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ Do the same using <m>\log_5(x)</m>. \\
+    \comment{Or any other
+      base. Again we just picked <m>5</m> at random.}
+  </p>
+</statement>
+</task>
+</exercise>
 
-
-
-<!-- Most modern scientific calculators have both the natural and the -->
-<!-- common logarithms built in.  The <q>\term{ln}</q> button on a calculator -->
-<!-- computes natural logarithms while the <q>\term{log}</q> computes common -->
-<!-- logarithms. -->
-
-<!-- \begin{ProficiencyDrill-enumerate} -->
+<exercise>
+<introduction>
+<p>
+</p>
+</introduction>
+<task>
+<statement>
+<p>
+ Use whatever technology you prefer to compute the natural
+    logarithms of the numbers <m>21.2343</m> and <m>5689.121343</m> and their
+    product. Confirm that
+    <m>\ln(21.2343) + \ln(5689.121343) =
+    \ln(21.2343\times5689.121343)</m>. \\
+  (If you don't like these
+      numbers use others. We just picked these at random.)
+  </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ Do the same using common logarithms.
+  </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ Do the same using <m>\log_5(x)</m>. \\
+   (Or any other
+      base. Again we just picked <m>5</m> at random.)
+  </p>
+</statement>
+</task>
+</exercise>
+<!-- begin{ProficiencyDrill-enumerate} -->
 <!--   \begin{enumerate}[label={  (\alph*)}] -->
 <!--   \item Use whatever technology you prefer to compute the natural -->
 <!--     logarithms of the numbers <m>21.2343</m> and <m>5689.121343</m> and their -->
@@ -5047,87 +5212,233 @@ where <m>P</m> is the sound power of the source measured in watts and
 <!--       numbers use others. We just picked these at random.} -->
 <!--   \item Do the same using common logarithms. -->
 <!--   \item Do the same using <m>\log_5(x)</m>. \\ -->
-<!--     \comment{Or any other -->
+<!--    \ comment{Or any other -->
 <!--       base. Again we just picked <m>5</m> at random.} -->
 <!--   \end{enumerate} -->
 <!-- \end{ProficiencyDrill-enumerate} -->
 
 
-<!-- \begin{myexample} -->
-<!--   A calculator is a useful tool, but only if the human operating it -->
-<!--   understands what to calculate, and why. Blind computation is -->
-<!--   pointless and wasteful. As powerful and convenient as our modern -->
-<!--   technology is, there is still no substitution for a deep -->
-<!--   understanding of basic principles. -->
+<example>
+<title>label={  (\alph*)}</title>
+<p>
 
-<!--   For example, how many base-<m>10</m> digits long do you suppose the -->
-<!--   number <m>2^{1234567890}</m> is? You cannot solve this by punching -->
-<!--   <m>2^{1234567890}</m> into a calculator and counting the digits. Try it -->
-<!--   and see.  If you can solve this by punching <m>2^{1234567890}</m> into a -->
-<!--   calculator, that just means that technology has outpaced this -->
-<!--   particular problem. In that case use a bigger exponent, say <m>12345678901234567890</m>. -->
+  A calculator is a useful tool, but only if the human operating it
+  understands what to calculate, and why. Blind computation is
+  pointless and wasteful. As powerful and convenient as our modern
+  technology is, there is still no substitution for a deep
+  understanding of basic principles.
+</p>
+<p>
 
-<!--   This feels like the sort of problem a math professor might make up -->
-<!--   just for fun (though it often feels like we do it just to torment -->
-<!--   our students), but it is not. Computer programmers -->
-<!--   routinely have to allocate space in memory to hold information. If -->
-<!--   the information being held happens to be the number <m>2^{1234567890}</m> -->
-<!--   the programmer will need to know how much space to allocate to hold -->
-<!--   the number. -->
+  For example, how many base-<m>10</m> digits long do you suppose the
+  number <m>2^{1234567890}</m> is? You cannot solve this by punching
+  <m>2^{1234567890}</m> into a calculator and counting the digits. Try it
+  and see.  If you can solve this by punching <m>2^{1234567890}</m> into a
+  calculator, that just means that technology has outpaced this
+  particular problem. In that case use a bigger exponent, say <m>12345678901234567890</m>.
+</p>
+<p>
+
+  This feels like the sort of problem a math professor might make up
+  just for fun (though it often feels like we do it just to torment
+  our students), but it is not. Computer programmers
+  routinely have to allocate space in memory to hold information. If
+  the information being held happens to be the number <m>2^{1234567890}</m>
+  the programmer will need to know how much space to allocate to hold
+  the number.
+</p>
+</example>
+
+  <exercise>
+<statement>
+<p>
+    Show that if <m>n</m> is a positive integer and
+    <m>10^n\le\alpha\lt 10^{n+1}</m> then <m>\alpha</m> will have <m>n+1</m> digits to
+    the left of the decimal point. \\
+    \hint{This is true because our
+      number system is based on <q>powers of ten.</q> That is, it is
+      based on the base <m>10</m> exponential.}
+  </p>
+</statement>
+</exercise>
+
+<p>
+  Suppose we let <m>\alpha = 2^{1234567890}</m> and take the base <m>10</m> logarithm
+  (common logarithm) of both sides. This gives:
+  <me>
+  \log_{10}(\alpha)= \log_{10}(2^{1234567890})=1234567890\cdot
+  \log_{10}(2)\approx371641966.574.
+  </me>
+  Thus
+  <md>
+<mrow>
+
+    2^{1234567890}=\alpha\amp\approx 10^{371641966.574}\\
+</mrow>
+
+<mrow>
+
+    \amp\approx 10^{0.574}\times10^{371641966}
+</mrow>
+<mrow>
+\amp\approx 3.75      \times10^{371641966}.
+
+</mrow>
+</md>
+
+  Since <m>10^{371641966}\le 2^{1234567890}\le 10^{371641967}</m> our
+  number, <m>\alpha</m>, is <m>371641967</m> base-<m>10</m> digits long.  But since
+  computer arithmetic is binary (base-<m>2</m>) what we really need to know
+  how many binary digits (bits) are needed to store a given number.
+</p>
+
+    <exercise>
+<introduction>
+<p>
+    How many bits are needed to allocate to store these
+    numbers?
+</p>
+</introduction>
+<task>
+<statement>
+<p>
+ <m>2^{1234567890}</m>?
+       </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>10^{1234567890}</m>?
+       </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m> 5^{1234567890}</m>?
+       </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>12^{1234567890}</m>?
+    </p>
+</statement>
+</task>
+</exercise>
+<!-- begin{ProficiencyDrill} -->
+  <!--   How many bits are needed to allocate to store these -->
+  <!--   numbers? -->
+  <!--   \begin{enumerate}[label={  (\alph*)}] -->
+  <!--      \item <m>2^{1234567890}</m>? -->
+  <!--      \item <m>10^{1234567890}</m>? -->
+  <!--      \item <m> 5^{1234567890}</m>? -->
+  <!--      \item <m>12^{1234567890}</m>? -->
+  <!--   \end{enumerate} -->
+
+<!--   <!-\- \end{ProficiencyDrill} -\-> -->
+<!-- </p> -->
 
 
-<!--   \begin{ProficiencyDrill} -->
-<!--     Show that if <m>n</m> is a positive integer and -->
-<!--     <m>10^n\le\alpha\lt 10^{n+1}</m> then <m>\alpha</m> will have <m>n+1</m> digits to -->
-<!--     the left of the decimal point. \\ -->
-<!--     \hint{This is true because our -->
-<!--       number system is based on <q>powers of ten.</q> That is, it is -->
-<!--       based on the base <m>10</m> exponential.} -->
-<!--   \end{ProficiencyDrill} -->
 
+<problem>
+<introduction>
+<p>
+  For each of the following numbers:
+  
+<ol>
+    <li>
+<p>
+ <m>3^{1234567890}</m>
+</p>
+</li>
+    <li>
+<p>
+ <m>9^{1234567890}</m>
+</p>
+</li>
+    <li>
+<p>
+ <m>\left(\frac13\right)^{1234567890}</m>
+</p>
+</li>
+    <li>
+<p>
+ <m>\left(\frac19\right)^{1234567890}</m>
+</p>
+</li>
+  </ol>
 
-<!--   Suppose we let <m>\alpha = 2^{1234567890}</m> and take the base <m>10</m> logarithm -->
-<!--   (common logarithm) of both sides. This gives: -->
-<!--   <me> -->
-<!--   \log_{10}(\alpha)= \log_{10}(2^{1234567890})=1234567890\cdot -->
-<!--   \log_{10}(2)\approx371641966.574. -->
-<!--   </me> -->
-<!--   Thus -->
-<!--   \begin{align*} -->
-<!--     2^{1234567890}=\alpha\amp\approx 10^{371641966.574}\\ -->
-<!--     \amp\approx 10^{0.574}\times10^{371641966}\\ -->
-<!--     \amp\approx 3.75      \times10^{371641966}. -->
-<!--   \end{align*} -->
-<!--   Since <m>10^{371641966}\le 2^{1234567890}\le 10^{371641967}</m> our -->
-<!--   number, <m>\alpha</m>, is <m>371641967</m> base-<m>10</m> digits long.  But since -->
-<!--   computer arithmetic is binary (base-<m>2</m>) what we really need to know -->
-<!--   how many binary digits (bits) are needed to store a given number.  -->
-
-<!--     \begin{ProficiencyDrill} -->
-<!--     How many bits are needed to allocate to store these -->
-<!--     numbers? -->
-<!--     \begin{enumerate}[label={  (\alph*)}]  -->
-<!--        \begin{multicols}{2} -->
-<!--        \item <m>2^{1234567890}</m>? -->
-<!--        \item <m>10^{1234567890}</m>? -->
-<!--        \item <m> 5^{1234567890}</m>? -->
-<!--        \item <m>12^{1234567890}</m>? -->
-<!--        \end{multicols} -->
-<!--     \end{enumerate} -->
-
-<!--   \end{ProficiencyDrill} -->
-<!-- \end{myexample} -->
-
+</p>
+</introduction>
+<task>
+<statement>
+<p>
+ Find the number of binary digits needed to store the number.
+  </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ Find the number of base-<m>8 </m> digits needed to store the
+    number.
+  </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ Find the number of base-<m>10</m> digits needed to store the
+    number.
+  </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ Find the number of base-<m>100</m> digits needed to store the
+    number.
+  </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ Find the number of base-<m>9 </m> digits needed to store the
+    number.
+  </p>
+</statement>
+</task>
+</problem>
 <!-- \begin{embeddedproblem} -->
 <!--   For each of the following numbers: -->
-<!--   \begin{enumerate}[label={  (\roman*)}] -->
-<!--     \begin{multicols}{4} -->
-<!--     \item <m>3^{1234567890}</m> -->
-<!--     \item <m>9^{1234567890}</m> -->
-<!--     \item <m>\left(\frac13\right)^{1234567890}</m> -->
-<!--     \item <m>\left(\frac19\right)^{1234567890}</m> -->
-<!--     \end{multicols} -->
-<!--   \end{enumerate} -->
+  
+<!-- <ol> -->
+<!--     <li> -->
+<!-- <p> -->
+<!--  <m>3^{1234567890}</m> -->
+<!-- </p> -->
+<!-- </li> -->
+<!--     <li> -->
+<!-- <p> -->
+<!--  <m>9^{1234567890}</m> -->
+<!-- </p> -->
+<!-- </li> -->
+<!--     <li> -->
+<!-- <p> -->
+<!--  <m>\left(\frac13\right)^{1234567890}</m> -->
+<!-- </p> -->
+<!-- </li> -->
+<!--     <li> -->
+<!-- <p> -->
+<!--  <m>\left(\frac19\right)^{1234567890}</m> -->
+<!-- </p> -->
+<!-- </li> -->
+<!--   </ol> -->
+
 <!--   \begin{enumerate}[label={  (\alph*)}] -->
 <!--   \item Find the number of binary digits needed to store the number. -->
 <!--   \item Find the number of base-<m>8 </m> digits needed to store the -->
@@ -5141,35 +5452,76 @@ where <m>P</m> is the sound power of the source measured in watts and
 <!--   \end{enumerate} -->
 <!-- \end{embeddedproblem} -->
 
-<!-- The discussion above suggests the question: What base did Napier use -->
-<!-- when he first invented logarithms, before Briggs suggested using base-<m>10</m>? -->
+<p>
+The discussion above suggests the question: What base did Napier use
+when he first invented logarithms, before Briggs suggested using base-<m>10</m>?
+</p>
+<p>
+Napier defined his original logarithms as follows.  Consider a point
+<m>C</m> moving along line segment <m>AB</m> and a point <m>F</m> moving along an
+infinite ray <m>DE</m> as seen below.\\
+\centerline{\includegraphics*[height=.5in,width=1.5in]{../Figures/NapierLog1}}
+At the beginnning both <m>C</m> and <m>F</m> are moving at the same speed, and
+<m>F</m> continues to move at that initial speed. But the speed of <m>C</m> is
+always equal to the distance from <m>C</m> to <m>B</m>.  If we let <m>CB=x</m> and
+<m>DF=y</m>, then we define the <term>Naperian Logarithm</term> as
+<me>
+y = \text{Nap log}(x).
+</me>
+</p>
+<p>
 
-<!-- Napier defined his original logarithms as follows.  Consider a point -->
-<!-- <m>C</m> moving along line segment <m>AB</m> and a point <m>F</m> moving along an -->
-<!-- infinite ray <m>DE</m> as seen below.\\ -->
-<!-- \centerline{\includegraphics*[height=.5in,width=1.5in]{../Figures/NapierLog1}} -->
-<!-- At the beginnning both <m>C</m> and <m>F</m> are moving at the same speed, and -->
-<!-- <m>F</m> continues to move at that initial speed. But the speed of <m>C</m> is -->
-<!-- always equal to the distance from <m>C</m> to <m>B</m>.  If we let <m>CB=x</m> and -->
-<!-- <m>DF=y</m>, then we define the \term{Naperian Logarithm} as -->
-<!-- <me> -->
-<!-- y = \text{Nap log}(x). -->
-<!-- </me> -->
-
-<!-- Since Calculus hadn't been invented yet, Napier used Trigonometry to -->
-<!-- develop his table of logarithms. The details of those computations are -->
-<!-- not relevant for us, except that he took the length of <m>AB</m> to be -->
-<!-- <m>10^7</m>, because the best sine tables at the time were to accurate to -->
-<!-- seven decimal places. -->
+Since Calculus hadn't been invented yet, Napier used Trigonometry to
+develop his table of logarithms. The details of those computations are
+not relevant for us, except that he took the length of <m>AB</m> to be
+<m>10^7</m>, because the best sine tables at the time were to accurate to
+seven decimal places.
+</p>
+<p>
 
 
 
-<!--   It is not altogether clear from the description above that the -->
-<!--   Napierian logarithm actually is a logarithm, let alone what its base -->
-<!--   is. The next  problem explores both of these questions. -->
+  It is not altogether clear from the description above that the
+  Napierian logarithm actually is a logarithm, let alone what its base
+  is. The next  problem explores both of these questions.
+</p>
 
-<!--   \begin{embeddedproblem} -->
-<!--   \label{pic:NapierianLog} -->
+  <problem xml:id="PROBLEMNapierianLog">
+<introduction>
+<p>
+  <!-- \label{PROBLEMNapierianLog} -->
+  In this problem we have suppressed the variable <m>t</m>.
+</p>
+</introduction>
+<task>
+<statement>
+<p>
+ Show that <m>\dfdx{y}{t}=10^7</m>, and <m>y(0)=0</m>.
+  </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ Solve the IVP: <m>\dfdx{x}{t}=-x</m>, <m>x(0)=10^7</m>,
+  </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ Use the information in parts (a) and (b) to show that
+    <me>
+    \text{Nap
+      log}(x)=y(x)=10^7\log_{\frac{1}{e}}\left(\frac{x}{10^7}\right).
+    </me>
+    Thus the base of Napier's original logarithm was <m>\frac1e</m>.
+  </p>
+</statement>
+</task>
+</problem>
+<!-- \begin{embeddedproblem} -->
+<!--   <!-\- \label{PROBLEMNapierianLog} -\-> -->
 <!--   In this problem we have suppressed the variable <m>t</m>. -->
 <!--   \begin{enumerate}[label={  (\alph*)}] -->
 <!--   \item Show that <m>\dfdx{y}{t}=10^7</m>, and <m>y(0)=0</m>. -->
@@ -5186,6 +5538,8 @@ where <m>P</m> is the sound power of the source measured in watts and
 
 
 <!-- \end{Digression} -->
+<p><alert>END OF DIGRESSION</alert></p>
+</paragraphs>
 
 
 </subsection>
@@ -5217,7 +5571,7 @@ Solving for <m>x</m> we see that
 which  is the Power Rule. Since we did not constraint <m>\alpha</m> except
 to say that it is a real number the different versions of the Power Rule
 that we saw in <xref ref="SECTIONsome-rules-diff"></xref> are all special
-cases of <xref ref="EQUATIONeq:GeneralPowerRule"></xref>.
+cases of <xref ref="EQUATIONGeneralPowerRule"></xref>.
 </p>
 <p>
   The same trick we just used can make some differentiations much easier
@@ -5346,8 +5700,8 @@ If we multiply by <m>y</m> we get
 <!-- \end{embeddedproblem} -->
 <p>
   The technique of taking the logarithm of both sides of an expression
-  like <m>y=y(x)</m> and then differentiating is called \term{Logarithmic
-  Differentiation}.  It can reduce the amount of tedious computation
+  like <m>y=y(x)</m> and then differentiating is called <term>Logarithmic
+  Differentiation</term>.  It can reduce the amount of tedious computation
   needed considerably, so it is worth knowing how to use it.
 </p>
 <problem>
@@ -5578,27 +5932,29 @@ If we multiply by <m>y</m> we get
     </blockquote>
 
     <p>
-      Recall that in <xref ref="SECsimple-harm-oscill">Section</xref> we saw that the
+      Recall that in <xref ref="SUBSECTIONsimple-harm-oscill">Section</xref> we saw that the
       differential equation that models the motion of an object having mass
       <m>m</m>, bouncing on a spring without resistance is the simple harmonic
       oscillator equation:
-      <me>
+      <men  xml:id="EQUATIONSHO6">
 
-        m\dfdxn{y}{t}{2}= -ky,\label{eq:SHO6}
+        m\dfdxn{y}{t}{2}= -ky,
+<!-- \label{eq:SHO6} -->
 
-      </me>
+      </men>
       where <m>k</m> is the spring constant.  The solution of
-      <xref ref="EQSHO6">Equation</xref>) is
-      <me>
+      <xref ref="EQUATIONSHO6">Equation</xref>) is
+      <men  xml:id="EQUATIONSHOSpringSolution1">
 
-        y(t)=A\sin\sqrt{\frac{k}{m}}t+B\cos\sqrt{\frac{k}{m}}t\label{eq:SHOSpringSolution}
+        y(t)=A\sin\sqrt{\frac{k}{m}}t+B\cos\sqrt{\frac{k}{m}}t
+        <!-- \label{eq:SHOSpringSolution1} -->
 
-      </me>
+      </men>
       where <m>A</m> and <m>B</m> are arbitrary constants.
     </p>
     <p>
 
-      <xref ref="EQSHOSpringSolution">Equation</xref>) is unrealisitic because the
+      <xref ref="EQUATIONSHOSpringSolution1">Equation</xref>) is unrealisitic because the
       oscillations described never vary.  In the real world, as a result of
       friction, the spring's oscillations will get shorter and shorter,
       eventually stopping altogether. How could we modify this model in
@@ -5622,7 +5978,7 @@ If we multiply by <m>y</m> we get
 
   Putting the words <q>resistance is proportional to velocity</q> into
   symbols means we need to add the term <m>-b\dfdx{y}{t}</m> to
-  <xref ref="EQSHO6">Equation</xref>) where <m>b\gt0</m> is a constant which depends on
+  <xref ref="EQUATIONSHO6">Equation</xref>) where <m>b\gt0</m> is a constant which depends on
   the viscosity of the ambient medium (air, in this case).  (Why must
   this proportionality be negative?)
 </p>
@@ -5633,15 +5989,17 @@ If we multiply by <m>y</m> we get
     m\dfdxn{y}{t}{2}=-b\dfdx{y}{t}-ky
 </me>
 or
-<me>
-  \dfdxn{y}{t}{2}+\frac{b}{m}\dfdx{y}{t}+\frac{k}{m}y = 0.\label{eq:DampedOscillator1}
-</me>
+<men  xml:id="EQUATIONDampedOscillator1">
+  \dfdxn{y}{t}{2}+\frac{b}{m}\dfdx{y}{t}+\frac{k}{m}y = 0.
+<!-- \label{eq:DampedOscillator1} -->
+</men>
 <xref ref="EQDampedOscillator1">Equation</xref>) is a little scary to look at, let alone
 try to solve.  We'll begin with a simplified version where
 <m>b=k=m</m>:
-<me>
-  \dfdxn{y}{t}{2}+\dfdx{y}{t}+y=0.\label{eq:DampedProblem1}
-</me>
+<men  xml:id="EQUATIONDampedProblem1">
+  \dfdxn{y}{t}{2}+\dfdx{y}{t}+y=0.
+<!-- \label{eq:DampedProblem1} -->
+</men>
 </p>
 
 
@@ -5656,7 +6014,7 @@ try to solve.  We'll begin with a simplified version where
       Show that:
       <me> y(t)=e^{-\frac{t}{2}} \left[
       A\cos\left(\frac{\sqrt{3}}{2}t\right)+B\sin\left(\frac{\sqrt{3}}{2}t\right)
-      \right]</me> satisfies <xref ref="EQUATIONeq:DampedProblem1"></xref> for any
+      \right]</me> satisfies <xref ref="EQUATIONDampedProblem1"></xref> for any
       constants <m>A</m> and <m>B</m>.
 </p>
 </statement>
@@ -5676,7 +6034,7 @@ try to solve.  We'll begin with a simplified version where
 <!--   \item Show that: -->
 <!--     <me> y(t)=e^{-\frac{t}{2}} \left[ -->
 <!--       A\cos\left(\frac{\sqrt{3}}{2}t\right)+B\sin\left(\frac{\sqrt{3}}{2}t\right) -->
-<!--     \right]</me> satisfies <xref ref="EQUATIONeq:DampedProblem1"></xref> for any -->
+<!--     \right]</me> satisfies <xref ref="EQUATIONDampedProblem1"></xref> for any -->
 <!--     constants <m>A</m> and <m>B</m>. -->
 <!--   \item Let <m>A=1, B=0</m> and plot this solution for <m>0\le t\le 15</m> and -->
 <!--     <m>-0.5\le y \le 0.5.</m> Does this seem to model a damped oscillation? -->
@@ -5772,12 +6130,12 @@ seems to be oscillating!
       \dfdxn{y}{t}{2}+\dfdx{y}{t}+y=0
 </m>
 then <m>c</m> must satisfy the quadratic equation
-<me>
+<men  xml:id="EQUATIONImagSolution">
 
-  \label{eq:ImagSolution}
+  <!-- \label{eq:ImagSolution} -->
   c^2+c+1=0.
 
-</me>
+</men>
 \hint{Put the first two derivatives of <m>y</m>  into the
 differential equation.}
 </p>
@@ -5845,7 +6203,7 @@ these solutions could mean.
   <statement>
     <p>
       Show that <m>y_1(t)</m> is a solution of
-      <xref ref="EQUATIONeq:DampedProblem1"></xref>.
+      <xref ref="EQUATIONDampedProblem1"></xref>.
 </p>
 </statement>
 </task>
@@ -5853,7 +6211,7 @@ these solutions could mean.
   <statement>
     <p>
       Show that <m>y_2(t)</m> is also a solution of
-      <xref ref="EQUATIONeq:DampedProblem1"></xref>.
+      <xref ref="EQUATIONDampedProblem1"></xref>.
 </p>
 </statement>
 </task>
@@ -5862,7 +6220,7 @@ these solutions could mean.
     <p>
       Show that if <m>a</m> and <m>b</m> are constants then
 <m>w(t)=ay_1(t)+by_2(t)</m>
-is also a solution of <xref ref="EQUATIONeq:DampedProblem1"></xref>.
+is also a solution of <xref ref="EQUATIONDampedProblem1"></xref>.
 </p>
 </statement>
 </task>
@@ -5872,12 +6230,12 @@ is also a solution of <xref ref="EQUATIONeq:DampedProblem1"></xref>.
 <!--   Assume that <m>i=\sqrt{-1}</m> is a constant. -->
 <!--        \begin{enumerate}[label={  (\alph*)}]  -->
 <!--          \item Show that <m>y_1(t)</m> is a solution of -->
-<!--            <xref ref="EQUATIONeq:DampedProblem1"></xref>. -->
+<!--            <xref ref="EQUATIONDampedProblem1"></xref>. -->
 <!--          \item Show that <m>y_2(t)</m> is also a solution of -->
-<!--            <xref ref="EQUATIONeq:DampedProblem1"></xref>. -->
+<!--            <xref ref="EQUATIONDampedProblem1"></xref>. -->
 <!--          \item Show that if <m>a</m> and <m>b</m> are constants then -->
 <!--            <m>w(t)=ay_1(t)+by_2(t)</m> -->
-<!--            is also a solution of <xref ref="EQUATIONeq:DampedProblem1"></xref>. -->
+<!--            is also a solution of <xref ref="EQUATIONDampedProblem1"></xref>. -->
 <!--         \end{enumerate} -->
 <!-- \end{embeddedproblem} -->
 
@@ -5885,7 +6243,7 @@ is also a solution of <xref ref="EQUATIONeq:DampedProblem1"></xref>.
 
 <p>
   To find meaning in his solutions he returned to the simpler
-  <xref ref="EQSHO6">Equation</xref>),
+  <xref ref="EQUATIONSHO6">Equation</xref>),
   <me>  m\dfdxn{y}{t}{2}= -ky,</me> which he
   already knew how to solve. To make things simpler still he assumed
   that <m>m=k=1</m> and tried his crazy guess, <m>y=e^{ct}</m> again on
@@ -5907,7 +6265,7 @@ is also a solution of <xref ref="EQUATIONeq:DampedProblem1"></xref>.
   <m>y=e^{-it}</m> are both solutions of
   <xref ref="EQEulerSimpleSHO-1">Equation</xref>),
   but Euler knew (as we do\aside{See
-  <xref ref="SECmore-high-deriv">Section</xref>).}) that the solution of
+  <xref ref="SECTIONmore-high-deriv">Section</xref>).}) that the solution of
   <xref ref="EQEulerSimpleSHO-1">Equation</xref>) is
   <m>
     y(t)=a\cos(t)+b\sin(t)
@@ -5963,9 +6321,10 @@ first.}
 
   From part (a) of <xref ref="PROBLEMEulersFormula">Problem\</xref> we get the
   formula,
-  <me>
-    e^{it}=\cos(t)+ i\sin(t).\label{eq:EulerIdentity}
-</me>
+  <men  xml:id="EQUATIONEulerIdentity">
+    e^{it}=\cos(t)+ i\sin(t).
+<!-- \label{eq:EulerIdentity} -->
+</men>
 <xref ref="EQEulerIdentity">Equation</xref> is known as <term>Euler's Identity</term> and it
 is foundational to electrical engineering, and physics (especially
 Quantum Mechanics). For mathematicians it is the key to
