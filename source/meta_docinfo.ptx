@@ -21,10 +21,23 @@
 <!-- it defines.                                                    -->
 <macros>
 \def\abs#1{\left|#1\right|}
+\def\CancelToRed#1#2{\textcolor{red}{{\cancelto{#1}{#2}}}}
+\def\approach#1{{\left(\rightarrow{}#1\right)}}
+\def\halmos{\rule[-.1ex]{8pt}{2ex}}
+
+\def\limitX#1#2#3#4{{\displaystyle\lim_{\underset{#4}{#1\rightarrow #2}}#3}}
+\def\tlimitX#1#2#3#4{{\displaystyle\lim_{\underset{#4}{#1\rightarrow #2}}}#3}
+\def\rlimit#1#2#3{{\limitX{#1}{#2}{#3}{#1\gt{}#2}{}}}
+\def\rtlimit#1#2#3{{\tlimitX{#1}{#2}{#3}{#1\gt{}#2}{}}}
+\def\llimit#1#2#3{{\limitX{#1}{#2}{#3}{#1\lt{}#2}{}}}
+\def\ltlimit#1#2#3{{\tlimitX{#1}{#2}{#3}{#1\lt{}#2}{}}}
+
+\newcommand{\eps}{\varepsilon}
 \newcommand{\RR}{\mathbb {R}}
 \newcommand{\QQ}{\mathbb {Q}}
 \newcommand{\NN}{\mathbb {N}}
 \newcommand{\ZZ}{\mathbb {Z}}
+
 \newcommand{\ParamEqTwo}[2]
 {
   \left\{
@@ -44,6 +57,9 @@
     \end{array}
   \right\}
 }
+
+\def\absALT#1{\rule[-.7ex]{1pt}{5ex}\hskip2pt#1\hskip2pt\llap{\rule[-.7ex]{1pt}{5ex}}} 
+
 
 \def\sech{{\rm{}sech}{}}
 \def\csch{{\rm{}csch}{}}
