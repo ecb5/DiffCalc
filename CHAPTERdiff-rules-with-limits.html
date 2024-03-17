@@ -108,10 +108,23 @@ window.MathJax = {
 </div>
 </div>
 <span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="CHAPTERWhatsWrong.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ToTheory.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="CHAPTERFDT-Redux.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\def\abs#1{\left|#1\right|}
+\def\CancelToRed#1#2{\textcolor{red}{{\cancelto{#1}{#2}}}}
+\def\approach#1{{\left(\rightarrow{}#1\right)}}
+\def\halmos{\rule[-.1ex]{8pt}{2ex}}
+
+\def\limitX#1#2#3#4{{\displaystyle\lim_{\underset{#4}{#1\rightarrow #2}}#3}}
+\def\tlimitX#1#2#3#4{{\displaystyle\lim_{\underset{#4}{#1\rightarrow #2}}}#3}
+\def\rlimit#1#2#3{{\limitX{#1}{#2}{#3}{#1\gt{}#2}{}}}
+\def\rtlimit#1#2#3{{\tlimitX{#1}{#2}{#3}{#1\gt{}#2}{}}}
+\def\llimit#1#2#3{{\limitX{#1}{#2}{#3}{#1\lt{}#2}{}}}
+\def\ltlimit#1#2#3{{\tlimitX{#1}{#2}{#3}{#1\lt{}#2}{}}}
+
+\newcommand{\eps}{\varepsilon}
 \newcommand{\RR}{\mathbb {R}}
 \newcommand{\QQ}{\mathbb {Q}}
 \newcommand{\NN}{\mathbb {N}}
 \newcommand{\ZZ}{\mathbb {Z}}
+
 \newcommand{\ParamEqTwo}[2]
 {
   \left\{
@@ -131,6 +144,9 @@ window.MathJax = {
     \end{array}
   \right\}
 }
+
+\def\absALT#1{\rule[-.7ex]{1pt}{5ex}\hskip2pt#1\hskip2pt\llap{\rule[-.7ex]{1pt}{5ex}}} 
+
 
 \def\sech{{\rm{}sech}{}}
 \def\csch{{\rm{}csch}{}}
@@ -476,7 +492,10 @@ window.MathJax = {
 <ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="CHAPTERWhatsWrong.html" class="internal"><span class="codenumber">13</span> <span class="title">What’s Wrong with Differentials?</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERWhatsWrong.html#CalcAndBerkeley" class="internal"><span class="codenumber">13.1</span> <span class="title">Calculus and Bishop Berkeley</span></a></div></li></ul>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERWhatsWrong.html#CalcAndBerkeley" class="internal"><span class="codenumber">13.1</span> <span class="title">Calculus and Bishop Berkeley</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERWhatsWrong.html#sec:secants-tangents" class="internal"><span class="codenumber">13.2</span> <span class="title">Secants and Tangents</span></a></div></li>
+</ul>
 </li>
 <li class="toc-item toc-chapter active">
 <div class="toc-title-box"><a href="CHAPTERdiff-rules-with-limits.html" class="internal"><span class="codenumber">14</span> <span class="title">The Differentiation Rules via Limits</span></a></div>
@@ -502,21 +521,13 @@ window.MathJax = {
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="CHPTwhen-deriv-doesnt.html" class="internal"><span class="codenumber">16</span> <span class="title">When the Derivative Doesn’t Exist</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="CHPTwhen-deriv-doesnt.html#SECTIONone-sided-deriv" class="internal"><span class="codenumber">16.1</span> <span class="title">One Sided Derivatives</span></a></div></li></ul>
+<div class="toc-title-box"><a href="CHAPTERwhen-deriv-doesnt.html" class="internal"><span class="codenumber">16</span> <span class="title">When the Derivative Doesn’t Exist</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERwhen-deriv-doesnt.html#SECTIONone-sided-deriv" class="internal"><span class="codenumber">16.1</span> <span class="title">One Sided Derivatives</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="CHAPTERformal-limits.html" class="internal"><span class="codenumber">17</span> <span class="title">Formal Limits</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAPTERformal-limits.html#SECTIONlimits-at-infinity" class="internal"><span class="codenumber">17.1</span> <span class="title">Getting Around Infinity</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONEpsDelt1" class="internal"><span class="codenumber">17.1.1</span> <span class="title">The Infinitely Large</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONFormalLimits" class="internal"><span class="codenumber">17.1.2</span> <span class="title">The Infinitely Small</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONconvincing-skeptic" class="internal"><span class="codenumber">17.1.3</span> <span class="title">Convincing Berkeley</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SECTIONlimits-at-infinity-5" class="internal"><span class="codenumber">17.1.4</span> <span class="title">Refining the Definition</span></a></div></li>
-</ul>
-</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SECTIONlimits-at-infinity" class="internal"><span class="codenumber">17.1</span> <span class="title">Getting Around Infinity</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SECTIONlimits-at-real" class="internal"><span class="codenumber">17.2</span> <span class="title">Limits at a Real Number</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="CHAPTERformal-limits.html#SECTIONLimitLaws" class="internal"><span class="codenumber">17.3</span> <span class="title">Limit Laws (Theorems)</span></a></div>
@@ -527,11 +538,11 @@ window.MathJax = {
 <li class="toc-item toc-subsection">
 <div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONlimit-product-at" class="internal"><span class="codenumber">17.3.4</span> <span class="title">The Limit of a Product</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONlimit-product-at-3" class="internal"><span class="codenumber">17.3.4.1</span> <span class="title">Proving Lemma 17.50</span></a></div></li>
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONLemmaLimProd2" class="internal"><span class="codenumber">17.3.4.2</span> <span class="title">Proving Lemma 17.51</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONlimit-product-at-3" class="internal"><span class="codenumber">17.3.4.1</span> <span class="title">Proving Lemma 17.55</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONLemmaLimProd2" class="internal"><span class="codenumber">17.3.4.2</span> <span class="title">Proving Lemma 17.56</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONOneOverXIsCont" class="internal"><span class="codenumber">17.3.5</span> <span class="title">The Function  \boldmath  <span class="process-math">\(f(x)=\frac1x\)</span> is Continuous Wherever  It Is Defined</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONOneOverXIsCont" class="internal"><span class="codenumber">17.3.5</span> <span class="title">The Function    <span class="process-math">\(f(x)=\frac1x\)</span> is Continuous Wherever  It Is Defined</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -789,24 +800,25 @@ f(x)=
 </div>
 <div class="para">then <span class="process-math">\(\limit{x}{a}{f(x)} = L\)</span> also.</div>
 </div></article><div class="para" id="SUBSECTIONlimit-comp-cont-43">
-<a href="" class="xref" data-knowl="./knowl/xref/THEOREMFiniteSqueeze.html" title="Theorem 14.18: The Squeeze Theorem (The Finite Case)">~ 14.18</a> is illustrated below, but a formal proof will not be given until <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "CHAPTERcha:formal-limits" missing or not unique]</code>.\\ \centerline{\includegraphics*[height=1.4in,width=2.6in]{../Figures/SqueezeThm1}}</div>
-<article class="problem example-like" id="SUBSECTIONlimit-comp-cont-44"><h5 class="heading">
+<a href="" class="xref" data-knowl="./knowl/xref/THEOREMFiniteSqueeze.html" title="Theorem 14.18: The Squeeze Theorem (The Finite Case)">~ 14.18</a> is illustrated below, but a formal proof will not be given until <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "CHAPTERcha:formal-limits" missing or not unique]</code>.\\</div>
+<div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/images/SqueezeThm1.png" class="contained"></div>
+<article class="problem example-like" id="SUBSECTIONlimit-comp-cont-45"><h5 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">14.19</span><span class="period">.</span>
 </h5>
-<div class="introduction" id="SUBSECTIONlimit-comp-cont-44-1"><div class="para" id="SUBSECTIONlimit-comp-cont-44-1-1">Consider the two functions defined in the sketch below:\\ \centerline{\includegraphics*[height=2.5in,width=5.5in]{../Figures/TopSinCurve}}</div></div>
-<article class="task exercise-like" id="SUBSECTIONlimit-comp-cont-44-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<div class="para" id="SUBSECTIONlimit-comp-cont-44-2-1-1">Use <a href="" class="xref" data-knowl="./knowl/xref/THEOREMFiniteSqueeze.html" title="Theorem 14.18: The Squeeze Theorem (The Finite Case)">~ 14.18</a> to show that <span class="process-math">\(U(x)\)</span> is continuous at <span class="process-math">\(x=0\text{.}\)</span> \\ \hint{What functions is <span class="process-math">\(U(x)\)</span> caught between?}</div></article><article class="task exercise-like" id="SUBSECTIONlimit-comp-cont-44-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<div class="para" id="SUBSECTIONlimit-comp-cont-44-3-1-1">Use <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONcontinuity.html" title="Definition 14.15: Continuity at a Point">~ 14.15</a> to show that <span class="process-math">\(T(x)\)</span> is not continuous at <span class="process-math">\(x=0\text{.}\)</span>  \\ \hint{Try the substitution <span class="process-math">\(z=\frac1x\)</span> for <span class="process-math">\(x\neq0\text{.}\)</span>  What would <span class="process-math">\(\limit{x}{0}{T(x)}\)</span> look like in terms of <span class="process-math">\(z\text{?}\)</span>}</div></article></article><article class="theorem theorem-like" id="LimitOfComposition"><h5 class="heading">
+<div class="introduction" id="SUBSECTIONlimit-comp-cont-45-1"><div class="para" id="SUBSECTIONlimit-comp-cont-45-1-1">Consider the two functions defined in the sketch below:\\ \centerline{\includegraphics*[height=2.5in,width=5.5in]{../Figures/TopSinCurve}}</div></div>
+<article class="task exercise-like" id="SUBSECTIONlimit-comp-cont-45-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="para" id="SUBSECTIONlimit-comp-cont-45-2-1-1">Use <a href="" class="xref" data-knowl="./knowl/xref/THEOREMFiniteSqueeze.html" title="Theorem 14.18: The Squeeze Theorem (The Finite Case)">~ 14.18</a> to show that <span class="process-math">\(U(x)\)</span> is continuous at <span class="process-math">\(x=0\text{.}\)</span> \\ \hint{What functions is <span class="process-math">\(U(x)\)</span> caught between?}</div></article><article class="task exercise-like" id="SUBSECTIONlimit-comp-cont-45-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="para" id="SUBSECTIONlimit-comp-cont-45-3-1-1">Use <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONcontinuity.html" title="Definition 14.15: Continuity at a Point">~ 14.15</a> to show that <span class="process-math">\(T(x)\)</span> is not continuous at <span class="process-math">\(x=0\text{.}\)</span>  \\ \hint{Try the substitution <span class="process-math">\(z=\frac1x\)</span> for <span class="process-math">\(x\neq0\text{.}\)</span>  What would <span class="process-math">\(\limit{x}{0}{T(x)}\)</span> look like in terms of <span class="process-math">\(z\text{?}\)</span>}</div></article></article><article class="theorem theorem-like" id="THEOREMCompositionLimit"><h5 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">14.20</span><span class="period">.</span><span class="space"> </span><span class="title">The Limit of a Composition is the Composition of the Limits.</span>
 </h5>
-<div class="para logical" id="LimitOfComposition-2">
-<div class="para">Limits] \label{THEOREMCompositionLimit} Suppose <span class="process-math">\(\limit{x}{a}{g(x)}=L_g\)</span> and that <span class="process-math">\(f(x)\)</span> is continuous at <span class="process-math">\(L_g\text{.}\)</span> Then</div>
+<div class="para logical" id="THEOREMCompositionLimit-2">
+<div class="para">Suppose <span class="process-math">\(\limit{x}{a}{g(x)}=L_g\)</span> and that <span class="process-math">\(f(x)\)</span> is continuous at <span class="process-math">\(L_g\text{.}\)</span> Then</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \limit{x}{a}{f(g(x))}=f\left(\limit{x}{a}{g(x)}\right)=f(L_g).
 \end{equation*}
 </div>
-</div></article><div class="para" id="SUBSECTIONlimit-comp-cont-46">Essentially this says that we can interchange the function <span class="process-math">\(f\)</span> and the “<span class="process-math">\(\lim\)</span>” symbols if <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(g(a)\text{.}\)</span>
+</div></article><div class="para" id="SUBSECTIONlimit-comp-cont-47">Essentially this says that we can interchange the function <span class="process-math">\(f\)</span> and the “<span class="process-math">\(\lim\)</span>” symbols if <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(g(a)\text{.}\)</span>
 </div></section></section><section class="section" id="SECTIONdiff-rules-via"><h3 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">14.2</span><span class="space"> </span><span class="title">The General Differentiation Theorems, via Limits</span>
 </h3>
@@ -820,7 +832,7 @@ f(x)=
 <article class="theorem theorem-like" id="THEOREMLimConstantRule"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">14.21</span><span class="period">.</span><span class="space"> </span><span class="title">The Constant Rule for Differentiation.</span>
 </h4>
-<div class="para" id="THEOREMLimConstantRule-2">If <span class="process-math">\(L\)</span> is some number and <span class="process-math">\(f(x)=L\)</span> for all real values of <span class="process-math">\(x\)</span> near\aside{“Near” means on an open interval about <span class="process-math">\(L\text{.}\)</span> Recall <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONnear.html" title="Definition 14.6: Near">~ 14.6</a>.  } <span class="process-math">\(L\text{,}\)</span> then <span class="process-math">\(f^\prime(x)=0\)</span> at every real number <span class="process-math">\(x\)</span> near\aside{On the same open interval.} <span class="process-math">\(L\)</span> . \begin{myproof} By <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQUATIONDefDerivative" missing or not unique]</code> \begin{align*} f^\prime(x)\amp =\limit{h}{0}{\frac{f(x+h)-f(x)}{h}}.\\ \intertext{But <span class="process-math">\(f(x+h)=L=f(x)\)</span> so} f^\prime(x)\amp =\limit{h}{0}{\frac{L-L}{h}}=\limit{h}{0}{\frac{0}{h}}=0. \end{align*} \end{myproof}</div></article><article class="theorem theorem-like" id="SECTIONdiff-rules-via-8"><h4 class="heading">
+<div class="para" id="THEOREMLimConstantRule-2">If <span class="process-math">\(L\)</span> is some number and <span class="process-math">\(f(x)=L\)</span> for all real values of <span class="process-math">\(x\)</span> near\aside{“Near” means on an open interval about <span class="process-math">\(L\text{.}\)</span> Recall <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONnear.html" title="Definition 14.6: Near">~ 14.6</a>.  } <span class="process-math">\(L\text{,}\)</span> then <span class="process-math">\(f^\prime(x)=0\)</span> at every real number <span class="process-math">\(x\)</span> near\aside{On the same open interval.} <span class="process-math">\(L\)</span> . \begin{myproof} By <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONDefDerivative.html" title="Equation 13.3">(13.3)</a> \begin{align*} f^\prime(x)\amp =\limit{h}{0}{\frac{f(x+h)-f(x)}{h}}.\\ \intertext{But <span class="process-math">\(f(x+h)=L=f(x)\)</span> so} f^\prime(x)\amp =\limit{h}{0}{\frac{L-L}{h}}=\limit{h}{0}{\frac{0}{h}}=0. \end{align*} \end{myproof}</div></article><article class="theorem theorem-like" id="SECTIONdiff-rules-via-8"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">14.22</span><span class="period">.</span><span class="space"> </span><span class="title">The Sum Rule for Differentiation.</span>
 </h4>
 <div class="para logical" id="SECTIONdiff-rules-via-8-2">
@@ -864,7 +876,7 @@ f^\prime(x)=\alpha^\prime(x)+ \beta^\prime(x).
 \dfdx{y}{x}=3z\dx{z}=3\left(3x^2+6x\right)^2(6x+6).
 \end{equation*}
 </div>
-</div> <div class="para" id="EXAMPLEchain-rule1-2">But <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "DEFINITIONDerivative" missing or not unique]</code> requires that we think about functions, not variables so let’s translate this problem into the language of functions. If <span class="process-math">\(y=\left(2x^2-6x\right)^3\text{,}\)</span> clearly <span class="process-math">\(y\)</span> is a function of (depends on) <span class="process-math">\(x\text{.}\)</span> Naming that function <span class="process-math">\(f\text{,}\)</span> we have <span class="process-math">\(y=f(x)\text{.}\)</span> Replacing <span class="process-math">\(y\)</span> with <span class="process-math">\(f(x)\text{,}\)</span> we get <span class="process-math">\(f(x)=(2x^2-6x)^3\text{.}\)</span>
+</div> <div class="para" id="EXAMPLEchain-rule1-2">But <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONDerivative.html" title="Definition 13.4: The Derivative">Definition 13.4</a> requires that we think about functions, not variables so let’s translate this problem into the language of functions. If <span class="process-math">\(y=\left(2x^2-6x\right)^3\text{,}\)</span> clearly <span class="process-math">\(y\)</span> is a function of (depends on) <span class="process-math">\(x\text{.}\)</span> Naming that function <span class="process-math">\(f\text{,}\)</span> we have <span class="process-math">\(y=f(x)\text{.}\)</span> Replacing <span class="process-math">\(y\)</span> with <span class="process-math">\(f(x)\text{,}\)</span> we get <span class="process-math">\(f(x)=(2x^2-6x)^3\text{.}\)</span>
 </div> <div class="para logical" id="EXAMPLEchain-rule1-3">
 <div class="para">Similarly, if <span class="process-math">\(z=3x^2+6x\)</span> then <span class="process-math">\(z\)</span> is also a function of (depends on) <span class="process-math">\(x\text{,}\)</span> and naming that function <span class="process-math">\(\beta\)</span> we have <span class="process-math">\(z=\beta(x)\text{.}\)</span> Replacing <span class="process-math">\(z\)</span> with <span class="process-math">\(\beta(x)\)</span> we have <span class="process-math">\(f(x)=(\beta(x))^3\text{.}\)</span> If we suppress the “<span class="process-math">\((x)\)</span>” part of <span class="process-math">\(\beta(x)\text{,}\)</span> we see that <span class="process-math">\(f\)</span> can also be thought of as a function of (depends on) <span class="process-math">\(\beta\)</span> so that</div>
 <div class="displaymath process-math">
@@ -973,7 +985,7 @@ f^\prime(x) =\alpha^\prime(\beta(x))\cdot\beta^\prime(x)
 <article class="task exercise-like" id="SECTIONChainRule-11-6-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
 <div class="para" id="SECTIONChainRule-11-6-2-1-1">Show that the function <span class="process-math">\(\beta(x)=\sin\left(\frac1x\right)\)</span> does not satisfy the constraint <span class="process-math">\(\Delta\beta\neq0\)</span> when <span class="process-math">\(x\)</span> is near zero.\\ \hint{Recall <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONnear.html" title="Definition 14.6: Near">Definition 14.6</a>.}</div></article><article class="task exercise-like" id="SECTIONChainRule-11-6-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>
 <div class="para logical" id="SECTIONChainRule-11-6-3-1-1">
-<div class="para">As a result of part (a) <a href="" class="xref" data-knowl="./knowl/xref/THEOREMChainRule.html" title="Theorem 14.27: The Chain Rule">~ 14.27</a> does not apply to any of the following functions at <span class="process-math">\(x=0\text{.}\)</span> Nevertheless one of them is differentiable at <span class="process-math">\(x=0\text{.}\)</span> Use <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "DEFINITIONDerivative" missing or not unique]</code> to find out which one.</div>
+<div class="para">As a result of part (a) <a href="" class="xref" data-knowl="./knowl/xref/THEOREMChainRule.html" title="Theorem 14.27: The Chain Rule">~ 14.27</a> does not apply to any of the following functions at <span class="process-math">\(x=0\text{.}\)</span> Nevertheless one of them is differentiable at <span class="process-math">\(x=0\text{.}\)</span> Use <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONDerivative.html" title="Definition 13.4: The Derivative">Definition 13.4</a> to find out which one.</div>
 <ol class="decimal">
 <li id="SECTIONChainRule-11-6-3-1-1-5-1"><div class="para" id="SECTIONChainRule-11-6-3-1-1-5-1-1"><span class="process-math">\(\displaystyle T(x)=
 \begin{cases}
@@ -1217,7 +1229,7 @@ f^\prime(x)=\frac{\beta(x)\alpha^\prime(x)-\alpha(x)\beta^\prime(x)}{\left[\beta
 <div class="para" id="PROBLEMPR-rigor1-4-1-1">Use \term{Mathematical Induction} to show that\\ \centerline{<span class="process-math">\((a-b)(a^{q-1}+a^{q-2}b+a^{q-3}b^2+\cdots+ab^{q-2}+b^{q-1})=a^q-b^q\text{.}\)</span>}</div></article></article>               <article class="problem example-like" id="PROBLEMPR-rigor2"><h5 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">14.40</span><span class="period">.</span>
 </h5>
-<div class="introduction" id="PROBLEMPR-rigor2-1"><div class="para" id="PROBLEMPR-rigor2-1-1">Assume that <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> are integers and that <span class="process-math">\(q\neq0\text{.}\)</span> If we apply <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "DEFINITIONDerivative" missing or not unique]</code> to <span class="process-math">\(f(x)=x^\frac{1}{q}\text{,}\)</span> we get\\ \centerline{<span class="process-math">\(f^\prime(x)=\limit{h}{0}{\frac{(x+h)^\frac1q-x^\frac1q}{h}}.  \)</span>}</div></div>
+<div class="introduction" id="PROBLEMPR-rigor2-1"><div class="para" id="PROBLEMPR-rigor2-1-1">Assume that <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> are integers and that <span class="process-math">\(q\neq0\text{.}\)</span> If we apply <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONDerivative.html" title="Definition 13.4: The Derivative">Definition 13.4</a> to <span class="process-math">\(f(x)=x^\frac{1}{q}\text{,}\)</span> we get\\ \centerline{<span class="process-math">\(f^\prime(x)=\limit{h}{0}{\frac{(x+h)^\frac1q-x^\frac1q}{h}}.  \)</span>}</div></div>
 <article class="task exercise-like" id="PROBLEMPR-rigor2-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
 <div class="para logical" id="PROBLEMPR-rigor2-2-1-1">
 <div class="para">Use the substitutions <span class="process-math">\(a=(x+h)^\frac1q\text{,}\)</span> <span class="process-math">\(b=x^\frac1q\text{,}\)</span> and part (c) of the previous problem to show that</div>

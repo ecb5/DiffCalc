@@ -108,10 +108,23 @@ window.MathJax = {
 </div>
 </div>
 <span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="CHAPTApproximation.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="FromPractice.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="CHAPTERwhat-deriv-tells.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\def\abs#1{\left|#1\right|}
+\def\CancelToRed#1#2{\textcolor{red}{{\cancelto{#1}{#2}}}}
+\def\approach#1{{\left(\rightarrow{}#1\right)}}
+\def\halmos{\rule[-.1ex]{8pt}{2ex}}
+
+\def\limitX#1#2#3#4{{\displaystyle\lim_{\underset{#4}{#1\rightarrow #2}}#3}}
+\def\tlimitX#1#2#3#4{{\displaystyle\lim_{\underset{#4}{#1\rightarrow #2}}}#3}
+\def\rlimit#1#2#3{{\limitX{#1}{#2}{#3}{#1\gt{}#2}{}}}
+\def\rtlimit#1#2#3{{\tlimitX{#1}{#2}{#3}{#1\gt{}#2}{}}}
+\def\llimit#1#2#3{{\limitX{#1}{#2}{#3}{#1\lt{}#2}{}}}
+\def\ltlimit#1#2#3{{\tlimitX{#1}{#2}{#3}{#1\lt{}#2}{}}}
+
+\newcommand{\eps}{\varepsilon}
 \newcommand{\RR}{\mathbb {R}}
 \newcommand{\QQ}{\mathbb {Q}}
 \newcommand{\NN}{\mathbb {N}}
 \newcommand{\ZZ}{\mathbb {Z}}
+
 \newcommand{\ParamEqTwo}[2]
 {
   \left\{
@@ -131,6 +144,9 @@ window.MathJax = {
     \end{array}
   \right\}
 }
+
+\def\absALT#1{\rule[-.7ex]{1pt}{5ex}\hskip2pt#1\hskip2pt\llap{\rule[-.7ex]{1pt}{5ex}}} 
+
 
 \def\sech{{\rm{}sech}{}}
 \def\csch{{\rm{}csch}{}}
@@ -476,7 +492,10 @@ window.MathJax = {
 <ul class="structural toc-item-list">
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="CHAPTERWhatsWrong.html" class="internal"><span class="codenumber">13</span> <span class="title">What’s Wrong with Differentials?</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERWhatsWrong.html#CalcAndBerkeley" class="internal"><span class="codenumber">13.1</span> <span class="title">Calculus and Bishop Berkeley</span></a></div></li></ul>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERWhatsWrong.html#CalcAndBerkeley" class="internal"><span class="codenumber">13.1</span> <span class="title">Calculus and Bishop Berkeley</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERWhatsWrong.html#sec:secants-tangents" class="internal"><span class="codenumber">13.2</span> <span class="title">Secants and Tangents</span></a></div></li>
+</ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="CHAPTERdiff-rules-with-limits.html" class="internal"><span class="codenumber">14</span> <span class="title">The Differentiation Rules via Limits</span></a></div>
@@ -502,21 +521,13 @@ window.MathJax = {
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="CHPTwhen-deriv-doesnt.html" class="internal"><span class="codenumber">16</span> <span class="title">When the Derivative Doesn’t Exist</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="CHPTwhen-deriv-doesnt.html#SECTIONone-sided-deriv" class="internal"><span class="codenumber">16.1</span> <span class="title">One Sided Derivatives</span></a></div></li></ul>
+<div class="toc-title-box"><a href="CHAPTERwhen-deriv-doesnt.html" class="internal"><span class="codenumber">16</span> <span class="title">When the Derivative Doesn’t Exist</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERwhen-deriv-doesnt.html#SECTIONone-sided-deriv" class="internal"><span class="codenumber">16.1</span> <span class="title">One Sided Derivatives</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="CHAPTERformal-limits.html" class="internal"><span class="codenumber">17</span> <span class="title">Formal Limits</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAPTERformal-limits.html#SECTIONlimits-at-infinity" class="internal"><span class="codenumber">17.1</span> <span class="title">Getting Around Infinity</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONEpsDelt1" class="internal"><span class="codenumber">17.1.1</span> <span class="title">The Infinitely Large</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONFormalLimits" class="internal"><span class="codenumber">17.1.2</span> <span class="title">The Infinitely Small</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONconvincing-skeptic" class="internal"><span class="codenumber">17.1.3</span> <span class="title">Convincing Berkeley</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SECTIONlimits-at-infinity-5" class="internal"><span class="codenumber">17.1.4</span> <span class="title">Refining the Definition</span></a></div></li>
-</ul>
-</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SECTIONlimits-at-infinity" class="internal"><span class="codenumber">17.1</span> <span class="title">Getting Around Infinity</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SECTIONlimits-at-real" class="internal"><span class="codenumber">17.2</span> <span class="title">Limits at a Real Number</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="CHAPTERformal-limits.html#SECTIONLimitLaws" class="internal"><span class="codenumber">17.3</span> <span class="title">Limit Laws (Theorems)</span></a></div>
@@ -527,11 +538,11 @@ window.MathJax = {
 <li class="toc-item toc-subsection">
 <div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONlimit-product-at" class="internal"><span class="codenumber">17.3.4</span> <span class="title">The Limit of a Product</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONlimit-product-at-3" class="internal"><span class="codenumber">17.3.4.1</span> <span class="title">Proving Lemma 17.50</span></a></div></li>
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONLemmaLimProd2" class="internal"><span class="codenumber">17.3.4.2</span> <span class="title">Proving Lemma 17.51</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONlimit-product-at-3" class="internal"><span class="codenumber">17.3.4.1</span> <span class="title">Proving Lemma 17.55</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONLemmaLimProd2" class="internal"><span class="codenumber">17.3.4.2</span> <span class="title">Proving Lemma 17.56</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONOneOverXIsCont" class="internal"><span class="codenumber">17.3.5</span> <span class="title">The Function  \boldmath  <span class="process-math">\(f(x)=\frac1x\)</span> is Continuous Wherever  It Is Defined</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONOneOverXIsCont" class="internal"><span class="codenumber">17.3.5</span> <span class="title">The Function    <span class="process-math">\(f(x)=\frac1x\)</span> is Continuous Wherever  It Is Defined</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -2028,8 +2039,24 @@ e^y\dx{y} \amp = \dx{x}\text{.}
 </div>
 <div class="para">Graph both of these functions and use this to approximate the point <span class="process-math">\((x,y)\text{,}\)</span> where the curvature of the graph of the natural logarithm is the greatest.</div>
 </div></article><article class="task exercise-like" id="SECTIONDerivNatLog-6-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<div class="para" id="SECTIONDerivNatLog-6-4-1-1">What do you notice about the points where the curvature is greatest in parts (a) and (b)?  Does this surprise you? Explain.</div></article></article><aside class="aside aside-like" id="SECTIONDerivNatLog-7"><h4 class="heading"><span class="title">Note to self.</span></h4>
-<div class="para" id="SECTIONDerivNatLog-7-2">Digression missing.</div></aside></section><section class="section" id="SECTIONgener-logar-expon"><h3 class="heading hide-type">
+<div class="para" id="SECTIONDerivNatLog-6-4-1-1">What do you notice about the points where the curvature is greatest in parts (a) and (b)?  Does this surprise you? Explain.</div></article></article><section class="paragraphs" id="DIGRESSIONCuriousFact"><h4 class="heading"><span class="title">DIGRESSION: A Curious Fact.</span></h4>  <div class="para" id="DIGRESSIONCuriousFact-2">Observe that if <span class="process-math">\(y=x^\alpha,\)</span> then <span class="process-math">\(\dfdx{y}{x}=\alpha x^{\alpha-1}.\)</span> This is, of course, just the Power Rule but we take particular notice of the fact that the Power Rule guarantees that the derivative of any monomial <span class="process-math">\((x^\alpha)\)</span> is another monomial. But what happens if we try to go the other direction?</div> <div class="para logical" id="DIGRESSIONCuriousFact-3">
+<div class="para">If <span class="process-math">\(\dfdx{y}{x}=x^2\)</span> then clearly\aside{Actually, this should be <span class="process-math">\(y=\frac{x^3}{3}\)</span> plus an arbitrary constant. Do you see why? Since the constant is of no importance to our current point, we ignore it. } <span class="process-math">\(y=\frac{x^3}{3}\text{.}\)</span> In general if</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dfdx{y}{x}=x^\alpha
+\end{equation*}
+</div>
+<div class="para">then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y= \frac{x^{\alpha+1}}{\alpha+1}
+\text{ for }
+\alpha\ne -1.
+\end{equation*}
+</div>
+<div class="para">But if <span class="process-math">\(\alpha=-1\)</span> running the Power Rule backwards would give us <span class="process-math">\(y= \frac{x^{-1+1}}{-1+1}\)</span> which is meaningless since the denominator is <span class="process-math">\(-1+1=0.\)</span> When <span class="process-math">\(\alpha=-1\)</span> we get is <span class="process-math">\(y=\ln(x).\)</span>
+</div>
+</div> <div class="para" id="DIGRESSIONCuriousFact-4">It seems very strange that there would be this one, single exception doesn’t it?  Or, to come at the question a little differently, maybe this says that the logarithm function is somehow related to polynomials? What do you think?</div>  <div class="para" id="DIGRESSIONCuriousFact-5"><em class="alert">END OF DIGRESSION</em></div></section></section><section class="section" id="SECTIONgener-logar-expon"><h3 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">8.10</span><span class="space"> </span><span class="title">General Logarithms and Exponentials</span>
 </h3>
 <section class="subsection" id="SUBSECTIONGenExp"><h4 class="heading hide-type">

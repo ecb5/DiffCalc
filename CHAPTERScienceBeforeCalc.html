@@ -108,10 +108,23 @@ window.MathJax = {
 </div>
 </div>
 <span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="CHAPTERproblem-solving.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="FromPractice.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="CHAPTdifferentials.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\def\abs#1{\left|#1\right|}
+\def\CancelToRed#1#2{\textcolor{red}{{\cancelto{#1}{#2}}}}
+\def\approach#1{{\left(\rightarrow{}#1\right)}}
+\def\halmos{\rule[-.1ex]{8pt}{2ex}}
+
+\def\limitX#1#2#3#4{{\displaystyle\lim_{\underset{#4}{#1\rightarrow #2}}#3}}
+\def\tlimitX#1#2#3#4{{\displaystyle\lim_{\underset{#4}{#1\rightarrow #2}}}#3}
+\def\rlimit#1#2#3{{\limitX{#1}{#2}{#3}{#1\gt{}#2}{}}}
+\def\rtlimit#1#2#3{{\tlimitX{#1}{#2}{#3}{#1\gt{}#2}{}}}
+\def\llimit#1#2#3{{\limitX{#1}{#2}{#3}{#1\lt{}#2}{}}}
+\def\ltlimit#1#2#3{{\tlimitX{#1}{#2}{#3}{#1\lt{}#2}{}}}
+
+\newcommand{\eps}{\varepsilon}
 \newcommand{\RR}{\mathbb {R}}
 \newcommand{\QQ}{\mathbb {Q}}
 \newcommand{\NN}{\mathbb {N}}
 \newcommand{\ZZ}{\mathbb {Z}}
+
 \newcommand{\ParamEqTwo}[2]
 {
   \left\{
@@ -131,6 +144,9 @@ window.MathJax = {
     \end{array}
   \right\}
 }
+
+\def\absALT#1{\rule[-.7ex]{1pt}{5ex}\hskip2pt#1\hskip2pt\llap{\rule[-.7ex]{1pt}{5ex}}} 
+
 
 \def\sech{{\rm{}sech}{}}
 \def\csch{{\rm{}csch}{}}
@@ -476,7 +492,10 @@ window.MathJax = {
 <ul class="structural toc-item-list">
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="CHAPTERWhatsWrong.html" class="internal"><span class="codenumber">13</span> <span class="title">What’s Wrong with Differentials?</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERWhatsWrong.html#CalcAndBerkeley" class="internal"><span class="codenumber">13.1</span> <span class="title">Calculus and Bishop Berkeley</span></a></div></li></ul>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERWhatsWrong.html#CalcAndBerkeley" class="internal"><span class="codenumber">13.1</span> <span class="title">Calculus and Bishop Berkeley</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERWhatsWrong.html#sec:secants-tangents" class="internal"><span class="codenumber">13.2</span> <span class="title">Secants and Tangents</span></a></div></li>
+</ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="CHAPTERdiff-rules-with-limits.html" class="internal"><span class="codenumber">14</span> <span class="title">The Differentiation Rules via Limits</span></a></div>
@@ -502,21 +521,13 @@ window.MathJax = {
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="CHPTwhen-deriv-doesnt.html" class="internal"><span class="codenumber">16</span> <span class="title">When the Derivative Doesn’t Exist</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="CHPTwhen-deriv-doesnt.html#SECTIONone-sided-deriv" class="internal"><span class="codenumber">16.1</span> <span class="title">One Sided Derivatives</span></a></div></li></ul>
+<div class="toc-title-box"><a href="CHAPTERwhen-deriv-doesnt.html" class="internal"><span class="codenumber">16</span> <span class="title">When the Derivative Doesn’t Exist</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERwhen-deriv-doesnt.html#SECTIONone-sided-deriv" class="internal"><span class="codenumber">16.1</span> <span class="title">One Sided Derivatives</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="CHAPTERformal-limits.html" class="internal"><span class="codenumber">17</span> <span class="title">Formal Limits</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAPTERformal-limits.html#SECTIONlimits-at-infinity" class="internal"><span class="codenumber">17.1</span> <span class="title">Getting Around Infinity</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONEpsDelt1" class="internal"><span class="codenumber">17.1.1</span> <span class="title">The Infinitely Large</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONFormalLimits" class="internal"><span class="codenumber">17.1.2</span> <span class="title">The Infinitely Small</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONconvincing-skeptic" class="internal"><span class="codenumber">17.1.3</span> <span class="title">Convincing Berkeley</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SECTIONlimits-at-infinity-5" class="internal"><span class="codenumber">17.1.4</span> <span class="title">Refining the Definition</span></a></div></li>
-</ul>
-</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SECTIONlimits-at-infinity" class="internal"><span class="codenumber">17.1</span> <span class="title">Getting Around Infinity</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SECTIONlimits-at-real" class="internal"><span class="codenumber">17.2</span> <span class="title">Limits at a Real Number</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="CHAPTERformal-limits.html#SECTIONLimitLaws" class="internal"><span class="codenumber">17.3</span> <span class="title">Limit Laws (Theorems)</span></a></div>
@@ -527,11 +538,11 @@ window.MathJax = {
 <li class="toc-item toc-subsection">
 <div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONlimit-product-at" class="internal"><span class="codenumber">17.3.4</span> <span class="title">The Limit of a Product</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONlimit-product-at-3" class="internal"><span class="codenumber">17.3.4.1</span> <span class="title">Proving Lemma 17.50</span></a></div></li>
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONLemmaLimProd2" class="internal"><span class="codenumber">17.3.4.2</span> <span class="title">Proving Lemma 17.51</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONlimit-product-at-3" class="internal"><span class="codenumber">17.3.4.1</span> <span class="title">Proving Lemma 17.55</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONLemmaLimProd2" class="internal"><span class="codenumber">17.3.4.2</span> <span class="title">Proving Lemma 17.56</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONOneOverXIsCont" class="internal"><span class="codenumber">17.3.5</span> <span class="title">The Function  \boldmath  <span class="process-math">\(f(x)=\frac1x\)</span> is Continuous Wherever  It Is Defined</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONOneOverXIsCont" class="internal"><span class="codenumber">17.3.5</span> <span class="title">The Function    <span class="process-math">\(f(x)=\frac1x\)</span> is Continuous Wherever  It Is Defined</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -879,25 +890,25 @@ h\amp{}=\frac{A(x+h)-Ax}{x(x+h)}=\frac{Ah}{x(x+h)}. \tag{3.2}
 <div class="para">As before we set <span class="process-math">\(h=0\text{.}\)</span> Thus the slope of the line tangent to the graph of <span class="process-math">\(y=x^2\)</span> at <span class="process-math">\((1,1 )\)</span> is <span class="process-math">\(2.\)</span>
 </div>
 </div>
-<article class="problem example-like" id="PROBLEMFermMethX2"><h4 class="heading">
+<article class="problem example-like" id="PROBLEMferm-meth-x2"><h4 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">3.18</span><span class="period">.</span>
 </h4>
-<div class="introduction" id="PROBLEMFermMethX2-1"><div class="para" id="PROBLEMFermMethX2-1-1"></div></div>
-<article class="task exercise-like" id="PROBLEMFermMethX2-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para logical" id="PROBLEMFermMethX2-2-1-1"><ol class="lower-roman">
-<li id="PROBLEMFermMethX2-2-1-1-1-1"><div class="para" id="PROBLEMFermMethX2-2-1-1-1-1-1">Use Fermat’s method for tangents to compute the slope of the          line tangent to <span class="process-math">\(y=x^2\)</span> at the generic point <span class="process-math">\((a,a^2)\text{.}\)</span>
+<div class="introduction" id="PROBLEMferm-meth-x2-1"><div class="para" id="PROBLEMferm-meth-x2-1-1"></div></div>
+<article class="task exercise-like" id="PROBLEMferm-meth-x2-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para logical" id="PROBLEMferm-meth-x2-2-1-1"><ol class="lower-roman">
+<li id="PROBLEMferm-meth-x2-2-1-1-1-1"><div class="para" id="PROBLEMferm-meth-x2-2-1-1-1-1-1">Use Fermat’s method for tangents to compute the slope of the          line tangent to <span class="process-math">\(y=x^2\)</span> at the generic point <span class="process-math">\((a,a^2)\text{.}\)</span>
 </div></li>
-<li id="PROBLEMFermMethX2-2-1-1-1-2"><div class="para" id="PROBLEMFermMethX2-2-1-1-1-2-1">First plot the graph <span class="process-math">\(y=x^2\text{.}\)</span> Then, on the same set of axes,         plot the line the line through the point <span class="process-math">\((a,a^2)\text{,}\)</span> and tangent          to the graph of <span class="process-math">\(y=x^2\text{,}\)</span> for each of <span class="process-math">\(a=-2, -1, 0, 1, 2\text{.}\)</span>
+<li id="PROBLEMferm-meth-x2-2-1-1-1-2"><div class="para" id="PROBLEMferm-meth-x2-2-1-1-1-2-1">First plot the graph <span class="process-math">\(y=x^2\text{.}\)</span> Then, on the same set of axes,         plot the line the line through the point <span class="process-math">\((a,a^2)\text{,}\)</span> and tangent          to the graph of <span class="process-math">\(y=x^2\text{,}\)</span> for each of <span class="process-math">\(a=-2, -1, 0, 1, 2\text{.}\)</span>
 </div></li>
-<li id="PROBLEMFermMethX2-2-1-1-1-3"><div class="para" id="PROBLEMFermMethX2-2-1-1-1-3-1">What is the relationship between the slopes at <span class="process-math">\((a,a^2)\)</span> and          <span class="process-math">\((-a, a^2)\text{?}\)</span>  Is this consistent with what you see when you plot          the graph of <span class="process-math">\(y=x^2\text{?}\)</span>
+<li id="PROBLEMferm-meth-x2-2-1-1-1-3"><div class="para" id="PROBLEMferm-meth-x2-2-1-1-1-3-1">What is the relationship between the slopes at <span class="process-math">\((a,a^2)\)</span> and          <span class="process-math">\((-a, a^2)\text{?}\)</span>  Is this consistent with what you see when you plot          the graph of <span class="process-math">\(y=x^2\text{?}\)</span>
 </div></li>
-</ol></div></article><article class="task exercise-like" id="PROBLEMFermMethX2-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para logical" id="PROBLEMFermMethX2-3-1-1"><ol class="decimal">
-<li id="PROBLEMFermMethX2-3-1-1-1-1"><div class="para" id="PROBLEMFermMethX2-3-1-1-1-1-1">Use Fermat’s method for tangents to compute the slope of the line tangent to <span class="process-math">\(y=x^3\)</span> at the point <span class="process-math">\((a,a^3).\)</span>
+</ol></div></article><article class="task exercise-like" id="PROBLEMferm-meth-x2-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para logical" id="PROBLEMferm-meth-x2-3-1-1"><ol class="decimal">
+<li id="PROBLEMferm-meth-x2-3-1-1-1-1"><div class="para" id="PROBLEMferm-meth-x2-3-1-1-1-1-1">Use Fermat’s method for tangents to compute the slope of the line tangent to <span class="process-math">\(y=x^3\)</span> at the point <span class="process-math">\((a,a^3).\)</span>
 </div></li>
-<li id="PROBLEMFermMethX2-3-1-1-1-2"><div class="para" id="PROBLEMFermMethX2-3-1-1-1-2-1">First plot the graph <span class="process-math">\(y=x^3\text{.}\)</span> Then, on the same set of axes, plot the line the line through the point <span class="process-math">\((a,a^2)\text{,}\)</span> and tangent to the graph of <span class="process-math">\(y=x^3\text{,}\)</span> for each of <span class="process-math">\(a=-2, -1, 0, 1, 2\text{.}\)</span>  You should notice something interesting about the tangent lines at <span class="process-math">\(\pm1\)</span> and <span class="process-math">\(\pm2.\)</span>
+<li id="PROBLEMferm-meth-x2-3-1-1-1-2"><div class="para" id="PROBLEMferm-meth-x2-3-1-1-1-2-1">First plot the graph <span class="process-math">\(y=x^3\text{.}\)</span> Then, on the same set of axes, plot the line the line through the point <span class="process-math">\((a,a^2)\text{,}\)</span> and tangent to the graph of <span class="process-math">\(y=x^3\text{,}\)</span> for each of <span class="process-math">\(a=-2, -1, 0, 1, 2\text{.}\)</span>  You should notice something interesting about the tangent lines at <span class="process-math">\(\pm1\)</span> and <span class="process-math">\(\pm2.\)</span>
 </div></li>
-<li id="PROBLEMFermMethX2-3-1-1-1-3"><div class="para" id="PROBLEMFermMethX2-3-1-1-1-3-1">What can you say about the tangent lines at <span class="process-math">\((a, a^3)\)</span> and <span class="process-math">\((-a, -a^3)\text{?}\)</span>
+<li id="PROBLEMferm-meth-x2-3-1-1-1-3"><div class="para" id="PROBLEMferm-meth-x2-3-1-1-1-3-1">What can you say about the tangent lines at <span class="process-math">\((a, a^3)\)</span> and <span class="process-math">\((-a, -a^3)\text{?}\)</span>
 </div></li>
 </ol></div></article></article><article class="problem example-like" id="PROBLEMferm-meth-aedeq-1"><h4 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">3.19</span><span class="period">.</span>
@@ -972,7 +983,7 @@ a\amp{}=3,
 </div></article><article class="problem example-like" id="SECTIONdescartes-normals-14"><h4 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">3.27</span><span class="period">.</span>
 </h4>
-<div class="para" id="SECTIONdescartes-normals-14-1-1">Use Descartes’ Method of Normals to find the slope of the line tangent to the curve <span class="process-math">\(y=x^2\)</span> at the point <span class="process-math">\((3,9)\)</span> and compare with <a href="" class="xref" data-knowl="./knowl/xref/PROBLEMFermMethX2.html" title="Problem 3.18">Problem 3.18</a>.</div>
+<div class="para" id="SECTIONdescartes-normals-14-1-1">Use Descartes’ Method of Normals to find the slope of the line tangent to the curve <span class="process-math">\(y=x^2\)</span> at the point <span class="process-math">\((3,9)\)</span> and compare with <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "PROBLEMFermMethX2" missing or not unique]</code>.</div>
 <div class="solutions"><details id="SECTIONdescartes-normals-14-2" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="SECTIONdescartes-normals-14-2-1">You may want to use circles that are centered on the <span class="process-math">\(y\)</span>-axis instead of the <span class="process-math">\(x\)</span>-axis.</div></div></details></div></article><article class="problem example-like" id="SECTIONdescartes-normals-15"><h4 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">3.28</span><span class="period">.</span>
 </h4>

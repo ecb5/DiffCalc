@@ -108,6 +108,18 @@ window.MathJax = {
 </div>
 </div>
 <span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="CHAPTERFDT-Redux.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ToTheory.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="CHAPTERformal-limits.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\def\abs#1{\left|#1\right|}
+\def\CancelToRed#1#2{\textcolor{red}{{\cancelto{#1}{#2}}}}
+\def\approach#1{{\left(\rightarrow{}#1\right)}}
+\def\halmos{\rule[-.1ex]{8pt}{2ex}}
+
+\def\limitX#1#2#3#4{{\displaystyle\lim_{\underset{#4}{#1\rightarrow #2}}#3}}
+\def\tlimitX#1#2#3#4{{\displaystyle\lim_{\underset{#4}{#1\rightarrow #2}}}#3}
+\def\rlimit#1#2#3{{\limitX{#1}{#2}{#3}{#1\gt{}#2}{}}}
+\def\rtlimit#1#2#3{{\tlimitX{#1}{#2}{#3}{#1\gt{}#2}{}}}
+\def\llimit#1#2#3{{\limitX{#1}{#2}{#3}{#1\lt{}#2}{}}}
+\def\ltlimit#1#2#3{{\tlimitX{#1}{#2}{#3}{#1\lt{}#2}{}}}
+
+\newcommand{\eps}{\varepsilon}
 \newcommand{\RR}{\mathbb {R}}
 \newcommand{\QQ}{\mathbb {Q}}
 \newcommand{\NN}{\mathbb {N}}
@@ -131,6 +143,9 @@ window.MathJax = {
     \end{array}
   \right\}
 }
+
+\def\absALT#1{\rule[-.7ex]{1pt}{5ex}\hskip2pt#1\hskip2pt\llap{\rule[-.7ex]{1pt}{5ex}}} 
+
 
 \def\sech{{\rm{}sech}{}}
 \def\csch{{\rm{}csch}{}}
@@ -476,7 +491,10 @@ window.MathJax = {
 <ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="CHAPTERWhatsWrong.html" class="internal"><span class="codenumber">13</span> <span class="title">What’s Wrong with Differentials?</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERWhatsWrong.html#CalcAndBerkeley" class="internal"><span class="codenumber">13.1</span> <span class="title">Calculus and Bishop Berkeley</span></a></div></li></ul>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERWhatsWrong.html#CalcAndBerkeley" class="internal"><span class="codenumber">13.1</span> <span class="title">Calculus and Bishop Berkeley</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERWhatsWrong.html#sec:secants-tangents" class="internal"><span class="codenumber">13.2</span> <span class="title">Secants and Tangents</span></a></div></li>
+</ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="CHAPTERdiff-rules-with-limits.html" class="internal"><span class="codenumber">14</span> <span class="title">The Differentiation Rules via Limits</span></a></div>
@@ -508,15 +526,7 @@ window.MathJax = {
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="CHAPTERformal-limits.html" class="internal"><span class="codenumber">17</span> <span class="title">Formal Limits</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAPTERformal-limits.html#SECTIONlimits-at-infinity" class="internal"><span class="codenumber">17.1</span> <span class="title">Getting Around Infinity</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONEpsDelt1" class="internal"><span class="codenumber">17.1.1</span> <span class="title">The Infinitely Large</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONFormalLimits" class="internal"><span class="codenumber">17.1.2</span> <span class="title">The Infinitely Small</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONconvincing-skeptic" class="internal"><span class="codenumber">17.1.3</span> <span class="title">Convincing Berkeley</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SECTIONlimits-at-infinity-5" class="internal"><span class="codenumber">17.1.4</span> <span class="title">Refining the Definition</span></a></div></li>
-</ul>
-</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SECTIONlimits-at-infinity" class="internal"><span class="codenumber">17.1</span> <span class="title">Getting Around Infinity</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SECTIONlimits-at-real" class="internal"><span class="codenumber">17.2</span> <span class="title">Limits at a Real Number</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="CHAPTERformal-limits.html#SECTIONLimitLaws" class="internal"><span class="codenumber">17.3</span> <span class="title">Limit Laws (Theorems)</span></a></div>
@@ -527,11 +537,11 @@ window.MathJax = {
 <li class="toc-item toc-subsection">
 <div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONlimit-product-at" class="internal"><span class="codenumber">17.3.4</span> <span class="title">The Limit of a Product</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONlimit-product-at-3" class="internal"><span class="codenumber">17.3.4.1</span> <span class="title">Proving Lemma 17.50</span></a></div></li>
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONLemmaLimProd2" class="internal"><span class="codenumber">17.3.4.2</span> <span class="title">Proving Lemma 17.51</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONlimit-product-at-3" class="internal"><span class="codenumber">17.3.4.1</span> <span class="title">Proving Lemma 17.55</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONLemmaLimProd2" class="internal"><span class="codenumber">17.3.4.2</span> <span class="title">Proving Lemma 17.56</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONOneOverXIsCont" class="internal"><span class="codenumber">17.3.5</span> <span class="title">The Function  \boldmath  <span class="process-math">\(f(x)=\frac1x\)</span> is Continuous Wherever  It Is Defined</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONOneOverXIsCont" class="internal"><span class="codenumber">17.3.5</span> <span class="title">The Function    <span class="process-math">\(f(x)=\frac1x\)</span> is Continuous Wherever  It Is Defined</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -589,7 +599,7 @@ x\amp\text{ if } x\ge0
 <div class="introduction" id="PROBLEMAbsValDeriv-1"><div class="para" id="PROBLEMAbsValDeriv-1-1"></div></div>
 <article class="task exercise-like" id="PROBLEMAbsValDeriv-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para logical" id="PROBLEMAbsValDeriv-2-1-1">
-<div class="para">The Absolute Value function is not differentiable at <span class="process-math">\(x=0\)</span> but it is differentiable at every other value of <span class="process-math">\(x\text{.}\)</span> Let <span class="process-math">\(f(x)=\abs{x}\)</span> and use <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "DEFINITIONDerivative" missing or not unique]</code> to show that:</div>
+<div class="para">The Absolute Value function is not differentiable at <span class="process-math">\(x=0\)</span> but it is differentiable at every other value of <span class="process-math">\(x\text{.}\)</span> Let <span class="process-math">\(f(x)=\abs{x}\)</span> and use <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONDerivative.html" title="Definition 13.4: The Derivative">~ 13.4</a> to show that:</div>
 <ol class="decimal">
 <li id="PROBLEMAbsValDeriv-2-1-1-5-1"><div class="para" id="PROBLEMAbsValDeriv-2-1-1-5-1-1">If <span class="process-math">\(x\gt0\)</span> then <span class="process-math">\(f^\prime(x)=1\text{,}\)</span>
 </div></li>
@@ -613,7 +623,7 @@ x\amp\text{ if } x\ge0
 </h3>
 <div class="introduction" id="CHPTwhen-deriv-doesnt-2-11-1"><div class="para" id="CHPTwhen-deriv-doesnt-2-11-1-1"></div></div>
 <article class="task exercise-like" id="CHPTwhen-deriv-doesnt-2-11-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="CHPTwhen-deriv-doesnt-2-11-2-1-1">Use <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "DEFINITIONDerivative" missing or not unique]</code> to show that if <span class="process-math">\(f(x)=\frac{x}{x}\)</span> then <span class="process-math">\(f^\prime(0)\)</span> is undefined. \comment{It is pretty clear that <span class="process-math">\(f^\prime(0)\)</span> is undefined, since <span class="process-math">\(f(0)\)</span> is undefined. We can’t have a derivative where we don’t have a point. But this is the kind of vague reasoning we are trying to avoid. The purpose of this exercise is to show unequivocally that the limit which defines <span class="process-math">\(f^\prime(0)\)</span> is undefined.}</div></article><article class="task exercise-like" id="CHPTwhen-deriv-doesnt-2-11-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="CHPTwhen-deriv-doesnt-2-11-2-1-1">Use <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONDerivative.html" title="Definition 13.4: The Derivative">Definition 13.4</a> to show that if <span class="process-math">\(f(x)=\frac{x}{x}\)</span> then <span class="process-math">\(f^\prime(0)\)</span> is undefined. \comment{It is pretty clear that <span class="process-math">\(f^\prime(0)\)</span> is undefined, since <span class="process-math">\(f(0)\)</span> is undefined. We can’t have a derivative where we don’t have a point. But this is the kind of vague reasoning we are trying to avoid. The purpose of this exercise is to show unequivocally that the limit which defines <span class="process-math">\(f^\prime(0)\)</span> is undefined.}</div></article><article class="task exercise-like" id="CHPTwhen-deriv-doesnt-2-11-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="CHPTwhen-deriv-doesnt-2-11-3-1-1">Use <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "DEFINITIONdef:Derivative" missing or not unique]</code> to show that if <span class="process-math">\(f(x)=
 \begin{cases}
 \frac{x}{x}\amp  \text{ if }x\neq0
@@ -621,8 +631,8 @@ x\amp\text{ if } x\ge0
 \end{cases}\)</span> then <span class="process-math">\(f^\prime(0)\)</span> is defined. \comment{This time <span class="process-math">\(f(0)\)</span> is defined but this is a silly way to do it. We do this for emphasis.}</div></article></article>                        <article class="example example-like" id="CHPTwhen-deriv-doesnt-2-12"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">16.5</span><span class="period">.</span><span class="space"> </span><span class="title">.</span>
 </h3> <div class="para logical" id="CHPTwhen-deriv-doesnt-2-12-2">
-<div class="para">\begin{wrapfigure}[]{r}{2in} \captionsetup{labelformat=empty} \centerline{\includegraphics*[height=1in,width=2in]{../Figures/AbsSqrtX}} \label{fig:Astroid3} \end{wrapfigure} It is intuitively clear that derivative of the function <span class="process-math">\(f(x)=\sqrt{\abs{x}}\)</span> (at the right) is not defined at <span class="process-math">\(x=0\text{.}\)</span>  We will confirm our intuition using <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "DEFINITIONDerivative" missing or not unique]</code>. That is, we’ll try to compute the derivative of <span class="process-math">\(f(x)\)</span> at <span class="process-math">\(x=0\)</span> using <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "DEFINITIONDerivative" missing or not unique]</code> and see what goes wrong. The existence of the derivative of <span class="process-math">\(f(x)\)</span> at <span class="process-math">\(x=0\)</span> is equivalent to the existence of  the limit <span class="process-math">\(\tlimit{h}{0}{\frac{f(0+h)-f(0)}{h}}\text{,}\)</span> so we will try to compute this limit and see what happens.</div>
-<div class="displaymath process-math" data-contains-math-knowls="  ">
+<div class="para">\begin{wrapfigure}[]{r}{2in} \captionsetup{labelformat=empty} \centerline{\includegraphics*[height=1in,width=2in]{../Figures/AbsSqrtX}} \label{fig:Astroid3} \end{wrapfigure} It is intuitively clear that derivative of the function <span class="process-math">\(f(x)=\sqrt{\abs{x}}\)</span> (at the right) is not defined at <span class="process-math">\(x=0\text{.}\)</span>  We will confirm our intuition using <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONDerivative.html" title="Definition 13.4: The Derivative">Definition 13.4</a>. That is, we’ll try to compute the derivative of <span class="process-math">\(f(x)\)</span> at <span class="process-math">\(x=0\)</span> using <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONDerivative.html" title="Definition 13.4: The Derivative">Definition 13.4</a> and see what goes wrong. The existence of the derivative of <span class="process-math">\(f(x)\)</span> at <span class="process-math">\(x=0\)</span> is equivalent to the existence of  the limit <span class="process-math">\(\tlimit{h}{0}{\frac{f(0+h)-f(0)}{h}}\text{,}\)</span> so we will try to compute this limit and see what happens.</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/DEFINITIONDerivative.html ./knowl/xref/DEFINITIONDerivative.html ">
 \begin{equation*}
 f^\prime(0)  \stackrel{?}{=}
 \limit{h}{0}{\frac{f(0+h)-f(0)}{h}}=\limit{h}{0}{\frac{\sqrt{\abs{h}}}{h}}.
@@ -648,7 +658,7 @@ H(x)=
 </h3>
 <div class="introduction" id="PROBLEMHeavisideDeriv-1"><div class="para" id="PROBLEMHeavisideDeriv-1-1"></div></div>
 <article class="task exercise-like" id="PROBLEMHeavisideDeriv-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="PROBLEMHeavisideDeriv-2-1-1">Use <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "DEFINITIONDerivative" missing or not unique]</code> to show that <span class="process-math">\(H^\prime(x)=0\)</span> when <span class="process-math">\(x\ne0\)</span>
+<div class="para" id="PROBLEMHeavisideDeriv-2-1-1">Use <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONDerivative.html" title="Definition 13.4: The Derivative">Definition 13.4</a> to show that <span class="process-math">\(H^\prime(x)=0\)</span> when <span class="process-math">\(x\ne0\)</span>
 </div></article><article class="task exercise-like" id="PROBLEMHeavisideDeriv-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="PROBLEMHeavisideDeriv-3-1-1">Explain why the result in part (a) does not contradict <a href="" class="xref" data-knowl="./knowl/xref/PROBLEMDervEqZeroImpliesConstant.html" title="Problem 15.15">Problem 15.15</a>
 </div></article></article>           <div class="para" id="CHPTwhen-deriv-doesnt-2-15">We first introduced one-sided limits in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "SUBSECvertical-asymptotes" missing or not unique]</code>. At the time our concern was to locate vertical asymptotes so we only looked at limits that were equal to either positive or negative infinity. We see now that these limits can take any value and that they are more fundamental than they first appeared to be. Since we didn’t provide a formal definition earlier we will do so now.</div> <article class="definition definition-like" id="DEFINITIONOneSidedLimits"><h3 class="heading">

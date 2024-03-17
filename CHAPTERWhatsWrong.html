@@ -108,10 +108,23 @@ window.MathJax = {
 </div>
 </div>
 <span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="ToTheory.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ToTheory.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="CHAPTERdiff-rules-with-limits.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\def\abs#1{\left|#1\right|}
+\def\CancelToRed#1#2{\textcolor{red}{{\cancelto{#1}{#2}}}}
+\def\approach#1{{\left(\rightarrow{}#1\right)}}
+\def\halmos{\rule[-.1ex]{8pt}{2ex}}
+
+\def\limitX#1#2#3#4{{\displaystyle\lim_{\underset{#4}{#1\rightarrow #2}}#3}}
+\def\tlimitX#1#2#3#4{{\displaystyle\lim_{\underset{#4}{#1\rightarrow #2}}}#3}
+\def\rlimit#1#2#3{{\limitX{#1}{#2}{#3}{#1\gt{}#2}{}}}
+\def\rtlimit#1#2#3{{\tlimitX{#1}{#2}{#3}{#1\gt{}#2}{}}}
+\def\llimit#1#2#3{{\limitX{#1}{#2}{#3}{#1\lt{}#2}{}}}
+\def\ltlimit#1#2#3{{\tlimitX{#1}{#2}{#3}{#1\lt{}#2}{}}}
+
+\newcommand{\eps}{\varepsilon}
 \newcommand{\RR}{\mathbb {R}}
 \newcommand{\QQ}{\mathbb {Q}}
 \newcommand{\NN}{\mathbb {N}}
 \newcommand{\ZZ}{\mathbb {Z}}
+
 \newcommand{\ParamEqTwo}[2]
 {
   \left\{
@@ -131,6 +144,9 @@ window.MathJax = {
     \end{array}
   \right\}
 }
+
+\def\absALT#1{\rule[-.7ex]{1pt}{5ex}\hskip2pt#1\hskip2pt\llap{\rule[-.7ex]{1pt}{5ex}}} 
+
 
 \def\sech{{\rm{}sech}{}}
 \def\csch{{\rm{}csch}{}}
@@ -476,7 +492,10 @@ window.MathJax = {
 <ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-chapter active">
 <div class="toc-title-box"><a href="CHAPTERWhatsWrong.html" class="internal"><span class="codenumber">13</span> <span class="title">What’s Wrong with Differentials?</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERWhatsWrong.html#CalcAndBerkeley" class="internal"><span class="codenumber">13.1</span> <span class="title">Calculus and Bishop Berkeley</span></a></div></li></ul>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERWhatsWrong.html#CalcAndBerkeley" class="internal"><span class="codenumber">13.1</span> <span class="title">Calculus and Bishop Berkeley</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERWhatsWrong.html#sec:secants-tangents" class="internal"><span class="codenumber">13.2</span> <span class="title">Secants and Tangents</span></a></div></li>
+</ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="CHAPTERdiff-rules-with-limits.html" class="internal"><span class="codenumber">14</span> <span class="title">The Differentiation Rules via Limits</span></a></div>
@@ -502,21 +521,13 @@ window.MathJax = {
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="CHPTwhen-deriv-doesnt.html" class="internal"><span class="codenumber">16</span> <span class="title">When the Derivative Doesn’t Exist</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="CHPTwhen-deriv-doesnt.html#SECTIONone-sided-deriv" class="internal"><span class="codenumber">16.1</span> <span class="title">One Sided Derivatives</span></a></div></li></ul>
+<div class="toc-title-box"><a href="CHAPTERwhen-deriv-doesnt.html" class="internal"><span class="codenumber">16</span> <span class="title">When the Derivative Doesn’t Exist</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERwhen-deriv-doesnt.html#SECTIONone-sided-deriv" class="internal"><span class="codenumber">16.1</span> <span class="title">One Sided Derivatives</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="CHAPTERformal-limits.html" class="internal"><span class="codenumber">17</span> <span class="title">Formal Limits</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAPTERformal-limits.html#SECTIONlimits-at-infinity" class="internal"><span class="codenumber">17.1</span> <span class="title">Getting Around Infinity</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONEpsDelt1" class="internal"><span class="codenumber">17.1.1</span> <span class="title">The Infinitely Large</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONFormalLimits" class="internal"><span class="codenumber">17.1.2</span> <span class="title">The Infinitely Small</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONconvincing-skeptic" class="internal"><span class="codenumber">17.1.3</span> <span class="title">Convincing Berkeley</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SECTIONlimits-at-infinity-5" class="internal"><span class="codenumber">17.1.4</span> <span class="title">Refining the Definition</span></a></div></li>
-</ul>
-</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SECTIONlimits-at-infinity" class="internal"><span class="codenumber">17.1</span> <span class="title">Getting Around Infinity</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SECTIONlimits-at-real" class="internal"><span class="codenumber">17.2</span> <span class="title">Limits at a Real Number</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="CHAPTERformal-limits.html#SECTIONLimitLaws" class="internal"><span class="codenumber">17.3</span> <span class="title">Limit Laws (Theorems)</span></a></div>
@@ -527,11 +538,11 @@ window.MathJax = {
 <li class="toc-item toc-subsection">
 <div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONlimit-product-at" class="internal"><span class="codenumber">17.3.4</span> <span class="title">The Limit of a Product</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONlimit-product-at-3" class="internal"><span class="codenumber">17.3.4.1</span> <span class="title">Proving Lemma 17.50</span></a></div></li>
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONLemmaLimProd2" class="internal"><span class="codenumber">17.3.4.2</span> <span class="title">Proving Lemma 17.51</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONlimit-product-at-3" class="internal"><span class="codenumber">17.3.4.1</span> <span class="title">Proving Lemma 17.55</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONLemmaLimProd2" class="internal"><span class="codenumber">17.3.4.2</span> <span class="title">Proving Lemma 17.56</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONOneOverXIsCont" class="internal"><span class="codenumber">17.3.5</span> <span class="title">The Function  \boldmath  <span class="process-math">\(f(x)=\frac1x\)</span> is Continuous Wherever  It Is Defined</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONOneOverXIsCont" class="internal"><span class="codenumber">17.3.5</span> <span class="title">The Function    <span class="process-math">\(f(x)=\frac1x\)</span> is Continuous Wherever  It Is Defined</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -553,12 +564,12 @@ window.MathJax = {
 <span class="type">Chapter</span><span class="space"> </span><span class="codenumber">13</span><span class="space"> </span><span class="title">What’s Wrong with Differentials?</span>
 </h2>
 <section class="introduction" id="CHAPTERWhatsWrong-2"><h3 class="heading">Introduction.<span></span>
-</h3> <blockquote class="blockquote" id="CHAPTERWhatsWrong-2-2"><div class="para" id="CHAPTERWhatsWrong-2-2-1">“In the pursuit of truth we must beware of being misled by terms which we do not rightly understand. That is the chief point.” -- <a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Russell/" target="_blank">Bertrand Russell</a><a class="xref" id="CHAPTERWhatsWrong-2-2-1-3" href="" data-knowl="./knowl/fn/CHAPTERWhatsWrong-2-2-1-3.html" title="Footnote 13.1"><sup> 1 </sup></a> <span class="process-math">\((1872 - 1970)\)</span>
+</h3> <blockquote class="blockquote" id="CHAPTERWhatsWrong-2-2"><div class="para" id="CHAPTERWhatsWrong-2-2-1">“In the pursuit of truth we must beware of being misled by terms which we do not rightly understand. That is the chief point.” <a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Russell/" target="_blank">Bertrand Russell</a><a class="xref" id="CHAPTERWhatsWrong-2-2-1-3" href="" data-knowl="./knowl/fn/CHAPTERWhatsWrong-2-2-1-3.html" title="Footnote 13.1"><sup> 1 </sup></a> <span class="process-math">\((1872 - 1970)\)</span>
 </div></blockquote> <div class="para" id="CHAPTERWhatsWrong-2-3">To see what’s wrong with differentials consider the circle and the differential triangle below.</div> <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/WrongWithDiff2.png" class="contained"></div> <div class="para" id="CHAPTERWhatsWrong-2-5">Suppose that <span class="process-math">\(\dx{s}\)</span> is one of the differentials that makes up the circle. Since <span class="process-math">\(\dx{s}\)</span> is a non-zero increment it has two distinct endpoints so we can draw the two radii shown. Because the two (distinct) endpoints that lie on the circle are <em class="emphasis">infinitely</em> close together the two lines have the same slope. But all of the radii of a circle pass through the center of the circle so these two in particular must also intersect at the center, and we conclude that we have two parallel lines that intersect.</div> <div class="para" id="CHAPTERWhatsWrong-2-6">But the only way that can happen is if they are actually the same line, and if they are the same line then the points on the circle are not really distinct as we’ve drawn them. But if they are not distinct then <span class="process-math">\(\dx{x}\text{,}\)</span> <span class="process-math">\(\dx{y}\text{,}\)</span> and <span class="process-math">\(\dx{s}\)</span> are all actually <em class="emphasis">equal</em> to zero. If <span class="process-math">\(\dx{x}\)</span> =0 then <span class="process-math">\(\dfdx{y}{x}\)</span> is meaningless (why?).</div> <div class="para" id="CHAPTERWhatsWrong-2-7">This simple argument appears to completely destroy the differential foundation upon which we’ve based everything we’ve done up until now. Try as we might we can’t escape the contradictions inherent in the very notion of infinitely small numbers.</div> <div class="para" id="CHAPTERWhatsWrong-2-8">This is very troubling.</div></section><section class="section" id="CalcAndBerkeley"><h3 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">13.1</span><span class="space"> </span><span class="title">Calculus and Bishop Berkeley</span>
 </h3>
 <blockquote class="blockquote" id="CalcAndBerkeley-2">
-<div class="para" id="CalcAndBerkeley-2-1">“In my opinion, a mathematician, in so far as he is a mathematician, need not preoccupy himself with philosophy -- an opinion, moreover, which has been expressed by many philosophers.”</div> <cite class="attribution">―<a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Lebesgue/" target="_blank">Henri Lebesgue, (1875-1941)</a><a class="xref" id="CalcAndBerkeley-2-2-2" href="" data-knowl="./knowl/fn/CalcAndBerkeley-2-2-2.html" title="Footnote 13.2"><sup> 2 </sup></a></cite>
+<div class="para" id="CalcAndBerkeley-2-1">“In my opinion, a mathematician, in so far as he is a mathematician, need not preoccupy himself with philosophy — an opinion, moreover, which has been expressed by many philosophers.”</div> <cite class="attribution">―<a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Lebesgue/" target="_blank">Henri Lebesgue, (1875-1941)</a><a class="xref" id="CalcAndBerkeley-2-2-2" href="" data-knowl="./knowl/fn/CalcAndBerkeley-2-2-2.html" title="Footnote 13.2"><sup> 2 </sup></a></cite>
 </blockquote>
 <figure class="figure figure-like" id="CalcAndBerkeley-3"><div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="external/images/Berkeley.png" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">13.1<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Berkeley/" target="_blank">Bishop George Berkeley</a><a class="xref" id="CalcAndBerkeley-3-1-2" href="" data-knowl="./knowl/fn/CalcAndBerkeley-3-1-2.html" title="Footnote 13.3"><sup> 3 </sup></a></figcaption></figure><aside class="historical aside-like" id="CalcAndBerkeley-4"><div class="para" id="CalcAndBerkeley-4-1">His name is properly pronounced “bark lee,” not "burk lee."</div></aside><div class="para" id="CalcAndBerkeley-5">In <span class="process-math">\(1734\)</span> an even more devastating repudiation of differentials was published by <a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Berkeley" target="_blank">George Berkeley</a><a class="xref" id="CalcAndBerkeley-5-3" href="" data-knowl="./knowl/fn/CalcAndBerkeley-5-3.html" title="Footnote 13.4"><sup> 4 </sup></a> (<span class="process-math">\(1685-1753\)</span>), the Anglican Bishop of the Diocese of Cloyne, Ireland in a treatise ponderously entitled,</div>
@@ -585,7 +596,205 @@ window.MathJax = {
 <div class="para" id="CalcAndBerkeley-25">But wait a second. We <em class="emphasis">know</em> Calculus works. We’ve been successfully solving abstruse and difficult problems with it for some time. Throughout the first part of this text we’ve seen ample, even overwhelming, evidence of this fact.  Isn’t that sufficient?  Can’t we conclude from the fact that it <em class="emphasis">does</em> seem to work that the notion of the differential is tenable after all?</div>
 <div class="para" id="CalcAndBerkeley-26">Sadly, no. Berkeley thought of that too:</div>
 <blockquote class="blockquote" id="CalcAndBerkeley-27"><div class="para" id="CalcAndBerkeley-27-1">“But this inverted way of demonstrating your Principles by your Conclusions . . .  is contrary to the Rules of Logic. The truth of a Conclusion will not prove either the Form or the Matter . . . to be true . . . I say that in every other Science Men prove their Conclusions by their Principles, and not their Principles by their Conclusions.”  (Section XX)</div></blockquote>
-<div class="para" id="CalcAndBerkeley-28">In order to have confidence in our knowledge, we must begin with simple, clear ideas and build on them logically. Nothing else will do.</div></section></section></div>
+<div class="para" id="CalcAndBerkeley-28">In order to have confidence in our knowledge, we must begin with simple, clear ideas and build on them logically. Nothing else will do.</div>
+<div class="para" id="CalcAndBerkeley-29">However, the path to simple, clear ideas is neither simple nor clear. As we’ve mentioned before, it took about two hundred years for the mathematical community to find and fully understand how to make Calculus rigorous. We introduced the essential idea, the limit, intuitively in <a href="CHAPTERlimits-lhop-rule.html#SECTIONhoriz-asympt-as" class="internal" title='Section 12.1: Horizontal Asymptotes as Limits "at Infinity"'>Section 12.1</a>.</div>
+<aside class="aside aside-like" id="CalcAndBerkeley-30"><h4 class="heading"><span class="title">Comment.</span></h4>
+<div class="para" id="CalcAndBerkeley-30-2">For us rigorous means that we can provide an argument that even Bishop Berkeley would accept.</div></aside><div class="para" id="CalcAndBerkeley-31">It would be possible to introduce the limit concept formally  and then proceed to develop all of Calculus from it. Logically, there is nothing wrong with this approach, and indeed, this is exactly how most Calculus books present the topic. But the limit concept is  very subtle. Unless you understand exactly what issues it is meant to address it is very difficult to understand why it takes the form that it does.</div>
+<div class="para" id="CalcAndBerkeley-32">So, we will continue to build on our intuitive approach. However, our focus has changed. In Part I we worked intuitively to build confidence in the tools we were building. Here in Part II, our intention is to highlight how and where our intuition falls short, so that when we finally define the limit concept rigorously in <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONlimits-at-real.html" title="Definition 17.22: The Limit at a Point">Definition 17.22</a> it will be clear why it must have the form that it does. What this means is that while our intention is to finally  provide the rigor we’ve been lacking  we will not actually achieve that until the end of <a href="CHAPTERformal-limits.html" class="internal" title="Chapter 17: Formal Limits">Chapter 17</a>
+</div></section><section class="section" id="sec:secants-tangents"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">13.2</span><span class="space"> </span><span class="title">Secants and Tangents</span>
+</h3>
+<blockquote class="blockquote" id="sec:secants-tangents-2">
+<div class="para" id="sec:secants-tangents-2-1">Calculus required continuity, and continuity was supposed to require the infinitely little; but nobody could discover what the infinitely little might be.</div> <cite class="attribution">―<a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Russell/" target="_blank">Bertrand Russell</a><a class="xref" id="sec:secants-tangents-2-2-2" href="" data-knowl="./knowl/fn/sec:secants-tangents-2-2-2.html" title="Footnote 13.7"><sup> 7 </sup></a> (1872 - 1970)</cite>
+</blockquote>
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/LinesThroughPoint.png" class="contained"></div>
+<div class="para" id="sec:secants-tangents-4">In <a href="FromPractice.html" class="internal" title="Part I: From Practice . . .">Part I</a>  we  defined the derivative of <span class="process-math">\(y=y(x)\)</span> to be the differential ratio <span class="process-math">\(\dfdx{y}{x}\text{,}\)</span> but Berkeley shows in <span class="booktitle">The Analyst</span> that there are considerable difficulties with this approach. How else might we define the derivative? This is our next puzzle.</div>
+<div class="para" id="sec:secants-tangents-5">If we want to construct the line tangent at  a particular point, <span class="process-math">\((x_0, y(x_0))\)</span> on a given  curve we immediately have this problem: We only have one point, but there are (infinitely) many lines through that point.  A few of them are shown at the right. How could we possibly pick the tangent line out of this mess?</div>
+<div class="para" id="sec:secants-tangents-6">The only distinguishing feature that the  tangent line has  is that it is in fact tangent to our curve. That is not much to go on. But it is not nothing either.</div>
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/TangentLineCluster4.png" class="contained"></div>
+<div class="para" id="sec:secants-tangents-8">To form a line we desperately need another point. But where to find one? The only other points we have to work with are points on the curve itself.</div>
+<div class="para" id="sec:secants-tangents-9">Choose a new point, say <span class="process-math">\((x_1, y(x_1)),\)</span> on our curve but a little to the right of <span class="process-math">\((x_0,y(x_0))\)</span> and draw the line between <span class="process-math">\((x_0,y(x_0))\)</span> and <span class="process-math">\((x_1,y(x_1))\)</span> as shown in  the sketch at the left. Recall from <a href="CHAPTERcalc-trig.html" class="internal" title="Chapter 6: Calculus and Trigonometry">Chapter 6</a> that the trigonometric secant function is so called because it is the length of a line segment which cuts the circle. The brown line in this sketch cuts the curve so it is called a <dfn class="terminology">secant line</dfn>.</div>
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/TangentLineCluster3.png" class="contained"></div>
+<div class="para" id="sec:secants-tangents-11">Similarly, if we choose a point a little to the left of <span class="process-math">\((x_0,y(x_0))\)</span> and draw another secant line (shown in purple) it should be clear that the   tangent line will be between the two secant lines in the sketch at the right.</div>
+<div class="para" id="sec:secants-tangents-12">We have eliminated a lot of potential tangent lines, but we haven’t eliminated all of them.  Is there a way we could refine our search to reduce the set of possible tangent lines even further?</div>
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/TangentLineCluster.png" class="contained"></div>
+<div class="para" id="sec:secants-tangents-14">Sure. Choose <span class="process-math">\(x_3\)</span> between <span class="process-math">\(x_0\)</span> and <span class="process-math">\(x_1\)</span> and draw the (blue) secant line from <span class="process-math">\(x_0\)</span> to <span class="process-math">\(x_3,\)</span> and then choose <span class="process-math">\(x_4\)</span> between <span class="process-math">\(x_0\)</span> and <span class="process-math">\(x_2\)</span> and draw the (green) secant line through them to get the sketch at the left.  It is clear that we have eliminated more potential tangent lines, and that by continuing to choose points even closer to <span class="process-math">\(x_0\)</span> we can eliminate even more of them.</div>
+<div class="para logical" id="sec:secants-tangents-15">
+<div class="para">This approach seems to have some potential but there are at least two difficulties:</div>
+<ol class="decimal">
+<li id="sec:secants-tangents-15-1-1">
+<div class="para" id="sec:secants-tangents-15-1-1-1">So far we’ve relied heavily on diagrams to motivate our approach, and we know that diagrams can be misleading. However this is not as serious as it seems to be because we are only using the diagrams to motivate a new definition for the derivative. Once that definition is in place we can disregard the diagrams and work directly with the definition regardless of the shape of the graph.</div>
+<div class="para" id="sec:secants-tangents-15-1-1-2">You should generate a few graphs of your own, different from ours and from each other, to confirm that our arguments work for them as well.</div>
+</li>
+<li id="sec:secants-tangents-15-1-2"><div class="para" id="sec:secants-tangents-15-1-2-1">We’ve been drawing the tangent lines but we need to keep in mind that the line tangent to the graph of our function at a point is not the derivative of the function.  The derivative is the slope of the tangent line. And slope is a number. The pictures we’ve drawn so far are very suggestive but they don’t give us numbers.</div></li>
+</ol>
+</div>
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/TangentLineCluster2.png" class="contained"></div>
+<div class="para" id="sec:secants-tangents-17">For the time being, we will handle the first difficulty by ignoring it. That is, we will continue to use diagrams to motivate our ideas, but when we are done we will have circle back and ask ourselves if our reliance on those diagrams has caused us to miss any special cases which need to be addressed.</div>
+<div class="para logical" id="sec:secants-tangents-18">
+<div class="para">To handle the second difficulty consider the sketch at the right. It is clear that if the tangent line, <span class="process-math">\(T\text{,}\)</span> is caught between lines secant lines <span class="process-math">\(S_1\)</span> and <span class="process-math">\(S_2\text{,}\)</span> then the <em class="emphasis">slope</em> of <span class="process-math">\(T\)</span> is necessarily caught between the <em class="emphasis">slope</em> of <span class="process-math">\(S_1\)</span> and the <em class="emphasis">slope</em> of <span class="process-math">\(S_2.\)</span> Thus we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\text{slope of } S_1=\frac{y(x_1)-y(x_0)}{x_1-x_0}\gt \text{slope of }T\gt
+\frac{y(x_2)-y(x_0)}{x_2-x_0}=\text{slope of } S_2.
+\end{equation*}
+</div>
+<div class="para">A specific example will be helpful.</div>
+</div>
+<article class="example example-like" id="EXAMPLEy=x^2-limits"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">13.2</span><span class="period">.</span>
+</h4> <div class="para" id="EXAMPLEy=x^2-limits-1">Suppose <span class="process-math">\(y=x^2\text{.}\)</span> We would like to compute the derivative (slope of the line tangent to the graph) of <span class="process-math">\(y\)</span> at the point <span class="process-math">\(x=2\)</span> by the the procedure indicated above.</div> <div class="para logical" id="EXAMPLEy=x^2-limits-2">
+<div class="para">Before we start, observe that from our work with differentials we know what we are expecting to get. It is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y^\prime(2)=\left.\dfdx{y}{x}\right|_{x=2}=\bigeval{2x}{x}{2}=2\cdot2=4.
+\end{equation*}
+</div>
+</div> <div class="para logical" id="EXAMPLEy=x^2-limits-3">
+<div class="para">Taking <span class="process-math">\(x_1=2.1\)</span> and <span class="process-math">\(x_2=1.9,\)</span> gives</div>
+<div class="displaymath process-math" id="EXAMPLEy=x^2-limits-3-3">
+\begin{align*}
+\frac{y(2.1)-y(2)}{2.1-2}\amp{}\gt y^\prime(2)\gt\frac{y(1.9)-y(2)}{1.9-2} \\\\
+\frac{(2.1)^2-(2)^2}{.1}\amp{}\gt  y^\prime(2)\gt\frac{(1.9)^2-y(2)}{.9}\\
+4.1\amp{}\gt y^\prime(2)\gt3.9.
+\end{align*}
+</div>
+</div> <div class="para logical" id="EXAMPLEy=x^2-limits-4">
+<div class="para">So our proposed procedure seems to be heading us in the right direction. If we take <span class="process-math">\(x_3=2.01\)</span> and <span class="process-math">\(x_4=1.99\)</span> we get</div>
+<div class="displaymath process-math">
+\begin{equation*}
+4.01\gt y^\prime(2)\gt3.99.
+\end{equation*}
+</div>
+<div class="para">We say that <span class="process-math">\(y^\prime(2)\)</span> is <dfn class="terminology">bounded</dfn>, and that the numbers <span class="process-math">\(4.01\)</span> and <span class="process-math">\(3.99\)</span> are the <dfn class="terminology">bounds</dfn>.</div>
+</div></article><article class="problem example-like" id="PROBLEMBounds"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">13.3</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="PROBLEMBounds-1"><div class="para logical" id="PROBLEMBounds-1-1">
+<div class="para"> Compute bounds on the derivatives of each function given at <span class="process-math">\(x=2\)</span> by using the values of <span class="process-math">\(x_1\)</span> and <span class="process-math">\(x_2\)</span> given below.</div>
+<ol class="lower-roman cols2">
+<li id="PROBLEMBounds-1-1-4-1"><div class="para" id="PROBLEMBounds-1-1-4-1-1">
+<span class="process-math">\(x_1=2.001,\)</span> <span class="process-math">\(x_2=1.999\)</span>
+</div></li>
+<li id="PROBLEMBounds-1-1-4-2"><div class="para" id="PROBLEMBounds-1-1-4-2-1">
+<span class="process-math">\(x_1=2.0001,\)</span> <span class="process-math">\(x_2=1.9999\)</span>
+</div></li>
+<li id="PROBLEMBounds-1-1-4-3"><div class="para" id="PROBLEMBounds-1-1-4-3-1">
+<span class="process-math">\(x_1=2.00001,\)</span> <span class="process-math">\(x_2=1.99999\)</span>
+</div></li>
+<li id="PROBLEMBounds-1-1-4-4"><div class="para" id="PROBLEMBounds-1-1-4-4-1">
+<span class="process-math">\(x_{1}=2.000001,\)</span> <span class="process-math">\(x_{2}=1.999999\)</span>
+</div></li>
+</ol>
+</div></div>
+<article class="task exercise-like" id="PROBLEMBounds-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="PROBLEMBounds-2-1-1"><span class="process-math">\(y=x^2\text{,}\)</span></div></article><article class="task exercise-like" id="PROBLEMBounds-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="PROBLEMBounds-3-1-1"><span class="process-math">\(y=x^3\text{,}\)</span></div></article><article class="task exercise-like" id="PROBLEMBounds-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="PROBLEMBounds-4-1-1">
+<span class="process-math">\(y=-\frac{1}{x}\text{,}\)</span>  and</div></article><article class="task exercise-like" id="PROBLEMBounds-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="PROBLEMBounds-5-1-1"><span class="process-math">\(y=x^{1/2}\)</span></div></article></article><div class="para" id="sec:secants-tangents-21">The results in <a href="" class="xref" data-knowl="./knowl/xref/PROBLEMBounds.html" title="Problem 13.3">Problem 13.3</a> are looking very promising indeed. Since they are looking so promising we’ll take a few minutes to simplify our notation a bit.</div>
+<div class="para" id="sec:secants-tangents-22">It is tedious to have all of these subscripted <span class="process-math">\(x\)</span> variables (<span class="process-math">\(x_0, x_1, x_2, \cdots\)</span>) so we will define an equivalent, but more useful, notation. The basic idea here is that we move to a new point a little bit away from <span class="process-math">\(x_0\)</span> and form the quotient that gives the slope of the secant line at that point. To construct the first secant line we took <span class="process-math">\(x_1\)</span> to be a number a little to the right of <span class="process-math">\(x_0\text{.}\)</span> However, if we take <span class="process-math">\(h\)</span> to be a positive number near zero then <span class="process-math">\(x_0+h\)</span> expresses the same idea.  Similarly, to construct a secant line a little to the left of <span class="process-math">\(x_0\)</span> we take <span class="process-math">\(h\)</span> to be a negative number near zero so that <span class="process-math">\(x_0+h\)</span> expresses the same idea.</div>
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/Secant-h.png" class="contained"></div>
+<div class="para" id="sec:secants-tangents-24">We can capture both situations notationally by agreeing that <span class="process-math">\(h\)</span> is a number (either positive or negative) which is close to zero. Thus when <span class="process-math">\(h\)</span> is positive the point <span class="process-math">\(x_0+h\)</span> is to the right, and when <span class="process-math">\(h\)</span> is negative the point <span class="process-math">\(x_0+h\)</span> is to the left of <span class="process-math">\(x_0\)</span> as shown in the diagram at the right.</div>
+<div class="para logical" id="sec:secants-tangents-25">
+<div class="para">When we express the idea this way we no longer need to generate all of the independent variables, <span class="process-math">\(x_1, x_2, x_3, \ldots\text{.}\)</span> We can accomplish the same thing by taking <span class="process-math">\(x_h=x_0+h,\)</span> where <span class="process-math">\(h\)</span> is some arbitrary real number, which is close to zero. Each value of <span class="process-math">\(h\)</span> gives us a different secant line through the point <span class="process-math">\((x_0,y(x_0)),\)</span> and its slope will be</div>
+<div class="displaymath process-math" id="EQUATIONDefDeriv">
+\begin{equation}
+\frac{y(x_0+h)-y(x_0)}{(x_0+h)-x_0}
+=\frac{y(x_0+h)-y(x_0)}{h}\tag{13.1}
+\end{equation}
+</div>
+<div class="para">By the Principle of Local Linearity we see that when <span class="process-math">\(h\)</span> is very small the quotient <span class="process-math">\(\frac{y(x_0+h)-y(x_0)}{h}\)</span> will be very close to the the slope of the tangent line.</div>
+</div>
+<div class="para" id="sec:secants-tangents-26">There is also a small technical matter we need to think about: Do we really need to consider secant lines on either side of <span class="process-math">\(x_0\)</span> (for both positive and negative values of <span class="process-math">\(h\)</span>)? Would it not be sufficient to consider just the secant lines on the right formed from the sequence <span class="process-math">\(x_1=2.1, x_1=2.01, x_1=2.001,\ \ldots?\)</span> It seems pretty clear that the slopes we get, <span class="process-math">\(4.1, 4.01, 4.001, \ldots\)</span> are getting closer to <span class="process-math">\(4\text{.}\)</span> Isn’t that enough?</div>
+<div class="para" id="sec:secants-tangents-27">No, it is not. But not because there is any inherent logical flaw in doing so. This has more to do with the properties we want the derivative to have than any purely logical consideration, so we’ll hold off  further discussion until <a href="CHAPTERFDT-Redux.html#SECTIONfirst-deriv-test" class="internal" title="Section 15.3: The Proof of the First Derivative Test">Section 15.3</a>.</div>
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/EpsSlope2.png" class="contained"></div>
+<div class="para logical" id="sec:secants-tangents-29">
+<div class="para">Returning to the example  <span class="process-math">\(y=x^2\)</span> at <span class="process-math">\(x=2\text{,}\)</span> we let <span class="process-math">\(h\)</span> be any number except zero and find of the secant line through <span class="process-math">\((2,4)\)</span> and <span class="process-math">\((2+h,(2+h)^2)\text{.}\)</span> We can’t let <span class="process-math">\(h\)</span> be zero because if it is zero then <span class="process-math">\((2,4)\)</span> and <span class="process-math">\((2+h,(2+h)^2)\)</span> are the same point and we can’t construct the secant line. We <em class="emphasis">must</em> have <span class="process-math">\(h\neq0\)</span> just to get started. In that case we have</div>
+<div class="displaymath process-math" id="sec:secants-tangents-29-11">
+\begin{align}
+\frac{y(2+h)-y(2)}{h} =   \frac{(2+h)^2-2}{h}  \amp= \frac{4+4h+h^2-4}{h}\notag\\
+\amp=\frac{4h+h^2}{h}\notag\\
+\amp= 4+h.\tag{13.2}
+\end{align}
+</div>
+<div class="para">    </div>
+</div>
+<div class="para" id="sec:secants-tangents-30">This is interesting. Do you recognize this computation? It should be familiar to you. This is precisely the same computation you did when you used Fermat’s adaptation of the Method of Adequality to find tangent lines in <a href="" class="xref" data-knowl="./knowl/xref/PROBLEMferm-meth-x2.html" title="Problem 3.18">Problem 3.18</a> of <a href="CHAPTERScienceBeforeCalc.html" class="internal" title="Chapter 3: Science Before Calculus">Chapter 3</a>. The only difference, really, is that at this point Fermat would simply set <span class="process-math">\(h=0\)</span> and move on.  We can’t do that because we need two distinct points to specify a (secant) line. If <span class="process-math">\(h=0\)</span> we only have one. This is frustrating because we can see that setting <span class="process-math">\(h=0\)</span> will give us <span class="process-math">\(y^\prime(2)=4\)</span> which we know to be the correct value.</div>
+<div class="para" id="sec:secants-tangents-31">Berkeley pointed out the problem of setting <span class="process-math">\(h=0\)</span> in <span class="booktitle">The Analyst</span> (his Increments are what we’ve called <span class="process-math">\(h\)</span>):</div>
+<blockquote class="blockquote" id="sec:secants-tangents-32"><div class="para" id="sec:secants-tangents-32-1">.  .  . this reasoning is not fair or conclusive. For when it is said, let the Increments vanish, i.e. let the Increments be nothing, or let there be no Increments, the former Supposition that the Increments were something, or that there were Increments is destroyed, and yet as a Consequence of that Supposition, i.e. an Expression got by virtue thereof, is retained. Which  .  .  . is a false way of reasoning. Certainly when we suppose the Increments to vanish, we must suppose their Proportions, their Expressions, and every thing else derived from the Supposition of their Existence to vanish with them.</div></blockquote>
+<div class="para logical" id="sec:secants-tangents-33">
+<div class="para">Requiring <span class="process-math">\(h\)</span> to be non-zero at the beginning of our argument, and zero at the end is tantamount to requiring <span class="process-math">\(h\)</span> to be zero and not zero simultaneously which is not possible.  So <span class="process-math">\(h\)</span> can’t be zero. But it can be very close to zero. Moreover as it gets closer to zero (<span class="process-math">\(h\rightarrow0\)</span>) it is clear that <span class="process-math">\(4+h\rightarrow4\text{.}\)</span> This should also feel very familiar to you. Do you see that we’re talking about a limit? From <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONsqrslope1.html" title="Equation 13.2">equation (13.2)</a> we see that as  <span class="process-math">\(h\rightarrow0\text{,}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQUATIONsqrslope1.html">
+\begin{equation*}
+\frac{y(2+h)-y(2)}{h} =  4+h \rightarrow4.
+\end{equation*}
+</div>
+<div class="para">Moreover, by the Principle of Local Linearity as <span class="process-math">\(h\rightarrow0\)</span> the secant and tangent lines become indistinguishable. Thus it appears that  the limit</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQUATIONsqrslope1.html">
+\begin{equation*}
+\limit{h}{0}{\frac{y(2+h)-y(2)}{h}} =
+\limit{h}{0}{\frac{4+4h+h^2-4}{h}} = \limit{h}{0}{4+h}= 4
+\end{equation*}
+</div>
+<div class="para">will be the value of the derivative, <span class="process-math">\(y^\prime(2)\text{,}\)</span> of <span class="process-math">\(y(x)\)</span> at <span class="process-math">\(x=2\text{.}\)</span>
+</div>
+</div>
+<div class="para" id="sec:secants-tangents-34">Our discussion in <a href="" class="xref" data-knowl="./knowl/xref/EXAMPLEy=x^2-limits.html" title="Example 13.2">Example 13.2</a> suggests that we can use the limit concept to finally resolve the logical difficulties inherent in a naive use of the differential as a foundation for Calculus, and that is exactly our present goal.</div>
+<aside class="aside aside-like" id="sec:secants-tangents-35"><h4 class="heading"><span class="title">Historical Background.</span></h4>
+<div class="para" id="sec:secants-tangents-35-2">We say “naive” because the fact is that the differential concept actually can be made fully rigorous and thus can serve as a foundation for Calculus just as well as the limit theory we are currently pursuing.  Such a foundation was built by the mathematician <a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Robinson/" target="_blank">Abraham Robinson</a><a class="xref" id="sec:secants-tangents-35-2-3" href="" data-knowl="./knowl/fn/sec:secants-tangents-35-2-3.html" title="Footnote 13.8"><sup> 8 </sup></a> is his <span class="process-math">\(1966\)</span> book <span class="booktitle">Non-Standard Analysis</span>. However Robinson used ideas and techniques from modern mathematical logic which were not available to mathematicians of the seventeenth century. Because they are they are not available to us either, we will justify our methods using the older, slightly simpler, limit theory.</div></aside><div class="para" id="sec:secants-tangents-36">In this second part of this text we will finally build a viable theory  to support Calculus which even Bishop Berkeley would have to accept. We begin with the following definition. This is the modern definition of the derivative.</div>
+<article class="definition definition-like" id="DEFINITIONDerivative"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">13.4</span><span class="period">.</span><span class="space"> </span><span class="title">The Derivative.</span>
+</h4> <div class="para logical" id="DEFINITIONDerivative-2-1">
+<div class="para"> Suppose <span class="process-math">\(f\)</span> is a function, and that <span class="process-math">\(x\)</span> is a real number. If <span class="process-math">\(\limit{h}{0}{\frac{f(x+h{})-f(x)}{h}}\)</span> exists then we say that <span class="process-math">\(f\)</span> is <dfn class="terminology">differentiable</dfn> at <span class="process-math">\(x\)</span> and that the derivative of <span class="process-math">\(f\)</span> at <span class="process-math">\(x\)</span> is given by:</div>
+<div class="displaymath process-math" id="EQUATIONDefDerivative">
+\begin{equation}
+f^\prime(x)=\dfdx{f}{x}=\limit{h}{0}{\frac{f(x+h{})-f(x)}{h}}\tag{13.3}
+\end{equation}
+</div>
+<div class="para">if this limit exists. If the limit does not exist then the derivative also  does not exist at <span class="process-math">\(x\text{.}\)</span>
+</div>
+</div></article><div class="para" id="sec:secants-tangents-38">
+<a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONDerivative.html" title="Definition 13.4: The Derivative">Definition 13.4</a> defines the derivative locally, “at <span class="process-math">\(x\text{.}\)</span>” This may seem to be a mere formality but it is not. When we write <span class="process-math">\(f(x)\)</span> it is easy to fall into the habit of thinking of <span class="process-math">\(x\)</span> as representing all of the points in the domain of <span class="process-math">\(f\text{.}\)</span>  But that is fundamentally wrong. The variable <span class="process-math">\(x\)</span> always represents a single point in the domain of <span class="process-math">\(f\text{.}\)</span> Always. No exceptions.  When its value is unknown we call it  <span class="process-math">\(x\)</span> because this is simpler than saying “whatever point we’re interested in.”  This is why the symbol <span class="process-math">\(f(x)\)</span> is pronounced “<span class="process-math">\(f\)</span> of <span class="process-math">\(x\text{,}\)</span>” or “<span class="process-math">\(f\)</span> at <span class="process-math">\(x\text{.}\)</span>”</div>
+<aside class="aside aside-like" id="sec:secants-tangents-39"><h4 class="heading"><span class="title">Comment.</span></h4>
+<div class="para" id="sec:secants-tangents-39-2">Or <span class="process-math">\(y\text{,}\)</span> or <span class="process-math">\(z\text{,}\)</span> or Fred, Ethel, Ricky, or Lucy. These are all just names we give to a specific quantity which is unknown.</div></aside><div class="para" id="sec:secants-tangents-40">In  <a href="" class="xref" data-knowl="./knowl/xref/EXAMPLEy=x^2-limits.html" title="Example 13.2">Example 13.2</a> we evaluated the derivative of <span class="process-math">\(f(x)=x^2\)</span> at the single point <span class="process-math">\(x=2\text{.}\)</span>  It appears that if we want to evaluate the derivative of <span class="process-math">\(f(x)=x^2\)</span> at <span class="process-math">\(x=3\)</span> and <span class="process-math">\(x=4\)</span> we need to compute <span class="process-math">\(\tlimit{h}{0}{\frac{f(3+h)-f(3)}{h}}\text{,}\)</span> and <span class="process-math">\(\tlimit{h}{0}{\frac{f(4+h)-f(4)}{h}}\text{.}\)</span>
+</div>
+<div class="para" id="sec:secants-tangents-41">But it is tedious to compute the derivative of a function one specific point at a time. If we leave <span class="process-math">\(x\)</span> unspecified and compute <span class="process-math">\(f^\prime(x)=\limit{h}{0}{\frac{f(x+h)-f(x)}{h}} \)</span> we obtain the value of the derivative of <span class="process-math">\(f\)</span> at the single, but unspecified point <span class="process-math">\(x\text{.}\)</span> We can then find the derivative of <span class="process-math">\(f\)</span> at any point by replacing <span class="process-math">\(x\)</span> with whatever point we are interested in.</div>
+<div class="para" id="sec:secants-tangents-42"></div>
+<article class="problem example-like" id="PROBLEMxIsSingular"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">13.5</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="PROBLEMxIsSingular-1">
+<div class="para" id="PROBLEMxIsSingular-1-1"> Use the techniques we saw in <a href="CHAPTERlimits-lhop-rule.html" class="internal" title="Chapter 12: Limits and L’H\^o pital’s Rule">Chapter 12</a> to compute <span class="process-math">\(f^\prime(x)\)</span> by evaluating a limit. Check your work by differentiating using differentials.</div> <div class="para" id="PROBLEMxIsSingular-1-2">Do not use L’Hôpital’s Rule. L’Hôpital’s Rule requires that we be able to differentiate these functions. Since that is exactly what this problem asks you to do, using L’Hôpital’s Rule would be circular reasoning.</div>
+</div>
+<article class="task exercise-like" id="PROBLEMxIsSingular-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="PROBLEMxIsSingular-2-1-1"><span class="process-math">\(f(x)=x^2\)</span></div></article><article class="task exercise-like" id="PROBLEMxIsSingular-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="PROBLEMxIsSingular-3-1-1"><span class="process-math">\(f(x)=2x^2-x\)</span></div></article><article class="task exercise-like" id="PROBLEMxIsSingular-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="PROBLEMxIsSingular-4-1-1"><span class="process-math">\(f(x)=x^6-7x^4\)</span></div></article><article class="task exercise-like" id="PROBLEMxIsSingular-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="PROBLEMxIsSingular-5-1-1"><span class="process-math">\(f(x)=\pi\)</span></div></article><article class="task exercise-like" id="PROBLEMxIsSingular-6"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<div class="para" id="PROBLEMxIsSingular-6-1-1"><span class="process-math">\(f(x)=\frac{1}{x^3}\)</span></div></article><article class="task exercise-like" id="PROBLEMxIsSingular-7"><h5 class="heading"><span class="codenumber">(f)</span></h5>
+<div class="para" id="PROBLEMxIsSingular-7-1-1"><span class="process-math">\(f(x)=-\frac{1}{x}\)</span></div></article><article class="task exercise-like" id="PROBLEMxIsSingular-8"><h5 class="heading"><span class="codenumber">(g)</span></h5>
+<div class="para" id="PROBLEMxIsSingular-8-1-1"><span class="process-math">\(f(x)=x^{1/2}\)</span></div></article><article class="task exercise-like" id="PROBLEMxIsSingular-9"><h5 class="heading"><span class="codenumber">(h)</span></h5>
+<div class="para" id="PROBLEMxIsSingular-9-1-1"><span class="process-math">\(f(x)=x^{1/3}\)</span></div></article></article><div class="para" id="sec:secants-tangents-44">When a function is differentiable at all  of the points in its domain it is said to be <dfn class="terminology">differentiable on its domain</dfn> or just <dfn class="terminology">differentiable</dfn>.</div>
+<aside class="aside aside-like" id="sec:secants-tangents-45"><h4 class="heading"><span class="title">Comment.</span></h4>
+<div class="para" id="sec:secants-tangents-45-2">In practice we are often quite loose with the term <dfn class="terminology">differentiable</dfn>. Most people would call the functions <span class="process-math">\(f(x)=\sqrt{x}\)</span> and <span class="process-math">\(g(x)=\sqrt[3]{x}\)</span> <dfn class="terminology">differentiable</dfn> even though they both fail to be differentiable at <span class="process-math">\(x=0\text{.}\)</span>
+</div></aside><article class="exercise exercise-like" id="no-label"><h4 class="heading">
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">13.6</span><span class="period">.</span>
+</h4>
+<div class="para" id="no-label-1-1">Which of the functions in <a href="" class="xref" data-knowl="./knowl/xref/PROBLEMxIsSingular.html" title="Problem 13.5">Problem 13.5</a> are <dfn class="terminology">differentiable</dfn> and which are not? Identify all points of non-differentiability.</div></article><div class="para logical" id="sec:secants-tangents-47">
+<div class="para">If you look closely at <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONDerivative.html" title="Definition 13.4: The Derivative">Definition 13.4</a> you can see Leibniz’ differentials lurking in the background\aside{Newton’s fluxions are nowhere to be seen, however.}. If we let <span class="process-math">\(\Delta{}y=f(x+h{})-f(x)\)</span> and <span class="process-math">\(\Delta x = h\)</span> then for values of <span class="process-math">\(h\)</span> very close to zero we have.</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/DEFINITIONDerivative.html ./knowl/xref/DEFINITIONDerivative.html">
+\begin{equation*}
+f^\prime(x) \approx \frac{\Delta y}{\Delta x} =
+\frac{f(x+h{})-f(x)}{h}.
+\end{equation*}
+</div>
+<div class="para">The approximation gets better as <span class="process-math">\(\Delta x\rightarrow0\)</span> (equivalently, as <span class="process-math">\(h\rightarrow0\)</span>) so you can see that <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONDerivative.html" title="Definition 13.4: The Derivative">Definition 13.4</a> avoids the infinitely small by replacing differentials with <span class="process-math">\(\Delta x\)</span> (equivalently <span class="process-math">\(h\)</span>) which is a small, but finite, number which is only considered in the limit as <span class="process-math">\(\Delta x\rightarrow0\text{.}\)</span> In particular, <span class="process-math">\(\Delta x\)</span> is not an infinitesimal. But it is allowed to become as close to zero as needed while remaining finite in size.  Needless to say, limits are much harder to work with than differentials. Their saving grace is if they can be made logically unassailable with a proper definition. Bishop Berkeley would approve.</div>
+</div>
+<div class="para" id="sec:secants-tangents-48">For the rest of this text we pursue two over--arching goals.  The first is to rigorously recapture from <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONDerivative.html" title="Definition 13.4: The Derivative">Definition 13.4</a> all of the differentiation rules we are already familiar with.  We will address that in the first section of the next chapter. Keep in mind that we are not developing the differentiation rules. We already know them, and by now you should be quite skillful at their use. Our goal now is to show rigorously that by using <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONDerivative.html" title="Definition 13.4: The Derivative">Definition 13.4</a> we can recapture all of the properties that we found so useful before.</div>
+<div class="para" id="sec:secants-tangents-49">To do this we will need several properties of limits which we will state — without proof — in the next section. Then we will prove that our differentiation rules and the First Derivative Test are valid using <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONDerivative.html" title="Definition 13.4: The Derivative">Definition 13.4</a>. However all of this will be done under the assumption that the limit properties in the next section are actually true.</div>
+<div class="para" id="sec:secants-tangents-50">Our second goal is to prove, rigorously that the limit properties in the next section are actually true. We will do this in <a href="CHAPTERformal-limits.html#SECTIONLimitLaws" class="internal" title="Section 17.3: Limit Laws (Theorems)">Section 17.3</a>.</div></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="ToTheory.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="CHAPTERdiff-rules-with-limits.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
