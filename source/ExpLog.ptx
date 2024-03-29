@@ -3,8 +3,6 @@
 
   <!-- \label{CHAPTERlast-elem-funct} -->
 
-  <section>
-    <title>Introduction</title>
 
     <introduction>
       <blockquote>
@@ -15,7 +13,7 @@
         </p>
         <attribution>
           <url href="https://www.britannica.com/biography/Edward-Teller" visual="https://www.britannica.com/biography/Edward-Teller">Edward
-          Teller (1908-2003)</url>
+          Teller (1908<ndash/>2003)</url>
         </attribution>
       </blockquote>
 
@@ -24,17 +22,19 @@
         You are already familiar with fourteen of the so-called elementary
         functions in mathematics. These are:
 
-        <ol>
+        <dl>
           <li>
+              <title>Polynomials:</title> 
             <p>
-              <term>\underline{Polynomials:</term>} Polynomials are functions of the
+              Polynomials are functions of the
               form: <m>f(x) = c_0+c_1x+c_2x^2+c_3x^3+\ldots+c_{n-1}x^{n-1}+c_nx^n,</m>
               where <m>c_0, \ldots, c_n</m> are constants.
             </p>
           </li>
           <li>
+              <title>Rational Functions:</title>
             <p>
-              <term>\underline{Rational Functions:</term>} The rational functions
+              The rational functions
               are quotients of polynomials:
               <me>
                 \frac{a_0+a_1x+a_2x^2+a_3x^3+\ldots+a_{n-1}x^{n-1}+a_nx^n}{b_0+b_1x+b_2x^2+b_3x^3+\ldots+b_{n-1}x^{m-1}+b_mx^m},
@@ -43,29 +43,32 @@
             </p>
           </li>
           
-
           <li>
+              <title>Trigonometric Functions:</title>
             <p>
-              <term>\underline{Trigonometric Functions:</term>} There are six
-              trigonometric functions: <m>\sin(\theta)</m>, <m>\cos(\theta)</m>,
-              <m>\tan(\theta)</m>, <m>\cot(\theta)</m>, <m>\sec(\theta)</m>, and <m>\csc(\theta).</m>
+              There are six trigonometric functions:
+              <m>\sin(\theta)</m>, <m>\cos(\theta)</m>,
+              <m>\tan(\theta)</m>, <m>\cot(\theta)</m>,
+              <m>\sec(\theta)</m>, and <m>\csc(\theta).</m>
             </p>
           </li>
           <li>
+            <title>Trigonometric Inverses:</title>
             <p>
-              <term>\underline{Trigonometric Inverses:</term>} Each of the
-              trigonometric functions has an associated inverse:
-              <m>\inverse\sin(\theta)</m>, <m> \inverse\cos(\theta)</m>,
-              <m>\inverse\tan(\theta)</m>, <m> \inverse\cot(\theta)</m>,
-              <m>\inverse\sec(\theta)</m>, and <m>\inverse\csc(\theta).</m>
+              Each of the trigonometric functions has an associated
+              inverse: <m>\inverse\sin(\theta)</m>, <m>
+              \inverse\cos(\theta)</m>, <m>\inverse\tan(\theta)</m>,
+              <m> \inverse\cot(\theta)</m>,
+              <m>\inverse\sec(\theta)</m>, and
+              <m>\inverse\csc(\theta).</m>
             </p>
           </li>
-        </ol>
+        </dl>
 
         Algebraically combining this basic set of fourteen functions allows us
         to build almost all of the functions you have encountered so far in
         your mathematics education. Loosely speaking what makes these
-        elementary is that we don't need Calculus to define them.
+        elementary is that we don<rsq/>t need Calculus to define them.
       </p>
       <p>
 
@@ -75,47 +78,54 @@
         problems. This is one reason that the invention of Calculus was such
         an important advance.
       </p>
-      <p>
 
+      <p>
         Functions which require Calculus for their definition are (usually)
-        called <term>analytic</term> functions\aside{The precise definition
-        of <term>analytic</term> actually comes directly from the work we did in
-        <xref ref="SECTIONmore-high-deriv">Section</xref> on approximating functions with
-        polynomials. But one way or another the definition of
-        <term>analytic</term> is tied to Calculus.}.
+        called <term>analytic</term> functions.
       </p>
-      <p>
-
-        The exponential and logarithmic functions which we take up next occupy
-        a middle ground between the elementary and the analytic
-        functions. They can be defined without Calculus, which is why
-        you're probably already familiar with them. But in some ways it is
-        better to use Calculus.  The exponential functions give us our first,
-        fairly easy-to-understand introduction to the construction of new
-        functions using Calculus so we will start there.
-      </p>
-
-
+      <aside>
+        <title>Mathematical Terminology</title>
+        <p>
+          The precise definition of <term>analytic</term> actually
+          comes directly from the work we did in <xref
+          ref="SECTIONmore-high-deriv">Section</xref> on approximating
+          functions with polynomials. But one way or another the
+          definition of <term>analytic</term> is tied to Calculus.
+        </p>
+        <p>
+          The exponential and logarithmic functions which we take up
+          next occupy a middle ground between the elementary and the
+          analytic functions. They can be defined without Calculus,
+          which is why you<rsq/>re probably already familiar with them. But
+          in some ways it is better to use Calculus.  The exponential
+          functions give us our first, fairly easy-to-understand
+          introduction to the construction of new functions using
+          Calculus so we will start there.
+        </p>
+      </aside>
 
     </introduction>
 
 
 
-    <subsection xml:id="SUBSECTIONIvps">
+    <section xml:id="SECTIONIvps">
       <title>Initial Value Problems (IVPs)</title>
       <p>
-        Let's step back for a moment.
-        Recall that an IVP consists of two parts:
+        Let<rsq/>s step back for a moment.  Recall that in <xref
+        ref="SECTIONmore-high-deriv">Section</xref> we defined Initial
+        Value Problems (IVPs).  an IVP consists of two parts:
 
         <ol>
           <li>
             <p>
-              The differential equation (for example, <m>\dfdx{y}{x}=2x</m>), and
+              The differential equation (for example, <m>\dfdx{y}{x}=2x</m>, and
             </p>
           </li>
           <li>
             <p>
-              The initial value\aside{It's called an initial value    because when time is the independent variable we usually know the    value of our function initially, when <m>t=0.</m>} (for example,  <m>y(0)=0</m>).
+              The initial value. (So called because when the
+              independent variable is time  we usually know the value of our
+              function initially.
             </p>
           </li>
         </ol>
@@ -128,81 +138,66 @@
       </p>
 
       <example>
-        <p>  We've seen that when we differentiate the formula <m>y=x^2</m> we get the
+        <p>  We<rsq/>ve seen that when we differentiate the formula <m>y=x^2</m> we get the
         <term>differential equation</term> <m>\dx{y} = 2x\dx{x},</m> or
         <men  xml:id="EQUATIONx2diffeq">
           \dfdx{y}{x}=2x.
 <!-- \label{eq:x2diffeq} -->
         </men>
         If we did not already know that the function <m>y(x)=x^2</m> satisfies
-        <xref ref="EQUATIONx2diffeq">Equation~</xref>) we could give a name to the solution
+        <xref ref="EQUATIONx2diffeq">equation</xref> we could give a name to the solution
         (sqr<m>(x)</m>, perhaps?) and by fiat, define sqr<m>(x)</m> to be
         whatever function solves this equation.
-        But there is a problem. The solution of <xref ref="EQUATIONx2diffeq">Equation~</xref>)
+        But there is a problem. The solution of <xref ref="EQUATIONx2diffeq">equation</xref>
         is a multifunction, remember? To choose a single branch we need to
         impose an initial condition.
         </p>
       </example>
 
       <exercise xml:id="DRILLIVP-sqr">
-        <introduction>
           <p>
             Solve each of the following IVPs. Graph your solutions:
-          </p>
-        </introduction>
-        <task>
-          <statement>
-            <p>
-              <m>\dfdx{y}{x}=2x,\ \ \ y(0)=0</m>
-            </p>
-          </statement>
-        </task>
-        <task>
-          <statement>
+            <ol cols="2" marker="i">
+              <li>
+                <p>
+                  <m>\dfdx{y}{x}=2x,\ \ \ y(0)=0</m>
+                </p>
+              </li>
+            <li>
             <p>
               <m>\dfdx{y}{x}=2x,\ \ \ y(0)=1</m>
             </p>
-          </statement>
-        </task>
-        <task>
-          <statement>
+          </li>
+        <li>
             <p>
               <m>\dfdx{y}{x}=2x,\ \ \ y(0)=-10</m>
             </p>
-          </statement>
-        </task>
-        <task>
-          <statement>
+          </li>
+        <li>
             <p>
               <m>\dfdx{y}{x}=2x,\ \ \ y(1)=2</m>
             </p>
-          </statement>
-        </task>
-        <task>
-          <statement>
+          </li>
+        <li>
             <p>
               <m>\dfdx{y}{x}=2x,\ \ \ y(-1)=1</m>
             </p>
-          </statement>
-        </task>
-        <task>
-          <statement>
+          </li>
+        <li>
             <p>
               <m>\dfdx{y}{x}=x,\ \ \ y(0)=1</m>
             </p>
-          </statement>
-        </task>
-        <task>
-          <statement>
+          </li>
+        <li>
             <p>
               <m>\dfdx{y}{x}=2x,\ \ \ y(x_0)=y_0</m> where <m>x_0</m> and <m>y_0</m> are
               fixed, but unspecified constants.
             </p>
-          </statement>
-        </task>
+        </li>
+            </ol>
+          </p>
       </exercise>
-      <p>
-
+<p>
         Simply naming the function tells us nothing about it. However the IVP
         itself can give us a some insight into the nature of the solution.
         For example since <m>2x\lt 0</m> when <m>x\lt 0</m>, the slope of the graph of
@@ -212,9 +207,8 @@
       <p>
 
         Of course we already knew that since we have a formula for
-        <m>y(x)=\text{sqr}(x)=x^2</m>. This won't be true in the next section.
+        <m>y(x)=\text{sqr}(x)=x^2</m>. This won<rsq/>t be true in the next section.
       </p>
-    </subsection>
   </section>
 
   <section xml:id="SECTIONexponential">
@@ -222,10 +216,11 @@
 
     <p>
       \TLogo{PSP:four-proof-irrat}
-
+</p>
+<p>
       In exactly the same way that we can define <m>\text{sqr}(x)</m> via any of
       the
-      Initial Value Problems in <xref ref="DRILLIVP-sqr"></xref> we can declare, by fiat, the following:\\
+      Initial Value Problems in <xref ref="DRILLIVP-sqr"></xref> we can declare, by fiat, the following:
     </p>
     <definition xml:id="DEFINITIONnatural-exponential-ivp">
       <title>The Natural Exponential Function</title>
@@ -233,9 +228,11 @@
         <p>
           <!-- \label{def:natural-exponential-ivp} -->
           The function which satisfies the IVP
-          <men  xml:id="IVPExpDiffeq">
-            \dfdx{y}{x}=y,\ \ y(0)=1.
-          </men>
+          <mdn>
+<mrow  xml:id="IVPExpDiffeq">
+            \dfdx{y}{x}=y,\amp{}\amp{} y(0)=1.
+</mrow>
+          </mdn>
           is called the <term>natural exponential function</term>, denoted
           <m>\exp(x)</m>.
         </p>
@@ -254,12 +251,12 @@
       initial value, <m>\exp(0)</m>). We will explore this function further here.
     </p>
 
+
+    
     <p>
       Recall that the Taylor Polynomial of a function, as described in
-      <xref ref="SECTIONmore-high-deriv">Section</xref>, <xref ref="EQUATIONTaylorFormula">Equation</xref>,
-      given by\aside{Recall that the parenthetical superscript, <m>(n)</m>, indicates the <m>n</m>th
-      derivative. Thus <m>y^{(2)}(x)</m> represents the second  derivative of
-      <m>y(x)</m>, <m>y^{(3)}</m> represents the  third derivative,  and so on.}
+      <xref ref="SECTIONmore-high-deriv"></xref>, <xref ref="EQUATIONTaylorFormula">equation</xref>,
+      given by
       <me>
         T_n(x)=y(0) +\frac{y^{\prime}(0)}{1!}x
         +\frac{y^{(2)}(0)}{2!}x^2+\frac{y^{(3)}(0)}{3!}x^3
@@ -272,8 +269,19 @@
       <m>\exp(x)</m> near that point.
     </p>
 
+    <aside>
+<title>Mathematics Notation</title>
+<p>
+Recall that the parenthetical superscript, <m>(n)</m>, indicates the
+<m>n</m>th derivative. Thus <m>y^{(2)}(x)</m> represents the second
+derivative of <m>y(x)</m>, <m>y^{(3)}</m> represents the third
+derivative, and so on.
+</p>
+</aside>
+
+
     <p>
-      Notice that because <m>\exp(x)</m> satisfies <xref ref="IVPExpDiffeq">IVP~</xref>) it
+      Notice that because <m>\exp(x)</m> satisfies <xref ref="IVPExpDiffeq">IVP</xref> it
       also satisfies each of the following (why?):
       <mdn>
         <mrow number="no">       \exp^{(2)}(x)=\exp^\prime(x)\amp =\exp(x)</mrow>
@@ -286,12 +294,12 @@
     <problem>
       <statement>
         <p>
-          Let <m>T_n(x)</m> be the <m>n</m>th degree Taylor polynomial approximation of
-          <m>\exp(x)</m> and use <xref ref="EQUATIONExpDerivs">Equation~</xref>) and the initial
-          value,
-          <m>\exp(0)=1</m>  to show that
+          Let <m>T_n(x)</m> be the <m>n</m>th degree Taylor polynomial
+          approximation of <m>\exp(x)</m> use <xref
+          ref="EQUATIONExpDerivs">equation</xref> and the initial
+          value <m>\exp(0)=1</m>, to show that
           <me>
-            \displaystyle T_n(x) =1+x+\frac{x^2}{2!}+\frac{x^3}{3!}
+T_n(x) =1+x+\frac{x^2}{2!}+\frac{x^3}{3!}
             + \cdots + \frac{x^n}{n!}.
           </me>
         </p>
@@ -301,14 +309,14 @@
   <section xml:id="SECTIONexponential-growth">
     <title>Exponential Growth and Exponential Notation</title>
       <p>
-        It is now time to solve <xref ref="IVPExpDiffeq">IVP</xref>) by finding an
+        It is now time to solve <xref ref="IVPExpDiffeq">IVP</xref> by finding an
         explicit formula for <m>\exp(x)</m>.
       </p>
 
       <p>
         But how? Nothing really presents itself as a potential solution so
-        what should we do?  Since we don't seem to have any better options,
-        let's see if we can guess a solution.
+        what should we do?  Since we don<rsq/>t seem to have any better options,
+        let<rsq/>s see if we can guess a solution.
       </p>
 
     <paragraphs  xml:id="DIGRESSIONGuessingEffectively">
@@ -320,10 +328,10 @@
       </p>
       <p>
 
-        You know this of course. You've been doing it all of your life, but
-        in the past -- especially in math classes -- guessing was probably
+        You know this of course. You<rsq/>ve been doing it all of your life, but
+        in the past <mdash/> especially in math classes <mdash/> guessing was probably
         discouraged so you tend to deny doing it, possibly even to yourself.
-        It's OK. Guess anyway. We won't tell anyone.
+        It<rsq/>s OK. Guess anyway. We won<rsq/>t tell anyone.
       </p>
 
       <p>
@@ -339,7 +347,7 @@
         you to guess often from now on. But be aware that making a guess is
         a process, not an event. If you guess wrong, which
         is most likely, then you have a new, related problem to think
-        about: All of your intuition said this was a good guess.  Why didn't
+        about: All of your intuition said this was a good guess.  Why didn<rsq/>t
         it work?  The answer to that question almost always gives some
         insight into the original problem.  Even a bad guess can be useful.
       </p>
@@ -347,30 +355,30 @@
       <p>
         However a bad guess, indeed
         any guess,  in isolation is a waste of time. You must also take
-        the time to figure out why your bad guess doesn't work.
+        the time to figure out why your bad guess doesn<rsq/>t work.
       </p>
 
       <p>
-        But the real danger in guessing -- the reason it is usually
-        discouraged -- is that when you do guess correctly, or nearly so, it
-        is  very tempting to just move on from there. Don't do that.
+        But the real danger in guessing <mdash/> the reason it is usually
+        discouraged <mdash/> is that when you do guess correctly, or nearly so, it
+        is  very tempting to just move on from there. Don<rsq/>t do that.
       </p>
 
       <p>
         Guessing correctly means that your intuition was very good. But
         intuition is unconscious.  It is at least as important to understand
         where a good guess came from, and why it worked as it is to
-        understand why a bad guess didn't work.  But when you guess well it
+        understand why a bad guess didn<rsq/>t work.  But when you guess well it
         is extremely tempting to just take your good guess and run with
         it. This will invariably lead to confusion later. So, when you guess
         correctly take a few moments to think about the intuition that led
         you to that guess.  Bring that intuition out of your unconscious
-        mind and into your conscious mind.  If you don't do that your
+        mind and into your conscious mind.  If you don<rsq/>t do that your
         guesses are a waste of your time. 
       </p>
 
       <p>
-        So let's take a guess. There is no need to get really crazy about it
+        So let<rsq/>s take a guess. There is no need to get really crazy about it
         though. We already know that the Taylor polynomial of <m>\exp(x)</m>
         approximates <m>\exp(x)</m>. Maybe we can find an <m>n</m> large enough that the
         approximation becomes exact.
@@ -380,7 +388,7 @@
         <introduction>
           <p>
             Show that none of the following is a solution of
-            <xref ref="DEFINITIONnatural-exponential-ivp">IVP~</xref>).\\
+            <xref ref="DEFINITIONnatural-exponential-ivp">IVP</xref>.
             \hint{Observe that if
             <m>y(x)</m> is a solution then <m>y-\dfdx{y}{x}=0</m>.}
           </p>
@@ -432,7 +440,7 @@
                   read <q>three factorial</q> and means <m>3\cdot2\cdot1.</m>
                   Similarly <m>4!=4\cdot3\cdot2\cdot1</m> and in general
                   <m>n!=n(n-1)(n-2)\ldots3\cdot2\cdot1</m>} is a solution of
-                  <xref ref="DEFINITIONnatural-exponential-ivp"></xref>.\\
+                  <xref ref="DEFINITIONnatural-exponential-ivp"></xref>.
                   \hint{Observe that if
                   <m>y(x)</m> is a solution then <m>y-\dfdx{y}{x}=0</m>.}
                 </p>
@@ -487,13 +495,13 @@
 
             <p>
               Since the difference between <m>y</m> and <m>\dfdx{y}{x}</m> is that stupid
-              one-millionth term -- which is very small --  it is clear that we've
+              one-millionth term <mdash/> which is very small <mdash/>  it is clear that we<rsq/>ve
               almost got something here. Surely we can handle that last term somehow!
             </p>
 
             <p>
-              Sadly no, we can't. In fact no polynomial will solve
-              <xref ref="IVPExpDiffeq">IVP~</xref>).
+              Sadly no, we can<rsq/>t. In fact no polynomial will solve
+              <xref ref="IVPExpDiffeq">IVP</xref>.
             </p>
 
 
@@ -502,7 +510,7 @@
                 <p>
                   Show that the previous paragraph is true. That is, show that there
                   is no (non-zero) polynomial that solves the differential equation:
-                  <m>\dfdx{y}{x}=y.</m> \\
+                  <m>\dfdx{y}{x}=y.</m> 
                   \hint{Consider the degree of the polynomial and the
                   degree of its derivative.}
                 </p>
@@ -516,15 +524,15 @@
 
             <p>
               In fact, we almost have a solution here. One million is a very
-              large number, so one million factorial (<m>1000000!</m>) is inconceivably
-              large. Thus for any value of <m>x</m> we're likely to encounter that one
+              large number, so one million factorial (<m>1000000!</m> is inconceivably
+              large. Thus for any value of <m>x</m> we<rsq/>re likely to encounter that one
               millionth term, <m>\frac{x^{1000000}}{1000000!},</m> is so incredibly close
-              to zero that it almost isn't really there. And if it isn't really
+              to zero that it almost isn<rsq/>t really there. And if it isn<rsq/>t really
               there then
               <me>
                 y= 1+x+\frac{x^2}{2!}+\frac{x^3}{3!} + \ldots +
                 \frac{x^{999999}}{999999!}  \textcolor{red}{\underbrace{+
-                \frac{x^{1000000}}{1000000!}}_{\text{\tiny Not really
+                \frac{x^{1000000}}{1000000!}}_{ \text{Not really
                 here. Shhh!}}}
               </me>
               and its derivative
@@ -536,22 +544,29 @@
             </p>
 
             <p>
-              So we're .\ .\ . done, .\ .\ . right?
+              So we<rsq/>re . . . done, . . . right?
             </p>
 
             <p>
               No, of course not. Although that last term really is
               practically zero it is not actually zero, no matter how
               small it is.  As Newton said, <q>In mathematics the
-              smallest of errors must be dealt with\aside{Newton wrote his
+              smallest of errors must be dealt with.</q>
+              </p>
+              <aside>
+<title>Historical Background</title>
+<p>
+Newton wrote his
               scientific works in Latin. This is a very loose translation of the
-              phrase ``<foreign>In rebus mathematicis erores quam minimi non sunt
-              contemnendi.</foreign></q> from his book <pubtitle> Quadraturam Curvarum</pubtitle> (On
-              the Quadrature of Curves).}.''
-            </p>
+              phrase <foreign>In rebus mathematicis erores quam minimi non sunt
+              contemnendi.</foreign> from his book <pubtitle> Quadraturam Curvarum</pubtitle> (On
+              the Quadrature of Curves).
+</p>
+</aside>
+
 
             <p>
-              So we haven't solved our problem in the sense of having an explicit
+              So we haven<rsq/>t solved our problem in the sense of having an explicit
               formula for <m>\exp(x)</m>. But we do know a great deal about it at this
               point. In particular we know that the Taylor polynomial
               <m> 1+x+\frac{x^2}{2!}+\frac{x^3}{3!} + \ldots +
@@ -562,17 +577,17 @@
 
             <p>
               But if there is no polynomial that solves
-              <xref ref="IVPExpDiffeq">equation~</xref>) does that mean there is no solution at
+              <xref ref="IVPExpDiffeq">equation</xref> does that mean there is no solution at
               all? Certainly not. In fact, since that last term of the polynomial
               seems to be the stumbling block the solution is clear: All we need to
               do is not have a last term.
             </p>
 
             <p>
-              This is a startling idea but before we dismiss it, let's take our own
-              advice from our <xref ref="DIGRESSIONGuessingEffectively" text="custom">Digression</xref> on effective guessing. We'll trust
-              our intuition, but also examine it closely. What we're saying is that
-              the solution of <xref ref="IVPExpDiffeq">Equation~</xref>) is:
+              This is a startling idea but before we dismiss it, let<rsq/>s take our own
+              advice from our <xref ref="DIGRESSIONGuessingEffectively" text="custom">Digression</xref> on effective guessing. We<rsq/>ll trust
+              our intuition, but also examine it closely. What we<rsq/>re saying is that
+              the solution of <xref ref="IVPExpDiffeq">equation</xref> is:
               <men  xml:id="EQUATIONExpSeries1">
                 y= 1+x+\frac{x^2}{2!}+\frac{x^3}{3!} + \cdots
                 <!-- \label{eq:ExpSeries1} -->
@@ -582,21 +597,21 @@
             </p>
       
             <p>
-              You would expect a polynomial that doesn't end to be called an
+              You would expect a polynomial that doesn<rsq/>t end to be called an
               infinite polynomial but it is not. Such an expression is called an
               <term>infinite series.</term> Usually we  just call it a series. A
               series is not a polynomial. That is, a polynomial is
               defined to have only finitely many terms and a series is
               defined to have infinitely many terms. We distinguish them from
               each other
-              specifically so that we don't confuse a series with a polynomial.
+              specifically so that we don<rsq/>t confuse a series with a polynomial.
             </p>
       
             <p>
               An obvious question to ask is, <q>Does this infinite series even mean
               anything?</q> Or, equivalently, <q>What does it mean to add up infinitely
               many numbers?</q>  These are excellent questions which will have to be
-              addressed eventually. But for now we won't let them trouble us. We'll
+              addressed eventually. But for now we won<rsq/>t let them trouble us. We<rsq/>ll
               just assume that <m>y=1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\ldots</m> makes
               sense, in the same way we assumed that differentials make sense and
               defer those questions until later.
@@ -622,11 +637,16 @@
               <task>
                 <statement>
                   <p>
-                    Show that <m>y(0)=1.</m> \\
-                    \hint{Yes, this really is as easy as it
-                    looks.}
+                    Show that <m>y(0)=1.</m> 
                   </p>
                 </statement>
+                <hint>
+                  <p>
+                    Yes, this really is as easy as it
+                    looks.
+                  </p>
+                </hint>
+
               </task>
             </problem>
 
@@ -646,12 +666,11 @@
               works.
             </p>
 
-            <figure>
-              <caption>
-                <url href="https://link.springer.com/content/pdf/10.1007/s00004-010-0030-8.pdf" visual="https://link.springer.com/content/pdf/10.1007/s00004-010-0030-8.pdf">This figure needs a caption.</url>
-              </caption>
-              <image source="images/ExpFifty.png" width="50%"/>
-            </figure>
+            <!-- <figure> -->
+            <!--   <caption> -->
+            <!--     <url href="https://link.springer.com/content/pdf/10.1007/s00004-010-0030-8.pdf" visual="https://link.springer.com/content/pdf/10.1007/s00004-010-0030-8.pdf">This figure needs a caption.</url> -->
+            <!--   </caption> -->
+            <!-- </figure> -->
             <!-- <figure> -->
             <!--      <caption> -->
             <!--      <url href="https://link.springer.com/content/pdf/10.1007/s00004-010-0030-8.pdf</pubtitle>{How -->
@@ -667,21 +686,22 @@
             <!--   \label{fig:ExpFifty} -->
             <!-- \end{wrapfigure} -->
             <p>
-              <xref ref="PROBLEMTaylorSeries1">Problem~\</xref> shows that we appear to have the
-              exact solution of <xref ref="IVPExpDiffeq">IVP~</xref>) in the form of the infinite
+              <xref ref="PROBLEMTaylorSeries1"></xref> shows that we appear to have the
+              exact solution of <xref ref="IVPExpDiffeq">IVP</xref> in the form of the infinite
               series,
               <men  xml:id="EQUATIONExpSeries2">
                 \exp(x)=1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\frac{x^4}{4!}+\ldots.
               </men>
-              This actually is a correct solution of <xref ref="IVPExpDiffeq">IVP~</xref>), and
+              This actually is a correct solution of <xref ref="IVPExpDiffeq">IVP</xref>, and
               eventually you will learn to work with infinite series solutions of
-              IVPs directly. But, unfortunately, we don't yet have the tools that allow
+              IVPs directly. But, unfortunately, we don<rsq/>t yet have the tools that allow
               us to do that. So we will have to find another way.
               What now?
             </p>
 
+              <image source="images/ExpFifty.png" width="30%"/>
             <p>
-              At the left is the graph of the polynomial
+              The sketch above shows the graph of the polynomial
               <m>y= 1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+ \cdots + \frac{x^{50}}{50!}</m>
               which we believe, from our work in <xref ref="SECTIONmore-high-deriv">Section</xref>,
               should be a good approximation to <m>\exp(x)</m>, at least when <m>x</m> is near
@@ -690,7 +710,7 @@
               graph should be a reasonable approximation to the solution of
               <xref ref="IVPExpDiffeq">IVP</xref> in the interval shown.
             </p>
-            <image source="images/FiftiethExp.png" width="60%" />
+            <image source="images/FiftiethExp.png" width="40%" />
             <!--         <image source="images/FiftiethExp.png" width="60%" /> -->
             <!-- \centerline{\includegraphics*[height=2in,width=2.5in]{../Figures/FiftiethExp}}  -->
 
@@ -701,7 +721,7 @@
               and notice that they are very similar to the graph of <m>y=
               1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+ \cdots + \frac{x^{50}}{50!}</m>.
             </p>
-            <image source="images/2^xAnd3^x.png" width="60%" />
+            <image source="images/2^xAnd3^x.png" width="40%" />
             <p>
               This
               is much clearer  when we graph all three functions
@@ -709,22 +729,22 @@
             </p>
 
             <!-- \centerline{\includegraphics*[height=2in,width=2.5in]{../Figures/2^xAnd3^x}} -->
-            <image source="images/Exp2and3.png" width="60%" />
+            <image source="images/Exp2and3.png" width="40%" />
             <!-- \centerline{\includegraphics*[height=2in,width=2.5in]{../Figures/Exp2and3}} -->
             <p>
               As you can plainly see near <m>x=0</m> they are indeed very similar.
             </p>
-            <image source="images/Exp2and3.png" width="60%" />
+            <image source="images/Exp2and3.png" width="40%" />
 
             <p>
               Since the polynomial <m>y= 1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+
               \cdots + \frac{x^{50}}{50!}</m> is an approximation to the
               solution of <xref ref="IVPExpDiffeq">IVP</xref> it appears that
               either of <m>y(x)=2^x</m> or <m>y(x)=3^x</m> might be a viable
-              candidate for the solution of our IVP.  Is it possible we've had
-              the solution in our hands all along? Let's differentiate
+              candidate for the solution of our IVP.  Is it possible we<rsq/>ve had
+              the solution in our hands all along? Let<rsq/>s differentiate
               <m>y(x)=2^x</m> to see if solves <xref
-              ref="IVPExpDiffeq">IVP~</xref>).
+              ref="IVPExpDiffeq">IVP</xref>.
             </p>
 
             <p>
@@ -735,7 +755,7 @@
             <p>
               To check the differential equation it is tempting to assume that we
               can apply the Power Rule, giving us <m>\dfdx{(2^x)}{x} = x2^{x-1}</m>. But
-              this can't possibly be correct because when <m>x</m> is negative then
+              this can<rsq/>t possibly be correct because when <m>x</m> is negative then
               <m>x2^{x-1}</m> is also negative. But the slope of <m>y(x)=2^x</m> is positive
               everywhere as you can see from its graph.
             </p>
@@ -747,19 +767,28 @@
               Differentiation Rules.
             </p>
 
+            <aside>
+<title>Commnet</title>
+<p>
+Our notation fails us a bit
+              here. Recall that <m>y(x)</m> is a function so <m>y(x+\dx{x})</m> means <q><m>y</m>
+              evaluated at <m>x+\dx{x}</m>.</q> This is not multiplication. 
+</p>
+</aside>
+
             <p>
               Let <m>y(x)=2^x</m> and observe that <m>\dx{y}</m> is the (infinitesimal)
-              difference between <m>y(x+\dx{x})</m> and\aside{Our notation fails us a bit
-              here. Recall that <m>y(x)</m> is a function so <m>y(x+\dx{x})</m> means <q><m>y</m>
-              evaluated at <m>x+\dx{x}</m>.</q> This is not multiplication. }
+              difference between <m>y(x+\dx{x})</m> and
               <m>y(x)</m>, or
-              \begin{align*}
-              \dx{y}\amp =y(x+\dx{x})-y(x)\\
-              \intertext{
+<me>
+              \dx{y} =y(x+\dx{x})-y(x)
+</me>
+
               Since <m>y(x+\dx{x})</m> is equal to <m>2^{x+\dx{x}}</m> and <m>y(x)=2^x</m> we
-              have,}
-              \dx{y} \amp =2^{x+\dx{x}}-2^x.\\
-              \end{align*}
+              have,
+<me>
+              \dx{y}  =2^{x+\dx{x}}-2^x.
+</me>
               Thus
               <men  xml:id="EQUATIONExp2-1">
                 \dx{y} =2^x(2^{\dx{x}}-1).
@@ -767,7 +796,7 @@
               </men>
             </p>
             <p>
-              We want to form <m>\dfdx{y}{x}</m> so we divide <xref ref="EQUATIONExp2-1">Equation~</xref>) by
+              We want to form <m>\dfdx{y}{x}</m> so we divide <xref ref="EQUATIONExp2-1">equation</xref> by
               <m>\dx{x}</m>, giving
               <men  xml:id="EQUATIONDEXP2">
                 \dfdx{y}{x}=\frac{2^x(2^{\dx{x}}-1)}{\dx{x}}.
@@ -780,12 +809,12 @@
               We have become comfortable thinking of <m>\dx{x}</m> as infinitely small,
               but it should be clear that if we take <m>\dx{x}</m> to be a very
               small, but finite number, say <m>\dx{x}= 0.0000001,</m> we can use
-              <xref ref="EQUATIONDEXP2">Equation~</xref>) to approximate <m>\dfdx{y}{x}</m> as
+              <xref ref="EQUATIONDEXP2">equation</xref> to approximate <m>\dfdx{y}{x}</m> as
               accurately as we wish.
             </p>
             <p>
               Replacing <m>\dx{x}</m> with <m>0.0000001</m> on the right side of
-              <xref ref="EQUATIONDEXP2">Equation~</xref>) we get
+              <xref ref="EQUATIONDEXP2">equation</xref> we get
               <men  xml:id="EQUATIONExp2-2">
                 \dfdx{y}{x}=\dfdx{(2^x)}{x}\approx
                 2^x\left[\frac{(2^{\dx{x}}-1)}{\dx{x}}\right]_{\dx{x}=0.0000001} \approx
@@ -796,18 +825,18 @@
             <exercise>
               <statement>
                 <p>
-                  Confirm  <xref ref="EQUATIONExp2-2">Equation</xref>.
+                  Confirm  <xref ref="EQUATIONExp2-2">equation</xref>.
                 </p>
               </statement>
             </exercise>
 
             <p>
-              This isn't bad for a first try! Do you see that we have almost
+              This isn<rsq/>t bad for a first try! Do you see that we have almost
               satisfied the differential equation? We have
               <m>\dfdx{(2^x)}{x}\approx (0.7)2^x</m> when what we need is
               <m>\dfdx{(2^x)}{x}=2^x</m>.  The constant factor is a bit too small. If it
-              were <m>1</m> instead of <m>0.7</m> we'd have the solution of
-              <xref ref="IVPExpDiffeq">IVP~</xref>). This is hopeful.
+              were <m>1</m> instead of <m>0.7</m> we<rsq/>d have the solution of
+              <xref ref="IVPExpDiffeq">IVP</xref>. This is hopeful.
             </p>
 
             <p>
@@ -818,17 +847,19 @@
                 3^x\left[\frac{(3^{\dx{x}}-1)}{\dx{x}}\right]_{\dx{x}=0.0000001} \approx
                 3^x(1.1).
               </men>
-              The initial condition is still satisfied and once again the differential
-              equation <xref ref="IVPExpDiffeq">in~</xref>) is {\it almost} satisfied. But this time
-              the coefficient, <m>1.1</m> is a bit too big.
+              The initial condition is still satisfied and once again
+              the differential equation part of <xref
+              ref="IVPExpDiffeq">IVP</xref> is <em>almost</em>
+              satisfied. But this time the coefficient, <m>1.1</m> is
+              a bit too big.
             </p>
 
             <p>
       It stands to reason that there must be some number between <m>2</m> and <m>3</m>
       with the property that <m>y=(\text{number})^x</m> satisfies
-      <xref ref="IVPExpDiffeq">IVP~</xref>). For historical reasons this number,
+      <xref ref="IVPExpDiffeq">IVP</xref>. For historical reasons this number,
       whatever it is, has been named <m>e</m>. So the solution of
-      <xref ref="IVPExpDiffeq">IVP~</xref>) is
+      <xref ref="IVPExpDiffeq">IVP</xref> is
       <me>
         \exp(x)=e^x.
       </me>
@@ -842,10 +873,10 @@
 <!-- <title>Exponential Notation</title> -->
 <p> 
        We originally named this function <m>\exp(x)</m>.That is still a
-        valid name for it, just as sqr(<m>x</m>) is a valid name for the function
+        valid name for it, just as sqr(<m>x</m> is a valid name for the function
         sqr<m>(x)=x^2</m>. However, just as the formula <m>y(x)=x^2</m>
         better represents the way we usually think about the squaring
-        function (<q>square the input variable</q>), the notation <m>y(x)=e^x</m>
+        function (<q>square the input variable</q>, the notation <m>y(x)=e^x</m>
         better represents the way we usually think about the natural
         exponential function.
 </p>
@@ -863,21 +894,21 @@
         expression <m>e^{1/2}</m> means.
 </p>
 <p>
-        That's easy enough. Since <m>x^{1/2}=\sqrt{x}</m> clearly
+        That<rsq/>s easy enough. Since <m>x^{1/2}=\sqrt{x}</m> clearly
         <m>e^{1/2}</m> is the square root of this funny number
         <m>e</m>: <me>e^{1/2}=\sqrt{e}.</me> It would not necessarily be easy to compute the
-        square root of <m>e</m> but we're only asking about the meaning of our
+        square root of <m>e</m> but we<rsq/>re only asking about the meaning of our
         symbols here. Since <m>e</m> is a positive number we can take its square
-        root and that is what <m>\sqrt{e}</m> means, even if we can't
+        root and that is what <m>\sqrt{e}</m> means, even if we can<rsq/>t
         compute it.  In precisely the same way <m>e^{5/7}=\sqrt[7]{e^5}</m>,
         <m>e^{2/3}=\sqrt[3]{e^2}</m> and in general if <m>a</m> and <m>b</m> are positive
         integers, <m>e^{a/b}=\sqrt[b]{e^a}</m>.
 </p>
 <p>
         But what could the expression <m>2^e</m> possibly mean?  Since <m>e</m> is not
-        an integer it doesn't mean <q><m>e</m> copies of <m>2</m> multiplied
-        together.</q>  Since <m>e</m> can't be represented as ratio of integers
-        (because it is irrational after all) it doesn't mean some
+        an integer it doesn<rsq/>t mean <q><m>e</m> copies of <m>2</m> multiplied
+        together.</q>  Since <m>e</m> can<rsq/>t be represented as ratio of integers
+        (because it is irrational after all) it doesn<rsq/>t mean some
         root of <m>2</m> raised to a power the way that say, <m>2^{5/7}</m> means
         <m>\sqrt[7]{2^5}.</m> This difficulty is compounded if we ask for the
         meaning of <m>e^\pi</m> or <m>\pi^e</m> since both <m>e</m> and <m>\pi</m> are
@@ -895,33 +926,33 @@
 <p>
 Many people are repelled when they encounter this
           situation. Especially in mathematics. After all, mathematics is
-          about having the answers to mathematical problems isn't it? 
+          about having the answers to mathematical problems isn<rsq/>t it? 
 </p>
 <p>
           Well,
-          no. Actually it isn't. You're thinking of engineering. 
+          no. Actually it isn<rsq/>t. You<rsq/>re thinking of engineering. 
           Mathematics is about finding the answers to mathematical
           problems, not having them.
 
 </p>
 </aside>
 <p>
-        Even if we can't compute it we need to find a way to give
+        Even if we can<rsq/>t compute it we need to find a way to give
         meaning
   to the expression <m>e^x</m> that works when <m>x</m> is
-        irrational.  Ideally, we'd like our interpretation to be consistent
+        irrational.  Ideally, we<rsq/>d like our interpretation to be consistent
         with our understanding that <m>e^3= e\cdot e\cdot e.</m>
 
         This is precisely why we define natural exponential as an infinite
-        series.    It can be shown (though we will not show it here) that if <m>m</m>, and <m>n</m> are integers
-        (<m>n\gt0</m>)  then
+        series.    It can be shown (though we will not show it here) that if <m>m</m>, and <m>n</m> are integers with
+        <m>n\gt0</m>  then
         <men  xml:id="EQUATIONExpSeries4">
-        \exp(m/n)=\left(\sqrt[n]{e}\right)^m=1+(m/n)+\frac{(m/n)^n}{n!}+\frac{(m/n)^3}{3!}+\frac{(m/n)^4}{4!}+\ldots,
+        \exp\left(\frac{m}{n}\right)= \left(\sqrt[n]{e}\right)^m=1+\left(\frac{m}{n}\right)+\frac{\left(\frac{m}{n}\right)^n}{n!}+\frac{\left(\frac{m}{n}\right)^3}{3!}+\frac{\left(\frac{m}{n}\right)^4}{4!}+\ldots 
 <!-- \label{eq:ExpSeries4} -->
         </men>
 </p>
 <p>
-        If there is only one solution to the IVP (there is) then
+        If there is only one solution to <xref ref="IVPExpDiffeq">IVP</xref> (there is) then
         <m>y(x) = e^x</m> and <m>y(x)=1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\ldots</m>
         must be the same solution.  Defining <m>\exp(x)</m> as
         <men  xml:id="EQUATIONExpSeries3">
@@ -952,7 +983,7 @@ Many people are repelled when they encounter this
       <task>
       <statement>
       <p>
-       Use <xref ref="EQUATIONExpApprox1">equation</xref>) to show that
+       Use <xref ref="EQUATIONExpApprox1">equation</xref> to show that
             <m>\inverse{e} \approx 0.36788</m>. Compare this with the numerical
             value of
             <m>\frac1e\approx\frac{1}{2.71828}</m> you get from a calculator.
@@ -960,14 +991,14 @@ Many people are repelled when they encounter this
       </statement>
 <hint>
 <p>
-In <xref ref="EQUATIONExpApprox1">equation</xref>) take <m>x=-1.</m>
+In <xref ref="EQUATIONExpApprox1">equation</xref> take <m>x=-1.</m>
 </p>
 </hint>
       </task>
       <task>
       <statement>
       <p>
-       Use <xref ref="EQUATIONExpApprox1">equation</xref>) to show that
+       Use <xref ref="EQUATIONExpApprox1">equation</xref> to show that
             <m>\sqrt{e} \approx 1.64872</m>. Compare this with the numerical
             value of <m>\sqrt{e}\approx \sqrt{2.71828}</m> you get from a
             calculator.
@@ -1044,7 +1075,7 @@ In <xref ref="EQUATIONExpApprox1">equation</xref>) take <m>x=-1.</m>
 <p>
 You can decide for yourself how natural this really
       is. Opinions vary. But whether you decide you like this name or not
-      it is the name everyone uses so we're stuck with it.
+      it is the name everyone uses so we<rsq/>re stuck with it.
 </p>
 </aside>
 
@@ -1068,7 +1099,7 @@ You can decide for yourself how natural this really
         \frac{1^{50}}{50!}.
       </me>
       Compute this approximation using your favorite computing
-      technology to confirm that <m>e\approx 2.718</m>.  (If you don't
+      technology to confirm that <m>e\approx 2.718</m>.  (If you don<rsq/>t
       have any computing technology available just compute the sum of
       the first six terms.)
       </p>
@@ -1078,8 +1109,8 @@ You can decide for yourself how natural this really
       <p>
       The upshot of <xref ref="DRILLComputingE"></xref> is that if we
       replace <m>2</m> with <m>e\approx 2.718</m> in <xref
-      ref="EQUATIONExp2-1">Equation</xref>, or if we replace <m>3</m> in
-      <xref ref="EQUATIONExp3">Equation</xref> the constant the result
+      ref="EQUATIONExp2-1">equation</xref>, or if we replace <m>3</m> in
+      <xref ref="EQUATIONExp3">equation</xref> the constant the result
       should be closer to <m>1</m> than if we use  <m>0.7</m> or
       <m>1.1</m>, respectively.
       </p>
@@ -1112,7 +1143,7 @@ You can decide for yourself how natural this really
       </p>
 <p>
         But the evidence is compelling that <m>\exp(x)=e^x</m> is the solution of
-        the <xref ref="IVPExpDiffeq">IVP</xref>).  Henceforth then, we will reserve the
+        the <xref ref="IVPExpDiffeq">IVP</xref>.  Henceforth then, we will reserve the
         letter <m>e</m> to designate the base of the natural exponential function.
       </p>
 
@@ -1289,7 +1320,7 @@ Point: <m>(1,e/2)</m>
       <task>
         <statement>
           <p>
-            Show that when we use Newton's Method to approximate the coordinates
+            Show that when we use Newton<rsq/>s Method to approximate the coordinates
             of the intersection point of the curves <m>y = -x</m> and <m>y = e^x</m>, we
             get the iteration formula
             <me>
@@ -1317,9 +1348,10 @@ Point: <m>(1,e/2)</m>
       <task>
         <statement>
           <p>
-            Show that when we use Newton's Method to approximate the coordinates -->
-            of the intersection point of the curves <m>y = -x</m> and <m>y = e^x</m>, we
-            get the iteration formula
+            Show that when we use Newton<rsq/>s Method to approximate
+            the coordinates of the intersection point of the curves
+            <m>y = -x</m> and <m>y = e^x</m>, we get the iteration
+            formula
             <me>
               r_{n+1}=\frac{r_n-1}{1+e^{-r_n}}
       </me>
@@ -1589,79 +1621,106 @@ Point: <m>(1,e/2)</m>
         it is the key to the solution.
       </p>
 
-<problem  xml:id="PROBLEMHangingChain">
-<title>The Shape of a Hanging Chain</title>
-<introduction>
+      <problem  xml:id="PROBLEMHangingChain">
+        <title>The Shape of a Hanging Chain</title>
+        <introduction>
+          <p>
+            The Calculus in this problem is pretty straightforward but the
+            Algebra gets a bit messy. To avoid some of this mess in <xref ref="PROBLEMHangChainA"> part</xref>, <xref ref="PROBLEMHangChainB"> part</xref>, and <xref ref="PROBLEMHangChainC"> part</xref> we will solve the special case where <m>\frac{w}{H}=1</m>
+            in  <xref ref="PROBLEMHangChainD"> part</xref> we<rsq/>ll use our solution of this special case to solve
+            the original problem.
+          </p>
+          <p>
+            So assume that <m>\frac{w}{H}=1</m>.  For this special case we will call
+            our variables <m>X</m> and <m>Y</m>, rather than <m>x</m> and <m>y</m>. The reasons for
+            this will become clear in  <xref ref="PROBLEMHangChainD"> part</xref>.
+          </p>
+        </introduction>
+        <task  xml:id="PROBLEMHangChainA">
+          <statement>
+            <p>
+              Show that
+              <m>1+\left(\frac{e^X-e^{-X}}{2}\right)^2=\left(\frac{e^X+e^{-X}}{2}\right)^2.</m>
+            </p>
+          </statement>
+          <hint>
+            <p>
+              It might help to make the substitution <m>e^X=a</m> just to make
+              things <q>easier on the eyes.</q> That makes <m>e^{-X}=\frac1a.</m>
+            </p>
+          </hint>
+        </task>
+        <task  xml:id="PROBLEMHangChainB">
+          <statement>
+            <p>
+              Show that
+              <me>\dfdx{\left(\frac12\left(e^X+e^{-X}\right)\right)}{X} =\frac12 \left(e^X-e^{-X}\right) </me>
+              and that
+              <me>\dfdx{\left(\frac12\left(e^X-e^{-X}\right)\right)}{X} =\frac12 \left(e^X+e^{-X}\right). </me>
+            </p>
+          </statement>
+        </task>
+        <task  xml:id="PROBLEMHangChainC">
+          <statement>
+            <p>
+              Show that the curve <m>Y=\frac12 \left( e^X+e^{-X}\right) </m>
+              satisfies the differential equation
+              <me>\dfdxn{Y}{X}{2}=\sqrt{1+\left(\dfdx{Y}{X} \right)^2 }.</me>
+            </p>
+          </statement>
+        </task>
+        <task  xml:id="PROBLEMHangChainD">
+          <p>
+            Now let<rsq/>s tackle the original problem.
+            Show that
+            <men  xml:id="EQUATIONCatSol">
+              y=\frac{H}{w}
+              \left(\frac{e^{\frac{wx}{H}}+e^{-\frac{wx}{H}}}{2}\right)
+            </men>
+            satisfies the equation
+            <me>
+              \dfdxn{y}{x}{2}=\frac{w}{H} \sqrt{1+\left(\dfdx{y}{x}\right)^2}
+            </me>
+            where <m>w</m> is the weight density of the chain, and <m>H</m> is the
+            constant (magnitude of the) horizontal tension.
+          </p>
+<hint>
 <p>
-        The Calculus in this problem is pretty straightforward but the
-        Algebra gets a bit messy. To avoid some of this mess in parts (a),
-        (b), and (c) we will solve the special case where <m>\frac{w}{H}=1</m>.
-        In part (d) we'll use our solution of this special case to solve
-        the original problem.
+This is essentially the same computation you did for the
+            special case, but the Algebra is messier. Consider making
+            it <q>easier on the eyes</q> with the
+            substitutions <me>X=\frac{wx}{H}</me> and
+            <me>Y(X)=\frac12\left(e^X+e^{-X}\right).</me>
+            We already know from <xref ref="HangChainC">part</xref> that
+            <m>\dfdxn{Y}{X}{2}=\sqrt{1+\left(\dfdx{Y}{X}\right)^2}</m>.
+            Notice that <m>y=\frac{H}{w}Y(X)</m> and use this to show that
+            <m>
+              \dfdx{y}{x}=\dfdx{Y}{X}\text{ and that }
+              \dfdxn{y}{x}{2}=\frac{w}{H}\dfdxn{Y}{X}{2}.
+            </m>
 </p>
-<p>
-        So assume that <m>\frac{w}{H}=1</m>.  For this special case we will call
-        our variables <m>X</m> and <m>Y</m>, rather than <m>x</m> and <m>y</m>. The reasons for
-        this will become clear in part (d).
-</p>
-</introduction>
-<task>
+</hint>
+        </task>
+<task  xml:id="PROBLEMHangChainE">
 <statement>
 <p>
-     Show that
-        <m>1+\left(\frac{e^X-e^{-X}}{2}\right)^2=\left(\frac{e^X+e^{-X}}{2}\right)^2.</m>
-        \hint{It might help to make the substitution <m>e^X=a</m> just to make
-        things <q>easier on the eyes.</q> That makes <m>e^{-X}=\frac1a.</m>}
+Assume that <m>w=1 </m>, and <m>H=1</m> and graph the curve given in
+<xref ref="EQUATIONCatSol"></xref>. Does it look like a hanging chain? What
+happens to the graph if we use <m>w=1</m> and <m>H=2</m>, or
+<m>w=2</m> and <m>H=1</m>? Does this make sense physically? Why or why
+not?
 </p>
 </statement>
 </task>
-<task>
-<statement>
-<p>
-     Show that
-        <m>1+\left(\frac{e^X-e^{-X}}{2}\right)^2=\left(\frac{e^X+e^{-X}}{2}\right)^2.</m>
-        \hint{It might help to make the substitution <m>e^X=a</m> just to make
-        things <q>easier on the eyes.</q> That makes <m>e^{-X}=\frac1a.</m>}
-</p>
-</statement>
-</task>
-<task>
-<p>
-     Now let's tackle the original problem.
-  Show that
-      <men  xml:id="EQUATIONCatSol">
-        y=\frac{H}{w}
-        \left(\frac{e^{\frac{wx}{H}}+e^{-\frac{wx}{H}}}{2}\right)
-      </men>
-      satisfies the equation
-      <me>
-        \dfdxn{y}{x}{2}=\frac{w}{H} \sqrt{1+\left(\dfdx{y}{x}\right)^2}
-      </me>
-      where <m>w</m> is the weight density of the chain, and <m>H</m> is the
-      constant (magnitude of the) horizontal tension.\\
-      \hint{This is essentially the same computation you did for the
-      special case, but the Algebra is messier. Consider making
-      it <q>easier on the eyes</q> with the
-      substitutions <me>X=\frac{wx}{H} \text{ and }
-      Y(X)=\frac12\left(e^X+e^{-X}\right).</me>
-      We already know from part (c) that
-      <m>\dfdxn{Y}{X}{2}=\sqrt{1+\left(\dfdx{Y}{X}\right)^2}</m>.
-      Notice that <m>y=\frac{H}{w}Y(X)</m> and use this to show that
-      <m>
-        \dfdx{y}{x}=\dfdx{Y}{X}\text{ and that }
-        \dfdxn{y}{x}{2}=\frac{w}{H}\dfdxn{Y}{X}{2}.
-      </m>
-      }
-</p>
-</task>
-</problem>
+
+      </problem>
 
       <!--   \begin{embeddedproblem}[The Shape of a Hanging Chain]  ;;; MULTILEVEL PROBLEM -->
       <!--   <!-\- <!-\\- \label{problem:HangingChain} -\\-> -\-> -->
       <!--   The Calculus in this problem is pretty straightforward but the -->
       <!--   Algebra gets a bit messy. To avoid some of this mess in parts (a), -->
       <!--   (b), and (c) we will solve the special case where <m>\frac{w}{H}=1</m>. -->
-      <!--   In part (d) we'll use our solution of this special case to solve -->
+      <!--   In part (d) we<rsq/>ll use our solution of this special case to solve -->
       <!--   the original problem. -->
 
       <!--   So assume that <m>\frac{w}{H}=1</m>.  For this special case we will call -->
@@ -1683,7 +1742,7 @@ Point: <m>(1,e/2)</m>
       <!--   \dfdxn{Y}{X}{2}=\sqrt{1+\left(\dfdx{Y}{X}\right)^2} -->
       <!-- </me> -->
       <!-- \end{enumerate} -->
-      <!-- Now let's tackle the original problem. -->
+      <!-- Now let<rsq/>s tackle the original problem. -->
 
       <!-- \begin{enumerate}[start=4,label={  (\alph*)}] -->
       <!-- \item  Show that -->
@@ -1812,7 +1871,7 @@ Traditionally, <m>\sinh</m> is read aloud as <q>cinch</q> and <m>\cosh{}</m> is 
 <statement>
 <p>
  Show that
-<ol  marker="i">
+<ol  cols="2" marker="i">
 <li>
 <p>
  <m>\dfdx{(\cosh(x))}{x} = \sinh(x)</m>
@@ -1820,27 +1879,27 @@ Traditionally, <m>\sinh</m> is read aloud as <q>cinch</q> and <m>\cosh{}</m> is 
 </li>
 <li>
 <p>
- <m>\dfdx{(\sinh(x))}{x} = \cosh(x)</m>.
+ <m>\dfdx{(\sinh(x))}{x} = \cosh(x)</m>
 </p>
 </li>
 <li>
 <p>
- <m>\dfdx{(\tanh(x))}{x} = \sech^2(x)</m>.
+ <m>\dfdx{(\tanh(x))}{x} = \sech^2(x)</m>
 </p>
 </li>
 <li>
 <p>
- <m>\dfdx{(\coth(x))}{x} = -\csch^2(x)</m>.
+ <m>\dfdx{(\sech(x))}{x} = -\sech(x)\tanh(x)</m>
 </p>
 </li>
 <li>
 <p>
- <m>\dfdx{(\sech(x))}{x} = -\sech(x)\tanh(x)</m>.
+ <m>\dfdx{(\coth(x))}{x} = -\csch^2(x)</m>
 </p>
 </li>
 <li>
 <p>
- <m>\dfdx{(\csch(x))}{x} = -\csch(x)\coth(x)</m>.
+ <m>\dfdx{(\csch(x))}{x} = -\csch(x)\coth(x)</m>
 </p>
 </li>
 </ol>
@@ -1961,11 +2020,7 @@ Traditionally, <m>\sinh</m> is read aloud as <q>cinch</q> and <m>\cosh{}</m> is 
       <!-- <!-\-   \caption{\textcolor{black}{The Gateway Arch in St. Louis}} -\-> -->
       <!-- <!-\- \end{wrapfigure} -->
       <p>
-        When he designed the Gateway Arch\aside{For more information on the
-        history and mathematics of the Gateway Arch, see the article by
-        Robert Osserman <url  href="https://link.springer.com/content/pdf/10.1007/s00004-010-0030-8.pdf"
-        visual="https://link.springer.com/content/pdf/10.1007/s00004-010-0030-8.pdf">How
-        the Gateway Arch Got its Shape</url> in St. Louis, Missouri, architect <url
+        When he designed the Gateway Arch in St. Louis, Missouri, architect <url
         href="https://en.wikipedia.org/wiki/Eero_Saarinen"
         visual="https://en.wikipedia.org/wiki/Eero_Saarinen">Eero
         Saarinen</url> wanted to build it in the shape of an inverted
@@ -1980,7 +2035,18 @@ Traditionally, <m>\sinh</m> is read aloud as <q>cinch</q> and <m>\cosh{}</m> is 
         </men>
         where <m>
         -299.226\leq x\leq 299.226</m>.
-      </p>
+        </p>
+        <aside>
+<title>Historical Background</title>
+<p>
+For more information on the
+        history and mathematics of the Gateway Arch, see the article by
+        Robert Osserman <url  href="https://link.springer.com/content/pdf/10.1007/s00004-010-0030-8.pdf"
+        visual="https://link.springer.com/content/pdf/10.1007/s00004-010-0030-8.pdf"><pubtitle>How
+        the Gateway Arch Got its Shape</pubtitle></url>
+</p>
+</aside>
+
       <problem>
         <introduction>
           <p>
@@ -2069,11 +2135,11 @@ Traditionally, <m>\sinh</m> is read aloud as <q>cinch</q> and <m>\cosh{}</m> is 
           assuming that <m>30</m>% of our bacteria divide once per day at the same
           time.  Such a population is growing at a rate of <m>30</m>% per day.  If
           we start with <m>10</m> grams of bacteria on day zero, then on day one
-          we'll have <m>30%</m> more, or <m>13</m> grams. On day two we'll have <m>30\%</m>
+          we<rsq/>ll have <m>30%</m> more, or <m>13</m> grams. On day two we<rsq/>ll have <m>30\%</m>
           more than on day one, or <m>16.9</m> grams. It should be clear that the
           rate of growth from day <m>n</m> to day <m>n+1</m> is proportional to how many
           bacteria we have on day <m>n</m>. Thus from any one day to the next we
-          see that the change in <m>P</m> (<m>\Delta P</m>) is given by
+          see that the change in <m>P</m> (<m>\Delta P</m> is given by
           <men  xml:id="EQUATIONDiscBacterModel">
                         \Delta P = 0.3 P\Delta t
           </men>
@@ -2088,8 +2154,8 @@ Traditionally, <m>\sinh</m> is read aloud as <q>cinch</q> and <m>\cosh{}</m> is 
           next that enough of them divide during any one hour so that at the
           end of one day the population has still grown by <m>30</m>\%. Then from
           any one hour to the next we again have
-          <xref ref="EQUATIONDiscBacterModel">Equation</xref>) but this time <m>\Delta t</m> is
-          equal to one hour, or <m>\frac{1}{24}</m> day.  However, we don't have to
+          <xref ref="EQUATIONDiscBacterModel">equation</xref> but this time <m>\Delta t</m> is
+          equal to one hour, or <m>\frac{1}{24}</m> day.  However, we don<rsq/>t have to
           measure time in days. If we measure it in hours instead we again
           have <m>\Delta t=1 \text{ hour } = \frac{1}{24} \text{ day}</m>. The constant factor is still <m>0.3</m> because we assumed that the
           population was growing at <m>30\%</m> per day, and this is still
@@ -2111,9 +2177,9 @@ The word
 
         <p>
           If we measure time in seconds the same reasoning will give us
-          <xref ref="EQUATIONDiscBacterModel">Equation</xref>), with <m>\Delta t=1 \text{ second }
+          <xref ref="EQUATIONDiscBacterModel">equation</xref>, with <m>\Delta t=1 \text{ second }
           = 1.15741\times 10^{-5} \text{ day}</m>. If we
-          measure in nanoseconds we get <xref ref="EQUATIONDiscBacterModel">Equation</xref>),
+          measure in nanoseconds we get <xref ref="EQUATIONDiscBacterModel">equation</xref>,
           with <m>\Delta t=1 \text{ nanosecond } = 1.15741\times 10^{-14} \text{ day}</m>. If we measure time in
           infinitesimal increments we  get
           <me>
@@ -2138,7 +2204,7 @@ The word
             </mrow>
           </mdn>
           Take specific notice that the differential equation in
-          <xref ref="EQUATIONBacteriaIVP">IVP</xref>) expresses the idea
+          <xref ref="EQUATIONBacteriaIVP">IVP</xref> expresses the idea
           that the rate of change of the population, <m>\dfdx{P}{t}</m>, is
           proportional to the size of the population, <m>P</m>. The constant of
           proportionality is <m>0.3</m>, or <m>30\%</m>.
@@ -2149,7 +2215,7 @@ The word
         <p>
           Clearly there is nothing particularly special about the number <m>0.3.</m>
           If our colony had been increasing at a <term>nominal</term> rate of <m>15\%</m>
-          we'd have arrived at the IVP:
+          we<rsq/>d have arrived at the IVP:
           <me>
             \dfdx{P}{t}=0.15P,\ \ P(0)=10.
           </me>
@@ -2160,7 +2226,7 @@ The word
           <p>
             To begin solving <xref ref="EQUATIONBacteriaIVP">IVP</xref> show that one solution of
             the <term>differential equation</term> <m> \dfdx{P}{t}=0.3P</m>, from
-            <xref ref="EQUATIONBacteriaIVP">IVP</xref>) is: <me>\rho(t)=e^{0.3t}.</me> There are other
+            <xref ref="EQUATIONBacteriaIVP">IVP</xref> is: <me>\rho(t)=e^{0.3t}.</me> There are other
             solutions.  Find one of them.
           </p>
         </statement>
@@ -2168,18 +2234,18 @@ The word
       <p>
         From <xref ref="DRILLExpGrowth1"></xref> we see that a solution of the
         differential equation in our bacterial growth problem,
-        <xref ref="EQUATIONBacteriaIVP">IVP</xref>), is <m>\rho(t)= e^{0.3t}</m>. But <m>\rho(t)</m> does
+        <xref ref="EQUATIONBacteriaIVP">IVP</xref>, is <m>\rho(t)= e^{0.3t}</m>. But <m>\rho(t)</m> does
         not satisfy the initial condition since
         \begin{align*}
         \rho(0)\amp =e^{(0.3)0}\\
         \amp = e^0\\
         \amp =1\neq10,
         \end{align*}
-        so <m>\rho(t)</m> can't be the solution of our bacterial growth problem,
-        <xref ref="EQUATIONBacteriaIVP">IVP</xref>).
+        so <m>\rho(t)</m> can<rsq/>t be the solution of our bacterial growth problem,
+        <xref ref="EQUATIONBacteriaIVP">IVP</xref>.
       </p>
       <p>
-        We've found that <m>P(t)= e^{0.3t}</m> satisfies the differential equation
+        We<rsq/>ve found that <m>P(t)= e^{0.3t}</m> satisfies the differential equation
         but not the initial condition. Can we tweak this so that it
         satisfies the initial condition?
       </p>
@@ -2290,27 +2356,27 @@ The word
             \dfdx{P}{t}\amp{}=rP, \amp{}  P(0)\amp{}=P_0.
           </mrow>
         </mdn>
-        The constant <m>r</m> is called the <term>nominal</term> growth rate as we've
+        The constant <m>r</m> is called the <term>nominal</term> growth rate as we<rsq/>ve
         seen.  Because <m>r=\frac{\dfdx{P}{t}}{P}</m> it is also called the <term>
         relative</term> growth rate of the population and is often given as a
         percentage, as we have done here.
       </p>
 
       <p>
-        The <xref ref="IVPExpGeneral">IVP</xref>) should look familiar to you.  Notice that when
+        The <xref ref="IVPExpGeneral">IVP</xref> should look familiar to you.  Notice that when
         <m>r=1</m> and <m>P_0=1</m> it is  the same as <xref ref="IVPExpDiffeq">IVP</xref>
         which we used to define the the natural exponential. Except, of
         course, for the names of the variables. To put it another
-        way <xref ref="IVPExpGeneral">IVP</xref>) is the special case of
-        <xref ref="IVPExpDiffeq">IVP</xref>) when <m>r=1.</m> Since these are so similar it is not
+        way <xref ref="IVPExpGeneral">IVP</xref> is the special case of
+        <xref ref="IVPExpDiffeq">IVP</xref> when <m>r=1.</m> Since these are so similar it is not
         surprising  that the solution of <xref ref="IVPExpGeneral">IVP</xref>
         involves the natural exponential.
       </p>
 
       <p>
-        <xref ref="PROBLEMExpGrowth2">Problems</xref> and <xref ref="PROBLEMBacteriaIVP1"></xref>
+        <xref ref="PROBLEMExpGrowth2">Problem</xref> and <xref ref="PROBLEMBacteriaIVP1"></xref>
         suggest, rather convincingly, that the general solution of
-        <xref ref="IVPExpGeneral">IVP</xref>) is
+        <xref ref="IVPExpGeneral">IVP</xref> is
         <men  xml:id="EQUATIONGeneralExponentialSolution">
           P(t)=P_0e^{rt}.
         </men>
@@ -2320,14 +2386,14 @@ The word
         <statement>
           <p>
             Show that <m>P(t)=P_0e^{rt}</m> is a
-            solution of <xref ref="IVPExpGeneral">IVP</xref>).
+            solution of <xref ref="IVPExpGeneral">IVP</xref>.
           </p>
         </statement>
       </exercise>
 
       <p>
         Part (c) in <xref ref="PROBLEMBacteriaIVP1">Problem</xref> indicates that there
-        are limitations to the usefulness of <xref ref="EQUATIONBacteriaIVP">IVP</xref>) and
+        are limitations to the usefulness of <xref ref="EQUATIONBacteriaIVP">IVP</xref> and
         its solution, <m>P(t)=10e^{0.3 t}</m>. If we use it to
         predict how much bacteria there would be after one year we get
         <m>P(365)=10e^{0.3\times365}\approx3.59\times10^{48}</m> grams.  Since
@@ -2359,15 +2425,23 @@ below  shows the surface of Lake Erie during  what is called
 <p>
 The green discoloration on the western side of the
         lake is from an explosive (exponential) growth of algae.  When the
-        conditions for algae growth are nearly optimum -- if there is abundant
+        conditions for algae growth are nearly optimum <mdash/> if there is abundant
         food, there is room for the population to expand into, and the water
-        temperature is exactly right -- the population of algae in Lake Erie
-        tracks with our model nearly perfectly\aside{Except that the nominal
-        growth rate and the initial condition would need to be adjusted to
-        fit the situation.}. The quantity of algae grows exponentially until
+        temperature is exactly right <mdash/> the population of algae in Lake Erie
+        tracks with our model nearly perfectly.
+ The quantity of algae grows exponentially until
         the conditions become sub-optimal. Then the population of algae drops
         again to normal levels.
       </p>
+<aside>
+<title>Comment</title>
+<p>
+Except that the nominal
+        growth rate and the initial condition would need to be adjusted to
+        fit the situation.
+</p>
+</aside>
+
 
       <p>
         An algal bloom can happen in any body of water where algae grow. They
@@ -2413,14 +2487,14 @@ The green discoloration on the western side of the
 
       <p>
         There is a lot of financial jargon in the previous paragraph which
-        makes it hard to understand if we don't speak financial-ese. So we
+        makes it hard to understand if we don<rsq/>t speak financial-ese. So we
         will take a few pages to learn the vocabulary. After that things will
         clear up pretty quickly.
       </p>
 
       <p>
         To start, the effective yield represents the actual amount of money
-        earned at the end of one year -- how much money the investment
+        earned at the end of one year <mdash/> how much money the investment
         actually pays out.  For example, if the investment was not
         compounded at all, then at the end of one year, every dollar invested
         would yield <m>1.05</m> in return, so the effective yield is the same as
@@ -2530,7 +2604,7 @@ The green discoloration on the western side of the
       <p>
         What if the investment was compounded continuously? That is,
         suppose the interest is being continuously paid out and
-        simultaneously reinvested? Obviously, this can't actually be done,
+        simultaneously reinvested? Obviously, this can<rsq/>t actually be done,
         but it comes to the same thing if at the end of the year we get an
         effective yield that is equal to the effective yield that would
         come from continuous compounding. All we have to do is figure out
@@ -2577,7 +2651,7 @@ The green discoloration on the western side of the
       <p>
         In <xref ref="SECTIONexponential">Section</xref> we saw that <m>e\approx2.7182</m>. From
         this table it would appear that <m>\left(1+\frac{1}{m}\right)^m</m>
-        approaches the number <m>e</m> as <m>m</m> grows larger -- that is, as we
+        approaches the number <m>e</m> as <m>m</m> grows larger <mdash/> that is, as we
         compound the interest more frequently.  We will show that this is in
         fact the case in <xref ref="SECTIONmore-indet-forms">Section</xref>.
       </p>
@@ -2680,14 +2754,13 @@ The green discoloration on the western side of the
       </p>
 
       <p>
-        To answer this question we'd need solve <m> e^{0.05t}=2</m>, for <m>t</m> and
+        To answer this question we<rsq/>d need solve <m> e^{0.05t}=2</m>, for <m>t</m> and
         compare this to the solution of <m> e^{0.1t}=2 </m>.   To
         solve either equation we need a way to <q>undo</q> the natural
         exponential function. That is, we need the inverse of the natural
         exponential function. This leads us to a discussion of the <term>natural
         logarithm</term> function in the next section.
       </p>
-
 
     </section>
 
@@ -2782,7 +2855,7 @@ The green discoloration on the western side of the
 <aside>
 <title>A Little History</title>
 <p>
-We're taking liberties with the history here. Napier's
+We<rsq/>re taking liberties with the history here. Napier<rsq/>s
         original scheme was not based on <m>10^x</m>.  We explain how Napier
         actually defined his logarithms in
         <xref ref="DIGRESSIONBriggsAndNapier" text="custom">Digression</xref>.  For now it is useful to
@@ -2818,10 +2891,10 @@ We're taking liberties with the history here. Napier's
         To use a table of base <m>10</m> logarithms to find the product of two
         numbers we would first look up the logarithm of each number, then add
         the logarithms.  The resulting sum is the base <m>10</m> logarithm of the
-        product, so we'd look up in our table what this sum is the logarithm
+        product, so we<rsq/>d look up in our table what this sum is the logarithm
         of. The result is the product of the two original numbers. Since the
         invention of modern computing technology the original purpose of base
-        <m>10</m> logarithms -- simplifying numerical computations -- is completely
+        <m>10</m> logarithms <mdash/> simplifying numerical computations <mdash/> is completely
         obsolete. So
 
 <url href="https://www.maa.org/press/periodicals/convergence/mathematical-treasure-babbage-s-tables-of-logarithms" visual="https://www.maa.org/press/periodicals/convergence/mathematical-treasure-babbage-s-tables-of-logarithms">tables
@@ -2853,7 +2926,7 @@ We're taking liberties with the history here. Napier's
 
         In the same way that <m>\log_{10}(x)</m> is the functional inverse of the
         base ten exponential, <m>10^x</m>, the \term{natural logarithm} - usually
-        denoted  <m>\ln(x)</m> -- is the functional inverse of the
+        denoted  <m>\ln(x)</m> <mdash/> is the functional inverse of the
         natural exponential, <m>e^x</m>.
         This inverse relationship allows us to immediately observe two
         important properties of the natural logarithm.
@@ -2957,7 +3030,7 @@ We're taking liberties with the history here. Napier's
 </p>
 <p>
 
-      As we've observed the \term{natural logarithm} function is, by
+      As we<rsq/>ve observed the \term{natural logarithm} function is, by
       definition, the inverse of the \term{natural exponential} in
       precisely the same way that <m>\inverse\tan(x)</m> is, by definition, the
       inverse of <m>\tan(x)</m> .  Unfortunately the notation that is used for
@@ -2974,7 +3047,7 @@ We're taking liberties with the history here. Napier's
       to use it when we want to emphasize the functional nature of the
       natural exponential, but most of the time it is more helpful to
       think of it as the number <q><m>e</m> raised to a power</q> and to denote it
-      with <m>e^x</m> which, unfortunately, doesn't look like the name of a
+      with <m>e^x</m> which, unfortunately, doesn<rsq/>t look like the name of a
       function at all.
 </p>
 <p>
@@ -2994,7 +3067,7 @@ We're taking liberties with the history here. Napier's
       the natural logarithm. This notation comes from the initials of the
       Latin name of the function: \foreign{logarithms naturali}. This is
       unfortunate for the student because it adheres to no standard naming
-      scheme whatsoever. But once you get used to it, it isn't so bad.
+      scheme whatsoever. But once you get used to it, it isn<rsq/>t so bad.
 </p>
 <p>
 
@@ -3416,7 +3489,7 @@ We're taking liberties with the history here. Napier's
 
 
       <p>
-        Let's return to the question that motivated our look into the
+        Let<rsq/>s return to the question that motivated our look into the
         logarithm function in the first place: <q>How long will it take for my money to
         double?</q>
       </p>
@@ -3552,7 +3625,7 @@ We're taking liberties with the history here. Napier's
         <me>
           y(t)=2e^{rt}
         </me>
-        but we don't know the value of <m>r</m>.
+        but we don<rsq/>t know the value of <m>r</m>.
       </p>
       <p>
 
@@ -3598,7 +3671,7 @@ We're taking liberties with the history here. Napier's
         <statement>
           <p>
             How good was your guess in <xref ref="DRILLBacteriaGuess1"></xref>?
-            Whether it was good or bad isn't really the point. Either way take
+            Whether it was good or bad isn<rsq/>t really the point. Either way take
             a moment to hone your guessing skills by considering why you
             guessed the way you did. What was your intuition telling you about
             the problem?
@@ -3747,7 +3820,7 @@ We're taking liberties with the history here. Napier's
         </p>
 
         <p>
-          Wait a minute. This can't be right. It says that the number of
+          Wait a minute. This can<rsq/>t be right. It says that the number of
           isotopes is increasing, not decreasing. Graph it and see.
         </p>
         <p>
@@ -3767,7 +3840,7 @@ We're taking liberties with the history here. Napier's
           </men>
           instead of
           <xref ref="IVPRadioactiveDecay-Wrong"></xref>. Since <xref ref="IVPIVP:RadioactiveDecay-Correct"></xref>
-          also has the same form as <xref ref="IVeq:ExpGen"></xref>),  the correct
+          also has the same form as <xref ref="IVeq:ExpGen"></xref>,  the correct
           solution is
           <men  xml:id="EQUATIONNuclearDecay-Wrong">
             <!-- \label{eq:NuclearDecay-Wrong} -->
@@ -3807,7 +3880,7 @@ We're taking liberties with the history here. Napier's
             y(t) =6e^{rt}
           </me>
           where and <m>r</m> is an unknown constant.  To find <m>r</m> we must use the
-          additional information given.  Half of our isotope's mass is
+          additional information given.  Half of our isotope<rsq/>s mass is
           lost in <m>2</m> hours, so <m>y(2)=3</m>. Thus
           \begin{align*}
           y(2)=3\amp = 6e^{r(2)}\\
@@ -4077,7 +4150,7 @@ We're taking liberties with the history here. Napier's
 
             This has been used by scientists to study the frequency of
             geomagnetic reversals.  A geomagnetic reversal is a change in the
-            earth's magnetic polarity where the magnetic north and south poles
+            earth<rsq/>s magnetic polarity where the magnetic north and south poles
             (not to be confused with the geographic north and south poles) are
             switched.  Basically, the magnetic polarity of the planet is
             <q>recorded</q> in cooled lava flows.  By dating the age of the
@@ -4114,7 +4187,7 @@ We're taking liberties with the history here. Napier's
 
       <!-- This has been used by scientists to study the frequency of -->
       <!-- geomagnetic reversals.  A geomagnetic reversal is a change in the -->
-      <!-- earth's magnetic polarity where the magnetic north and south poles -->
+      <!-- earth<rsq/>s magnetic polarity where the magnetic north and south poles -->
       <!-- (not to be confused with the geographic north and south poles) are -->
       <!-- switched.  Basically, the magnetic polarity of the planet is -->
       <!-- <q>recorded</q> in cooled lava flows.  By dating the age of the -->
@@ -4134,14 +4207,14 @@ We're taking liberties with the history here. Napier's
 
     </subsubsection>
     <subsubsection xml:id="SUBSUBSECTIONnewtons-law-cooling">
-      <title>\underline{Chillin' with Newton: The Law of Cooling</title>
+      <title>Chillin<rsq/> with Newton: The Law of Cooling</title>
 
       <example>
 
         <p>
           Suppose a container of water at a temperature of <m>40^\circ F</m> is
           placed into a freezer maintained at a constant temperature of
-          <m>5^\circ F.</m> We'd like to have a model that will allow us to
+          <m>5^\circ F.</m> We<rsq/>d like to have a model that will allow us to
           compute how long it will take for the water to cool down to a
           temperature of, for example, <m>32^\circ F</m> where it will start to
           freeze.
@@ -4151,7 +4224,7 @@ We're taking liberties with the history here. Napier's
           In the late <m>17</m>th century Isaac Newton showed experimentally that
           the rate at which the water cools will be proportional to the
           difference between its current temperature and the ambient
-          (surrounding) temperature. This is known as Newton's Law of Cooling
+          (surrounding) temperature. This is known as Newton<rsq/>s Law of Cooling
           and it holds generally, not just for water.
         </p>
         <p>
@@ -4213,7 +4286,7 @@ We're taking liberties with the history here. Napier's
         </p>
         <p>
 
-          Newton's Law of Cooling accurately models the cooling of any object
+          Newton<rsq/>s Law of Cooling accurately models the cooling of any object
           placed in  cooler surroundings. We used water in our example just to
           be definite.
         </p>
@@ -4280,10 +4353,10 @@ We're taking liberties with the history here. Napier's
           <p>
             The forensic rule of thumb for determining the time of death of a
             person is to start with a body temperature of <m>37^\circ C</m>
-            and\aside{Notice that we've switched to measuring temperature in
+            and\aside{Notice that we<rsq/>ve switched to measuring temperature in
             degrees Celsius.}
             subtract <m>1.5^\circ C</m> for each hour the person is dead.  Of course,
-            this simple linear model isn't as accurate as Newton's Law of
+            this simple linear model isn<rsq/>t as accurate as Newton<rsq/>s Law of
             Cooling since it does not
             take into account the surrounding temperature, size of the body,
             etc. and can only be applied until the temperature of the body
@@ -4305,15 +4378,15 @@ We're taking liberties with the history here. Napier's
           <statement>
             <p>
               Use the temperature predicted by the rule of thumb at the
-              halfway point to give a complete model of the body's cooling as
-              predicted by Newton's Law of Cooling.
+              halfway point to give a complete model of the body<rsq/>s cooling as
+              predicted by Newton<rsq/>s Law of Cooling.
             </p>
           </statement>
         </task>
         <task>
           <statement>
             <p>
-              Of course, in Newton's Law of Cooling, the body temperature
+              Of course, in Newton<rsq/>s Law of Cooling, the body temperature
               will never quite reach the ambient temperature, but just for
               comparison, substitute the time when the rule of thumb predicts
               that the body temperature is <m>20^\circ C</m> and see how close it is
@@ -4336,10 +4409,10 @@ We're taking liberties with the history here. Napier's
       <!-- \begin{embeddedproblem} -->
       <!-- The forensic rule of thumb for determining the time of death of a -->
       <!-- person is to start with a body temperature of <m>37^\circ C</m> -->
-      <!-- and\aside{Notice that we've switched to measuring temperature in -->
+      <!-- and\aside{Notice that we<rsq/>ve switched to measuring temperature in -->
       <!-- degrees Celsius.} -->
       <!-- subtract <m>1.5^\circ C</m> for each hour the person is dead.  Of course, -->
-      <!-- this simple linear model isn't as accurate as Newton's Law of -->
+      <!-- this simple linear model isn<rsq/>t as accurate as Newton<rsq/>s Law of -->
       <!-- Cooling since it does not -->
       <!-- take into account the surrounding temperature, size of the body, -->
       <!-- etc. and can only be applied until the temperature of the body -->
@@ -4351,9 +4424,9 @@ We're taking liberties with the history here. Napier's
       <!-- what would the body temperature be halfway through the cooling -->
       <!-- process. -->
       <!-- \item Use the temperature predicted by the rule of thumb at the -->
-      <!-- halfway point to give a complete model of the body's cooling as -->
-      <!-- predicted by Newton's Law of Cooling. -->
-      <!-- \item Of course, in Newton's Law of Cooling, the body temperature -->
+      <!-- halfway point to give a complete model of the body<rsq/>s cooling as -->
+      <!-- predicted by Newton<rsq/>s Law of Cooling. -->
+      <!-- \item Of course, in Newton<rsq/>s Law of Cooling, the body temperature -->
       <!-- will never quite reach the ambient temperature, but just for -->
       <!-- comparison, substitute the time when the rule of thumb predicts -->
       <!-- that the body temperature is <m>20^\circ C</m> and see how close it is -->
@@ -4366,7 +4439,7 @@ We're taking liberties with the history here. Napier's
       <!-- \end{enumerate} -->
       <!-- \end{embeddedproblem} -->
       <p>
-        Of course, Newton's Law of Cooling can be used just as well to model
+        Of course, Newton<rsq/>s Law of Cooling can be used just as well to model
         an object heating.  Consider the following:
       </p>
 
@@ -4607,7 +4680,7 @@ need to memorize. Memorize it.
   <introduction>
     <p>
 Recall that in <xref ref="SUBSECTIONcurvature"></xref>
-(<xref ref="PROBLEMeq:CurvatureDef"></xref>) we showed the curvature of the graph
+(<xref ref="PROBLEMeq:CurvatureDef"></xref> we showed the curvature of the graph
 of a function <m>y=y(x)</m> is given by
 <me>
   \kappa=\frac{\abs{\dfdxn{y}{x}{2}}}{\left(1+\left(\dfdx{y}{x}\right)^2\right)^{\frac32}}.
@@ -4702,7 +4775,7 @@ of a function <m>y=y(x)</m> is given by
 
 <p>
   It seems very strange that there would be this one, single exception
-  doesn't it?  Or, to come at the question a little differently, maybe
+  doesn<rsq/>t it?  Or, to come at the question a little differently, maybe
   this says that the logarithm function is somehow related to
   polynomials? What do you think?
 </p>
@@ -4732,14 +4805,14 @@ Friederich Gauss (1777-1855)</url>
 </blockquote>
 
 <p>
-  So far we've focused on the \term{natural} exponential and logarithm
+  So far we<rsq/>ve focused on the \term{natural} exponential and logarithm
   functions even though we started our discussion of logarithms by
   defining <m>\log_{10}(x)</m> as the inverse of the base-<m>10</m> exponential:
   <m>10^x</m>.
 </p>
 <p>
-  But we've seen that  <m>2^x</m> is also an exponential, and it's  inverse
-  is <m>\log_2(x)</m>. In fact, we've seen that for any
+  But we<rsq/>ve seen that  <m>2^x</m> is also an exponential, and it<rsq/>s  inverse
+  is <m>\log_2(x)</m>. In fact, we<rsq/>ve seen that for any
   <m>a\gt 0</m>, <m>a\neq1</m>, <m>a^x</m> is the <q>base <m>a</m></q> exponential and the
   corresponding inverse function is called the <q>base <m>a</m></q> logarithm,
   and is denoted <m>\log_a(x)</m>.
@@ -4757,7 +4830,7 @@ Friederich Gauss (1777-1855)</url>
   Calculus is not needed for the next problem which establishes that all
   logarithm functions change multiplication into addition (Property 4)
   and exponentiation into multiplication (Property 6) as we stated
-  (but didn't prove) earlier.
+  (but didn<rsq/>t prove) earlier.
 </p>
 <problem>
   <introduction>
@@ -4799,7 +4872,7 @@ Friederich Gauss (1777-1855)</url>
 <!--   \end{embeddedproblem} -->
 <p>
   But if there are so many different exponential and logarithm
-  functions, don't we need differentiation rules for all of them? If
+  functions, don<rsq/>t we need differentiation rules for all of them? If
   so, what are the derivatives of the other exponentials and
   logarithms?
 </p>
@@ -4813,7 +4886,7 @@ Friederich Gauss (1777-1855)</url>
 </p>
 <p>
 
-  Here's how to do that. Recall that from the inverse relationship
+  Here<rsq/>s how to do that. Recall that from the inverse relationship
   between the natural exponential and the natural logarithm (Properties
   1 and 2) <m>a=e^{\ln(a)}</m>. So we make that
   substitution\aside{Some may see this step as  making <m>a^x</m> <q>harder
@@ -4847,7 +4920,7 @@ and be lazy. We find it much simpler to find the derivative of
 </p>
 <p>
   The following problem shows an alternative (and equivalent) method if
-  you can't remember how to rewrite <m>a^x</m>.
+  you can<rsq/>t remember how to rewrite <m>a^x</m>.
 </p>
 
 <problem>
@@ -4861,7 +4934,7 @@ and be lazy. We find it much simpler to find the derivative of
 <p>
   Taking a logarithm of complicated formulas sometimes allows us to
   simplify things considerably via the properties of logarithms. It is a
-  nice trick. Keep it in mind. We'll be using it later.
+  nice trick. Keep it in mind. We<rsq/>ll be using it later.
 </p>
 <exercise>
   <introduction>
@@ -4971,7 +5044,7 @@ as a natural logarithm. This is a bit more difficult, but only a bit.
     \log_a(x)=\frac{\ln(x)}{\ln(a)}.
 <!-- \label{eq:GenLogConversion} -->
 </men>
-This is why many scientific calculators don't bother including a
+This is why many scientific calculators don<rsq/>t bother including a
 <m>\log_a(x)</m> button.
 </p>
 <p>
@@ -5122,7 +5195,7 @@ It is a well worn truism among research mathematicians that the
   Napier had had the same idea himself, but was unable to pursue it
   <q>on account of ill-health.</q> As a result, Briggs took on the task
   of computing tables of base-<m>10</m> logarithms, collaborating with
-  Napier until the latter's death two years later. The results of
+  Napier until the latter<rsq/>s death two years later. The results of
   their collaboration are known as the Briggsian or \term{Common
     Logarithms}. Common Logarithms are the base <m>10</m> logarithms we
   discussed earlier and were an important computational aid for nearly
@@ -5157,7 +5230,7 @@ logarithms.
     product. Confirm that
     <m>\ln(21.2343) + \ln(5689.121343) =
     \ln(21.2343\times5689.121343)</m>. \\
-    \comment{If you don't like these
+    \comment{If you don<rsq/>t like these
       numbers use others. We just picked these at random.}
   </p>
 </statement>
@@ -5193,7 +5266,7 @@ logarithms.
     product. Confirm that
     <m>\ln(21.2343) + \ln(5689.121343) =
     \ln(21.2343\times5689.121343)</m>. \\
-  (If you don't like these
+  (If you don<rsq/>t like these
       numbers use others. We just picked these at random.)
   </p>
 </statement>
@@ -5222,7 +5295,7 @@ logarithms.
 <!--     product. Confirm that -->
 <!--     <m>\ln(21.2343) + \ln(5689.121343) = -->
 <!--     \ln(21.2343\times5689.121343)</m>. \\ -->
-<!--     \comment{If you don't like these -->
+<!--     \comment{If you don<rsq/>t like these -->
 <!--       numbers use others. We just picked these at random.} -->
 <!--   \item Do the same using common logarithms. -->
 <!--   \item Do the same using <m>\log_5(x)</m>. \\ -->
@@ -5485,7 +5558,7 @@ y = \text{Nap log}(x).
 </p>
 <p>
 
-Since Calculus hadn't been invented yet, Napier used Trigonometry to
+Since Calculus hadn<rsq/>t been invented yet, Napier used Trigonometry to
 develop his table of logarithms. The details of those computations are
 not relevant for us, except that he took the length of <m>AB</m> to be
 <m>10^7</m>, because the best sine tables at the time were to accurate to
@@ -5529,7 +5602,7 @@ seven decimal places.
     \text{Nap
       log}(x)=y(x)=10^7\log_{\frac{1}{e}}\left(\frac{x}{10^7}\right).
     </me>
-    Thus the base of Napier's original logarithm was <m>\frac1e</m>.
+    Thus the base of Napier<rsq/>s original logarithm was <m>\frac1e</m>.
   </p>
 </statement>
 </task>
@@ -5545,7 +5618,7 @@ seven decimal places.
 <!--     \text{Nap -->
 <!--       log}(x)=y(x)=10^7\log_{\frac{1}{e}}\left(\frac{x}{10^7}\right). -->
 <!--     </me> -->
-<!--     Thus the base of Napier's original logarithm was <m>\frac1e</m>. -->
+<!--     Thus the base of Napier<rsq/>s original logarithm was <m>\frac1e</m>. -->
 <!--   \end{enumerate} -->
 <!-- \end{embeddedproblem} -->
 
@@ -5620,7 +5693,7 @@ gives
 and we can now bring the exponents down
 in front (Property 6).
 <me>        \ln(y)    \amp =\frac{1}{2}  \ln(x^3+2x)+\ln(\tan(x)) -4 \ln(x^5-7)).</me>
-Notice that we have not yet started differentiating. All we've done
+Notice that we have not yet started differentiating. All we<rsq/>ve done
 so far is re-express our function using the properties of
 logarithms.
 </p>
@@ -5649,8 +5722,8 @@ If we multiply by <m>y</m> we get
 </p>
 </example>
 <p>
-  This looks like a lot of work when it's laid out on the page but it
-  really isn't. With practice you can differentiate an expression like
+  This looks like a lot of work when it<rsq/>s laid out on the page but it
+  really isn<rsq/>t. With practice you can differentiate an expression like
   <m> \frac{\sqrt{x^3+2x}\cdot \tan(x)}{(x^5-7)^4}</m> in your head as fast
   as you can write it down. Really.  Even if this is not true, would you
   rather compute this derivative using the Quotient Rule and Product
@@ -5826,7 +5899,7 @@ If we multiply by <m>y</m> we get
   only option.  Consider something like <m>y=x^x.</m> Unfortunately, this is
   not a monomial like <m>x^2</m> nor is it an exponential like
   <m>2^x</m>.  This is some strange combination of both and  our existing
-  rules don't directly apply. But Logarithmic Differentiation will work.
+  rules don<rsq/>t directly apply. But Logarithmic Differentiation will work.
 </p>
 
 <problem>
@@ -5874,9 +5947,9 @@ If we multiply by <m>y</m> we get
 <!--   \end{enumerate} -->
 <!-- \end{embeddedproblem} -->
 <p>
-  Finally, because we've given it a name it is easy to get the
+  Finally, because we<rsq/>ve given it a name it is easy to get the
   impression that Logarithmic Differentiation is a new differentiation
-  rule, but it isn't. It is really just a trick as the next problem
+  rule, but it isn<rsq/>t. It is really just a trick as the next problem
   shows. A handy trick, to be sure, but still a trick.
 </p>
 <problem>
@@ -5957,7 +6030,7 @@ If we multiply by <m>y</m> we get
 
       </men>
       where <m>k</m> is the spring constant.  The solution of
-      <xref ref="EQUATIONSHO6">Equation</xref>) is
+      <xref ref="EQUATIONSHO6">equation</xref> is
       <men  xml:id="EQUATIONSHOSpringSolution1">
 
         y(t)=A\sin\sqrt{\frac{k}{m}}t+B\cos\sqrt{\frac{k}{m}}t
@@ -5968,9 +6041,9 @@ If we multiply by <m>y</m> we get
     </p>
     <p>
 
-      <xref ref="EQUATIONSHOSpringSolution1">Equation</xref>) is unrealisitic because the
+      <xref ref="EQUATIONSHOSpringSolution1">equation</xref> is unrealisitic because the
       oscillations described never vary.  In the real world, as a result of
-      friction, the spring's oscillations will get shorter and shorter,
+      friction, the spring<rsq/>s oscillations will get shorter and shorter,
       eventually stopping altogether. How could we modify this model in
       order to capture the effects of, say, air resistance?
     </p>
@@ -5980,7 +6053,7 @@ If we multiply by <m>y</m> we get
       resistive force is proportional to the speed of the object. This
       sounds imposing but you are quite familiar with this sort of
       resistance. If you put your hand out the window of a moving car
-      you'll notice that as the car moves faster there is more force (wind)
+      you<rsq/>ll notice that as the car moves faster there is more force (wind)
       pushing back on your hand.  This simple model breaks down at high
       speeds where factors such as turbulence will also affect the
       resistance, but it can be shown experimentally that the assumption
@@ -5992,7 +6065,7 @@ If we multiply by <m>y</m> we get
 
   Putting the words <q>resistance is proportional to velocity</q> into
   symbols means we need to add the term <m>-b\dfdx{y}{t}</m> to
-  <xref ref="EQUATIONSHO6">Equation</xref>) where <m>b\gt0</m> is a constant which depends on
+  <xref ref="EQUATIONSHO6">equation</xref> where <m>b\gt0</m> is a constant which depends on
   the viscosity of the ambient medium (air, in this case).  (Why must
   this proportionality be negative?)
 </p>
@@ -6007,8 +6080,8 @@ or
   \dfdxn{y}{t}{2}+\frac{b}{m}\dfdx{y}{t}+\frac{k}{m}y = 0.
 <!-- \label{eq:DampedOscillator1} -->
 </men>
-<xref ref="EQDampedOscillator1">Equation</xref>) is a little scary to look at, let alone
-try to solve.  We'll begin with a simplified version where
+<xref ref="EQDampedOscillator1">equation</xref> is a little scary to look at, let alone
+try to solve.  We<rsq/>ll begin with a simplified version where
 <m>b=k=m</m>:
 <men  xml:id="EQUATIONDampedProblem1">
   \dfdxn{y}{t}{2}+\dfdx{y}{t}+y=0.
@@ -6105,7 +6178,7 @@ Sandifer, of Western Connecticut State University
   once asked by a novice how best to learn Calculus. Laplace told him
   <q>Read Euler, read Euler, he is the master of us all.</q>}
   <m>(1707-1783)</m> solved the differential
-  <xref ref="EQDampedProblem1">Equation</xref>) by guessing that for some
+  <xref ref="EQDampedProblem1">equation</xref> by guessing that for some
 carefully chosen  value of <m>c</m>
 <me>
   y(t)=e^{ct}
@@ -6119,13 +6192,13 @@ seems to be oscillating!
 
   It is
   difficult to imagine what might have led him to make such a guess.
-  But Euler knew that if his guess didn't pan out he didn't have to tell anyone
+  But Euler knew that if his guess didn<rsq/>t pan out he didn<rsq/>t have to tell anyone
   about it. He could just toss all of his notes into his fireplace and
-  pretend that he'd never made his crazy-seeming guess.
+  pretend that he<rsq/>d never made his crazy-seeming guess.
 </p>
 <p>
 
-  The really crazy thing though, is that Euler's guess worked. Here's
+  The really crazy thing though, is that Euler<rsq/>s guess worked. Here<rsq/>s
   how.
 </p>
 <p>
@@ -6157,13 +6230,13 @@ differential equation.}
 </problem>
 <p>
 
-  Solving  <xref ref="EQImagSolution">Equation</xref> we see that
+  Solving  <xref ref="EQImagSolution">equation</xref> we see that
   <m>
     c=\frac{-1}{2}\pm\frac{\sqrt{-3}}{2},
 </m>
 so we conclude that if <m>c=-\frac12+\frac{\sqrt{-3}}{2}</m> or
 <m>c=-\frac12-\frac{\sqrt{-3}}{2}</m> then <m>y=e^{ct}</m> satisfies
-<xref ref="EQDampedProblem1">Equation</xref>).
+<xref ref="EQDampedProblem1">equation</xref>.
 </p>
 <p>
 
@@ -6191,7 +6264,7 @@ so we conclude that if <m>c=-\frac12+\frac{\sqrt{-3}}{2}</m> or
 </p>
 <p>
 
-  Euler now had two solutions of <xref ref="EQDampedProblem1">Equation</xref>), one
+  Euler now had two solutions of <xref ref="EQDampedProblem1">equation</xref>, one
   for each possible value of <m>c</m>:
   <me>
     y_1(t) =e^{\left(-\frac12+\frac{\sqrt{3}}{2}i\right)t} =
@@ -6257,7 +6330,7 @@ is also a solution of <xref ref="EQUATIONDampedProblem1"></xref>.
 
 <p>
   To find meaning in his solutions he returned to the simpler
-  <xref ref="EQUATIONSHO6">Equation</xref>),
+  <xref ref="EQUATIONSHO6">equation</xref>,
   <me>  m\dfdxn{y}{t}{2}= -ky,</me> which he
   already knew how to solve. To make things simpler still he assumed
   that <m>m=k=1</m> and tried his crazy guess, <m>y=e^{ct}</m> again on
@@ -6269,7 +6342,7 @@ is also a solution of <xref ref="EQUATIONDampedProblem1"></xref>.
   <statement>
     <p>
       Show that <m>y=e^{ct}</m> is a solution of the differential
-      <xref ref="EQEulerSimpleSHO-1">Equation</xref>) when <m>c=i</m> or <m>c=-i</m>.
+      <xref ref="EQEulerSimpleSHO-1">equation</xref> when <m>c=i</m> or <m>c=-i</m>.
 </p>
 </statement>
 </problem>
@@ -6277,10 +6350,10 @@ is also a solution of <xref ref="EQUATIONDampedProblem1"></xref>.
 
   <xref ref="PROBLEMDampedOscillation1">Problem\</xref> shows that <m>y=e^{it}</m> and
   <m>y=e^{-it}</m> are both solutions of
-  <xref ref="EQEulerSimpleSHO-1">Equation</xref>),
+  <xref ref="EQEulerSimpleSHO-1">equation</xref>,
   but Euler knew (as we do\aside{See
-  <xref ref="SECTIONmore-high-deriv">Section</xref>).}) that the solution of
-  <xref ref="EQEulerSimpleSHO-1">Equation</xref>) is
+  <xref ref="SECTIONmore-high-deriv">Section</xref>.}) that the solution of
+  <xref ref="EQEulerSimpleSHO-1">equation</xref> is
   <m>
     y(t)=a\cos(t)+b\sin(t)
 </m>
@@ -6289,7 +6362,7 @@ where <m>a</m> and <m>b</m> are constants.
 <p>
 
   He now had  very different looking solutions of
-  <xref ref="EQEulerSimpleSHO-1">Equation</xref>). Euler guessed that somehow
+  <xref ref="EQEulerSimpleSHO-1">equation</xref>. Euler guessed that somehow
   these  must be the same, so he set
   <me>
     e^{it}=a\cos(t)+b\sin(t)
@@ -6339,11 +6412,11 @@ first.}
     e^{it}=\cos(t)+ i\sin(t).
 <!-- \label{eq:EulerIdentity} -->
 </men>
-<xref ref="EQEulerIdentity">Equation</xref> is known as <term>Euler's Identity</term> and it
+<xref ref="EQEulerIdentity">equation</xref> is known as <term>Euler<rsq/>s Identity</term> and it
 is foundational to electrical engineering, and physics (especially
 Quantum Mechanics). For mathematicians it is the key to
 understanding the geometry of the <term>Complex Numbers</term> (numbers of
-the form <m>a+bi</m>, where <m>a</m> and <m>b</m> are real numbers and <m>i^2=-1</m>).
+the form <m>a+bi</m>, where <m>a</m> and <m>b</m> are real numbers and <m>i^2=-1</m>.
 </p>
 <p>
 
@@ -6355,9 +6428,9 @@ the form <m>a+bi</m>, where <m>a</m> and <m>b</m> are real numbers and <m>i^2=-1
 
   Before we get to that, notice the following curious\aside{We call this
   curious because it relates the numbers <m>0, 1, i, e</m> , and <m>\pi</m> all
-  in one simple formula. To find out what it actually means you'll
+  in one simple formula. To find out what it actually means you<rsq/>ll
   need to become a mathematics major and take a course in Complex
-  Analysis. It's fun. You should do that.} consequences of Euler's
+  Analysis. It<rsq/>s fun. You should do that.} consequences of Euler<rsq/>s
   Identity.
 </p>
 
@@ -6402,7 +6475,7 @@ Show that <m> \cosh(it)=\frac{e^{it}+e^{-it}}{2}=\cos(t)</m>
 <!--       \end{enumerate} -->
 <!--     \end{embeddedproblem} -->
 <p>
-  Finally, we return to <xref ref="EQDampedProblem1">Equation</xref>). In
+  Finally, we return to <xref ref="EQDampedProblem1">equation</xref>. In
   <xref ref="PROBLEMDampedOscillator1">Problem\</xref> we saw that
   <me> z(t)=e^{-\frac{t}{2}} \left[
   A\cos\left(\frac{\sqrt{3}}{2}t\right)+B\sin\left(\frac{\sqrt{3}}{2}t\right)
@@ -6436,7 +6509,7 @@ that
   + be^{-\frac{\sqrt{3}}{2}it}\right],
 </me>
 and that <me>z(t)=w(t)</me>,
-use Euler's Identity to show that <m>A=a+b</m> and that <m>B=i(a-b)</m>.
+use Euler<rsq/>s Identity to show that <m>A=a+b</m> and that <m>B=i(a-b)</m>.
 </p>
 </statement>
 </task>

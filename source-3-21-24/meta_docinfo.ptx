@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- The docinfo block is the analogue to the latex preamble -->
+<!-- This is where you can define macros and other book-wide -->
+<!--  settings.                                              -->
+<docinfo xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <!-- A unique name for the book in a catalog; for example, see https://pretextbook.org/catalog.html and https://runestone.academy/ns/books/index. It contains a simple lowercase string with no dashes or other special characters. See https://pretextbook.org/doc/guide/html/sec-publishing-to-runestone-academy.html for more information. -->
+  <!-- <document-id>DiffCalcBomanRogers</document-id> -->
+  <!-- A brief description for the book in a catalog; see the links above. The @shelf is used only when publishing to Runestone; see https://runestone.academy/ns/books/index for a list of valid values. You must copy these @shelf names exactly, including capitalization. -->
+  <!-- <blurb shelf="Differential Calculus: From Practice to Theory">Differential Calculus presented through the lens of history. </blurb> -->
+
+<!-- The next three lines are likely for mature projects only: -->
+
+<!-- <brandlogo url="" source="images/cover.png"/> -->
+<!-- <covers front="images/front.pdf" back="images/back.pdf"/> -->
+<!-- <document-id>unique-book-id</document-id> -->
+
+<!-- macros for defining latex math shortcuts. It is good practice  -->
+<!-- to define these semantically, so that the macro relates to what-->
+<!-- it defines.                                                    -->
+<macros>
+\def\abs#1{\left|#1\right|}
+\def\CancelToRed#1#2{\textcolor{red}{{\cancelto{#1}{#2}}}}
+\def\approach#1{{\left(\rightarrow{}#1\right)}}
+\def\halmos{\rule[-.1ex]{8pt}{2ex}}
+
+\def\limitX#1#2#3#4{{\displaystyle\lim_{\underset{#4}{#1\rightarrow #2}}#3}}
+\def\tlimitX#1#2#3#4{{\displaystyle\lim_{\underset{#4}{#1\rightarrow #2}}}#3}
+\def\rlimit#1#2#3{{\limitX{#1}{#2}{#3}{#1\gt{}#2}{}}}
+\def\rtlimit#1#2#3{{\tlimitX{#1}{#2}{#3}{#1\gt{}#2}{}}}
+\def\llimit#1#2#3{{\limitX{#1}{#2}{#3}{#1\lt{}#2}{}}}
+\def\ltlimit#1#2#3{{\tlimitX{#1}{#2}{#3}{#1\lt{}#2}{}}}
+
+\newcommand{\eps}{\varepsilon}
+\newcommand{\RR}{\mathbb {R}}
+\newcommand{\QQ}{\mathbb {Q}}
+\newcommand{\NN}{\mathbb {N}}
+\newcommand{\ZZ}{\mathbb {Z}}
+
+\newcommand{\ParamEqTwo}[2]
+{
+  \left\{
+    \begin{array}{c}
+    {#1}\\
+    {#2}
+    \end{array}
+  \right\}
+}
+\newcommand{\ParamEqThree}[3]
+{
+  \left\{
+    \begin{array}{c}
+    {#1}\\
+    {#2}\\
+    {#3}
+    \end{array}
+  \right\}
+}
+
+\def\absALT#1{\rule[-.7ex]{1pt}{5ex}\hskip2pt#1\hskip2pt\llap{\rule[-.7ex]{1pt}{5ex}}} 
+
+
+\def\sech{{\rm{}sech}{}}
+\def\csch{{\rm{}csch}{}}
+
+
+\def\DD{{\bf{}D}}
+\def\ftceval#1#2#3{#1\hskip.5ex{\llap{\smash{\rule[-3ex]{0.5pt}{7ex}}}_{\raise{-3ex}{\hskip.5ex#2}}^{\raise{-5ex}{\hskip.5ex #3}}}}
+
+%%\def\eval#1#2#3{#1\hskip.5ex{\llap{\smash{\rule[-3ex]{0.5pt}{7ex}}}_{\raise{-3ex}{\hskip.5ex#2=#3}}}}
+%%  \def\eval#1#2#3{#1\hskip.5ex{\llap{\smash{\rule[-1.5ex]{0.5pt}{4ex}}}_{\raise{-1.5ex}{\hskip.5ex#2=#3}}}}
+
+\def\eval#1#2#3{#1\hskip.5ex{\llap{\rule[-1.5ex]{0.5pt}{4ex}}_{\raise{-1.5ex}{\hskip.5ex#2=#3}}}}
+\def\dispeval#1#2#3{#1\hskip.5ex{\llap{\smash{\rule[-2ex]{0.5pt}{5ex}}}_{\raise{-2ex}{\hskip.5ex#2=#3}}}}
+
+\def\geneval#1#2{\left.#1\right|_{#2}}
+<!-- \def\eval#1#2#3{\left.#1\right|_{#2=#3}} -->
+\def\bigeval#1#2#3{\eval{#2}{#2}{#3}}
+
+<!-- \def\bigeval#1#2#3{\left.\tallstrut{}#1\right|_{#2=#3}} -->
+<!-- \def\evallt#1#2#3{\left.#1\right|_{#2<#3}} -->
+<!-- \def\bigevallt#1#2#3{\left.\tallstrut{}#1\right|_{#2<#3}} -->
+<!-- \def\evalgt#1#2#3{\left.#1\right|_{#2>#3}} -->
+<!-- \def\bigevalgt#1#2#3{\left.\tallstrut{}#1\right|_{#2>#3}} -->
+\def\inverse#1{#1^{-1}}
+<!-- \newcommand{\N}{\mathbb N} -->
+<!-- \newcommand{\Z}{\mathbb Z} -->
+<!-- \newcommand{\Q}{\mathbb Q} -->
+<!-- \newcommand{\R}{\mathbb R} -->
+\def\dx#1{\thinspace{\mathrm d}#1}
+\def\dfdx#1#2{\frac{\dx{#1}}{\dx{#2}}} 
+\def\partialfx#1#2{\frac{\partial{#1}}{\partial{#2}}} 
+\def\partialfxn#1#2#3{\frac{\partial^{#3}{#1}}{\partial{#2}^{#3}}} 
+\def\dfdxn#1#2#3{\frac{\text{d}^{#3}{#1}}{\text{d}{#2}^{#3}}} 
+
+\def\dfdxat#1#2#3{\eval{\dfdx{#1}{#2}}{#2}{#3}}
+
+\def\limit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}#3}}%display style
+\def\tlimit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}}#3}%text style
+\def\limitX#1#2#3#4{{\displaystyle\lim_{\underset{#4}{#1\rightarrow #2}}#3}}
+\def\rlimit#1#2#3{{\limitX{#1}{#2}{#3}{#1\gt{}#2}{}}}
+\def\llimit#1#2#3{{\limitX{#1}{#2}{#3}{#1\lt{}#2}{}}}
+</macros>
+
+
+<latex-image-preamble>
+\usepackage{xcolor}
+\usepackage{cancel}
+</latex-image-preamble>
+
+<!-- If you put any latex-image elements you can include preambles  -->
+<!-- for those in the next element.                                 -->
+<latex-image-preamble>
+  <!-- \usepackage{tikz, pgfplots} -->
+  <!-- \usetikzlibrary{positioning,matrix,arrows} -->
+  <!-- \usetikzlibrary{shapes,decorations,shadows,fadings,patterns} -->
+  <!-- \usetikzlibrary{decorations.markings}  -->
+</latex-image-preamble>
+
+<!-- It is possible to rename elements using the tags below -->
+  <rename element="investigation" xml:lang="en-US">Scrapwork</rename>
+  <rename element="observation">Digression</rename>
+  <rename element="inlineexercise" xml:lang="en-US">Drill</rename>
+  <rename element="fact" xml:lang="en-US">Rule</rename>
+  <!-- <rename element="problem" xml:lang="en-US">Drill</rename> -->
+<!-- Specify the default type of cross reference:           -->
+  <cross-references text="type-global" />
+  
+
+</docinfo>
+

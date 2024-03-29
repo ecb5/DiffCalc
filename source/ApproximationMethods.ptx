@@ -9,13 +9,13 @@
         dominated by the idea of approximation. When a man tells you that he
         knows the exact truth about anything, you are safe in inferring that
         he is an inexact man. Every careful measurement in science is always
-        given with the probable error .\ .\ . every observer admits that he is
+        given with the probable error . . . every observer admits that he is
         likely wrong, and knows about how much wrong he is likely to
         be.
       </p>
       <attribution>
         <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Russell/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Russell/">Bertrand
-        Russell (1872-1970)</url>
+        Russell (1872<ndash/>1970)</url>
       </attribution>
     </blockquote>
 
@@ -34,11 +34,14 @@
 
     <p>
       In a world where you can take your phone out of your pocket, ask
-      it for the square root of two (<m>\approx 1.4142135624</m>) or
-      the fifth root of seven (<m>\approx 1.47577316159</m>), and
-      instantly obtain those numbers accurate to eleven decimal places
-      it is difficult to convey the profound importance of having good
-      methods of approximation.  There appears to be no need for
+      <!-- it for the square root of two (<m>\approx 1.4142135624</m>) or -->
+      <!-- the fifth root of seven (<m>\approx 1.47577316159</m>), and -->
+      it for the square root of two (<m>\approx 1.414213562</m>) or
+      the fifth root of seven (<m>\approx 1.475773162</m>), and
+      instantly obtain those numbers, accurate to nine decimal
+      places it is difficult to convey the profound importance of
+      having good methods of approximation. With this level of
+      accuracy available to us there appears to be no need for
       approximations.
     </p>
 
@@ -47,8 +50,8 @@
       and <m>\sqrt[5]{7}</m> are irrational numbers so neither can be
       completely represented by a terminating decimal. That is, the
       decimal form of both numbers is infinitely long. So if all we
-      have is a value accurate to only eleven decimal places what we
-      really have is an approximation, right? It's not even a
+      have is a value accurate to only nine decimal places what we
+      really have is an approximation, right? It<rsq/>s not even a
       particularly good approximation in the sense that most of the
       information we need to completely specify <m>\sqrt{2}</m> or
       <m>\sqrt[5]{7}</m> in decimal form is missing.
@@ -67,35 +70,34 @@
     </p>
 
     <p>
-      Based on the audio signal your phone receives it constantly
-      approximates what signal to send to the speaker for you to
-      hear. Because processing an audio signal is such a ubiquitous
+      Based on the very noisy audio signal it receives your phone
+      constantly approximates what signal to send to the speaker for
+      you to hear. Because signal processing is such a ubiquitous
       problem, many very sophisticated approximation techniques have
-      been developed and they are used all of the time. We don't see
+      been developed and they are used all of the time. We don<rsq/>t see
       them because they are usually embedded in software on our many
       electronic devices. Because they are so accurate, we tend not to
       see them as approximations.
     </p>
 
     <p>
-      Every scientific, engineering, or financial computation involves
-      approximations because it is almost always impossible to get
-      perfect information. We must approximate and we do it all of the
-      time. Well, actually most of the time our technology does it for
-      us. But our technology is simply the realization of ideas that
-      begin with paper, pencil, and thought. Without these no
-      new technology is possible.
+      Yet, every scientific, engineering, or financial computation
+      involves approximations because it is almost always impossible
+      to get perfect information. We must approximate and we do it all
+      of the time. Well, actually most of the time our technology does
+      it for us. But our technology is simply the realization of ideas
+      that begin with paper, pencil, and thought. Without these no new
+      technology is possible.
     </p>
 
 
-<aside>
-<p>
-Ok, paper and pencil
-      are not strictly necessary either because more modern technology
-      is rapidly replacing even that. But the need for thought and a
-      way to record our thoughts will never change.
-</p>
-</aside>
+    <aside>
+      <p>
+        Ok, paper and pencil are not strictly necessary either because more
+        modern technology is rapidly replacing even that. But the need for
+        thought and a way to record our thoughts will never change.
+      </p>
+    </aside>
 
 
 
@@ -104,8 +106,8 @@ Ok, paper and pencil
       twentieth century <mdash/> the number of very good approximation
       techniques ballooned. We will look, very briefly, at two
       pre-Calculus methods of approximation. Then we will consider two
-      early approximation methods that came from Calculus, Newton's
-      Method and Euler's Method.
+      early approximation methods that came from Calculus: Newton<rsq/>s
+      Method and Euler<rsq/>s Method.
     </p>
   </introduction>
 
@@ -123,7 +125,7 @@ Ok, paper and pencil
       <p>
         The Bisection Method is what nearly everyone would think of
         first when faced with an approximation problem. It sounds very
-        complicated when written out in words and symbols, as we're
+        complicated when written out in words and symbols, as we<rsq/>re
         about to do, but it is really quite simple. It will help if you
         do the computations along with us, rather than just reading
         them.
@@ -134,14 +136,15 @@ Ok, paper and pencil
           suppose we want to compute a decimal approximation to
           <m>\sqrt{2}</m>. The Bisection Method works like this: First
           pick two numbers, one less than <m>\sqrt{2}</m>, and one
-          greater than <m>\sqrt{2}</m>, In this example we'll choose
+          greater than <m>\sqrt{2}</m>, In this example we<rsq/>ll choose
           <m>1</m> and <m>2</m>.
         </p>
         
         <p>
           Next, we take the midpoint of the interval <m>[1,2]</m> as
-          our first approximation to <m>\sqrt{2}.</m> The midpoint is
-          the average of the endpoints so in this example <m>r_1 =
+          our first approximation to <m>\sqrt{2}</m>. We<rsq/>ll call
+          this <m>r_1</m>. The midpoint is the average of the
+          endpoints so in this example <m>r_1 =
           \frac{1+2}{2}=\frac{3}{2}</m>.  Since <m>\sqrt{2}</m> and
           <m>\frac32</m> are both in the bracketing interval
           <m>[1,2]</m> we see that the distance between
@@ -207,7 +210,8 @@ Ok, paper and pencil
           <statement>
             <p>
               Show that the next two iterations for this example are
-              <m>r_3=1.375</m> and <m>r_4=1.4375</m>.
+              <m>r_3=\frac{11}{8}=1.375</m> and
+              <m>r_4=\frac{23}{16}=1.4375</m>.
             </p>
           </statement>
         </task>
@@ -216,7 +220,7 @@ Ok, paper and pencil
             <p>
               The starting interval matters.
               
-              <ol>
+              <ol marker="i">
                 <li>
                   <p>
                     For this example take the initial interval to be
@@ -349,7 +353,7 @@ Ok, paper and pencil
         The Bisection Method is simple, very general, and it always
         works. But, even in ideal circumstances, it is not an efficient
         algorithm. Despite all of our high-speed computational technology
-        this is a drawback. We'd like something more efficient.
+        this is a drawback. We<rsq/>d like something more efficient.
       </p>
 
     </subsection>
@@ -362,7 +366,7 @@ Ok, paper and pencil
         visual="https://mathshistory.st-andrews.ac.uk/HistTopics/Babylonian_mathematics/">Babylonians</url>
         were using the approximation <m>\sqrt{2}\approx17/12\approx
         1.41667,</m> which is within <m>3/1000</m> of the correct
-        value. As with much ancient mathematics we don't really know
+        value. As with much ancient mathematics we don<rsq/>t really know
         how the Babylonians obtained this kind of accuracy. However
         <url
             href="https://mathshistory.st-andrews.ac.uk/Biographies/Heron/"
@@ -374,10 +378,10 @@ Ok, paper and pencil
 
       <p>
         As with the Bisection Method we begin by making a guess for
-        <m>\sqrt{2}.</m> We'll label our first guess <m>r_1</m> as
-        before.  Just as with the Bisection Method we'd like to have
+        <m>\sqrt{2}.</m> We<rsq/>ll label our first guess <m>r_1</m> as
+        before.  Just as with the Bisection Method we<rsq/>d like to have
         <m>\sqrt{2}</m> bracketed between two numbers. <xref
-        ref="DRILLBabylonFirstGuess">Drill\</xref> shows how to do
+        ref="DRILLBabylonFirstGuess"></xref> shows how to do
         that.
       </p>
 
@@ -408,7 +412,7 @@ Ok, paper and pencil
       <p>
         In the Bisection Method we needed to determine if this was
         less than or greater than <m>\sqrt{2}</m>. In the Babylonian
-        algorithm it doesn't matter for <m>\sqrt{2}</m> will always be
+        algorithm it doesn<rsq/>t matter for <m>\sqrt{2}</m> will always be
         between <m>r_2</m> and <m>\frac{2}{r_2}</m> (by <xref
         ref="DRILLBabylonFirstGuess"></xref>). We average these
         together to get our third approximation,
@@ -423,7 +427,7 @@ Ok, paper and pencil
       </p>
 
       <p>
-        It's pretty remarkable that we can get such a good
+        It<rsq/>s pretty remarkable that we can get such a good
         approximation of <m>\sqrt{2}</m> with so little arithmetic.
         If we were to apply the algorithm again, we would get an even
         closer approximation.
@@ -441,20 +445,14 @@ Ok, paper and pencil
       <problem xml:id="PROBLEMBabylonianMethod">
         <introduction>
           <p>
+              Write down the Babylonian method, as described by Heron, as a step-by-step
+              algorithm.
           </p>
         </introduction>
         <task>
           <statement>
             <p>
-              Write down the Babylonian method, as described by Heron, as an
-              algorithm.
-            </p>
-          </statement>
-        </task>
-        <task>
-          <statement>
-            <p>
-              Choose and initial guess and then use your algorithm to
+              Choose an initial guess and then use your algorithm to
               compute an approximation of <m>\sqrt{5}</m>.
             </p>
           </statement>
@@ -485,9 +483,13 @@ Ok, paper and pencil
           <statement>
             <p>
               Suppose you wanted to use the Babylonian algorithm to
-              approximate (Yes, we know this is <m>2</m>. Work with us
-              here.) <m>\sqrt{4}</m> and started with an initial guess of
+              approximate  <m>\sqrt{4}</m> and started with an initial guess of
               <m>2</m>.  What would happen?
+            </p>
+            <p>
+              Yes, we know this is <m>2</m> is already the square root
+              of <m>4</m>. We<rsq/>re making a point. Work with us
+              here.
             </p>
           </statement>
         </task>
@@ -511,9 +513,16 @@ Ok, paper and pencil
       <!--   \end{enumerate} -->
       <!-- \end{embeddedproblem-enumerate} -->
 
+      <aside>
+        <title>Historical Background</title>
+        <p>
+          Not even Heron knew; look at the dates involved.
+        </p>
+      </aside>
+
       <p>
         Again, no one knows how the Babylonians discovered this
-        algorithm\aside{Not even Heron knew; look at the dates involved.}, but
+        algorithm, but
         some interesting questions arise from it: What about <m>\sqrt[3]{2}?</m> Is
         there some similar algorithm that approximates cube roots? Fourth
         roots? Fifth? Two hundred and eighty-seventh roots?
@@ -521,7 +530,7 @@ Ok, paper and pencil
       <p>
 
         Of course the answer to all of these questions is yes, otherwise we
-        wouldn't have asked. But  to see why we'll have to step away
+        wouldn<rsq/>t have asked. But  to see why we<rsq/>ll have to step away
         from the Babylonians for a bit.
       </p>
 
@@ -532,7 +541,7 @@ Ok, paper and pencil
 
 
   <section xml:id="SECTIONnewtons-method-1">
-    <title>Newton's Method</title>
+    <title>Newton<rsq/>s Method</title>
 
     <introduction>
       <p>
@@ -540,24 +549,32 @@ Ok, paper and pencil
         When Calculus came along, Newton
         realized  that his new invention could be used to approximate solutions
         to equations by a particularly simple method now called, reasonably
-        enough, Newton's Method\aside{This is sometimes also called the Newton-Raphson
-        Method. <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Raphson/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Raphson/">Joseph
-        Raphson</url> (<m>1668-1712</m>) was a younger contemporary of Newton who
-        apparently invented this method independently.}.
+        enough, Newton<rsq/>s Method.
       </p>
-    </introduction>
+      <aside>
+        <title>Historical Background</title>
+        <p>
+          This is sometimes also called the Newton-Raphson
+          Method. <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Raphson/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Raphson/">Joseph
+          Raphson</url> (1668<ndash/>1712) was a younger contemporary of Newton who
+          apparently invented this method independently.
+        </p>
+      </aside>
+      </introduction>
+
+
 
     <subsection  xml:id="SUBSECTIONNewtonsMethodBasic">
-      <title>The Idea Behind Newton's Method</title>
+      <title>The Idea Behind Newton<rsq/>s Method</title>
       <p>
 
-        We will use Newton's Method to <q>re-invent</q> the Babylonian square
-        root algorithm and, more importantly, to generalize it.  Here's the
+        We will use Newton<rsq/>s Method to <q>re-invent</q> the Babylonian square
+        root algorithm and, more importantly, to generalize it.  Here<rsq/>s the
         essential idea: We know how to find the root of a <term>linear</term>
         equation like <m>ax+b=0</m>.  We want to use this knowledge to approximate
         the root of a nonlinear equation.  As with the rest of Calculus this
         means that the <term>Principle of Local Linearity</term> is the postulate
-        underlying Newton's Method.
+        underlying Newton<rsq/>s Method.
       </p>
       <p>
 
@@ -576,12 +593,12 @@ Ok, paper and pencil
 
       <example xml:id="EXAMPLEnewtons-method1">
 
-        <figure>
-          <caption>
-            <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/">This figure needs a caption.</url>
-          </caption>
-          <image source="images/nm1.png" width="50%"/>
-        </figure>
+        <!-- <figure> -->
+        <!--   <caption> -->
+        <!--     <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/">This figure needs a caption.</url> -->
+        <!--   </caption> -->
+
+        <!-- </figure> -->
         <!-- \begin{wrapfigure}[10]{r}{2.1in} -->
         <!--     \captionsetup{labelformat=empty} -->
         <!--     \vskip-12mm  -->
@@ -591,19 +608,25 @@ Ok, paper and pencil
 
         <p>
 
-          Most mathematical software will accept the equation <m>x^3-3x^2=5x+6</m>
-          as input and give back the approximate solution <m>x=4.433</m> at the
-          click of a button.  As a result it is easy to get the impression
-          that this is a a simple problem.  But, imagine yourself back in the
-          late <m>17</m>th century for a moment. The only computation technology
-          available is paper and pencil. How would you solve this problem?
-          How would you even generate an approximate solution?
+          Most mathematical software will accept the equation
+          <m>x^3-3x^2=5x+6</m>, whose graph is shown below, as input
+          and give back the approximate solution <m>x=4.433</m> at the
+          click of a button.  As a result it is easy to get the
+          impression that this is a a simple problem.  But, imagine
+          yourself back in the late <m>17</m>th century for a
+          moment. The only computation technology available is paper
+          and pencil. How would you solve this problem?  How would you
+          even generate an approximate solution?
         </p>
-        <p>
 
+        <p>
           One possibility is to graph <m>y=x^3-3x^2</m> and <m>y=5x+6</m> on the same
           set of axes and look for the value of <m>x</m> where the two graphs
-          intersect as in the figure above at the right. This seems like a
+          intersect as in the figure below.
+        </p>
+        <image source="images/nm1.png" width="40%"/>
+        <p>
+          This seems like a
           good idea until we actually try it.  Immediately we realize that
           accurately graphing even simple equations would have been an almost
           insurmountable task in those days. We clearly used modern technology
@@ -611,29 +634,29 @@ Ok, paper and pencil
           glean useful information from it would have been virtually
           impossible.
         </p>
-        <p>
 
-          Here's another idea. If we rearrange the equation just a little we
+        <p>
+          Here<rsq/>s another idea. If we rearrange the equation just a little we
           get
           <men  xml:id="EQUATIONNewtonMethod1">
             x^3-3x^2-(5x+6)=0.
 <!-- \label{eq:NewtonMethod1} -->
           </men>
           Now define <m>f(x)</m> to be the expression on the left of
-          <xref ref="EQUATIONNewtonMethod1">Equation~</xref>): <m>f(x) = x^3-3x^2-(5x+6)</m>. The graph
-          of this function, seen at the left, will cross the <m>x</m>-axis (that is
+          <xref ref="EQUATIONNewtonMethod1">equation</xref>): <m>f(x) = x^3-3x^2-(5x+6)</m>. The graph
+          of this function, seen below, will cross the <m>x</m>-axis (that is
           <m>f(x)=0</m>) at the same <m>x</m> coordinate where the equation
           <m>x^3-3x^2 = 5x+6</m> is satisfied. This simple observation allows us to
           think of the problem in a slightly different way: We are looking for
           the <m>x</m> value which is a root of the function <m>f(x)</m>.
         </p>
 
-        <figure>
-          <caption>
-            <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/">This figure needs a caption.</url>
-          </caption>
+        <!-- <figure> -->
+        <!--   <caption> -->
+        <!--     <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/">This figure needs a caption.</url> -->
+        <!--   </caption> -->
           <image source="images/nm5.png" width="50%"/>
-        </figure>
+        <!-- </figure> -->
         <!-- \begin{wrapfigure}[]{l}{2in} -->
         <!--     \vskip-4mm  -->
         <!--     \captionsetup{labelformat=empty} -->
@@ -641,54 +664,52 @@ Ok, paper and pencil
         <!--     \label{fig:nm5} -->
         <!--   \end{wrapfigure} -->
 
-        <p>
 
-          You wouldn't think such a simple change would help. But it does.
-          Now, instead of looking for both the <m>x</m> and <m>y</m> coordinates of an
-          intersection point we need only  search for the  value of <m>x</m> where the
-          graph of the function <m>f(x)=x^3-3x^2-(5x+6) </m> crosses the <m>x-</m>axis.
-          This gives us just a little more information because we know that the
-          <m>y</m> coordinate is zero if a point is on the <m>x</m>-axis.
+        <p>
+          You wouldn<rsq/>t think such a simple change would help. But it
+          does because  now, instead of looking for both the <m>x</m> and
+          <m>y</m> coordinates of an intersection point we need only
+          search for the value of <m>x</m> where the graph of the
+          function <m>f(x)=x^3-3x^2-(5x+6) </m> crosses the
+          <m>x-</m>axis.  This gives us just a little more information
+          because we know that the <m>y</m> coordinate is zero if a
+          point is on the <m>x</m>-axis.
         </p>
 
         <p>
-          As before we will need an initial guess to get started. Since the root
-          seems to be close to <m>4</m> we'll use <m>r_1=4</m> as our first approximation.
-          Now  find and sketch the line tangent to
-          <m>f(x)</m> at <m>r_1=4</m> as seen in the sketch at the left (in red). If our first
-          guess is close to the actual root the Principle of Local Linearity
-          guarantees that the tangent line will cross the <m>x</m>-axis very near to
-          the actual root.  So the value of <m>x</m>, whatever it is, where the
-          tangent line crosses seems like it would be a pretty good second
-          approximation <m>r_2</m>, of the root of <m>f(x) = x^3-3x^2-(5x+6)</m>. If we zoom
-          in on this part of our graph, as in the figure, this is easy to see.
+          As before we will need an initial guess to get
+          started. Since the root seems to be close to the point where
+          <m>x=4</m> we<rsq/>ll use <m>r_1=4</m> as our first
+          approximation.  Now find and sketch the line tangent to
+          <m>f(x)</m> at <m>(r_1, f(r_1)=(4,f(4))</m> as seen in the sketch
+          above (in red). If our first guess is close enough to the
+          actual root the Principle of Local Linearity guarantees that
+          the tangent line will cross the <m>x</m>-axis very near to
+          the actual root.  So the value of <m>x</m>, whatever it is,
+          where the tangent line crosses seems like it would be a
+          pretty good second approximation <m>r_2</m>, of the root of
+          <m>f(x) = x^3-3x^2-(5x+6)</m>. If we zoom in on this part of
+          our graph, as in the figure, this is easy to see.
         </p>
         <p>
 
-          Apparently all we have to do now is determine the slope of the line
-          tangent to the graph at <m>r_1= 4</m>, then find the equation of the line
-          and its <m>x</m>-intercept.
+          Apparently all we have to do now is determine the slope of
+          the line tangent to the graph at <m>(r_1, f(r_1))=
+          (4,f(4))</m>, then find the equation of the line and its
+          <m>x</m>-intercept.
         </p>
       </example>
 
       <exercise  xml:id="DRILLNewtonMethod2">
-        <introduction>
-          <p>
-            <!-- \vskip-6mm  -->
-            <!-- \label{drill:NewtonMethod2} -->
-          </p>
-        </introduction>
-        <task>
-          <statement>
+<ol marker="i">
+<li>
             <p>
               Show that in this example an equation of the line tangent to
               <m>f(x)</m> at <m>r_1=4</m> is
               <me> y+10=19(x-4).  </me>
             </p>
-          </statement>
-        </task>
-        <task>
-          <statement>
+</li>
+<li>
             <p>
               Our second approximation (<m>r_2</m>) to the root we seek will be
               the <m>x</m> coordinate of the point where the line in part (a)
@@ -697,8 +718,8 @@ Ok, paper and pencil
               Set <m>y=0</m> and show that the line in part (a) crosses the
               <m>x-</m>axis at <m>r_2= \frac{10}{19}+4\approx 4.526</m>.
             </p>
-          </statement>
-        </task>
+</li>
+</ol>
       </exercise>
       <!-- begin{ProficiencyDrill} -->
       <!--   \vskip-6mm  -->
@@ -721,12 +742,12 @@ Ok, paper and pencil
 
         The approximation we found in <xref ref="DRILLNewtonMethod2"></xref> is
         better than our original guess of <m>r_1=4</m>, but it is still not great
-        since <m>f(4.526) \approx 2.6</m>, whereas if we'd found the actual root,
-        <m>r</m>, we'd have <m>f(r)=0.</m>
+        since <m>f(4.526) \approx 2.6</m>, whereas if we<rsq/>d found the actual root,
+        <m>r</m>, we<rsq/>d have <m>f(r)=0.</m>
       </p>
       <p>
 
-        But we don't have to stop there, and the pattern should be clear. If
+        But we don<rsq/>t have to stop there, and the pattern should be clear. If
         we wanted a more accurate approximation we could use <m>r_2</m> to generate
         an <m>r_3,</m> and so on. We stop when our approximation is accurate enough
         for our purposes.
@@ -760,7 +781,7 @@ Ok, paper and pencil
         <task>
           <statement>
             <p>
-              If you've done it correctly, you will notice that <m> r_2\gt r_3\gt r_4</m>.
+              If you<rsq/>ve done it correctly, you will notice that <m> r_2\gt r_3\gt r_4</m>.
               Does this surprise to you? Explain.
             </p>
           </statement>
@@ -787,7 +808,7 @@ Ok, paper and pencil
       <!--     obtain the next approximation <m>r_4</m>, but this time round it off to -->
       <!--     <m>6</m> decimal places. -->
       <!--     \comment{You will need <m>6</m> digits for  part (d).} -->
-      <!--   \item If you've done it correctly, you will notice that <m> r_2\gt r_3\gt r_4</m>. -->
+      <!--   \item If you<rsq/>ve done it correctly, you will notice that <m> r_2\gt r_3\gt r_4</m>. -->
       <!--     Does this surprise to you? Explain. -->
       <!--   \item Use your favorite computational software to find an -->
       <!--     approximation to the root of <m>f(x)=x^3-x^2-(5x+6)</m> to <m>6</m> -->
@@ -816,7 +837,7 @@ Ok, paper and pencil
       <p>
 
         When computing approximations our goal is to compute good
-        approximations efficiently, not to do a lot of arithmetic. We'd
+        approximations efficiently, not to do a lot of arithmetic. We<rsq/>d
         actually like to avoid doing arithmetic as much as possible. So it will
         be worth the effort needed to organize our computations as much as we
         can. Fortunately this is not hard to do.
@@ -824,12 +845,12 @@ Ok, paper and pencil
       <p>
 
         In  the diagram at the right we see the graph of a generic function
-        <m>y=y(x)</m>. Suppose we have used Newton's Method repeatedly and found
+        <m>y=y(x)</m>. Suppose we have used Newton<rsq/>s Method repeatedly and found
         the <m>n</m>th approximation, <m>r_n</m>, of the the root (the <m>n</m>th iterate).
-        We'd like to find a formula to compute the next
+        We<rsq/>d like to find a formula to compute the next
         iterate, <m>r_{n+1}</m>, without having to draw the sketch and solve a new
         equation.
-        <xref ref="PROBLEMNewtonsMethod3">Problem~\</xref> leads you through this process.
+        <xref ref="PROBLEMNewtonsMethod3"></xref> leads you through this process.
       </p>
 
 
@@ -856,7 +877,7 @@ Ok, paper and pencil
               <men  xml:id="EQUATIONNewtonMethod">
                 r_{n+1}=r_n-\frac{y(r_n)}{y^\prime(r_n)}.
               </men>
-              is the general formula for Newton's Method.
+              is the general formula for Newton<rsq/>s Method.
             </p>
           </statement>
         </task>
@@ -873,10 +894,10 @@ Ok, paper and pencil
       </problem>
 
       <p>
-        In <xref ref="SECTIONDerivative"></xref> we introduced Lagrange's <lsq/>prime<rsq/>
+        In <xref ref="SECTIONDerivative"></xref> we introduced Lagrange<rsq/>s <lsq/>prime<rsq/>
         notation for the derivative: If <m>y=y(x)</m> then
         <m>\dfdx{y}{x}=y^\prime(x)</m>. We also commented that when the
-        differential form becomes cumbersome we would switch to Lagrange's
+        differential form becomes cumbersome we would switch to Lagrange<rsq/>s
         notation.  Such a time has come.
       </p>
 
@@ -912,7 +933,7 @@ Ok, paper and pencil
                 Choose <m>r_1.</m>
               </p>
             </li>
-            <li>
+            <li  xml:id="NewtIterStep">
               <p>
                 For <m>n=2, 3, 4, \ldots</m> compute <me>
                 r_{n+1}=r_n-\frac{y(r_n)}{y^\prime(r_n)} </me> until the
@@ -924,7 +945,7 @@ Ok, paper and pencil
       </algorithm>
 
       <p>
-        One reason for writing down Newton's Method in this compact form is that
+        One reason for writing down Newton<rsq/>s Method in this compact form is that
         this makes it easier to program into a computer.
       </p>
 
@@ -937,7 +958,7 @@ Ok, paper and pencil
       </p>
       <p>
 
-        Newton's Method works because the property of being the root of a
+        Newton<rsq/>s Method works because the property of being the root of a
         function is a local, not a global property.  If our approximation,
         <m>r_n,</m> is quite close to the root we seek then we can safely
         assume\aside{Most of the time. See the discussion below.}  that the curve and its tangent line
@@ -964,7 +985,7 @@ Ok, paper and pencil
           <p>
             Obviously, <m>f(x) = x-\sqrt{2}</m> has a root at <m>x=\sqrt{2}.</m> But if we
             want to compute <m>\sqrt{2}</m> this is not a good choice of function to
-            apply Newton's Method to. Explain why not. What would be a good
+            apply Newton<rsq/>s Method to. Explain why not. What would be a good
             choice for <m>f(x)</m> if we wish to approximate <m>\sqrt{2}</m>?
           </p>
         </statement>
@@ -974,7 +995,7 @@ Ok, paper and pencil
         <introduction>
           <p>
             Create a function which has a root at each of the following numbers
-            and use your function to compute each to <m>5</m> decimals using Newton's
+            and use your function to compute each to <m>5</m> decimals using Newton<rsq/>s
             Method.
           </p>
         </introduction>
@@ -1024,7 +1045,7 @@ Ok, paper and pencil
       <!-- \begin{embeddedproblem-1line}  -->
       <!--   <!-\- \label{PROBLEMNewtMethCreateFunction} -\-> -->
       <!--   Create a function which has a root at each of the following numbers -->
-      <!--   and use your function to compute each to <m>5</m> decimals using Newton's -->
+      <!--   and use your function to compute each to <m>5</m> decimals using Newton<rsq/>s -->
       <!--   Method. -->
       <!--   \begin{enumerate}[label={  (\alph*)}] -->
       <!--     \item <m>\sqrt[5]{7}</m> -->
@@ -1039,10 +1060,10 @@ Ok, paper and pencil
       <problem xml:id="PROBLEMNewton-meth">
         <introduction>
           <p>
-            Start with <m>r_1=4</m> and use Newton's Method to compute the next four
+            Start with <m>r_1=4</m> and use Newton<rsq/>s Method to compute the next four
             approximations (<m>r_2</m>, <m>r_3</m>, <m>r_4</m>, and <m>r_5</m>) of the roots of each
             of the following functions. Compare these with your results in
-            <xref ref="PROBLEMbisect-meth">Problem~\#</xref>. Which algorithm seems to be more
+            <xref ref="PROBLEMbisect-meth"></xref>. Which algorithm seems to be more
             accurate after four iterations?
           </p>
         </introduction>
@@ -1091,7 +1112,7 @@ Ok, paper and pencil
       </problem>
       <!-- \begin{embeddedproblem} -->
       <!--   <!-\- \label{PROBLEMNewton-meth} -\-> -->
-      <!--   Start with <m>r_1=4</m> and use Newton's Method to compute the next four -->
+      <!--   Start with <m>r_1=4</m> and use Newton<rsq/>s Method to compute the next four -->
       <!--   approximations (<m>r_2</m>, <m>r_3</m>, <m>r_4</m>, and <m>r_5</m>) of the roots of each -->
       <!--   of the following functions. Compare these with your results in -->
       <!--   <xref ref="PROBbisect-meth">Problem~\#</xref>. Which algorithm seems to be more -->
@@ -1111,7 +1132,7 @@ Ok, paper and pencil
       <problem xml:id="PROBLEMNewton-meth2">
         <introduction>
           <p>
-            Use Newton's Method to approximate the root of each of the following
+            Use Newton<rsq/>s Method to approximate the root of each of the following
             functions to at least four decimal places on the interval given.
           </p>
         </introduction>
@@ -1139,7 +1160,7 @@ Ok, paper and pencil
       </problem>
       <!-- \begin{embeddedproblem} -->
       <!--   <!-\- \label{PROBLEMNewton-meth2} -\-> -->
-      <!--   Use Newton's Method to approximate the root of each of the following -->
+      <!--   Use Newton<rsq/>s Method to approximate the root of each of the following -->
       <!--   functions to at least four decimal places on the interval given. -->
       <!--   \begin{enumerate}[label={  (\alph*)}] -->
       <!--       \item <m>f(x) = \frac{x^2-x+2}{x^2(x-1)}-3</m> on <m>[0,2]</m>   -->
@@ -1151,12 +1172,12 @@ Ok, paper and pencil
 
       <problem xml:id="PROBLEMXCosx">
         <statement>
-          <figure>
-            <caption>
-              <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/">This figure needs a caption.</url>
-            </caption>
-            <image source="images/NewtonsMethod3.png" width="50%"/>
-          </figure>
+          <!-- <figure> -->
+          <!--   <caption> -->
+          <!--     <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/">This figure needs a caption.</url> -->
+          <!--   </caption> -->
+            <image source="images/NewtonsMethod3.png" width="40%"/>
+          <!-- </figure> -->
           <!-- \begin{wrapfigure}[]{r}{3.6in} -->
           <!--     \vskip-6mm  -->
           <!--     \captionsetup{labelformat=empty} -->
@@ -1164,13 +1185,12 @@ Ok, paper and pencil
           <!--     \label{fig:NewtonsMethod3} -->
           <!--   \end{wrapfigure} -->
           <p>
-            As you can see from the sketch, the graphs of <m>y=x</m> and
-            <m>y=\cos(x)</m> intersect exactly once. We want to use Newton's Method to find an
+            As you can see from the sketch above, the graphs of <m>y=x</m> and
+            <m>y=\cos(x)</m> intersect exactly once. We want to use Newton<rsq/>s Method to find an
             approximation of the coordinates of the  point of intersection.
 
           </p>
           <p>
-            `
             First obtain the iteration formula:
             <me>
               r_{n+1}=\dfrac{r_n\sin(r_n)+\cos(r_n)}{\sin(r_n)+1}.
@@ -1191,7 +1211,7 @@ Ok, paper and pencil
         <task>
           <statement>
             <p>
-              Apply Newton's Method to the function <m>f(x)=x^2-a</m>  to
+              Apply Newton<rsq/>s Method to the function <m>f(x)=x^2-a</m>, shown above,  to
               determine the iteration formula for approximating <m>\sqrt{a}</m>. Show
               that this is precisely the <m>(n+1)</m>st iteration you get when using
               the Babylonian method:
@@ -1202,7 +1222,7 @@ Ok, paper and pencil
         <task>
           <statement>
             <p>
-              Use Newton's Method on the function <m>f(x)=x^3-a</m> to obtain
+              Use Newton<rsq/>s Method on the function <m>f(x)=x^3-a</m> to obtain
               the iteration formula:
               <m>\displaystyle
               r_{n+1}=\frac{1}{3} \left(2r_n+\frac{a}{r_n^2} \right)
@@ -1238,7 +1258,7 @@ Ok, paper and pencil
       </problem>
       <!-- \begin{embeddedproblem-enumerate}[Find the pattern] -->
       <!--   \begin{enumerate}[label={  (\alph*)}] -->
-      <!--   \item   Apply Newton's Method to the function <m>f(x)=x^2-a</m>  to -->
+      <!--   \item   Apply Newton<rsq/>s Method to the function <m>f(x)=x^2-a</m>  to -->
       <!--     determine the iteration formula for approximating <m>\sqrt{a}</m>. Show -->
       <!--     that this is precisely the <m>(n+1)</m>st iteration you get when using -->
       <!--     the Babylonian method. -->
@@ -1246,7 +1266,7 @@ Ok, paper and pencil
       <!--     <m>\displaystyle -->
       <!--     r_{n+1}=\frac{1}{2} \left(r_n+\frac{a}{r_n} \right). -->
       <!--     </m> -->
-      <!--   \item Use Newton's Method on the function <m>f(x)=x^3-a</m> to obtain -->
+      <!--   \item Use Newton<rsq/>s Method on the function <m>f(x)=x^3-a</m> to obtain -->
       <!--     the iteration formula: -->
       <!--     <m>\displaystyle -->
       <!--     r_{n+1}=\frac{1}{3} \left(2r_n+\frac{a}{r_n^2} \right) -->
@@ -1282,7 +1302,7 @@ Ok, paper and pencil
 
       <p>
 
-        If the initial guess is reasonably close to the root Newton's Method
+        If the initial guess is reasonably close to the root Newton<rsq/>s Method
         finds a very accurate approximation to the root of a function in just
         a few iterations most of the time. This made it extremely useful in
         the <m>17</m>th century when such computations were done by hand. Indeed,
@@ -1302,7 +1322,7 @@ Ok, paper and pencil
 
         But this paper-and-pencil procedure is not as simple as handing
         the problem off to your favorite computational software so a natural
-        question to ask is, <q>Why bother, why should we learn this?</q>
+        question to ask is, <q>Why bother? why should we learn this?</q>
       </p>
       <p>
 
@@ -1317,16 +1337,16 @@ Ok, paper and pencil
         Perhaps more importantly, you are less likely to believe a wrong
         answer when you get it. Depending on what you are computing an
         incorrect approximation could mean anything from a minor annoyance --
-        if you are calculating <m>\sqrt{2}</m> just for fun -- to a deadly disaster
-        -- if you are designing a control procedure for a self-driving car.
+        if you are calculating <m>\sqrt{2}</m> just for fun<mdash/>to a deadly disaster
+       <mdash/>if you are designing a control procedure for a self-driving car.
       </p>
 
       <problem xml:id="PROBLEMNewtMethSignOfIterates">
         <introduction>
           <p>
-            Even if you don't have any intuition into the problem a more than
+            Even if you don<rsq/>t have any intuition into the problem a more than
             cursory understanding of the algorithm itself can be helpful.  For
-            example, show that when Newton's Method is used:
+            example, show that when Newton<rsq/>s Method is used:
           </p>
         </introduction>
         <task>
@@ -1350,8 +1370,8 @@ Ok, paper and pencil
             <p>
               Suppose you are trying to compute a numerical
               approximation of <m>\sqrt{2}</m> using an implementation of
-              Newton's Method, but you accidentally enter <m>x^2+2</m> as
-              you're function (instead of <m>x^2-2</m>). Explain how you can
+              Newton<rsq/>s Method, but you accidentally enter <m>x^2+2</m> as
+              you<rsq/>re function (instead of <m>x^2-2</m>). Explain how you can
               use the results of (a) and (b) to know that the algorithm
               is failing at the third iteration.
             </p>
@@ -1359,9 +1379,9 @@ Ok, paper and pencil
         </task>
       </problem>
       <!-- \begin{embeddedproblem} -->
-      <!--   Even if you don't have any intuition into the problem a more than -->
+      <!--   Even if you don<rsq/>t have any intuition into the problem a more than -->
       <!--   cursory understanding of the algorithm itself can be helpful.  For -->
-      <!--   example, show that when Newton's Method is used: -->
+      <!--   example, show that when Newton<rsq/>s Method is used: -->
       <!--   \begin{enumerate}[label={  (\alph*)}]  -->
       <!--   \item If <m>y(r_n)</m> and <m>y^\prime(r_n)</m> have the same sign then -->
       <!--     <m>r_{n+1}\le r_n</m>. -->
@@ -1369,8 +1389,8 @@ Ok, paper and pencil
       <!--     then <m>r_{n+1}\ge r_n</m>. -->
       <!--   \item Suppose you are trying to compute a numerical -->
       <!--     approximation of <m>\sqrt{2}</m> using an implementation of -->
-      <!--     Newton's Method, but you accidentally enter <m>x^2+2</m> as -->
-      <!--     you're function (instead of <m>x^2-2</m>). Explain how you can -->
+      <!--     Newton<rsq/>s Method, but you accidentally enter <m>x^2+2</m> as -->
+      <!--     you<rsq/>re function (instead of <m>x^2-2</m>). Explain how you can -->
       <!--     use the results of (a) and (b) to know that the algorithm -->
       <!--     is failing at the third iteration. -->
       <!--   \end{enumerate} -->
@@ -1379,15 +1399,15 @@ Ok, paper and pencil
       <p>
         So, how do you know if you should trust the approximation you get back
         from your favorite software? First, be aware of what a reasonable
-        answer should be. In <xref ref="EXAMPLEnewtons-method1">Example~\</xref> it is
+        answer should be. In <xref ref="EXAMPLEnewtons-method1"></xref> it is
         clear that the root must be positive. If software tries to tell you
         that it is equal to <m>-2.5</m> you know it is lying. Second be aware of
         the ways that an approximation method might fail.
       </p>
 
       <p>
-        For example, Newton's Method is not perfect. It can fail in two distinct ways:
-        Subtle and Spectacular. Let's take a look at them.
+        For example, Newton<rsq/>s Method is not perfect. It can fail in two distinct ways:
+        Subtle and Spectacular. Let<rsq/>s take a look at them.
           </p>
 
 
@@ -1399,7 +1419,7 @@ Ok, paper and pencil
           <title>Spectacular Failure</title>
 
           <p>
-            Newton's Method can fail spectacularly in two distinct, but related,
+            Newton<rsq/>s Method can fail spectacularly in two distinct, but related,
             ways.
             The first is very easy to spot.
           </p>
@@ -1409,7 +1429,7 @@ Ok, paper and pencil
               <p>
                 Suppose we want to find the root of <m>y=x^2-4x+7</m> and our initial
                 guess is <m>r_1=2</m>.  Investigate, both algebraically and graphically,
-                what happens when we apply Newton's Method to this problem. Describe
+                what happens when we apply Newton<rsq/>s Method to this problem. Describe
                 the results of your investigations.
                 
               </p>
@@ -1417,7 +1437,7 @@ Ok, paper and pencil
           </problem>
           <p>
 
-            Because Newton's Method requires that we divide by <m>y^\prime(r_n)</m> we
+            Because Newton<rsq/>s Method requires that we divide by <m>y^\prime(r_n)</m> we
             will get an error if it happens that <m>y^\prime(r_n) =0</m>. We call this
             a spectacular failure because it is easy to spot whether we do the
             computation with a computer or with paper and pencil. Indeed, modern
@@ -1440,18 +1460,22 @@ Ok, paper and pencil
             <task>
               <statement>
                 <p>
-                  Use Newton's Method with the initial guess, <m>r_1=1</m> to
+                  Use Newton<rsq/>s Method with the initial guess, <m>r_1=1</m> to
                   see if it converges to zero.
-                  \hint{It won't.}
                 </p>
               </statement>
+              <hint>
+                <p>
+                  It won<rsq/>t.
+                </p>
+              </hint>
             </task>
             <task>
               <statement>
                 <p>
-                  Write down the iteration step (step 2) from Newton's
+                  Write down a formula for the computation in  <xref ref="NewtIterStep">  step</xref> from Newton<rsq/>s
                   Method for this function. Use this to explain why the method will
-                  not converge no matter what non-zero initial guess is used.
+                  not converge no matter what non-zero initial guess is used. 
                 </p>
               </statement>
             </task>
@@ -1460,18 +1484,18 @@ Ok, paper and pencil
           <!--   <!-\- \label{problem:NewtonsMethodOneThird} -\-> -->
           <!--   The only root of the function <m>f(x)=x^{1/3}</m> is zero.   -->
           <!--   \begin{enumerate}[label={  (\alph*)}] -->
-          <!--   \item Use Newton's Method with the initial guess, <m>r_1=1</m> to -->
+          <!--   \item Use Newton<rsq/>s Method with the initial guess, <m>r_1=1</m> to -->
           <!--     see if it converges to zero.  -->
-          <!--     \hint{It won't.}  -->
-          <!--   \item Write down the iteration step (step 2) from Newton's -->
+          <!--     \hint{It won<rsq/>t.}  -->
+          <!--   \item Write down the iteration step (step 2) from Newton<rsq/>s -->
           <!--     Method for this function. Use this to explain why the method will -->
           <!--     not converge no matter what non-zero initial guess is used. -->
           <!--   \end{enumerate} -->
 
           <!-- \end{embeddedproblem} -->
           <p>
-            Obviously we don't need to use Newton's Method to compute the root of
-            <m>f(x)=x^{1/3}.</m> The point of this example is that Newton's Method will
+            Obviously we don<rsq/>t need to use Newton<rsq/>s Method to compute the root of
+            <m>f(x)=x^{1/3}.</m> The point of this example is that Newton<rsq/>s Method will
             not find the root no matter how close our initial guess is. Instead it
             will continue to generate alternately positive and negative
             <q>approximations</q> to zero, that are farther and farther from zero.
@@ -1483,25 +1507,24 @@ Ok, paper and pencil
         <subsection xml:id="SUBSECTIONSubtleFailure">
           <title>Subtle Failure</title>
           <p>
-            The other way Newton's Method fails can be quite subtle. That is, it
+            The other way Newton<rsq/>s Method fails can be quite subtle. That is, it
             can converge, but not to the number we seek.
             The best way to demonstrate this is with an example.
           </p>
           <example xml:id="EXAMPLE-SubtleFailCos">
             <p>
-              Suppose we wish to compute <m>\frac{\pi}{2}</m> by finding the first
+              Suppose we wish to compute <m>\frac{\pi}{2}</m> by finding the smallest
               positive root of <m>\cos(x).</m> If we start with an initial guess of
-              <m>r_1=.1</m> (not a great first guess, but it's not obviously horrible
+              <m>r_1=0.1</m> (not a great first guess, but it<rsq/>s not obviously horrible
               either) we get <m>r_2=10.07,</m> which certainly seems like it might be a
               problem since <m>\frac{\pi}{2}\approx 1.7.</m> If we ignore this and
               continue we get <m>r_3= 11.4,</m> and <m>r_4=10.97.</m>
             </p>
-            <figure>
-              <caption>
-                <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/">This figure needs a caption.</url>
-              </caption>
-              <image source="images/NewtonsMethodFail1.png" width="50%"/>
-            </figure>
+            <!-- <figure> -->
+            <!--   <caption> -->
+            <!--     <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/">This figure needs a caption.</url> -->
+            <!--   </caption> -->
+            <!-- </figure> -->
             <!-- \begin{wrapfigure}[13]{r}{2.7in} -->
             <!--     \vskip-6mm  -->
             <!--     \captionsetup{labelformat=empty} -->
@@ -1509,11 +1532,12 @@ Ok, paper and pencil
             <!--     \label{fig:NewtonsMethodFail1} -->
             <!--   \end{wrapfigure} -->
             <p>
-              What's going on here?  The numbers seem to be
-              converging, but they are not converging to the  answer we intended
-              to find. The
-              figure at the right shows what the difficulty is.
+              What<rsq/>s going on here?  The numbers seem to be
+              converging, but they are not converging to the answer we
+              intended to find. The figure below shows what the
+              difficulty is.
             </p>
+              <image source="images/NewtonsMethodFail1.png" width="40%"/>
             <p>
 
               In a nutshell, our initial guess was too far away from the
@@ -1523,16 +1547,16 @@ Ok, paper and pencil
               that its slope is very shallow. Thus the tangent line crosses the
               <m>x-</m>axis at about <m>r_2=10.07,</m> very far from the root we seek. Now
               it happens that <m>10.07</m> is actually pretty close to another
-              root of our function: <m>7\pi/2.</m> So continued iterations of Newton's
+              root of our function: <m>7\pi/2.</m> So continued iterations of Newton<rsq/>s
               Method will settle in on the root at <m>7\pi/2</m>. But the damage has
-              already been done. We've found a legitimate root but not he one we
+              already been done. We<rsq/>ve found a legitimate root but not he one we
               intended to find.
             </p>
             <p>
               
-              We call this a subtle failure because Newton's Method will converge
+              We call this a subtle failure because Newton<rsq/>s Method will converge
               without complaint. None of the computations will seem suspicious. A
-              software implementation of Newton's Method for this problem using
+              software implementation of Newton<rsq/>s Method for this problem using
               this initial guess will return a reasonable looking, but wrong,
               number.  Although it is glaringly obvious what goes wrong when we
               draw a picture of each successive approximation the fact is if we
@@ -1546,6 +1570,16 @@ Ok, paper and pencil
               could accept a
               ridiculous answer as correct.
             </p>
+            <aside>
+              <title>Comment</title>
+              <p>
+                This is embarrassing at best, deadly at
+                worst. Seriously. If what you are calculating is the
+                embedded software for, say the autopilot system, of an
+                airliner accepting the wrong answer midflight could
+                easily be deadly. Don<rsq/>t take this lightly.
+              </p>
+            </aside>
           </example>
 
           <p>
@@ -1570,15 +1604,15 @@ Ok, paper and pencil
             that the initial guess be sufficiently close to the root we seek that the
             iterations will converge to the desired root. This, of course, begs
             the question, <q>How close should our initial guess be?</q> This is
-            actually a hard question. Since we don't yet possess all of the
-            knowledge and skills needed we can't answer it in any definite way. So
-            we'll just say that in general your initial guess should be as close
+            actually a hard question. Since we don<rsq/>t yet possess all of the
+            knowledge and skills needed we can<rsq/>t answer it in any definite way. So
+            we<rsq/>ll just say that in general your initial guess should be as close
             as you can make it.
           </p>
           <p>
 
             But take care. As we saw in
-            <xref ref="PROBLEMNewtonsMethodOneThird">Problem~\</xref> sometimes even having a
+            <xref ref="PROBLEMNewtonsMethodOneThird"></xref> sometimes even having a
             very accurate first guess is not sufficient.
           </p>
 
@@ -1591,12 +1625,12 @@ Ok, paper and pencil
             <task>
               <statement>
                 <p>
-                  Use Newton's Method to find approximations to the positive
+                  Use Newton<rsq/>s Method to find approximations to the positive
                   roots closest to zero of each of the following functions.
                   (Clearly you can use Algebra and Trigonometry to compute them
                   exactly. The point here is to see how good our guesses must
-                  sometimes be in order for Newton's Method to work.}
-                  <ol>
+                  sometimes be in order for Newton<rsq/>s Method to work.}
+                  <ol cols="2" marker="i">
                     <li>
                       <p>
                         <m>y(x)=x(x^2-.01)</m>
@@ -1627,18 +1661,18 @@ Ok, paper and pencil
             <p>
               If we were to next ask you to find approximations of the
               negative roots closest to zero of each of these functions would you
-              need to use Newton's Method again? Explain.
+              need to use Newton<rsq/>s Method again? Explain.
             </p>
           </statement>
         </task>
 </problem>
 <!-- \begin{embeddedproblem-enumerate}  ;;; MULTILEVEL PROBLEM -->
 <!--   \begin{enumerate}[label={  (\alph*)}] -->
-<!--   \item Use Newton's Method to find approximations to the -->
+<!--   \item Use Newton<rsq/>s Method to find approximations to the -->
 <!--     positive roots closest to zero of each of the following functions. -->
 <!--     \comment{Yes, we know you can find them exactly using -->
 <!--       Algebra and Trigonometry. The point here is to see how good our -->
-<!--       guesses have to be sometimes for Newton's Method to work.} -->
+<!--       guesses have to be sometimes for Newton<rsq/>s Method to work.} -->
 
 <!--       <ol> -->
 <!--         <li> -->
@@ -1665,7 +1699,7 @@ Ok, paper and pencil
 
 <!--   \item If we were to next ask you to find approximations of the -->
 <!--     negative roots closest to zero of each of these functions would you -->
-<!--     need to use Newton's Method again? Explain. -->
+<!--     need to use Newton<rsq/>s Method again? Explain. -->
 <!--   \end{enumerate} -->
 <!-- \end{embeddedproblem-enumerate} -->
 
@@ -1688,7 +1722,7 @@ Ok, paper and pencil
     <statement>
       <p>
         Show that with an initial guess, <m>r_1 \gt 2</m>,
-        Newton's Method almost never converges to the root.
+        Newton<rsq/>s Method almost never converges to the root.
       </p>
     </statement>
   </task>
@@ -1696,10 +1730,10 @@ Ok, paper and pencil
     <statement>
       <p>
         We said <q>almost never</q> in part (a) because there is a
-        small interval of numbers greater than <m>2</m> with the property that Newton's Method
+        small interval of numbers greater than <m>2</m> with the property that Newton<rsq/>s Method
         will converge if <m>r_1</m> is any number in the
-        interval. Find an interval that works. \comment{It doesn't have to be
-        the largest possible interval.}
+        interval. Find an interval that works. (It doesn<rsq/>t have to be
+        the largest possible interval.)
       </p>
     </statement>
   </task>
@@ -1707,7 +1741,7 @@ Ok, paper and pencil
     <statement>
       <p>
         Show that if you start with an initial guess of <m>r_1=2</m> or
-        <m>r_1=3</m> Newton's Method will not even generate the first iterate:
+        <m>r_1=3</m> Newton<rsq/>s Method will not even generate the first iterate:
         <m>r_2.</m> Explain.
       </p>
     </statement>
@@ -1725,14 +1759,14 @@ Ok, paper and pencil
 <!--   has exactly one real root and it is between one and two. -->
 <!--   \begin{enumerate}[label={  (\alph*)}] -->
 <!--   \item Show that with an initial guess, <m>r_1 \gt 2</m>, -->
-<!--     Newton's Method almost never converges to the root. -->
+<!--     Newton<rsq/>s Method almost never converges to the root. -->
 <!--   \item We said <q>almost never</q> in part (a) because there is a -->
-<!--     small interval of numbers greater than <m>2</m> with the property that Newton's Method -->
+<!--     small interval of numbers greater than <m>2</m> with the property that Newton<rsq/>s Method -->
 <!--     will converge if <m>r_1</m> is any number in the -->
-<!--     interval. Find an interval that works. \comment{It doesn't have to be -->
+<!--     interval. Find an interval that works. \comment{It doesn<rsq/>t have to be -->
 <!--       the largest possible interval.} -->
 <!--   \item Show that if you start with an initial guess of <m>r_1=2</m> or -->
-<!--     <m>r_1=3</m> Newton's Method will not even generate the first iterate: -->
+<!--     <m>r_1=3</m> Newton<rsq/>s Method will not even generate the first iterate: -->
 <!--     <m>r_2.</m> Explain. -->
 <!--   \end{enumerate} -->
 <!-- \end{embeddedproblem} -->
@@ -1744,7 +1778,7 @@ Ok, paper and pencil
       Suppose that a cubic polynomial has three real roots, <m>a</m>, <m>b</m>,
       and <m>c</m> and  that two of them, <m>a</m> and <m>b</m> are known.  We wish
       to approximate the third. Show that if we take the average of <m>a</m>
-      and <m>b</m> as our initial guess, Newton's Method will find the exact
+      and <m>b</m> as our initial guess, Newton<rsq/>s Method will find the exact
       value of the third root, <m>c</m>, in one iteration.
     </p>
   </statement>
@@ -1755,14 +1789,14 @@ Ok, paper and pencil
 
 </section>
 <section xml:id="SECTIONeulers-method">
-  <title>Euler's Method</title>
+  <title>Euler<rsq/>s Method</title>
 
-  <figure>
-    <caption>
-      <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/">This figure needs a caption.</url>
-    </caption>
-    <image source="images/EulerFig1.png" width="50%"/>
-  </figure>
+  <!-- <figure> -->
+  <!--   <caption> -->
+  <!--     <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/">This figure needs a caption.</url> -->
+  <!--   </caption> -->
+    <image source="images/EulerFig1.png" width="40%"/>
+  <!-- </figure> -->
   <!-- \begin{wrapfigure}[10]{r}{2in} -->
   <!--   \captionsetup{labelformat=empty} -->
   <!--   \vskip-10mm  -->
@@ -1771,25 +1805,31 @@ Ok, paper and pencil
   <!-- \end{wrapfigure} -->
   <p>
     Suppose <m>B</m> is a point on the graph of an unknown function <m>y(x)</m> (in
-    green in the figure at the right). Suppose further that if the line
+    green in the figure above). Suppose further that if the line
     tangent to the graph at <m>B</m> (in red) crosses the <m>x</m>-axis at <m>(a, 0)</m>
     as shown.
   </p>
   <p>
 
-    We wish to address the following question\aside{The line segment <m>AC</m>
-    is called the subtangent of the graph. In the seventeenth
-    mathematics century was still strongly tied to Greek geometry so
-    some of the early, pre-Calculus efforts to find the tangent lines
-    were aimed at finding the length of the subtangent of a
-    curve. Finding length of <m>\overline{CA}</m> is equivalent to finding
-    the derivative of <m>y</m> at <m>B</m> because if <m>B</m> and <m>C</m> are known then
-    the slope of the curve at <m>B</m> is equal to
-    <m>\frac{\overline{BC}}{\overline{AC}}</m>.}: <q>Is there a curve which
+    We wish to address the following question: <q>Is there a curve which
     passes through the point <m>(0,
     1)</m> with the property that the distance from <m>A</m> to
     <m>C</m> is equal to <m>1</m> regardless of the location of <m>B</m> on the graph.</q>
-  </p>
+    </p>
+    <aside>
+      <title>Historical Background</title>
+      <p>
+        The line segment <m>AC</m> is called the subtangent of the graph. In
+        the seventeenth century mathematics was still strongly tied to Greek
+        geometry so some of the early, pre-Calculus efforts to find the
+        tangent lines were aimed at finding the length of the subtangent of a
+        curve. Finding length of <m>\overline{CA}</m> is equivalent to finding
+        the derivative of <m>y</m> at <m>B</m> because if <m>B</m> and
+        <m>C</m> are known then the slope of the curve at <m>B</m> is equal to
+        <m>\frac{\overline{BC}}{\overline{AC}}</m>.
+      </p>
+    </aside>
+
   <p>
 
     At <m>B</m> form the differential right triangle with the infinitesimal
@@ -1804,10 +1844,12 @@ Ok, paper and pencil
     Since we specified that the curve must pass through the point <m>(0, 1)</m>
     we see that we need to find a function <m>y(x)</m> that satisfies the
     following two conditions:
-    <men  xml:id="IVPExpDiffeq1">
+    <mdn>
+<mrow xml:id="IVPExpDiffeq1">
       <!-- \label{IVPExpDiffeq1} -->
-      \dfdx{y}{x} = y, \text{ and }  y(0)=1.
-    </men>
+      \dfdx{y}{x} = y, \amp{}\amp{}\text{and}\amp{}\amp{}  y(0)=1.
+</mrow>  
+    </mdn>
     A problem like the one stated in <xref ref="IVPExpDiffeq1">Formula</xref> is
     called an <term>Initial Value Problem</term>, or IVP. We will give a formal
     definition below (<xref ref="DEFINITIONIVP">Definition</xref>).
@@ -1815,19 +1857,19 @@ Ok, paper and pencil
   <p>
 
     We do not know a formula for <m>y</m> which will satisfy
-    <xref ref="IVPExpDiffeq1">IVP~\</xref>, nor do we have the tools to find such a
+    <xref ref="IVPExpDiffeq1">IVP</xref>, nor do we have the tools to find such a
     formula, yet.  We will return to this question in
-    <xref ref="CHAPTERlast-elem-funct">Chapter~</xref>) where we will solve
-    <xref ref="IVPExpDiffeq1">IVP~</xref>) exactly. For the moment we will be
+    <xref ref="CHAPTERlast-elem-funct"></xref>) where we will solve
+    <xref ref="IVPExpDiffeq1">IVP</xref>) exactly. For the moment we will be
     satisfied if we can find an approximate graph of the solution.  That
     will give us a general sense of its shape.
   </p>
   <p>
 
 
-    The initial value in <xref ref="IVPExpDiffeq1">IVP~</xref>) shows that  the curve
+    The initial value in <xref ref="IVPExpDiffeq1">IVP</xref>) shows that  the curve
     passes through the point <m>(0,1)</m>.  From the differential equation in
-    <xref ref="IVPExpDiffeq1">IVP~</xref>)  we see that
+    <xref ref="IVPExpDiffeq1">IVP</xref>)  we see that
     <me>
       \eval{\dfdx{y}{x}}{x}{0} = y(0) =1.
     </me>
@@ -1839,7 +1881,7 @@ Ok, paper and pencil
       \text{ or }
       y=x+1.
     </me>
-    This is not a lot to work with, but let's not set our sights too high.
+    This is not a lot to work with, but let<rsq/>s not set our sights too high.
   </p>
   <p>
 
@@ -1851,16 +1893,16 @@ Ok, paper and pencil
     <m>y-</m>coordinate on the tangent line will be close to the <m>y-</m>coordinate
     on the curve. So we can use the <m>y</m>-coordinate on the tangent line
     (which we know) to approximate the <m>y</m>-coordinate on the curve (which
-    we don't know).
+    we don<rsq/>t know).
   </p>
 
 
-  <figure>
-    <caption>
-      <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/">This figure needs a caption.</url>
-    </caption>
-    <image source="images/exp-piecewise-linear2.png" width="50%"/>
-  </figure>
+  <!-- <figure> -->
+  <!--   <caption> -->
+  <!--     <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/">This figure needs a caption.</url> -->
+  <!--   </caption> -->
+    <image source="images/exp-piecewise-linear2.png" width="60%"/>
+  <!-- </figure> -->
   <!-- \begin{wrapfigure}[]{r}{3in} -->
   <!-- \captionsetup{labelformat=empty} -->
   <!-- \centerline{\includegraphics*[height=1.6in,width=3in]{../Figures/exp-piecewise-linear2}} -->
@@ -1868,16 +1910,16 @@ Ok, paper and pencil
   <!-- \end{wrapfigure} -->
   <p>
 
-    Let's say we increase <m>x</m> by <m>0.1</m> so that <m>x=0.1</m>.  The
+    Let<rsq/>s say we increase <m>x</m> by <m>0.1</m> so that <m>x=0.1</m>.  The
     <m>y</m>-coordinate on the line tangent to the curve at <m>x=0.1</m> is <m>1.1</m>
     (since the equation of our tangent line is <m>y=x+1</m>).
   </p>
   <p>
 
     We now have two points on our curve: <m>(0,1)</m> and <m>(0.1, 1.1).</m> The
-    point <m>(0.1, 1.1)</m> isn't on the curve, but it's close. Remember we're
+    point <m>(0.1, 1.1)</m> isn<rsq/>t on the curve, but it<rsq/>s close. Remember we<rsq/>re
     only trying to approximate the curve. Connecting these with a straight
-    line we have the red segment on the graph at the right.  So far, so
+    line we have the red segment on the graph above.  So far, so
     good.
   </p>
   <p>
@@ -1886,21 +1928,19 @@ Ok, paper and pencil
     like to have the equation of the line tangent to the curve at
     <m>(0.1, y(0.1))</m> but we simply have no way to obtain it. All we have is
     the point <m>(0.1, 1.1)</m>. But we know that <m>y(0.1)\approx1.1</m> so the
-    differential equation from <xref ref="IVPExpDiffeq1">IVP~</xref>) tells us that
+    differential equation from <xref ref="IVPExpDiffeq1">IVP</xref>) tells us that
     <m>\eval{\dfdx{y}{x}}{x}{0.1}\approx1.1</m> also. Thus we see that the curve
     will pass (approximately) through the point <m>(0.1, 1.1)</m> with slope
     (approximately) equal to <m>1.1</m>. Therefore the equation of the line
     tangent to the curve at (approximately) <m>(0.1, 1.1)</m> will be
-    <m>y-1.1=1.1(x-0.1)</m> and as long as we don't move too far the
+    <m>y-1.1=1.1(x-0.1)</m> and as long as we don<rsq/>t move too far the
     Principle of Local Linearity guarantees that this line and the curve
     we seek are close together. So we use the blue line segment from
     <m>(0.1, 1.1)</m> to <m>(0.2, 1.21)</m> in our figure above to approximate the
     curve on the interval <m>(0.1, 0.2)</m>.
-  </p>
+         </p>
+
   <p>
-
-
-
     We now repeat this process to compute the points:<m>(0.3,1.331)</m>,
     <m>(0.4,1.4641)</m>, <m>(0.5,1.61051)</m>, and so on.  Plotting these points and
     connecting them with straight line segments gives us the rest of the
@@ -1908,12 +1948,11 @@ Ok, paper and pencil
   </p>
 
 
-  <figure>
-    <caption>
-      <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/">This figure needs a caption.</url>
-    </caption>
-    <image source="images/exp-piecewise-linear3.png" width="50%"/>
-  </figure>
+  <!-- <figure> -->
+  <!--   <caption> -->
+  <!--     <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/">This figure needs a caption.</url> -->
+  <!--   </caption> -->
+  <!-- </figure> -->
   <!-- \begin{wrapfigure}[15]{l}{2.5in} -->
   <!-- \captionsetup{labelformat=empty} -->
   <!-- \centerline{\includegraphics*[height=2.1in,width=2.5in]{../Figures/exp-piecewise-linear3}} -->
@@ -1923,16 +1962,23 @@ Ok, paper and pencil
 
     At each step we use the previous approximation to compute the next, so
     it would be miraculous if we actually found exactly the points on the
-    graph of our curve.  But it should be clear  that the curve we've drawn
-    will at least resemble the desired curve, as long as we don't
+    graph of our curve.  But it should be clear  that the curve we<rsq/>ve drawn
+    will at least resemble the desired curve, as long as we don<rsq/>t
     stray too far from our initial point <m>x=0</m>.
     The sketch below shows our approximation and the actual solution
-    on the same set of axes\aside{In practice of course, we wouldn't know the
-    actual solution -- if we knew that there would be no reason to find an
-    approximation -- but in this case we (the authors) do know.}.
+    on the same set of axes.
   </p>
-  <p>
+  <aside>
+    <title>Comment</title>
+    <p>
+      In practice of course, we wouldn<rsq/>t know the
+      actual solution<mdash/>if we knew that there would be no reason to find an
+      approximation<mdash/>but in this case we (the authors) do know.
+    </p>
+  </aside>
 
+  <image source="images/exp-piecewise-linear3.png" width="50%"/>
+  <p>
     The solution of this particular IVP  turns out to be
     incredibly useful in mathematics, theoretical physics, engineering,
     and science and technology in general.  We will be revisiting it in
@@ -1940,9 +1986,9 @@ Ok, paper and pencil
   </p>
   <p>
 
-    The procedure we have just outlined is known as <term>Euler's Method</term>;
+    The procedure we have just outlined is known as <term>Euler<rsq/>s Method</term>;
     named for the great eighteenth century mathematician Leonhard
-    Euler. For now we'll focus on how to use Euler's Method to find an
+    Euler. For now we<rsq/>ll focus on how to use Euler<rsq/>s Method to find an
     approximate solution of an arbitrary <term>Initial Value Problem</term>.
   </p>
   <p>
@@ -1963,30 +2009,36 @@ Ok, paper and pencil
   </definition>
   <p>
 
-    Don't let the formalism of this definition scare you. All it says is
+    Don<rsq/>t let the formalism of this definition scare you. All it says is
     that at every point <m>(x,y)</m> the slope of <m>y(x)</m>,
     <m>\left(\dfdx{y}{x}\right)</m>, is given by some formula, <m>f(x,y)</m>,
     which may involve both <m>x</m> and <m>y</m>\aside{In our problem above we had
-    <m>\dfdx{y}{x}=f(x,y)=y</m>.}, and that we know the value of <m>y(x)</m> for a
+    <m>\dfdx{y}{x}=f(x,y)=y</m>., and that we know the value of <m>y(x)</m> for a
     single value of <m>x</m>. Specifically, at  <m>x=x_0</m>.
   </p>
   <p>
 
-    To write down Euler's Method clearly we will need some
+    To write down Euler<rsq/>s Method clearly we will need some
     notation.
     We know that the equation of the tangent line to the curve <m>y=y(x)</m> at
     the point <m>(x_0,y_0)</m> is given by
-    \begin{align*}
+    <md>
+<mrow>
+
     y\amp =y_0+\left(\eval{\dfdx{y}{x}}{(x,y)}{(x_0,y_0)}\right)(x-x_0)
+</mrow>
+<mrow>
     \amp =y_0+f(x_0,y_0)(x-x_0 ).
-    \end{align*}
+</mrow>
+</md>
+
     So if we choose <m>x_1</m> very close to <m>x_0</m> and compute
     <m>
       y_1=y_0+f(x_0,y_0 )(x_1-x_0 )
     </m>
     then <m>(x_1,y_1)</m> would be approximately on the curve. In this way we can generate
     a sequence of points
-    <m>(x_0,y_0 ), (x_1,y_1 ), (x_2,y_2 ), (x_3,y_3 ),\ldots</m> which are
+    <m>(x_0,y_0 ), (x_1,y_1 ), (x_2,y_2 ), (x_3,y_3 ),\cdots</m> which are
     approximately on the curve.  Connecting them with straight line
     segments should provide an
     approximate graph of the curve.
@@ -1995,7 +2047,7 @@ Ok, paper and pencil
     Formalizing all of this we have:
   </p>
   <algorithm>
-    <title>Euler's Method</title>
+    <title>Euler<rsq/>s Method</title>
     <p>
       Given an IVP:
       <me>
@@ -2025,12 +2077,39 @@ Ok, paper and pencil
             \dfdx{y}{x}=\cos(x),\ \ \  y(0)=0.
           </me>
 
-          Use Euler's Method on this IVP to complete the table. Then plot the
+          Use Euler<rsq/>s Method on this IVP to complete the table. Then plot the
           points you generated and the graph of <m>y=\sin(x)</m> on the same
           set of axes so you can compare them.
 </p>
 
-<image source="images/EulerTable1.png" width="60%" />
+<tabular>
+<row bottom="minor">
+<cell><m>n</m></cell>
+<cell right="minor"><m>x_n</m></cell>
+<cell><m>y_n=y_{n-1}+\cos (x_{n-1})\cdot{(x_n-x_{n-1})}</m></cell></row>
+
+<row><cell><m>0</m></cell><cell right="minor"><m>0</m></cell><cell><m></m></cell></row>
+<row><cell><m>1</m></cell><cell right="minor"><m>0.1</m></cell><cell><m></m></cell></row>
+<row><cell><m>2</m></cell><cell right="minor"><m>0.2</m></cell><cell><m></m></cell></row>
+<row><cell><m>3</m></cell><cell right="minor"><m>0.3</m></cell><cell><m></m></cell></row>
+<row><cell><m>4</m></cell><cell right="minor"><m>0.4</m></cell><cell><m></m></cell></row>
+<row><cell><m>5</m></cell><cell right="minor"><m>0.5</m></cell><cell><m></m></cell></row>
+<row><cell><m>6</m></cell><cell right="minor"><m>0.6</m></cell><cell><m></m></cell></row>
+<row><cell><m>7</m></cell><cell right="minor"><m>0.7</m></cell><cell><m></m></cell></row>
+<row><cell><m>8</m></cell><cell right="minor"><m>0.8</m></cell><cell><m></m></cell></row>
+<row><cell><m>9</m></cell><cell right="minor"><m>0.9</m></cell><cell><m></m></cell></row>
+<row><cell><m>10</m></cell><cell right="minor"><m>1.0</m></cell><cell><m></m></cell></row>
+<row><cell><m>11</m></cell><cell right="minor"><m>1.1</m></cell><cell><m></m></cell></row>
+<row><cell><m>12</m></cell><cell right="minor"><m>1.2</m></cell><cell><m></m></cell></row>
+<row><cell><m>13</m></cell><cell right="minor"><m>1.3</m></cell><cell><m></m></cell></row>
+<row><cell><m>14</m></cell><cell right="minor"><m>1.4</m></cell><cell><m></m></cell></row>
+<row><cell><m>15</m></cell><cell right="minor"><m>1.5</m></cell><cell><m></m></cell></row>
+
+</tabular>
+
+
+
+<!-- <image source="images/EulerTable1.png" width="60%" /> -->
 <!-- \centerline{\includegraphics*[height=1.4in,width=5.1in]{../Figures/EulerTable1}} -->
 </statement>
 </problem>
@@ -2044,12 +2123,36 @@ Ok, paper and pencil
         \dfdx{y}{x}=-\sin(x),\ \ \  y(0)=1.
 </me>
 
-Use Euler's Method on this IVP to complete the following table.
+Use Euler<rsq/>s Method on this IVP to complete the following table.
 Then plot the points you generated and the graph of <m>y=\cos(x)</m> on
 the same
 set of axes so you can compare them.
 </p>
-<image source="images/EulerTable2.png" width="60%" />
+<tabular>
+<row bottom="minor">
+<cell><m>n</m></cell>
+<cell right="minor"><m>x_n</m></cell>
+<cell><m>y_n=y_{n-1}+\sin (x_{n-1})\cdot{(x_n-x_{n-1})}</m></cell></row>
+
+<row><cell><m>0</m></cell><cell right="minor"><m>0</m></cell><cell><m></m></cell></row>
+<row><cell><m>1</m></cell><cell right="minor"><m>0.1</m></cell><cell><m></m></cell></row>
+<row><cell><m>2</m></cell><cell right="minor"><m>0.2</m></cell><cell><m></m></cell></row>
+<row><cell><m>3</m></cell><cell right="minor"><m>0.3</m></cell><cell><m></m></cell></row>
+<row><cell><m>4</m></cell><cell right="minor"><m>0.4</m></cell><cell><m></m></cell></row>
+<row><cell><m>5</m></cell><cell right="minor"><m>0.5</m></cell><cell><m></m></cell></row>
+<row><cell><m>6</m></cell><cell right="minor"><m>0.6</m></cell><cell><m></m></cell></row>
+<row><cell><m>7</m></cell><cell right="minor"><m>0.7</m></cell><cell><m></m></cell></row>
+<row><cell><m>8</m></cell><cell right="minor"><m>0.8</m></cell><cell><m></m></cell></row>
+<row><cell><m>9</m></cell><cell right="minor"><m>0.9</m></cell><cell><m></m></cell></row>
+<row><cell><m>10</m></cell><cell right="minor"><m>1.0</m></cell><cell><m></m></cell></row>
+<row><cell><m>11</m></cell><cell right="minor"><m>1.1</m></cell><cell><m></m></cell></row>
+<row><cell><m>12</m></cell><cell right="minor"><m>1.2</m></cell><cell><m></m></cell></row>
+<row><cell><m>13</m></cell><cell right="minor"><m>1.3</m></cell><cell><m></m></cell></row>
+<row><cell><m>14</m></cell><cell right="minor"><m>1.4</m></cell><cell><m></m></cell></row>
+<row><cell><m>15</m></cell><cell right="minor"><m>1.5</m></cell><cell><m></m></cell></row>
+
+</tabular>
+<!-- <image source="images/EulerTable2.png" width="60%" /> -->
 <!-- \centerline{\includegraphics*[height=1.5in,width=5.1in]{../Figures/EulerTable2}} -->
 </statement>
 </problem>
@@ -2058,7 +2161,7 @@ set of axes so you can compare them.
 <problem>
   <introduction>
     <p>
-      Use Euler's Method to approximate the solutions of the given IVPs
+      Use Euler<rsq/>s Method to approximate the solutions of the given IVPs
       by constructing a table like the ones in
 <xref ref="PROBLEMEulerSine">Problems</xref>
 <xref ref="PROBLEMEulerCosine">and</xref>. Then plot the points you found,
@@ -2095,7 +2198,7 @@ connecting them with straight line segments.
 </task>
 </problem>
 <!-- \begin{embeddedproblem} -->
-<!--   Use Euler's Method to approximate the solutions of the given IVPs -->
+<!--   Use Euler<rsq/>s Method to approximate the solutions of the given IVPs -->
 <!--   by constructing a table like the ones in -->
 <!--   <xref ref="PROBLEMEulerSine">Problems</xref> -->
 <!--   <xref ref="PROBLEMEulerCosine">and</xref>. Then plot the points you found, -->
@@ -2111,7 +2214,7 @@ connecting them with straight line segments.
 <problem>
   <introduction>
     <p>
-      Use Euler's Method to approximate the solutions of the given IVPs
+      Use Euler<rsq/>s Method to approximate the solutions of the given IVPs
       by constructing a table like the ones in
 <xref ref="PROBLEMEulerSine">Problems</xref>
 <xref ref="PROBLEMEulerCosine">and</xref>. Then plot the points you found,
@@ -2148,7 +2251,7 @@ connecting them with straight line segments.
 </task>
 </problem>
 <!-- \begin{embeddedproblem} -->
-<!--   Use Euler's Method to approximate the solutions of the given IVPs -->
+<!--   Use Euler<rsq/>s Method to approximate the solutions of the given IVPs -->
 <!--   by constructing a table like the ones in -->
 <!--   <xref ref="PROBLEMEulerSine">Problems</xref> -->
 <!--   <xref ref="PROBLEMEulerCosine">and</xref>. Then plot the points you found, -->
@@ -2165,7 +2268,7 @@ connecting them with straight line segments.
 <problem>
   <introduction>
     <p>
-      Use Euler's Method to approximate the solutions of the given IVPs
+      Use Euler<rsq/>s Method to approximate the solutions of the given IVPs
       by constructing a table like the ones in
 <xref ref="PROBLEMEulerSine">Problems</xref>
 <xref ref="PROBLEMEulerCosine">and</xref>. Then plot the points you found,
@@ -2237,7 +2340,7 @@ connecting them with straight line segments.
 </task>
 </problem>
 <!-- \begin{embeddedproblem}  -->
-<!--   Use Euler's Method to approximate the solutions of the given IVPs -->
+<!--   Use Euler<rsq/>s Method to approximate the solutions of the given IVPs -->
 <!--   by constructing a table like the ones in -->
 <!--   <xref ref="PROBLEMEulerSine">Problems</xref> -->
 <!--   <xref ref="PROBLEMEulerCosine">and</xref>. Then plot the points you found, -->
@@ -2259,7 +2362,7 @@ connecting them with straight line segments.
 
 <problem xml:id="PROBLEMTractrix">
   <introduction>
-    <image source="images/Tractrix.png" width="50%"/>
+    <image source="images/Tractrix.png" width="40%"/>
     <!-- \begin{wrapfigure}[10]{r}{2.5in} -->
     <!--       \captionsetup{labelformat=empty} -->
     <!--       \vskip-4mm -->
@@ -2271,10 +2374,10 @@ connecting them with straight line segments.
       the right.  Initially, the center of the rear axle of the tractor is
       at the origin and the center of the rear axle of the trailer is at
       the point <m>(1,0)</m>.  The tractor pulls the front wheels vertically up
-      the <m>y</m>-axis and we assume that the rear wheels don't slip.
+      the <m>y</m>-axis and we assume that the rear wheels don<rsq/>t slip.
       
       The path that the center of the rear axle follows is called a
-      tractrix from the Latin verb \foreign{trahere}, meaning <q>to drag or
+      tractrix from the Latin verb <foreign>trahere</foreign>, meaning <q>to drag or
 pull.</q>
 
 </p>
@@ -2289,19 +2392,50 @@ pull.</q>
         \dfdx{y}{x}=-\frac{\sqrt{1-x^2 }}{x}\ \ y(1)=0.
         
 </men>
-\hint{Find a differential triangle and an ordinary triangle which
-are proportional..}
 </p>
 </statement>
+<hint>
+<p>
+Find a differential triangle and an ordinary triangle which
+are proportional.
+
+</p>
+</hint>
 </task>
 <task>
   <statement>
     <p>
-      Apply Euler's Method to complete the
+      Apply Euler<rsq/>s Method to complete the
       following table to
       approximate the tractrix.
-      \leftline{\includegraphics*[height=1.25in,width=5in]{../Figures/EulerTable3}}
 </p>
+<tabular>
+<row bottom="minor">
+<cell><m>n</m></cell>
+<cell right="minor"><m>x_n</m></cell>
+<cell><m>y_n=y_{n-1}+\left(\eval{\dfdx{y}{x}}{x}{n-1}\right)\cdot{(x_n-x_{n-1})}</m></cell></row>
+
+<row><cell><m>0</m></cell><cell right="minor"><m>0</m></cell><cell><m></m></cell></row>
+<row><cell><m>1</m></cell><cell right="minor"><m>0.1</m></cell><cell><m></m></cell></row>
+<row><cell><m>2</m></cell><cell right="minor"><m>0.2</m></cell><cell><m></m></cell></row>
+<row><cell><m>3</m></cell><cell right="minor"><m>0.3</m></cell><cell><m></m></cell></row>
+<row><cell><m>4</m></cell><cell right="minor"><m>0.4</m></cell><cell><m></m></cell></row>
+<row><cell><m>5</m></cell><cell right="minor"><m>0.5</m></cell><cell><m></m></cell></row>
+<row><cell><m>6</m></cell><cell right="minor"><m>0.6</m></cell><cell><m></m></cell></row>
+<row><cell><m>7</m></cell><cell right="minor"><m>0.7</m></cell><cell><m></m></cell></row>
+<row><cell><m>8</m></cell><cell right="minor"><m>0.8</m></cell><cell><m></m></cell></row>
+<row><cell><m>9</m></cell><cell right="minor"><m>0.9</m></cell><cell><m></m></cell></row>
+<row><cell><m>10</m></cell><cell right="minor"><m>1.0</m></cell><cell><m></m></cell></row>
+<row><cell><m>11</m></cell><cell right="minor"><m>1.1</m></cell><cell><m></m></cell></row>
+<row><cell><m>12</m></cell><cell right="minor"><m>1.2</m></cell><cell><m></m></cell></row>
+<row><cell><m>13</m></cell><cell right="minor"><m>1.3</m></cell><cell><m></m></cell></row>
+<row><cell><m>14</m></cell><cell right="minor"><m>1.4</m></cell><cell><m></m></cell></row>
+<row><cell><m>15</m></cell><cell right="minor"><m>1.5</m></cell><cell><m></m></cell></row>
+
+</tabular>
+<!-- <image source="images/EulerTable3.png" width="40%" /> -->
+
+<!-- \includegraphics*[height=1.25in,width=5in]{../Figures/EulerTable3} -->
 </statement>
 </task>
 <task>
@@ -2341,7 +2475,7 @@ This figure needs a caption.</caption>
 <task>
   <statement>
     <p>
-      Find <m>s</m> if <m>s</m> denotes the length of the the missile's path
+      Find <m>s</m> if <m>s</m> denotes the length of the the missile<rsq/>s path
       at time <m>t</m>.
 </p>
 </statement>
@@ -2349,7 +2483,7 @@ This figure needs a caption.</caption>
 <task>
   <statement>
     <p>
-      Show that the missile's path must satisfy the IVP
+      Show that the missile<rsq/>s path must satisfy the IVP
       <me>
         \dfdx{y}{x}=\frac{\frac{2s}{3}-y}{1-x},\ \       y(0)=0.r
 </me>
@@ -2368,10 +2502,38 @@ This figure needs a caption.</caption>
 <task>
   <statement>
     <p>
-      Apply Euler's Method to fill in the following
+      Apply Euler<rsq/>s Method to fill in the following
       table.
-      \leftline{\includegraphics*[height=1.25in,width=5in]{../Figures/EulerTable4}}
 </p>
+
+<tabular>
+<row bottom="minor">
+<cell><m>n</m></cell>
+<cell right="minor"><m>x_n</m></cell>
+<cell><m>y_n=y_{n-1}+\left(\eval{\dfdx{y}{x}}{x}{n-1}\right)\cdot{(x_n-x_{n-1})}</m></cell></row>
+
+<row><cell><m>0</m></cell><cell right="minor"><m>0</m></cell><cell><m></m></cell></row>
+<row><cell><m>1</m></cell><cell right="minor"><m>0.1</m></cell><cell><m></m></cell></row>
+<row><cell><m>2</m></cell><cell right="minor"><m>0.2</m></cell><cell><m></m></cell></row>
+<row><cell><m>3</m></cell><cell right="minor"><m>0.3</m></cell><cell><m></m></cell></row>
+<row><cell><m>4</m></cell><cell right="minor"><m>0.4</m></cell><cell><m></m></cell></row>
+<row><cell><m>5</m></cell><cell right="minor"><m>0.5</m></cell><cell><m></m></cell></row>
+<row><cell><m>6</m></cell><cell right="minor"><m>0.6</m></cell><cell><m></m></cell></row>
+<row><cell><m>7</m></cell><cell right="minor"><m>0.7</m></cell><cell><m></m></cell></row>
+<row><cell><m>8</m></cell><cell right="minor"><m>0.8</m></cell><cell><m></m></cell></row>
+<row><cell><m>9</m></cell><cell right="minor"><m>0.9</m></cell><cell><m></m></cell></row>
+<row><cell><m>10</m></cell><cell right="minor"><m>1.0</m></cell><cell><m></m></cell></row>
+<row><cell><m>11</m></cell><cell right="minor"><m>1.1</m></cell><cell><m></m></cell></row>
+<row><cell><m>12</m></cell><cell right="minor"><m>1.2</m></cell><cell><m></m></cell></row>
+<row><cell><m>13</m></cell><cell right="minor"><m>1.3</m></cell><cell><m></m></cell></row>
+<row><cell><m>14</m></cell><cell right="minor"><m>1.4</m></cell><cell><m></m></cell></row>
+<row><cell><m>15</m></cell><cell right="minor"><m>1.5</m></cell><cell><m></m></cell></row>
+
+</tabular>
+<image source="images/EulerTable4.png" width="40%" />
+
+<!-- \includegraphics*[height=1.25in,width=5in]{../Figures/EulerTable4} -->
+
 </statement>
 </task>
 <task>
@@ -2403,15 +2565,15 @@ This figure needs a caption.</caption>
 <!-- <m>R(1,vt)</m> We want to find the path the missile will follow.  The -->
 <!-- diagram at the right shows the situation at time <m>t</m>.%  -->
 <!--     \begin{enumerate}[label={  (\alph*)}] -->
-<!--   \item Find <m>s</m> if <m>s</m> denotes the length of the the missile's path -->
+<!--   \item Find <m>s</m> if <m>s</m> denotes the length of the the missile<rsq/>s path -->
 <!--     at time <m>t</m>. -->
-<!--   \item Show that the missile's path must satisfy the IVP -->
+<!--   \item Show that the missile<rsq/>s path must satisfy the IVP -->
 <!--     <me> -->
 <!--     \dfdx{y}{x}=\frac{\frac{2s}{3}-y}{1-x},\ \       y(0)=0.r -->
 <!--     </me> -->
 <!--     \hint{Find a triangle which is proportional to the differential -->
 <!--       triangle shown.} -->
-<!--   \item Apply Euler's Method to fill in the following -->
+<!--   \item Apply Euler<rsq/>s Method to fill in the following -->
 <!--     table. -->
 <!--     \leftline{\includegraphics*[height=1.25in,width=5in]{../Figures/EulerTable4}} -->
 
@@ -2426,12 +2588,12 @@ This figure needs a caption.</caption>
 <section xml:id="SECTIONmore-high-deriv">
 <title>Higher Derivatives, Lagrange, and Taylor  </title>
 
-<figure>
-  <caption>
-<url href="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/">This figure needs a caption.</url>
-</caption>
-<image source="images/HigherLagr1.png" width="50%"/>
-</figure>
+<!-- <figure> -->
+<!--   <caption> -->
+<!-- <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/">This figure needs a caption.</url> -->
+<!-- </caption> -->
+
+<!-- </figure> -->
 <!-- \begin{wrapfigure}[]{l}{2in} -->
 <!--   \captionsetup{labelformat=empty} -->
 <!--   \vskip-8mm  -->
@@ -2440,7 +2602,7 @@ This figure needs a caption.</caption>
 <!-- \end{wrapfigure} -->
 <p>
 
-  In the diagram at the left, we see a pendulum of length <m>l</m> with an
+  In the diagram below we see a pendulum of length <m>l</m> with an
   object of mass <m>m</m> at the end. If the object is moved away from its
   equilibrium point the pendulum will begin to swing back and
   forth. If we disregard  friction the angle <m>\theta</m>, that the pendulum forms
@@ -2448,8 +2610,10 @@ This figure needs a caption.</caption>
 manner very like the motion of the <term>Simple Harmonic Oscillators</term>
 (SHO) that we saw in <xref ref="SUBSECTIONsimple-harm-oscill">Section</xref>.
 </p>
-<p>
+<image source="images/HigherLagr1.png" width="40%"/>
 
+
+<p>
   If the motion of the pendulum actually is an SHO then it will
   necessarily satisfy <xref ref="EQUATIONSHO">Equation</xref>. In this case that means
   that
@@ -2457,7 +2621,7 @@ manner very like the motion of the <term>Simple Harmonic Oscillators</term>
     \dfdxn{\theta}{t}{2}=-\omega^2\theta,
 </me>
 for some constant value of <m>\omega</m>.
-We'll investigate to see if that is true.
+We<rsq/>ll investigate to see if that is true.
 </p>
 <p>
 
@@ -2479,7 +2643,7 @@ We'll investigate to see if that is true.
   shown). This says that the sign of the tangential force <m>F</m> is the
   opposite of the sign of <m>\theta</m>. When <m>\theta</m> is in the interval
   <m>[-\pi, \pi]</m> <m>\theta</m> and <m>\sin(\theta)</m> have the same sign.  Thus We
-  have <m>F=-mg\sin(\theta)</m>. Using Newton's Second Law,
+  have <m>F=-mg\sin(\theta)</m>. Using Newton<rsq/>s Second Law,
   <m>\text{Force} = \text{mass}\cdot\text{acceleration}</m>, we see that the
   motion of a pendulum satisfies the equation
   <me>
@@ -2492,17 +2656,16 @@ Finally, since <m>s=l\theta</m> we have
   \dfdxn{\theta}{t}{2}=\frac{g}{l}\sin(\theta).
 <!-- \label{eq:SHO3} -->
 </men>
-But it does not satisfy <xref ref="EQUATIONSHO">Equation~</xref>). Therefore a
+But it does not satisfy <xref ref="EQUATIONSHO">equation</xref>). Therefore a
 swinging pendulum is not a Simple Harmonic Oscillator. Its
 motion is slightly more complex.
 </p>
 
-<figure>
-  <caption>
-<url href="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/">This figure needs a caption.</url>
-</caption>
-<image source="images/SinApprox1.png" width="50%"/>
-</figure>
+<!-- <figure> -->
+<!--   <caption> -->
+<!-- <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/">This figure needs a caption.</url> -->
+<!-- </caption> -->
+<!-- </figure> -->
 <!-- \begin{wrapfigure}[7]{r}{2.4in} -->
 <!--   \vskip-4mm  -->
 <!--   \captionsetup{labelformat=empty} -->
@@ -2513,19 +2676,20 @@ motion is slightly more complex.
 
   But only slightly.
 </p>
+<image source="images/SinApprox1.png" width="50%"/>
 <p>
 
   By examining the graphs of <m>y=\sin(x)</m> and <m>y=x</m> we can see the that
   for values of <m>x</m> close to zero the graphs are nearly identical. Thus,
   when the angle <m>\theta</m> is very small <m>\sin(\theta)</m> and <m>\theta</m> are
   very nearly equal.  In that case if we replace <m>\sin(\theta)</m> with
-  <m>\theta</m> in <xref ref="EQUATIONSHO3">Equation~</xref>) we see the the motion of a
+  <m>\theta</m> in <xref ref="EQUATIONSHO3">equation</xref> we see the the motion of a
   pendulum approximately satisfies the equation
   <men  xml:id="EQUATIONSHO4">
     <!-- \label{eq:SHO4} -->
     \dfdxn{\theta}{t}{2}=-\frac{g}{l}\theta,
 </men>
-which we recognize as <xref ref="EQUATIONSHO">Equation~</xref>) with <m>\omega^2 =
+which we recognize as <xref ref="EQUATIONSHO">equation</xref> with <m>\omega^2 =
 \frac{g}{l}.</m>
 </p>
 
@@ -2539,12 +2703,12 @@ is <m>y=x</m>.
 </statement>
 </exercise>
 
-<figure>
-  <caption>
-<url href="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/">This figure needs a caption.</url>
-</caption>
-<image source="images/HigherLagr4.png" width="50%"/>
-</figure>
+<!-- <figure> -->
+<!--   <caption> -->
+<!-- <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/">This figure needs a caption.</url> -->
+<!-- </caption> -->
+<!-- <image source="images/HigherLagr4.png" width="50%"/> -->
+<!-- </figure> -->
 <!-- \begin{wrapfigure}[]{l}{2.3in} -->
 <!--   \captionsetup{labelformat=empty} -->
 <!--       \centerline{\includegraphics*[height=1.2in,width=2in]{../Figures/HigherLagr4}} -->
@@ -2555,13 +2719,13 @@ is <m>y=x</m>.
   Approximating <m>\sin(x)</m> by its tangent line at <m>x=0</m> works well for
   values of <m>x</m> close to zero. We have not been very precise about the
 meaning of <q>close to zero</q> but it should be clear that if <m>\theta</m>
-is too large <xref ref="EQUATIONSHO3">Equation~</xref>) will no longer serve as a good
+is too large <xref ref="EQUATIONSHO3">equation</xref> will no longer serve as a good
 model.
 </p>
 <p>
 
   Notice that the function <m>y(x) = x</m> is a first degree polynomial. Is
-  it possible that a polynomial with a higher degree give us a better
+  it possible that a polynomial with a higher degree will give us a better
   approximation?  Can we find a polynomial with degree greater than one
   that approximates the graph of <m>y=\sin(x)</m>?
 </p>
@@ -2585,12 +2749,12 @@ model.
     \theta(t)=0,
 </men>
 if we can solve it, would serve as a better model for the motion of a
-pendulum than <xref ref="EQUATIONSHO4">Equation</xref>. Unfortunately we do not yet have
-the tools to solve <xref ref="EQUATIONSHO5">Equation</xref>, but the notion of
+pendulum than <xref ref="EQUATIONSHO4">equation</xref>. Unfortunately we do not yet have
+the tools to solve <xref ref="EQUATIONSHO5">equation</xref>, but the notion of
 approximating a complex function, like <m>\sin(x)</m>, with a polynomial  will turn out
 to be very useful so we will explore it for a bit before we go on.
-We will again switch to Lagrange's prime notation because in this
-context Lagrange's notation really shines. Indeed, it was while
+We will again switch to Lagrange<rsq/>s prime notation because in this
+context Lagrange<rsq/>s notation really shines. Indeed, it was while
 he was looking at similar problems that Lagrange invented his prime
 notation in the first place.
 </p>
@@ -2689,11 +2853,11 @@ notation in the first place.
   To obtain <m>B</m>, differentiate both functions and
   insist that the first two derivatives of <m>f(x)</m> and <m>q(x)</m> match at
   <m>x=0</m>. That is,
-  <md>
-    <mrow>  f^\prime(0)\amp=\eval{\dfdx{q}{x}}{x}{0}</mrow>
-    <mrow>  \amp=\bigeval{B+2Cx}{x}{0}</mrow>
-    <mrow>  \amp=B.</mrow>
-  </md>
+  <me>
+    f^\prime(0)=\eval{\dfdx{q}{x}}{x}{0}
+    =\bigeval{B+2Cx}{x}{0}
+    B.
+  </me>
   So <m>f^\prime(0)=B</m>.
 </p>
 
@@ -2762,20 +2926,21 @@ notation in the first place.
   <q>machine-like</q> way to produce a polynomial approximation of any
   degree.  In fact, this <q>machine</q> for producing approximating
   polynomials was known long before Lagrange, but he made it more
-  tractable by replacing differentials, which are very cumbersome to use
-  here, with derivatives and his prime notation. In general this
-  approximating polynomial is called a <term>Taylor Polynomial</term>
-  named after the English mathematician <url
+  tractable by replacing differentials and differential notation,
+  which are very cumbersome to use here, with derivatives and his
+  prime notation. In general this approximating polynomial is called a
+  <term>Taylor Polynomial</term> named after the English mathematician
+  <url
   href="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/"
   visual="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/">Brook
-  Taylor</url> (<m>1685-1731</m>), but was known to mathematicians
-  (including Newton and Leibniz) before Taylor.
+  Taylor</url> (<m>1685-1731</m>), but was known to mathematiciasn before Taylor
+  (including Newton and Leibniz).
 </p>
 <problem>
   <introduction>
     <p>
       This is the process we used to generate our cubic approximation to the
-      sine function just before <xref ref="EQUATIONSHO5">Equation~\#</xref>.
+      sine function just before <xref ref="EQUATIONSHO5">equation</xref>.
     </p>
   </introduction>
   <task>

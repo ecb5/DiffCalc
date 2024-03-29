@@ -1,0 +1,2456 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="CHAPTERScienceBeforeCalc">
+  <title>Science Before Calculus</title>
+  
+  <section xml:id="Apologia">
+    <title>Apologia</title>
+    
+    <blockquote>
+      <p>
+        In any particular theory there is only as much real science as
+        there is mathematics.
+      </p>
+      <attribution>
+        <url href="https://plato.stanford.edu/entries/kant/" visual="https://plato.stanford.edu/entries/kant/">Immanuel Kant (1724-1804)</url>
+      </attribution>
+    </blockquote>
+    
+    <blockquote>
+      <p>
+        The mathematician may be compared to a designer of
+        garments, who is utterly oblivious of the creatures whom his
+        garments may fit. To be sure, his art originated in the necessity
+        for clothing such creatures, but this was long ago; to this day a
+        shape will occasionally appear which will fit into the garment as if
+        the garment had been made for it. Then there is no end of surprise
+        and delight.
+      </p>
+      <attribution>
+        <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Dantzig_George/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Dantzig_George/">George Dantzig (1914-2005)</url>
+      </attribution>
+    </blockquote>
+    
+    
+    <p>
+      
+      Like the authors, your instructor is probably a highly trained,
+      professional mathematician. As mathematicians we solve problems and we
+      build logical structures. This is what we were trained to do.
+    </p>
+    <p>
+      
+      The structures we build are what makes mathematics useful but that is
+      not why we build them. Most of the time we create simply for the love
+      of the creative act itself. Usefulness, as such, is often a secondary
+      consideration. In this, mathematicians are more like poets or artists
+      than scientists or engineers. By and large, we consider the act of
+      creation to be its own reward. It is a remarkable fact that
+      sometimes the logical structures we build turn out to be applicable to
+      problems in the real world.
+      
+    </p>
+    
+    <aside>
+      <title>Comment</title>
+      <p>
+        This is why mathematicians sometimes seem to be out of touch
+        with the real world. Much like poets and artists, when we are
+        doing mathematics we actually are out of touch, at least a
+        little.
+      </p>
+    </aside>
+    
+    
+    <p>
+      When we explain our mathematical works to each other we mathematicians
+      only display the finished product in much the same way that an artist
+      or an architect will display their work without all of the
+      behind-the-scenes sketches and pencil lines (and mistakes), that they
+      made along the way.  We start with simple ideas and bit by bit, piece
+      by piece, we assemble our mathematics like we would a puzzle. When we
+      explain it to others we ignore all of the mistakes we made along the
+      way for the same reason that artists do.  They are not part the
+      finished product. That is how we understand, and think about our
+      mathematics, and that is how we talk to each other about it. Displayed
+      in this manner a mathematical structure is truly as beautiful as any
+      artistic creation.
+    </p>
+    <p>
+      
+      
+      But in this text we are not talking to other mathematicians. We are
+      talking to you, a mathematics student. And you are (presumably)
+      encountering Calculus for the first time. This is not the time to
+      build Calculus up from its logical foundations and expect you to
+      appreciate its beauty.  This is the time to show you where Calculus
+      came from, how it was built, what problems it was invented to solve,
+      and, perhaps most importantly, how well Calculus addresses those
+      problems. Once that is done you will appreciate it, or not, as your
+      own sense of aesthetics allows.
+    </p>
+    <p>
+      
+      As you proceed through this text know that it took several centuries
+      for some of the most brilliant persons who have ever lived to polish
+      the ideas of Calculus to their current luster. But just as a painting
+      is unappealing before it is finished, Calculus is not lustrous until
+      you can look back on it as a whole. Until then it takes a lot of
+      calculation and thought to see how the ideas work together. In the
+      end, we hope you will come to see that it is worth all of the work and
+      frustration.
+    </p>
+    <p>
+      
+      In this chapter we will be exploring the <foreign>ad hoc</foreign> techniques
+      used by the mathematical pioneers who were trying to solve some very
+      real and very specific problems using only the tools that you possess
+      now: Geometry, Algebra, and Trigonometry. The pre-Calculus techniques
+      they came up with substantially influenced the form that Calculus
+      eventually took. If the pioneers had been different people, or if they
+      had begun with different tools Calculus would likely have taken a
+      different form. Or it might not have been invented at all. The
+      pre-Calculus methods we will see in this chapter represent the first
+      ideas that eventually led to Calculus. The supporting logical
+      structure came later, much later.
+    </p>
+    <p>
+      Thus we will begin with the intuitive notions that preceded
+      Calculus. But we will not hide the problems inherent in this
+      approach. Quite the reverse. It is our intention to highlight
+      them as much as possible. The underlying difficulties are real
+      and they need to be understood. We want you to be aware of them
+      so that in <xref ref="CHAPTwhats-wrong-with">Chapter</xref> when
+      we begin to address them, the necessity of the rather severe
+      formalism we are forced to adopt will be clear to you.
+    </p>
+    <p>
+      
+      
+      For example, we will soon start talking about <q>the line tangent to a
+      curve.</q>  You have a very clear image of what is meant by ``tangent
+      line'' and that will suffice to begin.  But, it is actually very hard
+      to define precisely what we mean by 
+      <q>the line tangent to a
+      curve.</q>
+    </p>
+    
+    
+    <aside>
+      <title>Comment</title>
+      <p>
+        You almost certainly don't believe this because nothing could
+        be clearer than the image of tangency you have in your
+        head. Nevertheless we will eventually see that it is true.
+      </p>
+    </aside>
+    
+    
+    <p>
+      Later we will encounter a similar difficulty with the idea of a
+      continuous curve. The phrase <q>continuous curve</q> surely
+      conjures up a very clear image in your mind. Nothing could be
+      clearer really. Continuous curves are unbroken curves, right?
+      This is oso intuitively obvious that mathematicians did not
+      bother to define it formally for millennia. Most likely you
+      don't see the need for a formal definition either. Yet.  But
+      <q>continuity</q> is very hard to define in a mathematically
+      rigorous manner. The first person to give a rigorous definition
+      in the modern sense was <url
+      href="https://mathshistory.st-andrews.ac.uk/Biographies/Bolzano/"
+      visual="https://mathshistory.st-andrews.ac.uk/Biographies/Bolzano/">Bernhard
+      Bolzano</url> in 1817.
+    </p>
+    
+    
+    <figure>
+      <caption>
+        <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Bolzano/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Bolzano/">Bernhard Bolzano</url> 1781-1848
+      </caption>
+      <image source="images/Bolzano.png" width="50%"/>
+    </figure>
+    <p>
+      One of our goals is to set up the conditions under which it will
+      become very clear to you why your intuitive image of a 
+      <q>tangent
+      line,</q> or a 
+      <q>continuous curve</q> is not sufficient; why these are
+      hard concepts to define. We want you to bump into the difficulties
+      that come with the intuitive understanding you have right now so that
+      you will see <mdash/> and appreciate <mdash/> why the definitions we will
+      eventually be offering are better. Or at least more useful.
+    </p>
+    <p>
+      
+      But have some sympathy for the poor instructor! Everything we do in
+      the first part of this text, especially in this section, goes directly
+      against all of the instructor's training as a
+      mathematician.
+      Instructors would be much happier with us if we would define the terms
+      
+      <q>the line tangent to a curve</q> and ``continuous curve'' before we use
+      them because that is the way they see and appreciate the beauty of our
+      topic.
+    </p>
+    <p>
+      Indeed, it may well go against your own
+      sensibilities as well. If you find yourself getting irritated with
+      the imprecision of our presentation you may well be a mathematician
+      yourself, at least by temperament. In that case, all you lack is
+      training and you can get that by changing your
+      major to mathematics. Think about it.
+      If you are not a mathematician at heart then this first part of the
+      text is the part you will probably find most useful and
+      interesting. This is where we will try to elucidate the most
+      powerful problem solving tools that came from Calculus and show you
+      how to use them. But the problems are only representative. Pay
+      attention to the techniques, not to the problems themselves.
+    </p>
+    <p>
+      
+      The problem is that this is not (in our opinion) a good way to learn
+      Calculus. So we will be following in the footsteps of our
+      forebears. We will proceed using intuitive ideas until they become too
+      unwieldy to use. Only after we have found the properties we need from
+      a concept (like 
+      <q>tangent</q>) will we offer formal
+      definitions. Hopefully it will then be clear to you why the
+      definitions are needed, and why they are stated as they are.
+    </p>
+    
+    <figure>
+      <caption>
+        <url
+            href="https://mathshistory.st-andrews.ac.uk/Biographies/Tartaglia/"
+            visual="https://mathshistory.st-andrews.ac.uk/Biographies/Tartaglia/">Niccolo
+        Fontana, The Stutterer</url> 1500-1557
+      </caption>
+      <image source="images/Tartaglia.png" width="50%"/>
+    </figure>
+    <p>
+      So to the instructor, or anyone else of a mathematical bent who
+      might be reading this, we offer our apologies for proceeding in
+      what we know looks like the wrong way around. As mathematicians
+      ourselves we certainly feel the same discomfort you do. But in
+      this text we are not writing as mathematicians for other
+      mathematicians, we are writing as teachers for students. Please
+      bear with us. <url
+      href="http://shakespeare.mit.edu/hamlet/index.html"
+      visual="http://shakespeare.mit.edu/hamlet/index.html"> <q>Though
+      o      this be madness, yet there is method in't.</q></url>
+    </p>
+
+    <aside>
+      <title>Comment</title>
+      <p>
+        Hamlet, Act 2, Scene 2
+      </p>
+    </aside>
+  </section>
+  
+  <section xml:id="no-label">
+    <title>Some Preliminaries</title>
+    
+    <p>
+      In <m>1537</m> <url
+      href="https://mathshistory.st-andrews.ac.uk/Biographies/Tartaglia/"
+      visual="https://mathshistory.st-andrews.ac.uk/Biographies/Tartaglia/">Niccolo
+      Fontana </url> (1500-1557), also known as <q>Targtaglia</q> (The
+      Stutterer), wrote a book titled <pubtitle>Nova Scientia (New
+      Science)</pubtitle> wherein he analyzed the motion of objects
+      moving under the influence of gravity near the surface of the
+      earth as it was understood at the time.
+    </p>
+    <p>
+      
+      There is much allegory in the
+      <url href="https://www.maa.org/press/periodicals/convergence/mathematical-treasures-nicolo-tartaglias-nova-scientia" visual="https://www.maa.org/press/periodicals/convergence/mathematical-treasures-nicolo-tartaglias-nova-scientia">title
+      page of his book</url> (next page).  Inside the large ring is a group of
+      Muses surrounding Tartaglia and observing the trajectory of a
+      cannonball.  This represents the fact that this was one of the first
+      works which studied the science of projectile motion using
+      mathematical principles rather than empirical data and guesswork.  At
+      the door of the larger ring is Euclid, representing the notion that
+      one can only enter through an understanding of Euclid's Elements
+      (Geometry).  Clearly the man trying to scale the wall does not
+      understand Geometry. His ladder is far too short.
+    </p>
+    
+    <figure>
+      <caption>
+        <url href="https://www.maa.org/press/periodicals/convergence/mathematical-treasures-nicolo-tartaglias-nova-scientia" visual="https://www.maa.org/press/periodicals/convergence/mathematical-treasures-nicolo-tartaglias-nova-scientia">This figure needs a caption.</url>
+      </caption>
+      <image source="images/NovaScientia2.png" width="50%"/>
+    </figure>
+    <p>
+      The smaller, slightly raised ring is occupied by Philosophia (wisdom)
+      seated on a throne.  Of course, the only entrance to the ring of
+      philosophy, and therefore understanding, is through the larger ring of
+      mathematics.  At that gate
+      are
+      <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Aristotle/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Aristotle/">Aristotle</url>
+      (384-322 BCE) (on the mathematics side)
+      and
+      <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Plato/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Plato/">Plato</url>
+      (427-347 BCE) (on the philosophy side).  On the banner is the
+      motto
+      of
+      <url href="https://mathshistory.st-andrews.ac.uk/Societies/Plato/" visual="https://mathshistory.st-andrews.ac.uk/Societies/Plato/">Plato's
+      Academy</url>, 
+      <q>Let no one ignorant of geometry enter.</q>  Of course,
+      such allegory is open to interpretation, but it seems pretty clear
+      that Geometry (mathematics)  would play an
+      important role in the <em>New Science</em>.
+      </p>
+
+      <aside>
+<title>History</title>
+        <p>
+          In those days there wasn't a clear distinction between
+          Geometry and mathematics.
+        </p>
+      </aside>
+
+      <p>
+      The caption below the illustration means, <q>The Mathematical
+      sciences speak: Who wishes to know the various causes of things,
+      learn about us.  The way is open to all.</q>
+    </p>
+    <p>
+      From the beginning of the Renaissance to the present day the use
+      of mathematics to describe and analyze physical phenomena has
+      become ever the more normal mode of analysis in science. At
+      first the Geometry of the Greeks, including Trigonometry, was at
+      the forefront, but as time went on newer methods were
+      invented. Primary among these were Algebra and then, eventually,
+      Calculus.
+    </p>
+    <p>
+      Algebra came first but it merged with Geometry to form what we
+      now call Analytic Geometry. When Calculus was invented it
+      supplemented, enhanced, and expanded its predecessors.
+    </p>
+    <p>
+      But none of the other fields of mathematics
+      disappeared. Geometry, Trigonometry, Algebra, and Analytic
+      Geometry remain very useful tools in science. But they have, in
+      a sense, become subordinate to Calculus.
+    </p>
+    <p>
+      There are physical problems that are very difficult to solve
+      using either Algebra or Geometry but which become relatively
+      easy once Calculus has been mastered.  Attempts to address those
+      difficult-to-solve problems are what led to the invention of
+      Calculus and several of the very ingenious techniques developed
+      were very Calculus-like. In this chapter we will look briefly at
+      some of these pre-Calculus techniques.
+    </p>
+    <p>
+      <alert>Warning:</alert> You may be tempted to disregard this
+      chapter and get on to <q>the Calculus part.</q> This is an
+      error.  The story of Calculus, what sorts of problems it was
+      invented to address, and why the tools of Calculus developed in
+      the way that they did, will help you understand what Calculus
+      is, and what it is not.
+    </p>
+    <p>
+    </p>
+  </section>
+  
+  <section xml:id="sec-laziness-nature">
+    <title>The Laziness of Nature</title>
+    
+    <subsection  xml:id="subsection-">
+      <p>
+        In order to apply mathematical principles to the study of
+        physical phenomena we need to agree on some foundational
+        assumptions which seem to govern the behavior of nature.  A
+        fundamental tenet that scientists use is this: <em>Nature is
+        lazy!</em> That is, nature optimizes. It tries to do things in
+        the most efficient (optimal) manner possible. The most common
+        form such <term>Optimization Problems</term> take is to find the
+        value of the independent variable (often denoted <m>x</m>) which
+        makes the dependent variable (often denoted <m>y</m>) as large
+        or as small as possible.
+      </p>
+      <p>
+        To illustrate the usefulness of this principle consider a beam
+        of light bouncing off of a flat mirror. Empirical evidence (that
+        is, evidence gained from measuring the angles) suggests that the
+        angle of incidence is equal to the angle of reflection. However,
+        no matter how many experiments we run there is always the chance
+        that there is some configuration of lights and mirrors we've
+        missed. A configuration where the angles are not equal.
+      </p>
+      <p>
+        
+        Let's try a thought experiment.
+      </p>
+      
+      
+      <aside>
+        <title>Comment</title>
+        <p>
+          This just means that we'll think about it.
+        </p>
+      </aside>
+      
+      
+      <p>
+        
+        
+        We want to discover what path a beam of light would travel between the
+        points <m>A</m> and <m>B</m> in the figure below assuming that it first reflects
+        off of the line <m>m</m> (<m>m</m> for mirror, not slope).
+      </p>
+      <image source="images/ReflectingMirror1.png" width="60%" />
+      <p>
+        
+        From our assumption that <em>Nature is Lazy</em>, it is clear that our
+        task is to find the shortest path from <m>A</m> to <m>m</m> to <m>B.</m> That is, we have an
+        <term>Optimization Problem.</term>
+      </p>
+      <aside>
+<title>Comment</title>
+
+        <p>
+          Actually we want to minimize the amount of time it takes to
+          pass between two points, but for this problem minimizing the
+          time and minimizing the distance are equivalent. The modern
+          name for this idea is the <q>Principle of Least Action.</q>
+        </p>
+      </aside>
+      
+      
+      <p>
+        
+        Begin by reflecting <m>B</m> across <m>m</m> in our imagination and
+        denote this reflection by <m>B_R.</m>
+      </p>
+      <image source="images/ReflectingMirror2.png" width="60%" />
+      <p>
+        
+        Next we reflect <m>B_R</m> back across <m>m</m> so that it falls onto <m>B</m>, and
+        we reflect those portions of the solid and
+        dotted paths that are below line <m>m</m>, in the same way.
+      </p>
+      <image source="images/ReflectingMirror3.png" width="60%" />
+      
+      <problem xml:id="no-label">
+        <introduction>
+          <image source="images/ReflectingMirror7.png" width="50%">
+            <shortdescription></shortdescription>
+          </image>
+          <p>
+            Suppose we label the angles in the previous diagram as
+            follows:
+          </p>
+        </introduction>
+        <task>
+          <statement>
+            <p>
+              Explain why <m>\angle\gamma=\angle\beta</m>.
+            </p>
+          </statement>
+        </task>
+        
+        <task>
+          <statement>
+            <p>
+              Explain why <m>\angle\gamma=\angle\alpha</m>.
+            </p>
+          </statement>
+        </task>
+        
+        <task>
+          <statement>
+            <p>
+              And finally, conclude that <m>\angle\alpha=\angle\beta</m>.
+            </p>
+          </statement>
+        </task>
+      </problem>
+      
+      <p>
+        Thus the angle of incidence
+        (<m>\alpha</m>) will equal the angle of reflection
+        (<m>\beta</m>) provided light adheres to the <em>Nature is Lazy</em>
+        principle and really does travel by the shortest possible path.
+        
+      </p>
+      <problem xml:id="no-label">
+        <statement>
+          <image source="images/ReflectionProbFig1.png" width="80%"/>
+          <p>
+            If a spotlight is mounted at point <m>A</m>, how far from point <m>C</m> must
+            point <m>D</m> be so that the light will be reflected to point <m>B</m>?
+            Justify
+            your answer.
+          </p>
+        </statement>
+      </problem>
+      
+      
+      
+      <problem xml:id="no-label">
+        <statement>
+          <p>
+            As long as it is not spinning sideways a billiard ball will bounce
+            just like a beam of light. In the sketch below what must <m>x</m> be to
+            sink the
+            ball  into the side pocket at <m>S</m>? Make sure that you explain how you obtained your answer.
+          </p>
+          <image source="images/ReflectionProbFig2.png" width="60%" />
+        </statement>
+      </problem>
+      <p>
+        Another optimization problem that we can solve without Calculus (this
+        time we'll use Algebra) is the following.
+      </p>
+      
+      <example xml:id="ex-wefixed-perimeter">
+        <title>Maximizing Area</title>
+        <p>
+          Out of all rectangles with a given fixed perimeter, which
+          one encompasses the greatest area?
+        </p>
+        <p>
+          A reasonable guess is that the correct shape is a
+          square. But a guess, no matter how much it feels right, is
+          just a guess. We need a convincing demonstration.
+        </p>
+        <p>
+          To see that this actually is the correct shape, consider a
+          square whose side is <m>s.</m> If <m>s</m> is the length of
+          one side then the perimeter of our square is (the fixed
+          value) <m>4s</m> and the area is <m>s^2</m> (also
+          fixed). Suppose we now increase of two opposite sides the
+          length by <m>x.</m> To maintain the same perimeter, we must
+          now decrease the width by the same <m>x.</m> The area of
+          this new rectangle is <m>(s-x) \times (s+x)</m> is
+          <m>(s-x)(s+x)=s^2-x^2\lt{}s^2</m> but its perimeter is still
+          <m>4s</m>.
+        </p>
+        <p>
+          Thus the square has a larger area than this rectangle with
+          the same perimeter. Moreover, since we didn't specify a
+          value for <m>x</m> our conclusion holds for all possible
+          values of <m>x</m>. That is, every rectangle with perimeter
+          <m>4s</m> has a smaller area than the square with perimeter
+          <m>4s</m>.
+        </p>
+      </example>
+    </subsection>
+    
+    <subsection  xml:id="Digress-VarConstFunc-">
+      <title>Digression: Variables, Constants, and Functions</title>
+      <p>
+        It is easy to have the impression that using a letter, like
+        <m>s</m>, to represent quantity automatically means that the
+        quantity can vary <mdash/> that it is <q>variable.</q> This is
+        not true.  There are three situations in which a letter is
+        used to represent a given quantity.
+        
+        <dl>
+          <li>
+            <title>Variables:</title>
+            <p>
+              For example, the area of a square is given by
+              <m>A=x^2,</m> where <m>x</m> is the length of one side.
+              If we think of <m>x</m> as a <term>variable</term> <mdash/>
+              if it can take on any positive value <mdash/> then this
+              expression gives us the area of all possible squares.
+            </p>
+          </li>
+          <li>
+            <title>Constants:</title>
+            <p> 
+              Sometimes letters are used to designate unchanging
+              quantities <mdash/> <term>constants</term> (also called
+              <term>parameters</term>) <mdash/> when the actual value of
+              the constant is irrelevant. For example, the area of all
+              rectangles where one side is some fixed value, say
+              <m>c</m>, but the other varies is given by <m>A = c\cdot
+              x,</m> where <m>x</m> is variable as before. Since we
+              don't care what the size of the fixed side is we don't
+              choose a specific length for it. We just let <m>c</m>
+              represent that fixed size, whatever it is.  The crucial
+              fact here is that we have a rectangle, not what size the
+              rectangle is.
+            </p>
+            <p>      
+              The difference between <term>variables</term> and
+              <term>constants</term> is mostly in the way we think about
+              them. Constants are fixed, but unknown. Variables are not
+              fixed.
+            </p>
+          </li>
+          <li>
+            <title>Functions:</title>
+            <p> 
+              Sometimes a varying quantity depends on the values
+              of one or more other varying quantities. In that case the
+              dependent variable is said to be a <term>function</term> of the
+              independent variable. We saw this above when we said the area of a
+              rectangle with a fixed side length, <m>c</m>, was
+              <me>
+                A=c\cdot x.
+              </me>
+              Most often we would write this as
+              <me>
+                A(x)=c\cdot x.
+              </me>
+              The <q><m>(x)</m></q> part of <q><m>A(x)</m></q> just tells
+              us that that the dependent variable <m>A</m> depends on
+              is the independent variable <m>x</m>.  The name we give to the
+              dependent variable ( <m>A</m> in this case)  usually
+              serves double duty as both the name of the dependent 
+              variable, and the name of are also sometimes called 
+              functions. In this example <m>A</m> is a
+              <em>function</em> of <m>x</m>.
+              </p>
+              
+              <p>
+                If you are inclined to be persnickety, you can make a
+                reasonable argument that if <m>A(x)=cx</m> then
+                <m>A</m> depends on both <m>c</m> and <m>x</m>. And
+                you'd be right. But the tradition is to only put
+                variables inside the parentheses, not parameters.
+              </p>
+          </li>
+        </dl>
+        
+        These are simple distinctions now, but it will be useful for you to
+        get in the habit of making sure it is clear in your mind what is
+        variable, what is constant, and which variables are functions of
+        other variables. As the problems get more complex and we need
+        several variables, parameters, and functions, just untangling all of
+        this can become problematic. Keep in mind that the distinction is
+        purely in how we choose to 
+        <q>think about</q> a given symbol, not in
+        how we manipulate it algebraically.
+      </p>
+    </subsection>
+    
+    <subsection  xml:id="subsection-">
+      
+      <p>
+        
+        The following problem is a variation on
+        <xref ref="EXfixed-perimeter">Example~\</xref> and can be solved similarly.
+      </p>
+      
+      <problem  xml:id="problem-prob:science-before-calc-1">
+        <p>
+          Out of all rectangles with a fixed perimeter, which one has the
+          shortest diagonal?  Justify your answer.
+        </p>
+      </problem>
+      
+      <p>
+        As we mentioned above, <xref
+        ref="PROBscience-before-calc-1">Problem</xref> can be done in a
+        manner similar to <xref ref="EXfixed-perimeter">Example</xref>.
+        But what about the following?
+      </p>
+      
+      <example xml:id="prob:science-before-calc-2">
+        
+        <p>
+          Consider all square based boxes with a fixed surface area
+          <m>S</m>. Does the cube enclose the largest volume?
+        </p>
+        <p>
+          
+          To do this problem in the same manner as <xref
+          ref="EXfixed-perimeter">Example</xref>, observe that a cube
+          with side <m>s</m> would have a volume of <m>s^3</m> and a
+          surface area of <m>6s^2</m>. Suppose we change the lengths on
+          the base from <m>s</m> to <m>s+x</m>.  Notice that if
+          <m>x\gt0</m> then we will be increasing the lengths on the
+          base and if <m>x\lt0</m> then we will be decreasing the
+          lengths.  The only restriction is that <m>0\lt s+x</m> so as
+          to be a length.  This says that <m>-s\lt x\lt\infty</m>. (In
+          theory, we can make the lengths of the base as long as we
+          wish.)  To maintain a surface area of <m>6s^2</m>, we will
+          need to adjust our height appropriately.  Let’s call this new
+          height <m>h</m>.
+        </p>
+      </example>
+      <problem xml:id="problem:MaximalCube1">
+        <statement>
+          <p>
+            Proceed as in <xref
+            ref="PROBscience-before-calc-2">Example</xref> to show that in
+            order to maintain a surface area of <m>6s^2</m>, <m>h</m> must
+            be <m> h=\frac{s^2-sx-\frac{x^2}{2}}{s+x}</m>. Use this to show
+            that the volume of this new box is
+            <me>
+              V=s^3-x^2\left(s+\frac{s+x}{2}\right).
+            </me>
+            How does this address the original question about the cube
+            having the largest volume?
+          </p>
+        </statement>
+        <hint>
+          <p>
+            Why did we write <m>V</m> in this rather peculiar way?
+          </p>
+        </hint>
+      </problem>
+      
+      <p>
+        <xref ref="PROBLEMMaximalCube1">Problem</xref> shows that
+        proceeding in this <foreign>ad hoc</foreign> manner is
+        becoming more difficult.  Difficulties of this kind are what
+        prompted mathematicians in the seventeenth century to search
+        for more systematic methods for handling such optimization.
+        These techniques ultimately led to the invention of Calculus.
+        We’ll come back to the this problem later in this chapter.
+      </p>
+      
+    </subsection>
+    
+    
+  </section>
+  <section xml:id="sec:ferm-meth-aedeq">
+    <title>Fermat's Method of Adequality</title>
+    
+    <!-- \TLogo{PSP:ferm-meth-find} -->
+    <figure>
+      <caption>
+        <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Fermat/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Fermat/">Pierre de Fermat </url>1601-1665
+      </caption>
+      <image source="images/Fermat1.png" width="50%"/>
+    </figure>
+    <p>
+      In its simplest form an <term>Optimization Problem</term> can be described
+      as follows: Given that <m>y</m> depends on <m>x</m>, find the value of <m>x</m> that
+      makes <m>y</m> as large (or as small) as it can possibly be.
+    </p>
+    <p>
+      
+      For example, if <m>y=x^2-\frac{29}{21}x+\frac{10}{21}</m> then <m>y</m> will be
+      as small as it can possibly be when <m>x=\frac{29}{42}</m>. The question
+      is, how did we find <m>x=\frac{29}{42}</m>?
+    </p>
+    <p>
+      
+      One of the mathematicians who developed techniques for solving
+      optimization problems
+      was
+      <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Fermat/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Fermat/">Pierre
+      de Fermat</url> (<m>1601-1665</m>) who created what has been called the
+      <em>Method of Adequalty</em>. Fermat's method was based on the simple
+      observation that if the maximum value of <m>y</m> occurs when <m>x</m> is equal
+      to say, <m>6</m>, then when <m>x</m> is very near <m>6</m>, <m>y</m> will almost be equal
+      to its maximum value.
+    </p>
+    
+
+    <aside>
+      <title>Comment</title>
+      <p>
+        Fermat's name is pronounced <q>fair mah</q>, not <q>fur
+        mat.</q>
+      </p>
+    </aside>
+
+
+    <figure>
+      <caption>
+        <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Descartes/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Descartes/">This figure needs a caption.</url>
+      </caption>
+      <image source="images/SantaBarbaraDaylight.png" width="50%"/>
+    </figure>
+    <!-- \begin{wrapfigure}[14]{r}{3.5in} -->
+    <!--   % \vskip-2mm{} -->
+    <!--   \captionsetup{labelformat=empty} -->
+    <!--   % \centerline{\includegraphics*[height=2.5in,width=4.4in]{../Figures/SantaBarbaraDaylight}} -->
+    <!--   \centerline{\includegraphics*[height=2in,width=3.5in]{../Figures/SantaBarbaraDaylight}} -->
+    <!--   \label{fig:SantaBarbaraDaylight1} -->
+    <!-- \end{wrapfigure} -->
+    <p>
+      You can see this in the graph at the right.  Notice that the maximum number of daylight hours
+      (about <m>14.5</m>) occurs just after <m>169</m> days (in fact, at day <m>172</m>)
+      and that for several days before or after we have about the same
+      number of hours of daylight.  This is also true near the minimum which
+      occurs at day <m>356.</m> Regardless of what the variables represent if the
+      graph of a function, <m>f(x)</m>, is continuous the near a maximum or
+      minimum: <m>f(x+h)\approx f(x)</m> as long as <m>h</m> is not too big.
+      </p>
+      
+
+      <aside>
+        <title>Comment</title>
+      <p>
+      Since there is only
+      one number associated with each day of the year this should be a
+      discrete graph. Since we'll be more interested in continuous
+      functions we connect the dots to create a continuous
+      approximation.
+      </p>
+      </aside>
+      
+      <p>
+      Fermat's simple idea was to purposely make the mistake of
+      setting <m>f(x+h)</m> actually equal means to equalize.  When
+        something is adequate, then it is equal to the need.} to
+      <m>f(x)</m>.  He then rearranged the formulas algebraically and
+      at the crucial point he would set <m>h=0</m> to <q>make it
+      correct.</q> An example will make this clearer.  
+    </p>
+
+    <aside>
+      <title>History</title>
+      <p>
+        The Latin root <foreign>adaequ\={a</foreign>re
+      </p>
+    </aside>
+
+    <example xml:id="example:SquareMinimalPerimeter">
+      <image source="images/GenericRectangle.png" width="50%"/>
+      <p>
+        In <xref ref="EXfixed-perimeter">Example</xref>, we showed
+        that out of all rectangles with a fixed perimeter, the one
+        with the largest area is a square. Next we will use Fermat's
+        Method of Adequality to examine the related question: Out of
+        all rectangles with a fixed area, does a square have the
+        smallest perimeter?
+      </p>
+      <p>
+        
+        Consider a rectangle whose length is given by <m>x</m> and width is given
+        by <m>y.</m> The area of the rectangle is given by <m>A=xy</m> and the
+        perimeter is given by <m>P=2x+2y.</m>
+      </p>
+      <p>
+        
+        The problem is to minimize <m>P</m> while holding <m>A</m> constant. More
+        precisely, our objective is to minimize the function <m>P=2x+2y</m>,
+        subject to the constraint that the area, <m>A=xy</m>, is fixed. First, we
+        will use our constraint <m>A=xy</m> to eliminate one of the variables and
+        substitute into <m>P</m>. Solving for <m>y,</m> we get <m>y=A/x.</m> Then,
+        <me>
+          P=P(x) = 2x+\frac{2A}{x}.
+        </me>
+        We have used function notation for <m>P(x)</m> to emphasize that <m>P</m> is a
+        function of <m>x</m> alone.  (Remember that <m>A</m> is constant or
+        
+        <q>fixed.</q>)
+      </p>
+      <p>
+        
+        Fermat's method says to first set
+        <me>
+          P(x+h)=P(x).
+        </me>
+        This gives:
+        \begin{align}
+        2(\textcolor{red}{x}+h)+\frac{2A}{x+h}=2\textcolor{red}{x}+\frac{2A}{x}.\label{equation:FermAd1}
+        \intertext{  Rearranging a bit, we get}
+        \nonumber
+        \textcolor{red}{2x}+\textcolor{blue}{2}h+\frac{\textcolor{blue}{2}A}{x+h}\amp{}=\textcolor{red}{2x}+\frac{\textcolor{blue}{2}A}{x}
+      </p>
+      <p>
+        
+        \intertext{so that}
+        \nonumber h\amp{}=\frac{A}{x}-\frac{A}{x+h}. 
+        \intertext{Adding the fractions gives}
+        h\amp{}=\frac{A(x+h)-Ax}{x(x+h)}=\frac{Ah}{x(x+h)}. \label{equation:FermAd6}
+        \intertext{Finally, and crucially, dividing both sides   by <m>h,</m> gives}   
+        1\amp{}=\frac{A}{x(x+h)}.\label{equation:FermAd7}
+        \end{align}
+      </p>
+      <p>
+        
+        Earlier we had made the 
+        <q>mistake</q> of setting <m>P(x+h)=P(x)</m>
+        (knowing that this is not true). Now we 
+        <q>make it correct</q> by
+        setting <m>h=0</m>. This gives: <m> 1=\frac{A}{x^2}, \text{ or } x^2=A.  </m>
+        Substituting this into <m>y=\frac{A}{x},</m> we get
+        <m>y=\frac{A}{x}=\frac{x^2}{x}=x.</m>
+      </p>
+      <p>
+        
+        Thus <m>P</m> is minimum when <m>y=x,</m> which is to say, when the rectangle
+        is actually a square. A moment's thought should make it clear that
+        there is no maximum value for <m>P.</m>
+      </p>
+      <p>
+        
+        
+        Fermat's method is very slick.  However it contains an inherent
+        logical flaw.  We begin by setting <m>P(x+h)</m> equal to <m>P(x)</m>, even
+        though we know we are making an error. This seems like it might be a
+        flaw but it really isn't. When we set <m>P(x+h)=P(x)</m> we are asking,
+        
+        <q>What happens if they are equal?</q> The computations leading up to
+        <xref ref="EQUATIONFermAd7">equation~</xref>) are the answer to that question.
+      </p>
+      <p>
+        
+        But notice that we got from <xref ref="EQUATIONFermAd6">equation~</xref>) to
+        <xref ref="EQUATIONFermAd7">equation~</xref>) by dividing by <m>h.</m> From
+        arithmetic you know that you can only divide by <m>h</m> if <m>h</m> is not
+        zero. Fortunately it is clear that <m>h\ne0</m> since the whole point of
+        introducing <m>h</m> is for <m>x+h</m> and <m>x</m> to be two different values.
+        However, in the final step, after <xref ref="EQUATIONFermAd7">Equation~</xref>),
+        we took <m>h=0</m> to 
+        <q>make it correct</q> but if <m>h</m> is zero then we
+        couldn't have divided by <m>h</m>. We seem to be chasing our tails. We
+        need for <m>h</m> to be equal to zero and not be equal to zero at the
+        same time!
+      </p>
+      <p>
+        
+        This is the logical flaw.
+      </p>
+      <p>
+        
+        Since we began with the assumption that <m>h\neq0</m> we can't just
+        change our minds later. We can't have both <m>h=0</m> and <m>h\neq0</m>.
+      </p>
+    </example>
+    <p>
+      
+      Despite this logical flaw, Fermat's technique does seem to produce the
+      correct answer. So let's explore it and see what happens.
+    </p>
+    <p>
+      
+      \begin{ProficiencyDrill}
+      \label{drill:MethAdeq}
+      Apply Fermat's Method of Adequality to find all maxima or minima of
+      the following functions.  In each case examine a graph the function
+      to see if Fermat's Method provides the correct answer.
+      \begin{enumerate}[label={\bf{}(\alph*)}]
+      \begin{multicols}{3}
+      \item <m>f(x)=x(100-x)</m>
+      \item <m>q(x) = x^2-2x+4</m>
+      \item <m>g(x)=x^4-4x^3+6x^2-4x</m>
+      \end{multicols}
+      \end{enumerate}
+      \end{ProficiencyDrill}
+      <xref ref="DRILLMethAdeq">Drill~\</xref> shows that Fermat's method does not
+      indicate whether the computed value of <m>x</m> is at a maximum or a
+      minimum. Often the context of the problem provides the additional
+      information needed to make that
+      determination. <xref ref="EXAMPLESquareMinimalPerimeter">Example~\</xref> and
+      <xref ref="PROBLEMRectSolid">Problem~\</xref> both provide such a context.
+    </p>
+    <problem  xml:id="problem-problem:RectSolid">
+      <introduction>
+        <p>
+          Consider a rectangular box with a square base, as seen here.
+        </p>
+        <!-- <figure> -->
+        <!--   <caption> -->
+        <!--     <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Descartes/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Descartes/">test</url> -->
+        <!--   </caption> -->
+        <image source="images/RectSolid.png" width="25%"/>
+        <!-- </figure> -->
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Find a formula for the volume, <m>V</m>, and the surface area, <m>S</m>,
+            of the box.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Suppose we want to determine which box has the least surface
+            area, given a fixed volume. What is our objective and what is our
+            constraint? Use Fermat's Method of Adequality to find the
+            dimensions of the box that solves this problem. Is the minimal box
+            a cube?
+          </p>
+        </statement>
+      </task>
+    </problem>
+    
+    
+    
+    <p>
+      
+      A few minutes of thought should convince you that what makes Fermat's
+      method work is the fact that near a maximum or minimum, the curve is
+      practically horizontal. That is, its slope is nearly zero.
+    </p>
+    <p>
+      
+      Fermat recognized that finding a maximum or minimum by his method was
+      a special case of finding the slope of (the line tangent to) the curve
+      and he modified his method to determine the slope of a curve even when
+      it is not horizontal.
+    </p>
+    <p>
+      
+      Before we pursue Fermat's modification, it might be a good time to
+      brush up on some basics regarding the slopes of lines.  No doubt you
+      are already familiar with all of the following formulas for the
+      equation of a line:
+    </p>
+    <!-- <blockquote> -->
+    <!-- <p> -->
+    <!-- \begin{center} -->
+    <!-- \begin{minipage}{.85\linewidth} -->
+    <!-- \begin{description} -->
+    
+    <p>
+      <dl>
+        <li>
+          <title>Slope-Intercept formula:</title>
+          <p><m>y=mx+b</m></p>
+        </li>
+        <li>
+          <title>Point-Slope formula:</title>
+          <p>  <m>y-y_0=m(x-x_0)</m></p>
+        </li>
+        <li>
+          <title>Two-Point, or Point-Point formula:</title>
+          <p>  <m>y-y_0=\dfrac{y_1-y_0}{x_1-x_0}(x-x_0)</m></p>
+        </li>
+      </dl>
+    </p>
+    <!-- \end{description} -->
+    <!-- \end{minipage} -->
+    <!-- \end{center} -->
+    <!-- </p> -->
+    <!-- </blockquote> -->
+    
+    
+    <p>
+      
+      These formulas are all really just rearrangements of one another. We
+      use three different rearrangements because in different contexts one
+      of them is usually simpler to use than the others. Through most of
+      Calculus you will probably find the Point-Slope version to be the
+      most convenient to use.
+    </p>
+    <p>
+      
+      \begin{ProficiencyDrill-enumerate}
+      \begin{enumerate}[label={\bf{}(\alph*)}]
+      \item Use the appropriate formula for the equation of a line to find
+      an equation of each of the following lines:
+      \begin{enumerate}[label={\bf{}(\roman*)}]
+      \begin{multicols}{2}
+\item with slope <m>2</m> and <m>y</m>-intercept <m>(0,7)</m>
+\item with slope <m>-8</m> and <m>y</m>-intercept <m>(0,5)</m>
+\item with slope <m>-2</m> and <m>x</m>-intercept <m>(7,0)</m>
+\item with slope <m>5</m> and passing through the point <m>(2,-8)</m>
+\item with slope <m>-4</m> and passing through the point <m>(6,-1)</m>
+\item passing through the points <m>(2,8)</m> and <m>(4,-2)</m>
+\item passing through the points <m>(4,3)</m> and <m>(2,3)</m>
+\end{multicols}
+\end{enumerate}
+\item Show that the Point-Slope formula follows from the fact that
+the slope of a line can be determined using any two points on the
+line.
+\item Show that the Slope-Intercept formula is really a
+rearrangement of the Point-Slope formula.
+\item Show that the Point-Slope formula follows from the Two-Point
+formula.
+% \item In fact, these all follow from the fact that the slope of
+%   a line can be computed using any two points on the line. Use
+%   this fact to derive the Point-Slope formula for the equation
+%   of a line.
+\item
+\begin{enumerate}[label={\bf{}(\roman*)}]
+\item What does the two-point formula reduce to if <m>y_0=y_1</m>?
+\item What does the two-point formula reduce to if <m>x_0=x_1</m>?
+\hint{Notice that in the two-point formula, as given we need to
+assume that <m>x_0\ne x_1</m>.% because division by zero is not
+% defined.
+Can you rearrange the formula so that this is not a problem?}
+\end{enumerate}
+\item Show that the equation of the line with <m>x</m>-intercept <m>(a,0)</m>
+and <m>y</m>-intercept <m>(0,b)</m> can be written in the form:
+<m> \frac{x}{a}+\frac{y}{b}=1.  </m> Notice that this equation is only
+valid if <m>a\ne 0</m> and <m>b\ne 0.</m>
+\begin{enumerate}[label={\bf{}(\roman*)}]
+\item Determine the equation of the line if <m>a=0</m>.
+\item Determine the equation of the line if <m>b=0</m>.
+\end{enumerate}
+\end{enumerate}
+\end{ProficiencyDrill-enumerate}
+</p>
+<p>
+
+
+  \begin{embeddedproblem-enumerate}{}
+  \begin{enumerate}[label={\bf{}(\alph*)}]
+  \item In the diagram below <m>L_1</m> is obtained from <m>L_2</m> by
+  translating (but not rotating) <m>L_2</m>, as indicated by the
+  arrows. Use the diagram to show that parallel lines have
+  the same slope.
+  % \centerline{\includegraphics*[height=3.3in,width=4in]{../Figures/Parallels2}}
+  \centerline{\includegraphics*[height=1.5in,width=1.75in]{../Figures/Parallels2}}
+  \item In the diagram below we have taken <m>L_1</m> from the previous
+  figure, and rotated by <m>90^\circ</m>.  Use this diagram to show that
+  perpendicular lines have slopes that are negative
+  reciprocals of each other.
+  % \centerline{\includegraphics*[height=2.5in,
+  % width=2.8in]{../Figures/Perpendiculars}}
+  % \centerline{\includegraphics*[height=2.7in,
+  % width=3.4in]{../Figures/Perpendiculars}}
+  \centerline{\includegraphics*[height=1.7in,
+  width=1.8in]{../Figures/Perpendiculars}}
+  \end{enumerate}
+  \end{embeddedproblem-enumerate}
+</p>
+<p>
+
+
+
+  \begin{ProficiencyDrill}{}
+  Find the equation of the line:
+  \begin{enumerate}[label={\bf{}(\alph*)}]
+  \begin{multicols}{2}
+\item parallel to <m>y=3x-2</m> and passing through <m>(3,-3)</m>
+\item perpendicular to <m>y=3x-2</m> and passing through <m>(3,-3)</m>
+\item parallel to <m>2x+3y=7</m> with <m>y</m>-intercept <m>(0,5)</m>
+\item perpendicular to <m>2x+3y=7</m> and passing through the point
+<m>(-1,5)</m>
+% \item parallel to <m>2x+3y=7</m> with <m>y</m>-intercept <m>(0,5)</m>
+% \item perpendicular to <m>2x+3y=7</m> and passing through the point
+%   <m>(-1,5)</m>
+% \item parallel to <m>2x+3y=7</m> with <m>y</m>-intercept <m>(0,5)</m>
+% \item perpendicular to <m>2x+3y=7</m> and passing through the point
+%   <m>(-1,5)</m>
+\end{multicols}
+\end{enumerate}
+\end{ProficiencyDrill}
+</p>
+
+
+<problem xml:id="problem:PerpendicularDistance">
+  <statement>
+    <p>
+      <!-- \label{problem:PerpendicularDistance} -->
+      Find the equations of the two lines such that each one is a
+      perpendicular distance of <m>5</m> units away from the line
+      <m>y=\frac{4}{3} x+2</m> and parallel to it.
+</p>
+</statement>
+</problem>
+
+
+<figure>
+  <caption>
+<url href="https://mathshistory.st-andrews.ac.uk/Biographies/Descartes/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Descartes/">This figure needs a caption.</url>
+</caption>
+<image source="images/Aedequality1.png" width="50%"/>
+</figure>
+<!-- \begin{wrapfigure}[13]{r}{1in} -->
+<!--   \captionsetup{labelformat=empty} -->
+<!--   \centerline{\includegraphics*[height=1.4in,width=1in]{../Figures/Aedequality1}} -->
+<!--   % \centerline{\includegraphics*[height=2.5in,width=1.75in]{../Figures/Aedequality1}} -->
+<!--   \label{fig:Adequality} -->
+<!-- \end{wrapfigure} -->
+<p>
+  Now that you've had a chance to brush up on slopes, let's see how
+  Fermat modified his method to determine the slope of a
+  curve.  We will start by determining the slope of the graph of
+<m>y=x^2</m> at the point <m>(1,1).</m>
+</p>
+
+
+<aside>
+  <title>Comment</title>
+  <p>
+    That is to say, the slope of the line tangent to the curve.
+  </p>
+</aside>
+
+
+<p>
+
+  We need two points to determine the slope of a line, so with Fermat's
+  method in mind, we choose another point on the curve <m>y=x^2</m> very
+  close to <m>(1,1).</m> Since we don't really care which point we take as
+  long as it is close to <m>(1,1)</m> we introduce the parameter, <m>h,</m> which
+  we think of as very small. The points <m>(1,1)</m> and <m>(1+h,(1+h)^2)</m> are
+  thus very close together. This is represented in the sketch at the
+  right.
+</p>
+<p>
+
+  The slope of secant line joining <m>(1,1)</m> and <m>(1+h,(1+h)^2)</m> is given
+  by
+  \begin{align*}
+  \frac{(1+h)^2-1}{(1+h)-1}\amp{}=\frac{1+2h+h^2-1}{h}
+  \amp{}=2+h.
+  \end{align*}
+  As before we set <m>h=0</m>. Thus the slope of the line tangent to the
+graph of <m>y=x^2</m> at <m>(1,1 )</m> is <m>2.</m>
+</p>
+<p>
+
+
+  \begin{embeddedproblem-enumerate}
+  \label{prob:ferm-meth-x2}
+  \begin{enumerate}[label={\bf{}(\alph*)}]
+  \item
+  \begin{enumerate}[label={\bf{}(\roman*)}]
+  \item Use Fermat's method for tangents to compute the slope of the
+  line tangent to <m>y=x^2</m> at the generic point <m>(a,a^2)</m>.
+  \item First plot the graph <m>y=x^2</m>. Then, on the same set of axes,
+  plot the line the line through the point <m>(a,a^2)</m>, and tangent
+  to the graph of <m>y=x^2</m>, for each of <m>a=-2, -1, 0, 1, 2</m>.
+  % Substitute the values <m>a=-2, -1, 0, 1, 2</m> into your formula
+  % for the slope. For each value of <m>a</m> graph <m>y=x^2</m> and the line
+  % with that slope through <m>(a,a^2)</m> to see if your line is tangent
+  % to the graph.
+  \item What is the relationship between the slopes at <m>(a,a^2)</m> and
+  <m>(-a, a^2)</m>?  Is this consistent with what you see when you plot
+  the graph of <m>y=x^2</m>?
+  \end{enumerate}
+  \item
+  \begin{enumerate}[label={\bf{}(\roman*)}]
+  \item Use Fermat's method for tangents to compute the slope of the
+line tangent to <m>y=x^3</m> at the point <m>(a,a^3).</m>
+\item First plot the graph <m>y=x^3</m>. Then, on the same set of axes,
+plot the line the line through the point <m>(a,a^2)</m>, and tangent
+to the graph of <m>y=x^3</m>, for each of <m>a=-2, -1, 0, 1, 2</m>.
+% \item Substitute the values <m>a=-2, -1, 0, 1,</m> and <m>2</m> into the
+%   formula you obtained for the slope. For each value of <m>a</m> graph
+%   <m>y=x^3</m> and the line with that slope through <m>(a, a^3)</m> to see
+%   if your line is tangent to the the graph. 
+You should notice
+something interesting about the tangent lines at <m>\pm1</m> and
+<m>\pm2.</m>
+\item What can you say about the tangent lines at <m>(a, a^3)</m> and
+<m>(-a, -a^3)</m>?
+\end{enumerate}
+\end{enumerate}
+\end{embeddedproblem-enumerate}
+</p>
+<p>
+
+  \newpage{}
+  \begin{embeddedproblem-enumerate}{}
+  \label{prob:ferm-meth-aedeq-1}
+  \begin{enumerate}[label={\bf{}(\alph*)}]{}
+  \item Use Fermat's Method to find a formula for the slope of the
+  tangent line to <m>y(x)= x^3 +2x^2</m> at the point <m>(a, y(a))</m>.  How
+  does this answer compare with the results of the previous two
+  problems?
+  \item What would happen if we used Fermat's Method to find the slope
+of the tangent line to <m>y(x)= x^3+2x^2+b</m> at the point <m>(a, y(a))</m>
+where <m>b</m> is any constant?  Does this make sense graphically?
+Explain.
+\end{enumerate}
+\end{embeddedproblem-enumerate}
+</p>
+
+
+
+</section>
+<section xml:id="sec:descartes-normals">
+<title>Descartes's Method of Normals</title>
+
+<!-- \label{sec:descartes-normals} -->
+
+<figure>
+  <caption>
+<url href="https://mathshistory.st-andrews.ac.uk/Biographies/Descartes/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Descartes/">\centerline{Ren\'e{} Descartes} \centerline{1596-1650}</url>
+</caption>
+<image source="images/Descartes.png" width="50%"/>
+</figure>
+<!-- \begin{wrapfigure}[11]{l}{1.9in} -->
+<!--   \vskip-4mm \captionsetup{labelformat=empty} -->
+<!--   % \centerline{\href{https://mathshistory.st-andrews.ac.uk/Biographies/Descartes/}{\includegraphics*[height=1.75in,width=2.75in]{../Figures/Descartes}}} -->
+<!--   \centerline{\href{https://mathshistory.st-andrews.ac.uk/Biographies/Descartes/}{\includegraphics*[height=1.2in,width=1.9in]{../Figures/Descartes}}} -->
+<!--   \label{fig:Descartes} -->
+<!--   \caption{\centerline{Ren\'e{} Descartes} \centerline{1596-1650}} -->
+<!-- \end{wrapfigure} -->
+<p>
+  As we noted earlier, while Fermat's Method of Adequality seems to work
+  it has a fundamental logical flaw. Fermat's
+  contemporary,
+<url href="https://mathshistory.st-andrews.ac.uk/Biographies/Descartes/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Descartes/">Ren\'e{</url>
+Descartes} <m>(1596-1650)</m>, provided an alternative method in his
+book
+<url href="https://www.maa.org/press/periodicals/convergence/mathematical-treasures-rene-descartes-treatise-on-method" visual="https://www.maa.org/press/periodicals/convergence/mathematical-treasures-rene-descartes-treatise-on-method"><pubtitle>Discourse
+on Method</pubtitle></url> which is free of logical issues.  Unfortunately
+Descartes' technique is also very difficult to use and as we will see
+is of limited applicability.
+</p>
+
+
+<aside>
+<title>Mathematical Vocabulary</title>
+<p>
+The
+  English word, 
+<q>normal</q> comes from the Latin word <foreign>norma</foreign>
+which literally means a carpenter's square. In construction, it is
+important that vertical posts be perpendicular to the horizontal
+ground, so a vertical post is normal.
+</p>
+</aside>
+
+
+<p>
+
+  Descartes's method is often called the Method of Normals  because what he actually
+finds is the line normal to (perpendicular to) a curve.  Once the line
+normal to the curve at a point is obtained, the line perpendicular to
+the normal line will be tangent to the curve.  Descartes' Method
+relies solely on the fact (from Greek Geometry) that at each point of
+a circle the radius and tangent line through the point are
+perpendicular.  We'll illustrate Descartes' idea with the following
+example.
+</p>
+
+<figure>
+  <caption>
+<url href="https://mathshistory.st-andrews.ac.uk/Biographies/Roberval/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Roberval/">This figure needs a caption.</url>
+</caption>
+<image source="images/DescartesCircle.png" width="50%"/>
+</figure>
+<!-- \begin{wrapfigure}[12]{r}{2.3in} -->
+<!--   \vskip-4mm{} \captionsetup{labelformat=empty} -->
+<!--   \centerline{\includegraphics*[height=2in,width=2.3in]{../Figures/DescartesCircle}} -->
+<!--   % \centerline{\includegraphics*[height=2.75in,width=3.16in]{../Figures/DescartesCircle}} -->
+<!--   \label{fig:DescartesCircle2} -->
+<!-- \end{wrapfigure} -->
+<example xml:id="ex:DescartesNormal1">
+
+  <!-- \label{ex:DescartesNormal1} -->
+  <p>
+    To find the slope of the normal (and, eventually the tangent) line
+to the graph of the curve <m>y=\sqrt{2x}</m> at the point <m>(2,2)</m>
+Descartes' approach was to look at the family of circles with
+centers on the <m>x</m>-axis and passing through the point <m>(2,2).</m> The
+sketch at the right displays several members of of that family of
+circles.  Notice that each circle crosses the parabola at the point
+<m>(2,2)</m>. We are searching for the center of the solid black circle
+which touches (is tangent to) the parabola at <m>(2,2)</m>. If we can
+find the center of the black circle then the radial line through the
+point <m>(2,2)</m> will be normal to the parabola at <m>(2,2)</m> and the
+slope of the tangent line will be the negative reciprocal of the
+slope of the normal.
+</p>
+<p>
+  
+  We now want to turn the geometric problem of finding the
+  intersection of our circle and parabola into an algebraic problem.
+  Let <m>(a,0)</m> denote the coordinates of the center of a circle in that
+  family, then the equation of the circle with center <m>(a,0)</m> is
+  <m>(x-a)^2+y^2=r^2</m> where <m>r</m> is the length of the radius of the
+  circle and <m>a</m> is a parameter. Since we require our circle to pass
+  through the point <m>(2,2)</m> the length of this radius will be the
+  distance from <m>(2,2)</m> to <m>(a,0)</m>, <m>r=\sqrt{(2-a)^2+2^2}.</m> Thus we
+  have
+  \begin{equation}
+  (x-a)^2+y^2=(2-a)^2+2^2.\label{eq:Descartes1}
+  \end{equation}
+</p>
+<p>
+  
+  Since we are looking for the point where <m>y=\sqrt{2x}</m> and the
+  circle intersect, we substitute <m>y=\sqrt{2x}</m> into
+  <xref ref="EQDescartes1">Equation~</xref>) to get
+  \begin{align}
+  \nonumber  (x-a)^2+2x\amp{}=(2-a)^2+4
+  \nonumber  x^2-2ax+a^2+2x\amp{}=4-4a+a^2+4
+  x^2+(2-2a)x+(4a-8)\amp{}=0.\label{eq:NormQuad}
+  \end{align}
+</p>
+<p>
+  
+  At this point it is tempting to use the Quadratic Formula to solve
+  for <m>x</m> and get (typically) two distinct solutions for <m>x</m> in terms
+  of <m>a</m>. But the fact is we really don't care about the variable
+  <m>x</m>. We want to find the value of <m>a</m> which ensures that the circle
+  and the curve intersect exactly once.
+</p>
+<p>
+  
+  Think about this for a moment. We get a single solution when we use
+  the Quadratic Formula to solve this equation precisely when the
+  discriminant (the part under the square root) is zero.
+</p>
+</example>
+
+
+<problem xml:id="drill:HuddeDiscriminant">
+  <statement>
+    <p>
+      <!-- \label{drill:HuddeDiscriminant} -->
+      Use the Quadratic Formula to show that the discriminant of
+      <xref ref="EQNormQuad">Equation~</xref>) is <m>(2-2a)^2-4(4a-8)</m>.
+      \end{ProficiencyDrill}
+      Setting the discriminant in <xref ref="DRILLHuddeDiscriminant">Drill</xref>
+      equal to zero and solving, we get
+      \begin{align*}
+      4-8a+4a^2-16a+32\amp{}=0
+      4(a^2-6a+9)\amp{}=0
+      4(a-3)^2\amp{}=0. 
+      a\amp{}=3,
+      \end{align*}
+      So the center of the circle touching the curve only once is at
+      <m>(3, 0)</m> and the line segment from <m>(3,0)</m> to <m>(2,2)</m> is normal
+      (perpendicular) to the graph of <m>y=\sqrt{2x}</m>.
+      
+      Descartes and Fermat are generally credited with the invention of
+      Analytic Geometry which is a technique that allows us to move
+      problems from Algebra to Geometry or, as in this problem, from
+      Geometry to Algebra.
+      
+      
+      
+      \begin{embeddedproblem}
+      Descartes would not have approached this problem using the idea of
+      a discriminant as we just did.  He knew that the only way the
+      circle and the parabola could be tangent at <m>x=2</m> is if <m>2</m> is a
+      double root of <xref ref="EQNormQuad">Equation~</xref>).  Since a quadratic
+      polynomial only has two roots, this means that
+      <xref ref="EQNormQuad">Equation~</xref>) must be
+      \begin{equation}
+      (x-2)^2=0=x^2-4x+4.
+      \label{eq:DoubleRoot1}
+      \end{equation}
+      By comparing the coefficients of <xref ref="EQNormQuad">Equation~</xref>) and
+      the right side of <xref ref="EQDoubleRoot1">Equation~</xref>) show that <m>a=3</m>.
+</p>
+</statement>
+</problem>
+<p>
+  Like any powerful tool, Analytic Geometry must be used
+  carefully. Sometimes, as in this problem, the transition from
+  Geometry to Algebra can generate algebraic solutions that have no
+  corresponding geometric solution. An extraneous root is the most
+  common example of this.
+</p>
+
+<problem xml:id="no-label">
+<title>Extraneous Roots</title>
+<statement>
+  <p>
+    Show that the roots of <m> x^2+(2-2a)x+(4a-8)=0</m> are <m>x=2</m> and
+    <m>x=2a-4</m>. Notice that when <m>a\ge2</m> and <m>a\ne3</m> we the parabola and
+    circle will have two intersection points (as seen in the graph in
+    <xref ref="EXDescartesNormal1">Example</xref>).  When <m>a\lt{}2</m> we get one
+    positive and one negative root, but the parabola and the circle
+    cross only at <m>(2,2)</m>. How do we make peace with this
+    apparent contradiction?
+    \hint{Look closely at the equation for the parabola. Can <m>x</m> be
+    negative? }
+</p>
+</statement>
+</problem>
+<p>  
+  <xref ref="EXDescartesNormal1">Example</xref> illustrates that there is a
+  significant difference between curves touching (curves that are
+  tangent) and curves crossing (curves that intersect). Finding the
+  line tangent to a curve is actually much more subtle than you would
+  expect at first. But this is not the appropriate place to start that
+  conversation so we will hold off until we reach
+  <xref ref="SECveloc-slop-tang">Section</xref>.
+</p>  
+<p>
+  \begin{ProficiencyDrill}
+  \label{prob:DescartesNormals2}
+  Now that we've found the center of the circle tangent to the curve
+  <m>y=\sqrt{2x}</m> at <m>(2,2)</m>, use this to find the equation of the
+  lines normal and tangent to the curve at that point.  Plot the
+  curve and these two lines on the same set of axes to see if they
+  really are normal and tangent to the curve.
+  \end{ProficiencyDrill}
+</p>
+
+
+<problem xml:id="prob:DescartesNormals1">
+  <statement>
+    <p>
+      <!-- \label{prob:DescartesNormals1} -->
+      Use Descartes' Method of Normals to find the slope of the line
+      tangent to the curve <m>y=\sqrt{x}</m> at the point <m>(4,2)</m>.
+</p>
+</statement>
+</problem>
+
+
+
+<problem xml:id="no-label">
+  <statement>
+    <p>
+      Use Descartes' Method of Normals to find the slope of the line
+      tangent to the curve <m>y=x^2</m> at the point <m>(3,9)</m> and compare with
+      <xref ref="PROBferm-meth-x2">Problem</xref>.  
+      \hint{You may want to use circles that are centered on the <m>y</m>-axis
+      instead of the <m>x</m>-axis.}
+</p>
+</statement>
+</problem>
+
+<problem xml:id="no-label">
+  <statement>
+    <p>
+      Apply Descartes' Method of Normals to the line <m>y-3x=2</m> at the point
+      <m>(1,5).</m> What equation did you find for the tangent line? Does this
+      make sense to you?
+</p>
+</statement>
+</problem>
+
+<p>
+  Descartes' Method, unlike Fermat's, is free of the logical pitfalls.
+  But it is algebraically cumbersome because it requires that we find
+  the 
+  <q>double root</q> of a polynomial. Double roots of quadratic
+  functions like the one in <xref ref="EXDescartesNormal1">Example~\</xref> are
+  relatively easy to find. But for higher degree polynomials this can be
+a substantial problem. For transcendental functions like <m>y=1-\cos(x)</m>
+this problem is almost insurmountable without Calculus.
+</p>
+
+</section>
+<section xml:id="sec:roberv-conic-sect">
+<title>Roberval, Conic Sections, and the Dynamic Approach</title>
+
+<!-- \label{sec:roberv-conic-sect} -->
+
+
+
+
+<subsection xml:id="no-label">
+<title>Speed, Velocity, and Rates of Change</title>
+<p>
+  Descartes and Fermat were co-creators of Analytic Geometry <mdash/> the use
+  of Algebra to solve geometric problems <mdash/> so their methods are
+  simultaneously algebraic and geometric in nature. That is, their
+  methods are static. There is no motion involved.  But at it's heart,
+  Calculus gives us a way of dealing with the properties of objects as
+  they change. It is the mathematics of motion. So we will need to think
+  more dynamically.
+</p>
+<p>
+
+  If quantity <m>A</m> changes by <m>\Delta A</m> each time quantity <m>B</m> changes
+  by <m>\Delta B</m> we say that the rate of change of <m>A</m> <term>with respect
+  to</term> <m>B</m> is <m>\frac{\Delta A}{\Delta B}</m>.
+</p>
+<p>
+
+  For example, in a video game if your character gains one hundred hit
+  points whenever you cast a certain spell we would say that the rate of
+  change of your hit points is one hundred points per spell, denoted
+  <m>100 \frac{\text{points}}{\text{spell}}</m>. If you gain fifty hit points
+  every second time you quaff a potion we write
+  <m>\frac{50\ \text{points}}{2\ \text{quaffs}}</m> or, equivalently,
+  <m>25 \frac{\text{points}}{\text{quaff}}</m> and we say that the rate of
+  change of hit points with respect to quaffs is twenty-five. Notice how
+  naturally the properties of fractions come into play:
+  <m>\frac{50\ \text{points}}{2\ \text{quaffs}} = 25
+  \frac{\text{points}}{\text{quaff}}</m>.
+</p>
+<p>
+
+
+
+  On the other hand if you lose <m>15</m> hit points each time an enemy
+  strikes you three times with a sword then your hit points are
+  decreasing at a rate of
+  <m>\frac{15\ \text{points}}{3\ \text{strikes}} = 5
+  \frac{\text{points}}{\text{strike}}</m>. % Notice that the number of hit
+  It is inconvenient to specify whether <m>A</m> is increasing or decreasing
+  verbally so we adopt the convention that a negative rate of change is
+  decreasing and a positive rate of change is increasing.
+</p>
+<p>
+
+  Speed is the rate of change we are most familiar with in daily life.
+  If you are driving on a flat, straight, road your speed is the
+  <term>rate of change</term> of your position, <m>\Delta x</m>, <term>with respect
+  to</term> the passage (change) of time, <m>\Delta t</m>.  If your speedometer
+  reads <m>60</m> we say your speed is sixty miles per hour:
+  <m>60 \frac{\text{miles}}{\text{hour}}</m>, meaning of course that in one
+hour you will travel sixty miles. This is often abbreviated to <m>60</m>
+mph. We will model a flat, straight, road as the <m>x</m>-axis with the
+positive direction to the right, as is customary. Of course, on this
+flat, straight, road we could be going
+<m>60 \frac{\text{miles}}{\text{hour}}</m> to the right or to the
+left. Since there are only two directions possible, we can again use
+negative numbers to indicate the direction of travel as depicted in
+the sketch below.
+\centerline{\includegraphics*[height=.8in,width=3in]{../Figures/Vector2}}
+</p>
+<p>
+
+  However if we are on a broad flat plain, as depicted in the sketch
+  below:
+  \centerline{\includegraphics*[height=2.9in,width=2.8in]{../Figures/Vector1}}
+  we can travel in any direction whatsoever. Notice that our sketch
+  indicates that there are eight cars, all traveling at
+  <m>60 \frac{\text{miles}}{\text{hour}}</m>, but in different
+  directions. That is, the <term>speed</term> of each car is
+  <m>60 \frac{\text{miles}}{\text{hour}}</m>. But it should be clear that a
+  single number is not adequate to fully describe the motion of these
+  cars. We also need to specify the direction of travel and simply using
+  plus or minus is no longer sufficient.
+</p>
+<p>
+
+  When we specify the speed and direction of motion of some object we
+  are stating its <term>velocity</term>. This can be difficult at first
+  because in casual conversation we use the words speed and velocity
+  interchangeably, so we tend to think of them as synonyms.  But in a
+  technical setting speed and velocity, while related, have different
+  meanings. <term>Speed</term> is how fast we're going. In the sketch at the
+  left the speed of all of the cars is
+  <m>60 \frac{\text{miles}}{\text{hour}}</m>. But their <term>velocities</term> are
+  all different. The velocity of one car is
+  <m>60 \frac{\text{miles}}{\text{hour}}</m> to the north, the velocity of
+  another is <m>60 \frac{\text{miles}}{\text{hour}}</m> to the west, the
+  velocity of a third is <m>60 \frac{\text{miles}}{\text{hour}}</m> to the
+  southeast, and so on.
+</p>
+<p>
+
+  <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Roberval/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Roberval/">Gilles
+  Personne de Roberval</url> <m>(1602-1675)</m>, a contemporary of Fermat and
+  Descartes, used arrows to indicate the velocity of moving objects just
+  as we have. The length of the arrow represents the speed of the object
+  and the direction of travel is the direction that the arrow
+  points. This works well in the kind of geometric arguments he used as
+  it enabled him to develop a method for constructing tangents which is
+  dynamic in nature.
+</p>
+<p>
+
+  Suppose you are on a moving sidewalk like those in an airport and the
+  sidewalk is moving at <m>3 \frac{\text{feet}}{\text{second}}</m>.  If you
+  stand still on the sidewalk then you are still moving at
+  <m>3 \frac{\text{feet}}{\text{second}}</m>.
+  \centerline{\includegraphics*[height=.75in,width=2in]{../Figures/Arrows1}}
+</p>
+<p>
+
+  If you are walking along the sidewalk at
+  <m>4 \frac{\text{feet}}{\text{second}}</m> and in the same direction the
+  sidewalk is moving then it is pretty clear that you
+  are moving at a rate of <m>7 \frac{\text{feet}}{\text{second}}</m>.
+  \centerline{\includegraphics*[height=1.2in,width=3.3in]{../Figures/Arrows2}}
+  Of course, if you turn around and walk against the sidewalk, then
+  your speed  would be <m>1 \frac{\text{foot}}{\text{second}}</m>.
+  \centerline{\includegraphics*[height=1.2in,width=2.8in]{../Figures/Arrows3}}
+  If you are walking against the sidewalk but slower than the sidewalk
+  is moving, say at <m>2 \frac{\text{feet}}{\text{second}}</m>, then you are
+  again moving at
+  <m>1 \frac{\text{foot}}{\text{second}}</m> but in the other direction.
+  \centerline{\includegraphics*[height=1.2in,width=2.4in]{../Figures/Arrows4}}
+</p>
+<p>
+
+  Since there are only two possible directions all this could have been
+  done without arrows by just adding signed numbers where the sign
+  indicates the direction: <m>3+ 4=7</m>, <m>3+(-4)=-1</m>, <m>3+(-2) =1</m>, but what
+  if there are more directions available?
+</p>
+<p>
+
+  Using arrows allows us to bring this discussion into a more general
+  setting. In the examples above notice that the resulting velocity (the
+  black arrow) was always obtained by attaching the tail of the green or
+  red arrow to the head of the blue arrow.
+</p>
+<p>
+
+
+  This works equally well if more directions are available, like when we
+  are moving in a plane instead of a straight line.
+</p>
+<p>
+
+  For example, suppose we are swimming across a river at a speed of
+  <m> 2 \frac{\text{feet}}{\text{second}} </m> and the river is flowing at
+  <m>3 \frac{\text{feet}}{\text{second}}</m>.  Assuming that we are swimming
+  perpendicular to the current, we have the situation depicted below. 
+  \centerline{\includegraphics*[height=1.2in,width=2.4in]{../Figures/Vector4}}
+</p>
+
+<p>
+  \begin{ProficiencyDrill}
+  \label{drill:VectorAddition}
+  \begin{enumerate}[label={\bf{}(\alph*)}]{}
+  \item In the diagram above what does the length of the black arrow
+  represent physically?
+  \item What is the length of the black arrow?
+  \end{enumerate}
+  \end{ProficiencyDrill}
+</p>
+<p>
+
+  In general you can think of the velocity of an object moving in a
+  plane as being compounded of a horizontal velocity (the blue arrow in
+  <xref ref="DRILLVectorAddition">Drill</xref>) and a vertical velocity (the red
+  arrow in <xref ref="DRILLVectorAddition">Drill</xref>).  This is easiest to think
+  about when the component velocities are perpendicular but this isn't
+  strictly necessary. For example, you don't need to be swimming
+  perpendicular to the
+  current. As seen in the diagram at the right to find the result of two
+  non-perpendicular velocities (the solid red and blue arrows) we need
+  only form the parallelogram as shown. The resulting velocity is then
+  represented by the black diagonal arrow.
+</p>
+<figure>
+  <caption>
+<url href="https://ephemeralnewyork.wordpress.com/2015/09/07/the-whispering-gallery-in-grand-central-terminal/" visual="https://ephemeralnewyork.wordpress.com/2015/09/07/the-whispering-gallery-in-grand-central-terminal/">This figure needs a caption.</url>
+</caption>
+<image source="images/Vector5.png" width="50%"/>
+</figure>
+<!-- \begin{wrapfigure}[6]{r}{2in} -->
+<!--   \vskip-5mm{} \captionsetup{labelformat=empty} -->
+<!--   \centerline{\includegraphics*[height=1in,width=2in]{../Figures/Vector5}} -->
+<!--   \label{fig:Vector5} -->
+<!-- \end{wrapfigure} -->
+<p>
+  Roberval assumed that a curve in the plane is generated by a point
+  whose motion is an aggregate of two known motions, which can be
+  represented as arrows. The arrows are then 
+  <q>added</q> by finding the
+  diagonal of the parallelogram generated by the two arrows. This
+  diagonal will point in the direction of motion at that point on the
+  curve and will point tangent to the curve.
+</p>
+<example xml:id="example:RectilinearMotion">
+  <p>
+
+    <!-- \label{example:RectilinearMotion} -->
+    Suppose a point is moving in the plane so that its horizontal speed
+    is <m>1</m> unit per second and its vertical velocity is <m>2</m> units per
+    second as in the diagram at the right. Clearly our point is moving
+    along the line <m>y=2x</m>.
+    </p>
+    
+
+    <aside>
+      <title>Comment</title>
+      <p>
+        Observe that <m>x(t) = t</m> is the algebraic representation
+        of a horizontal arrow with length <m>t</m>, and <m>y(t) =
+        2t</m> is the algebraic representation of a vertical arrow
+        with length <m>2t</m>. Translating statements and concepts
+        between Algebra and Geometry is the essence of Analytic
+        Geometry.
+      </p>
+    </aside>
+
+
+<p>
+  
+  If <m>t</m> represents time in seconds and if the point starts at the
+  origin, then its coordinates are given by <m>x(t)=t</m> and  <m>y(t)=2t</m>.  Since both <m>x</m> and <m>y</m>
+are needed to locate the point we will join them together
+notationally like this:
+<me>
+  P(t)=
+  \begin{Bmatrix}
+  x(t)
+  y(t)
+  \end{Bmatrix} =
+  \begin{Bmatrix}
+  t
+  2t
+  \end{Bmatrix}.
+</me>
+</p>
+
+<figure>
+  <caption>
+<url href="https://ephemeralnewyork.wordpress.com/2015/09/07/the-whispering-gallery-in-grand-central-terminal/" visual="https://ephemeralnewyork.wordpress.com/2015/09/07/the-whispering-gallery-in-grand-central-terminal/">This figure needs a caption.</url>
+</caption>
+<image source="images/Roberval8.png" width="50%"/>
+</figure>
+<!-- \begin{wrapfigure}[19]{r}{2.3in} -->
+<!--     \vskip-1mm{} \captionsetup{labelformat=empty} -->
+<!--     \centerline{\includegraphics*[height=3.6in,width=2.3in]{../Figures/Roberval8}} -->
+<!--     \label{fig:Roberval4} -->
+<!--   \end{wrapfigure} -->
+<p>  You might quite reasonably ask why we've gone to all this bother
+just to have two different ways to represent a particular line:
+<m>y=2x</m>, and <m>P(t)=
+\begin{Bmatrix}
+t
+2t
+\end{Bmatrix}.
+</m>
+The difference is in how we 
+<q>think about</q> the
+graph. When we write <m>y=2x</m> we are thinking of the entire
+graph. When we write <m>
+P(t)=
+\begin{Bmatrix}
+x(t)
+y(t)
+\end{Bmatrix}
+</m> there is an implicit understanding that (<m>t</m>)ime is passing and we
+are thinking about the motion of the point.  Thus when <m>t=1</m> the
+point is at <m>(1,2)</m> when <m>t=2</m> it's at <m>(2,4)</m>.
+</p>
+<p>
+  
+  Think of the line as a road. The formula <m>y=2x</m> describes the entire
+  road, whereas the expression <m> P(t)=
+  \begin{Bmatrix}
+  t
+  2t
+  \end{Bmatrix}
+  </m> tells us the point's location on the road at any given time, <m>t</m>.
+</p>
+<p>
+  
+  The idea of representing velocities with arrows is quite a powerful
+  and common technique for representing non-linear motion. Roberval
+  used this technique to find the tangent lines of the conic sections
+  (as we will soon see) as well as more general curves. Since
+  Roberval's time this idea has been developed considerably beyond
+  what Roberval did. In fact we are skirting the edge of some very
+  deep ideas here. In modern terms these arrows would be called
+  <term>vectors</term>.  <term>Vector Addition</term> is then done by the
+  <term>Parallelogram Rule</term>, which is essentially what we did with our
+  arrows above: Form the parallelogram and find its diagonal.  The
+  full force of vector analysis was not available to Roberval, and we
+  won't need it, so we will not take you any further down this path
+  but we encourage you visualize velocities, and any other directed
+  quantity, as composed of horizontal and vertical components whenever
+  you can. You will see this representation in more detail later in
+  your education and it will help if you have already begun thinking
+  in these terms.
+</p>
+</example>
+
+<p>
+
+  \begin{embeddedproblem}
+  % \vskip-9mm{}
+  Suppose the position of a point in the plane is given by
+  <m> P(t)=\begin{Bmatrix}
+  3t
+  6t
+\end{Bmatrix}.</m>
+\begin{enumerate}[label={\bf{}(\alph*)}]
+% \begin{multicols}{3}
+\item What is the horizontal speed of the point?
+\item What is the vertical speed of the point?
+\item What is the speed of the point in the direction of motion?
+\item Compare the motion of the point in this problem to the
+motion of the point in <xref ref="EXAMPLERectilinearMotion">Example</xref>.
+% \end{multicols}
+\end{enumerate}
+\end{embeddedproblem}
+</p>
+<p>
+  
+  
+  
+  \begin{embeddedproblem}
+  Suppose a point is moving along the line <m>y=mx+b</m> with a
+  horizontal speed of <m>1</m> unit per second.
+  \begin{enumerate}[label={\bf{}(\alph*)}]
+  \item Find a representation of the point's position in the form
+  <m>P(t)=\begin{Bmatrix}
+  x(t)
+  y(t)
+\end{Bmatrix}</m>
+\comment{There are a variety of correct solutions here. You must find a
+representation and then show that it is correct.  }
+\item What is the speed of the point in the vertical
+direction?
+\item What is the speed of the point in the direction of
+motion?
+\end{enumerate}
+\end{embeddedproblem}
+</p>
+<p>
+  
+  
+  \begin{embeddedproblem}
+  Suppose a point is moving along the line <m>y=mx+b</m> with a
+  horizontal speed of <m>5</m> units per second.
+  \begin{enumerate}[label={\bf{}(\alph*)}]
+  \item What is the speed of the point in the vertical
+  direction?
+  \item What is the speed of the point in the direction of
+  motion?
+  \end{enumerate}
+  \end{embeddedproblem}
+</p>
+<p>
+  
+  
+  \begin{embeddedproblem}
+  Suppose the position of a point in the plane is given by
+  <m> P(t)= \begin{Bmatrix}
+  2t
+  5t
+\end{Bmatrix}.</m>
+\begin{enumerate}[label={\bf{}(\alph*)}]
+% \begin{multicols}{3}
+\item What is the horizontal velocity of the point?
+\item What is the vertical velocity of the point?
+\item What is the velocity of <m>P</m> in the direction
+of motion?
+% \end{multicols}
+\end{enumerate}
+\end{embeddedproblem}
+</p>
+
+
+<problem xml:id="problem:HelicopterFall">
+  <statement>
+    <p>
+      We drop an object from a helicopter which is traveling
+      horizontally with a constant velocity of
+      <m>1</m> meter per second. After it leave the helicopter
+      the  vertical velocity of the object at
+      time <m>t</m> will be <m>-9.8t</m> meters per
+      second
+      as in the following diagram:
+      </p>
+      
+
+      <aside>
+        <title>Comment</title>
+        <p>
+          This is because the acceleration due to
+          gravity at the surface of the earth has been
+          determined (by Galileo) to be
+          <m>9.8 \frac{\text{m
+        </p>
+      </aside>
+
+{\text{sec}^2}</m>. We'll discuss
+      this in more depth in
+      <xref ref="SECrates-change">Section</xref>.}
+<figure>
+  <caption>
+<url href="https://ephemeralnewyork.wordpress.com/2015/09/07/the-whispering-gallery-in-grand-central-terminal/" visual="https://ephemeralnewyork.wordpress.com/2015/09/07/the-whispering-gallery-in-grand-central-terminal/">This figure needs a caption.</url>
+</caption>
+<image source="images/RobervalTan8.png" width="50%"/>
+</figure>
+<!-- \begin{wrapfigure}[12]{r}{3in} -->
+<!--                   %   \vskip-5mm{} \captionsetup{labelformat=empty} -->
+<!--                   \centerline{\includegraphics*[height=2in,width=3in]{../Figures/RobervalTan8}} -->
+<!--                   % \label{fig:RobervalTan8} -->
+<!--                   % \end{wrapfigure} -->
+<p>
+  If Roberval's method works then the speed of the
+  point at any time, <m>t</m>, will be the length of the
+  diagonal of parallelogram of velocity arrows at time
+  <m>t</m>. Find a formula for the speed of the point and
+any time <m>t.</m>
+</p>
+</statement>
+</problem>
+
+
+
+</subsection>
+<subsection xml:id="no-label">
+<title>The Tangent Lines of the Conic Sections</title>
+<introduction>
+
+  <figure>
+    <caption>
+<url href="https://ephemeralnewyork.wordpress.com/2015/09/07/the-whispering-gallery-in-grand-central-terminal/" visual="https://ephemeralnewyork.wordpress.com/2015/09/07/the-whispering-gallery-in-grand-central-terminal/">This figure needs a caption.</url>
+</caption>
+<image source="images/ConicSections.png" width="50%"/>
+</figure>
+<!-- \begin{wrapfigure}[7]{r}{2.3in} -->
+<!--   \vskip-10mm{} \captionsetup{labelformat=empty} -->
+<!--   \centerline{\includegraphics*[height=1.5in,width=2.3in]{../Figures/ConicSections}} -->
+<!--   \label{fig:ConicSections} -->
+<!-- \end{wrapfigure} -->
+<p>
+  Parabolas, ellipses, and hyperbolas are called conic sections, or just
+  conics, because they were originally defined as the intersection of a
+  cone with planes situated at various angles, as shown in the sketches
+  at the right.
+</p>
+<p>
+
+  While interesting, the original geometric definitions won't do for our
+  purposes because they are entirely static. There is
+  no motion involved.
+  </p>
+  
+
+  <aside>
+    <title>History</title>
+    <p>
+      This is primarily because we depend very heavily on our
+      modern algebraic notation, not because of any inherent flaw in the
+      definition. Without any notation at all ancient Greek scholars
+      understood the nature of parabolas at least as well as we do
+      today. Possibly better.
+    </p>
+  </aside>
+
+
+<p>
+
+  The more modern algebraic forms are a bit better:
+  \begin{center}
+  \begin{minipage}{.5\linewidth}
+  \begin{description}
+  \item[Parabolas:] <m>y=ax^2+bx+c</m>,
+  \item[Ellipses:] <m>\frac{x^2}{a^2}+\frac{y^2}{b^2}=1</m>,
+  \item[Hyperbolas:] <m>\frac{x^2}{a^2}-\frac{y^2}{b^2}=\pm1</m>.
+  \end{description}
+  \end{minipage}
+  \end{center}
+  but they are also static.
+</p>
+<p>
+
+  To use Roberval's dynamic approach to constructing tangent lines to
+  the conic sections we will resort to yet a third equivalent
+  definition. We start with the parabola.
+</p>
+
+
+</introduction>
+
+<subsubsection xml:id="no-label">
+<title>The Tangent to a Parabola</title>
+<p>
+
+  A parabola can also be thought of as the set of points, <m>P</m>, in a
+  plane which are equidistant from a fixed point, <m>F</m>, called the
+  <term>focus</term> of the parabola, and a specific line, <m>d</m>, called the
+  <term>directrix</term> of the parabola. Adopting Roberval's dynamic
+  viewpoint, we can think of <m>P</m> as tracing out the parabola by moving
+  so that these distances stay equal to each other.
+</p>
+<p>
+  \begin{embeddedproblem-enumerate}{}
+  \label{prob:parall-rhombus}
+  \begin{enumerate}[label={\bf{}(\alph*)}]
+  \item Explain why it must be that the speed at which <m>P</m> moves away
+  from <m>F</m> must equal the speed at which <m>P</m> moves away from
+  <m>d</m>.
+  \hint{Suppose these speeds were not equal. What would this say
+  about the distances from <m>P</m> to <m>F</m> and from <m>P</m> to <m>d</m>?}
+  \item Consider the following diagram.
+  \centerline{\includegraphics*[height=1.7in,width=2.5in]{../Figures/GeometricParabola3}}
+  If <m>PV</m> represents the velocity of the motion of <m>P</m> away from
+  <m>F</m>, and <m>PU</m> represents the velocity of the motion of <m>P</m> away
+  from <m>d</m>, then according to Roberval, the diagonal, <m>PR</m> of the
+  parallelogram <m>PVRU</m> is tangent to the parabola. Use the result of
+  part (a) to explain why this parallelogram is a rhombus. (A
+  <term>rhombus</term> is a parallelogram where the four sides have
+  equal length.)
+  \item In our sketch the angle <m>\beta</m> is between the arrows <m>PU</m> and
+  <m>PR.</m> We have also extended the arrow <m>PR</m> downward to form the
+  angle <m>\alpha</m> with <m>FP.</m> Given that the parallelogram <m>PVRU</m> in
+  the previous figure is a rhombus, show that the two angles,
+  <m>\alpha,</m> <m>\beta</m> are congruent.
+  \end{enumerate}
+  \end{embeddedproblem-enumerate}
+</p>
+
+
+<figure>
+  <caption>
+<url href="https://ephemeralnewyork.wordpress.com/2015/09/07/the-whispering-gallery-in-grand-central-terminal/" visual="https://ephemeralnewyork.wordpress.com/2015/09/07/the-whispering-gallery-in-grand-central-terminal/">This figure needs a caption.</url>
+</caption>
+<image source="images/Roberval7.png" width="50%"/>
+</figure>
+<!-- \begin{wrapfigure}[9]{r}{1.5in} -->
+<!--   \captionsetup{labelformat=empty} \vskip-7mm{} -->
+<!--   \centerline{\includegraphics*[height=1.5in,width=1.5in]{../Figures/Roberval7}} -->
+<!--   \label{fig:NewtonTelescope} -->
+<!-- \end{wrapfigure} -->
+<p>
+  That <m>\alpha</m> and <m>\beta</m> in the previous problem are congruent has an
+  interesting consequence in optics. Imagine that the inside of our
+  parabola is a mirror, and that a light source has been placed at the
+  point <m>F.</m> As we have seen when light reflects off of a flat mirror
+  the angle of incidence is equal to the angle of reflection. Since this
+  mirror isn't flat the angles of incidence and reflection are measured
+  from the line tangent to the parabola at the point where the light
+  strikes the mirror. Thus the angle of incidence of a beam emerging
+  from <m>F</m> and striking the parabola at <m>P</m> will be <m>\alpha</m> in our
+  diagram and the angle of reflection will be <m>\beta (=\alpha).</m> It
+  follows that a light beam emerging from <m>F</m> and reflecting from the
+  parabola at any point will follow a path parallel to the axis of
+  symmetry of the parabola after reflecting from the interior of the
+  parabola.
+</p>
+<p>
+
+
+
+
+  You can see this in action with your car headlights or a
+  flashlight. The reflector is cast in the shape of a parabola and the
+  light emitting filament is place at the focus, so all of the light
+  which strikes the reflector gets reflected in that direction.
+</p>
+
+<figure>
+  <caption>
+<url href="https://ephemeralnewyork.wordpress.com/2015/09/07/the-whispering-gallery-in-grand-central-terminal/" visual="https://ephemeralnewyork.wordpress.com/2015/09/07/the-whispering-gallery-in-grand-central-terminal/">This figure needs a caption.</url>
+</caption>
+<image source="images/Satellite1.png" width="50%"/>
+</figure>
+<!-- \begin{wrapfigure}[15]{l}{2.3in} -->
+<!--   \captionsetup{labelformat=empty} \vskip-3mm{} -->
+<!--   \centerline{\includegraphics*[height=2.3in,width=2.3in]{../Figures/Satellite1}} -->
+<!--   % \url{https://kids.britannica.com/students assembly/view/67385}} -->
+<!--   \label{fig:Satellite1} -->
+<!-- \end{wrapfigure} -->
+<p>
+  Now turn this around. Any light beam coming parallel to axis of
+  symmetry and striking the parabolic mirror will pass through the focal
+  point <m>F</m>. The light is thus focused and the image appears larger.
+  This fact was used by Isaac Newton in the seventeenth century to
+  design a new, and better, telescope than the one used by Galileo a
+  generation earlier. Galileo's telescope was based on the refraction of
+  light as it passes through shaped lenses.  Through his study of optics
+  Newton learned that the magnification effect could also be achieved
+  via reflection.  It was his invention of the reflecting telescope that
+  first brought Newton into scientific prominence.
+</p>
+<p>
+
+  The fundamental optical principle he used, a light beam traveling
+  parallel to the axis of symmetry, after reflecting from the interior
+  of a parabolic mirror, will pass through the focus of the parabola, is
+  the underlying design principle of all reflective telescopes, large
+  and small, today.
+</p>
+<p>
+
+
+
+  In fact, you use this every day. Since radio waves are a form of
+  electromagnetic radiation, just like visible light, this is also a
+  fundamental design point for both radar antennas, satellite cable TV
+  dishes, and the antennas at the tops of cell phone towers.
+</p>
+
+
+</subsubsection>
+<subsubsection xml:id="no-label">
+<title>The Tangent to an Ellipse</title>
+
+<!-- \begin{wrapfigure}[]{r}{2.5in} -->
+<!--   \vskip-9mm{} \captionsetup{labelformat=empty} -->
+<!--   \centerline{\includegraphics*[height=1.8in,width=2.5in]{../Figures/Ellipse}} -->
+<!--   \label{fig:Ellipse} -->
+<!-- \end{wrapfigure} -->
+<p>Geometrically, an ellipse is the set of points in a plane, the sum of
+where the sum of the distances from two fixed points (foci) is a
+constant. Following Roberval we can generate an ellipse by combining
+two motions: one away from one focus (<m>F_1P</m>) and one toward the other
+focus (<m>PF_2</m>) as in the sketch below.  
+
+</p>
+<image source="images/Ellipse.png" width="50%"/>
+
+<p>
+  If we set <m>d_1</m> equal
+  to the length of <m>F_1P</m> and <m>d_2</m> equal to the length of <m>PF_2</m>, then
+  <m>d_1+d_2</m> is constant.
+</p>
+<p>
+  Because <m>d_1+d_2</m> is constant it should be clear that the rate at
+  which <m>d_1</m> lengthens is related to the rate at which <m>d_2</m> shortens.
+  These rates of change are represented by the red arrows in our sketch.
+</p>
+<problem xml:id="problem:EllipseRhombus">
+  <statement>
+    <p>
+      <!-- \label{problem:EllipseRhombus} -->
+      Explain why the parallelogram in the sketch above must be a rhombus
+      and use this to show that angle <m>\alpha</m> is congruent to
+angle <m>\beta.</m> 
+\hint{ An argument very similar to the one used in
+<xref ref="PROBparall-rhombus">Problem~\</xref> will work.}
+</p>
+</statement>
+</problem>
+<p>
+
+  From <xref ref="PROBLEMEllipseRhombus">Problem~\</xref> we see that any light ray,
+  sound wave, etc., emanating from one focus of an ellipse will reflect
+  off of the interior of the ellipse to the other focus.
+</p>
+<p>
+
+
+
+  A playful example of the reflective properties of an ellipse are the
+  so-called 
+  <q>whisper galleries.</q>  If you and a friend stand at the
+  foci of a room in the shape of an ellipse you will be able to converse
+  in whispers even if you are very far apart. This is because the sound
+  waves from your friend's voice will spread out to the walls and then
+  reflect back to the other focus, where you are standing. Naturally,
+  the volume of sound from any single location in the interior of the
+  ellipse will have dropped considerably in transit. However, since all
+  of them travel the same distance to get to you they arrive at the same
+  time and the volume you hear is the sum of all of the individual
+  reflected volumes.
+</p>
+
+<figure>
+  <caption>
+<url href="https://ephemeralnewyork.wordpress.com/2015/09/07/the-whispering-gallery-in-grand-central-terminal/" visual="https://ephemeralnewyork.wordpress.com/2015/09/07/the-whispering-gallery-in-grand-central-terminal/">This figure needs a caption.</url>
+</caption>
+<image source="images/WhisperGallery1.png" width="50%"/>
+</figure>
+<!-- \begin{wrapfigure}[11]{l}{2.8in} -->
+<!--   \captionsetup{labelformat=empty} \vskip-3mm{} -->
+<!--   \centerline{\href{https://ephemeralnewyork.wordpress.com/2015/09/07/the-whispering-gallery-in-grand-central-terminal/}{\includegraphics*[height=1.7in,width=2.8in]{../Figures/WhisperGallery1}}} -->
+<!--   \label{fig:WhisperGallery1} -->
+<!-- \end{wrapfigure} -->
+<p>
+  The whisper gallery shown at the left is the one in Grand Central
+  Station in New York City. The young woman on the left and the young
+  man on the right are standing at the foci and speaking to each other
+  quietly.
+</p>
+<p>
+
+  There is another whisper gallery in Statuary Hall in the Capitol
+  building in Washington DC. This room was originally the meeting hall
+  for the House of Representatives. It is said that when John Quincy
+  Adams was a representative he would eavesdrop on his political enemies
+  by placing himself at one focus of the room whenever he saw them
+  talking quietly at the other.  A more serious application of this
+  reflective property is used in modern medicine to treat kidney stones.
+  The treatment is called Extra-corporeal Shock Wave
+  Lithotripsy.
+</p>
+
+
+<aside>
+  <title>Comment</title>
+  <p>
+    Lithotripsy literally means 
+    <q>rock grinding.</q>
+  </p>
+</aside>
+
+
+
+
+</subsubsection>
+<subsubsection xml:id="no-label">
+<title>The Tangent to an Hyperbola</title>
+<p>
+  If an ellipse is the locus of points the sum of whose distances from
+  two given points is constant it is natural to ask, 
+  <q>What do we get
+  when the difference of their distances is constant?</q> That is the
+  shape
+  called the hyperbola seen in the diagram below.
+  \centerline{\includegraphics*[height=1.8in,width=2in]{../Figures/Hyperbola1}}
+  As before, we set <m>d_1</m> and <m>d_2</m> equal to the lengths of <m>F_1P</m> and
+  <m>F_2P</m>, respectively. An hyperbola has the property that <m>d_1-d_2</m> is
+  constant.
+</p>
+
+<problem xml:id="no-label">
+  <statement>
+    <p>
+      Explain why the parallelogram in the sketch above must be a rhombus
+      and use this to show that angle <m>\alpha</m> is congruent to angle
+      <m>\beta.</m> As before in our diagram the red arrows represent the
+velocity of <m>P</m>
+in the direction from <m>F_1</m> to <m>P</m> and from <m>F_2</m> to <m>P</m>.
+% \hint{Because the curve is an hyperbola <m>d_1</m>-<m>d_2</m> must be
+% constant.}
+</p>
+</statement>
+</problem>
+
+<figure>
+  <caption>
+<url href="https://mathshistory.st-andrews.ac.uk/Biographies/Snell/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Snell/">This figure needs a caption.</url>
+</caption>
+<image source="images/CassegrainAntenna.png" width="50%"/>
+</figure>
+<!-- \begin{wrapfigure}[9]{r}{2.5in} -->
+<!--   \vskip-6mm{} \captionsetup{labelformat=empty} -->
+<!--   \centerline{\includegraphics*[height=1.5in,width=2.5in]{../Figures/CassegrainAntenna}} -->
+<!--   \label{fig:CassegrainAntenna} -->
+<!-- \end{wrapfigure} -->
+<p>
+
+  The hyperbola also has interesting reflective properties. If a beam of
+  light is aimed at one focus it will reflect off of the hyperbola
+  toward the other focus. This property can be used to further refine
+  the design of reflecting telescopes and antennae. The figure at the
+  right shows the design of Cassegrain antenna. The large, primary
+  mirror on the left is parabolic and shares a focus with the smaller,
+  secondary, hyperbolic mirror on the right. Light reflecting off of the
+  primary mirror is directed at the shared focus on the right where it
+  is reflected to the other focus at the primary mirror. A detection
+  device is then placed at the secondary focus to collect the amplified
+  signal.
+</p>
+<p>
+
+  Roberval's use of arrows to represent velocities provides an intuitive
+  way to understand the reflective properties of the conic
+  sections. Moreover, thinking of curves as being traced out in time it
+  gives us a dynamical way of looking at curves. This was a viewpoint
+  that Newton adopted in his version of the Calculus.
+</p>
+
+
+</subsubsection>
+</subsection>
+</section>
+
+
+
+
+<section xml:id="sec:snells-law-refr">
+<title>Snell's Law and the Limitations of Adequality: </title>
+
+<!-- \label{sec:snells-law-refr} -->
+<p>
+
+  When light passes from one medium to another, say from air to water, it bends. This property is
+  called refraction.  The physical law governing refraction is known as
+  Snell's Law, named after the Dutch
+  Astronomer
+  <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Snell/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Snell/">Willebrord
+  Snell</url> <m>(1580-1626)</m> though it was accurately described before that
+  time.  In modern terms, Snell's Law can be stated as follows.
+</p>
+<p>
+
+
+  \underline{\bf Snell's Law of Refraction:} Suppose that
+  light travels with a velocity of <m>v_1</m> in the first medium and
+  velocity <m>v_2</m> in second medium, and that <m>\theta_1</m> and
+  <m>\theta_2</m> are as seen in the diagram below.
+  \centerline{\includegraphics*[height=1in,width=2in]{../Figures/Refraction2}}
+  Then the path that light follows satisfies
+  <me>
+\frac{\sin(\theta_1)}{v_1} = \frac{\sin(\theta_2)}{v_2 }.  </me>
+Notice that if <m>v_1=v_2</m> this says that
+<m>\sin(\theta_1)=\sin(\theta_2)</m> and the path of the line would be a
+straight line.
+</p>
+<p>
+
+  A number of mathematicians, including both Snell and Fermat, gave
+  derivations of Snell's Law, but we will focus on Fermat's method.  To
+attack this problem, Fermat refined the <em>Nature is Lazy</em>
+assumption a bit. Instead of assuming that that light would follow the
+shortest path, he assumed that light would follow the path that takes
+the least time.
+</p>
+<p>
+
+  Notice that this is consistent with our observations concerning
+  reflections from a mirror.  In that case, the speed of light was
+  constant so the shortest path was, in fact, the fastest path. But
+  refraction occurs because the velocity of light changes when the
+  surrounding medium changes.
+</p>
+<p>
+
+  Let's see what happens when we try to use Fermat's Method of
+  Adequality to find this fastest path.
+</p>
+
+
+<problem xml:id="PIC:FermatSnell">
+<statement>
+
+
+<aside>
+<title>Mathematical Vocabulary</title>
+<p>
+  Is it clear to you that we've used velocity here when we really mean
+  speed?  If not, think about it for a moment. We're really only
+  interested how fast light travels in either medium, not in the
+  direction it is going. This was the language used in the seventeenth
+  century so it is accurate historically, but not mathematically.
+  Unfortunately, it is still common to use these words
+  interchangeably, even among folks who know better. This can be quite
+  confusing for the beginner but there isn't much that can be done
+  except be aware of the problem. Whenever you encounter either word
+  pause of a moment and ask yourself if the speaker or author means
+  speed, or velocity. It should always be clear from the context.
+</p>
+</aside>
+
+
+    <p>
+      <!-- \label{PIC:FermatSnell} -->
+      Assuming that the velocity of light is <m>v_1</m> in the
+      first medium and
+      <m>v_2</m> in the second,  use the following  diagram:
+      \centerline{\includegraphics*[height=1.9in,width=3.5in]{../Figures/Refraction4}}
+to show the time, <m>t</m>, for light to travel along the path from <m>A</m>
+to <m>C</m> <m>B</m> is
+<m> \frac{\sqrt{a^2+x^2}}{v_1}+\frac{\sqrt{b^2+(c-x)^2}}{v_2}.  </m>
+</p>
+</statement>
+</problem>
+<p>
+
+
+  Of course the next step would be to use Fermat's Method of Adequality
+  to minimize <m>t</m>, but the square roots involved make the Algebra
+  daunting to say the least. Despite these difficulties Fermat was able
+  to show that <m>t</m> is minimized precisely when Snell's Law holds.
+</p>
+<p>
+
+  Although it is possible to derive Snell's Law with the tools we now
+  have it is very difficult so we won't attempt it here. Instead we will
+  return to this problem in <xref ref="CHAwhat-deriv-tells">Chapter</xref> where we
+  will complete the derivation of Snell's Law using the rules of
+  Calculus. That will be much simpler.
+</p>
+<p>
+
+
+  It seems that our efforts to solve optimization problems using
+  pre-Calculus techniques has hit an impasse. To be sure those
+  techniques, and others of a similar nature, were very clever and it
+  must be admitted that they yielded interesting and correct
+  results. However for the most part they were <foreign>ad hoc</foreign> methods
+  and quite limited in their applicability. We need a way to overcome
+  these limitations.
+</p>
+<p>
+
+  This is exactly what the invention of Calculus in the mid-seventeenth
+  century did. The title of Leibniz' first published work on Calculus
+  makes this very clear:
+</p>
+<p>
+
+  \begin{minipage}[]{.85\linewidth}
+  \it A New Method for Maxima and Minima, as Well as Tangents, Which
+  is Impeded Neither by Fractional nor Irrational Quantities, and a
+  Remarkable Type of Calculus for This.
+  \end{minipage}
+</p>
+<p>
+
+  It is time for us to learn about this <em>Remarkable Type
+  of Calculus</em>.
+</p>
+
+
+</section>
+</chapter>

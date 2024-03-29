@@ -518,7 +518,7 @@ undefined.
       <m>f(x)=\frac{f(x)}{g(x)}\cdot g(x)</m> for <m>x</m> near <m>a</m>.}\\
     \comment{This problem shows that if <m>\limit{x}{a}{g(x)}=0</m>
 then the only way that <m>\limit{x}{a}{\frac{f(x)}{g(x)}}</m> can exist is
-if we have a \lhop  Indeterminate. It can also be used to prove
+if we have a L<rsq/>Hôpital  Indeterminate. It can also be used to prove
 <xref ref="LEMMADiffImpliesCont">Lemma</xref> as you will see when we get to it.}
 </p>
 </statement>
@@ -820,16 +820,24 @@ will leave them as exercises\aside{Frequently students will simply
   <m>L</m>, then
   <m>f^\prime(x)=0</m> at every real number <m>x</m> near\aside{On the same open
   interval.} <m>L</m> .
-  \begin{myproof}
+</p>
+
+</theorem>
+  <proof>
+<p>
     By <xref ref="EQUATIONDefDerivative"></xref>
     \begin{align*}
       f^\prime(x)\amp =\limit{h}{0}{\frac{f(x+h)-f(x)}{h}}.\\
       \intertext{But <m>f(x+h)=L=f(x)</m> so}
       f^\prime(x)\amp =\limit{h}{0}{\frac{L-L}{h}}=\limit{h}{0}{\frac{0}{h}}=0.
     \end{align*}
-  \end{myproof}
+  </p>
+<p>
+<alert><m>\halmos</m></alert>
 </p>
-</theorem>
+</proof>
+
+
 
 
 
@@ -1082,8 +1090,9 @@ derivative of <m>\beta</m> with respect to <m>x</m>) we view it as a function.
 </p>
 <p>
   As far as the Chain Rule is concerned it is both.
-
-  \begin{myproof}
+</p>
+  <proof>
+<p>
     Before we begin take specific notice of the assumption
     <q><m>\Delta\beta\neq0</m> near <m>x</m></q> in the statement of the Chain
     Rule. We will have
@@ -1156,8 +1165,12 @@ derivative of <m>\beta</m> with respect to <m>x</m>) we view it as a function.
   </me>
   to
   emphasize that <m>x</m>, not <m>\beta</m>, is the variable.
-\end{myproof}
 </p>
+<p>
+<alert><m>\halmos</m></alert>
+</p>
+</proof>
+
 
 <paragraphs>
 <title>DIGRESSION: Why Assume That <m>\Delta\beta\neq0</m> Near Zero?</title>
@@ -1489,6 +1502,9 @@ the proof of the Chain Rule.
   </me>
   and therefore
   <me> f^\prime(x)=\alpha(x)\beta^\prime(x)+\beta(x)\alpha^\prime(x).</me>
+</p>
+<p>
+<alert><m>\halmos</m></alert>
 </p>
 </proof>
 
@@ -2054,17 +2070,20 @@ END OF DIGRESSION
   do this via the two  lemmas below.
   
 </p>
+<p>
+<alert><m>\halmos</m></alert>
+</p>
 </proof>
 
 <p>
-It is tempting to use L'H\^o pital's Rule to evaluate these limits,
+It is tempting to use L<rsq/>Hôpital<rsq/>s Rule to evaluate these limits,
 especially since it is so very easy to do.
 </p>
 
 <exercise xml:id="DRILLCircularReasoning">
 <statement>
 <p>
-  Use L'H\^o pitals Rule to show that
+  Use L<rsq/>Hôpital<rsq/>s Rule to show that
   <m>\tlimit{h}{0}{\frac{(\cos(h)-1)}{h}}=0</m> and that
   <m>\tlimit{h}{0}{\frac{\sin(h)}{h}}=1</m>.
 </p>
@@ -2076,7 +2095,7 @@ of <xref ref="THEOREMSineDeriv"></xref> is an example of circular
 reasoning. We can't use the fact that the derivative of <m>\sin(x)</m> is
 <m>\cos(x)</m> to prove that the derivative of <m>\sin(x)</m> is <m>\cos(x)</m>. So
 we will have to find a way to evaluate these limits without using
-L'H\^o pital's Rule.
+L<rsq/>Hôpital<rsq/>s Rule.
 </p>
 
 <lemma xml:id="LEMMASinOverh">
@@ -2087,14 +2106,15 @@ L'H\^o pital's Rule.
 
 <proof xml:id="PROOFSinOverh">
 <title></title>
+  <image source="images/SqueezeThm2.png" width="50%"/>
+<!-- \begin{wrapfigure}[]{r}{3in} -->
+<!--      \vskip-8mm  -->
+<!--     \captionsetup{labelformat=empty} -->
+<!--     \centerline{\includegraphics*[height=2in,width=3in]{../Figures/SqueezeThm2}} -->
+<!--     \label{fig:SqueezeThm2} -->
+<!--   \end{wrapfigure} -->
 <p>
-  \begin{wrapfigure}[]{r}{3in}
-     \vskip-8mm 
-    \captionsetup{labelformat=empty}
-    \centerline{\includegraphics*[height=2in,width=3in]{../Figures/SqueezeThm2}}
-    \label{fig:SqueezeThm2}
-  \end{wrapfigure}
-  There are two cases:\\
+  There are two cases:
   \underline{  \boldmath Case 1, <m>\theta\ge0</m>:} We will use the
   Squeeze Theorem.  Recall that in <xref ref="SECTIONtrig-interl">~</xref> we
   observed that the lengths of certain line segments associated with
@@ -2141,6 +2161,9 @@ L'H\^o pital's Rule.
   =\rlimit{\phi}{0}{\frac{\sin(\phi)}{\phi}} =1
   </me>
   by Case 1.
+</p>
+<p>
+<alert><m>\halmos</m></alert>
 </p>
 </proof>
 
@@ -2533,6 +2556,9 @@ exists or it does not exist. There are two steps:
   Therefore our assumption cannot true so <m>\inverse{f}</m> is not
   differentiable at <m>x=b</m>.
 </p>
+<p>
+<alert><m>\halmos</m></alert>
+</p>
 </proof>
 
 <p>
@@ -2695,6 +2721,12 @@ I think something is got lost in translation here. The formula <m>(a+k)-a\right<
   \DD\left(\inverse{f}(b)\right) =\frac{1}{f^\prime(\inverse{f}(b))}
   </me>
   and the proof is complete.
+</p>
+<p>
+<alert><m>\halmos</m></alert>
+</p>
+<p>
+<alert><m>\halmos</m></alert>
 </p>
 </proof>
 

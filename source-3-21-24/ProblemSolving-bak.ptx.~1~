@@ -1,0 +1,980 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="ProblemSolving">
+
+<title>;lkdfjIntroduction: Some  Advice on Problem Solving</title>
+
+<introduction>
+<p>ladkjfldk</p>
+<blockquote>
+<p>
+lkjThe most difficult thing is the decision to act, the
+  rest is merely
+  tenacity.
+</p>
+<attribution>
+<url href="https://en.wikipedia.org/wiki/Amelia_Earhart" visual="https://en.wikipedia.org/wiki/Amelia_Earhart">Amelia
+  Earhart (<m>1897-1937</m>)</url>
+  Earhart} }{.85}
+</attribution>
+</blockquote>
+<p>
+\mycenterquote{You just keep pushing. You just keep pushing. I made every mistake
+  that could be made. But I just kept pushing.}{\href{https://mathshistory.st-andrews.ac.uk/Biographies/Descartes/}{Ren\`e{}
+    Descartes} (<m>1596-1650</m>)}{.85}
+</p>
+<p>
+Our purpose here is to give you our very best advice on how to succeed
+in this course and a realistic impression of the level of difficulty
+of the course material. Please read this carefully and take our
+advice. We know what we are talking about. Believe us.
+</p>
+<p>
+Because the topic we will be studying is called
+\underline{\bf{}Calculus} there is a strong tendency to assume that
+only the concepts and techniques of Calculus are needed to
+solve the problems you will encounter in this course. That is not
+true. You will need all of the mathematics you know. And probably
+more. Really.
+</p>
+</introduction>
+
+
+<section  xml:id="section-UsingLetters">
+<title>Using Letters Instead of Numbers</title>
+
+<p>
+  Before we begin, a few comments on notation are apropos.
+</p>
+<p>  % \paragraph{ \underline{Generality}}
+  % \label{sec:generality}
+  Suppose your teacher starts a lecture with the statement, "Suppose
+  <m>a</m> and <m>b</m> are two positive numbers. Then <m>a \lt{} a+b</m> and
+  <m>b \lt{} a+b</m>." A common complaint is that we're making the problem
+  harder. This is often accompanied with a request to replace <m>a</m> and
+  <m>b</m> with numbers, just to make it easier to understand. For example,
+  if <m>a</m> and <m>b</m> are numbers why not just say that <m>a</m> is <m>23</m> and <m>b</m>
+  is <m>17</m>? In that case it is clear that <m>23 \lt{} 40\ (=23+17)</m> and
+  <m>17 \lt{} 40</m>. Why do we have to make it more complicated?
+</p>
+<p>
+  This seems like a reasonable point until you think about it a bit
+  more. Suppose we use the numbers <m>a=\frac{\sqrt{11}-\pi}{4}</m> and
+  <m>b=2.93\times 10^{1000}</m> instead? Is it obvious to you that
+  <me>\frac{\sqrt{11}-\pi}{4}\lt{}\left(\frac{\sqrt{11}-\pi}{4}\right)+\left(2.93\times
+    10^{1000}\right)</me> or
+  <me>2.93\times
+  10^{1000}\lt{}\left(\frac{\sqrt{11}-\pi}{4}\right)+\left(2.93\times
+    10^{1000}\right)?</me>
+</p>
+<p>
+  Our point here is that the symbol <m>a</m> is no different than the symbol
+  <m>23</m>.  Or the symbol <m>\frac{\sqrt{11}-\pi}{4}</m>.  These are all valid
+  symbols representing numbers. So we treat them all the same.
+  For example, all of the following are valid statements:
+  \begin{align*}
+    a+b &= b+a\\
+    23+17 &=17+23, \text{ and }\\
+    \left(\frac{\sqrt{11}-\pi}{4}\right) +\left(2.93\times 10^{1000}\right) &= \left(2.93\times 10^{1000}\right) +\left(\frac{\sqrt{11}-\pi}{4}\right).
+  \end{align*}
+  The difference is this: If <m>a=23</m> and <m>b=17</m> the first statement
+  includes the second as a specific case. Similarly if
+  <m>a=\frac{(\sqrt{11}-\pi)}{4}</m> and <m>b=2.93\times 10^{1000}</m> the first
+  statement includes the third.  The first statement is more
+  general. It is true no matter what <m>a</m> and <m>b</m> are.
+</p>
+<p>
+ %  \begin{embeddedproblem-enumerate}
+ %      \begin{enumerate}[label={\bf{}(\alph*)}]
+ %        % \begin{multicols}{2}
+ %      \item Use the fact that <m>\sqrt{7}\lt{}\sqrt{9}</m> to show that
+ %        <m>\frac{\sqrt{7}-\pi}{5}\lt{}0</m>. Do not use a calculator.
+ %      \item Check the validity of the statements. Are they true?\\
+ % 
+<me>\frac{\sqrt{7}-\pi}{5}\lt{}\left(\frac{\sqrt{7}-\pi}{5}\right)+2.93\times 10^{1000}</me>
+\\
+ % </me>
+2.93\times 10^{1000}\lt{}\left(\frac{\sqrt{7}-\pi}{5}\right)+2.93\times
+ %                                 10^{1000}<m>}\\
+ %         
+</hint>
+</p>
+<p>
+Using a calculator on </m>2.93\times 10^{1000}<m> would be
+ %           rather pointless. Try it and see.
+</p>
+</hint>
+ %      \end{enumerate}
+ %    \end{embeddedproblem-enumerate}
+
+  \begin{embeddedproblem-enumerate}
+      \begin{enumerate}[label={\bf{}(\alph*)}]
+        % \begin{multicols}{2}
+      \item Use the fact that </m>\sqrt{7}\lt{}\sqrt{9}<m> to show that
+        </m>\frac{\sqrt{7}-\pi}{5}\lt{}0<m>. Do not use a calculator.
+      \item Check the validity of the following statements. Are they true?\\
+\centerline{</m>\frac{\sqrt{7}-\pi}{5}\lt{}\left(\frac{\sqrt{7}-\pi}{5}\right)+2.93\times 10^{1000}<m>}\\
+\centerline{</m>2.93\times 10^{1000}\lt{}\left(\frac{\sqrt{7}-\pi}{5}\right)+2.93\times
+                                10^{1000}<m>}\\
+        
+</hint>
+<p>
+Using a calculator on </m>2.93\times 10^{1000}<m> would be
+          rather pointless. Try it and see.
+</p>
+</hint>
+      \item Show that it is not always true that if </m>a<m> and </m>b<m> are
+        numbers then
+        
+<men xml:id="EQTriIneq">
+          a\le a+b.label{EQTriIneq}
+        
+</men>
+      \item Find a restriction on the possible values of </m>a<m> and </m>b<m>
+        that will guarantee that <xref ref="EQTriIneq">inequality~</xref>)
+        is true.
+        % \end{multicols}
+      \end{enumerate}
+    \end{embeddedproblem-enumerate}
+  
+  
+  Keeping things simple is laudable as a goal and we don't want
+  to suggest that you shouldn't do it.  It can be very useful to look
+  at a special case of a general statement just to get a sense of the
+  problem. For example, a good way to "trick yourself into
+  abstraction" is to think </m>23<m> and </m>17<m>, but write
+    down </m>a<m> and </m>b<m>.  As long as you don’t try to do anything that
+  relies on the particular properties of </m>23<m> and </m>17<m>, you should be
+  fine. But you wouldn’t want to say something like </m>a+b<m> is an even
+  integer (even though </m>23+17<m> is). The sum </m>23+17<m> is an even integer
+  because both </m>23<m> and </m>17<m> are odd integers, but this is special to
+  these numbers and won't be true for </m>a<m> and </m>b<m> in general.
+
+    \begin{ProficiencyDrill-enumerate}
+      \begin{enumerate}[label={\bf{}(\alph*)}]
+        % \begin{multicols}{2}
+      \item Suppose </m>a<m> and </m>b<m> are both integers.  Find restrictions
+        on the possible values of </m>a<m> and </m>b<m> that will
+        guarantee that </m>a+b<m> is an even, positive integer.
+      \item Now suppose </m>a<m> and </m>b<m> are both numbers. Find
+        restrictions on the possible values of </m>a<m> and </m>b<m> that will
+        guarantee that </m>a+b<m> is an even, positive
+        integer.\\
+        \comment{This is not the same problem as part
+          (a). Read it carefully.}
+        % \end{multicols}
+      \end{enumerate}
+      \vskip-.1in{}
+    \end{ProficiencyDrill-enumerate}
+  % \begin{embeddedproblem}
+  %    In general, if </m>a<m> and </m>b<m> are numbers then it is
+  %   not true that </m>a+b<m> is a positive integer.
+
+  %   However if we narrow the range of values we allow for </m>a<m> and </m>b<m>
+  %   this will be true.
+  % \end{embeddedproblem}
+ 
+    When looking at </m>23\times17<m> most people are inclined to compute
+    this to get </m>391<m>. If the problem is: Find the value of
+    </m>23\times17<m>, then sure, doing the arithmetic is the correct thing
+    to do. But the last time you were asked to do multiplication for
+    its own sake you were probably </m>11<m> years old. Elementary
+    computations like this will only come up in the context of a
+    more advanced problem.  Before doing this calculation, you should
+    ask yourself if it will help you solve the more advanced problem.
+
+Now suppose the problem is: Determine  if the number
+</m>23\times17<m> is divisible by </m>17<m>. Do you see that computing
+</m>23\times17=391<m> will only make the problem harder?
+
+Your college professors will never ask you to do an arithmetic
+calculation for its own sake. Instead arithmetic problems will come up
+in the context of a more advanced problem and you will need to use
+your arithmetic skill to uncover patterns. But doing the arithmetic,
+boiling everything down to a single number usually hides the
+  patterns!
+
+For example, is it easier to see the pattern in the following
+list of numbers when they are presented like this:\\
+\centerline{</m>1, 2, 10, 110, 220, 1100, 12100, 24200, 121000, 1331000,
+  \ldots<m> }
+or like this:\\
+\centerline{</m>(2^05^011^0), (2^15^011^0),
+  (2^15^111^0), (2^15^111^1),
+  (2^25^111^1),
+  (2^25^211^1), (2^25^211^2), \ldots<m>}.
+
+\begin{embeddedproblem}
+%  \vskip-.3in{}
+Actually, there is something rather liberating about using letters to
+represent a broad class of numbers. Consider the following questions:
+\begin{enumerate}[label={\bf{}(\alph*)}]
+  \item
+Is the number </m>2^{24}5^{49}11^{1002}<m> a perfect square?  If so, what
+  is its square root?
+\item
+  What about </m>2^{24}5^{50}11^{1002}<m>?  Was your calculator of any use on this?  Notice
+  that these numbers were completely factored into their prime
+  factorizations.  Did that help? How?
+\item Now suppose that </m>n<m> is a positive integer. Is
+  </m>2^{2n}5^{3n}11^{4n}<m> always a perfect square? If not, for which
+  values of </m>n<m> will it be a perfect square?
+\item What can you say, in general, about whether or not an integer
+  greater than one is a perfect square in terms of its prime
+  factorization?
+\end{enumerate}
+%\vskip-7mm{}
+\end{embeddedproblem}
+
+
+
+ <section xml:id="no-label">
+ <title>Substitution, or Making Things "Easy on the Eyes"</title>
+ \label{sec:an-easy-problem-alg}
+ \markright{\sc{} Making Things "Easy on the Eyes"}
+\mycenterquote{Mathematicians do not study objects, but relations between objects. Thus, they are free to replace some objects by others so long as the relations remain unchanged.}{\href{https://mathshistory.st-andrews.ac.uk/Biographies/Poincare/}{Henri
+    Poincar\'e} (</m>1854-1912<m>)}{.85}
+A common misconception is that mathematicians are people who love
+complicated formulas. In fact, the opposite is true. We really very
+much prefer to keep things as simple as possible. We only
+accept complexity when we are forced to. Moreover, with experience we have
+learned that complexity is usually borne of an inadequate understanding of
+the problem.  Better understanding usually results in  a simpler
+formulation.
+
+This works in reverse too. If we can find a simple way to express what
+appears to be a complex problem we can usually gain a deeper
+understanding of the problem and its solution. A judicious
+substitution is one way to re-express a complex problem.
+
+
+  \begin{myexample}
+    \label{example:Sub1}
+    For example, suppose you were asked to solve the following
+    equation for </m>x<m>:
+  </m><m>
+  \frac{\frac{\pi x}{\sqrt{(28-\sqrt[3]{26})^{\frac{1}{3}}}}}{\pi^2-\sqrt{3}}
+  - \sqrt[21]{2^{\frac{11}{2}}}= (\pi^3-\sqrt{2})x.
+  </m><m>
+  At first glance this looks horribly complicated.  But look at it
+  again.  On the right the coefficient of </m>x<m> is </m>\pi^3-\sqrt{2}.<m>
+  That's just a number. It is approximately </m>29.6<m> but who cares? For
+  purposes of algebraically isolating </m>x<m> all we need to know is that
+  it is a number. Rather than calling it </m>\pi^3-\sqrt{2}<m>, let's
+  just call it something simple, like </m>A<m>. Think of it as giving the
+  expression </m>\pi^3-\sqrt{2}<m> a nickname; something shorter, and
+  easier to remember.
+
+  If we make that substitution our equation is now
+  </m><m>
+  \frac{\frac{\pi x}{\sqrt{(28-\sqrt[3]{26})^{\frac{1}{3}}}}}{\pi^2-\sqrt{3}}
+  - \sqrt[21]{2^{\frac{11}{2}}}= Ax.
+  </m><m>
+  which is a bit "easier on the eyes."
+
+  But wait. The expression </m>\sqrt[21]{2^{\frac{11}{2}}}<m> is also just a
+  number. Let's make it "easier on the eyes," too. If we let
+  </m>B=\sqrt[21]{2^{\frac{11}{2}}}<m> we have
+  </m><m>
+  \frac{\frac{\pi x}{\sqrt{(28-\sqrt[3]{26})^{\frac{1}{3}}}}}{\pi^2-\sqrt{3}}
+  - B= Ax.
+  </m><m>
+  which is even easier to look at. By now you see where this is
+  going. If we let
+  </m>C=\frac{\frac{\pi}{\sqrt{(28-\sqrt[3]{26})^{\frac{1}{3}}}}}{\pi^2-\sqrt{3}}<m>
+  then our equation is
+  </m><m>
+  Cx-B=Ax
+  </m><m>
+  which is much "easier on the eyes" than the original
+  equation was. In fact, we can now see that this is really a very
+  simple equation and the solution is </m>x=\frac{B}{C-A}<m>. Of course we
+  inserted </m>A<m>, </m>B<m>, and </m>C<m> into the problem so now we need to unwind
+  our
+  substitutions. When we do that we get\\
+</m><m>
+  x=\frac{\sqrt[21]{2^{\frac{11}{2}}}}{\frac{\frac{\pi}{\sqrt{(28-\sqrt[3]{26})^{\frac{1}{3}}}}}{\pi^2-\sqrt{3}}
+    - (\pi^3-\sqrt{2})}.
+  </m><m>
+  If a decimal number is required we could enter this formula into
+  whatever computational tool we're using. Good luck with that.
+\end{myexample}
+
+
+The previous example was clearly contrived.  Obviously we went
+out of our way to make a simple problem look complicated just so we
+could simplify it. As a result it would be easy to dismiss this as a
+silly example. But it is not. There is a serious lesson to be learned
+here. One that we will use over and over again in the near future.  By
+its very nature mathematical notation is not easy to read. It is so
+dense, with so much information packed into a few symbols, that it is
+easy to misinterpret. Making a formula easier to read can be very
+helpful.  A well chosen substitution can make a complex looking
+formula much easier to work with.
+
+\begin{myexample}
+  \label{example:Sub2}
+  When you were learning Algebra you almost certainly encountered
+  problems like this:\\
+  Given
+  
+<men xml:id="EQQuadInForm1">
+    x^{\frac{2}{3}}-4x^{\frac{1}{3}}+3=0label{EQQuadInForm1}
+  
+</men>
+  solve for </m>x<m>.
+
+  At first glance, this looks like a formidable problem.  However, if
+  we look closer we see that it actually has a very familiar
+  form. Because </m>x^{\frac{2}{3}}=\left(x^{\frac{1}{3}}\right)^2<m> we
+  can rewrite <xref ref="EQQuadInForm1">Equation~</xref>) as
+  
+<men xml:id="EQQuadInForm2">
+    \left(x^{\frac{1}{3}}\right)^2-4x^{\frac{1}{3}}+3=0label{EQQuadInForm2}
+  
+</men>
+  and if you look closely you'll see that
+  <xref ref="EQQuadInForm2">Equation~</xref>) is "quadratic in form." That is,
+  it is really a quadratic equation -- which we know how to solve --
+  in disguise. However it is still rather difficult to see the
+  quadratic nature of <xref ref="EQQuadInForm2">Equation</xref>. To make this
+  very clear we let
+  </m><m>
+  z=x^{\frac{1}{3}}.
+  </m><m>
+  That is, just as in <xref ref="EXAMPLESub1">Example</xref> we give the
+  expression </m>x^{\frac{1}{3}}<m> the nickname, </m>z<m>, which is shorter, easier to
+  remember, and "easier on the eyes." Then
+  <xref ref="EQQuadInForm2">Equation~</xref>) becomes the quadratic equation:
+  </m><m>
+  z^2-4z+3=0.
+  </m><m>
+  Our problem is not solved. Indeed, we haven't even tried to solve it
+  yet.  But it is much more simply expressed. And because it is more
+  simply expressed we can now see how to solve it.
+  Factoring, we have
+  </m><m>
+  0=z^2-4z+3=(z-1)(z-3)
+  </m><m>
+  so we have </m>z=1<m> and </m>z=3<m>. But, of course, these are not solutions of our
+  problem. We have found </m>z<m> (which we inserted into the problem)
+  not </m>x<m> (which is what we need to find). To complete the solution we
+  need to unwind the substitution we made and solve the two equations
+  </m><m>x^{\frac{1}{3}}=1 \text{ and } x^{\frac{1}{3}}=3,</m><m>
+  yielding the solutions
+    </m>x=1<m> and </m>x=27<m>, respectively.
+\end{myexample}
+
+In making a substitution our goal is always to make the formulas we
+are dealing with simpler to understand and easier to read.  In
+<xref ref="EXAMPLESub1">Examples</xref> <xref ref="EXAMPLESub2">and</xref> it was
+straightforward
+<aside><p>"Straightforward" is not the same as
+  "easy."</p>
+</aside>  to see how to do that.  There were expressions that were
+hard to read so we simply replaced a complicated part of the problem
+with something simple. It isn't always that easy.  Sometimes just
+finding a good substitution presents challenges of its own.
+
+For example,  the Quadratic Formula can be derived by making a very
+simple substitution that allows us to solve the general quadratic equation
+  
+<men xml:id="EQQuadEq">
+    ax^2+bx+c=0.label{EQQuadEq}
+  
+</men>
+  Once the substitution is found it is very easy to work through the
+  algebra, but finding the right substitution in the first place is
+  not straightforward at all.
+
+\begin{embeddedproblem}
+  \label{problem:QuadSub1}
+  Before reading any further see if you can come up with the right
+  substitution for <xref ref="EQQuadEq">Equation~</xref>).\\
+  
+</hint>
+<p>
+The goal is to eliminate the linear term,
+    </m>bx<m>. You can see how this would help. If </m>bx<m> were not present in
+    <xref ref="EQQuadEq">Equation</xref> we could easily
+    solve </m>ax^2+c=0.<m>
+</p>
+</hint>
+\end{embeddedproblem}
+
+
+  Were you able to solve <xref ref="PROBLEMQuadSub1">Problem</xref>?
+  It's actually very hard to do without some guidance. Here's another
+  hint. Try the substitution </m>x=y-\frac{b}{ka}<m> where </m>k<m> is a
+  parameter to be determined.  That is, make this substitution and
+  find the value of </m>k<m> that eliminates the linear term.
+
+  After making this substitution the problem will be given in terms of
+  </m>y<m>, not </m>x<m>. That's OK. Solve the problem in this form, and then
+  unwind your substitution back to the original </m>x<m> variable.
+
+\begin{embeddedproblem}
+  Notice that after making our substitution we
+  get:
+    </m><m> a\left(y-\frac{b}{k a}\right)^2+b\left(y-\frac{b}{k
+        a}\right)+c=0.  </m><m> which is more complicated, not
+    less. Of course it is. Sometimes you have to complicate before you
+    can simplify.  Don't give up. Multiply everything out to see what
+    you've got.
+
+  Once you've found </m>k<m> make the substitution and eliminate the linear
+  term -- that was the objective, remember? At that point you should
+  see the Quadratic Formula starting to emerge.  Don't forget to
+  unwind the substitution and solve for </m>x<m>
+\end{embeddedproblem}
+
+% It may interest you to learn that there is a Cubic Formula which
+% solves the general cubic equation:
+% 
+<men xml:id="EQCubic">
+% ax^3+bx^2+cx+d=0.label{EQCubic}
+% 
+</men>
+% just as the Quadratic Formula solves the general quadratic equation.
+% The Cubic Formula is:
+% \begin{align*}
+%   x&=\sqrt[3]{\left(\frac{-b^3}{27a^3}+\frac{bc}{6a^2}-\frac{d}{2a}\right)+\sqrt{\left(\frac{-b^3}{27a^3}+\frac{bc}{6a^2}-\frac{d}{2a}\right)^2+\left(\frac{c}{3a}-\frac{b^2}{9a^2}\right)^3}}\\
+%    &\quad\quad+\sqrt[3]{\left(\frac{-b^3}{27a^3}+\frac{bc}{6a^2}-\frac{d}{2a}\right)-\sqrt{\left(\frac{-b^3}{27a^3}+\frac{bc}{6a^2}-\frac{d}{2a}\right)^2+\left(\frac{c}{3a}-\frac{b^2}{9a^2}\right)^3}}\\
+%    &\quad\quad\quad-\frac{b}{3a}
+% \end{align*}\label{eq:CubicFormula}
+% You can see why you were not required to memorize the Cubic Formula
+% along with the Quadratic Formula.
+
+%   We will not ask you to derive the Cubic Formula but the first step
+%   is to use a substitution similar to the one you used in
+%   <xref ref="EXAMPLESub2">Example</xref> to eliminate the
+%   quadratic term from <xref ref="EQCubic">Equation</xref>.
+% \begin{embeddedproblem-enumerate}[Find the pattern]
+%   \vskip-.3in{}
+%   \begin{enumerate}[label={\bf{}(\alph*)}]
+%   \item Find the substitution  needed to eliminate the quadratic term
+%     (</m>bx^2<m>) in <xref ref="EQCubic">Equation</xref>.
+%   \item Now look back at the substitutions used to eliminate the
+%     linear term (</m>x<m> to the first power) from the general quadratic,
+%     and to eliminate the quadratic term (</m>x<m> to the second power) from
+%     the general cubic. Find the pattern and guess what substitution
+%     will eliminate the cubic term (</m>x<m> to the third power) from the
+%     general quartic equation:
+%     </m><m>
+%     ax^4+bx^3+cx^2+cx+e=0.
+%     </m><m>
+%   \end{enumerate}
+% \vskip-.2in
+% \end{embeddedproblem-enumerate}
+
+% \subsection*{\underline{Generality: Making Things "Harder on the
+%     Eyes" }}
+
+% Another  common misconception is that the formulas we use in
+% mathematics just make things harder to read and understand, that if we
+% would just use numbers instead of all of these letters
+% everything would be easier.
+
+% For example, if </m>a<m>, </m>b<m>, and </m>c<m> are the sides of a right triangle
+% and </m>c<m> is the hypotenuse then we know from the
+% Given two numbers </m>a<m> and </m>b<m>, is it true that </m>0\lt{} a \lt{} a+b<m>. A common
+%   error at this point is to use specific numbers, like </m>5<m>, </m>7<m>, to
+%   check: If we let  and complaint we have heard from students is that the problem is harder
+%   because it doesn’t have numbers in it. But it does. The numbers are
+%   </m>a<m> and </m>b<m>.
+
+%   Naturally, you are thinking something like, "Stop being such jerks!
+%   You're being deliberately obtuse. You know what I mean. Sure we can
+%   call our numbers </m>a<m> and </m>b<m>, but that just makes it harder to
+%   handle them if we have to combine them in a formula. If </m>a=7<m> and
+%   </m>b=5<m> then </m>7^2+5^2=49+25=99<m> which is much simpler than
+%   </m>a^2+b^2<m>. Why make things more complicated by using letters?"
+
+%   Why indeed. This is an entirely valid point. But here's the
+%   problem. Nature rarely gives us simple integers like </m>5<m> and </m>7<m> to
+%   work with. Suppose instead of </m>5<m> and </m>7<m> we had
+%   </m>a=\frac{\sqrt{7}+\pi}{4}<m> and </m>b=2.93\times 10^3<m>? Then
+%   </m>a^2+b^2<m> becomes </m>\left(\frac{\sqrt{7}+\pi}{4}\right)^2+ \left(2.93\times
+%       10^3\right)^2<m>. Would you really rather work with that? Is it
+%     simpler to combine these and get a single number?
+
+%   Would you feel better if we used two numbers such
+%   as and ?  If we did, then you might actually say, “Couldn’t we use
+%   simpler numbers?”, whereupon we might say, “Sure! How about and ?”
+%   The point is that the symbol is no different than the symbol or the
+%   symbol .  These are all valid positive numbers, so treat them all
+%   the same.  For example, just as , etc.  A good way to “fool”
+%   yourself is to think “23” and “17”, but write down and .  As long as
+%   you don’t try to do anything predicated on having 23 and 17, then
+%   you should be fine.  For example, you wouldn’t want to say something
+%   like is an even integer (even though is).  In fact, may not be an
+%   integer at all.  All you could really say about them is that and .
+% \end{Digression}
+
+
+</section>
+<!-- <section xml:id="no-label"> -->
+<!--  <title>An "Easy" Problem From Geometry</title> -->
+<!-- \label{sec:an-easy-problem-geo} -->
+<!--  \markright{\sc{} An "Easy" Problem From Geometry} -->
+
+<!-- % \mycenterquote{A good problem should be more than a mere exercise; it should be -->
+<!-- %     challenging and not too easily solved by the student, and it -->
+<!-- %     should require some ‘dreaming’ time.}{Howard Eves}{.8} -->
+
+<!--   \mycenterquote{Ideas are like rabbits. You get a couple and learn how -->
+<!--   to handle them, and pretty soon you have a dozen.} -->
+<!-- {\href{https://www.nobelprize.org/prizes/literature/1962/steinbeck/biographical/}{John Steinbeck} (1902-1968)}{.8} -->
+<!-- %{\centerline{\normalsize Quoted in \pubtitle{John Steinbeck: A -->
+<!-- %      Biography,} by Jay Parini}} -->
+
+
+<!-- % \begin{center} -->
+<!-- %   \begin{minipage}{.7\linewidth} -->
+<!-- %     {\large\bf{} "Ideas are like rabbits. You get a couple and learn how to -->
+<!-- %       handle them, and pretty soon you have a dozen."   -\- John Steinbeck -->
+<!-- %     } -->
+<!-- %     \begin{center} -->
+<!-- %         Quoted in \pubtitle{John Steinbeck: A Biography,} -->
+<!-- %         by Jay Parini -->
+<!-- %       \end{center} -->
+<!-- %       \textcolor{carmine}{\rule{\textwidth{}}{1mm}} -->
+<!-- %   \end{minipage} -->
+<!-- % \end{center} -->
+
+
+  
+<!-- We've chosen the following example because it is neither particularly -->
+<!-- easy nor particularly difficult. It is typical of the kinds of -->
+<!-- medium level problems that appear in most Calculus textbooks. -->
+
+<!-- \begin{myexample}{} -->
+<!--   \label{example:MaxTriangle} -->
+<!--   The lengths of two sides of a triangle are </m>a<m> and </m>b<m>. If the third -->
+<!--   side is chosen in such a way that the area of the triangle is as -->
+<!--   large as possible what is the length of the third side? -->
+<!-- \end{myexample} -->
+
+
+
+<!-- You may be able to intuit the correct answer to this problem. That's -->
+<!-- OK, but you should try to solve it, too. By "solve" we mean that you -->
+<!-- should be able to explain to someone with the same mathematical skills -->
+<!-- you have at the moment why your answer is correct. -->
+
+<!-- Before reading -->
+<!-- further do your best to solve this problem in <xref ref="EXAMPLEMaxTriangle">Example</xref>. We'll wait. -->
+<!-- \begin{center} -->
+<!--   \begin{minipage}{.8\linewidth} -->
+<!--     \vfill{} {\large\bf{} No, really. Give this problem a serious shot -->
+<!--       before you go on. It is not important that you -->
+<!--       succeed. Only that you try.} -->
+<!--   \end{minipage} -->
+<!-- \end{center} -->
+<!-- \vfill{} -->
+<!-- %\newpage{} -->
+
+<!-- \noindent{}\underline{\bf{}Partial Solution:} -->
+
+<!-- At first it is difficult to see where to begin -->
+<!-- <aside><p>That's why it's -->
+<!--   called a problem.</p> -->
+<!-- </aside>.  Don't let this stop you! In our experience the -->
+<!-- most common mistake is giving up too soon. -->
+
+<!-- Don't. Do. That.  Keep thinking. -->
+
+<!-- \begin{wrapfigure}[]{r}{1.5in} -->
+<!--   \captionsetup{labelformat=empty} -->
+<!--   \centerline{\includegraphics*[height=1in,width=1.5in]{../Figures/Advice1}} -->
+<!--   \label{fig:Advice1} -->
+<!-- \end{wrapfigure} -->
+<!-- Since we know the lengths of the sides </m>a<m> and </m>b<m> of our triangle let's -->
+<!-- draw it. The sketch at the right would be typical. The question is, -->
+<!-- what length for side </m>c<m> makes the total area enclosed by the triangle -->
+<!-- as large as it can possibly be? -->
+
+<!-- Now what? -->
+
+<!-- Well, this looks like a right triangle doesn't it? If it is a right -->
+<!-- triangle, then we can find the length of </m>c<m> via the Pythagorean -->
+<!-- Theorem: -->
+<!-- </m><m> -->
+<!-- c=\sqrt{a^2+b^2}, -->
+<!-- </m><m> -->
+<!-- right? -->
+
+<!-- Before you go on take a moment and really think about this -->
+<!-- problem. Can it really be that simple? -->
+<!-- Can you find any flaws -->
+<!-- in our reasoning. -->
+
+<!-- Once you think about it you see that we have no reason to believe that -->
+<!-- the triangle we seek must be a right triangle. It was completely -->
+<!-- accidental that we drew our diagram that way. If this seems like a -->
+<!-- simple-minded mistake, the sort of mistake that you would never make, -->
+<!-- be careful. It is a mistake to rely too heavily on the diagrams -->
+<!-- we draw. But it is an easy mistake to make, especially when the -->
+<!-- problems are more complicated, because as problems get complex we will -->
+<!-- need to rely on visualization more and more. This was not a dumb -->
+<!-- mistake. It was just a bit careless, and it is easy to be careless, -->
+<!-- especially when we first start thinking about a problem. -->
+
+<!-- %\pagebreak[4] -->
+
+
+<!-- \begin{Digression}[Making Mistakes] -->
+<!-- \mycenterquote{Being wrong isn't a bad thing like they teach you in -->
+<!--   school.  It is an opportunity to learn something.} -->
+<!-- {\href{https://mathshistory.st-andrews.ac.uk/Biographies/Feynman/}{Richard Feynman} (1918-1988)}{.75} -->
+
+<!-- \mycenterquote{Experience is the name everyone gives to their -->
+<!--   mistakes.}{\href{http://www.cmgww.com/historic/wilde/}{Oscar Wilde} (1854-1900)}{.75} -->
+
+<!-- By definition, mistakes are wrong. A mistake is always obvious -->
+<!-- after you recognize it as a mistake.  Everyone -->
+<!-- makes mistakes in the course of solving a problem. The process of -->
+<!-- making mistakes, recognizing them as mistakes, and figuring out why -->
+<!-- they are mistakes is called learning. -->
+<!--   The very smartest people, for example \href{https://mathshistory.st-andrews.ac.uk/Biographies/Newton/}{Isaac Newton}, \href{https://mathshistory.st-andrews.ac.uk/Biographies/Leibniz/}{Gottfried -->
+<!--   Leibniz}, -->
+<!--   \href{https://mathshistory.st-andrews.ac.uk/Biographies/Galileo/}{Galileo}, -->
+<!--   \href{https://mathshistory.st-andrews.ac.uk/Biographies/Fermat/}{Pierre Fermat}, \href{https://www.smithsonianmag.com/history/madame-curies-passion-74183598/}{Marie Curie}, \href{https://mathshistory.st-andrews.ac.uk/Biographies/Noether_Emmy/}{Emmy N\"other}, \href{https://mathshistory.st-andrews.ac.uk/Biographies/Einstein/}{Albert -->
+<!--   Einstein}, or -->
+<!-- \href{https://mathshistory.st-andrews.ac.uk/Biographies/Feynman/}{Richard -->
+<!--   Feynman}, made lots of mistakes. -->
+<!--   Making mistakes is how they got to be smart. -->
+
+<!--   Isaac Newton was once asked how he had been able to solve problems -->
+<!--   that no one before him had solved. His reply: "By thinking, and -->
+<!--   thinking, and thinking about them." Of course, when he described -->
+<!--   his solutions he left out all of the errors like anyone would do, -->
+<!--   because, who cares about those? Making -->
+<!--   mistakes doesn't typically get the attention it deserves. -->
+
+<!--   An expert is someone who has made every possible mistake. This is -->
+<!--   why your teacher, an expert, will seldom err -->
+<!-- <aside><p>And will be embarrassed -->
+<!--     when they do.</p> -->
+<!-- </aside>. Each mistake you make reflects the level of -->
+<!--   your current understanding of the problem. Each mistake you make -->
+<!--   takes you a little closer to expertise.  Embrace your mistakes -->
+<!--     and make lots of them!  They are proof that you are making -->
+<!--   progress.  But make no mistake (Gasp!) about it,  making and -->
+<!--   embracing a mistake is just the first step. You also have to figure -->
+<!--   out what went wrong. -->
+
+<!--   Sadly, mistakes are too often seen as a source of embarrassment. Too -->
+<!--   many students will berate themselves as stupid every time they make -->
+<!--   a mistake. Don't do that. It is pointless and counter-productive. All -->
+<!--   it will do is destroy your self confidence. Don't do it -->
+<!-- <aside><p>Did -->
+<!--     we mention that you shouldn't berate yourself when you make a -->
+<!--     mistake?  You really shouldn't.</p> -->
+<!-- </aside>. Learning Calculus can be hard, -->
+<!--   but you would not have made it this far if you couldn't do -->
+<!--   it. So keep making mistakes. Ask -->
+<!--   for help when you need it. And don't give up. -->
+<!--   You have not failed until you stop trying. -->
+<!-- \end{Digression} -->
+
+<!-- Let's look at this problem again.  The triangle we seek might look -->
+<!-- like the first one we drew, or it might look like either of the ones -->
+<!-- drawn in the diagram below, or  myriad others. We simply don't -->
+<!-- have enough information to decide at this point. -->
+
+<!-- \begin{wrapfigure}[8]{l}{1.4in} -->
+<!--   \vskip-3mm{} -->
+<!--   \captionsetup{labelformat=empty} -->
+<!--   \centerline{\includegraphics*[height=1.2in,width=1.4in]{../Figures/Advice3}} -->
+<!--   \label{fig:Advice3} -->
+<!-- \end{wrapfigure} -->
+<!-- But from the diagrams we've drawn so far we can see that one end of -->
+<!-- side </m>a<m> must be pinned to one end of side </m>b<m> and for each angle -->
+<!-- between </m>a<m> and </m>b<m> we have a different possible triangle.  We don't -->
+<!-- have to think of both of them as in motion. We can think of one of -->
+<!-- them, say </m>b<m>, as fixed while the other swings around their common -->
+<!-- endpoint. The circle in our diagram  indicates all of the -->
+<!-- possible positions </m>a<m>. -->
+
+<!-- Do you see how that worked? Our first attempt was simple-minded, -->
+<!-- but by drawing our first, simple-minded sketch, making a stab at a -->
+<!-- solution, and  figuring out why our simple-minded approach won't -->
+<!-- work, we were led to this insight: We can think of </m>b<m> as static, and -->
+<!-- we can think of </m>a<m> as swinging freely while pinned to the end of </m>b.<m> -->
+
+
+<!-- \begin{wrapfigure}[5]{r}{2.5in} -->
+<!--   \captionsetup{labelformat=empty} -->
+<!--   \vskip-9mm{} -->
+<!--   \centerline{\includegraphics*[height=1in,width=2.5in]{../Figures/Advice4}} -->
+<!--   \label{fig:Advice4} -->
+<!-- \end{wrapfigure} -->
+<!-- Clearly we need to find the angle between </m>a<m> and </m>b<m> -\-\- call it -->
+<!-- </m>\phi<m> as in the sketch at the right -\-\- that maximizes the area of -->
+<!-- the triangle.  But which angle does that? -->
+
+<!-- Whenever triangles are involved it is a good idea to recall your -->
+<!-- Trigonometry. After all, that's what Trigonometry is about, isn't it? -->
+<!-- Since we are thinking of </m>b<m> as fixed, we may as well use it as the -->
+<!-- base. This makes the height equal to </m>a\sin(\phi).<m> Also, since we're -->
+<!-- trying to maximize the area we should probably write down the area -->
+<!-- formula: </m>A=\frac12\text{(b)ase}\times\text{(h)eight}.<m> Thus the area -->
+<!-- of the triangle is </m>A=\frac{1}{2}ab\sin(\phi).<m> -->
+
+<!-- Is it clear that our initial guess was correct? The angle, </m>\phi,<m> that -->
+<!-- maximizes the area will be the one whose sine is as large as -->
+<!-- possible. That would be </m>\phi=90^\circ<m> so </m>c=\sqrt{a^2+b^2}<m> -->
+<!-- provides the maximum area. -->
+
+<!--   You might be a little uncomfortable with our argument that -->
+<!--   </m>a\sin(\phi)<m> is maximized when </m>\phi=90^\circ<m>. If so, then for -->
+<!--   you, this problem is not finished. Possibly we've made a mistake. -->
+<!--   Let's follow our own advice and see why it is a mistake, if it is. -->
+
+<!-- \begin{embeddedproblem} -->
+<!--   Replace </m>a\sin(\phi)<m> with </m>h<m> in the diagram above. Use the -->
+<!--   Pythagorean Theorem to reason that if </m>\phi\lt{}90^\circ<m> then -->
+<!--   </m>h\lt{}a<m>. How does this apply to the problem of maximizing the area -->
+<!--   of the triangle? -->
+<!-- \end{embeddedproblem} -->
+<!-- % Can you account for either of these objections? If not, then the -->
+<!-- % problem remains unsolved. -->
+
+<!-- % As we said above, </m>\phi=\frac{\pi}{2}<m> is correct so </m>c=\sqrt{a^2+b^2}<m> -->
+<!-- % is the maximum area of the triangle. But we need to know this, -->
+<!-- % not just believe it. Unless we can show an irrefutable argument -\- an -->
+<!-- % argument that addresses all possible objections -\- then we just -->
+<!-- % believe it. And belief is not knowledge. -->
+
+<!-- % We will return to this problem and solve it completely at a later -->
+<!-- % point. Until we do, although we believe that -->
+<!-- % </m>c=\sqrt{a^2+b^2}<m> is the maximum area of the triangle, it is only a -->
+<!-- % conjecture -\- a guess. -->
+<!-- \vskip-2mm{} -->
+<!-- Until we can demonstrate that </m>c=\sqrt{a^2+b^2}<m> with a convincing and -->
+<!-- rigorous argument, this problem is not solved. Instead it is -->
+<!-- only a conjecture; an educated guess. Our evidence so far is very -->
+<!-- convincing so it is a very well educated guess, but it is still -->
+<!-- only a guess. -->
+
+<!--  \pagebreak[4] -->
+
+<!-- </section> -->
+<!-- <section xml:id="no-label"> -->
+<!--  <title>Our advice, a synopsis:</title> -->
+<!-- \label{sec:our-advice-synopsis} -->
+<!-- \mycenterquote{There are times when I feel like I'm in a big forest -->
+<!--   and don't know where I'm going. But then somehow I come to the top -->
+<!--   of a hill and can see everything more clearly. When that happens -->
+<!--   it's really -->
+<!--   exciting.}{\href{https://mathshistory.st-andrews.ac.uk/Biographies/Mirzakhani/}{Maryam -->
+<!--     Mirzakhani} (1977-2017)}{.9} -->
+<!-- \mycenterquote{If you see a whole thing -\- it seems that it's always -->
+<!--   beautiful. Planets, lives  . . . \ But up close a world's all dirt -->
+<!--   and rocks. And day to day, life's a hard job, you get tired, you -->
+<!--   lose the pattern.}{\href{https://www.ursulakleguin.com/biography}{Ursula -->
+<!--     K. Le Guin} (1929-2018)}{.9} -->
+
+<!-- In order to solve a problem, any problem, you must: -->
+<!-- \begin{description} -->
+<!-- \item[Have an idea.]\ \\  Solving a mathematical problem is a bit like -->
+<!--   getting dropped in the woods without a map or any GPS technology and -->
+<!--   being told to find your way out -->
+<!-- <aside><p>Except, of course, that you -->
+<!--     won't die of exposure, and you always have the option of declaring -->
+<!--     the math problem "Stupid" and doing something else. If you -->
+<!--     are dropped in the woods you don't have that option. You -->
+<!--     must solve the problem or you will die. It is -->
+<!--     astonishing how quickly that knowledge will focus the -->
+<!--     mind.</p> -->
+<!-- </aside>. First you have to find a path. Once a path is found, you -->
+<!--   have to follow it. Nothing else really has a chance of working. -->
+<!--   Following your path will eventually lead you to another path. Now -->
+<!--   you have to decide which path to follow, so you look around and make -->
+<!--   your best guess. If you guess right, great! If not you will have to -->
+<!--   backtrack and take the other path. And so it -->
+<!--   goes. Guess. Backtrack. Guess again. As you learn the terrain and -->
+<!--   get familiar with the network of paths your guesses get -->
+<!--   better.  Sometimes none -->
+<!--   of the paths you've found seem to be getting you closer to your -->
+<!--   destination. So you have to try something different, like getting -->
+<!--   off of the path completely. -->
+
+<!--   Eventually you'll get where you're going but the one thing you can't -->
+<!--   do is give up. You will never get anywhere if you don't keep trying. -->
+
+<!--   Having an idea is like following a path in the woods. It's a start, -->
+<!--   but that's all it is. You still have to follow it. After you've -->
+<!--   taken it as far as you can you need to look for another idea; a new -->
+<!--   path to follow. -->
+
+<!--   Finding your way out of the woods takes patience, diligence, and a -->
+<!--   lot of hard work. So does solving a mathematics problem. -->
+
+<!--   If an idea occurs to you, follow it. Most likely you will not hit on -->
+<!--   a good, or even a workable approach the first time. Or the first -->
+<!--   three times. That's OK. Keep thinking about the problem anyway. It -->
+<!--   is frustrating and it doesn't feel like progress, but it is. As long -->
+<!--   as you are having and discarding ideas you are making progress. -->
+<!-- \item[Really, have an idea. If you don't have a good idea, then -->
+<!--   use a bad one.] \ \\ -->
+<!--   OK, we hear you say, but what if I don't have any good -->
+<!--   ideas? What do I do then? -->
+
+<!--   Easy. Use a not-so-good idea. -->
+
+<!--   This is what you've been doing all of your life anyway isn't it? -->
+<!--   You just didn't tell anyone because you were sure you were doing -->
+<!--   something wrong, right?  You weren't. -->
+  
+<!--   The most important thing you can do is get started. That's what -->
+<!--   having an idea is for, getting started. All we did to start the -->
+<!--   problem in <xref ref="EXAMPLEMaxTriangle">Example</xref> was draw the -->
+<!--   lines </m>a<m> and </m>b.<m> Look back up at  our partial solution and -->
+<!--   see. The first thing we did was make the drawing below:\\ -->
+<!--   \centerline{\includegraphics*[height=1in,width=1.8in]{../Figures/Advice1}} -->
+<!--   Can you think of anything more simple-minded? And yet it worked. It -->
+<!--   didn't work right away, but it got us moving in the right direction. -->
+<!-- \item[Have another idea.]\ \\  Because this is a textbook we couldn't -->
+<!--   really waste time and pages by running down blind alleys, so we -->
+<!--   started off with an idea that we knew would take us in the right -->
+<!--   direction. In real life this usually won't happen. Most often your -->
+<!--   first (two or three or four) ideas aren't going to take you in the right -->
+<!--   direction. That's OK. Figure out what is wrong with them. You had -->
+<!--   some intuition about the problem that led you to your -->
+<!--   idea. Figuring out why it didn't work will clarify things for you -->
+<!--   just a bit. That will help. -->
+
+<!--   So, have another idea that is based on what you learned from your -->
+<!--   first idea. And another. And another after that. Keep having ideas -->
+<!--   until you find one that works. Another way to say this -->
+<!--   is: Don't give up. -->
+<!-- \item[Ask for help when you get stuck, not before.]\  \\ Sometimes ideas -->
+<!--   just won't come to you. That's OK. Sometimes you will need help. Ask -->
+<!--   for it. Ask your teacher, another student, a tutor, your Mom, your -->
+<!--   Dad, a former teacher. -->
+
+<!--   Ask. For. Help. -->
+
+<!--   But ask constructively. If you are asking another student, a peer, -->
+<!--   it is fine to ask, "How do I do this problem?" But if you are -->
+<!--   asking your teacher, or a tutor, this sounds a lot like, "This -->
+<!--   problem looks hard, my friends are meeting up in half an hour and, -->
+<!--   besides, I don't really want to spend any more time on it. Please, -->
+<!--   do this problem and let me watch so I can turn it in and go have -->
+<!--   fun with my friends -->
+<!-- <aside><p>To be clear, your teacher knows that -->
+<!--     a serious student does not mean this, that you really just want -->
+<!--     to learn how to do the problem. The difficulty is that there are -->
+<!--     always some students who have no qualms about asking their -->
+<!--     instructor to do problem after problem with no intention of -->
+<!--     learning anything. They just want to copy the answers down and -->
+<!--     quit. Teachers quickly learn to identify these students from the -->
+<!--     way they ask questions. If you approach your instructor in the -->
+<!--     same fashion that a non-serious student does the response you -->
+<!--     get won't be as helpful as you would like.\\ -->
+<!--     Teachers <em>want</em> to help serious students, but non-serious -->
+<!--     students are a waste of time. Be a serious student. Just as -->
+<!--     importantly, <em>act</em> like a serious student.</p> -->
+<!-- </aside>." This is not -->
+<!--   usually effective. Moreover some teachers will get a little testy -->
+<!--   about it. Instead ask something like, "I've tried this, and this, -->
+<!--   and this, but I keep getting stuck here. Can you give me some -->
+<!--   direction?"  That shows that you have already put real effort into -->
+<!--   solving the problem and are willing to continue working on it. -->
+
+<!--   Or, if you find the problem so mystifying that you can't even -->
+<!--   think of a first idea ask, "I really don't know where to begin on -->
+<!--   this problem. Can you point me in the right direction to get me -->
+<!--   started?" -->
+
+<!--   \item[Keep thinking about the problem after you solve it.]\ \\ -->
+<!-- After you've solved a problem, pause for a moment, take -->
+<!-- a sip of coffee, or tea, or whatever and think about -->
+<!-- the problem you just solved. This is like the difference between looking -->
+<!-- at a mountain from its base, when all you can see is the tangle of -->
+<!-- brush in your way, and looking at it from the peak. From the peak all -->
+<!-- of the obstacles you overcame getting there look small and -->
+<!-- unimportant. You can see the broad outlines of the mountain and the -->
+<!-- path you took climbing it. Frequently you will also see a better path -->
+<!-- than the one you took. -->
+
+<!-- This kind of reflection is the most neglected aspect of problem -->
+<!-- solving. After you've been struggling with a problem you probably -->
+<!-- don't ever want to see it again.  This is a natural response. -->
+<!-- However, before you put the problem away reflect on your solution and -->
+<!-- make this part of your knowledge base. Think about which ideas you had -->
+<!-- that worked, and which ideas you had that didn't work. Think about why -->
+<!-- they did, or didn't work. Do this immediately, while the problem is -->
+<!-- still in your mind. Later, if something reminds you of this problem, -->
+<!-- think about it some more to see why you were reminded of it. -->
+
+<!-- The difference between the teacher and the student is not -->
+<!-- intelligence, but experience.  The more problems you solve, the more -->
+<!-- experience you gain. But you need to be able to use that experience -->
+<!-- for subsequent problems. Reflecting on a problem after you solve it is -->
+<!-- how you make the knowledge you gained from the problem available for -->
+<!-- later use. -->
+
+
+<!-- For example, see if you can use what you learned from the triangle -->
+<!-- problem to solve this one. -->
+<!-- \end{description} -->
+<!-- \begin{embeddedproblem-1line}{} -->
+<!-- %  \vskip-.3in{} -->
+<!--   Out of all parallelograms with sides </m>a<m> and </m>b<m>, which would have the -->
+<!--   largest area? -->
+<!-- %  \vskip-.2in{} -->
+<!-- \end{embeddedproblem-1line} -->
+<!-- \begin{description} -->
+<!-- \item[Use your intuition, but don't trust it]\  \\ -->
+<!-- Finally, because many problems in Calculus are about motion and you -->
+<!-- are very familiar with how things move, you will often have a good deal -->
+<!-- of intuition into their solution. Paradoxically you need to learn to -->
+<!-- use, but not to trust, your intuition. -->
+
+<!-- When approaching a problem intuitively, there is a tendency to add -->
+<!-- assumptions to familiar looking problems. Notice how easy it was to -->
+<!-- believe that our triangle must be a right triangle just because our -->
+<!-- first drawing looked like a right triangle. -->
+
+<!-- As we said, you will have some intuition into many problems, and -->
+<!-- intuition can be very helpful, but it can also lead you astray. You -->
+<!-- need to learn to support your intuition with reasoning. -->
+
+<!-- %\pagebreak[4] -->
+
+<!-- <exercise> -->
+<!-- <p> -->
+<!-- % \begin{wrapfigure}[]{r}{1.5in} -->
+<!-- % \captionsetup{labelformat=empty} -->
+<!-- % \centerline{\includegraphics*[height=1.5in,width=1.5in]{../Figures/ParabolicSection1}} -->
+<!-- % \label{fig:ParabolicSection1} -->
+<!-- % \end{wrapfigure} -->
+<!-- % All of the problems below refer to the following diagram:\\ -->
+<!-- % \centerline{\includegraphics*[height=1.5in,width=1.5in]{../Figures/ParabolicSection1}} -->
+<!-- \vskip-3mm{} -->
+<!--   You will probably have a strong insight, or intuition, about each of -->
+<!--   the following claims. Do your best to explain why each is true, or why it is -->
+<!--   false. Read each problem carefully and take care not to add -->
+<!--   assumptions that are not in the problem. Back up your claim with -->
+<!--   reasoning, not intuition, -->
+<!--   \begin{enumerate}[label={\bf{}(\alph*)}] -->
+<!--   \item Given a regular polygon inscribed in a fixed circle, if you -->
+<!--     double the number of sides, then the area inside the polygon -->
+<!--     becomes larger. -->
+<!--   \item Given a polygon inscribed in a fixed circle, the more sides -->
+<!--     there are, the bigger the area inside the polygon is. -->
+<!--   \item Given a polygon inscribed in a fixed circle, the more sides -->
+<!--     there are, the bigger the perimeter is. -->
+<!--   \item Given the following parabola with axis </m>\overline{AM}<m>, </m>M<m> is the midpoint -->
+<!--     of </m>\overline{BC}<m>.\\ -->
+<!--     \centerline{\includegraphics*[height=2in,width=2in]{../Figures/ParabolicSection1}} -->
+<!--   \item In part (d), what if we insist that </m>\overline{BC}<m> is perpendicular to </m>\overline{AM}<m</m>? -->
+<!--   \end{enumerate} -->
+<!-- </p> -->
+<!-- </exercise> -->
+<!-- \end{description} -->
+<!-- </p> -->
+<!-- </section> -->
+</chapter>
+

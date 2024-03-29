@@ -1,0 +1,739 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="CHAPTERFDT-Redux">
+ <title>The First Derivative Test, Redux</title>
+
+<!-- \label{CHAPTERFDT-Redux} -->
+<introduction>
+<blockquote>
+<p>
+Geometry has always been considered as an
+  exact science, and indeed as the source of the exactness which is
+  widespread among other parts of mathematics.\ .\ . But it seems that
+  this feature of exactness does not reign anymore in geometry since
+  the new system of infinitely small quantities has been mixed to
+  it. I do not see that this system has produced anything for the
+  truth and it would seem to me that it often conceals
+  mistakes.
+</p>
+<attribution>
+<url href="https://mathshistory.st-andrews.ac.uk/Biographies/Rolle/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Rolle/">Michel
+    Rolle (1652-1719)</url>
+</attribution>
+</blockquote>
+ 
+<p>
+
+Assuming that all of the properties of limits we talked about in
+<xref ref="SECTIONlimit-theorems-laws">Section</xref> can be proved, we have seen that
+all of the differentiation rules we developed intuitively using
+differentials in <xref ref="CHAPTdifferentials">Chapter</xref> can be made
+rigorous using limits.
+</p>
+<p>
+
+The question we need to address now is this: Does the need for rigor,
+which prompted our definition of the
+<xref ref="DEFDerivative">derivative~</xref>),
+get in the way of practical applications such as, say, the First
+Derivative Test? We will show that such a practical result can still
+be achieved while maintaining rigor. To do this, we will need a
+theorem that allows us to relate instantaneous changes to finite
+changes. The French name for this theorem is <q>le théorème des
+accroissements finis</q> (translated literally as <q>the Theorem of
+Finite Increments</q>). In English it is called the the Mean Value
+Theorem. We will see how this powerful theorem can be used to
+transition from theoretical to practical.
+</p>
+</introduction>
+
+<section xml:id="SECTIONfermats-theorem">
+<title>Fermat's Theorem</title>
+
+<blockquote>
+<p>
+It is by logic that we prove, but by intuition that we discover.
+</p>
+<attribution>
+<url href="https://mathshistory.st-andrews.ac.uk/Biographies/Poincare/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Poincare/">Henri
+    Poincar\'{e (1854-1912)</url>
+</attribution>
+</blockquote>
+
+<p>
+It is actually a little surprising
+how much effort it takes to prove the First Derivative Test.  We
+will start by proving some  preliminary results that will make it
+a little easier to follow the logic behind the proof of the First
+Derivative Test.
+We'll begin with Fermat's Theorem (<xref ref="THEOREMFermatsTheorem">Theorem</xref>)
+which says that if <m>f</m> attains a maximum (or minimum) at <m>x=a</m> then
+<m>f^\prime(a)=0.</m> More formally:
+</p>
+
+<theorem xml:id="THEOREMFermatsTheorem2">
+<title>Fermat's Theorem</title>
+<p>
+  If <m>f(a)</m> is a local extremum (either a maximum or a minimum) of
+  <m>f(x)</m> at <m>x=a</m>, and <m>f(x)</m> is differentiable at <m>x=a</m> then
+  <m>f^\prime(a)=0</m>.
+</p>
+</theorem>
+<p>
+
+
+Recall that Fermat's Theorem does not say that if <m>f^\prime(a)=0</m> then
+<m>f(a)</m> is an extremum. In fact, we know that this is not true.
+Rather, it states the converse: If we know that <m>f(a)</m> is an extremum
+and <m>f^\prime(a)</m> exists, then <m>f^\prime(a) =0</m>.
+</p>
+<p>
+
+It is very rare that we can develop a proof of a theorem by directly
+writing down the logical steps in order.  Usually the process takes a
+lot of trying, backtracking, trying again, and so on much as we
+described in our analogy in <xref ref="CHAPTERproblem-solving">Chapter</xref> about
+finding your way out of a forest.
+</p>
+<p>
+
+Of course, in a textbook it is not practical to list all of the bad
+ideas we might have just to see that they are, in fact, bad ideas. So
+we will use the following \underline{  Scrapwork} construct when we
+are just <q>thinking about</q> a problem. The scrapwork is not the
+proof. The purpose of scrapwork is to engage our intuition and to
+begin organizing our intuitive understanding so that a rigorous proof
+will emerge. So, not every statement we make inside a scrapwork
+construct will necessarily be fully rigorous. If you see a gap in the
+logic inside a scrapwork construct watch to see how it gets filled in
+the proof.
+</p>
+<investigation>
+  <figure>
+<caption>
+<url href="https://mathshistory.st-andrews.ac.uk/Biographies/Rolle/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Rolle/">This figure needs a caption.</url>
+</caption>
+<image source="images/FermatThm1.png" width="50%"/>
+</figure>
+<!-- \begin{wrapfigure}[]{r}{2in} -->
+<!--     \captionsetup{labelformat=empty} -->
+<!--     \centerline{\includegraphics*[height=1in,width=2in]{../Figures/FermatThm1}} -->
+<!--     \label{fig:FermatThm1} -->
+<!--   \end{wrapfigure} -->
+<p>
+  Notice that in <xref ref="DEFDerivative">Definition</xref> the quantity
+  <m>\frac{f(a+h)-f(a)}{h}</m> is the slope of a particular secant line, as
+  in the sketch at the right.
+</p>
+<p>
+
+  If, as shown in the sketch at the right, <m>(a,f(a))</m> is a (local)
+  maximum then the slope of the secant line in our diagram,
+  <m>\frac{f(a+h)-f(a)}{h}</m>, must be negative when <m>h\gt 0</m>. Since the
+  slope is less than zero it follows that
+  <me>
+  f^\prime(a)=\limit{h}{0}{\frac{f(a+h)-f(a)}{h}}\le0.
+  </me>
+</p>
+</investigation>
+
+  <exercise>
+<statement>
+<p>
+    Draw a similar diagram to convince yourself that <m>f^\prime(a)</m>
+    must also be greater than or equal to zero when <m>h\lt 0</m>.
+  </p>
+</statement>
+</exercise>
+  <p>
+  We can now rigorously prove Fermat's Theorem.
+</p>
+
+<proof>
+<title>Proof of Fermat's Theorem</title>
+
+<p>
+  We will only prove the case when <m>f(a)</m> is a local maximum. The case
+  of a local minimum is very similar.
+  
+  Since <m>f(a)</m> is a local maximum there is an interval containing <m>a</m>
+  such that for any <m>h</m> (sufficiently small that <m>a+h</m> is also in the
+  interval), <m>f(a+h)\leq f(a)</m>. Thus <m>f(a+h)-f(a)\leq0</m> as seen in the
+  sketch above. If <m>h\lt0</m> then <m>\frac{f(a+h)-f(a)}{h}\geq 0</m> and so
+  <me>
+  f^\prime(a)=\limit{h}{0}{\frac{f(a+h)-f(a)}{h}}\ge0.\label{eq:Rolle1}
+  </me>
+  However if <m>h\gt0</m> then
+  <me>
+  f^\prime(a)=\limit{h}{0}{\frac{f(a+h)-f(a)}{h}}\le0.\label{eq:Rolle2}
+  </me>
+  The only way that inequalities in <xref ref="EQRolle1">Formulas~</xref>) <xref ref="EQRolle2">and~</xref>) can 
+  be both true is if <m>f^\prime(a)=0.</m>
+</p>
+<p>
+<alert><m>\halmos</m></alert>
+</p>
+</proof>
+
+
+
+<problem>
+<statement>
+<p>
+  Use our proof of the maximum case as a guide to constructing a proof
+  of Fermat's Theorem when <m>f(a)</m> is a local minimum.
+</p>
+</statement>
+</problem>
+
+
+</section>
+<section xml:id="SECTIONrolles-lemma-mean">
+<title>Rolle's Lemma and the Mean Value Theorem</title>
+
+<figure>
+<caption>
+<url href="https://mathshistory.st-andrews.ac.uk/Biographies/Rolle/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Rolle/">\centerline{Michel Rolle} \centerline{(1659-1719)}</url>
+</caption>
+<image source="images/Rolle.png" width="50%"/>
+</figure>
+<!-- \begin{wrapfigure}[12]{r}{1.3in} -->
+<!--   \vskip-5mm  -->
+<!--   \captionsetup{labelformat=empty} -->
+<!--    \centerline{\href{https://mathshistory.st-andrews.ac.uk/Biographies/Rolle/}{\includegraphics*[height=1.5in,width=1.3in]{../Figures/Rolle}}} -->
+<!--   \caption{\centerline{Michel Rolle} \centerline{(1659-1719)}} -->
+<!--   \label{fig:RollePortrait} -->
+<!-- \end{wrapfigure} -->
+<p>
+
+Were he alive
+today
+<url href="https://mathshistory.st-andrews.ac.uk/Biographies/Rolle/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Rolle/">Michel
+  Rolle</url> might be horrified to know that his lemma has become a
+fundamental part of the modern development of Calculus.  Like Bishop
+Berkeley, he was an early critic of Calculus, having once described it
+as a <q>collection of ingenious fallacies.</q>
+</p>
+<p>
+
+The distinction between a theorem and a lemma is very slight and
+rather arbitrary. Typically we call a statement\aside{Technically
+  speaking, a statement is not a theorem until it has actually been
+  proved. Until then it is a conjecture.} a theorem if it is important
+and requires proof. We call it a lemma if it requires proof itself,
+and is used to simply the proof of a theorem.  This is not a
+hard-and-fast rule by any means. Sometimes we first prove a lemma as
+an aid to proving a theorem, only to find that the lemma is actually
+more important. However, having been originally dubbed a lemma the
+result is known ever after as a lemma.  For example, in the present
+instance we will be using the Extreme Value\aside{We will not be
+  proving the Extreme Value Theorem in this text. Although it appears
+  to be obviously true (read it again and see), it is remarkably hard
+  to prove in a fully rigorous fashion. If you feel that you must see
+  the proof you should change your major to mathematics and take a
+  course in Real Analysis.}, and Fermat's <em>Theorems</em> to prove
+what often called Rolle's <em>Lemma</em>, and then use use Rolle's
+<em>Lemma</em> to prove the Mean Value <em>Theorem</em>.  Then we will use
+the Mean Value <em>Theorem</em> to prove the First Derivative <em>Test</em>. It is all
+very chaotic.
+</p>
+
+
+
+<lemma xml:id="LEMMArolles-lemma">
+<title>Rolle's Lemma</title>
+<p>
+  Suppose <m>f</m> is continuous on the closed interval <m>[a,b]</m> and
+  differentiable on the open interval <m>(a,b)</m>. Suppose further that
+  <m>f(a)=f(b)</m>. Then there is at least one number <m>c</m>, in the interval
+  <m>(a,b)</m> such that <m>f^\prime(c)=0</m>.
+</p>
+</lemma>
+
+
+<figure>
+<caption>
+This figure needs a caption.</caption>
+<image source="images/RollesLemma.png" width="50%"/>
+</figure>
+<!-- \begin{wrapfigure}[5]{r}{1.5in} -->
+<!--   \captionsetup{labelformat=empty} -->
+<!--   \vskip-7mm -->
+<!-- \centerline{\includegraphics*[height=1in,width=1.5in]{../Figures/RollesLemma}} -->
+<!-- \label{fig:RollesLemma} -->
+<!-- \end{wrapfigure} -->
+<p>
+
+When Rolle's Lemma is visualized, as in the sketch at the right, it is
+clear what is going on. If <m>f(a)=f(b)</m> then between the points
+<m>(a,f(a))</m> and <m>(b,f(b))</m> the graph of <m>f(x)</m> will either rise to a maximum
+or drop to a minimum (not shown) at some point <m>c</m>. In either case, by
+Fermat's Theorem, the derivative of <m>f</m> at <m>c</m> will be zero. Notice
+that the slope of the line through <m>(a,f(a))</m> and <m>(b,f(b))</m> is also
+zero. Thus these two lines are parallel.
+</p>
+<p>
+
+Despite the clarity of our sketch, an analytic proof is still
+required because our sketch does not capture all of the possible ways
+that Rolle's Lemma  can manifest. This is demonstrated in
+<xref ref="DRILLRollesLemma1">Drill</xref> below.
+</p>
+
+
+<exercise xml:id="DRILLRollesLemma1">
+<introduction>
+<p>
+</p>
+</introduction>
+<task>
+<statement>
+<p>
+ Sketch the graph of a function (different from the one in
+         our sketch) which satisfies all of the conditions of Rolle's
+         Lemma and convince yourself that the conclusion of  Rolle's
+         Lemma must still  be
+         true.
+       </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ Show that the condition that <m>f</m> is continuous on <m>[a,b]</m>
+         is necessary by sketching the graph of a function which
+         violates only that  condition and the conclusion of Rolle's
+         Lemma.
+       </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ Show that the condition that <m>f</m> is differentiable on
+         <m>(a,b)</m> is necessary by sketching the graph of a function
+         which violates only that condition and the conclusion of
+         Rolle's Lemma.
+       </p>
+</statement>
+</task>
+</exercise>
+<!-- begin{ProficiencyDrill-enumerate} -->
+ <!--  <!-\- \label{drill:RollesLemma1} -\-> -->
+ <!--       \begin{enumerate}[label={  (\alph*)}]  -->
+ <!--       \item Sketch the graph of a function (different from the one in -->
+ <!--         our sketch) which satisfies all of the conditions of Rolle's -->
+ <!--         Lemma and convince yourself that the conclusion of  Rolle's -->
+ <!--         Lemma must still  be -->
+ <!--         true. -->
+ <!--       \item Show that the condition that <m>f</m> is continuous on <m>[a,b]</m> -->
+ <!--         is necessary by sketching the graph of a function which -->
+ <!--         violates only that  condition and the conclusion of Rolle's -->
+ <!--         Lemma. -->
+ <!--       \item Show that the condition that <m>f</m> is differentiable on -->
+ <!--         <m>(a,b)</m> is necessary by sketching the graph of a function -->
+ <!--         which violates only that condition and the conclusion of -->
+ <!--         Rolle's Lemma. -->
+ <!--       \end{enumerate} -->
+ <!--     \end{ProficiencyDrill-enumerate} -->
+
+
+
+<proof>
+<title>Proof of Roll<rsq/>s Lemma</title>
+<p>
+  By The Extreme Value Theorem (<xref ref="THEOREMmax-min">Theorem</xref>) there is are points 
+  <m>\alpha</m> and <m>\beta</m> in the interval <m>[a,b]</m>, such that  <m>f(\alpha)</m> is a global
+  maximum, and  <m>f(\beta)</m> is a global minimum.
+  
+  There are two possibilities for <m>\alpha</m> and <m>\beta</m>:
+         \begin{enumerate}%[label={  (\alph*)}] 
+  \item {  \boldmath Both <m>\alpha</m> and <m>\beta</m> are endpoints of the
+      interval}: In this case since <m>f(a)=f(b)</m> the global maximum
+    and the global minimum are equal. The only way that can happen is
+    if the function is constant on the interval <m>[a,b]</m>, and if <m>f</m> is
+    constant then <m>f^\prime(x)=0</m> for every <m>x</m> in the interval
+    <m>(a,b)</m>. So we take
+    <m>c</m> to be any point in <m>(a,b)</m>.
+  \item{  \boldmath  At least one of <m>\alpha</m> or <m>\beta</m> is not an
+      endpoint of the interval:} In this case by Fermat's Theorem,
+    either <m>f^\prime(\alpha)=0</m>, or <m>f^\prime(\beta)=0</m>. So we take
+    <m>c=\alpha</m> or <m>c=\beta</m> as appropriate.
+  \end{enumerate}
+  In either case the existence of <m>c</m> in the interval <m>(a,b)</m>, with
+  <m>f^\prime(c)=0</m> is guaranteed.
+</p>
+<p>
+<alert><m>\halmos</m></alert>
+</p>
+</proof>
+
+<theorem xml:id="THEOREMMVT">
+<title>The Mean Value Theorem</title>
+<p>
+  Suppose <m>f(x)</m> is continuous on some closed interval, <m>[a,b]</m>, and
+<m>f</m> is  differentiable on <m>(a,b)</m>. Then there is at least one number
+  <m>c</m> in the open interval <m>(a,b)</m> such that
+  <me>
+    f^\prime(c)=\frac{f(b)-f(a)}{b-a}.\label{eq:MVT}
+  </me>
+</p>
+</theorem>
+
+<investigation>
+<p>
+The Mean Value Theorem (visualized at the left) says that there is a
+point <m>c</m>, in the interval <m>(a,b)</m> such that the tangent line at <m>c</m>
+and the line through <m>(a,f(a)</m> and <m>(b,f(b))</m> are parallel. Thus in
+the special case where <m>f(a)=f(b)</m> the Mean Value Theorem reduces to
+Rolle's Lemma.  In other words the Mean Value Theorem is a
+generalization of Rolle's Lemma.
+</p>
+<figure>
+<caption>
+This figure needs a caption.</caption>
+<image source="images/mvt4.png" width="50%"/>
+</figure>
+<!-- \begin{wrapfigure}[8]{l}{2in} -->
+<!--   \captionsetup{labelformat=empty} -->
+<!--   \centerline{\includegraphics*[height=.9in,width=2.2in]{../Figures/mvt4}} -->
+<!--   \label{fig:mvt3} -->
+<!-- \end{wrapfigure} -->
+<p>
+We said we would use Rolle's Lemma to prove the Mean Value Theorem. To
+do that we'll need to create a function -- we'll call it <m>\phi(x)</m> --
+that satisfies all of the conditions of Rolle's Lemma .  From the
+diagram at the left we have <me>\phi(x)=f(x)-L(x).</me> Do you see that
+<m>\phi(x)</m> is the function we need?
+</p>
+</investigation>
+
+
+<exercise>
+<statement>
+<p>
+  Show that <m>L(x) = \frac{f(b)-f(a)}{b-a}(x-a)+f(a)</m>.
+  \hint{<m>L(x)</m> is a straight line and we have the coordinates of two
+    points, <m>(a,f(a))</m> and <m>(b,f(b))</m> on the line.}
+</p>
+</statement>
+</exercise>
+
+<problem xml:id="PROBLEMrolles-lemma-mean-2">
+<introduction>
+<p>
+  Show that <m>\phi(x)=f(x)-L(x)</m> from the diagram above satisfies all
+  of the conditions of Rolle's Lemma. That is, show that:
+</p>
+</introduction>
+<task>
+<statement>
+<p>
+ <m>\phi(x)</m> is continuous on <m>[a,b]</m>.
+  </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>\phi(x)</m> is differentiable on <m>(a,b)</m>.
+  </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ <m>\phi(a)=\phi(b)=0</m>
+</p>
+</statement>
+</task>
+</problem>
+<!-- \begin{embeddedproblem} -->
+<!--   <!-\- \label{problem:rolles-lemma-mean-2} -\-> -->
+<!--   Show that <m>\phi(x)=f(x)-L(x)</m> from the diagram above satisfies all -->
+<!--   of the conditions of Rolle's Lemma. That is, show that: -->
+<!--          \begin{enumerate}[label={  (\alph*)}]  -->
+<!--   \item <m>\phi(x)</m> is continuous on <m>[a,b]</m>. -->
+<!--   \item <m>\phi(x)</m> is differentiable on <m>(a,b)</m>. -->
+<!--   \item <m>\phi(a)=\phi(b)=0</m> -->
+<!-- \end{enumerate} -->
+<!-- \end{embeddedproblem} -->
+
+  
+<proof>
+<title>Proof of the Mean Value Theorem</title>
+<p>
+
+  Observe that
+  <me>
+  \phi(x)=f(x)-\frac{f(b)-f(a)}{b-a}(x-a)+f(a)
+  </me>
+  satisfies all of the conditions of Rolle's Lemma. Therefore, by Rolle's Lemma there is a point <m>c</m>, between
+  <m>a</m> and <m>b</m> such that <m> \phi^\prime(c)=0</m>. Therefore
+  <me>
+  f^\prime(c) -\frac{f(b)-f(a)}{b-a} =0
+  </me>
+  and so
+  <me>
+  f^\prime(c) = \frac{f(b)-f(a)}{b-a},
+  </me>
+  which
+  completes the proof.
+</p>
+<p>
+<alert><m>\halmos</m></alert>
+</p>
+</proof>
+
+
+<p>
+
+As we mentioned at the beginning of this chapter in French the Mean
+Value Theorem is known as the <foreign>théorème des accroissements
+  finis</foreign> or literally the <q>theorem of the finite increments.</q>
+</p>
+<p>
+
+To see why this is an accurate description let <m>y=f(x)</m>. Then
+<m>f(b)-f(a) = \Delta y</m> and <m>b-a=\Delta x</m>. So we can re-express
+<xref ref="EQMVT">Equation~</xref>) as <m>\Delta y=f^\prime(c)\Delta x</m>. In this
+form it is clear that the Mean Value Theorem relates the finite
+increments <m>\Delta y</m> and <m>\Delta x</m> to the instantaneous rate of
+change <m>f^\prime(c)</m>.
+</p>
+<p>
+
+The English name, <q>Mean Value Theorem</q> comes from interpreting the
+derivative as an instantaneous velocity. If <m>t</m> represents time and
+<m>p(t)</m> represents position at time <m>t</m>, then <m>\frac{p(b)-p(a)}{b-a}</m>
+is the average velocity in the time interval <m>[a,b]</m>. Since
+<m>p^\prime(c)</m> is instantaneous velocity at time <m>c</m>, the conclusion of
+the Mean Value Theorem is that at some point in that interval,
+instantaneous velocity must match average (mean) velocity. For
+example, if you travel <m>50</m> miles in one hour then your average
+velocity is <m>50\frac{\text{miles}}{\text{hour}}</m>. But it is unlikely
+that you traveled at exactly <m>50\frac{\text{miles}}{\text{hour}}</m> for
+the entire hour. However, at one instant (possibly more) you had to have
+been traveling at exactly <m>50\frac{\text{miles}}{\text{hour}}</m>. This
+is the Mean Value Theorem. It provides the bridge we need to get from
+infinitesimals to finite intervals.
+</p>
+
+
+</section>
+<section xml:id="SECTIONfirst-deriv-test">
+<title>The Proof of the First Derivative Test</title>
+
+<p>
+
+We stated <xref ref="THEOREMFDT">Theorem</xref> in <xref ref="CHAPTERwhat-deriv-tells">Chapter</xref>
+without stating the conditions that make it true, because at the time
+our attention was primarily on using it.
+</p>
+<p>
+
+Since the focus of our attention here is on what makes the First
+Derivative Test true we will restate it to reflect our new, and
+deeper, understanding. Notice that the conclusion is the same, only
+the conditions have changed.
+</p>
+
+<theorem xml:id="THEOREMFDTproved">
+<title>First Derivative Test</title>
+<p>
+  Suppose <m>f(x)</m> is continuous on the interval <m>[\alpha,\beta]</m>, and
+  differentiable on the interval <m>(\alpha,\beta)</m>. Suppose further
+  that  both <m>a</m> and <m>b</m> are in the interval
+  <m>[\alpha,\beta]</m> and <m>b\gt a</m>.
+  \begin{enumerate}[label={  (\alph*)}]
+  \item If <m>f^\prime(x)\gt 0</m> on the interval <m>(\alpha,\beta)</m> then
+    <m>f(b)\gt f(a)</m>. (That is, the function is increasing on <m>[\alpha,\beta]</m>.)
+  \item If <m>f^\prime(x)\lt 0</m> on the interval <m>(\alpha,\beta)</m> then
+    <m>f(b)\lt f(a)</m>. (That is, the function is decreasing on <m>[\alpha,\beta]</m>.)
+  \end{enumerate}
+</p>
+</theorem>
+
+
+<proof>
+<title>Proof of Part (a)</title>
+<p>
+  We want to use the Mean Value Theorem  on the interval <m>[a,b]</m> so we begin by
+  verifying that the conditions of the Mean Value Theorem  are
+  satisfied on that interval.  
+  Observe that <m>[a,b]</m> is a subinterval of <m>[\alpha,\beta]</m> so <m>f(x)</m>
+  is continuous on <m>[a,b]</m> and differentiable on <m>(a,b)</m>.
+  
+  By the Mean Value Theorem there is a number, <m>c</m>, in the interval <m>(a,b)</m> such that
+  \begin{align*}
+    \frac{f(b)-f(a)}{b-a} \amp= f^\prime(c)
+    f(b)-f(a) \amp= f^\prime(c)(b-a).
+  \end{align*}
+  Since both  <m>b-a\gt 0</m> and <m>f^\prime(c)\gt 0</m> are
+    positive, <m>f(b)-f(a)</m> must be positive as well. Therefore
+    <me>f(b)-f(a) \gt  0 \text{ or } 
+    f(b)\gt f(a).</me>
+</p>
+<p>
+<alert><m>\halmos</m></alert>
+</p>
+</proof>
+
+
+
+<problem>
+<introduction>
+<p>
+  Prove part (b) of the First Derivative Test in two different ways:
+</p>
+</introduction>
+<task>
+<statement>
+<p>
+ By modifying our proof of part (a) of the First Derivative
+    Test as needed.
+  </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ Let <m>g(x)=-f(x)</m> and apply part (a) of this
+    problem. 
+    \comment{Don't forget to show first that <m>g(x)</m>
+      satisfies the conditions of the Mean Value Theorem.}
+  </p>
+</statement>
+</task>
+</problem>
+<!-- \begin{embeddedproblem} -->
+<!--   Prove part (b) of the First Derivative Test in two different ways: -->
+<!--   \begin{enumerate}[label={  (\alph*)}] -->
+<!--   \item By modifying our proof of part (a) of the First Derivative -->
+<!--     Test as needed. -->
+<!--   \item Let <m>g(x)=-f(x)</m> and apply part (a) of this -->
+<!--     problem.  -->
+<!--     \comment{Don't forget to show first that <m>g(x)</m> -->
+<!--       satisfies the conditions of the Mean Value Theorem.} -->
+<!--   \end{enumerate} -->
+<!-- \end{embeddedproblem} -->
+<p>
+While we are in this frame of mind, we'll take a moment to notice that
+we can use the Mean Value Theorem  to prove, rigorously, something that we have
+alluded to a few times but have never addressed directly.  It is clear
+from our differentiation rules that if two functions differ by a
+constant, then they have the same derivative.  We've mentioned that
+the converse is true, namely if two functions have the same derivative
+on an interval then they must differ by a constant. %  For example, see
+This can be proved in a
+manner similar to the proof above.
+</p>
+<problem xml:id="PROBLEMDervEqZeroImpliesConstant">
+<introduction>
+<p>
+</p>
+</introduction>
+<task>
+<statement>
+<p>
+ Suppose <m>f^\prime(x)=0</m> on the interval <m>(\alpha,\beta)</m> and
+    that <m>a</m> and  <m>b</m> are two points in that interval.  Use an
+    argument similar to the proof of the first derivative test to show
+    that <m>f(a)=f(b)</m>.
+  </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ Explain how the result of part (a) says that <m>f(x)</m> must be
+    constant on <m>(\alpha, \beta)</m>.
+  </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ Show that if <m>f^\prime(x)=g^\prime(x)</m> on the interval
+    <m>(\alpha,\beta)</m>, then <me>f(x)=g(x)+c</me> for some constant <m>c</m>.
+    \hint{Consider the function <m>F(x)=f(x)-g(x)</m>.}    
+  </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ What can be said if <m>f^\prime(x)=g^\prime(x)</m> for all <m>x</m> in
+    some set <m>S</m> which is not an interval?
+  </p>
+</statement>
+</task>
+</problem>
+<!-- \begin{embeddedproblem-enumerate} -->
+<!-- <!-\- \label{problem:DervEqZeroImpliesConstant} -\-> -->
+<!--   \begin{enumerate}[label={  (\alph*)}]  -->
+<!--   \item Suppose <m>f^\prime(x)=0</m> on the interval <m>(\alpha,\beta)</m> and -->
+<!--     that <m>a</m> and  <m>b</m> are two points in that interval.  Use an -->
+<!--     argument similar to the proof of the first derivative test to show -->
+<!--     that <m>f(a)=f(b)</m>. -->
+<!--   \item Explain how the result of part (a) says that <m>f(x)</m> must be -->
+<!--     constant on <m>(\alpha, \beta)</m>. -->
+<!--   \item Show that if <m>f^\prime(x)=g^\prime(x)</m> on the interval -->
+<!--     <m>(\alpha,\beta)</m>, then <me>f(x)=g(x)+c</me> for some constant <m>c</m>. -->
+<!--     \hint{Consider the function <m>F(x)=f(x)-g(x)</m>.}     -->
+<!--   \item What can be said if <m>f^\prime(x)=g^\prime(x)</m> for all <m>x</m> in -->
+<!--     some set <m>S</m> which is not an interval? -->
+<!--   \end{enumerate} -->
+<!-- \end{embeddedproblem-enumerate} -->
+<p>
+We did not prove  \lhop 's Rule
+(<xref ref="THEOREMLHRuleGen">Theorem</xref>) in <xref ref="CHAPTERlimits-lhop-rule">Chapter</xref>
+because the general theorem is slightly beyond the scope of this
+text. But the somewhat simpler first special case,
+<xref ref="THEOREMLHRule1">Theorem</xref>, is a straightforward consequence of  the
+Mean Value Theorem.
+</p>
+
+<problem>
+<introduction>
+<p>
+</p>
+</introduction>
+<task>
+<statement>
+<p>
+ Under the conditions of <xref ref="THEOREMLHRule1"></xref>
+    explain why
+    <me>
+    \limit{x}{a}{\frac{f(x)}{g(x)}}=\limit{x}{a}{\frac{f(x)-f(a)}{g(x)-g(a)}}
+    </me>
+  </p>
+</statement>
+</task>
+<task>
+<statement>
+<p>
+ Apply the Mean Value Theorem to the numerator and
+    denominator in part (a) and then prove <xref ref="THEOREMLHRule1">~</xref>.
+    \hint{Use the fact that  in the statement of <xref ref="THEOREMMVT">~</xref> <m>c</m> is between
+      <m>a</m> and <m>b</m>.}
+  </p>
+</statement>
+</task>
+</problem>
+<!-- \begin{embeddedproblem-enumerate} -->
+<!--   \begin{enumerate}[label={  (\alph*)}]  -->
+<!--   \item Under the conditions of <xref ref="THEOREMLHRule1"></xref> -->
+<!--     explain why -->
+<!--     <me> -->
+<!--     \limit{x}{a}{\frac{f(x)}{g(x)}}=\limit{x}{a}{\frac{f(x)-f(a)}{g(x)-g(a)}} -->
+<!--     </me> -->
+<!--   \item Apply the Mean Value Theorem to the numerator and -->
+<!--     denominator in part (a) and then prove <xref ref="THEOREMLHRule1">~</xref>. -->
+<!--     \hint{Use the fact that  in the statement of <xref ref="THEOREMMVT">~</xref> <m>c</m> is between -->
+<!--       <m>a</m> and <m>b</m>.} -->
+<!--   \end{enumerate} -->
+<!-- \end{embeddedproblem-enumerate} -->
+
+
+
+</section>
+</chapter>
