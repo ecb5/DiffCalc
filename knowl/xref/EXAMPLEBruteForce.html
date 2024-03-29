@@ -11,10 +11,32 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="example example-like"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.28</span><span class="period">.</span><span class="space"> </span><span class="title">Brute Force Computation.</span>
-</h6> <div class="para logical">
-<div class="para">Suppose and we wish to find <span class="process-math">\(\dx{y}\)</span> when <span class="process-math">\(y=5(x^2+x)^3\)</span> One way to do this is simple brute force. That is, we compute \begin{align*} y=5\textcolor{red}{(x^2+x)^3} \amp = 5\textcolor{red}{(x^6+3x^5+3x^4+x^3)} = 5x^6+15x^5+15x^4+5x^3. \intertext{Applying the Sum Rule we see that} \dx y \amp = \dx \left(5x^6\right)+\dx \left(15x^5\right)+\dx \left(15x^4\right)+\dx \left(5x^3\right). \intertext{Next we use the Constant Multiple Rule, to get} \dx y \amp = 5\dx \left(x^6\right)+15\dx \left(x^5\right)+15\dx \left(x^4\right)+5\dx \left(x^3\right). \intertext{Finally, we use the Power Rule four times to get} \dx y \amp = 30x^5\dx x+75x^4\dx x+60x^3\dx x+15x^2\dx x. \dx y \amp = (30x^5+75x^4+60x^3+15x^2)\dx x. \end{align*} In the end we have,</div>
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.31</span><span class="period">.</span><span class="space"> </span><span class="title">Brute Force Computation.</span>
+</h4> <div class="para logical">
+<div class="para">Suppose we wish to find <span class="process-math">\(\dx{y}\)</span> when <span class="process-math">\(y=5(x^2+x)^3\text{.}\)</span> One way to do this is simple brute force. That is, we compute</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y=5\textcolor{red}{(x^2+x)^3} = 5\textcolor{red}{(x^6+3x^5+3x^4+x^3)}
+= 5x^6+15x^5+15x^4+5x^3.
+\end{equation*}
+</div>
+<div class="para">Applying the Sum Rule we see that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dx y  = \dx \left(5x^6\right)+\dx \left(15x^5\right)+\dx
+\left(15x^4\right)+\dx \left(5x^3\right).
+\end{equation*}
+</div>
+<div class="para">Next we use the Constant Multiple Rule, to get</div>
+<div class="displaymath process-math">
+\begin{align*}
+\dx y \amp{} = 5\dx \left(x^6\right)+15\dx \left(x^5\right)+15\dx
+\left(x^4\right)+5\dx \left(x^3\right).\\
+\dx y \amp = 30x^5\dx x+75x^4\dx x+60x^3\dx x+15x^2\dx x.
+\end{align*}
+</div>
+<div class="para">In the end we have,</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \dx{y}= (30x^5+75x^4+60x^3+15 x^2)\dx{x}.
@@ -27,6 +49,6 @@
 \dx y = 15(x^2+x)^2(2x+1)\dx x.
 \end{equation*}
 </div>
-</div></article><span class="incontext"><a class="internal" href="CHAPTdifferentials.html#EXAMPLEBruteForce">in-context</a></span>
+</div></article><span class="incontext"><a class="internal" href="CHAPTERdifferentials.html#EXAMPLEBruteForce">in-context</a></span>
 </body>
 </html>

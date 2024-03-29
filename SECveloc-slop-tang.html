@@ -107,11 +107,24 @@ window.MathJax = {
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="CHAPTdifferentials.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="FromPractice.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="CHAcalc-trig.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\def\abs#1{\left|#1\right|}
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="CHAPTERdifferentials.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="FromPractice.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="CHAPTERcalc-trig.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\def\abs#1{\left|#1\right|}
+\def\CancelToRed#1#2{\textcolor{red}{{\cancelto{#1}{#2}}}}
+\def\approach#1{{\left(\rightarrow{}#1\right)}}
+\def\halmos{\rule[-.1ex]{8pt}{2ex}}
+
+\def\limitX#1#2#3#4{{\displaystyle\lim_{\underset{#4}{#1\rightarrow #2}}#3}}
+\def\tlimitX#1#2#3#4{{\displaystyle\lim_{\underset{#4}{#1\rightarrow #2}}}#3}
+\def\rlimit#1#2#3{{\limitX{#1}{#2}{#3}{#1\gt{}#2}{}}}
+\def\rtlimit#1#2#3{{\tlimitX{#1}{#2}{#3}{#1\gt{}#2}{}}}
+\def\llimit#1#2#3{{\limitX{#1}{#2}{#3}{#1\lt{}#2}{}}}
+\def\ltlimit#1#2#3{{\tlimitX{#1}{#2}{#3}{#1\lt{}#2}{}}}
+
+\newcommand{\eps}{\varepsilon}
 \newcommand{\RR}{\mathbb {R}}
 \newcommand{\QQ}{\mathbb {Q}}
 \newcommand{\NN}{\mathbb {N}}
 \newcommand{\ZZ}{\mathbb {Z}}
+
 \newcommand{\ParamEqTwo}[2]
 {
   \left\{
@@ -127,10 +140,16 @@ window.MathJax = {
     \begin{array}{c}
     {#1}\\
     {#2}\\
-    {#3}n
+    {#3}
     \end{array}
   \right\}
 }
+
+\def\absALT#1{\rule[-.7ex]{1pt}{5ex}\hskip2pt#1\hskip2pt\llap{\rule[-.7ex]{1pt}{5ex}}} 
+
+
+\def\sech{{\rm{}sech}{}}
+\def\csch{{\rm{}csch}{}}
 
 
 \def\DD{{\bf{}D}}
@@ -140,7 +159,7 @@ window.MathJax = {
 \def\eval#1#2#3{#1\hskip.5ex{\llap{\rule[-1.5ex]{0.5pt}{4ex}}_{\raise{-1.5ex}{\hskip.5ex#2=#3}}}}
 \def\dispeval#1#2#3{#1\hskip.5ex{\llap{\smash{\rule[-2ex]{0.5pt}{5ex}}}_{\raise{-2ex}{\hskip.5ex#2=#3}}}}
 
-
+\def\geneval#1#2{\left.#1\right|_{#2}}
 
 \def\bigeval#1#2#3{\eval{#2}{#2}{#3}}
 
@@ -189,68 +208,46 @@ window.MathJax = {
 <ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-chapter"><div class="toc-title-box"><a href="CalculusIsARock.html" class="internal"><span class="codenumber">1</span> <span class="title">Calculus is a Rock</span></a></div></li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="CHAproblem-solving.html" class="internal"><span class="codenumber">2</span> <span class="title">Introduction: Some  Advice on Problem Solving</span></a></div>
+<div class="toc-title-box"><a href="CHAPTERproblem-solving.html" class="internal"><span class="codenumber">2</span> <span class="title">Introduction: Some  Advice on Problem Solving</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAproblem-solving.html#SECusing-lett-inst" class="internal"><span class="codenumber">2.1</span> <span class="title">Using Letters Instead of Numbers</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAproblem-solving.html#SECan-easy-problem-alg" class="internal"><span class="codenumber">2.2</span> <span class="title">Substitution, or Making Things “Easy on the Eyes”</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAproblem-solving.html#SECan-easy-problem-geo" class="internal"><span class="codenumber">2.3</span> <span class="title">An “Easy” Problem From Geometry</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAproblem-solving.html#SECour-advice-synopsis" class="internal"><span class="codenumber">2.4</span> <span class="title">Our advice, a synopsis</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERproblem-solving.html#SECusing-lett-inst" class="internal"><span class="codenumber">2.1</span> <span class="title">Using Letters Instead of Numbers</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERproblem-solving.html#SECTIONAn-easy-problem-alg" class="internal"><span class="codenumber">2.2</span> <span class="title">Substitution, or Making Things “Easy on the Eyes”</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERproblem-solving.html#SECan-easy-problem-geo" class="internal"><span class="codenumber">2.3</span> <span class="title">An “Easy” Problem From Geometry</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERproblem-solving.html#SECour-advice-synopsis" class="internal"><span class="codenumber">2.4</span> <span class="title">Our advice, a synopsis</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html" class="internal"><span class="codenumber">3</span> <span class="title">Science Before Calculus</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#Apologia" class="internal"><span class="codenumber">3.1</span> <span class="title">Apologia</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#no-label" class="internal"><span class="codenumber">3.2</span> <span class="title">Some Preliminaries</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#SECTIONSomePreliminaries" class="internal"><span class="codenumber">3.2</span> <span class="title">Some Preliminaries</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#sec-laziness-nature" class="internal"><span class="codenumber">3.3</span> <span class="title">The Laziness of Nature</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#SECTIONFermMethAedeq" class="internal"><span class="codenumber">3.4</span> <span class="title">Fermat’s Method of Adequality</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#SECTIONdescartes-normals" class="internal"><span class="codenumber">3.5</span> <span class="title">Descartes’s Method of Normals</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#sec-laziness-nature" class="internal"><span class="codenumber">3.3</span> <span class="title">The Laziness of Nature</span></a></div>
+<div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#SECTIONroberv-conic-sect" class="internal"><span class="codenumber">3.6</span> <span class="title">Roberval, Conic Sections, and the Dynamic Approach</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#subsection-" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Nature is Lazy</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#Digress-VarConstFunc-" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Digression: Variables, Constants, and Functions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#subsection-" class="internal"><span class="codenumber">3.3.3</span> <span class="title">After Digression</span></a></div></li>
-</ul>
-</li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#sec:ferm-meth-aedeq" class="internal"><span class="codenumber">3.4</span> <span class="title">Fermat’s Method of Adequality</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#sec:descartes-normals" class="internal"><span class="codenumber">3.5</span> <span class="title">Descartes’s Method of Normals</span></a></div></li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#sec:roberv-conic-sect" class="internal"><span class="codenumber">3.6</span> <span class="title">Roberval, Conic Sections, and the Dynamic Approach</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#no-label" class="internal"><span class="codenumber">3.6.1</span> <span class="title">Speed, Velocity, and Rates of Change</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#SUBSECTIONSpdVelRofC" class="internal"><span class="codenumber">3.6.1</span> <span class="title">Speed, Velocity, and Rates of Change</span></a></div></li>
 <li class="toc-item toc-subsection">
-<div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#no-label" class="internal"><span class="codenumber">3.6.2</span> <span class="title">The Tangent Lines of the Conic Sections</span></a></div>
+<div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#SUBSECTIONTanConicSect" class="internal"><span class="codenumber">3.6.2</span> <span class="title">The Tangent Lines of the Conic Sections</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#no-label" class="internal"><span class="codenumber">3.6.2.1</span> <span class="title">The Tangent to a Parabola</span></a></div></li>
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#no-label" class="internal"><span class="codenumber">3.6.2.2</span> <span class="title">The Tangent to an Ellipse</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#SUBSECTIONTanParab" class="internal"><span class="codenumber">3.6.2.1</span> <span class="title">The Tangent to a Parabola</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#SUBSECTIONTanEllipse" class="internal"><span class="codenumber">3.6.2.2</span> <span class="title">The Tangent to an Ellipse</span></a></div></li>
 <li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#TangentHyperbola" class="internal"><span class="codenumber">3.6.2.3</span> <span class="title">The Tangent to an Hyperbola</span></a></div></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#sec:snells-law-refr" class="internal"><span class="codenumber">3.7</span> <span class="title">Snell’s Law and the Limitations of Adequality:</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#SECTIONsnells-law-refr" class="internal"><span class="codenumber">3.7</span> <span class="title">Snell’s Law and the Limitations of Adequality:</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="CHAPTdifferentials.html" class="internal"><span class="codenumber">4</span> <span class="title">Differentials, Differentiation, and the Derivative</span></a></div>
+<div class="toc-title-box"><a href="CHAPTERdifferentials.html" class="internal"><span class="codenumber">4</span> <span class="title">Differentials, Differentiation, and the Derivative</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTdifferentials.html#sec:hist-intr" class="internal"><span class="codenumber">4.1</span> <span class="title">Historical Introduction</span></a></div></li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAPTdifferentials.html#sec:some-rules-diff" class="internal"><span class="codenumber">4.2</span> <span class="title">The General Differentiation Rules</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTdifferentials.html#no-label" class="internal"><span class="codenumber">4.2.1</span> <span class="title">Warning: Be Sure You Understand  the Purpose of This Chapter.</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTdifferentials.html#no-label" class="internal"><span class="codenumber">4.2.2</span> <span class="title">Differentials</span></a></div></li>
-<li class="toc-item toc-subsection">
-<div class="toc-title-box"><a href="CHAPTdifferentials.html#no-label" class="internal"><span class="codenumber">4.2.3</span> <span class="title">The General Differentiation Rules</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTdifferentials.html#no-label-3" class="internal"><span class="codenumber">4.2.3.1</span> <span class="title">The Constant Rule</span></a></div></li>
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTdifferentials.html#no-label-4" class="internal"><span class="codenumber">4.2.3.2</span> <span class="title">The Constant Multiple Rule</span></a></div></li>
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTdifferentials.html#no-label-5" class="internal"><span class="codenumber">4.2.3.3</span> <span class="title">The Product Rule</span></a></div></li>
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTdifferentials.html#no-label-6" class="internal"><span class="codenumber">4.2.3.4</span> <span class="title">The Power  Rule for Positive Integers</span></a></div></li>
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTdifferentials.html#no-label" class="internal"><span class="codenumber">4.2.3.5</span> <span class="title">The General Power Rule</span></a></div></li>
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTdifferentials.html#SUBSUBQuotRule" class="internal"><span class="codenumber">4.2.3.6</span> <span class="title">The Quotient Rule</span></a></div></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERdifferentials.html#SECTIONHist-intr" class="internal"><span class="codenumber">4.1</span> <span class="title">Historical Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERdifferentials.html#SECTIONWarning" class="internal"><span class="codenumber">4.2</span> <span class="title">Warning: Be Sure You Understand  the Purpose of This Chapter</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERdifferentials.html#SECTIONsome-rules-diff" class="internal"><span class="codenumber">4.3</span> <span class="title">The General Differentiation Rules</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERdifferentials.html#CHAPTERdifferentials-5" class="internal"><span class="codenumber">4.4</span> <span class="title">The Generalized Power  Rule</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter active">
@@ -268,202 +265,192 @@ window.MathJax = {
 <div class="toc-title-box"><a href="SECveloc-slop-tang.html#sec:self-inters-curv" class="internal"><span class="codenumber">5.9</span> <span class="title">Self-intersecting Curves and Parametric Equations</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#no-label" class="internal"><span class="codenumber">5.9.1</span> <span class="title">Parametric Functions</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="SECveloc-slop-tang.html#sec:bridg-chains-telesc" class="internal"><span class="codenumber">5.10</span> <span class="title">Bridges, Chains, Domes, and Telescopes</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#no-label" class="internal"><span class="codenumber">5.10.1</span> <span class="title">Bridges</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#no-label" class="internal"><span class="codenumber">5.10.2</span> <span class="title">Chains</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#no-label" class="internal"><span class="codenumber">5.10.3</span> <span class="title">Domes</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECveloc-slop-tang.html#no-label" class="internal"><span class="codenumber">5.10.4</span> <span class="title">Telescopes</span></a></div></li>
-</ul>
-</li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="CHAcalc-trig.html" class="internal"><span class="codenumber">6</span> <span class="title">Calculus and Trigonometry</span></a></div>
+<div class="toc-title-box"><a href="CHAPTERcalc-trig.html" class="internal"><span class="codenumber">6</span> <span class="title">Calculus and Trigonometry</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAcalc-trig.html#subsec:trig-interl" class="internal"><span class="codenumber">6.1</span> <span class="title">A Trigonometric Interlude</span></a></div>
+<div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SECTIONtrig-interl" class="internal"><span class="codenumber">6.1</span> <span class="title">A Trigonometric Interlude</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#subsec:radian-measure" class="internal"><span class="codenumber">6.1.1</span> <span class="title">Radian Measure</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SUBSECTIONradian-measure" class="internal"><span class="codenumber">6.1.1</span> <span class="title">Radian Measure</span></a></div></li>
 <li class="toc-item toc-subsection">
-<div class="toc-title-box"><a href="CHAcalc-trig.html#no-label" class="internal"><span class="codenumber">6.1.2</span> <span class="title">The Trigonometric Functions</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#no-label" class="internal"><span class="codenumber">6.1.2.1</span> <span class="title">The Sine Function</span></a></div></li></ul>
+<div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SECTIONtrig-interl-4" class="internal"><span class="codenumber">6.1.2</span> <span class="title">The Trigonometric Functions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SECTIONtrig-interl-4-3" class="internal"><span class="codenumber">6.1.2.1</span> <span class="title">The Sine Function</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:model-with-trig" class="internal"><span class="codenumber">6.1.3</span> <span class="title">Modeling with Trigonometric Functions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#no-label" class="internal"><span class="codenumber">6.1.4</span> <span class="title">Phase Shifts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SUBSECTIONmodel-with-trig" class="internal"><span class="codenumber">6.1.3</span> <span class="title">Modeling with Trigonometric Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SECTIONtrig-interl-6" class="internal"><span class="codenumber">6.1.4</span> <span class="title">Phase Shifts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SECTIONpolar-coordinates" class="internal"><span class="codenumber">6.1.5</span> <span class="title">Polar Coordinates</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:polar-coordinates" class="internal"><span class="codenumber">6.2</span> <span class="title">Polar Coordinates</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAcalc-trig.html#sec:diff-sine-cosine" class="internal"><span class="codenumber">6.3</span> <span class="title">The Differentials of the Sine and Cosine Functions</span></a></div>
+<div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SECTIONdiff-sine-cosine" class="internal"><span class="codenumber">6.2</span> <span class="title">The Differentials of the Sine and Cosine Functions</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:polar-coord-calc" class="internal"><span class="codenumber">6.3.1</span> <span class="title">Polar Coordinates and Calculus</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#no-label" class="internal"><span class="codenumber">6.3.2</span> <span class="title">The Brachistochrone Problem</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#no-label" class="internal"><span class="codenumber">6.3.3</span> <span class="title">Spin Casting, Redux</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:simple-harm-oscill" class="internal"><span class="codenumber">6.3.4</span> <span class="title">Simple Harmonic Oscillation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SUBSECTIONCircularMotion" class="internal"><span class="codenumber">6.2.1</span> <span class="title">Circular Motion</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SUBSECTIONpolar-coord-calc" class="internal"><span class="codenumber">6.2.2</span> <span class="title">Polar Coordinates and Calculus</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SECTIONdiff-sine-cosine-5" class="internal"><span class="codenumber">6.2.3</span> <span class="title">The Brachistochrone Problem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SECTIONdiff-sine-cosine-6" class="internal"><span class="codenumber">6.2.4</span> <span class="title">Spin Casting, Redux</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SUBSECTIONsimple-harm-oscill" class="internal"><span class="codenumber">6.2.5</span> <span class="title">Simple Harmonic Oscillation</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAcalc-trig.html#subsec:diff-other-trig" class="internal"><span class="codenumber">6.4</span> <span class="title">The Differentials of the Other Trigonometric Functions</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:inverse-tan-and-cot" class="internal"><span class="codenumber">6.5</span> <span class="title">The Inverse Tangent and Cotangent Functions</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:witch-agnesi-inverse" class="internal"><span class="codenumber">6.6</span> <span class="title">The Witch of Agnesi and the Inverse Tangent Function</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAcalc-trig.html#SECTIONSECTIONdiff-inverse-tancot" class="internal"><span class="codenumber">6.7</span> <span class="title">The Differentials of the Inverse Tangent and Inverse Cotangent Functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SECTIONdiff-other-trig" class="internal"><span class="codenumber">6.3</span> <span class="title">The Differentials of the Other Trigonometric Functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SECTIONinverse-tan-and-cot" class="internal"><span class="codenumber">6.4</span> <span class="title">The Inverse Tangent and Cotangent Functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SECTIONwitch-agnesi-inverse" class="internal"><span class="codenumber">6.5</span> <span class="title">The Witch of Agnesi and the Inverse Tangent Function</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SECTIONdiff-inverse-tancot" class="internal"><span class="codenumber">6.6</span> <span class="title">The Differentials of the Inverse Tangent and Inverse Cotangent Functions</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAcalc-trig.html#sec:other-inverse-trig" class="internal"><span class="codenumber">6.8</span> <span class="title">The Other Inverse Trigonometric Functions</span></a></div>
+<div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SECTIONother-inverse-trig" class="internal"><span class="codenumber">6.7</span> <span class="title">The Other Inverse Trigonometric Functions</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#no-label" class="internal"><span class="codenumber">6.8.1</span> <span class="title">The Inverse Sine Function: \boldmath <span class="process-math">\(\inverse\sin(x)\)</span></span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAcalc-trig.html#no-label" class="internal"><span class="codenumber">6.8.2</span> <span class="title">The Inverse Secant and Inverse Cosecant</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#InverseSine" class="internal"><span class="codenumber">6.7.1</span> <span class="title">The Inverse Sine Function: \boldmath <span class="process-math">\(\inverse\sin(x)\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#InverseSecCsc" class="internal"><span class="codenumber">6.7.2</span> <span class="title">The Inverse Secant and Inverse Cosecant</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAcalc-trig.html#sec:curvature" class="internal"><span class="codenumber">6.9</span> <span class="title">Curvature</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SECTIONcurvature" class="internal"><span class="codenumber">6.8</span> <span class="title">Curvature</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="CHAPTApproximation.html" class="internal"><span class="codenumber">7</span> <span class="title">Approximation Methods</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAPTApproximation.html#sec:newtons-method" class="internal"><span class="codenumber">7.1</span> <span class="title">Root Finding: Two  Pre-Calculus Approaches</span></a></div>
+<div class="toc-title-box"><a href="CHAPTApproximation.html#SECTIONnewtons-method" class="internal"><span class="codenumber">7.1</span> <span class="title">Root Finding: Two  Pre-Calculus Approaches</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTApproximation.html#no-label" class="internal"><span class="codenumber">7.1.1</span> <span class="title">The Bisection Method</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTApproximation.html#no-label" class="internal"><span class="codenumber">7.1.2</span> <span class="title">The Babylonian Method for Square Roots</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTApproximation.html#SUBSECTIONBisectionMethod" class="internal"><span class="codenumber">7.1.1</span> <span class="title">The Bisection Method</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTApproximation.html#SUBSECTIONBabylonianMethod" class="internal"><span class="codenumber">7.1.2</span> <span class="title">The Babylonian Method for Square Roots</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAPTApproximation.html#sec:newtons-method-1" class="internal"><span class="codenumber">7.2</span> <span class="title">Newton’s Method</span></a></div>
+<div class="toc-title-box"><a href="CHAPTApproximation.html#SECTIONnewtons-method-1" class="internal"><span class="codenumber">7.2</span> <span class="title">Newton’s Method</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTApproximation.html#no-label" class="internal"><span class="codenumber">7.2.1</span> <span class="title">Spectacular Failure</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTApproximation.html#no-label" class="internal"><span class="codenumber">7.2.2</span> <span class="title">Subtle Failure</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTApproximation.html#SUBSECTIONNewtonsMethodBasic" class="internal"><span class="codenumber">7.2.1</span> <span class="title">The Idea Behind Newton’s Method</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTApproximation.html#SUBSECTIONSpectacularFailure" class="internal"><span class="codenumber">7.2.2</span> <span class="title">Spectacular Failure</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTApproximation.html#SUBSECTIONSubtleFailure" class="internal"><span class="codenumber">7.2.3</span> <span class="title">Subtle Failure</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTApproximation.html#sec:eulers-method" class="internal"><span class="codenumber">7.3</span> <span class="title">Euler’s Method</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTApproximation.html#sec:more-high-deriv" class="internal"><span class="codenumber">7.4</span> <span class="title">Higher Derivatives, Lagrange, and Taylor</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTApproximation.html#SECTIONeulers-method" class="internal"><span class="codenumber">7.3</span> <span class="title">Euler’s Method</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTApproximation.html#SECTIONmore-high-deriv" class="internal"><span class="codenumber">7.4</span> <span class="title">Higher Derivatives, Lagrange, and Taylor</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="CHAlast-elem-funct.html" class="internal"><span class="codenumber">8</span> <span class="title">Exponentials and Logarithms</span></a></div>
+<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html" class="internal"><span class="codenumber">8</span> <span class="title">Exponentials and Logarithms</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAlast-elem-funct.html#no-label" class="internal"><span class="codenumber">8.1</span> <span class="title">Introduction</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAlast-elem-funct.html#no-label" class="internal"><span class="codenumber">8.1.1</span> <span class="title">Initial Value Problems (IVPs)</span></a></div></li></ul>
+<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#CHAPTERlast-elem-funct-2" class="internal"><span class="codenumber">8.1</span> <span class="title">Introduction</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONIvps" class="internal"><span class="codenumber">8.1.1</span> <span class="title">Initial Value Problems (IVPs)</span></a></div></li></ul>
 </li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONexponential" class="internal"><span class="codenumber">8.2</span> <span class="title">The Natural Exponential</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONexponential-growth" class="internal"><span class="codenumber">8.3</span> <span class="title">Exponential Growth and Exponential Notation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONhyperb-trig-hang" class="internal"><span class="codenumber">8.4</span> <span class="title">Hyperbolic Trigonometry: The Hanging Chain</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONGatewayArch" class="internal"><span class="codenumber">8.5</span> <span class="title">The Gateway Arch</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#CHAPTERlast-elem-funct-7" class="internal"><span class="codenumber">8.6</span> <span class="title">Exponential Growth</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONExpAndCmpndInt" class="internal"><span class="codenumber">8.7</span> <span class="title">Exponential Functions and Compound Interest</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAlast-elem-funct.html#sec:exponential" class="internal"><span class="codenumber">8.2</span> <span class="title">The Natural Exponential</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAlast-elem-funct.html#sec:hyperb-trig-hang" class="internal"><span class="codenumber">8.2.1</span> <span class="title">Hyperbolic Trigonometry: The Hanging Chain</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAlast-elem-funct.html#no-label" class="internal"><span class="codenumber">8.2.2</span> <span class="title">The Gateway Arch</span></a></div></li>
-</ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAlast-elem-funct.html#sec:exponential-growth" class="internal"><span class="codenumber">8.3</span> <span class="title">Exponential Growth</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAlast-elem-funct.html#no-label" class="internal"><span class="codenumber">8.3.1</span> <span class="title">Exponential Functions and Compound Interest</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAlast-elem-funct.html#sec:natural-logarithm-1" class="internal"><span class="codenumber">8.4</span> <span class="title">The Natural Logarithm</span></a></div>
+<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONnatural-logarithm-1" class="internal"><span class="codenumber">8.8</span> <span class="title">The Natural Logarithm</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection">
-<div class="toc-title-box"><a href="CHAlast-elem-funct.html#no-label" class="internal"><span class="codenumber">8.4.1</span> <span class="title">John Napier Logs In</span></a></div>
+<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONNapier" class="internal"><span class="codenumber">8.8.1</span> <span class="title">John Napier Logs In</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAlast-elem-funct.html#subsec:radioactive-decay" class="internal"><span class="codenumber">8.4.1.1</span> <span class="title">Radioactive Dating</span></a></div></li>
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAlast-elem-funct.html#subsec:newtons-law-cooling" class="internal"><span class="codenumber">8.4.1.2</span> <span class="title">\underline{Chillin’ with Newton: The Law of Cooling</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONNapier-2" class="internal"><span class="codenumber">8.8.1.1</span> <span class="title">A Short Introduction to Logarithms</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSUBSECTIONradioactive-decay" class="internal"><span class="codenumber">8.8.1.2</span> <span class="title">Radioactive Dating</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSUBSECTIONnewtons-law-cooling" class="internal"><span class="codenumber">8.8.1.3</span> <span class="title">Chillin’ with Newton: The Law of Cooling</span></a></div></li>
 </ul>
 </li></ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAlast-elem-funct.html#no-label" class="internal"><span class="codenumber">8.5</span> <span class="title">The Derivative of the Natural Logarithm</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONDerivNatLog" class="internal"><span class="codenumber">8.9</span> <span class="title">The Derivative of the Natural Logarithm</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAlast-elem-funct.html#sec:gener-logar-expon" class="internal"><span class="codenumber">8.6</span> <span class="title">General Logarithms and Exponentials</span></a></div>
+<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONgener-logar-expon" class="internal"><span class="codenumber">8.10</span> <span class="title">General Logarithms and Exponentials</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAlast-elem-funct.html#no-label" class="internal"><span class="codenumber">8.6.1</span> <span class="title">General Exponentials</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAlast-elem-funct.html#no-label" class="internal"><span class="codenumber">8.6.2</span> <span class="title">General Logarithms</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAlast-elem-funct.html#no-label" class="internal"><span class="codenumber">8.6.3</span> <span class="title">Logarithmic Differentiation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONGenExp" class="internal"><span class="codenumber">8.10.1</span> <span class="title">General Exponentials</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONGenLog" class="internal"><span class="codenumber">8.10.2</span> <span class="title">General Logarithms</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONLogDiff" class="internal"><span class="codenumber">8.10.3</span> <span class="title">Logarithmic Differentiation</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAlast-elem-funct.html#sec:leonh-euler-harm" class="internal"><span class="codenumber">8.7</span> <span class="title">Leonhard Euler, Harmonic Oscillators, and Complex Numbers</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAlast-elem-funct.html#no-label" class="internal"><span class="codenumber">8.7.1</span> <span class="title">How Euler Did It</span></a></div></li></ul>
-</li>
-</ul>
-</li>
-<li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="CHAwhat-deriv-tells.html" class="internal"><span class="codenumber">9</span> <span class="title">Optimization: Going to Extremes</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAwhat-deriv-tells.html#sec:introduction" class="internal"><span class="codenumber">9.1</span> <span class="title">Introduction</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAwhat-deriv-tells.html#sec:five-simil-probl" class="internal"><span class="codenumber">9.2</span> <span class="title">Preliminaries: Some Simple Optimizations</span></a></div></li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAwhat-deriv-tells.html#sec:refl-refr-rainb" class="internal"><span class="codenumber">9.3</span> <span class="title">Reflections, Refractions, and Rainbows</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAwhat-deriv-tells.html#subsec:reflection" class="internal"><span class="codenumber">9.3.1</span> <span class="title">Reflection</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAwhat-deriv-tells.html#subsec:refraction" class="internal"><span class="codenumber">9.3.2</span> <span class="title">Refraction: Snell’s Law</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAwhat-deriv-tells.html#subsec:rainbows" class="internal"><span class="codenumber">9.3.3</span> <span class="title">Rainbows</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAwhat-deriv-tells.html#no-label" class="internal"><span class="codenumber">9.3.4</span> <span class="title">The Colors of the Rainbow</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAwhat-deriv-tells.html#no-label" class="internal"><span class="codenumber">9.3.5</span> <span class="title">Double Rainbows</span></a></div></li>
-</ul>
-</li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAwhat-deriv-tells.html#sec:more-optimal-squares" class="internal"><span class="codenumber">9.4</span> <span class="title">Global vs. Local Extrema</span></a></div></li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAwhat-deriv-tells.html#subsec:optim-abstr-probl" class="internal"><span class="codenumber">9.5</span> <span class="title">Optimization, the Abstract Problem</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAwhat-deriv-tells.html#no-label" class="internal"><span class="codenumber">9.5.1</span> <span class="title">Identifying and Distinguishing Maxima and Minima</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAwhat-deriv-tells.html#no-label" class="internal"><span class="codenumber">9.5.2</span> <span class="title">Transition Points, and Possible Transition Points on Open Intervals</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAwhat-deriv-tells.html#subsec:underl-deriv" class="internal"><span class="codenumber">9.5.3</span> <span class="title">Undefined Derivatives</span></a></div></li>
-</ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAwhat-deriv-tells.html#sec:conc-second-deriv-1" class="internal"><span class="codenumber">9.6</span> <span class="title">Concavity and the Second Derivative Test</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAwhat-deriv-tells.html#sec:conc-second-deriv" class="internal"><span class="codenumber">9.6.1</span> <span class="title">The Second Derivative Test</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAwhat-deriv-tells.html#sec:optim-probl" class="internal"><span class="codenumber">9.7</span> <span class="title">Optimization Problems</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAwhat-deriv-tells.html#no-label" class="internal"><span class="codenumber">9.7.1</span> <span class="title">Second Solution:</span></a></div></li></ul>
+<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONleonh-euler-harm" class="internal"><span class="codenumber">8.11</span> <span class="title">Leonhard Euler, Harmonic Oscillators, and Complex Numbers</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONHowEulerDidIt" class="internal"><span class="codenumber">8.11.1</span> <span class="title">How Euler Did It</span></a></div></li></ul>
 </li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="CHAPTshape-things.html" class="internal"><span class="codenumber">10</span> <span class="title">Graphing with Calculus</span></a></div>
+<div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html" class="internal"><span class="codenumber">9</span> <span class="title">Optimization: Going to Extremes</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTshape-things.html#sec:graph-with-form" class="internal"><span class="codenumber">10.1</span> <span class="title">Graphing with a Formula for \boldmath <span class="process-math">\(y(x)\)</span></span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTshape-things.html#sec:graph-without-form" class="internal"><span class="codenumber">10.2</span> <span class="title">Graphing Without Formulas</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SECTIONintroduction" class="internal"><span class="codenumber">9.1</span> <span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SECTIONfive-simil-probl" class="internal"><span class="codenumber">9.2</span> <span class="title">Preliminaries: Some Simple Optimizations</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAPTshape-things.html#SECTION" class="internal"><span class="codenumber">10.3</span> <span class="title">Graphing with a Formula for  <span class="process-math">\(\dfdx{y}{x}\)</span></span></a></div>
+<div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SECTIONrefl-refr-rainb" class="internal"><span class="codenumber">9.3</span> <span class="title">Reflections, Refractions, and Rainbows</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTshape-things.html#SUBSECTION" class="internal"><span class="codenumber">10.3.1</span> <span class="title">When  <span class="process-math">\(\dfdx{y}{x}\)</span> Depends on <span class="process-math">\(x\)</span> alone</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTshape-things.html#SUBSECTION" class="internal"><span class="codenumber">10.3.2</span> <span class="title">When  <span class="process-math">\(\dfdx{y}{t}\)</span> depends on <span class="process-math">\(y\)</span> alone</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSECTIONreflection" class="internal"><span class="codenumber">9.3.1</span> <span class="title">Reflection</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSECTIONrefraction" class="internal"><span class="codenumber">9.3.2</span> <span class="title">Refraction: Snell’s Law</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSECTIONrainbows" class="internal"><span class="codenumber">9.3.3</span> <span class="title">Rainbows</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSECTIONRainbow" class="internal"><span class="codenumber">9.3.4</span> <span class="title">The Colors of the Rainbow</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSECTIONDoubleRainbows" class="internal"><span class="codenumber">9.3.5</span> <span class="title">Double Rainbows</span></a></div></li>
 </ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SECTIONmore-optimal-squares" class="internal"><span class="codenumber">9.4</span> <span class="title">Global vs. Local Extrema</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSECTIONoptim-abstr-probl" class="internal"><span class="codenumber">9.5</span> <span class="title">Optimization, the Abstract Problem</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSECTIONoptim-abstr-probl-3" class="internal"><span class="codenumber">9.5.1</span> <span class="title">Identifying and Distinguishing Maxima and Minima</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSECTIONTransitionPoints" class="internal"><span class="codenumber">9.5.2</span> <span class="title">Transition Points, and Possible Transition Points on Open Intervals</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSECTIONunderl-deriv" class="internal"><span class="codenumber">9.5.3</span> <span class="title">Undefined Derivatives</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSECTIONoptim-clos-interv" class="internal"><span class="codenumber">9.5.4</span> <span class="title">Transition Points on a Closed Interval; the Problem of Endpoints</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SECTIONconc-second-deriv-1" class="internal"><span class="codenumber">9.6</span> <span class="title">Concavity and the Second Derivative Test</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSECTIONconc-second-deriv" class="internal"><span class="codenumber">9.6.1</span> <span class="title">The Second Derivative Test</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SECTIONoptim-probl" class="internal"><span class="codenumber">9.7</span> <span class="title">Optimization Problems</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSECTIONOptSecondSolution" class="internal"><span class="codenumber">9.7.1</span> <span class="title">Second Solution:</span></a></div></li></ul>
 </li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="CHAmodel-with-calc.html" class="internal"><span class="codenumber">11</span> <span class="title">Modeling with Calculus</span></a></div>
+<div class="toc-title-box"><a href="CHAPTERPTshape-things.html" class="internal"><span class="codenumber">10</span> <span class="title">Graphing with Calculus</span></a></div>
 <ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTshape-things.html#SECTIONgraph-with-form" class="internal"><span class="codenumber">10.1</span> <span class="title">Graphing with a Formula for \boldmath <span class="process-math">\(y(x)\)</span></span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTshape-things.html#SECTIONgraph-without-form" class="internal"><span class="codenumber">10.2</span> <span class="title">Graphing Without Formulas</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAmodel-with-calc.html#sec:population-dynamics" class="internal"><span class="codenumber">11.1</span> <span class="title">Population Dynamics</span></a></div>
+<div class="toc-title-box"><a href="CHAPTERPTshape-things.html#SECTIONGraphingWithDeriv" class="internal"><span class="codenumber">10.3</span> <span class="title">Graphing with a Formula for  <span class="process-math">\(\dfdx{y}{x}\)</span></span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAmodel-with-calc.html#no-label" class="internal"><span class="codenumber">11.1.1</span> <span class="title">Modeling a Trout Farm</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAmodel-with-calc.html#sec:little-healthy-comp" class="internal"><span class="codenumber">11.1.2</span> <span class="title">The Competing Species Model</span></a></div></li>
-</ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAmodel-with-calc.html#sec:select-model-probl" class="internal"><span class="codenumber">11.2</span> <span class="title">Selected Modeling Problems</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAmodel-with-calc.html#sec:epidemic-blues:-sir" class="internal"><span class="codenumber">11.2.1</span> <span class="title">Epidemics, The SIR Model</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAmodel-with-calc.html#subsec:tractrix" class="internal"><span class="codenumber">11.2.2</span> <span class="title">The Tractrix</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAmodel-with-calc.html#subsec:pursuit" class="internal"><span class="codenumber">11.2.3</span> <span class="title">The  Pursuit Problem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTshape-things.html#SUBSECTIONDerivDepOnxAlone" class="internal"><span class="codenumber">10.3.1</span> <span class="title">When  <span class="process-math">\(\dfdx{y}{x}\)</span> Depends on <span class="process-math">\(x\)</span> alone</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTshape-things.html#SUBSECTIONDfdxDependsOnYAlone" class="internal"><span class="codenumber">10.3.2</span> <span class="title">When  <span class="process-math">\(\dfdx{y}{t}\)</span> depends on <span class="process-math">\(y\)</span> alone</span></a></div></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="CHAlimits-lhop-rule.html" class="internal"><span class="codenumber">12</span> <span class="title">Limits and L’H\^o pital’s Rule</span></a></div>
+<div class="toc-title-box"><a href="CHAPTERmodel-with-calc.html" class="internal"><span class="codenumber">11</span> <span class="title">Modeling with Calculus</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAlimits-lhop-rule.html#sec:horiz-asympt-as" class="internal"><span class="codenumber">12.1</span> <span class="title">Horizontal Asymptotes as Limits ``at Infinity’’</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAlimits-lhop-rule.html#digression:LimitNotation" class="internal"><span class="codenumber">12.1.1</span> <span class="title">Limit Notation</span></a></div></li></ul>
+<div class="toc-title-box"><a href="CHAPTERmodel-with-calc.html#SECTIONpopulation-dynamics" class="internal"><span class="codenumber">11.1</span> <span class="title">Population Dynamics</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERmodel-with-calc.html#SUBSECTIONModelingTrout" class="internal"><span class="codenumber">11.1.1</span> <span class="title">Modeling a Trout Farm</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERmodel-with-calc.html#SECTIONlittle-healthy-comp" class="internal"><span class="codenumber">11.1.2</span> <span class="title">The Competing Species Model</span></a></div></li>
+</ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAlimits-lhop-rule.html#sec:squeeze-theorem-informal" class="internal"><span class="codenumber">12.2</span> <span class="title">The Squeeze Theorem</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAlimits-lhop-rule.html#subsec:vertical-asymptotes" class="internal"><span class="codenumber">12.3</span> <span class="title">Vertical Asymptotes</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAlimits-lhop-rule.html#sec:more-indet-forms" class="internal"><span class="codenumber">12.4</span> <span class="title">Indeterminate Forms and L’H\^o pital’s Rule</span></a></div>
+<div class="toc-title-box"><a href="CHAPTERmodel-with-calc.html#SECTIONselect-model-probl" class="internal"><span class="codenumber">11.2</span> <span class="title">Selected Modeling Problems</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAlimits-lhop-rule.html#SUBSECTION" class="internal"><span class="codenumber">12.4.1</span> <span class="title">L’H\^{o}pital’s Rule</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAlimits-lhop-rule.html#subsec:lhop-rule-horiz" class="internal"><span class="codenumber">12.4.2</span> <span class="title">L’H\^o pital’s Rule and Horizontal Asymptotes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERmodel-with-calc.html#SECTIONepidemic-blues" class="internal"><span class="codenumber">11.2.1</span> <span class="title">Epidemics, The SIR Model</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERmodel-with-calc.html#subSECTIONtractrix" class="internal"><span class="codenumber">11.2.2</span> <span class="title">The Tractrix</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERmodel-with-calc.html#SUBSECTIONPursuit" class="internal"><span class="codenumber">11.2.3</span> <span class="title">The  Pursuit Problem</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTERlimits-lhop-rule.html" class="internal"><span class="codenumber">12</span> <span class="title">Limits and L’Hôpital’s Rule</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERlimits-lhop-rule.html#SECTIONhoriz-asympt-as" class="internal"><span class="codenumber">12.1</span> <span class="title">Horizontal Asymptotes as Limits “at Infinity”</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlimits-lhop-rule.html#DIGRESSIONLimitNotation" class="internal"><span class="codenumber">12.1.1</span> <span class="title">Limit Notation</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlimits-lhop-rule.html#SECTIONsqueeze-theorem-informal" class="internal"><span class="codenumber">12.2</span> <span class="title">The Squeeze Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlimits-lhop-rule.html#SECTIONvertical-asymptotes" class="internal"><span class="codenumber">12.3</span> <span class="title">Vertical Asymptotes</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERlimits-lhop-rule.html#SECTIONmore-indet-forms" class="internal"><span class="codenumber">12.4</span> <span class="title">Indeterminate Forms and L’Hôpital’s Rule</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlimits-lhop-rule.html#SUBSECTIONLHopitalsRule" class="internal"><span class="codenumber">12.4.1</span> <span class="title">L’Hôpital’s Rule</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlimits-lhop-rule.html#SUBSECTIONlhop-rule-horiz" class="internal"><span class="codenumber">12.4.2</span> <span class="title">L’Hôpital’s Rule and Horizontal Asymptotes</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -474,63 +461,52 @@ window.MathJax = {
 <div class="toc-title-box"><a href="ToTheory.html" class="internal"><span class="codenumber">II</span> <span class="title">To Theory . . .</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="WhasWrong.html" class="internal"><span class="codenumber">13</span> <span class="title">What’s Wrong with Differentials?</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="WhasWrong.html#CalcAndBerkeley" class="internal"><span class="codenumber">13.1</span> <span class="title">Calculus and Bishop Berkeley</span></a></div></li></ul>
+<div class="toc-title-box"><a href="CHAPTERWhatsWrong.html" class="internal"><span class="codenumber">13</span> <span class="title">What’s Wrong with Differentials?</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERWhatsWrong.html#CalcAndBerkeley" class="internal"><span class="codenumber">13.1</span> <span class="title">Calculus and Bishop Berkeley</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERWhatsWrong.html#sec:secants-tangents" class="internal"><span class="codenumber">13.2</span> <span class="title">Secants and Tangents</span></a></div></li>
+</ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="CHAdiff-rules-with-limits.html" class="internal"><span class="codenumber">14</span> <span class="title">The Differentiation Rules via Limits</span></a></div>
+<div class="toc-title-box"><a href="CHAPTERdiff-rules-with-limits.html" class="internal"><span class="codenumber">14</span> <span class="title">The Differentiation Rules via Limits</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAdiff-rules-with-limits.html#sec:limit-theorems-laws" class="internal"><span class="codenumber">14.1</span> <span class="title">The Limit Rules (Theorems)</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAdiff-rules-with-limits.html#sec:limit-comp-cont" class="internal"><span class="codenumber">14.1.1</span> <span class="title">The Limit of a Composition and Continuity at a Point</span></a></div></li></ul>
+<div class="toc-title-box"><a href="CHAPTERdiff-rules-with-limits.html#SECTIONlimit-theorems-laws" class="internal"><span class="codenumber">14.1</span> <span class="title">The Limit Rules (Theorems)</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERdiff-rules-with-limits.html#SUBSECTIONlimit-comp-cont" class="internal"><span class="codenumber">14.1.1</span> <span class="title">The Limit of a Composition and Continuity at a Point</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAdiff-rules-with-limits.html#sec:diff-rules-via" class="internal"><span class="codenumber">14.2</span> <span class="title">The General Differentiation Theorems, via Limits</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAdiff-rules-with-limits.html#no-label" class="internal"><span class="codenumber">14.3</span> <span class="title">The Chain Rule</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAdiff-rules-with-limits.html#subsec:product-rule-limits" class="internal"><span class="codenumber">14.4</span> <span class="title">The Product Rule</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAdiff-rules-with-limits.html#sec:other-gener-diff" class="internal"><span class="codenumber">14.5</span> <span class="title">The Other General Differentiation Rules</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAdiff-rules-with-limits.html#sec:diff-trig-funct" class="internal"><span class="codenumber">14.6</span> <span class="title">Derivatives of the Trigonometric Functions, via Limits</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAdiff-rules-with-limits.html#sec:inverse-functions" class="internal"><span class="codenumber">14.7</span> <span class="title">Inverse Functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERdiff-rules-with-limits.html#SECTIONdiff-rules-via" class="internal"><span class="codenumber">14.2</span> <span class="title">The General Differentiation Theorems, via Limits</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERdiff-rules-with-limits.html#SECTIONChainRule" class="internal"><span class="codenumber">14.3</span> <span class="title">The Chain Rule</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERdiff-rules-with-limits.html#SECTIONproduct-rule-limits" class="internal"><span class="codenumber">14.4</span> <span class="title">The Product Rule</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERdiff-rules-with-limits.html#SECTIONother-gener-diff" class="internal"><span class="codenumber">14.5</span> <span class="title">The Other General Differentiation Rules</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERdiff-rules-with-limits.html#SECTIONdiff-trig-funct" class="internal"><span class="codenumber">14.6</span> <span class="title">Derivatives of the Trigonometric Functions, via Limits</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERdiff-rules-with-limits.html#SECTIONinverse-functions" class="internal"><span class="codenumber">14.7</span> <span class="title">Inverse Functions</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="CHAPTERFDT-Redux.html" class="internal"><span class="codenumber">15</span> <span class="title">The First Derivative Test, Redux</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERFDT-Redux.html#sec:fermats-theorem" class="internal"><span class="codenumber">15.1</span> <span class="title">Fermat’s Theorem</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERFDT-Redux.html#sec:rolles-lemma-mean" class="internal"><span class="codenumber">15.2</span> <span class="title">Rolle’s Lemma and the Mean Value Theorem</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERFDT-Redux.html#sec:first-deriv-test" class="internal"><span class="codenumber">15.3</span> <span class="title">The Proof of the First Derivative Test</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERFDT-Redux.html#SECTIONfermats-theorem" class="internal"><span class="codenumber">15.1</span> <span class="title">Fermat’s Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERFDT-Redux.html#SECTIONrolles-lemma-mean" class="internal"><span class="codenumber">15.2</span> <span class="title">Rolle’s Lemma and the Mean Value Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERFDT-Redux.html#SECTIONfirst-deriv-test" class="internal"><span class="codenumber">15.3</span> <span class="title">The Proof of the First Derivative Test</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="CHPTwhen-deriv-doesnt.html" class="internal"><span class="codenumber">16</span> <span class="title">When the Derivative Doesn’t Exist</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="CHPTwhen-deriv-doesnt.html#sec:one-sided-deriv" class="internal"><span class="codenumber">16.1</span> <span class="title">One Sided Derivatives</span></a></div></li></ul>
+<div class="toc-title-box"><a href="CHAPTERwhen-deriv-doesnt.html" class="internal"><span class="codenumber">16</span> <span class="title">When the Derivative Doesn’t Exist</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERwhen-deriv-doesnt.html#SECTIONone-sided-deriv" class="internal"><span class="codenumber">16.1</span> <span class="title">One Sided Derivatives</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="CHAformal-limits.html" class="internal"><span class="codenumber">17</span> <span class="title">Formal Limits</span></a></div>
+<div class="toc-title-box"><a href="CHAPTERformal-limits.html" class="internal"><span class="codenumber">17</span> <span class="title">Formal Limits</span></a></div>
 <ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SECTIONlimits-at-infinity" class="internal"><span class="codenumber">17.1</span> <span class="title">Getting Around Infinity</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SECTIONlimits-at-real" class="internal"><span class="codenumber">17.2</span> <span class="title">Limits at a Real Number</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAformal-limits.html#sec:limits-at-infinity" class="internal"><span class="codenumber">17.1</span> <span class="title">Getting Around Infinity</span></a></div>
+<div class="toc-title-box"><a href="CHAPTERformal-limits.html#SECTIONLimitLaws" class="internal"><span class="codenumber">17.3</span> <span class="title">Limit Laws (Theorems)</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAformal-limits.html#SUBSECTIONEpsDelt1" class="internal"><span class="codenumber">17.1.1</span> <span class="title">The Infinitely Large</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAformal-limits.html#SUBSECTION" class="internal"><span class="codenumber">17.1.2</span> <span class="title">The Infinitely Small</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAformal-limits.html#sec:convincing-skeptic" class="internal"><span class="codenumber">17.1.3</span> <span class="title">Convincing Berkeley</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAformal-limits.html#no-label" class="internal"><span class="codenumber">17.1.4</span> <span class="title">Refining the Definition</span></a></div></li>
-</ul>
-</li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAformal-limits.html#sec:limits-at-real" class="internal"><span class="codenumber">17.2</span> <span class="title">Limits at a Real Number</span></a></div></li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAformal-limits.html#sec:LimitLaws" class="internal"><span class="codenumber">17.3</span> <span class="title">Limit Laws (Theorems)</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAformal-limits.html#subsec:limit-sum-at" class="internal"><span class="codenumber">17.3.1</span> <span class="title">The Limit of a Sum</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAformal-limits.html#sec:squeeze-theorem" class="internal"><span class="codenumber">17.3.2</span> <span class="title">The Squeeze Theorem</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAformal-limits.html#sec:limit-composition" class="internal"><span class="codenumber">17.3.3</span> <span class="title">The Limit of a Composition</span></a></div></li>
-<li class="toc-item toc-subsection">
-<div class="toc-title-box"><a href="CHAformal-limits.html#sec:limit-product-at" class="internal"><span class="codenumber">17.3.4</span> <span class="title">The Limit of a Product</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAformal-limits.html#no-label" class="internal"><span class="codenumber">17.3.4.1</span> <span class="title">Proving <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "LEMMAlemma:LimProd1" missing or not unique]</code></span></a></div></li>
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAformal-limits.html#no-label" class="internal"><span class="codenumber">17.3.4.2</span> <span class="title">Proving <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "LEMMAlemma:LimProd2" missing or not unique]</code></span></a></div></li>
-</ul>
-</li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAformal-limits.html#no-label" class="internal"><span class="codenumber">17.3.5</span> <span class="title">The Function  \boldmath  <span class="process-math">\(f(x)=\frac1x\)</span> is Continuous Wherever  It Is Defined</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONlimit-sum-at" class="internal"><span class="codenumber">17.3.1</span> <span class="title">The Limit of a Sum</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONsqueeze-theorem" class="internal"><span class="codenumber">17.3.2</span> <span class="title">The Squeeze Theorem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SECTIONlimit-composition" class="internal"><span class="codenumber">17.3.3</span> <span class="title">The Limit of a Composition</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONlimit-product-at" class="internal"><span class="codenumber">17.3.4</span> <span class="title">The Limit of a Product</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONOneOverXIsCont" class="internal"><span class="codenumber">17.3.5</span> <span class="title">The Function    <span class="process-math">\(f(x)=\frac1x\)</span> is Continuous Wherever  It Is Defined</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -770,7 +746,7 @@ y=\frac12x+\frac14 + (x-1)^2(x-2)^2(x-3)^2(x-4)^2.
 </div></article></article><article class="problem example-like" id="problem:ClassicalCurves1"><h4 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">5.14</span><span class="period">.</span>
 </h4>
-<div class="introduction" id="problem:ClassicalCurves1-1"><div class="para" id="problem:ClassicalCurves1-1-1"> Find an equation of the line(s) tangent to and normal to each of the given curves at the specified points. (You have seen all of these curves previously in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "DRILLClassicalCurves" missing or not unique]</code>)</div></div>
+<div class="introduction" id="problem:ClassicalCurves1-1"><div class="para" id="problem:ClassicalCurves1-1-1"> Find an equation of the line(s) tangent to and normal to each of the given curves at the specified points. (You have seen all of these curves previously in <a href="" class="xref" data-knowl="./knowl/xref/DRILLClassicalCurves.html" title="Drill 4.52">Drill~\ 4.52</a>)</div></div>
 <article class="task exercise-like" id="problem:ClassicalCurves1-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
 <div class="para" id="problem:ClassicalCurves1-2-1-1">
 <a class="external" href="https://mathshistory.st-andrews.ac.uk/Curves/Astroid/" target="_blank">Astroid</a><a class="xref" id="problem:ClassicalCurves1-2-1-1-2" href="" data-knowl="./knowl/fn/problem:ClassicalCurves1-2-1-1-2.html" title="Footnote 5.2"><sup> 2 </sup></a>: <span class="process-math">\(x^\frac23+y^\frac23 = 4\)</span> at <span class="process-math">\(\left(1,3\sqrt{3}\right)\)</span> and <span class="process-math">\(\left(-1,-3\sqrt{3}\right).\)</span>
@@ -1059,7 +1035,7 @@ y=Ax^2+x+7000.
 <td class="c m b0 r0 l0 t0 lines">9.799</td>
 </tr>
 </table></div></figure><div class="para" id="sec:rates-change-29">Referring to the diagram above, it is clear that when <span class="process-math">\(\theta=\pi/2\)</span> --&gt; the ball won’t move at all. So its acceleration is zero. When <span class="process-math">\(\theta=0\)</span> the ball accelerates downward freely under the influence of gravity with no resistance Galileo measured the acceleration associated with steeper and steeper ramps (that is for <span class="process-math">\(\theta\)</span> closer and closer to zero) obtaining a table of values similar to the one at the left.</div>
-<aside class="aside aside-like" id="sec:rates-change-30"><div class="para" id="sec:rates-change-30-1">Notice that we are using radians to measure the angle. If you are unsure what a radian is we have a brief review of Trigonometry in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "SECTIONsubsec:trig-interl" missing or not unique]</code>.</div></aside><div class="para" id="sec:rates-change-31">For scientific computation radian measure is usually simplest, so we will use fairly consistently throughout this text. But degree measure is also common so it will occasionally make an appearance, like it did in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "PROBLEMFlightPath2" missing or not unique]</code>"&gt;.</div>
+<aside class="aside aside-like" id="sec:rates-change-30"><div class="para" id="sec:rates-change-30-1">Notice that we are using radians to measure the angle. If you are unsure what a radian is we have a brief review of Trigonometry in Section~(\ref{subsec:trig-interl}).</div></aside><div class="para" id="sec:rates-change-31">For scientific computation radian measure is usually simplest, so we will use fairly consistently throughout this text. But degree measure is also common so it will occasionally make an appearance, like it did in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "PROBLEMFlightPath2" missing or not unique]</code>"&gt;.</div>
 <aside class="aside aside-like" id="sec:rates-change-32"><div class="para" id="sec:rates-change-32-1">Or at least, very little.</div></aside><div class="para" id="sec:rates-change-33">From the table it is clear that as <span class="process-math">\(\theta\)</span> gets closer and closer to zero the acceleration is getting closer and closer to <span class="process-math">\(9.8.\)</span> Thus Galileo  deduced that when there is no ramp (when <span class="process-math">\(\theta =0\)</span>) the velocity will increase each second by <span class="process-math">\(9.8\frac{\text{meters}}{\text{second}}.\)</span>
 </div>
 <div class="para" id="sec:rates-change-34">That is, the velocity of an object falling under the influence of the earth’s gravity increases by <span class="process-math">\(9.8\)</span> meters per second, each second. This is usually abbreviated as <span class="process-math">\(9.8\frac{\text{meters}}{\text{second}^2}\text{,}\)</span> is commonly denoted by <span class="process-math">\(g\text{,}\)</span> and is called the <dfn class="terminology">constant of acceleration due to gravity</dfn>
@@ -1142,8 +1118,8 @@ v=9.8t
 </div>
 <article class="task exercise-like" id="problem:PositionVelocityAcceleration-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
 <div class="para logical" id="problem:PositionVelocityAcceleration-2-1-1">
-<div class="para">Show that <span class="process-math">\(p(t)=kt^2\)</span> satisfies <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQUATIONeq:GalileoDiffeq" missing or not unique]</code> when</div>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="para">Show that <span class="process-math">\(p(t)=kt^2\)</span> satisfies Equation~(\ref{eq:GalileoDiffeq}) when</div>
+<div class="displaymath process-math">
 \begin{equation*}
 k=4.9=\frac{g}{2}.
 \end{equation*}
@@ -1360,18 +1336,18 @@ y\amp =x^3\\
 <div class="para" id="no-label-4-1-1">
 <span class="process-math">\(y=\sqrt{x}\)</span> Compare this with part (b).</div></article><article class="task exercise-like" id="no-label-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
 <div class="para" id="no-label-5-1-1">
-<span class="process-math">\(xy=1\)</span> Compare this with <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EXAMPLEexample:HighOrderDerivs" missing or not unique]</code>. Which method do you prefer?</div></article><article class="task exercise-like" id="no-label-6"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<span class="process-math">\(xy=1\)</span> Compare this with Example~\#\ref{example:HighOrderDerivs}. Which method do you prefer?</div></article><article class="task exercise-like" id="no-label-6"><h5 class="heading"><span class="codenumber">(e)</span></h5>
 <div class="para" id="no-label-6-1-1"><span class="process-math">\(\frac{x^2+y}{3x+y^2}=x-y\)</span></div></article></article><article class="exercise exercise-like" id="EXERCISE"><h4 class="heading">
 <span class="type">Drill</span><span class="space"> </span><span class="codenumber">5.39</span><span class="period">.</span>
 </h4>
 <div class="introduction" id="EXERCISE-1"><div class="para logical" id="EXERCISE-1-1">
 <div class="para"> We know that it is not generally true that <span class="process-math">\(a^b=a\cdot b\)</span> even though there are certain exceptions, like <span class="process-math">\(a=b=1\text{,}\)</span> <span class="process-math">\(a=4\)</span> and <span class="process-math">\(b=1/2\text{,}\)</span> or <span class="process-math">\(a=b=2\text{.}\)</span> In the same way, even though the Product Rule makes it very clear that</div>
-<div class="displaymath process-math" data-contains-math-knowls="" id="EQUATIONNewbyError1">
+<div class="displaymath process-math" id="EQUATIONNewbyError1">
 \begin{equation}
 \dfdx{(y\cdot z)}{x}\neq  \dfdx{y}{x}\cdot\dfdx{z}{x}.\label{eq:NewbyError1}\tag{5.3}
 \end{equation}
 </div>
-<div class="para">there are certain pairs of functions which are exceptions; for which <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQUATIONeq:NewbyError1" missing or not unique]</code> \emph{is} true. For example, show that for each of the following it is true that <span class="process-math">\(\dfdx{(y\cdot z)}{x}= \dfdx{y}{x}\cdot\dfdx{z}{x}\text{.}\)</span>
+<div class="para">there are certain pairs of functions which are exceptions; for which Equation~(\ref{eq:NewbyError1}) \emph{is} true. For example, show that for each of the following it is true that <span class="process-math">\(\dfdx{(y\cdot z)}{x}= \dfdx{y}{x}\cdot\dfdx{z}{x}\text{.}\)</span>
 </div>
 </div></div>
 <article class="task exercise-like" id="EXERCISE-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
@@ -1414,7 +1390,7 @@ y\amp =x^3\\
 <div class="para" id="sec:newt-flux-dynam-2">If <span class="process-math">\(s(t)\)</span> represents the position of an object moving in a straight line we have seen that its velocity is given by <span class="process-math">\(\dfdx{s}{t}\text{.}\)</span> When the object is falling vertically we will use <span class="process-math">\(y(t)\)</span> to represent its vertical position, so that <span class="process-math">\(\dfdx{y}{t}\)</span> is its vertical velocity. Similarly if it is moving horizontally we will use <span class="process-math">\(x(t)\)</span> and <span class="process-math">\(\dfdx{x}{t}\text{.}\)</span>
 </div>
 <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/Helicopter3.png" class="contained"></div>
-<div class="para" id="sec:newt-flux-dynam-4">Recall that in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "PROBLEMHelicopterFall" missing or not unique]</code> we imagined releasing an object from a helicopter which is flying horizontally horizontally with a speed of <span class="process-math">\(\dfdx{x}{t}=1\frac{\text{meter}}{\text{second}}\text{.}\)</span> From Galileo’s work we now know that its vertical velocity will be <span class="process-math">\(\dfdx{y}{t}=9.8 t\, \frac{\text{meters}}{\text{second}}\text{.}\)</span>
+<div class="para" id="sec:newt-flux-dynam-4">Recall that in <a href="" class="xref" data-knowl="./knowl/xref/PROBLEMHelicopterFall.html" title="Problem 3.35">Problem 3.35</a> we imagined releasing an object from a helicopter which is flying horizontally horizontally with a speed of <span class="process-math">\(\dfdx{x}{t}=1\frac{\text{meter}}{\text{second}}\text{.}\)</span> From Galileo’s work we now know that its vertical velocity will be <span class="process-math">\(\dfdx{y}{t}=9.8 t\, \frac{\text{meters}}{\text{second}}\text{.}\)</span>
 </div>
 <div class="para" id="sec:newt-flux-dynam-5">After its release the ball will fall neither horizontally, nor vertically. It won’t even fall along a straight line. If we ignore air resistance then combination of the ball’s horizontal velocity (inherited from the helicopter) and its vertical velocity (due to the force of gravity) will cause the flight path, <span class="process-math">\(s(t)\text{,}\)</span> to curve into an arc similar to that shown in the figure at the right.</div>
 <article class="exercise exercise-like" id="no-label"><h4 class="heading">
@@ -1424,8 +1400,7 @@ y\amp =x^3\\
 <div class="para" id="sec:newt-flux-dynam-8">We’d like to find the <em class="emphasis">speed</em> of the object in the direction it is moving.  Referring to the differential triangle in our sketch it is clear that this will be <span class="process-math">\(\abs{\dfdx{s}{t}}\text{.}\)</span>  But how do we find <span class="process-math">\(\dfdx{s}{t}\text{?}\)</span>
 </div>
 <aside class="aside aside-like" id="sec:newt-flux-dynam-9"><h4 class="heading"><span class="title">Mathematical Notation.</span></h4>
-<div class="para" id="sec:newt-flux-dynam-9-2">The absolute value bars here are correct.  This has more to do with our vocabulary (speed vs. velocity) than with this physical problem. In general speed is always a positive number, while velocity can be negative or positive. We will discuss this in more depth in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "CHAPTERcha:calc-trig" missing or not unique]</code>
-</div></aside><div class="para logical" id="sec:newt-flux-dynam-10">
+<div class="para" id="sec:newt-flux-dynam-9-2">The absolute value bars here are correct.  This has more to do with our vocabulary (speed vs. velocity) than with this physical problem. In general speed is always a positive number, while velocity can be negative or positive. We will discuss this in more depth in Chapter~\ref{cha:calc-trig}</div></aside><div class="para logical" id="sec:newt-flux-dynam-10">
 <div class="para">Since <span class="process-math">\(\dx{x}\)</span> and <span class="process-math">\(\dx{y}\)</span> are perpendicular (they are displacements in the horizontal and vertical directions, respectively)  by the Pythagorean Theorem  we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1452,8 +1427,8 @@ y\amp =x^3\\
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">5.43</span><span class="period">.</span>
 </h4>
 <div class="introduction" id="problem:AirlinerSpeed-1"> <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/Descent2.png" class="contained"></div>       <div class="para logical" id="problem:AirlinerSpeed-1-2">
-<div class="para">Recall that in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "PROBLEMproblem:FlightPath1" missing or not unique]</code> we asked  you find the equation of this flight path from the data in the figure at the right. You should have found that</div>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="para">Recall that in Problem~\ref{problem:FlightPath1} we asked  you find the equation of this flight path from the data in the figure at the right. You should have found that</div>
+<div class="displaymath process-math">
 \begin{equation*}
 y=\frac{-2h}{l^3}x^3+\frac{3h}{l^2}x^2.
 \end{equation*}
@@ -1504,7 +1479,7 @@ y=\frac{-2h}{l^3}x^3+\frac{3h}{l^2}x^2.
 <article class="problem example-like" id="no-label"><h4 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">5.45</span><span class="period">.</span>
 </h4>
-<div class="introduction" id="no-label-1"><div class="para" id="no-label-1-1">The flight path  obtained <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "INproblem:FlightPath1" missing or not unique]</code> was <span class="process-math">\(y=\frac{-2h}{l^3}x^3+\frac{3h}{l^2}x^2 \text{.}\)</span> We need to put some limitations on the vertical acceleration, <span class="process-math">\(\dfdxn{y}{t}{2}\text{,}\)</span> experienced by the passengers in a commercial airliner. For simplicity assume that the pilot must maintain a constant horizontal speed of <span class="process-math">\(v\frac{\text{
+<div class="introduction" id="no-label-1"><div class="para" id="no-label-1-1">The flight path  obtained in Problem~\#\ref{problem:FlightPath1} was <span class="process-math">\(y=\frac{-2h}{l^3}x^3+\frac{3h}{l^2}x^2 \text{.}\)</span> We need to put some limitations on the vertical acceleration, <span class="process-math">\(\dfdxn{y}{t}{2}\text{,}\)</span> experienced by the passengers in a commercial airliner. For simplicity assume that the pilot must maintain a constant horizontal speed of <span class="process-math">\(v\frac{\text{
 meters}}{\text{second}}\text{.}\)</span> (That is, set  <span class="process-math">\(\dfdx{x}{t}=-v\text{.}\)</span>)</div></div>
 <article class="task exercise-like" id="no-label-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
 <div class="para logical" id="no-label-2-1-1">
@@ -1836,7 +1811,7 @@ y(t)=\frac{3t^2}{1+t^3}
 x=\frac{3t}{1+t^3},\text{ and } y=\frac{3t^2}{1+t^3}.
 \end{equation*}
 </div>
-</div> <div class="para" id="no-label-1-2">The difference between this problem and <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "PROBLEMproblem:FoliumOfDescartes1" missing or not unique]</code> is this: In <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "PROBLEMFoliumOfDescartes1" missing or not unique]</code> we gave you <span class="process-math">\(x(t)\)</span> and <span class="process-math">\(y(t)\)</span> and asked you to show that it satisfies the equation of the Folium. Here we start with the equation of the Folium and you need to find <span class="process-math">\(x(t)\)</span> and <span class="process-math">\(y(t)\text{.}\)</span>
+</div> <div class="para" id="no-label-1-2">The difference between this problem and Problem~\ref{problem:FoliumOfDescartes1} is this: In <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "PROBLEMFoliumOfDescartes1" missing or not unique]</code> we gave you <span class="process-math">\(x(t)\)</span> and <span class="process-math">\(y(t)\)</span> and asked you to show that it satisfies the equation of the Folium. Here we start with the equation of the Folium and you need to find <span class="process-math">\(x(t)\)</span> and <span class="process-math">\(y(t)\text{.}\)</span>
 </div></article><div class="para" id="no-label-7">Of course, it is not wrong to also think of this parameter as time. We are just stipulating that the point is moving so that its position at time <span class="process-math">\(t\)</span> is such that the slope of the line joining the origin to the point matches <span class="process-math">\(t\text{.}\)</span>  Mathematically, what the parameter represents is usually not at issue. It is just a parameter.</div>
 <div class="para" id="no-label-8">Recall that when we looked at Roberval’s treatment of the conic sections in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "SECroberv-conic-sect" missing or not unique]</code> we found it handy to think of our curves as being traced out by the motion of a point and we created the notation <span class="process-math">\(\begin{ParamEq}
 {x(t)}{y(t)}
@@ -2107,154 +2082,9 @@ P(t)=
 {        1/\sqrt{t}}
 {        \sqrt{t}}
 {        0\lt t}
-\end{ParamEq}\)</span></div></article></article></section></section><section class="section" id="sec:bridg-chains-telesc"><h3 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">5.10</span><span class="space"> </span><span class="title">Bridges, Chains, Domes, and Telescopes</span>
-</h3>
-<section class="subsection" id="no-label"><h4 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">5.10.1</span><span class="space"> </span><span class="title">Bridges</span>
-</h4>
-<div class="para" id="no-label-2">In the previous section all of the quantities we were looking at were time dependent -- they were in motion -- so it was useful to think of the derivative, <span class="process-math">\(\dfdx{y}{t}\text{,}\)</span> as a velocity (fluxion). In other applications, where the quantities involved are not time dependent, the derivative is still a useful tool but thinking of it as a velocity may not be as useful.</div>
-<div class="para" id="no-label-3">For example, consider the shape of the support cable on a stable suspension bridge as seen in the picture below. The shape of the suspension cable appears to be parabolic, but how can we be sure of this?</div>
-<div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/images/GoldenGatebyModestosUrbanos1.png" class="contained"></div>
-<div class="para" id="no-label-5">At any given moment there are a lot of forces acting on a bridge, but most  are insignificant most of the time. The mantra of mathematical modeling is to keep things as simple as possible (at least in the beginning) by focusing on the dominant parameter first.</div>
-<aside class="aside aside-like" id="no-label-6"><h5 class="heading"><span class="title">Comment.</span></h5>
-<div class="para" id="no-label-6-2">Or, equivalently, we set the secondary parameters equal to zero.  In this case the dominant force involved is clearly the weight of the bridge itself.</div></aside><div class="para" id="no-label-7">We assume that the weight density of the deck of the bridge is <span class="process-math">\(W\)</span> newtons per meter. The cable adds to the weight of the bridge as well, but  it is relatively small compared to the weight of the deck. So we will ignore it to keep the model simple.  Assuming the deck is horizontal, we can take it to be the <span class="process-math">\(x\)</span> axis</div>
-<aside class="aside aside-like" id="no-label-8"><h5 class="heading"><span class="title">Terminology.</span></h5>
-<div class="para" id="no-label-8-2">A <dfn class="terminology">newton</dfn> is a unit of force named, obviously, after Isaac Newton.</div></aside><div class="para" id="no-label-9">Now suppose the graph of <span class="process-math">\(y=y(x)\)</span> represents the cable between two upright towers located at <span class="process-math">\(x=-U\)</span> and <span class="process-math">\(x=U.\)</span> Remember, though we suspect that <span class="process-math">\(y(x)\)</span> is a parabola we don’t yet know if this is true. \centerline{\includegraphics*[height=1in,width=5in]{../Figures/Bridge1}} We choose an arbitrary point <span class="process-math">\((x,y)\)</span> on the curve with <span class="process-math">\(0\lt x\lt U\)</span> and focus on the portion of the bridge between <span class="process-math">\((-x,y)\)</span> and <span class="process-math">\((x,y)\text{.}\)</span> \centerline{\includegraphics*[height=1in,width=5in]{../Figures/Bridge2}} These are the two points that are holding up the section of the bridge on the interval from <span class="process-math">\(-x\)</span> to <span class="process-math">\(x\text{.}\)</span>  The arrows represent the tangential forces felt on the cable at the points.</div>
-<div class="para" id="no-label-10">We’ll examine the the horizontal and vertical components of the tangential force at various points on the bridge. \centerline{\includegraphics*[height=1.7in,width=6in]{../Figures/Bridge6}} Since the curve is symmetric, we only draw the half where <span class="process-math">\(x\ge
-0\text{.}\)</span>
-</div>
-<div class="para" id="no-label-11">Notice the tangential force at <span class="process-math">\(x=0\text{,}\)</span> which we have labeled <span class="process-math">\(-T\text{,}\)</span> is horizontal. This reflects the fact that at that point the vertical force would be the weight for the deck from <span class="process-math">\(x=0\)</span> to <span class="process-math">\(x=0\)</span> which is zero (You’ll see why we used negatives momentarily.) Hence the tangential force is equal to the horizontal tension, <span class="process-math">\(-H\text{.}\)</span>
-</div>
-<aside class="aside aside-like" id="no-label-12"><h5 class="heading"><span class="title">Comment.</span></h5>
-<div class="para" id="no-label-12-2">This is why it’s the lowest point, there is no vertical pull.</div></aside><div class="para" id="no-label-13">As we move away from the center of the cable to some point <span class="process-math">\(x_1\text{,}\)</span> there is more of the deck to support. Since we are ignoring the weight of the cable, the vertical force is equal to the weight of the deck from <span class="process-math">\(x=0\)</span> to <span class="process-math">\(x_1\)</span> so the tangential tension gets larger as we move to the right. The horizontal tension at every single point will be the same as the tension at the origin. What varies is the vertical component of the force.</div>
-<div class="para" id="no-label-14">The cumulative effect can also be thought of this way. The point on the cable at <span class="process-math">\(x = 20\)</span> meters must not only support the weight of the deck from <span class="process-math">\(x = 10\)</span> meters to <span class="process-math">\(x = 20\)</span> meters, but must bear the brunt of the load at the point <span class="process-math">\(x = 10\)</span> meters as well. This leads to the vertical force at <span class="process-math">\(x
-= 20\)</span> meters being <span class="process-math">\(-10W \text{ newtons }- 10W \text{ newtons }= -20W\)</span> newtons. The point at <span class="process-math">\(x = 30\)</span> meters must support whatever weight there is at <span class="process-math">\(x = 20\)</span> meters along with the extra weight from <span class="process-math">\(x
-= 20\)</span> meters to <span class="process-math">\(x = 30\)</span> meters which totals <span class="process-math">\(-20W \text{ newtons }- 10W \text{
-newtons }= -30W\)</span> newtons. If you were hoisting a person carrying a bucket of sand, then you would be bearing the weight of both the person and the sand even though that person is only bearing the weight of the sand. This is the same idea.</div>
-<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/Bridge7.png" class="contained"></div>
-<div class="para" id="no-label-16">The conclusion of this analysis is that at any point <span class="process-math">\((x, y)\)</span> on the curve, the tangential force pulling against the cable has a horizontal component of <span class="process-math">\(-H\)</span> and a vertical component of <span class="process-math">\(-Wx\text{.}\)</span> To stabilize the bridge, we need the cable to be pulling with the same force in exactly the opposite direction. This leads to the sketch at the right. (Now you see why we used negatives before.)</div>
-<article class="problem example-like" id="no-label"><h5 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">5.70</span><span class="period">.</span>
-</h5>
-<div class="introduction" id="no-label-1"><div class="para" id="no-label-1-1"></div></div>
-<article class="task exercise-like" id="no-label-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<div class="para logical" id="no-label-2-1-1">
-<div class="para">Use the above analysis and schematic drawing of the forces involved to show that the curve  representing the cable must satisfy the differential equation</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\dfdx{y}{x}=\frac{Wx}{H}.
-\end{equation*}
-</div>
-<div class="para">\hint{Notice that <span class="process-math">\(T\)</span> is pulling in the direction tangent to the cable.}</div>
-</div></article><article class="task exercise-like" id="no-label-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<div class="para" id="no-label-3-1-1">Show that the parabola <span class="process-math">\(y=\frac{W}{2H} x^2+b,\)</span> where <span class="process-math">\(b\)</span> is an arbitrary constant, satisfies this differential equation</div></article><article class="task exercise-like" id="no-label-4"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<div class="para" id="no-label-4-1-1">Let <span class="process-math">\(W = 1\text{,}\)</span> <span class="process-math">\(b = 0\)</span> and plot the parabola for <span class="process-math">\(H = 1, 2,
-3\text{.}\)</span> Does this agree with the idea that <span class="process-math">\(H\)</span> indicates how tightly we are winching the cable?</div></article></article><div class="para" id="no-label-18">With our simplifying assumptions in place it appears that  the cable on a suspension bridge does indeed  hang in the shape of a parabola. But the suspension bridge has to hold up the deck beneath it. After all, that is its purpose.</div></section><section class="subsection" id="no-label"><h4 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">5.10.2</span><span class="space"> </span><span class="title">Chains</span>
-</h4>
-<div class="para" id="no-label-2">What shape do you think a chain takes on if it is pinned at both ends, and allowed to hang freely in between? Take your best guess and don’t worry about guessing correctly. We’ll solve this problem shortly.</div>
-<div class="para" id="no-label-3">If you guessed that the curve is a parabola, then you are in good company.  Galileo also believed that a hanging chain assumed a parabolic shape as we see in the following passage from his book <a class="external" href="https://www.maa.org/press/periodicals/convergence/mathematical-treasure-galileos-two-new-sciences" target="_blank">Dialogue Concerning Two New Sciences</a><a class="xref" id="no-label-3-2" href="" data-knowl="./knowl/fn/no-label-3-2.html" title="Footnote 5.24"><sup> 24 </sup></a> (<span class="process-math">\(1638\)</span>).</div>
-<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/ChainWithoutBob.png" class="contained"></div>
-<blockquote class="blockquote" id="no-label-5"><div class="para" id="no-label-5-1">``Drive two nails into a wall at a convenient height and at the same level; make the distance between these nails twice the width of the rectangle upon which it is desired to trace the semiparabola. Over these two nails hang a light chain of such length that the depth of its sag (curve or <i class="foreign">sacca</i>) is equal to the length of the prism. This chain will assume the form of a parabola, so that if this form be marked by points on the wall we shall have described a complete parabola which can be divided into two equal parts by drawing a vertical line through a point midway between the two nails . . . Any ordinary mechanic will know how to do it.’’</div></blockquote>
-<article class="problem example-like" id="no-label"><h5 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">5.71</span><span class="period">.</span><span class="space"> </span><span class="title">The Hanging Chain.</span>
-</h5>
-<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/HangingChainSchematic.png" class="contained"></div>       <div class="para" id="no-label-2-2">This problem is very similar to finding the shape of the suspension bridge cable.  The difference here is that since there is no deck to support, the only vertical force will be the weight of the chain itself, so we can’t ignore the weight of the chain the way we ignored the weight of the cable in the suspension bridge.</div> <div class="para logical" id="no-label-2-3">
-<div class="para">Let <span class="process-math">\(w\)</span> represent the weight density of the chain in newtons per meter and <span class="process-math">\(s\)</span> represent the length of the chain from the lowest point to a point <span class="process-math">\(P=(x,y)\)</span> on the chain.  Show that the curve represented by the chain must satisfy the differential equation</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\dfdx{y}{x}=\frac{ws}{H}.\label{eq:Catenary1}
-\end{equation*}
-</div>
-</div></article><div class="para" id="no-label-7">OK, but so what? All <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQCatenary1" missing or not unique]</code>) says is that the proportion <span class="process-math">\(\dfdx{y}{x}\)</span> is equal to the proportion <span class="process-math">\(\frac{ws}{H}\text{.}\)</span>
-</div>
-<div class="para" id="no-label-8">If we could <em class="emphasis">solve</em> this equation for <span class="process-math">\(y(x)\)</span> then the graph of <span class="process-math">\(y\)</span> would be the shape of the chain, but sadly we don’t have the tools to do that (yet).</div>
-<div class="para" id="no-label-9">So why did we bother writing down <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQCatenary1" missing or not unique]</code>) at all? Does this tell us anything about the shape of the hanging chain?</div>
-<div class="para" id="no-label-10">Yes. Actually it does.</div>
-<div class="para" id="no-label-11">The fact is that in our attempts to describe the world around us using mathematics we can’t actually solve <em class="emphasis">most</em> of the equations we write down. Real world phenomena are just too complex. But just writing them down is a step forward. Although we can’t (yet) solve <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQCatenary1" missing or not unique]</code>), and thereby find the shape of a hanging chain, we can use it to eliminate some shapes.  In particular, we can now show that Galileo was wrong about the shape of a hanging chain.</div>
-<article class="problem example-like" id="PIC:catenary"><h5 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">5.72</span><span class="period">.</span>
-</h5>
-<div class="introduction" id="PIC:catenary-1"><div class="para" id="PIC:catenary-1-1"> The difficulty is that we have the wrong variable on the right side of <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQUATIONeq:Catenary1" missing or not unique]</code>. Since <span class="process-math">\(y\)</span> depends on <span class="process-math">\(x\)</span> we’d like to have only the variables <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{,}\)</span> appearing in our equation. Instead we have <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(y\text{,}\)</span> and <span class="process-math">\(s\text{.}\)</span> And we really don’t know anything about <span class="process-math">\(s\text{.}\)</span> However, recall that we do know something about <span class="process-math">\(\dx{s}\text{.}\)</span>
-</div></div>
-<article class="task exercise-like" id="PIC:catenary-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<div class="para logical" id="PIC:catenary-2-1-1">
-<div class="para">Use a differential triangle to show that the hanging chain curve must satisfy the differential equation</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\dfdxn{y}{x}{2}=\frac{w}{H}  \dfdx{s}{x}=\frac{w}{H}
-\sqrt{1+\left(\dfdx{y}{x}\right)^2 }.\label{eq:CatenaryDiffeq}
-\end{equation*}
-</div>
-<div class="para">\hint{Recall the <span class="process-math">\(\d{s}\)</span> represents a differential along the direction of the curve. How is it related to <span class="process-math">\(\d{x}\)</span> and <span class="process-math">\(\d{y}\text{?}\)</span>}</div>
-</div></article><article class="task exercise-like" id="PIC:catenary-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<div class="para" id="PIC:catenary-3-1-1">Show that the general parabola <span class="process-math">\(y=ax^2+bx+c\)</span> does \emph{not} satisfy this differential equation (and so Galileo was mistaken!)  .</div></article><article class="task exercise-like" id="PIC:catenary-4"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<div class="para" id="PIC:catenary-4-1-1">Show that, in fact no nonzero polynomial <span class="process-math">\(y=a_0+a_1x+a_2x^2+\ldots+a_nx^n\)</span> satisfies  <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQUATIONeq:CatenaryDiffeq" missing or not unique]</code>. \hint{Suppose it did satisfy the equation.  If we were to square both sides of the equation, what would be the degree of each side?}</div></article></article><div class="para" id="no-label-13">Galileo’s brilliance is not at all diminished  by this error. As we said in <a href="CHAproblem-solving.html" class="internal" title="Chapter 2: Introduction: Some  Advice on Problem Solving">Chapter 2</a>, smart people make mistakes!  This is how they get to be smart. You should follow the example of Galileo (and Newton, and Leibniz) by making and embracing lots of mistakes. But don’t forget to learn from them as well. Also, in fairness to Galileo, he did not have access to  the Calculus tools that make this problem tractable. We do.</div></section><section class="subsection" id="no-label"><h4 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">5.10.3</span><span class="space"> </span><span class="title">Domes</span>
-</h4>
-<div class="para" id="no-label-2">In <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "PICcatenary" missing or not unique]</code> we saw that the shape of a hanging chain is not a parabola as Galileo believed. But it actually shows much more than that. It shows that the shape of a hanging chain is not the graph of any polynomial regardless of its degree. (A parabola is the graph of a polynomial of degree <span class="process-math">\(2\text{.}\)</span>) This result tell us   that the set of polynomials is too small to model all of the phenomena we observe in the world. The solution of the hanging chain problem  will require a larger class of functions.</div>
-<div class="para" id="no-label-3">The curve which <em class="emphasis">does</em> satisfy <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQCatenary1" missing or not unique]</code>), and thus is the shape of a hanging chain is called the catenary. This is not especially illuminating since the word ``catenary’’ is derived from the Latin word {\it catena} which simply means chain.</div>
-<figure class="figure figure-like" id="FIGUREPantheon"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/images/Pantheon.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.73<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://uh.edu/engines/epi1169.htm" target="_blank">Drawings of the Pantheon and a cross section of the dome with an inverted catenary superimposed on the arch.</a><a class="xref" id="FIGUREPantheon-1-2" href="" data-knowl="./knowl/fn/FIGUREPantheon-1-2.html" title="Footnote 5.25"><sup> 25 </sup></a>  </figcaption></figure><div class="para" id="no-label-5">The structural properties of the catenary have been known and used since ancient times The Pantheon in Rome was completed during the reign of Hadrian and dedicated around <span class="process-math">\(126\)</span> AD. It is not known who designed it, but there is evidence which suggests that a catenary design was employed.</div>
-<aside class="aside aside-like" id="no-label-6"><h5 class="heading"><span class="title">Comment.</span></h5>
-<div class="para" id="no-label-6-2">For example, its shape.</div></aside><div class="para" id="no-label-7">The architect <a class="external" href="https://www.britannica.com/biography/Filippo-Brunelleschi" target="_blank">Filippo Brunelleschi</a><a class="xref" id="no-label-7-2" href="" data-knowl="./knowl/fn/no-label-7-2.html" title="Footnote 5.26"><sup> 26 </sup></a> (1377-1446) used a hanging chain to develop the shape of the dome of the <a class="external" href="http://www.museumsinflorence.com/musei/cathedral_of_florence.html" target="_blank">Cathedral of Santa Maria del Fiore</a><a class="xref" id="no-label-7-4" href="" data-knowl="./knowl/fn/no-label-7-4.html" title="Footnote 5.27"><sup> 27 </sup></a> in Florence, Italy in the Middle Ages.</div>
-<div class="para" id="no-label-8">A number of modern architects and masons have used the catenary to design arches and domes (a rotated arch) as well. For example, the mathematician and architect \<a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Wren/" target="_blank">Sir Christopher Wren</a><a class="xref" id="no-label-8-2" href="" data-knowl="./knowl/fn/no-label-8-2.html" title="Footnote 5.28"><sup> 28 </sup></a> <span class="process-math">\((1632-1723)\)</span> used the shape of the catenary arch in the design and construction of the structural part of the dome on \href{https://en.wikipedia.org/wiki/St_Paul%27s_Cathedral}{St Paul’s Cathedral in London.}</div>
-<figure class="figure figure-like" id="no-label-9"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/StPauls.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.74<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://en.wikipedia.org/wiki/St_Paul%27s_Cathedral" target="_blank">This figure needs a caption.</a><a class="xref" id="no-label-9-1-2" href="" data-knowl="./knowl/fn/no-label-9-1-2.html" title="Footnote 5.29"><sup> 29 </sup></a></figcaption></figure><div class="para" id="no-label-10">Wren was assisted in designing St.  by his good friend \href{https://mathshistory.st-andrews.ac.uk/Biographies/Hooke/}{Robert Hooke} (<span class="process-math">\(1635-1703\)</span>), who advised him that the cross section of the dome should be an inverted catenary: ``As hangs a flexible cable so, inverted, stand the touching pieces of an arch.’’</div>
-<aside class="aside aside-like" id="no-label-11"><h5 class="heading"><span class="title">Historical Background.</span></h5>
-<div class="para" id="no-label-11-2">Hooke is also famous for showing that the contracting force of a stretched spring is proportional to the amount of stretching. This is known as ``Hooke’s Law.’’ We will examine this in more depth in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "SECTIONsec:simple-harm-oscill" missing or not unique]</code>.</div></aside></section><section class="subsection" id="no-label"><h4 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">5.10.4</span><span class="space"> </span><span class="title">Telescopes</span>
-</h4>
-<div class="para" id="no-label-2">Though he didn’t invent the telescope, Galileo is usually cited as the first person to use a telescope to discover, for example, craters and mountains on the surface of the Moon, the phases Venus, and the moons of Jupiter. This work helped convince Galileo of the validity of <a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Copernicus/" target="_blank">Nicolaus Copernicus</a><a class="xref" id="no-label-2-2" href="" data-knowl="./knowl/fn/no-label-2-2.html" title="Footnote 5.30"><sup> 30 </sup></a>’s heliocentric (sun-centered) model of the solar system, for which he (Galileo) was eventually condemned by the Inquisition.</div>
-<aside class="aside aside-like" id="no-label-3"><div class="para" id="no-label-3-1">
-<code class="code-inline tex2jax_ignore">[cross-reference to target(s) "https://mathshistory.st-andrews.ac.uk/Biographies/Harriot/" missing or not unique]</code> did it before Galileo but Harriot didn’t publish his observations.</div></aside><div class="para" id="no-label-4">All telescopes follow one of two basic designs, refractive and reflective. Refractive telescopes us the refractive property of light described by Snell’s Law (see <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "SECsnells-law-refr" missing or not unique]</code>) to reduce the large image entering the telescope to a smaller area, thus focusing the image for the observer. Galileo used a refractive telescope</div>
-<div class="para" id="no-label-5">Refractive telescopes work well for relatively close objects, but since refraction separates light into its various color components (think of light passing through a prism) it tends to create little rainbows (usually called chromatic aberrations) in the image.</div>
-<figure class="figure figure-like" id="no-label-6"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/MountGraham.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.75<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://www.lbto.org/" target="_blank">\textcolor{black}{{\centerline{The Large Binocular Telescope}} \centerline{Mt. Graham, Arizona}}</a><a class="xref" id="no-label-6-1-2" href="" data-knowl="./knowl/fn/no-label-6-1-2.html" title="Footnote 5.31"><sup> 31 </sup></a></figcaption></figure><div class="para" id="no-label-7">Because of his work in optics, Newton realized that he could use the reflective properties of the parabola to achieve greater magnification with a smaller physical device while simultaneously avoiding the chromatic aberrations.  All modern research telescopes are built on Newton’s original design, which uses parabolic mirrors to reflect light toward the focus of the par\-a\-bo\-la, where a secondary mirror reflects it to the eyepiece.</div>
-<div class="para" id="no-label-8">For example the each mirror of the two large mirrors required by the Large Binocular Telescope at Mt. Graham, Arizona is <span class="process-math">\(8.4\)</span> meters in diameter.  The image below gives a sense of the size of one of these mirrors.</div>
-<div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/images/SpinCasting1.png" class="contained"></div>
-<div class="para" id="no-label-10">To produce a large, perfectly parabolic mirror the <a class="external" href="https://mirrorlab.arizona.edu/" target="_blank">Richard F. Caris Mirror Laboratory</a><a class="xref" id="no-label-10-2" href="" data-knowl="./knowl/fn/no-label-10-2.html" title="Footnote 5.32"><sup> 32 </sup></a> uses a process called spin casting, where high quality borosilicate glass is place into a revolving furnace.  As the furnace spins the glass liquefies and the rotational forces push the surface of the glass into a parabolic shape.</div>
-<div class="para" id="no-label-11">As  the molten glass spins the middle goes down and the sides go up. As we will see momentarily the surface generated must be a parabola.  The shape of the mirror, and hence its focal length, will be affected by the rotational speed of the glass. The question is, how fast must we spin the furnace to produce a particular focal length?</div>
-<div class="para" id="no-label-12">To begin to answer that question we will need to think about a typical point mass at a point on the surface of the molten glass as shown below. Suppose the glass is spinning at an angular velocity of <span class="process-math">\(\omega\)</span>~<span class="process-math">\(\frac{\text{radians}}{\text{second}}\text{.}\)</span>  Our task is to find the function <span class="process-math">\(y=y(x)\)</span> whose graph is shape of a cross-section of the surface of the liquid glass.</div>
-<div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/images/Spincasting8.png" class="contained"></div>
-<div class="para" id="no-label-14">The red arrow in the diagram depicts the force keeping the point mass elevated and spinning in a circle. It will be perpendicular to the surface of the liquid, as shown.  (Think about a hose with a hole in it.  The water sprays out in a stream perpendicular to the hose.)</div>
-<div class="para" id="no-label-15">If we separate that force into its vertical and horizontal components, as shown in the diagram, the magnitude of the vertical component of the force is <span class="process-math">\(mg\text{,}\)</span> where <span class="process-math">\(g\)</span> is the acceleration due to gravity.  This is the force needed to counter the weight of the particle.  The only horizontal force is the centripetal force due to the spinning of the furnace, which is <span class="process-math">\(mx\omega^2\text{.}\)</span>  (We will derive this formula analytically in <a href="CHAcalc-trig.html" class="internal" title="Chapter 6: Calculus and Trigonometry">Chapte 6</a> when we have extended the scope of our differentiation rules.  For now we will assume this is correct and proceed.)</div>
-<article class="problem example-like" id="PIC:SpinCast1"><h5 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">5.76</span><span class="period">.</span>
-</h5>
-<div class="introduction" id="PIC:SpinCast1-1"><div class="para" id="PIC:SpinCast1-1-1"></div></div>
-<article class="task exercise-like" id="PIC:SpinCast1-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<div class="para logical" id="PIC:SpinCast1-2-1-1">
-<div class="para">Use the diagram above to show that the curve <span class="process-math">\(y=y(x)\)</span> must satisfy the differential equation</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\dfdx{y}{x}=\frac{\omega^2}{g} x.
-\end{equation*}
-</div>
-<div class="para">\hint{The slope of the line tangent to the parabola at <span class="process-math">\((x,y)\)</span> will be <span class="process-math">\(\dfdx{y}{x}\text{.}\)</span> This will be perpendicular to the force acting at that point,  represented by the red arrow.}</div>
-</div></article><article class="task exercise-like" id="PIC:SpinCast1-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<div class="para" id="PIC:SpinCast1-3-1-1">Show that  <span class="process-math">\(y(x)\)</span> must be a parabola to satisfy this differential equation.</div></article><article class="task exercise-like" id="PIC:SpinCast1-4"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<div class="para" id="PIC:SpinCast1-4-1-1">Using the value <span class="process-math">\(g=9.8\frac{\text{meters}}{\text{second}^2}\text{,}\)</span> graph the parabola from part (b).  for <span class="process-math">\(\omega =1, 2, 3\text{.}\)</span>  Do these graphs coincide with your intuition about what should happen as the liquid rotates faster?</div></article></article><div class="para" id="no-label-17">In antiquity the reflective properties of all of the conic sections (parabola, ellipse and hyperbola) were worked out via very laborious geometric arguments. In <a href="CHAPTERScienceBeforeCalc.html" class="internal" title="Chapter 3: Science Before Calculus">Chapter 3</a> we saw that Roberval reestablished these properties using his more dynamic (if somewhat questionable) approach.  The next two problems will reestablish the reflective property of the parabola once more using a combination of Geometry and Calculus.</div>
-<div class="para" id="no-label-18">Recall from <a href="CHAPTERScienceBeforeCalc.html" class="internal" title="Chapter 3: Science Before Calculus">Chapter 3</a> that any light ray  parallel to the axis of a parabola will reflect to a single point (the focus of the parabola).</div>
-<article class="problem example-like" id="problem:ParabolaDefinition"><h5 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">5.77</span><span class="period">.</span>
-</h5>
-<div class="introduction" id="problem:ParabolaDefinition-1"><div class="para" id="problem:ParabolaDefinition-1-1"> \begin{wrapfigure}[9]{r}{2.5in} \vskip-6mm \captionsetup{labelformat=empty} \centerline{\includegraphics*[height=1.6in,width=2.5in]{../Figures/RobervalProb1}} \label{fig:RobervalProb1} \end{wrapfigure} A parabola may be defined geometrically as the set of points equidistant from a given point, the focus, and a given line, the directrix as shown below. Suppose that the point <span class="process-math">\((x,y)\)</span> lies on the parabola with focus <span class="process-math">\(F=(0,p)\)</span> and directrix <span class="process-math">\(y=-p\)</span> as in the diagram at the right.</div></div>
-<article class="task exercise-like" id="problem:ParabolaDefinition-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<div class="para" id="problem:ParabolaDefinition-2-1-1">Show that <span class="process-math">\((x,y)\)</span> must satisfy the equation: <span class="process-math">\(x^2=4py.\)</span>
-</div></article><article class="task exercise-like" id="problem:ParabolaDefinition-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<div class="para" id="problem:ParabolaDefinition-3-1-1">In <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "PROBLEMPIC:SpinCast1" missing or not unique]</code>, show that in order to spin a mirror with a focus\aside{Having the correct focus (and thus the correct focal length) is of paramount importance in the performance of the telescope.  To give you a notion of the precision required, it took <span class="process-math">\(3\)</span> months to polish the surface of one of the primary mirrors in the Large Binocular Telescope to a precision of <span class="process-math">\(30\)</span> nanometers (<span class="process-math">\(3,000\)</span> times thinner than a human hair).} at <span class="process-math">\((0,p)\)</span> the angular velocity must be <span class="process-math">\(\omega =\sqrt{\frac{g}{2p}}\text{.}\)</span>
-</div></article></article><article class="problem example-like" id="problem:ParabolaReflectivity"><h5 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">5.78</span><span class="period">.</span>
-</h5>
-<div class="introduction" id="problem:ParabolaReflectivity-1"><div class="para" id="problem:ParabolaReflectivity-1-1"> \begin{wrapfigure}[9]{r}{2.5in} \vskip-10mm \captionsetup{labelformat=empty} \centerline{\includegraphics*[height=1.6in,width=2.5in]{../Figures/ParabReflectBobsStudentSolution}} \label{fig:RobervalProb2} \end{wrapfigure} Consider the parabola with equation <span class="process-math">\(y=\frac{x^2}{4p}\)</span> focus <span class="process-math">\(F=(0,p)\text{,}\)</span> and directrix <span class="process-math">\(y=-p\)</span> as in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "PROBLEMproblem:ParabolaDefinition" missing or not unique]</code>.</div></div>
-<article class="task exercise-like" id="problem:ParabolaReflectivity-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<div class="para" id="problem:ParabolaReflectivity-2-1-1">Show that the tangent line (in red) is perpendicular to line segment <span class="process-math">\(FQ\text{.}\)</span>
-</div></article><article class="task exercise-like" id="problem:ParabolaReflectivity-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<div class="para" id="problem:ParabolaReflectivity-3-1-1">Show that <span class="process-math">\(\angle \alpha = \angle\beta\text{.}\)</span> \hint{What do you know about <span class="process-math">\(\triangle FPQ\text{?}\)</span>}</div></article></article></section></section></section></div>
+\end{ParamEq}\)</span></div></article></article></section></section></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="CHAPTdifferentials.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="CHAcalc-trig.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="CHAPTERdifferentials.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="CHAPTERcalc-trig.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
