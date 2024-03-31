@@ -159,15 +159,21 @@ window.MathJax = {
 
 
 \def\DD{{\bf{}D}}
-\def\ftceval#1#2#3{#1\hskip.5ex{\llap{\smash{\rule[-3ex]{0.5pt}{7ex}}}_{\raise{-3ex}{\hskip.5ex#2}}^{\raise{-5ex}{\hskip.5ex #3}}}}
 
-
-\def\eval#1#2#3{#1\hskip.5ex{\llap{\rule[-1.5ex]{0.5pt}{4ex}}_{\raise{-1.5ex}{\hskip.5ex#2=#3}}}}
-\def\dispeval#1#2#3{#1\hskip.5ex{\llap{\smash{\rule[-2ex]{0.5pt}{5ex}}}_{\raise{-2ex}{\hskip.5ex#2=#3}}}}
-
-\def\geneval#1#2{\left.#1\right|_{#2}}
-
+\def\eval#1#2#3{\left.#1\right\rvert_{#2}^{#3}}
+\def\ftceval#1#2#3{\eval#1#2#3}
+\def\geneval#1#2{\eval{#1}{#2}{}}
 \def\bigeval#1#2#3{\eval{#2}{#2}{#3}}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -350,29 +356,20 @@ window.MathJax = {
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONGatewayArch" class="internal"><span class="codenumber">8.5</span> <span class="title">The Gateway Arch</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#CHAPTERlast-elem-funct-8" class="internal"><span class="codenumber">8.6</span> <span class="title">Exponential Growth</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONExpAndCmpndInt" class="internal"><span class="codenumber">8.7</span> <span class="title">Exponential Functions and Compound Interest</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONnatural-logarithm-1" class="internal"><span class="codenumber">8.8</span> <span class="title">A Short Introduction to Logarithms: John Napier Logs In</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONNatLog" class="internal"><span class="codenumber">8.9</span> <span class="title">Logarithms, Natural and Unnatural</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONnatural-logarithm-1" class="internal"><span class="codenumber">8.8</span> <span class="title">The Natural Logarithm</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection">
-<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONNapier" class="internal"><span class="codenumber">8.8.1</span> <span class="title">John Napier Logs In</span></a></div>
+<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONLogApps" class="internal"><span class="codenumber">8.10</span> <span class="title">Applications of Logarithms</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONNapier-2" class="internal"><span class="codenumber">8.8.1.1</span> <span class="title">A Short Introduction to Logarithms</span></a></div></li>
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSUBSECTIONradioactive-decay" class="internal"><span class="codenumber">8.8.1.2</span> <span class="title">Radioactive Dating</span></a></div></li>
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSUBSECTIONnewtons-law-cooling" class="internal"><span class="codenumber">8.8.1.3</span> <span class="title">Chillin’ with Newton: The Law of Cooling</span></a></div></li>
-</ul>
-</li></ul>
-</li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONDerivNatLog" class="internal"><span class="codenumber">8.9</span> <span class="title">The Derivative of the Natural Logarithm</span></a></div></li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONgener-logar-expon" class="internal"><span class="codenumber">8.10</span> <span class="title">General Logarithms and Exponentials</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONGenExp" class="internal"><span class="codenumber">8.10.1</span> <span class="title">General Exponentials</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONGenLog" class="internal"><span class="codenumber">8.10.2</span> <span class="title">General Logarithms</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONLogDiff" class="internal"><span class="codenumber">8.10.3</span> <span class="title">Logarithmic Differentiation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONradioactive-decay" class="internal"><span class="codenumber">8.10.1</span> <span class="title">Radioactive Dating</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONnewtons-law-cooling" class="internal"><span class="codenumber">8.10.2</span> <span class="title">Chillin’ with Newton: The Law of Cooling</span></a></div></li>
 </ul>
 </li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONDerivNatLog" class="internal"><span class="codenumber">8.11</span> <span class="title">The Derivative of the Natural Logarithm</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONgener-logar-expon" class="internal"><span class="codenumber">8.12</span> <span class="title">General Logarithms and Exponentials</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONleonh-euler-harm" class="internal"><span class="codenumber">8.11</span> <span class="title">Leonhard Euler, Harmonic Oscillators, and Complex Numbers</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONHowEulerDidIt" class="internal"><span class="codenumber">8.11.1</span> <span class="title">How Euler Did It</span></a></div></li></ul>
+<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONleonh-euler-harm" class="internal"><span class="codenumber">8.13</span> <span class="title">Leonhard Euler, Harmonic Oscillators, and Complex Numbers</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONHowEulerDidIt" class="internal"><span class="codenumber">8.13.1</span> <span class="title">How Euler Did It</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -543,7 +540,7 @@ window.MathJax = {
 <div class="author-name">Robert Rogers</div>
 <div class="author-info">Dept. of Mathematics<br>SUNY, Fredonia</div>
 </div>
-<div class="date">March 29, 2024</div>
+<div class="date">March 31, 2024</div>
 <nav class="summary-links"><ul>
 <li><a href="frontmatter-2.html" class="internal"><span class="title">Colophon</span></a></li>
 <li><a href="frontmatter-3.html" class="internal"><span class="title">Acknowledgements</span></a></li>

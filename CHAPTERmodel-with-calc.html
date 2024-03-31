@@ -159,15 +159,21 @@ window.MathJax = {
 
 
 \def\DD{{\bf{}D}}
-\def\ftceval#1#2#3{#1\hskip.5ex{\llap{\smash{\rule[-3ex]{0.5pt}{7ex}}}_{\raise{-3ex}{\hskip.5ex#2}}^{\raise{-5ex}{\hskip.5ex #3}}}}
 
-
-\def\eval#1#2#3{#1\hskip.5ex{\llap{\rule[-1.5ex]{0.5pt}{4ex}}_{\raise{-1.5ex}{\hskip.5ex#2=#3}}}}
-\def\dispeval#1#2#3{#1\hskip.5ex{\llap{\smash{\rule[-2ex]{0.5pt}{5ex}}}_{\raise{-2ex}{\hskip.5ex#2=#3}}}}
-
-\def\geneval#1#2{\left.#1\right|_{#2}}
-
+\def\eval#1#2#3{\left.#1\right\rvert_{#2}^{#3}}
+\def\ftceval#1#2#3{\eval#1#2#3}
+\def\geneval#1#2{\eval{#1}{#2}{}}
 \def\bigeval#1#2#3{\eval{#2}{#2}{#3}}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -350,29 +356,20 @@ window.MathJax = {
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONGatewayArch" class="internal"><span class="codenumber">8.5</span> <span class="title">The Gateway Arch</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#CHAPTERlast-elem-funct-8" class="internal"><span class="codenumber">8.6</span> <span class="title">Exponential Growth</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONExpAndCmpndInt" class="internal"><span class="codenumber">8.7</span> <span class="title">Exponential Functions and Compound Interest</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONnatural-logarithm-1" class="internal"><span class="codenumber">8.8</span> <span class="title">A Short Introduction to Logarithms: John Napier Logs In</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONNatLog" class="internal"><span class="codenumber">8.9</span> <span class="title">Logarithms, Natural and Unnatural</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONnatural-logarithm-1" class="internal"><span class="codenumber">8.8</span> <span class="title">The Natural Logarithm</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection">
-<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONNapier" class="internal"><span class="codenumber">8.8.1</span> <span class="title">John Napier Logs In</span></a></div>
+<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONLogApps" class="internal"><span class="codenumber">8.10</span> <span class="title">Applications of Logarithms</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONNapier-2" class="internal"><span class="codenumber">8.8.1.1</span> <span class="title">A Short Introduction to Logarithms</span></a></div></li>
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSUBSECTIONradioactive-decay" class="internal"><span class="codenumber">8.8.1.2</span> <span class="title">Radioactive Dating</span></a></div></li>
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSUBSECTIONnewtons-law-cooling" class="internal"><span class="codenumber">8.8.1.3</span> <span class="title">Chillin’ with Newton: The Law of Cooling</span></a></div></li>
-</ul>
-</li></ul>
-</li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONDerivNatLog" class="internal"><span class="codenumber">8.9</span> <span class="title">The Derivative of the Natural Logarithm</span></a></div></li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONgener-logar-expon" class="internal"><span class="codenumber">8.10</span> <span class="title">General Logarithms and Exponentials</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONGenExp" class="internal"><span class="codenumber">8.10.1</span> <span class="title">General Exponentials</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONGenLog" class="internal"><span class="codenumber">8.10.2</span> <span class="title">General Logarithms</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONLogDiff" class="internal"><span class="codenumber">8.10.3</span> <span class="title">Logarithmic Differentiation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONradioactive-decay" class="internal"><span class="codenumber">8.10.1</span> <span class="title">Radioactive Dating</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONnewtons-law-cooling" class="internal"><span class="codenumber">8.10.2</span> <span class="title">Chillin’ with Newton: The Law of Cooling</span></a></div></li>
 </ul>
 </li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONDerivNatLog" class="internal"><span class="codenumber">8.11</span> <span class="title">The Derivative of the Natural Logarithm</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONgener-logar-expon" class="internal"><span class="codenumber">8.12</span> <span class="title">General Logarithms and Exponentials</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONleonh-euler-harm" class="internal"><span class="codenumber">8.11</span> <span class="title">Leonhard Euler, Harmonic Oscillators, and Complex Numbers</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONHowEulerDidIt" class="internal"><span class="codenumber">8.11.1</span> <span class="title">How Euler Did It</span></a></div></li></ul>
+<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONleonh-euler-harm" class="internal"><span class="codenumber">8.13</span> <span class="title">Leonhard Euler, Harmonic Oscillators, and Complex Numbers</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONHowEulerDidIt" class="internal"><span class="codenumber">8.13.1</span> <span class="title">How Euler Did It</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -567,11 +564,11 @@ window.MathJax = {
 \end{equation*}
 </div>
 </div>
-<div class="para" id="SUBSECTIONModelingTrout-8">This IVP should look familiar. When we were modeling the growth of a bacteria colony in <a href="" class="xref" data-knowl="./knowl/xref/EXAMPLEpopulation-growth.html" title="Example 8.31: Population Growth">Example~\ 8.31</a> <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "SECexponential-growth" missing or not unique]</code> we got <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONBacteriaIVP.html" title="Equation 8.18">IVP~ (8.18)</a>), which is almost the same equation, remember? The only difference between them is that in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQFishery1" missing or not unique]</code>) the coefficient of <span class="process-math">\(P\)</span> is <span class="process-math">\(0.1\)</span> and in <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONBacteriaIVP.html" title="Equation 8.18">IVP~ (8.18)</a>) the coefficient of <span class="process-math">\(y\)</span> is <span class="process-math">\(0.3\text{.}\)</span>
+<div class="para" id="SUBSECTIONModelingTrout-8">This IVP should look familiar. When we were modeling the growth of a bacteria colony in <a href="" class="xref" data-knowl="./knowl/xref/EXAMPLEpopulation-growth.html" title="Example 8.31: Population Growth">Example~\ 8.31</a> <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "SECexponential-growth" missing or not unique]</code> we got <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQUATIONBacteriaIVP" missing or not unique]</code>), which is almost the same equation, remember? The only difference between them is that in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQFishery1" missing or not unique]</code>) the coefficient of <span class="process-math">\(P\)</span> is <span class="process-math">\(0.1\)</span> and in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQUATIONBacteriaIVP" missing or not unique]</code>) the coefficient of <span class="process-math">\(y\)</span> is <span class="process-math">\(0.3\text{.}\)</span>
 </div>
 <div class="para logical" id="SUBSECTIONModelingTrout-9">
-<div class="para">Since the solution of <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONBacteriaIVP.html" title="Equation 8.18">Equation~ (8.18)</a>) was <span class="process-math">\(y(t)=10e^{0.3t}\)</span> it seems reasonable to conclude that the solution of <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQFishery1" missing or not unique]</code>}) is:</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQUATIONBacteriaIVP.html ">
+<div class="para">Since the solution of <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQUATIONBacteriaIVP" missing or not unique]</code>) was <span class="process-math">\(y(t)=10e^{0.3t}\)</span> it seems reasonable to conclude that the solution of <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQFishery1" missing or not unique]</code>}) is:</div>
+<div class="displaymath process-math" data-contains-math-knowls=" ">
 \begin{equation*}
 P(t)=10e^{0.1t}.
 \end{equation*}

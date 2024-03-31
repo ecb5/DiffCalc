@@ -159,15 +159,21 @@ window.MathJax = {
 
 
 \def\DD{{\bf{}D}}
-\def\ftceval#1#2#3{#1\hskip.5ex{\llap{\smash{\rule[-3ex]{0.5pt}{7ex}}}_{\raise{-3ex}{\hskip.5ex#2}}^{\raise{-5ex}{\hskip.5ex #3}}}}
 
-
-\def\eval#1#2#3{#1\hskip.5ex{\llap{\rule[-1.5ex]{0.5pt}{4ex}}_{\raise{-1.5ex}{\hskip.5ex#2=#3}}}}
-\def\dispeval#1#2#3{#1\hskip.5ex{\llap{\smash{\rule[-2ex]{0.5pt}{5ex}}}_{\raise{-2ex}{\hskip.5ex#2=#3}}}}
-
-\def\geneval#1#2{\left.#1\right|_{#2}}
-
+\def\eval#1#2#3{\left.#1\right\rvert_{#2}^{#3}}
+\def\ftceval#1#2#3{\eval#1#2#3}
+\def\geneval#1#2{\eval{#1}{#2}{}}
 \def\bigeval#1#2#3{\eval{#2}{#2}{#3}}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -350,29 +356,20 @@ window.MathJax = {
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONGatewayArch" class="internal"><span class="codenumber">8.5</span> <span class="title">The Gateway Arch</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#CHAPTERlast-elem-funct-8" class="internal"><span class="codenumber">8.6</span> <span class="title">Exponential Growth</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONExpAndCmpndInt" class="internal"><span class="codenumber">8.7</span> <span class="title">Exponential Functions and Compound Interest</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONnatural-logarithm-1" class="internal"><span class="codenumber">8.8</span> <span class="title">A Short Introduction to Logarithms: John Napier Logs In</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONNatLog" class="internal"><span class="codenumber">8.9</span> <span class="title">Logarithms, Natural and Unnatural</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONnatural-logarithm-1" class="internal"><span class="codenumber">8.8</span> <span class="title">The Natural Logarithm</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection">
-<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONNapier" class="internal"><span class="codenumber">8.8.1</span> <span class="title">John Napier Logs In</span></a></div>
+<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONLogApps" class="internal"><span class="codenumber">8.10</span> <span class="title">Applications of Logarithms</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONNapier-2" class="internal"><span class="codenumber">8.8.1.1</span> <span class="title">A Short Introduction to Logarithms</span></a></div></li>
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSUBSECTIONradioactive-decay" class="internal"><span class="codenumber">8.8.1.2</span> <span class="title">Radioactive Dating</span></a></div></li>
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSUBSECTIONnewtons-law-cooling" class="internal"><span class="codenumber">8.8.1.3</span> <span class="title">Chillin’ with Newton: The Law of Cooling</span></a></div></li>
-</ul>
-</li></ul>
-</li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONDerivNatLog" class="internal"><span class="codenumber">8.9</span> <span class="title">The Derivative of the Natural Logarithm</span></a></div></li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONgener-logar-expon" class="internal"><span class="codenumber">8.10</span> <span class="title">General Logarithms and Exponentials</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONGenExp" class="internal"><span class="codenumber">8.10.1</span> <span class="title">General Exponentials</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONGenLog" class="internal"><span class="codenumber">8.10.2</span> <span class="title">General Logarithms</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONLogDiff" class="internal"><span class="codenumber">8.10.3</span> <span class="title">Logarithmic Differentiation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONradioactive-decay" class="internal"><span class="codenumber">8.10.1</span> <span class="title">Radioactive Dating</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONnewtons-law-cooling" class="internal"><span class="codenumber">8.10.2</span> <span class="title">Chillin’ with Newton: The Law of Cooling</span></a></div></li>
 </ul>
 </li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONDerivNatLog" class="internal"><span class="codenumber">8.11</span> <span class="title">The Derivative of the Natural Logarithm</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONgener-logar-expon" class="internal"><span class="codenumber">8.12</span> <span class="title">General Logarithms and Exponentials</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONleonh-euler-harm" class="internal"><span class="codenumber">8.11</span> <span class="title">Leonhard Euler, Harmonic Oscillators, and Complex Numbers</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONHowEulerDidIt" class="internal"><span class="codenumber">8.11.1</span> <span class="title">How Euler Did It</span></a></div></li></ul>
+<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONleonh-euler-harm" class="internal"><span class="codenumber">8.13</span> <span class="title">Leonhard Euler, Harmonic Oscillators, and Complex Numbers</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONHowEulerDidIt" class="internal"><span class="codenumber">8.13.1</span> <span class="title">How Euler Did It</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -1417,7 +1414,7 @@ P(t)=
 </h5>
 <div class="para" id="SUBSECTIONsimple-harm-oscill-6-1-1">Find two more SHOs.</div>
 <div class="solutions"><details id="SUBSECTIONsimple-harm-oscill-6-2" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="SUBSECTIONsimple-harm-oscill-6-2-1">Don’t overthink this. Build from the two that you already know.</div></div></details></div></article><div class="para" id="SUBSECTIONsimple-harm-oscill-7">
-<a href="" class="xref" data-knowl="./knowl/xref/EQUATIONSHO.html" title="Equation 6.9">Equation (6.9)</a> is used to model vibrations of buildings, acoustics, AC circuits, molecular, and crystal vibrations; basically anything that oscillates, but where the effects of air resistance are negligible. In <a href="CHAPTERlast-elem-funct.html#SECTIONleonh-euler-harm" class="internal" title="Section 8.11: Leonhard Euler, Harmonic Oscillators, and Complex Numbers">Section 8.11</a>, after we have expanded our repertoire of functions a bit, we will look at one way we can incorporate the role of air resistance into our computations so that we can extend the usefulness of our analysis.</div>
+<a href="" class="xref" data-knowl="./knowl/xref/EQUATIONSHO.html" title="Equation 6.9">Equation (6.9)</a> is used to model vibrations of buildings, acoustics, AC circuits, molecular, and crystal vibrations; basically anything that oscillates, but where the effects of air resistance are negligible. In <a href="CHAPTERlast-elem-funct.html#SECTIONleonh-euler-harm" class="internal" title="Section 8.13: Leonhard Euler, Harmonic Oscillators, and Complex Numbers">Section 8.13</a>, after we have expanded our repertoire of functions a bit, we will look at one way we can incorporate the role of air resistance into our computations so that we can extend the usefulness of our analysis.</div>
 <article class="problem example-like" id="PROBLEMHarmonicOscillator"><h5 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">6.41</span><span class="period">.</span>
 </h5>
@@ -1756,7 +1753,7 @@ x)}_{=z})}\right),
 </div>
 <div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/images/arctan5.png" class="contained"></div>
 <div class="para" id="SECTIONinverse-tan-and-cot-10">Actually, yes. It is just that simple. And the usual choice is the one we’ve indicated.  In this text we will designate this branch of <span class="process-math">\(\arctan(x)\)</span> with <span class="process-math">\(\inverse\tan(x)\text{.}\)</span> Thus <span class="process-math">\(\inverse\tan(x)\)</span> denotes the <dfn class="terminology">inverse tangent</dfn> function. Because the multifunction arctangent is not a function we will henceforth ignore it as much as possible.</div>
-<section class="paragraphs" id="DIGRESSION"><h4 class="heading"><span class="title">DIGRESSION: Inverse Function Notation.</span></h4>  <div class="para logical" id="DIGRESSION-2">
+<section class="paragraphs" id="DIGRESSIONInverse-function-notation"><h4 class="heading"><span class="title">DIGRESSION: Inverse Function Notation.</span></h4>  <div class="para logical" id="DIGRESSIONInverse-function-notation-2">
 <div class="para">The use of <span class="process-math">\(-1\)</span> as an exponent is probably the most common notation used to indicate function inversion. Unfortunately, from the standpoint of a student it is also probably the worst notation we could have possibly invented because It is so very easily confused with reciprocation. While it is true that</div>
 <div class="displaymath process-math" id="EQUATIONNegOneRecip">
 \begin{equation}
@@ -1769,7 +1766,7 @@ x)}_{=z})}\right),
 \inverse{\tan}(x) \text{ is not equal to } \frac{1}{\tan(x)}.\tag{6.13}
 \end{equation}
 </div>
-</div> <div class="para logical" id="DIGRESSION-3">
+</div> <div class="para logical" id="DIGRESSIONInverse-function-notation-3">
 <div class="para">That the “<span class="process-math">\(-1\)</span>” notation is used for both comes from the fact that both <span class="process-math">\(2^{-1}\)</span> and <span class="process-math">\(\inverse\sin(x)\)</span> really are inverses. But they are different kinds of inverses: <span class="process-math">\(\inverse2\)</span> is the multiplicative inverse of <span class="process-math">\(2\text{,}\)</span> which means simply that</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1788,16 +1785,16 @@ x)}_{=z})}\right),
 \tan(\inverse\tan(x))=x.
 \end{equation*}
 </div>
-</div> <div class="para" id="DIGRESSION-4">In <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONNegOneRecip.html" title="Equation 6.12">equation (6.12)</a> you can think of the <span class="process-math">\(-1\)</span> in the exponent as an operator. It operates on <span class="process-math">\(2\)</span> by taking its reciprocal: <span class="process-math">\(\inverse{2}=\frac12\text{.}\)</span> In <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONNegOneInv.html" title="Equation 6.13">equation (6.13)</a> the <span class="process-math">\(-1\)</span> is not an operator. It is part of the symbol, <span class="process-math">\(\inverse\tan\text{,}\)</span> that we use to denote the inverse tangent.</div> <div class="para" id="DIGRESSION-5">With practice this all gets easier, but in the beginning it is very troublesome. Be careful.</div> <article class="exercise exercise-like" id="DIGRESSION-6"><h5 class="heading">
+</div> <div class="para" id="DIGRESSIONInverse-function-notation-4">In <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONNegOneRecip.html" title="Equation 6.12">equation (6.12)</a> you can think of the <span class="process-math">\(-1\)</span> in the exponent as an operator. It operates on <span class="process-math">\(2\)</span> by taking its reciprocal: <span class="process-math">\(\inverse{2}=\frac12\text{.}\)</span> In <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONNegOneInv.html" title="Equation 6.13">equation (6.13)</a> the <span class="process-math">\(-1\)</span> is not an operator. It is part of the symbol, <span class="process-math">\(\inverse\tan\text{,}\)</span> that we use to denote the inverse tangent.</div> <div class="para" id="DIGRESSIONInverse-function-notation-5">With practice this all gets easier, but in the beginning it is very troublesome. Be careful.</div> <article class="exercise exercise-like" id="DIGRESSIONInverse-function-notation-6"><h5 class="heading">
 <span class="type">Drill</span><span class="space"> </span><span class="codenumber">6.63</span><span class="period">.</span>
 </h5>
-<div class="para" id="DIGRESSION-6-1">Evaluate each of the following:</div>
+<div class="para" id="DIGRESSIONInverse-function-notation-6-1">Evaluate each of the following:</div>
 <ol class="lower-roman cols2">
-<li id="DIGRESSION-6-2-1"><div class="para" id="DIGRESSION-6-2-1-1"><span class="process-math">\(\displaystyle \inverse{\left(\frac{2}{\inverse{3}}\right)}\)</span></div></li>
-<li id="DIGRESSION-6-2-2"><div class="para" id="DIGRESSION-6-2-2-1"><span class="process-math">\(\displaystyle \inverse\tan\left(\frac{\sqrt{3}}{2}\right)\)</span></div></li>
-<li id="DIGRESSION-6-2-3"><div class="para" id="DIGRESSION-6-2-3-1"><span class="process-math">\(\displaystyle \inverse{\left(\cot\left(\frac{\pi}{3}\right)\right)}\)</span></div></li>
-<li id="DIGRESSION-6-2-4"><div class="para" id="DIGRESSION-6-2-4-1"><span class="process-math">\(\displaystyle \inverse{\left(\inverse\tan\left(1\right)\right)}\)</span></div></li>
-</ol></article>          <div class="para" id="DIGRESSION-7">END OF DIGRESSION</div></section><div class="para logical" id="SECTIONinverse-tan-and-cot-12">
+<li id="DIGRESSIONInverse-function-notation-6-2-1"><div class="para" id="DIGRESSIONInverse-function-notation-6-2-1-1"><span class="process-math">\(\displaystyle \inverse{\left(\frac{2}{\inverse{3}}\right)}\)</span></div></li>
+<li id="DIGRESSIONInverse-function-notation-6-2-2"><div class="para" id="DIGRESSIONInverse-function-notation-6-2-2-1"><span class="process-math">\(\displaystyle \inverse\tan\left(\frac{\sqrt{3}}{2}\right)\)</span></div></li>
+<li id="DIGRESSIONInverse-function-notation-6-2-3"><div class="para" id="DIGRESSIONInverse-function-notation-6-2-3-1"><span class="process-math">\(\displaystyle \inverse{\left(\cot\left(\frac{\pi}{3}\right)\right)}\)</span></div></li>
+<li id="DIGRESSIONInverse-function-notation-6-2-4"><div class="para" id="DIGRESSIONInverse-function-notation-6-2-4-1"><span class="process-math">\(\displaystyle \inverse{\left(\inverse\tan\left(1\right)\right)}\)</span></div></li>
+</ol></article>          <div class="para" id="DIGRESSIONInverse-function-notation-7">END OF DIGRESSION</div></section><div class="para logical" id="SECTIONinverse-tan-and-cot-12">
 <div class="para">But what, exactly, is <span class="process-math">\(\inverse\tan(x)\)</span> the inverse of? From the sketch above it should be clear that restricting the <em class="alert">range</em> of <span class="process-math">\(\inverse\tan(x)\)</span> to values in the interval <span class="process-math">\((-\pi/2, \pi/2)\)</span> forced us to restrict the <em class="alert">domain</em> of <span class="process-math">\(\tan(x)\text{.}\)</span> So</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -2383,10 +2380,10 @@ x(x^2-1)\dfdxn{y}{x}{2}+(2x^2-1)\dfdx{y}{x}=0.
 </div>
 <div class="para">          </div>
 </div>
-<article class="problem example-like" id="SECTIONcurvature-22"><h4 class="heading">
+<article class="problem example-like" id="PROBLEMCurvatureDef2"><h4 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">6.96</span><span class="period">.</span>
 </h4>
-<div class="para logical" id="SECTIONcurvature-22-1-1">
+<div class="para logical" id="PROBLEMCurvatureDef2-1-1">
 <div class="para">Use <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONCurvaturePreamble.html" title="Equation 6.20">equation (6.20)</a> to show that</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQUATIONCurvaturePreamble.html" id="EQUATIONCurvatureDef2">
 \begin{equation}
@@ -2394,7 +2391,7 @@ x(x^2-1)\dfdxn{y}{x}{2}+(2x^2-1)\dfdx{y}{x}=0.
 \end{equation}
 </div>
 </div>
-<div class="solutions"><details id="SECTIONcurvature-22-2" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="SECTIONcurvature-22-2-1">
+<div class="solutions"><details id="PROBLEMCurvatureDef2-2" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="PROBLEMCurvatureDef2-2-1">
 <span class="process-math">\(\dx{s}=\sqrt{(\dx{x})^2+(\dx{y})^2}\text{.}\)</span>}</div></div></details></div></article><section class="paragraphs" id="SECTIONcurvature-23"><h4 class="heading"><span class="title">DIGRESSION: <i class="foreign">Hic Sunt Dracones</i> (Here Be Dragons).</span></h4> <div class="para" id="SECTIONcurvature-23-2">The time has come for us to begin understanding why differentials were abandoned as a foundational concept for Calculus. We are entering dangerous and uncharted waters but we won’t dive into the deep part just yet. We’ll only wade in a little way.</div> <div class="para" id="SECTIONcurvature-23-3">To indicate dangerous and  uncharted waters on their maps medieval mapmakers would fill in the unexplored regions of their maps with illustrations of dragons and other mythological beasts. The Lennox Globe, in the Rare Book Division of the The New York Public Library (1510 CE), even has the inscription <i class="foreign">Hic Sunt Dracones</i> (Here Be Dragons) along the eastern Asian coast.</div> <figure class="figure figure-like" id="SECTIONcurvature-23-4"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/LennoxGlobe2.png" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">6.97<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://en.wikipedia.org/wiki/Hunt-Lenox_Globe" target="_blank">The Lennox Globe</a><a class="xref" id="SECTIONcurvature-23-4-1-2" href="" data-knowl="./knowl/fn/SECTIONcurvature-23-4-1-2.html" title="Footnote 6.16"><sup> 16 </sup></a></figcaption></figure>       <div class="para" id="SECTIONcurvature-23-5">The concept of the differential of a differential, like <span class="process-math">\(\dx^2x\)</span> or <span class="process-math">\(\dx^2y\text{,}\)</span> is a mathematical dragon of sorts. We will proceed carefully.</div> <div class="para" id="SECTIONcurvature-23-6">If the entire development from <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONDiffTheta.html" title="Equation 6.18">equation (6.18)</a> to <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONCurvaturePreamble.html" title="Equation 6.20">equation (6.20)</a> feels contrived, it’s because it is contrived. In particular the “uncancelling” step is clearly a trick in the sense that nothing we did before that step seems to motivate the uncancelling. We just pulled it out of the air, and it worked. Clearly we knew that it would work, but why do you suppose we used a trick rather than explaining what we were doing?</div> <div class="para" id="SECTIONcurvature-23-7">Since everything we did hinged on the observation that <span class="process-math">\(\dfdxn{y}{x}{2}=\dfdx{\left(\dfdx{y}{x}\right)}{x}\)</span> (from <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONSecondDifferentials.html" title="Equation 6.19">equation (6.19)</a> and <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONCurvaturePreamble.html" title="Equation 6.20">equation (6.20)</a>) it would seem more natural to simply apply the Quotient Rule to <span class="process-math">\(\dx{\left(\dfdx{y}{x}\right)}\text{,}\)</span> wouldn’t it?</div> <div class="para logical" id="SECTIONcurvature-23-8">
 <div class="para">Let’s try that and see what happens. First we get</div>

@@ -159,15 +159,21 @@ window.MathJax = {
 
 
 \def\DD{{\bf{}D}}
-\def\ftceval#1#2#3{#1\hskip.5ex{\llap{\smash{\rule[-3ex]{0.5pt}{7ex}}}_{\raise{-3ex}{\hskip.5ex#2}}^{\raise{-5ex}{\hskip.5ex #3}}}}
 
-
-\def\eval#1#2#3{#1\hskip.5ex{\llap{\rule[-1.5ex]{0.5pt}{4ex}}_{\raise{-1.5ex}{\hskip.5ex#2=#3}}}}
-\def\dispeval#1#2#3{#1\hskip.5ex{\llap{\smash{\rule[-2ex]{0.5pt}{5ex}}}_{\raise{-2ex}{\hskip.5ex#2=#3}}}}
-
-\def\geneval#1#2{\left.#1\right|_{#2}}
-
+\def\eval#1#2#3{\left.#1\right\rvert_{#2}^{#3}}
+\def\ftceval#1#2#3{\eval#1#2#3}
+\def\geneval#1#2{\eval{#1}{#2}{}}
 \def\bigeval#1#2#3{\eval{#2}{#2}{#3}}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -350,29 +356,20 @@ window.MathJax = {
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONGatewayArch" class="internal"><span class="codenumber">8.5</span> <span class="title">The Gateway Arch</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#CHAPTERlast-elem-funct-8" class="internal"><span class="codenumber">8.6</span> <span class="title">Exponential Growth</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONExpAndCmpndInt" class="internal"><span class="codenumber">8.7</span> <span class="title">Exponential Functions and Compound Interest</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONnatural-logarithm-1" class="internal"><span class="codenumber">8.8</span> <span class="title">A Short Introduction to Logarithms: John Napier Logs In</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONNatLog" class="internal"><span class="codenumber">8.9</span> <span class="title">Logarithms, Natural and Unnatural</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONnatural-logarithm-1" class="internal"><span class="codenumber">8.8</span> <span class="title">The Natural Logarithm</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection">
-<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONNapier" class="internal"><span class="codenumber">8.8.1</span> <span class="title">John Napier Logs In</span></a></div>
+<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONLogApps" class="internal"><span class="codenumber">8.10</span> <span class="title">Applications of Logarithms</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONNapier-2" class="internal"><span class="codenumber">8.8.1.1</span> <span class="title">A Short Introduction to Logarithms</span></a></div></li>
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSUBSECTIONradioactive-decay" class="internal"><span class="codenumber">8.8.1.2</span> <span class="title">Radioactive Dating</span></a></div></li>
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSUBSECTIONnewtons-law-cooling" class="internal"><span class="codenumber">8.8.1.3</span> <span class="title">Chillin’ with Newton: The Law of Cooling</span></a></div></li>
-</ul>
-</li></ul>
-</li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONDerivNatLog" class="internal"><span class="codenumber">8.9</span> <span class="title">The Derivative of the Natural Logarithm</span></a></div></li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONgener-logar-expon" class="internal"><span class="codenumber">8.10</span> <span class="title">General Logarithms and Exponentials</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONGenExp" class="internal"><span class="codenumber">8.10.1</span> <span class="title">General Exponentials</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONGenLog" class="internal"><span class="codenumber">8.10.2</span> <span class="title">General Logarithms</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONLogDiff" class="internal"><span class="codenumber">8.10.3</span> <span class="title">Logarithmic Differentiation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONradioactive-decay" class="internal"><span class="codenumber">8.10.1</span> <span class="title">Radioactive Dating</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONnewtons-law-cooling" class="internal"><span class="codenumber">8.10.2</span> <span class="title">Chillin’ with Newton: The Law of Cooling</span></a></div></li>
 </ul>
 </li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONDerivNatLog" class="internal"><span class="codenumber">8.11</span> <span class="title">The Derivative of the Natural Logarithm</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONgener-logar-expon" class="internal"><span class="codenumber">8.12</span> <span class="title">General Logarithms and Exponentials</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONleonh-euler-harm" class="internal"><span class="codenumber">8.11</span> <span class="title">Leonhard Euler, Harmonic Oscillators, and Complex Numbers</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONHowEulerDidIt" class="internal"><span class="codenumber">8.11.1</span> <span class="title">How Euler Did It</span></a></div></li></ul>
+<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONleonh-euler-harm" class="internal"><span class="codenumber">8.13</span> <span class="title">Leonhard Euler, Harmonic Oscillators, and Complex Numbers</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONHowEulerDidIt" class="internal"><span class="codenumber">8.13.1</span> <span class="title">How Euler Did It</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -604,13 +601,13 @@ x-5}{(x,y)}{(3,12)}=6\cdot3-5=13.
 </div>
 </div> <aside class="aside aside-like" id="EXAMPLEEvaluationNotation-4-1-2"><h6 class="heading"><span class="title">Mathematical Notation.</span></h6>
 <div class="para" id="EXAMPLEEvaluationNotation-4-1-2-2">Obviously this makes no sense if the point <span class="process-math">\((3,12)\)</span> is not a point on the curve. You should always make sure the problem makes sense before you try to solve it.</div></aside> <div class="para" id="EXAMPLEEvaluationNotation-4-1-3">In this case we could just write: <span class="process-math">\(\eval{\dfdx{y}{x}}{x}{3}=13\text{,}\)</span> since the <span class="process-math">\(y\)</span> coordinate never comes into play.</div> <div class="para" id="EXAMPLEEvaluationNotation-4-1-4">Finally, we emphasize that Leibniz’ notation is <em class="emphasis">deliberately</em> evocative of the notion of slope because when we evaluate the differential ratio at a point it tells us the slope of the curve at that point.  In view of the <em class="alert">Principle of Local Linearity</em>, this is equivalent to finding the slope of the line tangent to the curve at that point.</div></article></article><div class="para" id="SECTIONVelocitySlopeTangent-15">This notation probably seems unnecessarily cumbersome and honestly, in some ways it is. But be assured we have not made this choice lightly, and this notation has certain advantages that will become apparent later.</div>
-<div class="para" id="SECTIONVelocitySlopeTangent-16">It can be easy to get careless or simply confused and write <span class="process-math">\(\dfdx{y}{x}\)</span> when you mean <span class="process-math">\(\eval{\dfdx{y}{x}}{x}{a}\text{,}\)</span> and <i class="foreign">vice versa</i>, so it is important that you have the distinction between them clear in your mind.</div>
+<div class="para" id="SECTIONVelocitySlopeTangent-16">It can be easy to get careless or simply confused and write <span class="process-math">\(\dfdx{y}{x}\)</span> when you mean <span class="process-math">\(\geneval{\dfdx{y}{x}}{x=a}\text{,}\)</span> and <i class="foreign">vice versa</i>, so it is important that you have the distinction between them clear in your mind.</div>
 <article class="problem example-like" id="SECTIONVelocitySlopeTangent-17"><h4 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">5.3</span><span class="period">.</span>
 </h4>
 <div class="introduction" id="SECTIONVelocitySlopeTangent-17-1"><div class="para" id="SECTIONVelocitySlopeTangent-17-1-1"></div></div>
 <article class="task exercise-like" id="SECTIONVelocitySlopeTangent-17-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="SECTIONVelocitySlopeTangent-17-2-1-1">Explain the difference between <span class="process-math">\(\dfdx{y}{x}\)</span> and <span class="process-math">\(\eval{\dfdx{y}{x}}{x}{a}\)</span> carefully and clearly.</div></article><article class="task exercise-like" id="SECTIONVelocitySlopeTangent-17-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="SECTIONVelocitySlopeTangent-17-2-1-1">Explain the difference between <span class="process-math">\(\dfdx{y}{x}\)</span> and <span class="process-math">\(\eval{\dfdx{y}{x}}{x=a}{}\)</span> carefully and clearly.</div></article><article class="task exercise-like" id="SECTIONVelocitySlopeTangent-17-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
 <div class="para logical" id="SECTIONVelocitySlopeTangent-17-3-1-1">
 <div class="para">We (the authors) have sometimes had students assert that since <span class="process-math">\(\dfdx{y}{x}=2x\text{,}\)</span> the equation of the line tangent to the graph of <span class="process-math">\(y=x^2\)</span> at the point <span class="process-math">\((a, a^2)\)</span> is</div>
 <div class="displaymath process-math">
@@ -624,7 +621,7 @@ y-a^2=2x(x-a).\label{eq:TanLineNoLine}
 </div></article></article><article class="exercise exercise-like" id="SECTIONVelocitySlopeTangent-18"><h4 class="heading">
 <span class="type">Drill</span><span class="space"> </span><span class="codenumber">5.4</span><span class="period">.</span>
 </h4>
-<div class="para" id="SECTIONVelocitySlopeTangent-18-1-1">Find <span class="process-math">\(\eval{\dfdx{y}{x}}{(x,y)}{(2,2)}\)</span> if <span class="process-math">\(y=\sqrt{2x}\)</span> and compare this with the slope we obtained in <a href="" class="xref" data-knowl="./knowl/xref/EXERCISEDescartesNormals2.html" title="Drill 3.25">Drill 3.25</a> using Descartes’ Method of Normals.</div></article><article class="problem example-like" id="PROBLEMDeri"><h4 class="heading">
+<div class="para" id="SECTIONVelocitySlopeTangent-18-1-1">Find <span class="process-math">\(\eval{\dfdx{y}{x}}{(x,y)=(2,2)}{}\)</span> if <span class="process-math">\(y=\sqrt{2x}\)</span> and compare this with the slope we obtained in <a href="" class="xref" data-knowl="./knowl/xref/EXERCISEDescartesNormals2.html" title="Drill 3.25">Drill 3.25</a> using Descartes’ Method of Normals.</div></article><article class="problem example-like" id="PROBLEMDeri"><h4 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">5.5</span><span class="period">.</span>
 </h4>
 <div class="introduction" id="PROBLEMDeri-1"><div class="para" id="PROBLEMDeri-1-1">Evaluate <span class="process-math">\(\eval{\dfdx{y}{x}}{x}{a}\)</span> for each of the following functions at each of the given values of <span class="process-math">\(x\text{.}\)</span>
