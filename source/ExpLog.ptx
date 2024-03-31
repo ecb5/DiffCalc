@@ -118,14 +118,14 @@
         <ol>
           <li>
             <p>
-              The differential equation (for example, <m>\dfdx{y}{x}=2x</m>, and
+              The differential equation (for example, <m>\dfdx{y}{x}=2x</m>),
             </p>
           </li>
           <li>
             <p>
               The initial value. (So called because when the
               independent variable is time  we usually know the value of our
-              function initially.
+              function initially.)
             </p>
           </li>
         </ol>
@@ -387,10 +387,9 @@ T_n(x) =1+x+\frac{x^2}{2!}+\frac{x^3}{3!}
       <problem>
         <introduction>
           <p>
-            Show that none of the following is a solution of
-            <xref ref="DEFINITIONnatural-exponential-ivp">IVP</xref>.
-            \hint{Observe that if
-            <m>y(x)</m> is a solution then <m>y-\dfdx{y}{x}=0</m>.}
+            Show that none of the following is a solution of <xref
+            ref="IVPExpDiffeq">IVP</xref>.  (Observe that if
+            <m>y(x)</m> is a solution then <m>y-\dfdx{y}{x}=0</m>.)
           </p>
         </introduction>
         <task>
@@ -436,26 +435,33 @@ T_n(x) =1+x+\frac{x^2}{2!}+\frac{x^3}{3!}
             <problem>
               <introduction>
                 <p>
-                  Show that none of the following\aside{The notation <m>3!</m> is
+                  Show that none of the following is a solution of
+                  <xref ref="DEFINITIONnatural-exponential-ivp"></xref>.
+                  (Observe that if
+                  <m>y(x)</m> is a solution then <m>y-\dfdx{y}{x}=0</m>.)
+                </p>
+                <aside>
+<title>Mathematical Notation</title>
+<p>
+The notation <m>3!</m> is
                   read <q>three factorial</q> and means <m>3\cdot2\cdot1.</m>
                   Similarly <m>4!=4\cdot3\cdot2\cdot1</m> and in general
-                  <m>n!=n(n-1)(n-2)\ldots3\cdot2\cdot1</m>} is a solution of
-                  <xref ref="DEFINITIONnatural-exponential-ivp"></xref>.
-                  \hint{Observe that if
-                  <m>y(x)</m> is a solution then <m>y-\dfdx{y}{x}=0</m>.}
-                </p>
+                  <m>n!=n(n-1)(n-2)\ldots3\cdot2\cdot1</m>
+</p>
+</aside>
+
               </introduction>
               <task>
                 <statement>
                   <p>
-                    <m>y= 1+x+\frac{x^2}{2!}+\frac{x^3}{3!}</m> -->
+                    <m>y= 1+x+\frac{x^2}{2!}+\frac{x^3}{3!}</m>
                   </p>
                 </statement>
               </task>
         <task>
                 <statement>
                   <p>
-                    <m>y= 1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\frac{x^4}{4!}</m> -->
+                    <m>y= 1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\frac{x^4}{4!}</m>
                   </p>
                 </statement>
               </task>
@@ -585,7 +591,7 @@ Newton wrote his
 
             <p>
               This is a startling idea but before we dismiss it, let<rsq/>s take our own
-              advice from our <xref ref="DIGRESSIONGuessingEffectively" text="custom">Digression</xref> on effective guessing. We<rsq/>ll trust
+              advice from <xref ref="DIGRESSIONGuessingEffectively" text="custom">Digression: The Art of Guessing Effectively</xref>. We<rsq/>ll trust
               our intuition, but also examine it closely. What we<rsq/>re saying is that
               the solution of <xref ref="IVPExpDiffeq">equation</xref> is:
               <men  xml:id="EQUATIONExpSeries1">
@@ -686,9 +692,10 @@ Newton wrote his
             <!--   \label{fig:ExpFifty} -->
             <!-- \end{wrapfigure} -->
             <p>
-              <xref ref="PROBLEMTaylorSeries1"></xref> shows that we appear to have the
-              exact solution of <xref ref="IVPExpDiffeq">IVP</xref> in the form of the infinite
-              series,
+              The result of <xref ref="PROBLEMTaylorSeries1"></xref>
+              seems to show that we have the exact solution of <xref
+              ref="IVPExpDiffeq">IVP</xref> in the form of the
+              infinite series,
               <men  xml:id="EQUATIONExpSeries2">
                 \exp(x)=1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\frac{x^4}{4!}+\ldots.
               </men>
@@ -1670,49 +1677,50 @@ Point: <m>(1,e/2)</m>
           </statement>
         </task>
         <task  xml:id="PROBLEMHangChainD">
-          <p>
-            Now let<rsq/>s tackle the original problem.
-            Show that
-            <men  xml:id="EQUATIONCatSol">
-              y=\frac{H}{w}
-              \left(\frac{e^{\frac{wx}{H}}+e^{-\frac{wx}{H}}}{2}\right)
-            </men>
-            satisfies the equation
-            <me>
-              \dfdxn{y}{x}{2}=\frac{w}{H} \sqrt{1+\left(\dfdx{y}{x}\right)^2}
-            </me>
-            where <m>w</m> is the weight density of the chain, and <m>H</m> is the
-            constant (magnitude of the) horizontal tension.
-          </p>
-<hint>
-<p>
-This is essentially the same computation you did for the
-            special case, but the Algebra is messier. Consider making
-            it <q>easier on the eyes</q> with the
-            substitutions <me>X=\frac{wx}{H}</me> and
-            <me>Y(X)=\frac12\left(e^X+e^{-X}\right).</me>
-            We already know from <xref ref="HangChainC">part</xref> that
-            <m>\dfdxn{Y}{X}{2}=\sqrt{1+\left(\dfdx{Y}{X}\right)^2}</m>.
-            Notice that <m>y=\frac{H}{w}Y(X)</m> and use this to show that
-            <m>
-              \dfdx{y}{x}=\dfdx{Y}{X}\text{ and that }
-              \dfdxn{y}{x}{2}=\frac{w}{H}\dfdxn{Y}{X}{2}.
-            </m>
-</p>
-</hint>
+          <statement>
+            <p>
+              Now let<rsq/>s tackle the original problem.
+              Show that
+              <men  xml:id="EQUATIONCatSol">
+                y=\frac{H}{w}
+                \left(\frac{e^{\frac{wx}{H}}+e^{-\frac{wx}{H}}}{2}\right)
+              </men>
+              satisfies the equation
+              <me>
+                \dfdxn{y}{x}{2}=\frac{w}{H} \sqrt{1+\left(\dfdx{y}{x}\right)^2}
+              </me>
+              where <m>w</m> is the weight density of the chain, and <m>H</m> is the
+              constant (magnitude of the) horizontal tension.
+            </p>
+          </statement>
+          <hint>
+            <p>
+              This is essentially the same computation you did for the
+              special case, but the Algebra is messier. Consider making
+              it <q>easier on the eyes</q> with the
+              substitutions <me>X=\frac{wx}{H}</me> and
+              <me>Y(X)=\frac12\left(e^X+e^{-X}\right).</me>
+              We already know from <xref ref="HangChainC">part</xref> that
+              <m>\dfdxn{Y}{X}{2}=\sqrt{1+\left(\dfdx{Y}{X}\right)^2}</m>.
+              Notice that <m>y=\frac{H}{w}Y(X)</m> and use this to show that
+              <m>
+                \dfdx{y}{x}=\dfdx{Y}{X}\text{ and that }
+                \dfdxn{y}{x}{2}=\frac{w}{H}\dfdxn{Y}{X}{2}.
+              </m>
+            </p>
+          </hint>
         </task>
-<task  xml:id="PROBLEMHangChainE">
-<statement>
-<p>
-Assume that <m>w=1 </m>, and <m>H=1</m> and graph the curve given in
-<xref ref="EQUATIONCatSol"></xref>. Does it look like a hanging chain? What
-happens to the graph if we use <m>w=1</m> and <m>H=2</m>, or
-<m>w=2</m> and <m>H=1</m>? Does this make sense physically? Why or why
-not?
-</p>
-</statement>
-</task>
-
+        <task  xml:id="PROBLEMHangChainE">
+          <statement>
+            <p>
+              Assume that <m>w=1 </m>, and <m>H=1</m> and graph the curve given in
+              <xref ref="EQUATIONCatSol"></xref>. Does it look like a hanging chain? What
+              happens to the graph if we use <m>w=1</m> and <m>H=2</m>, or
+              <m>w=2</m> and <m>H=1</m>? Does this make sense physically? Why or why
+              not?
+            </p>
+          </statement>
+        </task>
       </problem>
 
       <!--   \begin{embeddedproblem}[The Shape of a Hanging Chain]  ;;; MULTILEVEL PROBLEM -->
@@ -2139,7 +2147,7 @@ For more information on the
           more than on day one, or <m>16.9</m> grams. It should be clear that the
           rate of growth from day <m>n</m> to day <m>n+1</m> is proportional to how many
           bacteria we have on day <m>n</m>. Thus from any one day to the next we
-          see that the change in <m>P</m> (<m>\Delta P</m> is given by
+          see that the change in <m>P</m> (that is,  <m>\Delta P</m>) is given by
           <men  xml:id="EQUATIONDiscBacterModel">
                         \Delta P = 0.3 P\Delta t
           </men>
@@ -2149,16 +2157,16 @@ For more information on the
         </p>
         <p>
 
-          But we assumed that <m>30</m>\% of the bacteria were dividing in sync
+          But we assumed that <m>30</m>% of the bacteria were dividing in sync
           once per day, which is unrealistic. To get closer to reality suppose
           next that enough of them divide during any one hour so that at the
-          end of one day the population has still grown by <m>30</m>\%. Then from
+          end of one day the population has still grown by <m>30</m>%. Then from
           any one hour to the next we again have
           <xref ref="EQUATIONDiscBacterModel">equation</xref> but this time <m>\Delta t</m> is
           equal to one hour, or <m>\frac{1}{24}</m> day.  However, we don<rsq/>t have to
           measure time in days. If we measure it in hours instead we again
           have <m>\Delta t=1 \text{ hour } = \frac{1}{24} \text{ day}</m>. The constant factor is still <m>0.3</m> because we assumed that the
-          population was growing at <m>30\%</m> per day, and this is still
+          population was growing at <m>30%</m> per day, and this is still
           true. That factor is called the <term>nominal</term> growth rate.
         </p>
 
@@ -2199,7 +2207,7 @@ The word
           bacteria we have the initial condition <m>P(0)=10</m>. This says that the
           amount of bacteria at time <m>t</m> must satisfy the IVP:
           <mdn>
-            <mrow xml:id="EQUATIONBacteriaIVP">
+            <mrow xml:id="IVPBacteriaIVP">
             \dfdx{P}{t}\amp{}= 0.3P,\amp{} P(0)\amp{}=10.
             </mrow>
           </mdn>
@@ -2207,14 +2215,14 @@ The word
           <xref ref="EQUATIONBacteriaIVP">IVP</xref> expresses the idea
           that the rate of change of the population, <m>\dfdx{P}{t}</m>, is
           proportional to the size of the population, <m>P</m>. The constant of
-          proportionality is <m>0.3</m>, or <m>30\%</m>.
+          proportionality is <m>0.3</m>, or <m>30%</m>.
         </p>
 
 
 
         <p>
           Clearly there is nothing particularly special about the number <m>0.3.</m>
-          If our colony had been increasing at a <term>nominal</term> rate of <m>15\%</m>
+          If our colony had been increasing at a <term>nominal</term> rate of <m>15%</m>
           we<rsq/>d have arrived at the IVP:
           <me>
             \dfdx{P}{t}=0.15P,\ \ P(0)=10.
@@ -2314,7 +2322,7 @@ The word
           <statement>
             <p>
               According to the model in part (a), how much did the colony grow over the
-              first day and how does this compare to the growth rate of <m>30\%</m>?
+              first day and how does this compare to the growth rate of <m>30%</m>?
             </p>
           </statement>
         </task>
@@ -2330,9 +2338,9 @@ The word
         <task>
           <statement>
             <p>
-              Suppose our  growth rate was <m>15\%</m>
+              Suppose our  growth rate was <m>15%</m>
               per day.  Would the bacteria have grown half as
-              much in the first day as it did when the growth rate was <m>30\%</m>
+              much in the first day as it did when the growth rate was <m>30%</m>
               per day?
               <ol cols="2" marker="i">
                 <li>
@@ -2403,7 +2411,7 @@ The word
       </p>
 
       <p>
-        Clearly the bacteria can not sustain a growth rate of <m>30\%</m>
+        Clearly the bacteria can not sustain a growth rate of <m>30%</m>
         indefinitely.  If nothing else, they will eventually run out of
         food. Our point here is that this model, like all models, is
         limited. To use a mathematical model effectively we need to stay
@@ -2480,9 +2488,9 @@ Except that the nominal
       <p>
         The natural exponential function also arises naturally in financial
         mathematics.  If we invest money in a bond which pays a <term>nominal
-        interest</term> rate of <m>5\%</m> annually, and the interest is
+        interest</term> rate of <m>5%</m> annually, and the interest is
         <term>compounded</term> quarterly then the <term>effective yield</term> will be
-        <m>5.09\%</m>.
+        <m>5.09%</m>.
       </p>
 
       <p>
@@ -2500,12 +2508,8 @@ Except that the nominal
         would yield <m>1.05</m> in return, so the effective yield is the same as
         the <term>nominal yield</term>: <m>5</m>.
       </p>
-      <aside>
-        <title>Note to self</title>
-        <p>
-          Missing table
-        </p>
-      </aside>
+
+
 
       <p>
         If the investment is compounded semiannually (twice per year), then
@@ -2514,7 +2518,7 @@ Except that the nominal
         in the table below.
         <!-- \begin{center} -->
         <!-- \begin{tabular}[h]{|c|l|} -->
-        <!-- \multicolumn{2}{c}{\textcolor{blue}{<m>5\%</m> nominal interest compounded semiannually}}\\\hline -->
+        <!-- \multicolumn{2}{c}{\textcolor{blue}{<m>5%</m> nominal interest compounded semiannually}}\\\hline -->
         <!-- Time <m>t</m> in years \amp Amount investment is worth in -->
         <!-- dollars\bigstrut \\\hline -->
         <!-- <m>0</m>\amp <m>1</m>\bigstrut \\ -->
@@ -2524,56 +2528,117 @@ Except that the nominal
         <!-- =<m>\</m>1\left(1+\frac{0.05}{2}\right)^2=\<m>1.050625</m>\bigstrut \\\hline -->
         <!-- \end{tabular} -->
         <!-- \end{center} -->
-        The effective yield in this case is approximately <m>5.06\%</m>.
+
+       The effective yield in this case is approximately <m>5.06%</m>.
       </p>
-      <aside>
-        <title>Note to self</title>
-        <p>
-          Missing table
-        </p>
-      </aside>
+<table  xml:id="5percenCompSemiAn">
+<title><m>5\%</m> nominal interest compounded semiannually</title>
+<tabular>
+
+<row bottom="minor" halign="center">
+<cell>Time <m>t</m> in years</cell>
+<cell>Amount investment is worth in dollars</cell>
+</row>
+
+<row halign="center">
+<cell><m>0</m></cell>
+<cell><m>\$ 1</m></cell>
+</row>
+<row halign="center">
+<cell><m>1/2</m></cell>
+<cell>
+<m> \$1+\$1\left(\frac{0.05}{2}\right)=\$1\left(1+\frac{0.05}{2}\right)=\$1.025</m>
+</cell>
+</row>
+<row halign="center">
+<cell><m>1</m></cell>
+<!-- <cell> -->
+<!-- <m>\$1\left(1+\frac{0.05}{2}\right)+\$1\left(1+\frac{0.05}{2}\right)\left(\frac{0.05}{2}\right)=\$1\left(1+\frac{0.05}{2}\right)^2=\$1.050625</m> -->
+<!-- </cell> -->
+<cell>
+<m>
+\begin{split}
+     \$1\left(1+\frac{0.05}{2}\right)&amp;+\$1\left(1+\frac{0.05}{2}\right)\left(\frac{0.05}{2}\right)\\
+\amp{}=\$1\left(1+\frac{0.05}{2}\right)^2=\$1.050625   \end{split}
+</m>
+
+   </cell>
+</row>
+
+</tabular>
+</table>
 
       <p>
         The table below shows, in abbreviated form, the computations needed if
         the investment is compounded three times in a year.
       </p>
-      <p>
-        \begin{center}
-        \begin{tabular}[h]{|c|c|}
-        \multicolumn{2}{c}{\textcolor{blue}{<m>5\%</m> nominal interest, compounded three times annually}}\\\hline
-        Time in years \amp  Amount investment is worth in dollars\bigstrut \\\hline
-        <m>0</m> \amp  <m>1</m>\bigstrut \\
-        <m>1/3</m> \amp  <m>1\left(1+\frac{0.05}{3}\right)^1</m>\bigstrut\\
-        <m>2/3</m> \amp  <m>1\left(1+\frac{0.05}{3}\right)^2</m>\bigstrut\\
-        <m>1</m>   \amp  <m>1\left(1+\frac{0.05}{3}\right)^3\approx1.0508</m>\bigstrut\\\hline
-        \end{tabular}
-        \end{center}
-      </p>
+<table  xml:id="5percenCompThreeAn">
+<title><m>5\%</m> nominal interest compounded three time per year</title>
+<tabular>
+
+<row bottom="minor" halign="center">
+<cell>Time <m>t</m> in years</cell>
+<cell>Amount investment is worth in dollars</cell>
+</row>
+
+<row halign="center">
+<cell><m>0</m></cell>
+<cell><m>\$ 1</m></cell>
+</row>
+<row halign="center">
+<cell><m>1/3</m></cell>
+<cell><m>\$1\left(1+\frac{0.05}{3}\right)^1</m></cell>
+</row>
+<row halign="center">
+<cell><m>2/3</m></cell>
+<cell><m>\$1\left(1+\frac{0.05}{3}\right)^2</m></cell>
+</row>
+<row halign="center">
+<cell><m>1</m></cell>
+<cell><m>\$1\left(1+\frac{0.05}{3}\right)^3\approx\$1.0508</m></cell>
+</row>
+
+</tabular>
+</table>
       <p>
         Quarterly compounding means that the interest is re-invested four
         times and is shown in the next table.
       </p>
-      <aside>
-        <title>Note to self</title>
-        <p>
-          Missing table
-        </p>
-      </aside>
+<table  xml:id="5percenCompQuart">
+<title><m>5\%</m> nominal interest compounded quarterly</title>
+<tabular>
+
+<row bottom="minor" halign="center">
+<cell>Time <m>t</m> in years</cell>
+<cell>Amount investment is worth in dollars</cell>
+</row>
+
+<row halign="center">
+<cell><m>0</m></cell>
+<cell><m>\$ 1</m></cell>
+</row>
+<row halign="center">
+<cell><m>1/4</m></cell>
+<cell><m>\$1\left(1+\frac{0.05}{4}\right)^1</m></cell>
+</row>
+<row halign="center">
+<cell><m>1/2</m></cell>
+<cell><m>\$1\left(1+\frac{0.05}{4}\right)^2</m></cell>
+</row>
+<row halign="center">
+<cell><m>3/4</m></cell>
+<cell><m>\$1\left(1+\frac{0.05}{4}\right)^3</m></cell>
+</row>
+<row halign="center">
+<cell><m>1</m></cell>
+<cell><m>\$\left(1+\frac{0.05}{4}\right)^4\approx\$1.0509</m></cell>
+</row>
+
+</tabular>
+</table>
+
       <p>
-        \begin{center}
-        \begin{tabular}[h]{|c|c|}
-        \multicolumn{2}{c}{\textcolor{blue}{<m>5\%</m> nominal interest, compounded <m>\</m>1<m> quarterly}}\\\hline
-        Time in years \amp  Amount investment is worth in dollars\bigstrut \\\hline
-        </m>0<m>   \amp  </m>\<m>1</m>\bigstrut \\
-        <m>1/4</m> \amp  <m>\</m>1\left(1+\frac{0.05}{4}\right)^1<m>\bigstrut\\
-        </m>1/2<m> \amp  </m>\<m>1\left(1+\frac{0.05}{4}\right)^2</m>\bigstrut\\
-        <m>3/4</m> \amp  <m>\</m>1\left(1+\frac{0.05}{4}\right)^3<m>\bigstrut\\
-        </m>1<m>   \amp  </m>\<m>1\left(1+\frac{0.05}{4}\right)^4\approx1.0509</m>\bigstrut\\\hline
-        \end{tabular}
-        \end{center}
-      </p>
-      <p>
-        Notice how these three tables differ from and are similar to each
+        Notice how these three tables differ, and how they are similar to each
         other.  The effective yield comes from the last entry in each table.
         It is the difference between the amount
         the investment is worth at the end of the year and what it is worth at
@@ -2613,42 +2678,57 @@ Except that the nominal
 
       <p>
         To do this, it will be convenient to write <m>A(t)</m> as
-        \begin{align*}
-        A(t)\amp =1\cdot\left(1+\frac{0.05}{n}\right)^{nt}\\
-        \amp =1\cdot\left(\left(1+\frac{0.05}{n}\right)^{\frac{n}{0.05}}\right)^{0.05t}\\
-        \amp =1\cdot\left(\left(1+\frac{1}{\frac{n}{0.05}}\right)^{\frac{n}{0.05}}\right)^{0.05t}
-        \intertext{ Setting <m>m=\frac{n}{0.05}</m> we see that}
-        A(t)\amp =1\cdot\left(\left(1+\frac{1}{m}\right)^{m}\right)^{0.05t}.
-        \end{align*}
+        <md>
+<mrow>        A(t)\amp =1\cdot\left(1+\frac{0.05}{n}\right)^{nt}</mrow>
+<mrow>        \amp =1\cdot\left(\left(1+\frac{0.05}{n}\right)^{\frac{n}{0.05}}\right)^{0.05t}</mrow>
+<mrow>        \amp =1\cdot\left(\left(1+\frac{1}{\frac{n}{0.05}}\right)^{\frac{n}{0.05}}\right)^{0.05t}</mrow>
+        </md>
+ Setting <m>m=\frac{n}{0.05}</m> we see that
+<me>        A(t)=1\cdot\left(\left(1+\frac{1}{m}\right)^{m}\right)^{0.05t}.</me>
+
         We are particularly interested in the quantity
         <m>\left(1+\frac{1}{m}\right)^{m}</m> as we compound the interest more
         frequently (as <m>m</m> becomes very large).  The following table shows
         some values of <m>\left(1+\frac{1}{m}\right)^m</m>, for large values of
-        <m>m</m>. Does the numbers in the right colum look familiar to you?
+        <m>m</m>. Does the numbers in the right column look familiar to you?
       </p>
 
-      <aside>
-        <title>Note to self</title>
-        <p>
-          Format table
-        </p>
-      </aside>
 
-      <p>
-        \begin{center}
-        \begin{tabular}[h]{|cc|}\hline
-        m \amp  <m>\left(1+\frac{1}{m}\right)^m</m>\bigstrut \\\hline
-        100  \amp  2.70481382942\bigstrut \\
-        1000  \amp  2.71692393224\bigstrut \\
-        10000  \amp  2.71814592683\bigstrut \\
-        100000  \amp  2.71826823717\bigstrut \\
-        1000000  \amp  2.71828046932\bigstrut \\
-        10000000  \amp  2.71828169255\bigstrut \\\hline
-        \end{tabular}
-        \end{center}
-      </p>
+<table  xml:id="5percenCompQuart">
+<title><m>5\%</m> nominal interest compounded continuously</title>
+<tabular>
 
-      <p>
+<row bottom="minor" halign="center">
+<cell><m>m</m></cell>
+<cell><m>\left(1+\frac{1}{m}\right)^m</m></cell>
+</row>
+<row halign="center">
+<cell><m>100</m></cell>
+<cell>2.70481382942</cell>
+</row>
+<row halign="center">
+<cell>1000</cell>
+<cell>2.71692393224</cell>
+</row>
+<row halign="center">
+<cell><m>10000</m></cell>
+<cell>2.71814592683</cell>
+</row>
+<row halign="center">
+<cell>100000</cell>
+<cell>2.71826823717</cell>
+</row>
+<row halign="center">
+<cell>1000000</cell>
+<cell>2.71828046932</cell>
+</row>
+<row halign="center">
+<cell>10000000</cell>
+<cell>2.71828169255</cell>
+</row>
+</tabular>
+</table>
+<p>
         In <xref ref="SECTIONexponential">Section</xref> we saw that <m>e\approx2.7182</m>. From
         this table it would appear that <m>\left(1+\frac{1}{m}\right)^m</m>
         approaches the number <m>e</m> as <m>m</m> grows larger <mdash/> that is, as we
@@ -2675,7 +2755,7 @@ Except that the nominal
         <statement>
           <p>
             The function <m>A(t)</m> has the same form as our solution of
-            <xref ref="EQUATIONBacteriaIVP">IVP\</xref> so it must satisfy the differential
+            <xref ref="IVPBacteriaIVP">IVP</xref> so it must satisfy the differential
             equation: <m>\dfdx{A}{t}= 0.05A</m>.
             Confirm that it does.
           </p>
@@ -2727,7 +2807,7 @@ Except that the nominal
           <statement>
             <p>
               What would the effective yield be for a bond nominally rated
-              at 5\% annually, compounded continuously?  How does this compare to
+              at 5% annually, compounded continuously?  How does this compare to
               the effective yield of an investment compounded daily?
             </p>
           </statement>
@@ -2736,7 +2816,7 @@ Except that the nominal
           <statement>
             <p>
               Suppose we had two investments growing continuously with
-              nominal rates of 5\% and 10\% annually? After one year would the
+              nominal rates of 5% and 10% annually? After one year would the
               effective yield of the second investment be twice that of the
               first?  Justify your answer.
             </p>
@@ -2748,8 +2828,8 @@ Except that the nominal
       <p>
         A natural question to ask is, <q>How long will it take for my money to
         double?</q> Would an investment compounding continuously
-        at a nominal rate of <m>10\%</m> double in half the time as one growing at
-        a nominal rate of <m>5</m>\%. Take a guess and write it down for later
+        at a nominal rate of <m>10%</m> double in half the time as one growing at
+        a nominal rate of <m>5</m>%. Take a guess and write it down for later
         reference.
       </p>
 
@@ -2765,16 +2845,9 @@ Except that the nominal
     </section>
 
   <section xml:id="SECTIONnatural-logarithm-1">
-    <title>The Natural Logarithm</title>
-    <introduction>
-      <p>
-
-      </p>
-    </introduction>
-    <subsection xml:id="SUBSECTIONNapier">
-      <title>John Napier Logs In</title>
-      <subsubsection>
-<title>A Short Introduction to Logarithms</title>
+      <title>A Short Introduction to Logarithms: John Napier Logs In</title>
+<!--       <subsubsection> -->
+<!-- <title></title> -->
 
         <p>
         In the <m>16</m>th and <m>17</m>th centuries the computational
@@ -2793,9 +2866,9 @@ Except that the nominal
       </p>
       <figure>
         <caption>
-          <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Napier/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Napier/">John Napier (<m>1555-1617</m>)</url>
+          <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Napier/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Napier/">John Napier</url> (1555<mdash/>1617)
         </caption>
-        <image source="images/Napier.png" width="50%"/>
+        <image source="images/Napier.png" width="30%"/>
       </figure>
       <!-- \begin{wrapfigure}[19]{r}{2in} -->
       <!-- \captionsetup{labelformat=empty} -->
@@ -2805,7 +2878,7 @@ Except that the nominal
       <!-- \end{wrapfigure} -->
       <p>
         Napier described logarithms in
-        <url href="https://www.maa.org/press/periodicals/convergence/mathematical-treasure-john-napier-s-mirifici-logarithmorum" visual="https://www.maa.org/press/periodicals/convergence/mathematical-treasure-john-napier-s-mirifici-logarithmorum"><foreign>Mirifici  logarithmorum canonis descriptio</foreign></url>, published in <m>1614</m>, well
+        <url href="https://www.maa.org/press/periodicals/convergence/mathematical-treasure-john-napier-s-mirifici-logarithmorum" visual="https://www.maa.org/press/periodicals/convergence/mathematical-treasure-john-napier-s-mirifici-logarithmorum"><foreign>Mirifici  logarithmorum canonis descriptio</foreign></url> (<pubtitle>A Wonderful Description of the Canon of Logarithms</pubtitle>), published in <m>1614</m>, well
         before Newton or Leibniz were born so logarithms actually predate the
         invention of Calculus by several decades.  He coined the term
         <q>logarithm</q> from the Greek words logos meaning
@@ -2853,7 +2926,7 @@ Except that the nominal
         did.
               </p>
 <aside>
-<title>A Little History</title>
+<title>Historical Background</title>
 <p>
 We<rsq/>re taking liberties with the history here. Napier<rsq/>s
         original scheme was not based on <m>10^x</m>.  We explain how Napier
@@ -2899,8 +2972,8 @@ We<rsq/>re taking liberties with the history here. Napier<rsq/>s
 
 <url href="https://www.maa.org/press/periodicals/convergence/mathematical-treasure-babbage-s-tables-of-logarithms" visual="https://www.maa.org/press/periodicals/convergence/mathematical-treasure-babbage-s-tables-of-logarithms">tables
         of base <m>10</m> logarithms</url> are rarely seen in the wild anymore
-        On the other hand the \term{natural exponential} function
-        <m>\exp(x)=e^x</m> and its functional inverse, the \term{natural logarithm}
+        On the other hand the <term>natural exponential</term> function
+        <m>\exp(x)=e^x</m> and its functional inverse, the <term>natural logarithm</term>
         are both still quite useful in a variety of contexts, both scientific
         and mathematical.
       </p>
@@ -2925,7 +2998,7 @@ We<rsq/>re taking liberties with the history here. Napier<rsq/>s
       <p>
 
         In the same way that <m>\log_{10}(x)</m> is the functional inverse of the
-        base ten exponential, <m>10^x</m>, the \term{natural logarithm} - usually
+        base ten exponential, <m>10^x</m>, the <term>natural logarithm</term> - usually
         denoted  <m>\ln(x)</m> <mdash/> is the functional inverse of the
         natural exponential, <m>e^x</m>.
         This inverse relationship allows us to immediately observe two
@@ -2940,14 +3013,14 @@ We<rsq/>re taking liberties with the history here. Napier<rsq/>s
 
           <row>
             <cell halign="right">
-            <alert>Property 1:</alert></cell>
+            <alert>Property #1:</alert></cell>
             <cell halign="left">
               <line><m>\ln(e^x)=x</m></line>
             </cell>
           </row>        
           <row>
             <cell halign="right">
-            <alert>Property 2:</alert></cell>
+            <alert>Property #2:</alert></cell>
             <cell halign="left">
               <m>e^{\ln(x)}=x</m>
             </cell>
@@ -2955,29 +3028,29 @@ We<rsq/>re taking liberties with the history here. Napier<rsq/>s
 
           <row>
             <cell halign="right">
-            <alert>Property 3:</alert></cell>
+            <alert>Property #3:</alert></cell>
             <cell halign="left">
               <line><m>\ln(e)=1</m></line>
-            <line>Notice that this is  a special case of Property \#1.</line></cell>
+            <line>Notice that this is  a special case of Property #1.</line></cell>
           </row>
 
           <row>
             <cell halign=
-                  "right"><alert>Property 4:</alert></cell>
+                  "right"><alert>Property #4:</alert></cell>
             <cell halign=
                   "left"><m>\ln(ab)=\ln(a)+\ln(b)</m></cell>
           </row>
 
           <row>
             <cell halign=
-                  "right"><alert>Property 5:</alert></cell>
+                  "right"><alert>Property #5:</alert></cell>
             <cell halign=
                   "left"><m>\ln\left(\frac{a}{b}\right)=\ln(a)-\ln(b)</m></cell>
           </row>
 
           <row>
             <cell halign=
-                  "right"><alert>Property 6:</alert></cell>
+                  "right"><alert>Property #6:</alert></cell>
             <cell halign=
                   "left"><m>\ln(a^b)=b\ln(a)</m></cell>
           </row>
@@ -2998,8 +3071,11 @@ We<rsq/>re taking liberties with the history here. Napier<rsq/>s
         <!--   </li> -->
         <!-- </dl> -->
       </p>
-      <p>
+  </section>
+<section  xml:id="SECTIONNatLog">
+<title> Logarithms, Natural and Unnatural</title>
 
+      <p>
         The properties that make the natural logarithm useful as a theoretical
         tool are the same properties that made <m>\log_{10}(x)</m> useful as a
         computational tool. In fact if we replace the base <m>10</m> with the base
@@ -3024,17 +3100,16 @@ We<rsq/>re taking liberties with the history here. Napier<rsq/>s
       <!-- \begin{Digression}[Exponential and Logarithmic Notation] -->
 <title>DIGRESSION: Exponential and Logarithmic Notation</title>
 <p>
-      Consider reviewing
-      <xref ref="DIGRESSIONdigression:inverse-function-notation"></xref> before
-      reading this one. It will probably help.
+      Consider reviewing 
+      <xref ref="DIGRESSIONInverse-function-notation">DIGRESSION: Inverse Function Notation</xref>. It will probably help.
 </p>
 <p>
 
-      As we<rsq/>ve observed the \term{natural logarithm} function is, by
-      definition, the inverse of the \term{natural exponential} in
+      As we<rsq/>ve observed the <term>natural logarithm</term> function is, by
+      definition, the inverse of the <term>natural exponential</term> in
       precisely the same way that <m>\inverse\tan(x)</m> is, by definition, the
       inverse of <m>\tan(x)</m> .  Unfortunately the notation that is used for
-      the \term{natural exponential} and the \term{natural logarithm} is
+      the <term>natural exponential</term> and the <term>natural logarithm</term> is
       not helpful.
 </p>
 <p>
@@ -3052,20 +3127,7 @@ We<rsq/>re taking liberties with the history here. Napier<rsq/>s
 </p>
 <p>
 
-      As we saw in <xref ref="DIGRESSIONdigression:inverse-function-notation"></xref>
-      before it is also fairly standard practice to denote the inverse of
-      a given function with the exponent <m>-1</m>.  By that standard we should
-      properly denote the natural logarithm by <m>\inverse\exp</m>,
-      but this is extremely rare.
-</p>
-<p>
-
-      By the <q>three letter name</q> standard the next best name for the
-      natural logarithm should be <q><m>\log(x)</m></q> but that has been used for
-      over <m>400</m> years to denote the base <m>10</m> logarithm.  As a result for
-      historical reasons we are stuck with symbol <q><m>\ln(x)</m></q> to denote
-      the natural logarithm. This notation comes from the initials of the
-      Latin name of the function: \foreign{logarithms naturali}. This is
+  As we saw in <xref ref="DIGRESSIONInverse-function-notation">DIGRESSION:Inverse Function Notation</xref>. This is
       unfortunate for the student because it adheres to no standard naming
       scheme whatsoever. But once you get used to it, it isn<rsq/>t so bad.
 </p>
@@ -3074,12 +3136,19 @@ We<rsq/>re taking liberties with the history here. Napier<rsq/>s
       Sometimes there are reasons to use logarithms with bases other than
       <m>10</m> or <m>e</m>. For example, computer scientists frequently use
       logarithms with a base of <m>2</m> which they denote <m>\text{lb}(x)</m>
-      (binary logarithm).  Even worse, when we talk among ourselves
-      mathematicians tend to use the natural logarithm (because for us it
-      is the most important), but we often denote it as <q><m>\log(x)</m>.</q>
-      When we are talking to scientists and engineers we use whatever is
+      (binary logarithm).
+</p>
+<aside>
+<title>Mathematical Customs</title>
+<p>
+  Even worse, when we talk among ourselves
+      mathematicians tend to use the natural logarithm because for us it
+      is the most important, but we often denote it as <q><m>\log(x)</m>.</q>
+      When we are talking to scientists and engineers we use whichever notation is
       appropriate to their discipline.
 </p>
+</aside>
+
 <p>
 
 
@@ -3103,46 +3172,38 @@ We<rsq/>re taking liberties with the history here. Napier<rsq/>s
 <p>
 
       It is often helpful to think of <m>\ln(x)</m> as the function that peels
-      the exponent off of <m>e^x</m> as in Property \#1: <m>\ln(e^x)=x</m>.
+      the exponent off of <m>e^x</m> as in Property #1: <m>\ln(e^x)=x</m>.
 </p>
 <p><alert>END OF DIGRESSION</alert></p>
 </paragraphs>
 
       <exercise>
-        <introduction>
           <p>
             Evaluate each of the following:
           </p>
-        </introduction>
-        <task>
-          <statement>
+<ol cols="2" marker="i">
+<li>
             <p>
-              <m>\ln(e^2)</m> \solution{<m>2</m>}
+              <m>\ln(e^2)</m> 
             </p>
-          </statement>
-        </task>
-        <task>
-          <statement>
+</li>
+<li>
             <p>
-              <m>\ln(e^{\sin(t)})</m> \solution{<m>\sin(t)</m>}
+              <m>\ln(e^{\sin(t)})</m> 
             </p>
-          </statement>
-        </task>
-        <task>
-          <statement>
+          </li>
+<li>
             <p>
-              <m>e^{\ln(2)}</m> \solution{<m>2</m>}
+              <m>e^{\ln(2)}</m> 
             </p>
-          </statement>
-        </task>
-        <task>
-          <statement>
+          </li>
+<li>
             <p>
-              <m>e^{\ln(x+y)}</m> \solution{<m>x+y</m>}
+              <m>e^{\ln(x+y)}</m> 
             </p>
-          </statement>
-        </task>
-      </exercise>
+        </li>
+</ol>
+</exercise>
       <!-- begin{ProficiencyDrill} -->
       <!-- Evaluate each of the following: -->
       <!-- \begin{enumerate}[label={  (\alph*)}] -->
@@ -3163,30 +3224,39 @@ We<rsq/>re taking liberties with the history here. Napier<rsq/>s
       <problem>
         <statement>
           <p>
-            Like Property \#3, Property \#5 is really just a convenience. Show that it is really
-            an immediate consequence of Property \#4 and Property \#6.\\
-            \hint{Find a way to express <m>a/b</m> as a product.}
+            Like Property #3, Property #5 is really just a convenience. Show that it is really
+            an immediate consequence of Property #4 and Property #6.
           </p>
         </statement>
+<hint>
+<p>
+Find a way to express <m>a/b</m> as a product.
+</p>
+</hint>
       </problem>
 
 
       <p>
-        The simplest use to which we can put a \term{natural logarithm} is to
+        The simplest use to which we can put a <term>natural logarithm</term> is to
         aid in solving an equation like:
         <me>
           3^x=17.
         </me>
         The difficulty here is that the variable <m>x</m> is in the exponent so to
         isolate it we have to <q>undo</q> an exponential. This is exactly
-        what logarithms do!  By Property \#6, <m>\ln(3^x)=x\ln(3)</m>, so we can
+        what logarithms do!  By Property #6, <m>\ln(3^x)=x\ln(3)</m>, so we can
         solve our equation like this:
-        \begin{align*}
-        3^x\amp=17\\
-        \ln(3^x)\amp = \ln(17)\\
-        x\ln(3)\amp= \ln(17)\\
-        x\amp=\frac{\ln(17)}{\ln(3)}.
-        \end{align*}
+        <md>
+          <mrow>
+            3^x\amp=17
+          </mrow>
+          <mrow>
+            \ln(3^x)\amp = \ln(17)
+          </mrow>
+          <mrow> x\ln(3)\amp= \ln(17)\\</mrow>
+          <mrow> x\amp=\frac{\ln(17)}{\ln(3)}.</mrow>
+        </md>
+
         At this point we can use technology to find that
         <m>\ln(17) \approx 2.8332</m> and <m>\ln(3)\approx1.0986</m> so that
         <m>x=\frac{\ln(17)}{\ln(3)}\approx2.5789</m>.
@@ -3202,89 +3272,67 @@ We<rsq/>re taking liberties with the history here. Napier<rsq/>s
 
 
       <exercise>
-        <introduction>
           <p>
             Find approximate solutions for each of the following equations:
           </p>
-        </introduction>
-        <task>
-          <statement>
+<ol cols="3" marker="i">
+<li>
             <p>
               <m>e^x=5</m>
             </p>
-          </statement>
-        </task>
-        <task>
-          <statement>
+</li>
+<li>
             <p>
               <m>e^x=\frac{1}{\sqrt{e}}</m>
             </p>
-          </statement>
-        </task>
-        <task>
-          <statement>
+</li>
+<li>
             <p>
               <m>e^{3x}=7</m>
             </p>
-          </statement>
-        </task>
-        <task>
-          <statement>
+</li>
+<li>
             <p>
               <m>e^{x/3}=12</m>
             </p>
-          </statement>
-        </task>
-        <task>
-          <statement>
+</li>
+<li>
             <p>
-              <m>2^{x}=3^x</m> \solution{<m>x=0</m>}
+              <m>2^{x}=3^x</m> 
             </p>
-          </statement>
-        </task>
-        <task>
-          <statement>
+</li>
+<li>
             <p>
-              <m>e^{x-5}=e^5</m> \solution{<m>x=10</m>}
+              <m>e^{x-5}=e^5</m>
             </p>
-          </statement>
-        </task>
-        <task>
-          <statement>
+</li>
+<li>
             <p>
               <m>7^{x^2-x}=e</m>
             </p>
-          </statement>
-        </task>
-        <task>
-          <statement>
+</li>
+<li>
             <p>
               <m>7e^{x+3}=2</m>
             </p>
-          </statement>
-        </task>
-        <task>
-          <statement>
+</li>
+<li>
             <p>
               <m>e^{2x}-3e^x+2=0</m>
             </p>
-          </statement>
-        </task>
-        <task>
-          <statement>
+</li>
+<li>
             <p>
               <m>e^{2x}- e^x-2=0</m>
             </p>
-          </statement>
-        </task>
-        <task>
-          <statement>
+</li>
+<li>
             <p>
               <m>\sin(e^x)=\frac{1}{\sqrt{2}}</m>
             </p>
-          </statement>
-        </task>
-      </exercise>
+</li>
+</ol>
+</exercise>
       <!-- begin{ProficiencyDrill} -->
       <!-- Find approximate solutions for each of the following equations: -->
       <!-- \begin{enumerate}[label={  (\alph*)}] -->
@@ -3506,7 +3554,7 @@ We<rsq/>re taking liberties with the history here. Napier<rsq/>s
             <p>
               Suppose that <m>P_0</m> dollars are invested in two separate
               accounts, <m>A</m> and <m>B</m>, where the interest in compounded
-              continuously at the nominal rates of <m>5\%</m> and <m>10\%</m>,
+              continuously at the nominal rates of <m>5%</m> and <m>10%</m>,
               respectively. Let <m>t_A</m> be the time it takes for the initial
               investment in account <m>A</m> to double, and let <m>t_B</m> be the time it
               takes for the initial investment in account <m>B</m> to double. Is
@@ -3542,7 +3590,7 @@ We<rsq/>re taking liberties with the history here. Napier<rsq/>s
       <!-- \begin{enumerate}[label={  (\alph*)}] -->
       <!-- \item Suppose that <m>P_0</m> dollars are invested in two separate -->
       <!-- accounts, <m>A</m> and <m>B</m>, where the interest in compounded -->
-      <!-- continuously at the nominal rates of <m>5\%</m> and <m>10\%</m>, -->
+      <!-- continuously at the nominal rates of <m>5%</m> and <m>10%</m>, -->
       <!-- respectively. Let <m>t_A</m> be the time it takes for the initial -->
       <!-- investment in account <m>A</m> to double, and let <m>t_B</m> be the time it -->
       <!-- takes for the initial investment in account <m>B</m> to double. Is -->
@@ -3590,8 +3638,8 @@ We<rsq/>re taking liberties with the history here. Napier<rsq/>s
               B(0)\amp =2, \text{ (Initially we have }2 \text{ grams of bacteria.)}\\
             </mrow>
             <mrow>
-              B(24)\amp =3.\text{ (There are} 3 \text{ grams of bacteria
-              presentafter }24 \text{ hours.)}
+              B(24)\amp =3.\text{ (There are } 3 \text{ grams of bacteria
+              present after }24 \text{ hours.)}
             </mrow>
           </md>
         </p>
@@ -3612,11 +3660,7 @@ We<rsq/>re taking liberties with the history here. Napier<rsq/>s
  
        Note that our model is an IVP plus the extra datum: <m>B(24)=3</m>. The first
         two pieces of our model, <m> \dfdx{B}{t}=rB</m>, and <m> B(0)=2</m>, define an
-        IVP very similar to <xref ref="IVPeq:BacteriaIVP"></xref> which we repeat here
-        for convenience:
-        <md>
-          <mrow> \dfdx{y}{t}\amp{}= 0.3y,\amp{} y(0)\amp{}=10.</mrow>
-        </md>
+        IVP very similar to <xref ref="IVPBacteriaIVP">IVP</xref>.
         In fact the only difference is that where we had <m>0.3</m> before, we
         now have the unknown parameter, <m>r</m>.  In
         <xref ref="PROBLEMBacteriaIVP1"></xref> we saw that
@@ -3625,7 +3669,7 @@ We<rsq/>re taking liberties with the history here. Napier<rsq/>s
         <me>
           y(t)=2e^{rt}
         </me>
-        but we don<rsq/>t know the value of <m>r</m>.
+        but we don<rsq/>t know the value of <m>r</m> (yet).
       </p>
       <p>
 
@@ -3764,16 +3808,18 @@ We<rsq/>re taking liberties with the history here. Napier<rsq/>s
       <!-- \item How long does it take for the culture to triple in size? -->
       <!-- \end{enumerate} -->
       <!-- \end{embeddedproblem} -->
+</section>
+<section  xml:id="SECTIONLogApps">
+<title>Applications of Logarithms</title>
 
-    </subsubsection>
-    <subsubsection xml:id="SUBSUBSECTIONradioactive-decay">
+    <subsection xml:id="SUBSECTIONradioactive-decay">
       <title>Radioactive Dating</title>
 
       <p>
 
         Radioactive isotopes have the curious property that in time they break
         down into other, more stable, substances. This process is known as
-        \term{radioactive decay}.
+        <term>radioactive decay</term>.
         While there is no way to predict when an
         individual radioactive atom will decay, the decay of a large
         collection of radioactive isotopes is very regular and can be
@@ -3782,7 +3828,7 @@ We<rsq/>re taking liberties with the history here. Napier<rsq/>s
       <p>
 
         For example, if we have two pounds of the radioactive isotope
-        Cesium-137 (<m>\text{Cs}_{137}</m>) it is known that after the passage of
+        Cesium-137 <m>(\text{Cs}{137})</m> it is known that after the passage of
         <m>30</m> years and <m>70</m> days we will have only one pound. The rest will
         have decayed into barium.  Even more curious though, is this: If we
         wait another <m>30</m> years and <m>70</m> days only one-half pound of the
@@ -3796,7 +3842,7 @@ We<rsq/>re taking liberties with the history here. Napier<rsq/>s
         in a fixed time interval the rate of change of <m>A(t)</m> will be
         proportional to <m>A</m> itself. Since this is exactly what we said about
         both population growth and return on investment,
-        <xref ref="IVPeq:ExpGen"></xref>
+        <xref ref="IVPExpGeneral">IVP</xref>
         should model this phenomenon as well. There is, of course, the
         difference that the quantity is now shrinking rather than growing. How
         do you think that will manifest in our model? Take a guess.
@@ -3805,14 +3851,14 @@ We<rsq/>re taking liberties with the history here. Napier<rsq/>s
       <example xml:id="EXAMPLEradioactive-dating">
         <p>
           For the sake of being definite suppose that our
-          isotope is decaying (shrinking) at a \term{relative}
-          (<term>nominal</term>) rate of  <m>25\%</m>. Then if we start
+          isotope is decaying (shrinking) at a <term>relative</term>
+          (<term>nominal</term>) rate of  <m>25%</m>. Then if we start
           with <m>20</m>Kg, the IVP to be solved is
           <men  xml:id="IVPRadioactiveDecay-Wrong">
             <!-- \label{IVPRadioactiveDecay-Wrong} -->
             \dfdx{A}{t}= 0.25A,\ A(0)=20.
           </men>
-          which we recognize as a special case of <xref ref="IVPeq:ExpGen"></xref>, so
+          which we recognize as a special case of <xref ref="IVPExpGeneral">IVP</xref>, so
           the solution will be
           <me>
             A(t)=20e^{0.25t}
@@ -3834,13 +3880,13 @@ We<rsq/>re taking liberties with the history here. Napier<rsq/>s
           decreasing then its rate of change will be negative. We seem to have
           committed one of the classic blunders of mathematics. We got the
           sign wrong. We should have been solving  the IVP
-          <men  xml:id="EQUATIONIVPRadioactiveDecay-Correct">
+          <men  xml:id="IVPRadioactiveDecay-Correct">
             <!-- \label{IVP:RadioactiveDecay-Correct} -->
             \dfdx{A}{t}= -0.25A,\ A(0)=20.
           </men>
           instead of
-          <xref ref="IVPRadioactiveDecay-Wrong"></xref>. Since <xref ref="IVPIVP:RadioactiveDecay-Correct"></xref>
-          also has the same form as <xref ref="IVeq:ExpGen"></xref>,  the correct
+          <xref ref="IVPRadioactiveDecay-Wrong">IVP</xref>. Since <xref ref="IVPRadioactiveDecay-Correct">IVP</xref>
+          also has the same form as <xref ref="IVPExpGeneral">IVP</xref>,  the correct
           solution is
           <men  xml:id="EQUATIONNuclearDecay-Wrong">
             <!-- \label{eq:NuclearDecay-Wrong} -->
@@ -3871,10 +3917,10 @@ We<rsq/>re taking liberties with the history here. Napier<rsq/>s
           write the differential equation as <m>\dfdx{y}{t}=-ry</m>. While this
           is not necessarily wrong, it is not helpful. The variable <m>r</m> can
           be any number, positive or negative. If we do our analysis
-          correctly the correct value will emerge.}
-          <me>
-            \dfdx{y}{t}=ry,\ \ y(0)=6.
-          </me>
+          correctly the correct value will emerge.
+          <md>
+            <mrow>\dfdx{y}{t}=ry, \amp{}\amp{} y(0)=6.</mrow>
+          </md>
           As always the solution of a differential equation of this form is
           <me>
             y(t) =6e^{rt}
@@ -3882,14 +3928,14 @@ We<rsq/>re taking liberties with the history here. Napier<rsq/>s
           where and <m>r</m> is an unknown constant.  To find <m>r</m> we must use the
           additional information given.  Half of our isotope<rsq/>s mass is
           lost in <m>2</m> hours, so <m>y(2)=3</m>. Thus
-          \begin{align*}
-          y(2)=3\amp = 6e^{r(2)}\\
-          \frac12\amp = e^{r(2)}\\
-          \ln\left(\frac12\right)\amp = \ln\left({e^{2r}}\right)\\
-          \amp =              2r\\
-          \intertext{or}
-          r\amp =\frac12\ln\left(\frac12\right).
-          \end{align*}
+          <md>
+            <mrow> y(2)=3\amp = 6e^{r(2)}</mrow>
+            <mrow> \frac12\amp = e^{r(2)}</mrow>
+            <mrow> \ln\left(\frac12\right)\amp = \ln\left({e^{2r}}\right)</mrow>
+            <mrow> \amp = 2r</mrow>
+          </md>
+or
+          <me>r =\frac12\ln\left(\frac12\right).</me>
           Thus
           <me>y(t) = 6e^{\frac{t}{2}\ln\left(\frac12\right)}.</me>
           This is correct but again it is cumbersome. Also the lack of an
@@ -3898,28 +3944,21 @@ We<rsq/>re taking liberties with the history here. Napier<rsq/>s
       </example>
 
       <exercise>
-        <introduction>
-          <p>
-          </p>
-        </introduction>
-        <task>
-          <statement>
+        <ol  marker="i">
+          <li>
             <p>
               Use the properties of logarithms and exponentials to show that
               <m>6e^{\frac{t}{2}\ln\left(\frac12\right)} =
               6e^{-\frac{t}{2}\ln\left(2\right)}</m>.
             </p>
-          </statement>
-        </task>
-        <task>
-          <statement>
+          </li>
+          <li>
             <p>
               Use the properties of logarithms and exponentials  to show that
               <m>6e^{\frac{t}{2}\ln\left(\frac12\right)} = \frac{6}{\left(\sqrt{2}\right)^t}</m>
-
             </p>
-          </statement>
-        </task>
+          </li>
+        </ol>
       </exercise>
       <!-- begin{ProficiencyDrill-enumerate} -->
       <!-- \begin{enumerate}[label={  (\alph*)}] -->
@@ -3936,12 +3975,18 @@ We<rsq/>re taking liberties with the history here. Napier<rsq/>s
 
       <p>
         The length of time that it takes for a quantity of a radioactive
-        isotope to decay by one-half is called the \term{half-life} of the isotope.
-        Each substance has its own half-life\aside{In fact, all
-        substances have a half-life. But some are more useful than others.}.
+        isotope to decay by one-half is called the <term>half-life</term> of the isotope.
+        Each substance has its own half-life.
         The half-life for Carbon-14 is roughly <m>5,730</m> years; for Fluorine-18,
         it is <m>110</m> minutes; for Potassium-<m>40</m>, it is <m>1.25</m> billion years.
       </p>
+      <aside>
+<title>Comment</title>
+        <p>
+          In fact, all
+          substances have a half-life. But some are more useful than others.
+        </p>
+      </aside>
 
 
       <problem>
@@ -4028,9 +4073,9 @@ We<rsq/>re taking liberties with the history here. Napier<rsq/>s
         approximately when the plant or animal died. This is called
         <term>radiocarbon dating</term>, and it was developed
         by
-        \href{https://www.nobelprize.org/prizes/chemistry/1960/libby/biographical/}{Willard
-        Libby} (<m>1908-1980</m>) in <m>1949</m>. Radiocarbon dating revolutionized
-        the field of archaeology.  Libby was awarded the Nobel Prize in Chemistry
+        <url href="https://www.nobelprize.org/prizes/chemistry/1960/libby/biographical/" visual="https://www.nobelprize.org/prizes/chemistry/1960/libby/biographical/">Willard
+        Libby</url> (1908-1980), in <m>1949</m>. Radiocarbon dating revolutionized
+        the field of archaeology and   Libby was awarded the Nobel Prize in Chemistry
         in <m>1960</m> for this development.
       </p>
 
@@ -4038,7 +4083,6 @@ We<rsq/>re taking liberties with the history here. Napier<rsq/>s
 
       <problem>
         <introduction>
-          <image source="images/ShroudOfTurin.png" width="50%"/>
           <!-- \begin{wrapfigure}[]{r}{1.2in} -->
           <!-- \vskip-10mm -->
           <!-- \captionsetup{labelformat=empty} -->
@@ -4046,17 +4090,19 @@ We<rsq/>re taking liberties with the history here. Napier<rsq/>s
           <!-- \label{fig:ShroudOfTurin} -->
           <!-- \end{wrapfigure} -->
           <p>
-            The Shroud of Turin is a Christian religious relic which bears an
-            image of a man. Some people believe it is the burial cloth of Jesus
-            and that the image is that of Jesus himself. In <m>1987</m> the Vatican
-            agreed to subject pieces of the shroud to radiocarbon dating. In
-            this problem we will recreate the computations done to determine the
-            age of the Shroud.
+            The Shroud of Turin, shown below, is a Christian religious
+            relic which bears an image of a man. Some people believe
+            it is the burial cloth of Jesus and that the image is that
+            of Jesus himself. In <m>1987</m> the Vatican agreed to
+            subject pieces of the shroud to radiocarbon dating. In
+            this problem we will recreate the computations done to
+            determine the age of the Shroud.
 
             Let <m>A=A(t)</m> be the amount of <m>C_{14}</m> (in mg) at time <m>t</m> years,
             where <m>t=0</m> represents when the shroud was used.  Let <m>A(0)=A_0</m> be
             the initial amount of <m>C_{14}</m> present in the sample.
           </p>
+          <image source="images/ShroudOfTurin.png" width="30%"/>
         </introduction>
         <task>
           <statement>
@@ -4069,17 +4115,25 @@ We<rsq/>re taking liberties with the history here. Napier<rsq/>s
         <task>
           <statement>
             <p>
-              If one of the samples of the Shroud contained 88.9\% of the
-              original <m>C_{14}</m>.  How old would this sample be\aside{This does
+              If one of the samples of the Shroud contained 88.9% of the
+              original <m>C_{14}</m>.  How old would this sample be?
+            </p>
+          </statement>
+        </task>
+<conclusion>
+<p>
+This does
               not settle the question of the age of the Shroud. The technique
               of carbon dating is not in dispute, but there are other issues
               including questions about the quality of the samples.  If you
               are interested you can read more here:
-              \href{https://www.usatoday.com/story/news/world/2013/03/30/shroud-turin-display/2038295/}{https://www.usatoday.com/story/news/world/2013/03/30/shroud-turin-display/2038295/}.}?
-            </p>
-          </statement>
-        </task>
-      </problem>
+             <url href="https://www.usatoday.com/story/news/world/2013/03/30/shroud-turin-display/2038295/" visual="https://www.usatoday.com/story/news/world/2013/03/30/shroud-turin-display/2038295/">https://www.usatoday.com/story/news/world/2013/03/30/shroud-turin-display/2038295/</url>.
+</p>
+</conclusion>
+
+        </problem>
+
+        
       <!-- \begin{embeddedproblem} -->
       <!-- \begin{wrapfigure}[]{r}{1.2in} -->
       <!-- \vskip-10mm -->
@@ -4100,7 +4154,7 @@ We<rsq/>re taking liberties with the history here. Napier<rsq/>s
       <!-- \begin{enumerate}[label={  (\alph*)}] -->
       <!-- \item How much <m>C_{14}</m> would be present if the shroud was 2000 -->
       <!-- years old? -->
-      <!-- \item If one of the samples of the Shroud contained 88.9\% of the -->
+      <!-- \item If one of the samples of the Shroud contained 88.9% of the -->
       <!-- original <m>C_{14}</m>.  How old would this sample be\aside{This does -->
       <!-- not settle the question of the age of the Shroud. The technique -->
       <!-- of carbon dating is not in dispute, but there are other issues -->
@@ -4162,10 +4216,9 @@ We<rsq/>re taking liberties with the history here. Napier<rsq/>s
           <statement>
             <p>
               A rock sample which appears to have a reversed magnetic field
-              is determined to contain between <m>99.9541\%</m> and <m>99.9593\%</m> of
+              is determined to contain between <m>99.9541%</m> and <m>99.9593%</m> of
               the <m>K_{40}</m> that it originally contained.  Approximately how old
-              is the rock?  (This is the latest geomagnetic reversal called the
-              Brunhes-Matuyama reversal.)
+              is the rock?
             </p>
           </statement>
         </task>
@@ -4195,7 +4248,7 @@ We<rsq/>re taking liberties with the history here. Napier<rsq/>s
 
       <!-- \begin{enumerate}[label={  (\alph*)}] -->
       <!-- \item A rock sample which appears to have a reversed magnetic field -->
-      <!-- is determined to contain between <m>99.9541\%</m> and <m>99.9593\%</m> of -->
+      <!-- is determined to contain between <m>99.9541%</m> and <m>99.9593%</m> of -->
       <!-- the <m>K_{40}</m> that it originally contained.  Approximately how old -->
       <!-- is the rock?  (This is the latest geomagnetic reversal called the -->
       <!-- Brunhes-Matuyama reversal.) -->
@@ -4204,9 +4257,8 @@ We<rsq/>re taking liberties with the history here. Napier<rsq/>s
       <!-- \end{enumerate} -->
       <!-- \end{embeddedproblem} -->
 
-
-    </subsubsection>
-    <subsubsection xml:id="SUBSUBSECTIONnewtons-law-cooling">
+    </subsection>
+    <subsection xml:id="SECTIONnewtons-law-cooling">
       <title>Chillin<rsq/> with Newton: The Law of Cooling</title>
 
       <example>
@@ -4238,9 +4290,9 @@ We<rsq/>re taking liberties with the history here. Napier<rsq/>s
           the water with respect to time is <m>\dfdx{T}{t}</m>, (or <m>\dot{T}</m> if
           you are Newton). Letting <m>r</m> be the (unknown) constant of
           proportionality we have the IVP
-          <me>
-            \dfdx{T}{t}=r(T-5),\ \ T(0)=40.
-          </me>
+          <md>
+<mrow>            \dfdx{T}{t}=r(T-5),\amp{}\amp{} T(0)=40.</mrow>
+          </md>
         </p>
         <p>
 
@@ -4249,40 +4301,54 @@ We<rsq/>re taking liberties with the history here. Napier<rsq/>s
           problem <q>easier on the eyes</q> with the substitution <m>D=T-5</m>.
           Notice that <m>\dfdx{D}{t}=\dfdx{(T-5)}{t}=\dfdx{T}{t}</m> so we have the
           IVP
-          <men  xml:id="EQUATIONCoolingIVP1">
-            \dfdx{D}{t}=rD\ \ D(0)=40-5=35.
-            <!-- \label{eq:CoolingIVP1} -->
-          </men>
+
+<mdn>
+          <mrow xml:id="EQUATIONCoolingIVP1"> 
+\dfdx{D}{t}=rD \amp{}\amp{}          D(0)=40-5=35.  <!-- \label{eq:CoolingIVP1} -->
+          </mrow>
+</mdn>
           Do you recognize this equation? This has the same form as
-          <xref ref="IVPeq:BacteriaIVP"></xref> so the solution is
+          <xref ref="IVPBacteriaIVP">IVP</xref> so the solution is
           <me>
             D(t)=D(0) e^{rt}=35e^{rt}.
           </me>
           Reversing the substitution we see that
-          \begin{align*}
-          T(t)-5\amp =\left(T(0)-5\right)e^{rt}\\
-          T(t)\amp =5+35e^{rt}.
-          \end{align*}
+          <md>
+            <mrow>
+
+              T(t)-5\amp =\left(T(0)-5\right)e^{rt}
+            </mrow>
+            <mrow>
+              T(t)\amp =5+35e^{rt}.
+            </mrow>
+          </md>
         </p>
+
         <p>
-
-
-
           To complete our model we need to determine <m>r</m>. We can find <m>r</m> if
           we know the temperature of the water at a second time during the
           cooling.  Assume that we measured the temperature of the water after
           <m>10</m> minutes and it was <m>35^\circ F.</m> Thus we have
-          \begin{align*}
-          35=T(10)\amp =5+35e^{10r}\\
-          \intertext{so that}
-          \frac{30}{35}\amp =e^{10r} \\
-          r\amp =\frac{\ln(6/7)}{10}
-          \end{align*}
+          <me>          35=T(10) =5+35e^{10r}</me>
+          so that
+          <md>
+            <mrow>
+              \frac{30}{35}\amp =e^{10r}
+            </mrow>
+            <mrow>
+              r\amp =\frac{\ln(6/7)}{10}
+            </mrow>
+          </md>
           and our complete model is
-          \begin{align*}
-          T(t)\amp =5+35e^{\frac{\ln(6/7)}{10} t}\\
-          \amp =5+35\left(\frac{6}{7}\right)^{\frac{t}{10}}.
-          \end{align*}
+          <md>
+            <mrow>
+              T(t)\amp =5+35e^{\frac{\ln(6/7)}{10} t}
+            </mrow>
+            <mrow>
+              \amp =5+35\left(\frac{6}{7}\right)^{\frac{t}{10}}.
+            </mrow>
+          </md>
+
         </p>
         <p>
 
@@ -4456,14 +4522,10 @@ We<rsq/>re taking liberties with the history here. Napier<rsq/>s
         </statement>
       </problem>
 
-
-
-
-    </subsubsection>
-  </subsection>
-
+    </subsection>
 
 </section>
+
 <section xml:id="SECTIONDerivNatLog">
 <title>The Derivative of the Natural Logarithm</title>
 
@@ -4471,23 +4533,24 @@ We<rsq/>re taking liberties with the history here. Napier<rsq/>s
   Since the <term>natural logarithm</term> is the inverse of the <term>natural
   exponential</term> we can find its derivative using the same trick that we
   used to find the derivatives of the inverse trig functions.  Start
-  with the identity
-<men xml:id="EQUATIONUseProp1">e^{\ln(x)}\amp =x \text{ (Property 1)}</men>
-and  make this easier on our eyes with the substitution
-<m>y=\ln(x)</m>. Differentiating <xref ref="EQUATIONUseProp1"></xref>
-we see that
-<me> e^y\dx{y} \amp = \dx{x}</me>.
-Thus
-<me>\dx{y}\amp =\frac{1}{e^y}\dx{x}</me>.
-Once more making the  substitution <m>y=\ln(x)</m>  we have
-<me>  \dx{y}\amp =\frac{1}{e^{\ln(x)}}\dx{x}</me>,
-and since <m>e^{\ln(x)}=x</m> we have
-<me>  \dx{y}\amp =\frac{1}{x}\dx{x}</me>.
-<me>  \dx{y}\amp =\frac{1}{x}\dx{x}</me>
-<men  xml:id="EQUATIONNatLogDeriv1">             \dx{(\ln(x))} \amp =x^{-1} \dx{x}.</men>
-<xref ref="EQUATIONNatLogDeriv1"></xref> is the last differentiation rule you
-need to memorize. Memorize it.
+  with the identity from Logarithm Property #1:
+  <men xml:id="EQUATIONUseProp1">e^{\ln(x)} =x </men>
+  and  make this easier on our eyes with the substitution
+  <m>y=\ln(x)</m>. Differentiating <xref ref="EQUATIONUseProp1">equation</xref>
+  we see that
+  <me> e^y\dx{y}  = \dx{x}</me>.
+  Thus
+  <me>\dx{y} =\frac{1}{e^y}\dx{x}</me>.
+  Once more making the  substitution <m>y=\ln(x)</m>  we have
+  <me>  \dx{y} =\frac{1}{e^{\ln(x)}}\dx{x}</me>,
+  and since <m>e^{\ln(x)}=x</m> we have
+  <me>  \dx{y} =\frac{1}{x}\dx{x}</me>.
+  <me>  \dx{y} =\frac{1}{x}\dx{x}</me>
+  <men  xml:id="EQUATIONNatLogDeriv1"> \dx{(\ln(x))}  =x^{-1} \dx{x}.</men>
+  <xref ref="EQUATIONNatLogDeriv1">equation</xref> is the last differentiation rule you
+  need to memorize. Memorize it.
 </p>
+
 <p>
   As always the difficulty here is not remembering what the
   differentiation rule is, the difficulty is in learning to use it in
@@ -4497,102 +4560,76 @@ need to memorize. Memorize it.
 
 
 <exercise>
-  <introduction>
     <p>
       For each of the following find <m>\dx{y}</m>, and <m>\dfdx{y}{x}</m>.
 </p>
-</introduction>
-<task>
-  <statement>
+<ol cols="2" marker="i">
+<li>
     <p>
 <m>y=\ln\left(\frac{7-x}{5+x}\right)</m>
 </p>
-</statement>
-</task>
-<task>
-  <statement>
+</li>
+<li>
     <p>
 <m>y=\dfrac{\ln(x)}{e^x}</m>
 </p>
-</statement>
-</task>
-<task>
-  <statement>
+</li>
+<li>
     <p>
 <m>y=\tan(\ln(x))</m>
 </p>
-</statement>
-</task>
-<task>
-  <statement>
+</li>
+<li>
     <p>
 <m>y=\ln(\tan(x))</m>
 </p>
-</statement>
-</task>
-<task>
-  <statement>
+</li>
+<li>
     <p>
 <m>y=\inverse\tan(\ln(x))</m>
 </p>
-</statement>
-</task>
-<task>
-  <statement>
+</li>
+<li>
     <p>
 <m>y=x\ln(x)-x</m>
 </p>
-</statement>
-</task>
-<task>
-  <statement>
+</li>
+<li>
     <p>
 <m>y=\ln(\ln(\sec(x)))</m>
 </p>
-</statement>
-</task>
-<task>
-  <statement>
+</li>
+<li>
     <p>
 <m>y=\ln(\sin(x^2+1))</m>
 </p>
-</statement>
-</task>
-<task>
-  <statement>
+</li>
+<li>
     <p>
 <m>y=\sqrt{x}\cdot\ln\left(\sqrt{x}\right)</m>
 </p>
-</statement>
-</task>
-<task>
-  <statement>
+</li>
+<li>
     <p>
 <m>y=\ln(2x+2)</m>
 </p>
-</statement>
-</task>
-<task>
-  <statement>
+</li>
+<li>
     <p>
 <m>\ln(y)=\sin(e^x)</m>
 </p>
-</statement>
-</task>
-<task>
-  <statement>
+</li>
+<li>
     <p>
 <m>\ln(x+y)=x\inverse\tan(y)</m>
 </p>
-</statement>
-</task>
-<task>
-  <statement>
+</li>
+<li>
     <p>
 <m>\ln(x+y)=e^{x+y}</m>
 </p>
-</statement>
-</task>
+</li>
+</ol>
 </exercise>
 <!-- begin{ProficiencyDrill} -->
 <!--   For each of the following find </m>\dx{y}<m>, and </m>\dfdx{y}{x}<m>. -->
@@ -4618,8 +4655,8 @@ need to memorize. Memorize it.
   <introduction>
     <p>
       For each of the following find <m>\dx{y}</m>, and <m>\dfdx{y}{x}</m>.
-      \hint{Use the properties of logarithms to make these drills easier
-      on the eyes.}
+      (Use the properties of logarithms to make these drills easier
+      on the eyes.)
 </p>
 </introduction>
 <task>
@@ -4679,8 +4716,8 @@ need to memorize. Memorize it.
 <problem>
   <introduction>
     <p>
-Recall that in <xref ref="SUBSECTIONcurvature"></xref>
-(<xref ref="PROBLEMeq:CurvatureDef"></xref> we showed the curvature of the graph
+Recall that in 
+<xref ref="PROBLEMCurvatureDef2"></xref> we showed the curvature of the graph
 of a function <m>y=y(x)</m> is given by
 <me>
   \kappa=\frac{\abs{\dfdxn{y}{x}{2}}}{\left(1+\left(\dfdx{y}{x}\right)^2\right)^{\frac32}}.
@@ -4759,15 +4796,25 @@ of a function <m>y=y(x)</m> is given by
   another monomial. But what happens if we try to go the other
   direction?
 </p>
-
+<aside>
+<title>Comment</title>
 <p>
-  If <m>\dfdx{y}{x}=x^2</m> then clearly\aside{Actually, this should be
+Actually, this should be
     <m>y=\frac{x^3}{3}</m> plus an arbitrary constant. Do you see
     why? Since the constant is of no importance to our current point,
-    we ignore it. } <m>y=\frac{x^3}{3}</m>. In general if
-  <me>\dfdx{y}{x}=x^\alpha</me> then <me>y= \frac{x^{\alpha+1}}{\alpha+1}
- \text{ for }
-  \alpha\ne -1.</me> But if <m>\alpha=-1</m> running the Power Rule backwards
+    we ignore it. 
+</p>
+</aside>
+
+<p>
+  If <m>\dfdx{y}{x}=x^2</m> then clearly <m>y=\frac{x^3}{3}</m>. In general if
+  <me>\dfdx{y}{x}=x^\alpha</me> then 
+
+<md>
+<mrow>y= \frac{x^{\alpha+1}}{\alpha+1}\amp{}\amp{} \text{ for }\amp{}\amp{} \alpha\ne -1.</mrow>
+</md>
+
+ But if <m>\alpha=-1</m> running the Power Rule backwards
   would give us <m>y= \frac{x^{-1+1}}{-1+1}</m> which is meaningless since
   the denominator is <m>-1+1=0.</m> When <m>\alpha=-1</m> we get
   is <m>y=\ln(x).</m>
@@ -4790,8 +4837,6 @@ of a function <m>y=y(x)</m> is given by
 <section xml:id="SECTIONgener-logar-expon">
 <title>General Logarithms and Exponentials</title>
 
-<subsection xml:id="SUBSECTIONGenExp">
-<title>General Exponentials</title>
   <blockquote>
     <p>
       You have no idea how much poetry there is in the
@@ -4804,8 +4849,11 @@ Friederich Gauss (1777-1855)</url>
 </attribution>
 </blockquote>
 
+<paragraphs xml:id="PARAGRAPHSGenExp">
+<title>General Exponentials</title>
+
 <p>
-  So far we<rsq/>ve focused on the \term{natural} exponential and logarithm
+  So far we<rsq/>ve focused on the <term>natural</term> exponential and logarithm
   functions even though we started our discussion of logarithms by
   defining <m>\log_{10}(x)</m> as the inverse of the base-<m>10</m> exponential:
   <m>10^x</m>.
@@ -4841,21 +4889,29 @@ Friederich Gauss (1777-1855)</url>
 <task>
   <statement>
     <p>
-      Show that <m>\log_a(xy)=\log_a(x)+\log_a(y).</m> \\
-      \hint{Consider
-      <m>a^{\log_a(x)+\log_a(y)}</m> and use the properties of exponents to
-      show that this equals <m>xy.</m>}
+      Show that <m>\log_a(xy)=\log_a(x)+\log_a(y).</m> 
 </p>
 </statement>
+<hint>
+<p>
+Consider
+      <m>a^{\log_a(x)+\log_a(y)}</m> and use the properties of exponents to
+      show that this equals <m>xy.</m>
+</p>
+</hint>
 </task>
 <task>
   <statement>
     <p>
-      Show that <m>\log_a(x^c) =c \log_a(x).</m> \\
-      \hint{Consider <m>a^{c\log_a(x)}</m> and use the properties of exponents
-      to show that this equals <m>x^c</m>.}
+      Show that <m>\log_a(x^c) =c \log_a(x).</m> 
 </p>
 </statement>
+<hint>
+<p>
+Consider <m>a^{c\log_a(x)}</m> and use the properties of exponents
+      to show that this equals <m>x^c</m>.
+</p>
+</hint>
 </task>
 </problem>
 <!-- \begin{embeddedproblem}  -->
@@ -4889,22 +4945,37 @@ Friederich Gauss (1777-1855)</url>
   Here<rsq/>s how to do that. Recall that from the inverse relationship
   between the natural exponential and the natural logarithm (Properties
   1 and 2) <m>a=e^{\ln(a)}</m>. So we make that
-  substitution\aside{Some may see this step as  making <m>a^x</m> <q>harder
-  on the eyes.</q> But often it is often necessary to temporarily make
-  things more complicated so that we can recognize a pattern or to
-  reduce the situation to a previously solved problem. } to
+  substitution to
   get
   <me>
     y=a^x=\left(e^{\ln(a)}\right)^x=e^{x\ln(a)}
 </me>
 </p>
+<aside>
+<title>Comment</title>
 <p>
+Some may see this step as making <m>a^x</m> <q>harder on the eyes,</q>
+rather than easier, but often it is often necessary to temporarily
+make things more complicated so that we can recognize a pattern or to
+reduce the situation to a previously solved problem.
+</p>
+<p>
+Don<rsq/>t become rigid in your approach to problem solving. Remain flexible.
+</p>
+</aside>
 
+
+<p>
   Now differentiate:
-  \begin{align*}
-  a^x\amp =e^{x\ln(a)}\\
-  \dx(a^x) \amp = \dx{\left(e^{x\ln(a)}\right)}= e^{x\ln(a)}\dx(x\ln(a)).\\
-  \end{align*}
+  <md>
+    <mrow>
+      a^x\amp =e^{x\ln(a)}
+    </mrow>
+    <mrow>
+      \dx(a^x) \amp = \dx{\left(e^{x\ln(a)}\right)}= e^{x\ln(a)}\dx(x\ln(a)).
+    </mrow>
+  </md>
+
   Since <m>a</m> is a constant, <m>\ln(a)</m> is also a constant so
   <me>
     \dx(a^x) = e^{x\ln(a)}\ln(a)\dx{x},
@@ -4937,74 +5008,56 @@ and be lazy. We find it much simpler to find the derivative of
   nice trick. Keep it in mind. We<rsq/>ll be using it later.
 </p>
 <exercise>
-  <introduction>
     <p>
       Find <m>\dx{y}</m> and <m>\dfdx{y}{x}</m> for each of the following:
 </p>
-</introduction>
-<task>
-  <statement>
+<ol cols="3" marker="i">
+  <li>
     <p>
-<m>y=2^x</m>
-</p>
-</statement>
-</task>
-<task>
-  <statement>
+      <m>y=2^x</m>
+    </p>
+  </li>
+  <li>
     <p>
-<m>y=3^x\cdot3^x</m>
-</p>
-</statement>
-</task>
-<task>
-  <statement>
+      <m>y=3^x\cdot3^x</m>
+    </p>
+  </li>
+  <li>
     <p>
-<m>y=x3^x</m>
-</p>
-</statement>
-</task>
-<task>
-  <statement>
+      <m>y=x3^x</m>
+    </p>
+  </li>
+  <li>
     <p>
-<m>y=3\cdot7^x+7\cdot3^x</m>
-</p>
-</statement>
-</task>
-<task>
-  <statement>
+      <m>y=e^{5^x}</m>
+    </p>
+  </li>
+  <li>
     <p>
-<m>y=e^{5^x}</m>
-</p>
-</statement>
-</task>
-<task>
-  <statement>
+      <m>y=\ln\left(2^x\right)</m>
+    </p>
+  </li>
+  <li>
     <p>
-<m>y=\ln\left(2^x\right)</m>
-</p>
-</statement>
-</task>
-<task>
-  <statement>
+      <m>y=3\cdot7^x+7\cdot3^x</m>
+    </p>
+  </li>
+  <li>
     <p>
-<m>y=2^x\cdot 3^x</m>
-</p>
-</statement>
-</task>
-<task>
-  <statement>
+      <m>y=2^x\cdot 3^x</m>
+    </p>
+  </li>
+  <li>
     <p>
-<m>y=\frac{2^x}{3^x}</m>
-</p>
-</statement>
-</task>
-<task>
-  <statement>
+      <m>y=\frac{2^x}{3^x}</m>
+    </p>
+  </li>
+  <li>
     <p>
-<m>y=2^x\cdot4^x\cdot8^{x^2}</m>
-</p>
-</statement>
-</task>
+      <m>y=2^x\cdot4^x\cdot8^{x^2}</m>
+    </p>
+  </li>
+</ol>
 </exercise>
 <!-- begin{ProficiencyDrill} -->
 <!--   Find <m>\dx{y}</m> and <m>\dfdx{y}{x}</m> for each of the following: -->
@@ -5022,8 +5075,8 @@ and be lazy. We find it much simpler to find the derivative of
 <!-- \end{ProficiencyDrill} -->
 
 
-</subsection>
-<subsection xml:id="SUBSECTIONGenLog">
+</paragraphs>
+<paragraphs xml:id="PARAGRAPHSGenLog">
 <title>General Logarithms</title>
 <p>
 
@@ -5070,25 +5123,21 @@ So we have the differentiation formula:
   prefer.
 </p>
 <exercise>
-  <introduction>
-    <p>
-      Compute <m>\dx{y}</m> and <m>\dfdx{y}{x}</m> for each of the following.
-</p>
-</introduction>
-<task>
-  <statement>
-    <p>
-<m>y=\log_2(7x)</m>
-</p>
-</statement>
-</task>
-<task>
-  <statement>
-    <p>
-<m>y=\log_{10}(x^2+1)</m>
-</p>
-</statement>
-</task>
+  <p>
+    Compute <m>\dx{y}</m> and <m>\dfdx{y}{x}</m> for each of the following.
+  </p>
+  <ol cols="2" marker="i">
+    <li>
+      <p>
+        <m>y=\log_2(7x)</m>
+      </p>
+    </li>
+    <li>
+      <p>
+        <m>y=\log_{10}(x^2+1)</m>
+      </p>
+    </li>
+  </ol>
 </exercise>
 <!-- begin{ProficiencyDrill} -->
 <!--   Compute <m>\dx{y}</m> and <m>\dfdx{y}{x}</m> for each of the following. -->
@@ -5156,12 +5205,7 @@ where <m>P</m> is the sound power of the source measured in watts and
 <!-- \end{enumerate} -->
 <!-- \end{embeddedproblem} -->
 
-<aside>
-<title>Note to self</title>
-<p>
-  Digression missing
-</p>
-</aside>
+</paragraphs>
 
 <paragraphs xml:id="DIGRESSIONBriggsAndNapier">
 <title>DIGRESSION: Common and Napierian Logarithms</title>
@@ -5183,7 +5227,7 @@ It is a well worn truism among research mathematicians that the
   in
   <m>1614</m>,
   <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Briggs/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Briggs/">Henry
-    Briggs</url> (<m>1561 - 1630</m>), Professor of Geometry at Gresham College
+    Briggs</url> (1561<ndash/>1630), Professor of Geometry at Gresham College
   in London, visited Napier and suggested that a few simple changes to
   his logarithm table would make it more practical. In particular it
   was Briggs who suggested that since our number system is in
@@ -5196,8 +5240,8 @@ It is a well worn truism among research mathematicians that the
   <q>on account of ill-health.</q> As a result, Briggs took on the task
   of computing tables of base-<m>10</m> logarithms, collaborating with
   Napier until the latter<rsq/>s death two years later. The results of
-  their collaboration are known as the Briggsian or \term{Common
-    Logarithms}. Common Logarithms are the base <m>10</m> logarithms we
+  their collaboration are known as the Briggsian or <term>Common
+    Logarithms</term>. Common Logarithms are the base <m>10</m> logarithms we
   discussed earlier and were an important computational aid for nearly
   <m>400</m> years until the invention of modern computational
   technologies.
@@ -5218,76 +5262,34 @@ logarithms.
 </p>
 
 <exercise>
-<introduction>
-<p>
-</p>
-</introduction>
-<task>
-<statement>
-<p>
- Use whatever technology you prefer to compute the natural
-    logarithms of the numbers <m>21.2343</m> and <m>5689.121343</m> and their
-    product. Confirm that
-    <m>\ln(21.2343) + \ln(5689.121343) =
-    \ln(21.2343\times5689.121343)</m>. \\
-    \comment{If you don<rsq/>t like these
-      numbers use others. We just picked these at random.}
-  </p>
-</statement>
-</task>
-<task>
-<statement>
-<p>
- Do the same using common logarithms.
-  </p>
-</statement>
-</task>
-<task>
-<statement>
-<p>
- Do the same using <m>\log_5(x)</m>. \\
-    \comment{Or any other
-      base. Again we just picked <m>5</m> at random.}
-  </p>
-</statement>
-</task>
+  <ol  marker="i">
+    <li>
+      <p>
+        Use whatever technology you prefer to compute the natural
+        logarithms of the numbers <m>21.2343</m> and <m>5689.121343</m> and their
+        product. Confirm that
+        <m>\ln(21.2343) + \ln(5689.121343) =
+        \ln(21.2343\times5689.121343)</m>. 
+        (If you don<rsq/>t like these
+        numbers use others. We just picked these at random.)
+      </p>
+    </li>
+    <li>
+      <p>
+        Do the same using common logarithms.
+      </p>
+    </li>
+    <li>
+      <p>
+        Do the same using <m>\log_5(x)</m>. 
+        ( Or any other
+        base. Again we just picked <m>5</m> at random.)
+      </p>
+    </li>
+  </ol>
 </exercise>
 
-<exercise>
-<introduction>
-<p>
-</p>
-</introduction>
-<task>
-<statement>
-<p>
- Use whatever technology you prefer to compute the natural
-    logarithms of the numbers <m>21.2343</m> and <m>5689.121343</m> and their
-    product. Confirm that
-    <m>\ln(21.2343) + \ln(5689.121343) =
-    \ln(21.2343\times5689.121343)</m>. \\
-  (If you don<rsq/>t like these
-      numbers use others. We just picked these at random.)
-  </p>
-</statement>
-</task>
-<task>
-<statement>
-<p>
- Do the same using common logarithms.
-  </p>
-</statement>
-</task>
-<task>
-<statement>
-<p>
- Do the same using <m>\log_5(x)</m>. \\
-   (Or any other
-      base. Again we just picked <m>5</m> at random.)
-  </p>
-</statement>
-</task>
-</exercise>
+
 <!-- begin{ProficiencyDrill-enumerate} -->
 <!--   \begin{enumerate}[label={  (\alph*)}] -->
 <!--   \item Use whatever technology you prefer to compute the natural -->
@@ -5306,17 +5308,16 @@ logarithms.
 
 
 <example>
-<title>label={  (\alph*)}</title>
-<p>
 
+<p>
   A calculator is a useful tool, but only if the human operating it
   understands what to calculate, and why. Blind computation is
   pointless and wasteful. As powerful and convenient as our modern
   technology is, there is still no substitution for a deep
   understanding of basic principles.
 </p>
-<p>
 
+<p>
   For example, how many base-<m>10</m> digits long do you suppose the
   number <m>2^{1234567890}</m> is? You cannot solve this by punching
   <m>2^{1234567890}</m> into a calculator and counting the digits. Try it
@@ -5324,8 +5325,8 @@ logarithms.
   calculator, that just means that technology has outpaced this
   particular problem. In that case use a bigger exponent, say <m>12345678901234567890</m>.
 </p>
-<p>
 
+<p>
   This feels like the sort of problem a math professor might make up
   just for fun (though it often feels like we do it just to torment
   our students), but it is not. Computer programmers
@@ -5380,40 +5381,32 @@ logarithms.
 </p>
 
     <exercise>
-<introduction>
 <p>
     How many bits are needed to allocate to store these
     numbers?
 </p>
-</introduction>
-<task>
-<statement>
+<ol cols="2" marker="i">
+<li>
 <p>
  <m>2^{1234567890}</m>?
        </p>
-</statement>
-</task>
-<task>
-<statement>
+</li>
+<li>
 <p>
  <m>10^{1234567890}</m>?
        </p>
-</statement>
-</task>
-<task>
-<statement>
+</li>
+<li>
 <p>
  <m> 5^{1234567890}</m>?
        </p>
-</statement>
-</task>
-<task>
-<statement>
+</li>
+<li>
 <p>
  <m>12^{1234567890}</m>?
     </p>
-</statement>
-</task>
+</li>
+</ol>
 </exercise>
 <!-- begin{ProficiencyDrill} -->
   <!--   How many bits are needed to allocate to store these -->
@@ -5435,7 +5428,7 @@ logarithms.
 <p>
   For each of the following numbers:
   
-<ol>
+<ol cols="2" marker="i">
     <li>
 <p>
  <m>3^{1234567890}</m>
@@ -5546,8 +5539,12 @@ when he first invented logarithms, before Briggs suggested using base-<m>10</m>?
 <p>
 Napier defined his original logarithms as follows.  Consider a point
 <m>C</m> moving along line segment <m>AB</m> and a point <m>F</m> moving along an
-infinite ray <m>DE</m> as seen below.\\
-\centerline{\includegraphics*[height=.5in,width=1.5in]{../Figures/NapierLog1}}
+infinite ray <m>DE</m> as seen below.
+</p>
+<image source="images/NapierLog1.png" width="40%" />
+
+<!-- \includegraphics*[height=.5in,width=1.5in]{../Figures/NapierLog1} -->
+<p>
 At the beginnning both <m>C</m> and <m>F</m> are moving at the same speed, and
 <m>F</m> continues to move at that initial speed. But the speed of <m>C</m> is
 always equal to the distance from <m>C</m> to <m>B</m>.  If we let <m>CB=x</m> and
@@ -5629,8 +5626,8 @@ seven decimal places.
 </paragraphs>
 
 
-</subsection>
-<subsection xml:id="SUBSECTIONLogDiff">
+
+<paragraphs xml:id="PARAGRAPHSLogDiff">
 <title>Logarithmic Differentiation</title>
 <p>
   Recall that in <xref ref="SECTIONsome-rules-diff"></xref> we observed that the
@@ -5638,10 +5635,16 @@ seven decimal places.
   an irrational number. The properties of the natural exponential and
   the natural logarithm functions will (finally) allow us to make this
   extension.
-</p>
+  </p>
+  <aside>
+<title>Comment</title>
 <p>
-  Suppose <m>\alpha</m> is any real number\aside{In particular we do not
-  assume that <m>\alpha</m> is rational.}.  Starting with <m>y=x^\alpha</m> we
+In particular we do not assume that <m>\alpha</m> is rational.
+</p>
+</aside>
+
+<p>
+  Suppose <m>\alpha</m> is any real number.  Starting with <m>y=x^\alpha</m> we
   take the logarithm of both sides, obtaining
   <me>
     \ln(y)=\alpha\ln(x).
@@ -5675,24 +5678,24 @@ cases of <xref ref="EQUATIONGeneralPowerRule"></xref>.
   While we can do this using our Differentiation Rules, it will be
   very tedious.  But nice things happen if we take the natural
   logarithm of both sides before we differentiate.
-<me>    \ln(y)\amp =\ln\left(\frac{\sqrt{x^3+2x}\cdot \tan(x)}{(x^5-7)^4} \right)</me>
+<me>    \ln(y) =\ln\left(\frac{\sqrt{x^3+2x}\cdot \tan(x)}{(x^5-7)^4} \right)</me>
 Since the natural  logarithm changes division
 into subtraction (Property 5) we
 can rewrite the right side as:
-<me>      \amp =\ln\left[\sqrt{x^3+2x}\cdot\tan(x)\right] -
+<me>       =\ln\left[\sqrt{x^3+2x}\cdot\tan(x)\right] -
 \ln\left(\left(x^5-7\right)^4\right).</me>
 And since the  natural  logarithm changes
 multiplication    into addition (Property 4) we can
 re-express  the right side again. This time as:
-<me>      \amp =\ln\left(\sqrt{x^3+2x}\right)+ \ln\left(\tan(x)\right) -
+<me>       =\ln\left(\sqrt{x^3+2x}\right)+ \ln\left(\tan(x)\right) -
 \ln\left(\left(x^5-7\right)^4\right).</me>
 Re-expressing the square root as an exponent
 gives
-<me>      \amp =\ln\left(x^3+2x\right)^{1/2}+ \ln\left(\tan(x)\right) -
+<me>       =\ln\left(x^3+2x\right)^{1/2}+ \ln\left(\tan(x)\right) -
 \ln\left(\left(x^5-7\right)^4\right)</me>.
 and we can now bring the exponents down
 in front (Property 6).
-<me>        \ln(y)    \amp =\frac{1}{2}  \ln(x^3+2x)+\ln(\tan(x)) -4 \ln(x^5-7)).</me>
+<me>        \ln(y)     =\frac{1}{2}  \ln(x^3+2x)+\ln(\tan(x)) -4 \ln(x^5-7)).</me>
 Notice that we have not yet started differentiating. All we<rsq/>ve done
 so far is re-express our function using the properties of
 logarithms.
@@ -5730,13 +5733,13 @@ If we multiply by <m>y</m> we get
   Rule?
 </p>
 
-<exercise>
-  <statement>
-    <p>
-      Try it and see.
-    </p>
-  </statement>
-</exercise>
+<!-- <exercise> -->
+<!--   <statement> -->
+<!--     <p> -->
+<!--       Try it and see. -->
+<!--     </p> -->
+<!--   </statement> -->
+<!-- </exercise> -->
 <p>
   Recall that in <xref ref="PROBLEMGeneralPowerRule"></xref> you used the Product
   Rule to compute <m>\dx\left[(x+1)(x+2)(x+3)\cdots(x+n)\right]</m>. You
@@ -5795,9 +5798,9 @@ If we multiply by <m>y</m> we get
   <introduction>
     <p>
       Show that if <m>y=\sqrt{e^{x^2+x}\sin(x)}</m>, then
-      <m>
+      <me>
         \dx{y}= \frac12\sqrt{e^{x^2+x}\sin(x)}\left(2x+1\cot(x)\right)\dx{x}
-      </m>
+      </me>
       by
     </p>
   </introduction>
@@ -5846,9 +5849,9 @@ If we multiply by <m>y</m> we get
     <statement>
       <p>
         <m>y=\left[x(x+1)\right]^7</m>
-        \solution{
-        <m>        \dfdx{y}{x} = \left[x(x+1)\right]^7\left[\dfrac7x+\dfrac{7}{x+1}\right]</m>\\
-        <m> \dfdx{z}{x} = \ln\left(\dfrac7x+\dfrac{7}{x+1}\right)</m>}
+        <!-- \solution{ -->
+        <!-- <m>        \dfdx{y}{x} = \left[x(x+1)\right]^7\left[\dfrac7x+\dfrac{7}{x+1}\right]</m>\\ -->
+        <!-- <m> \dfdx{z}{x} = \ln\left(\dfrac7x+\dfrac{7}{x+1}\right)</m>} -->
       </p>
     </statement>
   </task>
@@ -5999,7 +6002,7 @@ If we multiply by <m>y</m> we get
   </statement>
 </problem>
 
-</subsection>
+</paragraphs>
 
 </section>
 
@@ -6014,7 +6017,7 @@ If we multiply by <m>y</m> we get
       </p>
       <attribution>
         <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Euler" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Euler">Leonhard
-        Euler (1707-1783)</url>
+        Euler</url> (1707-1783)
       </attribution>
     </blockquote>
 
@@ -6041,11 +6044,12 @@ If we multiply by <m>y</m> we get
     </p>
     <p>
 
-      <xref ref="EQUATIONSHOSpringSolution1">equation</xref> is unrealisitic because the
-      oscillations described never vary.  In the real world, as a result of
-      friction, the spring<rsq/>s oscillations will get shorter and shorter,
-      eventually stopping altogether. How could we modify this model in
-      order to capture the effects of, say, air resistance?
+      <xref ref="EQUATIONSHOSpringSolution1">Equation</xref> is
+      unrealisitic because the oscillations described never vary.  In
+      the real world, as a result of friction, the spring<rsq/>s
+      oscillations will get shorter and shorter, eventually stopping
+      altogether. How could we modify this model in order to capture
+      the effects of, say, air resistance?
     </p>
     <p>
 
@@ -6080,7 +6084,7 @@ or
   \dfdxn{y}{t}{2}+\frac{b}{m}\dfdx{y}{t}+\frac{k}{m}y = 0.
 <!-- \label{eq:DampedOscillator1} -->
 </men>
-<xref ref="EQDampedOscillator1">equation</xref> is a little scary to look at, let alone
+<xref ref="EQUATIONDampedOscillator1">Equation</xref> is a little scary to look at, let alone
 try to solve.  We<rsq/>ll begin with a simplified version where
 <m>b=k=m</m>:
 <men  xml:id="EQUATIONDampedProblem1">
@@ -6101,7 +6105,7 @@ try to solve.  We<rsq/>ll begin with a simplified version where
       Show that:
       <me> y(t)=e^{-\frac{t}{2}} \left[
       A\cos\left(\frac{\sqrt{3}}{2}t\right)+B\sin\left(\frac{\sqrt{3}}{2}t\right)
-      \right]</me> satisfies <xref ref="EQUATIONDampedProblem1"></xref> for any
+      \right]</me> satisfies <xref ref="EQUATIONDampedProblem1">equation</xref> for any
       constants <m>A</m> and <m>B</m>.
 </p>
 </statement>
@@ -6129,7 +6133,7 @@ try to solve.  We<rsq/>ll begin with a simplified version where
 <!-- \end{embeddedproblem-enumerate} -->
 <p>
   It is one thing to confirm a given solution as in
-  <xref ref="PROBLEMDampedOscillator1">Problem\</xref>,  but  quite another to
+  <xref ref="PROBLEMDampedOscillator1"></xref>,  but  quite another to
   find the
   solution in the first place.  A natural question to ask is
 <q>How was this problem solved the first time?</q>
@@ -6140,6 +6144,7 @@ try to solve.  We<rsq/>ll begin with a simplified version where
 
 
 <aside>
+<title>Comment</title>
   <p>
     This heading was borrowed from the
     <url href="http://eulerarchive.maa.org/hedi/index.html" visual="http://eulerarchive.maa.org/hedi/index.html">
@@ -6155,10 +6160,9 @@ Sandifer, of Western Connecticut State University
 
 <figure>
   <caption>
-    <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Euler" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Euler">\centerline{Leonhard Euler}
-\centerline</url>
+    <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Euler" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Euler">Leonhard Euler</url>
 </caption>
-<image source="images/Euler.png" width="50%"/>
+<image source="images/Euler.png" width="30%"/>
 </figure>
 <!-- \begin{wrapfigure}[]{r}{2.3in} -->
 <!--   \vskip-7mm -->
@@ -6169,22 +6173,27 @@ Sandifer, of Western Connecticut State University
 <!-- \label{fig:EulerPortrait} -->
 <!-- \end{wrapfigure} -->
 
-
+<aside>
+<title>Historical Background</title>
 <p>
-  Leonhard Euler\aside{<url href="https://mathshistory.st-andrews.ac.uk/Biographies/Euler" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Euler">Euler</url> was one of the all-time great
+<url href="https://mathshistory.st-andrews.ac.uk/Biographies/Euler" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Euler">Euler</url> was one of the all-time great
   mathematicians. In any list of stellar mathematicians, he would
   stand out among the best.  Indeed, Pierre-Simon Laplace
   <m>(1749-1827)</m>, an outstanding mathematician in his own right, was
   once asked by a novice how best to learn Calculus. Laplace told him
-  <q>Read Euler, read Euler, he is the master of us all.</q>}
-  <m>(1707-1783)</m> solved the differential
-  <xref ref="EQDampedProblem1">equation</xref> by guessing that for some
-carefully chosen  value of <m>c</m>
+  <q>Read Euler, read Euler, he is the master of us all.</q>
+</p>
+</aside>
+
+<p>
+  Leonhard Euler (1707<mdash/>1783) solved the differential <xref
+  ref="EQUATIONDampedProblem1">equation</xref> by guessing that for some
+  carefully chosen value of <m>c</m>
 <me>
   y(t)=e^{ct}
 </me>
 would be a solution. In view of the
-results of <xref ref="PROBLEMDampedOscillator1">Problem\</xref> this guess looks
+results of <xref ref="PROBLEMDampedOscillator1"></xref> this guess looks
 completely crazy. Where is the sine? Where is the cosine? Nothing
 seems to be oscillating!
 </p>
@@ -6201,10 +6210,15 @@ seems to be oscillating!
   The really crazy thing though, is that Euler<rsq/>s guess worked. Here<rsq/>s
   how.
 </p>
+<aside>
+<title>Pronunciation</title>
 <p>
+His name is pronounced <q>oiler,</q> not <q>you-ler.</q>
+</p>
+</aside>
 
-  The key is the constant <m>c</m>. By leaving it unspecified Euler\aside{By
-  the way, his name is pronounced <q>oiler,</q> not <q>you-ler.</q>} gave
+<p>
+  The key is the constant <m>c</m>. By leaving it unspecified Euler gave
   himself a little <q>wiggle room.</q> All he had to do now was find a
   value of <m>c</m> that would work.
 </p>
@@ -6213,9 +6227,7 @@ seems to be oscillating!
   <statement>
     <p>
       Show that if <m>y=e^{ct}</m> satisfies the differential equation
-      <m>\displaystyle
-      \dfdxn{y}{t}{2}+\dfdx{y}{t}+y=0
-</m>
+      <me>      \dfdxn{y}{t}{2}+\dfdx{y}{t}+y=0</me>
 then <m>c</m> must satisfy the quadratic equation
 <men  xml:id="EQUATIONImagSolution">
 
@@ -6223,20 +6235,24 @@ then <m>c</m> must satisfy the quadratic equation
   c^2+c+1=0.
 
 </men>
-\hint{Put the first two derivatives of <m>y</m>  into the
-differential equation.}
 </p>
 </statement>
+<hint>
+<p>
+Put the first two derivatives of <m>y</m>  into the
+differential equation.
+</p>
+</hint>
 </problem>
 <p>
 
-  Solving  <xref ref="EQImagSolution">equation</xref> we see that
+  Solving  <xref ref="EQUATIONImagSolution">equation</xref> we see that
   <m>
     c=\frac{-1}{2}\pm\frac{\sqrt{-3}}{2},
 </m>
 so we conclude that if <m>c=-\frac12+\frac{\sqrt{-3}}{2}</m> or
 <m>c=-\frac12-\frac{\sqrt{-3}}{2}</m> then <m>y=e^{ct}</m> satisfies
-<xref ref="EQDampedProblem1">equation</xref>.
+<xref ref="EQUATIONDampedProblem1">equation</xref>.
 </p>
 <p>
 
@@ -6244,18 +6260,24 @@ so we conclude that if <m>c=-\frac12+\frac{\sqrt{-3}}{2}</m> or
   number which is the square root of a negative number. But Euler knew
   that such <q>imaginary</q> numbers had been effectively used in the
   previous century, although no one could yet explain what they really
-  were\aside{Descartes had dubbed them as <q>imaginary</q> in his book
-  <pubtitle>La Geometrie</pubtitle> in <m>1637</m>: <q>.\ .\ . whereas we can always
-  imagine as many roots for each equation as I have predicted, there
-  is still not always a quantity which corresponds to each root so
-  imagined.</q>  }. Knowing that if nothing useful came of his efforts
+  were. Knowing that if nothing useful came of his efforts
   he could discard them and try something else, Euler decided to
   treat the square roots of negative numbers, like differentials, as
 <q>convenient fictions</q>
 </p>
+<aside>
+<title>Historical Background</title>
+<p>
+Descartes had derided them as <q>imaginary</q> in his book
+  <pubtitle>La Geometrie</pubtitle> in 1637 <q>. . . whereas we can always
+  imagine as many roots for each equation as I have predicted, there
+  is still not always a quantity which corresponds to each root so
+  imagined.</q>
+</p>
+</aside>
+
 
 <p>
-
   Since he had assumed that <m>c</m> was a constant Euler
   wanted to see where that assumption would lead. In particular he
   decided to treat <m>\sqrt{-3}</m> as the constant it is.
@@ -6264,7 +6286,7 @@ so we conclude that if <m>c=-\frac12+\frac{\sqrt{-3}}{2}</m> or
 </p>
 <p>
 
-  Euler now had two solutions of <xref ref="EQDampedProblem1">equation</xref>, one
+  Euler now had two solutions of <xref ref="EQUATIONDampedProblem1">equation</xref>, one
   for each possible value of <m>c</m>:
   <me>
     y_1(t) =e^{\left(-\frac12+\frac{\sqrt{3}}{2}i\right)t} =
@@ -6290,7 +6312,7 @@ these solutions could mean.
   <statement>
     <p>
       Show that <m>y_1(t)</m> is a solution of
-      <xref ref="EQUATIONDampedProblem1"></xref>.
+      <xref ref="EQUATIONDampedProblem1">equation</xref>.
 </p>
 </statement>
 </task>
@@ -6298,7 +6320,7 @@ these solutions could mean.
   <statement>
     <p>
       Show that <m>y_2(t)</m> is also a solution of
-      <xref ref="EQUATIONDampedProblem1"></xref>.
+      <xref ref="EQUATIONDampedProblem1">equation</xref>.
 </p>
 </statement>
 </task>
@@ -6307,7 +6329,7 @@ these solutions could mean.
     <p>
       Show that if <m>a</m> and <m>b</m> are constants then
 <m>w(t)=ay_1(t)+by_2(t)</m>
-is also a solution of <xref ref="EQUATIONDampedProblem1"></xref>.
+is also a solution of <xref ref="EQUATIONDampedProblem1">equation</xref>.
 </p>
 </statement>
 </task>
@@ -6342,18 +6364,18 @@ is also a solution of <xref ref="EQUATIONDampedProblem1"></xref>.
   <statement>
     <p>
       Show that <m>y=e^{ct}</m> is a solution of the differential
-      <xref ref="EQEulerSimpleSHO-1">equation</xref> when <m>c=i</m> or <m>c=-i</m>.
+      <xref ref="EQUATIONEulerSimpleSHO-1">equation</xref> when <m>c=i</m> or <m>c=-i</m>.
 </p>
 </statement>
 </problem>
 <p>
 
-  <xref ref="PROBLEMDampedOscillation1">Problem\</xref> shows that <m>y=e^{it}</m> and
+  <xref ref="PROBLEMDampedOscillation1"></xref> shows that <m>y=e^{it}</m> and
   <m>y=e^{-it}</m> are both solutions of
-  <xref ref="EQEulerSimpleSHO-1">equation</xref>,
-  but Euler knew (as we do\aside{See
-  <xref ref="SECTIONmore-high-deriv">Section</xref>.}) that the solution of
-  <xref ref="EQEulerSimpleSHO-1">equation</xref> is
+  <xref ref="EQUATIONEulerSimpleSHO-1">equation</xref>,
+  but Euler knew (as we do, see
+  <xref ref="SECTIONmore-high-deriv"></xref>.) that the solution of
+  <xref ref="EQUATIONEulerSimpleSHO-1">equation</xref> is
   <m>
     y(t)=a\cos(t)+b\sin(t)
 </m>
@@ -6362,7 +6384,7 @@ where <m>a</m> and <m>b</m> are constants.
 <p>
 
   He now had  very different looking solutions of
-  <xref ref="EQEulerSimpleSHO-1">equation</xref>. Euler guessed that somehow
+  <xref ref="EQUATIONEulerSimpleSHO-1">equation</xref>. Euler guessed that somehow
   these  must be the same, so he set
   <me>
     e^{it}=a\cos(t)+b\sin(t)
@@ -6380,10 +6402,14 @@ and tried to find <m>a</m> and
   <statement>
     <p>
 Show that if <m>e^{it}=a\cos(t)+b\sin(t),</m> then <m>a=1</m> and <m>b=i.</m>
-\hint{To get <m>a,</m> substitute <m>t=0.</m> To get <m>b,</m> differentiate
-first.}
 </p>
 </statement>
+<hint>
+<p>
+To get <m>a,</m> substitute <m>t=0.</m> To get <m>b,</m> differentiate
+first.
+</p>
+</hint>
 </task>
 <task>
   <statement>
@@ -6406,13 +6432,13 @@ first.}
 <!-- \end{embeddedproblem-enumerate} -->
 <p>
 
-  From part (a) of <xref ref="PROBLEMEulersFormula">Problem\</xref> we get the
+  From part (a) of <xref ref="PROBLEMEulersFormula"></xref> we get the
   formula,
   <men  xml:id="EQUATIONEulerIdentity">
     e^{it}=\cos(t)+ i\sin(t).
 <!-- \label{eq:EulerIdentity} -->
 </men>
-<xref ref="EQEulerIdentity">equation</xref> is known as <term>Euler<rsq/>s Identity</term> and it
+<xref ref="EQUATIONEulerIdentity">equation</xref> is known as <term>Euler<rsq/>s Identity</term> and it
 is foundational to electrical engineering, and physics (especially
 Quantum Mechanics). For mathematicians it is the key to
 understanding the geometry of the <term>Complex Numbers</term> (numbers of
@@ -6424,15 +6450,21 @@ the form <m>a+bi</m>, where <m>a</m> and <m>b</m> are real numbers and <m>i^2=-1
   exponential (and hyperbolic trigonometric) functions and back.  For
   us, it is the key to our dampened oscillation problem.
 </p>
-<p>
 
-  Before we get to that, notice the following curious\aside{We call this
+<p>
+  Before we get to that, notice the following curious consequences of Euler<rsq/>s
+  Identity.
+</p>
+<aside>
+<title>Comment</title>
+<p>
+We call this
   curious because it relates the numbers <m>0, 1, i, e</m> , and <m>\pi</m> all
   in one simple formula. To find out what it actually means you<rsq/>ll
   need to become a mathematics major and take a course in Complex
-  Analysis. It<rsq/>s fun. You should do that.} consequences of Euler<rsq/>s
-  Identity.
+  Analysis. It<rsq/>s fun. You should do that.
 </p>
+</aside>
 
 <exercise>
   <statement>
@@ -6475,8 +6507,8 @@ Show that <m> \cosh(it)=\frac{e^{it}+e^{-it}}{2}=\cos(t)</m>
 <!--       \end{enumerate} -->
 <!--     \end{embeddedproblem} -->
 <p>
-  Finally, we return to <xref ref="EQDampedProblem1">equation</xref>. In
-  <xref ref="PROBLEMDampedOscillator1">Problem\</xref> we saw that
+  Finally, we return to <xref ref="EQUATIONDampedProblem1">equation</xref>. In
+  <xref ref="PROBLEMDampedOscillator1"></xref> we saw that
   <me> z(t)=e^{-\frac{t}{2}} \left[
   A\cos\left(\frac{\sqrt{3}}{2}t\right)+B\sin\left(\frac{\sqrt{3}}{2}t\right)
   \right]</me> and  in part (c) of <xref ref="PROBLEMDampOscExpSol"></xref> we saw that
@@ -6554,3 +6586,4 @@ If <m>i^2=-1</m>
 </subsection>
 </section>
 </chapter>
+
