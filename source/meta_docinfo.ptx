@@ -104,7 +104,8 @@
 \def\partialfxn#1#2#3{\frac{\partial^{#3}{#1}}{\partial{#2}^{#3}}} 
 \def\dfdxn#1#2#3{\frac{\text{d}^{#3}{#1}}{\text{d}{#2}^{#3}}} 
 
-\def\dfdxat#1#2#3{\eval{\dfdx{#1}{#2}}{#2}{#3}}
+<!-- \def\dfdxat#1#2#3{\eval{\dfdx{#1}{#2}}{#2}{#3}} -->
+\def\dfdxat#1#2#3{\eval{\dfdx{#1}{#2}}{#2=#3}{}}
 
 \def\limit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}#3}}%display style
 \def\tlimit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}}#3}%text style

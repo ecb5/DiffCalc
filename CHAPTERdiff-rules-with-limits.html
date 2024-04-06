@@ -119,6 +119,12 @@ window.MathJax = {
 \def\llimit#1#2#3{{\limitX{#1}{#2}{#3}{#1\lt{}#2}{}}}
 \def\ltlimit#1#2#3{{\tlimitX{#1}{#2}{#3}{#1\lt{}#2}{}}}
 
+\def\arccot{{\rm{}arccot}{}}
+\def\Arctan{{\rm{}Arctan}{}}
+\def\Arcsin{{\rm{}Arcsin}{}}
+\def\arcsec{{\rm{}arcsec}{}}
+\def\arccsc{{\rm{}arccsc}{}}
+
 \newcommand{\eps}{\varepsilon}
 \newcommand{\RR}{\mathbb {R}}
 \newcommand{\QQ}{\mathbb {Q}}
@@ -153,15 +159,21 @@ window.MathJax = {
 
 
 \def\DD{{\bf{}D}}
-\def\ftceval#1#2#3{#1\hskip.5ex{\llap{\smash{\rule[-3ex]{0.5pt}{7ex}}}_{\raise{-3ex}{\hskip.5ex#2}}^{\raise{-5ex}{\hskip.5ex #3}}}}
 
-
-\def\eval#1#2#3{#1\hskip.5ex{\llap{\rule[-1.5ex]{0.5pt}{4ex}}_{\raise{-1.5ex}{\hskip.5ex#2=#3}}}}
-\def\dispeval#1#2#3{#1\hskip.5ex{\llap{\smash{\rule[-2ex]{0.5pt}{5ex}}}_{\raise{-2ex}{\hskip.5ex#2=#3}}}}
-
-\def\geneval#1#2{\left.#1\right|_{#2}}
-
+\def\eval#1#2#3{\left.#1\right\rvert_{#2}^{#3}}
+\def\ftceval#1#2#3{\eval#1#2#3}
+\def\geneval#1#2{\eval{#1}{#2}{}}
 \def\bigeval#1#2#3{\eval{#2}{#2}{#3}}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -305,7 +317,7 @@ window.MathJax = {
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SECTIONother-inverse-trig" class="internal"><span class="codenumber">6.7</span> <span class="title">The Other Inverse Trigonometric Functions</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#InverseSine" class="internal"><span class="codenumber">6.7.1</span> <span class="title">The Inverse Sine Function: \boldmath <span class="process-math">\(\inverse\sin(x)\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#InverseSine" class="internal"><span class="codenumber">6.7.1</span> <span class="title">The Inverse Sine Function:  <span class="process-math">\(\inverse\sin(x)\)</span></span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#InverseSecCsc" class="internal"><span class="codenumber">6.7.2</span> <span class="title">The Inverse Secant and Inverse Cosecant</span></a></div></li>
 </ul>
 </li>
@@ -337,46 +349,34 @@ window.MathJax = {
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html" class="internal"><span class="codenumber">8</span> <span class="title">Exponentials and Logarithms</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#CHAPTERlast-elem-funct-2" class="internal"><span class="codenumber">8.1</span> <span class="title">Introduction</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONIvps" class="internal"><span class="codenumber">8.1.1</span> <span class="title">Initial Value Problems (IVPs)</span></a></div></li></ul>
-</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONIvps" class="internal"><span class="codenumber">8.1</span> <span class="title">Initial Value Problems (IVPs)</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONexponential" class="internal"><span class="codenumber">8.2</span> <span class="title">The Natural Exponential</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONexponential-growth" class="internal"><span class="codenumber">8.3</span> <span class="title">Exponential Growth and Exponential Notation</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONhyperb-trig-hang" class="internal"><span class="codenumber">8.4</span> <span class="title">Hyperbolic Trigonometry: The Hanging Chain</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONGatewayArch" class="internal"><span class="codenumber">8.5</span> <span class="title">The Gateway Arch</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#CHAPTERlast-elem-funct-7" class="internal"><span class="codenumber">8.6</span> <span class="title">Exponential Growth</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#CHAPTERlast-elem-funct-8" class="internal"><span class="codenumber">8.6</span> <span class="title">Exponential Growth</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONExpAndCmpndInt" class="internal"><span class="codenumber">8.7</span> <span class="title">Exponential Functions and Compound Interest</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONnatural-logarithm-1" class="internal"><span class="codenumber">8.8</span> <span class="title">A Short Introduction to Logarithms: John Napier Logs In</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONNatLog" class="internal"><span class="codenumber">8.9</span> <span class="title">Logarithms, Natural and Unnatural</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONnatural-logarithm-1" class="internal"><span class="codenumber">8.8</span> <span class="title">The Natural Logarithm</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection">
-<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONNapier" class="internal"><span class="codenumber">8.8.1</span> <span class="title">John Napier Logs In</span></a></div>
+<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONLogApps" class="internal"><span class="codenumber">8.10</span> <span class="title">Applications of Logarithms</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONNapier-2" class="internal"><span class="codenumber">8.8.1.1</span> <span class="title">A Short Introduction to Logarithms</span></a></div></li>
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSUBSECTIONradioactive-decay" class="internal"><span class="codenumber">8.8.1.2</span> <span class="title">Radioactive Dating</span></a></div></li>
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSUBSECTIONnewtons-law-cooling" class="internal"><span class="codenumber">8.8.1.3</span> <span class="title">Chillin’ with Newton: The Law of Cooling</span></a></div></li>
-</ul>
-</li></ul>
-</li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONDerivNatLog" class="internal"><span class="codenumber">8.9</span> <span class="title">The Derivative of the Natural Logarithm</span></a></div></li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONgener-logar-expon" class="internal"><span class="codenumber">8.10</span> <span class="title">General Logarithms and Exponentials</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONGenExp" class="internal"><span class="codenumber">8.10.1</span> <span class="title">General Exponentials</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONGenLog" class="internal"><span class="codenumber">8.10.2</span> <span class="title">General Logarithms</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONLogDiff" class="internal"><span class="codenumber">8.10.3</span> <span class="title">Logarithmic Differentiation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONradioactive-decay" class="internal"><span class="codenumber">8.10.1</span> <span class="title">Radioactive Dating</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONnewtons-law-cooling" class="internal"><span class="codenumber">8.10.2</span> <span class="title">Chillin’ with Newton: The Law of Cooling</span></a></div></li>
 </ul>
 </li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONDerivNatLog" class="internal"><span class="codenumber">8.11</span> <span class="title">The Derivative of the Natural Logarithm</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONgener-logar-expon" class="internal"><span class="codenumber">8.12</span> <span class="title">General Logarithms and Exponentials</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONleonh-euler-harm" class="internal"><span class="codenumber">8.11</span> <span class="title">Leonhard Euler, Harmonic Oscillators, and Complex Numbers</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONHowEulerDidIt" class="internal"><span class="codenumber">8.11.1</span> <span class="title">How Euler Did It</span></a></div></li></ul>
+<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONleonh-euler-harm" class="internal"><span class="codenumber">8.13</span> <span class="title">Leonhard Euler, Harmonic Oscillators, and Complex Numbers</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONHowEulerDidIt" class="internal"><span class="codenumber">8.13.1</span> <span class="title">How Euler Did It</span></a></div></li></ul>
 </li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html" class="internal"><span class="codenumber">9</span> <span class="title">Optimization: Going to Extremes</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SECTIONintroduction" class="internal"><span class="codenumber">9.1</span> <span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SECTIONintroduction" class="internal"><span class="codenumber">9.1</span> <span class="title">Introduction: Fermat’s Theorem</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SECTIONfive-simil-probl" class="internal"><span class="codenumber">9.2</span> <span class="title">Preliminaries: Some Simple Optimizations</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SECTIONrefl-refr-rainb" class="internal"><span class="codenumber">9.3</span> <span class="title">Reflections, Refractions, and Rainbows</span></a></div>
@@ -730,7 +730,7 @@ f(x)=
 </div></article><article class="problem example-like" id="PROBLEMDiffImpCont"><h5 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">14.12</span><span class="period">.</span>
 </h5>
-<div class="para" id="PROBLEMDiffImpCont-1-1">Suppose <span class="process-math">\(g(x)\neq0\)</span> near <span class="process-math">\(x=a\)</span> and <span class="process-math">\(\tlimit{x}{a}{\frac{f(x)}{g(x)}}\)</span> exists. Use <a href="" class="xref" data-knowl="./knowl/xref/THEOREMLimProd2.html" title="Theorem 14.2: The Limit of a Product is the Product of the Limits">Theorem~\ 14.2</a> to show that if <span class="process-math">\(\limit{x}{a}{g(x)}=0\)</span>         then <span class="process-math">\(\limit{x}{a}{f(x)}=0\text{.}\)</span>\\ \hint{Consider <span class="process-math">\(f(x)=\frac{f(x)}{g(x)}\cdot g(x)\)</span> for <span class="process-math">\(x\)</span> near <span class="process-math">\(a\text{.}\)</span>}\\ \comment{This problem shows that if <span class="process-math">\(\limit{x}{a}{g(x)}=0\)</span> then the only way that <span class="process-math">\(\limit{x}{a}{\frac{f(x)}{g(x)}}\)</span> can exist is if we have a \lhop  Indeterminate. It can also be used to prove <a href="" class="xref" data-knowl="./knowl/xref/LEMMADiffImpliesCont.html" title="Lemma 14.16: Differentiability Implies Continuity">Lemma 14.16</a> as you will see when we get to it.}</div></article><div class="para" id="SUBSECTIONlimit-comp-cont-26">The following Corollary says that if <span class="process-math">\(f(x)\)</span> is approaching <span class="process-math">\(L_f\)</span> and we multiply <span class="process-math">\(f(x)\)</span> by a number, <span class="process-math">\(k\text{,}\)</span> then the product <span class="process-math">\(kf(x)\)</span> approaches <span class="process-math">\(kL_f\text{.}\)</span> It follows from <a href="" class="xref" data-knowl="./knowl/xref/THEOREMConstLimit.html" title="Theorem 14.7: The Limit of a Constant is the Constant">Theorem 14.7</a> and <a href="" class="xref" data-knowl="./knowl/xref/THEOREMLimProd2.html" title="Theorem 14.2: The Limit of a Product is the Product of the Limits">Theorem 14.2</a>.</div>
+<div class="para" id="PROBLEMDiffImpCont-1-1">Suppose <span class="process-math">\(g(x)\neq0\)</span> near <span class="process-math">\(x=a\)</span> and <span class="process-math">\(\tlimit{x}{a}{\frac{f(x)}{g(x)}}\)</span> exists. Use <a href="" class="xref" data-knowl="./knowl/xref/THEOREMLimProd2.html" title="Theorem 14.2: The Limit of a Product is the Product of the Limits">Theorem~\ 14.2</a> to show that if <span class="process-math">\(\limit{x}{a}{g(x)}=0\)</span>         then <span class="process-math">\(\limit{x}{a}{f(x)}=0\text{.}\)</span>\\ \hint{Consider <span class="process-math">\(f(x)=\frac{f(x)}{g(x)}\cdot g(x)\)</span> for <span class="process-math">\(x\)</span> near <span class="process-math">\(a\text{.}\)</span>}\\ \comment{This problem shows that if <span class="process-math">\(\limit{x}{a}{g(x)}=0\)</span> then the only way that <span class="process-math">\(\limit{x}{a}{\frac{f(x)}{g(x)}}\)</span> can exist is if we have a L’Hôpital  Indeterminate. It can also be used to prove <a href="" class="xref" data-knowl="./knowl/xref/LEMMADiffImpliesCont.html" title="Lemma 14.16: Differentiability Implies Continuity">Lemma 14.16</a> as you will see when we get to it.}</div></article><div class="para" id="SUBSECTIONlimit-comp-cont-26">The following Corollary says that if <span class="process-math">\(f(x)\)</span> is approaching <span class="process-math">\(L_f\)</span> and we multiply <span class="process-math">\(f(x)\)</span> by a number, <span class="process-math">\(k\text{,}\)</span> then the product <span class="process-math">\(kf(x)\)</span> approaches <span class="process-math">\(kL_f\text{.}\)</span> It follows from <a href="" class="xref" data-knowl="./knowl/xref/THEOREMConstLimit.html" title="Theorem 14.7: The Limit of a Constant is the Constant">Theorem 14.7</a> and <a href="" class="xref" data-knowl="./knowl/xref/THEOREMLimProd2.html" title="Theorem 14.2: The Limit of a Product is the Product of the Limits">Theorem 14.2</a>.</div>
 <article class="corollary theorem-like" id="COROLLARYConstMultLimit"><h5 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">14.13</span><span class="period">.</span>
 </h5>
@@ -1338,32 +1338,195 @@ y(x)=x^3.\label{eq:Inv1}
 \end{equation*}
 </div>
 <div class="para">
-<codetancot" class="internal" title="Section 6.6: The Differentials of the Inverse Tangent and Inverse Cotangent Functions">~ 6.6</a> and <a href="CHAPTERcalc-trig.html#SECTIONother-inverse-trig" class="internal" title="Section 6.7: The Other Inverse Trigonometric Functions">~ 6.7</a>.</div>
-<div class="para" id="SECTIONinverse-functions-9">But that would require that we explicitly assume that each of the inverse trigonometric functions is differentiable, similar to the way we found the derivative of a quotient. This is a valid approach of course, but proceeding in that manner would mask some issues that will be of interest to us later. So we will approach the derivatives of inverse functions abstractly by (rigorously) finding a formula for the derivative of the inverse of a generic, invertible function. After that we’ll only need to apply the formula to each of the inverse trigonmetric formulas.</div>
-<section class="paragraphs" id="SECTIONinverse-functions-10"><h4 class="heading"><span class="title">DIGRESSION: Inverse and Derivative Notation.</span></h4> <div class="para" id="SECTIONinverse-functions-10-2">As we saw in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "DIGRESSIONdigression:inverse-function-notation" missing or not unique]</code> there are some difficulties with the notation we use to indicate inverse functions. These problems only get worse when we mix the standard derivative notations with the inverse function notation. Lagrange’s prime notation is especially problematic.</div> <div class="para" id="SECTIONinverse-functions-10-3">For example if <span class="process-math">\(f(x)\)</span> is an invertible function the derivative of <span class="process-math">\(\inverse{f}(x)\)</span> could be denoted either  as:\\ \centerline{<span class="process-math">\(\dfdx{(\inverse{f})}{x}\)</span> \hskip3mm or\hskip3mm <span class="process-math">\({\inverse{f}}^\prime(x)\text{.}\)</span>}</div> <div class="para logical" id="SECTIONinverse-functions-10-4">
-<div class="para">But both of these are somewhat awkward. Mathematicians also sometimes use the \term{operator} notation:</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\DD(f(x)) =  f^\prime(x)=\dfdx{f}{x}
-\end{equation*}
-</div>
-<div class="para">and in this situation it minimizes the awkwardness a bit.</div>
-</div> <div class="para logical" id="SECTIONinverse-functions-10-5">
-<div class="para">As we’ve seen there can also be some vagueness involving the distinction between functions and variables. For example  suppose we want to sketch a graph of this relation between <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{:}\)</span>
-</div>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-y-x^3=0.
-\end{equation*}
-</div>
-<div class="para">The simplest thing to do is to choose a value for either <span class="process-math">\(x\)</span> or <span class="process-math">\(y\)</span> and then figure out what the corresponding <span class="process-math">\(y\)</span> or <span class="process-math">\(x\)</span> is. This is simpler to do that if we rearrange the relation so that we have one variable strictly in terms of (“as a function of”) the other. For this particular relation it is easiest to choose a value for <span class="process-math">\(x\)</span> and compute the corresponding <span class="process-math">\(y\)</span> value so we would normally rearrange it as</div>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-y(x)=x^3.\label{eq:Inv1}
-\end{equation*}
-</div>
-<div class="para">
 <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQUATIONInv1" missing or not unique]</code> defines <span class="process-math">\(y\)</span> as a function of <span class="process-math">\(x\text{.}\)</span>
 </div>
 </div> <div class="para logical" id="SECTIONinverse-functions-10-6">
-<div class="para">But we only solved for <span class="process-math">\(y\)</span> because we could see it was a little easier to do. Otherwise our choice 
+<div class="para">But we only solved for <span class="process-math">\(y\)</span> because we could see it was a little easier to do. Otherwise our choice was completely arbitrary. We could also have solved for <span class="process-math">\(x\)</span> giving,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x(y)=\sqrt[3]{y}.\label{eq:Inv2}
+\end{equation*}
+</div>
+<div class="para">In this case we have <span class="process-math">\(x\)</span> as a function of <span class="process-math">\(y\text{.}\)</span>
+</div>
+</div> <div class="para" id="SECTIONinverse-functions-10-7">The two functions, <span class="process-math">\(y(x)\text{,}\)</span> (“cube”) and <span class="process-math">\(x(y)\)</span> (“cube root”), clearly contain the same information as the original relation  <span class="process-math">\(y-x^3=0\text{.}\)</span> But they are different, related, functions. They are in fact mutually inverse.</div> <div class="para" id="SECTIONinverse-functions-10-8">For example suppose we choose <span class="process-math">\(x=2\)</span> and use <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQUATIONInv1" missing or not unique]</code> to find <span class="process-math">\(y=8\text{.}\)</span> If we then take <span class="process-math">\(y=8\)</span> and use <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQUATIONInv2" missing or not unique]</code> we find that <span class="process-math">\(x=2\text{.}\)</span> That is, <span class="process-math">\(x(y)\)</span> has “undone” <span class="process-math">\(y(x)\)</span> for the single pair <span class="process-math">\((2,8)\text{.}\)</span> <a href="" class="xref" data-knowl="./knowl/xref/DRILLCubeRoot.html" title="Drill 14.48">Drill 14.48</a> asks you to show that it is true for every pair <span class="process-math">\((x, y(x))\text{.}\)</span> This “undoing” makes <span class="process-math">\(y(x)\)</span> and <span class="process-math">\(x(y)\)</span> a pair of mutually inverse functions.</div> <div class="para" id="SECTIONinverse-functions-10-9">But in function notation the variable (frequently <span class="process-math">\(x\)</span> or <span class="process-math">\(t\)</span>) is a placeholder. For example, each of <span class="process-math">\(y(x)=x^3,\)</span> <span class="process-math">\(y(t)=t^3\text{,}\)</span> <span class="process-math">\(f(\alpha)=\alpha^3\text{,}\)</span> or even <span class="process-math">\(f(\halmos)=\halmos^3\)</span> defines exactly the same function: The function which cubes its input. It doesn’t matter what we call the variable. It just holds a place in the formula that tells us what the input  is and what to do with it. Since it doesn’t matter what we call the variable we usually call it <span class="process-math">\(x\)</span> unless there is some compelling reason to use something else.</div> <div class="para" id="SECTIONinverse-functions-10-10">To avoid confusing variable names with function names we usually denote <span class="process-math">\(y(x)\)</span> as <span class="process-math">\(f(x)\text{.}\)</span> It’s inverse, <span class="process-math">\(x(y)\)</span> should probably be denoted as <span class="process-math">\(\inverse{f}(y)\text{.}\)</span>  But sadly, recognizing that the variable is just a placeholder in function notation we use the same variable name in both the function and it’s inverse. So we denote the inverse of <span class="process-math">\(f(x)\)</span> as <span class="process-math">\(\inverse{f}(x)\text{,}\)</span> even though it would probably make it easier for beginners to use <span class="process-math">\(\inverse{f}(y)\text{,}\)</span> as a reminder that both functions come from the same original relation.</div> <article class="exercise exercise-like" id="DRILLCubeRoot"><h5 class="heading">
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">14.48</span><span class="period">.</span>
+</h5>
+<div class="para" id="DRILLCubeRoot-1-1"> Prove that <span class="process-math">\(f(x)=x^3\)</span> and     <span class="process-math">\(\inverse{f}(x)=\sqrt[3]{x}\)</span> are mutually inverse by showing that they satisfy the conditions stated in <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONFunctionInverse.html" title="Definition 14.47: Inverse Functions">Definition 14.47</a>
+</div></article> <div class="para" id="SECTIONinverse-functions-10-12">The notation for inverse functions is not great. It can be very confusing, especially for beginners. Be careful with it.</div> <div class="para" id="SECTIONinverse-functions-10-13"><em class="alert">END OF DIGRESSION</em></div> <div class="para" id="SECTIONinverse-functions-10-14">END OF DIGRESSION</div></section><div class="para logical" id="SECTIONinverse-functions-11">
+<div class="para">Our next task is to show that if <span class="process-math">\(f(x)\)</span> is invertible and differentiable, then <span class="process-math">\(\inverse{f}\)</span> is also differentiable\aside{<span class="process-math">\(\inverse{f}\)</span> is obviously invertible}. We do this by showing that the limit</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\label{eq:InvFuncDerivLimit}
+\DD\left(\inverse{f}(x)\right)=\limit{h}{0}{\frac{\inverse{f}(x+h)-\inverse{f}(x)}{h}}
+\end{equation*}
+</div>
+<div class="para">exists.</div>
+</div>
+<div class="para" id="SECTIONinverse-functions-12">In general this is true but there is one exception that has to be addressed. When <span class="process-math">\(f\)</span> is differentiable at <span class="process-math">\(a\)</span> and <span class="process-math">\(f^\prime(a) = 0\)</span> then the limit in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQUATIONInvFuncDerivLimit" missing or not unique]</code> does not exist. Hence <span class="process-math">\(\inverse f\)</span> is not differentiable at <span class="process-math">\(f(a)\text{.}\)</span> More formally, we have the following lemma.</div>
+<article class="lemma theorem-like" id="LEMMAInvDerivAtZero"><h4 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">14.49</span><span class="period">.</span>
+</h4>
+<div class="para" id="LEMMAInvDerivAtZero-1">If  <span class="process-math">\(f\)</span> is an invertible function, <span class="process-math">\(f(a)=b\text{,}\)</span> <span class="process-math">\(f\)</span> is differentiable at <span class="process-math">\(x=a\text{,}\)</span> and <span class="process-math">\(f^\prime(a)=0\text{,}\)</span> then <span class="process-math">\(\inverse f\)</span> is not differentiable at  <span class="process-math">\(x=b\text{.}\)</span> That is <span class="process-math">\(\DD\left(\inverse f(b)\right)\)</span> does not exist.</div></article><div class="para" id="SECTIONinverse-functions-14">The following proof of this lemma is very challenging to read and understand for several reasons.</div>
+<div class="para" id="SECTIONinverse-functions-15">First, it is quite abstract. We don’t have a particular function to think about so we can’t simply write down formulas for the function and its inverse. Instead we have only the generic function, <span class="process-math">\(f\)</span> and its inverse <span class="process-math">\(\inverse{f}\text{,}\)</span> and we’ll need to remember what these symbols represent.</div>
+<div class="para" id="SECTIONinverse-functions-16">Second, we need to think about the functions <span class="process-math">\(f\)</span> and <span class="process-math">\(\inverse{f}\)</span> as well as their derivatives.</div>
+<div class="para" id="SECTIONinverse-functions-17">Third, instead of using the differential notation, <span class="process-math">\(\dfdx{f}{x}\)</span> that we’ve grown very comfortable with we’ll be using the less familiar Lagrange prime notation  and the operator notation we just introduced.</div>
+<div class="para" id="SECTIONinverse-functions-18">Finally, the nature of the problem forces us to mix these last two notations, using one here and the other there. This can make for difficult reading.</div>
+<div class="para" id="SECTIONinverse-functions-19">Read slowly. Remember that each symbol has meaning. Take time to understand that meaning and what each formula as a whole is telling you.</div>
+<div class="para logical" id="SECTIONinverse-functions-20">
+<div class="para">We include this proof in its full abstraction for two reasons:</div>
+<ol class="decimal">
+<li id="SECTIONinverse-functions-20-1-1"><div class="para" id="SECTIONinverse-functions-20-1-1-1">To be as precise and as rigorous and we can.</div></li>
+<li id="SECTIONinverse-functions-20-1-2"><div class="para" id="SECTIONinverse-functions-20-1-2-1">We want to give you practice with higher level abstract  reasoning in this (fairly) simple case.</div></li>
+</ol>
+</div>
+<div class="para" id="SECTIONinverse-functions-21">The strategy behind the following proof follows the same general scheme as the Sherlock Holmes Maxim that we referred to in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "PROBLEMMaximalTriangle" missing or not unique]</code>. We will eliminate the impossible so that “whatever remains, however improbable, must be the truth.”</div>
+<div class="para logical" id="SECTIONinverse-functions-22">
+<div class="para">There are two possibilities: Either the derivative of <span class="process-math">\(\inverse{f}(b)\)</span> exists or it does not exist. There are two steps:</div>
+<ol class="decimal">
+<li id="SECTIONinverse-functions-22-2-1"><div class="para" id="SECTIONinverse-functions-22-2-1-1">Assume that the derivative of <span class="process-math">\(\inverse{f}\)</span> does exist at <span class="process-math">\(x=b\)</span> and calculate what <span class="process-math">\(\DD\left(\inverse{f}(b)\right)\)</span> must be.</div></li>
+<li id="SECTIONinverse-functions-22-2-2"><div class="para" id="SECTIONinverse-functions-22-2-2-1">Show that our computed value is impossible. Then \foreign{\’a la} Holme’s Maxim the only possibility left will be that the derivative of <span class="process-math">\(\inverse{f}\)</span> does not exist at <span class="process-math">\(x=b\text{.}\)</span>
+</div></li>
+</ol>
+</div>
+<details id="SECTIONinverse-functions-23" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof"><div class="para logical" id="SECTIONinverse-functions-23-1">
+<div class="para">Assume that <span class="process-math">\(\inverse{f}\)</span> is differentiable\aside{We don’t really believe this assumption. Be sure you are very clear on this point. We make this assumption so that we can use it to derive an absurd result; a contradiction. If there are no errors in our reasoning then the only possible conclusion will be that this assumption is false: <span class="process-math">\(\inverse{f}\)</span> is not differentiable at <span class="process-math">\(x=b\text{.}\)</span>} at <span class="process-math">\(x=b\text{.}\)</span> Because <span class="process-math">\(f\)</span> and <span class="process-math">\(\inverse{f}\)</span> are mutually inverse we know that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f\left(\inverse{f}(x)\right)=x.
+\end{equation*}
+</div>
+<div class="para">Therefore</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\DD\left(f\left(\inverse{f}(x)\right)\right)=\DD\left(x\right).
+\end{equation*}
+</div>
+<div class="para">On the right we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\DD(x)=1.
+\end{equation*}
+</div>
+<div class="para">On the left apply the Chain Rule:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\label{eq:InvDeriv2}
+f^\prime\left(\inverse{f}(x)\right)\cdot\DD\left(\inverse{f}(x)\right)=1.
+\end{equation*}
+</div>
+<div class="para">But when <span class="process-math">\(x=b\)</span> we find that <span class="process-math">\(f^\prime\left(\inverse{f}(b)\right)=f^\prime\left(a\right)=0\text{,}\)</span> so that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0=\underbrace{f^\prime\left(\inverse{f}(b)\right)}_{=0}\cdot\DD\left(\inverse{f}(b)\right)=1
+\end{equation*}
+</div>
+<div class="para">or</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0=1
+\end{equation*}
+</div>
+<div class="para">which is ridiculous or in Holmes’ word, impossible. Therefore our assumption cannot true so <span class="process-math">\(\inverse{f}\)</span> is not differentiable at <span class="process-math">\(x=b\text{.}\)</span>
+</div>
+</div> <div class="para" id="SECTIONinverse-functions-23-2"><em class="alert"><span class="process-math">\(\halmos\)</span></em></div></article></details><div class="para" id="SECTIONinverse-functions-24">While valid and correct, this proof is not very enlightening.  A well chosen sketch would be much more convincing, if less rigorous.</div>
+<article class="problem example-like" id="SECTIONinverse-functions-25"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">14.50</span><span class="period">.</span>
+</h4>
+<div class="para" id="SECTIONinverse-functions-25-1-1">Choose a function whose derivative is equal to zero at some point and sketch the graph of your function and its inverse on the same set of axes. Be sure to include the point where the derivative is zero. Use your graph to explain why the derivative of the inverse of your function does not exist.</div></article><div class="para" id="SECTIONinverse-functions-26">We now understand what conditions are necessary for an arbitrary function, <span class="process-math">\(f(x)\text{,}\)</span> to have a differentiable inverse.</div>
+<div class="para logical" id="SECTIONinverse-functions-27">
+<div class="para">Also, from <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQUATIONInvDeriv2" missing or not unique]</code> we know what the derivative of the inverse will be if it exists:</div>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\DD\left(\inverse{f}(x)\right)=\frac{1}{f^\prime\left(\inverse{f}(x)\right)}.
+\end{equation*}
+</div>
+</div>
+<article class="exercise exercise-like" id="SECTIONinverse-functions-28"><h4 class="heading">
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">14.51</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="SECTIONinverse-functions-28-1-1">
+<div class="para">Let <span class="process-math">\(y=\inverse{f}(x)\)</span> and explain how the formula above is equivalent to</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dfdx{y}{x}=\frac{1}{\dfdx{x}{y}}\label{eq:InvDeriv}
+\end{equation*}
+</div>
+</div></article><div class="para" id="SECTIONinverse-functions-29">The only thing left is to show that under the conditions on <span class="process-math">\(f\)</span> in <a href="" class="xref" data-knowl="./knowl/xref/LEMMAInvDerivAtZero.html" title="Lemma 14.49">~ 14.49</a> the derivative (that is, the limit which defines the derivative) of the inverse does in fact exist.</div>
+<article class="theorem theorem-like" id="THEOREMDerivInvFunc"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">14.52</span><span class="period">.</span><span class="space"> </span><span class="title">The Derivative of Inverse Functions.</span>
+</h4>
+<div class="para logical" id="THEOREMDerivInvFunc-2">
+<div class="para">Suppose that \begin{enumerate} \begin{multicols}{2} \item <span class="process-math">\(f\)</span> is differentiable at <span class="process-math">\(x=a\text{,}\)</span> \item <span class="process-math">\(f(a)=b\text{,}\)</span> \item <span class="process-math">\(f^\prime(a)\neq0\text{,}\)</span> \item <span class="process-math">\(\inverse{f}\)</span> is continuous at\aside{In fact, this follows from the continuity of <span class="process-math">\(f\)</span> at <span class="process-math">\(x=a\text{.}\)</span> We do not have all of the tools necessary to prove this so we must include it in the assumptions of our theorem.} <span class="process-math">\(x=b\text{.}\)</span> \end{multicols} \end{enumerate} Then the inverse of <span class="process-math">\(f\)</span> is differentiable at <span class="process-math">\(x=b\)</span> and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\DD\left(\inverse{f}(b)\right)=\frac{1}{f^\prime\left(\inverse{f}(b)\right)}.
+\end{equation*}
+</div>
+</div></article><div class="para" id="SECTIONinverse-functions-31">Reading and understanding the notation in <a href="" class="xref" data-knowl="./knowl/xref/THEOREMDerivInvFunc.html" title="Theorem 14.52: The Derivative of Inverse Functions">Theorem 14.52</a> presents the same difficulties we saw in the proof of <a href="" class="xref" data-knowl="./knowl/xref/LEMMAInvDerivAtZero.html" title="Lemma 14.49">~ 14.49</a>. Read it carefully.  Be patient with yourself and do not rush.</div>
+<aside class="aside aside-like" id="SECTIONinverse-functions-32"><h4 class="heading"><span class="title">Note to self.</span></h4>
+<div class="para" id="SECTIONinverse-functions-32-2">I think something is got lost in translation here. The formula <span class="process-math">\((a+k)-a\right\)</span> was in the title of this proof.</div></aside><details id="SECTIONinverse-functions-33" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="title">Proof of Theorem 14.52.</span></h4></summary><article class="hiddenproof"> <div class="para logical" id="SECTIONinverse-functions-33-2">
+<div class="para">We want to show that the limit</div>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\DD\left(\inverse{f}(b)\right)=\limit{h}{0}{\frac{\inverse{f}(b+h)-\inverse{f}(b)}{h}}=\frac{1}{f^\prime\left(\inverse{f}(b)\right)}.
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(f(a)=b\)</span> we know that <span class="process-math">\(\textcolor{red}{\inverse{f}(b)=a}\)</span> so that \begin{align*} \limit{h}{0}{\frac{\inverse{f}(b+h)-\textcolor{red}{\inverse{f}(b)}}{h}} \amp = \limit{h}{0}{\frac{\inverse{f}(b+h)-\textcolor{red}{a}}{h}} \intertext{ Observe that if <span class="process-math">\(b+h\)</span> is in the domain of <span class="process-math">\(\inverse{f}\)</span> then it is in the range of <span class="process-math">\(f\text{.}\)</span> Thus there is some number in the domain   of <span class="process-math">\(f\)</span> (for convenience we’ll call it <span class="process-math">\(a+k\)</span>) such that <span class="process-math">\(\textcolor{blue}{b+h}=\textcolor{blue}{f(a+k)}\text{.}\)</span> Thus} \limit{h}{0}{\frac{\inverse{f}(\textcolor{blue}{b+h})-\inverse{f}(b)}{h}} \amp = \limit{h}{0} {\frac{\inverse{f}(\textcolor{blue}{f(a+k)})-a}{h}}.\\ \intertext{Again since <span class="process-math">\(f\)</span> and <span class="process-math">\(\inverse{f}\)</span> are mutually inverse they “undo”y each other, so  <span class="process-math">\(\inverse{f}(f(a+k))=a+k\)</span> so that } \limit{h}{0}{\frac{\inverse{f}(b+h)-\inverse{f}(b)}{h}}       \amp = \limit{h}{0}{\frac{k}{h}}.\\ \intertext{ Solving <span class="process-math">\({b+h=f(a+k)}\)</span> for <span class="process-math">\(h\)</span> gives <span class="process-math">\(\textcolor{blue}{h}=\textcolor{blue}{f(a+k)-b}\)</span> so  } \limit{h}{0}{\frac{k}{h}}\amp = \limit{h}{0}{\frac{k}{\textcolor{blue}{f(a+k)-b}}}\\ \intertext{and since <span class="process-math">\(b=f(a)\)</span> we have} \amp = \limit{h}{0}{\frac{k}{f(a+k)-f(a)}}\\ \amp = \limit{h}{0} {\frac{1} {\frac{f(a+k)-f(a)}{k}}}.\\ \amp =  \frac{1} {\limit{h}{0}{\frac{f(a+k)-f(a)}{k}}}.\\ \end{align*} The expression <span class="process-math">\(\limit{h}{0}{\frac{f(a+k)-f(a)}{k}}\)</span> would be <span class="process-math">\(f^\prime(a)\)</span> if only we had <span class="process-math">\(k\rightarrow0\)</span> instead of <span class="process-math">\(h\rightarrow0\text{.}\)</span>  What we need to show now is that if <span class="process-math">\(h\rightarrow0\)</span> then <span class="process-math">\(k\rightarrow0\text{.}\)</span> Then we could write</div>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\label{eq:InvProof}
+\DD\left(\inverse{f}(b)\right) = \frac{1}
+{\limit{k}{0}{\frac{f(a+k)-f(a)}{k}}}=\frac{1}{f^\prime(a)}
+\end{equation*}
+</div>
+<div class="para">and our proof would be complete Written a little more carefully, what we need to show is that <span class="process-math">\(\tlimit{h}{0}{k}=0\text{.}\)</span> Recall that <span class="process-math">\(a=\inverse{f}(b)\text{,}\)</span> and that <span class="process-math">\(a+k=\inverse{f}(b+h)\)</span> so we need to show  that</div>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\tlimit{h}{0}{k}=\limit{h}{0}{\left[(a+k)-a\right]}=  \tlimit{h}{0}{\left[\inverse{f}(b+h)-\inverse{f}(b)\right]} = 0
+\end{equation*}
+</div>
+<div class="para">or But we assumed that <span class="process-math">\(\inverse{f}\)</span> is continuous at <span class="process-math">\(x=b\)</span> which means that</div>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\tlimit{h}{0}{\left[\inverse{f}(b+h)-\inverse{f}(b)\right]}=0,
+\end{equation*}
+</div>
+<div class="para">and the proof is complete. One last point: On the left side of <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "FORMULAeq:InvProof" missing or not unique]</code> the variable is <span class="process-math">\(b\)</span> and on the right it is <span class="process-math">\(a\text{.}\)</span> While this is not strictly wrong it is a more useful theorem if we state it in terms of <span class="process-math">\(b\)</span> alone. Since <span class="process-math">\(f(a)=b\)</span> we see that <span class="process-math">\(\inverse{f}(b)=a\)</span> so</div>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\DD\left(\inverse{f}(b)\right) =\frac{1}{f^\prime(\inverse{f}(b))}
+\end{equation*}
+</div>
+<div class="para">and the proof is complete.</div>
+</div> <div class="para" id="SECTIONinverse-functions-33-3"><em class="alert"><span class="process-math">\(\halmos\)</span></em></div> <div class="para" id="SECTIONinverse-functions-33-4"><em class="alert"><span class="process-math">\(\halmos\)</span></em></div></article></details><div class="para" id="SECTIONinverse-functions-34">Using <a href="" class="xref" data-knowl="./knowl/xref/THEOREMDerivInvFunc.html" title="Theorem 14.52: The Derivative of Inverse Functions">~ 14.52</a> we can now show that the derivatives of the inverse trigonometric functions and the natural logarithm are exactly what we expect them to be. The difference is that now there is no uncertainty or vagueness in our foundations. No modern Bishop Berkeley can step in and sew doubt.</div>
+<article class="example example-like" id="SECTIONinverse-functions-35"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">14.53</span><span class="period">.</span><span class="space"> </span><span class="title">The Derivative of the Inverse Sine.</span>
+</h4> <div class="para" id="SECTIONinverse-functions-35-2">Suppose <span class="process-math">\(f(x)=\sin(x).\)</span> Then <span class="process-math">\(\inverse{f}(x)=\inverse{\sin}(x)\)</span> so \begin{align*} \DD\left(\inverse{f}(x)\right) =     \DD\left(\inverse\sin(x)\right) \amp = \frac{1}{\textcolor{red}{f^\prime}(\textcolor{blue}{\inverse{f}}(x))}\\ \amp = \frac{1}{\textcolor{red}{\cos}(\textcolor{blue}{\inverse\sin}(x))}\\ \DD\left(\inverse{f}(x)\right) \amp =  \frac{1}{\sqrt{1-x^2}}. \end{align*}</div></article><article class="problem example-like" id="SECTIONinverse-functions-36"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">14.54</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="SECTIONinverse-functions-36-1"><div class="para" id="SECTIONinverse-functions-36-1-1">Use <a href="" class="xref" data-knowl="./knowl/xref/THEOREMDerivInvFunc.html" title="Theorem 14.52: The Derivative of Inverse Functions">~ 14.52</a> to show that each of the following differentiation rules is correct:</div></div>
+<article class="task exercise-like" id="SECTIONinverse-functions-36-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="SECTIONinverse-functions-36-2-1-1"><span class="process-math">\(\DD\left(\inverse{\cos}(x)\right) = \frac{-1}{\sqrt{1-x^2}}\)</span></div></article><article class="task exercise-like" id="SECTIONinverse-functions-36-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="SECTIONinverse-functions-36-3-1-1"><span class="process-math">\(\DD\left(\inverse{\tan}(x)\right) = \frac{1}{1+x^2}\)</span></div></article><article class="task exercise-like" id="SECTIONinverse-functions-36-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="SECTIONinverse-functions-36-4-1-1"><span class="process-math">\(\DD\left(\inverse{\cot}(x)\right) = \frac{-1}{1+x^2}\)</span></div></article><article class="task exercise-like" id="SECTIONinverse-functions-36-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="SECTIONinverse-functions-36-5-1-1"><span class="process-math">\(\DD\left(\inverse{\sec}(x)\right) =
+\frac{1}{\abs{x}\sqrt{x^2-1}}\)</span></div></article><article class="task exercise-like" id="SECTIONinverse-functions-36-6"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<div class="para" id="SECTIONinverse-functions-36-6-1-1"><span class="process-math">\(\DD\left(\inverse{\csc}(x)\right) =
+\frac{-1}{\abs{x}\sqrt{x^2-1}}\)</span></div></article><article class="task exercise-like" id="SECTIONinverse-functions-36-7"><h5 class="heading"><span class="codenumber">(f)</span></h5>
+<div class="para" id="SECTIONinverse-functions-36-7-1-1"><span class="process-math">\(\DD\left(\inverse{\ln}(x)\right) = e^x\)</span></div></article></article><div class="para" id="SECTIONinverse-functions-37">Wait a minute! Did we forget one? What about the natural exponential function?  Don’t we also have to show that <span class="process-math">\(\DD\left(e^x\right)=e^x\text{?}\)</span>
+</div>
+<article class="exercise exercise-like" id="SECTIONinverse-functions-38"><h4 class="heading">
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">14.55</span><span class="period">.</span>
+</h4>
+<div class="para" id="SECTIONinverse-functions-38-1-1">Look back at <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONnatural-exponential-ivp.html" title="Definition 8.3: The Natural Exponential Function">~ 8.3</a> and explain why it is not necessary to use limits to show that <span class="process-math">\(\DD\left(e^x\right)=e^x\text{.}\)</span>
+</div></article></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="CHAPTERWhatsWrong.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="CHAPTERFDT-Redux.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>
