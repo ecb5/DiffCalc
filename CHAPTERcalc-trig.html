@@ -191,7 +191,8 @@ window.MathJax = {
 \def\partialfxn#1#2#3{\frac{\partial^{#3}{#1}}{\partial{#2}^{#3}}} 
 \def\dfdxn#1#2#3{\frac{\text{d}^{#3}{#1}}{\text{d}{#2}^{#3}}} 
 
-\def\dfdxat#1#2#3{\eval{\dfdx{#1}{#2}}{#2}{#3}}
+
+\def\dfdxat#1#2#3{\eval{\dfdx{#1}{#2}}{#2=#3}{}}
 
 \def\limit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}#3}}
 \def\tlimit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}}#3}
@@ -376,7 +377,7 @@ window.MathJax = {
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html" class="internal"><span class="codenumber">9</span> <span class="title">Optimization: Going to Extremes</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SECTIONintroduction" class="internal"><span class="codenumber">9.1</span> <span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SECTIONintroduction" class="internal"><span class="codenumber">9.1</span> <span class="title">Introduction: Fermat’s Theorem</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SECTIONfive-simil-probl" class="internal"><span class="codenumber">9.2</span> <span class="title">Preliminaries: Some Simple Optimizations</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SECTIONrefl-refr-rainb" class="internal"><span class="codenumber">9.3</span> <span class="title">Reflections, Refractions, and Rainbows</span></a></div>
@@ -388,7 +389,7 @@ window.MathJax = {
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSECTIONDoubleRainbows" class="internal"><span class="codenumber">9.3.5</span> <span class="title">Double Rainbows</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SECTIONmore-optimal-squares" class="internal"><span class="codenumber">9.4</span> <span class="title">Global vs. Local Extrema</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SECTIONGlobalVsLocalExtrema" class="internal"><span class="codenumber">9.4</span> <span class="title">Global vs. Local Extrema</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSECTIONoptim-abstr-probl" class="internal"><span class="codenumber">9.5</span> <span class="title">Optimization, the Abstract Problem</span></a></div>
 <ul class="structural toc-item-list">
@@ -404,14 +405,23 @@ window.MathJax = {
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SECTIONoptim-probl" class="internal"><span class="codenumber">9.7</span> <span class="title">Optimization Problems</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSECTIONOptSecondSolution" class="internal"><span class="codenumber">9.7.1</span> <span class="title">Second Solution:</span></a></div></li></ul>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSECTIONPageOfText" class="internal"><span class="codenumber">9.7.1</span> <span class="title">Two Ways to Optimize</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSUBSECTIONFirstSolution" class="internal"><span class="codenumber">9.7.1.1</span> <span class="title">First Solution:</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSUBSECTIONSecondSolution" class="internal"><span class="codenumber">9.7.1.2</span> <span class="title">Second Solution</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSECTIONVarOptProbs" class="internal"><span class="codenumber">9.7.2</span> <span class="title">Selected Optimization Problems</span></a></div></li>
+</ul>
 </li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="CHAPTERPTshape-things.html" class="internal"><span class="codenumber">10</span> <span class="title">Graphing with Calculus</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTshape-things.html#SECTIONgraph-with-form" class="internal"><span class="codenumber">10.1</span> <span class="title">Graphing with a Formula for \boldmath <span class="process-math">\(y(x)\)</span></span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTshape-things.html#SECTIONgraph-with-form" class="internal"><span class="codenumber">10.1</span> <span class="title">Graphing with a Formula for  <span class="process-math">\(y(x)\)</span></span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTshape-things.html#SECTIONgraph-without-form" class="internal"><span class="codenumber">10.2</span> <span class="title">Graphing Without Formulas</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="CHAPTERPTshape-things.html#SECTIONGraphingWithDeriv" class="internal"><span class="codenumber">10.3</span> <span class="title">Graphing with a Formula for  <span class="process-math">\(\dfdx{y}{x}\)</span></span></a></div>
@@ -1815,7 +1825,7 @@ x)}_{=z})}\right),
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">6.65</span><span class="period">.</span>
 </h4>
 <div class="para" id="SECTIONinverse-tan-and-cot-19-1-1">Find all solutions of <span class="process-math">\(\tan(x)=1\)</span> and <span class="process-math">\(x=\inverse\tan\left(1\right)\text{.}\)</span> Do they have the same set of solutions?</div>
-<div class="solutions"><details id="SECTIONinverse-tan-and-cot-19-2" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="SECTIONinverse-tan-and-cot-19-2-1">Obviously, they do not. Otherwise we wouldn’t have asked the question. What is the difference between the two sets of solutions?</div></div></details></div></article><section class="paragraphs" id="DIGRESSIONTanNoInv"><h4 class="heading"><span class="title">DIGRESSION: The Tangent Function Has No Inverse.</span></h4> <div class="para logical" id="DIGRESSIONTanNoInv-2">
+<div class="solutions"><details id="SECTIONinverse-tan-and-cot-19-2" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="SECTIONinverse-tan-and-cot-19-2-1">Obviously, they do not. Otherwise we wouldn’t have asked the question. What is the difference between the two sets of solutions?</div></div></details></div></article><section class="paragraphs" id="DIGRESSIONTangentHasNoInverse"><h4 class="heading"><span class="title">DIGRESSION: The Tangent Function Has No Inverse.</span></h4> <div class="para logical" id="DIGRESSIONTangentHasNoInverse-2">
 <div class="para">The function <span class="process-math">\(\tan(x)\)</span> is not invertible. This is because, by custom, its domain is all real numbers (except <span class="process-math">\(\frac\pi2, \pm\pi,
 \pm2\pi, \pm3\pi, \cdots.\)</span>) . Thus it is <em class="alert">not</em> the same function as</div>
 <div class="displaymath process-math">
@@ -1825,7 +1835,7 @@ x\lt \frac{\pi}{2}.
 \end{equation*}
 </div>
 <div class="para">A function has two parts: (1) The set of inputs (domain) and (2) the rule associating input with output. Most of the time the domain is the set of all real numbers (<span class="process-math">\(\RR\)</span>), so we don’t bother to explicitly state that the domain of, say <span class="process-math">\(f(x)=x^2\)</span> is <span class="process-math">\(\RR\)</span> . Unless otherwise specified we simply assume that it is.  Properly speaking, we should always specify the domain of our functions, but typically we don’t. The custom is to assume that the domain of a function is <span class="process-math">\(\RR\)</span> unless otherwise stated.  Thus the function, <span class="process-math">\(\tan(x)\)</span> cannot be inverted because on its domain (<span class="process-math">\(\RR\)</span>) it has more than one branch.</div>
-</div> <div class="para" id="DIGRESSIONTanNoInv-3">Because we both want and need an inverse tangent function we restrict the range of <span class="process-math">\(\inverse\tan(x)\text{.}\)</span> But this is the inverse of <span class="process-math">\(\tan(x)\text{,}\)</span> with domain <span class="process-math">\(-\frac{\pi}{2}\lt x\lt \frac{\pi}{2}\text{,}\)</span> which has only one branch. It is <em class="alert">not</em> the inverse of <span class="process-math">\(\tan(x)\text{,}\)</span> because it has too many branches.</div> <div class="para" id="DIGRESSIONTanNoInv-4">To use our notation as it was intended to be used we should say that <span class="process-math">\(\inverse\tan(x)\)</span> is the inverse of <span class="process-math">\(\tan(x)\text{,}\)</span> with domain <span class="process-math">\(-\frac{\pi}{2}\lt x\lt \frac{\pi}{2}\text{,}\)</span> which is true. But instead, we typically just say that it is the inverse of <span class="process-math">\(\tan(x)\text{,}\)</span> which strictly speaking, is not true.</div> <div class="para" id="DIGRESSIONTanNoInv-5">When we (mathematicians) talk amongst ourselves this is not a problem. We all understand what we mean. But it can be very confusing for students who usually have a more tenuous grasp of these distinctions.  It is a bit unfair of us (mathematicians) to speak to students in what amount to incomplete sentences, but we tend to do it anyway, mostly out of habit.</div> <div class="para" id="DIGRESSIONTanNoInv-6">We (the authors) apologize.</div> <div class="para" id="DIGRESSIONTanNoInv-7">END OF DIGRESSION</div></section><div class="para logical" id="SECTIONinverse-tan-and-cot-21">
+</div> <div class="para" id="DIGRESSIONTangentHasNoInverse-3">Because we both want and need an inverse tangent function we restrict the range of <span class="process-math">\(\inverse\tan(x)\text{.}\)</span> But this is the inverse of <span class="process-math">\(\tan(x)\text{,}\)</span> with domain <span class="process-math">\(-\frac{\pi}{2}\lt x\lt \frac{\pi}{2}\text{,}\)</span> which has only one branch. It is <em class="alert">not</em> the inverse of <span class="process-math">\(\tan(x)\text{,}\)</span> because it has too many branches.</div> <div class="para" id="DIGRESSIONTangentHasNoInverse-4">To use our notation as it was intended to be used we should say that <span class="process-math">\(\inverse\tan(x)\)</span> is the inverse of <span class="process-math">\(\tan(x)\text{,}\)</span> with domain <span class="process-math">\(-\frac{\pi}{2}\lt x\lt \frac{\pi}{2}\text{,}\)</span> which is true. But instead, we typically just say that it is the inverse of <span class="process-math">\(\tan(x)\text{,}\)</span> which strictly speaking, is not true.</div> <div class="para" id="DIGRESSIONTangentHasNoInverse-5">When we (mathematicians) talk amongst ourselves this is not a problem. We all understand what we mean. But it can be very confusing for students who usually have a more tenuous grasp of these distinctions.  It is a bit unfair of us (mathematicians) to speak to students in what amount to incomplete sentences, but we tend to do it anyway, mostly out of habit.</div> <div class="para" id="DIGRESSIONTangentHasNoInverse-6">We (the authors) apologize.</div> <div class="para" id="DIGRESSIONTangentHasNoInverse-7">END OF DIGRESSION</div></section><div class="para logical" id="SECTIONinverse-tan-and-cot-21">
 <div class="para">The definition of the arccotangent is similar to the definition of the arctangent: If <span class="process-math">\(x\)</span> is the cotangent of <span class="process-math">\(y\text{,}\)</span> <span class="process-math">\(x=\cot(y)\text{,}\)</span> then we say that <span class="process-math">\(y\)</span> is the <dfn class="terminology">arccotangent</dfn> of <span class="process-math">\(x\text{,}\)</span> and write</div>
 <div class="displaymath process-math">
 \begin{equation*}

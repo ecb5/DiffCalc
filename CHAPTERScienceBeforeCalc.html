@@ -191,7 +191,8 @@ window.MathJax = {
 \def\partialfxn#1#2#3{\frac{\partial^{#3}{#1}}{\partial{#2}^{#3}}} 
 \def\dfdxn#1#2#3{\frac{\text{d}^{#3}{#1}}{\text{d}{#2}^{#3}}} 
 
-\def\dfdxat#1#2#3{\eval{\dfdx{#1}{#2}}{#2}{#3}}
+
+\def\dfdxat#1#2#3{\eval{\dfdx{#1}{#2}}{#2=#3}{}}
 
 \def\limit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}#3}}
 \def\tlimit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}}#3}
@@ -376,7 +377,7 @@ window.MathJax = {
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html" class="internal"><span class="codenumber">9</span> <span class="title">Optimization: Going to Extremes</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SECTIONintroduction" class="internal"><span class="codenumber">9.1</span> <span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SECTIONintroduction" class="internal"><span class="codenumber">9.1</span> <span class="title">Introduction: Fermat’s Theorem</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SECTIONfive-simil-probl" class="internal"><span class="codenumber">9.2</span> <span class="title">Preliminaries: Some Simple Optimizations</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SECTIONrefl-refr-rainb" class="internal"><span class="codenumber">9.3</span> <span class="title">Reflections, Refractions, and Rainbows</span></a></div>
@@ -388,7 +389,7 @@ window.MathJax = {
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSECTIONDoubleRainbows" class="internal"><span class="codenumber">9.3.5</span> <span class="title">Double Rainbows</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SECTIONmore-optimal-squares" class="internal"><span class="codenumber">9.4</span> <span class="title">Global vs. Local Extrema</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SECTIONGlobalVsLocalExtrema" class="internal"><span class="codenumber">9.4</span> <span class="title">Global vs. Local Extrema</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSECTIONoptim-abstr-probl" class="internal"><span class="codenumber">9.5</span> <span class="title">Optimization, the Abstract Problem</span></a></div>
 <ul class="structural toc-item-list">
@@ -404,14 +405,23 @@ window.MathJax = {
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SECTIONoptim-probl" class="internal"><span class="codenumber">9.7</span> <span class="title">Optimization Problems</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSECTIONOptSecondSolution" class="internal"><span class="codenumber">9.7.1</span> <span class="title">Second Solution:</span></a></div></li></ul>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSECTIONPageOfText" class="internal"><span class="codenumber">9.7.1</span> <span class="title">Two Ways to Optimize</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSUBSECTIONFirstSolution" class="internal"><span class="codenumber">9.7.1.1</span> <span class="title">First Solution:</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSUBSECTIONSecondSolution" class="internal"><span class="codenumber">9.7.1.2</span> <span class="title">Second Solution</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSECTIONVarOptProbs" class="internal"><span class="codenumber">9.7.2</span> <span class="title">Selected Optimization Problems</span></a></div></li>
+</ul>
 </li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="CHAPTERPTshape-things.html" class="internal"><span class="codenumber">10</span> <span class="title">Graphing with Calculus</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTshape-things.html#SECTIONgraph-with-form" class="internal"><span class="codenumber">10.1</span> <span class="title">Graphing with a Formula for \boldmath <span class="process-math">\(y(x)\)</span></span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTshape-things.html#SECTIONgraph-with-form" class="internal"><span class="codenumber">10.1</span> <span class="title">Graphing with a Formula for  <span class="process-math">\(y(x)\)</span></span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTshape-things.html#SECTIONgraph-without-form" class="internal"><span class="codenumber">10.2</span> <span class="title">Graphing Without Formulas</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="CHAPTERPTshape-things.html#SECTIONGraphingWithDeriv" class="internal"><span class="codenumber">10.3</span> <span class="title">Graphing with a Formula for  <span class="process-math">\(\dfdx{y}{x}\)</span></span></a></div>
@@ -592,18 +602,18 @@ window.MathJax = {
 <div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/images/ReflectingMirror2.png" class="contained"></div>
 <div class="para" id="sec-laziness-nature-11">Next we reflect <span class="process-math">\(B_R\)</span> back across <span class="process-math">\(m\)</span> so that it falls onto <span class="process-math">\(B\text{,}\)</span> and we reflect those portions of the solid and dotted paths that are below line <span class="process-math">\(m\text{,}\)</span> in the same way.</div>
 <div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/images/ReflectingMirror3.png" class="contained"></div>
-<article class="problem example-like" id="sec-laziness-nature-13"><h4 class="heading">
+<article class="problem example-like" id="DRILLReflectingMirror"><h4 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">3.3</span><span class="period">.</span>
 </h4>
-<div class="introduction" id="sec-laziness-nature-13-1">
-<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/ReflectingMirror7.png" class="contained"></div> <div class="para" id="sec-laziness-nature-13-1-2">Suppose we label the angles in the previous diagram as follows:</div>
+<div class="introduction" id="DRILLReflectingMirror-1">
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/ReflectingMirror7.png" class="contained"></div> <div class="para" id="DRILLReflectingMirror-1-2">Suppose we label the angles in the previous diagram as follows:</div>
 </div>
-<article class="task exercise-like" id="sec-laziness-nature-13-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="sec-laziness-nature-13-2-1-1">Explain why <span class="process-math">\(\angle\gamma=\angle\beta\text{.}\)</span>
-</div></article><article class="task exercise-like" id="sec-laziness-nature-13-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="sec-laziness-nature-13-3-1-1">Explain why <span class="process-math">\(\angle\gamma=\angle\alpha\text{.}\)</span>
-</div></article><article class="task exercise-like" id="sec-laziness-nature-13-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<div class="para" id="sec-laziness-nature-13-4-1-1">And finally, conclude that <span class="process-math">\(\angle\alpha=\angle\beta\text{.}\)</span>
+<article class="task exercise-like" id="DRILLReflectingMirror-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="DRILLReflectingMirror-2-1-1">Explain why <span class="process-math">\(\angle\gamma=\angle\beta\text{.}\)</span>
+</div></article><article class="task exercise-like" id="DRILLReflectingMirror-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="DRILLReflectingMirror-3-1-1">Explain why <span class="process-math">\(\angle\gamma=\angle\alpha\text{.}\)</span>
+</div></article><article class="task exercise-like" id="DRILLReflectingMirror-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="DRILLReflectingMirror-4-1-1">And finally, conclude that <span class="process-math">\(\angle\alpha=\angle\beta\text{.}\)</span>
 </div></article></article><div class="para" id="sec-laziness-nature-14">Thus the angle of incidence (<span class="process-math">\(\alpha\)</span>) will equal the angle of reflection (<span class="process-math">\(\beta\)</span>) provided light adheres to the <em class="emphasis">Nature is Lazy</em> principle and really does travel by the shortest possible path.</div>
 <article class="problem example-like" id="sec-laziness-nature-15"><h4 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">3.4</span><span class="period">.</span>

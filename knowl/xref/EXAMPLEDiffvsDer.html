@@ -12,23 +12,23 @@
 </head>
 <body class="ignore-math">
 <article class="example example-like"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">9.13</span><span class="period">.</span><span class="space"> </span><span class="title">Differentials vs. Derivatives.</span>
-</h4> <div class="para">But take a moment to consider this. Is it clear to you that there must be such a maximal rectangle?  If so then, as before, setting the derivative of the objective function equal to zero and solving for the variable will provide all of the values of the variable where the maximal rectangle might occur. If we’re lucky there will only be a few such and we can check them one at a time.</div> <div class="para logical">
-<div class="para">Finding the objective function is easy. The area, <span class="process-math">\(A\text{,}\)</span> of any rectangle is its length, <span class="process-math">\(l\text{,}\)</span> times its width, <span class="process-math">\(w\text{,}\)</span> so</div>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">9.12</span><span class="period">.</span><span class="space"> </span><span class="title">Differentials vs. Derivatives.</span>
+</h4> <div class="para">Take a moment to consider <a href="" class="xref" data-knowl="./knowl/xref/PROBLEMEllipseDist.html" title="Problem 9.10">Problem 9.10</a>. Is it clear to you that there must be such a maximal rectangle?  If so then, as before, setting the derivative of the objective function equal to zero and solving for the variable will provide all of the values of the variable where the maximal rectangle might occur. If we’re lucky there will only be a few such and we can check them one at a time.</div> <div class="para logical">
+<div class="para">Finding the objective function is easy. The area <span class="process-math">\(A\text{,}\)</span> of any rectangle is its length, <span class="process-math">\(l\text{,}\)</span> times its width, <span class="process-math">\(w\text{,}\)</span> so</div>
 <div class="displaymath process-math">
-\begin{equation*}
-A=lw\label{eq:SquareObjFun}
-\end{equation*}
+\begin{equation}
+A=lw\tag{9.10}
+\end{equation}
 </div>
 <div class="para">is the objective function.</div>
 </div> <div class="para logical">
 <div class="para">The perimeter, <span class="process-math">\(P\)</span> is</div>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-P=2l +2w\label{eq:SquareConst}
-\end{equation*}
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQUATIONSquareConst.html">
+\begin{equation}
+P=2l +2w\tag{9.11}
+\end{equation}
 </div>
-<div class="para">and is constrained to be a constant (fixed) value so <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQSquareConst" missing or not unique]</code>) is the constraint. Throughout this example keep in mind that <span class="process-math">\(P\)</span> is a fixed constant, not a function of <span class="process-math">\(l\)</span> and <span class="process-math">\(w\text{.}\)</span>
+<div class="para">and is constrained to be a constant (fixed) value so <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONSquareConst.html" title="Equation 9.11">equation (9.11)</a> is the constraint. Throughout this example keep in mind that <span class="process-math">\(P\)</span> is a fixed constant, not a function of <span class="process-math">\(l\)</span> and <span class="process-math">\(w\text{.}\)</span>
 </div>
 </div> <div class="para logical">
 <div class="para">At this point we can complete the problem using Calculus in either of two equivalent ways.</div>
@@ -74,7 +74,7 @@ A(w)=\frac12(P-2w)\cdot w = \frac12(Pw-w^2).
 <div class="para">Proceeding, we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\dfdx{A}{w}=\dfdx {w}\left(\frac12(Pw-2w^2)\right)=\frac12(P-4w)=0
+\dfdx{A}{w}=\dfdx{\left(\frac12(Pw-2w^2)\right)}{w}=\frac12(P-4w)=0
 \end{equation*}
 </div>
 <div class="para">so <span class="process-math">\(w=\frac{P}{4}\text{.}\)</span> Putting this back into our constraint gives <span class="process-math">\(P=2\cdot\frac{P}{4}+2l\)</span> we see that <span class="process-math">\(l\)</span> is also equal to <span class="process-math">\(\frac{P}{4}\text{.}\)</span> Since <span class="process-math">\(l=w=\frac{P}{4}\)</span> the square encloses the most area.</div>
