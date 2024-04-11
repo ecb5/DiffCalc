@@ -64,8 +64,9 @@
   \right\}
 }
 
-\def\absALT#1{\rule[-.7ex]{1pt}{5ex}\hskip2pt#1\hskip2pt\llap{\rule[-.7ex]{1pt}{5ex}}} 
+<!-- \def\absALT#1{\rule[-.7ex]{1pt}{5ex}\hskip2pt#1\hskip2pt\llap{\rule[-.7ex]{1pt}{5ex}}}  -->
 
+\def\lhopeq{\stackrel{L'H}{=}}
 
 \def\sech{{\rm{}sech}{}}
 \def\csch{{\rm{}csch}{}}
@@ -93,6 +94,10 @@
 <!-- \def\bigevallt#1#2#3{\left.\tallstrut{}#1\right|_{#2<#3}} -->
 <!-- \def\evalgt#1#2#3{\left.#1\right|_{#2>#3}} -->
 <!-- \def\bigevalgt#1#2#3{\left.\tallstrut{}#1\right|_{#2>#3}} -->
+
+
+
+
 \def\inverse#1{#1^{-1}}
 <!-- \newcommand{\N}{\mathbb N} -->
 <!-- \newcommand{\Z}{\mathbb Z} -->
@@ -105,6 +110,8 @@
 \def\dfdxn#1#2#3{\frac{\text{d}^{#3}{#1}}{\text{d}{#2}^{#3}}} 
 
 <!-- \def\dfdxat#1#2#3{\eval{\dfdx{#1}{#2}}{#2}{#3}} -->
+\def\limitatinf#1#2{\limit{#1}{\infty}{#2}}
+\def\limitatninf#1#2{\limit{#1}{-\infty}{#2}}
 \def\dfdxat#1#2#3{\eval{\dfdx{#1}{#2}}{#2=#3}{}}
 
 \def\limit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}#3}}%display style

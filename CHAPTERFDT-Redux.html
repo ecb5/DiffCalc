@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>The First Derivative Test, Redux</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Differential Calculus">
+<meta property="book:author" content="Eugene Boman">
+<meta property="book:author" content="Robert Rogers">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.33/pretext_search.js"></script><link href="https://pretextbook.org/css/0.83/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.33</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.33/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.33/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.33/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<link href="https://pretextbook.org/css/0.83/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
+<h1 class="heading"><a href="DiffCalc.html"><span class="title">Differential Calculus:</span> <span class="subtitle">From Practice to Theory</span></a></h1>
+<p class="byline">Eugene Boman, Robert Rogers</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="meta_backmatter-5.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="CHAPTERdiff-rules-with-limits.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ToTheory.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="CHAPTERwhen-deriv-doesnt.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\def\abs#1{\left|#1\right|}
+\def\CancelToRed#1#2{\textcolor{red}{{\cancelto{#1}{#2}}}}
+\def\approach#1{{\left(\rightarrow{}#1\right)}}
+\def\halmos{\rule[-.1ex]{8pt}{2ex}}
+
+\def\limitX#1#2#3#4{{\displaystyle\lim_{\underset{#4}{#1\rightarrow #2}}#3}}
+\def\tlimitX#1#2#3#4{{\displaystyle\lim_{\underset{#4}{#1\rightarrow #2}}}#3}
+\def\rlimit#1#2#3{{\limitX{#1}{#2}{#3}{#1\gt{}#2}{}}}
+\def\rtlimit#1#2#3{{\tlimitX{#1}{#2}{#3}{#1\gt{}#2}{}}}
+\def\llimit#1#2#3{{\limitX{#1}{#2}{#3}{#1\lt{}#2}{}}}
+\def\ltlimit#1#2#3{{\tlimitX{#1}{#2}{#3}{#1\lt{}#2}{}}}
+
+\def\arccot{{\rm{}arccot}{}}
+\def\Arctan{{\rm{}Arctan}{}}
+\def\Arcsin{{\rm{}Arcsin}{}}
+\def\arcsec{{\rm{}arcsec}{}}
+\def\arccsc{{\rm{}arccsc}{}}
+
+\newcommand{\eps}{\varepsilon}
+\newcommand{\RR}{\mathbb {R}}
+\newcommand{\QQ}{\mathbb {Q}}
+\newcommand{\NN}{\mathbb {N}}
+\newcommand{\ZZ}{\mathbb {Z}}
+
+\newcommand{\ParamEqTwo}[2]
+{
+  \left\{
+    \begin{array}{c}
+    {#1}\\
+    {#2}
+    \end{array}
+  \right\}
+}
+\newcommand{\ParamEqThree}[3]
+{
+  \left\{
+    \begin{array}{c}
+    {#1}\\
+    {#2}\\
+    {#3}
+    \end{array}
+  \right\}
+}
+
+\def\absALT#1{\rule[-.7ex]{1pt}{5ex}\hskip2pt#1\hskip2pt\llap{\rule[-.7ex]{1pt}{5ex}}} 
+
+
+\def\sech{{\rm{}sech}{}}
+\def\csch{{\rm{}csch}{}}
+
+
+\def\DD{{\bf{}D}}
+
+\def\eval#1#2#3{\left.#1\right\rvert_{#2}^{#3}}
+\def\ftceval#1#2#3{\eval#1#2#3}
+\def\geneval#1#2{\eval{#1}{#2}{}}
+\def\bigeval#1#2#3{\eval{#2}{#2}{#3}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\def\inverse#1{#1^{-1}}
+
+
+
+
+\def\dx#1{\thinspace{\mathrm d}#1}
+\def\dfdx#1#2{\frac{\dx{#1}}{\dx{#2}}} 
+\def\partialfx#1#2{\frac{\partial{#1}}{\partial{#2}}} 
+\def\partialfxn#1#2#3{\frac{\partial^{#3}{#1}}{\partial{#2}^{#3}}} 
+\def\dfdxn#1#2#3{\frac{\text{d}^{#3}{#1}}{\text{d}{#2}^{#3}}} 
+
+
+\def\dfdxat#1#2#3{\eval{\dfdx{#1}{#2}}{#2=#3}{}}
+
+\def\limit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}#3}}
+\def\tlimit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}}#3}
+\def\limitX#1#2#3#4{{\displaystyle\lim_{\underset{#4}{#1\rightarrow #2}}#3}}
+\def\rlimit#1#2#3{{\limitX{#1}{#2}{#3}{#1\gt{}#2}{}}}
+\def\llimit#1#2#3{{\limitX{#1}{#2}{#3}{#1\lt{}#2}{}}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth5 parts"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Epigraphs</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="SECinstructor.html" class="internal"><span class="title">To the Instructor: Read This First</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-part">
+<div class="toc-title-box"><a href="FromPractice.html" class="internal"><span class="codenumber">I</span> <span class="title">From Practice . . .</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="CalculusIsARock.html" class="internal"><span class="codenumber">1</span> <span class="title">Calculus is a Rock</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTERproblem-solving.html" class="internal"><span class="codenumber">2</span> <span class="title">Introduction: Some  Advice on Problem Solving</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERproblem-solving.html#SECusing-lett-inst" class="internal"><span class="codenumber">2.1</span> <span class="title">Using Letters Instead of Numbers</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERproblem-solving.html#SECTIONAn-easy-problem-alg" class="internal"><span class="codenumber">2.2</span> <span class="title">Substitution, or Making Things “Easy on the Eyes”</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERproblem-solving.html#SECan-easy-problem-geo" class="internal"><span class="codenumber">2.3</span> <span class="title">An “Easy” Problem From Geometry</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERproblem-solving.html#SECour-advice-synopsis" class="internal"><span class="codenumber">2.4</span> <span class="title">Our advice, a synopsis</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html" class="internal"><span class="codenumber">3</span> <span class="title">Science Before Calculus</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#Apologia" class="internal"><span class="codenumber">3.1</span> <span class="title">Apologia</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#SECTIONSomePreliminaries" class="internal"><span class="codenumber">3.2</span> <span class="title">Some Preliminaries</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#sec-laziness-nature" class="internal"><span class="codenumber">3.3</span> <span class="title">The Laziness of Nature</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#SECTIONFermMethAedeq" class="internal"><span class="codenumber">3.4</span> <span class="title">Fermat’s Method of Adequality</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#SECTIONdescartes-normals" class="internal"><span class="codenumber">3.5</span> <span class="title">Descartes’s Method of Normals</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#SECTIONroberv-conic-sect" class="internal"><span class="codenumber">3.6</span> <span class="title">Roberval, Conic Sections, and the Dynamic Approach</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#SUBSECTIONSpdVelRofC" class="internal"><span class="codenumber">3.6.1</span> <span class="title">Speed, Velocity, and Rates of Change</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#SUBSECTIONTanConicSect" class="internal"><span class="codenumber">3.6.2</span> <span class="title">The Tangent Lines of the Conic Sections</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#SUBSECTIONTanParab" class="internal"><span class="codenumber">3.6.2.1</span> <span class="title">The Tangent to a Parabola</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#SUBSECTIONTanEllipse" class="internal"><span class="codenumber">3.6.2.2</span> <span class="title">The Tangent to an Ellipse</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#TangentHyperbola" class="internal"><span class="codenumber">3.6.2.3</span> <span class="title">The Tangent to an Hyperbola</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#SECTIONsnells-law-refr" class="internal"><span class="codenumber">3.7</span> <span class="title">Snell’s Law and the Limitations of Adequality:</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTERdifferentials.html" class="internal"><span class="codenumber">4</span> <span class="title">Differentials, Differentiation, and the Derivative</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERdifferentials.html#SECTIONHist-intr" class="internal"><span class="codenumber">4.1</span> <span class="title">Historical Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERdifferentials.html#SECTIONWarning" class="internal"><span class="codenumber">4.2</span> <span class="title">Warning: Be Sure You Understand  the Purpose of This Chapter</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERdifferentials.html#SECTIONsome-rules-diff" class="internal"><span class="codenumber">4.3</span> <span class="title">The General Differentiation Rules</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERdifferentials.html#CHAPTERdifferentials-5" class="internal"><span class="codenumber">4.4</span> <span class="title">The Generalized Power  Rule</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html" class="internal"><span class="codenumber">5</span> <span class="title">Slopes, Tangents, and Rates of Change</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONVelocitySlopeTangent" class="internal"><span class="codenumber">5.1</span> <span class="title">Slopes and Tangents</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONdefin-tang-line" class="internal"><span class="codenumber">5.2</span> <span class="title">Defining the Tangent Line</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONvomit-comet" class="internal"><span class="codenumber">5.3</span> <span class="title">The Vomit Comet</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONrates-change" class="internal"><span class="codenumber">5.4</span> <span class="title">Galileo Drops the Ball</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECONDBringCalc" class="internal"><span class="codenumber">5.5</span> <span class="title">Bringing in Calculus</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONDerivative" class="internal"><span class="codenumber">5.6</span> <span class="title">The Derivative</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONnewt-flux-dynam" class="internal"><span class="codenumber">5.7</span> <span class="title">Thinking Dynamically</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONFluxions" class="internal"><span class="codenumber">5.8</span> <span class="title">Newton’s Method of Fluxions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONParametricFunctions" class="internal"><span class="codenumber">5.8.1</span> <span class="title">Parametric Functions</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONbridg-chains-telesc" class="internal"><span class="codenumber">5.9</span> <span class="title">Bridges, Chains, Domes, and Telescopes</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONBridges" class="internal"><span class="codenumber">5.9.1</span> <span class="title">Bridges</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONChains" class="internal"><span class="codenumber">5.9.2</span> <span class="title">Chains</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONDomes" class="internal"><span class="codenumber">5.9.3</span> <span class="title">Domes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONTelescopes" class="internal"><span class="codenumber">5.9.4</span> <span class="title">Telescopes</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTERcalc-trig.html" class="internal"><span class="codenumber">6</span> <span class="title">Calculus and Trigonometry</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SECTIONtrig-interl" class="internal"><span class="codenumber">6.1</span> <span class="title">A Trigonometric Interlude</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SUBSECTIONradian-measure" class="internal"><span class="codenumber">6.1.1</span> <span class="title">Radian Measure</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SECTIONtrig-interl-3" class="internal"><span class="codenumber">6.1.2</span> <span class="title">The Trigonometric Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SUBSECTIONmodel-with-trig" class="internal"><span class="codenumber">6.1.3</span> <span class="title">Modeling with Trigonometric Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SECTIONtrig-interl-5" class="internal"><span class="codenumber">6.1.4</span> <span class="title">Phase Shifts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SECTIONpolar-coordinates" class="internal"><span class="codenumber">6.1.5</span> <span class="title">Polar Coordinates</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SECTIONdiff-sine-cosine" class="internal"><span class="codenumber">6.2</span> <span class="title">The Differentials of the Sine and Cosine Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SUBSECTIONCircularMotion" class="internal"><span class="codenumber">6.2.1</span> <span class="title">Circular Motion</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SUBSECTIONpolar-coord-calc" class="internal"><span class="codenumber">6.2.2</span> <span class="title">Polar Coordinates and Calculus</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SECTIONdiff-sine-cosine-5" class="internal"><span class="codenumber">6.2.3</span> <span class="title">The Brachistochrone Problem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SECTIONdiff-sine-cosine-6" class="internal"><span class="codenumber">6.2.4</span> <span class="title">Spin Casting, Redux</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SUBSECTIONsimple-harm-oscill" class="internal"><span class="codenumber">6.2.5</span> <span class="title">Simple Harmonic Oscillation</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SECTIONdiff-other-trig" class="internal"><span class="codenumber">6.3</span> <span class="title">The Differentials of the Other Trigonometric Functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SECTIONinverse-tan-and-cot" class="internal"><span class="codenumber">6.4</span> <span class="title">The Inverse Tangent and Cotangent Functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SECTIONwitch-agnesi-inverse" class="internal"><span class="codenumber">6.5</span> <span class="title">The Witch of Agnesi and the Inverse Tangent Function</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SECTIONdiff-inverse-tancot" class="internal"><span class="codenumber">6.6</span> <span class="title">The Differentials of the Inverse Tangent and Inverse Cotangent Functions</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SECTIONother-inverse-trig" class="internal"><span class="codenumber">6.7</span> <span class="title">The Other Inverse Trigonometric Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#InverseSine" class="internal"><span class="codenumber">6.7.1</span> <span class="title">The Inverse Sine Function:  <span class="process-math">\(\inverse\sin(x)\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#InverseSecCsc" class="internal"><span class="codenumber">6.7.2</span> <span class="title">The Inverse Secant and Inverse Cosecant</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SECTIONcurvature" class="internal"><span class="codenumber">6.8</span> <span class="title">Curvature</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTApproximation.html" class="internal"><span class="codenumber">7</span> <span class="title">Approximation Methods</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTApproximation.html#SECTIONnewtons-method" class="internal"><span class="codenumber">7.1</span> <span class="title">Root Finding: Two  Pre-Calculus Approaches</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTApproximation.html#SUBSECTIONBisectionMethod" class="internal"><span class="codenumber">7.1.1</span> <span class="title">The Bisection Method</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTApproximation.html#SUBSECTIONBabylonianMethod" class="internal"><span class="codenumber">7.1.2</span> <span class="title">The Babylonian Method for Square Roots</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTApproximation.html#SECTIONnewtons-method-1" class="internal"><span class="codenumber">7.2</span> <span class="title">Newton’s Method</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTApproximation.html#SUBSECTIONNewtonsMethodBasic" class="internal"><span class="codenumber">7.2.1</span> <span class="title">The Idea Behind Newton’s Method</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTApproximation.html#SUBSECTIONSpectacularFailure" class="internal"><span class="codenumber">7.2.2</span> <span class="title">Spectacular Failure</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTApproximation.html#SUBSECTIONSubtleFailure" class="internal"><span class="codenumber">7.2.3</span> <span class="title">Subtle Failure</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTApproximation.html#SECTIONeulers-method" class="internal"><span class="codenumber">7.3</span> <span class="title">Euler’s Method</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTApproximation.html#SECTIONmore-high-deriv" class="internal"><span class="codenumber">7.4</span> <span class="title">Higher Derivatives, Lagrange, and Taylor</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html" class="internal"><span class="codenumber">8</span> <span class="title">Exponentials and Logarithms</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONIvps" class="internal"><span class="codenumber">8.1</span> <span class="title">Initial Value Problems (IVPs)</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONexponential" class="internal"><span class="codenumber">8.2</span> <span class="title">The Natural Exponential</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONexponential-growth" class="internal"><span class="codenumber">8.3</span> <span class="title">Exponential Growth and Exponential Notation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONhyperb-trig-hang" class="internal"><span class="codenumber">8.4</span> <span class="title">Hyperbolic Trigonometry: The Hanging Chain</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONGatewayArch" class="internal"><span class="codenumber">8.5</span> <span class="title">The Gateway Arch</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#CHAPTERlast-elem-funct-8" class="internal"><span class="codenumber">8.6</span> <span class="title">Exponential Growth</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONExpAndCmpndInt" class="internal"><span class="codenumber">8.7</span> <span class="title">Exponential Functions and Compound Interest</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONnatural-logarithm-1" class="internal"><span class="codenumber">8.8</span> <span class="title">A Short Introduction to Logarithms: John Napier Logs In</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONNatLog" class="internal"><span class="codenumber">8.9</span> <span class="title">Logarithms, Natural and Unnatural</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONLogApps" class="internal"><span class="codenumber">8.10</span> <span class="title">Applications of Logarithms</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONradioactive-decay" class="internal"><span class="codenumber">8.10.1</span> <span class="title">Radioactive Dating</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONnewtons-law-cooling" class="internal"><span class="codenumber">8.10.2</span> <span class="title">Chillin’ with Newton: The Law of Cooling</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONDerivNatLog" class="internal"><span class="codenumber">8.11</span> <span class="title">The Derivative of the Natural Logarithm</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONgener-logar-expon" class="internal"><span class="codenumber">8.12</span> <span class="title">General Logarithms and Exponentials</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONleonh-euler-harm" class="internal"><span class="codenumber">8.13</span> <span class="title">Leonhard Euler, Harmonic Oscillators, and Complex Numbers</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONHowEulerDidIt" class="internal"><span class="codenumber">8.13.1</span> <span class="title">How Euler Did It</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html" class="internal"><span class="codenumber">9</span> <span class="title">Optimization: Going to Extremes</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SECTIONintroduction" class="internal"><span class="codenumber">9.1</span> <span class="title">Introduction: Fermat’s Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SECTIONfive-simil-probl" class="internal"><span class="codenumber">9.2</span> <span class="title">Preliminaries: Some Simple Optimizations</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SECTIONrefl-refr-rainb" class="internal"><span class="codenumber">9.3</span> <span class="title">Reflections, Refractions, and Rainbows</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSECTIONreflection" class="internal"><span class="codenumber">9.3.1</span> <span class="title">Reflection</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSECTIONrefraction" class="internal"><span class="codenumber">9.3.2</span> <span class="title">Refraction: Snell’s Law</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSECTIONrainbows" class="internal"><span class="codenumber">9.3.3</span> <span class="title">Rainbows</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSECTIONRainbow" class="internal"><span class="codenumber">9.3.4</span> <span class="title">The Colors of the Rainbow</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSECTIONDoubleRainbows" class="internal"><span class="codenumber">9.3.5</span> <span class="title">Double Rainbows</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SECTIONGlobalVsLocalExtrema" class="internal"><span class="codenumber">9.4</span> <span class="title">Global vs. Local Extrema</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSECTIONoptim-abstr-probl" class="internal"><span class="codenumber">9.5</span> <span class="title">Optimization, the Abstract Problem</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSECTIONoptim-abstr-probl-3" class="internal"><span class="codenumber">9.5.1</span> <span class="title">Identifying and Distinguishing Maxima and Minima</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSECTIONTransitionPoints" class="internal"><span class="codenumber">9.5.2</span> <span class="title">Transition Points, and Possible Transition Points on Open Intervals</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSECTIONunderl-deriv" class="internal"><span class="codenumber">9.5.3</span> <span class="title">Undefined Derivatives</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSECTIONoptim-clos-interv" class="internal"><span class="codenumber">9.5.4</span> <span class="title">Transition Points on a Closed Interval; the Problem of Endpoints</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SECTIONconc-second-deriv-1" class="internal"><span class="codenumber">9.6</span> <span class="title">Concavity and the Second Derivative Test</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSECTIONconc-second-deriv" class="internal"><span class="codenumber">9.6.1</span> <span class="title">The Second Derivative Test</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SECTIONoptim-probl" class="internal"><span class="codenumber">9.7</span> <span class="title">Optimization Problems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSECTIONPageOfText" class="internal"><span class="codenumber">9.7.1</span> <span class="title">Two Ways to Optimize</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSUBSECTIONFirstSolution" class="internal"><span class="codenumber">9.7.1.1</span> <span class="title">First Solution:</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSUBSECTIONSecondSolution" class="internal"><span class="codenumber">9.7.1.2</span> <span class="title">Second Solution</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSECTIONVarOptProbs" class="internal"><span class="codenumber">9.7.2</span> <span class="title">Selected Optimization Problems</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTERPTshape-things.html" class="internal"><span class="codenumber">10</span> <span class="title">Graphing with Calculus</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTshape-things.html#SECTIONgraph-with-form" class="internal"><span class="codenumber">10.1</span> <span class="title">Graphing with a Formula for  <span class="process-math">\(y(x)\)</span></span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTshape-things.html#SECTIONgraph-without-form" class="internal"><span class="codenumber">10.2</span> <span class="title">Graphing Without Formulas</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTshape-things.html#SECTIONGraphingWithDeriv" class="internal"><span class="codenumber">10.3</span> <span class="title">Graphing with a Formula for  <span class="process-math">\(\dfdx{y}{t}\)</span></span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTERmodel-with-calc.html" class="internal"><span class="codenumber">11</span> <span class="title">Modeling with Calculus</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERmodel-with-calc.html#SECTIONpopulation-dynamics" class="internal"><span class="codenumber">11.1</span> <span class="title">Population Dynamics</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERmodel-with-calc.html#SUBSECTIONModelingTrout" class="internal"><span class="codenumber">11.1.1</span> <span class="title">Modeling a Trout Farm</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERmodel-with-calc.html#SECTIONlittle-healthy-comp" class="internal"><span class="codenumber">11.1.2</span> <span class="title">The Competing Species Model</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERmodel-with-calc.html#SECTIONselect-model-probl" class="internal"><span class="codenumber">11.2</span> <span class="title">Selected Modeling Problems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERmodel-with-calc.html#SECTIONepidemic-blues" class="internal"><span class="codenumber">11.2.1</span> <span class="title">Epidemics, The SIR Model</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERmodel-with-calc.html#subSECTIONtractrix" class="internal"><span class="codenumber">11.2.2</span> <span class="title">The Tractrix</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERmodel-with-calc.html#SUBSECTIONPursuit" class="internal"><span class="codenumber">11.2.3</span> <span class="title">The  Pursuit Problem</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTERlimits-lhop-rule.html" class="internal"><span class="codenumber">12</span> <span class="title">Limits and L’Hôpital’s Rule</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERlimits-lhop-rule.html#SECTIONhoriz-asympt-as" class="internal"><span class="codenumber">12.1</span> <span class="title">Horizontal Asymptotes as Limits “at Infinity”</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlimits-lhop-rule.html#DIGRESSIONLimitNotation" class="internal"><span class="codenumber">12.1.1</span> <span class="title">Limit Notation</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlimits-lhop-rule.html#SECTIONsqueeze-theorem-informal" class="internal"><span class="codenumber">12.2</span> <span class="title">The Squeeze Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlimits-lhop-rule.html#SECTIONvertical-asymptotes" class="internal"><span class="codenumber">12.3</span> <span class="title">Vertical Asymptotes</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERlimits-lhop-rule.html#SECTIONmore-indet-forms" class="internal"><span class="codenumber">12.4</span> <span class="title">Indeterminate Forms and L’Hôpital’s Rule</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlimits-lhop-rule.html#SUBSECTIONLHopitalsRule" class="internal"><span class="codenumber">12.4.1</span> <span class="title">L’Hôpital’s Rule</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlimits-lhop-rule.html#SUBSECTIONlhop-rule-horiz" class="internal"><span class="codenumber">12.4.2</span> <span class="title">L’Hôpital’s Rule and Horizontal Asymptotes</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-part contains-active">
+<div class="toc-title-box"><a href="ToTheory.html" class="internal"><span class="codenumber">II</span> <span class="title">To Theory . . .</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTERWhatsWrong.html" class="internal"><span class="codenumber">13</span> <span class="title">What’s Wrong with Differentials?</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERWhatsWrong.html#CalcAndBerkeley" class="internal"><span class="codenumber">13.1</span> <span class="title">Calculus and Bishop Berkeley</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERWhatsWrong.html#sec:secants-tangents" class="internal"><span class="codenumber">13.2</span> <span class="title">Secants and Tangents</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTERdiff-rules-with-limits.html" class="internal"><span class="codenumber">14</span> <span class="title">The Differentiation Rules via Limits</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERdiff-rules-with-limits.html#SECTIONlimit-theorems-laws" class="internal"><span class="codenumber">14.1</span> <span class="title">The Limit Rules (Theorems)</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERdiff-rules-with-limits.html#SUBSECTIONlimit-comp-cont" class="internal"><span class="codenumber">14.1.1</span> <span class="title">The Limit of a Composition and Continuity at a Point</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERdiff-rules-with-limits.html#SECTIONdiff-rules-via" class="internal"><span class="codenumber">14.2</span> <span class="title">The General Differentiation Theorems, via Limits</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERdiff-rules-with-limits.html#SECTIONChainRule" class="internal"><span class="codenumber">14.3</span> <span class="title">The Chain Rule</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERdiff-rules-with-limits.html#SECTIONproduct-rule-limits" class="internal"><span class="codenumber">14.4</span> <span class="title">The Product Rule</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERdiff-rules-with-limits.html#SECTIONother-gener-diff" class="internal"><span class="codenumber">14.5</span> <span class="title">The Other General Differentiation Rules</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERdiff-rules-with-limits.html#SECTIONdiff-trig-funct" class="internal"><span class="codenumber">14.6</span> <span class="title">Derivatives of the Trigonometric Functions, via Limits</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERdiff-rules-with-limits.html#SECTIONinverse-functions" class="internal"><span class="codenumber">14.7</span> <span class="title">Inverse Functions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter active">
+<div class="toc-title-box"><a href="CHAPTERFDT-Redux.html" class="internal"><span class="codenumber">15</span> <span class="title">The First Derivative Test, Redux</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERFDT-Redux.html#SECTIONfermats-theorem" class="internal"><span class="codenumber">15.1</span> <span class="title">Fermat’s Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERFDT-Redux.html#SECTIONrolles-lemma-mean" class="internal"><span class="codenumber">15.2</span> <span class="title">Rolle’s Lemma and the Mean Value Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERFDT-Redux.html#SECTIONfirst-deriv-test" class="internal"><span class="codenumber">15.3</span> <span class="title">The Proof of the First Derivative Test</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTERwhen-deriv-doesnt.html" class="internal"><span class="codenumber">16</span> <span class="title">When the Derivative Doesn’t Exist</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERwhen-deriv-doesnt.html#SECTIONone-sided-deriv" class="internal"><span class="codenumber">16.1</span> <span class="title">One Sided Derivatives</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTERformal-limits.html" class="internal"><span class="codenumber">17</span> <span class="title">Formal Limits</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SECTIONlimits-at-infinity" class="internal"><span class="codenumber">17.1</span> <span class="title">Getting Around Infinity</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SECTIONlimits-at-real" class="internal"><span class="codenumber">17.2</span> <span class="title">Limits at a Real Number</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERformal-limits.html#SECTIONLimitLaws" class="internal"><span class="codenumber">17.3</span> <span class="title">Limit Laws (Theorems)</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONlimit-sum-at" class="internal"><span class="codenumber">17.3.1</span> <span class="title">The Limit of a Sum</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONsqueeze-theorem" class="internal"><span class="codenumber">17.3.2</span> <span class="title">The Squeeze Theorem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SECTIONlimit-composition" class="internal"><span class="codenumber">17.3.3</span> <span class="title">The Limit of a Composition</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONlimit-product-at" class="internal"><span class="codenumber">17.3.4</span> <span class="title">The Limit of a Product</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONOneOverXIsCont" class="internal"><span class="codenumber">17.3.5</span> <span class="title">The Function    <span class="process-math">\(f(x)=\frac1x\)</span> is Continuous Wherever  It Is Defined</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="meta_backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="meta_backmatter-2.html" class="internal"><span class="codenumber">A</span> <span class="title">Selected Hints</span></a></div></li>
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="meta_backmatter-3.html" class="internal"><span class="codenumber">B</span> <span class="title">Selected Solutions</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="meta_backmatter-4.html" class="internal"><span class="codenumber">C</span> <span class="title">List of Symbols</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="meta_backmatter-5.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="meta_backmatter-6.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="CHAPTERFDT-Redux"><h2 class="heading">
+<span class="type">Chapter</span><span class="space"> </span><span class="codenumber">15</span><span class="space"> </span><span class="title">The First Derivative Test, Redux</span>
+</h2>
+<section class="introduction" id="CHAPTERFDT-Redux-2"><blockquote class="blockquote" id="CHAPTERFDT-Redux-2-1">
+<div class="para" id="CHAPTERFDT-Redux-2-1-1">Geometry has always been considered as an exact science, and indeed as the source of the exactness which is widespread among other parts of mathematics.\ .\ . But it seems that this feature of exactness does not reign anymore in geometry since the new system of infinitely small quantities has been mixed to it. I do not see that this system has produced anything for the truth and it would seem to me that it often conceals mistakes.</div> <cite class="attribution">―<a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Rolle/" target="_blank">Michel Rolle (1652-1719)</a><a class="xref" id="CHAPTERFDT-Redux-2-1-2-2" href="" data-knowl="./knowl/fn/CHAPTERFDT-Redux-2-1-2-2.html" title="Footnote 15.1"><sup> 1 </sup></a></cite>
+</blockquote> <div class="para" id="CHAPTERFDT-Redux-2-2">Assuming that all of the properties of limits we talked about in <a href="CHAPTERdiff-rules-with-limits.html#SECTIONlimit-theorems-laws" class="internal" title="Section 14.1: The Limit Rules (Theorems)">Section 14.1</a> can be proved, we have seen that all of the differentiation rules we developed intuitively using differentials in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "CHAPTdifferentials" missing or not unique]</code> can be made rigorous using limits.</div> <div class="para" id="CHAPTERFDT-Redux-2-3">The question we need to address now is this: Does the need for rigor, which prompted our definition of the <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "DEFDerivative" missing or not unique]</code>), get in the way of practical applications such as, say, the First Derivative Test? We will show that such a practical result can still be achieved while maintaining rigor. To do this, we will need a theorem that allows us to relate instantaneous changes to finite changes. The French name for this theorem is “le théorème des accroissements finis” (translated literally as “the Theorem of Finite Increments”). In English it is called the the Mean Value Theorem. We will see how this powerful theorem can be used to transition from theoretical to practical.</div></section><section class="section" id="SECTIONfermats-theorem"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">15.1</span><span class="space"> </span><span class="title">Fermat’s Theorem</span>
+</h3>
+<blockquote class="blockquote" id="SECTIONfermats-theorem-2">
+<div class="para" id="SECTIONfermats-theorem-2-1">It is by logic that we prove, but by intuition that we discover.</div> <cite class="attribution">―<a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Poincare/" target="_blank">Henri Poincar\’{e (1854-1912)</a><a class="xref" id="SECTIONfermats-theorem-2-2-2" href="" data-knowl="./knowl/fn/SECTIONfermats-theorem-2-2-2.html" title="Footnote 15.2"><sup> 2 </sup></a></cite>
+</blockquote>
+<div class="para" id="SECTIONfermats-theorem-3">It is actually a little surprising how much effort it takes to prove the First Derivative Test.  We will start by proving some  preliminary results that will make it a little easier to follow the logic behind the proof of the First Derivative Test. We’ll begin with Fermat’s Theorem (<a href="" class="xref" data-knowl="./knowl/xref/THEOREMFermatsTheorem.html" title="Theorem 9.1: Fermat’s Theorem">Theorem 9.1</a>) which says that if <span class="process-math">\(f\)</span> attains a maximum (or minimum) at <span class="process-math">\(x=a\)</span> then <span class="process-math">\(f^\prime(a)=0.\)</span> More formally:</div>
+<article class="theorem theorem-like" id="THEOREMFermatsTheorem2"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">15.1</span><span class="period">.</span><span class="space"> </span><span class="title">Fermat’s Theorem.</span>
+</h4>
+<div class="para" id="THEOREMFermatsTheorem2-2">If <span class="process-math">\(f(a)\)</span> is a local extremum (either a maximum or a minimum) of <span class="process-math">\(f(x)\)</span> at <span class="process-math">\(x=a\text{,}\)</span> and <span class="process-math">\(f(x)\)</span> is differentiable at <span class="process-math">\(x=a\)</span> then <span class="process-math">\(f^\prime(a)=0\text{.}\)</span>
+</div></article><div class="para" id="SECTIONfermats-theorem-5">Recall that Fermat’s Theorem does not say that if <span class="process-math">\(f^\prime(a)=0\)</span> then <span class="process-math">\(f(a)\)</span> is an extremum. In fact, we know that this is not true. Rather, it states the converse: If we know that <span class="process-math">\(f(a)\)</span> is an extremum and <span class="process-math">\(f^\prime(a)\)</span> exists, then <span class="process-math">\(f^\prime(a) =0\text{.}\)</span>
+</div>
+<div class="para" id="SECTIONfermats-theorem-6">It is very rare that we can develop a proof of a theorem by directly writing down the logical steps in order.  Usually the process takes a lot of trying, backtracking, trying again, and so on much as we described in our analogy in <a href="CHAPTERproblem-solving.html" class="internal" title="Chapter 2: Introduction: Some  Advice on Problem Solving">Chapter 2</a> about finding your way out of a forest.</div>
+<div class="para" id="SECTIONfermats-theorem-7">Of course, in a textbook it is not practical to list all of the bad ideas we might have just to see that they are, in fact, bad ideas. So we will use the following \underline{  Scrapwork} construct when we are just “thinking about” a problem. The scrapwork is not the proof. The purpose of scrapwork is to engage our intuition and to begin organizing our intuitive understanding so that a rigorous proof will emerge. So, not every statement we make inside a scrapwork construct will necessarily be fully rigorous. If you see a gap in the logic inside a scrapwork construct watch to see how it gets filled in the proof.</div>
+<article class="investigation project-like" id="SECTIONfermats-theorem-8"><h4 class="heading">
+<span class="type">Scrapwork</span><span class="space"> </span><span class="codenumber">15.1</span><span class="period">.</span>
+</h4>
+<figure class="figure figure-like" id="SECTIONfermats-theorem-8-1"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/FermatThm1.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">15.2<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Rolle/" target="_blank">This figure needs a caption.</a><a class="xref" id="SECTIONfermats-theorem-8-1-1-2" href="" data-knowl="./knowl/fn/SECTIONfermats-theorem-8-1-1-2.html" title="Footnote 15.3"><sup> 3 </sup></a></figcaption></figure>      <div class="para" id="SECTIONfermats-theorem-8-2">Notice that in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "DEFDerivative" missing or not unique]</code> the quantity <span class="process-math">\(\frac{f(a+h)-f(a)}{h}\)</span> is the slope of a particular secant line, as in the sketch at the right.</div> <div class="para logical" id="SECTIONfermats-theorem-8-3">
+<div class="para">If, as shown in the sketch at the right, <span class="process-math">\((a,f(a))\)</span> is a (local) maximum then the slope of the secant line in our diagram, <span class="process-math">\(\frac{f(a+h)-f(a)}{h}\text{,}\)</span> must be negative when <span class="process-math">\(h\gt 0\text{.}\)</span> Since the slope is less than zero it follows that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f^\prime(a)=\limit{h}{0}{\frac{f(a+h)-f(a)}{h}}\le0.
+\end{equation*}
+</div>
+</div></article><article class="exercise exercise-like" id="SECTIONfermats-theorem-9"><h4 class="heading">
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">15.3</span><span class="period">.</span>
+</h4>
+<div class="para" id="SECTIONfermats-theorem-9-1-1">Draw a similar diagram to convince yourself that <span class="process-math">\(f^\prime(a)\)</span> must also be greater than or equal to zero when <span class="process-math">\(h\lt 0\text{.}\)</span>
+</div></article><div class="para" id="SECTIONfermats-theorem-10">We can now rigorously prove Fermat’s Theorem.</div>
+<details id="SECTIONfermats-theorem-11" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="title">Proof of Fermat’s Theorem.</span></h4></summary><article class="hiddenproof"> <div class="para logical" id="SECTIONfermats-theorem-11-2">
+<div class="para">We will only prove the case when <span class="process-math">\(f(a)\)</span> is a local maximum. The case of a local minimum is very similar. Since <span class="process-math">\(f(a)\)</span> is a local maximum there is an interval containing <span class="process-math">\(a\)</span> such that for any <span class="process-math">\(h\)</span> (sufficiently small that <span class="process-math">\(a+h\)</span> is also in the interval), <span class="process-math">\(f(a+h)\leq f(a)\text{.}\)</span> Thus <span class="process-math">\(f(a+h)-f(a)\leq0\)</span> as seen in the sketch above. If <span class="process-math">\(h\lt0\)</span> then <span class="process-math">\(\frac{f(a+h)-f(a)}{h}\geq 0\)</span> and so</div>
+<div class="displaymath process-math" data-contains-math-knowls=" ">
+\begin{equation*}
+f^\prime(a)=\limit{h}{0}{\frac{f(a+h)-f(a)}{h}}\ge0.\label{eq:Rolle1}
+\end{equation*}
+</div>
+<div class="para">However if <span class="process-math">\(h\gt0\)</span> then</div>
+<div class="displaymath process-math" data-contains-math-knowls=" ">
+\begin{equation*}
+f^\prime(a)=\limit{h}{0}{\frac{f(a+h)-f(a)}{h}}\le0.\label{eq:Rolle2}
+\end{equation*}
+</div>
+<div class="para">The only way that inequalities in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQRolle1" missing or not unique]</code>) <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQRolle2" missing or not unique]</code>) can be both true is if <span class="process-math">\(f^\prime(a)=0.\)</span>
+</div>
+</div> <div class="para" id="SECTIONfermats-theorem-11-3"><em class="alert"><span class="process-math">\(\halmos\)</span></em></div></article></details><article class="problem example-like" id="SECTIONfermats-theorem-12"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">15.4</span><span class="period">.</span>
+</h4>
+<div class="para" id="SECTIONfermats-theorem-12-1-1">Use our proof of the maximum case as a guide to constructing a proof of Fermat’s Theorem when <span class="process-math">\(f(a)\)</span> is a local minimum.</div></article></section><section class="section" id="SECTIONrolles-lemma-mean"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">15.2</span><span class="space"> </span><span class="title">Rolle’s Lemma and the Mean Value Theorem</span>
+</h3>
+<figure class="figure figure-like" id="SECTIONrolles-lemma-mean-2"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/Rolle.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">15.5<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Rolle/" target="_blank">\centerline{Michel Rolle} \centerline{(1659-1719)}</a><a class="xref" id="SECTIONrolles-lemma-mean-2-1-2" href="" data-knowl="./knowl/fn/SECTIONrolles-lemma-mean-2-1-2.html" title="Footnote 15.4"><sup> 4 </sup></a></figcaption></figure><div class="para" id="SECTIONrolles-lemma-mean-3">Were he alive today <a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Rolle/" target="_blank">Michel Rolle</a><a class="xref" id="SECTIONrolles-lemma-mean-3-2" href="" data-knowl="./knowl/fn/SECTIONrolles-lemma-mean-3-2.html" title="Footnote 15.5"><sup> 5 </sup></a> might be horrified to know that his lemma has become a fundamental part of the modern development of Calculus.  Like Bishop Berkeley, he was an early critic of Calculus, having once described it as a “collection of ingenious fallacies.”</div>
+<div class="para" id="SECTIONrolles-lemma-mean-4">The distinction between a theorem and a lemma is very slight and rather arbitrary. Typically we call a statement\aside{Technically speaking, a statement is not a theorem until it has actually been proved. Until then it is a conjecture.} a theorem if it is important and requires proof. We call it a lemma if it requires proof itself, and is used to simply the proof of a theorem.  This is not a hard-and-fast rule by any means. Sometimes we first prove a lemma as an aid to proving a theorem, only to find that the lemma is actually more important. However, having been originally dubbed a lemma the result is known ever after as a lemma.  For example, in the present instance we will be using the Extreme Value\aside{We will not be proving the Extreme Value Theorem in this text. Although it appears to be obviously true (read it again and see), it is remarkably hard to prove in a fully rigorous fashion. If you feel that you must see the proof you should change your major to mathematics and take a course in Real Analysis.}, and Fermat’s <em class="emphasis">Theorems</em> to prove what often called Rolle’s <em class="emphasis">Lemma</em>, and then use use Rolle’s <em class="emphasis">Lemma</em> to prove the Mean Value <em class="emphasis">Theorem</em>.  Then we will use the Mean Value <em class="emphasis">Theorem</em> to prove the First Derivative <em class="emphasis">Test</em>. It is all very chaotic.</div>
+<article class="lemma theorem-like" id="LEMMArolles-lemma"><h4 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">15.6</span><span class="period">.</span><span class="space"> </span><span class="title">Rolle’s Lemma.</span>
+</h4>
+<div class="para" id="LEMMArolles-lemma-2">Suppose <span class="process-math">\(f\)</span> is continuous on the closed interval <span class="process-math">\([a,b]\)</span> and differentiable on the open interval <span class="process-math">\((a,b)\text{.}\)</span> Suppose further that <span class="process-math">\(f(a)=f(b)\text{.}\)</span> Then there is at least one number <span class="process-math">\(c\text{,}\)</span> in the interval <span class="process-math">\((a,b)\)</span> such that <span class="process-math">\(f^\prime(c)=0\text{.}\)</span>
+</div></article><figure class="figure figure-like" id="SECTIONrolles-lemma-mean-6"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/RollesLemma.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">15.7<span class="period">.</span></span><span class="space"> </span>This figure needs a caption.</figcaption></figure><div class="para" id="SECTIONrolles-lemma-mean-7">When Rolle’s Lemma is visualized, as in the sketch at the right, it is clear what is going on. If <span class="process-math">\(f(a)=f(b)\)</span> then between the points <span class="process-math">\((a,f(a))\)</span> and <span class="process-math">\((b,f(b))\)</span> the graph of <span class="process-math">\(f(x)\)</span> will either rise to a maximum or drop to a minimum (not shown) at some point <span class="process-math">\(c\text{.}\)</span> In either case, by Fermat’s Theorem, the derivative of <span class="process-math">\(f\)</span> at <span class="process-math">\(c\)</span> will be zero. Notice that the slope of the line through <span class="process-math">\((a,f(a))\)</span> and <span class="process-math">\((b,f(b))\)</span> is also zero. Thus these two lines are parallel.</div>
+<div class="para" id="SECTIONrolles-lemma-mean-8">Despite the clarity of our sketch, an analytic proof is still required because our sketch does not capture all of the possible ways that Rolle’s Lemma  can manifest. This is demonstrated in <a href="" class="xref" data-knowl="./knowl/xref/DRILLRollesLemma1.html" title="Drill 15.8">Drill 15.8</a> below.</div>
+<article class="exercise exercise-like" id="DRILLRollesLemma1"><h4 class="heading">
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">15.8</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="DRILLRollesLemma1-1"><div class="para" id="DRILLRollesLemma1-1-1"></div></div>
+<article class="task exercise-like" id="DRILLRollesLemma1-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="DRILLRollesLemma1-2-1-1">Sketch the graph of a function (different from the one in our sketch) which satisfies all of the conditions of Rolle’s Lemma and convince yourself that the conclusion of  Rolle’s Lemma must still  be true.</div></article><article class="task exercise-like" id="DRILLRollesLemma1-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="DRILLRollesLemma1-3-1-1">Show that the condition that <span class="process-math">\(f\)</span> is continuous on <span class="process-math">\([a,b]\)</span> is necessary by sketching the graph of a function which violates only that  condition and the conclusion of Rolle’s Lemma.</div></article><article class="task exercise-like" id="DRILLRollesLemma1-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="DRILLRollesLemma1-4-1-1">Show that the condition that <span class="process-math">\(f\)</span> is differentiable on <span class="process-math">\((a,b)\)</span> is necessary by sketching the graph of a function which violates only that condition and the conclusion of Rolle’s Lemma.</div></article></article><details id="SECTIONrolles-lemma-mean-10" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="title">Proof of Roll’s Lemma.</span></h4></summary><article class="hiddenproof"> <div class="para" id="SECTIONrolles-lemma-mean-10-2">By The Extreme Value Theorem (<a href="" class="xref" data-knowl="./knowl/xref/THEOREMmax-min.html" title="Theorem 9.57: Extreme Value Theorem">Theorem 9.57</a>) there is are points <span class="process-math">\(\alpha\)</span> and <span class="process-math">\(\beta\)</span> in the interval <span class="process-math">\([a,b]\text{,}\)</span> such that  <span class="process-math">\(f(\alpha)\)</span> is a global maximum, and  <span class="process-math">\(f(\beta)\)</span> is a global minimum. There are two possibilities for <span class="process-math">\(\alpha\)</span> and <span class="process-math">\(\beta\text{:}\)</span> \begin{enumerate}%[label={  (\alph*)}] \item {  \boldmath Both <span class="process-math">\(\alpha\)</span> and <span class="process-math">\(\beta\)</span> are endpoints of the interval}: In this case since <span class="process-math">\(f(a)=f(b)\)</span> the global maximum and the global minimum are equal. The only way that can happen is if the function is constant on the interval <span class="process-math">\([a,b]\text{,}\)</span> and if <span class="process-math">\(f\)</span> is constant then <span class="process-math">\(f^\prime(x)=0\)</span> for every <span class="process-math">\(x\)</span> in the interval <span class="process-math">\((a,b)\text{.}\)</span> So we take <span class="process-math">\(c\)</span> to be any point in <span class="process-math">\((a,b)\text{.}\)</span> \item{  \boldmath  At least one of <span class="process-math">\(\alpha\)</span> or <span class="process-math">\(\beta\)</span> is not an endpoint of the interval:} In this case by Fermat’s Theorem, either <span class="process-math">\(f^\prime(\alpha)=0\text{,}\)</span> or <span class="process-math">\(f^\prime(\beta)=0\text{.}\)</span> So we take <span class="process-math">\(c=\alpha\)</span> or <span class="process-math">\(c=\beta\)</span> as appropriate. \end{enumerate} In either case the existence of <span class="process-math">\(c\)</span> in the interval <span class="process-math">\((a,b)\text{,}\)</span> with <span class="process-math">\(f^\prime(c)=0\)</span> is guaranteed.</div> <div class="para" id="SECTIONrolles-lemma-mean-10-3"><em class="alert"><span class="process-math">\(\halmos\)</span></em></div></article></details><article class="theorem theorem-like" id="THEOREMMVT"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">15.9</span><span class="period">.</span><span class="space"> </span><span class="title">The Mean Value Theorem.</span>
+</h4>
+<div class="para logical" id="THEOREMMVT-2">
+<div class="para">Suppose <span class="process-math">\(f(x)\)</span> is continuous on some closed interval, <span class="process-math">\([a,b]\text{,}\)</span> and <span class="process-math">\(f\)</span> is  differentiable on <span class="process-math">\((a,b)\text{.}\)</span> Then there is at least one number <span class="process-math">\(c\)</span> in the open interval <span class="process-math">\((a,b)\)</span> such that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f^\prime(c)=\frac{f(b)-f(a)}{b-a}.\label{eq:MVT}
+\end{equation*}
+</div>
+</div></article><article class="investigation project-like" id="SECTIONrolles-lemma-mean-12"><h4 class="heading">
+<span class="type">Scrapwork</span><span class="space"> </span><span class="codenumber">15.2</span><span class="period">.</span>
+</h4>
+<div class="para" id="SECTIONrolles-lemma-mean-12-1">The Mean Value Theorem (visualized at the left) says that there is a point <span class="process-math">\(c\text{,}\)</span> in the interval <span class="process-math">\((a,b)\)</span> such that the tangent line at <span class="process-math">\(c\)</span> and the line through <span class="process-math">\((a,f(a)\)</span> and <span class="process-math">\((b,f(b))\)</span> are parallel. Thus in the special case where <span class="process-math">\(f(a)=f(b)\)</span> the Mean Value Theorem reduces to Rolle’s Lemma.  In other words the Mean Value Theorem is a generalization of Rolle’s Lemma.</div> <figure class="figure figure-like" id="SECTIONrolles-lemma-mean-12-2"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/mvt4.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">15.10<span class="period">.</span></span><span class="space"> </span>This figure needs a caption.</figcaption></figure>      <div class="para logical" id="SECTIONrolles-lemma-mean-12-3">
+<div class="para">We said we would use Rolle’s Lemma to prove the Mean Value Theorem. To do that we’ll need to create a function -- we’ll call it <span class="process-math">\(\phi(x)\)</span> -- that satisfies all of the conditions of Rolle’s Lemma .  From the diagram at the left we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\phi(x)=f(x)-L(x).
+\end{equation*}
+</div>
+<div class="para">Do you see that <span class="process-math">\(\phi(x)\)</span> is the function we need?</div>
+</div></article><article class="exercise exercise-like" id="SECTIONrolles-lemma-mean-13"><h4 class="heading">
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">15.11</span><span class="period">.</span>
+</h4>
+<div class="para" id="SECTIONrolles-lemma-mean-13-1-1">Show that <span class="process-math">\(L(x) = \frac{f(b)-f(a)}{b-a}(x-a)+f(a)\text{.}\)</span> \hint{<span class="process-math">\(L(x)\)</span> is a straight line and we have the coordinates of two points, <span class="process-math">\((a,f(a))\)</span> and <span class="process-math">\((b,f(b))\)</span> on the line.}</div></article><article class="problem example-like" id="PROBLEMrolles-lemma-mean-2"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">15.12</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="PROBLEMrolles-lemma-mean-2-1"><div class="para" id="PROBLEMrolles-lemma-mean-2-1-1">Show that <span class="process-math">\(\phi(x)=f(x)-L(x)\)</span> from the diagram above satisfies all of the conditions of Rolle’s Lemma. That is, show that:</div></div>
+<article class="task exercise-like" id="PROBLEMrolles-lemma-mean-2-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="PROBLEMrolles-lemma-mean-2-2-1-1">
+<span class="process-math">\(\phi(x)\)</span> is continuous on <span class="process-math">\([a,b]\text{.}\)</span>
+</div></article><article class="task exercise-like" id="PROBLEMrolles-lemma-mean-2-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="PROBLEMrolles-lemma-mean-2-3-1-1">
+<span class="process-math">\(\phi(x)\)</span> is differentiable on <span class="process-math">\((a,b)\text{.}\)</span>
+</div></article><article class="task exercise-like" id="PROBLEMrolles-lemma-mean-2-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="PROBLEMrolles-lemma-mean-2-4-1-1"><span class="process-math">\(\phi(a)=\phi(b)=0\)</span></div></article></article><details id="SECTIONrolles-lemma-mean-15" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="title">Proof of the Mean Value Theorem.</span></h4></summary><article class="hiddenproof"> <div class="para logical" id="SECTIONrolles-lemma-mean-15-2">
+<div class="para">Observe that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\phi(x)=f(x)-\frac{f(b)-f(a)}{b-a}(x-a)+f(a)
+\end{equation*}
+</div>
+<div class="para">satisfies all of the conditions of Rolle’s Lemma. Therefore, by Rolle’s Lemma there is a point <span class="process-math">\(c\text{,}\)</span> between <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> such that <span class="process-math">\(\phi^\prime(c)=0\text{.}\)</span> Therefore</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f^\prime(c) -\frac{f(b)-f(a)}{b-a} =0
+\end{equation*}
+</div>
+<div class="para">and so</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f^\prime(c) = \frac{f(b)-f(a)}{b-a},
+\end{equation*}
+</div>
+<div class="para">which completes the proof.</div>
+</div> <div class="para" id="SECTIONrolles-lemma-mean-15-3"><em class="alert"><span class="process-math">\(\halmos\)</span></em></div></article></details><div class="para" id="SECTIONrolles-lemma-mean-16">As we mentioned at the beginning of this chapter in French the Mean Value Theorem is known as the <i class="foreign">théorème des accroissements finis</i> or literally the “theorem of the finite increments.”</div>
+<div class="para" id="SECTIONrolles-lemma-mean-17">To see why this is an accurate description let <span class="process-math">\(y=f(x)\text{.}\)</span> Then <span class="process-math">\(f(b)-f(a) = \Delta y\)</span> and <span class="process-math">\(b-a=\Delta x\text{.}\)</span> So we can re-express <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQMVT" missing or not unique]</code>) as <span class="process-math">\(\Delta y=f^\prime(c)\Delta x\text{.}\)</span> In this form it is clear that the Mean Value Theorem relates the finite increments <span class="process-math">\(\Delta y\)</span> and <span class="process-math">\(\Delta x\)</span> to the instantaneous rate of change <span class="process-math">\(f^\prime(c)\text{.}\)</span>
+</div>
+<div class="para" id="SECTIONrolles-lemma-mean-18">The English name, “Mean Value Theorem” comes from interpreting the derivative as an instantaneous velocity. If <span class="process-math">\(t\)</span> represents time and <span class="process-math">\(p(t)\)</span> represents position at time <span class="process-math">\(t\text{,}\)</span> then <span class="process-math">\(\frac{p(b)-p(a)}{b-a}\)</span> is the average velocity in the time interval <span class="process-math">\([a,b]\text{.}\)</span> Since <span class="process-math">\(p^\prime(c)\)</span> is instantaneous velocity at time <span class="process-math">\(c\text{,}\)</span> the conclusion of the Mean Value Theorem is that at some point in that interval, instantaneous velocity must match average (mean) velocity. For example, if you travel <span class="process-math">\(50\)</span> miles in one hour then your average velocity is <span class="process-math">\(50\frac{\text{miles}}{\text{hour}}\text{.}\)</span> But it is unlikely that you traveled at exactly <span class="process-math">\(50\frac{\text{miles}}{\text{hour}}\)</span> for the entire hour. However, at one instant (possibly more) you had to have been traveling at exactly <span class="process-math">\(50\frac{\text{miles}}{\text{hour}}\text{.}\)</span> This is the Mean Value Theorem. It provides the bridge we need to get from infinitesimals to finite intervals.</div></section><section class="section" id="SECTIONfirst-deriv-test"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">15.3</span><span class="space"> </span><span class="title">The Proof of the First Derivative Test</span>
+</h3>
+<div class="para" id="SECTIONfirst-deriv-test-2">We stated <a href="" class="xref" data-knowl="./knowl/xref/THEOREMFDT.html" title="Theorem 9.41: The First Derivative Test">Theorem 9.41</a> in <a href="CHAPTERwhat-deriv-tells.html" class="internal" title="Chapter 9: Optimization: Going to Extremes">Chapter 9</a> without stating the conditions that make it true, because at the time our attention was primarily on using it.</div>
+<div class="para" id="SECTIONfirst-deriv-test-3">Since the focus of our attention here is on what makes the First Derivative Test true we will restate it to reflect our new, and deeper, understanding. Notice that the conclusion is the same, only the conditions have changed.</div>
+<article class="theorem theorem-like" id="THEOREMFDTproved"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">15.13</span><span class="period">.</span><span class="space"> </span><span class="title">First Derivative Test.</span>
+</h4>
+<div class="para" id="THEOREMFDTproved-2">Suppose <span class="process-math">\(f(x)\)</span> is continuous on the interval <span class="process-math">\([\alpha,\beta]\text{,}\)</span> and differentiable on the interval <span class="process-math">\((\alpha,\beta)\text{.}\)</span> Suppose further that  both <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are in the interval <span class="process-math">\([\alpha,\beta]\)</span> and <span class="process-math">\(b\gt a\text{.}\)</span> \begin{enumerate}[label={  (\alph*)}] \item If <span class="process-math">\(f^\prime(x)\gt 0\)</span> on the interval <span class="process-math">\((\alpha,\beta)\)</span> then <span class="process-math">\(f(b)\gt f(a)\text{.}\)</span> (That is, the function is increasing on <span class="process-math">\([\alpha,\beta]\text{.}\)</span>) \item If <span class="process-math">\(f^\prime(x)\lt 0\)</span> on the interval <span class="process-math">\((\alpha,\beta)\)</span> then <span class="process-math">\(f(b)\lt f(a)\text{.}\)</span> (That is, the function is decreasing on <span class="process-math">\([\alpha,\beta]\text{.}\)</span>) \end{enumerate}</div></article><details id="SECTIONfirst-deriv-test-5" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="title">Proof of Part (a).</span></h4></summary><article class="hiddenproof"> <div class="para logical" id="SECTIONfirst-deriv-test-5-2">
+<div class="para">We want to use the Mean Value Theorem  on the interval <span class="process-math">\([a,b]\)</span> so we begin by verifying that the conditions of the Mean Value Theorem  are satisfied on that interval. Observe that <span class="process-math">\([a,b]\)</span> is a subinterval of <span class="process-math">\([\alpha,\beta]\)</span> so <span class="process-math">\(f(x)\)</span> is continuous on <span class="process-math">\([a,b]\)</span> and differentiable on <span class="process-math">\((a,b)\text{.}\)</span> By the Mean Value Theorem there is a number, <span class="process-math">\(c\text{,}\)</span> in the interval <span class="process-math">\((a,b)\)</span> such that \begin{align*} \frac{f(b)-f(a)}{b-a} \amp= f^\prime(c) f(b)-f(a) \amp= f^\prime(c)(b-a). \end{align*} Since both  <span class="process-math">\(b-a\gt 0\)</span> and <span class="process-math">\(f^\prime(c)\gt 0\)</span> are positive, <span class="process-math">\(f(b)-f(a)\)</span> must be positive as well. Therefore</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(b)-f(a) \gt  0 \text{ or } 
+f(b)\gt f(a).
+\end{equation*}
+</div>
+</div> <div class="para" id="SECTIONfirst-deriv-test-5-3"><em class="alert"><span class="process-math">\(\halmos\)</span></em></div></article></details><article class="problem example-like" id="SECTIONfirst-deriv-test-6"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">15.14</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="SECTIONfirst-deriv-test-6-1"><div class="para" id="SECTIONfirst-deriv-test-6-1-1">Prove part (b) of the First Derivative Test in two different ways:</div></div>
+<article class="task exercise-like" id="SECTIONfirst-deriv-test-6-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="SECTIONfirst-deriv-test-6-2-1-1">By modifying our proof of part (a) of the First Derivative Test as needed.</div></article><article class="task exercise-like" id="SECTIONfirst-deriv-test-6-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="SECTIONfirst-deriv-test-6-3-1-1">Let <span class="process-math">\(g(x)=-f(x)\)</span> and apply part (a) of this problem. \comment{Don’t forget to show first that <span class="process-math">\(g(x)\)</span> satisfies the conditions of the Mean Value Theorem.}</div></article></article><div class="para" id="SECTIONfirst-deriv-test-7">While we are in this frame of mind, we’ll take a moment to notice that we can use the Mean Value Theorem  to prove, rigorously, something that we have alluded to a few times but have never addressed directly.  It is clear from our differentiation rules that if two functions differ by a constant, then they have the same derivative.  We’ve mentioned that the converse is true, namely if two functions have the same derivative on an interval then they must differ by a constant. %  For example, see This can be proved in a manner similar to the proof above.</div>
+<article class="problem example-like" id="PROBLEMDervEqZeroImpliesConstant"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">15.15</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="PROBLEMDervEqZeroImpliesConstant-1"><div class="para" id="PROBLEMDervEqZeroImpliesConstant-1-1"></div></div>
+<article class="task exercise-like" id="PROBLEMDervEqZeroImpliesConstant-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="PROBLEMDervEqZeroImpliesConstant-2-1-1">Suppose <span class="process-math">\(f^\prime(x)=0\)</span> on the interval <span class="process-math">\((\alpha,\beta)\)</span> and that <span class="process-math">\(a\)</span> and  <span class="process-math">\(b\)</span> are two points in that interval.  Use an argument similar to the proof of the first derivative test to show that <span class="process-math">\(f(a)=f(b)\text{.}\)</span>
+</div></article><article class="task exercise-like" id="PROBLEMDervEqZeroImpliesConstant-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="PROBLEMDervEqZeroImpliesConstant-3-1-1">Explain how the result of part (a) says that <span class="process-math">\(f(x)\)</span> must be constant on <span class="process-math">\((\alpha, \beta)\text{.}\)</span>
+</div></article><article class="task exercise-like" id="PROBLEMDervEqZeroImpliesConstant-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para logical" id="PROBLEMDervEqZeroImpliesConstant-4-1-1">
+<div class="para">Show that if <span class="process-math">\(f^\prime(x)=g^\prime(x)\)</span> on the interval <span class="process-math">\((\alpha,\beta)\text{,}\)</span> then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(x)=g(x)+c
+\end{equation*}
+</div>
+<div class="para">for some constant <span class="process-math">\(c\text{.}\)</span> \hint{Consider the function <span class="process-math">\(F(x)=f(x)-g(x)\text{.}\)</span>}</div>
+</div></article><article class="task exercise-like" id="PROBLEMDervEqZeroImpliesConstant-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="PROBLEMDervEqZeroImpliesConstant-5-1-1">What can be said if <span class="process-math">\(f^\prime(x)=g^\prime(x)\)</span> for all <span class="process-math">\(x\)</span> in some set <span class="process-math">\(S\)</span> which is not an interval?</div></article></article><div class="para" id="SECTIONfirst-deriv-test-9">We did not prove  L’Hôpital’s Rule (<a href="" class="xref" data-knowl="./knowl/xref/THEOREMLHRuleGen.html" title="Theorem 12.60: L’Hôpital’s’s Rule">Theorem 12.60</a>) in <a href="CHAPTERlimits-lhop-rule.html" class="internal" title="Chapter 12: Limits and L’Hôpital’s Rule">Chapter 12</a> because the general theorem is slightly beyond the scope of this text. But the somewhat simpler first special case, <a href="" class="xref" data-knowl="./knowl/xref/THEOREMLHRule1.html" title="Theorem 12.51: L’Hôpital’s Rule, (First Special Case)">Theorem 12.51</a>, is a straightforward consequence of  the Mean Value Theorem.</div>
+<article class="problem example-like" id="SECTIONfirst-deriv-test-10"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">15.16</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="SECTIONfirst-deriv-test-10-1"><div class="para" id="SECTIONfirst-deriv-test-10-1-1"></div></div>
+<article class="task exercise-like" id="SECTIONfirst-deriv-test-10-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para logical" id="SECTIONfirst-deriv-test-10-2-1-1">
+<div class="para">Under the conditions of <a href="" class="xref" data-knowl="./knowl/xref/THEOREMLHRule1.html" title="Theorem 12.51: L’Hôpital’s Rule, (First Special Case)">Theorem 12.51</a> explain why</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/THEOREMLHRule1.html">
+\begin{equation*}
+\limit{x}{a}{\frac{f(x)}{g(x)}}=\limit{x}{a}{\frac{f(x)-f(a)}{g(x)-g(a)}}
+\end{equation*}
+</div>
+</div></article><article class="task exercise-like" id="SECTIONfirst-deriv-test-10-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="SECTIONfirst-deriv-test-10-3-1-1">Apply the Mean Value Theorem to the numerator and denominator in part (a) and then prove <a href="" class="xref" data-knowl="./knowl/xref/THEOREMLHRule1.html" title="Theorem 12.51: L’Hôpital’s Rule, (First Special Case)">~ 12.51</a>. \hint{Use the fact that  in the statement of <a href="" class="xref" data-knowl="./knowl/xref/THEOREMMVT.html" title="Theorem 15.9: The Mean Value Theorem">~ 15.9</a> <span class="process-math">\(c\)</span> is between <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{.}\)</span>}</div></article></article></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="CHAPTERdiff-rules-with-limits.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="CHAPTERwhen-deriv-doesnt.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

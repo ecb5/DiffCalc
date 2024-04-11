@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Modeling with Calculus</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Differential Calculus">
+<meta property="book:author" content="Eugene Boman">
+<meta property="book:author" content="Robert Rogers">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.33/pretext_search.js"></script><link href="https://pretextbook.org/css/0.83/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.33</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.33/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.33/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.33/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<link href="https://pretextbook.org/css/0.83/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
+<h1 class="heading"><a href="DiffCalc.html"><span class="title">Differential Calculus:</span> <span class="subtitle">From Practice to Theory</span></a></h1>
+<p class="byline">Eugene Boman, Robert Rogers</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="meta_backmatter-5.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="CHAPTERPTshape-things.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="FromPractice.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="CHAPTERlimits-lhop-rule.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\def\abs#1{\left|#1\right|}
+\def\CancelToRed#1#2{\textcolor{red}{{\cancelto{#1}{#2}}}}
+\def\approach#1{{\left(\rightarrow{}#1\right)}}
+\def\halmos{\rule[-.1ex]{8pt}{2ex}}
+
+\def\limitX#1#2#3#4{{\displaystyle\lim_{\underset{#4}{#1\rightarrow #2}}#3}}
+\def\tlimitX#1#2#3#4{{\displaystyle\lim_{\underset{#4}{#1\rightarrow #2}}}#3}
+\def\rlimit#1#2#3{{\limitX{#1}{#2}{#3}{#1\gt{}#2}{}}}
+\def\rtlimit#1#2#3{{\tlimitX{#1}{#2}{#3}{#1\gt{}#2}{}}}
+\def\llimit#1#2#3{{\limitX{#1}{#2}{#3}{#1\lt{}#2}{}}}
+\def\ltlimit#1#2#3{{\tlimitX{#1}{#2}{#3}{#1\lt{}#2}{}}}
+
+\def\arccot{{\rm{}arccot}{}}
+\def\Arctan{{\rm{}Arctan}{}}
+\def\Arcsin{{\rm{}Arcsin}{}}
+\def\arcsec{{\rm{}arcsec}{}}
+\def\arccsc{{\rm{}arccsc}{}}
+
+\newcommand{\eps}{\varepsilon}
+\newcommand{\RR}{\mathbb {R}}
+\newcommand{\QQ}{\mathbb {Q}}
+\newcommand{\NN}{\mathbb {N}}
+\newcommand{\ZZ}{\mathbb {Z}}
+
+\newcommand{\ParamEqTwo}[2]
+{
+  \left\{
+    \begin{array}{c}
+    {#1}\\
+    {#2}
+    \end{array}
+  \right\}
+}
+\newcommand{\ParamEqThree}[3]
+{
+  \left\{
+    \begin{array}{c}
+    {#1}\\
+    {#2}\\
+    {#3}
+    \end{array}
+  \right\}
+}
+
+\def\absALT#1{\rule[-.7ex]{1pt}{5ex}\hskip2pt#1\hskip2pt\llap{\rule[-.7ex]{1pt}{5ex}}} 
+
+
+\def\sech{{\rm{}sech}{}}
+\def\csch{{\rm{}csch}{}}
+
+
+\def\DD{{\bf{}D}}
+
+\def\eval#1#2#3{\left.#1\right\rvert_{#2}^{#3}}
+\def\ftceval#1#2#3{\eval#1#2#3}
+\def\geneval#1#2{\eval{#1}{#2}{}}
+\def\bigeval#1#2#3{\eval{#2}{#2}{#3}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\def\inverse#1{#1^{-1}}
+
+
+
+
+\def\dx#1{\thinspace{\mathrm d}#1}
+\def\dfdx#1#2{\frac{\dx{#1}}{\dx{#2}}} 
+\def\partialfx#1#2{\frac{\partial{#1}}{\partial{#2}}} 
+\def\partialfxn#1#2#3{\frac{\partial^{#3}{#1}}{\partial{#2}^{#3}}} 
+\def\dfdxn#1#2#3{\frac{\text{d}^{#3}{#1}}{\text{d}{#2}^{#3}}} 
+
+
+\def\dfdxat#1#2#3{\eval{\dfdx{#1}{#2}}{#2=#3}{}}
+
+\def\limit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}#3}}
+\def\tlimit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}}#3}
+\def\limitX#1#2#3#4{{\displaystyle\lim_{\underset{#4}{#1\rightarrow #2}}#3}}
+\def\rlimit#1#2#3{{\limitX{#1}{#2}{#3}{#1\gt{}#2}{}}}
+\def\llimit#1#2#3{{\limitX{#1}{#2}{#3}{#1\lt{}#2}{}}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth5 parts"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Epigraphs</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="SECinstructor.html" class="internal"><span class="title">To the Instructor: Read This First</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-part contains-active">
+<div class="toc-title-box"><a href="FromPractice.html" class="internal"><span class="codenumber">I</span> <span class="title">From Practice . . .</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="CalculusIsARock.html" class="internal"><span class="codenumber">1</span> <span class="title">Calculus is a Rock</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTERproblem-solving.html" class="internal"><span class="codenumber">2</span> <span class="title">Introduction: Some  Advice on Problem Solving</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERproblem-solving.html#SECusing-lett-inst" class="internal"><span class="codenumber">2.1</span> <span class="title">Using Letters Instead of Numbers</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERproblem-solving.html#SECTIONAn-easy-problem-alg" class="internal"><span class="codenumber">2.2</span> <span class="title">Substitution, or Making Things “Easy on the Eyes”</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERproblem-solving.html#SECan-easy-problem-geo" class="internal"><span class="codenumber">2.3</span> <span class="title">An “Easy” Problem From Geometry</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERproblem-solving.html#SECour-advice-synopsis" class="internal"><span class="codenumber">2.4</span> <span class="title">Our advice, a synopsis</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html" class="internal"><span class="codenumber">3</span> <span class="title">Science Before Calculus</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#Apologia" class="internal"><span class="codenumber">3.1</span> <span class="title">Apologia</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#SECTIONSomePreliminaries" class="internal"><span class="codenumber">3.2</span> <span class="title">Some Preliminaries</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#sec-laziness-nature" class="internal"><span class="codenumber">3.3</span> <span class="title">The Laziness of Nature</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#SECTIONFermMethAedeq" class="internal"><span class="codenumber">3.4</span> <span class="title">Fermat’s Method of Adequality</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#SECTIONdescartes-normals" class="internal"><span class="codenumber">3.5</span> <span class="title">Descartes’s Method of Normals</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#SECTIONroberv-conic-sect" class="internal"><span class="codenumber">3.6</span> <span class="title">Roberval, Conic Sections, and the Dynamic Approach</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#SUBSECTIONSpdVelRofC" class="internal"><span class="codenumber">3.6.1</span> <span class="title">Speed, Velocity, and Rates of Change</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#SUBSECTIONTanConicSect" class="internal"><span class="codenumber">3.6.2</span> <span class="title">The Tangent Lines of the Conic Sections</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#SUBSECTIONTanParab" class="internal"><span class="codenumber">3.6.2.1</span> <span class="title">The Tangent to a Parabola</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#SUBSECTIONTanEllipse" class="internal"><span class="codenumber">3.6.2.2</span> <span class="title">The Tangent to an Ellipse</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#TangentHyperbola" class="internal"><span class="codenumber">3.6.2.3</span> <span class="title">The Tangent to an Hyperbola</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html#SECTIONsnells-law-refr" class="internal"><span class="codenumber">3.7</span> <span class="title">Snell’s Law and the Limitations of Adequality:</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTERdifferentials.html" class="internal"><span class="codenumber">4</span> <span class="title">Differentials, Differentiation, and the Derivative</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERdifferentials.html#SECTIONHist-intr" class="internal"><span class="codenumber">4.1</span> <span class="title">Historical Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERdifferentials.html#SECTIONWarning" class="internal"><span class="codenumber">4.2</span> <span class="title">Warning: Be Sure You Understand  the Purpose of This Chapter</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERdifferentials.html#SECTIONsome-rules-diff" class="internal"><span class="codenumber">4.3</span> <span class="title">The General Differentiation Rules</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERdifferentials.html#CHAPTERdifferentials-5" class="internal"><span class="codenumber">4.4</span> <span class="title">The Generalized Power  Rule</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html" class="internal"><span class="codenumber">5</span> <span class="title">Slopes, Tangents, and Rates of Change</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONVelocitySlopeTangent" class="internal"><span class="codenumber">5.1</span> <span class="title">Slopes and Tangents</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONdefin-tang-line" class="internal"><span class="codenumber">5.2</span> <span class="title">Defining the Tangent Line</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONvomit-comet" class="internal"><span class="codenumber">5.3</span> <span class="title">The Vomit Comet</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONrates-change" class="internal"><span class="codenumber">5.4</span> <span class="title">Galileo Drops the Ball</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECONDBringCalc" class="internal"><span class="codenumber">5.5</span> <span class="title">Bringing in Calculus</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONDerivative" class="internal"><span class="codenumber">5.6</span> <span class="title">The Derivative</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONnewt-flux-dynam" class="internal"><span class="codenumber">5.7</span> <span class="title">Thinking Dynamically</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONFluxions" class="internal"><span class="codenumber">5.8</span> <span class="title">Newton’s Method of Fluxions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONParametricFunctions" class="internal"><span class="codenumber">5.8.1</span> <span class="title">Parametric Functions</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONbridg-chains-telesc" class="internal"><span class="codenumber">5.9</span> <span class="title">Bridges, Chains, Domes, and Telescopes</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONBridges" class="internal"><span class="codenumber">5.9.1</span> <span class="title">Bridges</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONChains" class="internal"><span class="codenumber">5.9.2</span> <span class="title">Chains</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONDomes" class="internal"><span class="codenumber">5.9.3</span> <span class="title">Domes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONTelescopes" class="internal"><span class="codenumber">5.9.4</span> <span class="title">Telescopes</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTERcalc-trig.html" class="internal"><span class="codenumber">6</span> <span class="title">Calculus and Trigonometry</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SECTIONtrig-interl" class="internal"><span class="codenumber">6.1</span> <span class="title">A Trigonometric Interlude</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SUBSECTIONradian-measure" class="internal"><span class="codenumber">6.1.1</span> <span class="title">Radian Measure</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SECTIONtrig-interl-3" class="internal"><span class="codenumber">6.1.2</span> <span class="title">The Trigonometric Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SUBSECTIONmodel-with-trig" class="internal"><span class="codenumber">6.1.3</span> <span class="title">Modeling with Trigonometric Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SECTIONtrig-interl-5" class="internal"><span class="codenumber">6.1.4</span> <span class="title">Phase Shifts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SECTIONpolar-coordinates" class="internal"><span class="codenumber">6.1.5</span> <span class="title">Polar Coordinates</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SECTIONdiff-sine-cosine" class="internal"><span class="codenumber">6.2</span> <span class="title">The Differentials of the Sine and Cosine Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SUBSECTIONCircularMotion" class="internal"><span class="codenumber">6.2.1</span> <span class="title">Circular Motion</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SUBSECTIONpolar-coord-calc" class="internal"><span class="codenumber">6.2.2</span> <span class="title">Polar Coordinates and Calculus</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SECTIONdiff-sine-cosine-5" class="internal"><span class="codenumber">6.2.3</span> <span class="title">The Brachistochrone Problem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SECTIONdiff-sine-cosine-6" class="internal"><span class="codenumber">6.2.4</span> <span class="title">Spin Casting, Redux</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SUBSECTIONsimple-harm-oscill" class="internal"><span class="codenumber">6.2.5</span> <span class="title">Simple Harmonic Oscillation</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SECTIONdiff-other-trig" class="internal"><span class="codenumber">6.3</span> <span class="title">The Differentials of the Other Trigonometric Functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SECTIONinverse-tan-and-cot" class="internal"><span class="codenumber">6.4</span> <span class="title">The Inverse Tangent and Cotangent Functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SECTIONwitch-agnesi-inverse" class="internal"><span class="codenumber">6.5</span> <span class="title">The Witch of Agnesi and the Inverse Tangent Function</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SECTIONdiff-inverse-tancot" class="internal"><span class="codenumber">6.6</span> <span class="title">The Differentials of the Inverse Tangent and Inverse Cotangent Functions</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SECTIONother-inverse-trig" class="internal"><span class="codenumber">6.7</span> <span class="title">The Other Inverse Trigonometric Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#InverseSine" class="internal"><span class="codenumber">6.7.1</span> <span class="title">The Inverse Sine Function:  <span class="process-math">\(\inverse\sin(x)\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#InverseSecCsc" class="internal"><span class="codenumber">6.7.2</span> <span class="title">The Inverse Secant and Inverse Cosecant</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERcalc-trig.html#SECTIONcurvature" class="internal"><span class="codenumber">6.8</span> <span class="title">Curvature</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTApproximation.html" class="internal"><span class="codenumber">7</span> <span class="title">Approximation Methods</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTApproximation.html#SECTIONnewtons-method" class="internal"><span class="codenumber">7.1</span> <span class="title">Root Finding: Two  Pre-Calculus Approaches</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTApproximation.html#SUBSECTIONBisectionMethod" class="internal"><span class="codenumber">7.1.1</span> <span class="title">The Bisection Method</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTApproximation.html#SUBSECTIONBabylonianMethod" class="internal"><span class="codenumber">7.1.2</span> <span class="title">The Babylonian Method for Square Roots</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTApproximation.html#SECTIONnewtons-method-1" class="internal"><span class="codenumber">7.2</span> <span class="title">Newton’s Method</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTApproximation.html#SUBSECTIONNewtonsMethodBasic" class="internal"><span class="codenumber">7.2.1</span> <span class="title">The Idea Behind Newton’s Method</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTApproximation.html#SUBSECTIONSpectacularFailure" class="internal"><span class="codenumber">7.2.2</span> <span class="title">Spectacular Failure</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTApproximation.html#SUBSECTIONSubtleFailure" class="internal"><span class="codenumber">7.2.3</span> <span class="title">Subtle Failure</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTApproximation.html#SECTIONeulers-method" class="internal"><span class="codenumber">7.3</span> <span class="title">Euler’s Method</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTApproximation.html#SECTIONmore-high-deriv" class="internal"><span class="codenumber">7.4</span> <span class="title">Higher Derivatives, Lagrange, and Taylor</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html" class="internal"><span class="codenumber">8</span> <span class="title">Exponentials and Logarithms</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONIvps" class="internal"><span class="codenumber">8.1</span> <span class="title">Initial Value Problems (IVPs)</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONexponential" class="internal"><span class="codenumber">8.2</span> <span class="title">The Natural Exponential</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONexponential-growth" class="internal"><span class="codenumber">8.3</span> <span class="title">Exponential Growth and Exponential Notation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONhyperb-trig-hang" class="internal"><span class="codenumber">8.4</span> <span class="title">Hyperbolic Trigonometry: The Hanging Chain</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONGatewayArch" class="internal"><span class="codenumber">8.5</span> <span class="title">The Gateway Arch</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#CHAPTERlast-elem-funct-8" class="internal"><span class="codenumber">8.6</span> <span class="title">Exponential Growth</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONExpAndCmpndInt" class="internal"><span class="codenumber">8.7</span> <span class="title">Exponential Functions and Compound Interest</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONnatural-logarithm-1" class="internal"><span class="codenumber">8.8</span> <span class="title">A Short Introduction to Logarithms: John Napier Logs In</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONNatLog" class="internal"><span class="codenumber">8.9</span> <span class="title">Logarithms, Natural and Unnatural</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONLogApps" class="internal"><span class="codenumber">8.10</span> <span class="title">Applications of Logarithms</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONradioactive-decay" class="internal"><span class="codenumber">8.10.1</span> <span class="title">Radioactive Dating</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONnewtons-law-cooling" class="internal"><span class="codenumber">8.10.2</span> <span class="title">Chillin’ with Newton: The Law of Cooling</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONDerivNatLog" class="internal"><span class="codenumber">8.11</span> <span class="title">The Derivative of the Natural Logarithm</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONgener-logar-expon" class="internal"><span class="codenumber">8.12</span> <span class="title">General Logarithms and Exponentials</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONleonh-euler-harm" class="internal"><span class="codenumber">8.13</span> <span class="title">Leonhard Euler, Harmonic Oscillators, and Complex Numbers</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONHowEulerDidIt" class="internal"><span class="codenumber">8.13.1</span> <span class="title">How Euler Did It</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html" class="internal"><span class="codenumber">9</span> <span class="title">Optimization: Going to Extremes</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SECTIONintroduction" class="internal"><span class="codenumber">9.1</span> <span class="title">Introduction: Fermat’s Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SECTIONfive-simil-probl" class="internal"><span class="codenumber">9.2</span> <span class="title">Preliminaries: Some Simple Optimizations</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SECTIONrefl-refr-rainb" class="internal"><span class="codenumber">9.3</span> <span class="title">Reflections, Refractions, and Rainbows</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSECTIONreflection" class="internal"><span class="codenumber">9.3.1</span> <span class="title">Reflection</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSECTIONrefraction" class="internal"><span class="codenumber">9.3.2</span> <span class="title">Refraction: Snell’s Law</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSECTIONrainbows" class="internal"><span class="codenumber">9.3.3</span> <span class="title">Rainbows</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSECTIONRainbow" class="internal"><span class="codenumber">9.3.4</span> <span class="title">The Colors of the Rainbow</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSECTIONDoubleRainbows" class="internal"><span class="codenumber">9.3.5</span> <span class="title">Double Rainbows</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SECTIONGlobalVsLocalExtrema" class="internal"><span class="codenumber">9.4</span> <span class="title">Global vs. Local Extrema</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSECTIONoptim-abstr-probl" class="internal"><span class="codenumber">9.5</span> <span class="title">Optimization, the Abstract Problem</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSECTIONoptim-abstr-probl-3" class="internal"><span class="codenumber">9.5.1</span> <span class="title">Identifying and Distinguishing Maxima and Minima</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSECTIONTransitionPoints" class="internal"><span class="codenumber">9.5.2</span> <span class="title">Transition Points, and Possible Transition Points on Open Intervals</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSECTIONunderl-deriv" class="internal"><span class="codenumber">9.5.3</span> <span class="title">Undefined Derivatives</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSECTIONoptim-clos-interv" class="internal"><span class="codenumber">9.5.4</span> <span class="title">Transition Points on a Closed Interval; the Problem of Endpoints</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SECTIONconc-second-deriv-1" class="internal"><span class="codenumber">9.6</span> <span class="title">Concavity and the Second Derivative Test</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSECTIONconc-second-deriv" class="internal"><span class="codenumber">9.6.1</span> <span class="title">The Second Derivative Test</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SECTIONoptim-probl" class="internal"><span class="codenumber">9.7</span> <span class="title">Optimization Problems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSECTIONPageOfText" class="internal"><span class="codenumber">9.7.1</span> <span class="title">Two Ways to Optimize</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSUBSECTIONFirstSolution" class="internal"><span class="codenumber">9.7.1.1</span> <span class="title">First Solution:</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSUBSECTIONSecondSolution" class="internal"><span class="codenumber">9.7.1.2</span> <span class="title">Second Solution</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html#SUBSECTIONVarOptProbs" class="internal"><span class="codenumber">9.7.2</span> <span class="title">Selected Optimization Problems</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTERPTshape-things.html" class="internal"><span class="codenumber">10</span> <span class="title">Graphing with Calculus</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTshape-things.html#SECTIONgraph-with-form" class="internal"><span class="codenumber">10.1</span> <span class="title">Graphing with a Formula for  <span class="process-math">\(y(x)\)</span></span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTshape-things.html#SECTIONgraph-without-form" class="internal"><span class="codenumber">10.2</span> <span class="title">Graphing Without Formulas</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERPTshape-things.html#SECTIONGraphingWithDeriv" class="internal"><span class="codenumber">10.3</span> <span class="title">Graphing with a Formula for  <span class="process-math">\(\dfdx{y}{x}\)</span></span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTshape-things.html#SUBSECTIONDerivDepOnxAlone" class="internal"><span class="codenumber">10.3.1</span> <span class="title">When  <span class="process-math">\(\dfdx{y}{x}\)</span> Depends on <span class="process-math">\(x\)</span> alone</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTshape-things.html#SUBSECTIONDfdxDependsOnYAlone" class="internal"><span class="codenumber">10.3.2</span> <span class="title">When  <span class="process-math">\(\dfdx{y}{t}\)</span> depends on <span class="process-math">\(y\)</span> alone</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter active">
+<div class="toc-title-box"><a href="CHAPTERmodel-with-calc.html" class="internal"><span class="codenumber">11</span> <span class="title">Modeling with Calculus</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERmodel-with-calc.html#SECTIONpopulation-dynamics" class="internal"><span class="codenumber">11.1</span> <span class="title">Population Dynamics</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERmodel-with-calc.html#SUBSECTIONModelingTrout" class="internal"><span class="codenumber">11.1.1</span> <span class="title">Modeling a Trout Farm</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERmodel-with-calc.html#SECTIONlittle-healthy-comp" class="internal"><span class="codenumber">11.1.2</span> <span class="title">The Competing Species Model</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERmodel-with-calc.html#SECTIONselect-model-probl" class="internal"><span class="codenumber">11.2</span> <span class="title">Selected Modeling Problems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERmodel-with-calc.html#SECTIONepidemic-blues" class="internal"><span class="codenumber">11.2.1</span> <span class="title">Epidemics, The SIR Model</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERmodel-with-calc.html#subSECTIONtractrix" class="internal"><span class="codenumber">11.2.2</span> <span class="title">The Tractrix</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERmodel-with-calc.html#SUBSECTIONPursuit" class="internal"><span class="codenumber">11.2.3</span> <span class="title">The  Pursuit Problem</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTERlimits-lhop-rule.html" class="internal"><span class="codenumber">12</span> <span class="title">Limits and L’Hôpital’s Rule</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERlimits-lhop-rule.html#SECTIONhoriz-asympt-as" class="internal"><span class="codenumber">12.1</span> <span class="title">Horizontal Asymptotes as Limits “at Infinity”</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlimits-lhop-rule.html#DIGRESSIONLimitNotation" class="internal"><span class="codenumber">12.1.1</span> <span class="title">Limit Notation</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlimits-lhop-rule.html#SECTIONsqueeze-theorem-informal" class="internal"><span class="codenumber">12.2</span> <span class="title">The Squeeze Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlimits-lhop-rule.html#SECTIONvertical-asymptotes" class="internal"><span class="codenumber">12.3</span> <span class="title">Vertical Asymptotes</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERlimits-lhop-rule.html#SECTIONmore-indet-forms" class="internal"><span class="codenumber">12.4</span> <span class="title">Indeterminate Forms and L’Hôpital’s Rule</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlimits-lhop-rule.html#SUBSECTIONLHopitalsRule" class="internal"><span class="codenumber">12.4.1</span> <span class="title">L’Hôpital’s Rule</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlimits-lhop-rule.html#SUBSECTIONlhop-rule-horiz" class="internal"><span class="codenumber">12.4.2</span> <span class="title">L’Hôpital’s Rule and Horizontal Asymptotes</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-part">
+<div class="toc-title-box"><a href="ToTheory.html" class="internal"><span class="codenumber">II</span> <span class="title">To Theory . . .</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTERWhatsWrong.html" class="internal"><span class="codenumber">13</span> <span class="title">What’s Wrong with Differentials?</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERWhatsWrong.html#CalcAndBerkeley" class="internal"><span class="codenumber">13.1</span> <span class="title">Calculus and Bishop Berkeley</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERWhatsWrong.html#sec:secants-tangents" class="internal"><span class="codenumber">13.2</span> <span class="title">Secants and Tangents</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTERdiff-rules-with-limits.html" class="internal"><span class="codenumber">14</span> <span class="title">The Differentiation Rules via Limits</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERdiff-rules-with-limits.html#SECTIONlimit-theorems-laws" class="internal"><span class="codenumber">14.1</span> <span class="title">The Limit Rules (Theorems)</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERdiff-rules-with-limits.html#SUBSECTIONlimit-comp-cont" class="internal"><span class="codenumber">14.1.1</span> <span class="title">The Limit of a Composition and Continuity at a Point</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERdiff-rules-with-limits.html#SECTIONdiff-rules-via" class="internal"><span class="codenumber">14.2</span> <span class="title">The General Differentiation Theorems, via Limits</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERdiff-rules-with-limits.html#SECTIONChainRule" class="internal"><span class="codenumber">14.3</span> <span class="title">The Chain Rule</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERdiff-rules-with-limits.html#SECTIONproduct-rule-limits" class="internal"><span class="codenumber">14.4</span> <span class="title">The Product Rule</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERdiff-rules-with-limits.html#SECTIONother-gener-diff" class="internal"><span class="codenumber">14.5</span> <span class="title">The Other General Differentiation Rules</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERdiff-rules-with-limits.html#SECTIONdiff-trig-funct" class="internal"><span class="codenumber">14.6</span> <span class="title">Derivatives of the Trigonometric Functions, via Limits</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERdiff-rules-with-limits.html#SECTIONinverse-functions" class="internal"><span class="codenumber">14.7</span> <span class="title">Inverse Functions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTERFDT-Redux.html" class="internal"><span class="codenumber">15</span> <span class="title">The First Derivative Test, Redux</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERFDT-Redux.html#SECTIONfermats-theorem" class="internal"><span class="codenumber">15.1</span> <span class="title">Fermat’s Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERFDT-Redux.html#SECTIONrolles-lemma-mean" class="internal"><span class="codenumber">15.2</span> <span class="title">Rolle’s Lemma and the Mean Value Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERFDT-Redux.html#SECTIONfirst-deriv-test" class="internal"><span class="codenumber">15.3</span> <span class="title">The Proof of the First Derivative Test</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTERwhen-deriv-doesnt.html" class="internal"><span class="codenumber">16</span> <span class="title">When the Derivative Doesn’t Exist</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERwhen-deriv-doesnt.html#SECTIONone-sided-deriv" class="internal"><span class="codenumber">16.1</span> <span class="title">One Sided Derivatives</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTERformal-limits.html" class="internal"><span class="codenumber">17</span> <span class="title">Formal Limits</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SECTIONlimits-at-infinity" class="internal"><span class="codenumber">17.1</span> <span class="title">Getting Around Infinity</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SECTIONlimits-at-real" class="internal"><span class="codenumber">17.2</span> <span class="title">Limits at a Real Number</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CHAPTERformal-limits.html#SECTIONLimitLaws" class="internal"><span class="codenumber">17.3</span> <span class="title">Limit Laws (Theorems)</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONlimit-sum-at" class="internal"><span class="codenumber">17.3.1</span> <span class="title">The Limit of a Sum</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONsqueeze-theorem" class="internal"><span class="codenumber">17.3.2</span> <span class="title">The Squeeze Theorem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SECTIONlimit-composition" class="internal"><span class="codenumber">17.3.3</span> <span class="title">The Limit of a Composition</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONlimit-product-at" class="internal"><span class="codenumber">17.3.4</span> <span class="title">The Limit of a Product</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERformal-limits.html#SUBSECTIONOneOverXIsCont" class="internal"><span class="codenumber">17.3.5</span> <span class="title">The Function    <span class="process-math">\(f(x)=\frac1x\)</span> is Continuous Wherever  It Is Defined</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="meta_backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="meta_backmatter-2.html" class="internal"><span class="codenumber">A</span> <span class="title">Selected Hints</span></a></div></li>
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="meta_backmatter-3.html" class="internal"><span class="codenumber">B</span> <span class="title">Selected Solutions</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="meta_backmatter-4.html" class="internal"><span class="codenumber">C</span> <span class="title">List of Symbols</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="meta_backmatter-5.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="meta_backmatter-6.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="CHAPTERmodel-with-calc"><h2 class="heading">
+<span class="type">Chapter</span><span class="space"> </span><span class="codenumber">11</span><span class="space"> </span><span class="title">Modeling with Calculus</span>
+</h2>
+<section class="section" id="SECTIONpopulation-dynamics"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">11.1</span><span class="space"> </span><span class="title">Population Dynamics</span>
+</h3>
+<section class="introduction" id="SECTIONpopulation-dynamics-2"><blockquote class="blockquote" id="SECTIONpopulation-dynamics-2-1">
+<div class="para" id="SECTIONpopulation-dynamics-2-1-1">The purpose of mathematical models is not to fit to data but to sharpen one’s questions.</div> <cite class="attribution">―<a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Karlin/" target="_blank">Samuel Karlin (1924-2007)</a><a class="xref" id="SECTIONpopulation-dynamics-2-1-2-2" href="" data-knowl="./knowl/fn/SECTIONpopulation-dynamics-2-1-2-2.html" title="Footnote 11.1"><sup> 1 </sup></a></cite>
+</blockquote> <div class="para" id="SECTIONpopulation-dynamics-2-2">In the introduction to <a href="CHAPTERwhat-deriv-tells.html" class="internal" title="Chapter 9: Optimization: Going to Extremes">Chapter 9</a> we mentioned that the original motivation for the invention of Calculus was optimization. But after it was invented scientists and mathematicians found that Calculus is useful for solving a wide variety of other kinds of problems. In this chapter we will explore how Calculus helps us solve various non-optimization problems. As you will see the ability  to sketch the graph of a function, even if it is only qualitative, is extremely useful.</div></section><section class="subsection" id="SUBSECTIONModelingTrout"><h4 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">11.1.1</span><span class="space"> </span><span class="title">Modeling a Trout Farm</span>
+</h4>
+<blockquote class="blockquote" id="SUBSECTIONModelingTrout-2">
+<div class="para" id="SUBSECTIONModelingTrout-2-1">A man may fish with the worm that hath eat of a king, and eat of the fish that hath fed of that worm.</div> <cite class="attribution">―<a class="external" href="https://www.shakespeare.org.uk/explore-shakespeare/shakespedia/william-shakespeare/william-shakespeare-biography/" target="_blank">William Shakespeare (1564-1616)</a><a class="xref" id="SUBSECTIONModelingTrout-2-2-2" href="" data-knowl="./knowl/fn/SUBSECTIONModelingTrout-2-2-2.html" title="Footnote 11.2"><sup> 2 </sup></a></cite>
+</blockquote>
+<div class="para" id="SUBSECTIONModelingTrout-3">Suppose we are running an industrial trout fishery. There are a number of questions we’d really like to be able to answer at any given time. How large is the current stock? Do we have too few? Too many?  Is our stock of trout in danger of dying off due to under or over population? How frequently can we harvest our stock without endangering it? Even if precise numbers aren’t possible, it would still be useful to have a good, qualitative understanding of the life cycle of our stock of trout so we could make reliable estimates.</div>
+<div class="para" id="SUBSECTIONModelingTrout-4">To gain such an understanding we will build a model of our trout population as a function of time. As a first approximation assume that we have complete control of the lake where we will hold the trout.  We can supply all of the food and space that our trout need to continue reproducing.</div>
+<div class="para" id="SUBSECTIONModelingTrout-5">Suppose that our lake is stocked with an initial purchase of <span class="process-math">\(10\)</span> tons of trout.  Let <span class="process-math">\(P(t)\)</span> represent the amount of fish we have, in tons, at time, <span class="process-math">\(t\text{,}\)</span> in years, (so <span class="process-math">\(P(0)=10\)</span> tons). We can estimate the rate of growth of our population by casting a net into the same point of the lake each year and weighing the catch\aside{Of course we’d want to always use the same sized net as well.}. Comparing the weight of the catch from year to year will give  a reasonable estimate of the rate at which the trout population grows in one year.</div>
+<div class="para logical" id="SUBSECTIONModelingTrout-6">
+<div class="para">For the sake of specificity, suppose that the population is growing continuously at a nominal growth rate of <span class="process-math">\(10\%\text{.}\)</span> %  This Then we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\dfdx{P}{t}=0.1P
+\end{equation*}
+</div>
+<div class="para">just as we did in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "SECexponential-growth" missing or not unique]</code>.</div>
+</div>
+<div class="para logical" id="SUBSECTIONModelingTrout-7">
+<div class="para">So the first model for our trout fishery lake is the following IVP:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dfdx{P}{t}=.1P,\ \       P(0)=10.
+\label{eq:Fishery1}
+\end{equation*}
+</div>
+</div>
+<div class="para" id="SUBSECTIONModelingTrout-8">This IVP should look familiar. When we were modeling the growth of a bacteria colony in <a href="" class="xref" data-knowl="./knowl/xref/EXAMPLEpopulation-growth.html" title="Example 8.31: Population Growth">Example~\ 8.31</a> <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "SECexponential-growth" missing or not unique]</code> we got <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQUATIONBacteriaIVP" missing or not unique]</code>), which is almost the same equation, remember? The only difference between them is that in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQFishery1" missing or not unique]</code>) the coefficient of <span class="process-math">\(P\)</span> is <span class="process-math">\(0.1\)</span> and in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQUATIONBacteriaIVP" missing or not unique]</code>) the coefficient of <span class="process-math">\(y\)</span> is <span class="process-math">\(0.3\text{.}\)</span>
+</div>
+<div class="para logical" id="SUBSECTIONModelingTrout-9">
+<div class="para">Since the solution of <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQUATIONBacteriaIVP" missing or not unique]</code>) was <span class="process-math">\(y(t)=10e^{0.3t}\)</span> it seems reasonable to conclude that the solution of <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQFishery1" missing or not unique]</code>}) is:</div>
+<div class="displaymath process-math" data-contains-math-knowls=" ">
+\begin{equation*}
+P(t)=10e^{0.1t}.
+\end{equation*}
+</div>
+</div>
+<article class="exercise exercise-like" id="SUBSECTIONModelingTrout-10"><h5 class="heading">
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">11.1</span><span class="period">.</span>
+</h5>
+<div class="para" id="SUBSECTIONModelingTrout-10-1-1">Confirm that <span class="process-math">\(P(t)=10e^{0.1t}\)</span> solves <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQFishery1" missing or not unique]</code>).</div></article><figure class="figure figure-like" id="SUBSECTIONModelingTrout-11"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/Fishery1.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">11.2<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://www.britannica.com/biography/Abraham-Cowley" target="_blank">This figure needs a caption.</a><a class="xref" id="SUBSECTIONModelingTrout-11-1-2" href="" data-knowl="./knowl/fn/SUBSECTIONModelingTrout-11-1-2.html" title="Footnote 11.3"><sup> 3 </sup></a></figcaption></figure><div class="para" id="SUBSECTIONModelingTrout-12">The graph of <span class="process-math">\(P(t)\)</span> is shown at the right. As you can see our trout population is growing exponentially, so it appears that we’re going to get very rich as soon as we sell of all of those fish.</div>
+<div class="para" id="SUBSECTIONModelingTrout-13">Of course, in practice this is not what happens. We made several simplifying assumptions when we began.  We assumed that (1) we could supply all of the food our growing population needs, and (2) our trout would have all of the room they needed.</div>
+<div class="para" id="SUBSECTIONModelingTrout-14">These assumptions are unrealistic in the long run.  But in the short run they are not completely crazy.</div>
+<div class="para" id="SUBSECTIONModelingTrout-15">Recall that in <a href="CHAPTERlast-elem-funct.html" class="internal" title="Chapter 8: Exponentials and Logarithms">Chapter 8</a> we described a situation in Lake Erie near Toledo, Ohio when, for a few days, the algae population grew exponentially in much the same manner as that suggested by our trout model.  Naturally such growth cannot be sustained. Eventually the algae will consume all of the available nutrients, or will simply run out of space. They will then begin to die off. But our model, simple as it is, gives pretty accurate predictions of the population for small values of <span class="process-math">\(t\text{,}\)</span> be they a population of bacteria, algae, trout, or even humans.</div>
+<div class="para" id="SUBSECTIONModelingTrout-16">In building a mathematical model of any physical phenomenon we start with the simplest model we can, find out where it goes bad, and then “tweak” it so that we: \begin{enumerate} \item keep those properties of the model that make realistic predictions, and \item eliminate those properties of the model that make unrealistic predictions. \end{enumerate} Thus we need to tweak <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQFishery1" missing or not unique]</code>) in such a way that <span class="process-math">\(\dfdx{P}{t}=0.1P\)</span> when <span class="process-math">\(P\)</span> is near zero (or, at least, <span class="process-math">\(\dfdx{P}{t}\approx0.1P\)</span>), but which also recognizes that exponential growth is unsustainable.</div>
+<div class="para" id="SUBSECTIONModelingTrout-17">Since exponential growth can’t be maintained indefinitely the population must eventually stop growing and drop to a lower level -- or collapse entirely. Thus there must be a maximum population level, <span class="process-math">\(P(t)\text{,}\)</span> where <span class="process-math">\(\dfdx{P}{t}=0\text{.}\)</span> Whatever that level is, we’ll call it <span class="process-math">\(C\text{.}\)</span>
+</div>
+<div class="para logical" id="SUBSECTIONModelingTrout-18">
+<div class="para">One way to tweak <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQFishery1" missing or not unique]</code>) to reflect this fact is to insert the factor <span class="process-math">\((C-P)\)</span> as follows</div>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\dfdx{P}{t}=0.1P(C-P).
+\end{equation*}
+</div>
+<div class="para">We see that if the trout population ever reaches <span class="process-math">\(C\)</span> it must level off since in that case <span class="process-math">\(\dfdx{P}{t}=0\text{.}\)</span> Therefore this model avoids predicting that the trout population will grow exponentially.</div>
+</div>
+<div class="para logical" id="SUBSECTIONModelingTrout-19">
+<div class="para">However, notice that for values of <span class="process-math">\(P\)</span> near zero, <span class="process-math">\(C-P\approx C\text{.}\)</span> Thus this differential equation says that when <span class="process-math">\(P\)</span> is near zero</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dfdx{P}{t}\approx\left(0.1C\right)P
+\end{equation*}
+</div>
+<div class="para">but we needed <span class="process-math">\(\dfdx{P}{t}\approx0.1P\)</span> so this particular tweak won’t quite work because the difference between <span class="process-math">\(\dfdx{P}{t}\approx0.01P\)</span> and <span class="process-math">\(\dfdx{P}{t}\approx\left(0.01C\right)P\)</span> could be substantial,  depending on the value of <span class="process-math">\(C\)</span> (which we don’t know).</div>
+</div>
+<div class="para logical" id="SUBSECTIONModelingTrout-20">
+<div class="para">So we will try a slightly different tweak. Instead of <span class="process-math">\((C-P)\)</span> we will insert the factor <span class="process-math">\(\left(1-\frac{P}{C}\right)\)</span> as in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQFishery2" missing or not unique]</code>) below.</div>
+<div class="displaymath process-math" data-contains-math-knowls="  ">
+\begin{equation*}
+\label{eq:Fishery2}
+\dfdx{P}{t}=0.1P\left(1-\frac{P}{C}\right), \ P(0)=10.
+\end{equation*}
+</div>
+<div class="para">Notice that we still have <span class="process-math">\(\dfdx{P}{t}=0\)</span> when <span class="process-math">\(P=C\text{.}\)</span> But now we also have <span class="process-math">\(\dfdx{P}{t}\approx0.1P\)</span> when <span class="process-math">\(P\)</span> is close to zero, so this change seems to meet the goal of our tweak. This type of <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQFishery2" missing or not unique]</code>) is called the Logistic Equation (or the Logistic Model) and its solution is a better long-term predictor of population growth than is the solution of <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQFishery1" missing or not unique]</code>) as we will see.</div>
+</div>
+<div class="para logical" id="SUBSECTIONModelingTrout-21">
+<div class="para">The parameter <span class="process-math">\(C\)</span> would normally be determined experimentally (measured), but for purposes of this discussion we will arbitrarily assign it the value <span class="process-math">\(C=100\)</span> just to keep the numbers easy to deal with. So, our IVP will be</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\label{eq:LogEq}
+\dfdx{P}{t}=0.1P\left(1-\frac{P}{100}\right),\ \ P(0)=10.
+\end{equation*}
+</div>
+</div>
+<div class="para" id="SUBSECTIONModelingTrout-22"></div>
+<article class="exercise exercise-like" id="SUBSECTIONModelingTrout-23"><h5 class="heading">
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">11.3</span><span class="period">.</span>
+</h5>
+<div class="introduction" id="SUBSECTIONModelingTrout-23-1"><div class="para" id="SUBSECTIONModelingTrout-23-1-1">Compute the  growth rate of the trout population for <span class="process-math">\(P=\)</span>
+</div></div>
+<article class="task exercise-like" id="SUBSECTIONModelingTrout-23-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="para" id="SUBSECTIONModelingTrout-23-2-1-1"><span class="process-math">\(99\)</span></div></article><article class="task exercise-like" id="SUBSECTIONModelingTrout-23-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="para" id="SUBSECTIONModelingTrout-23-3-1-1"><span class="process-math">\(99.9\)</span></div></article><article class="task exercise-like" id="SUBSECTIONModelingTrout-23-4"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<div class="para" id="SUBSECTIONModelingTrout-23-4-1-1"><span class="process-math">\(99.99\)</span></div></article><article class="task exercise-like" id="SUBSECTIONModelingTrout-23-5"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<div class="para" id="SUBSECTIONModelingTrout-23-5-1-1"><span class="process-math">\(100.01\)</span></div></article><article class="task exercise-like" id="SUBSECTIONModelingTrout-23-6"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<div class="para" id="SUBSECTIONModelingTrout-23-6-1-1"><span class="process-math">\(100.1\)</span></div></article><article class="task exercise-like" id="SUBSECTIONModelingTrout-23-7"><h6 class="heading"><span class="codenumber">(f)</span></h6>
+<div class="para" id="SUBSECTIONModelingTrout-23-7-1-1"><span class="process-math">\(101\)</span></div></article></article><div class="para" id="SUBSECTIONModelingTrout-24">It would be nice if we could find a formula for <span class="process-math">\(P(t)\)</span> in terms of <span class="process-math">\(t\)</span> but this will have to wait for a course in Integral Calculus. Still we would like to provide a reasonable sketch of the graph of <span class="process-math">\(P = P(t)\text{.}\)</span>  Aside from the initial condition, <span class="process-math">\(P(0) = 10\text{,}\)</span> we don’t know any specific values of <span class="process-math">\(P(t)\)</span> but we can at least capture the qualitative behavior of the population.</div>
+<div class="para" id="SUBSECTIONModelingTrout-25">We will obtain a sketch of the graph of <span class="process-math">\(P(t)\)</span> in the same systematic way as before.  We  can use the first derivative test to determine when the trout population is increasing or decreasing. But keep in mind that we have <span class="process-math">\(\dfdx{P}{t}\)</span> in terms of <span class="process-math">\(P\)</span> --- not <span class="process-math">\(t\)</span> --- so we won’t be able to say that the population is increasing or decreasing at a particular time. This will change how we interpret the results. For example we can say that when we have <span class="process-math">\(25\)</span> tons of trout the population is increasing even though we do not know <em class="emphasis">when</em> this happens.</div>
+<div class="para" id="SUBSECTIONModelingTrout-26">It should be straightforward to see that the POTPs are <span class="process-math">\(P = 0,
+100\text{.}\)</span> Since the context of our problem prohibits <span class="process-math">\(P \lt  0\)</span> (why?), we will look at intervals <span class="process-math">\([0,100)\)</span> and <span class="process-math">\((100, \infty)\)</span> to determine for which values of <span class="process-math">\(P\)</span> the population is increasing or decreasing. We summarize this analysis in the following  table: \begin{center} \begin{tabular}[h]{|c|c|c|} \hline Interval \amp  <span class="process-math">\((0,100)\)</span> \amp  <span class="process-math">\((100,\infty)\)</span>\bigstrut \hline <span class="process-math">\(\dfdx{P}{t}\)</span>\amp <span class="process-math">\(\gt 0\)</span>\amp <span class="process-math">\(\lt 0\)</span>\bigstrut <span class="process-math">\(P\)</span> \amp  <span class="process-math">\(\nearrow\)</span>\amp  <span class="process-math">\(\searrow\)</span>\bigstrut \hline \end{tabular} \end{center}</div>
+<article class="exercise exercise-like" id="SUBSECTIONModelingTrout-27"><h5 class="heading">
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">11.4</span><span class="period">.</span>
+</h5>
+<div class="para" id="SUBSECTIONModelingTrout-27-1-1">Suppose we were to use the data in the table above to plot a graph of <span class="process-math">\(P\)</span> versus <span class="process-math">\(t\text{.}\)</span> Would there be a maximum when <span class="process-math">\(P=100\text{.}\)</span> Explain.</div></article><article class="problem example-like" id="SUBSECTIONModelingTrout-28"><h5 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">11.5</span><span class="period">.</span>
+</h5>
+<div class="introduction" id="SUBSECTIONModelingTrout-28-1"><div class="para" id="SUBSECTIONModelingTrout-28-1-1">In this problem we analyze the concavity of the graph of <span class="process-math">\(P(t)\text{.}\)</span> In particular we’d like to find all values of <span class="process-math">\(P\)</span> where PITPs occur.</div></div>
+<article class="task exercise-like" id="SUBSECTIONModelingTrout-28-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="para" id="SUBSECTIONModelingTrout-28-2-1-1">Show that <span class="process-math">\(\dx\left(\dfdx{P}{t}\right)=0.1\left(1-\frac{P}{50}\right)\dx{P}\)</span> and therefore <span class="process-math">\(\dfdxn{P}{t}{2}=0.1\left(1-\frac{P}{50}\right)\dfdx{P}{t}.\)</span>
+</div></article><article class="task exercise-like" id="SUBSECTIONModelingTrout-28-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="para" id="SUBSECTIONModelingTrout-28-3-1-1">Find all values of <span class="process-math">\(P\)</span> where a PITP occurs.</div></article><article class="task exercise-like" id="SUBSECTIONModelingTrout-28-4"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<div class="para" id="SUBSECTIONModelingTrout-28-4-1-1">Create a table similar to the one above to determine the (vertical) intervals on which <span class="process-math">\(P\)</span> is concave up or concave down.</div></article></article><div class="para" id="SUBSECTIONModelingTrout-29">We now have enough data on to plot a reasonable sketch of the graph of <span class="process-math">\(P=P(t)\)</span> but because all of our formulas are in terms of the dependent variable <span class="process-math">\(P\text{,}\)</span> our transition points and intervals are will all be shown on the vertical axis, not the horizontal as seen below.</div>
+<div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/images/IncDecChart2.png" class="contained"></div>
+<div class="para" id="SUBSECTIONModelingTrout-31">Notice that we drew solid horizontal lines at <span class="process-math">\(P=0\)</span> and <span class="process-math">\(P= 100\text{.}\)</span> At these population levels <span class="process-math">\(\dfdx{P}{t}=0\)</span> so, theoretically at least, once the population has achieved either of these levels it will never change again. This is correct when <span class="process-math">\(P(0)=0\text{.}\)</span> Once all of our fish have died the only way we can get more is to buy them and start again. But for other values of <span class="process-math">\(P\)</span> it is still not entirely clear what’s happening  to our fish population.</div>
+<div class="para" id="SUBSECTIONModelingTrout-32">It is not possible to maintain a population of trout at a constant value of <span class="process-math">\(100\)</span> tons. There will always be a little fluctuation above and below. All models are inaccurate in some way. This is one way in which this model is inaccurate.</div>
+<div class="para" id="SUBSECTIONModelingTrout-33">The dashed line represents the population level where the graph of the population transitions from concave up to concave down. Physically this means that the rate of growth transitions from accelerating to decelerating.</div>
+<figure class="figure figure-like" id="SUBSECTIONModelingTrout-34"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/SlopeField1.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">11.6<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://www.britannica.com/biography/Abraham-Cowley" target="_blank">This figure needs a caption.</a><a class="xref" id="SUBSECTIONModelingTrout-34-1-2" href="" data-knowl="./knowl/fn/SUBSECTIONModelingTrout-34-1-2.html" title="Footnote 11.4"><sup> 4 </sup></a></figcaption></figure><div class="para" id="SUBSECTIONModelingTrout-35">We can visualize this (at the left) using slope field technique we saw in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "SECgraph-with-form-1" missing or not unique]</code>.  Starting with an initial value of <span class="process-math">\(P(0)=10\text{,}\)</span> we can plot the graph of the  population and make a prediction of what will happened to the population in the long term. We just can’t tell what “long term” means.  That would have to be determined experimentally.</div>
+<div class="para" id="SUBSECTIONModelingTrout-36">Notice that on the vertical interval <span class="process-math">\((0,50)\)</span> the population is accelerating until it reaches <span class="process-math">\(P=50\)</span> tons. After that, it still grows, but is starting to decelerate. Over the long run it will approach (but never quite reach) a level of <span class="process-math">\(P=100\)</span> tons.</div>
+<article class="problem example-like" id="SUBSECTIONModelingTrout-37"><h5 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">11.7</span><span class="period">.</span>
+</h5>
+<div class="introduction" id="SUBSECTIONModelingTrout-37-1"><div class="para" id="SUBSECTIONModelingTrout-37-1-1"></div></div>
+<article class="task exercise-like" id="SUBSECTIONModelingTrout-37-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="para logical" id="SUBSECTIONModelingTrout-37-2-1-1">
+<div class="para">On the same set of axes, plot reasonable graphs for <span class="process-math">\(P(t)\)</span> with the following initial values:</div>
+<ol class="decimal">
+<li id="SUBSECTIONModelingTrout-37-2-1-1-2-1"><div class="para" id="SUBSECTIONModelingTrout-37-2-1-1-2-1-1"><span class="process-math">\(P(0)=0\text{,}\)</span></div></li>
+<li id="SUBSECTIONModelingTrout-37-2-1-1-2-2"><div class="para" id="SUBSECTIONModelingTrout-37-2-1-1-2-2-1"><span class="process-math">\(P(0)=10\text{,}\)</span></div></li>
+<li id="SUBSECTIONModelingTrout-37-2-1-1-2-3"><div class="para" id="SUBSECTIONModelingTrout-37-2-1-1-2-3-1"><span class="process-math">\(P(0)=75\text{,}\)</span></div></li>
+<li id="SUBSECTIONModelingTrout-37-2-1-1-2-4"><div class="para" id="SUBSECTIONModelingTrout-37-2-1-1-2-4-1"><span class="process-math">\(P(0)=100\text{.}\)</span></div></li>
+</ol>
+<div class="para">\comment{Is it clear to you that none of these curves can cross?  Think about it a moment, if two of these curves crossed, it would force <span class="process-math">\(\dfdx{y}{t}\)</span> to take on two different values for some value of <span class="process-math">\(y.\)</span> Do you see why this can’t happen?  This fact should help you in your graphing.}</div>
+</div></article><article class="task exercise-like" id="SUBSECTIONModelingTrout-37-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="para" id="SUBSECTIONModelingTrout-37-3-1-1">Sketch the graph you get if you start by purchasing <span class="process-math">\(150\)</span> tons of trout, rather than <span class="process-math">\(10\)</span> tons.  Is this a good business decision?</div></article></article><article class="problem example-like" id="PROBLEMBassModel"><h5 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">11.8</span><span class="period">.</span>
+</h5>
+<div class="introduction" id="PROBLEMBassModel-1"><div class="para logical" id="PROBLEMBassModel-1-1">
+<div class="para">Suppose our fishery has another lake full of bass, that the intrinsic growth rate is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dfdx{B}{t}=.25B\left(1-\frac{B}{500}\right)  \frac{\text{ tons}}{\text{year}}\label{eq:Logistic2}
+\end{equation*}
+</div>
+</div></div>
+<article class="task exercise-like" id="PROBLEMBassModel-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="para" id="PROBLEMBassModel-2-1-1">Analyze this model in the same way we analyzed <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQFishery2" missing or not unique]</code>). Draw several typical graphs.</div></article><article class="task exercise-like" id="PROBLEMBassModel-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="para" id="PROBLEMBassModel-3-1-1">We can’t make any money unless we sell some of our fish. Modify <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQLogistic2" missing or not unique]</code>) to account for harvesting at a uniform rate of <span class="process-math">\(20 \frac{\text{ tons}}{\text{year}}\text{.}\)</span>
+</div></article><article class="task exercise-like" id="PROBLEMBassModel-4"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<div class="para" id="PROBLEMBassModel-4-1-1">Suppose <span class="process-math">\(B(0)=150\)</span> tons.  Sketch a graph of the population.  What does the model predict about the amount of fish in the lake over a long period of time?</div></article><article class="task exercise-like" id="PROBLEMBassModel-5"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<div class="para" id="PROBLEMBassModel-5-1-1">Assume that <span class="process-math">\(B(0)\)</span> is still <span class="process-math">\(150\)</span> tons as in part (b), but this time the amount of harvesting is increased from <span class="process-math">\(20 \frac{\text{ tons}}{\text{year}}\)</span> to <span class="process-math">\(30 \frac{\text{ tons}}{\text{year}}\text{.}\)</span> Use a slope field to draw a graph of <span class="process-math">\(B(t)\text{.}\)</span> What does the model predict now about the amount of fish over a long period of time?</div></article></article><div class="para logical" id="SUBSECTIONModelingTrout-39">
+<div class="para">The general logistic growth equation is</div>
+<div class="displaymath process-math" data-contains-math-knowls=" ">
+\begin{equation*}
+\dfdx{P}{t}= rP\left(1-\frac{P}{C}\right)\label{eq:GenLogisModel}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(P=P(t)\)</span> is the population at time <span class="process-math">\(t\)</span> and the positive constants <span class="process-math">\(r\)</span> and <span class="process-math">\(C\)</span> are the <dfn class="terminology">intrinsic growth rate</dfn> and <dfn class="terminology">carrying capacity</dfn>, respectively. Recall that we obtained <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQGenLogisModel" missing or not unique]</code>) by tweaking <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQFishery1" missing or not unique]</code>) (the exponential model) to account for die-off due to overpopulation.</div>
+</div>
+<article class="problem example-like" id="SUBSECTIONModelingTrout-40"><h5 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">11.9</span><span class="period">.</span>
+</h5>
+<div class="para" id="SUBSECTIONModelingTrout-40-1-1">Show that in this model <span class="process-math">\(P\)</span> is increasing and concave up when <span class="process-math">\(0\lt P\lt\frac{C}{2},\)</span> <span class="process-math">\(P\)</span> is increasing and concave down when <span class="process-math">\(\frac{C}{2} \lt P \lt C,\)</span> and <span class="process-math">\(P\)</span> is decreasing and concave up when <span class="process-math">\(P\gt C.\)</span> \comment{This is the same analysis we did above when we assumed that <span class="process-math">\(C=100\text{.}\)</span>}</div></article><div class="para" id="SUBSECTIONModelingTrout-41">Of course there is also a risk from underpopulation which our model does not account for. To catch this effect we tweak <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQGenLogisModel" missing or not unique]</code>) by inserting the factor <span class="process-math">\(\left(1-\frac{m}{P}\right)\)</span> where <span class="process-math">\(m\lt C\)</span> is a small positive constant. We justify this tweak in <a href="" class="xref" data-knowl="./knowl/xref/PROBLEMMinViablePop.html" title="Problem 11.10">problem~\ 11.10</a> below.</div>
+<article class="problem example-like" id="PROBLEMMinViablePop"><h5 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">11.10</span><span class="period">.</span>
+</h5>
+<div class="introduction" id="PROBLEMMinViablePop-1"><div class="para logical" id="PROBLEMMinViablePop-1-1">
+<div class="para">Our new model is then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\label{eq:TweakedLogistic}
+\dfdx{P}{t}=rP\left(1-\frac{m}{P}\right)\left(1-\frac{P}{C}\right)=\frac{r}{C}(P-m)(C-P)
+\end{equation*}
+</div>
+</div></div>
+<article class="task exercise-like" id="PROBLEMMinViablePop-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="para" id="PROBLEMMinViablePop-2-1-1">Show that when <span class="process-math">\(P\)</span> is very large <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQUATIONTweakedLogistic" missing or not unique]</code> reduces (approximately) to <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQUATIONGenLogisModel" missing or not unique]</code>.</div></article><article class="task exercise-like" id="PROBLEMMinViablePop-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="para" id="PROBLEMMinViablePop-3-1-1">Show that when <span class="process-math">\(P\lt m\)</span> then <span class="process-math">\(\dfdx{P}{t}\lt0\text{.}\)</span> What does this say about the growth of the population when <span class="process-math">\(P\)</span> is near zero?</div></article><article class="task exercise-like" id="PROBLEMMinViablePop-4"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<div class="para" id="PROBLEMMinViablePop-4-1-1">Find all values of <span class="process-math">\(P\)</span> for which  the graph of <span class="process-math">\(P=P(t)\)</span> is increasing and the values for which it is decreasing?</div></article><article class="task exercise-like" id="PROBLEMMinViablePop-5"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<div class="para logical" id="PROBLEMMinViablePop-5-1-1">
+<div class="para">Show that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dfdxn{P}{t}{2}=\frac{2r}{C}
+\left(\frac{C+m}{2}-P\right)\dfdx{P}{t}.
+\end{equation*}
+</div>
+<div class="para">Use this to determine the values of <span class="process-math">\(P\)</span> for which the graph of <span class="process-math">\(P=P(t)\)</span> is concave upward and the values for which the graph of <span class="process-math">\(P(t)\)</span> is concave downward.</div>
+</div></article><article class="task exercise-like" id="PROBLEMMinViablePop-6"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<div class="para logical" id="PROBLEMMinViablePop-6-1-1">
+<div class="para">Use the information to plot a sketch of the graph  of <span class="process-math">\(P=P(t)\)</span> where the initial value <span class="process-math">\(P(0)\)</span> satisfies each of the following:</div>
+<ol class="decimal">
+<li id="PROBLEMMinViablePop-6-1-1-3-1"><div class="para" id="PROBLEMMinViablePop-6-1-1-3-1-1"><span class="process-math">\(\displaystyle 0\lt P(0)\lt m\)</span></div></li>
+<li id="PROBLEMMinViablePop-6-1-1-3-2"><div class="para" id="PROBLEMMinViablePop-6-1-1-3-2-1"><span class="process-math">\(\displaystyle m\lt P(0)\lt \frac{C+m}{2}\)</span></div></li>
+<li id="PROBLEMMinViablePop-6-1-1-3-3"><div class="para" id="PROBLEMMinViablePop-6-1-1-3-3-1"><span class="process-math">\(\displaystyle \frac{C+m}{2}\lt P(0)\lt C\)</span></div></li>
+<li id="PROBLEMMinViablePop-6-1-1-3-4"><div class="para" id="PROBLEMMinViablePop-6-1-1-3-4-1"><span class="process-math">\(\displaystyle C\lt P(0)\)</span></div></li>
+</ol>
+</div></article><article class="task exercise-like" id="PROBLEMMinViablePop-7"><h6 class="heading"><span class="codenumber">(f)</span></h6>
+<div class="para" id="PROBLEMMinViablePop-7-1-1">Explain why <span class="process-math">\(m\)</span> is called the \term{minimum viable population} for the species.</div></article></article></section><section class="subsection" id="SECTIONlittle-healthy-comp"><h4 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">11.1.2</span><span class="space"> </span><span class="title">The Competing Species Model</span>
+</h4>
+<div class="para" id="SECTIONlittle-healthy-comp-2">When we modeled the populations of trout and bass in an industrial farm we did not have to account for competition between species because we assumed that the two species of fish were kept in separate lakes. For fish living in the wild we cannot make that assumption, but we can tweak our original model to account for competition between species in a natural setting. To do this we’ll have to use two equations, one for each species.</div>
+<div class="para" id="SECTIONlittle-healthy-comp-3">So let’s introduce a competing species of fish into the same lake. Bass and walleye compete in the wild for the same food source, so each one’s presence affects the other’s growth rate. To model the walleye population take <span class="process-math">\(C=400\)</span> for the carrying capacity,  <span class="process-math">\(r=0.2\)</span> as the intrinsic growth rate of the walleye, and let <span class="process-math">\(W=W(t)\)</span> denote the amount of walleye (in tons) at time <span class="process-math">\(t\text{.}\)</span> Combining this with our model for the bass population from <a href="" class="xref" data-knowl="./knowl/xref/PROBLEMBassModel.html" title="Problem 11.8">Problem~\ 11.8</a> we have the following equations for each species separately: \begin{align} \label{eq:CompSpec1}\text{  Bass: }    \dfdx{B}{t}\amp=.25B\left(1-\frac{B}{500}\right) \label{eq:CompSpec2}\text{  Walleye: } \dfdx{W}{t}\amp= .2W\left(1-\frac{W}{400}\right) \end{align} These equations have no terms modeling cross-species competition. That is, the value of <span class="process-math">\(B(t)\)</span> does not affect the value of <span class="process-math">\(W(t)\)</span> and <i class="foreign">vice versa</i>, so we’ll have to insert terms which do that.</div>
+<div class="para" id="SECTIONlittle-healthy-comp-4">Since they compete for food each species affects the others growth rate detrimentally. So we will model this interaction as follows\aside{Just like the growth rates and carrying capacities we used earlier, these numbers are fabricated. We made them up. We (the authors) have inserted values for these parameters that we believe are reasonable but we do not pretend to know what might be realistic. If we were modeling a real population we would determine all of these parameters experimentally.} \begin{align*} \dfdx{B}{t}\amp=.25B\left(1-\frac{B}{500}\right)-0.0001BW \dfdx{W}{t}\amp= .2W\left(1-\frac{W}{400}\right)-0.0001BW. \end{align*}</div>
+<div class="para" id="SECTIONlittle-healthy-comp-5">Notice that we took the growth rates from before and subtracted an identical term <span class="process-math">\(0.0001BW\text{.}\)</span>  This represents the detrimental effect of each species on the other’s growth rate.  For simplicity, we assumed that the effect of each on the other is the same.  The fact that the new term, <span class="process-math">\(-0.0001BW\text{,}\)</span> has the product <span class="process-math">\(BW\)</span> in it reflects the idea that to have an appreciable effect on each other, both species must have a sufficient number to produce the required interactions.  Again, this model is overly simplified, but let’s see what long term effect this tweak has on both species.</div>
+<div class="para" id="SECTIONlittle-healthy-comp-6">To see that this is truly just a tweak of our previous model notice that if <span class="process-math">\(W=0\text{,}\)</span> then we would recover the previous model and over time <span class="process-math">\(B\)</span> would approach its carrying capacity of <span class="process-math">\(500\)</span> tons.  Likewise, if <span class="process-math">\(B=0\text{,}\)</span> then, again we recover the previous model and over time <span class="process-math">\(W\)</span> would approach its carrying capacity of <span class="process-math">\(400\)</span> tons.</div>
+<div class="para" id="SECTIONlittle-healthy-comp-7">Given that <span class="process-math">\(B,W\ge0\text{,}\)</span> we want to determine what  this model will predict happens to both species in the long term.  Could they coexist or would one species drive the other to extinction? Take your best guess.</div>
+<div class="para logical" id="SECTIONlittle-healthy-comp-8">
+<div class="para">We’ll start with <span class="process-math">\(B\text{.}\)</span> We want to find all of the points  where <span class="process-math">\(\dfdx{B}{t}\gt0\)</span> (<span class="process-math">\(B\)</span> is growing) and where <span class="process-math">\(\dfdx{B}{t}\lt0\)</span> (<span class="process-math">\(B\)</span> is shrinking). We will start by determining   where <span class="process-math">\(\dfdx{B}{t}=0\text{.}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0=\dfdx{B}{t}=.25B\left(1-\frac{B}{500}\right)-.0001BW=B\left[.25\left(1-\frac{B}{500}\right)-.0001W\right].
+\end{equation*}
+</div>
+</div>
+<div class="para" id="SECTIONlittle-healthy-comp-9">Thus we see that <span class="process-math">\(\dfdx{B}{t}=0\)</span> when \begin{align} B\amp=0 \label{equation:Compete1} \intertext{ or when } \nonumber  .25\left(1-\frac{B}{500}\right)-.0001W\amp=0 \nonumber  2500\left(1-\frac{B}{500}\right)-W\amp=0 \nonumber  2500-5B-W\amp=0 5B+W\amp=2500. \label{equation:Compete2} \end{align}</div>
+<div class="para" id="SECTIONlittle-healthy-comp-10">Next we form the (<span class="process-math">\(B\)</span>)ass-(<span class="process-math">\(W\)</span>)alleye plane, where each point <span class="process-math">\((B,W)\)</span> identifies a particular pair of possible populations.  For example the point <span class="process-math">\((200, 500)\)</span> represents the situation when there are <span class="process-math">\(200\)</span> tons of bass and <span class="process-math">\(500\)</span> tons of walleye in the lake.</div>
+<figure class="figure figure-like" id="SECTIONlittle-healthy-comp-11"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/CompetingSpeciesModel1.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">11.11<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://www.britannica.com/biography/Abraham-Cowley" target="_blank">This figure needs a caption.</a><a class="xref" id="SECTIONlittle-healthy-comp-11-1-2" href="" data-knowl="./knowl/fn/SECTIONlittle-healthy-comp-11-1-2.html" title="Footnote 11.5"><sup> 5 </sup></a></figcaption></figure><div class="para" id="SECTIONlittle-healthy-comp-12">In the sketch at the right we see from <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQUATIONCompete1" missing or not unique]</code>) and <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQUATIONCompete2" missing or not unique]</code>) that on each of the red lines we have <span class="process-math">\(\dfdx{B}{t}=0\text{.}\)</span>
+</div>
+<div class="para" id="SECTIONlittle-healthy-comp-13">Since the two red lines are the only locations where <span class="process-math">\(\dfdx{B}{t}=0\text{,}\)</span> it must be that <span class="process-math">\(\dfdx{B}{t}\)</span> is either greater than zero or less that zero in any region bounded by them. Choosing the point <span class="process-math">\((1,1)\)</span> in the shaded region we see that <span class="process-math">\(\eval{\dfdx{B}{t}}{(B,W)}{(1,1)}\gt0\text{.}\)</span> Choosing the point <span class="process-math">\((2000,2000)\)</span> outside the blue region we see that <span class="process-math">\(\eval{\dfdx{B}{t}}{(B,W)}{(2000,2000)}\lt0\text{.}\)</span> So for any bass/walleye pair, <span class="process-math">\((B,W)\text{,}\)</span> the bass population is increasing when <span class="process-math">\((B,W)\)</span> lies below the diagonal line (in the blue region), and for any bass/walleye pair, <span class="process-math">\((B,W)\text{,}\)</span> above the diagonal line, the amount of bass is decreasing.</div>
+<div class="para" id="SECTIONlittle-healthy-comp-14">Finally, notice that when  <span class="process-math">\(W =0\)</span> the bass population will  increase until it reaches the carrying capacity of the lake for bass alone (<span class="process-math">\(500\)</span>), after which it will start to decrease. But if there are walleye in the lake the bass population will not reach the carrying capacity before it begins to decrease. This is consistent with the notion that the number of walleye adversely affect the growth rate of the bass.</div>
+<div class="para" id="SECTIONlittle-healthy-comp-15">Next we need to perform a similar analysis for the walleye population.</div>
+<article class="problem example-like" id="PROBLEMWalleyeAnalysis"><h5 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">11.12</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="PROBLEMWalleyeAnalysis-1-1">
+<div class="para">Apply the same type of analysis to</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dfdx{W}{t}=.2W\left(1-\frac{W}{400}\right)-.0001BW
+\end{equation*}
+</div>
+<div class="para">to determine where <span class="process-math">\(W\)</span> is increasing and where <span class="process-math">\(W\)</span> is decreasing. Plot these regions in the first quadrant of the <span class="process-math">\(B\)</span>-<span class="process-math">\(W\)</span> plane just as we did above for the bass population.</div>
+</div></article><div class="para" id="SECTIONlittle-healthy-comp-17">If we superimpose the sketch you (should have) obtained from <a href="" class="xref" data-knowl="./knowl/xref/PROBLEMWalleyeAnalysis.html" title="Problem 11.12">Problem~\ 11.12</a> onto the graph we have above, we get the <span class="process-math">\(4\)</span> regions seen in the sketch below.</div>
+<div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/images/CompetingSpeciesModel9.png" class="contained"></div>
+<div class="para" id="SECTIONlittle-healthy-comp-19">The points where the green and red lines intersect are called equilibrium points. Theoretically, if the two population levels are at an equilibrium point then neither population will ever change again because the growth rates are both zero.</div>
+<article class="exercise exercise-like" id="SECTIONlittle-healthy-comp-20"><h5 class="heading">
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">11.13</span><span class="period">.</span>
+</h5>
+<div class="introduction" id="SECTIONlittle-healthy-comp-20-1"><div class="para" id="SECTIONlittle-healthy-comp-20-1-1"></div></div>
+<article class="task exercise-like" id="SECTIONlittle-healthy-comp-20-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="para" id="SECTIONlittle-healthy-comp-20-2-1-1">Verify that the points <span class="process-math">\((0,0)\text{,}\)</span> <span class="process-math">\((500,0)\text{,}\)</span> and <span class="process-math">\((0,400)\text{,}\)</span> are equilibrium points for our bass/walleye populations.</div></article><article class="task exercise-like" id="SECTIONlittle-healthy-comp-20-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="para" id="SECTIONlittle-healthy-comp-20-3-1-1">Compute the coordinates of the equilibrium point <span class="process-math">\(E=(E_B, E_W)\)</span> in the diagram.</div></article></article><figure class="figure figure-like" id="SECTIONlittle-healthy-comp-21"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/CompetingSpeciesModel10.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">11.14<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://www.britannica.com/biography/Abraham-Cowley" target="_blank">This figure needs a caption.</a><a class="xref" id="SECTIONlittle-healthy-comp-21-1-2" href="" data-knowl="./knowl/fn/SECTIONlittle-healthy-comp-21-1-2.html" title="Footnote 11.6"><sup> 6 </sup></a></figcaption></figure><div class="para" id="SECTIONlittle-healthy-comp-22">But what happens if we don’t start at an equilibrium point?  Would the levels tend toward an equilibrium over time  as the name suggests? Take your best guess.</div>
+<div class="para" id="SECTIONlittle-healthy-comp-23">We can figure this out by looking at the growth rates in each region. For example, suppose the initial populations of bass and walleye, <span class="process-math">\((B,W)\)</span> is in the blue region at the left. The bass population is increasing. Think of this as an arrow pointing  to the right. In the same region  the walleye  population is decreasing which we can think of as an arrow pointing downward. Combining these arrows gives us an arrow pointing down and to the right.</div>
+<div class="para" id="SECTIONlittle-healthy-comp-24">Similarly, in the purple area the trajectory of the populations will be up and to the right since both populations are increasing. In the red area it will be up and to the left, while in the white area it will be down and to the left. All of this is displayed in the sketch at the left.</div>
+<div class="para" id="SECTIONlittle-healthy-comp-25">As rough as this qualitative drawing is, it gives us an idea of the population trajectories that the model predicts for the population levels of bass and walleye from various starting points.</div>
+<div class="para" id="SECTIONlittle-healthy-comp-26">Notice that these trajectories tend toward the equilibrium point, <span class="process-math">\(E=\left(437.5, 312.5\right)\text{.}\)</span> This says that given these initial levels of bass and walleye, the levels will approach <span class="process-math">\(E_B\)</span> tons of bass and <span class="process-math">\(E_w\)</span> tons of walleye. This kind of problem is called a <dfn class="terminology">dynamical system</dfn> and the path that the point <span class="process-math">\((B,W)\)</span> follows for any given set of initial conditions is called its <dfn class="terminology">trajectory</dfn>.</div>
+<article class="problem example-like" id="SECTIONlittle-healthy-comp-27"><h5 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">11.15</span><span class="period">.</span>
+</h5>
+<div class="para" id="SECTIONlittle-healthy-comp-27-1-1">Are there any initial conditions where the trajectory approaches the points <span class="process-math">\((0,0)\text{,}\)</span> <span class="process-math">\((0,400)\text{,}\)</span> or <span class="process-math">\((500,0)\text{?}\)</span>  Explain.</div></article><article class="problem example-like" id="SECTIONlittle-healthy-comp-28"><h5 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">11.16</span><span class="period">.</span>
+</h5>
+<div class="introduction" id="SECTIONlittle-healthy-comp-28-1"><div class="para" id="SECTIONlittle-healthy-comp-28-1-1"></div></div>
+<article class="task exercise-like" id="SECTIONlittle-healthy-comp-28-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="para" id="SECTIONlittle-healthy-comp-28-2-1-1">Suppose we adjust our differential equations slightly to \begin{align*} \dfdx{B}{t}\amp=.25B\left(1-\frac{B}{500}\right)-.0001BW \dfdx{W}{t}\amp=.2W\left(1-\frac{W}{400}\right)-.001BW \end{align*} Perform a similar graphical analysis to show that as long as <span class="process-math">\(B\neq0\text{,}\)</span> then any trajectory will approach the equilibrium point <span class="process-math">\((500,0)\text{.}\)</span>  That is, the walleye will become extinct, and the bass will approach their natural level of <span class="process-math">\(500\)</span> tons.  How is this consistent with the adjustments we made from the original differential equations?  Explain.</div></article><article class="task exercise-like" id="SECTIONlittle-healthy-comp-28-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="para logical" id="SECTIONlittle-healthy-comp-28-3-1-1">
+<div class="para">Now let’s again adjust our differential equations to \begin{align*} \dfdx{B}{t}\amp=.25B\left(1-\frac{B}{500}\right)-.001BW \dfdx{W}{t}\amp=.2W\left(1-\frac{W}{400}\right)-.001BW \end{align*}</div>
+<ol class="decimal">
+<li id="SECTIONlittle-healthy-comp-28-3-1-1-1-1"><div class="para" id="SECTIONlittle-healthy-comp-28-3-1-1-1-1-1">Identify how this system of equations is different from the      one in part (a), and interpret the difference in terms of the      influence of each population on the other.</div></li>
+<li id="SECTIONlittle-healthy-comp-28-3-1-1-1-2"><div class="para" id="SECTIONlittle-healthy-comp-28-3-1-1-1-2-1">Perform a similar graphical analysis to show that the      equilibrium points are <span class="process-math">\((0,0)\text{,}\)</span> <span class="process-math">\((500,0)\text{,}\)</span> <span class="process-math">\((0,400)\text{,}\)</span> and      <span class="process-math">\((100,200)\text{.}\)</span>  While it is theoretically possible for a      trajectory to approach <span class="process-math">\((100,200)\text{,}\)</span> show that most trajectories      will either approach <span class="process-math">\((500,0)\)</span> or <span class="process-math">\((0,400)\text{.}\)</span>  What does this      mean for the fish populations, and is it consistent with the      differential equations?  Explain.</div></li>
+</ol>
+</div></article><article class="task exercise-like" id="SECTIONlittle-healthy-comp-28-4"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<div class="para" id="SECTIONlittle-healthy-comp-28-4-1-1">Compare the results in parts (a) and (b) with the example that started this section (<code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQUATIONCompSpec1" missing or not unique]</code> and <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQUATIONCompSpec2" missing or not unique]</code>). How does the coefficient of the <span class="process-math">\(BW\)</span> term affect the model?</div></article></article></section></section><section class="section" id="SECTIONselect-model-probl"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">11.2</span><span class="space"> </span><span class="title">Selected Modeling Problems</span>
+</h3>
+<section class="introduction" id="SECTIONselect-model-probl-2"><blockquote class="blockquote" id="SECTIONselect-model-probl-2-1">
+<div class="para" id="SECTIONselect-model-probl-2-1-1">Life is an incurable disease.</div> <cite class="attribution">―<a class="external" href="https://www.britannica.com/biography/Abraham-Cowley" target="_blank">Abraham Cowley (1618-1667)</a><a class="xref" id="SECTIONselect-model-probl-2-1-2-2" href="" data-knowl="./knowl/fn/SECTIONselect-model-probl-2-1-2-2.html" title="Footnote 11.7"><sup> 7 </sup></a></cite>
+</blockquote></section><section class="subsection" id="SECTIONepidemic-blues"><h4 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">11.2.1</span><span class="space"> </span><span class="title">Epidemics, The SIR Model</span>
+</h4>
+<div class="para" id="SECTIONepidemic-blues-2">The SIR Model is a fairly simple model that is frequently used to understand the spread of an infectious disease through a population. As with any mathematical model, it is over-simplified but, just like <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQFishery1" missing or not unique]</code>, it provides a foundation which can be tweaked as needed for better predictions.</div>
+<div class="para" id="SECTIONepidemic-blues-3">We will assume that every member the population falls into one of three categories: (S)usceptible, (I)nfected, or (R)ecovered.  We assume that any population member who has recovered from the disease is immune to it, and those that have not are susceptible to infection.</div>
+<div class="para" id="SECTIONepidemic-blues-4">We let \begin{align*} S\amp =S(t)=\text{ The fraction of the population susceptible to infection.} I\amp =I(t)=\text{ The fraction of the population currently infected.} R\amp =R(t)=\text{ The fraction of the population no longer susceptible to infection. } \end{align*} Note that <span class="process-math">\(R(t)\)</span> includes those victims who have died\aside{They have “recovered” in the sense that they can no longer be infected.}</div>
+<article class="exercise exercise-like" id="SECTIONepidemic-blues-5"><h5 class="heading">
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">11.17</span><span class="period">.</span>
+</h5>
+<div class="para" id="SECTIONepidemic-blues-5-1-1">Assuming that no members are entering or leaving the population (by births, deaths from other diseases, or migration), explain why <span class="process-math">\(S+I+R=1.\)</span>
+</div></article><div class="para logical" id="SECTIONepidemic-blues-6">
+<div class="para">Since the disease spreads by contact between a susceptible and an infected individual, we will assume that the number of susceptible population members is decreasing (you cannot get the disease twice) and the  rate of decrease is proportional to the number of susceptible and the number of infected currently present.  This says that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dfdx{S}{t}=-aSI
+\end{equation*}
+</div>
+<div class="para">for some positive constant, <span class="process-math">\(a\text{.}\)</span> The constant <span class="process-math">\(a\)</span> is called the <dfn class="terminology">transmission rate</dfn>. (Why?)</div>
+</div>
+<article class="exercise exercise-like" id="SECTIONepidemic-blues-7"><h5 class="heading">
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">11.18</span><span class="period">.</span>
+</h5>
+<div class="para" id="SECTIONepidemic-blues-7-1-1">Explain how we know that <span class="process-math">\(\dfdx{S}{t}\)</span> must be negative.</div></article><div class="para logical" id="SECTIONepidemic-blues-8">
+<div class="para">Since the only way to become immune is to recover from the disease, we also assume that  the rate of change of <span class="process-math">\(R\)</span> is proportional to the number of infected individuals present.  This means that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dfdx{R}{t}=bI
+\end{equation*}
+</div>
+<div class="para">for some positive constant <span class="process-math">\(b\text{.}\)</span> The constant <span class="process-math">\(b\)</span> is called the <dfn class="terminology">recovery rate</dfn>. (Why?)</div>
+</div>
+<article class="problem example-like" id="SECTIONepidemic-blues-9"><h5 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">11.19</span><span class="period">.</span>
+</h5>
+<div class="introduction" id="SECTIONepidemic-blues-9-1"><div class="para" id="SECTIONepidemic-blues-9-1-1"></div></div>
+<article class="task exercise-like" id="SECTIONepidemic-blues-9-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="para" id="SECTIONepidemic-blues-9-2-1-1">Explain how we know that <span class="process-math">\(\dfdx{R}{t}\)</span> must be positive.</div></article><article class="task exercise-like" id="SECTIONepidemic-blues-9-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="para logical" id="SECTIONepidemic-blues-9-3-1-1">
+<div class="para">Show that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dfdx{I}{t}=(aS-b)I.
+\end{equation*}
+</div>
+</div></article><article class="task exercise-like" id="SECTIONepidemic-blues-9-4"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<div class="para" id="SECTIONepidemic-blues-9-4-1-1">Use the information in part (b) to show that the number of infected is increasing when <span class="process-math">\(S\gt \frac{b}{a}\)</span> and decreasing when <span class="process-math">\(S\lt \frac{b}{a}.\)</span>
+</div></article><article class="task exercise-like" id="SECTIONepidemic-blues-9-5"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<div class="para logical" id="SECTIONepidemic-blues-9-5-1-1">
+<div class="para">Show that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dfdxn{I}{t}{2}=a^2I\left[S^2-\left(\frac{2b}{a}+I\right)S+\left(\frac{b}{a}\right)^2\right]
+\end{equation*}
+</div>
+<div class="para">and use this to show that <span class="process-math">\(\dfdxn{I}{t}{2}\lt 0\)</span> when</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{b}{a}+\left(\frac{I}{2}-\sqrt{\left(\frac{I}{2}\right)^2+\frac{bI}{a}}\right)\lt S\lt \frac{b}{a}+\left(\frac{I}{2}+\sqrt{\left(\frac{I}{2}\right)^2+\frac{bI}{a}}\right)
+\end{equation*}
+</div>
+<div class="para">and is positive otherwise.</div>
+</div></article></article><div class="para logical" id="SECTIONepidemic-blues-10">
+<div class="para">Putting this together we see that the number of infected is increasing and accelerating when</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{b}{a}+\left(\frac{I}{2}+\sqrt{\left( \frac{I}{2}\right)^2+\frac{bI}{a}}\right)\lt S\lt 1
+\end{equation*}
+</div>
+<div class="para">and increasing, but slowing down, when</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{b}{a}\lt S\lt \frac{b}{a}+\left(\frac{I}{2}+\sqrt{\left(\frac{I}{2}\right)^2+\frac{bI}{a}}\right).
+\end{equation*}
+</div>
+<div class="para">When <span class="process-math">\(S\lt \frac{b}{a}\)</span> it is decreasing.</div>
+</div></section><section class="subsection" id="subSECTIONtractrix"><h4 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">11.2.2</span><span class="space"> </span><span class="title">The Tractrix</span>
+</h4>
+<blockquote class="blockquote" id="subSECTIONtractrix-2">
+<div class="para" id="subSECTIONtractrix-2-1">Truckin’, got my chips cashed in Keep truckin’, like the do-dah man Together, more or less in line Just keep truckin’ on.</div> <cite class="attribution">―<a class="external" href="https://en.wikipedia.org/wiki/Grateful_Dead" target="_blank">The Grateful Dead (1967-1995)</a><a class="xref" id="subSECTIONtractrix-2-2-2" href="" data-knowl="./knowl/fn/subSECTIONtractrix-2-2-2.html" title="Footnote 11.8"><sup> 8 </sup></a></cite>
+</blockquote>
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/Tractrix.png" class="contained"></div>
+<div class="para" id="subSECTIONtractrix-4">We first looked at the curve called the tractrix <a href="" class="xref" data-knowl="./knowl/xref/PROBLEMTractrix.html" title="Problem 7.34">Problem 7.34</a> of <a href="CHAPTApproximation.html#SECTIONeulers-method" class="internal" title="Section 7.3: Euler’s Method">~ 7.3</a>. Consider reviewing that problem  before you proceed.</div>
+<div class="para" id="subSECTIONtractrix-5">Recall that initially the center of the rear axle of the tractor is at the origin and the center of the rear axle of the trailer is at the point <span class="process-math">\((1,0)\)</span> Also we assumed that the tractor pulls the front wheels vertically up the <span class="process-math">\(y\)</span>-axis and that the rear wheels don’t slip.</div>
+<div class="para logical" id="subSECTIONtractrix-6">
+<div class="para">
+<a href="" class="xref" data-knowl="./knowl/xref/PROBLEMTractrix.html" title="Problem 7.34">Problem 7.34</a> we showed that the path followed by the center of the rear axle of the trailer follows, <span class="process-math">\(y=y(t)\text{,}\)</span> must satisfy the IVP:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/PROBLEMTractrix.html">
+\begin{equation*}
+\label{eq:TractrixIVP-2}
+\dfdx{y}{x}=-\frac{\sqrt{1-x^2}}{x}, \hskip5mm y(1)=0.
+\end{equation*}
+</div>
+</div>
+<article class="problem example-like" id="subSECTIONtractrix-7"><h5 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">11.20</span><span class="period">.</span>
+</h5>
+<div class="introduction" id="subSECTIONtractrix-7-1"><div class="para" id="subSECTIONtractrix-7-1-1"></div></div>
+<article class="task exercise-like" id="subSECTIONtractrix-7-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="para" id="subSECTIONtractrix-7-2-1-1">Show that <span class="process-math">\(y=\ln\left(\frac{1+\sqrt{1-x^2}}{x}\right)-\sqrt{1-x^2}\)</span> satisfies the IVP in part (a). Graph this formula. Does it match your intuition about the shape of the curve? Does it match the graph you found using Euler’s Method in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "PROBTractrix" missing or not unique]</code>? You will learn how to derive this solution from <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQTractrixIVP-2" missing or not unique]</code> when you take Integral Calculus.</div></article><article class="task exercise-like" id="subSECTIONtractrix-7-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="para" id="subSECTIONtractrix-7-3-1-1">How far will the tractor have gone (in trailer lengths) before the trailer is within one degree of vertical?</div></article></article></section><section class="subsection" id="SUBSECTIONPursuit"><h4 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">11.2.3</span><span class="space"> </span><span class="title">The  Pursuit Problem</span>
+</h4>
+<blockquote class="blockquote" id="SUBSECTIONPursuit-2">
+<div class="para" id="SUBSECTIONPursuit-2-1">Our scientific power has outrun our spiritual power. We have guided missiles and misguided men.</div> <cite class="attribution">―<a class="external" href="https://en.wikipedia.org/wiki/Martin_Luther_King_Jr." target="_blank">Martin Luther King, Jr. (1929-1968)</a><a class="xref" id="SUBSECTIONPursuit-2-2-2" href="" data-knowl="./knowl/fn/SUBSECTIONPursuit-2-2-2.html" title="Footnote 11.9"><sup> 9 </sup></a></cite>
+</blockquote>
+<div class="para" id="SUBSECTIONPursuit-3">Like the the tractrix problem above, we first looked at this pursuit curve in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "PROBLEMPursuit" missing or not unique]</code> of <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "SECeulers-method" missing or not unique]</code>.  Consider reviewing that problem before you proceed.</div>
+<article class="problem example-like" id="PROBLEMPursuit2"><h5 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">11.21</span><span class="period">.</span>
+</h5>
+<div class="introduction" id="PROBLEMPursuit2-1">
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/PursuitCurve2.png" class="contained"></div>       <div class="para logical" id="PROBLEMPursuit2-1-2">
+<div class="para">In   <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "PROBLEMPursuit" missing or not unique]</code>  we assumed that  rocket <span class="process-math">\(R\)</span> starting  is traveling vertically  up the line <span class="process-math">\(x=1\)</span> at a constant speed <span class="process-math">\(v\text{.}\)</span> When the rocket reaches the point  <span class="process-math">\((1,0)\text{,}\)</span> a missile <span class="process-math">\(M\)</span> is fired from the origin directly at the rocket. Assuming that the missile is always aimed directly at the rocket, and that it travels at a speed which is\aside{<code class="code-inline tex2jax_ignore">[cross-reference to target(s) "PROBLEMPursuit" missing or not unique]</code> we took <span class="process-math">\(k=1.5\text{.}\)</span> Here we look at the more general problem by letting <span class="process-math">\(k\gt1\)</span> be arbitrar. } <span class="process-math">\(k\)</span> times the speed of the rocket (<span class="process-math">\(k\gt1\)</span>) we showed in <a href="" class="xref" data-knowl="./knowl/xref/PROBLEMPursuit2.html" title="Problem 11.21">Problem 11.21</a> that the curve described by the path the missile will satisfy the IVP:</div>
+<div class="displaymath process-math" data-contains-math-knowls="  ./knowl/xref/PROBLEMPursuit2.html">
+\begin{equation*}
+\label{eq:PursuitIVP}
+\dfdx{y}{x}=\frac{\frac{s}{k}-y}{1-x},\ \       y(0)=0.
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(s\)</span> denotes the length of the the missile’s path at time <span class="process-math">\(t\text{.}\)</span>
+</div>
+</div>
+</div>
+<article class="task exercise-like" id="PROBLEMPursuit2-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="para logical" id="PROBLEMPursuit2-2-1-1">
+<div class="para">
+<code class="code-inline tex2jax_ignore">[cross-reference to target(s) "USEeq:PursuitIVP" missing or not unique]</code>) to show that the missile’s path must satisfy the (second order) differential equation</div>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+(1-x)\dfdxn{y}{x}{2}=\frac{1}{k}\dfdx{s}{x}=\frac{1}{k}\sqrt{1+\left(\dfdx{y}{x}\right)^2}
+\end{equation*}
+</div>
+<div class="para">with the initial conditions: <span class="process-math">\(y(0)=0\)</span> and <span class="process-math">\(\eval{\dfdx{y}{x}}{x}{0}=0\text{.}\)</span>
+</div>
+</div></article><article class="task exercise-like" id="PROBLEMPursuit2-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="para logical" id="PROBLEMPursuit2-3-1-1">
+<div class="para">Show that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y=\frac12\left(\frac{k}{k+1}\left(1-x\right)^{\frac{k+1}{k}}-\frac{k}{k-1}\left(1-x\right)^{\frac{k-1}{k}}\right)+\frac{k}{k^2-1}
+\end{equation*}
+</div>
+<div class="para">satisfies the differential equation and initial conditions in part (a).</div>
+</div></article><article class="task exercise-like" id="PROBLEMPursuit2-4"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<div class="para" id="PROBLEMPursuit2-4-1-1">Find how long  it takes for the missile to catch the rocket for <span class="process-math">\(k=3\text{,}\)</span> <span class="process-math">\(k=2\text{,}\)</span> and <span class="process-math">\(k=1.1\text{.}\)</span> Does this make sense to you physically? Explain</div></article></article></section></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="CHAPTERPTshape-things.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="CHAPTERlimits-lhop-rule.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>
