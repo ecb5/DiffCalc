@@ -149,19 +149,20 @@ theorems from <xref ref="CHAPTERlimits-lhop-rule">Chapter</xref>:
 </ul>
 
 To see why these are necessary recall that we're going to use limits
-to define the derivative as in <xref ref="DEFINITIONDerivative">Theorem</xref> so we'll
-need to evaluate the limit
-<m>f^\prime(x)=\tlimit{h}{0}{\frac{f(x+h)-f(x)}{h}}</m> . Clearly the
-expression <m>\frac{f(x+h)-f(x)}{h}</m> is not defined at <m>h=0</m>. But we're
-only interested in its value <term>in the limit</term> as <m>h\rightarrow0</m>
-which means that <m>h</m> must be able to get close to <m>0</m>. That is, there
-must be an open interval around <m>0</m> where the expression
-<m>\frac{f(x+h)-f(x)}{h}</m> is defined.
+to define the derivative as in <xref
+ref="DEFINITIONDerivative">Theorem</xref> so we'll need to evaluate
+the limit <m>f^\prime(x)=\tlimit{h}{0}{\frac{f(x+h)-f(x)}{h}}</m>.
+ Clearly the expression <m>\frac{f(x+h)-f(x)}{h}</m> is not defined at
+<m>h=0</m>. But we're only interested in its value <term>in the
+limit</term> as <m>h\rightarrow0</m> which means that <m>h</m> must be
+able to get close to <m>0</m>. That is, there must be an open interval
+around <m>0</m> where the expression <m>\frac{f(x+h)-f(x)}{h}</m> is
+defined.
 </p>
 <p>
 
 But we don't care if <m>\frac{f(x+h)-f(x)}{h}</m> is defined at <m>h=0</m> or
-not. It is irrelevant to our purpose.  So we state explicitly that we
+not. That is irrelevant to our purpose.  So we state explicitly that we
 do not consider whether <m>h=0</m>.
 </p>
 <p>
@@ -170,8 +171,8 @@ do not consider whether <m>h=0</m>.
 Ok, but why did we insert the word <q>possibly</q>? Wouldn't it be enough
 to simply say <q>except at <m>a</m></q>?
 </p>
-<p>
 
+<p>
 We need to say <q>possibly</q> because these theorems, like all theorems,
 are stated with as much generality as possible.  For example, consider
 the function <m>f(x)=2x</m>. Had we not included <q>possibly</q> in the
@@ -188,8 +189,8 @@ important when we discuss the meaning of continuity in
 In the
   eighteenth century there was a, public, protracted, and vitriolic
   argument between <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Robins/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Robins/">Benjamin Robins</url> and <url href="https://en.wikipedia.org/wiki/James_Jurin" visual="https://en.wikipedia.org/wiki/James_Jurin">James Jurin</url> over exactly this
-  point. Jurin would have claimed that the statement
-  <m>\tlimit{x}{3}{2x} = 6</m> is meaningless. Robins would have said it
+  point. Robins would have claimed that the statement
+  <m>\tlimit{x}{3}{2x} = 6</m> is meaningless. Jurin would have said it
   has meaning because it is obviously true. The point here is not that
   either man was right or wrong, but rather that it depends on how we
   define limits. By one definition Robins was correct, by another
@@ -453,11 +454,11 @@ undefined.
 
 <problem>
 <introduction>
-<p>
-    \noindent  Explain, that  the following
-  statements are true by citing <xref ref="THEOREMLimSum2"></xref> through
-  <xref ref="THEOREMConstLimit"></xref> as needed.
-</p>
+  <p>
+    Explain, that the following statements are true by citing <xref
+    ref="THEOREMLimSum2"></xref> through <xref
+    ref="THEOREMConstLimit"></xref> as needed.
+  </p>
 </introduction>
 <task>
 <statement>
@@ -527,16 +528,26 @@ undefined.
   Suppose <m>g(x)\neq0</m> near <m>x=a</m> and
   <m>\tlimit{x}{a}{\frac{f(x)}{g(x)}}</m> exists. Use
   <xref ref="THEOREMLimProd2"></xref> to show that if
-  <m>\limit{x}{a}{g(x)}=0</m>         then <m>\limit{x}{a}{f(x)}=0</m>.\\
-     \hint{Consider
-      <m>f(x)=\frac{f(x)}{g(x)}\cdot g(x)</m> for <m>x</m> near <m>a</m>.}\\
-    \comment{This problem shows that if <m>\limit{x}{a}{g(x)}=0</m>
+  <m>\limit{x}{a}{g(x)}=0</m>         then <m>\limit{x}{a}{f(x)}=0</m>.
+</p>
+
+</statement>
+<hint>
+<p>
+Consider
+      <m>f(x)=\frac{f(x)}{g(x)}\cdot g(x)</m> for <m>x</m> near <m>a</m>.
+</p>
+</hint>
+</problem>
+<aside>
+<title>Comment</title>
+<p>
+This problem shows that if <m>\limit{x}{a}{g(x)}=0</m>
 then the only way that <m>\limit{x}{a}{\frac{f(x)}{g(x)}}</m> can exist is
 if we have a L<rsq/>Hôpital  Indeterminate. It can also be used to prove
-<xref ref="LEMMADiffImpliesCont">Lemma</xref> as you will see when we get to it.}
+<xref ref="LEMMADiffImpliesCont">Lemma</xref> as you will see when we get to it.
 </p>
-</statement>
-</problem>
+</aside>
 
 
 <p>
@@ -581,7 +592,7 @@ a curve is <term>continuous</term>? A first, intuitive definition usually
 goes something like this: <q>A function is continuous if you can draw
 its graph without lifting your pencil from the paper,</q> but this is
 unsatisfactory for a number of reasons. In particular, it is
-impossible to apply in most cases. Think about it. Have often have you seen
+impossible to apply in most cases. Think about it. How often have you seen
 the entire graph of any function? Usually we just draw the part
 neat the origin and put arrowheads on both ends of the graph. We need
 something more precise.
@@ -601,7 +612,7 @@ discussion.
 
 First, notice that when you think closely about the statement <q><m>f(x)</m>
 is continuous at <m>g(a)</m></q> it appears to be nonsense, because <m>g(a)</m> is
-the value of <m>f</m> at the single value <m>g(a)</m> but .  Does it make sense to
+the value of <m>f</m> at the single value <m>g(a)</m>.  Does it make sense to
 you that a curve can be continuous at a single value of its domain?
 In ordinary usage  the concept of continuity requires an interval to
 be continuous on, doesn't it?
@@ -627,7 +638,6 @@ Since we need the concept of <q>continuity at a point,</q> we define it.
 </p>
 </statement>
 </definition>
-<image source="images/ContDiscExamp.png" width="50%"/>
 <!-- \begin{wrapfigure}[]{r}{2in} -->
 <!--   \captionsetup{labelformat=empty} -->
 <!--   \vskip-4mm  -->
@@ -641,17 +651,20 @@ it a continuous function.
 </p>
 <p>
 
-The sketch at the right shows that <xref ref="DEFINITIONcontinuity"></xref>
+The sketch below shows that <xref ref="DEFINITIONcontinuity"></xref>
 recovers the intuitive notion that a function is continuous if we can
 draw its graph without lifting pen from page.  Both of the functions,
 <m>f(x)</m> and <m>g(x)</m> are identical everywhere except at
-<m>x=1</m>. Clearly, to draw <m>g(x)</m>, which is discontinuous at <m>x=1</m>, we
-must lift our pen from the page. This is not true of the graph of
+<m>x=1</m>. Clearly, to draw <m>g(x)</m>, which is discontinuous at
+<m>x=1</m>  since <m>\limit{x}{0}{g(x)} \neq g(1)</m>.  We
+must lift our pen from the page to draw the graph of 
+<m>g(x)</m>. None of this is true of the graph of
 <m>f(x)</m>, which is continuous.
 </p>
-<p>
+<image source="images/ContDiscExamp.png" width="50%"/>
 
     
+<p>
 The following lemma is true and the proof will be valid once the limit
 theorems have been proven in <xref ref="CHAPTERformal-limits"></xref>.
 </p>
@@ -695,16 +708,22 @@ theorems have been proven in <xref ref="CHAPTERformal-limits"></xref>.
 <p>
     <xref ref="THEOREMFiniteSqueeze"></xref> is illustrated below, but a formal
     proof will not be given until <xref ref="CHAPTERformal-limits"></xref>.
+Notice that on the interval <m>(c,d)</m> <m>f(x)</m> is caught between
+(<q>squeezed by</q>) <m>\alpha{(x)}</m> and <m>\beta{(x)}</m>.
+
 </p>
       
-<image source="images/SqueezeThm1.png" width="60%" />
+<image source="images/SqueezeThm1.png" width="40%" />
 <!-- \centerline{\includegraphics*[height=1.4in,width=2.6in]{../Figures/SqueezeThm1}} -->
-
 <problem>
 <introduction>
 <p>
-        Consider the two functions defined in the sketch below:\\
-        \centerline{\includegraphics*[height=2.5in,width=5.5in]{../Figures/TopSinCurve}}
+        Consider the two functions defined in the sketch below:
+</p>
+<image source="images/TopSinCurve.png" width="100%" />
+
+<p>
+<!-- \includegraphics*[height=2.5in,width=5.5in]{../Figures/TopSinCurve} -->
 </p>
 </introduction>
 <task>
@@ -712,22 +731,28 @@ theorems have been proven in <xref ref="CHAPTERformal-limits"></xref>.
 <p>
  Use <xref ref="THEOREMFiniteSqueeze"></xref> to show that <m>U(x)</m> is
       continuous at <m>x=0</m>. 
-\hint{
-What functions is <m>U(x)</m> caught between?
-}
     </p>
 </statement>
+<hint>
+<p>
+What functions is <m>U(x)</m> caught between?
+</p>
+</hint>
 </task>
 <task>
 <statement>
 <p>
  Use <xref ref="DEFINITIONcontinuity"></xref> to show that <m>T(x)</m> is
       not
-      continuous at <m>x=0</m>.  \\
-      \hint{Try the substitution <m>z=\frac1x</m> for <m>x\neq0</m>.  What would
-        <m>\limit{x}{0}{T(x)}</m> look like in terms of <m>z</m>?}
+      continuous at <m>x=0</m>.  
     </p>
 </statement>
+<hint>
+<p>
+      Try the substitution <m>z=\frac1x</m> for <m>x\neq0</m>.  What would
+        <m>\limit{x}{0}{T(x)}</m> look like in terms of <m>z</m>?
+</p>
+</hint>
 </task>
 </problem>
 <!-- \begin{embeddedproblem} -->
@@ -782,7 +807,7 @@ the <q><m>\lim</m></q> symbols if <m>f</m> is continuous at <m>g(a)</m>.
 </p>
 <attribution>
 <url href="https://en.wikipedia.org/wiki/David_Foster_Wallace" visual="https://en.wikipedia.org/wiki/David_Foster_Wallace">David
-    Foster Wallace (<m>1962</m> - <m>2008</m>)</url>
+    Foster Wallace</url> (1962-2008)
 </attribution>
 </blockquote>
 
@@ -819,34 +844,40 @@ at every point in its domain.
 
 The proofs of the Constant, Sum, and Constant Multiple
 Differentiation Rules are all completely straightforward so we
-will leave them as exercises\aside{Frequently students will simply
+will leave them as exercises for you.
+</p>
+<aside>
+<title>Comment</title>
+<p>
+Frequently students will simply
   ignore problems that are described as straightforward. Don't make
   that mistake. Straightforward does not mean easy, and it does not
   mean unimportant. We are leaving these problems for you so you can
   gain experience using limits in the simplest cases, not because they
-  are unimportant.} for you.
+  are unimportant.
 </p>
+</aside>
 
 
 <theorem xml:id="THEOREMLimConstantRule">
 <title>The Constant Rule for Differentiation</title>
 <p>
   If <m>L</m> is some number and <m>f(x)=L</m> for all real values of <m>x</m>
-  near\aside{<q>Near</q> means on an open interval about <m>L</m>. Recall <xref ref="DEFINITIONnear"></xref>.  }
+  near (on an open interval around)
   <m>L</m>, then
-  <m>f^\prime(x)=0</m> at every real number <m>x</m> near\aside{On the same open
-  interval.} <m>L</m> .
+  <m>f^\prime(x)=0</m> at every real number <m>x</m> near (on the same open
+  interval) <m>L</m>.
 </p>
 
 </theorem>
   <proof>
 <p>
     By <xref ref="EQUATIONDefDerivative"></xref>
-    \begin{align*}
-      f^\prime(x)\amp =\limit{h}{0}{\frac{f(x+h)-f(x)}{h}}.\\
-      \intertext{But <m>f(x+h)=L=f(x)</m> so}
-      f^\prime(x)\amp =\limit{h}{0}{\frac{L-L}{h}}=\limit{h}{0}{\frac{0}{h}}=0.
-    \end{align*}
+<me>
+      f^\prime(x) =\limit{h}{0}{\frac{f(x+h)-f(x)}{h}}.
+</me>
+But <m>f(x+h)=L=f(x)</m> so
+<me>      f^\prime(x) =\limit{h}{0}{\frac{L-L}{h}}=\limit{h}{0}{\frac{0}{h}}=0.</me>
   </p>
 <p>
 <alert><m>\halmos</m></alert>
@@ -886,7 +917,7 @@ will leave them as exercises\aside{Frequently students will simply
 
 
 Recall that when we first established the  General Differentiation Rules using
-differentials in <xref ref="CHAPTERPTdifferentials">Chapter</xref> we said that the
+differentials in <xref ref="CHAPTERdifferentials">Chapter</xref> we said that the
 Constant Multiple,  Power and Quotient Rules for differentiation were just
 conveniences because they depend on the other rules.
 </p>
@@ -940,10 +971,10 @@ distinction between function and variable.
     <m>\dx{y}=3z\dx{z}=3\left(3x^2+6x\right)^2(6x+6)\dx{x}</m>, and
     dividing through by <m>\dx{x}</m> gives us the derivative of <m>y</m> with
     respect to <m>x</m>,
-    <me>
-      \label{eq:CR1}
+    <men  xml:id="EQUATIONCR1">
+      <!-- \label{eq:CR1} -->
       \dfdx{y}{x}=3z\dx{z}=3\left(3x^2+6x\right)^2(6x+6).
-  </me>
+  </men>
 
 </p>
 <p>
@@ -977,7 +1008,7 @@ distinction between function and variable.
 </p>
 <p>
 
-        Looking again at <xref ref="EQUATIONCR1"></xref>, and mixing the
+        Looking again at <xref ref="EQUATIONCR1">equation</xref>, and mixing the
         differential and functional notations a bit we see that 
         <me>
         f^\prime(x)=\dfdx{y}{x}=3z\dx{z}=\underbrace{3\left(3x^2+6x\right)^2}_{\dfdx{\alpha}{\beta}=\alpha^\prime(\beta)}\underbrace{(6x+6)}_{\dfdx{\beta}{x}=\beta^\prime(x)}=\alpha^\prime(\beta)\cdot\beta^\prime(x).
@@ -1011,15 +1042,15 @@ distinction between function and variable.
   Then the composition,\\
   \centerline{<m> f(x) = \alpha(\beta(x)) </m>}
   is also differentiable, and
-  <me>
-    \label{eq:ChainRule}
+  <men  xml:id="EQUATIONChainRule">
+    <!-- \label{eq:ChainRule} -->
     f^\prime(x) =\alpha^\prime(\beta(x))\cdot\beta^\prime(x).
-</me>
+</men>
 </p>
 </theorem>
 
 
-<paragraphs>
+<paragraphs  xml:id="DIGRESSIONCROrigins">
 <title>DIGRESSION: The Origins of the Chain Rule</title>
 <p>
 
@@ -1027,49 +1058,79 @@ distinction between function and variable.
   <q>The Chain Rule</q> to the computational technique that is used to,
   among other things, convert money from one currency to another. For
   example if we need to convert <m>30</m> American dollars ($) to British
-  pounds (\pounds) and we know that\aside{These numbers were accurate
+  pounds (£) but we only know their values ie euros (€). Specifically we know that
+<md>
+<mrow>1 \text{ dollar} = 0.86\text{ euros,} \amp{}\amp{}\text{ and that }
+    \amp{}\amp{} 1\text{ euro} = 0.9 \text{ pounds.}
+</mrow>
+</md>
+
+(These numbers were accurate
     on the day this passage was written. They are almost certainly
     wrong on
-    the day you are reading it. Don't use them to convert currency.}\\
-  \centerline{ <m>1 \text{ dollar} = 0.86</m> euros, and that
-    <m>1 \text{ euro} = 0.9</m> pounds.  }
+    the day you are reading it. Don't use them to convert currency.)
   Then the conversion is
-<me>
-30= 30  \textcolor{red}{\cancel{dollars}} \times
-\frac{0.86}{1} \frac { \text { \textcolor{blue}{\cancel{euros}} } } {
-  \text{\textcolor{red}{\cancel{dollars}}} } \times \frac{0.9}{1}
-\frac{\text{pounds}}{\text{\textcolor{blue}{\cancel{euros}}}}
-=30\times0.86\times0.9\text{ pounds}=23.22 \pounds
-</me>
+<md>
+<mrow>30$ = 30  \textcolor{red}{\cancel{\text{dollars}}} \times
+\frac{0.86}{1} 
+  \frac{\textcolor{blue}{\cancel{ \text {euros}} } }
+       {\textcolor{red}{\cancel{\text{dollars}}} } 
+\amp{}   \times 
+\frac{0.9}{1}
+  \frac{\text{pounds}}{\textcolor{blue}{\cancel{\text{euros}}}}</mrow>
+<mrow>
+\amp{}=30\times0.86\times0.9\text{
+  pounds}
+</mrow>
+<mrow>\amp{}=23.22£</mrow>
+</md>
 </p>
 
 <p>
-We've actually seen this type of conversion before. We used in in
-<xref ref="CHAPTERcalc-trig">Section</xref> when we converted angular velocity to
+We've actually seen this type of conversion before.  In
+<xref ref="CHAPTERcalc-trig">Section</xref>  we converted angular velocity to
 linear velocity via the formula:
-<me>
-\left(\frac{3}{1}\frac{\text{\cancel{revolution}}}{{\text{\cancel{minute}}}}\right)\cdot
-\left(\frac{2\pi}{1}
-  \frac{\text{\cancel{radians}}}{\text{\cancel{revolution}}}\right)\cdot
-\left(\frac{10}{1}\frac{\text{meters}}{\text{\cancel{radians}}}\right)\cdot
-\left(\frac{1}{60}\frac{\text{\cancel{minute}}}{\text{second}}\right)
-=\frac{\pi}{1} \frac{\text{meters}}{\text{second}} \approx 3.14
-\frac{\text{meters}}{\text{second}}.
-</me>
+<md>
+  <mrow>
+    \left(\frac{3}{1}\frac{\cancel{\text{revolution}}}{{\cancel{\text{minute}}}}\right)\cdot
+    \left(\frac{2\pi}{1}
+    \frac{\cancel{\text{radians}}}{\cancel{\text{revolution}}}\right)\cdot
+    \left(\frac{10}{1}\frac{\text{meters}}{\cancel{\text{radians}}}\right)\amp{}\cdot
+    \left(\frac{1}{60}\frac{\cancel{\text{minute}}}{\text{second}}\right)
+  </mrow>
+  <mrow>
+    \amp{}=\frac{\pi}{1} \frac{\text{meters}}{\text{second}} 
+  </mrow>
+  <mrow>
+    \amp{}\approx 3.14
+    \frac{\text{meters}}{\text{second}}.
+  </mrow>
+</md>
 </p>
 <p>
 
 A similar chain of cancellations will occur when we differentiate a
 function composition of the form
-<m>\alpha(t)=\alpha(\beta(y(x(t))))</m>. We think of\\\\
-\centerline{ <m>\alpha</m> as a function of <m>\beta</m> (so that
-  <m>\alpha^\prime(\beta)=\dfdx{\alpha}{\beta}</m>)} \\\\
-\centerline{ <m>\beta</m>
-  as a function of <m>y</m> (so that <m>\beta^\prime(y)=\dfdx{\beta}{y}</m>),}\\\\
-\centerline{ <m>y</m> as a function of <m>x</m> (so that
-  <m>y^\prime(x)=\dfdx{y}{x}</m>),}\\\\
-\centerline{ and <m>x</m> as a function of
-  <m>t</m> (so that <m>y^\prime(x)=\dfdx{x}{t}</m>).}\\\\
+<m>\alpha(t)=\alpha(\beta(y(x(t))))</m>. We think of
+<md>
+ <mrow>\alpha \text{ as a function of }\beta \left(\text{ so that }
+  \alpha^\prime(\beta)=\dfdx{\alpha}{\beta}\right)
+</mrow>
+<mrow>
+\beta \text{ as a function of }y \left(\text{ so that
+}\beta^\prime(y)=\dfdx{\beta}{y}\right)
+</mrow>
+<mrow>
+ y> \text{ as a function of }x \left(\text{so that}
+  y^\prime(x)=\dfdx{y}{x}\right),
+</mrow>
+<intertext>and</intertext>
+<mrow>
+ x \text{ as a function of }t \left(\text{so that }
+ y^\prime(x)=\dfdx{x}{t}\right).
+</mrow>
+</md>
+
 </p>
 <p>
 
@@ -1082,13 +1143,14 @@ Putting this all together we see that
 </p>
 <p>
 
-The substitutions we used to make things <q>easier on your eyes</q> in
+The substitution we used to make things <q>easier on your eyes</q> in
 <xref ref="SECTIONAn-easy-problem-alg">Section</xref> is equivalent this chain of
 cancellations.  With the invention of Calculus the older Chain Rule
 for unit conversion was extended to the differentiation by
-substitution technique using differentials. Eventually it became the
+substitution technique using differentials. Eventually the older usage
+was dropped and this became the
 only Chain Rule. When the limit was used to provide rigor to Calculus
- the name was also applied to <xref ref="EQUATIONChainRule"></xref>).
+ the name was also applied to <xref ref="EQUATIONChainRule">equation</xref>).
 </p>
 <p>
 END OF DIGRESSION
@@ -1118,60 +1180,108 @@ derivative of <m>\beta</m> with respect to <m>x</m>) we view it as a function.
   
 <p> 
  We will first establish that
-  <me>
-    \label{eq:DeltaBetaEq0}
+  <men  xml:id="EQUATIONDeltaBetaEq0">
+    <!-- \label{eq:DeltaBetaEq0} -->
     \limit{h}{0}{\Delta\beta}=0.
-  </me>
+  </men>
 </p>
 <p>    
-  Suppose\aside{Because asserting the equality of non-existing objects
-    would be meaningless we assume, implicitly that all limits in this
-    argument exist.} that
-  <me>
-    \beta(x+h)-\beta(x)=\Delta\beta\label{eq:ChainRule1}.
-  </me>
+  Suppose that
+  <men xml:id="EQUATIONChainRule1">
+    \beta(x+h)-\beta(x)=\Delta\beta.
+    <!-- \label{eq:ChainRule1} -->
+  </men>
 </p>  
+<aside>
+<title>Comment</title>
+<p>
+Because asserting the equality of non-existing objects
+    would be meaningless we assume, implicitly that all limits in this
+    argument exist.
+</p>
+</aside>
+
 <p>Then
-  \begin{align*}
+
+<md>
+<mrow>
     \limit{h}{0}{\beta(x+h)}\amp =\limit{h}{0}{(\beta(x)+\Delta\beta)}.
-    \\
-    \intertext{By <xref ref="THEOREMLimSum2">Theorem</xref>
-    we have}
-    \limit{h}{0}{\beta(x+h)}\amp =\limit{h}{0}{\beta(x)}+\limit{h}{0}{\Delta\beta},
-    \\
-    \intertext{and since <m>\beta(x)</m> is differentiable at <m>x</m> we see from
+</mrow>
+<intertext>
+By <xref ref="THEOREMLimSum2">Theorem</xref>
+    we have
+</intertext>
+<mrow> 
+   \limit{h}{0}{\beta(x+h)}\amp =\limit{h}{0}{\beta(x)}+\limit{h}{0}{\Delta\beta},
+</mrow>
+<intertext>
+and since <m>\beta(x)</m> is differentiable at <m>x</m> we see from
     <xref ref="LEMMADiffImpliesCont">Lemma</xref> 
-    that}
-    \beta(x)\amp =\beta(x) +\limit{h}{0}{\Delta\beta}
-  \end{align*}
+    that
+</intertext>
+<mrow> 
+   \beta(x)\amp =\beta(x) +\limit{h}{0}{\Delta\beta}
+</mrow>
+</md>
   from  which <xref ref="EQUATIONDeltaBetaEq0"></xref>) follows. 
   
   To prove the Chain Rule recall that 
-  \begin{align*}
-    f^\prime(x)\amp =\limit{h}{0}{\frac{f(x+h)-f(x)}{h}}\\ 
-   \amp =\limit{h}{0}{\frac{\alpha(\beta(x+h))-\alpha(\beta(x))}{h}}.
-  \end{align*}
-  Multiplying  by <m>1</m> in the form\aside{In the past we
+
+<md>
+<mrow>
+    f^\prime(x)\amp =\limit{h}{0}{\frac{f(x+h)-f(x)}{h}}
+</mrow>
+<mrow>   \amp =\limit{h}{0}{\frac{\alpha(\beta(x+h))-\alpha(\beta(x))}{h}}.</mrow>
+</md>
+</p>
+
+<aside>
+<title>Comment</title>
+<p>
+(in the past we
     have called this <q>uncancelling</q> <m>\Delta\beta</m>. Also, notice that
   this is where we use the assumption, <q><m>\Delta\beta\neq0</m> near
-  <m>x</m>.</q>}
-    \textcolor{red}{<m>\frac{\Delta\beta}{\Delta\beta}</m>   gives}
-  \begin{align}
-  \label{eq:UncancelDeltaBeta}  f^\prime(x)    \amp =\limit{h}{0}{\left(\frac{\alpha(\beta(x+h))-\alpha(\beta(x))}{\textcolor{red}{\Delta\beta}}\cdot\frac{\textcolor{red}{\Delta\beta}}{h}\right)}.\\
-    \intertext{From <xref ref="EQUATIONChainRule1"></xref>) we see that
-    <m>\textcolor{red}{\Delta\beta}=\textcolor{blue}{\beta(x+h)-\beta(x)}</m> so}
-\nonumber    \amp =\limit{h}{0}{\left(\frac{\alpha(\beta(x+h))-\alpha(\beta(x))}{\Delta\beta}\cdot\frac{\textcolor{blue}{\beta(x+h)-\beta(x)}}{h}\right)}.\\
-    \intertext{By <xref ref="THEOREMLimProd2">Theorem</xref> we have:}
-\nonumber    \amp =\limit{h}{0}{\left(\frac{\alpha(\beta(x+h))-\alpha(\beta(x))}{\Delta\beta}\right)}\cdot\limit{h}{0}{\left(\frac{\beta(x+h)-\beta(x)}{h}\right)}.\\
-\intertext{<xref ref="EQUATIONDeltaBetaEq0"></xref>) says that <m>h\rightarrow 0</m>
-    is equivalent to 
-  <m>\Delta\beta\rightarrow 0</m> so we have}
-\nonumber    f^\prime(x)\amp =\lim_{\textcolor{red}{\underset{\Delta\beta\rightarrow0}{\cancel{h\rightarrow0}}}}{\left(\frac{\alpha(\beta+\Delta\beta)-\alpha(\beta)}{\Delta\beta}\right)}\cdot\limit{h}{0}{\left(\frac{\beta(x+h)-\beta(x)}{h}\right)},\\
-\label{eq:ChainRuleProof1}    f^\prime(x)           \amp =\underbrace{\limit{\Delta\beta}{0}{\left(\frac{\alpha(\beta+\Delta\beta)-\alpha(\beta)}{\Delta\beta}\right)}}_{=\alpha^\prime(\beta)}\cdot\underbrace{\limit{h}{0}{\left(\frac{\beta(x+h)-\beta(x)}{h}\right)}}_{=\beta^\prime(x)}.\\
-   \label{eq:ChainRuleBetaIsVariable}    f^\prime(x)
+  <m>x</m>.</q>)
+</p>
+</aside>
+
+<p>
+  Multiplying  by <m>1</m> in the form 
+    <m>\textcolor{red}{\frac{\Delta\beta}{\Delta\beta}}</m>   gives
+<mdn>
+<mrow xml:id="EQUATIONUncancelDeltaBeta">
+  <!-- \label{eq:UncancelDeltaBeta}  -->
+  f^\prime(x)    \amp =\limit{h}{0}{\left(\frac{\alpha(\beta(x+h))-\alpha(\beta(x))}{\textcolor{red}{\Delta\beta}}\cdot\frac{\textcolor{red}{\Delta\beta}}{h}\right)}.
+</mrow>
+<intertext>From <xref ref="EQUATIONChainRule1"></xref>) we see that
+    <m>\textcolor{red}{\Delta\beta}=\textcolor{blue}{\beta(x+h)-\beta(x)}</m>
+so</intertext>
+<mrow number="no">
+   \amp =\limit{h}{0}{\left(\frac{\alpha(\beta(x+h))-\alpha(\beta(x))}{\Delta\beta}\cdot\frac{\textcolor{blue}{\beta(x+h)-\beta(x)}}{h}\right)}.
+</mrow>
+<intertext>By <xref ref="THEOREMLimProd2">Theorem</xref> we have:</intertext>
+<mrow number="no">
+    \amp =\limit{h}{0}{\left(\frac{\alpha(\beta(x+h))-\alpha(\beta(x))}{\Delta\beta}\right)}\cdot\limit{h}{0}{\left(\frac{\beta(x+h)-\beta(x)}{h}\right)}.
+</mrow>
+<intertext>
+  <xref ref="EQUATIONDeltaBetaEq0"></xref>) says that <m>h\rightarrow 0</m>
+    is equivalent to
+  <m>\Delta\beta\rightarrow 0</m> so we have
+</intertext>
+<mrow number="no">
+    f^\prime(x)\amp =\lim_{\textcolor{red}{\underset{\Delta\beta\rightarrow0}{\cancel{h\rightarrow0}}}}{\left(\frac{\alpha(\beta+\Delta\beta)-\alpha(\beta)}{\Delta\beta}\right)}\cdot\limit{h}{0}{\left(\frac{\beta(x+h)-\beta(x)}{h}\right)},
+</mrow>
+<mrow xml:id="EQUATIONChainRuleProof1">
+<!-- \label{eq:ChainRuleProof1} -->
+    f^\prime(x)           \amp =\underbrace{\limit{\Delta\beta}{0}{\left(\frac{\alpha(\beta+\Delta\beta)-\alpha(\beta)}{\Delta\beta}\right)}}_{=\alpha^\prime(\beta)}\cdot\underbrace{\limit{h}{0}{\left(\frac{\beta(x+h)-\beta(x)}{h}\right)}}_{=\beta^\prime(x)}.
+</mrow>
+<mrow xml:id="EQUATIONChainRuleBetaIsVariable">
+   <!-- \label{eq:ChainRuleBetaIsVariable} -->
+    f^\prime(x)
     \amp =\alpha^\prime(\beta)\cdot\beta^\prime(x).
-  \end{align}
-  In <xref ref="EQUATIONChainRuleBetaIsVariable"></xref> <m>\beta</m> is first used
+</mrow>
+</mdn>
+  In <xref ref="EQUATIONChainRuleBetaIsVariable">equation</xref> <m>\beta</m> is first used
   as a variable in <m>\alpha^\prime(\beta)</m>, and then as the function
   <m>\beta(x)</m>. While this is correct, it is also poor form because it
   accentuates the dual use of <m>\beta</m>. To avoid this we usually
@@ -1188,7 +1298,7 @@ derivative of <m>\beta</m> with respect to <m>x</m>) we view it as a function.
 </proof>
 
 
-<paragraphs>
+<paragraphs xml:id="DIGRESSIONDeltaBetaNotZero">
 <title>DIGRESSION: Why Assume That <m>\Delta\beta\neq0</m> Near Zero?</title>
 <p>
 
@@ -1196,14 +1306,14 @@ derivative of <m>\beta</m> with respect to <m>x</m>) we view it as a function.
 </p>
 <p>
   
-  Observe that in <xref ref="EQUATIONChainRuleProof1"></xref>) <m>\Delta\beta</m>
+  Observe that in <xref ref="EQUATIONChainRuleProof1">equation</xref>) <m>\Delta\beta</m>
   plays the same role the <m>h</m> plays in
   <xref ref="DEFINITIONDerivative"></xref>). In
   <xref ref="DEFINITIONDerivative"></xref>) we were careful to insist that <m>h</m>
   could never equal zero,so if we are going to interpret
-  <m>\limit{\Delta\beta}{0}{\left(\frac{\alpha(\beta+\Delta\beta)-\alpha(\beta)}{\Delta\beta}\right)}</m>
+  <me>\limit{\Delta\beta}{0}{\left(\frac{\alpha(\beta+\Delta\beta)-\alpha(\beta)}{\Delta\beta}\right)}</me>
   as the derivative of <m>\alpha</m> with respect to <m>\beta</m>, as we did in
-  <xref ref="EQUATIONChainRuleProof1"></xref>), we need to know that
+  <xref ref="EQUATIONChainRuleProof1">equation</xref>), we need to know that
   <m>\Delta\beta\neq0</m> when <m>h</m> is near zero.
 </p>
 <p>
@@ -1217,16 +1327,25 @@ derivative of <m>\beta</m> with respect to <m>x</m>) we view it as a function.
   chapter. A valid proof of the Chain Rule without that constraint is
   possible, but since it would have very little relevance to anything
   we'll be doing we have chosen to prove only this weaker form of the
-  Chain Rule\aside{You may be wondering if our choice  to go with a
+  Chain Rule
+  </p>
+  <aside>
+<title>Comment</title>
+<p>
+You may be wondering if our choice  to go with a
     weaker form of the Chain Rule means we've given Bishop Berkeley
     cause for compliant. The answer
     is no, we haven't. If we'd left off the condition that
     <m>\Delta\beta\neq0</m>, then our proof would not have been rigorous
     because we'd have ended by claiming more than we'd proved. As it
-    is, we've only claimed what we have proved.\\
-    Rigorous does not mean perfect, it means logical.
-  }
+    is, we've only claimed what we have proved.
 </p>
+<p>
+
+    Rigorous does not mean perfect, it means logical.
+</p>
+</aside>
+
 <p>
 
   If you are unsatisfied with this proof and want to see a proof of
@@ -1248,10 +1367,14 @@ derivative of <m>\beta</m> with respect to <m>x</m>) we view it as a function.
           \beta(x)=\sin\left(\frac1x\right)
         </m>
         does not satisfy the constraint <m>\Delta\beta\neq0</m> when <m>x</m> is near
-        zero.\\
-        \hint{Recall <xref ref="DEFINITIONnear"></xref>.}
+        zero.
       </p>
     </statement>
+      <hint>
+        <p>
+          Recall <xref ref="DEFINITIONnear"></xref>.
+        </p>
+      </hint>
   </task>
   <task>
     <statement>
@@ -1261,7 +1384,7 @@ derivative of <m>\beta</m> with respect to <m>x</m>) we view it as a function.
         <m>x=0</m>. Nevertheless one of them is differentiable at <m>x=0</m>. Use
         <xref ref="DEFINITIONDerivative"></xref> to find out which one.
         
-        <ol>
+        <ol marker="i">
           <li>
             <p>
               <m>T(x)=
@@ -1353,13 +1476,22 @@ END OF DIGRESSION
   <m>f(x)</m> is the composition of <m>\alpha(x)=x^2</m>, and
   <m>\beta(x)=\sin(x)+\cos(x)</m> and then apply
   <xref ref="THEOREMChainRule"></xref> as follows.
-  \begin{align*}
-    f^\prime(x) \amp = \alpha^\prime(\beta(x))\cdot\beta^\prime(x)\\
-    \amp = \alpha^\prime(\beta(x))\cdot(\cos(x)-\sin(x))\\
-    \amp = \alpha^\prime(\sin(x)+\cos(x))\cdot(\cos(x)-\sin(x))\\
+  <md>
+<mrow>
+    f^\prime(x) \amp = \alpha^\prime(\beta(x))\cdot\beta^\prime(x)
+</mrow>
+<mrow>
+    \amp = \alpha^\prime(\beta(x))\cdot(\cos(x)-\sin(x))
+</mrow>
+<mrow>
+    \amp = \alpha^\prime(\sin(x)+\cos(x))\cdot(\cos(x)-\sin(x))
+</mrow>
+<mrow>
     f^\prime(x)\amp = 2
     (\sin(x)+\cos(x))\cdot(\cos(x)-\sin(x)).
-  \end{align*}
+</mrow>
+</md>
+
 </p>
 </example>
 
@@ -1382,51 +1514,59 @@ always used.
 </exercise>
 
 <problem>
-<statement>
-<p>
-  Compute <m>\dfdx{y}{x}</m> for each of the following functions by
-  identifying <m>\alpha(x)</m> and <m>\beta(x)</m> such that
-  <m>y(x) = \alpha(\beta(x))</m> and applying the Chain Rule. You may have
-  to do this more than once for a given problem.
-  
-  In each case confirm that your computation is correct with an
-  appropriate differential substitution.
-  
-<ol>
-    <li>
-<p>
- <m>y=(3x+5)^6</m>
-</p>
-</li>
-    <li>
-<p>
- <m>y=\sec(\tan(x))</m>
-</p>
-</li>
-    <li>
-<p>
- <m>y=\sqrt[7]{\frac{1}{x} +x^3}</m>
-</p>
-</li>
-    <li>
-<p>
- <m>y=\left(\frac{x-x^{\frac12}}{x^3-1}\right)^2</m>
-</p>
-</li>
-    <li>
-<p>
- <m>y=e^{x-\cos^2(x)}+(2x^2-3)^{\frac15}</m>
-</p>
-</li>
-    <li>
-<p>
- <m>y=\sqrt{x+\sqrt[3]{2+\sqrt[4]{3-x^2}}}</m>
-</p>
-</li>
-  </ol>
-
-  </p>
-</statement>
+  <introduction>
+    <p>
+      Compute <m>\dfdx{y}{x}</m> for each of the following functions by
+      identifying <m>\alpha(x)</m> and <m>\beta(x)</m> such that
+      <m>y(x) = \alpha(\beta(x))</m> and applying the Chain Rule. You may have
+      to do this more than once for a given problem.
+      
+      In each case confirm that your computation is correct with an
+      appropriate differential substitution.
+    </p>
+  </introduction>
+  <task>
+    <statement>
+      <p>
+        <m>y=(3x+5)^6</m>
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        <m>y=\sec(\tan(x))</m>
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        <m>y=\sqrt[7]{\frac{1}{x} +x^3}</m>
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        <m>y=\left(\frac{x-x^{\frac12}}{x^3-1}\right)^2</m>
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        <m>y=e^{x-\cos^2(x)}+(2x^2-3)^{\frac15}</m>
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        <m>y=\sqrt{x+\sqrt[3]{2+\sqrt[4]{3-x^2}}}</m>
+      </p>
+    </statement>
+  </task>
 </problem>
 
 
@@ -1444,43 +1584,47 @@ the proof of the Chain Rule.
 <p>
   If <m>\alpha(x)</m> and <m>\beta(x)</m> are differentiable at <m>x</m> then
   <m>f(x)=\alpha(x)\cdot\beta(x)</m> is differentiable and
-  <me>
-    \label{eq:PRviaLimit2}
+  <men xml:id="EQUATIONPRviaLimit2">
+    <!-- \label{eq:PRviaLimit2} -->
     f^\prime(x)=\alpha(x)\cdot\beta^\prime(x)+\beta(x)\cdot\alpha^\prime(x).
-  </me>
+  </men>
   </p>
 </theorem>
 <proof xml:id="PROOFLimitProdRule">
 <!-- <title>\textcolor{blue}{-\beta(x)\left(\alpha(x+h)-\alpha(x)\right)}\right</title> -->
 <p>
-  We start with the two observations. The first is that
-  <me>
+  We start with two observations. The first is that
+  <men xml:id="EQUATIONPRviaLimit">
     f^\prime(x)=\limit{h}{0}{\frac{\textcolor{red}{f(x+h)}-\textcolor{blue}{f(x)}}{h}}
     =  \limit{h}{0}{\frac{\textcolor{red}
         {\alpha(x+h)\beta(x+h)}-\textcolor{blue}{\alpha(x)\beta(x)}}{h}}
-    \label{eq:PRviaLimit}
-  </me>
+    <!-- \label{eq:PRviaLimit} -->
+  </men>
   and the second is that, in limit form,
-  <xref ref="EQUATIONPRviaLimit2"></xref> is
-  <me>
-    \label{eq:PRviaLimit3}
-    f^\prime(x)=\alpha(x)\left(\limit{h}{0}{\frac{\beta(x+h)-\beta(x)}{h}}\right)+\beta(x)\left(\limit{h}{0}{\frac{\alpha(x+h)-\alpha(x)}{h}}\right).
-  </me>
-  It appears then that our goal is to simply reorganize
-  <xref ref="EQUATIONPRviaLimit"></xref> until it looks like
-  <xref ref="EQUATIONPRviaLimit3"></xref>.  We say <q>simply</q> but it will only
+  <xref ref="EQUATIONPRviaLimit2">equation</xref> is
+  <men xml:id="EQUATIONPRviaLimit3">
+    <!-- \label{eq:PRviaLimit3} -->
+    \begin{split}f^\prime(x)=\alpha(x)\amp{}\left(\limit{h}{0}{\frac{\beta(x+h)-\beta(x)}{h}}\right)\\
+\amp{}+\beta(x)\left(\limit{h}{0}{\frac{\alpha(x+h)-\alpha(x)}{h}}\right).
+\end{split}
+  </men>
+  It appears then that our goal is simply to reorganize
+  <xref ref="EQUATIONPRviaLimit">equation</xref> until it looks like
+  <xref ref="EQUATIONPRviaLimit3">equation</xref>.  We say <q>simply</q> but it will only
   appear to be simple after we have succeeded. We will proceed slowly.
-  
+  </p>
+
+<p>
   Observe that if we subtract <m>\alpha(x+h)\beta(x)</m> from the blue part
   of the numerator
-  in <xref ref="EQUATIONPRviaLimit"></xref> we get
+  in <xref ref="EQUATIONPRviaLimit">equation</xref> we get
   <me>
   \alpha(x)\beta(x)-\alpha(x+h)\beta(x)=
   \textcolor{blue}{-\beta(x)\left(\alpha(x+h)-\alpha(x)\right)},
   </me>
   whereas if we add <m>\alpha(x+h)\beta(x)</m> to the red part of
   the numerator in
-  <xref ref="EQUATIONPRviaLimit"></xref>  we get
+  <xref ref="EQUATIONPRviaLimit">equation</xref>  we get
   <me>
   \alpha(x+h)\beta(x+h)+\alpha(x+h)\beta(x) =
   \textcolor{red}{\alpha(x+h)\left(\beta(x+h)-\beta(x)\right)}.
@@ -1488,7 +1632,7 @@ the proof of the Chain Rule.
   
   This suggests that we should both add and subtract the expression
   <m>\alpha(x+h)\beta(x)</m> to the numerator of
-  <xref ref="EQUATIONPRviaLimit"></xref>.  Doing this and factoring as we've
+  <xref ref="EQUATIONPRviaLimit">equation</xref>.  Doing this and factoring as we've
   indicated above we get
   <me>
   f^\prime(x)=\limit{h}{0}{ \frac{ \textcolor {red}
@@ -1506,15 +1650,18 @@ the proof of the Chain Rule.
   </me>
   and by <xref ref="THEOREMLimProd2"></xref> we see that
   <me>
+\begin{split}
   f^\prime(x)=
   \underbrace{\left[ \tlimit{h}{0}{\textcolor{green}{\alpha(x+h)}}
-    \right]}_{=\alpha(x)} \underbrace{\left[ \tlimit{h}{0}{ \left(
+    \right]}_{=\alpha(x)}\amp{} \underbrace{\left[ \tlimit{h}{0}{ \left(
           \textcolor{red}{\frac{\beta(x+h)-\beta(x)}{h}} \right) }
-    \right]}_{=\beta^{\prime}(x)} + \underbrace{\left[
+    \right]}_{=\beta^{\prime}(x)}\\
+\amp{} + \underbrace{\left[
       \tlimit{h}{0}{\textcolor{green}{\beta(x)}} \right]}_{\beta(x)}
   \underbrace{\left[ \limit{h}{0}{ \left(
           \textcolor{blue}{\frac{\alpha(x+h)-\alpha(x)}{h}} \right) },
     \right]}_{\alpha^\prime(x)}
+    \end{split}
   </me>
   and therefore
   <me> f^\prime(x)=\alpha(x)\beta^\prime(x)+\beta(x)\alpha^\prime(x).</me>
@@ -1619,44 +1766,56 @@ viewed as a rearranged version of the Product Rule.
 <problem>
 <statement>
 <p>
-  Use the Product Rule to derive the Quotient Rule.\\
-  \hint{First solve <m>f(x)=\frac{\alpha(x)}{\beta(x)}</m> for
-    <m>\alpha(x)</m>. }
+  Use the Product Rule to derive the Quotient Rule.
 </p>
 </statement>
+<hint>
+<p>
+First solve <m>f(x)=\frac{\alpha(x)}{\beta(x)}</m> for
+    <m>\alpha(x)</m>.
+</p>
+</hint>
 </problem>
 
 <p>
 With the Product Rule for Differentiation in place we now have the
 tools needed to prove the Power Rule for Positive Integer Exponents.
 The method of proof we outline in the following problem is called
-<term>Mathematical Induction</term>\aside{We mentioned <term>Mathematical
-    Induction</term> In part (d) of <xref ref="PROBLEMPR-integer"></xref> back
-  in <xref ref="CHAPTERdifferentials">Chapter</xref>.}  and it can be used in other
+<term>Mathematical Induction</term>  and it can be used in other
 contexts as well. In fact, most of the <q>Find the Pattern</q> problems
 in this text require an Induction argument for full rigor.
 </p>
 
-<problem>
-<title>The Power Rule for Positive Integer Exponents</title>
-<statement>
-<p>
-  Assume  that <m>\alpha(x)=x^n</m> is differentiable at <m>x</m> for
-  any positive integer <m>n</m>.
-<dl>
-<li>
-<title>   Part 1:</title>
-<p>
- Assume that <m>n=1</m>.  Use the limit definition to    show that <m>\alpha^\prime(x) = nx^{n-1}.</m> \\    \comment{This says, <q>The Power Rule holds for <m>k=1</m>.</q>}
-</p>
-</li>
-<li>
-<title>   Part 2:</title>
-<p>
- Now assume that the Power Rule for Positive  Integer Exponents holds for <m>n=k</m>, where <m>k</m> is an arbitrary, fixed  positive integer.        Let <m>\beta(x)=x^{k+1}</m> and show that <m>\beta^\prime(x)=(k+1)x^k.</m>\\    \comment{This says, <q>If the Power Rule holds for <m>k</m> then it    must also hold for <m>k+1</m>.</q>
-</p>
-  </li>
-</dl>
+<problem xml:id="PROBLEMPowRulInduction">
+  <title>The Power Rule for Positive Integer Exponents</title>
+<introduction>
+    <p>
+      Assume  that <m>\alpha(x)=x^n</m> is differentiable at <m>x</m> for
+      any positive integer <m>n</m>.
+    </p>
+</introduction>
+  <task>
+    <statement>
+      <p>
+        Assume that <m>n=1</m>.  Use the limit definition to    show
+        that <m>\alpha^\prime(x) = nx^{n-1}.</m> (This says, <q>The
+        Power Rule holds for <m>k=1</m>.</q>)
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Now assume that the Power Rule for Positive Integer Exponents
+        holds for <m>n=k</m>, where <m>k</m> is an arbitrary, fixed
+        positive integer.  Let <m>\beta(x)=x^{k+1}</m> and show that
+        <m>\beta^\prime(x)=(k+1)x^k.</m> (This says, <q>If the Power
+        Rule holds for <m>k</m> then it must also hold for
+        <m>k+1</m>.</q>)
+      </p>
+    </statement>
+  </task>
+
 
 <!--   \begin{description} -->
 <!--   \item[   Part 1:] Assume that <m>n=1</m>.  Use the limit definition to -->
@@ -1670,20 +1829,36 @@ in this text require an Induction argument for full rigor.
 <!--     \comment{This says, <q>If the Power Rule holds for <m>k</m> then it -->
 <!--     must also hold for <m>k+1</m>.</q>} -->
 <!--   \end{description} -->
-  
+<task>
+<statement>
+<p>
   Do you see how this proves that the Power Rule holds for any
   positive integer, <m>n</m>? Write a short paragraph explaining the logic
   behind this.
 </p>
 </statement>
+</task>
 </problem>
+
 <p>
-With the  Power Rule for Positive Integer Exponents in place we
-can extend it to both negative and rational exponents in the same way
-we did it in <xref ref="CHAPTERdifferentials"></xref>. The following problem
-is essentially a repeat of <xref ref="PROBLEMPRPosRat"></xref> <xref ref="EPPRRecip">and
-</xref>, using Lagrange's prime notation, and function
-notation, rather than differentials.
+  Parts (a) and (b) of this problem constitute a
+  proof of the Power Rule for Positive Integer Exponents by
+  <term>Mathematical Induction</term>, and part (c) asks you to
+  explain the underlying logic. Although we didn<rsq/>t  mention it at
+  the time, Mathematical
+  Induction was the underlying idea in part (d) of <xref
+  ref="PROBLEMPR-integer"></xref> as well.
+</p>
+
+
+
+<p>
+With the Power Rule for Positive Integer Exponents in place we can
+extend it to both negative and rational exponents in the same way we
+did it in <xref ref="CHAPTERdifferentials"></xref>. The following
+problem is essentially a repeat of <xref ref="PROBLEMPRPosRat"></xref>
+<xref ref="PROBLEMRecip">and </xref>, using Lagrange's prime notation,
+and function notation, rather than differentials.
 </p>
 
 <problem>
@@ -1699,11 +1874,14 @@ notation, rather than differentials.
  Assume <m>n</m> is a positive integer and that <m>\alpha(x)=x^{-n}</m> is
     differentiable.  Show that
     <me>\alpha^\prime(x) = -nx^{-(n+1)}.</me>
-    
-    \hint{Rewrite <m>\alpha(x)=x^{-n}</m> as <m>\frac{1}{x^n}</m> and use the
-      Quotient Rule for Differentiation and the Power Rule for positive integers.}
   </p>
 </statement>
+<hint>
+<p>
+Rewrite <m>\alpha(x)=x^{-n}</m> as <m>\frac{1}{x^n}</m> and use the
+      Quotient Rule for Differentiation and the Power Rule for positive integers.
+</p>
+</hint>
 </task>
 <task>
 <statement>
@@ -1711,12 +1889,15 @@ notation, rather than differentials.
  Assume that <m>q</m> is a non-zero integer and that
     <m>\alpha(x)=x^{1/q}</m> is differentiable at <m>x</m>.  Show
     that <me>\alpha^\prime(x) = (1/q)x^{(1/q-1)}.</me>
-    
-    \hint{Rewrite <m>\alpha(x)=x^{1/q}</m> as
-      <me>\left[\alpha(x)\right]^q=x</me> and use the Chain Rule and
-      the Power Rule for positive integers.}
   </p>
 </statement>
+<hint>
+<p>
+Rewrite <m>\alpha(x)=x^{1/q}</m> as
+      <me>\left[\alpha(x)\right]^q=x</me> and use the Chain Rule and
+      the Power Rule for positive integers.
+</p>
+</hint>
 </task>
 <task>
 <statement>
@@ -1724,12 +1905,15 @@ notation, rather than differentials.
  Assume that <m>p</m> and <m>q</m> are integers,  <m>q\neq0</m>, and that
     <m>\alpha(x)=x^{p/q}</m> is differentiable at <m>x</m>.  Show
     that <me>\alpha^\prime(x) = (p/q)x^{(p/q-1)}.</me>
-    
-    \hint{Rewrite <m>\alpha(x)=x^{p/q}</m> as
-      <m>\alpha(x)=\left(x^{1/q}\right)^p</m> and use the Chain Rule and
-      part (b).}
   </p>
 </statement>
+<hint>
+<p>
+Rewrite <m>\alpha(x)=x^{p/q}</m> as
+      <m>\alpha(x)=\left(x^{1/q}\right)^p</m> and use the Chain Rule and
+      part (b).
+</p>
+</hint>
 </task>
 </problem>
 <!-- \begin{embeddedproblem-enumerate}[The Power Rule for Rational and Negative Exponents] -->
@@ -1789,7 +1973,7 @@ We added the same assumption to <xref ref="THEOREMPowerRuleLimit"></xref> for
 similar reasons.
 </p>
 
-<paragraphs>
+<paragraphs  xml:id="DIGRESSIONRUAMathematician">
 <title>DIGRESSION: Are You a Mathematician?</title>
 <p>
 
@@ -1826,7 +2010,7 @@ similar reasons.
  First prove the special case of the Quotient Rule where
     <m>f(x)=\frac{1}{\beta(x)}</m>.
     
-<ol>
+<ol marker="i">
     <li>
 <p>
  Use the limit definition to show that
@@ -1851,7 +2035,8 @@ similar reasons.
  Use the Product Rule for Differentiation and the Chain Rule (along
  with the result of part a) to show that
  <m>f(x)=\frac{\alpha(x)}{\beta(x)}</m> is differentiable at <m>x</m>
- and that\\ <me>\displaystyle f^\prime(x) =
+ and that
+ <me>\displaystyle f^\prime(x) =
  \frac{\beta(x)\alpha^\prime(x) -
  \alpha(x)\beta^\prime(x)}{\left[\beta(x)\right]^2}.  </me>
   </p>
@@ -1899,17 +2084,23 @@ similar reasons.
     Have fun!
 </p>  
   <problem xml:id="PROBLEMPR-rigor1">
-<introduction>
-<p>
-    To prove  <xref ref="THEOREMPowerRuleLimit"></xref> we will first focus
-    on the special case of <m>\beta(x)=x^{\frac{1}{q}}</m>, <m>q</m> is a
-    non-negative integer.
-    
-    The key to proving this special case is a generalization of the
-    difference of squares formula: <m>(a-b)(a+b)=a^2-b^2.</m>
-    
-</p>
-</introduction>
+    <introduction>
+      <p>
+        To prove  <xref ref="THEOREMPowerRuleLimit"></xref> we will first focus
+        on the special case of 
+        <me>
+          \beta(x)=x^{\frac{1}{q}},
+        </me> 
+        where 
+        <m>q</m> is a
+        non-negative integer.
+      </p>
+      <p>
+        The key to proving this special case is a generalization of the
+        difference of squares formula: <me>(a-b)(a+b)=a^2-b^2.</me>
+        
+      </p>
+    </introduction>
 <task>
 <statement>
 <p>
@@ -1927,8 +2118,8 @@ similar reasons.
 <task>
 <statement>
 <p>
- Use <term>Mathematical Induction</term> to show that\\
-      \centerline{<m>(a-b)(a^{q-1}+a^{q-2}b+a^{q-3}b^2+\cdots+ab^{q-2}+b^{q-1})=a^q-b^q</m>.}
+ Use <term>Mathematical Induction</term> to show that
+      <me>(a-b)(a^{q-1}+a^{q-2}b+a^{q-3}b^2+\cdots+ab^{q-2}+b^{q-1})=a^q-b^q</me>.
     </p>
 </statement>
 </task>
@@ -1956,9 +2147,10 @@ similar reasons.
 <p>
     Assume that <m>p</m> and <m>q</m> are integers and that <m>q\neq0</m>. If we
     apply <xref ref="DEFINITIONDerivative"></xref> to <m>f(x)=x^\frac{1}{q}</m>, we
-    get\\
-    \centerline{<m>
-      f^\prime(x)=\limit{h}{0}{\frac{(x+h)^\frac1q-x^\frac1q}{h}}.  </m>}
+    get
+<me>
+      f^\prime(x)=\limit{h}{0}{\frac{(x+h)^\frac1q-x^\frac1q}{h}}.  
+</me>
 </p>
 </introduction>
 <task>
@@ -2342,9 +2534,10 @@ trigonmetric formulas.
   other. For this particular relation it is easiest to choose a value
   for <m>x</m> and compute the corresponding <m>y</m> value so we would normally
   rearrange it as
-  <me>
-    y(x)=x^3.\label{eq:Inv1}
-  </me>
+  <men  xml:id="EQUATIONInv1">
+    y(x)=x^3.
+    <!-- \label{eq:Inv1} -->
+  </men>
   <xref ref="EQUATIONInv1"></xref> defines <m>y</m> as a function of <m>x</m>.
 </p>
 <p>
@@ -2352,9 +2545,10 @@ trigonmetric formulas.
   But we only solved for <m>y</m> because we could see it was a little
   easier to do. Otherwise our choice was completely arbitrary. We could also
   have solved for <m>x</m> giving,
-  <me>
-    x(y)=\sqrt[3]{y}.\label{eq:Inv2}
-  </me>
+  <men xml:id="EQUATIONInv2">
+    x(y)=\sqrt[3]{y}.
+    <!-- \label{eq:Inv2} -->
+  </men>
   In this case we have <m>x</m> as a function of <m>y</m>.
 </p>
 <p>
@@ -2426,10 +2620,10 @@ END OF DIGRESSION
 Our next task is to show that if <m>f(x)</m> is invertible and
 differentiable, then <m>\inverse{f}</m> is also differentiable\aside{<m>\inverse{f}</m> is
   obviously invertible}. We do this by showing that the limit
-<me>
-  \label{eq:InvFuncDerivLimit}
+<men xml:id="EQUATIONInvFuncDerivLimit">
+  <!-- \label{eq:InvFuncDerivLimit} -->
   \DD\left(\inverse{f}(x)\right)=\limit{h}{0}{\frac{\inverse{f}(x+h)-\inverse{f}(x)}{h}}
-</me>
+</men>
 exists.
 </p>
 <p>
@@ -2555,10 +2749,10 @@ exists or it does not exist. There are two steps:
   \DD(x)=1.
   </me>
    On the left apply the Chain Rule:
-  <me>
-    \label{eq:InvDeriv2}
+  <men xml:id="EQUATIONInvDeriv2">
+    <!-- \label{eq:InvDeriv2} -->
     f^\prime\left(\inverse{f}(x)\right)\cdot\DD\left(\inverse{f}(x)\right)=1.
-  </me>
+  </men>
   But when <m>x=b</m> we find that 
   <m>f^\prime\left(\inverse{f}(b)\right)=f^\prime\left(a\right)=0</m>,
   so that
@@ -2615,9 +2809,10 @@ the derivative of the inverse will be if it exists:
 <p>
   Let <m>y=\inverse{f}(x)</m> and explain how the formula above is
   equivalent to
-  <me>
-    \dfdx{y}{x}=\frac{1}{\dfdx{x}{y}}\label{eq:InvDeriv}
-  </me>
+  <men xml:id="EQUATIONInvDeriv">
+    \dfdx{y}{x}=\frac{1}{\dfdx{x}{y}}
+    <!-- \label{eq:InvDeriv} -->
+  </men>
   </p>
 </statement>
 </exercise>
@@ -2704,11 +2899,11 @@ I think something is got lost in translation here. The formula <m>(a+k)-a\right<
   <m>f^\prime(a)</m> if only we had <m>k\rightarrow0</m> instead of
   <m>h\rightarrow0</m>.  What we need to show now is that if
   <m>h\rightarrow0</m> then <m>k\rightarrow0</m>. Then we could write
-  <me>
-    \label{eq:InvProof}
+  <men xml:id="EQUATIONInvProof">
+    <!-- \label{eq:InvProof} -->
     \DD\left(\inverse{f}(b)\right) = \frac{1}
     {\limit{k}{0}{\frac{f(a+k)-f(a)}{k}}}=\frac{1}{f^\prime(a)}
-</me>
+  </men>
   and our proof would be complete
   
   Written a little more carefully, what we need to show is that
@@ -2727,7 +2922,7 @@ I think something is got lost in translation here. The formula <m>(a+k)-a\right<
   
           
           
-   One last point: On the left side of <xref ref="FORMULAeq:InvProof"></xref> the
+   One last point: On the left side of <xref ref="EQUATIONInvProof"></xref> the
    variable is <m>b</m> and on the right it is <m>a</m>. While this is not
    strictly wrong it is a more useful theorem if we state it in terms
    of <m>b</m> alone.
