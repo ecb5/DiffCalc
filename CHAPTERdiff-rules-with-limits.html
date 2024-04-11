@@ -603,14 +603,14 @@ window.MathJax = {
 <li id="SUBSECTIONlimit-comp-cont-9-4-1"><div class="para" id="SUBSECTIONlimit-comp-cont-9-4-1-1">“Suppose that the functions <span class="process-math">\(f(x)\)</span> and <span class="process-math">\(g(x)\)</span> are defined on some open interval about <span class="process-math">\(a\)</span>” and,</div></li>
 <li id="SUBSECTIONlimit-comp-cont-9-4-2"><div class="para" id="SUBSECTIONlimit-comp-cont-9-4-2-1">“except, possibly, at <span class="process-math">\(a\)</span> itself”</div></li>
 </ul>
-<div class="para">To see why these are necessary recall that we’re going to use limits to define the derivative as in <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONDerivative.html" title="Definition 13.4: The Derivative">Theorem 13.4</a> so we’ll need to evaluate the limit <span class="process-math">\(f^\prime(x)=\tlimit{h}{0}{\frac{f(x+h)-f(x)}{h}}\)</span> . Clearly the expression <span class="process-math">\(\frac{f(x+h)-f(x)}{h}\)</span> is not defined at <span class="process-math">\(h=0\text{.}\)</span> But we’re only interested in its value <dfn class="terminology">in the limit</dfn> as <span class="process-math">\(h\rightarrow0\)</span> which means that <span class="process-math">\(h\)</span> must be able to get close to <span class="process-math">\(0\text{.}\)</span> That is, there must be an open interval around <span class="process-math">\(0\)</span> where the expression <span class="process-math">\(\frac{f(x+h)-f(x)}{h}\)</span> is defined.</div>
+<div class="para">To see why these are necessary recall that we’re going to use limits to define the derivative as in <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONDerivative.html" title="Definition 13.4: The Derivative">Theorem 13.4</a> so we’ll need to evaluate the limit <span class="process-math">\(f^\prime(x)=\tlimit{h}{0}{\frac{f(x+h)-f(x)}{h}}\text{.}\)</span> Clearly the expression <span class="process-math">\(\frac{f(x+h)-f(x)}{h}\)</span> is not defined at <span class="process-math">\(h=0\text{.}\)</span> But we’re only interested in its value <dfn class="terminology">in the limit</dfn> as <span class="process-math">\(h\rightarrow0\)</span> which means that <span class="process-math">\(h\)</span> must be able to get close to <span class="process-math">\(0\text{.}\)</span> That is, there must be an open interval around <span class="process-math">\(0\)</span> where the expression <span class="process-math">\(\frac{f(x+h)-f(x)}{h}\)</span> is defined.</div>
 </div>
-<div class="para" id="SUBSECTIONlimit-comp-cont-10">But we don’t care if <span class="process-math">\(\frac{f(x+h)-f(x)}{h}\)</span> is defined at <span class="process-math">\(h=0\)</span> or not. It is irrelevant to our purpose.  So we state explicitly that we do not consider whether <span class="process-math">\(h=0\text{.}\)</span>
+<div class="para" id="SUBSECTIONlimit-comp-cont-10">But we don’t care if <span class="process-math">\(\frac{f(x+h)-f(x)}{h}\)</span> is defined at <span class="process-math">\(h=0\)</span> or not. That is irrelevant to our purpose.  So we state explicitly that we do not consider whether <span class="process-math">\(h=0\text{.}\)</span>
 </div>
 <div class="para" id="SUBSECTIONlimit-comp-cont-11">Ok, but why did we insert the word “possibly”? Wouldn’t it be enough to simply say “except at <span class="process-math">\(a\)</span>”?</div>
 <div class="para" id="SUBSECTIONlimit-comp-cont-12">We need to say “possibly” because these theorems, like all theorems, are stated with as much generality as possible.  For example, consider the function <span class="process-math">\(f(x)=2x\text{.}\)</span> Had we not included “possibly” in the conditions of our theorems the limit: <span class="process-math">\(\tlimit{x}{3}{2x}\text{,}\)</span> which is clearly equal to <span class="process-math">\(6\text{,}\)</span> would have to be considered undefined because <span class="process-math">\(f(x)=2x\)</span> is defined at <span class="process-math">\(x=3\text{.}\)</span> This distinction  may seem like a very fussy, and unimportant detail right now, but it will be important when we discuss the meaning of continuity in <a href="CHAPTERdiff-rules-with-limits.html#SUBSECTIONlimit-comp-cont" class="internal" title="Subsection 14.1.1: The Limit of a Composition and Continuity at a Point">Subsection 14.1.1</a>.</div>
 <aside class="aside aside-like" id="SUBSECTIONlimit-comp-cont-13"><h5 class="heading"><span class="title">Historical Background.</span></h5>
-<div class="para" id="SUBSECTIONlimit-comp-cont-13-2">In the eighteenth century there was a, public, protracted, and vitriolic argument between <a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Robins/" target="_blank">Benjamin Robins</a><a class="xref" id="SUBSECTIONlimit-comp-cont-13-2-2" href="" data-knowl="./knowl/fn/SUBSECTIONlimit-comp-cont-13-2-2.html" title="Footnote 14.2"><sup> 2 </sup></a> and <a class="external" href="https://en.wikipedia.org/wiki/James_Jurin" target="_blank">James Jurin</a><a class="xref" id="SUBSECTIONlimit-comp-cont-13-2-4" href="" data-knowl="./knowl/fn/SUBSECTIONlimit-comp-cont-13-2-4.html" title="Footnote 14.3"><sup> 3 </sup></a> over exactly this point. Jurin would have claimed that the statement <span class="process-math">\(\tlimit{x}{3}{2x} = 6\)</span> is meaningless. Robins would have said it has meaning because it is obviously true. The point here is not that either man was right or wrong, but rather that it depends on how we define limits. By one definition Robins was correct, by another Jurin was. Their controversy was the result of the incomplete understanding of limits that prevailed at the time.</div></aside><article class="example example-like" id="EXAMPLEDiscontLimit1"><h5 class="heading">
+<div class="para" id="SUBSECTIONlimit-comp-cont-13-2">In the eighteenth century there was a, public, protracted, and vitriolic argument between <a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Robins/" target="_blank">Benjamin Robins</a><a class="xref" id="SUBSECTIONlimit-comp-cont-13-2-2" href="" data-knowl="./knowl/fn/SUBSECTIONlimit-comp-cont-13-2-2.html" title="Footnote 14.2"><sup> 2 </sup></a> and <a class="external" href="https://en.wikipedia.org/wiki/James_Jurin" target="_blank">James Jurin</a><a class="xref" id="SUBSECTIONlimit-comp-cont-13-2-4" href="" data-knowl="./knowl/fn/SUBSECTIONlimit-comp-cont-13-2-4.html" title="Footnote 14.3"><sup> 3 </sup></a> over exactly this point. Robins would have claimed that the statement <span class="process-math">\(\tlimit{x}{3}{2x} = 6\)</span> is meaningless. Jurin would have said it has meaning because it is obviously true. The point here is not that either man was right or wrong, but rather that it depends on how we define limits. By one definition Robins was correct, by another Jurin was. Their controversy was the result of the incomplete understanding of limits that prevailed at the time.</div></aside><article class="example example-like" id="EXAMPLEDiscontLimit1"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">14.4</span><span class="period">.</span>
 </h5>
 <div class="para logical" id="EXAMPLEDiscontLimit1-1">
@@ -740,7 +740,7 @@ f(x)=
 </ol></article><article class="problem example-like" id="SUBSECTIONlimit-comp-cont-25"><h5 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">14.10</span><span class="period">.</span>
 </h5>
-<div class="introduction" id="SUBSECTIONlimit-comp-cont-25-1"><div class="para" id="SUBSECTIONlimit-comp-cont-25-1-1">\noindent  Explain, that  the following statements are true by citing <a href="" class="xref" data-knowl="./knowl/xref/THEOREMLimSum2.html" title="Theorem 14.1: The Limit of a Sum is the Sum of the Limits">Theorem 14.1</a> through <a href="" class="xref" data-knowl="./knowl/xref/THEOREMConstLimit.html" title="Theorem 14.7: The Limit of a Constant is the Constant">Theorem 14.7</a> as needed.</div></div>
+<div class="introduction" id="SUBSECTIONlimit-comp-cont-25-1"><div class="para" id="SUBSECTIONlimit-comp-cont-25-1-1">Explain, that the following statements are true by citing <a href="" class="xref" data-knowl="./knowl/xref/THEOREMLimSum2.html" title="Theorem 14.1: The Limit of a Sum is the Sum of the Limits">Theorem 14.1</a> through <a href="" class="xref" data-knowl="./knowl/xref/THEOREMConstLimit.html" title="Theorem 14.7: The Limit of a Constant is the Constant">Theorem 14.7</a> as needed.</div></div>
 <article class="task exercise-like" id="SUBSECTIONlimit-comp-cont-25-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
 <div class="para" id="SUBSECTIONlimit-comp-cont-25-2-1-1"><span class="process-math">\(\limit{x}{0}{\left(\frac{5x}{x}+\frac{\pi x}{x}\right)}=5+\pi\)</span></div></article><article class="task exercise-like" id="SUBSECTIONlimit-comp-cont-25-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>
 <div class="para" id="SUBSECTIONlimit-comp-cont-25-3-1-1"><span class="process-math">\(\limit{x}{2}{\left(\frac{x-2}{x-2}+\frac{3x-6}{x-2}\right)}=4\)</span></div></article><article class="task exercise-like" id="SUBSECTIONlimit-comp-cont-25-4"><h6 class="heading"><span class="codenumber">(c)</span></h6>
@@ -759,33 +759,37 @@ f(x)=
 </div></article><article class="problem example-like" id="PROBLEMDiffImpCont"><h5 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">14.12</span><span class="period">.</span>
 </h5>
-<div class="para" id="PROBLEMDiffImpCont-1-1">Suppose <span class="process-math">\(g(x)\neq0\)</span> near <span class="process-math">\(x=a\)</span> and <span class="process-math">\(\tlimit{x}{a}{\frac{f(x)}{g(x)}}\)</span> exists. Use <a href="" class="xref" data-knowl="./knowl/xref/THEOREMLimProd2.html" title="Theorem 14.2: The Limit of a Product is the Product of the Limits">Theorem 14.2</a> to show that if <span class="process-math">\(\limit{x}{a}{g(x)}=0\)</span>         then <span class="process-math">\(\limit{x}{a}{f(x)}=0\text{.}\)</span>\\ \hint{Consider <span class="process-math">\(f(x)=\frac{f(x)}{g(x)}\cdot g(x)\)</span> for <span class="process-math">\(x\)</span> near <span class="process-math">\(a\text{.}\)</span>}\\ \comment{This problem shows that if <span class="process-math">\(\limit{x}{a}{g(x)}=0\)</span> then the only way that <span class="process-math">\(\limit{x}{a}{\frac{f(x)}{g(x)}}\)</span> can exist is if we have a L’Hôpital  Indeterminate. It can also be used to prove <a href="" class="xref" data-knowl="./knowl/xref/LEMMADiffImpliesCont.html" title="Lemma 14.16: Differentiability Implies Continuity">Lemma 14.16</a> as you will see when we get to it.}</div></article><div class="para" id="SUBSECTIONlimit-comp-cont-28">The following Corollary says that if <span class="process-math">\(f(x)\)</span> is approaching <span class="process-math">\(L_f\)</span> and we multiply <span class="process-math">\(f(x)\)</span> by a number, <span class="process-math">\(k\text{,}\)</span> then the product <span class="process-math">\(kf(x)\)</span> approaches <span class="process-math">\(kL_f\text{.}\)</span> It follows from <a href="" class="xref" data-knowl="./knowl/xref/THEOREMConstLimit.html" title="Theorem 14.7: The Limit of a Constant is the Constant">Theorem 14.7</a> and <a href="" class="xref" data-knowl="./knowl/xref/THEOREMLimProd2.html" title="Theorem 14.2: The Limit of a Product is the Product of the Limits">Theorem 14.2</a>.</div>
+<div class="para" id="PROBLEMDiffImpCont-1-1">Suppose <span class="process-math">\(g(x)\neq0\)</span> near <span class="process-math">\(x=a\)</span> and <span class="process-math">\(\tlimit{x}{a}{\frac{f(x)}{g(x)}}\)</span> exists. Use <a href="" class="xref" data-knowl="./knowl/xref/THEOREMLimProd2.html" title="Theorem 14.2: The Limit of a Product is the Product of the Limits">Theorem 14.2</a> to show that if <span class="process-math">\(\limit{x}{a}{g(x)}=0\)</span>         then <span class="process-math">\(\limit{x}{a}{f(x)}=0\text{.}\)</span>
+</div>
+<div class="solutions"><details id="PROBLEMDiffImpCont-2" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="PROBLEMDiffImpCont-2-1">Consider <span class="process-math">\(f(x)=\frac{f(x)}{g(x)}\cdot g(x)\)</span> for <span class="process-math">\(x\)</span> near <span class="process-math">\(a\text{.}\)</span>
+</div></div></details></div></article><aside class="aside aside-like" id="SUBSECTIONlimit-comp-cont-28"><h5 class="heading"><span class="title">Comment.</span></h5>
+<div class="para" id="SUBSECTIONlimit-comp-cont-28-2">This problem shows that if <span class="process-math">\(\limit{x}{a}{g(x)}=0\)</span> then the only way that <span class="process-math">\(\limit{x}{a}{\frac{f(x)}{g(x)}}\)</span> can exist is if we have a L’Hôpital  Indeterminate. It can also be used to prove <a href="" class="xref" data-knowl="./knowl/xref/LEMMADiffImpliesCont.html" title="Lemma 14.16: Differentiability Implies Continuity">Lemma 14.16</a> as you will see when we get to it.</div></aside><div class="para" id="SUBSECTIONlimit-comp-cont-29">The following Corollary says that if <span class="process-math">\(f(x)\)</span> is approaching <span class="process-math">\(L_f\)</span> and we multiply <span class="process-math">\(f(x)\)</span> by a number, <span class="process-math">\(k\text{,}\)</span> then the product <span class="process-math">\(kf(x)\)</span> approaches <span class="process-math">\(kL_f\text{.}\)</span> It follows from <a href="" class="xref" data-knowl="./knowl/xref/THEOREMConstLimit.html" title="Theorem 14.7: The Limit of a Constant is the Constant">Theorem 14.7</a> and <a href="" class="xref" data-knowl="./knowl/xref/THEOREMLimProd2.html" title="Theorem 14.2: The Limit of a Product is the Product of the Limits">Theorem 14.2</a>.</div>
 <article class="corollary theorem-like" id="COROLLARYConstMultLimit"><h5 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">14.13</span><span class="period">.</span>
 </h5>
 <div class="para" id="COROLLARYConstMultLimit-1">If <span class="process-math">\(\limit{x}{a}{f(x)}=L_f\)</span> and <span class="process-math">\(k\)</span> is a real number then <span class="process-math">\(\limit{x}{a}{kf(x)}=k\limit{x}{a}{f(x)}=kL_f.\)</span>
-</div></article><article class="exercise exercise-like" id="SUBSECTIONlimit-comp-cont-30"><h5 class="heading">
+</div></article><article class="exercise exercise-like" id="SUBSECTIONlimit-comp-cont-31"><h5 class="heading">
 <span class="type">Drill</span><span class="space"> </span><span class="codenumber">14.14</span><span class="period">.</span>
 </h5>
-<div class="para" id="SUBSECTIONlimit-comp-cont-30-1-1">Prove <a href="" class="xref" data-knowl="./knowl/xref/COROLLARYConstMultLimit.html" title="Corollary 14.13">Corollary 14.13</a>.</div></article><div class="para" id="SUBSECTIONlimit-comp-cont-31">The concept of <dfn class="terminology">continuity</dfn> is essential to Calculus, but you may have noticed that we have carefully avoided it as much as possible until now. This is because defining continuity is similar to defining the line tagent to a curve (<a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONTangentLine.html" title="Definition 5.7: The Line Tangent to a Curve  at a Point">Definition 5.7</a>). We need to think carefully about what we want the term <dfn class="terminology">continuous</dfn> to mean, and then craft our definition to capture that meaning. This would have been very difficult to do without a fairly sophisticated understanding of the limit concept.</div>
-<div class="para" id="SUBSECTIONlimit-comp-cont-32">So stop and think about this for a moment. What do we mean when we say a curve is <dfn class="terminology">continuous</dfn>? A first, intuitive definition usually goes something like this: “A function is continuous if you can draw its graph without lifting your pencil from the paper,” but this is unsatisfactory for a number of reasons. In particular, it is impossible to apply in most cases. Think about it. Have often have you seen the entire graph of any function? Usually we just draw the part neat the origin and put arrowheads on both ends of the graph. We need something more precise.</div>
-<div class="para" id="SUBSECTIONlimit-comp-cont-33">At the end of <a href="" class="xref" data-knowl="./knowl/xref/EXAMPLELimComp1.html" title="Example 12.62">Example 12.62</a> we remarked that it is only when <span class="process-math">\(f(x)\)</span> is continuous at <span class="process-math">\(x=g(a)\)</span> that <span class="process-math">\(\textcolor{blue}{\tlimit{x}{a}{\textcolor{red}{f(g(x))}}}\)</span> is equal to <span class="process-math">\(\textcolor{red}{f}\textcolor{blue}{\left(\tlimit{x}{a}{g(x)}\right)}\text{,}\)</span> but we did not discuss the matter any further. It is time for that discussion.</div>
-<div class="para" id="SUBSECTIONlimit-comp-cont-34">First, notice that when you think closely about the statement “<span class="process-math">\(f(x)\)</span> is continuous at <span class="process-math">\(g(a)\)</span>” it appears to be nonsense, because <span class="process-math">\(g(a)\)</span> is the value of <span class="process-math">\(f\)</span> at the single value <span class="process-math">\(g(a)\)</span> but .  Does it make sense to you that a curve can be continuous at a single value of its domain? In ordinary usage  the concept of continuity requires an interval to be continuous on, doesn’t it?</div>
-<div class="para" id="SUBSECTIONlimit-comp-cont-35">Since we need the concept of “continuity at a point,” we define it.</div>
+<div class="para" id="SUBSECTIONlimit-comp-cont-31-1-1">Prove <a href="" class="xref" data-knowl="./knowl/xref/COROLLARYConstMultLimit.html" title="Corollary 14.13">Corollary 14.13</a>.</div></article><div class="para" id="SUBSECTIONlimit-comp-cont-32">The concept of <dfn class="terminology">continuity</dfn> is essential to Calculus, but you may have noticed that we have carefully avoided it as much as possible until now. This is because defining continuity is similar to defining the line tagent to a curve (<a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONTangentLine.html" title="Definition 5.7: The Line Tangent to a Curve  at a Point">Definition 5.7</a>). We need to think carefully about what we want the term <dfn class="terminology">continuous</dfn> to mean, and then craft our definition to capture that meaning. This would have been very difficult to do without a fairly sophisticated understanding of the limit concept.</div>
+<div class="para" id="SUBSECTIONlimit-comp-cont-33">So stop and think about this for a moment. What do we mean when we say a curve is <dfn class="terminology">continuous</dfn>? A first, intuitive definition usually goes something like this: “A function is continuous if you can draw its graph without lifting your pencil from the paper,” but this is unsatisfactory for a number of reasons. In particular, it is impossible to apply in most cases. Think about it. How often have you seen the entire graph of any function? Usually we just draw the part neat the origin and put arrowheads on both ends of the graph. We need something more precise.</div>
+<div class="para" id="SUBSECTIONlimit-comp-cont-34">At the end of <a href="" class="xref" data-knowl="./knowl/xref/EXAMPLELimComp1.html" title="Example 12.62">Example 12.62</a> we remarked that it is only when <span class="process-math">\(f(x)\)</span> is continuous at <span class="process-math">\(x=g(a)\)</span> that <span class="process-math">\(\textcolor{blue}{\tlimit{x}{a}{\textcolor{red}{f(g(x))}}}\)</span> is equal to <span class="process-math">\(\textcolor{red}{f}\textcolor{blue}{\left(\tlimit{x}{a}{g(x)}\right)}\text{,}\)</span> but we did not discuss the matter any further. It is time for that discussion.</div>
+<div class="para" id="SUBSECTIONlimit-comp-cont-35">First, notice that when you think closely about the statement “<span class="process-math">\(f(x)\)</span> is continuous at <span class="process-math">\(g(a)\)</span>” it appears to be nonsense, because <span class="process-math">\(g(a)\)</span> is the value of <span class="process-math">\(f\)</span> at the single value <span class="process-math">\(g(a)\text{.}\)</span>  Does it make sense to you that a curve can be continuous at a single value of its domain? In ordinary usage  the concept of continuity requires an interval to be continuous on, doesn’t it?</div>
+<div class="para" id="SUBSECTIONlimit-comp-cont-36">Since we need the concept of “continuity at a point,” we define it.</div>
 <article class="definition definition-like" id="DEFINITIONcontinuity"><h5 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">14.15</span><span class="period">.</span><span class="space"> </span><span class="title">Continuity at a Point.</span>
-</h5> <div class="para" id="DEFINITIONcontinuity-2-1"> A function <span class="process-math">\(f\text{,}\)</span> whose domain is an interval in <span class="process-math">\(\RR\text{,}\)</span> is continuous at <span class="process-math">\(x=a\)</span> in the interval, if and only if <span class="process-math">\(\limit{x}{a}{f(x)}=f(a)\text{,}\)</span> (alternatively, if <span class="process-math">\(\limit{h}{0}{f(a+h)}=f(a)\)</span>).</div></article><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/ContDiscExamp.png" class="contained"></div>
-<div class="para" id="SUBSECTIONlimit-comp-cont-38">If <span class="process-math">\(f\)</span> is continuous at every point in its domain we’ll just call it a continuous function.</div>
-<div class="para" id="SUBSECTIONlimit-comp-cont-39">The sketch at the right shows that <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONcontinuity.html" title="Definition 14.15: Continuity at a Point">Definition 14.15</a> recovers the intuitive notion that a function is continuous if we can draw its graph without lifting pen from page.  Both of the functions, <span class="process-math">\(f(x)\)</span> and <span class="process-math">\(g(x)\)</span> are identical everywhere except at <span class="process-math">\(x=1\text{.}\)</span> Clearly, to draw <span class="process-math">\(g(x)\text{,}\)</span> which is discontinuous at <span class="process-math">\(x=1\text{,}\)</span> we must lift our pen from the page. This is not true of the graph of <span class="process-math">\(f(x)\text{,}\)</span> which is continuous.</div>
-<div class="para" id="SUBSECTIONlimit-comp-cont-40">The following lemma is true and the proof will be valid once the limit theorems have been proven in <a href="CHAPTERformal-limits.html" class="internal" title="Chapter 17: Formal Limits">Chapter 17</a>.</div>
+</h5> <div class="para" id="DEFINITIONcontinuity-2-1"> A function <span class="process-math">\(f\text{,}\)</span> whose domain is an interval in <span class="process-math">\(\RR\text{,}\)</span> is continuous at <span class="process-math">\(x=a\)</span> in the interval, if and only if <span class="process-math">\(\limit{x}{a}{f(x)}=f(a)\text{,}\)</span> (alternatively, if <span class="process-math">\(\limit{h}{0}{f(a+h)}=f(a)\)</span>).</div></article><div class="para" id="SUBSECTIONlimit-comp-cont-38">If <span class="process-math">\(f\)</span> is continuous at every point in its domain we’ll just call it a continuous function.</div>
+<div class="para" id="SUBSECTIONlimit-comp-cont-39">The sketch below shows that <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONcontinuity.html" title="Definition 14.15: Continuity at a Point">Definition 14.15</a> recovers the intuitive notion that a function is continuous if we can draw its graph without lifting pen from page.  Both of the functions, <span class="process-math">\(f(x)\)</span> and <span class="process-math">\(g(x)\)</span> are identical everywhere except at <span class="process-math">\(x=1\text{.}\)</span> Clearly, to draw <span class="process-math">\(g(x)\text{,}\)</span> which is discontinuous at <span class="process-math">\(x=1\)</span>  since <span class="process-math">\(\limit{x}{0}{g(x)} \neq g(1)\text{.}\)</span>  We must lift our pen from the page to draw the graph of <span class="process-math">\(g(x)\text{.}\)</span> None of this is true of the graph of <span class="process-math">\(f(x)\text{,}\)</span> which is continuous.</div>
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/ContDiscExamp.png" class="contained"></div>
+<div class="para" id="SUBSECTIONlimit-comp-cont-41">The following lemma is true and the proof will be valid once the limit theorems have been proven in <a href="CHAPTERformal-limits.html" class="internal" title="Chapter 17: Formal Limits">Chapter 17</a>.</div>
 <article class="lemma theorem-like" id="LEMMADiffImpliesCont"><h5 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">14.16</span><span class="period">.</span><span class="space"> </span><span class="title">Differentiability Implies Continuity.</span>
 </h5>
 <div class="para" id="LEMMADiffImpliesCont-2">If <span class="process-math">\(f(x)\)</span> is differentiable at <span class="process-math">\(x=a\)</span> then <span class="process-math">\(f(x)\)</span> is also continuous at <span class="process-math">\(x=a.\)</span>
-</div></article><article class="problem example-like" id="SUBSECTIONlimit-comp-cont-42"><h5 class="heading">
+</div></article><article class="problem example-like" id="SUBSECTIONlimit-comp-cont-43"><h5 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">14.17</span><span class="period">.</span>
 </h5>
-<div class="para" id="SUBSECTIONlimit-comp-cont-42-1-1">Use the result of <a href="" class="xref" data-knowl="./knowl/xref/PROBLEMDiffImpCont.html" title="Problem 14.12">Problem 14.12</a> to prove <a href="" class="xref" data-knowl="./knowl/xref/LEMMADiffImpliesCont.html" title="Lemma 14.16: Differentiability Implies Continuity">Lemma 14.16</a>.</div></article><div class="para" id="SUBSECTIONlimit-comp-cont-43">When we were studying horizontal asymptotes in <a href="CHAPTERlimits-lhop-rule.html#SUBSECTIONlhop-rule-horiz" class="internal" title="Subsection 12.4.2: L’Hôpital’s Rule and Horizontal Asymptotes">Subsection 12.4.2</a> we encountered <a href="" class="xref" data-knowl="./knowl/xref/THEOREMInfSqueeze.html" title="Theorem 12.26: The Squeeze  Theorem, (when x\rightarrow\pm\infty)">Theorem 12.26</a> (the  Squeeze Theorem “at” Infinity). But the Squeeze Theorem is also valid if <span class="process-math">\(x\rightarrow a\text{,}\)</span> where <span class="process-math">\(a\)</span> is a real number.</div>
+<div class="para" id="SUBSECTIONlimit-comp-cont-43-1-1">Use the result of <a href="" class="xref" data-knowl="./knowl/xref/PROBLEMDiffImpCont.html" title="Problem 14.12">Problem 14.12</a> to prove <a href="" class="xref" data-knowl="./knowl/xref/LEMMADiffImpliesCont.html" title="Lemma 14.16: Differentiability Implies Continuity">Lemma 14.16</a>.</div></article><div class="para" id="SUBSECTIONlimit-comp-cont-44">When we were studying horizontal asymptotes in <a href="CHAPTERlimits-lhop-rule.html#SUBSECTIONlhop-rule-horiz" class="internal" title="Subsection 12.4.2: L’Hôpital’s Rule and Horizontal Asymptotes">Subsection 12.4.2</a> we encountered <a href="" class="xref" data-knowl="./knowl/xref/THEOREMInfSqueeze.html" title="Theorem 12.26: The Squeeze  Theorem, (when x\rightarrow\pm\infty)">Theorem 12.26</a> (the  Squeeze Theorem “at” Infinity). But the Squeeze Theorem is also valid if <span class="process-math">\(x\rightarrow a\text{,}\)</span> where <span class="process-math">\(a\)</span> is a real number.</div>
 <article class="theorem theorem-like" id="THEOREMFiniteSqueeze"><h5 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">14.18</span><span class="period">.</span><span class="space"> </span><span class="title">The Squeeze Theorem (The Finite Case).</span>
 </h5>
@@ -797,16 +801,24 @@ f(x)=
 \end{equation*}
 </div>
 <div class="para">then <span class="process-math">\(\limit{x}{a}{f(x)} = L\)</span> also.</div>
-</div></article><div class="para" id="SUBSECTIONlimit-comp-cont-45">
-<a href="" class="xref" data-knowl="./knowl/xref/THEOREMFiniteSqueeze.html" title="Theorem 14.18: The Squeeze Theorem (The Finite Case)">Theorem 14.18</a> is illustrated below, but a formal proof will not be given until <a href="CHAPTERformal-limits.html" class="internal" title="Chapter 17: Formal Limits">Chapter 17</a>.</div>
-<div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/images/SqueezeThm1.png" class="contained"></div>
-<article class="problem example-like" id="SUBSECTIONlimit-comp-cont-47"><h5 class="heading">
+</div></article><div class="para" id="SUBSECTIONlimit-comp-cont-46">
+<a href="" class="xref" data-knowl="./knowl/xref/THEOREMFiniteSqueeze.html" title="Theorem 14.18: The Squeeze Theorem (The Finite Case)">Theorem 14.18</a> is illustrated below, but a formal proof will not be given until <a href="CHAPTERformal-limits.html" class="internal" title="Chapter 17: Formal Limits">Chapter 17</a>. Notice that on the interval <span class="process-math">\((c,d)\)</span> <span class="process-math">\(f(x)\)</span> is caught between (“squeezed by”) <span class="process-math">\(\alpha{(x)}\)</span> and <span class="process-math">\(\beta{(x)}\text{.}\)</span>
+</div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="external/images/SqueezeThm1.png" class="contained"></div>
+<article class="problem example-like" id="SUBSECTIONlimit-comp-cont-48"><h5 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">14.19</span><span class="period">.</span>
 </h5>
-<div class="introduction" id="SUBSECTIONlimit-comp-cont-47-1"><div class="para" id="SUBSECTIONlimit-comp-cont-47-1-1">Consider the two functions defined in the sketch below:\\ \centerline{\includegraphics*[height=2.5in,width=5.5in]{../Figures/TopSinCurve}}</div></div>
-<article class="task exercise-like" id="SUBSECTIONlimit-comp-cont-47-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<div class="para" id="SUBSECTIONlimit-comp-cont-47-2-1-1">Use <a href="" class="xref" data-knowl="./knowl/xref/THEOREMFiniteSqueeze.html" title="Theorem 14.18: The Squeeze Theorem (The Finite Case)">Theorem 14.18</a> to show that <span class="process-math">\(U(x)\)</span> is continuous at <span class="process-math">\(x=0\text{.}\)</span> \hint{ What functions is <span class="process-math">\(U(x)\)</span> caught between? }</div></article><article class="task exercise-like" id="SUBSECTIONlimit-comp-cont-47-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<div class="para" id="SUBSECTIONlimit-comp-cont-47-3-1-1">Use <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONcontinuity.html" title="Definition 14.15: Continuity at a Point">Definition 14.15</a> to show that <span class="process-math">\(T(x)\)</span> is not continuous at <span class="process-math">\(x=0\text{.}\)</span>  \\ \hint{Try the substitution <span class="process-math">\(z=\frac1x\)</span> for <span class="process-math">\(x\neq0\text{.}\)</span>  What would <span class="process-math">\(\limit{x}{0}{T(x)}\)</span> look like in terms of <span class="process-math">\(z\text{?}\)</span>}</div></article></article><article class="theorem theorem-like" id="THEOREMCompositionLimit"><h5 class="heading">
+<div class="introduction" id="SUBSECTIONlimit-comp-cont-48-1">
+<div class="para" id="SUBSECTIONlimit-comp-cont-48-1-1">Consider the two functions defined in the sketch below:</div> <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/TopSinCurve.png" class="contained"></div> <div class="para" id="SUBSECTIONlimit-comp-cont-48-1-3"></div>
+</div>
+<article class="task exercise-like" id="SUBSECTIONlimit-comp-cont-48-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="para" id="SUBSECTIONlimit-comp-cont-48-2-1-1">Use <a href="" class="xref" data-knowl="./knowl/xref/THEOREMFiniteSqueeze.html" title="Theorem 14.18: The Squeeze Theorem (The Finite Case)">Theorem 14.18</a> to show that <span class="process-math">\(U(x)\)</span> is continuous at <span class="process-math">\(x=0\text{.}\)</span>
+</div>
+<div class="solutions"><details id="SUBSECTIONlimit-comp-cont-48-2-2" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="SUBSECTIONlimit-comp-cont-48-2-2-1">What functions is <span class="process-math">\(U(x)\)</span> caught between?</div></div></details></div></article><article class="task exercise-like" id="SUBSECTIONlimit-comp-cont-48-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="para" id="SUBSECTIONlimit-comp-cont-48-3-1-1">Use <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONcontinuity.html" title="Definition 14.15: Continuity at a Point">Definition 14.15</a> to show that <span class="process-math">\(T(x)\)</span> is not continuous at <span class="process-math">\(x=0\text{.}\)</span>
+</div>
+<div class="solutions"><details id="SUBSECTIONlimit-comp-cont-48-3-2" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="SUBSECTIONlimit-comp-cont-48-3-2-1">Try the substitution <span class="process-math">\(z=\frac1x\)</span> for <span class="process-math">\(x\neq0\text{.}\)</span>  What would <span class="process-math">\(\limit{x}{0}{T(x)}\)</span> look like in terms of <span class="process-math">\(z\text{?}\)</span>
+</div></div></details></div></article></article><article class="theorem theorem-like" id="THEOREMCompositionLimit"><h5 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">14.20</span><span class="period">.</span><span class="space"> </span><span class="title">The Limit of a Composition is the Composition of the Limits.</span>
 </h5>
 <div class="para logical" id="THEOREMCompositionLimit-2">
@@ -816,35 +828,51 @@ f(x)=
 \limit{x}{a}{f(g(x))}=f\left(\limit{x}{a}{g(x)}\right)=f(L_g).
 \end{equation*}
 </div>
-</div></article><div class="para" id="SUBSECTIONlimit-comp-cont-49">Essentially this says that we can interchange the function <span class="process-math">\(f\)</span> and the “<span class="process-math">\(\lim\)</span>” symbols if <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(g(a)\text{.}\)</span>
+</div></article><div class="para" id="SUBSECTIONlimit-comp-cont-50">Essentially this says that we can interchange the function <span class="process-math">\(f\)</span> and the “<span class="process-math">\(\lim\)</span>” symbols if <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(g(a)\text{.}\)</span>
 </div></section></section><section class="section" id="SECTIONdiff-rules-via"><h3 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">14.2</span><span class="space"> </span><span class="title">The General Differentiation Theorems, via Limits</span>
 </h3>
 <blockquote class="blockquote" id="SECTIONdiff-rules-via-2">
-<div class="para" id="SECTIONdiff-rules-via-2-1">. . . one way in math to take care of destabilizing problems is to legislate them out of existence . . . by loading theorems with stipulations and exclusions designed to head off crazy results.</div> <cite class="attribution">―<a class="external" href="https://en.wikipedia.org/wiki/David_Foster_Wallace" target="_blank">David Foster Wallace (<span class="process-math">\(1962\)</span> - <span class="process-math">\(2008\)</span>)</a><a class="xref" id="SECTIONdiff-rules-via-2-2-2" href="" data-knowl="./knowl/fn/SECTIONdiff-rules-via-2-2-2.html" title="Footnote 14.4"><sup> 4 </sup></a></cite>
+<div class="para" id="SECTIONdiff-rules-via-2-1">. . . one way in math to take care of destabilizing problems is to legislate them out of existence . . . by loading theorems with stipulations and exclusions designed to head off crazy results.</div> <cite class="attribution">―<a class="external" href="https://en.wikipedia.org/wiki/David_Foster_Wallace" target="_blank">David Foster Wallace</a><a class="xref" id="SECTIONdiff-rules-via-2-2-2" href="" data-knowl="./knowl/fn/SECTIONdiff-rules-via-2-2-2.html" title="Footnote 14.4"><sup> 4 </sup></a> (1962-2008)</cite>
 </blockquote>
 <div class="para" id="SECTIONdiff-rules-via-3">Since we will now be proving the the differentiation rules rigorously we will call them what they really are: Theorems. Because limits are much less intuitive than differentials we’ll want to be as efficient as possible when using them. The sooner we can build up some tools to make things easier, the better.</div>
 <div class="para" id="SECTIONdiff-rules-via-4">Also, in this section we will add a new differentiation rule (theorem): The Chain Rule. Or rather, we will give a name to an already familiar technique and elevate it’s status by providing a formal proof.  Proving the Chain, Product, and Quotient Differentiation Rules using limits will require a good deal of cleverness. These proofs will also uncover some unexpected subtleties along the way.</div>
 <div class="para" id="SECTIONdiff-rules-via-5">Before we begin there is one more point that needs to be clear. Because differentiation is now defined via a limit and limits are defined at a point we can only differentiate a function at a point. We usually say that limit evaluation and differentiability are <dfn class="terminology">local properties</dfn>.  If we don’t specify the “at <span class="process-math">\(x\)</span>” the convention is that the function is differentiable at every point in its domain.</div>
-<div class="para" id="SECTIONdiff-rules-via-6">The proofs of the Constant, Sum, and Constant Multiple Differentiation Rules are all completely straightforward so we will leave them as exercises\aside{Frequently students will simply ignore problems that are described as straightforward. Don’t make that mistake. Straightforward does not mean easy, and it does not mean unimportant. We are leaving these problems for you so you can gain experience using limits in the simplest cases, not because they are unimportant.} for you.</div>
-<article class="theorem theorem-like" id="THEOREMLimConstantRule"><h4 class="heading">
+<div class="para" id="SECTIONdiff-rules-via-6">The proofs of the Constant, Sum, and Constant Multiple Differentiation Rules are all completely straightforward so we will leave them as exercises for you.</div>
+<aside class="aside aside-like" id="SECTIONdiff-rules-via-7"><h4 class="heading"><span class="title">Comment.</span></h4>
+<div class="para" id="SECTIONdiff-rules-via-7-2">Frequently students will simply ignore problems that are described as straightforward. Don’t make that mistake. Straightforward does not mean easy, and it does not mean unimportant. We are leaving these problems for you so you can gain experience using limits in the simplest cases, not because they are unimportant.</div></aside><article class="theorem theorem-like" id="THEOREMLimConstantRule"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">14.21</span><span class="period">.</span><span class="space"> </span><span class="title">The Constant Rule for Differentiation.</span>
 </h4>
-<div class="para" id="THEOREMLimConstantRule-2">If <span class="process-math">\(L\)</span> is some number and <span class="process-math">\(f(x)=L\)</span> for all real values of <span class="process-math">\(x\)</span> near\aside{“Near” means on an open interval about <span class="process-math">\(L\text{.}\)</span> Recall <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONnear.html" title="Definition 14.6: Near">Definition 14.6</a>.  } <span class="process-math">\(L\text{,}\)</span> then <span class="process-math">\(f^\prime(x)=0\)</span> at every real number <span class="process-math">\(x\)</span> near\aside{On the same open interval.} <span class="process-math">\(L\)</span> .</div></article><details id="SECTIONdiff-rules-via-8" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof"><div class="para" id="SECTIONdiff-rules-via-8-1">By <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONDefDerivative.html" title="Equation 13.3">(13.3)</a> \begin{align*} f^\prime(x)\amp =\limit{h}{0}{\frac{f(x+h)-f(x)}{h}}.\\ \intertext{But <span class="process-math">\(f(x+h)=L=f(x)\)</span> so} f^\prime(x)\amp =\limit{h}{0}{\frac{L-L}{h}}=\limit{h}{0}{\frac{0}{h}}=0. \end{align*}</div> <div class="para" id="SECTIONdiff-rules-via-8-2"><em class="alert"><span class="process-math">\(\halmos\)</span></em></div></article></details><article class="theorem theorem-like" id="SECTIONdiff-rules-via-9"><h4 class="heading">
+<div class="para" id="THEOREMLimConstantRule-2">If <span class="process-math">\(L\)</span> is some number and <span class="process-math">\(f(x)=L\)</span> for all real values of <span class="process-math">\(x\)</span> near (on an open interval around) <span class="process-math">\(L\text{,}\)</span> then <span class="process-math">\(f^\prime(x)=0\)</span> at every real number <span class="process-math">\(x\)</span> near (on the same open interval) <span class="process-math">\(L\text{.}\)</span>
+</div></article><details id="SECTIONdiff-rules-via-9" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof"><div class="para logical" id="SECTIONdiff-rules-via-9-1">
+<div class="para">By <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONDefDerivative.html" title="Equation 13.3">(13.3)</a>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQUATIONDefDerivative.html">
+\begin{equation*}
+f^\prime(x) =\limit{h}{0}{\frac{f(x+h)-f(x)}{h}}.
+\end{equation*}
+</div>
+<div class="para">But <span class="process-math">\(f(x+h)=L=f(x)\)</span> so</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQUATIONDefDerivative.html">
+\begin{equation*}
+f^\prime(x) =\limit{h}{0}{\frac{L-L}{h}}=\limit{h}{0}{\frac{0}{h}}=0.
+\end{equation*}
+</div>
+</div> <div class="para" id="SECTIONdiff-rules-via-9-2"><em class="alert"><span class="process-math">\(\halmos\)</span></em></div></article></details><article class="theorem theorem-like" id="SECTIONdiff-rules-via-10"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">14.22</span><span class="period">.</span><span class="space"> </span><span class="title">The Sum Rule for Differentiation.</span>
 </h4>
-<div class="para logical" id="SECTIONdiff-rules-via-9-2">
+<div class="para logical" id="SECTIONdiff-rules-via-10-2">
 <div class="para">If <span class="process-math">\(\alpha(x)\)</span> and <span class="process-math">\(\beta(x)\)</span> are differentiable at <span class="process-math">\(x\)</span> and <span class="process-math">\(f(x)=\alpha(x)+\beta(x)\text{,}\)</span> then <span class="process-math">\(f(x)\)</span> is also differentiable at <span class="process-math">\(x\)</span> and</div>
 <div class="displaymath process-math">
 \begin{equation*}
 f^\prime(x)=\alpha^\prime(x)+ \beta^\prime(x).
 \end{equation*}
 </div>
-</div></article><article class="problem example-like" id="SECTIONdiff-rules-via-10"><h4 class="heading">
+</div></article><article class="problem example-like" id="SECTIONdiff-rules-via-11"><h4 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">14.23</span><span class="period">.</span>
 </h4>
-<div class="para" id="SECTIONdiff-rules-via-10-1-1">Use <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONDerivative.html" title="Definition 13.4: The Derivative">Definition 13.4</a> to prove the Sum Rule for Differentiation.</div></article><div class="para" id="SECTIONdiff-rules-via-11">Recall that when we first established the  General Differentiation Rules using differentials in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "CHAPTERPTdifferentials" missing or not unique]</code> we said that the Constant Multiple,  Power and Quotient Rules for differentiation were just conveniences because they depend on the other rules.</div>
-<div class="para" id="SECTIONdiff-rules-via-12">This is still true of course (except for the caveat in the point of rigor below) which means that we don’t have to prove any of them using limits. For example, since the Constant Rule and the Product Rule are now established theorems we can use these to prove the Constant Multiple Rule directly, without having to resort to using limits.</div>
+<div class="para" id="SECTIONdiff-rules-via-11-1-1">Use <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONDerivative.html" title="Definition 13.4: The Derivative">Definition 13.4</a> to prove the Sum Rule for Differentiation.</div></article><div class="para" id="SECTIONdiff-rules-via-12">Recall that when we first established the  General Differentiation Rules using differentials in <a href="CHAPTERdifferentials.html" class="internal" title="Chapter 4: Differentials, Differentiation, and the Derivative">Chapter 4</a> we said that the Constant Multiple,  Power and Quotient Rules for differentiation were just conveniences because they depend on the other rules.</div>
+<div class="para" id="SECTIONdiff-rules-via-13">This is still true of course (except for the caveat in the point of rigor below) which means that we don’t have to prove any of them using limits. For example, since the Constant Rule and the Product Rule are now established theorems we can use these to prove the Constant Multiple Rule directly, without having to resort to using limits.</div>
 <article class="theorem theorem-like" id="THEOREMLimitConstMult"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">14.24</span><span class="period">.</span><span class="space"> </span><span class="title">The Constant Multiple Rule for Differentiation.</span>
 </h4>
@@ -868,11 +896,10 @@ f^\prime(x)=\alpha^\prime(x)+ \beta^\prime(x).
 <div class="para logical" id="EXAMPLEchain-rule1-1">
 <div class="para">Here’s what we mean: The formula <span class="process-math">\(y=(2x^2-6x)^3\text{,}\)</span> is given entirely in terms of the variables <span class="process-math">\(x\text{,}\)</span> and <span class="process-math">\(y\text{.}\)</span> To differentiate using differentials we would make the (variable) substitution <span class="process-math">\(z=3x^2+6x\)</span> so that <span class="process-math">\(y=z^3\text{.}\)</span> In that case, <span class="process-math">\(\dx{y}=3z\dx{z}=3\left(3x^2+6x\right)^2(6x+6)\dx{x}\text{,}\)</span> and dividing through by <span class="process-math">\(\dx{x}\)</span> gives us the derivative of <span class="process-math">\(y\)</span> with respect to <span class="process-math">\(x\text{,}\)</span>
 </div>
-<div class="displaymath process-math">
-\begin{equation*}
-\label{eq:CR1}
-\dfdx{y}{x}=3z\dx{z}=3\left(3x^2+6x\right)^2(6x+6).
-\end{equation*}
+<div class="displaymath process-math" id="EQUATIONCR1">
+\begin{equation}
+\dfdx{y}{x}=3z\dx{z}=3\left(3x^2+6x\right)^2(6x+6).\tag{14.1}
+\end{equation}
 </div>
 </div> <div class="para" id="EXAMPLEchain-rule1-2">But <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONDerivative.html" title="Definition 13.4: The Derivative">Definition 13.4</a> requires that we think about functions, not variables so let’s translate this problem into the language of functions. If <span class="process-math">\(y=\left(2x^2-6x\right)^3\text{,}\)</span> clearly <span class="process-math">\(y\)</span> is a function of (depends on) <span class="process-math">\(x\text{.}\)</span> Naming that function <span class="process-math">\(f\text{,}\)</span> we have <span class="process-math">\(y=f(x)\text{.}\)</span> Replacing <span class="process-math">\(y\)</span> with <span class="process-math">\(f(x)\text{,}\)</span> we get <span class="process-math">\(f(x)=(2x^2-6x)^3\text{.}\)</span>
 </div> <div class="para logical" id="EXAMPLEchain-rule1-3">
@@ -889,8 +916,8 @@ f(x)= \alpha(\beta).
 \end{equation*}
 </div>
 </div> <div class="para logical" id="EXAMPLEchain-rule1-4">
-<div class="para">Looking again at <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQUATIONCR1" missing or not unique]</code>, and mixing the differential and functional notations a bit we see that</div>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="para">Looking again at <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONCR1.html" title="Equation 14.1">equation (14.1)</a>, and mixing the differential and functional notations a bit we see that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQUATIONCR1.html">
 \begin{equation*}
 f^\prime(x)=\dfdx{y}{x}=3z\dx{z}=\underbrace{3\left(3x^2+6x\right)^2}_{\dfdx{\alpha}{\beta}=\alpha^\prime(\beta)}\underbrace{(6x+6)}_{\dfdx{\beta}{x}=\beta^\prime(x)}=\alpha^\prime(\beta)\cdot\beta^\prime(x).
 \end{equation*}
@@ -908,37 +935,66 @@ f^\prime(x)=\alpha^\prime(\beta(x))\beta^\prime(x).
 </h4>
 <div class="para logical" id="THEOREMChainRule-2">
 <div class="para">Suppose that <span class="process-math">\(\beta(x)\)</span> is differentiable at <span class="process-math">\(x\text{,}\)</span> that <span class="process-math">\(\alpha(x)\)</span> is differentiable at <span class="process-math">\(\beta(x)\)</span> and that <span class="process-math">\(\Delta\beta\neq0\)</span> near <span class="process-math">\(x\text{.}\)</span> Then the composition,\\ \centerline{<span class="process-math">\(f(x) = \alpha(\beta(x)) \)</span>} is also differentiable, and</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\label{eq:ChainRule}
-f^\prime(x) =\alpha^\prime(\beta(x))\cdot\beta^\prime(x).
-\end{equation*}
+<div class="displaymath process-math" id="EQUATIONChainRule">
+\begin{equation}
+f^\prime(x) =\alpha^\prime(\beta(x))\cdot\beta^\prime(x).\tag{14.2}
+\end{equation}
 </div>
-</div></article><section class="paragraphs" id="SECTIONChainRule-5"><h4 class="heading"><span class="title">DIGRESSION: The Origins of the Chain Rule.</span></h4> <div class="para logical" id="SECTIONChainRule-5-2">
-<div class="para">Before the invention of Calculus, arithmetic primers gave the name “The Chain Rule” to the computational technique that is used to, among other things, convert money from one currency to another. For example if we need to convert <span class="process-math">\(30\)</span> American dollars ($) to British pounds (\pounds) and we know that\aside{These numbers were accurate on the day this passage was written. They are almost certainly wrong on the day you are reading it. Don’t use them to convert currency.}\\ \centerline{ <span class="process-math">\(1 \text{ dollar} = 0.86\)</span> euros, and that <span class="process-math">\(1 \text{ euro} = 0.9\)</span> pounds.  } Then the conversion is</div>
-<div class="displaymath process-math">
-\begin{equation*}
-30= 30  \textcolor{red}{\cancel{dollars}} \times
-\frac{0.86}{1} \frac { \text { \textcolor{blue}{\cancel{euros}} } } {
-\text{\textcolor{red}{\cancel{dollars}}} } \times \frac{0.9}{1}
-\frac{\text{pounds}}{\text{\textcolor{blue}{\cancel{euros}}}}
-=30\times0.86\times0.9\text{ pounds}=23.22 \pounds
-\end{equation*}
+</div></article><section class="paragraphs" id="DIGRESSIONCROrigins"><h4 class="heading"><span class="title">DIGRESSION: The Origins of the Chain Rule.</span></h4> <div class="para logical" id="DIGRESSIONCROrigins-2">
+<div class="para">Before the invention of Calculus, arithmetic primers gave the name “The Chain Rule” to the computational technique that is used to, among other things, convert money from one currency to another. For example if we need to convert <span class="process-math">\(30\)</span> American dollars ($) to British pounds (£) but we only know their values ie euros (€). Specifically we know that</div>
+<div class="displaymath process-math" id="DIGRESSIONCROrigins-2-3">
+\begin{align*}
+1 \text{ dollar} = 0.86\text{ euros,} \amp{}\amp{}\text{ and that }
+\amp{}\amp{} 1\text{ euro} = 0.9 \text{ pounds.}
+\end{align*}
 </div>
-</div> <div class="para logical" id="SECTIONChainRule-5-3">
-<div class="para">We’ve actually seen this type of conversion before. We used in in <a href="CHAPTERcalc-trig.html" class="internal" title="Chapter 6: Calculus and Trigonometry">Section 6</a> when we converted angular velocity to linear velocity via the formula:</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CHAPTERcalc-trig.html">
-\begin{equation*}
-\left(\frac{3}{1}\frac{\text{\cancel{revolution}}}{{\text{\cancel{minute}}}}\right)\cdot
+<div class="para">(These numbers were accurate on the day this passage was written. They are almost certainly wrong on the day you are reading it. Don’t use them to convert currency.) Then the conversion is</div>
+<div class="displaymath process-math" id="DIGRESSIONCROrigins-2-4">
+\begin{align*}
+30$ = 30  \textcolor{red}{\cancel{\text{dollars}}} \times
+\frac{0.86}{1} 
+\frac{\textcolor{blue}{\cancel{ \text {euros}} } }
+{\textcolor{red}{\cancel{\text{dollars}}} } 
+\amp{}   \times 
+\frac{0.9}{1}
+\frac{\text{pounds}}{\textcolor{blue}{\cancel{\text{euros}}}}\\
+\amp{}=30\times0.86\times0.9\text{
+pounds}\\
+\amp{}=23.22£
+\end{align*}
+</div>
+</div> <div class="para logical" id="DIGRESSIONCROrigins-3">
+<div class="para">We’ve actually seen this type of conversion before.  In <a href="CHAPTERcalc-trig.html" class="internal" title="Chapter 6: Calculus and Trigonometry">Section 6</a>  we converted angular velocity to linear velocity via the formula:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CHAPTERcalc-trig.html" id="DIGRESSIONCROrigins-3-2">
+\begin{align*}
+\left(\frac{3}{1}\frac{\cancel{\text{revolution}}}{{\cancel{\text{minute}}}}\right)\cdot
 \left(\frac{2\pi}{1}
-\frac{\text{\cancel{radians}}}{\text{\cancel{revolution}}}\right)\cdot
-\left(\frac{10}{1}\frac{\text{meters}}{\text{\cancel{radians}}}\right)\cdot
-\left(\frac{1}{60}\frac{\text{\cancel{minute}}}{\text{second}}\right)
-=\frac{\pi}{1} \frac{\text{meters}}{\text{second}} \approx 3.14
+\frac{\cancel{\text{radians}}}{\cancel{\text{revolution}}}\right)\cdot
+\left(\frac{10}{1}\frac{\text{meters}}{\cancel{\text{radians}}}\right)\amp{}\cdot
+\left(\frac{1}{60}\frac{\cancel{\text{minute}}}{\text{second}}\right)\\
+\amp{}=\frac{\pi}{1} \frac{\text{meters}}{\text{second}} \\
+\amp{}\approx 3.14
 \frac{\text{meters}}{\text{second}}.
-\end{equation*}
+\end{align*}
 </div>
-</div> <div class="para" id="SECTIONChainRule-5-4">A similar chain of cancellations will occur when we differentiate a function composition of the form <span class="process-math">\(\alpha(t)=\alpha(\beta(y(x(t))))\text{.}\)</span> We think of\\\\ \centerline{ <span class="process-math">\(\alpha\)</span> as a function of <span class="process-math">\(\beta\)</span> (so that <span class="process-math">\(\alpha^\prime(\beta)=\dfdx{\alpha}{\beta}\)</span>)} \\\\ \centerline{ <span class="process-math">\(\beta\)</span> as a function of <span class="process-math">\(y\)</span> (so that <span class="process-math">\(\beta^\prime(y)=\dfdx{\beta}{y}\)</span>),}\\\\ \centerline{ <span class="process-math">\(y\)</span> as a function of <span class="process-math">\(x\)</span> (so that <span class="process-math">\(y^\prime(x)=\dfdx{y}{x}\)</span>),}\\\\ \centerline{ and <span class="process-math">\(x\)</span> as a function of <span class="process-math">\(t\)</span> (so that <span class="process-math">\(y^\prime(x)=\dfdx{x}{t}\)</span>).}\\\\</div> <div class="para logical" id="SECTIONChainRule-5-5">
+</div> <div class="para logical" id="DIGRESSIONCROrigins-4">
+<div class="para">A similar chain of cancellations will occur when we differentiate a function composition of the form <span class="process-math">\(\alpha(t)=\alpha(\beta(y(x(t))))\text{.}\)</span> We think of</div>
+<div class="displaymath process-math" id="DIGRESSIONCROrigins-4-2">
+\begin{gather*}
+\alpha \text{ as a function of }\beta \left(\text{ so that }
+\alpha^\prime(\beta)=\dfdx{\alpha}{\beta}\right)\\
+\beta \text{ as a function of }y \left(\text{ so that
+}\beta^\prime(y)=\dfdx{\beta}{y}\right)\\
+y&gt; \text{ as a function of }x \left(\text{so that}
+y^\prime(x)=\dfdx{y}{x}\right),\\
+\end{gather*}
+<p class="intertext">and</p>
+\begin{gather*}
+x \text{ as a function of }t \left(\text{so that }
+y^\prime(x)=\dfdx{x}{t}\right).
+\end{gather*}
+</div>
+</div> <div class="para logical" id="DIGRESSIONCROrigins-5">
 <div class="para">Putting this all together we see that</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -947,78 +1003,141 @@ f^\prime(x) =\alpha^\prime(\beta(x))\cdot\beta^\prime(x).
 = \dfdx{\alpha}{t}.
 \end{equation*}
 </div>
-</div> <div class="para" id="SECTIONChainRule-5-6">The substitutions we used to make things “easier on your eyes” in <a href="CHAPTERproblem-solving.html#SECTIONAn-easy-problem-alg" class="internal" title='Section 2.2: Substitution, or Making Things "Easy on the Eyes"'>Section 2.2</a> is equivalent this chain of cancellations.  With the invention of Calculus the older Chain Rule for unit conversion was extended to the differentiation by substitution technique using differentials. Eventually it became the only Chain Rule. When the limit was used to provide rigor to Calculus the name was also applied to <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQUATIONChainRule" missing or not unique]</code>).</div> <div class="para" id="SECTIONChainRule-5-7">END OF DIGRESSION</div></section><div class="para" id="SECTIONChainRule-6">Understanding the Chain Rule in this form requires that we blur the distinction between function and variable a bit. When we compute <span class="process-math">\(\dfdx{\alpha}{\beta}=\alpha^\prime(\beta)\)</span> (the derivative of <span class="process-math">\(\alpha\)</span> with with respect to <span class="process-math">\(\beta\)</span>)  we view <span class="process-math">\(\beta\)</span> as a variable, but when we compute <span class="process-math">\(\dfdx{\beta}{x}=\beta^\prime(x)\)</span> (the derivative of <span class="process-math">\(\beta\)</span> with respect to <span class="process-math">\(x\)</span>) we view it as a function.</div>
+</div> <div class="para" id="DIGRESSIONCROrigins-6">The substitution we used to make things “easier on your eyes” in <a href="CHAPTERproblem-solving.html#SECTIONAn-easy-problem-alg" class="internal" title='Section 2.2: Substitution, or Making Things "Easy on the Eyes"'>Section 2.2</a> is equivalent this chain of cancellations.  With the invention of Calculus the older Chain Rule for unit conversion was extended to the differentiation by substitution technique using differentials. Eventually the older usage was dropped and this became the only Chain Rule. When the limit was used to provide rigor to Calculus the name was also applied to <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONChainRule.html" title="Equation 14.2">equation (14.2)</a>).</div> <div class="para" id="DIGRESSIONCROrigins-7">END OF DIGRESSION</div></section><div class="para" id="SECTIONChainRule-6">Understanding the Chain Rule in this form requires that we blur the distinction between function and variable a bit. When we compute <span class="process-math">\(\dfdx{\alpha}{\beta}=\alpha^\prime(\beta)\)</span> (the derivative of <span class="process-math">\(\alpha\)</span> with with respect to <span class="process-math">\(\beta\)</span>)  we view <span class="process-math">\(\beta\)</span> as a variable, but when we compute <span class="process-math">\(\dfdx{\beta}{x}=\beta^\prime(x)\)</span> (the derivative of <span class="process-math">\(\beta\)</span> with respect to <span class="process-math">\(x\)</span>) we view it as a function.</div>
 <div class="para" id="SECTIONChainRule-7">As far as the Chain Rule is concerned it is both.</div>
-<details id="SECTIONChainRule-8" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof"><div class="para" id="SECTIONChainRule-8-1">Before we begin take specific notice of the assumption “<span class="process-math">\(\Delta\beta\neq0\)</span> near <span class="process-math">\(x\)</span>” in the statement of the Chain Rule. We will have a few comments about this in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "DIGRESSIONDeltaBetaNotZero" missing or not unique]</code> after the proof is completed.</div> <div class="para logical" id="SECTIONChainRule-8-2">
+<details id="SECTIONChainRule-8" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof"><div class="para" id="SECTIONChainRule-8-1">Before we begin take specific notice of the assumption “<span class="process-math">\(\Delta\beta\neq0\)</span> near <span class="process-math">\(x\)</span>” in the statement of the Chain Rule. We will have a few comments about this in <a href="" class="xref" data-knowl="./knowl/xref/DIGRESSIONDeltaBetaNotZero.html" title="Paragraphs: DIGRESSION: Why Assume That \Delta\beta\neq0 Near Zero?">Digression~\ </a> after the proof is completed.</div> <div class="para logical" id="SECTIONChainRule-8-2">
 <div class="para">We will first establish that</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\label{eq:DeltaBetaEq0}
-\limit{h}{0}{\Delta\beta}=0.
-\end{equation*}
+<div class="displaymath process-math" id="EQUATIONDeltaBetaEq0">
+\begin{equation}
+\limit{h}{0}{\Delta\beta}=0.\tag{14.3}
+\end{equation}
 </div>
 </div> <div class="para logical" id="SECTIONChainRule-8-3">
-<div class="para">Suppose\aside{Because asserting the equality of non-existing objects would be meaningless we assume, implicitly that all limits in this argument exist.} that</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\beta(x+h)-\beta(x)=\Delta\beta\label{eq:ChainRule1}.
-\end{equation*}
+<div class="para">Suppose that</div>
+<div class="displaymath process-math" id="EQUATIONChainRule1">
+\begin{equation}
+\beta(x+h)-\beta(x)=\Delta\beta.\tag{14.4}
+\end{equation}
 </div>
-</div> <div class="para logical" id="SECTIONChainRule-8-4">
-<div class="para">Then \begin{align*} \limit{h}{0}{\beta(x+h)}\amp =\limit{h}{0}{(\beta(x)+\Delta\beta)}. \\ \intertext{By <a href="" class="xref" data-knowl="./knowl/xref/THEOREMLimSum2.html" title="Theorem 14.1: The Limit of a Sum is the Sum of the Limits">Theorem 14.1</a> we have} \limit{h}{0}{\beta(x+h)}\amp =\limit{h}{0}{\beta(x)}+\limit{h}{0}{\Delta\beta}, \\ \intertext{and since <span class="process-math">\(\beta(x)\)</span> is differentiable at <span class="process-math">\(x\)</span> we see from <a href="" class="xref" data-knowl="./knowl/xref/LEMMADiffImpliesCont.html" title="Lemma 14.16: Differentiability Implies Continuity">Lemma 14.16</a> that} \beta(x)\amp =\beta(x) +\limit{h}{0}{\Delta\beta} \end{align*} from  which <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQUATIONDeltaBetaEq0" missing or not unique]</code>) follows. To prove the Chain Rule recall that \begin{align*} f^\prime(x)\amp =\limit{h}{0}{\frac{f(x+h)-f(x)}{h}}\\ \amp =\limit{h}{0}{\frac{\alpha(\beta(x+h))-\alpha(\beta(x))}{h}}. \end{align*} Multiplying  by <span class="process-math">\(1\)</span> in the form\aside{In the past we have called this “uncancelling” <span class="process-math">\(\Delta\beta\text{.}\)</span> Also, notice that this is where we use the assumption, “<span class="process-math">\(\Delta\beta\neq0\)</span> near <span class="process-math">\(x\text{.}\)</span>”} \textcolor{red}{<span class="process-math">\(\frac{\Delta\beta}{\Delta\beta}\)</span>   gives} \begin{align} \label{eq:UncancelDeltaBeta}  f^\prime(x)    \amp =\limit{h}{0}{\left(\frac{\alpha(\beta(x+h))-\alpha(\beta(x))}{\textcolor{red}{\Delta\beta}}\cdot\frac{\textcolor{red}{\Delta\beta}}{h}\right)}.\\ \intertext{From <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQUATIONChainRule1" missing or not unique]</code>) we see that <span class="process-math">\(\textcolor{red}{\Delta\beta}=\textcolor{blue}{\beta(x+h)-\beta(x)}\)</span> so} \nonumber    \amp =\limit{h}{0}{\left(\frac{\alpha(\beta(x+h))-\alpha(\beta(x))}{\Delta\beta}\cdot\frac{\textcolor{blue}{\beta(x+h)-\beta(x)}}{h}\right)}.\\ \intertext{By <a href="" class="xref" data-knowl="./knowl/xref/THEOREMLimProd2.html" title="Theorem 14.2: The Limit of a Product is the Product of the Limits">Theorem 14.2</a> we have:} \nonumber    \amp =\limit{h}{0}{\left(\frac{\alpha(\beta(x+h))-\alpha(\beta(x))}{\Delta\beta}\right)}\cdot\limit{h}{0}{\left(\frac{\beta(x+h)-\beta(x)}{h}\right)}.\\ \intertext{<code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQUATIONDeltaBetaEq0" missing or not unique]</code>) says that <span class="process-math">\(h\rightarrow 0\)</span> is equivalent to <span class="process-math">\(\Delta\beta\rightarrow 0\)</span> so we have} \nonumber    f^\prime(x)\amp =\lim_{\textcolor{red}{\underset{\Delta\beta\rightarrow0}{\cancel{h\rightarrow0}}}}{\left(\frac{\alpha(\beta+\Delta\beta)-\alpha(\beta)}{\Delta\beta}\right)}\cdot\limit{h}{0}{\left(\frac{\beta(x+h)-\beta(x)}{h}\right)},\\ \label{eq:ChainRuleProof1}    f^\prime(x)           \amp =\underbrace{\limit{\Delta\beta}{0}{\left(\frac{\alpha(\beta+\Delta\beta)-\alpha(\beta)}{\Delta\beta}\right)}}_{=\alpha^\prime(\beta)}\cdot\underbrace{\limit{h}{0}{\left(\frac{\beta(x+h)-\beta(x)}{h}\right)}}_{=\beta^\prime(x)}.\\ \label{eq:ChainRuleBetaIsVariable}    f^\prime(x) \amp =\alpha^\prime(\beta)\cdot\beta^\prime(x). \end{align} In <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQUATIONChainRuleBetaIsVariable" missing or not unique]</code> <span class="process-math">\(\beta\)</span> is first used as a variable in <span class="process-math">\(\alpha^\prime(\beta)\text{,}\)</span> and then as the function <span class="process-math">\(\beta(x)\text{.}\)</span> While this is correct, it is also poor form because it accentuates the dual use of <span class="process-math">\(\beta\text{.}\)</span> To avoid this we usually express the Chain Rule as</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/THEOREMLimSum2.html ./knowl/xref/LEMMADiffImpliesCont.html   ./knowl/xref/THEOREMLimProd2.html  ">
+</div> <aside class="aside aside-like" id="SECTIONChainRule-8-4"><h4 class="heading"><span class="title">Comment.</span></h4>
+<div class="para" id="SECTIONChainRule-8-4-2">Because asserting the equality of non-existing objects would be meaningless we assume, implicitly that all limits in this argument exist.</div></aside> <div class="para logical" id="SECTIONChainRule-8-5">
+<div class="para">Then</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/THEOREMLimSum2.html ./knowl/xref/LEMMADiffImpliesCont.html ./knowl/xref/EQUATIONDeltaBetaEq0.html" id="SECTIONChainRule-8-5-1">
+\begin{align*}
+\limit{h}{0}{\beta(x+h)}\amp =\limit{h}{0}{(\beta(x)+\Delta\beta)}.\\
+\end{align*}
+<p class="intertext">By <a href="" class="xref" data-knowl="./knowl/xref/THEOREMLimSum2.html" title="Theorem 14.1: The Limit of a Sum is the Sum of the Limits">Theorem 14.1</a> we have</p>
+\begin{align*}
+\limit{h}{0}{\beta(x+h)}\amp =\limit{h}{0}{\beta(x)}+\limit{h}{0}{\Delta\beta},\\
+\end{align*}
+<p class="intertext">and since <span class="process-math">\(\beta(x)\)</span> is differentiable at <span class="process-math">\(x\)</span> we see from <a href="" class="xref" data-knowl="./knowl/xref/LEMMADiffImpliesCont.html" title="Lemma 14.16: Differentiability Implies Continuity">Lemma 14.16</a> that</p>
+\begin{align*}
+\beta(x)\amp =\beta(x) +\limit{h}{0}{\Delta\beta}
+\end{align*}
+</div>
+<div class="para">from  which <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONDeltaBetaEq0.html" title="Equation 14.3">(14.3)</a>) follows. To prove the Chain Rule recall that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/THEOREMLimSum2.html ./knowl/xref/LEMMADiffImpliesCont.html ./knowl/xref/EQUATIONDeltaBetaEq0.html" id="SECTIONChainRule-8-5-3">
+\begin{align*}
+f^\prime(x)\amp =\limit{h}{0}{\frac{f(x+h)-f(x)}{h}}\\
+\amp =\limit{h}{0}{\frac{\alpha(\beta(x+h))-\alpha(\beta(x))}{h}}.
+\end{align*}
+</div>
+</div> <aside class="aside aside-like" id="SECTIONChainRule-8-6"><h4 class="heading"><span class="title">Comment.</span></h4>
+<div class="para" id="SECTIONChainRule-8-6-2">(in the past we have called this “uncancelling” <span class="process-math">\(\Delta\beta\text{.}\)</span> Also, notice that this is where we use the assumption, “<span class="process-math">\(\Delta\beta\neq0\)</span> near <span class="process-math">\(x\text{.}\)</span>”)</div></aside> <div class="para logical" id="SECTIONChainRule-8-7">
+<div class="para">Multiplying  by <span class="process-math">\(1\)</span> in the form <span class="process-math">\(\textcolor{red}{\frac{\Delta\beta}{\Delta\beta}}\)</span>   gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQUATIONChainRule1.html ./knowl/xref/THEOREMLimProd2.html ./knowl/xref/EQUATIONDeltaBetaEq0.html ./knowl/xref/EQUATIONChainRuleBetaIsVariable.html" id="SECTIONChainRule-8-7-3">
+\begin{align}
+f^\prime(x)    \amp =\limit{h}{0}{\left(\frac{\alpha(\beta(x+h))-\alpha(\beta(x))}{\textcolor{red}{\Delta\beta}}\cdot\frac{\textcolor{red}{\Delta\beta}}{h}\right)}.\tag{14.5}\\
+\end{align}
+<p class="intertext">From <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONChainRule1.html" title="Equation 14.4">(14.4)</a>) we see that <span class="process-math">\(\textcolor{red}{\Delta\beta}=\textcolor{blue}{\beta(x+h)-\beta(x)}\)</span> so</p>
+\begin{align}
+\amp =\limit{h}{0}{\left(\frac{\alpha(\beta(x+h))-\alpha(\beta(x))}{\Delta\beta}\cdot\frac{\textcolor{blue}{\beta(x+h)-\beta(x)}}{h}\right)}.\notag\\
+\end{align}
+<p class="intertext">By <a href="" class="xref" data-knowl="./knowl/xref/THEOREMLimProd2.html" title="Theorem 14.2: The Limit of a Product is the Product of the Limits">Theorem 14.2</a> we have:</p>
+\begin{align}
+\amp =\limit{h}{0}{\left(\frac{\alpha(\beta(x+h))-\alpha(\beta(x))}{\Delta\beta}\right)}\cdot\limit{h}{0}{\left(\frac{\beta(x+h)-\beta(x)}{h}\right)}.\notag\\
+\end{align}
+<p class="intertext"><a href="" class="xref" data-knowl="./knowl/xref/EQUATIONDeltaBetaEq0.html" title="Equation 14.3">(14.3)</a>) says that <span class="process-math">\(h\rightarrow 0\)</span> is equivalent to <span class="process-math">\(\Delta\beta\rightarrow 0\)</span> so we have</p>
+\begin{align}
+f^\prime(x)\amp =\lim_{\textcolor{red}{\underset{\Delta\beta\rightarrow0}{\cancel{h\rightarrow0}}}}{\left(\frac{\alpha(\beta+\Delta\beta)-\alpha(\beta)}{\Delta\beta}\right)}\cdot\limit{h}{0}{\left(\frac{\beta(x+h)-\beta(x)}{h}\right)},\notag\\
+f^\prime(x)           \amp =\underbrace{\limit{\Delta\beta}{0}{\left(\frac{\alpha(\beta+\Delta\beta)-\alpha(\beta)}{\Delta\beta}\right)}}_{=\alpha^\prime(\beta)}\cdot\underbrace{\limit{h}{0}{\left(\frac{\beta(x+h)-\beta(x)}{h}\right)}}_{=\beta^\prime(x)}.\tag{14.6}\\
+f^\prime(x)
+\amp =\alpha^\prime(\beta)\cdot\beta^\prime(x).\tag{14.7}
+\end{align}
+</div>
+<div class="para">In <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONChainRuleBetaIsVariable.html" title="Equation 14.7">equation (14.7)</a> <span class="process-math">\(\beta\)</span> is first used as a variable in <span class="process-math">\(\alpha^\prime(\beta)\text{,}\)</span> and then as the function <span class="process-math">\(\beta(x)\text{.}\)</span> While this is correct, it is also poor form because it accentuates the dual use of <span class="process-math">\(\beta\text{.}\)</span> To avoid this we usually express the Chain Rule as</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQUATIONChainRule1.html ./knowl/xref/THEOREMLimProd2.html ./knowl/xref/EQUATIONDeltaBetaEq0.html ./knowl/xref/EQUATIONChainRuleBetaIsVariable.html">
 \begin{equation*}
 f^\prime(x) =\alpha^\prime(\beta(x))\cdot\beta^\prime(x)
 \end{equation*}
 </div>
 <div class="para">to emphasize that <span class="process-math">\(x\text{,}\)</span> not <span class="process-math">\(\beta\text{,}\)</span> is the variable.</div>
-</div> <div class="para" id="SECTIONChainRule-8-5"><em class="alert"><span class="process-math">\(\halmos\)</span></em></div></article></details><section class="paragraphs" id="SECTIONChainRule-9"><h4 class="heading"><span class="title">DIGRESSION: Why Assume That <span class="process-math">\(\Delta\beta\neq0\)</span> Near Zero?</span></h4> <div class="para" id="SECTIONChainRule-9-2">Do you see why we had to assume that <span class="process-math">\(\Delta\beta\neq0\)</span> near <span class="process-math">\(x\text{?}\)</span>
-</div> <div class="para" id="SECTIONChainRule-9-3">Observe that in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQUATIONChainRuleProof1" missing or not unique]</code>) <span class="process-math">\(\Delta\beta\)</span> plays the same role the <span class="process-math">\(h\)</span> plays in <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONDerivative.html" title="Definition 13.4: The Derivative">Definition 13.4</a>). In <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONDerivative.html" title="Definition 13.4: The Derivative">Definition 13.4</a>) we were careful to insist that <span class="process-math">\(h\)</span> could never equal zero,so if we are going to interpret <span class="process-math">\(\limit{\Delta\beta}{0}{\left(\frac{\alpha(\beta+\Delta\beta)-\alpha(\beta)}{\Delta\beta}\right)}\)</span> as the derivative of <span class="process-math">\(\alpha\)</span> with respect to <span class="process-math">\(\beta\text{,}\)</span> as we did in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQUATIONChainRuleProof1" missing or not unique]</code>), we need to know that <span class="process-math">\(\Delta\beta\neq0\)</span> when <span class="process-math">\(h\)</span> is near zero.</div> <div class="para" id="SECTIONChainRule-9-4">Our imposition of that constraint means that <a href="" class="xref" data-knowl="./knowl/xref/THEOREMChainRule.html" title="Theorem 14.27: The Chain Rule">Theorem 14.27</a> does not apply to any function <span class="process-math">\(f(x)=\alpha(\beta(x))\)</span> where <span class="process-math">\(\Delta\beta\)</span> might be equal to zero no matter how close <span class="process-math">\(h\)</span> is to zero.  Fortunately, functions of that sort are generally the kinds of “pathological functions” that Poincarè is complained about in the quote at the beginning of this chapter. A valid proof of the Chain Rule without that constraint is possible, but since it would have very little relevance to anything we’ll be doing we have chosen to prove only this weaker form of the Chain Rule\aside{You may be wondering if our choice  to go with a weaker form of the Chain Rule means we’ve given Bishop Berkeley cause for compliant. The answer is no, we haven’t. If we’d left off the condition that <span class="process-math">\(\Delta\beta\neq0\text{,}\)</span> then our proof would not have been rigorous because we’d have ended by claiming more than we’d proved. As it is, we’ve only claimed what we have proved.\\ Rigorous does not mean perfect, it means logical. }</div> <div class="para" id="SECTIONChainRule-9-5">If you are unsatisfied with this proof and want to see a proof of the stronger version of the Chain Rule, consider majoring in mathematics. You’ll see that and much, much more. In the meantime try working through the following problem.</div> <article class="problem example-like" id="SECTIONChainRule-9-6"><h5 class="heading">
+</div> <div class="para" id="SECTIONChainRule-8-8"><em class="alert"><span class="process-math">\(\halmos\)</span></em></div></article></details><section class="paragraphs" id="DIGRESSIONDeltaBetaNotZero"><h4 class="heading"><span class="title">DIGRESSION: Why Assume That <span class="process-math">\(\Delta\beta\neq0\)</span> Near Zero?</span></h4> <div class="para" id="DIGRESSIONDeltaBetaNotZero-2">Do you see why we had to assume that <span class="process-math">\(\Delta\beta\neq0\)</span> near <span class="process-math">\(x\text{?}\)</span>
+</div> <div class="para logical" id="DIGRESSIONDeltaBetaNotZero-3">
+<div class="para">Observe that in <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONChainRuleProof1.html" title="Equation 14.6">equation (14.6)</a>) <span class="process-math">\(\Delta\beta\)</span> plays the same role the <span class="process-math">\(h\)</span> plays in <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONDerivative.html" title="Definition 13.4: The Derivative">Definition 13.4</a>). In <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONDerivative.html" title="Definition 13.4: The Derivative">Definition 13.4</a>) we were careful to insist that <span class="process-math">\(h\)</span> could never equal zero,so if we are going to interpret</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQUATIONChainRuleProof1.html ./knowl/xref/DEFINITIONDerivative.html ./knowl/xref/DEFINITIONDerivative.html ./knowl/xref/EQUATIONChainRuleProof1.html">
+\begin{equation*}
+\limit{\Delta\beta}{0}{\left(\frac{\alpha(\beta+\Delta\beta)-\alpha(\beta)}{\Delta\beta}\right)}
+\end{equation*}
+</div>
+<div class="para">as the derivative of <span class="process-math">\(\alpha\)</span> with respect to <span class="process-math">\(\beta\text{,}\)</span> as we did in <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONChainRuleProof1.html" title="Equation 14.6">equation (14.6)</a>), we need to know that <span class="process-math">\(\Delta\beta\neq0\)</span> when <span class="process-math">\(h\)</span> is near zero.</div>
+</div> <div class="para" id="DIGRESSIONDeltaBetaNotZero-4">Our imposition of that constraint means that <a href="" class="xref" data-knowl="./knowl/xref/THEOREMChainRule.html" title="Theorem 14.27: The Chain Rule">Theorem 14.27</a> does not apply to any function <span class="process-math">\(f(x)=\alpha(\beta(x))\)</span> where <span class="process-math">\(\Delta\beta\)</span> might be equal to zero no matter how close <span class="process-math">\(h\)</span> is to zero.  Fortunately, functions of that sort are generally the kinds of “pathological functions” that Poincarè is complained about in the quote at the beginning of this chapter. A valid proof of the Chain Rule without that constraint is possible, but since it would have very little relevance to anything we’ll be doing we have chosen to prove only this weaker form of the Chain Rule</div> <aside class="aside aside-like" id="DIGRESSIONDeltaBetaNotZero-5"><h5 class="heading"><span class="title">Comment.</span></h5>
+<div class="para" id="DIGRESSIONDeltaBetaNotZero-5-2">You may be wondering if our choice  to go with a weaker form of the Chain Rule means we’ve given Bishop Berkeley cause for compliant. The answer is no, we haven’t. If we’d left off the condition that <span class="process-math">\(\Delta\beta\neq0\text{,}\)</span> then our proof would not have been rigorous because we’d have ended by claiming more than we’d proved. As it is, we’ve only claimed what we have proved.</div>
+<div class="para" id="DIGRESSIONDeltaBetaNotZero-5-3">Rigorous does not mean perfect, it means logical.</div></aside> <div class="para" id="DIGRESSIONDeltaBetaNotZero-6">If you are unsatisfied with this proof and want to see a proof of the stronger version of the Chain Rule, consider majoring in mathematics. You’ll see that and much, much more. In the meantime try working through the following problem.</div> <article class="problem example-like" id="DIGRESSIONDeltaBetaNotZero-7"><h5 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">14.28</span><span class="period">.</span>
 </h5>
-<div class="introduction" id="SECTIONChainRule-9-6-1"><div class="para" id="SECTIONChainRule-9-6-1-1"></div></div>
-<article class="task exercise-like" id="SECTIONChainRule-9-6-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<div class="para" id="SECTIONChainRule-9-6-2-1-1">Show that the function <span class="process-math">\(\beta(x)=\sin\left(\frac1x\right)\)</span> does not satisfy the constraint <span class="process-math">\(\Delta\beta\neq0\)</span> when <span class="process-math">\(x\)</span> is near zero.\\ \hint{Recall <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONnear.html" title="Definition 14.6: Near">Definition 14.6</a>.}</div></article><article class="task exercise-like" id="SECTIONChainRule-9-6-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<div class="para logical" id="SECTIONChainRule-9-6-3-1-1">
+<div class="introduction" id="DIGRESSIONDeltaBetaNotZero-7-1"><div class="para" id="DIGRESSIONDeltaBetaNotZero-7-1-1"></div></div>
+<article class="task exercise-like" id="DIGRESSIONDeltaBetaNotZero-7-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="para" id="DIGRESSIONDeltaBetaNotZero-7-2-1-1">Show that the function <span class="process-math">\(\beta(x)=\sin\left(\frac1x\right)\)</span> does not satisfy the constraint <span class="process-math">\(\Delta\beta\neq0\)</span> when <span class="process-math">\(x\)</span> is near zero.</div>
+<div class="solutions"><details id="DIGRESSIONDeltaBetaNotZero-7-2-2" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="DIGRESSIONDeltaBetaNotZero-7-2-2-1">Recall <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONnear.html" title="Definition 14.6: Near">Definition 14.6</a>.</div></div></details></div></article><article class="task exercise-like" id="DIGRESSIONDeltaBetaNotZero-7-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="para logical" id="DIGRESSIONDeltaBetaNotZero-7-3-1-1">
 <div class="para">As a result of part (a) <a href="" class="xref" data-knowl="./knowl/xref/THEOREMChainRule.html" title="Theorem 14.27: The Chain Rule">Theorem 14.27</a> does not apply to any of the following functions at <span class="process-math">\(x=0\text{.}\)</span> Nevertheless one of them is differentiable at <span class="process-math">\(x=0\text{.}\)</span> Use <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONDerivative.html" title="Definition 13.4: The Derivative">Definition 13.4</a> to find out which one.</div>
-<ol class="decimal">
-<li id="SECTIONChainRule-9-6-3-1-1-5-1"><div class="para" id="SECTIONChainRule-9-6-3-1-1-5-1-1"><span class="process-math">\(\displaystyle T(x)=
+<ol class="lower-roman">
+<li id="DIGRESSIONDeltaBetaNotZero-7-3-1-1-5-1"><div class="para" id="DIGRESSIONDeltaBetaNotZero-7-3-1-1-5-1-1"><span class="process-math">\(\displaystyle T(x)=
 \begin{cases}
 \sin\left(\frac1x\right) \amp  x\neq0\\
 0                        \amp  x=0
 \end{cases}.\)</span></div></li>
-<li id="SECTIONChainRule-9-6-3-1-1-5-2"><div class="para" id="SECTIONChainRule-9-6-3-1-1-5-2-1"><span class="process-math">\(\displaystyle U(x)=
+<li id="DIGRESSIONDeltaBetaNotZero-7-3-1-1-5-2"><div class="para" id="DIGRESSIONDeltaBetaNotZero-7-3-1-1-5-2-1"><span class="process-math">\(\displaystyle U(x)=
 \begin{cases}
 x\sin\left(\frac1x\right) \amp  x\neq0\\
 0                        \amp  x=0
 \end{cases}.\)</span></div></li>
-<li id="SECTIONChainRule-9-6-3-1-1-5-3"><div class="para" id="SECTIONChainRule-9-6-3-1-1-5-3-1"><span class="process-math">\(\displaystyle V(x)=
+<li id="DIGRESSIONDeltaBetaNotZero-7-3-1-1-5-3"><div class="para" id="DIGRESSIONDeltaBetaNotZero-7-3-1-1-5-3-1"><span class="process-math">\(\displaystyle V(x)=
 \begin{cases}
 x^2\sin\left(\frac1x\right) \amp  x\neq0\\
 0                        \amp  x=0
 \end{cases}.\)</span></div></li>
 </ol>
-</div></article></article>                                             <div class="para" id="SECTIONChainRule-9-7">END OF DIGRESSION</div></section><article class="example example-like" id="EXAMPLEDiffByCR"><h4 class="heading">
+</div></article></article>                                             <div class="para" id="DIGRESSIONDeltaBetaNotZero-8">END OF DIGRESSION</div></section><article class="example example-like" id="EXAMPLEDiffByCR"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">14.29</span><span class="period">.</span>
 </h4>
-<div class="para" id="EXAMPLEDiffByCR-1">Suppose that <span class="process-math">\(f(x)=\left(\sin(x)+\cos(x)\right)^2\text{.}\)</span> To use the Chain Rule to compute the derivative of <span class="process-math">\(f(x)\)</span> we need to recognize that <span class="process-math">\(f(x)\)</span> is the composition of <span class="process-math">\(\alpha(x)=x^2\text{,}\)</span> and <span class="process-math">\(\beta(x)=\sin(x)+\cos(x)\)</span> and then apply <a href="" class="xref" data-knowl="./knowl/xref/THEOREMChainRule.html" title="Theorem 14.27: The Chain Rule">Theorem 14.27</a> as follows. \begin{align*} f^\prime(x) \amp = \alpha^\prime(\beta(x))\cdot\beta^\prime(x)\\ \amp = \alpha^\prime(\beta(x))\cdot(\cos(x)-\sin(x))\\ \amp = \alpha^\prime(\sin(x)+\cos(x))\cdot(\cos(x)-\sin(x))\\ f^\prime(x)\amp = 2 (\sin(x)+\cos(x))\cdot(\cos(x)-\sin(x)). \end{align*}</div></article><div class="para" id="SECTIONChainRule-11">In our opinion the Chain Rule leaves a lot to be desired as a computational technique. But we don’t have to use it that way since <a href="" class="xref" data-knowl="./knowl/xref/THEOREMChainRule.html" title="Theorem 14.27: The Chain Rule">Theorem 14.27</a> validates the substitutions  we have always used.</div>
+<div class="para logical" id="EXAMPLEDiffByCR-1">
+<div class="para">Suppose that <span class="process-math">\(f(x)=\left(\sin(x)+\cos(x)\right)^2\text{.}\)</span> To use the Chain Rule to compute the derivative of <span class="process-math">\(f(x)\)</span> we need to recognize that <span class="process-math">\(f(x)\)</span> is the composition of <span class="process-math">\(\alpha(x)=x^2\text{,}\)</span> and <span class="process-math">\(\beta(x)=\sin(x)+\cos(x)\)</span> and then apply <a href="" class="xref" data-knowl="./knowl/xref/THEOREMChainRule.html" title="Theorem 14.27: The Chain Rule">Theorem 14.27</a> as follows.</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/THEOREMChainRule.html" id="EXAMPLEDiffByCR-1-7">
+\begin{align*}
+f^\prime(x) \amp = \alpha^\prime(\beta(x))\cdot\beta^\prime(x)\\
+\amp = \alpha^\prime(\beta(x))\cdot(\cos(x)-\sin(x))\\
+\amp = \alpha^\prime(\sin(x)+\cos(x))\cdot(\cos(x)-\sin(x))\\
+f^\prime(x)\amp = 2
+(\sin(x)+\cos(x))\cdot(\cos(x)-\sin(x)).
+\end{align*}
+</div>
+</div></article><div class="para" id="SECTIONChainRule-11">In our opinion the Chain Rule leaves a lot to be desired as a computational technique. But we don’t have to use it that way since <a href="" class="xref" data-knowl="./knowl/xref/THEOREMChainRule.html" title="Theorem 14.27: The Chain Rule">Theorem 14.27</a> validates the substitutions  we have always used.</div>
 <article class="exercise exercise-like" id="SECTIONChainRule-12"><h4 class="heading">
 <span class="type">Drill</span><span class="space"> </span><span class="codenumber">14.30</span><span class="period">.</span>
 </h4>
 <div class="para" id="SECTIONChainRule-12-1-1">Suppose <span class="process-math">\(y=f(x)=\left(\sin(x)+\cos(x)\right)^2\text{.}\)</span>  Compute the differential <span class="process-math">\(\dx{y}\)</span> and then divide through by <span class="process-math">\(\dx{x}\)</span> to find the derivative <span class="process-math">\(\dfdx{y}{x}\text{.}\)</span> Confirm that it is the same as the derivative we found in <a href="" class="xref" data-knowl="./knowl/xref/EXAMPLEDiffByCR.html" title="Example 14.29">Example 14.29</a>.</div></article><article class="problem example-like" id="SECTIONChainRule-13"><h4 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">14.31</span><span class="period">.</span>
 </h4>
-<div class="para logical" id="SECTIONChainRule-13-1-1">
-<div class="para">Compute <span class="process-math">\(\dfdx{y}{x}\)</span> for each of the following functions by identifying <span class="process-math">\(\alpha(x)\)</span> and <span class="process-math">\(\beta(x)\)</span> such that <span class="process-math">\(y(x) = \alpha(\beta(x))\)</span> and applying the Chain Rule. You may have to do this more than once for a given problem. In each case confirm that your computation is correct with an appropriate differential substitution.</div>
-<ol class="decimal">
-<li id="SECTIONChainRule-13-1-1-5-1"><div class="para" id="SECTIONChainRule-13-1-1-5-1-1"><span class="process-math">\(\displaystyle y=(3x+5)^6\)</span></div></li>
-<li id="SECTIONChainRule-13-1-1-5-2"><div class="para" id="SECTIONChainRule-13-1-1-5-2-1"><span class="process-math">\(\displaystyle y=\sec(\tan(x))\)</span></div></li>
-<li id="SECTIONChainRule-13-1-1-5-3"><div class="para" id="SECTIONChainRule-13-1-1-5-3-1"><span class="process-math">\(\displaystyle y=\sqrt[7]{\frac{1}{x} +x^3}\)</span></div></li>
-<li id="SECTIONChainRule-13-1-1-5-4"><div class="para" id="SECTIONChainRule-13-1-1-5-4-1"><span class="process-math">\(\displaystyle y=\left(\frac{x-x^{\frac12}}{x^3-1}\right)^2\)</span></div></li>
-<li id="SECTIONChainRule-13-1-1-5-5"><div class="para" id="SECTIONChainRule-13-1-1-5-5-1"><span class="process-math">\(\displaystyle y=e^{x-\cos^2(x)}+(2x^2-3)^{\frac15}\)</span></div></li>
-<li id="SECTIONChainRule-13-1-1-5-6"><div class="para" id="SECTIONChainRule-13-1-1-5-6-1"><span class="process-math">\(\displaystyle y=\sqrt{x+\sqrt[3]{2+\sqrt[4]{3-x^2}}}\)</span></div></li>
-</ol>
-</div></article></section><section class="section" id="SECTIONproduct-rule-limits"><h3 class="heading hide-type">
+<div class="introduction" id="SECTIONChainRule-13-1"><div class="para" id="SECTIONChainRule-13-1-1">Compute <span class="process-math">\(\dfdx{y}{x}\)</span> for each of the following functions by identifying <span class="process-math">\(\alpha(x)\)</span> and <span class="process-math">\(\beta(x)\)</span> such that <span class="process-math">\(y(x) = \alpha(\beta(x))\)</span> and applying the Chain Rule. You may have to do this more than once for a given problem. In each case confirm that your computation is correct with an appropriate differential substitution.</div></div>
+<article class="task exercise-like" id="SECTIONChainRule-13-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="SECTIONChainRule-13-2-1-1"><span class="process-math">\(y=(3x+5)^6\)</span></div></article><article class="task exercise-like" id="SECTIONChainRule-13-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="SECTIONChainRule-13-3-1-1"><span class="process-math">\(y=\sec(\tan(x))\)</span></div></article><article class="task exercise-like" id="SECTIONChainRule-13-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="SECTIONChainRule-13-4-1-1"><span class="process-math">\(y=\sqrt[7]{\frac{1}{x} +x^3}\)</span></div></article><article class="task exercise-like" id="SECTIONChainRule-13-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="SECTIONChainRule-13-5-1-1"><span class="process-math">\(y=\left(\frac{x-x^{\frac12}}{x^3-1}\right)^2\)</span></div></article><article class="task exercise-like" id="SECTIONChainRule-13-6"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<div class="para" id="SECTIONChainRule-13-6-1-1"><span class="process-math">\(y=e^{x-\cos^2(x)}+(2x^2-3)^{\frac15}\)</span></div></article><article class="task exercise-like" id="SECTIONChainRule-13-7"><h5 class="heading"><span class="codenumber">(f)</span></h5>
+<div class="para" id="SECTIONChainRule-13-7-1-1"><span class="process-math">\(y=\sqrt{x+\sqrt[3]{2+\sqrt[4]{3-x^2}}}\)</span></div></article></article></section><section class="section" id="SECTIONproduct-rule-limits"><h3 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">14.4</span><span class="space"> </span><span class="title">The Product Rule</span>
 </h3>
 <div class="para" id="SECTIONproduct-rule-limits-2">A rigorous proof of the Product Rule is also fairly complex, but it does not suffer from the kind of technical problems we encountered in the proof of the Chain Rule.</div>
@@ -1027,45 +1146,46 @@ x^2\sin\left(\frac1x\right) \amp  x\neq0\\
 </h4>
 <div class="para logical" id="THEOREMLimitProdRule-2">
 <div class="para">If <span class="process-math">\(\alpha(x)\)</span> and <span class="process-math">\(\beta(x)\)</span> are differentiable at <span class="process-math">\(x\)</span> then <span class="process-math">\(f(x)=\alpha(x)\cdot\beta(x)\)</span> is differentiable and</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\label{eq:PRviaLimit2}
-f^\prime(x)=\alpha(x)\cdot\beta^\prime(x)+\beta(x)\cdot\alpha^\prime(x).
-\end{equation*}
+<div class="displaymath process-math" id="EQUATIONPRviaLimit2">
+\begin{equation}
+f^\prime(x)=\alpha(x)\cdot\beta^\prime(x)+\beta(x)\cdot\alpha^\prime(x).\tag{14.8}
+\end{equation}
 </div>
 </div></article><details id="PROOFLimitProdRule" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof"> <div class="para logical" id="PROOFLimitProdRule-1">
-<div class="para">We start with the two observations. The first is that</div>
-<div class="displaymath process-math" data-contains-math-knowls="      ./knowl/xref/THEOREMLimSum2.html ./knowl/xref/THEOREMLimProd2.html">
-\begin{equation*}
+<div class="para">We start with two observations. The first is that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQUATIONPRviaLimit2.html ./knowl/xref/EQUATIONPRviaLimit.html ./knowl/xref/EQUATIONPRviaLimit3.html" id="EQUATIONPRviaLimit">
+\begin{equation}
 f^\prime(x)=\limit{h}{0}{\frac{\textcolor{red}{f(x+h)}-\textcolor{blue}{f(x)}}{h}}
 =  \limit{h}{0}{\frac{\textcolor{red}
-{\alpha(x+h)\beta(x+h)}-\textcolor{blue}{\alpha(x)\beta(x)}}{h}}
-\label{eq:PRviaLimit}
-\end{equation*}
+{\alpha(x+h)\beta(x+h)}-\textcolor{blue}{\alpha(x)\beta(x)}}{h}}\tag{14.9}
+\end{equation}
 </div>
-<div class="para">and the second is that, in limit form, <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQUATIONPRviaLimit2" missing or not unique]</code> is</div>
-<div class="displaymath process-math" data-contains-math-knowls="      ./knowl/xref/THEOREMLimSum2.html ./knowl/xref/THEOREMLimProd2.html">
-\begin{equation*}
-\label{eq:PRviaLimit3}
-f^\prime(x)=\alpha(x)\left(\limit{h}{0}{\frac{\beta(x+h)-\beta(x)}{h}}\right)+\beta(x)\left(\limit{h}{0}{\frac{\alpha(x+h)-\alpha(x)}{h}}\right).
-\end{equation*}
+<div class="para">and the second is that, in limit form, <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONPRviaLimit2.html" title="Equation 14.8">equation (14.8)</a> is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQUATIONPRviaLimit2.html ./knowl/xref/EQUATIONPRviaLimit.html ./knowl/xref/EQUATIONPRviaLimit3.html" id="EQUATIONPRviaLimit3">
+\begin{equation}
+\begin{split}f^\prime(x)=\alpha(x)\amp{}\left(\limit{h}{0}{\frac{\beta(x+h)-\beta(x)}{h}}\right)\\
+\amp{}+\beta(x)\left(\limit{h}{0}{\frac{\alpha(x+h)-\alpha(x)}{h}}\right).
+\end{split}\tag{14.10}
+\end{equation}
 </div>
-<div class="para">It appears then that our goal is to simply reorganize <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQUATIONPRviaLimit" missing or not unique]</code> until it looks like <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQUATIONPRviaLimit3" missing or not unique]</code>.  We say “simply” but it will only appear to be simple after we have succeeded. We will proceed slowly. Observe that if we subtract <span class="process-math">\(\alpha(x+h)\beta(x)\)</span> from the blue part of the numerator in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQUATIONPRviaLimit" missing or not unique]</code> we get</div>
-<div class="displaymath process-math" data-contains-math-knowls="      ./knowl/xref/THEOREMLimSum2.html ./knowl/xref/THEOREMLimProd2.html">
+<div class="para">It appears then that our goal is simply to reorganize <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONPRviaLimit.html" title="Equation 14.9">equation (14.9)</a> until it looks like <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONPRviaLimit3.html" title="Equation 14.10">equation (14.10)</a>.  We say “simply” but it will only appear to be simple after we have succeeded. We will proceed slowly.</div>
+</div> <div class="para logical" id="PROOFLimitProdRule-2">
+<div class="para">Observe that if we subtract <span class="process-math">\(\alpha(x+h)\beta(x)\)</span> from the blue part of the numerator in <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONPRviaLimit.html" title="Equation 14.9">equation (14.9)</a> we get</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQUATIONPRviaLimit.html ./knowl/xref/EQUATIONPRviaLimit.html ./knowl/xref/EQUATIONPRviaLimit.html ./knowl/xref/THEOREMLimSum2.html ./knowl/xref/THEOREMLimProd2.html">
 \begin{equation*}
 \alpha(x)\beta(x)-\alpha(x+h)\beta(x)=
 \textcolor{blue}{-\beta(x)\left(\alpha(x+h)-\alpha(x)\right)},
 \end{equation*}
 </div>
-<div class="para">whereas if we add <span class="process-math">\(\alpha(x+h)\beta(x)\)</span> to the red part of the numerator in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQUATIONPRviaLimit" missing or not unique]</code>  we get</div>
-<div class="displaymath process-math" data-contains-math-knowls="      ./knowl/xref/THEOREMLimSum2.html ./knowl/xref/THEOREMLimProd2.html">
+<div class="para">whereas if we add <span class="process-math">\(\alpha(x+h)\beta(x)\)</span> to the red part of the numerator in <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONPRviaLimit.html" title="Equation 14.9">equation (14.9)</a>  we get</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQUATIONPRviaLimit.html ./knowl/xref/EQUATIONPRviaLimit.html ./knowl/xref/EQUATIONPRviaLimit.html ./knowl/xref/THEOREMLimSum2.html ./knowl/xref/THEOREMLimProd2.html">
 \begin{equation*}
 \alpha(x+h)\beta(x+h)+\alpha(x+h)\beta(x) =
 \textcolor{red}{\alpha(x+h)\left(\beta(x+h)-\beta(x)\right)}.
 \end{equation*}
 </div>
-<div class="para">This suggests that we should both add and subtract the expression <span class="process-math">\(\alpha(x+h)\beta(x)\)</span> to the numerator of <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQUATIONPRviaLimit" missing or not unique]</code>.  Doing this and factoring as we’ve indicated above we get</div>
-<div class="displaymath process-math" data-contains-math-knowls="      ./knowl/xref/THEOREMLimSum2.html ./knowl/xref/THEOREMLimProd2.html">
+<div class="para">This suggests that we should both add and subtract the expression <span class="process-math">\(\alpha(x+h)\beta(x)\)</span> to the numerator of <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONPRviaLimit.html" title="Equation 14.9">equation (14.9)</a>.  Doing this and factoring as we’ve indicated above we get</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQUATIONPRviaLimit.html ./knowl/xref/EQUATIONPRviaLimit.html ./knowl/xref/EQUATIONPRviaLimit.html ./knowl/xref/THEOREMLimSum2.html ./knowl/xref/THEOREMLimProd2.html">
 \begin{equation*}
 f^\prime(x)=\limit{h}{0}{ \frac{ \textcolor {red}
 {\alpha(x+h)\left(\beta(x+h)-\beta(x)\right)} -
@@ -1074,7 +1194,7 @@ f^\prime(x)=\limit{h}{0}{ \frac{ \textcolor {red}
 \end{equation*}
 </div>
 <div class="para">By <a href="" class="xref" data-knowl="./knowl/xref/THEOREMLimSum2.html" title="Theorem 14.1: The Limit of a Sum is the Sum of the Limits">Theorem 14.1</a> we can separate this into the limit of the two fractions as follows:</div>
-<div class="displaymath process-math" data-contains-math-knowls="      ./knowl/xref/THEOREMLimSum2.html ./knowl/xref/THEOREMLimProd2.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQUATIONPRviaLimit.html ./knowl/xref/EQUATIONPRviaLimit.html ./knowl/xref/EQUATIONPRviaLimit.html ./knowl/xref/THEOREMLimSum2.html ./knowl/xref/THEOREMLimProd2.html">
 \begin{equation*}
 f^\prime(x)=\tlimit{h}{0}{\left(\textcolor{red}{\frac{\textcolor{green}{\alpha(x+h)}\left(\beta(x+h)-{\beta(x)}\right)}{h}}\right)}
 +
@@ -1082,26 +1202,29 @@ f^\prime(x)=\tlimit{h}{0}{\left(\textcolor{red}{\frac{\textcolor{green}{\alpha(x
 \end{equation*}
 </div>
 <div class="para">and by <a href="" class="xref" data-knowl="./knowl/xref/THEOREMLimProd2.html" title="Theorem 14.2: The Limit of a Product is the Product of the Limits">Theorem 14.2</a> we see that</div>
-<div class="displaymath process-math" data-contains-math-knowls="      ./knowl/xref/THEOREMLimSum2.html ./knowl/xref/THEOREMLimProd2.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQUATIONPRviaLimit.html ./knowl/xref/EQUATIONPRviaLimit.html ./knowl/xref/EQUATIONPRviaLimit.html ./knowl/xref/THEOREMLimSum2.html ./knowl/xref/THEOREMLimProd2.html">
 \begin{equation*}
+\begin{split}
 f^\prime(x)=
 \underbrace{\left[ \tlimit{h}{0}{\textcolor{green}{\alpha(x+h)}}
-\right]}_{=\alpha(x)} \underbrace{\left[ \tlimit{h}{0}{ \left(
+\right]}_{=\alpha(x)}\amp{} \underbrace{\left[ \tlimit{h}{0}{ \left(
 \textcolor{red}{\frac{\beta(x+h)-\beta(x)}{h}} \right) }
-\right]}_{=\beta^{\prime}(x)} + \underbrace{\left[
+\right]}_{=\beta^{\prime}(x)}\\
+\amp{} + \underbrace{\left[
 \tlimit{h}{0}{\textcolor{green}{\beta(x)}} \right]}_{\beta(x)}
 \underbrace{\left[ \limit{h}{0}{ \left(
 \textcolor{blue}{\frac{\alpha(x+h)-\alpha(x)}{h}} \right) },
 \right]}_{\alpha^\prime(x)}
+\end{split}
 \end{equation*}
 </div>
 <div class="para">and therefore</div>
-<div class="displaymath process-math" data-contains-math-knowls="      ./knowl/xref/THEOREMLimSum2.html ./knowl/xref/THEOREMLimProd2.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQUATIONPRviaLimit.html ./knowl/xref/EQUATIONPRviaLimit.html ./knowl/xref/EQUATIONPRviaLimit.html ./knowl/xref/THEOREMLimSum2.html ./knowl/xref/THEOREMLimProd2.html">
 \begin{equation*}
 f^\prime(x)=\alpha(x)\beta^\prime(x)+\beta(x)\alpha^\prime(x).
 \end{equation*}
 </div>
-</div> <div class="para" id="PROOFLimitProdRule-2"><em class="alert"><span class="process-math">\(\halmos\)</span></em></div></article></details></section><section class="section" id="SECTIONother-gener-diff"><h3 class="heading hide-type">
+</div> <div class="para" id="PROOFLimitProdRule-3"><em class="alert"><span class="process-math">\(\halmos\)</span></em></div></article></details></section><section class="section" id="SECTIONother-gener-diff"><h3 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">14.5</span><span class="space"> </span><span class="title">The Other General Differentiation Rules</span>
 </h3>
 <article class="theorem theorem-like" id="THEOREMQuotientRuleLimit"><h4 class="heading">
@@ -1118,59 +1241,59 @@ f^\prime(x)=\frac{\beta(x)\alpha^\prime(x)-\alpha(x)\beta^\prime(x)}{\left[\beta
 <article class="problem example-like" id="SECTIONother-gener-diff-4"><h4 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">14.34</span><span class="period">.</span>
 </h4>
-<div class="para" id="SECTIONother-gener-diff-4-1-1">Use the Product Rule to derive the Quotient Rule.\\ \hint{First solve <span class="process-math">\(f(x)=\frac{\alpha(x)}{\beta(x)}\)</span> for <span class="process-math">\(\alpha(x)\text{.}\)</span> }</div></article><div class="para" id="SECTIONother-gener-diff-5">With the Product Rule for Differentiation in place we now have the tools needed to prove the Power Rule for Positive Integer Exponents. The method of proof we outline in the following problem is called <dfn class="terminology">Mathematical Induction</dfn>\aside{We mentioned <dfn class="terminology">Mathematical Induction</dfn> In part (d) of <a href="" class="xref" data-knowl="./knowl/xref/PROBLEMPR-integer.html" title="Problem 4.20: Find the Pattern">Problem 4.20</a> back in <a href="CHAPTERdifferentials.html" class="internal" title="Chapter 4: Differentials, Differentiation, and the Derivative">Chapter 4</a>.}  and it can be used in other contexts as well. In fact, most of the “Find the Pattern” problems in this text require an Induction argument for full rigor.</div>
-<article class="problem example-like" id="SECTIONother-gener-diff-6"><h4 class="heading">
+<div class="para" id="SECTIONother-gener-diff-4-1-1">Use the Product Rule to derive the Quotient Rule.</div>
+<div class="solutions"><details id="SECTIONother-gener-diff-4-2" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="SECTIONother-gener-diff-4-2-1">First solve <span class="process-math">\(f(x)=\frac{\alpha(x)}{\beta(x)}\)</span> for <span class="process-math">\(\alpha(x)\text{.}\)</span>
+</div></div></details></div></article><div class="para" id="SECTIONother-gener-diff-5">With the Product Rule for Differentiation in place we now have the tools needed to prove the Power Rule for Positive Integer Exponents. The method of proof we outline in the following problem is called <dfn class="terminology">Mathematical Induction</dfn>  and it can be used in other contexts as well. In fact, most of the “Find the Pattern” problems in this text require an Induction argument for full rigor.</div>
+<article class="problem example-like" id="PROBLEMPowRulInduction"><h4 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">14.35</span><span class="period">.</span><span class="space"> </span><span class="title">The Power Rule for Positive Integer Exponents.</span>
 </h4>
-<div class="para logical" id="SECTIONother-gener-diff-6-2-1">
-<div class="para">Assume  that <span class="process-math">\(\alpha(x)=x^n\)</span> is differentiable at <span class="process-math">\(x\)</span> for any positive integer <span class="process-math">\(n\text{.}\)</span>
-</div>
-<dl class="description-list">
-<dt id="SECTIONother-gener-diff-6-2-1-4-1">Part 1:</dt>
-<dd><div class="para" id="SECTIONother-gener-diff-6-2-1-4-1-2">Assume that <span class="process-math">\(n=1\text{.}\)</span>  Use the limit definition to    show that <span class="process-math">\(\alpha^\prime(x) = nx^{n-1}.\)</span> \\    \comment{This says, “The Power Rule holds for <span class="process-math">\(k=1\text{.}\)</span>”}</div></dd>
-<dt id="SECTIONother-gener-diff-6-2-1-4-2">Part 2:</dt>
-<dd><div class="para" id="SECTIONother-gener-diff-6-2-1-4-2-2">Now assume that the Power Rule for Positive  Integer Exponents holds for <span class="process-math">\(n=k\text{,}\)</span> where <span class="process-math">\(k\)</span> is an arbitrary, fixed  positive integer.        Let <span class="process-math">\(\beta(x)=x^{k+1}\)</span> and show that <span class="process-math">\(\beta^\prime(x)=(k+1)x^k.\)</span>\\    \comment{This says, “If the Power Rule holds for <span class="process-math">\(k\)</span> then it    must also hold for <span class="process-math">\(k+1\text{.}\)</span>”</div></dd>
-</dl>
-<div class="para">           Do you see how this proves that the Power Rule holds for any positive integer, <span class="process-math">\(n\text{?}\)</span> Write a short paragraph explaining the logic behind this.</div>
-</div></article><div class="para" id="SECTIONother-gener-diff-7">With the  Power Rule for Positive Integer Exponents in place we can extend it to both negative and rational exponents in the same way we did it in <a href="CHAPTERdifferentials.html" class="internal" title="Chapter 4: Differentials, Differentiation, and the Derivative">Chapter 4</a>. The following problem is essentially a repeat of <a href="" class="xref" data-knowl="./knowl/xref/PROBLEMPRPosRat.html" title="Problem 4.38">Problem 4.38</a> <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EPPRRecip" missing or not unique]</code>, using Lagrange’s prime notation, and function notation, rather than differentials.</div>
-<article class="problem example-like" id="SECTIONother-gener-diff-8"><h4 class="heading">
+<div class="introduction" id="PROBLEMPowRulInduction-2"><div class="para" id="PROBLEMPowRulInduction-2-1">Assume  that <span class="process-math">\(\alpha(x)=x^n\)</span> is differentiable at <span class="process-math">\(x\)</span> for any positive integer <span class="process-math">\(n\text{.}\)</span>
+</div></div>
+<article class="task exercise-like" id="PROBLEMPowRulInduction-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="PROBLEMPowRulInduction-3-1-1">Assume that <span class="process-math">\(n=1\text{.}\)</span>  Use the limit definition to    show that <span class="process-math">\(\alpha^\prime(x) = nx^{n-1}.\)</span> (This says, “The Power Rule holds for <span class="process-math">\(k=1\text{.}\)</span>”)</div></article><article class="task exercise-like" id="PROBLEMPowRulInduction-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="PROBLEMPowRulInduction-4-1-1">Now assume that the Power Rule for Positive Integer Exponents holds for <span class="process-math">\(n=k\text{,}\)</span> where <span class="process-math">\(k\)</span> is an arbitrary, fixed positive integer.  Let <span class="process-math">\(\beta(x)=x^{k+1}\)</span> and show that <span class="process-math">\(\beta^\prime(x)=(k+1)x^k.\)</span> (This says, “If the Power Rule holds for <span class="process-math">\(k\)</span> then it must also hold for <span class="process-math">\(k+1\text{.}\)</span>”)</div></article><article class="task exercise-like" id="PROBLEMPowRulInduction-5"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="PROBLEMPowRulInduction-5-1-1">Do you see how this proves that the Power Rule holds for any positive integer, <span class="process-math">\(n\text{?}\)</span> Write a short paragraph explaining the logic behind this.</div></article></article><div class="para" id="SECTIONother-gener-diff-7">Parts (a) and (b) of this problem constitute a proof of the Power Rule for Positive Integer Exponents by <dfn class="terminology">Mathematical Induction</dfn>, and part (c) asks you to explain the underlying logic. Although we didn’t  mention it at the time, Mathematical Induction was the underlying idea in part (d) of <a href="" class="xref" data-knowl="./knowl/xref/PROBLEMPR-integer.html" title="Problem 4.20: Find the Pattern">Problem 4.20</a> as well.</div>
+<div class="para" id="SECTIONother-gener-diff-8">With the Power Rule for Positive Integer Exponents in place we can extend it to both negative and rational exponents in the same way we did it in <a href="CHAPTERdifferentials.html" class="internal" title="Chapter 4: Differentials, Differentiation, and the Derivative">Chapter 4</a>. The following problem is essentially a repeat of <a href="" class="xref" data-knowl="./knowl/xref/PROBLEMPRPosRat.html" title="Problem 4.38">Problem 4.38</a> <a href="" class="xref" data-knowl="./knowl/xref/PROBLEMRecip.html" title="Problem 4.41">and 4.41</a>, using Lagrange’s prime notation, and function notation, rather than differentials.</div>
+<article class="problem example-like" id="SECTIONother-gener-diff-9"><h4 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">14.36</span><span class="period">.</span><span class="space"> </span><span class="title">The Power Rule for Rational and Negative Exponents.</span>
 </h4>
-<div class="introduction" id="SECTIONother-gener-diff-8-2"><div class="para" id="SECTIONother-gener-diff-8-2-1"></div></div>
-<article class="task exercise-like" id="SECTIONother-gener-diff-8-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para logical" id="SECTIONother-gener-diff-8-3-1-1">
+<div class="introduction" id="SECTIONother-gener-diff-9-2"><div class="para" id="SECTIONother-gener-diff-9-2-1"></div></div>
+<article class="task exercise-like" id="SECTIONother-gener-diff-9-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para logical" id="SECTIONother-gener-diff-9-3-1-1">
 <div class="para">Assume <span class="process-math">\(n\)</span> is a positive integer and that <span class="process-math">\(\alpha(x)=x^{-n}\)</span> is differentiable.  Show that</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \alpha^\prime(x) = -nx^{-(n+1)}.
 \end{equation*}
 </div>
-<div class="para">\hint{Rewrite <span class="process-math">\(\alpha(x)=x^{-n}\)</span> as <span class="process-math">\(\frac{1}{x^n}\)</span> and use the Quotient Rule for Differentiation and the Power Rule for positive integers.}</div>
-</div></article><article class="task exercise-like" id="SECTIONother-gener-diff-8-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para logical" id="SECTIONother-gener-diff-8-4-1-1">
+</div>
+<div class="solutions"><details id="SECTIONother-gener-diff-9-3-2" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="SECTIONother-gener-diff-9-3-2-1">Rewrite <span class="process-math">\(\alpha(x)=x^{-n}\)</span> as <span class="process-math">\(\frac{1}{x^n}\)</span> and use the Quotient Rule for Differentiation and the Power Rule for positive integers.</div></div></details></div></article><article class="task exercise-like" id="SECTIONother-gener-diff-9-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para logical" id="SECTIONother-gener-diff-9-4-1-1">
 <div class="para">Assume that <span class="process-math">\(q\)</span> is a non-zero integer and that <span class="process-math">\(\alpha(x)=x^{1/q}\)</span> is differentiable at <span class="process-math">\(x\text{.}\)</span>  Show that</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \alpha^\prime(x) = (1/q)x^{(1/q-1)}.
 \end{equation*}
 </div>
-<div class="para">\hint{Rewrite <span class="process-math">\(\alpha(x)=x^{1/q}\)</span> as</div>
+</div>
+<div class="solutions"><details id="SECTIONother-gener-diff-9-4-2" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para logical" id="SECTIONother-gener-diff-9-4-2-1">
+<div class="para">Rewrite <span class="process-math">\(\alpha(x)=x^{1/q}\)</span> as</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \left[\alpha(x)\right]^q=x
 \end{equation*}
 </div>
-<div class="para">and use the Chain Rule and the Power Rule for positive integers.}</div>
-</div></article><article class="task exercise-like" id="SECTIONother-gener-diff-8-5"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<div class="para logical" id="SECTIONother-gener-diff-8-5-1-1">
+<div class="para">and use the Chain Rule and the Power Rule for positive integers.</div>
+</div></div></details></div></article><article class="task exercise-like" id="SECTIONother-gener-diff-9-5"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para logical" id="SECTIONother-gener-diff-9-5-1-1">
 <div class="para">Assume that <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> are integers,  <span class="process-math">\(q\neq0\text{,}\)</span> and that <span class="process-math">\(\alpha(x)=x^{p/q}\)</span> is differentiable at <span class="process-math">\(x\text{.}\)</span>  Show that</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \alpha^\prime(x) = (p/q)x^{(p/q-1)}.
 \end{equation*}
 </div>
-<div class="para">\hint{Rewrite <span class="process-math">\(\alpha(x)=x^{p/q}\)</span> as <span class="process-math">\(\alpha(x)=\left(x^{1/q}\right)^p\)</span> and use the Chain Rule and part (b).}</div>
-</div></article></article><div class="para" id="SECTIONother-gener-diff-9">Together the previous two problems prove the Power Rule for rational exponents:</div>
+</div>
+<div class="solutions"><details id="SECTIONother-gener-diff-9-5-2" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="SECTIONother-gener-diff-9-5-2-1">Rewrite <span class="process-math">\(\alpha(x)=x^{p/q}\)</span> as <span class="process-math">\(\alpha(x)=\left(x^{1/q}\right)^p\)</span> and use the Chain Rule and part (b).</div></div></details></div></article></article><div class="para" id="SECTIONother-gener-diff-10">Together the previous two problems prove the Power Rule for rational exponents:</div>
 <article class="theorem theorem-like" id="THEOREMPowerRuleLimit"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">14.37</span><span class="period">.</span><span class="space"> </span><span class="title">The Power Rule for Rational Exponents.</span>
 </h4>
@@ -1181,9 +1304,9 @@ f^\prime(x)=\frac{\beta(x)\alpha^\prime(x)-\alpha(x)\beta^\prime(x)}{\left[\beta
 \alpha^\prime(x) = (p/q)x^{(p/q-1)}.
 \end{equation*}
 </div>
-</div></article><div class="para" id="SECTIONother-gener-diff-11">In the statement of <a href="" class="xref" data-knowl="./knowl/xref/THEOREMQuotientRuleLimit.html" title="Theorem 14.33: The Quotient Rule for Differentiation">Theorem 14.33</a> we explicitly assumed that the quotient, <span class="process-math">\(\frac{\alpha(x)}{\beta(x)}\text{,}\)</span> is differentiable at <span class="process-math">\(x\text{.}\)</span> This has the effect that the theorem does not necessarily apply to all possible quotients, in the same way that when we add <span class="process-math">\(\Delta\beta\neq0\)</span> to the statement of the Chain Rule, the theorem applies to fewer compositions. And just like the Chain Rule the functions that <a href="" class="xref" data-knowl="./knowl/xref/THEOREMQuotientRuleLimit.html" title="Theorem 14.33: The Quotient Rule for Differentiation">Theorem 14.33</a> does not apply to are mostly pathological, and of no use to us right now.</div>
-<div class="para" id="SECTIONother-gener-diff-12">We added the same assumption to <a href="" class="xref" data-knowl="./knowl/xref/THEOREMPowerRuleLimit.html" title="Theorem 14.37: The Power Rule for Rational Exponents">Theorem 14.37</a> for similar reasons.</div>
-<section class="paragraphs" id="SECTIONother-gener-diff-13"><h4 class="heading"><span class="title">DIGRESSION: Are You a Mathematician?</span></h4> <div class="para" id="SECTIONother-gener-diff-13-2">If leaving these theorems incomplete in this way is troubling to you then you are almost certainly a mathematician by temperament. If you haven’t decided on a major yet, consider mathematics. You obviously like it. Why not learn more?</div> <div class="para" id="SECTIONother-gener-diff-13-3">If you find that you simply don’t care about completing all of the details and you are not majoring in mathematics, congratulations! You’ve made the right choice.</div> <div class="para" id="SECTIONother-gener-diff-13-4">
+</div></article><div class="para" id="SECTIONother-gener-diff-12">In the statement of <a href="" class="xref" data-knowl="./knowl/xref/THEOREMQuotientRuleLimit.html" title="Theorem 14.33: The Quotient Rule for Differentiation">Theorem 14.33</a> we explicitly assumed that the quotient, <span class="process-math">\(\frac{\alpha(x)}{\beta(x)}\text{,}\)</span> is differentiable at <span class="process-math">\(x\text{.}\)</span> This has the effect that the theorem does not necessarily apply to all possible quotients, in the same way that when we add <span class="process-math">\(\Delta\beta\neq0\)</span> to the statement of the Chain Rule, the theorem applies to fewer compositions. And just like the Chain Rule the functions that <a href="" class="xref" data-knowl="./knowl/xref/THEOREMQuotientRuleLimit.html" title="Theorem 14.33: The Quotient Rule for Differentiation">Theorem 14.33</a> does not apply to are mostly pathological, and of no use to us right now.</div>
+<div class="para" id="SECTIONother-gener-diff-13">We added the same assumption to <a href="" class="xref" data-knowl="./knowl/xref/THEOREMPowerRuleLimit.html" title="Theorem 14.37: The Power Rule for Rational Exponents">Theorem 14.37</a> for similar reasons.</div>
+<section class="paragraphs" id="DIGRESSIONRUAMathematician"><h4 class="heading"><span class="title">DIGRESSION: Are You a Mathematician?</span></h4> <div class="para" id="DIGRESSIONRUAMathematician-2">If leaving these theorems incomplete in this way is troubling to you then you are almost certainly a mathematician by temperament. If you haven’t decided on a major yet, consider mathematics. You obviously like it. Why not learn more?</div> <div class="para" id="DIGRESSIONRUAMathematician-3">If you find that you simply don’t care about completing all of the details and you are not majoring in mathematics, congratulations! You’ve made the right choice.</div> <div class="para" id="DIGRESSIONRUAMathematician-4">
 <a href="" class="xref" data-knowl="./knowl/xref/PROBLEMQR-rigor.html" title="Problem 14.38">Problem 14.38</a>  will lead you through the steps necessary to prove the Quotient Rule for Differentiation without the assumption that <span class="process-math">\(\frac{\alpha(x)}{\beta(x)}\)</span> is differentiable. Have fun!</div> <article class="problem example-like" id="PROBLEMQR-rigor"><h5 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">14.38</span><span class="period">.</span>
 </h5>
@@ -1193,7 +1316,7 @@ f^\prime(x)=\frac{\beta(x)\alpha^\prime(x)-\alpha(x)\beta^\prime(x)}{\left[\beta
 <div class="para logical" id="PROBLEMQR-rigor-2-1-1">
 <div class="para">First prove the special case of the Quotient Rule where <span class="process-math">\(f(x)=\frac{1}{\beta(x)}\text{.}\)</span>
 </div>
-<ol class="decimal">
+<ol class="lower-roman">
 <li id="PROBLEMQR-rigor-2-1-1-2-1"><div class="para" id="PROBLEMQR-rigor-2-1-1-2-1-1">Use the limit definition to show that <span class="process-math">\(\beta^\prime(x)=\limit{h}{0}{\frac{\beta(x)-\beta(x+h)}{h\beta(x)\beta(x+h)}}\text{.}\)</span>
 </div></li>
 <li id="PROBLEMQR-rigor-2-1-1-2-2"><div class="para" id="PROBLEMQR-rigor-2-1-1-2-2-1">Now evaluate the limit in part (i) to show that <span class="process-math">\(f^\prime(x)=
@@ -1202,7 +1325,7 @@ f^\prime(x)=\frac{\beta(x)\alpha^\prime(x)-\alpha(x)\beta^\prime(x)}{\left[\beta
 </ol>
 </div></article><article class="task exercise-like" id="PROBLEMQR-rigor-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>
 <div class="para logical" id="PROBLEMQR-rigor-3-1-1">
-<div class="para">Use the Product Rule for Differentiation and the Chain Rule (along with the result of part a) to show that <span class="process-math">\(f(x)=\frac{\alpha(x)}{\beta(x)}\)</span> is differentiable at <span class="process-math">\(x\)</span> and that\\</div>
+<div class="para">Use the Product Rule for Differentiation and the Chain Rule (along with the result of part a) to show that <span class="process-math">\(f(x)=\frac{\alpha(x)}{\beta(x)}\)</span> is differentiable at <span class="process-math">\(x\)</span> and that</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \displaystyle f^\prime(x) =
@@ -1210,21 +1333,51 @@ f^\prime(x)=\frac{\beta(x)\alpha^\prime(x)-\alpha(x)\beta^\prime(x)}{\left[\beta
 \alpha(x)\beta^\prime(x)}{\left[\beta(x)\right]^2}.  
 \end{equation*}
 </div>
-</div></article></article>                               <div class="para" id="SECTIONother-gener-diff-13-6">
+</div></article></article>                               <div class="para" id="DIGRESSIONRUAMathematician-6">
 <a href="" class="xref" data-knowl="./knowl/xref/PROBLEMPR-rigor2.html" title="Problem 14.40">Problem 14.40</a> will lead you through the steps necessary to prove the Product Rule for Rational Exponents without the assumption that <span class="process-math">\(x^{\frac{p}{q}}\)</span> is differentiable. It relies on the result of <a href="" class="xref" data-knowl="./knowl/xref/PROBLEMPR-rigor1.html" title="Problem 14.39">Problem 14.39</a>. Have fun!</div> <article class="problem example-like" id="PROBLEMPR-rigor1"><h5 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">14.39</span><span class="period">.</span>
 </h5>
-<div class="introduction" id="PROBLEMPR-rigor1-1"><div class="para" id="PROBLEMPR-rigor1-1-1">To prove  <a href="" class="xref" data-knowl="./knowl/xref/THEOREMPowerRuleLimit.html" title="Theorem 14.37: The Power Rule for Rational Exponents">Theorem 14.37</a> we will first focus on the special case of <span class="process-math">\(\beta(x)=x^{\frac{1}{q}}\text{,}\)</span> <span class="process-math">\(q\)</span> is a non-negative integer. The key to proving this special case is a generalization of the difference of squares formula: <span class="process-math">\((a-b)(a+b)=a^2-b^2.\)</span>
-</div></div>
+<div class="introduction" id="PROBLEMPR-rigor1-1">
+<div class="para logical" id="PROBLEMPR-rigor1-1-1">
+<div class="para">To prove  <a href="" class="xref" data-knowl="./knowl/xref/THEOREMPowerRuleLimit.html" title="Theorem 14.37: The Power Rule for Rational Exponents">Theorem 14.37</a> we will first focus on the special case of</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/THEOREMPowerRuleLimit.html">
+\begin{equation*}
+\beta(x)=x^{\frac{1}{q}},
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(q\)</span> is a non-negative integer.</div>
+</div> <div class="para logical" id="PROBLEMPR-rigor1-1-2">
+<div class="para">The key to proving this special case is a generalization of the difference of squares formula:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(a-b)(a+b)=a^2-b^2.
+\end{equation*}
+</div>
+</div>
+</div>
 <article class="task exercise-like" id="PROBLEMPR-rigor1-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
 <div class="para" id="PROBLEMPR-rigor1-2-1-1">Show that <span class="process-math">\((a-b)(a^2+ab+b^2)=a^3-b^3\text{.}\)</span>
 </div></article><article class="task exercise-like" id="PROBLEMPR-rigor1-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>
 <div class="para" id="PROBLEMPR-rigor1-3-1-1">Show that <span class="process-math">\((a-b)(a^3+a^2b+ab^2+b^3)=a^4-b^4\text{.}\)</span>
 </div></article><article class="task exercise-like" id="PROBLEMPR-rigor1-4"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<div class="para" id="PROBLEMPR-rigor1-4-1-1">Use <dfn class="terminology">Mathematical Induction</dfn> to show that\\ \centerline{<span class="process-math">\((a-b)(a^{q-1}+a^{q-2}b+a^{q-3}b^2+\cdots+ab^{q-2}+b^{q-1})=a^q-b^q\text{.}\)</span>}</div></article></article>               <article class="problem example-like" id="PROBLEMPR-rigor2"><h5 class="heading">
+<div class="para logical" id="PROBLEMPR-rigor1-4-1-1">
+<div class="para">Use <dfn class="terminology">Mathematical Induction</dfn> to show that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(a-b)(a^{q-1}+a^{q-2}b+a^{q-3}b^2+\cdots+ab^{q-2}+b^{q-1})=a^q-b^q\text{.}
+\end{equation*}
+</div>
+</div></article></article>               <article class="problem example-like" id="PROBLEMPR-rigor2"><h5 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">14.40</span><span class="period">.</span>
 </h5>
-<div class="introduction" id="PROBLEMPR-rigor2-1"><div class="para" id="PROBLEMPR-rigor2-1-1">Assume that <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> are integers and that <span class="process-math">\(q\neq0\text{.}\)</span> If we apply <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONDerivative.html" title="Definition 13.4: The Derivative">Definition 13.4</a> to <span class="process-math">\(f(x)=x^\frac{1}{q}\text{,}\)</span> we get\\ \centerline{<span class="process-math">\(f^\prime(x)=\limit{h}{0}{\frac{(x+h)^\frac1q-x^\frac1q}{h}}.  \)</span>}</div></div>
+<div class="introduction" id="PROBLEMPR-rigor2-1"><div class="para logical" id="PROBLEMPR-rigor2-1-1">
+<div class="para">Assume that <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> are integers and that <span class="process-math">\(q\neq0\text{.}\)</span> If we apply <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONDerivative.html" title="Definition 13.4: The Derivative">Definition 13.4</a> to <span class="process-math">\(f(x)=x^\frac{1}{q}\text{,}\)</span> we get</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/DEFINITIONDerivative.html">
+\begin{equation*}
+f^\prime(x)=\limit{h}{0}{\frac{(x+h)^\frac1q-x^\frac1q}{h}}.  
+\end{equation*}
+</div>
+</div></div>
 <article class="task exercise-like" id="PROBLEMPR-rigor2-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
 <div class="para logical" id="PROBLEMPR-rigor2-2-1-1">
 <div class="para">Use the substitutions <span class="process-math">\(a=(x+h)^\frac1q\text{,}\)</span> <span class="process-math">\(b=x^\frac1q\text{,}\)</span> and part (c) of the previous problem to show that</div>
@@ -1250,7 +1403,7 @@ f^\prime(x)=\frac1qx^{\frac1q-1}.
 \alpha^\prime(x)=\frac{p}{q}x^{\frac{p}{q}-1}.
 \end{equation*}
 </div>
-</div></article></article>                          <div class="para" id="SECTIONother-gener-diff-13-9">END OF DIGRESSION</div></section></section><section class="section" id="SECTIONdiff-trig-funct"><h3 class="heading hide-type">
+</div></article></article>                          <div class="para" id="DIGRESSIONRUAMathematician-9">END OF DIGRESSION</div></section></section><section class="section" id="SECTIONdiff-trig-funct"><h3 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">14.6</span><span class="space"> </span><span class="title">Derivatives of the Trigonometric Functions, via Limits</span>
 </h3>
 <div class="para" id="SECTIONdiff-trig-funct-2">\TLogo{PSP:deriv-sine-cosine}</div>
@@ -1355,44 +1508,43 @@ x_2\)</span> then, <span class="process-math">\(f(x_1)\neq f(x_2)\text{.}\)</spa
 </div> <div class="para logical" id="SECTIONinverse-functions-10-5">
 <div class="para">As we’ve seen there can also be some vagueness involving the distinction between functions and variables. For example  suppose we want to sketch a graph of this relation between <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{:}\)</span>
 </div>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQUATIONInv1.html">
 \begin{equation*}
 y-x^3=0.
 \end{equation*}
 </div>
 <div class="para">The simplest thing to do is to choose a value for either <span class="process-math">\(x\)</span> or <span class="process-math">\(y\)</span> and then figure out what the corresponding <span class="process-math">\(y\)</span> or <span class="process-math">\(x\)</span> is. This is simpler to do that if we rearrange the relation so that we have one variable strictly in terms of (“as a function of”) the other. For this particular relation it is easiest to choose a value for <span class="process-math">\(x\)</span> and compute the corresponding <span class="process-math">\(y\)</span> value so we would normally rearrange it as</div>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-y(x)=x^3.\label{eq:Inv1}
-\end{equation*}
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQUATIONInv1.html" id="EQUATIONInv1">
+\begin{equation}
+y(x)=x^3.\tag{14.11}
+\end{equation}
 </div>
 <div class="para">
-<code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQUATIONInv1" missing or not unique]</code> defines <span class="process-math">\(y\)</span> as a function of <span class="process-math">\(x\text{.}\)</span>
+<a href="" class="xref" data-knowl="./knowl/xref/EQUATIONInv1.html" title="Equation 14.11">(14.11)</a> defines <span class="process-math">\(y\)</span> as a function of <span class="process-math">\(x\text{.}\)</span>
 </div>
 </div> <div class="para logical" id="SECTIONinverse-functions-10-6">
 <div class="para">But we only solved for <span class="process-math">\(y\)</span> because we could see it was a little easier to do. Otherwise our choice was completely arbitrary. We could also have solved for <span class="process-math">\(x\)</span> giving,</div>
-<div class="displaymath process-math">
-\begin{equation*}
-x(y)=\sqrt[3]{y}.\label{eq:Inv2}
-\end{equation*}
+<div class="displaymath process-math" id="EQUATIONInv2">
+\begin{equation}
+x(y)=\sqrt[3]{y}.\tag{14.12}
+\end{equation}
 </div>
 <div class="para">In this case we have <span class="process-math">\(x\)</span> as a function of <span class="process-math">\(y\text{.}\)</span>
 </div>
-</div> <div class="para" id="SECTIONinverse-functions-10-7">The two functions, <span class="process-math">\(y(x)\text{,}\)</span> (“cube”) and <span class="process-math">\(x(y)\)</span> (“cube root”), clearly contain the same information as the original relation  <span class="process-math">\(y-x^3=0\text{.}\)</span> But they are different, related, functions. They are in fact mutually inverse.</div> <div class="para" id="SECTIONinverse-functions-10-8">For example suppose we choose <span class="process-math">\(x=2\)</span> and use <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQUATIONInv1" missing or not unique]</code> to find <span class="process-math">\(y=8\text{.}\)</span> If we then take <span class="process-math">\(y=8\)</span> and use <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQUATIONInv2" missing or not unique]</code> we find that <span class="process-math">\(x=2\text{.}\)</span> That is, <span class="process-math">\(x(y)\)</span> has “undone” <span class="process-math">\(y(x)\)</span> for the single pair <span class="process-math">\((2,8)\text{.}\)</span> <a href="" class="xref" data-knowl="./knowl/xref/DRILLCubeRoot.html" title="Drill 14.48">Drill 14.48</a> asks you to show that it is true for every pair <span class="process-math">\((x, y(x))\text{.}\)</span> This “undoing” makes <span class="process-math">\(y(x)\)</span> and <span class="process-math">\(x(y)\)</span> a pair of mutually inverse functions.</div> <div class="para" id="SECTIONinverse-functions-10-9">But in function notation the variable (frequently <span class="process-math">\(x\)</span> or <span class="process-math">\(t\)</span>) is a placeholder. For example, each of <span class="process-math">\(y(x)=x^3,\)</span> <span class="process-math">\(y(t)=t^3\text{,}\)</span> <span class="process-math">\(f(\alpha)=\alpha^3\text{,}\)</span> or even <span class="process-math">\(f(\halmos)=\halmos^3\)</span> defines exactly the same function: The function which cubes its input. It doesn’t matter what we call the variable. It just holds a place in the formula that tells us what the input  is and what to do with it. Since it doesn’t matter what we call the variable we usually call it <span class="process-math">\(x\)</span> unless there is some compelling reason to use something else.</div> <div class="para" id="SECTIONinverse-functions-10-10">To avoid confusing variable names with function names we usually denote <span class="process-math">\(y(x)\)</span> as <span class="process-math">\(f(x)\text{.}\)</span> It’s inverse, <span class="process-math">\(x(y)\)</span> should probably be denoted as <span class="process-math">\(\inverse{f}(y)\text{.}\)</span>  But sadly, recognizing that the variable is just a placeholder in function notation we use the same variable name in both the function and it’s inverse. So we denote the inverse of <span class="process-math">\(f(x)\)</span> as <span class="process-math">\(\inverse{f}(x)\text{,}\)</span> even though it would probably make it easier for beginners to use <span class="process-math">\(\inverse{f}(y)\text{,}\)</span> as a reminder that both functions come from the same original relation.</div> <article class="exercise exercise-like" id="DRILLCubeRoot"><h5 class="heading">
+</div> <div class="para" id="SECTIONinverse-functions-10-7">The two functions, <span class="process-math">\(y(x)\text{,}\)</span> (“cube”) and <span class="process-math">\(x(y)\)</span> (“cube root”), clearly contain the same information as the original relation  <span class="process-math">\(y-x^3=0\text{.}\)</span> But they are different, related, functions. They are in fact mutually inverse.</div> <div class="para" id="SECTIONinverse-functions-10-8">For example suppose we choose <span class="process-math">\(x=2\)</span> and use <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONInv1.html" title="Equation 14.11">(14.11)</a> to find <span class="process-math">\(y=8\text{.}\)</span> If we then take <span class="process-math">\(y=8\)</span> and use <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONInv2.html" title="Equation 14.12">(14.12)</a> we find that <span class="process-math">\(x=2\text{.}\)</span> That is, <span class="process-math">\(x(y)\)</span> has “undone” <span class="process-math">\(y(x)\)</span> for the single pair <span class="process-math">\((2,8)\text{.}\)</span> <a href="" class="xref" data-knowl="./knowl/xref/DRILLCubeRoot.html" title="Drill 14.48">Drill 14.48</a> asks you to show that it is true for every pair <span class="process-math">\((x, y(x))\text{.}\)</span> This “undoing” makes <span class="process-math">\(y(x)\)</span> and <span class="process-math">\(x(y)\)</span> a pair of mutually inverse functions.</div> <div class="para" id="SECTIONinverse-functions-10-9">But in function notation the variable (frequently <span class="process-math">\(x\)</span> or <span class="process-math">\(t\)</span>) is a placeholder. For example, each of <span class="process-math">\(y(x)=x^3,\)</span> <span class="process-math">\(y(t)=t^3\text{,}\)</span> <span class="process-math">\(f(\alpha)=\alpha^3\text{,}\)</span> or even <span class="process-math">\(f(\halmos)=\halmos^3\)</span> defines exactly the same function: The function which cubes its input. It doesn’t matter what we call the variable. It just holds a place in the formula that tells us what the input  is and what to do with it. Since it doesn’t matter what we call the variable we usually call it <span class="process-math">\(x\)</span> unless there is some compelling reason to use something else.</div> <div class="para" id="SECTIONinverse-functions-10-10">To avoid confusing variable names with function names we usually denote <span class="process-math">\(y(x)\)</span> as <span class="process-math">\(f(x)\text{.}\)</span> It’s inverse, <span class="process-math">\(x(y)\)</span> should probably be denoted as <span class="process-math">\(\inverse{f}(y)\text{.}\)</span>  But sadly, recognizing that the variable is just a placeholder in function notation we use the same variable name in both the function and it’s inverse. So we denote the inverse of <span class="process-math">\(f(x)\)</span> as <span class="process-math">\(\inverse{f}(x)\text{,}\)</span> even though it would probably make it easier for beginners to use <span class="process-math">\(\inverse{f}(y)\text{,}\)</span> as a reminder that both functions come from the same original relation.</div> <article class="exercise exercise-like" id="DRILLCubeRoot"><h5 class="heading">
 <span class="type">Drill</span><span class="space"> </span><span class="codenumber">14.48</span><span class="period">.</span>
 </h5>
 <div class="para" id="DRILLCubeRoot-1-1"> Prove that <span class="process-math">\(f(x)=x^3\)</span> and     <span class="process-math">\(\inverse{f}(x)=\sqrt[3]{x}\)</span> are mutually inverse by showing that they satisfy the conditions stated in <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONFunctionInverse.html" title="Definition 14.47: Inverse Functions">Definition 14.47</a>
 </div></article> <div class="para" id="SECTIONinverse-functions-10-12">The notation for inverse functions is not great. It can be very confusing, especially for beginners. Be careful with it.</div> <div class="para" id="SECTIONinverse-functions-10-13"><em class="alert">END OF DIGRESSION</em></div> <div class="para" id="SECTIONinverse-functions-10-14">END OF DIGRESSION</div></section><div class="para logical" id="SECTIONinverse-functions-11">
 <div class="para">Our next task is to show that if <span class="process-math">\(f(x)\)</span> is invertible and differentiable, then <span class="process-math">\(\inverse{f}\)</span> is also differentiable\aside{<span class="process-math">\(\inverse{f}\)</span> is obviously invertible}. We do this by showing that the limit</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\label{eq:InvFuncDerivLimit}
-\DD\left(\inverse{f}(x)\right)=\limit{h}{0}{\frac{\inverse{f}(x+h)-\inverse{f}(x)}{h}}
-\end{equation*}
+<div class="displaymath process-math" id="EQUATIONInvFuncDerivLimit">
+\begin{equation}
+\DD\left(\inverse{f}(x)\right)=\limit{h}{0}{\frac{\inverse{f}(x+h)-\inverse{f}(x)}{h}}\tag{14.13}
+\end{equation}
 </div>
 <div class="para">exists.</div>
 </div>
-<div class="para" id="SECTIONinverse-functions-12">In general this is true but there is one exception that has to be addressed. When <span class="process-math">\(f\)</span> is differentiable at <span class="process-math">\(a\)</span> and <span class="process-math">\(f^\prime(a) = 0\)</span> then the limit in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQUATIONInvFuncDerivLimit" missing or not unique]</code> does not exist. Hence <span class="process-math">\(\inverse f\)</span> is not differentiable at <span class="process-math">\(f(a)\text{.}\)</span> More formally, we have the following lemma.</div>
+<div class="para" id="SECTIONinverse-functions-12">In general this is true but there is one exception that has to be addressed. When <span class="process-math">\(f\)</span> is differentiable at <span class="process-math">\(a\)</span> and <span class="process-math">\(f^\prime(a) = 0\)</span> then the limit in <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONInvFuncDerivLimit.html" title="Equation 14.13">(14.13)</a> does not exist. Hence <span class="process-math">\(\inverse f\)</span> is not differentiable at <span class="process-math">\(f(a)\text{.}\)</span> More formally, we have the following lemma.</div>
 <article class="lemma theorem-like" id="LEMMAInvDerivAtZero"><h4 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">14.49</span><span class="period">.</span>
 </h4>
@@ -1438,11 +1590,10 @@ f\left(\inverse{f}(x)\right)=x.
 \end{equation*}
 </div>
 <div class="para">On the left apply the Chain Rule:</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\label{eq:InvDeriv2}
-f^\prime\left(\inverse{f}(x)\right)\cdot\DD\left(\inverse{f}(x)\right)=1.
-\end{equation*}
+<div class="displaymath process-math" id="EQUATIONInvDeriv2">
+\begin{equation}
+f^\prime\left(\inverse{f}(x)\right)\cdot\DD\left(\inverse{f}(x)\right)=1.\tag{14.14}
+\end{equation}
 </div>
 <div class="para">But when <span class="process-math">\(x=b\)</span> we find that <span class="process-math">\(f^\prime\left(\inverse{f}(b)\right)=f^\prime\left(a\right)=0\text{,}\)</span> so that</div>
 <div class="displaymath process-math">
@@ -1464,8 +1615,8 @@ f^\prime\left(\inverse{f}(x)\right)\cdot\DD\left(\inverse{f}(x)\right)=1.
 </h4>
 <div class="para" id="SECTIONinverse-functions-25-1-1">Choose a function whose derivative is equal to zero at some point and sketch the graph of your function and its inverse on the same set of axes. Be sure to include the point where the derivative is zero. Use your graph to explain why the derivative of the inverse of your function does not exist.</div></article><div class="para" id="SECTIONinverse-functions-26">We now understand what conditions are necessary for an arbitrary function, <span class="process-math">\(f(x)\text{,}\)</span> to have a differentiable inverse.</div>
 <div class="para logical" id="SECTIONinverse-functions-27">
-<div class="para">Also, from <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQUATIONInvDeriv2" missing or not unique]</code> we know what the derivative of the inverse will be if it exists:</div>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="para">Also, from <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONInvDeriv2.html" title="Equation 14.14">(14.14)</a> we know what the derivative of the inverse will be if it exists:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQUATIONInvDeriv2.html">
 \begin{equation*}
 \DD\left(\inverse{f}(x)\right)=\frac{1}{f^\prime\left(\inverse{f}(x)\right)}.
 \end{equation*}
@@ -1476,10 +1627,10 @@ f^\prime\left(\inverse{f}(x)\right)\cdot\DD\left(\inverse{f}(x)\right)=1.
 </h4>
 <div class="para logical" id="SECTIONinverse-functions-28-1-1">
 <div class="para">Let <span class="process-math">\(y=\inverse{f}(x)\)</span> and explain how the formula above is equivalent to</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\dfdx{y}{x}=\frac{1}{\dfdx{x}{y}}\label{eq:InvDeriv}
-\end{equation*}
+<div class="displaymath process-math" id="EQUATIONInvDeriv">
+\begin{equation}
+\dfdx{y}{x}=\frac{1}{\dfdx{x}{y}}\tag{14.15}
+\end{equation}
 </div>
 </div></article><div class="para" id="SECTIONinverse-functions-29">The only thing left is to show that under the conditions on <span class="process-math">\(f\)</span> in <a href="" class="xref" data-knowl="./knowl/xref/LEMMAInvDerivAtZero.html" title="Lemma 14.49">Lemma 14.49</a> the derivative (that is, the limit which defines the derivative) of the inverse does in fact exist.</div>
 <article class="theorem theorem-like" id="THEOREMDerivInvFunc"><h4 class="heading">
@@ -1496,33 +1647,32 @@ f^\prime\left(\inverse{f}(x)\right)\cdot\DD\left(\inverse{f}(x)\right)=1.
 <aside class="aside aside-like" id="SECTIONinverse-functions-32"><h4 class="heading"><span class="title">Note to self.</span></h4>
 <div class="para" id="SECTIONinverse-functions-32-2">I think something is got lost in translation here. The formula <span class="process-math">\((a+k)-a\right\)</span> was in the title of this proof.</div></aside><details id="SECTIONinverse-functions-33" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="title">Proof of Theorem 14.52.</span></h4></summary><article class="hiddenproof"> <div class="para logical" id="SECTIONinverse-functions-33-2">
 <div class="para">We want to show that the limit</div>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQUATIONInvProof.html">
 \begin{equation*}
 \DD\left(\inverse{f}(b)\right)=\limit{h}{0}{\frac{\inverse{f}(b+h)-\inverse{f}(b)}{h}}=\frac{1}{f^\prime\left(\inverse{f}(b)\right)}.
 \end{equation*}
 </div>
 <div class="para">Since <span class="process-math">\(f(a)=b\)</span> we know that <span class="process-math">\(\textcolor{red}{\inverse{f}(b)=a}\)</span> so that \begin{align*} \limit{h}{0}{\frac{\inverse{f}(b+h)-\textcolor{red}{\inverse{f}(b)}}{h}} \amp = \limit{h}{0}{\frac{\inverse{f}(b+h)-\textcolor{red}{a}}{h}} \intertext{ Observe that if <span class="process-math">\(b+h\)</span> is in the domain of <span class="process-math">\(\inverse{f}\)</span> then it is in the range of <span class="process-math">\(f\text{.}\)</span> Thus there is some number in the domain   of <span class="process-math">\(f\)</span> (for convenience we’ll call it <span class="process-math">\(a+k\)</span>) such that <span class="process-math">\(\textcolor{blue}{b+h}=\textcolor{blue}{f(a+k)}\text{.}\)</span> Thus} \limit{h}{0}{\frac{\inverse{f}(\textcolor{blue}{b+h})-\inverse{f}(b)}{h}} \amp = \limit{h}{0} {\frac{\inverse{f}(\textcolor{blue}{f(a+k)})-a}{h}}.\\ \intertext{Again since <span class="process-math">\(f\)</span> and <span class="process-math">\(\inverse{f}\)</span> are mutually inverse they “undo”y each other, so  <span class="process-math">\(\inverse{f}(f(a+k))=a+k\)</span> so that } \limit{h}{0}{\frac{\inverse{f}(b+h)-\inverse{f}(b)}{h}}       \amp = \limit{h}{0}{\frac{k}{h}}.\\ \intertext{ Solving <span class="process-math">\({b+h=f(a+k)}\)</span> for <span class="process-math">\(h\)</span> gives <span class="process-math">\(\textcolor{blue}{h}=\textcolor{blue}{f(a+k)-b}\)</span> so  } \limit{h}{0}{\frac{k}{h}}\amp = \limit{h}{0}{\frac{k}{\textcolor{blue}{f(a+k)-b}}}\\ \intertext{and since <span class="process-math">\(b=f(a)\)</span> we have} \amp = \limit{h}{0}{\frac{k}{f(a+k)-f(a)}}\\ \amp = \limit{h}{0} {\frac{1} {\frac{f(a+k)-f(a)}{k}}}.\\ \amp =  \frac{1} {\limit{h}{0}{\frac{f(a+k)-f(a)}{k}}}.\\ \end{align*} The expression <span class="process-math">\(\limit{h}{0}{\frac{f(a+k)-f(a)}{k}}\)</span> would be <span class="process-math">\(f^\prime(a)\)</span> if only we had <span class="process-math">\(k\rightarrow0\)</span> instead of <span class="process-math">\(h\rightarrow0\text{.}\)</span>  What we need to show now is that if <span class="process-math">\(h\rightarrow0\)</span> then <span class="process-math">\(k\rightarrow0\text{.}\)</span> Then we could write</div>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-\label{eq:InvProof}
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQUATIONInvProof.html" id="EQUATIONInvProof">
+\begin{equation}
 \DD\left(\inverse{f}(b)\right) = \frac{1}
-{\limit{k}{0}{\frac{f(a+k)-f(a)}{k}}}=\frac{1}{f^\prime(a)}
-\end{equation*}
+{\limit{k}{0}{\frac{f(a+k)-f(a)}{k}}}=\frac{1}{f^\prime(a)}\tag{14.16}
+\end{equation}
 </div>
 <div class="para">and our proof would be complete Written a little more carefully, what we need to show is that <span class="process-math">\(\tlimit{h}{0}{k}=0\text{.}\)</span> Recall that <span class="process-math">\(a=\inverse{f}(b)\text{,}\)</span> and that <span class="process-math">\(a+k=\inverse{f}(b+h)\)</span> so we need to show  that</div>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQUATIONInvProof.html">
 \begin{equation*}
 \tlimit{h}{0}{k}=\limit{h}{0}{\left[(a+k)-a\right]}=  \tlimit{h}{0}{\left[\inverse{f}(b+h)-\inverse{f}(b)\right]} = 0
 \end{equation*}
 </div>
 <div class="para">or But we assumed that <span class="process-math">\(\inverse{f}\)</span> is continuous at <span class="process-math">\(x=b\)</span> which means that</div>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQUATIONInvProof.html">
 \begin{equation*}
 \tlimit{h}{0}{\left[\inverse{f}(b+h)-\inverse{f}(b)\right]}=0,
 \end{equation*}
 </div>
-<div class="para">and the proof is complete. One last point: On the left side of <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "FORMULAeq:InvProof" missing or not unique]</code> the variable is <span class="process-math">\(b\)</span> and on the right it is <span class="process-math">\(a\text{.}\)</span> While this is not strictly wrong it is a more useful theorem if we state it in terms of <span class="process-math">\(b\)</span> alone. Since <span class="process-math">\(f(a)=b\)</span> we see that <span class="process-math">\(\inverse{f}(b)=a\)</span> so</div>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="para">and the proof is complete. One last point: On the left side of <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONInvProof.html" title="Equation 14.16">(14.16)</a> the variable is <span class="process-math">\(b\)</span> and on the right it is <span class="process-math">\(a\text{.}\)</span> While this is not strictly wrong it is a more useful theorem if we state it in terms of <span class="process-math">\(b\)</span> alone. Since <span class="process-math">\(f(a)=b\)</span> we see that <span class="process-math">\(\inverse{f}(b)=a\)</span> so</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQUATIONInvProof.html">
 \begin{equation*}
 \DD\left(\inverse{f}(b)\right) =\frac{1}{f^\prime(\inverse{f}(b))}
 \end{equation*}
