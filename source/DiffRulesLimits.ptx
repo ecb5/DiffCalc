@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="CHAPTERdiff-rules-with-limits">
  <title>The Differentiation Rules via Limits</title>
 
@@ -17,7 +18,7 @@ In the old days when people invented a new
 </p>
 <attribution>
 <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Poincare" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Poincare">Henri
-    Poincarè (<m>1854</m> -- <m>1912</m>)</url>
+    Poincarè</url> (1854-1912)
 </attribution>
 </blockquote>
 
@@ -30,16 +31,16 @@ quite prepared to prove these theorems so we will leave these theorems
 unproven for now. Our immediate goal is simply to understand what they
 say and learn how to use them.  In the next section we will begin
 using these theorems to show how the limit in
-<xref ref="DEFDerivative">Definition~\</xref> allows us to recapture all of the
+<xref ref="DEFINITIONDerivative"></xref> allows us to recapture all of the
 major results we used in Part I of this text.
 </p>
 <p>
 
 In <xref ref="CHAPTERformal-limits">Chapter</xref> we will finally discard our
 intuitive definition of a limit
-(<xref ref="DEFLimitAtInfinity-Intuitive">Definition~\</xref>) and formally define
-both a limit at infinity (<xref ref="DEFlimit-at-neginfinity">Theorem</xref>) and
-a limit at a point (<xref ref="DEFlimits-at-real">Theorem</xref>). Then we will
+(<xref ref="DEFINITIONLimitAtInfinity-Intuitive"></xref>) and formally define
+both a limit at infinity (<xref ref="DEFINITIONlimit-at-neginfinity">Theorem</xref>) and
+a limit at a point (<xref ref="DEFINITIONlimits-at-real">Theorem</xref>). Then we will
 return to the theorems in this section and (finally) prove rigorously
 that they are, in fact, true. Until then any result which relies on
 the theorems in this section should be considered contingent.
@@ -49,14 +50,25 @@ the theorems in this section should be considered contingent.
 
 In <xref ref="CHAPTERlimits-lhop-rule">Chapter</xref> we stated the following three
 theorems about limits <q>at infinity.</q>
-\begin{enumerate}
-\item the limit of a sum is the sum of the limits
-  (<xref ref="THEOREMLimSum1">Theorem</xref>),
-\item  the limit of a product is the
-  product of the limits (<xref ref="THEOREMLimProd1">Theorem</xref>) and, 
-\item  the limit of a quotient  is the
-  quotient of the limits (<xref ref="THEOREMLimQuot1">Theorem</xref>).
-\end{enumerate}
+
+<ol>
+  <li>
+    <p>
+      the limit of a sum is the sum of the limits  (<xref ref="THEOREMLimSum1">Theorem</xref>),
+    </p>
+  </li>
+  <li>
+    <p>
+      the limit of a product is the  product of the limits (<xref ref="THEOREMLimProd1">Theorem</xref>) and, 
+    </p>
+  </li>
+  <li>
+    <p>
+      the limit of a quotient  is the  quotient of the limits (<xref ref="THEOREMLimQuot1">Theorem</xref>).
+    </p>
+  </li>
+</ol>
+
 All three of these theorems remain true if <m>x</m> is approaching some
 finite number, <m>a</m>, instead of infinity.
 </p>
@@ -121,13 +133,23 @@ finite number, <m>a</m>, instead of infinity.
 Notice that in addition to changing <m>\infty</m> to some real number, <m>a</m>,
 we have added two qualifications to the statement of each of these
 theorems from <xref ref="CHAPTERlimits-lhop-rule">Chapter</xref>:
-\begin{enumerate}
-\item <q>Suppose that the functions <m>f(x)</m> and <m>g(x)</m> are defined on
-some open interval about <m>a</m></q> and,
-\item <q>except, possibly, at <m>a</m> itself</q>
-\end{enumerate}
+
+<ul>
+  <li>
+    <p>
+      <q>Suppose that the functions <m>f(x)</m> and <m>g(x)</m> are
+      defined on some open interval about <m>a</m></q> and,
+    </p>
+  </li>
+  <li>
+    <p>
+      <q>except, possibly, at <m>a</m> itself</q>
+    </p>
+  </li>
+</ul>
+
 To see why these are necessary recall that we're going to use limits
-to define the derivative as in <xref ref="DEFDerivative">Theorem</xref> so we'll
+to define the derivative as in <xref ref="DEFINITIONDerivative">Theorem</xref> so we'll
 need to evaluate the limit
 <m>f^\prime(x)=\tlimit{h}{0}{\frac{f(x+h)-f(x)}{h}}</m> . Clearly the
 expression <m>\frac{f(x+h)-f(x)}{h}</m> is not defined at <m>h=0</m>. But we're
@@ -155,7 +177,15 @@ are stated with as much generality as possible.  For example, consider
 the function <m>f(x)=2x</m>. Had we not included <q>possibly</q> in the
 conditions of our theorems the limit: <m>\tlimit{x}{3}{2x}</m>, which is
 clearly equal to <m>6</m>, would have to be considered undefined because
-<m>f(x)=2x</m> is defined at <m>x=3</m>. This distinction\aside{In the
+<m>f(x)=2x</m> is defined at <m>x=3</m>. This distinction  may seem like
+a very fussy, and unimportant detail right now, but it will be
+important when we discuss the meaning of continuity in
+<xref ref="SUBSECTIONlimit-comp-cont"></xref>.
+</p>
+<aside>
+<title>Historical Background</title>
+<p>
+In the
   eighteenth century there was a, public, protracted, and vitriolic
   argument between <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Robins/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Robins/">Benjamin Robins</url> and <url href="https://en.wikipedia.org/wiki/James_Jurin" visual="https://en.wikipedia.org/wiki/James_Jurin">James Jurin</url> over exactly this
   point. Jurin would have claimed that the statement
@@ -164,11 +194,10 @@ clearly equal to <m>6</m>, would have to be considered undefined because
   either man was right or wrong, but rather that it depends on how we
   define limits. By one definition Robins was correct, by another
   Jurin was. Their controversy was the result of the incomplete
-  understanding of limits that prevailed at the time.}  may seem like
-a very fussy, and unimportant detail right now, but it will be
-important when we discuss the meaning of continuity in
-<xref ref="SEClimit-comp-cont">Section</xref>.
+  understanding of limits that prevailed at the time.
 </p>
+</aside>
+
 
 <example xml:id="EXAMPLEDiscontLimit1">
 <p>
@@ -203,10 +232,10 @@ We're interested in the limit as <m>x\rightarrow3</m> so
 
   Notice that our reasoning is a little vague in the last step because
   we had to resort to the phase <q>gets close to,</q> and we know from
-  our work in <xref ref="SECTIONmore-indet-forms">~</xref> that this is not a
+  our work in <xref ref="SECTIONmore-indet-forms"></xref> that this is not a
   precise phrase. This is the best we can do now because we have not
   yet rigorously defined a limit. We will do that in
-  <xref ref="CHAPTERcha:formal-limits">~</xref>.
+  <xref ref="CHAPTERformal-limits"></xref>.
 </p>
 </example>
 
@@ -269,7 +298,14 @@ possible we will formalize this by redefining the word
 <statement>
 <p>
   <!-- \label{def:near} -->
-  We say that <m>f(x)</m> has some property \term{near}\aside{Notice that this is not what <q>near</q> means in
+  We say that <m>f(x)</m> has some property <term>near</term> <m>x=a</m> if <m>f(x)</m> has that
+  property on an open interval about <m>x=a</m>, except possibly at <m>a</m>
+  itself.
+</p>
+</statement>
+</definition>
+<p>
+Notice that this is not what <q>near</q> means in
   ordinary speech.  This is one of the things that makes it difficult
   to read mathematics. We routinely co-opt words from natural
   languages (like English) and redefine them to fit our needs. In this
@@ -279,13 +315,9 @@ possible we will formalize this by redefining the word
   cast off your preconceptions.  The familiar definition you learned
   in childhood will intrude and cause confusion. It is hard to
   overcome this. Refer back to the definition frequently until you
-  have internalized the mathematical definition.  } <m>x=a</m> if <m>f(x)</m> has that
-  property on an open interval about <m>x=a</m>, except possibly at <m>a</m>
-  itself.
-
+  have internalized the mathematical definition.  
 </p>
-</statement>
-</definition>
+
 
 <p>
 We  have the following theorem.
@@ -326,24 +358,18 @@ undefined.
 
 
 <exercise>
-<introduction>
-<p>
-</p>
-</introduction>
-<task>
-<statement>
-<p>
-   Find an open interval about <m>5</m> where <m>H(x)=1</m>.
-        </p>
-</statement>
-</task>
-<task>
-<statement>
-<p>
-   Find an open interval about <m>-5</m> where <m>H(x)=-1</m>.
-      </p>
-</statement>
-</task>
+<ol cols="2" marker="i">
+  <li>
+    <p>
+      Find an open interval about <m>5</m> where <m>H(x)=1</m>.
+    </p>
+  </li>
+  <li>
+    <p>
+      Find an open interval about <m>-5</m> where <m>H(x)=-1</m>.
+    </p>
+  </li>
+</ol>
 </exercise>
 <!-- begin{ProficiencyDrill-enumerate} -->
  <!--       \begin{enumerate}[label={  (\alph*)}]  -->
@@ -355,63 +381,51 @@ undefined.
  <!--  \end{ProficiencyDrill-enumerate} -->
 
 
-<exercise>
-<introduction>
-<p>
-  Suppose
-    <me>
-  f(x)=
-  \begin{cases}
-    \ \ 1;\amp  \text{ if } x\gt 1 \text{ or if } x=-2\\
-    -2;\amp  \text{ if } x\le1 \text{ and } x=-2.
-  \end{cases}
-  </me>
-  Determine whether the following statements are true or false.
-</p>
-</introduction>
-<task>
-<statement>
-<p>
- <m>f(x)= 1</m> near <m>x= 4</m>.
-    </p>
-</statement>
-</task>
-<task>
-<statement>
-<p>
- <m>f(x)= 1</m> near <m>x= 1</m>.
-    </p>
-</statement>
-</task>
-<task>
-<statement>
-<p>
- <m>f(x)= -2</m> near <m>x=1 </m>.
-    </p>
-</statement>
-</task>
-<task>
-<statement>
-<p>
- <m>f(x)= 1</m> near <m>x=-2 </m>.
-    </p>
-</statement>
-</task>
-<task>
-<statement>
-<p>
- <m>f(x)= -2</m> near <m>x=-2 </m>.
-    </p>
-</statement>
-</task>
-<task>
-<statement>
-<p>
- <m>f(x)= 0</m> near <m>x= 0</m>.
-  </p>
-</statement>
-</task>
-</exercise>
+ <exercise>
+   <p>
+     Suppose
+     <me>
+       f(x)=
+       \begin{cases}
+       \ \ 1;\amp  \text{ if } x\gt 1 \text{ or if } x=-2\\
+       -2;\amp  \text{ if } x\le1 \text{ and } x=-2.
+       \end{cases}
+     </me>
+     Determine whether the following statements are true or false.
+   </p>
+   <ol cols="2" marker="i">
+     <li>
+       <p>
+         <m>f(x)= 1</m> near <m>x= 4</m>.
+       </p>
+     </li>
+     <li>
+       <p>
+         <m>f(x)= 1</m> near <m>x= 1</m>.
+       </p>
+     </li>
+     <li>
+       <p>
+         <m>f(x)= -2</m> near <m>x=1 </m>.
+       </p>
+     </li>
+     <li>
+       <p>
+         <m>f(x)= 1</m> near <m>x=-2 </m>.
+       </p>
+     </li>
+     <li>
+       <p>
+         <m>f(x)= -2</m> near <m>x=-2 </m>.
+       </p>
+     </li>
+     <li>
+       <p>
+         <m>f(x)= 0</m> near <m>x= 0</m>.
+       </p>
+     </li>
+   </ol>
+ </exercise>
 <!-- begin{ProficiencyDrill} -->
 <!--   Suppose -->
 <!--     <me> -->
@@ -441,8 +455,8 @@ undefined.
 <introduction>
 <p>
     \noindent  Explain, that  the following
-  statements are true by citing <xref ref="THEOREMLimSum2">~</xref> through
-  <xref ref="THEOREMConstLimit">~</xref> as needed.
+  statements are true by citing <xref ref="THEOREMLimSum2"></xref> through
+  <xref ref="THEOREMConstLimit"></xref> as needed.
 </p>
 </introduction>
 <task>
@@ -512,7 +526,7 @@ undefined.
 <p>
   Suppose <m>g(x)\neq0</m> near <m>x=a</m> and
   <m>\tlimit{x}{a}{\frac{f(x)}{g(x)}}</m> exists. Use
-  <xref ref="THEOREMLimProd2">Theorem~\</xref> to show that if
+  <xref ref="THEOREMLimProd2"></xref> to show that if
   <m>\limit{x}{a}{g(x)}=0</m>         then <m>\limit{x}{a}{f(x)}=0</m>.\\
      \hint{Consider
       <m>f(x)=\frac{f(x)}{g(x)}\cdot g(x)</m> for <m>x</m> near <m>a</m>.}\\
@@ -544,7 +558,7 @@ approaches <m>kL_f</m>. It follows from <xref ref="THEOREMConstLimit">Theorem</x
 <exercise>
 <statement>
 <p>
-  Prove <xref ref="CORConstMultLimit">Corollary</xref>.
+  Prove <xref ref="COROLLARYConstMultLimit">Corollary</xref>.
 </p>
 </statement>
 </exercise>
@@ -554,7 +568,7 @@ approaches <m>kL_f</m>. It follows from <xref ref="THEOREMConstLimit">Theorem</x
 The concept of <term>continuity</term> is essential to Calculus, but you may
 have noticed that we have carefully avoided it as much as possible
 until now. This is because defining continuity is similar to defining
-the line tagent to a curve (<xref ref="DEFINITIONTangentLine">Definition~\</xref>). We
+the line tagent to a curve (<xref ref="DEFINITIONTangentLine"></xref>). We
 need to think carefully about what we want the term <term>continuous</term>
 to mean, and then craft our definition to capture that meaning. This
 would have been very difficult to do without a fairly sophisticated
@@ -574,7 +588,7 @@ something more precise.
 </p>
 <p>
 
-At the end of <xref ref="EXAMPLELimComp1">Example~\</xref> we remarked that it is
+At the end of <xref ref="EXAMPLELimComp1"></xref> we remarked that it is
 only when <m>f(x)</m> is continuous at <m>x=g(a)</m> that
 <m>\textcolor{blue}{\tlimit{x}{a}{\textcolor{red}{f(g(x))}}}</m> is equal
 to
@@ -639,7 +653,7 @@ must lift our pen from the page. This is not true of the graph of
 
     
 The following lemma is true and the proof will be valid once the limit
-theorems have been proven in <xref ref="CHAPTERcha:formal-limits">~</xref>.
+theorems have been proven in <xref ref="CHAPTERformal-limits"></xref>.
 </p>
   
   <lemma xml:id="LEMMADiffImpliesCont">
@@ -657,14 +671,14 @@ theorems have been proven in <xref ref="CHAPTERcha:formal-limits">~</xref>.
 <statement>
 <p>
     Use the result of <xref ref="PROBLEMDiffImpCont"></xref> to prove
-    <xref ref="LEMMADiffImpliesCont">~</xref>.
+    <xref ref="LEMMADiffImpliesCont"></xref>.
   </p>
 </statement>
 </problem>
 <p>  
   When we were studying horizontal asymptotes in
-  <xref ref="SUBSECTIONlhop-rule-horiz">~</xref> we encountered
-  <xref ref="THEOREMInfSqueeze">~</xref> (the  Squeeze
+  <xref ref="SUBSECTIONlhop-rule-horiz"></xref> we encountered
+  <xref ref="THEOREMInfSqueeze"></xref> (the  Squeeze
   Theorem <q>at</q> Infinity). But the Squeeze Theorem is also valid if
   <m>x\rightarrow a</m>, where <m>a</m> is a real number.
 </p>    
@@ -679,8 +693,8 @@ theorems have been proven in <xref ref="CHAPTERcha:formal-limits">~</xref>.
 </theorem>
 
 <p>
-    <xref ref="THEOREMFiniteSqueeze">~</xref> is illustrated below, but a formal
-    proof will not be given until <xref ref="CHAPTERcha:formal-limits">~</xref>.\\
+    <xref ref="THEOREMFiniteSqueeze"></xref> is illustrated below, but a formal
+    proof will not be given until <xref ref="CHAPTERformal-limits"></xref>.
 </p>
       
 <image source="images/SqueezeThm1.png" width="60%" />
@@ -696,16 +710,18 @@ theorems have been proven in <xref ref="CHAPTERcha:formal-limits">~</xref>.
 <task>
 <statement>
 <p>
- Use <xref ref="THEOREMFiniteSqueeze">~</xref> to show that <m>U(x)</m> is
-      continuous at <m>x=0</m>. \\
-      \hint{What functions is <m>U(x)</m> caught between?}
+ Use <xref ref="THEOREMFiniteSqueeze"></xref> to show that <m>U(x)</m> is
+      continuous at <m>x=0</m>. 
+\hint{
+What functions is <m>U(x)</m> caught between?
+}
     </p>
 </statement>
 </task>
 <task>
 <statement>
 <p>
- Use <xref ref="DEFINITIONcontinuity">~</xref> to show that <m>T(x)</m> is
+ Use <xref ref="DEFINITIONcontinuity"></xref> to show that <m>T(x)</m> is
       not
       continuous at <m>x=0</m>.  \\
       \hint{Try the substitution <m>z=\frac1x</m> for <m>x\neq0</m>.  What would
@@ -816,7 +832,7 @@ will leave them as exercises\aside{Frequently students will simply
 <title>The Constant Rule for Differentiation</title>
 <p>
   If <m>L</m> is some number and <m>f(x)=L</m> for all real values of <m>x</m>
-  near\aside{<q>Near</q> means on an open interval about <m>L</m>. Recall <xref ref="DEFINITIONnear">~</xref>.  }
+  near\aside{<q>Near</q> means on an open interval about <m>L</m>. Recall <xref ref="DEFINITIONnear"></xref>.  }
   <m>L</m>, then
   <m>f^\prime(x)=0</m> at every real number <m>x</m> near\aside{On the same open
   interval.} <m>L</m> .
@@ -861,7 +877,7 @@ will leave them as exercises\aside{Frequently students will simply
 <problem>
 <statement>
 <p>
-  Use <xref ref="DEFDerivative">Definition</xref> to prove the Sum Rule for
+  Use <xref ref="DEFINITIONDerivative">Definition</xref> to prove the Sum Rule for
   Differentiation.
 </p>
 </statement>
@@ -900,7 +916,7 @@ Multiple Rule directly, without having to resort to using limits.
 <problem xml:id="PROBLEMConstMultRule">
 <statement>
 <p>
- Use the <xref ref="DEFDerivative">Definition~\</xref> to prove the Constant Multiple Rule.
+ Use the <xref ref="DEFINITIONDerivative"></xref> to prove the Constant Multiple Rule.
 </p>
 </statement>
 </problem>
@@ -961,7 +977,7 @@ distinction between function and variable.
 </p>
 <p>
 
-        Looking again at <xref ref="EQUATIONCR1">~</xref>, and mixing the
+        Looking again at <xref ref="EQUATIONCR1"></xref>, and mixing the
         differential and functional notations a bit we see that 
         <me>
         f^\prime(x)=\dfdx{y}{x}=3z\dx{z}=\underbrace{3\left(3x^2+6x\right)^2}_{\dfdx{\alpha}{\beta}=\alpha^\prime(\beta)}\underbrace{(6x+6)}_{\dfdx{\beta}{x}=\beta^\prime(x)}=\alpha^\prime(\beta)\cdot\beta^\prime(x).
@@ -1072,7 +1088,7 @@ cancellations.  With the invention of Calculus the older Chain Rule
 for unit conversion was extended to the differentiation by
 substitution technique using differentials. Eventually it became the
 only Chain Rule. When the limit was used to provide rigor to Calculus
- the name was also applied to <xref ref="EQChainRule">Equation~</xref>).
+ the name was also applied to <xref ref="EQUATIONChainRule"></xref>).
 </p>
 <p>
 END OF DIGRESSION
@@ -1128,7 +1144,7 @@ derivative of <m>\beta</m> with respect to <m>x</m>) we view it as a function.
     that}
     \beta(x)\amp =\beta(x) +\limit{h}{0}{\Delta\beta}
   \end{align*}
-  from  which <xref ref="EQDeltaBetaEq0">Equation~</xref>) follows. 
+  from  which <xref ref="EQUATIONDeltaBetaEq0"></xref>) follows. 
   
   To prove the Chain Rule recall that 
   \begin{align*}
@@ -1142,12 +1158,12 @@ derivative of <m>\beta</m> with respect to <m>x</m>) we view it as a function.
     \textcolor{red}{<m>\frac{\Delta\beta}{\Delta\beta}</m>   gives}
   \begin{align}
   \label{eq:UncancelDeltaBeta}  f^\prime(x)    \amp =\limit{h}{0}{\left(\frac{\alpha(\beta(x+h))-\alpha(\beta(x))}{\textcolor{red}{\Delta\beta}}\cdot\frac{\textcolor{red}{\Delta\beta}}{h}\right)}.\\
-    \intertext{From <xref ref="EQChainRule1">Equation~</xref>) we see that
+    \intertext{From <xref ref="EQUATIONChainRule1"></xref>) we see that
     <m>\textcolor{red}{\Delta\beta}=\textcolor{blue}{\beta(x+h)-\beta(x)}</m> so}
 \nonumber    \amp =\limit{h}{0}{\left(\frac{\alpha(\beta(x+h))-\alpha(\beta(x))}{\Delta\beta}\cdot\frac{\textcolor{blue}{\beta(x+h)-\beta(x)}}{h}\right)}.\\
     \intertext{By <xref ref="THEOREMLimProd2">Theorem</xref> we have:}
 \nonumber    \amp =\limit{h}{0}{\left(\frac{\alpha(\beta(x+h))-\alpha(\beta(x))}{\Delta\beta}\right)}\cdot\limit{h}{0}{\left(\frac{\beta(x+h)-\beta(x)}{h}\right)}.\\
-\intertext{<xref ref="EQDeltaBetaEq0">Equation~</xref>) says that <m>h\rightarrow 0</m>
+\intertext{<xref ref="EQUATIONDeltaBetaEq0"></xref>) says that <m>h\rightarrow 0</m>
     is equivalent to 
   <m>\Delta\beta\rightarrow 0</m> so we have}
 \nonumber    f^\prime(x)\amp =\lim_{\textcolor{red}{\underset{\Delta\beta\rightarrow0}{\cancel{h\rightarrow0}}}}{\left(\frac{\alpha(\beta+\Delta\beta)-\alpha(\beta)}{\Delta\beta}\right)}\cdot\limit{h}{0}{\left(\frac{\beta(x+h)-\beta(x)}{h}\right)},\\
@@ -1155,7 +1171,7 @@ derivative of <m>\beta</m> with respect to <m>x</m>) we view it as a function.
    \label{eq:ChainRuleBetaIsVariable}    f^\prime(x)
     \amp =\alpha^\prime(\beta)\cdot\beta^\prime(x).
   \end{align}
-  In <xref ref="EQChainRuleBetaIsVariable">Equation~</xref> <m>\beta</m> is first used
+  In <xref ref="EQUATIONChainRuleBetaIsVariable"></xref> <m>\beta</m> is first used
   as a variable in <m>\alpha^\prime(\beta)</m>, and then as the function
   <m>\beta(x)</m>. While this is correct, it is also poor form because it
   accentuates the dual use of <m>\beta</m>. To avoid this we usually
@@ -1180,20 +1196,20 @@ derivative of <m>\beta</m> with respect to <m>x</m>) we view it as a function.
 </p>
 <p>
   
-  Observe that in <xref ref="EQChainRuleProof1">Equation~</xref>) <m>\Delta\beta</m>
+  Observe that in <xref ref="EQUATIONChainRuleProof1"></xref>) <m>\Delta\beta</m>
   plays the same role the <m>h</m> plays in
-  <xref ref="DEFDerivative">Definition~</xref>). In
-  <xref ref="DEFDerivative">Definition~</xref>) we were careful to insist that <m>h</m>
+  <xref ref="DEFINITIONDerivative"></xref>). In
+  <xref ref="DEFINITIONDerivative"></xref>) we were careful to insist that <m>h</m>
   could never equal zero,so if we are going to interpret
   <m>\limit{\Delta\beta}{0}{\left(\frac{\alpha(\beta+\Delta\beta)-\alpha(\beta)}{\Delta\beta}\right)}</m>
   as the derivative of <m>\alpha</m> with respect to <m>\beta</m>, as we did in
-  <xref ref="EQChainRuleProof1">Equation~</xref>), we need to know that
+  <xref ref="EQUATIONChainRuleProof1"></xref>), we need to know that
   <m>\Delta\beta\neq0</m> when <m>h</m> is near zero.
 </p>
 <p>
 
   Our imposition of that constraint means that
-  <xref ref="THEOREMChainRule">Theorem~\</xref> does not apply to any function
+  <xref ref="THEOREMChainRule"></xref> does not apply to any function
   <m>f(x)=\alpha(\beta(x))</m> where <m>\Delta\beta</m> might be equal to zero
   no matter how close <m>h</m> is to zero.  Fortunately, functions of that
   sort are generally the kinds of <q>pathological functions</q> that
@@ -1240,7 +1256,7 @@ derivative of <m>\beta</m> with respect to <m>x</m>) we view it as a function.
   <task>
     <statement>
       <p>
-        As a result of part (a) <xref ref="THEOREMChainRule">~</xref> does
+        As a result of part (a) <xref ref="THEOREMChainRule"></xref> does
         not apply to any of the following functions at
         <m>x=0</m>. Nevertheless one of them is differentiable at <m>x=0</m>. Use
         <xref ref="DEFINITIONDerivative"></xref> to find out which one.
@@ -1336,7 +1352,7 @@ END OF DIGRESSION
   Rule to compute the derivative of <m>f(x)</m> we need to recognize that
   <m>f(x)</m> is the composition of <m>\alpha(x)=x^2</m>, and
   <m>\beta(x)=\sin(x)+\cos(x)</m> and then apply
-  <xref ref="THEOREMChainRule">~</xref> as follows.
+  <xref ref="THEOREMChainRule"></xref> as follows.
   \begin{align*}
     f^\prime(x) \amp = \alpha^\prime(\beta(x))\cdot\beta^\prime(x)\\
     \amp = \alpha^\prime(\beta(x))\cdot(\cos(x)-\sin(x))\\
@@ -1350,7 +1366,7 @@ END OF DIGRESSION
 <p>
 In our opinion the Chain Rule leaves a lot to be desired as a
 computational technique. But we don't have to use it that way since
-<xref ref="THEOREMChainRule">~</xref> validates the substitutions  we have
+<xref ref="THEOREMChainRule"></xref> validates the substitutions  we have
 always used.
 </p>
 
@@ -1481,14 +1497,14 @@ the proof of the Chain Rule.
     }{h} },
   </me>
   
-  By <xref ref="THEOREMLimSum2">~</xref> we can separate this into the limit of
+  By <xref ref="THEOREMLimSum2"></xref> we can separate this into the limit of
   the two fractions as follows:
   <me>
   f^\prime(x)=\tlimit{h}{0}{\left(\textcolor{red}{\frac{\textcolor{green}{\alpha(x+h)}\left(\beta(x+h)-{\beta(x)}\right)}{h}}\right)}
   +
   \rlimit{h}{0}{\left(\textcolor{blue}{\frac{\textcolor{green}{\beta(x)}\left(\alpha(x+h)-\alpha(x)\right)}{h}}\right)},
   </me>
-  and by <xref ref="THEOREMLimProd2">~</xref> we see that
+  and by <xref ref="THEOREMLimProd2"></xref> we see that
   <me>
   f^\prime(x)=
   \underbrace{\left[ \tlimit{h}{0}{\textcolor{green}{\alpha(x+h)}}
@@ -1596,7 +1612,7 @@ the proof of the Chain Rule.
 </theorem>
 <p>
 Proving this directly by using limits would be unpleasant, but as we
-observed in <xref ref="CHAPTERchapt:differentials">~</xref> the Quotient Rule can be
+observed in <xref ref="CHAPTERdifferentials"></xref> the Quotient Rule can be
 viewed as a rearranged version of the Product Rule.
 </p>
 
@@ -1615,8 +1631,8 @@ With the Product Rule for Differentiation in place we now have the
 tools needed to prove the Power Rule for Positive Integer Exponents.
 The method of proof we outline in the following problem is called
 <term>Mathematical Induction</term>\aside{We mentioned <term>Mathematical
-    Induction</term> In part (d) of <xref ref="PROBLEMPR-integer">Problem~\</xref> back
-  in <xref ref="CHAPTdifferentials">Chapter</xref>.}  and it can be used in other
+    Induction</term> In part (d) of <xref ref="PROBLEMPR-integer"></xref> back
+  in <xref ref="CHAPTERdifferentials">Chapter</xref>.}  and it can be used in other
 contexts as well. In fact, most of the <q>Find the Pattern</q> problems
 in this text require an Induction argument for full rigor.
 </p>
@@ -1664,7 +1680,7 @@ in this text require an Induction argument for full rigor.
 <p>
 With the  Power Rule for Positive Integer Exponents in place we
 can extend it to both negative and rational exponents in the same way
-we did it in <xref ref="CHAPTERchapt:differentials">~</xref>. The following problem
+we did it in <xref ref="CHAPTERdifferentials"></xref>. The following problem
 is essentially a repeat of <xref ref="PROBLEMPRPosRat"></xref> <xref ref="EPPRRecip">and
 </xref>, using Lagrange's prime notation, and function
 notation, rather than differentials.
@@ -1885,7 +1901,7 @@ similar reasons.
   <problem xml:id="PROBLEMPR-rigor1">
 <introduction>
 <p>
-    To prove  <xref ref="THEOREMPowerRuleLimit">~</xref> we will first focus
+    To prove  <xref ref="THEOREMPowerRuleLimit"></xref> we will first focus
     on the special case of <m>\beta(x)=x^{\frac{1}{q}}</m>, <m>q</m> is a
     non-negative integer.
     
@@ -1911,7 +1927,7 @@ similar reasons.
 <task>
 <statement>
 <p>
- Use \term{Mathematical Induction} to show that\\
+ Use <term>Mathematical Induction</term> to show that\\
       \centerline{<m>(a-b)(a^{q-1}+a^{q-2}b+a^{q-3}b^2+\cdots+ab^{q-2}+b^{q-1})=a^q-b^q</m>.}
     </p>
 </statement>
@@ -2054,10 +2070,10 @@ END OF DIGRESSION
     \limit{h}{0}{\frac{\textcolor{red}{\sin(\theta)}(\cos(h)-1)+\cos(\theta)\sin(h)}{h}}.\\
     \amp =
     \limit{h}{0}{\left(\frac{\sin(\theta)(\cos(h)-1)}{h}+\frac{\cos(\theta)\sin(h)}{h}\right)}.\\
-    \intertext{By <xref ref="THEOREMLimSum2">~</xref>:}
+    \intertext{By <xref ref="THEOREMLimSum2"></xref>:}
     \amp =
     \limit{h}{0}{\frac{\sin(\theta)(\cos(h)-1)}{h}}+\limit{h}{0}{\frac{\cos(\theta)\sin(h)}{h}}\\
-    \intertext{and by <xref ref="COROLLARYConstMultLimit">~</xref>:}
+    \intertext{and by <xref ref="COROLLARYConstMultLimit"></xref>:}
     \amp =
     \sin(\theta)\underbrace{\left(\limit{h}{0}{\frac{(\cos(h)-1)}{h}}\right)}_{=0}+\cos(\theta)\underbrace{\left(\limit{h}{0}{\frac{\sin(h)}{h}}\right)}_{=1}.
   \end{align*}
@@ -2116,7 +2132,7 @@ L<rsq/>Hôpital<rsq/>s Rule.
 <p>
   There are two cases:
   \underline{  \boldmath Case 1, <m>\theta\ge0</m>:} We will use the
-  Squeeze Theorem.  Recall that in <xref ref="SECTIONtrig-interl">~</xref> we
+  Squeeze Theorem.  Recall that in <xref ref="SECTIONtrig-interl"></xref> we
   observed that the lengths of certain line segments associated with
   the unit circle in the first quadrant are equal to the trigonometric
   functions. The figure at the right shows the relationship between
@@ -2173,7 +2189,7 @@ L<rsq/>Hôpital<rsq/>s Rule.
 <p>
   Show that <m>\tlimit{h}{0}{\frac{(\cos(h)-1)}{h}}=0</m>.\\
   \hint{It is tempting to model this proof on the proof of
-    <xref ref="LEMMASinOverh">~</xref>. While this can be done, it is 
+    <xref ref="LEMMASinOverh"></xref>. While this can be done, it is 
     delicate. It is simpler to multiply by <m>1</m> in the form
     <m>\frac{\cos(h)+1}{\cos(h)+1}</m>. Try that instead.}
 </p>
@@ -2188,16 +2204,16 @@ proof that <m>\dfdx{(\sin(x))}{x}= \cos(x)</m> is complete.
 <statement>
 <p>
   Prove that <m>\dfdx{(\cos(\theta))}{\theta} = -\sin(\theta)</m>, using
-  the proof of <xref ref="THEOREMSineDeriv">~</xref> as a guide.
+  the proof of <xref ref="THEOREMSineDeriv"></xref> as a guide.
 </p>
 </statement>
 </problem>
 <p>
 Assuming that <m>\tan(\theta)</m>, <m>\cot(\theta)</m>, <m>\sec(\theta)</m>, and
 <m>\csc(\theta)</m> are differentiable we can now use
-<xref ref="THEOREMQR-rigor">~</xref> to find their derivatives as
+<xref ref="THEOREMQR-rigor"></xref> to find their derivatives as
 well. Since this is exactly what we did in
-<xref ref="SUBSECTIONdiff-other-trig">~</xref> we have the derivatives of all of
+<xref ref="SUBSECTIONdiff-other-trig"></xref> we have the derivatives of all of
 the trigonometric functions.
 </p>
 
@@ -2270,8 +2286,8 @@ Our next task is to show that the derivatives of the in inverse
 trigonometric functions are what we expect them to be. Given that we
 have now obtained the derivatives of all of the trigonometric
 functions it appears that we could proceed just as we did in
-<xref ref="SECTIONdiff-inverse-tancot">~</xref> and
-<xref ref="SECTIONother-inverse-trig">~</xref>.
+<xref ref="SECTIONdiff-inverse-tancot"></xref> and
+<xref ref="SECTIONother-inverse-trig"></xref>.
 </p>
 <p>
 
@@ -2289,7 +2305,7 @@ trigonmetric formulas.
 <title>DIGRESSION: Inverse and Derivative Notation</title>
 <p>
 
-  As we saw in <xref ref="DIGRESSIONdigression:inverse-function-notation">~</xref> there are some
+  As we saw in <xref ref="DIGRESSIONdigression:inverse-function-notation"></xref> there are some
   difficulties with the notation we use to indicate inverse
   functions. These problems only get worse when we mix the standard
   derivative notations with the inverse function notation.
@@ -2305,7 +2321,7 @@ trigonmetric formulas.
 <p>
   
   But both of these are somewhat awkward. Mathematicians also
-  sometimes use the \term{operator} notation:
+  sometimes use the <term>operator</term> notation:
   <me>
   \DD(f(x)) =  f^\prime(x)=\dfdx{f}{x}
   </me>
@@ -2329,7 +2345,7 @@ trigonmetric formulas.
   <me>
     y(x)=x^3.\label{eq:Inv1}
   </me>
-  <xref ref="EQUATIONInv1">~</xref> defines <m>y</m> as a function of <m>x</m>.
+  <xref ref="EQUATIONInv1"></xref> defines <m>y</m> as a function of <m>x</m>.
 </p>
 <p>
   
@@ -2420,7 +2436,7 @@ exists.
 
 In general this is true but there is one exception that has to be
 addressed. When <m>f</m> is differentiable at <m>a</m> and <m>f^\prime(a) = 0</m>
-then the limit in <xref ref="EQUATIONInvFuncDerivLimit">~(</xref> does not
+then the limit in <xref ref="EQUATIONInvFuncDerivLimit"></xref> does not
 exist. Hence <m>\inverse f</m> is not differentiable at <m>f(a)</m>.
 More formally, we have the following lemma.
 </p>
@@ -2608,7 +2624,7 @@ the derivative of the inverse will be if it exists:
 
 <p>
 The only thing left is to show that under the conditions on <m>f</m> in
-<xref ref="LEMMAInvDerivAtZero">~</xref> the
+<xref ref="LEMMAInvDerivAtZero"></xref> the
 derivative (that is, the limit which defines the derivative) of the
 inverse does in fact exist.
 </p>
@@ -2642,7 +2658,7 @@ inverse does in fact exist.
 Reading and understanding the notation in <xref
 ref="THEOREMDerivInvFunc"></xref> presents the same difficulties we
 saw in the proof of <xref
-ref="LEMMAInvDerivAtZero">~</xref>. Read it carefully.  Be
+ref="LEMMAInvDerivAtZero"></xref>. Read it carefully.  Be
 patient with yourself and do not rush.
 </p>
 <aside>
@@ -2731,7 +2747,7 @@ I think something is got lost in translation here. The formula <m>(a+k)-a\right<
 </proof>
 
 <p>
-Using <xref ref="THEOREMDerivInvFunc">~</xref> we can now show that the
+Using <xref ref="THEOREMDerivInvFunc"></xref> we can now show that the
 derivatives of the inverse trigonometric functions and the natural
 logarithm are exactly what we expect them to be. The difference is
 that now there is no uncertainty or vagueness in our foundations. No
@@ -2755,7 +2771,7 @@ modern Bishop Berkeley can step in and sew doubt.
 <problem>
 <introduction>
 <p>
-  Use <xref ref="THEOREMDerivInvFunc">~</xref> to show that each of the following
+  Use <xref ref="THEOREMDerivInvFunc"></xref> to show that each of the following
   differentiation rules is correct:
 </p>
 </introduction>
@@ -2831,7 +2847,7 @@ function?  Don't we also have to show that <m>\DD\left(e^x\right)=e^x</m>?
 <exercise>
 <statement>
 <p>
-  Look back at <xref ref="DEFINITIONnatural-exponential-ivp">~</xref> and
+  Look back at <xref ref="DEFINITIONnatural-exponential-ivp"></xref> and
   explain why it is not necessary to use limits to show that
   <m>\DD\left(e^x\right)=e^x</m>.
 </p>
