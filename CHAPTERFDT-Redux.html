@@ -151,8 +151,9 @@ window.MathJax = {
   \right\}
 }
 
-\def\absALT#1{\rule[-.7ex]{1pt}{5ex}\hskip2pt#1\hskip2pt\llap{\rule[-.7ex]{1pt}{5ex}}} 
 
+
+\def\lhopeq{\stackrel{L'H}{=}}
 
 \def\sech{{\rm{}sech}{}}
 \def\csch{{\rm{}csch}{}}
@@ -164,6 +165,10 @@ window.MathJax = {
 \def\ftceval#1#2#3{\eval#1#2#3}
 \def\geneval#1#2{\eval{#1}{#2}{}}
 \def\bigeval#1#2#3{\eval{#2}{#2}{#3}}
+
+
+
+
 
 
 
@@ -192,6 +197,8 @@ window.MathJax = {
 \def\dfdxn#1#2#3{\frac{\text{d}^{#3}{#1}}{\text{d}{#2}^{#3}}} 
 
 
+\def\limitatinf#1#2{\limit{#1}{\infty}{#2}}
+\def\limitatninf#1#2{\limit{#1}{-\infty}{#2}}
 \def\dfdxat#1#2#3{\eval{\dfdx{#1}{#2}}{#2=#3}{}}
 
 \def\limit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}#3}}
@@ -343,7 +350,7 @@ window.MathJax = {
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTApproximation.html#SUBSECTIONSubtleFailure" class="internal"><span class="codenumber">7.2.3</span> <span class="title">Subtle Failure</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTApproximation.html#SECTIONeulers-method" class="internal"><span class="codenumber">7.3</span> <span class="title">Euler’s Method</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTApproximation.html#SECTIONEulersMethod" class="internal"><span class="codenumber">7.3</span> <span class="title">Euler’s Method</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTApproximation.html#SECTIONmore-high-deriv" class="internal"><span class="codenumber">7.4</span> <span class="title">Higher Derivatives, Lagrange, and Taylor</span></a></div></li>
 </ul>
 </li>
@@ -423,13 +430,7 @@ window.MathJax = {
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTshape-things.html#SECTIONgraph-with-form" class="internal"><span class="codenumber">10.1</span> <span class="title">Graphing with a Formula for  <span class="process-math">\(y(x)\)</span></span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTshape-things.html#SECTIONgraph-without-form" class="internal"><span class="codenumber">10.2</span> <span class="title">Graphing Without Formulas</span></a></div></li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAPTERPTshape-things.html#SECTIONGraphingWithDeriv" class="internal"><span class="codenumber">10.3</span> <span class="title">Graphing with a Formula for  <span class="process-math">\(\dfdx{y}{x}\)</span></span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTshape-things.html#SUBSECTIONDerivDepOnxAlone" class="internal"><span class="codenumber">10.3.1</span> <span class="title">When  <span class="process-math">\(\dfdx{y}{x}\)</span> Depends on <span class="process-math">\(x\)</span> alone</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTshape-things.html#SUBSECTIONDfdxDependsOnYAlone" class="internal"><span class="codenumber">10.3.2</span> <span class="title">When  <span class="process-math">\(\dfdx{y}{t}\)</span> depends on <span class="process-math">\(y\)</span> alone</span></a></div></li>
-</ul>
-</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTshape-things.html#SECTIONGraphingWithDeriv" class="internal"><span class="codenumber">10.3</span> <span class="title">Graphing with a Formula for  <span class="process-math">\(\dfdx{y}{t}\)</span></span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -713,21 +714,21 @@ f(x)=g(x)+c
 </div>
 <div class="para">for some constant <span class="process-math">\(c\text{.}\)</span> \hint{Consider the function <span class="process-math">\(F(x)=f(x)-g(x)\text{.}\)</span>}</div>
 </div></article><article class="task exercise-like" id="PROBLEMDervEqZeroImpliesConstant-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
-<div class="para" id="PROBLEMDervEqZeroImpliesConstant-5-1-1">What can be said if <span class="process-math">\(f^\prime(x)=g^\prime(x)\)</span> for all <span class="process-math">\(x\)</span> in some set <span class="process-math">\(S\)</span> which is not an interval?</div></article></article><div class="para" id="SECTIONfirst-deriv-test-9">We did not prove  L’Hôpital’s Rule (<a href="" class="xref" data-knowl="./knowl/xref/THEOREMLHRuleGen.html" title="Theorem 12.60: L’Hôpital’s’s Rule">Theorem 12.60</a>) in <a href="CHAPTERlimits-lhop-rule.html" class="internal" title="Chapter 12: Limits and L’Hôpital’s Rule">Chapter 12</a> because the general theorem is slightly beyond the scope of this text. But the somewhat simpler first special case, <a href="" class="xref" data-knowl="./knowl/xref/THEOREMLHRule1.html" title="Theorem 12.51: L’Hôpital’s Rule, (First Special Case)">Theorem 12.51</a>, is a straightforward consequence of  the Mean Value Theorem.</div>
+<div class="para" id="PROBLEMDervEqZeroImpliesConstant-5-1-1">What can be said if <span class="process-math">\(f^\prime(x)=g^\prime(x)\)</span> for all <span class="process-math">\(x\)</span> in some set <span class="process-math">\(S\)</span> which is not an interval?</div></article></article><div class="para" id="SECTIONfirst-deriv-test-9">We did not prove  L’Hôpital’s Rule (<a href="" class="xref" data-knowl="./knowl/xref/THEOREMLHRuleGen.html" title="Theorem 12.55: L’Hôpital’s’s Rule">Theorem 12.55</a>) in <a href="CHAPTERlimits-lhop-rule.html" class="internal" title="Chapter 12: Limits and L’Hôpital’s Rule">Chapter 12</a> because the general theorem is slightly beyond the scope of this text. But the somewhat simpler first special case, <a href="" class="xref" data-knowl="./knowl/xref/THEOREMLHRule1.html" title="Theorem 12.46: L’Hôpital’s Rule, (First Special Case)">Theorem 12.46</a>, is a straightforward consequence of  the Mean Value Theorem.</div>
 <article class="problem example-like" id="SECTIONfirst-deriv-test-10"><h4 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">15.16</span><span class="period">.</span>
 </h4>
 <div class="introduction" id="SECTIONfirst-deriv-test-10-1"><div class="para" id="SECTIONfirst-deriv-test-10-1-1"></div></div>
 <article class="task exercise-like" id="SECTIONfirst-deriv-test-10-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
 <div class="para logical" id="SECTIONfirst-deriv-test-10-2-1-1">
-<div class="para">Under the conditions of <a href="" class="xref" data-knowl="./knowl/xref/THEOREMLHRule1.html" title="Theorem 12.51: L’Hôpital’s Rule, (First Special Case)">Theorem 12.51</a> explain why</div>
+<div class="para">Under the conditions of <a href="" class="xref" data-knowl="./knowl/xref/THEOREMLHRule1.html" title="Theorem 12.46: L’Hôpital’s Rule, (First Special Case)">Theorem 12.46</a> explain why</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/THEOREMLHRule1.html">
 \begin{equation*}
 \limit{x}{a}{\frac{f(x)}{g(x)}}=\limit{x}{a}{\frac{f(x)-f(a)}{g(x)-g(a)}}
 \end{equation*}
 </div>
 </div></article><article class="task exercise-like" id="SECTIONfirst-deriv-test-10-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="SECTIONfirst-deriv-test-10-3-1-1">Apply the Mean Value Theorem to the numerator and denominator in part (a) and then prove <a href="" class="xref" data-knowl="./knowl/xref/THEOREMLHRule1.html" title="Theorem 12.51: L’Hôpital’s Rule, (First Special Case)">~ 12.51</a>. \hint{Use the fact that  in the statement of <a href="" class="xref" data-knowl="./knowl/xref/THEOREMMVT.html" title="Theorem 15.9: The Mean Value Theorem">~ 15.9</a> <span class="process-math">\(c\)</span> is between <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{.}\)</span>}</div></article></article></section></section></div>
+<div class="para" id="SECTIONfirst-deriv-test-10-3-1-1">Apply the Mean Value Theorem to the numerator and denominator in part (a) and then prove <a href="" class="xref" data-knowl="./knowl/xref/THEOREMLHRule1.html" title="Theorem 12.46: L’Hôpital’s Rule, (First Special Case)">~ 12.46</a>. \hint{Use the fact that  in the statement of <a href="" class="xref" data-knowl="./knowl/xref/THEOREMMVT.html" title="Theorem 15.9: The Mean Value Theorem">~ 15.9</a> <span class="process-math">\(c\)</span> is between <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{.}\)</span>}</div></article></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="CHAPTERdiff-rules-with-limits.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="CHAPTERwhen-deriv-doesnt.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

@@ -151,8 +151,9 @@ window.MathJax = {
   \right\}
 }
 
-\def\absALT#1{\rule[-.7ex]{1pt}{5ex}\hskip2pt#1\hskip2pt\llap{\rule[-.7ex]{1pt}{5ex}}} 
 
+
+\def\lhopeq{\stackrel{L'H}{=}}
 
 \def\sech{{\rm{}sech}{}}
 \def\csch{{\rm{}csch}{}}
@@ -164,6 +165,10 @@ window.MathJax = {
 \def\ftceval#1#2#3{\eval#1#2#3}
 \def\geneval#1#2{\eval{#1}{#2}{}}
 \def\bigeval#1#2#3{\eval{#2}{#2}{#3}}
+
+
+
+
 
 
 
@@ -192,6 +197,8 @@ window.MathJax = {
 \def\dfdxn#1#2#3{\frac{\text{d}^{#3}{#1}}{\text{d}{#2}^{#3}}} 
 
 
+\def\limitatinf#1#2{\limit{#1}{\infty}{#2}}
+\def\limitatninf#1#2{\limit{#1}{-\infty}{#2}}
 \def\dfdxat#1#2#3{\eval{\dfdx{#1}{#2}}{#2=#3}{}}
 
 \def\limit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}#3}}
@@ -343,7 +350,7 @@ window.MathJax = {
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTApproximation.html#SUBSECTIONSubtleFailure" class="internal"><span class="codenumber">7.2.3</span> <span class="title">Subtle Failure</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTApproximation.html#SECTIONeulers-method" class="internal"><span class="codenumber">7.3</span> <span class="title">Euler’s Method</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTApproximation.html#SECTIONEulersMethod" class="internal"><span class="codenumber">7.3</span> <span class="title">Euler’s Method</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTApproximation.html#SECTIONmore-high-deriv" class="internal"><span class="codenumber">7.4</span> <span class="title">Higher Derivatives, Lagrange, and Taylor</span></a></div></li>
 </ul>
 </li>
@@ -423,13 +430,7 @@ window.MathJax = {
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTshape-things.html#SECTIONgraph-with-form" class="internal"><span class="codenumber">10.1</span> <span class="title">Graphing with a Formula for  <span class="process-math">\(y(x)\)</span></span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTshape-things.html#SECTIONgraph-without-form" class="internal"><span class="codenumber">10.2</span> <span class="title">Graphing Without Formulas</span></a></div></li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAPTERPTshape-things.html#SECTIONGraphingWithDeriv" class="internal"><span class="codenumber">10.3</span> <span class="title">Graphing with a Formula for  <span class="process-math">\(\dfdx{y}{x}\)</span></span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTshape-things.html#SUBSECTIONDerivDepOnxAlone" class="internal"><span class="codenumber">10.3.1</span> <span class="title">When  <span class="process-math">\(\dfdx{y}{x}\)</span> Depends on <span class="process-math">\(x\)</span> alone</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTshape-things.html#SUBSECTIONDfdxDependsOnYAlone" class="internal"><span class="codenumber">10.3.2</span> <span class="title">When  <span class="process-math">\(\dfdx{y}{t}\)</span> depends on <span class="process-math">\(y\)</span> alone</span></a></div></li>
-</ul>
-</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTshape-things.html#SECTIONGraphingWithDeriv" class="internal"><span class="codenumber">10.3</span> <span class="title">Graphing with a Formula for  <span class="process-math">\(\dfdx{y}{t}\)</span></span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -550,44 +551,46 @@ window.MathJax = {
 </blockquote>
 <div class="para logical" id="SECTIONgraph-with-form-3">
 <div class="para">In an age when everyone can open their cell phone and graph, for example, the function</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\label{eq:HolyGrail}
-y(x) =x^4 - 400.5 x^3 + 40099.49 x^2 + 4.005 x - 400.995,
-\end{equation*}
+<div class="displaymath process-math" id="EQUATIONHolyGrail">
+\begin{equation}
+y(x) =x^4 - 400.5 x^3 + 40099.49 x^2 + 4.005 x - 400.995,\tag{10.1}
+\end{equation}
 </div>
 <div class="para">literally in seconds it may not seem important to understand the nature of functions at any deeper level. After all, if you have a formula you know everything there is to know about a function, right?</div>
 </div>
-<div class="para" id="SECTIONgraph-with-form-4">Well, yes  . . .  , and no.</div>
-<figure class="figure figure-like" id="SECTIONgraph-with-form-5"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/HolyGrail1.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">10.1<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://en.wikipedia.org/wiki/Holy_Grail" target="_blank">This figure needs a caption.</a><a class="xref" id="SECTIONgraph-with-form-5-1-2" href="" data-knowl="./knowl/fn/SECTIONgraph-with-form-5-1-2.html" title="Footnote 10.2"><sup> 2 </sup></a></figcaption></figure><div class="para" id="SECTIONgraph-with-form-6">In a sense, obtaining a formula that describes whatever real-world phenomena you might be investigating is the <a class="external" href="https://en.wikipedia.org/wiki/Holy_Grail" target="_blank">Holy Grail</a><a class="xref" id="SECTIONgraph-with-form-6-2" href="" data-knowl="./knowl/fn/SECTIONgraph-with-form-6-2.html" title="Footnote 10.3"><sup> 3 </sup></a>, of science. And for exactly the reason you would expect.  Formulas can tell us a great deal about the phenomenon. But they don’t tell us everything.</div>
-<div class="para" id="SECTIONgraph-with-form-7">For example, suppose <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQHolyGrail" missing or not unique]</code>) describes some real world phenomenon. Does reading the formula give you any sense of the essential qualities of <span class="process-math">\(y(x)\text{?}\)</span> No, of course not.  Because pictures are easier to understand than formulas we usually look at the graph of a function to get a sense of it. We used one of the many graphing systems available to generate the graph of <span class="process-math">\(y(x)\)</span> seen at the right. Impressive, isn’t it?</div>
-<div class="para" id="SECTIONgraph-with-form-8">Because we simply  used the default settings of our graphing tool this picture  doesn’t really help much either. We’ll have to modify the viewing window to see anything useful. Take out your favorite graphing utility and adjust the settings until you find  settings that give you a more useful display like the one  below.</div>
-<figure class="figure figure-like" id="SECTIONgraph-with-form-9"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/HolyGrail3.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">10.2<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://www.nobelprize.org/" target="_blank">This figure needs a caption.</a><a class="xref" id="SECTIONgraph-with-form-9-1-2" href="" data-knowl="./knowl/fn/SECTIONgraph-with-form-9-1-2.html" title="Footnote 10.4"><sup> 4 </sup></a></figcaption></figure><div class="para" id="SECTIONgraph-with-form-10">To be sure, this graph does tell us great deal about the qualitative behavior of <span class="process-math">\(y(x)\text{.}\)</span>  Visualizing the graph in this way is a good thing. But getting more detailed information can be tricky. For example, what are the exact values of the <span class="process-math">\(x\)</span> coordinates of the two places where the graph appears to graze the <span class="process-math">\(x\)</span> axis? One appears to be <span class="process-math">\(x=0\)</span> and the other appears to be <span class="process-math">\(x=200\text{,}\)</span> but is that right? Notice the horizontal and vertical scales. Can we be sure that at these scales all of the important bumps an wiggles on the graph are visible? When the top of the graph is at <span class="process-math">\(y=\)</span> ten million can we tell, just by looking, if <span class="process-math">\(y(0)=y(200)=0\text{?}\)</span>
+<div class="para" id="SECTIONgraph-with-form-4">Well, yes  . . . and no.</div>
+<div class="para" id="SECTIONgraph-with-form-5">In a sense, obtaining a formula that describes whatever real-world phenomena you might be investigating is the <a class="external" href="https://en.wikipedia.org/wiki/Holy_Grail" target="_blank">Holy Grail</a><a class="xref" id="SECTIONgraph-with-form-5-2" href="" data-knowl="./knowl/fn/SECTIONgraph-with-form-5-2.html" title="Footnote 10.2"><sup> 2 </sup></a>, of science. And for exactly the reason you would expect.  Formulas can tell us a great deal about the phenomenon. But they don’t tell us everything.</div>
+<div class="para" id="SECTIONgraph-with-form-6">For example, suppose <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONHolyGrail.html" title="Equation 10.1">equation (10.1)</a>) describes some real world phenomenon. Does reading the formula give you any sense of the essential qualities of <span class="process-math">\(y(x)\text{?}\)</span> No, of course not.  Because pictures are easier to understand than formulas we usually look at the graph of a function to get a sense of it. We used one of the many graphing systems available to generate the graph of <span class="process-math">\(y(x)\)</span> seen in <a href="" class="xref" data-knowl="./knowl/xref/FIGUREUnusableGraph.html" title="Figure 10.1">Figure 10.1</a> below. Impressive, isn’t it?</div>
+<figure class="figure figure-like" id="FIGUREUnusableGraph"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/HolyGrail1.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">10.1<span class="period">.</span></span><span class="space"> </span>A useless graph of <span class="process-math">\(y(x) =x^4 - 400.5 x^3 + 40099.49 x^2 + 4.005 x - 400.995\)</span></figcaption></figure><div class="para" id="SECTIONgraph-with-form-8">Because we simply  used the default settings of our graphing tool this picture  doesn’t really help much either. We’ll have to modify the viewing window to see anything useful. Take out your favorite graphing utility and adjust the settings until you find  settings that give you a more useful display like the one in <a href="" class="xref" data-knowl="./knowl/xref/FIGUREUsaableGraph.html" title="Figure 10.2">Figure 10.2</a> below.</div>
+<figure class="figure figure-like" id="FIGUREUsaableGraph"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/HolyGrail3.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">10.2<span class="period">.</span></span><span class="space"> </span>A more usefull graph of <span class="process-math">\(y(x) =x^4 - 400.5 x^3 + 40099.49 x^2 + 4.005 x - 400.995\)</span></figcaption></figure><div class="para" id="SECTIONgraph-with-form-10">To be sure, this graph does tell us great deal about the qualitative behavior of <span class="process-math">\(y(x)\text{.}\)</span>  Visualizing the graph in this way is a good thing. But getting more detailed information can be tricky. For example, what are the exact values of the <span class="process-math">\(x\)</span> coordinates of the two places where the graph appears to graze the <span class="process-math">\(x\)</span> axis? One appears to be <span class="process-math">\(x=0\)</span> and the other appears to be <span class="process-math">\(x=200\text{,}\)</span> but is that right? Notice the horizontal and vertical scales. Can we be sure that at these scales all of the important bumps an wiggles on the graph are visible? When the top of the graph is at <span class="process-math">\(y=\)</span> ten million can we tell, just by looking, if <span class="process-math">\(y(0)=y(200)=0\text{?}\)</span>
 </div>
 <div class="para" id="SECTIONgraph-with-form-11">You might well ask, “Obviously when <span class="process-math">\(x=0\)</span> and <span class="process-math">\(x=200\)</span> <span class="process-math">\(y\)</span> is near zero. Is it really important to know whether or not it is exactly zero?”</div>
 <article class="exercise exercise-like" id="DRILLHolyGrail1"><h4 class="heading">
 <span class="type">Drill</span><span class="space"> </span><span class="codenumber">10.3</span><span class="period">.</span>
 </h4>
-<div class="para" id="DRILLHolyGrail1-1-1">Compute <span class="process-math">\(y(0)\)</span> and <span class="process-math">\(y(200)\)</span> to see if they are really near zero. \hint{Use a calculator for <span class="process-math">\(y(200)\text{,}\)</span> not for <span class="process-math">\(y(0)\text{.}\)</span>}</div></article><div class="para" id="SECTIONgraph-with-form-13">The fact is that it is hard to get good quantitative information from anything but very simple graphs.  But does that matter? From the graph above we can see very plainly what is happening over a very large interval. Isn’t that enough?</div>
+<div class="para" id="DRILLHolyGrail1-1-1">Compute <span class="process-math">\(y(0)\)</span> and <span class="process-math">\(y(200)\)</span> to see if they are really near zero.</div>
+<div class="solutions"><details id="DRILLHolyGrail1-2" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="DRILLHolyGrail1-2-1">Use a calculator for <span class="process-math">\(y(200)\text{,}\)</span> not for <span class="process-math">\(y(0)\text{.}\)</span>
+</div></div></details></div></article><div class="para" id="SECTIONgraph-with-form-13">The fact is that it is hard to get good quantitative information from anything but very simple graphs.  But does that matter? From the graph above we can see very plainly what is happening over a very large interval. Isn’t that enough?</div>
 <div class="para" id="SECTIONgraph-with-form-14">Well, that  depends.</div>
-<div class="para" id="SECTIONgraph-with-form-15">Suppose you are a nuclear engineer and you’ve invented a simple process that requires an external source of energy. Suppose further that the graph above shows the rate of energy consumption, <span class="process-math">\(y\text{,}\)</span> of your process as a function of the ambient temperature, <span class="process-math">\(x\text{.}\)</span> Then any temperature at which <span class="process-math">\(y\lt 0\)</span> is a temperature where the process is producing energy, not consuming it. Depending on rate of production and how simple the process is, being able to identify the temperature range where <span class="process-math">\(y(x)\lt 0\)</span> could be the difference between winning the <a class="external" href="https://www.nobelprize.org/" target="_blank">Nobel Prize</a><a class="xref" id="SECTIONgraph-with-form-15-6" href="" data-knowl="./knowl/fn/SECTIONgraph-with-form-15-6.html" title="Footnote 10.5"><sup> 5 </sup></a>, and becoming a laughing stock.</div>
+<div class="para" id="SECTIONgraph-with-form-15">Suppose you are a nuclear engineer and you’ve invented a simple process that requires an external source of energy. Suppose further that the graph above shows the rate of energy consumption, <span class="process-math">\(y\text{,}\)</span> of your process as a function of the ambient temperature, <span class="process-math">\(x\text{.}\)</span> Then any temperature at which <span class="process-math">\(y\lt 0\)</span> is a temperature where the process is producing energy, not consuming it. Depending on rate of production and how simple the process is, being able to identify the temperature range where <span class="process-math">\(y(x)\lt 0\)</span> could be the difference between winning the <a class="external" href="https://www.nobelprize.org/" target="_blank">Nobel Prize</a><a class="xref" id="SECTIONgraph-with-form-15-7" href="" data-knowl="./knowl/fn/SECTIONgraph-with-form-15-7.html" title="Footnote 10.3"><sup> 3 </sup></a>, and becoming a laughing stock.</div>
 <div class="para" id="SECTIONgraph-with-form-16">You would want to know.</div>
-<div class="para" id="SECTIONgraph-with-form-17">In this chapter we will explore some techniques that will help you win your Nobel Prize\aside{All you have to do is invent the process. Good luck.}. Please mention us in your acceptance speech.</div>
-<div class="para logical" id="SECTIONgraph-with-form-18">
+<div class="para" id="SECTIONgraph-with-form-17">In this chapter we will explore some techniques that will help you win your Nobel Prize.</div>
+<aside class="aside aside-like" id="SECTIONgraph-with-form-18"><h4 class="heading"><span class="title">Comment.</span></h4>
+<div class="para" id="SECTIONgraph-with-form-18-2">All you have to do is invent the process. Good luck. Please mention us in your acceptance speech.</div></aside><div class="para logical" id="SECTIONgraph-with-form-19">
 <div class="para">In <a href="CHAPTERwhat-deriv-tells.html" class="internal" title="Chapter 9: Optimization: Going to Extremes">Chapter 9</a> we saw that the First and Second Derivative Tests are exactly the tools necessary to answer each of the following questions:</div>
 <ol class="decimal">
-<li id="SECTIONgraph-with-form-18-2-1"><div class="para" id="SECTIONgraph-with-form-18-2-1-1">On what intervals is the function increasing and on what  intervals is it decreasing?</div></li>
-<li id="SECTIONgraph-with-form-18-2-2"><div class="para" id="SECTIONgraph-with-form-18-2-2-1">Where are the local extrema located?</div></li>
-<li id="SECTIONgraph-with-form-18-2-3"><div class="para" id="SECTIONgraph-with-form-18-2-3-1">What are the values of the local extrema?</div></li>
-<li id="SECTIONgraph-with-form-18-2-4"><div class="para" id="SECTIONgraph-with-form-18-2-4-1">Where does the inflection of the graph transition between   concave up and concave down?</div></li>
+<li id="SECTIONgraph-with-form-19-2-1"><div class="para" id="SECTIONgraph-with-form-19-2-1-1">On what intervals is the function increasing and on what  intervals is it decreasing?</div></li>
+<li id="SECTIONgraph-with-form-19-2-2"><div class="para" id="SECTIONgraph-with-form-19-2-2-1">Where are the local extrema located?</div></li>
+<li id="SECTIONgraph-with-form-19-2-3"><div class="para" id="SECTIONgraph-with-form-19-2-3-1">What are the values of the local extrema?</div></li>
+<li id="SECTIONgraph-with-form-19-2-4"><div class="para" id="SECTIONgraph-with-form-19-2-4-1">Where does the inflection of the graph transition between   concave up and concave down?</div></li>
 </ol>
 </div>
-<article class="example example-like" id="SECTIONgraph-with-form-19"><h4 class="heading">
+<article class="example example-like" id="SECTIONgraph-with-form-20"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">10.4</span><span class="period">.</span>
 </h4>
-<div class="para logical" id="SECTIONgraph-with-form-19-1">
+<div class="para logical" id="SECTIONgraph-with-form-20-1">
 <div class="para">For example consider the following function.  <span class="process-math">\(y=\frac{x}{1+x^2}\text{.}\)</span> Differentiating <span class="process-math">\(y\)</span> we see that</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -613,209 +616,577 @@ y(x) =x^4 - 400.5 x^3 + 40099.49 x^2 + 4.005 x - 400.995,
 <div class="para">This tells us that  <span class="process-math">\(y(x)\)</span> will have PITPs at <span class="process-math">\(x=-\sqrt{3}\text{,}\)</span> <span class="process-math">\(x=0\text{,}\)</span> and <span class="process-math">\(x= \sqrt{3}\text{.}\)</span> Testing a single point in each of these intervals between PITPs we see that</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\eval{\dfdxn{y}{x}{2}}{x}{-2} \lt0,\ \ \ 
-\eval{\dfdxn{y}{x}{2}}{x}{-1}  \gt0,\ \ \ 
-\eval{\dfdxn{y}{x}{2}}{x}{1} \lt0,\ \ \ 
+\eval{\dfdxn{y}{x}{2}}{x=-2}{} \lt0,\ \ \ 
+\eval{\dfdxn{y}{x}{2}}{x=-1}{}  \gt0,\ \ \ 
+\eval{\dfdxn{y}{x}{2}}{x=1}{} \lt0,\ \ \ 
 \text{  and }
-\eval{\dfdxn{y}{x}{2}}{x}{2} \gt0,
+\eval{\dfdxn{y}{x}{2}}{x=2}{} \gt0,
 \end{equation*}
 </div>
-<div class="para">and conclude that the graph is concave downward on the interval <span class="process-math">\(\left(-\infty,-\sqrt{3}\right)\text{,}\)</span> concave upward on the interval <span class="process-math">\((-\sqrt{3},0)\text{,}\)</span> concave downward on the interval <span class="process-math">\(\left(0,-\sqrt{3}\right)\text{,}\)</span> and concave downward on the interval <span class="process-math">\(\left(\sqrt{3}, \infty\right)\text{.}\)</span> \begin{ProficiencyDrill} Use your favorite graphing tool to graph <span class="process-math">\(y=\frac{x}{1+x^2}\)</span> and confirm our conclusions. \end{ProficiencyDrill}</div>
-</div></article><article class="example example-like" id="EXAMPLEAsym1"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">10.5</span><span class="period">.</span><span class="space"> </span><span class="title">h.</span>
+<div class="para">and conclude that the graph is concave downward on the interval <span class="process-math">\(\left(-\infty,-\sqrt{3}\right)\text{,}\)</span> concave upward on the interval <span class="process-math">\((-\sqrt{3},0)\text{,}\)</span> concave downward on the interval <span class="process-math">\(\left(0,-\sqrt{3}\right)\text{,}\)</span> and concave downward on the interval <span class="process-math">\(\left(\sqrt{3}, \infty\right)\text{.}\)</span>
+</div>
+</div></article><article class="exercise exercise-like" id="SECTIONgraph-with-form-21"><h4 class="heading">
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">10.5</span><span class="period">.</span>
+</h4>
+<div class="para" id="SECTIONgraph-with-form-21-1-1">Use your favorite graphing tool to graph <span class="process-math">\(y=\frac{x}{1+x^2}\)</span> and confirm our conclusions.</div></article><article class="example example-like" id="EXAMPLEAsym1"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">10.6</span><span class="period">.</span><span class="space"> </span><span class="title">.</span>
 </h4> <div class="para logical" id="EXAMPLEAsym1-2">
-<div class="para">\setcounter{TmpCtr1}{\value{myexample}} The previous example was fairly simple so it was easy to keep all of the important information in mind at the same time. This will not always be the case so we will need ways to organize the data we collect. This will ensure that it is not overwhelming.  Below we demonstrate one way to do this. It is not the only way. Let’s sketch the graph of</div>
-<div class="displaymath process-math" data-contains-math-knowls="  ./knowl/xref/SECTIONhoriz-asympt-as.html">
+<div class="para"> The previous example was fairly simple so it was easy to keep all of the important information in mind at the same time. This will not always be the case so we will need ways to organize the data we collect. This will ensure that it is not overwhelming.  Below we demonstrate one way to do this. It is not the only way. Let’s sketch the graph of</div>
+<div class="displaymath process-math">
 \begin{equation*}
 y=\frac{2+2x^2+2x^4}{1+x^4}
 \end{equation*}
 </div>
-<div class="para">using Calculus.   To use the First Derivative Test we’ll need  the derivative. \begin{ProficiencyDrill-1line} Confirm that the derivative is <span class="process-math">\(\dfdx{y}{x} =y^\prime(x)= \frac{4x(1-x^4)}{(1+x^4)^2}
-\text{.}\)</span> \end{ProficiencyDrill-1line} Setting the first derivative equal to zero and solving we see that we have a POTP at <span class="process-math">\(x=-1\text{,}\)</span> <span class="process-math">\(x=0\text{,}\)</span> and at <span class="process-math">\(x=1\text{.}\)</span>  To make all of this easier to see we arrange this data in the following table.  Notice that we have organized our POTPs (and hence the intervals that we are testing) from left to right, just as they would appear on a number line. \begin{center} \begin{tabular}[h]{|c||c|c|c|c|c|c|c|}\hline POTP  \amp              \amp <span class="process-math">\(-1\)</span>                     \amp            \amp <span class="process-math">\(0\)</span>                      \amp            \amp  <span class="process-math">\(1\)</span>\amp            \bigstrut \hline Interval    \amp <span class="process-math">\((\infty,-1)\)</span>\amp                          \amp <span class="process-math">\((-1,0)\)</span>   \amp                          \amp <span class="process-math">\((0,1)\)</span>    \amp     \amp <span class="process-math">\((1,\infty)\)</span> \bigstrut \hline\hline <span class="process-math">\(y^\prime(x)\)</span>\amp <span class="process-math">\(\gt 0\)</span>     \amp                          \amp <span class="process-math">\(\lt 0\)</span>   \amp                          \amp <span class="process-math">\(\gt 0\)</span>   \amp                         \amp <span class="process-math">\(\lt 0\)</span>\bigstrut <span class="process-math">\(y(t)\)</span>          \amp  <span class="process-math">\(\nearrow\)</span> \amp <span class="process-math">\(3\)</span>                         \amp  <span class="process-math">\(\searrow\)</span>\amp <span class="process-math">\(2\)</span>                         \amp  <span class="process-math">\(\nearrow\)</span>\amp  <span class="process-math">\(3\)</span>                        \amp  <span class="process-math">\(\searrow\)</span> \bigstrut \amp             \amp \rotatebox{90}{{\tiny {\tiny local max}}}\amp            \amp \rotatebox{90}{{\tiny local min}}\amp            \amp \rotatebox{90}{{\tiny local max}}\amp \bigstrut \hline \end{tabular} \end{center} \begin{wrapfigure}[]{r}{1in} \vskip-3mm \captionsetup{labelformat=empty} \centerline{\includegraphics*[height=.4in,width=1in]{../Figures/GraphingWith11}} \label{fig:GraphingWith1} \end{wrapfigure} Based on the table above we could reasonably infer that the graph might might have the shape shown at the right. The next step is to locate this graph on the <span class="process-math">\(x\)</span>-<span class="process-math">\(y\)</span> plane. From our table above we see that the local minimum is at <span class="process-math">\(y(0)=2\text{,}\)</span> and the two local maxima are at <span class="process-math">\(y(-1)=y(1)=3\text{.}\)</span> \begin{wrapfigure}[]{l}{1.2in} \vskip-3mm \captionsetup{labelformat=empty} \centerline{\includegraphics*[height=1.2in,width=1.2in]{../Figures/GraphingWith12}} \label{fig:GraphingWith2} \end{wrapfigure} Thus we can, again reasonably, infer that the graph of <span class="process-math">\(y(x)\)</span> is located on the plane as shown at the left. Unfortunately, we don’t know that our graph is correct\aside{In fact, it is not.} because we’ve made assumptions regarding its concavity that we haven’t justified. This is the same error we made in the discussion following <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EXAMPLEMaxTriangle" missing or not unique]</code>, back in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "CHAPTERPTERproblem-solving" missing or not unique]</code> when we drew a right triangle because it “seemed to be” correct. It is very easy to make this sort of mistake. Be careful. We can analyze the concavity of the graph using the second derivative in a manner very similar to what we did earlier with first derivative. \begin{ProficiencyDrill-enumerate} \begin{enumerate}[label={  (\alph*)}] \item   Confirm that the second derivative of our function is: <span class="process-math">\(\dfdxn{y}{x}{2} = \frac{4(1-12x^4+3x^8)}{(1+x^4)^3}\text{.}\)</span> \item Use an appropriate computational tool, or Newton’s Method, to show that the PITPs of <span class="process-math">\(y(x)\)</span> are: <span class="process-math">\(x\approx -1.41\text{,}\)</span> <span class="process-math">\(x\approx -0.54\text{,}\)</span> <span class="process-math">\(x\approx 0.54 \text{,}\)</span> and <span class="process-math">\(x\approx 1.41 \text{.}\)</span> \item The approximations in part (b) can actually be computed exactly. Find the exact solutions and confirm the approximations. \end{enumerate} \end{ProficiencyDrill-enumerate} Now set up a table to analyze concavity. \centerline{\includegraphics*[height=1.5in,width=5.5in]{../Figures/GraphingWith13}} \begin{wrapfigure}[]{r}{2in} \captionsetup{labelformat=empty} \centerline{\includegraphics*[height=1.2in,width=2in]{../Figures/GraphingWith14}} \label{fig:GraphingWith14} \end{wrapfigure} Combining the data in this table with the data in our previous table it would seem reasonable to infer that the graph of our function looks like the one at the right. Does this graph above seem complete to you now?  Obviously it is not, or we would not have asked, but do you see what is missing?  What happens to <span class="process-math">\(y(x)\)</span> as <span class="process-math">\(x\)</span> is very far from zero either the positive or the negative direction? Does <span class="process-math">\(y(x)\)</span> continue to drop? Or does it eventually level off? We’re not quite ready to talk about this yet, so give it some thought and take you best guess. We’ll come back and finish this example in <a href="CHAPTERlimits-lhop-rule.html#SECTIONhoriz-asympt-as" class="internal" title='Section 12.1: Horizontal Asymptotes as Limits "at Infinity"'>~ 12.1</a> after we’ve developed some essential notation and definitions.</div>
-</div></article><article class="problem example-like" id="SECTIONgraph-with-form-21"><h4 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">10.6</span><span class="period">.</span>
+<div class="para">using Calculus.   To use the First Derivative Test we’ll need  the derivative     <span class="process-math">\(\dfdx{y}{x} =y^\prime(x)= \frac{4x(1-x^4)}{(1+x^4)^2}
+\text{.}\)</span>
+</div>
+</div> <div class="para" id="EXAMPLEAsym1-3">Setting the first derivative equal to zero and solving we see that we have a POTP at <span class="process-math">\(x=-1\text{,}\)</span> <span class="process-math">\(x=0\text{,}\)</span> and at <span class="process-math">\(x=1\text{.}\)</span>  To make all of this easier to see we arrange this data in the following table.  Notice that we have organized our POTPs (and hence the intervals that we are testing) from left to right, just as they would appear on a number line.</div> <figure class="table table-like" id="FDTChart1"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">10.7<span class="period">.</span></span><span class="space"> </span>The First Derivative Test Analysis</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b3 r0 l0 t0 lines">Interval</td>
+<td class="c m b3 r0 l0 t0 lines"><span class="process-math">\((-\infty, -1)\)</span></td>
+<td class="c m b3 r0 l0 t0 lines"><span class="process-math">\((-1,0)\)</span></td>
+<td class="c m b3 r0 l0 t0 lines"><span class="process-math">\((0, 1)\)</span></td>
+<td class="c m b3 r0 l0 t0 lines"><span class="process-math">\((1,\infty) \)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(y^\prime(x) \)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\gt 0\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\lt 0\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\gt 0\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\lt 0 \)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(y(x) \)</span></td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(\nearrow\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(\searrow\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(\nearrow\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(\searrow\)</span></td>
+</tr>
+</table></div></figure> <div class="para" id="EXAMPLEAsym1-5">From the table above we see that we have a local maximum at <span class="process-math">\(x=-1\)</span> and <span class="process-math">\(x=1\)</span> and a local minimum at <span class="process-math">\(x=0\text{.}\)</span> Based on this information we could reasonably infer that the graph might might have the shape shown below.</div> <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/GraphingWith11.png" class="contained"></div> <div class="para" id="EXAMPLEAsym1-7">The next step is to locate this graph on the <span class="process-math">\(x\)</span>-<span class="process-math">\(y\)</span> plane. From our table above we see that the local minimum is at <span class="process-math">\(y(0)=2\text{,}\)</span> and the two local maxima are at <span class="process-math">\(y(-1)=y(1)=3\text{.}\)</span>       Thus we can, again reasonably, infer that the graph of <span class="process-math">\(y(x)\)</span> is located on the plane as shown below.</div> <div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="external/images/GraphingWith12.png" class="contained"></div> <div class="para" id="EXAMPLEAsym1-9">Unfortunately, we don’t know that our graph is correct (in fact, it is not) because we’ve made assumptions regarding its concavity that we haven’t justified. This is the same error we made in the discussion following <a href="" class="xref" data-knowl="./knowl/xref/EXAMPLEMaxTriangle.html" title="Example 2.8">Example 2.8</a>, back in <a href="CHAPTERproblem-solving.html" class="internal" title="Chapter 2: Introduction: Some  Advice on Problem Solving">Chapter 2</a> when we drew a right triangle because it “seemed to be” correct. It is very easy to make this sort of mistake. Be careful. We can analyze the concavity of the graph using the second derivative in a manner very similar to what we did earlier with first derivative.</div></article><article class="exercise exercise-like" id="no-label"><h4 class="heading">
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">10.8</span><span class="period">.</span>
 </h4>
-<div class="introduction" id="SECTIONgraph-with-form-21-1"><div class="para" id="SECTIONgraph-with-form-21-1-1">Use the first and second derivatives to sketch the  graph of each of the following functions. \comment{If you already know what some of these graphs look like use the tests to confirm what you already know.}</div></div>
-<article class="task exercise-like" id="SECTIONgraph-with-form-21-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="SECTIONgraph-with-form-21-2-1-1"><span class="process-math">\(y=e^x \)</span></div></article><article class="task exercise-like" id="SECTIONgraph-with-form-21-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="SECTIONgraph-with-form-21-3-1-1"><span class="process-math">\(y=\ln(x) \)</span></div></article><article class="task exercise-like" id="SECTIONgraph-with-form-21-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<div class="para" id="SECTIONgraph-with-form-21-4-1-1"><span class="process-math">\(y=\sin(x) \)</span></div></article><article class="task exercise-like" id="SECTIONgraph-with-form-21-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
-<div class="para" id="SECTIONgraph-with-form-21-5-1-1"><span class="process-math">\(y=\cos(x) \)</span></div></article><article class="task exercise-like" id="SECTIONgraph-with-form-21-6"><h5 class="heading"><span class="codenumber">(e)</span></h5>
-<div class="para" id="SECTIONgraph-with-form-21-6-1-1"><span class="process-math">\(y=\sin(x)\cos(x) \)</span></div></article><article class="task exercise-like" id="SECTIONgraph-with-form-21-7"><h5 class="heading"><span class="codenumber">(f)</span></h5>
-<div class="para" id="SECTIONgraph-with-form-21-7-1-1"><span class="process-math">\(y=xe^x\)</span></div></article><article class="task exercise-like" id="SECTIONgraph-with-form-21-8"><h5 class="heading"><span class="codenumber">(g)</span></h5>
-<div class="para" id="SECTIONgraph-with-form-21-8-1-1"><span class="process-math">\(y=\frac{e^x-e^{-x}}{2} \)</span></div></article><article class="task exercise-like" id="SECTIONgraph-with-form-21-9"><h5 class="heading"><span class="codenumber">(h)</span></h5>
-<div class="para" id="SECTIONgraph-with-form-21-9-1-1"><span class="process-math">\(y=\frac{e^x+e^{-x}}{2} \)</span></div></article><article class="task exercise-like" id="SECTIONgraph-with-form-21-10"><h5 class="heading"><span class="codenumber">(i)</span></h5>
-<div class="para" id="SECTIONgraph-with-form-21-10-1-1"><span class="process-math">\(y=x(x-1)\)</span></div></article><article class="task exercise-like" id="SECTIONgraph-with-form-21-11"><h5 class="heading"><span class="codenumber">(j)</span></h5>
-<div class="para" id="SECTIONgraph-with-form-21-11-1-1"><span class="process-math">\(y=x^2(x-1) \)</span></div></article><article class="task exercise-like" id="SECTIONgraph-with-form-21-12"><h5 class="heading"><span class="codenumber">(k)</span></h5>
-<div class="para" id="SECTIONgraph-with-form-21-12-1-1"><span class="process-math">\(y=x^2(x^2-1) \)</span></div></article><article class="task exercise-like" id="SECTIONgraph-with-form-21-13"><h5 class="heading"><span class="codenumber">(l)</span></h5>
-<div class="para" id="SECTIONgraph-with-form-21-13-1-1"><span class="process-math">\(y=x(x-1)(x-2) \)</span></div></article><article class="task exercise-like" id="SECTIONgraph-with-form-21-14"><h5 class="heading"><span class="codenumber">(m)</span></h5>
-<div class="para" id="SECTIONgraph-with-form-21-14-1-1"><span class="process-math">\(y=x\sqrt[3]{x-8} \)</span></div></article><article class="task exercise-like" id="SECTIONgraph-with-form-21-15"><h5 class="heading"><span class="codenumber">(n)</span></h5>
-<div class="para" id="SECTIONgraph-with-form-21-15-1-1"><span class="process-math">\(y=\sqrt[3]{x}{(x-8)} \)</span></div></article></article></section><section class="section" id="SECTIONgraph-without-form"><h3 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">10.2</span><span class="space"> </span><span class="title">Graphing Without Formulas</span>
-</h3>
-<div class="para" id="SECTIONgraph-without-form-2">function is just a rule for associating a given input with its unique output. For example, we could specify a particular function by writing "take two copies of the input, multiply them together and return the result as output."  This is a complete and valid description but it is cumbersome to use.  This is why we’ve instead invented notation that allows us to write the description succinctly as the formula <span class="process-math">\(f(x)=x^2\text{.}\)</span> It is easy to sketch an accurate graph of a function that is given as a formula, especially using modern technology, because the formula tells you the steps for finding the output for any given input.</div>
-<div class="para" id="SECTIONgraph-without-form-3">As mentioned earlier, formulas are the Holy Grail of modern science and business.  But, despite what you have seen in your mathematics education so far, very often we don’t have such a formula. This is the usual situation. If you own a trout fishery business for example, you would love to have a formula that tells you how many trout your fishery will have on any given day of the year. With such a formula you could make plans for your business well into the future.  We will talk about this in more detail in the next section.</div>
-<article class="example example-like" id="SECTIONgraph-without-form-4"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">10.7</span><span class="period">.</span><span class="space"> </span><span class="title">h.</span>
-</h4> <div class="para" id="SECTIONgraph-without-form-4-2">For example, suppose we have the following information about a certain function.  Can we sketch a reasonable graph of the function? \begin{multicols}{3} \begin{itemize} \item <span class="process-math">\(y(1)=2 \)</span> \item <span class="process-math">\(\dfdxat{y}{x}{1}=0\)</span> \item <span class="process-math">\(\dfdxat{y}{x}{5}=0\)</span> \item <span class="process-math">\(\eval{\dfdxn{y}{x}{2}}{x}{3}=0\)</span> \item <span class="process-math">\(\eval{\dfdxn{y}{x}{2}}{x}{5}=0\)</span> \item <span class="process-math">\(\dfdx{y}{x}\gt0\)</span> \leftline{for all <span class="process-math">\(x\lt1\)</span>} \item <span class="process-math">\(\dfdx{y}{x}\lt0\)</span> \leftline{for <span class="process-math">\(1\lt x\lt 5\)</span> and <span class="process-math">\(x\gt5\)</span>} \item <span class="process-math">\(\dfdxn{y}{x}{2}\gt0\)</span> \leftline{for <span class="process-math">\(3\lt x\lt5\)</span>} \item <span class="process-math">\(\dfdxn{y}{x}{2}\lt0\)</span> \leftline{for <span class="process-math">\(x\lt3\)</span>} \leftline{and <span class="process-math">\(x\gt5\)</span>} \end{itemize} \end{multicols} Actually, this is easier than the previous problems, since intervals of increase, decrease, concave up, and concave down have already been determined for us.  For example, here are the tables for each.% \begin{center} \begin{tabular}[h]{|c|c|c|c|c|c|} \hline POTP \amp   \amp  <span class="process-math">\(1\)</span>\amp  \amp  <span class="process-math">\(5\)</span>\amp  \bigstrut Interval \amp  <span class="process-math">\((-\infty,1)\)</span> \amp  \amp  <span class="process-math">\((1,5)\)</span> \amp \amp  <span class="process-math">\((5,\infty)\)</span>\bigstrut \hline\hline <span class="process-math">\(\dfdx{y}{x}\)</span>\amp  <span class="process-math">\(\dfdx{y}{x}\gt 0\)</span> \amp \amp  <span class="process-math">\(\dfdx{y}{x}\lt 0\)</span> \amp \amp  <span class="process-math">\(\dfdx{y}{x}\lt 0\)</span>\bigstrut <span class="process-math">\(y\)</span>\amp <span class="process-math">\(\nearrow\)</span>\amp <span class="process-math">\(2\)</span>\amp <span class="process-math">\(\searrow\)</span>\amp <span class="process-math">\(y(5)\)</span>\amp <span class="process-math">\(\searrow\)</span>\bigstrut \amp \amp \rotatebox{90}{{\tiny local max}}\amp \amp \rotatebox{90}{\textsf {\tiny neither}}\amp \bigstrut \hline \end{tabular} \end{center} \begin{center} \begin{tabular}[h]{|c|c|c|c|c|c|} \hline PITP\amp   \amp  <span class="process-math">\(3\)</span> \amp   \amp <span class="process-math">\(5\)</span>\amp  \bigstrut Interval \amp  <span class="process-math">\((-\infty,3)\)</span> \amp \amp  <span class="process-math">\((3,5)\)</span> \amp \amp  <span class="process-math">\((5,\infty)\)</span>\bigstrut \hline\hline <span class="process-math">\(\dfdxn{y}{x}{2}\)</span>\amp  <span class="process-math">\(\dfdxn{y}{x}{2}\lt 0\)</span> \amp \amp  <span class="process-math">\(\dfdxn{y}{x}{2}\gt 0\)</span> \amp \amp <span class="process-math">\(\dfdxn{y}{x}{2}\lt 0\)</span>\bigstrut <span class="process-math">\(y\)</span>\amp <span class="process-math">\(\bigcap\)</span>\amp <span class="process-math">\(y(3)\)</span>\amp <span class="process-math">\(\bigcup\)</span>\amp <span class="process-math">\(y(5)\)</span>\amp <span class="process-math">\(\bigcap\)</span>\bigstrut \amp \amp \rotatebox{90}{{\tiny inflection point}}\amp \amp \rotatebox{90}{{\tiny inflection point}}\amp \bigstrut \hline \end{tabular} \end{center} \begin{embeddedproblem} In this example we have <span class="process-math">\(\eval{\dfdx{y}{x}}{x}{5}=0\)</span> and <span class="process-math">\(\dfdx{y}{x}\lt 0\)</span> on the intervals <span class="process-math">\((1,5)\)</span> and <span class="process-math">\((5,\infty)\text{.}\)</span> Given that <span class="process-math">\(\dfdxat{y}{x}{5}=0\)</span> and <span class="process-math">\(\dfdxn{y}{x}{2}\lt 0\)</span> when <span class="process-math">\(x\gt 5\text{,}\)</span> did we really need to specify that <span class="process-math">\(\dfdx{y}{x}\lt0\)</span> on the interval <span class="process-math">\((5,\infty)\text{?}\)</span> \end{embeddedproblem} Based on the information given, the function <span class="process-math">\(y=y(x)\)</span> has a local maximum at <span class="process-math">\(x=1\)</span> and inflection points at <span class="process-math">\(x=3\)</span> and <span class="process-math">\(x=5.\)</span> A sketch of the graph might look something  like  this: \centerline{\includegraphics*[height=3in,width=4in]{../Figures/Optimization6}}</div></article><article class="problem example-like" id="SECTIONgraph-without-form-5"><h4 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">10.8</span><span class="period">.</span>
-</h4>
-<div class="introduction" id="SECTIONgraph-without-form-5-1"><div class="para" id="SECTIONgraph-without-form-5-1-1">Sketch the graph of <span class="process-math">\(y=y(x)\)</span> which satisfies the given requirements.</div></div>
-<article class="task exercise-like" id="SECTIONgraph-without-form-5-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="SECTIONgraph-without-form-5-2-1-1">
-<span class="process-math">\(y(-8)=10\text{,}\)</span> \leftline{<span class="process-math">\(\dfdx{y}{x}\lt0\)</span> for all <span class="process-math">\(x\)</span>} \leftline{ <span class="process-math">\(\dfdxn{y}{x}{2}\gt0\)</span> for all <span class="process-math">\(x\text{.}\)</span>}</div></article><article class="task exercise-like" id="SECTIONgraph-without-form-5-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="SECTIONgraph-without-form-5-3-1-1">
-<span class="process-math">\(y(0)=0\text{,}\)</span> <span class="process-math">\(\geneval{\dfdx{y}{x}}{x=0}=0\text{,}\)</span> <span class="process-math">\(\geneval{\dfdx{y}{x}}{x\neq0}\gt0\text{,}\)</span> \leftline{<span class="process-math">\(\dfdxn{y}{x}{2}\lt0\)</span> for <span class="process-math">\(x\lt0\text{,}\)</span>} \leftline{<span class="process-math">\(\dfdxn{y}{x}{2}\gt0\)</span> for <span class="process-math">\(x\gt0\text{,}\)</span>}</div></article></article><article class="problem example-like" id="SECTIONgraph-without-form-6"><h4 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">10.9</span><span class="period">.</span>
-</h4>
-<div class="introduction" id="SECTIONgraph-without-form-6-1"><div class="para" id="SECTIONgraph-without-form-6-1-1"></div></div>
-<article class="task exercise-like" id="SECTIONgraph-without-form-6-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="SECTIONgraph-without-form-6-2-1-1">
-<span class="process-math">\(-\frac{\pi}{2}\lt y\lt\frac{\pi}{2}\)</span> for all <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(y(0)=0\text{,}\)</span> <span class="process-math">\(\dfdxat{y}{x}{0}=1\text{,}\)</span> <span class="process-math">\(\dfdx{y}{x}\gt0\)</span> for all <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(\dfdxn{y}{x}{2}\gt0\text{,}\)</span> for <span class="process-math">\(x\lt0\text{,}\)</span> <span class="process-math">\(\dfdxn{y}{x}{2}\lt0\text{,}\)</span> for <span class="process-math">\(x\gt0\text{,}\)</span>
-</div></article><article class="task exercise-like" id="SECTIONgraph-without-form-6-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="SECTIONgraph-without-form-6-3-1-1">
-<span class="process-math">\(y(0)=0\text{,}\)</span> <span class="process-math">\(\dfdxat{y}{x}{0}\)</span>  does not exist, <span class="process-math">\(\geneval{\dfdx{y}{x}}{x\neq0}\gt0\text{,}\)</span> <span class="process-math">\(\dfdxn{y}{x}{2}\gt0\text{,}\)</span> for <span class="process-math">\(x\lt0\)</span> <span class="process-math">\(\dfdxn{y}{x}{2}\lt0\text{,}\)</span> for <span class="process-math">\(x\gt0\)</span>
-</div></article><article class="task exercise-like" id="SECTIONgraph-without-form-6-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<div class="para" id="SECTIONgraph-without-form-6-4-1-1">
-<span class="process-math">\(y\gt0\)</span> for all <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(y(0)=1\text{,}\)</span> <span class="process-math">\(\dfdx{y}{x}\gt0\)</span> for all <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(\dfdxn{y}{x}{2}\gt0\)</span> for all <span class="process-math">\(x\text{.}\)</span>
-</div></article><article class="task exercise-like" id="SECTIONgraph-without-form-6-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
-<div class="para" id="SECTIONgraph-without-form-6-5-1-1">
-<span class="process-math">\(y(0)=0\text{,}\)</span> <span class="process-math">\(\dfdxat{y}{x}{0}=0\text{,}\)</span> <span class="process-math">\(\dfdxat{y}{x}{2}=0,\)</span> <span class="process-math">\(\dfdx{y}{x}\gt0\)</span> for <span class="process-math">\(x\)</span> in <span class="process-math">\((-\infty,0)\text{,}\)</span> <span class="process-math">\(\dfdx{y}{x}\gt0\)</span> for <span class="process-math">\(x\)</span> in <span class="process-math">\((0,2)\text{,}\)</span> <span class="process-math">\(\dfdx{y}{x}\lt0\)</span> for <span class="process-math">\(x\gt2\text{,}\)</span> <span class="process-math">\(\eval{\dfdxn{y}{x}{2}}{x}{0}=0\text{,}\)</span>\ <span class="process-math">\(\eval{\dfdxn{y}{x}{2}}{x}{1}=0\text{,}\)</span> <span class="process-math">\(\dfdxn{y}{x}{2}\gt0\)</span> for <span class="process-math">\(x\)</span> in <span class="process-math">\((0,1)\text{,}\)</span> <span class="process-math">\(\dfdxn{y}{x}{2}\lt0\)</span> for <span class="process-math">\(x\)</span> in <span class="process-math">\((-\infty,0)\text{,}\)</span> <span class="process-math">\(\dfdxn{y}{x}{2}\lt0\)</span> for <span class="process-math">\(x\)</span> in <span class="process-math">\((1,\infty)\text{,}\)</span>
-</div></article><article class="task exercise-like" id="SECTIONgraph-without-form-6-6"><h5 class="heading"><span class="codenumber">(e)</span></h5>
-<div class="para" id="SECTIONgraph-without-form-6-6-1-1">
-<span class="process-math">\(y(3)=7\text{,}\)</span> <span class="process-math">\(\dfdx{y}{x}=1\text{,}\)</span> for <span class="process-math">\(x\lt 3\text{,}\)</span> <span class="process-math">\(\dfdx{y}{x}=-1\text{,}\)</span> for <span class="process-math">\(x\gt 3\)</span>
-</div></article><article class="task exercise-like" id="SECTIONgraph-without-form-6-7"><h5 class="heading"><span class="codenumber">(f)</span></h5>
-<div class="para" id="SECTIONgraph-without-form-6-7-1-1">
-<span class="process-math">\(y(-x)=y(x)\)</span> for all <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(y(0)=1\text{,}\)</span> <span class="process-math">\(\dfdxat{y}{x}{0}=0\text{,}\)</span> <span class="process-math">\(\dfdxat{y}{x}{2}=0\text{,}\)</span> <span class="process-math">\(\dfdx{y}{x}\gt0\text{,}\)</span> for <span class="process-math">\(0\lt x\lt2\)</span> <span class="process-math">\(\dfdx{y}{x}\lt0\text{,}\)</span> for <span class="process-math">\(x\gt2\)</span> <span class="process-math">\(\eval{\dfdxn{y}{x}{2}}{x}{1}=0,\)</span> <span class="process-math">\(\dfdxn{y}{x}{2}\gt0\)</span> for <span class="process-math">\(x\)</span> in <span class="process-math">\((0,1)\text{,}\)</span> <span class="process-math">\(\dfdxn{y}{x}{2}\lt0\)</span> for <span class="process-math">\(x\)</span> in <span class="process-math">\((1,\infty)\)</span>
-</div></article><article class="task exercise-like" id="SECTIONgraph-without-form-6-8"><h5 class="heading"><span class="codenumber">(g)</span></h5>
-<div class="para" id="SECTIONgraph-without-form-6-8-1-1">
-<span class="process-math">\(y(-x)=-y(x)\text{,}\)</span> for all <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(\dfdxat{y}{x}{0}=0\text{,}\)</span> <span class="process-math">\(\dfdxat{y}{x}{2}=0\text{,}\)</span> <span class="process-math">\(\dfdx{y}{x}\gt0\text{,}\)</span> for <span class="process-math">\(0\lt x \lt2\text{,}\)</span> <span class="process-math">\(\geneval{\dfdx{y}{x}}{x\gt2}\lt0\text{,}\)</span> <span class="process-math">\(\geneval{\dfdxn{y}{x}{2}}{x=1}=0\text{,}\)</span> <span class="process-math">\(\dfdxn{y}{x}{2}\gt0\text{,}\)</span> for <span class="process-math">\(0\lt x\lt1\text{,}\)</span> <span class="process-math">\(\dfdxn{y}{x}{2}\lt0\)</span> for <span class="process-math">\(x\gt1\text{.}\)</span>
-</div></article><article class="task exercise-like" id="SECTIONgraph-without-form-6-9"><h5 class="heading"><span class="codenumber">(h)</span></h5>
-<div class="para" id="SECTIONgraph-without-form-6-9-1-1">For this problem we restrict the domain to the interval <span class="process-math">\([0,2\pi]\text{.}\)</span> <span class="process-math">\(y(0)=y(2\pi)=-2\text{,}\)</span> <span class="process-math">\(y(\pi)=2\text{,}\)</span> <span class="process-math">\(\dfdxat{y}{x}{0}=\dfdxat{y}{x}{\pi}=\dfdxat{y}{x}{2\pi}=0,\)</span> <span class="process-math">\(\dfdx{y}{x}\gt0\text{,}\)</span> for  <span class="process-math">\(0\lt  x\lt \pi\text{,}\)</span> <span class="process-math">\(\dfdx{y}{x}\lt0\text{,}\)</span> for <span class="process-math">\(\pi\lt x\lt 2\pi\text{,}\)</span> <span class="process-math">\(\eval{\dfdxn{y}{x}{2}}{x}{\frac{\pi}{2}} =
-\eval{\dfdxn{y}{x}{2}}{x}{\frac{3\pi}{2}}=0\text{,}\)</span> <span class="process-math">\(\dfdxn{y}{x}{2}\gt0\)</span> for <span class="process-math">\(0\lt x \lt\frac{\pi}{2}\text{,}\)</span> <span class="process-math">\(\dfdxn{y}{x}{2}\gt0\)</span> for <span class="process-math">\(\frac{3\pi}{2} \lt x\lt2\pi\text{,}\)</span> <span class="process-math">\(\dfdxn{y}{x}{2}\lt0\)</span> for <span class="process-math">\(\frac{\pi}{2}\lt x \lt \frac{3\pi}{2}\)</span>
-</div></article></article><div class="para" id="SECTIONgraph-without-form-7">In <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "SECwitch-agnesi-inverse" missing or not unique]</code>) we found the graph of <span class="process-math">\(\inverse\tan(x)\)</span> by examining the graph of its derivative, the Witch of Agnesi, The procedure we used in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "SECwitch-agnesi-inverse" missing or not unique]</code>) is quite general. For example, suppose the graph of <span class="process-math">\(\dfdx{y}{x}\)</span> is given below.</div>
-<div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/images/Graphing1.png" class="contained"></div>
-<div class="para" id="SECTIONgraph-without-form-9">Recall that with a graph for <span class="process-math">\(\dfdx{y}{x}\text{,}\)</span> finding where <span class="process-math">\(y\)</span> is increasing or <span class="process-math">\(y\)</span> is decreasing is just a matter of determining where the derivative is positive (above the <span class="process-math">\(x\)</span> axis) or negative (below the <span class="process-math">\(x\)</span> axis). Similarly the concavity of the graph of <span class="process-math">\(y(x)\)</span> can be determined by finding where <span class="process-math">\(\dfdx{y}{x} = y^\prime(x)\)</span> is increasing (concave upward) and decreasing (concave downward). Given the graph of <span class="process-math">\(\dfdx{y}{x}\)</span> at the right, we can produce the following tables.</div>
-<div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/images/GrWiGrDer.png" class="contained"></div>
-<div class="para" id="SECTIONgraph-without-form-11">From the data in our tables we see that the graph of <span class="process-math">\(y\)</span> looks something like this.</div>
-<div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/images/Optimization5.png" class="contained"></div>
-<article class="problem example-like" id="SECTIONgraph-without-form-13"><h4 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">10.10</span><span class="period">.</span>
-</h4>
-<div class="introduction" id="SECTIONgraph-without-form-13-1"><div class="para" id="SECTIONgraph-without-form-13-1-1">Each of the following graphs is the derivative of some function. Find the shape of the graph of the function. % \comment{You</div></div>
-<article class="task exercise-like" id="SECTIONgraph-without-form-13-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="SECTIONgraph-without-form-13-2-1-1">\includegraphics*[height=1.4in,width=1.4in]{../Figures/Dgraph1}</div></article><article class="task exercise-like" id="SECTIONgraph-without-form-13-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="SECTIONgraph-without-form-13-3-1-1">\includegraphics*[height=1.4in,width=1.4in]{../Figures/Dgraph2}</div></article><article class="task exercise-like" id="SECTIONgraph-without-form-13-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<div class="para" id="SECTIONgraph-without-form-13-4-1-1">\includegraphics*[height=1.4in,width=1.4in]{../Figures/Dgraph3}</div></article><article class="task exercise-like" id="SECTIONgraph-without-form-13-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
-<div class="para" id="SECTIONgraph-without-form-13-5-1-1">\includegraphics*[height=1.4in,width=1.4in]{../Figures/Dgraph4}</div></article><article class="task exercise-like" id="SECTIONgraph-without-form-13-6"><h5 class="heading"><span class="codenumber">(e)</span></h5>
-<div class="para" id="SECTIONgraph-without-form-13-6-1-1">\includegraphics*[height=1.4in,width=1.4in]{../Figures/Dgraph5}</div></article><article class="task exercise-like" id="SECTIONgraph-without-form-13-7"><h5 class="heading"><span class="codenumber">(f)</span></h5>
-<div class="para" id="SECTIONgraph-without-form-13-7-1-1">\includegraphics*[height=1.4in,width=1.4in]{../Figures/Dgraph6}</div></article><article class="task exercise-like" id="SECTIONgraph-without-form-13-8"><h5 class="heading"><span class="codenumber">(g)</span></h5>
-<div class="para" id="SECTIONgraph-without-form-13-8-1-1">\includegraphics*[height=1.4in,width=1.4in]{../Figures/Dgraph7}</div></article><article class="task exercise-like" id="SECTIONgraph-without-form-13-9"><h5 class="heading"><span class="codenumber">(h)</span></h5>
-<div class="para" id="SECTIONgraph-without-form-13-9-1-1">\includegraphics*[height=1.4in,width=1.4in]{../Figures/Dgraph8}</div></article><article class="task exercise-like" id="SECTIONgraph-without-form-13-10"><h5 class="heading"><span class="codenumber">(i)</span></h5>
-<div class="para" id="SECTIONgraph-without-form-13-10-1-1">\includegraphics*[height=1.4in,width=1.4in]{../Figures/Dgraph9}</div></article><article class="task exercise-like" id="SECTIONgraph-without-form-13-11"><h5 class="heading"><span class="codenumber">(j)</span></h5>
-<div class="para" id="SECTIONgraph-without-form-13-11-1-1">\includegraphics*[height=1.4in,width=1.4in]{../Figures/Dgraph10}</div></article><article class="task exercise-like" id="SECTIONgraph-without-form-13-12"><h5 class="heading"><span class="codenumber">(k)</span></h5>
-<div class="para" id="SECTIONgraph-without-form-13-12-1-1">\includegraphics*[height=1.4in,width=1.4in]{../Figures/Dgraph11}</div></article><article class="task exercise-like" id="SECTIONgraph-without-form-13-13"><h5 class="heading"><span class="codenumber">(l)</span></h5>
-<div class="para" id="SECTIONgraph-without-form-13-13-1-1">\includegraphics*[height=1.4in,width=1.4in]{../Figures/Dgraph12}</div></article></article></section><section class="section" id="SECTIONGraphingWithDeriv"><h3 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">10.3</span><span class="space"> </span><span class="title">Graphing with a Formula for  <span class="process-math">\(\dfdx{y}{x}\)</span></span>
-</h3>
-<section class="subsection" id="SUBSECTIONDerivDepOnxAlone"><h4 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">10.3.1</span><span class="space"> </span><span class="title">When  <span class="process-math">\(\dfdx{y}{x}\)</span> Depends on <span class="process-math">\(x\)</span> alone</span>
-</h4>
-<article class="example example-like" id="SUBSECTIONDerivDepOnxAlone-2"><h5 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">10.11</span><span class="period">.</span><span class="space"> </span><span class="title">h.</span>
-</h5> <div class="para logical" id="SUBSECTIONDerivDepOnxAlone-2-2">
-<div class="para">Consider the IVP,</div>
-<div class="displaymath process-math">
+<ol class="lower-roman">
+<li id="no-label-1-1"><div class="para logical" id="no-label-1-1-1">
+<div class="para">Confirm that the derivative of the function in <a href="" class="xref" data-knowl="./knowl/xref/EXAMPLEAsym1.html" title="Example 10.6: ">Example 10.6</a> is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EXAMPLEAsym1.html">
 \begin{equation*}
-\dfdx{y}{t}=t(4-t),\ \         y(0)=0.
+\dfdx{y}{x} =y^\prime(x)= \frac{4x(1-x^4)}{(1+x^4)^2}.
 \end{equation*}
 </div>
-<div class="para">In Integral Calculus (probably your next math course) you will learn how to find <span class="process-math">\(y(t)\)</span> explicitly. For now we will be satisfied with sketching an approximate graph of <span class="process-math">\(y(t)\text{.}\)</span> Setting <span class="process-math">\(\dfdx{y}{t}=0\)</span> and solving we see that <span class="process-math">\(t=0\)</span> and <span class="process-math">\(t=4\)</span> are the POTPs for <span class="process-math">\(y(t)\text{.}\)</span>  Thus on each of the intervals <span class="process-math">\((-\infty,0)\text{,}\)</span> <span class="process-math">\((0,4)\text{,}\)</span> and <span class="process-math">\((4,\infty)\)</span> the graph of <span class="process-math">\(y(t)\)</span> is either always increasing or always decreasing. We tabulate this information as follows: \begin{center} \begin{tabular}[h]{|c||c|c|c|c|c|}\hline POTP\amp \amp 0\amp  \amp 4\amp  \bigstrut  \hline Interval\amp <span class="process-math">\((-\infty,0)\)</span>\amp \amp  <span class="process-math">\((0,4)\)</span>\amp \amp  <span class="process-math">\((4,\infty)\)</span>\bigstrut  \hline\hline <span class="process-math">\(y^\prime(t)\)</span>\amp  <span class="process-math">\(\lt 0\)</span>\amp \amp  <span class="process-math">\(\gt 0\)</span>\amp \amp  <span class="process-math">\(\lt 0\)</span>\bigstrut <span class="process-math">\(y(t)\)</span> \amp  <span class="process-math">\(\searrow \)</span>\amp 0\amp  <span class="process-math">\(\nearrow \)</span> \amp <span class="process-math">\(y(4)=\text{?}\)</span>\amp <span class="process-math">\(\searrow \)</span>\bigstrut \amp  \amp \rotatebox{90}{{\tiny {\tiny local min}}}\amp \amp \rotatebox{90}{{\tiny {\tiny local max}}}\amp \bigstrut \hline \end{tabular} \end{center} Based on this table, we can see that <span class="process-math">\(y(0)=0\)</span> is a local minimum and <span class="process-math">\(y(4)\)</span> is a local maximum. Observe that we do not know the value of <span class="process-math">\(y(4)\text{,}\)</span> only that it must be a local maximum. Nor do we have any way to determine the value of <span class="process-math">\(y(4)\)</span> in this problem. We  proceed in a similar fashion to determine concavity. The second derivative is</div>
+</div></li>
+<li id="no-label-1-2"><div class="para logical" id="no-label-1-2-1">
+<div class="para">Confirm that the second derivative of the function in <a href="" class="xref" data-knowl="./knowl/xref/EXAMPLEAsym1.html" title="Example 10.6: ">Example 10.6</a> is:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EXAMPLEAsym1.html">
+\begin{equation*}
+\dfdxn{y}{x}{2} =
+y^{\prime\prime}(x)= \frac{4(1-12x^4+3x^8)}{(1+x^4)^3}\text{.}
+\end{equation*}
+</div>
+</div></li>
+<li id="no-label-1-3"><div class="para" id="no-label-1-3-1">Use an appropriate computational tool, or Newton’s Method, to show that the PITPs of <span class="process-math">\(y(x)\)</span> are: <span class="process-math">\(x\approx -1.41\text{,}\)</span> <span class="process-math">\(x\approx -0.54\text{,}\)</span> <span class="process-math">\(x\approx 0.54 \text{,}\)</span> and <span class="process-math">\(x\approx 1.41 \text{.}\)</span>
+</div></li>
+<li id="no-label-1-4"><div class="para" id="no-label-1-4-1">The PITPs in part (c) can actually be computed exactly. Find the exact solutions and confirm the approximations.</div></li>
+</ol></article><div class="para" id="SECTIONgraph-with-form-24">Next we  set up a table to analyze the concavity of <span class="process-math">\(y=\frac{2+2x^2+2x^4}{1+x^4}\text{.}\)</span>
+</div>
+<figure class="table table-like" id="TABLESDTChart1"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">10.9<span class="period">.</span></span><span class="space"> </span>The Second Derivative Test Analysis</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b3 r0 l0 t0 lines">Interval</td>
+<td class="c m b3 r0 l0 t0 lines"><span class="process-math">\((-\infty,-1.41)\)</span></td>
+<td class="c m b3 r0 l0 t0 lines"><span class="process-math">\((-1.41,  -0.54)\)</span></td>
+<td class="c m b3 r0 l0 t0 lines"><span class="process-math">\(( -0.54,  0.54)\)</span></td>
+<td class="c m b3 r0 l0 t0 lines"><span class="process-math">\(( 0.54,  1.41)\)</span></td>
+<td class="c m b3 r0 l0 t0 lines"><span class="process-math">\(( 1.41, \infty)\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(y^{\prime\prime}(x)\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\gt 0\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\lt 0\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\gt 0\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\lt 0\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\gt 0\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(y(x)\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\bigcup\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\bigcap\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\bigcup\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\bigcap\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\bigcup\)</span></td>
+</tr>
+</table></div></figure><div class="para" id="SECTIONgraph-with-form-26">From <a href="" class="xref" data-knowl="./knowl/xref/TABLESDTChart1.html" title="Table 10.9: The Second Derivative Test Analysis">Table 10.9</a> we see that <span class="process-math">\(y(x)\)</span> has inflection points at <span class="process-math">\(x=-1.41\text{,}\)</span> <span class="process-math">\(x=-0.54\text{,}\)</span> <span class="process-math">\(0.54\text{,}\)</span> and <span class="process-math">\(x=1.41\text{.}\)</span>
+</div>
+<div class="para" id="SECTIONgraph-with-form-27">      Combining the data in this table with the data in our previous table it would seem reasonable to infer that the graph of our function looks like the one below.</div>
+<div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/images/GraphingWith14.png" class="contained"></div>
+<div class="para" id="SECTIONgraph-with-form-29">Does this graph above seem complete to you now?  Obviously it is not, or we would not have asked, but do you see what is missing?  What happens to <span class="process-math">\(y(x)\)</span> as <span class="process-math">\(x\)</span> is very far from zero either the positive or the negative direction? Does <span class="process-math">\(y(x)\)</span> continue to drop? Or does it eventually level off? We’re not quite ready to talk about this yet, so give it some thought and take you best guess. We’ll come back and finish this example in <a href="CHAPTERlimits-lhop-rule.html#SECTIONhoriz-asympt-as" class="internal" title='Section 12.1: Horizontal Asymptotes as Limits "at Infinity"'>Section 12.1</a> after we’ve developed some essential notation and definitions.</div>
+<article class="exercise exercise-like" id="SECTIONgraph-with-form-30"><h4 class="heading">
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">10.10</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="SECTIONgraph-with-form-30-1">
+<div class="para">Use the first and second derivatives to sketch the  graph of each of the following functions, then  sketch it again using graphing software. Resolve any discrepancies between the two graphs.</div>
+<ol class="lower-roman cols2">
+<li id="SECTIONgraph-with-form-30-1-1-1"><div class="para" id="SECTIONgraph-with-form-30-1-1-1-1"><span class="process-math">\(\displaystyle y=e^x \)</span></div></li>
+<li id="SECTIONgraph-with-form-30-1-1-2"><div class="para" id="SECTIONgraph-with-form-30-1-1-2-1"><span class="process-math">\(\displaystyle y=\ln(x) \)</span></div></li>
+<li id="SECTIONgraph-with-form-30-1-1-3"><div class="para" id="SECTIONgraph-with-form-30-1-1-3-1"><span class="process-math">\(\displaystyle y=\sin(x) \)</span></div></li>
+<li id="SECTIONgraph-with-form-30-1-1-4"><div class="para" id="SECTIONgraph-with-form-30-1-1-4-1"><span class="process-math">\(\displaystyle y=\cos(x) \)</span></div></li>
+<li id="SECTIONgraph-with-form-30-1-1-5"><div class="para" id="SECTIONgraph-with-form-30-1-1-5-1"><span class="process-math">\(\displaystyle y=\sin(x)\cos(x) \)</span></div></li>
+<li id="SECTIONgraph-with-form-30-1-1-6"><div class="para" id="SECTIONgraph-with-form-30-1-1-6-1"><span class="process-math">\(\displaystyle y=xe^x\)</span></div></li>
+<li id="SECTIONgraph-with-form-30-1-1-7"><div class="para" id="SECTIONgraph-with-form-30-1-1-7-1"><span class="process-math">\(\displaystyle y=\frac{e^x-e^{-x}}{2} \)</span></div></li>
+<li id="SECTIONgraph-with-form-30-1-1-8"><div class="para" id="SECTIONgraph-with-form-30-1-1-8-1"><span class="process-math">\(\displaystyle y=\frac{e^x+e^{-x}}{2} \)</span></div></li>
+<li id="SECTIONgraph-with-form-30-1-1-9"><div class="para" id="SECTIONgraph-with-form-30-1-1-9-1"><span class="process-math">\(\displaystyle y=x(x-1)\)</span></div></li>
+<li id="SECTIONgraph-with-form-30-1-1-10"><div class="para" id="SECTIONgraph-with-form-30-1-1-10-1"><span class="process-math">\(\displaystyle y=x^2(x-1) \)</span></div></li>
+<li id="SECTIONgraph-with-form-30-1-1-11"><div class="para" id="SECTIONgraph-with-form-30-1-1-11-1"><span class="process-math">\(\displaystyle y=x^2(x^2-1) \)</span></div></li>
+<li id="SECTIONgraph-with-form-30-1-1-12"><div class="para" id="SECTIONgraph-with-form-30-1-1-12-1"><span class="process-math">\(\displaystyle y=x(x-1)(x-2) \)</span></div></li>
+<li id="SECTIONgraph-with-form-30-1-1-13"><div class="para" id="SECTIONgraph-with-form-30-1-1-13-1"><span class="process-math">\(\displaystyle y=x\sqrt[3]{x-8} \)</span></div></li>
+<li id="SECTIONgraph-with-form-30-1-1-14"><div class="para" id="SECTIONgraph-with-form-30-1-1-14-1"><span class="process-math">\(\displaystyle y=\sqrt[3]{x}{(x-8)} \)</span></div></li>
+</ol>
+</div></article></section><section class="section" id="SECTIONgraph-without-form"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">10.2</span><span class="space"> </span><span class="title">Graphing Without Formulas</span>
+</h3>
+<div class="para" id="SECTIONgraph-without-form-2">At it’s most fundamental a function is just a rule for associating a given input with its unique output. For example, we could specify a particular function by writing “take two copies of the input, multiply them together and return the result as output.”  This is a complete and valid description but it is cumbersome to use.  This is why we’ve  invented notation that allows us to write the description succinctly as the formula <span class="process-math">\(f(x)=x^2\text{.}\)</span> It is easy to sketch an accurate graph of a function that is given as a formula, especially using modern technology, because the formula tells you the steps for finding the output for any given input.</div>
+<div class="para" id="SECTIONgraph-without-form-3">As mentioned earlier, formulas are the Holy Grail of modern science and business.  But, despite what you have seen in your mathematics education so far, very often we don’t have such a formula. This is the usual situation. If you own a trout fishery business for example, you would love to have a formula that tells you how many trout your fishery will have on any given day of the year. With such a formula you could make plans for your business well into the future.  We will talk about this in more detail in the next section.</div>
+<article class="example example-like" id="EXAMPLEGraphWOFormula"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">10.11</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="EXAMPLEGraphWOFormula-1">
+<div class="para">For example, suppose we have the following information about a certain function.  Can we sketch a reasonable graph of the function?</div>
+<ul class="disc cols3">
+<li id="EXAMPLEGraphWOFormula-1-1-1"><div class="para" id="p-derived-EXAMPLEGraphWOFormula-1-1-1"><span class="process-math">\(\displaystyle y(1)=2 \)</span></div></li>
+<li id="EXAMPLEGraphWOFormula-1-1-2"><div class="para" id="p-derived-EXAMPLEGraphWOFormula-1-1-2"><span class="process-math">\(\displaystyle \dfdxat{y}{x}{1}=0\)</span></div></li>
+<li id="EXAMPLEGraphWOFormula-1-1-3"><div class="para" id="p-derived-EXAMPLEGraphWOFormula-1-1-3"><span class="process-math">\(\displaystyle \dfdxat{y}{x}{5}=0\)</span></div></li>
+<li id="EXAMPLEGraphWOFormula-1-1-4"><div class="para" id="p-derived-EXAMPLEGraphWOFormula-1-1-4"><span class="process-math">\(\displaystyle \eval{\dfdxn{y}{x}{2}}{x=3}{}=0\)</span></div></li>
+<li id="EXAMPLEGraphWOFormula-1-1-5"><div class="para" id="p-derived-EXAMPLEGraphWOFormula-1-1-5"><span class="process-math">\(\displaystyle \eval{\dfdxn{y}{x}{2}}{x=5}{}=0\)</span></div></li>
+<li id="EXAMPLEGraphWOFormula-1-1-6">
+<div class="para" id="EXAMPLEGraphWOFormula-1-1-6-1"><span class="process-math">\(\dfdx{y}{x}\gt0\)</span></div>
+<div class="para" id="EXAMPLEGraphWOFormula-1-1-6-2">for all <span class="process-math">\(x\lt1\)</span>
+</div>
+</li>
+<li id="EXAMPLEGraphWOFormula-1-1-7">
+<div class="para" id="EXAMPLEGraphWOFormula-1-1-7-1"><span class="process-math">\(\dfdx{y}{x}\lt0\)</span></div>
+<div class="para" id="EXAMPLEGraphWOFormula-1-1-7-2">for <span class="process-math">\(1\lt x\lt 5\)</span>
+</div>
+<div class="para" id="EXAMPLEGraphWOFormula-1-1-7-3">and <span class="process-math">\(x\gt5\)</span>
+</div>
+</li>
+<li id="EXAMPLEGraphWOFormula-1-1-8">
+<div class="para" id="EXAMPLEGraphWOFormula-1-1-8-1"><span class="process-math">\(\dfdxn{y}{x}{2}\gt0\)</span></div>
+<div class="para" id="EXAMPLEGraphWOFormula-1-1-8-2">for <span class="process-math">\(3\lt x\lt5\)</span>
+</div>
+</li>
+<li id="EXAMPLEGraphWOFormula-1-1-9">
+<div class="para" id="EXAMPLEGraphWOFormula-1-1-9-1"><span class="process-math">\(\dfdxn{y}{x}{2}\lt0\)</span></div>
+<div class="para" id="EXAMPLEGraphWOFormula-1-1-9-2">for <span class="process-math">\(x\lt3\)</span>
+</div>
+<div class="para" id="EXAMPLEGraphWOFormula-1-1-9-3">and <span class="process-math">\(x\gt5\)</span>
+</div>
+</li>
+</ul>
+<div class="para">In a sense this is easier than the previous problems, since intervals of increase, decrease, concave up, and concave down have already been determined for us.  For example, here are the tables for each.</div>
+</div> <figure class="table table-like" id="TABLEFDerivTest"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">10.12<span class="period">.</span></span><span class="space"> </span>POTPs</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b3 r0 l0 t0 lines">Interval</td>
+<td class="c m b3 r0 l0 t0 lines"><span class="process-math">\((-\infty, 1)\)</span></td>
+<td class="c m b3 r0 l0 t0 lines"><span class="process-math">\((1,5)\)</span></td>
+<td class="c m b3 r0 l0 t0 lines"><span class="process-math">\((5,\infty )\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\dfdx{y}{x} \)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\dfdx{y}{x}\gt0\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\dfdx{y}{x}\lt0\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\dfdx{y}{x}\lt0\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(y\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\nearrow\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\searrow\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\searrow\)</span></td>
+</tr>
+</table></div></figure> <figure class="table table-like" id="TABLESDerivTest"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">10.13<span class="period">.</span></span><span class="space"> </span>PITPs</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b3 r0 l0 t0 lines">Interval</td>
+<td class="c m b3 r0 l0 t0 lines"><span class="process-math">\((-\infty, 3)\)</span></td>
+<td class="c m b3 r0 l0 t0 lines"><span class="process-math">\((3,5)\)</span></td>
+<td class="c m b3 r0 l0 t0 lines"><span class="process-math">\((5,\infty )\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\dfdxn{y}{x}{2} \)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\dfdxn{y}{x}{2}\lt0\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\dfdxn{y}{x}{2}\gt0\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\dfdxn{y}{x}{2}\lt0\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(y\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\bigcap\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\bigcup\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\bigcap\)</span></td>
+</tr>
+</table></div></figure>                              </article><article class="problem example-like" id="no-label"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">10.14</span><span class="period">.</span>
+</h4>
+<div class="para" id="no-label-1-1">In <a href="" class="xref" data-knowl="./knowl/xref/EXAMPLEGraphWOFormula.html" title="Example 10.11">Example 10.11</a> we have <span class="process-math">\(\dfdxat{y}{x}{5}=0\)</span> and <span class="process-math">\(\dfdx{y}{x}\lt 0\)</span> on the intervals <span class="process-math">\((1,5)\)</span> and <span class="process-math">\((5,\infty)\text{.}\)</span> Given that <span class="process-math">\(\dfdxat{y}{x}{5}=0\)</span> and <span class="process-math">\(\dfdxn{y}{x}{2}\lt 0\)</span> when <span class="process-math">\(x\gt 5\text{,}\)</span> did we really need to specify that <span class="process-math">\(\dfdx{y}{x}\lt0\)</span> on the interval <span class="process-math">\((5,\infty)\text{?}\)</span>
+</div></article><div class="para" id="SECTIONgraph-without-form-6">Based on the information given, the function <span class="process-math">\(y=y(x)\)</span> has a local maximum at <span class="process-math">\(x=1\)</span> and inflection points at <span class="process-math">\(x=3\)</span> and <span class="process-math">\(x=5.\)</span> A sketch of the graph might look something  like  this:</div>
+<div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="external/images/Optimization6.png" class="contained"></div>
+<article class="problem example-like" id="SECTIONgraph-without-form-8"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">10.15</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="SECTIONgraph-without-form-8-1"><div class="para" id="SECTIONgraph-without-form-8-1-1">Sketch the graph of <span class="process-math">\(y=y(x)\)</span> which satisfies the given requirements.</div></div>
+<article class="task exercise-like" id="SECTIONgraph-without-form-8-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para logical" id="SECTIONgraph-without-form-8-2-1-1"><ul class="disc cols2">
+<li id="SECTIONgraph-without-form-8-2-1-1-1-1"><div class="para" id="p-derived-SECTIONgraph-without-form-8-2-1-1-1-1"><span class="process-math">\(y(-8)=10\text{,}\)</span></div></li>
+<li id="SECTIONgraph-without-form-8-2-1-1-1-2"><div class="para" id="p-derived-SECTIONgraph-without-form-8-2-1-1-1-2">
+<span class="process-math">\(\dfdx{y}{x}\lt0\)</span> for all <span class="process-math">\(x\)</span>
+</div></li>
+<li id="SECTIONgraph-without-form-8-2-1-1-1-3"><div class="para" id="p-derived-SECTIONgraph-without-form-8-2-1-1-1-3"><span class="process-math">\(\displaystyle \dfdxn{y}{x}{2}\gt0\)</span></div></li>
+</ul></div></article><article class="task exercise-like" id="SECTIONgraph-without-form-8-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para logical" id="SECTIONgraph-without-form-8-3-1-1"><ul class="disc cols2">
+<li id="SECTIONgraph-without-form-8-3-1-1-1-1"><div class="para" id="p-derived-SECTIONgraph-without-form-8-3-1-1-1-1"><span class="process-math">\(y(0)=0\text{,}\)</span></div></li>
+<li id="SECTIONgraph-without-form-8-3-1-1-1-2"><div class="para" id="p-derived-SECTIONgraph-without-form-8-3-1-1-1-2"><span class="process-math">\(\geneval{\dfdx{y}{x}}{x=0}=0\text{,}\)</span></div></li>
+<li id="SECTIONgraph-without-form-8-3-1-1-1-3"><div class="para" id="p-derived-SECTIONgraph-without-form-8-3-1-1-1-3"><span class="process-math">\(\geneval{\dfdx{y}{x}}{x\neq0}\gt0\text{,}\)</span></div></li>
+<li id="SECTIONgraph-without-form-8-3-1-1-1-4"><div class="para" id="p-derived-SECTIONgraph-without-form-8-3-1-1-1-4">
+<span class="process-math">\(\dfdxn{y}{x}{2}\lt0\)</span> for <span class="process-math">\(x\lt0\text{,}\)</span>
+</div></li>
+<li id="SECTIONgraph-without-form-8-3-1-1-1-5"><div class="para" id="p-derived-SECTIONgraph-without-form-8-3-1-1-1-5">
+<span class="process-math">\(\dfdxn{y}{x}{2}\gt0\)</span> for <span class="process-math">\(x\gt0\text{,}\)</span>
+</div></li>
+</ul></div></article><article class="task exercise-like" id="SECTIONgraph-without-form-8-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para logical" id="SECTIONgraph-without-form-8-4-1-1"><ul class="disc cols2">
+<li id="SECTIONgraph-without-form-8-4-1-1-1-1"><div class="para" id="p-derived-SECTIONgraph-without-form-8-4-1-1-1-1">
+<span class="process-math">\(-\frac{\pi}{2}\lt y\lt\frac{\pi}{2}\)</span> for all <span class="process-math">\(x\text{,}\)</span>
+</div></li>
+<li id="SECTIONgraph-without-form-8-4-1-1-1-2"><div class="para" id="p-derived-SECTIONgraph-without-form-8-4-1-1-1-2"><span class="process-math">\(y(0)=0\text{,}\)</span></div></li>
+<li id="SECTIONgraph-without-form-8-4-1-1-1-3"><div class="para" id="p-derived-SECTIONgraph-without-form-8-4-1-1-1-3"><span class="process-math">\(\dfdxat{y}{x}{0}=1\text{,}\)</span></div></li>
+<li id="SECTIONgraph-without-form-8-4-1-1-1-4"><div class="para" id="p-derived-SECTIONgraph-without-form-8-4-1-1-1-4">
+<span class="process-math">\(\dfdx{y}{x}\gt0\)</span> for all <span class="process-math">\(x\text{,}\)</span>
+</div></li>
+<li id="SECTIONgraph-without-form-8-4-1-1-1-5"><div class="para" id="p-derived-SECTIONgraph-without-form-8-4-1-1-1-5">
+<span class="process-math">\(\dfdxn{y}{x}{2}\gt0\text{,}\)</span> for <span class="process-math">\(x\lt0\text{,}\)</span>
+</div></li>
+<li id="SECTIONgraph-without-form-8-4-1-1-1-6"><div class="para" id="p-derived-SECTIONgraph-without-form-8-4-1-1-1-6">
+<span class="process-math">\(\dfdxn{y}{x}{2}\lt0\text{,}\)</span> for <span class="process-math">\(x\gt0\text{,}\)</span>
+</div></li>
+</ul></div></article><article class="task exercise-like" id="SECTIONgraph-without-form-8-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para logical" id="SECTIONgraph-without-form-8-5-1-1"><ul class="disc cols2">
+<li id="SECTIONgraph-without-form-8-5-1-1-1-1"><div class="para" id="p-derived-SECTIONgraph-without-form-8-5-1-1-1-1"><span class="process-math">\(y(0)=0\text{,}\)</span></div></li>
+<li id="SECTIONgraph-without-form-8-5-1-1-1-2"><div class="para" id="p-derived-SECTIONgraph-without-form-8-5-1-1-1-2">
+<span class="process-math">\(\dfdxat{y}{x}{0}\)</span>  does not exist,</div></li>
+<li id="SECTIONgraph-without-form-8-5-1-1-1-3"><div class="para" id="p-derived-SECTIONgraph-without-form-8-5-1-1-1-3"><span class="process-math">\(\geneval{\dfdx{y}{x}}{x\neq0}\gt0\text{,}\)</span></div></li>
+<li id="SECTIONgraph-without-form-8-5-1-1-1-4"><div class="para" id="p-derived-SECTIONgraph-without-form-8-5-1-1-1-4">
+<span class="process-math">\(\dfdxn{y}{x}{2}\gt0\text{,}\)</span> for <span class="process-math">\(x\lt0\)</span>
+</div></li>
+<li id="SECTIONgraph-without-form-8-5-1-1-1-5"><div class="para" id="p-derived-SECTIONgraph-without-form-8-5-1-1-1-5">
+<span class="process-math">\(\dfdxn{y}{x}{2}\lt0\text{,}\)</span> for <span class="process-math">\(x\gt0\)</span>
+</div></li>
+</ul></div></article><article class="task exercise-like" id="SECTIONgraph-without-form-8-6"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<div class="para logical" id="SECTIONgraph-without-form-8-6-1-1"><ul class="disc cols2">
+<li id="SECTIONgraph-without-form-8-6-1-1-1-1"><div class="para" id="p-derived-SECTIONgraph-without-form-8-6-1-1-1-1">
+<span class="process-math">\(y\gt0\)</span> for all <span class="process-math">\(x\text{,}\)</span>
+</div></li>
+<li id="SECTIONgraph-without-form-8-6-1-1-1-2"><div class="para" id="p-derived-SECTIONgraph-without-form-8-6-1-1-1-2"><span class="process-math">\(y(0)=1\text{,}\)</span></div></li>
+<li id="SECTIONgraph-without-form-8-6-1-1-1-3"><div class="para" id="p-derived-SECTIONgraph-without-form-8-6-1-1-1-3">
+<span class="process-math">\(\dfdx{y}{x}\gt0\)</span> for all <span class="process-math">\(x\text{,}\)</span>
+</div></li>
+<li id="SECTIONgraph-without-form-8-6-1-1-1-4"><div class="para" id="p-derived-SECTIONgraph-without-form-8-6-1-1-1-4">
+<span class="process-math">\(\dfdxn{y}{x}{2}\gt0\)</span> for all <span class="process-math">\(x\text{.}\)</span>
+</div></li>
+</ul></div></article><article class="task exercise-like" id="SECTIONgraph-without-form-8-7"><h5 class="heading"><span class="codenumber">(f)</span></h5>
+<div class="para logical" id="SECTIONgraph-without-form-8-7-1-1"><ul class="disc cols2">
+<li id="SECTIONgraph-without-form-8-7-1-1-1-1"><div class="para" id="p-derived-SECTIONgraph-without-form-8-7-1-1-1-1"><span class="process-math">\(y(0)=0\text{,}\)</span></div></li>
+<li id="SECTIONgraph-without-form-8-7-1-1-1-2"><div class="para" id="p-derived-SECTIONgraph-without-form-8-7-1-1-1-2"><span class="process-math">\(\dfdxat{y}{x}{0}=0\text{,}\)</span></div></li>
+<li id="SECTIONgraph-without-form-8-7-1-1-1-3"><div class="para" id="p-derived-SECTIONgraph-without-form-8-7-1-1-1-3"><span class="process-math">\(\displaystyle \dfdxat{y}{x}{2}=0,\)</span></div></li>
+<li id="SECTIONgraph-without-form-8-7-1-1-1-4"><div class="para" id="p-derived-SECTIONgraph-without-form-8-7-1-1-1-4">
+<span class="process-math">\(\dfdx{y}{x}\gt0\)</span> for <span class="process-math">\(x\)</span> in <span class="process-math">\((-\infty,0)\text{,}\)</span>
+</div></li>
+<li id="SECTIONgraph-without-form-8-7-1-1-1-5"><div class="para" id="p-derived-SECTIONgraph-without-form-8-7-1-1-1-5">
+<span class="process-math">\(\dfdx{y}{x}\gt0\)</span> for <span class="process-math">\(x\)</span> in <span class="process-math">\((0,2)\text{,}\)</span>
+</div></li>
+<li id="SECTIONgraph-without-form-8-7-1-1-1-6"><div class="para" id="p-derived-SECTIONgraph-without-form-8-7-1-1-1-6">
+<span class="process-math">\(\dfdx{y}{x}\lt0\)</span> for <span class="process-math">\(x\gt2\text{,}\)</span>
+</div></li>
+<li id="SECTIONgraph-without-form-8-7-1-1-1-7"><div class="para" id="p-derived-SECTIONgraph-without-form-8-7-1-1-1-7"><span class="process-math">\(\eval{\dfdxn{y}{x}{2}}{x=0}{}=0\text{,}\)</span></div></li>
+<li id="SECTIONgraph-without-form-8-7-1-1-1-8"><div class="para" id="p-derived-SECTIONgraph-without-form-8-7-1-1-1-8"><span class="process-math">\(\eval{\dfdxn{y}{x}{2}}{x=1}{}=0\text{,}\)</span></div></li>
+<li id="SECTIONgraph-without-form-8-7-1-1-1-9"><div class="para" id="p-derived-SECTIONgraph-without-form-8-7-1-1-1-9">
+<span class="process-math">\(\dfdxn{y}{x}{2}\gt0\)</span> for <span class="process-math">\(x\)</span> in <span class="process-math">\((0,1)\text{,}\)</span>
+</div></li>
+<li id="SECTIONgraph-without-form-8-7-1-1-1-10"><div class="para" id="p-derived-SECTIONgraph-without-form-8-7-1-1-1-10">
+<span class="process-math">\(\dfdxn{y}{x}{2}\lt0\)</span> for <span class="process-math">\(x\)</span> in <span class="process-math">\((-\infty,0)\text{,}\)</span>
+</div></li>
+<li id="SECTIONgraph-without-form-8-7-1-1-1-11"><div class="para" id="p-derived-SECTIONgraph-without-form-8-7-1-1-1-11">
+<span class="process-math">\(\dfdxn{y}{x}{2}\lt0\)</span> for <span class="process-math">\(x\)</span> in <span class="process-math">\((1,\infty)\text{,}\)</span>
+</div></li>
+</ul></div></article><article class="task exercise-like" id="SECTIONgraph-without-form-8-8"><h5 class="heading"><span class="codenumber">(g)</span></h5>
+<div class="para logical" id="SECTIONgraph-without-form-8-8-1-1"><ul class="disc cols2">
+<li id="SECTIONgraph-without-form-8-8-1-1-1-1"><div class="para" id="p-derived-SECTIONgraph-without-form-8-8-1-1-1-1"><span class="process-math">\(y(3)=7\text{,}\)</span></div></li>
+<li id="SECTIONgraph-without-form-8-8-1-1-1-2"><div class="para" id="p-derived-SECTIONgraph-without-form-8-8-1-1-1-2">
+<span class="process-math">\(\dfdx{y}{x}=1\text{,}\)</span> for <span class="process-math">\(x\lt 3\text{,}\)</span>
+</div></li>
+<li id="SECTIONgraph-without-form-8-8-1-1-1-3"><div class="para" id="p-derived-SECTIONgraph-without-form-8-8-1-1-1-3">
+<span class="process-math">\(\dfdx{y}{x}=-1\text{,}\)</span> for <span class="process-math">\(x\gt 3\)</span>
+</div></li>
+</ul></div></article><article class="task exercise-like" id="SECTIONgraph-without-form-8-9"><h5 class="heading"><span class="codenumber">(h)</span></h5>
+<div class="para logical" id="SECTIONgraph-without-form-8-9-1-1"><ul class="disc cols2">
+<li id="SECTIONgraph-without-form-8-9-1-1-1-1"><div class="para" id="p-derived-SECTIONgraph-without-form-8-9-1-1-1-1">
+<span class="process-math">\(y(-x)=y(x)\)</span> for all <span class="process-math">\(x\text{,}\)</span>
+</div></li>
+<li id="SECTIONgraph-without-form-8-9-1-1-1-2"><div class="para" id="p-derived-SECTIONgraph-without-form-8-9-1-1-1-2"><span class="process-math">\(y(0)=1\text{,}\)</span></div></li>
+<li id="SECTIONgraph-without-form-8-9-1-1-1-3"><div class="para" id="p-derived-SECTIONgraph-without-form-8-9-1-1-1-3"><span class="process-math">\(\dfdxat{y}{x}{0}=0\text{,}\)</span></div></li>
+<li id="SECTIONgraph-without-form-8-9-1-1-1-4"><div class="para" id="p-derived-SECTIONgraph-without-form-8-9-1-1-1-4"><span class="process-math">\(\dfdxat{y}{x}{2}=0\text{,}\)</span></div></li>
+<li id="SECTIONgraph-without-form-8-9-1-1-1-5"><div class="para" id="p-derived-SECTIONgraph-without-form-8-9-1-1-1-5">
+<span class="process-math">\(\dfdx{y}{x}\gt0\text{,}\)</span> for <span class="process-math">\(0\lt x\lt2\)</span>
+</div></li>
+<li id="SECTIONgraph-without-form-8-9-1-1-1-6"><div class="para" id="p-derived-SECTIONgraph-without-form-8-9-1-1-1-6">
+<span class="process-math">\(\dfdx{y}{x}\lt0\text{,}\)</span> for <span class="process-math">\(x\gt2\)</span>
+</div></li>
+<li id="SECTIONgraph-without-form-8-9-1-1-1-7"><div class="para" id="p-derived-SECTIONgraph-without-form-8-9-1-1-1-7"><span class="process-math">\(\displaystyle \eval{\dfdxn{y}{x}{2}}{x=1}{}=0,\)</span></div></li>
+<li id="SECTIONgraph-without-form-8-9-1-1-1-8"><div class="para" id="p-derived-SECTIONgraph-without-form-8-9-1-1-1-8">
+<span class="process-math">\(\dfdxn{y}{x}{2}\gt0\)</span> for <span class="process-math">\(x\)</span> in <span class="process-math">\((0,1)\text{,}\)</span>
+</div></li>
+<li id="SECTIONgraph-without-form-8-9-1-1-1-9"><div class="para" id="p-derived-SECTIONgraph-without-form-8-9-1-1-1-9">
+<span class="process-math">\(\dfdxn{y}{x}{2}\lt0\)</span> for <span class="process-math">\(x\)</span> in <span class="process-math">\((1,\infty)\)</span>
+</div></li>
+</ul></div></article><article class="task exercise-like" id="SECTIONgraph-without-form-8-10"><h5 class="heading"><span class="codenumber">(i)</span></h5>
+<div class="para logical" id="SECTIONgraph-without-form-8-10-1-1"><ul class="disc cols2">
+<li id="SECTIONgraph-without-form-8-10-1-1-1-1"><div class="para" id="p-derived-SECTIONgraph-without-form-8-10-1-1-1-1">
+<span class="process-math">\(y(-x)=-y(x)\text{,}\)</span> for all <span class="process-math">\(x\text{,}\)</span>
+</div></li>
+<li id="SECTIONgraph-without-form-8-10-1-1-1-2"><div class="para" id="p-derived-SECTIONgraph-without-form-8-10-1-1-1-2"><span class="process-math">\(\dfdxat{y}{x}{0}=0\text{,}\)</span></div></li>
+<li id="SECTIONgraph-without-form-8-10-1-1-1-3"><div class="para" id="p-derived-SECTIONgraph-without-form-8-10-1-1-1-3"><span class="process-math">\(\dfdxat{y}{x}{2}=0\text{,}\)</span></div></li>
+<li id="SECTIONgraph-without-form-8-10-1-1-1-4"><div class="para" id="p-derived-SECTIONgraph-without-form-8-10-1-1-1-4">
+<span class="process-math">\(\dfdx{y}{x}\gt0\text{,}\)</span> for <span class="process-math">\(0\lt x \lt2\text{,}\)</span>
+</div></li>
+<li id="SECTIONgraph-without-form-8-10-1-1-1-5"><div class="para" id="p-derived-SECTIONgraph-without-form-8-10-1-1-1-5"><span class="process-math">\(\geneval{\dfdx{y}{x}}{x\gt2}\lt0\text{,}\)</span></div></li>
+<li id="SECTIONgraph-without-form-8-10-1-1-1-6"><div class="para" id="p-derived-SECTIONgraph-without-form-8-10-1-1-1-6"><span class="process-math">\(\geneval{\dfdxn{y}{x}{2}}{x=1}=0\text{,}\)</span></div></li>
+<li id="SECTIONgraph-without-form-8-10-1-1-1-7"><div class="para" id="p-derived-SECTIONgraph-without-form-8-10-1-1-1-7">
+<span class="process-math">\(\dfdxn{y}{x}{2}\gt0\text{,}\)</span> for <span class="process-math">\(0\lt x\lt1\text{,}\)</span>
+</div></li>
+<li id="SECTIONgraph-without-form-8-10-1-1-1-8"><div class="para" id="p-derived-SECTIONgraph-without-form-8-10-1-1-1-8">
+<span class="process-math">\(\dfdxn{y}{x}{2}\lt0\)</span> for <span class="process-math">\(x\gt1\text{.}\)</span>
+</div></li>
+</ul></div></article><article class="task exercise-like" id="SECTIONgraph-without-form-8-11"><h5 class="heading"><span class="codenumber">(j)</span></h5>
+<div class="para" id="SECTIONgraph-without-form-8-11-1-1">For this problem we restrict the domain to the interval            <span class="process-math">\([0,2\pi]\text{.}\)</span>
+</div> <div class="para logical" id="SECTIONgraph-without-form-8-11-1-2"><ul class="disc cols2">
+<li id="SECTIONgraph-without-form-8-11-1-2-1-1"><div class="para" id="p-derived-SECTIONgraph-without-form-8-11-1-2-1-1"><span class="process-math">\(y(0)=y(2\pi)=-2\text{,}\)</span></div></li>
+<li id="SECTIONgraph-without-form-8-11-1-2-1-2"><div class="para" id="p-derived-SECTIONgraph-without-form-8-11-1-2-1-2"><span class="process-math">\(y(\pi)=2\text{,}\)</span></div></li>
+<li id="SECTIONgraph-without-form-8-11-1-2-1-3"><div class="para" id="p-derived-SECTIONgraph-without-form-8-11-1-2-1-3">
+<span class="process-math">\(\dfdx{y}{x}\gt0\text{,}\)</span> for  <span class="process-math">\(0\lt  x\lt \pi\text{,}\)</span>
+</div></li>
+<li id="SECTIONgraph-without-form-8-11-1-2-1-4"><div class="para" id="p-derived-SECTIONgraph-without-form-8-11-1-2-1-4"><span class="process-math">\(\displaystyle \dfdxat{y}{x}{0}=\dfdxat{y}{x}{\pi}=\dfdxat{y}{x}{2\pi}=0,\)</span></div></li>
+<li id="SECTIONgraph-without-form-8-11-1-2-1-5"><div class="para" id="p-derived-SECTIONgraph-without-form-8-11-1-2-1-5">
+<span class="process-math">\(\dfdx{y}{x}\lt0\text{,}\)</span> for <span class="process-math">\(\pi\lt x\lt 2\pi\text{,}\)</span>
+</div></li>
+<li id="SECTIONgraph-without-form-8-11-1-2-1-6"><div class="para" id="p-derived-SECTIONgraph-without-form-8-11-1-2-1-6"><span class="process-math">\(\eval{\dfdxn{y}{x}{2}}{x=\frac{\pi}{2}}{} =
+\eval{\dfdxn{y}{x}{2}}{x=\frac{3\pi}{2}}{}=0\text{,}\)</span></div></li>
+<li id="SECTIONgraph-without-form-8-11-1-2-1-7"><div class="para" id="p-derived-SECTIONgraph-without-form-8-11-1-2-1-7">
+<span class="process-math">\(\dfdxn{y}{x}{2}\gt0\)</span> for <span class="process-math">\(0\lt x \lt\frac{\pi}{2}\text{,}\)</span>
+</div></li>
+<li id="SECTIONgraph-without-form-8-11-1-2-1-8"><div class="para" id="p-derived-SECTIONgraph-without-form-8-11-1-2-1-8">
+<span class="process-math">\(\dfdxn{y}{x}{2}\gt0\)</span> for <span class="process-math">\(\frac{3\pi}{2} \lt x\lt2\pi\text{,}\)</span>
+</div></li>
+<li id="SECTIONgraph-without-form-8-11-1-2-1-9"><div class="para" id="p-derived-SECTIONgraph-without-form-8-11-1-2-1-9">
+<span class="process-math">\(\dfdxn{y}{x}{2}\lt0\)</span> for <span class="process-math">\(\frac{\pi}{2}\lt x \lt \frac{3\pi}{2}\)</span>
+</div></li>
+</ul></div></article></article><section class="paragraphs" id="SECTIONgraph-without-form-9"><h4 class="heading"><span class="title">Graphing <span class="process-math">\(y(x)\)</span> from the Graph of <span class="process-math">\(\dfdx{y}{x} \)</span>.</span></h4> <div class="para" id="SECTIONgraph-without-form-9-2">In <a href="CHAPTERcalc-trig.html#SECTIONwitch-agnesi-inverse" class="internal" title="Section 6.5: The Witch of Agnesi and the Inverse Tangent Function">Section 6.5</a> we found tphe graph of <span class="process-math">\(\inverse\tan(x)\)</span> by examining the graph of its derivative, the Witch of Agnesi, The procedure we used in <a href="CHAPTERcalc-trig.html#SECTIONwitch-agnesi-inverse" class="internal" title="Section 6.5: The Witch of Agnesi and the Inverse Tangent Function">Section 6.5</a> is quite general. For example, suppose the graph of <span class="process-math">\(\dfdx{y}{x}\)</span> is given below.</div> <div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/images/Graphing1.png" class="contained"></div>  <div class="para" id="SECTIONgraph-without-form-9-4">Recall that with a graph for <span class="process-math">\(\dfdx{y}{x}\text{,}\)</span> finding where <span class="process-math">\(y\)</span> is increasing or <span class="process-math">\(y\)</span> is decreasing is just a matter of determining where the derivative is positive (above the <span class="process-math">\(x\)</span> axis) or negative (below the <span class="process-math">\(x\)</span> axis). Similarly the concavity of the graph of <span class="process-math">\(y(x)\)</span> can be determined by finding where <span class="process-math">\(\dfdx{y}{x} = y^\prime(x)\)</span> is increasing (concave upward) and decreasing (concave downward). Given the graph of <span class="process-math">\(\dfdx{y}{x}\)</span> at the right, we can produce the following tables.</div> <figure class="table table-like" id="TABLEGraphFromDerivGraph1"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">10.16<span class="period">.</span></span><span class="space"> </span>POTPs</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b3 r0 l0 t0 lines">Interval</td>
+<td class="c m b3 r0 l0 t0 lines"><span class="process-math">\((-\infty, 0)\)</span></td>
+<td class="c m b3 r0 l0 t0 lines"><span class="process-math">\((0,2)\)</span></td>
+<td class="c m b3 r0 l0 t0 lines"><span class="process-math">\((2,\infty) \)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\dfdx{y}{x} \)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\dfdx{y}{x} \gt 0\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\dfdx{y}{x} \lt 0\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\dfdx{y}{x} \gt 0\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(y\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\nearrow \)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\searrow \)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\nearrow \)</span></td>
+</tr>
+</table></div></figure> <figure class="table table-like" id="TABLEGraphFromDerivGraph2"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">10.17<span class="period">.</span></span><span class="space"> </span>PITPs</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b3 r0 l0 t0 lines">Interval</td>
+<td class="c m b3 r0 l0 t0 lines"><span class="process-math">\((-\infty, 1)\)</span></td>
+<td class="c m b3 r0 l0 t0 lines"><span class="process-math">\((1,\infty)\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\dfdxn{y}{x}{2} \)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\dfdxn{y}{x}{2}\lt0 \)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\dfdxn{y}{x}{2}\gt0 \)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(y \)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\bigcap \)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\bigcup \)</span></td>
+</tr>
+</table></div></figure>   <div class="para" id="SECTIONgraph-without-form-9-7">From the data in our tables we see that the graph of <span class="process-math">\(y\)</span> looks something like this.</div>   <article class="problem example-like" id="SECTIONgraph-without-form-9-8"><h5 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">10.18</span><span class="period">.</span>
+</h5>
+<div class="introduction" id="SECTIONgraph-without-form-9-8-1"><div class="para" id="SECTIONgraph-without-form-9-8-1-1">Each of the following graphs is the derivative of some function. Find the shape of the graph of the function.</div></div>
+<article class="task exercise-like" id="SECTIONgraph-without-form-9-8-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/images/Dgraph1.png" class="contained"></div> </article><article class="task exercise-like" id="SECTIONgraph-without-form-9-8-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/images/Dgraph2.png" class="contained"></div> </article><article class="task exercise-like" id="SECTIONgraph-without-form-9-8-4"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/images/Dgraph3.png" class="contained"></div> </article><article class="task exercise-like" id="SECTIONgraph-without-form-9-8-5"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/images/Dgraph4.png" class="contained"></div> </article><article class="task exercise-like" id="SECTIONgraph-without-form-9-8-6"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/images/Dgraph5.png" class="contained"></div> </article><article class="task exercise-like" id="SECTIONgraph-without-form-9-8-7"><h6 class="heading"><span class="codenumber">(f)</span></h6>
+<div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/images/Dgraph6.png" class="contained"></div> </article><article class="task exercise-like" id="SECTIONgraph-without-form-9-8-8"><h6 class="heading"><span class="codenumber">(g)</span></h6>
+<div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/images/Dgraph7.png" class="contained"></div> </article><article class="task exercise-like" id="SECTIONgraph-without-form-9-8-9"><h6 class="heading"><span class="codenumber">(h)</span></h6>
+<div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/images/Dgraph8.png" class="contained"></div> </article><article class="task exercise-like" id="SECTIONgraph-without-form-9-8-10"><h6 class="heading"><span class="codenumber">(i)</span></h6>
+<div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/images/Dgraph9.png" class="contained"></div> </article><article class="task exercise-like" id="SECTIONgraph-without-form-9-8-11"><h6 class="heading"><span class="codenumber">(j)</span></h6>
+<div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/images/Dgraph10.png" class="contained"></div> </article><article class="task exercise-like" id="SECTIONgraph-without-form-9-8-12"><h6 class="heading"><span class="codenumber">(k)</span></h6>
+<div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/images/Dgraph11.png" class="contained"></div> </article><article class="task exercise-like" id="SECTIONgraph-without-form-9-8-13"><h6 class="heading"><span class="codenumber">(l)</span></h6>
+<div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/images/Dgraph12.png" class="contained"></div> </article></article>                  </section></section><section class="section" id="SECTIONGraphingWithDeriv"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">10.3</span><span class="space"> </span><span class="title">Graphing with a Formula for  <span class="process-math">\(\dfdx{y}{t}\)</span></span>
+</h3>
+<section class="paragraphs" id="PARAGRAPHSDerivDepOnxAlone"><h4 class="heading"><span class="title">When  <span class="process-math">\(\dfdx{y}{t}\)</span> Depends on <span class="process-math">\(t\)</span> alone.</span></h4>        <article class="example example-like" id="PARAGRAPHSDerivDepOnxAlone-2"><h5 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">10.19</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="PARAGRAPHSDerivDepOnxAlone-2-1">
+<div class="para">Consider the IVP,</div>
+<div class="displaymath process-math" id="PARAGRAPHSDerivDepOnxAlone-2-1-1">
+\begin{align*}
+\dfdx{y}{t}=t(4-t), \amp{}\amp{}         y(0)=0.
+\end{align*}
+</div>
+<div class="para">In Integral Calculus (probably your next math course) you will learn how to find <span class="process-math">\(y(t)\)</span> explicitly. For now we will be satisfied with sketching an approximate graph of <span class="process-math">\(y(t)\text{.}\)</span> Setting <span class="process-math">\(\dfdx{y}{t}=0\)</span> and solving we see that <span class="process-math">\(t=0\)</span> and <span class="process-math">\(t=4\)</span> are the POTPs for <span class="process-math">\(y(t)\text{.}\)</span>  Thus on each of the intervals <span class="process-math">\((-\infty,0)\text{,}\)</span> <span class="process-math">\((0,4)\text{,}\)</span> and <span class="process-math">\((4,\infty)\)</span> the graph of <span class="process-math">\(y(t)\)</span> is either always increasing or always decreasing. We tabulate this information as follows:</div>
+</div> <figure class="table table-like" id="TABLEIVPPOTP1"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">10.20<span class="period">.</span></span><span class="space"> </span>POTPs</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b3 r0 l0 t0 lines">Interval</td>
+<td class="c m b3 r0 l0 t0 lines"><span class="process-math">\((-\infty, 0)\)</span></td>
+<td class="c m b3 r0 l0 t0 lines"><span class="process-math">\((0,4)\)</span></td>
+<td class="c m b3 r0 l0 t0 lines"><span class="process-math">\((4,\infty)\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(y^\prime (t)\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(y^\prime (t)\lt0\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(y^\prime (t)\gt0\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(y^\prime (t)\lt0\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(y (t)\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\searrow\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\nearrow\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\searrow\)</span></td>
+</tr>
+</table></div></figure>           <div class="para" id="PARAGRAPHSDerivDepOnxAlone-2-3">Based on this table, we can see that <span class="process-math">\(y(0)=0\)</span> is a local minimum and <span class="process-math">\(y(4)\)</span> is a local maximum. Observe that we do not know the value of <span class="process-math">\(y(4)\text{,}\)</span> only that it must be a local maximum. Nor do we have any way to determine the value of <span class="process-math">\(y(4)\)</span> in this problem.</div> <div class="para logical" id="PARAGRAPHSDerivDepOnxAlone-2-4">
+<div class="para">We  proceed in a similar fashion to determine concavity. The second derivative is</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \dfdxn{y}{t}{2}=\dfdx{(t(4-t))}{t}=4-2t.
 \end{equation*}
 </div>
-<div class="para">Setting <span class="process-math">\(\dfdxn{y}{t}{2}=0\)</span> and solving, we see that <span class="process-math">\(t=2\)</span> is a PITP for <span class="process-math">\(y(t)\text{.}\)</span>  Making a table as before we have \begin{center} \begin{tabular}[h]{|c||c|c|c|}\hline PITP\amp  \amp <span class="process-math">\(2\)</span>\amp  \bigstrut \hline Interval \amp  <span class="process-math">\((-\infty,2)\)</span>\amp \amp  <span class="process-math">\((2,\infty)\)</span>\bigstrut \hline\hline <span class="process-math">\(y^{\prime\prime}(t)\)</span>\amp  <span class="process-math">\(\gt 0\)</span>\amp  \amp <span class="process-math">\(\lt 0\)</span>\bigstrut <span class="process-math">\(y(t)\)</span>\amp  <span class="process-math">\(\bigcup\)</span>\amp <span class="process-math">\(0\)</span>\amp <span class="process-math">\(\bigcap\)</span>\bigstrut \amp \amp \rotatebox{90}{{\tiny inflection point}}\amp \bigstrut \hline \end{tabular} \end{center} Based on the table we see that the point <span class="process-math">\((2,y(2))\)</span> is an inflection point. We want to make a reasonable sketch of the graph of <span class="process-math">\(y=y(t)\)</span> based on this information. But there is a lot of information in the tables and our graph needs to be consistent with all of it.  So we first organize all of our conclusions by plotting the transition points (both optimal and inflective) on the <span class="process-math">\(t\)</span> axis and identifying the intervals where <span class="process-math">\(y\)</span> is increasing, decreasing, concave up, or concave down.\vskip4mm \centerline{\includegraphics*[height=1in,width=4in]{../Figures/IncDecChart1}} \vskip4mm This information, along with the initial value,  <span class="process-math">\(y(0)=0\)</span> allows us to provide a reasonable graph of <span class="process-math">\(y(t).\)</span> \centerline{\includegraphics*[height=3in,width=5in]{../Figures/Optimization4}} From the initial condition in the IVP we know that <span class="process-math">\(y(0)=0\)</span> but we have no information about the vertical coordinate of any other point on the graph. Thus, from the information given the scale Of this graph is unknowable. But we know that the graph above is reasonable because it is consistent with the data given in the IVP. This sort of graphical, qualitative analysis is the best we can do with the information we have but, as you see, we can glean a great deal of information about the “shape” of the graph of a function from its derivative alone.</div>
-</div></article><article class="problem example-like" id="SUBSECTIONDerivDepOnxAlone-3"><h5 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">10.12</span><span class="period">.</span>
+<div class="para">Setting <span class="process-math">\(\dfdxn{y}{t}{2}=0\)</span> and solving, we see that <span class="process-math">\(t=2\)</span> is a PITP for <span class="process-math">\(y(t)\text{.}\)</span>  Making a table as before we have</div>
+</div> <figure class="table table-like" id="TABLEIVPPITP1"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">10.21<span class="period">.</span></span><span class="space"> </span>PITPs</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b3 r0 l0 t0 lines">Interval</td>
+<td class="c m b3 r0 l0 t0 lines"><span class="process-math">\((-\infty, 2)\)</span></td>
+<td class="c m b3 r0 l0 t0 lines"><span class="process-math">\((2,\infty)\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(y^\prime(t) \)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(y^\prime(t)\gt 0\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(y^\prime(t)\lt 0\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(y(t)\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\bigcup\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\bigcap\)</span></td>
+</tr>
+</table></div></figure> <div class="para" id="PARAGRAPHSDerivDepOnxAlone-2-6">         Based on the table we see that the point <span class="process-math">\((2,y(2))\)</span> is an inflection point. We want to make a reasonable sketch of the graph of <span class="process-math">\(y=y(t)\)</span> based on this information. But there is a lot of information in <a href="" class="xref" data-knowl="./knowl/xref/TABLEIVPPOTP1.html" title="Table 10.20: POTPs">Table 10.20</a> and <a href="" class="xref" data-knowl="./knowl/xref/TABLEIVPPITP1.html" title="Table 10.21: PITPs">Table 10.21</a> and our graph needs to be consistent with all of it.  So we first organize all of our conclusions by plotting the transition points (both optimal and inflective) on the <span class="process-math">\(t\)</span> axis and identifying the intervals where <span class="process-math">\(y\)</span> is increasing, decreasing, concave up, or concave down.</div> <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/IncDecChart1.png" class="contained"></div>  <div class="para" id="PARAGRAPHSDerivDepOnxAlone-2-8">This information, along with the initial value, <span class="process-math">\(y(0)=0\)</span> allows us to provide a reasonable graph of <span class="process-math">\(y(t)\text{.}\)</span>
+</div> <div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/images/Optimization4.png" class="contained"></div>  <div class="para" id="PARAGRAPHSDerivDepOnxAlone-2-10">From the initial condition in the IVP we know that <span class="process-math">\(y(0)=0\)</span> but we have no information about the vertical coordinate of any other point on the graph. Thus, from the information given the scale of this graph is unknowable. But we know that the graph above is reasonable because it is consistent with the data given in the IVP. This sort of graphical, qualitative analysis is the best we can do with the information we have but, as you see, we can glean a great deal of information about the “shape” of the graph of a function from its derivative alone.</div></article> <article class="problem example-like" id="PARAGRAPHSDerivDepOnxAlone-3"><h5 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">10.22</span><span class="period">.</span>
 </h5>
-<div class="introduction" id="SUBSECTIONDerivDepOnxAlone-3-1"><div class="para" id="SUBSECTIONDerivDepOnxAlone-3-1-1">For each of the following  IVPs:</div></div>
-<article class="task exercise-like" id="SUBSECTIONDerivDepOnxAlone-3-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<div class="para" id="SUBSECTIONDerivDepOnxAlone-3-2-1-1">Find the intervals on which the graph of the solution is increasing and decreasing.  Identify the location all local extrema.</div></article><article class="task exercise-like" id="SUBSECTIONDerivDepOnxAlone-3-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<div class="para" id="SUBSECTIONDerivDepOnxAlone-3-3-1-1">Find the intervals on which the graph of the solution is concave upward and concave downward.  Identify the location of all inflection points.</div></article><article class="task exercise-like" id="SUBSECTIONDerivDepOnxAlone-3-4"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<div class="para" id="SUBSECTIONDerivDepOnxAlone-3-4-1-1">Plot a reasonable sketch of the graph for <span class="process-math">\(y=y(t).\)</span> Approximate transition points using the appropriate technology or Newton’s Method as necessary.</div></article></article></section><section class="subsection" id="SUBSECTIONDfdxDependsOnYAlone"><h4 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">10.3.2</span><span class="space"> </span><span class="title">When  <span class="process-math">\(\dfdx{y}{t}\)</span> depends on <span class="process-math">\(y\)</span> alone</span>
-</h4>
-<blockquote class="blockquote" id="SUBSECTIONDfdxDependsOnYAlone-2">
-<div class="para" id="SUBSECTIONDfdxDependsOnYAlone-2-1">To see a World in a Grain of Sand And a Heaven in a Wild Flower Hold Infinity in the palm of your hand And Eternity in an hour</div> <cite class="attribution">―<a class="external" href="https://www.poetryfoundation.org/poets/william-blake" target="_blank">William Blake (0)</a><a class="xref" id="SUBSECTIONDfdxDependsOnYAlone-2-2-2" href="" data-knowl="./knowl/fn/SUBSECTIONDfdxDependsOnYAlone-2-2-2.html" title="Footnote 10.6"><sup> 6 </sup></a></cite>
-</blockquote>
-<div class="para logical" id="SUBSECTIONDfdxDependsOnYAlone-3">
+<div class="introduction" id="PARAGRAPHSDerivDepOnxAlone-3-1"><div class="para" id="PARAGRAPHSDerivDepOnxAlone-3-1-1">For each of the following  IVPs:</div></div>
+<article class="task exercise-like" id="PARAGRAPHSDerivDepOnxAlone-3-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="para" id="PARAGRAPHSDerivDepOnxAlone-3-2-1-1">Find the intervals on which the graph of the solution is increasing and decreasing.  Identify the location all local extrema.</div></article><article class="task exercise-like" id="PARAGRAPHSDerivDepOnxAlone-3-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="para" id="PARAGRAPHSDerivDepOnxAlone-3-3-1-1">Find the intervals on which the graph of the solution is concave upward and concave downward.  Identify the location of all inflection points.</div></article><article class="task exercise-like" id="PARAGRAPHSDerivDepOnxAlone-3-4"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<div class="para" id="PARAGRAPHSDerivDepOnxAlone-3-4-1-1">Plot a reasonable sketch of the graph for <span class="process-math">\(y=y(t).\)</span> Approximate transition points using the appropriate technology or Newton’s Method as necessary.</div></article></article>                                                                                       </section><section class="paragraphs" id="PARAGRAPHSDfdxDependsOnYAlone"><h4 class="heading"><span class="title">When  <span class="process-math">\(\dfdx{y}{t}\)</span> depends on <span class="process-math">\(y\)</span> alone.</span></h4> <blockquote class="blockquote" id="PARAGRAPHSDfdxDependsOnYAlone-2">
+<div class="para" id="PARAGRAPHSDfdxDependsOnYAlone-2-1">To see a World in a Grain of Sand And a Heaven in a Wild Flower Hold Infinity in the palm of your hand And Eternity in an hour</div> <cite class="attribution">―<a class="external" href="https://www.poetryfoundation.org/poets/william-blake" target="_blank">William Blake</a><a class="xref" id="PARAGRAPHSDfdxDependsOnYAlone-2-2-2" href="" data-knowl="./knowl/fn/PARAGRAPHSDfdxDependsOnYAlone-2-2-2.html" title="Footnote 10.4"><sup> 4 </sup></a> (1757–1827)</cite>
+</blockquote> <div class="para logical" id="PARAGRAPHSDfdxDependsOnYAlone-3">
 <div class="para">Consider the IVP</div>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="displaymath process-math" data-contains-math-knowls="" id="PARAGRAPHSDfdxDependsOnYAlone-3-1">
+\begin{align}
+\dfdx{y}{t}=y,\amp{}\amp{} y(0)=1.\tag{10.2}
+\end{align}
+</div>
+<div class="para">This is the same IVP we approximated in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "SECTIONeulers-method" missing or not unique]</code>. The analysis we will do here is related so you may find it useful to review that section before proceeding.</div>
+</div> <div class="para" id="PARAGRAPHSDfdxDependsOnYAlone-4">As we’ve seen every IVP has two parts: a differential equation (in this case, <span class="process-math">\(\dfdx{y}{t}=y\text{,}\)</span> and an initial value (in this case, <span class="process-math">\(y(0)=1\)</span> or equivalently, <span class="process-math">\((0,1)\)</span>).</div>          <div class="para" id="PARAGRAPHSDfdxDependsOnYAlone-5">We will focus on the differential equation first.  The differential equation <span class="process-math">\(\dfdx{y}{t}=y\)</span> says that at each point on the graph of <span class="process-math">\(y(t)\)</span> the slope of the graph is equal to the vertical coordinate at that point.  For example if <span class="process-math">\((0,1)\)</span> is a point on the graph of <span class="process-math">\(y(t)\text{,}\)</span> then nearby the graph of <span class="process-math">\(y(t)\)</span> will look like the orange part of the sketch below.  On the other hand, if <span class="process-math">\((1,1)\)</span> is a point on the graph of <span class="process-math">\(y(t)\)</span> then near the point <span class="process-math">\((1,1)\text{,}\)</span> graph of <span class="process-math">\(y(t)\)</span> will look like the red graph in the sketch below.</div> <div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="external/images/DEGraph2.png" class="contained"></div> <div class="para" id="PARAGRAPHSDfdxDependsOnYAlone-7">In fact, for any value of <span class="process-math">\(t\text{,}\)</span> we know that if <span class="process-math">\((t,1)\)</span> is a point on the graph of <span class="process-math">\(y(t)\)</span> then the slope of the graph which passes through that point will be parallel to the orange and red lines above (that is, if a solution of the differential equation passes through a point <span class="process-math">\((t,1)\)</span> then its slope will be equal to <span class="process-math">\(1\)</span> at <span class="process-math">\((t,1)\)</span>).</div>          <div class="para" id="PARAGRAPHSDfdxDependsOnYAlone-8">This is seen in the figure below where each black dot represents a point with vertical coordinate equal to <span class="process-math">\(1\)</span> and each orange segment represents the graph of the curve that both satisfies the differential equation from <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONExpIVP2.html" title="Equation 10.2">IVP (10.2)</a>, and passes through that point.</div> <div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="external/images/DEGraph5.png" class="contained"></div> <div class="para" id="PARAGRAPHSDfdxDependsOnYAlone-10">Similarly, if we know that <span class="process-math">\((t,2)\)</span> is a point on the graph of <span class="process-math">\(y(t)\text{,}\)</span> where <span class="process-math">\(y(t)\)</span> both solves the differential equation from <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONExpIVP2.html" title="Equation 10.2">IVP (10.2)</a> and passes through that point, then the slope at <span class="process-math">\((t,2)\)</span> will be <span class="process-math">\(2\text{,}\)</span> as seen in the following sketch.</div> <div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/images/DEGraph7.png" class="contained"></div>  <div class="para" id="PARAGRAPHSDfdxDependsOnYAlone-12">By tagging more  points in the plane in the same way we get the image below.</div> <div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="external/images/DEGraph9.png" class="contained"></div>  <aside class="aside aside-like" id="PARAGRAPHSDfdxDependsOnYAlone-14"><h5 class="heading"><span class="title">Comment.</span></h5>
+<div class="para" id="PARAGRAPHSDfdxDependsOnYAlone-14-2">Actually the Principle of Local Linearity applies so it is a short section of the line tangent at <span class="process-math">\((a,b)\text{.}\)</span>
+</div></aside> <div class="para" id="PARAGRAPHSDfdxDependsOnYAlone-15">A sketch like this is called a <dfn class="terminology">slope field</dfn>. The short line segment at each point, <span class="process-math">\((a,b)\text{,}\)</span> is a short section of the graph of the function which satisfies the differential equation <span class="process-math">\(\dfdx{y}{t}=y\text{.}\)</span>
+</div> <div class="para" id="PARAGRAPHSDfdxDependsOnYAlone-16">If we know where to start (i.e., if we have an initial condition) the slope field allows us to determine the shape of the entire graph.</div> <div class="para" id="PARAGRAPHSDfdxDependsOnYAlone-17">For example to  sketch the graph of <span class="process-math">\(y(t)\)</span> if it passes through the point <span class="process-math">\((2,3)\text{,}\)</span> we simply follow the line segments in our slope field starting at that point. This is the black graph in the sketch below. The graph of the <span class="process-math">\(y(t)\)</span> that passes through the point <span class="process-math">\((5,5)\)</span> is shown in red below, and the graph that passes through the point <span class="process-math">\((-1,-1.25)\)</span> is shown in blue.</div> <div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="external/images/DEGraph8.png" class="contained"></div>  <article class="exercise exercise-like" id="PARAGRAPHSDfdxDependsOnYAlone-19"><h5 class="heading">
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">10.23</span><span class="period">.</span>
+</h5>
+<div class="para" id="PARAGRAPHSDfdxDependsOnYAlone-19-1-1">
+<a href="" class="xref" data-knowl="./knowl/xref/EQUATIONExpIVP2.html" title="Equation 10.2">IVP (10.2)</a> has the initial condition, <span class="process-math">\(y(0)=1.\)</span> Plot the point <span class="process-math">\((0,1)\)</span> and use this slope field to sketch the solution of <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONExpIVP2.html" title="Equation 10.2">IVP (10.2)</a>. Compare your solution with the  approximation we obtained in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "SECTIONeulers-method" missing or not unique]</code>. Do they look like the same solution?</div></article> <article class="problem example-like" id="PARAGRAPHSDfdxDependsOnYAlone-20"><h5 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">10.24</span><span class="period">.</span>
+</h5>
+<div class="introduction" id="PARAGRAPHSDfdxDependsOnYAlone-20-1"><div class="para" id="PARAGRAPHSDfdxDependsOnYAlone-20-1-1"></div></div>
+<article class="task exercise-like" id="PARAGRAPHSDfdxDependsOnYAlone-20-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="para" id="PARAGRAPHSDfdxDependsOnYAlone-20-2-1-1">Confirm that <span class="process-math">\(y(t)=3e^{t-2}\)</span> is the solution of the IVP <span class="process-math">\(\dfdx{y}{t}=y\text{,}\)</span> <span class="process-math">\(y(2)=3\text{.}\)</span> (This is the black graph above.)</div></article><article class="task exercise-like" id="PARAGRAPHSDfdxDependsOnYAlone-20-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="para" id="PARAGRAPHSDfdxDependsOnYAlone-20-3-1-1">Confirm that <span class="process-math">\(y(t)=5e^{t-5}\)</span> is the solution of the IVP <span class="process-math">\(\dfdx{y}{t}=y\text{,}\)</span> <span class="process-math">\(y(5)=5\text{.}\)</span> (This is the red graph above.)</div></article><article class="task exercise-like" id="PARAGRAPHSDfdxDependsOnYAlone-20-4"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<div class="para" id="PARAGRAPHSDfdxDependsOnYAlone-20-4-1-1">Based on parts (a) and (b) guess what the solution of the IVP <span class="process-math">\(\dfdx{y}{t}=y\text{,}\)</span> <span class="process-math">\(y(-1)=-2\)</span> will be. Confirm that your guess is correct. {If you guess wrong, guess again.}</div></article><article class="task exercise-like" id="PARAGRAPHSDfdxDependsOnYAlone-20-5"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<div class="para" id="PARAGRAPHSDfdxDependsOnYAlone-20-5-1-1">Based on parts (a) and (b), and (c) make a conjecture what the solution of the IVP <span class="process-math">\(\dfdx{y}{t}=y\text{,}\)</span> <span class="process-math">\(y(a)=b\)</span> will be. Confirm that your guess is correct.</div></article></article>               <div class="para" id="PARAGRAPHSDfdxDependsOnYAlone-21">To sketch the graph of the solution of a given  IVP  begin by drawing  the <dfn class="terminology">slope field</dfn> for the differential equation. Then plot the  value and follow the slope field to sketch the graph.</div> <article class="problem example-like" id="PARAGRAPHSDfdxDependsOnYAlone-22"><h5 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">10.25</span><span class="period">.</span>
+</h5>
+<div class="introduction" id="PARAGRAPHSDfdxDependsOnYAlone-22-1">
+<div class="para" id="PARAGRAPHSDfdxDependsOnYAlone-22-1-1">For each of the following IVPs sketch the <dfn class="terminology">slope field</dfn> in the ranges given and use your slope field to sketch the solution of the IVP.</div> <aside class="aside aside-like" id="PARAGRAPHSDfdxDependsOnYAlone-22-1-2"><h6 class="heading"><span class="title">Advice.</span></h6>
+<div class="para" id="PARAGRAPHSDfdxDependsOnYAlone-22-1-2-2">It is simplest to begin by sketching slopes at integer coordinate points and then to fill in between them to get a clearer sense of the graphs.}</div></aside>
+</div>
+<article class="task exercise-like" id="PARAGRAPHSDfdxDependsOnYAlone-22-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="para" id="PARAGRAPHSDfdxDependsOnYAlone-22-2-1-1">
+<span class="process-math">\(\dfdx{y}{t}=\sqrt{y}\text{,}\)</span> <span class="process-math">\(y(0)=1\text{,}\)</span> <span class="process-math">\(-5\le t\text{,}\)</span> <span class="process-math">\(y\ge0\)</span>
+</div></article><article class="task exercise-like" id="PARAGRAPHSDfdxDependsOnYAlone-22-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="para" id="PARAGRAPHSDfdxDependsOnYAlone-22-3-1-1">
+<span class="process-math">\(\dfdx{y}{t}=y^2\text{,}\)</span> <span class="process-math">\(y(-1)=-2\text{,}\)</span> <span class="process-math">\(-5\le t\le 5\text{,}\)</span> <span class="process-math">\(-5\le y\le 5\)</span>
+</div></article><article class="task exercise-like" id="PARAGRAPHSDfdxDependsOnYAlone-22-4"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<div class="para" id="PARAGRAPHSDfdxDependsOnYAlone-22-4-1-1">
+<span class="process-math">\(\dfdx{y}{t}=(y-1)^2\text{,}\)</span> <span class="process-math">\(y(1)=0\text{,}\)</span> <span class="process-math">\(-5\le t\le 5\text{,}\)</span> <span class="process-math">\(-5\le y\le 5\)</span>
+</div></article><article class="task exercise-like" id="PARAGRAPHSDfdxDependsOnYAlone-22-5"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<div class="para" id="PARAGRAPHSDfdxDependsOnYAlone-22-5-1-1">
+<span class="process-math">\(\dfdx{y}{t}=y(y-2)\text{,}\)</span> <span class="process-math">\(y(1)=1\text{,}\)</span> <span class="process-math">\(-1\le x\le 1\text{,}\)</span> <span class="process-math">\(-2\le y\le 3\)</span>
+</div></article><article class="task exercise-like" id="PARAGRAPHSDfdxDependsOnYAlone-22-6"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<div class="para" id="PARAGRAPHSDfdxDependsOnYAlone-22-6-1-1">
+<span class="process-math">\(\dfdx{y}{t}=y(2-y)\text{,}\)</span> <span class="process-math">\(y(1)=1\text{,}\)</span> <span class="process-math">\(-1\le t\le 1\text{,}\)</span> <span class="process-math">\(-2\le y\le 3\)</span>
+</div></article><article class="task exercise-like" id="PARAGRAPHSDfdxDependsOnYAlone-22-7"><h6 class="heading"><span class="codenumber">(f)</span></h6>
+<div class="para" id="PARAGRAPHSDfdxDependsOnYAlone-22-7-1-1">
+<span class="process-math">\(\dfdx{y}{t}=(y^2-1)\text{,}\)</span> <span class="process-math">\(y(0)=1\text{,}\)</span> <span class="process-math">\(-2\le t\le 2\text{,}\)</span> <span class="process-math">\(-2\le y\le 2\)</span>
+</div></article></article>                                   </section><section class="paragraphs" id="PARAGRAPHSDfdxDependsOnYAndt"><h4 class="heading"><span class="title">When  <span class="process-math">\(\dfdx{y}{t}\)</span> Depends on <span class="process-math">\(y\)</span> and <span class="process-math">\(t\)</span>.</span></h4> <div class="para logical" id="PARAGRAPHSDfdxDependsOnYAndt-2">
+<div class="para">So far we’ve examined the situation when <span class="process-math">\(\dfdx{y}{t}\)</span> depends on <span class="process-math">\(t\)</span> alone:</div>
+<div class="displaymath process-math">
 \begin{equation*}
-\label{eq:ExpIVP2}
-\dfdx{y}{t}=y,\ y(0)=1.
+\dfdx{y}{t}=f(t)
 \end{equation*}
 </div>
-<div class="para">This is the same IVP we approximated in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "SECeulers-method" missing or not unique]</code>. The analysis we will do here is related so you may find it useful to review that section before proceeding.</div>
+<div class="para">and when <span class="process-math">\(\dfdx{y}{t}\)</span> depends on <span class="process-math">\(y\)</span> alone:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dfdx{y}{t}=f(y)\text{.}
+\end{equation*}
 </div>
-<div class="para" id="SUBSECTIONDfdxDependsOnYAlone-4">As we’ve seen every IVP has two parts: a differential equation (in this case, <span class="process-math">\(\dfdx{y}{t}=y\text{,}\)</span> and an initial value (in this case, <span class="process-math">\(y(0)=1\)</span> or equivalently, <span class="process-math">\((0,1)\)</span>).</div>
-<figure class="figure figure-like" id="SUBSECTIONDfdxDependsOnYAlone-5"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/DEGraph2.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">10.13<span class="period">.</span></span><span class="space"> </span>This figure needs a caption.</figcaption></figure><div class="para" id="SUBSECTIONDfdxDependsOnYAlone-6">We will focus on the differential equation first. The differential equation <span class="process-math">\(\dfdx{y}{t}=y\)</span> says that at each point on the graph of <span class="process-math">\(y(t)\)</span> the slope of the graph is equal to the vertical coordinate at that point. For example if <span class="process-math">\((0,1)\)</span> is a point on the graph of <span class="process-math">\(y(t)\text{,}\)</span> then nearby  the graph of <span class="process-math">\(y(t)\)</span>  will look like  the orange part of the sketch at the right. On the other hand, if <span class="process-math">\((1,1)\)</span> is a point on the graph of <span class="process-math">\(y(t)\)</span> then near the point <span class="process-math">\((1,1)\text{,}\)</span> graph of <span class="process-math">\(y(t)\)</span> will look like the red graph in the sketch at the right.</div>
-<div class="para" id="SUBSECTIONDfdxDependsOnYAlone-7">In fact, for any value of <span class="process-math">\(t\text{,}\)</span> we know that if <span class="process-math">\((t,1)\)</span> is a point on the graph of <span class="process-math">\(y(t)\)</span> then the slope of the graph which passes through that point will be parallel to the orange and red lines above (that is, if a solution of the differential equation passes through a point <span class="process-math">\((t,1)\)</span> then its slope will be equal to <span class="process-math">\(1\)</span> at <span class="process-math">\((t,1)\)</span>).</div>
-<figure class="figure figure-like" id="SUBSECTIONDfdxDependsOnYAlone-8"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/DEGraph5.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">10.14<span class="period">.</span></span><span class="space"> </span>This figure needs a caption.</figcaption></figure><div class="para" id="SUBSECTIONDfdxDependsOnYAlone-9">This is seen in the figure at the left where each black dot represents a point with vertical coordinate equal to <span class="process-math">\(1\)</span> and each orange segment represents the graph of the curve that both satisfies the differential equation from <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQExpIVP2" missing or not unique]</code>, and passes through that point. %</div>
-<div class="para" id="SUBSECTIONDfdxDependsOnYAlone-10">Similarly, if we know that <span class="process-math">\((t,2)\)</span> is a point on the graph of <span class="process-math">\(y(t)\text{,}\)</span> where <span class="process-math">\(y(t)\)</span> both solves the differential equation from <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQExpIVP2" missing or not unique]</code> and passes through that point, then the slope at <span class="process-math">\((t,2)\)</span> will be <span class="process-math">\(2\text{,}\)</span> as seen in the following sketch.</div>
-<div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/images/DEGraph7.png" class="contained"></div>
-<div class="para" id="SUBSECTIONDfdxDependsOnYAlone-12">By tagging more  points in the plane in the same way we get the image below.</div>
-<div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/images/DEGraph9.png" class="contained"></div>
-<div class="para" id="SUBSECTIONDfdxDependsOnYAlone-14">A sketch like this is called a <dfn class="terminology">slope field</dfn>. The short line segment at each point, <span class="process-math">\((a,b)\text{,}\)</span> is a short section of the graph of the function\aside{Actually the Principle of Local Linearity applies so it is a short section of the line tangent at <span class="process-math">\((a,b)\text{.}\)</span>} which satisfies the differential equation <span class="process-math">\(\dfdx{y}{t}=y\text{.}\)</span> If we know where to start (i.e., if we have an initial condition) the slope field allows us to determine the shape of the entire graph.</div>
-<div class="para" id="SUBSECTIONDfdxDependsOnYAlone-15">For example to  sketch the graph of <span class="process-math">\(y(t)\)</span> if it passes through the point <span class="process-math">\((2,3)\text{,}\)</span> we simply follow the line segments in our slope field starting at that point. This is the black graph in the sketch below. The graph of the <span class="process-math">\(y(t)\)</span> that passes through the point <span class="process-math">\((5,5)\)</span> is shown in red below, and the graph that passes through the point <span class="process-math">\((-1,-1.25)\)</span> is shown in blue.</div>
-<div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/images/DEGraph8.png" class="contained"></div>
-<article class="exercise exercise-like" id="SUBSECTIONDfdxDependsOnYAlone-17"><h5 class="heading">
-<span class="type">Drill</span><span class="space"> </span><span class="codenumber">10.15</span><span class="period">.</span>
+<div class="para">But, of course, it could happen at <span class="process-math">\(\dfdx{y}{t}\)</span> depends on both <span class="process-math">\(y\)</span> and <span class="process-math">\(t\text{:}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dfdx{y}{t}=f(t,y)\text{.}
+\end{equation*}
+</div>
+<div class="para">Analytically, this is a more complex situation. However it is possible, and quite useful, to get a qualitative sketch of the solution of an IVP from the slope field.</div>
+</div> <article class="problem example-like" id="PARAGRAPHSDfdxDependsOnYAndt-3"><h5 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">10.26</span><span class="period">.</span>
 </h5>
-<div class="para" id="SUBSECTIONDfdxDependsOnYAlone-17-1-1">
-<code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQExpIVP2" missing or not unique]</code> has the initial condition, <span class="process-math">\(y(0)=1.\)</span> Plot the point <span class="process-math">\((0,1)\)</span> and use this slope field to sketch the solution of <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "EQExpIVP2" missing or not unique]</code>. Compare your solution with the  approximation we obtained in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "SECeulers-method" missing or not unique]</code>). Do they look like the same solution?</div></article><article class="problem example-like" id="SUBSECTIONDfdxDependsOnYAlone-18"><h5 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">10.16</span><span class="period">.</span>
-</h5>
-<div class="introduction" id="SUBSECTIONDfdxDependsOnYAlone-18-1"><div class="para" id="SUBSECTIONDfdxDependsOnYAlone-18-1-1"></div></div>
-<article class="task exercise-like" id="SUBSECTIONDfdxDependsOnYAlone-18-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<div class="para" id="SUBSECTIONDfdxDependsOnYAlone-18-2-1-1">Confirm that <span class="process-math">\(y(t)=3e^{t-2}\)</span> is the solution of the IVP <span class="process-math">\(\dfdx{y}{t}=y\text{,}\)</span> <span class="process-math">\(y(2)=3\text{.}\)</span> (This is the black graph above.)</div></article><article class="task exercise-like" id="SUBSECTIONDfdxDependsOnYAlone-18-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<div class="para" id="SUBSECTIONDfdxDependsOnYAlone-18-3-1-1">Confirm that <span class="process-math">\(y(t)=5e^{t-5}\)</span> is the solution of the IVP <span class="process-math">\(\dfdx{y}{t}=y\text{,}\)</span> <span class="process-math">\(y(5)=5\text{.}\)</span> (This is the red graph above.)</div></article><article class="task exercise-like" id="SUBSECTIONDfdxDependsOnYAlone-18-4"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<div class="para" id="SUBSECTIONDfdxDependsOnYAlone-18-4-1-1">Based on parts (a) and (b) guess what the solution of the IVP <span class="process-math">\(\dfdx{y}{t}=y\text{,}\)</span> <span class="process-math">\(y(-1)=-2\)</span> will be. Confirm that your guess is correct. {If you guess wrong, guess again.}</div></article><article class="task exercise-like" id="SUBSECTIONDfdxDependsOnYAlone-18-5"><h6 class="heading"><span class="codenumber">(d)</span></h6>
-<div class="para" id="SUBSECTIONDfdxDependsOnYAlone-18-5-1-1">Based on parts (a) and (b), and (c) make a conjecture what the solution of the IVP <span class="process-math">\(\dfdx{y}{t}=y\text{,}\)</span> <span class="process-math">\(y(a)=b\)</span> will be. Confirm that your guess is correct.</div></article></article><div class="para" id="SUBSECTIONDfdxDependsOnYAlone-19">To sketch the graph of the solution of a given  IVP  begin by drawing  the <dfn class="terminology">slope field</dfn> for the differential equation. Then plot the  value and follow the slope field to sketch the graph.</div>
-<article class="problem example-like" id="SUBSECTIONDfdxDependsOnYAlone-20"><h5 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">10.17</span><span class="period">.</span>
-</h5>
-<div class="introduction" id="SUBSECTIONDfdxDependsOnYAlone-20-1"><div class="para" id="SUBSECTIONDfdxDependsOnYAlone-20-1-1">For each of the following IVPs sketch the \term{slope field} in the ranges given and use your slope field to sketch the solution of the IVP. \comment{It is easiest to begin by sketching slopes at integer coordinate points but that doesn’t always give you a clear picture. Begin with the integer coordinate points and then fill in between them to get a clearer sense of the graphs.}</div></div>
-<article class="task exercise-like" id="SUBSECTIONDfdxDependsOnYAlone-20-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<div class="para" id="SUBSECTIONDfdxDependsOnYAlone-20-2-1-1">
-<span class="process-math">\(\dfdx{y}{t}=\sqrt{y}\text{,}\)</span> \leftline{<span class="process-math">\(y(0)=1\text{,}\)</span>} \leftline{<span class="process-math">\(-5\le t\text{,}\)</span>} \leftline{<span class="process-math">\(y\ge0\)</span>}</div></article><article class="task exercise-like" id="SUBSECTIONDfdxDependsOnYAlone-20-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<div class="para" id="SUBSECTIONDfdxDependsOnYAlone-20-3-1-1">
-<span class="process-math">\(\dfdx{y}{t}=y^2\text{,}\)</span> \leftline{ <span class="process-math">\(y(-1)=-2\text{,}\)</span>} \leftline{<span class="process-math">\(-5\le t\le 5\text{,}\)</span>} \leftline{<span class="process-math">\(-5\le y\le 5\)</span>}</div></article><article class="task exercise-like" id="SUBSECTIONDfdxDependsOnYAlone-20-4"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<div class="para" id="SUBSECTIONDfdxDependsOnYAlone-20-4-1-1">
-<span class="process-math">\(\dfdx{y}{t}=(y-1)^2\text{,}\)</span> \leftline{<span class="process-math">\(y(1)=0\text{,}\)</span>} \leftline{<span class="process-math">\(-5\le t\le 5\text{,}\)</span>} \leftline{<span class="process-math">\(-5\le y\le 5\)</span>}</div></article><article class="task exercise-like" id="SUBSECTIONDfdxDependsOnYAlone-20-5"><h6 class="heading"><span class="codenumber">(d)</span></h6>
-<div class="para" id="SUBSECTIONDfdxDependsOnYAlone-20-5-1-1">
-<span class="process-math">\(\dfdx{y}{t}=y(y-2)\text{,}\)</span> \leftline{<span class="process-math">\(y(1)=1\text{,}\)</span>} \leftline{<span class="process-math">\(-1\le x\le 1\text{,}\)</span>} \leftline{<span class="process-math">\(-2\le y\le 3\)</span>}</div></article><article class="task exercise-like" id="SUBSECTIONDfdxDependsOnYAlone-20-6"><h6 class="heading"><span class="codenumber">(e)</span></h6>
-<div class="para" id="SUBSECTIONDfdxDependsOnYAlone-20-6-1-1">
-<span class="process-math">\(\dfdx{y}{t}=y(2-y)\text{,}\)</span> \leftline{<span class="process-math">\(y(1)=1\text{,}\)</span>} \leftline{<span class="process-math">\(-1\le t\le 1\text{,}\)</span>} \leftline{<span class="process-math">\(-2\le y\le 3\)</span>}</div></article><article class="task exercise-like" id="SUBSECTIONDfdxDependsOnYAlone-20-7"><h6 class="heading"><span class="codenumber">(f)</span></h6>
-<div class="para" id="SUBSECTIONDfdxDependsOnYAlone-20-7-1-1">
-<span class="process-math">\(\dfdx{y}{t}=(y^2-1)\text{,}\)</span> \leftline{<span class="process-math">\(y(0)=1\text{,}\)</span>} \leftline{<span class="process-math">\(-2\le t\le 2\text{,}\)</span>} \leftline{<span class="process-math">\(-2\le y\le 2\)</span>}</div></article></article><div class="para" id="SUBSECTIONDfdxDependsOnYAlone-21">So far we’ve examined the situation when <span class="process-math">\(\dfdx{y}{t}\)</span> depends on <span class="process-math">\(t\)</span> alone: <span class="process-math">\(\dfdx{y}{t}=f(t)\)</span> and when <span class="process-math">\(\dfdx{y}{t}\)</span> depends on <span class="process-math">\(y\)</span> alone: <span class="process-math">\(\dfdx{y}{t}=f(y)\text{.}\)</span> But, of course, it could happen at <span class="process-math">\(\dfdx{y}{t}\)</span> depends on both <span class="process-math">\(y\)</span> and <span class="process-math">\(t\text{:}\)</span><span class="process-math">\(\dfdx{y}{t}=f(t,y)\text{.}\)</span> Analytically, this is a more complex situation. However it is possible, and quite useful, to get a qualitative sketch of the solution of an IVP from the slope field.</div>
-<article class="problem example-like" id="SUBSECTIONDfdxDependsOnYAlone-22"><h5 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">10.18</span><span class="period">.</span>
-</h5>
-<div class="introduction" id="SUBSECTIONDfdxDependsOnYAlone-22-1"><div class="para" id="SUBSECTIONDfdxDependsOnYAlone-22-1-1">For each of the following IVPs draw The \term{slope field} in the ranges given and use your slope field to sketch the solution of the IVP.</div></div>
-<article class="task exercise-like" id="SUBSECTIONDfdxDependsOnYAlone-22-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<div class="para" id="SUBSECTIONDfdxDependsOnYAlone-22-2-1-1">
-<span class="process-math">\(\dfdx{y}{t}=yt\text{,}\)</span> \leftline{<span class="process-math">\(y(0)=1\text{,}\)</span>} \leftline{<span class="process-math">\(-3\le t\le 3\text{,}\)</span>} \leftline{<span class="process-math">\(y\ge0\)</span>}</div></article><article class="task exercise-like" id="SUBSECTIONDfdxDependsOnYAlone-22-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<div class="para" id="SUBSECTIONDfdxDependsOnYAlone-22-3-1-1">
-<span class="process-math">\(\dfdx{y}{t}=\frac{y}{t^2+1}\text{,}\)</span> \leftline{<span class="process-math">\(y(1)=0\text{,}\)</span>} \leftline{<span class="process-math">\(-5\le x\le 5\text{,}\)</span>} \leftline{<span class="process-math">\(-5\le y\le 5\)</span>}</div></article><article class="task exercise-like" id="SUBSECTIONDfdxDependsOnYAlone-22-4"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<div class="para" id="SUBSECTIONDfdxDependsOnYAlone-22-4-1-1">
-<span class="process-math">\(\dfdx{y}{t}=ye^x\text{,}\)</span> \leftline{<span class="process-math">\(y(-4)=2\text{,}\)</span>} \leftline{<span class="process-math">\(-5\le t\le 5\text{,}\)</span>} \leftline{<span class="process-math">\(-5\le y\le 5\)</span>}</div></article><article class="task exercise-like" id="SUBSECTIONDfdxDependsOnYAlone-22-5"><h6 class="heading"><span class="codenumber">(d)</span></h6>
-<div class="para" id="SUBSECTIONDfdxDependsOnYAlone-22-5-1-1">
-<span class="process-math">\(\dfdx{y}{t}=ye^{-x}\text{,}\)</span> \leftline{<span class="process-math">\(y(0)=2\text{,}\)</span>} \leftline{<span class="process-math">\(0\le t\le 5\text{,}\)</span>} \leftline{<span class="process-math">\(-5\le y\le 5\)</span>}</div></article></article></section></section></section></div>
+<div class="introduction" id="PARAGRAPHSDfdxDependsOnYAndt-3-1"><div class="para" id="PARAGRAPHSDfdxDependsOnYAndt-3-1-1">For each of the following IVPs draw The <dfn class="terminology">slope field</dfn> in the ranges given and use your slope field to sketch the solution of the IVP.</div></div>
+<article class="task exercise-like" id="PARAGRAPHSDfdxDependsOnYAndt-3-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="para" id="PARAGRAPHSDfdxDependsOnYAndt-3-2-1-1">
+<span class="process-math">\(\dfdx{y}{t}=yt\text{,}\)</span> <span class="process-math">\(y(0)=1\text{,}\)</span> <span class="process-math">\(-3\le t\le 3\text{,}\)</span> <span class="process-math">\(y\ge0\)</span>
+</div></article><article class="task exercise-like" id="PARAGRAPHSDfdxDependsOnYAndt-3-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="para" id="PARAGRAPHSDfdxDependsOnYAndt-3-3-1-1">
+<span class="process-math">\(\dfdx{y}{t}=\frac{y}{t^2+1}\text{,}\)</span> <span class="process-math">\(y(1)=0\text{,}\)</span> <span class="process-math">\(-5\le x\le 5\text{,}\)</span> <span class="process-math">\(-5\le y\le 5\)</span>
+</div></article><article class="task exercise-like" id="PARAGRAPHSDfdxDependsOnYAndt-3-4"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<div class="para" id="PARAGRAPHSDfdxDependsOnYAndt-3-4-1-1">
+<span class="process-math">\(\dfdx{y}{t}=ye^x\text{,}\)</span> <span class="process-math">\(y(-4)=2\text{,}\)</span> <span class="process-math">\(-5\le t\le 5\text{,}\)</span> <span class="process-math">\(-5\le y\le 5\)</span>
+</div></article><article class="task exercise-like" id="PARAGRAPHSDfdxDependsOnYAndt-3-5"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<div class="para" id="PARAGRAPHSDfdxDependsOnYAndt-3-5-1-1">
+<span class="process-math">\(\dfdx{y}{t}=ye^{-x}\text{,}\)</span> <span class="process-math">\(y(0)=2\text{,}\)</span> <span class="process-math">\(0\le t\le 5\text{,}\)</span> <span class="process-math">\(-5\le y\le 5\)</span>
+</div></article></article>                       </section></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="CHAPTERwhat-deriv-tells.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="CHAPTERmodel-with-calc.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

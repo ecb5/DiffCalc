@@ -94,7 +94,7 @@ window.MathJax = {
 <h1 class="heading"><a href="DiffCalc.html"><span class="title">Differential Calculus:</span> <span class="subtitle">From Practice to Theory</span></a></h1>
 <p class="byline"></p>
 </div>
-</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="meta_backmatter-5.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
 <div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
 <div class="search-results-controls">
@@ -105,7 +105,7 @@ window.MathJax = {
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="DiffCalc.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="DiffCalc.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="meta_backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\def\abs#1{\left|#1\right|}
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="DiffCalc.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="DiffCalc.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\def\abs#1{\left|#1\right|}
 \def\CancelToRed#1#2{\textcolor{red}{{\cancelto{#1}{#2}}}}
 \def\approach#1{{\left(\rightarrow{}#1\right)}}
 \def\halmos{\rule[-.1ex]{8pt}{2ex}}
@@ -160,6 +160,8 @@ window.MathJax = {
 
 \def\eval#1#2#3{\left.#1\right\rvert_{#2}^{#3}}
 \def\ftceval#1#2#3{\eval#1#2#3}
+\def\geneval#1#2{\eval{#1}{#2}{}}
+\def\bigeval#1#2#3{\eval{#2}{#2}{#3}}
 
 
 
@@ -187,7 +189,8 @@ window.MathJax = {
 \def\partialfxn#1#2#3{\frac{\partial^{#3}{#1}}{\partial{#2}^{#3}}} 
 \def\dfdxn#1#2#3{\frac{\text{d}^{#3}{#1}}{\text{d}{#2}^{#3}}} 
 
-\def\dfdxat#1#2#3{\eval{\dfdx{#1}{#2}}{#2}{#3}}
+
+\def\dfdxat#1#2#3{\eval{\dfdx{#1}{#2}}{#2=#3}{}}
 
 \def\limit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}#3}}
 \def\tlimit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}}#3}
@@ -201,19 +204,7 @@ window.MathJax = {
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth5"><ul class="structural contains-active toc-item-list">
-<li class="toc-item toc-chapter active"><div class="toc-title-box"><a href="DiffCalc-3.html" class="internal"><span class="codenumber">1</span> <span class="title">alkdj</span></a></div></li>
-<li class="toc-item toc-backmatter">
-<div class="toc-title-box"><a href="meta_backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="meta_backmatter-2.html" class="internal"><span class="codenumber">A</span> <span class="title">Selected Hints</span></a></div></li>
-<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="meta_backmatter-3.html" class="internal"><span class="codenumber">B</span> <span class="title">Selected Solutions</span></a></div></li>
-<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="meta_backmatter-4.html" class="internal"><span class="codenumber">C</span> <span class="title">List of Symbols</span></a></div></li>
-<li class="toc-item toc-index"><div class="toc-title-box"><a href="meta_backmatter-5.html" class="internal"><span class="title">Index</span></a></div></li>
-<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="meta_backmatter-6.html" class="internal"><span class="title">Colophon</span></a></div></li>
-</ul>
-</li>
-</ul></nav></div>
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth5"><ul class="structural contains-active toc-item-list"><li class="toc-item toc-chapter active"><div class="toc-title-box"><a href="DiffCalc-3.html" class="internal"><span class="codenumber">1</span> <span class="title">alkdj</span></a></div></li></ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="DiffCalc-3"><h2 class="heading">
 <span class="type">Chapter</span><span class="space"> </span><span class="codenumber">1</span><span class="space"> </span><span class="title">alkdj</span>
 </h2>
@@ -227,7 +218,7 @@ window.MathJax = {
 </div>
 </div></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="DiffCalc.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="meta_backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="DiffCalc.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

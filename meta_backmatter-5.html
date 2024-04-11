@@ -154,8 +154,9 @@ window.MathJax = {
   \right\}
 }
 
-\def\absALT#1{\rule[-.7ex]{1pt}{5ex}\hskip2pt#1\hskip2pt\llap{\rule[-.7ex]{1pt}{5ex}}} 
 
+
+\def\lhopeq{\stackrel{L'H}{=}}
 
 \def\sech{{\rm{}sech}{}}
 \def\csch{{\rm{}csch}{}}
@@ -167,6 +168,10 @@ window.MathJax = {
 \def\ftceval#1#2#3{\eval#1#2#3}
 \def\geneval#1#2{\eval{#1}{#2}{}}
 \def\bigeval#1#2#3{\eval{#2}{#2}{#3}}
+
+
+
+
 
 
 
@@ -195,6 +200,8 @@ window.MathJax = {
 \def\dfdxn#1#2#3{\frac{\text{d}^{#3}{#1}}{\text{d}{#2}^{#3}}} 
 
 
+\def\limitatinf#1#2{\limit{#1}{\infty}{#2}}
+\def\limitatninf#1#2{\limit{#1}{-\infty}{#2}}
 \def\dfdxat#1#2#3{\eval{\dfdx{#1}{#2}}{#2=#3}{}}
 
 \def\limit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}#3}}
@@ -346,7 +353,7 @@ window.MathJax = {
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTApproximation.html#SUBSECTIONSubtleFailure" class="internal"><span class="codenumber">7.2.3</span> <span class="title">Subtle Failure</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTApproximation.html#SECTIONeulers-method" class="internal"><span class="codenumber">7.3</span> <span class="title">Euler’s Method</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTApproximation.html#SECTIONEulersMethod" class="internal"><span class="codenumber">7.3</span> <span class="title">Euler’s Method</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTApproximation.html#SECTIONmore-high-deriv" class="internal"><span class="codenumber">7.4</span> <span class="title">Higher Derivatives, Lagrange, and Taylor</span></a></div></li>
 </ul>
 </li>
@@ -426,13 +433,7 @@ window.MathJax = {
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTshape-things.html#SECTIONgraph-with-form" class="internal"><span class="codenumber">10.1</span> <span class="title">Graphing with a Formula for  <span class="process-math">\(y(x)\)</span></span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTshape-things.html#SECTIONgraph-without-form" class="internal"><span class="codenumber">10.2</span> <span class="title">Graphing Without Formulas</span></a></div></li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAPTERPTshape-things.html#SECTIONGraphingWithDeriv" class="internal"><span class="codenumber">10.3</span> <span class="title">Graphing with a Formula for  <span class="process-math">\(\dfdx{y}{x}\)</span></span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTshape-things.html#SUBSECTIONDerivDepOnxAlone" class="internal"><span class="codenumber">10.3.1</span> <span class="title">When  <span class="process-math">\(\dfdx{y}{x}\)</span> Depends on <span class="process-math">\(x\)</span> alone</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTshape-things.html#SUBSECTIONDfdxDependsOnYAlone" class="internal"><span class="codenumber">10.3.2</span> <span class="title">When  <span class="process-math">\(\dfdx{y}{t}\)</span> depends on <span class="process-math">\(y\)</span> alone</span></a></div></li>
-</ul>
-</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTshape-things.html#SECTIONGraphingWithDeriv" class="internal"><span class="codenumber">10.3</span> <span class="title">Graphing with a Formula for  <span class="process-math">\(\dfdx{y}{t}\)</span></span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -551,7 +552,7 @@ window.MathJax = {
 <div class="subindexitem">The Art of Guessing Effectively<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/DIGRESSIONGuessingEffectively.html" title="Paragraphs: DIGRESSION: The Art of Guessing Effectively">Paragraphs</a></span>
 </div>
 </div>
-<div class="indexletter" id="indexletter-p"><div class="indexitem">Problem<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/exercise-problem-calculator.html" title="Drill 2.1">Drill</a> <a href="" class="xref" data-knowl="./knowl/index/exercise-liberating.html" title="Drill 2.3">Drill</a> <a href="" class="xref" data-knowl="./knowl/index/PROBLEMQSub.html" title="Drill 2.6">Drill</a> <a href="" class="xref" data-knowl="./knowl/index/SECTIONAn-easy-problem-alg-14.html" title="Drill 2.7">Drill</a> <a href="" class="xref" data-knowl="./knowl/index/exercise-.html" title="Drill 2.10">Drill</a> <a href="" class="xref" data-knowl="./knowl/index/DRILLMaxPara.html" title="Drill 2.11">Drill</a> <a href="" class="xref" data-knowl="./knowl/index/exercise-IntuitionDeceivers.html" title="Drill 2.12: Some possibly deceptive problems">Drill</a> <a href="" class="xref" data-knowl="./knowl/index/PROBLEMDerivProdNEProdDeriv.html" title="Problem 5.42">Problem</a></span>
+<div class="indexletter" id="indexletter-p"><div class="indexitem">Problem<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/exercise-problem-calculator.html" title="Drill 2.1">Drill</a> <a href="" class="xref" data-knowl="./knowl/index/exercise-liberating.html" title="Drill 2.3">Drill</a> <a href="" class="xref" data-knowl="./knowl/index/PROBLEMQSub.html" title="Drill 2.6">Drill</a> <a href="" class="xref" data-knowl="./knowl/index/SECTIONAn-easy-problem-alg-14.html" title="Drill 2.7">Drill</a> <a href="" class="xref" data-knowl="./knowl/index/exercise-.html" title="Drill 2.9">Drill</a> <a href="" class="xref" data-knowl="./knowl/index/DRILLMaxPara.html" title="Drill 2.10">Drill</a> <a href="" class="xref" data-knowl="./knowl/index/exercise-IntuitionDeceivers.html" title="Drill 2.11: Some possibly deceptive problems">Drill</a> <a href="" class="xref" data-knowl="./knowl/index/PROBLEMDerivProdNEProdDeriv.html" title="Problem 5.42">Problem</a></span>
 </div></div>
 <div class="indexletter" id="indexletter-t">
 <div class="indexitem">Table</div>

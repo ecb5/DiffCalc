@@ -151,8 +151,9 @@ window.MathJax = {
   \right\}
 }
 
-\def\absALT#1{\rule[-.7ex]{1pt}{5ex}\hskip2pt#1\hskip2pt\llap{\rule[-.7ex]{1pt}{5ex}}} 
 
+
+\def\lhopeq{\stackrel{L'H}{=}}
 
 \def\sech{{\rm{}sech}{}}
 \def\csch{{\rm{}csch}{}}
@@ -164,6 +165,10 @@ window.MathJax = {
 \def\ftceval#1#2#3{\eval#1#2#3}
 \def\geneval#1#2{\eval{#1}{#2}{}}
 \def\bigeval#1#2#3{\eval{#2}{#2}{#3}}
+
+
+
+
 
 
 
@@ -192,6 +197,8 @@ window.MathJax = {
 \def\dfdxn#1#2#3{\frac{\text{d}^{#3}{#1}}{\text{d}{#2}^{#3}}} 
 
 
+\def\limitatinf#1#2{\limit{#1}{\infty}{#2}}
+\def\limitatninf#1#2{\limit{#1}{-\infty}{#2}}
 \def\dfdxat#1#2#3{\eval{\dfdx{#1}{#2}}{#2=#3}{}}
 
 \def\limit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}#3}}
@@ -343,7 +350,7 @@ window.MathJax = {
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTApproximation.html#SUBSECTIONSubtleFailure" class="internal"><span class="codenumber">7.2.3</span> <span class="title">Subtle Failure</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTApproximation.html#SECTIONeulers-method" class="internal"><span class="codenumber">7.3</span> <span class="title">Euler’s Method</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTApproximation.html#SECTIONEulersMethod" class="internal"><span class="codenumber">7.3</span> <span class="title">Euler’s Method</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTApproximation.html#SECTIONmore-high-deriv" class="internal"><span class="codenumber">7.4</span> <span class="title">Higher Derivatives, Lagrange, and Taylor</span></a></div></li>
 </ul>
 </li>
@@ -423,13 +430,7 @@ window.MathJax = {
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTshape-things.html#SECTIONgraph-with-form" class="internal"><span class="codenumber">10.1</span> <span class="title">Graphing with a Formula for  <span class="process-math">\(y(x)\)</span></span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTshape-things.html#SECTIONgraph-without-form" class="internal"><span class="codenumber">10.2</span> <span class="title">Graphing Without Formulas</span></a></div></li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAPTERPTshape-things.html#SECTIONGraphingWithDeriv" class="internal"><span class="codenumber">10.3</span> <span class="title">Graphing with a Formula for  <span class="process-math">\(\dfdx{y}{x}\)</span></span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTshape-things.html#SUBSECTIONDerivDepOnxAlone" class="internal"><span class="codenumber">10.3.1</span> <span class="title">When  <span class="process-math">\(\dfdx{y}{x}\)</span> Depends on <span class="process-math">\(x\)</span> alone</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTshape-things.html#SUBSECTIONDfdxDependsOnYAlone" class="internal"><span class="codenumber">10.3.2</span> <span class="title">When  <span class="process-math">\(\dfdx{y}{t}\)</span> depends on <span class="process-math">\(y\)</span> alone</span></a></div></li>
-</ul>
-</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTshape-things.html#SECTIONGraphingWithDeriv" class="internal"><span class="codenumber">10.3</span> <span class="title">Graphing with a Formula for  <span class="process-math">\(\dfdx{y}{t}\)</span></span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -905,28 +906,28 @@ f(x)=4x^{3}-30x^{2}+72x-52.
 <div class="para" id="SUBSECTIONSubtleFailure-9-4-1-1">Show that if you start with an initial guess of <span class="process-math">\(r_1=2\)</span> or <span class="process-math">\(r_1=3\)</span> Newton’s Method will not even generate the first iterate: <span class="process-math">\(r_2.\)</span> Explain.</div></article></article><article class="problem example-like" id="SUBSECTIONSubtleFailure-10"><h5 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">7.26</span><span class="period">.</span>
 </h5>
-<div class="para" id="SUBSECTIONSubtleFailure-10-1-1">Suppose that a cubic polynomial has three real roots, <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\)</span> and  that two of them, <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are known.  We wish to approximate the third. Show that if we take the average of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> as our initial guess, Newton’s Method will find the exact value of the third root, <span class="process-math">\(c\text{,}\)</span> in one iteration.</div></article></section></section><section class="section" id="SECTIONeulers-method"><h3 class="heading hide-type">
+<div class="para" id="SUBSECTIONSubtleFailure-10-1-1">Suppose that a cubic polynomial has three real roots, <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\)</span> and  that two of them, <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are known.  We wish to approximate the third. Show that if we take the average of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> as our initial guess, Newton’s Method will find the exact value of the third root, <span class="process-math">\(c\text{,}\)</span> in one iteration.</div></article></section></section><section class="section" id="SECTIONEulersMethod"><h3 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">7.3</span><span class="space"> </span><span class="title">Euler’s Method</span>
 </h3>
 <div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="external/images/EulerFig1.png" class="contained"></div>
-<div class="para" id="SECTIONeulers-method-3">Suppose <span class="process-math">\(B\)</span> is a point on the graph of an unknown function <span class="process-math">\(y(x)\)</span> (in green in the figure above). Suppose further that if the line tangent to the graph at <span class="process-math">\(B\)</span> (in red) crosses the <span class="process-math">\(x\)</span>-axis at <span class="process-math">\((a, 0)\)</span> as shown.</div>
-<div class="para" id="SECTIONeulers-method-4">We wish to address the following question: “Is there a curve which passes through the point <span class="process-math">\((0,
+<div class="para" id="SECTIONEulersMethod-3">Suppose <span class="process-math">\(B\)</span> is a point on the graph of an unknown function <span class="process-math">\(y(x)\)</span> (in green in the figure above). Suppose further that if the line tangent to the graph at <span class="process-math">\(B\)</span> (in red) crosses the <span class="process-math">\(x\)</span>-axis at <span class="process-math">\((a, 0)\)</span> as shown.</div>
+<div class="para" id="SECTIONEulersMethod-4">We wish to address the following question: “Is there a curve which passes through the point <span class="process-math">\((0,
 1)\)</span> with the property that the distance from <span class="process-math">\(A\)</span> to <span class="process-math">\(C\)</span> is equal to <span class="process-math">\(1\)</span> regardless of the location of <span class="process-math">\(B\)</span> on the graph.”</div>
-<aside class="aside aside-like" id="SECTIONeulers-method-5"><h4 class="heading"><span class="title">Historical Background.</span></h4>
-<div class="para" id="SECTIONeulers-method-5-2">The line segment <span class="process-math">\(AC\)</span> is called the subtangent of the graph. In the seventeenth century mathematics was still strongly tied to Greek geometry so some of the early, pre-Calculus efforts to find the tangent lines were aimed at finding the length of the subtangent of a curve. Finding length of <span class="process-math">\(\overline{CA}\)</span> is equivalent to finding the derivative of <span class="process-math">\(y\)</span> at <span class="process-math">\(B\)</span> because if <span class="process-math">\(B\)</span> and <span class="process-math">\(C\)</span> are known then the slope of the curve at <span class="process-math">\(B\)</span> is equal to <span class="process-math">\(\frac{\overline{BC}}{\overline{AC}}\text{.}\)</span>
-</div></aside><div class="para" id="SECTIONeulers-method-6">At <span class="process-math">\(B\)</span> form the differential right triangle with the infinitesimal vertical displacement <span class="process-math">\(\dx{y}\)</span> and the infinitesimal horizontal displacement <span class="process-math">\(\dx{x}\text{,}\)</span> as shown. Then the right triangle with sides of length <span class="process-math">\(y\)</span> and <span class="process-math">\(1\)</span> is proportional to the differential triangle. By the properties of proportional triangles this curve must satisfy the differential equation: <span class="process-math">\(\dfdx{y}{x} = y\text{.}\)</span>
+<aside class="aside aside-like" id="SECTIONEulersMethod-5"><h4 class="heading"><span class="title">Historical Background.</span></h4>
+<div class="para" id="SECTIONEulersMethod-5-2">The line segment <span class="process-math">\(AC\)</span> is called the subtangent of the graph. In the seventeenth century mathematics was still strongly tied to Greek geometry so some of the early, pre-Calculus efforts to find the tangent lines were aimed at finding the length of the subtangent of a curve. Finding length of <span class="process-math">\(\overline{CA}\)</span> is equivalent to finding the derivative of <span class="process-math">\(y\)</span> at <span class="process-math">\(B\)</span> because if <span class="process-math">\(B\)</span> and <span class="process-math">\(C\)</span> are known then the slope of the curve at <span class="process-math">\(B\)</span> is equal to <span class="process-math">\(\frac{\overline{BC}}{\overline{AC}}\text{.}\)</span>
+</div></aside><div class="para" id="SECTIONEulersMethod-6">At <span class="process-math">\(B\)</span> form the differential right triangle with the infinitesimal vertical displacement <span class="process-math">\(\dx{y}\)</span> and the infinitesimal horizontal displacement <span class="process-math">\(\dx{x}\text{,}\)</span> as shown. Then the right triangle with sides of length <span class="process-math">\(y\)</span> and <span class="process-math">\(1\)</span> is proportional to the differential triangle. By the properties of proportional triangles this curve must satisfy the differential equation: <span class="process-math">\(\dfdx{y}{x} = y\text{.}\)</span>
 </div>
-<div class="para logical" id="SECTIONeulers-method-7">
+<div class="para logical" id="SECTIONEulersMethod-7">
 <div class="para">Since we specified that the curve must pass through the point <span class="process-math">\((0, 1)\)</span> we see that we need to find a function <span class="process-math">\(y(x)\)</span> that satisfies the following two conditions:</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/IVPExpDiffeq1.html ./knowl/xref/DEFINITIONIVP.html" id="SECTIONeulers-method-7-3">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/IVPExpDiffeq1.html ./knowl/xref/DEFINITIONIVP.html" id="SECTIONEulersMethod-7-3">
 \begin{align}
 \dfdx{y}{x} = y, \amp{}\amp{}\text{and}\amp{}\amp{}  y(0)=1.\tag{7.5}
 \end{align}
 </div>
 <div class="para">A problem like the one stated in <a href="" class="xref" data-knowl="./knowl/xref/IVPExpDiffeq1.html" title="Equation 7.5">Formula (7.5)</a> is called an <dfn class="terminology">Initial Value Problem</dfn>, or IVP. We will give a formal definition below (<a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONIVP.html" title="Definition 7.27: Initial Value Problem (IVP)">Definition 7.27</a>).</div>
 </div>
-<div class="para" id="SECTIONeulers-method-8">We do not know a formula for <span class="process-math">\(y\)</span> which will satisfy <a href="" class="xref" data-knowl="./knowl/xref/IVPExpDiffeq1.html" title="Equation 7.5">IVP (7.5)</a>, nor do we have the tools to find such a formula, yet.  We will return to this question in <a href="CHAPTERlast-elem-funct.html" class="internal" title="Chapter 8: Exponentials and Logarithms">Chapter 8</a>) where we will solve <a href="" class="xref" data-knowl="./knowl/xref/IVPExpDiffeq1.html" title="Equation 7.5">IVP (7.5)</a>) exactly. For the moment we will be satisfied if we can find an approximate graph of the solution.  That will give us a general sense of its shape.</div>
-<div class="para logical" id="SECTIONeulers-method-9">
+<div class="para" id="SECTIONEulersMethod-8">We do not know a formula for <span class="process-math">\(y\)</span> which will satisfy <a href="" class="xref" data-knowl="./knowl/xref/IVPExpDiffeq1.html" title="Equation 7.5">IVP (7.5)</a>, nor do we have the tools to find such a formula, yet.  We will return to this question in <a href="CHAPTERlast-elem-funct.html" class="internal" title="Chapter 8: Exponentials and Logarithms">Chapter 8</a>) where we will solve <a href="" class="xref" data-knowl="./knowl/xref/IVPExpDiffeq1.html" title="Equation 7.5">IVP (7.5)</a>) exactly. For the moment we will be satisfied if we can find an approximate graph of the solution.  That will give us a general sense of its shape.</div>
+<div class="para logical" id="SECTIONEulersMethod-9">
 <div class="para">The initial value in <a href="" class="xref" data-knowl="./knowl/xref/IVPExpDiffeq1.html" title="Equation 7.5">IVP (7.5)</a>) shows that  the curve passes through the point <span class="process-math">\((0,1)\text{.}\)</span>  From the differential equation in <a href="" class="xref" data-knowl="./knowl/xref/IVPExpDiffeq1.html" title="Equation 7.5">IVP (7.5)</a>)  we see that</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/IVPExpDiffeq1.html ./knowl/xref/IVPExpDiffeq1.html">
 \begin{equation*}
@@ -943,19 +944,19 @@ y=x+1.
 </div>
 <div class="para">This is not a lot to work with, but let’s not set our sights too high.</div>
 </div>
-<div class="para" id="SECTIONeulers-method-10">By the Principle of Local Linearity, the line tangent to the curve and the curve itself are going to be nearly indistinguishable near to the point <span class="process-math">\((0,1)\text{.}\)</span> Moreover, we can find any point on the tangent line since we have its equation.  If we increment the <span class="process-math">\(x\)</span>-coordinate just a little bit while staying on the tangent line then the corresponding <span class="process-math">\(y-\)</span>coordinate on the tangent line will be close to the <span class="process-math">\(y-\)</span>coordinate on the curve. So we can use the <span class="process-math">\(y\)</span>-coordinate on the tangent line (which we know) to approximate the <span class="process-math">\(y\)</span>-coordinate on the curve (which we don’t know).</div>
+<div class="para" id="SECTIONEulersMethod-10">By the Principle of Local Linearity, the line tangent to the curve and the curve itself are going to be nearly indistinguishable near to the point <span class="process-math">\((0,1)\text{.}\)</span> Moreover, we can find any point on the tangent line since we have its equation.  If we increment the <span class="process-math">\(x\)</span>-coordinate just a little bit while staying on the tangent line then the corresponding <span class="process-math">\(y-\)</span>coordinate on the tangent line will be close to the <span class="process-math">\(y-\)</span>coordinate on the curve. So we can use the <span class="process-math">\(y\)</span>-coordinate on the tangent line (which we know) to approximate the <span class="process-math">\(y\)</span>-coordinate on the curve (which we don’t know).</div>
 <div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/images/exp-piecewise-linear2.png" class="contained"></div>
-<div class="para" id="SECTIONeulers-method-12">Let’s say we increase <span class="process-math">\(x\)</span> by <span class="process-math">\(0.1\)</span> so that <span class="process-math">\(x=0.1\text{.}\)</span>  The <span class="process-math">\(y\)</span>-coordinate on the line tangent to the curve at <span class="process-math">\(x=0.1\)</span> is <span class="process-math">\(1.1\)</span> (since the equation of our tangent line is <span class="process-math">\(y=x+1\)</span>).</div>
-<div class="para" id="SECTIONeulers-method-13">We now have two points on our curve: <span class="process-math">\((0,1)\)</span> and <span class="process-math">\((0.1, 1.1).\)</span> The point <span class="process-math">\((0.1, 1.1)\)</span> isn’t on the curve, but it’s close. Remember we’re only trying to approximate the curve. Connecting these with a straight line we have the red segment on the graph above.  So far, so good.</div>
-<div class="para" id="SECTIONeulers-method-14">Next we increment <span class="process-math">\(x\)</span> by <span class="process-math">\(0.1\)</span> again, to <span class="process-math">\(x=0.2\text{.}\)</span>  We would really like to have the equation of the line tangent to the curve at <span class="process-math">\((0.1, y(0.1))\)</span> but we simply have no way to obtain it. All we have is the point <span class="process-math">\((0.1, 1.1)\text{.}\)</span> But we know that <span class="process-math">\(y(0.1)\approx1.1\)</span> so the differential equation from <a href="" class="xref" data-knowl="./knowl/xref/IVPExpDiffeq1.html" title="Equation 7.5">IVP (7.5)</a>) tells us that <span class="process-math">\(\eval{\dfdx{y}{x}}{x}{0.1}\approx1.1\)</span> also. Thus we see that the curve will pass (approximately) through the point <span class="process-math">\((0.1, 1.1)\)</span> with slope (approximately) equal to <span class="process-math">\(1.1\text{.}\)</span> Therefore the equation of the line tangent to the curve at (approximately) <span class="process-math">\((0.1, 1.1)\)</span> will be <span class="process-math">\(y-1.1=1.1(x-0.1)\)</span> and as long as we don’t move too far the Principle of Local Linearity guarantees that this line and the curve we seek are close together. So we use the blue line segment from <span class="process-math">\((0.1, 1.1)\)</span> to <span class="process-math">\((0.2, 1.21)\)</span> in our figure above to approximate the curve on the interval <span class="process-math">\((0.1, 0.2)\text{.}\)</span>
+<div class="para" id="SECTIONEulersMethod-12">Let’s say we increase <span class="process-math">\(x\)</span> by <span class="process-math">\(0.1\)</span> so that <span class="process-math">\(x=0.1\text{.}\)</span>  The <span class="process-math">\(y\)</span>-coordinate on the line tangent to the curve at <span class="process-math">\(x=0.1\)</span> is <span class="process-math">\(1.1\)</span> (since the equation of our tangent line is <span class="process-math">\(y=x+1\)</span>).</div>
+<div class="para" id="SECTIONEulersMethod-13">We now have two points on our curve: <span class="process-math">\((0,1)\)</span> and <span class="process-math">\((0.1, 1.1).\)</span> The point <span class="process-math">\((0.1, 1.1)\)</span> isn’t on the curve, but it’s close. Remember we’re only trying to approximate the curve. Connecting these with a straight line we have the red segment on the graph above.  So far, so good.</div>
+<div class="para" id="SECTIONEulersMethod-14">Next we increment <span class="process-math">\(x\)</span> by <span class="process-math">\(0.1\)</span> again, to <span class="process-math">\(x=0.2\text{.}\)</span>  We would really like to have the equation of the line tangent to the curve at <span class="process-math">\((0.1, y(0.1))\)</span> but we simply have no way to obtain it. All we have is the point <span class="process-math">\((0.1, 1.1)\text{.}\)</span> But we know that <span class="process-math">\(y(0.1)\approx1.1\)</span> so the differential equation from <a href="" class="xref" data-knowl="./knowl/xref/IVPExpDiffeq1.html" title="Equation 7.5">IVP (7.5)</a>) tells us that <span class="process-math">\(\eval{\dfdx{y}{x}}{x}{0.1}\approx1.1\)</span> also. Thus we see that the curve will pass (approximately) through the point <span class="process-math">\((0.1, 1.1)\)</span> with slope (approximately) equal to <span class="process-math">\(1.1\text{.}\)</span> Therefore the equation of the line tangent to the curve at (approximately) <span class="process-math">\((0.1, 1.1)\)</span> will be <span class="process-math">\(y-1.1=1.1(x-0.1)\)</span> and as long as we don’t move too far the Principle of Local Linearity guarantees that this line and the curve we seek are close together. So we use the blue line segment from <span class="process-math">\((0.1, 1.1)\)</span> to <span class="process-math">\((0.2, 1.21)\)</span> in our figure above to approximate the curve on the interval <span class="process-math">\((0.1, 0.2)\text{.}\)</span>
 </div>
-<div class="para" id="SECTIONeulers-method-15">We now repeat this process to compute the points:<span class="process-math">\((0.3,1.331)\text{,}\)</span> <span class="process-math">\((0.4,1.4641)\text{,}\)</span> <span class="process-math">\((0.5,1.61051)\text{,}\)</span> and so on.  Plotting these points and connecting them with straight line segments gives us the rest of the sketch above.</div>
-<div class="para" id="SECTIONeulers-method-16">At each step we use the previous approximation to compute the next, so it would be miraculous if we actually found exactly the points on the graph of our curve.  But it should be clear  that the curve we’ve drawn will at least resemble the desired curve, as long as we don’t stray too far from our initial point <span class="process-math">\(x=0\text{.}\)</span> The sketch below shows our approximation and the actual solution on the same set of axes.</div>
-<aside class="aside aside-like" id="SECTIONeulers-method-17"><h4 class="heading"><span class="title">Comment.</span></h4>
-<div class="para" id="SECTIONeulers-method-17-2">In practice of course, we wouldn’t know the actual solution—if we knew that there would be no reason to find an approximation—but in this case we (the authors) do know.</div></aside><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/exp-piecewise-linear3.png" class="contained"></div>
-<div class="para" id="SECTIONeulers-method-19">The solution of this particular IVP  turns out to be incredibly useful in mathematics, theoretical physics, engineering, and science and technology in general.  We will be revisiting it in the next chapter.</div>
-<div class="para" id="SECTIONeulers-method-20">The procedure we have just outlined is known as <dfn class="terminology">Euler’s Method</dfn>; named for the great eighteenth century mathematician Leonhard Euler. For now we’ll focus on how to use Euler’s Method to find an approximate solution of an arbitrary <dfn class="terminology">Initial Value Problem</dfn>.</div>
-<div class="para" id="SECTIONeulers-method-21">We define an Initial Value Problem formally as follows.</div>
+<div class="para" id="SECTIONEulersMethod-15">We now repeat this process to compute the points:<span class="process-math">\((0.3,1.331)\text{,}\)</span> <span class="process-math">\((0.4,1.4641)\text{,}\)</span> <span class="process-math">\((0.5,1.61051)\text{,}\)</span> and so on.  Plotting these points and connecting them with straight line segments gives us the rest of the sketch above.</div>
+<div class="para" id="SECTIONEulersMethod-16">At each step we use the previous approximation to compute the next, so it would be miraculous if we actually found exactly the points on the graph of our curve.  But it should be clear  that the curve we’ve drawn will at least resemble the desired curve, as long as we don’t stray too far from our initial point <span class="process-math">\(x=0\text{.}\)</span> The sketch below shows our approximation and the actual solution on the same set of axes.</div>
+<aside class="aside aside-like" id="SECTIONEulersMethod-17"><h4 class="heading"><span class="title">Comment.</span></h4>
+<div class="para" id="SECTIONEulersMethod-17-2">In practice of course, we wouldn’t know the actual solution—if we knew that there would be no reason to find an approximation—but in this case we (the authors) do know.</div></aside><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/exp-piecewise-linear3.png" class="contained"></div>
+<div class="para" id="SECTIONEulersMethod-19">The solution of this particular IVP  turns out to be incredibly useful in mathematics, theoretical physics, engineering, and science and technology in general.  We will be revisiting it in the next chapter.</div>
+<div class="para" id="SECTIONEulersMethod-20">The procedure we have just outlined is known as <dfn class="terminology">Euler’s Method</dfn>; named for the great eighteenth century mathematician Leonhard Euler. For now we’ll focus on how to use Euler’s Method to find an approximate solution of an arbitrary <dfn class="terminology">Initial Value Problem</dfn>.</div>
+<div class="para" id="SECTIONEulersMethod-21">We define an Initial Value Problem formally as follows.</div>
 <article class="definition definition-like" id="DEFINITIONIVP"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.27</span><span class="period">.</span><span class="space"> </span><span class="title">Initial Value Problem (IVP).</span>
 </h4> <div class="para logical" id="DEFINITIONIVP-2-1">
@@ -972,13 +973,13 @@ y=x+1.
 y(x_0)=y_0.
 \end{equation*}
 </div>
-</div></article><div class="para" id="SECTIONeulers-method-23">Don’t let the formalism of this definition scare you. All it says is that at every point <span class="process-math">\((x,y)\)</span> the slope of <span class="process-math">\(y(x)\text{,}\)</span> <span class="process-math">\(\left(\dfdx{y}{x}\right)\text{,}\)</span> is given by some formula, <span class="process-math">\(f(x,y)\text{,}\)</span> which may involve both <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> and that we know the value of <span class="process-math">\(y(x)\)</span> for a single value of <span class="process-math">\(x\text{.}\)</span> Specifically, at  <span class="process-math">\(x=x_0\text{.}\)</span>
+</div></article><div class="para" id="SECTIONEulersMethod-23">Don’t let the formalism of this definition scare you. All it says is that at every point <span class="process-math">\((x,y)\)</span> the slope of <span class="process-math">\(y(x)\text{,}\)</span> <span class="process-math">\(\left(\dfdx{y}{x}\right)\text{,}\)</span> is given by some formula, <span class="process-math">\(f(x,y)\text{,}\)</span> which may involve both <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> and that we know the value of <span class="process-math">\(y(x)\)</span> for a single value of <span class="process-math">\(x\text{.}\)</span> Specifically, at  <span class="process-math">\(x=x_0\text{.}\)</span>
 </div>
-<aside class="aside aside-like" id="SECTIONeulers-method-24"><h4 class="heading"><span class="title">Comment.</span></h4>
-<div class="para" id="SECTIONeulers-method-24-2">In our problem above we had <span class="process-math">\(\dfdx{y}{x}=f(x,y)=y\text{.}\)</span>
-</div></aside><div class="para logical" id="SECTIONeulers-method-25">
+<aside class="aside aside-like" id="SECTIONEulersMethod-24"><h4 class="heading"><span class="title">Comment.</span></h4>
+<div class="para" id="SECTIONEulersMethod-24-2">In our problem above we had <span class="process-math">\(\dfdx{y}{x}=f(x,y)=y\text{.}\)</span>
+</div></aside><div class="para logical" id="SECTIONEulersMethod-25">
 <div class="para">To write down Euler’s Method clearly we will need some notation. We know that the equation of the tangent line to the curve <span class="process-math">\(y=y(x)\)</span> at the point <span class="process-math">\((x_0,y_0)\)</span> is given by</div>
-<div class="displaymath process-math" id="SECTIONeulers-method-25-4">
+<div class="displaymath process-math" id="SECTIONEulersMethod-25-4">
 \begin{align*}
 y\amp =y_0+\left(\eval{\dfdx{y}{x}}{(x,y)}{(x_0,y_0)}\right)(x-x_0)\\
 \amp =y_0+f(x_0,y_0)(x-x_0 ).
@@ -986,11 +987,11 @@ y\amp =y_0+\left(\eval{\dfdx{y}{x}}{(x,y)}{(x_0,y_0)}\right)(x-x_0)\\
 </div>
 <div class="para">So if we choose <span class="process-math">\(x_1\)</span> very close to <span class="process-math">\(x_0\)</span> and compute <span class="process-math">\(y_1=y_0+f(x_0,y_0 )(x_1-x_0 )\)</span> then <span class="process-math">\((x_1,y_1)\)</span> would be approximately on the curve. In this way we can generate a sequence of points <span class="process-math">\((x_0,y_0 ), (x_1,y_1 ), (x_2,y_2 ), (x_3,y_3 ),\cdots\)</span> which are approximately on the curve.  Connecting them with straight line segments should provide an approximate graph of the curve.</div>
 </div>
-<div class="para" id="SECTIONeulers-method-26">Formalizing all of this we have:</div>
-<article class="algorithm theorem-like" id="SECTIONeulers-method-27"><h4 class="heading">
+<div class="para" id="SECTIONEulersMethod-26">Formalizing all of this we have:</div>
+<article class="algorithm theorem-like" id="SECTIONEulersMethod-27"><h4 class="heading">
 <span class="type">Algorithm</span><span class="space"> </span><span class="codenumber">7.28</span><span class="period">.</span><span class="space"> </span><span class="title">Euler’s Method.</span>
 </h4>
-<div class="para logical" id="SECTIONeulers-method-27-2">
+<div class="para logical" id="SECTIONEulersMethod-27-2">
 <div class="para">Given an IVP:</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1004,7 +1005,7 @@ y_{n+1}=f(x_n,y_n )(x_{n+1}-x_n)+y_n
 \text{ for } n=1, 2, 3, \ldots.
 \end{equation*}
 </div>
-</div></article><div class="para" id="SECTIONeulers-method-28">At each iteration the value of <span class="process-math">\(y\)</span> has been approximated, so the next approximation is probably not as good. Thus, as we move further from our initial value <span class="process-math">\((x_0, y_0)\)</span> our approximation probably deviates further away from the actual curve.  However,  near to the initial value, <span class="process-math">\((x_0,y_0)\)</span> we should have a reasonable approximation to the curve <span class="process-math">\(y=y(x)\text{.}\)</span> The next two problems demonstrate this.</div>
+</div></article><div class="para" id="SECTIONEulersMethod-28">At each iteration the value of <span class="process-math">\(y\)</span> has been approximated, so the next approximation is probably not as good. Thus, as we move further from our initial value <span class="process-math">\((x_0, y_0)\)</span> our approximation probably deviates further away from the actual curve.  However,  near to the initial value, <span class="process-math">\((x_0,y_0)\)</span> we should have a reasonable approximation to the curve <span class="process-math">\(y=y(x)\text{.}\)</span> The next two problems demonstrate this.</div>
 <article class="problem example-like" id="PROBLEMEulerSine"><h4 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">7.29</span><span class="period">.</span>
 </h4>
@@ -1199,36 +1200,36 @@ y_{n+1}=f(x_n,y_n )(x_{n+1}-x_n)+y_n
 <td class="l m b0 r1 l0 t0 lines"><span class="process-math">\(1.5\)</span></td>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
 </tr>
-</table></div>  </article><article class="problem example-like" id="SECTIONeulers-method-31"><h4 class="heading">
+</table></div>  </article><article class="problem example-like" id="SECTIONEulersMethod-31"><h4 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">7.31</span><span class="period">.</span>
 </h4>
-<div class="introduction" id="SECTIONeulers-method-31-1"><div class="para" id="SECTIONeulers-method-31-1-1">Use Euler’s Method to approximate the solutions of the given IVPs by constructing a table like the ones in <a href="" class="xref" data-knowl="./knowl/xref/PROBLEMEulerSine.html" title="Problem 7.29">Problems 7.29</a> <a href="" class="xref" data-knowl="./knowl/xref/PROBLEMEulerCosine.html" title="Problem 7.30">and 7.30</a>. Then plot the points you found, connecting them with straight line segments.</div></div>
-<article class="task exercise-like" id="SECTIONeulers-method-31-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="SECTIONeulers-method-31-2-1-1"><span class="process-math">\(\dfdx{y}{x}=y^2,\ \ \ y(0)=1\)</span></div></article><article class="task exercise-like" id="SECTIONeulers-method-31-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="SECTIONeulers-method-31-3-1-1"><span class="process-math">\(\dfdx{y}{x}=y^3,\ \ \ y(0)=1\)</span></div></article><article class="task exercise-like" id="SECTIONeulers-method-31-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<div class="para" id="SECTIONeulers-method-31-4-1-1"><span class="process-math">\(\dfdx{y}{x}=y^4,\ \ \ y(0)=1\)</span></div></article><article class="task exercise-like" id="SECTIONeulers-method-31-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
-<div class="para" id="SECTIONeulers-method-31-5-1-1"><span class="process-math">\(\dfdx{y}{x}=y^5,\ \ \ y(0)=1\)</span></div></article></article><article class="problem example-like" id="SECTIONeulers-method-32"><h4 class="heading">
+<div class="introduction" id="SECTIONEulersMethod-31-1"><div class="para" id="SECTIONEulersMethod-31-1-1">Use Euler’s Method to approximate the solutions of the given IVPs by constructing a table like the ones in <a href="" class="xref" data-knowl="./knowl/xref/PROBLEMEulerSine.html" title="Problem 7.29">Problems 7.29</a> <a href="" class="xref" data-knowl="./knowl/xref/PROBLEMEulerCosine.html" title="Problem 7.30">and 7.30</a>. Then plot the points you found, connecting them with straight line segments.</div></div>
+<article class="task exercise-like" id="SECTIONEulersMethod-31-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="SECTIONEulersMethod-31-2-1-1"><span class="process-math">\(\dfdx{y}{x}=y^2,\ \ \ y(0)=1\)</span></div></article><article class="task exercise-like" id="SECTIONEulersMethod-31-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="SECTIONEulersMethod-31-3-1-1"><span class="process-math">\(\dfdx{y}{x}=y^3,\ \ \ y(0)=1\)</span></div></article><article class="task exercise-like" id="SECTIONEulersMethod-31-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="SECTIONEulersMethod-31-4-1-1"><span class="process-math">\(\dfdx{y}{x}=y^4,\ \ \ y(0)=1\)</span></div></article><article class="task exercise-like" id="SECTIONEulersMethod-31-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="SECTIONEulersMethod-31-5-1-1"><span class="process-math">\(\dfdx{y}{x}=y^5,\ \ \ y(0)=1\)</span></div></article></article><article class="problem example-like" id="SECTIONEulersMethod-32"><h4 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">7.32</span><span class="period">.</span>
 </h4>
-<div class="introduction" id="SECTIONeulers-method-32-1"><div class="para" id="SECTIONeulers-method-32-1-1">Use Euler’s Method to approximate the solutions of the given IVPs by constructing a table like the ones in <a href="" class="xref" data-knowl="./knowl/xref/PROBLEMEulerSine.html" title="Problem 7.29">Problems 7.29</a> <a href="" class="xref" data-knowl="./knowl/xref/PROBLEMEulerCosine.html" title="Problem 7.30">and 7.30</a>. Then plot the points you found, connecting them with straight line segments.</div></div>
-<article class="task exercise-like" id="SECTIONeulers-method-32-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="SECTIONeulers-method-32-2-1-1"><span class="process-math">\(\dfdx{y}{x}=\frac{1}{y},\ \ \ y(1)=1\)</span></div></article><article class="task exercise-like" id="SECTIONeulers-method-32-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="SECTIONeulers-method-32-3-1-1"><span class="process-math">\(\dfdx{y}{x}=\frac{1}{y^2},\ \ \ y(1)=1\)</span></div></article><article class="task exercise-like" id="SECTIONeulers-method-32-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<div class="para" id="SECTIONeulers-method-32-4-1-1"><span class="process-math">\(\dfdx{y}{x}=\frac{1}{y^3},\ \ \ y(1)=1\)</span></div></article><article class="task exercise-like" id="SECTIONeulers-method-32-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
-<div class="para" id="SECTIONeulers-method-32-5-1-1"><span class="process-math">\(\dfdx{y}{x}=\frac{1}{y^4},\ \ \ y(1)=1\)</span></div></article></article><article class="problem example-like" id="SECTIONeulers-method-33"><h4 class="heading">
+<div class="introduction" id="SECTIONEulersMethod-32-1"><div class="para" id="SECTIONEulersMethod-32-1-1">Use Euler’s Method to approximate the solutions of the given IVPs by constructing a table like the ones in <a href="" class="xref" data-knowl="./knowl/xref/PROBLEMEulerSine.html" title="Problem 7.29">Problems 7.29</a> <a href="" class="xref" data-knowl="./knowl/xref/PROBLEMEulerCosine.html" title="Problem 7.30">and 7.30</a>. Then plot the points you found, connecting them with straight line segments.</div></div>
+<article class="task exercise-like" id="SECTIONEulersMethod-32-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="SECTIONEulersMethod-32-2-1-1"><span class="process-math">\(\dfdx{y}{x}=\frac{1}{y},\ \ \ y(1)=1\)</span></div></article><article class="task exercise-like" id="SECTIONEulersMethod-32-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="SECTIONEulersMethod-32-3-1-1"><span class="process-math">\(\dfdx{y}{x}=\frac{1}{y^2},\ \ \ y(1)=1\)</span></div></article><article class="task exercise-like" id="SECTIONEulersMethod-32-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="SECTIONEulersMethod-32-4-1-1"><span class="process-math">\(\dfdx{y}{x}=\frac{1}{y^3},\ \ \ y(1)=1\)</span></div></article><article class="task exercise-like" id="SECTIONEulersMethod-32-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="SECTIONEulersMethod-32-5-1-1"><span class="process-math">\(\dfdx{y}{x}=\frac{1}{y^4},\ \ \ y(1)=1\)</span></div></article></article><article class="problem example-like" id="SECTIONEulersMethod-33"><h4 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">7.33</span><span class="period">.</span>
 </h4>
-<div class="introduction" id="SECTIONeulers-method-33-1"><div class="para" id="SECTIONeulers-method-33-1-1">Use Euler’s Method to approximate the solutions of the given IVPs by constructing a table like the ones in <a href="" class="xref" data-knowl="./knowl/xref/PROBLEMEulerSine.html" title="Problem 7.29">Problems 7.29</a> <a href="" class="xref" data-knowl="./knowl/xref/PROBLEMEulerCosine.html" title="Problem 7.30">and 7.30</a>. Then plot the points you found, connecting them with straight line segments.</div></div>
-<article class="task exercise-like" id="SECTIONeulers-method-33-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="SECTIONeulers-method-33-2-1-1"><span class="process-math">\(\dfdx{y}{x}=xy,\ \ \ y(0)=1\)</span></div></article><article class="task exercise-like" id="SECTIONeulers-method-33-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="SECTIONeulers-method-33-3-1-1"><span class="process-math">\(\dfdx{y}{x}=x^2y,\ \ \ y(0)=1\)</span></div></article><article class="task exercise-like" id="SECTIONeulers-method-33-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<div class="para" id="SECTIONeulers-method-33-4-1-1"><span class="process-math">\(\dfdx{y}{x}=xy^2,\ \ \ y(0)=1\)</span></div></article><article class="task exercise-like" id="SECTIONeulers-method-33-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
-<div class="para" id="SECTIONeulers-method-33-5-1-1"><span class="process-math">\(\dfdx{y}{x}=x^2y^2,\ \ \ y(0)=1\)</span></div></article><article class="task exercise-like" id="SECTIONeulers-method-33-6"><h5 class="heading"><span class="codenumber">(e)</span></h5>
-<div class="para" id="SECTIONeulers-method-33-6-1-1"><span class="process-math">\(\dfdx{y}{x}=\frac{x}{y},\ \ \ y(1)=1\)</span></div></article><article class="task exercise-like" id="SECTIONeulers-method-33-7"><h5 class="heading"><span class="codenumber">(f)</span></h5>
-<div class="para" id="SECTIONeulers-method-33-7-1-1"><span class="process-math">\(\dfdx{y}{x}=\frac{x^2}{y},\ \ \ y(1)=1\)</span></div></article><article class="task exercise-like" id="SECTIONeulers-method-33-8"><h5 class="heading"><span class="codenumber">(g)</span></h5>
-<div class="para" id="SECTIONeulers-method-33-8-1-1"><span class="process-math">\(\dfdx{y}{x}=\frac{x}{y^2},\ \ \ y(1)=1\)</span></div></article><article class="task exercise-like" id="SECTIONeulers-method-33-9"><h5 class="heading"><span class="codenumber">(h)</span></h5>
-<div class="para" id="SECTIONeulers-method-33-9-1-1"><span class="process-math">\(\dfdx{y}{x}=\frac{x^2}{y^2},\ \ \ y(1)=1\)</span></div></article><article class="task exercise-like" id="SECTIONeulers-method-33-10"><h5 class="heading"><span class="codenumber">(i)</span></h5>
-<div class="para" id="SECTIONeulers-method-33-10-1-1"><span class="process-math">\(\dfdx{y}{x}=\frac{x^2}{y^2},\ \ \ y(1)=2\)</span></div></article></article><article class="problem example-like" id="PROBLEMTractrix"><h4 class="heading">
+<div class="introduction" id="SECTIONEulersMethod-33-1"><div class="para" id="SECTIONEulersMethod-33-1-1">Use Euler’s Method to approximate the solutions of the given IVPs by constructing a table like the ones in <a href="" class="xref" data-knowl="./knowl/xref/PROBLEMEulerSine.html" title="Problem 7.29">Problems 7.29</a> <a href="" class="xref" data-knowl="./knowl/xref/PROBLEMEulerCosine.html" title="Problem 7.30">and 7.30</a>. Then plot the points you found, connecting them with straight line segments.</div></div>
+<article class="task exercise-like" id="SECTIONEulersMethod-33-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="SECTIONEulersMethod-33-2-1-1"><span class="process-math">\(\dfdx{y}{x}=xy,\ \ \ y(0)=1\)</span></div></article><article class="task exercise-like" id="SECTIONEulersMethod-33-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="SECTIONEulersMethod-33-3-1-1"><span class="process-math">\(\dfdx{y}{x}=x^2y,\ \ \ y(0)=1\)</span></div></article><article class="task exercise-like" id="SECTIONEulersMethod-33-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="SECTIONEulersMethod-33-4-1-1"><span class="process-math">\(\dfdx{y}{x}=xy^2,\ \ \ y(0)=1\)</span></div></article><article class="task exercise-like" id="SECTIONEulersMethod-33-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="SECTIONEulersMethod-33-5-1-1"><span class="process-math">\(\dfdx{y}{x}=x^2y^2,\ \ \ y(0)=1\)</span></div></article><article class="task exercise-like" id="SECTIONEulersMethod-33-6"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<div class="para" id="SECTIONEulersMethod-33-6-1-1"><span class="process-math">\(\dfdx{y}{x}=\frac{x}{y},\ \ \ y(1)=1\)</span></div></article><article class="task exercise-like" id="SECTIONEulersMethod-33-7"><h5 class="heading"><span class="codenumber">(f)</span></h5>
+<div class="para" id="SECTIONEulersMethod-33-7-1-1"><span class="process-math">\(\dfdx{y}{x}=\frac{x^2}{y},\ \ \ y(1)=1\)</span></div></article><article class="task exercise-like" id="SECTIONEulersMethod-33-8"><h5 class="heading"><span class="codenumber">(g)</span></h5>
+<div class="para" id="SECTIONEulersMethod-33-8-1-1"><span class="process-math">\(\dfdx{y}{x}=\frac{x}{y^2},\ \ \ y(1)=1\)</span></div></article><article class="task exercise-like" id="SECTIONEulersMethod-33-9"><h5 class="heading"><span class="codenumber">(h)</span></h5>
+<div class="para" id="SECTIONEulersMethod-33-9-1-1"><span class="process-math">\(\dfdx{y}{x}=\frac{x^2}{y^2},\ \ \ y(1)=1\)</span></div></article><article class="task exercise-like" id="SECTIONEulersMethod-33-10"><h5 class="heading"><span class="codenumber">(i)</span></h5>
+<div class="para" id="SECTIONEulersMethod-33-10-1-1"><span class="process-math">\(\dfdx{y}{x}=\frac{x^2}{y^2},\ \ \ y(1)=2\)</span></div></article></article><article class="problem example-like" id="PROBLEMTractrix"><h4 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">7.34</span><span class="period">.</span>
 </h4>
 <div class="introduction" id="PROBLEMTractrix-1">

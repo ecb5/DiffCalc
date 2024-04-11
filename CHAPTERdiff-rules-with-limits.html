@@ -151,8 +151,9 @@ window.MathJax = {
   \right\}
 }
 
-\def\absALT#1{\rule[-.7ex]{1pt}{5ex}\hskip2pt#1\hskip2pt\llap{\rule[-.7ex]{1pt}{5ex}}} 
 
+
+\def\lhopeq{\stackrel{L'H}{=}}
 
 \def\sech{{\rm{}sech}{}}
 \def\csch{{\rm{}csch}{}}
@@ -164,6 +165,10 @@ window.MathJax = {
 \def\ftceval#1#2#3{\eval#1#2#3}
 \def\geneval#1#2{\eval{#1}{#2}{}}
 \def\bigeval#1#2#3{\eval{#2}{#2}{#3}}
+
+
+
+
 
 
 
@@ -192,6 +197,8 @@ window.MathJax = {
 \def\dfdxn#1#2#3{\frac{\text{d}^{#3}{#1}}{\text{d}{#2}^{#3}}} 
 
 
+\def\limitatinf#1#2{\limit{#1}{\infty}{#2}}
+\def\limitatninf#1#2{\limit{#1}{-\infty}{#2}}
 \def\dfdxat#1#2#3{\eval{\dfdx{#1}{#2}}{#2=#3}{}}
 
 \def\limit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}#3}}
@@ -343,7 +350,7 @@ window.MathJax = {
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTApproximation.html#SUBSECTIONSubtleFailure" class="internal"><span class="codenumber">7.2.3</span> <span class="title">Subtle Failure</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTApproximation.html#SECTIONeulers-method" class="internal"><span class="codenumber">7.3</span> <span class="title">Euler’s Method</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTApproximation.html#SECTIONEulersMethod" class="internal"><span class="codenumber">7.3</span> <span class="title">Euler’s Method</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTApproximation.html#SECTIONmore-high-deriv" class="internal"><span class="codenumber">7.4</span> <span class="title">Higher Derivatives, Lagrange, and Taylor</span></a></div></li>
 </ul>
 </li>
@@ -423,13 +430,7 @@ window.MathJax = {
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTshape-things.html#SECTIONgraph-with-form" class="internal"><span class="codenumber">10.1</span> <span class="title">Graphing with a Formula for  <span class="process-math">\(y(x)\)</span></span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTshape-things.html#SECTIONgraph-without-form" class="internal"><span class="codenumber">10.2</span> <span class="title">Graphing Without Formulas</span></a></div></li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAPTERPTshape-things.html#SECTIONGraphingWithDeriv" class="internal"><span class="codenumber">10.3</span> <span class="title">Graphing with a Formula for  <span class="process-math">\(\dfdx{y}{x}\)</span></span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTshape-things.html#SUBSECTIONDerivDepOnxAlone" class="internal"><span class="codenumber">10.3.1</span> <span class="title">When  <span class="process-math">\(\dfdx{y}{x}\)</span> Depends on <span class="process-math">\(x\)</span> alone</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTshape-things.html#SUBSECTIONDfdxDependsOnYAlone" class="internal"><span class="codenumber">10.3.2</span> <span class="title">When  <span class="process-math">\(\dfdx{y}{t}\)</span> depends on <span class="process-math">\(y\)</span> alone</span></a></div></li>
-</ul>
-</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTshape-things.html#SECTIONGraphingWithDeriv" class="internal"><span class="codenumber">10.3</span> <span class="title">Graphing with a Formula for  <span class="process-math">\(\dfdx{y}{t}\)</span></span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -553,7 +554,7 @@ window.MathJax = {
 </blockquote>
 <div class="para" id="SUBSECTIONlimit-comp-cont-3">In this section we will state several theorems about limits which we will need in the sections following.  The limit concept is very subtle and our understanding of it is still quite intuitive.  We are not yet quite prepared to prove these theorems so we will leave these theorems unproven for now. Our immediate goal is simply to understand what they say and learn how to use them.  In the next section we will begin using these theorems to show how the limit in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "DEFDerivative" missing or not unique]</code> allows us to recapture all of the major results we used in Part I of this text.</div>
 <div class="para" id="SUBSECTIONlimit-comp-cont-4">In <a href="CHAPTERformal-limits.html" class="internal" title="Chapter 17: Formal Limits">Chapter 17</a> we will finally discard our intuitive definition of a limit (<code class="code-inline tex2jax_ignore">[cross-reference to target(s) "DEFLimitAtInfinity-Intuitive" missing or not unique]</code>) and formally define both a limit at infinity (<code class="code-inline tex2jax_ignore">[cross-reference to target(s) "DEFlimit-at-neginfinity" missing or not unique]</code>) and a limit at a point (<code class="code-inline tex2jax_ignore">[cross-reference to target(s) "DEFlimits-at-real" missing or not unique]</code>). Then we will return to the theorems in this section and (finally) prove rigorously that they are, in fact, true. Until then any result which relies on the theorems in this section should be considered contingent.</div>
-<div class="para" id="SUBSECTIONlimit-comp-cont-5">In <a href="CHAPTERlimits-lhop-rule.html" class="internal" title="Chapter 12: Limits and L’Hôpital’s Rule">Chapter 12</a> we stated the following three theorems about limits “at infinity.” \begin{enumerate} \item the limit of a sum is the sum of the limits (<a href="" class="xref" data-knowl="./knowl/xref/THEOREMLimSum1.html" title="Theorem 12.7: The Limit of a Sum">Theorem 12.7</a>), \item  the limit of a product is the product of the limits (<a href="" class="xref" data-knowl="./knowl/xref/THEOREMLimProd1.html" title="Theorem 12.8: The Limit of a Product">Theorem 12.8</a>) and, \item  the limit of a quotient  is the quotient of the limits (<a href="" class="xref" data-knowl="./knowl/xref/THEOREMLimQuot1.html" title="Theorem 12.9: The Limit of a Quotient">Theorem 12.9</a>). \end{enumerate} All three of these theorems remain true if <span class="process-math">\(x\)</span> is approaching some finite number, <span class="process-math">\(a\text{,}\)</span> instead of infinity.</div>
+<div class="para" id="SUBSECTIONlimit-comp-cont-5">In <a href="CHAPTERlimits-lhop-rule.html" class="internal" title="Chapter 12: Limits and L’Hôpital’s Rule">Chapter 12</a> we stated the following three theorems about limits “at infinity.” \begin{enumerate} \item the limit of a sum is the sum of the limits (<a href="" class="xref" data-knowl="./knowl/xref/THEOREMLimSum1.html" title="Theorem 12.6: The Limit of a Sum">Theorem 12.6</a>), \item  the limit of a product is the product of the limits (<a href="" class="xref" data-knowl="./knowl/xref/THEOREMLimProd1.html" title="Theorem 12.7: The Limit of a Product">Theorem 12.7</a>) and, \item  the limit of a quotient  is the quotient of the limits (<a href="" class="xref" data-knowl="./knowl/xref/THEOREMLimQuot1.html" title="Theorem 12.8: The Limit of a Quotient">Theorem 12.8</a>). \end{enumerate} All three of these theorems remain true if <span class="process-math">\(x\)</span> is approaching some finite number, <span class="process-math">\(a\text{,}\)</span> instead of infinity.</div>
 <article class="theorem theorem-like" id="THEOREMLimSum2"><h5 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">14.1</span><span class="period">.</span><span class="space"> </span><span class="title">The Limit of a Sum is the Sum of the Limits.</span>
 </h5>
@@ -750,7 +751,7 @@ f(x)=
 </h5>
 <div class="para" id="SUBSECTIONlimit-comp-cont-28-1-1">Prove <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "CORConstMultLimit" missing or not unique]</code>.</div></article><div class="para" id="SUBSECTIONlimit-comp-cont-29">The concept of <dfn class="terminology">continuity</dfn> is essential to Calculus, but you may have noticed that we have carefully avoided it as much as possible until now. This is because defining continuity is similar to defining the line tagent to a curve (<a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONTangentLine.html" title="Definition 5.7: The Line Tangent to a Curve  at a Point">Definition~\ 5.7</a>). We need to think carefully about what we want the term <dfn class="terminology">continuous</dfn> to mean, and then craft our definition to capture that meaning. This would have been very difficult to do without a fairly sophisticated understanding of the limit concept.</div>
 <div class="para" id="SUBSECTIONlimit-comp-cont-30">So stop and think about this for a moment. What do we mean when we say a curve is <dfn class="terminology">continuous</dfn>? A first, intuitive definition usually goes something like this: “A function is continuous if you can draw its graph without lifting your pencil from the paper,” but this is unsatisfactory for a number of reasons. In particular, it is impossible to apply in most cases. Think about it. Have often have you seen the entire graph of any function? Usually we just draw the part neat the origin and put arrowheads on both ends of the graph. We need something more precise.</div>
-<div class="para" id="SUBSECTIONlimit-comp-cont-31">At the end of <a href="" class="xref" data-knowl="./knowl/xref/EXAMPLELimComp1.html" title="Example 12.66">Example~\ 12.66</a> we remarked that it is only when <span class="process-math">\(f(x)\)</span> is continuous at <span class="process-math">\(x=g(a)\)</span> that <span class="process-math">\(\textcolor{blue}{\tlimit{x}{a}{\textcolor{red}{f(g(x))}}}\)</span> is equal to <span class="process-math">\(\textcolor{red}{f}\textcolor{blue}{\left(\tlimit{x}{a}{g(x)}\right)}\text{,}\)</span> but we did not discuss the matter any further. It is time for that discussion.</div>
+<div class="para" id="SUBSECTIONlimit-comp-cont-31">At the end of <a href="" class="xref" data-knowl="./knowl/xref/EXAMPLELimComp1.html" title="Example 12.62">Example~\ 12.62</a> we remarked that it is only when <span class="process-math">\(f(x)\)</span> is continuous at <span class="process-math">\(x=g(a)\)</span> that <span class="process-math">\(\textcolor{blue}{\tlimit{x}{a}{\textcolor{red}{f(g(x))}}}\)</span> is equal to <span class="process-math">\(\textcolor{red}{f}\textcolor{blue}{\left(\tlimit{x}{a}{g(x)}\right)}\text{,}\)</span> but we did not discuss the matter any further. It is time for that discussion.</div>
 <div class="para" id="SUBSECTIONlimit-comp-cont-32">First, notice that when you think closely about the statement “<span class="process-math">\(f(x)\)</span> is continuous at <span class="process-math">\(g(a)\)</span>” it appears to be nonsense, because <span class="process-math">\(g(a)\)</span> is the value of <span class="process-math">\(f\)</span> at the single value <span class="process-math">\(g(a)\)</span> but .  Does it make sense to you that a curve can be continuous at a single value of its domain? In ordinary usage  the concept of continuity requires an interval to be continuous on, doesn’t it?</div>
 <div class="para" id="SUBSECTIONlimit-comp-cont-33">Since we need the concept of “continuity at a point,” we define it.</div>
 <article class="definition definition-like" id="DEFINITIONcontinuity"><h5 class="heading">
@@ -766,7 +767,7 @@ f(x)=
 </div></article><article class="problem example-like" id="SUBSECTIONlimit-comp-cont-40"><h5 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">14.17</span><span class="period">.</span>
 </h5>
-<div class="para" id="SUBSECTIONlimit-comp-cont-40-1-1">Use the result of <a href="" class="xref" data-knowl="./knowl/xref/PROBLEMDiffImpCont.html" title="Problem 14.12">Problem 14.12</a> to prove <a href="" class="xref" data-knowl="./knowl/xref/LEMMADiffImpliesCont.html" title="Lemma 14.16: Differentiability Implies Continuity">~ 14.16</a>.</div></article><div class="para" id="SUBSECTIONlimit-comp-cont-41">When we were studying horizontal asymptotes in <a href="CHAPTERlimits-lhop-rule.html#SUBSECTIONlhop-rule-horiz" class="internal" title="Subsection 12.4.2: L’Hôpital’s Rule and Horizontal Asymptotes">~ 12.4.2</a> we encountered <a href="" class="xref" data-knowl="./knowl/xref/THEOREMInfSqueeze.html" title="Theorem 12.26: \boldmath The Squeeze  Theorem, (when x\rightarrow\pm\infty)">~ 12.26</a> (the  Squeeze Theorem “at” Infinity). But the Squeeze Theorem is also valid if <span class="process-math">\(x\rightarrow a\text{,}\)</span> where <span class="process-math">\(a\)</span> is a real number.</div>
+<div class="para" id="SUBSECTIONlimit-comp-cont-40-1-1">Use the result of <a href="" class="xref" data-knowl="./knowl/xref/PROBLEMDiffImpCont.html" title="Problem 14.12">Problem 14.12</a> to prove <a href="" class="xref" data-knowl="./knowl/xref/LEMMADiffImpliesCont.html" title="Lemma 14.16: Differentiability Implies Continuity">~ 14.16</a>.</div></article><div class="para" id="SUBSECTIONlimit-comp-cont-41">When we were studying horizontal asymptotes in <a href="CHAPTERlimits-lhop-rule.html#SUBSECTIONlhop-rule-horiz" class="internal" title="Subsection 12.4.2: L’Hôpital’s Rule and Horizontal Asymptotes">~ 12.4.2</a> we encountered <a href="" class="xref" data-knowl="./knowl/xref/THEOREMInfSqueeze.html" title="Theorem 12.26: The Squeeze  Theorem, (when x\rightarrow\pm\infty)">~ 12.26</a> (the  Squeeze Theorem “at” Infinity). But the Squeeze Theorem is also valid if <span class="process-math">\(x\rightarrow a\text{,}\)</span> where <span class="process-math">\(a\)</span> is a real number.</div>
 <article class="theorem theorem-like" id="THEOREMFiniteSqueeze"><h5 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">14.18</span><span class="period">.</span><span class="space"> </span><span class="title">The Squeeze Theorem (The Finite Case).</span>
 </h5>
