@@ -560,7 +560,7 @@ approaches <m>kL_f</m>. It follows from <xref ref="THEOREMConstLimit">Theorem</x
 <corollary xml:id="COROLLARYConstMultLimit">
 <p>
   If <m>\limit{x}{a}{f(x)}=L_f</m> and <m>k</m> is a real number then
-  <m>\limit{x}{a}{kf(x)}=k\limit{x}{a}{f(x)}=kL_f.</m>
+  <me>\limit{x}{a}{kf(x)}=k\limit{x}{a}{f(x)}=kL_f.</me>
 </p>
 </corollary>
 
@@ -1121,7 +1121,7 @@ function composition of the form
 }\beta^\prime(y)=\dfdx{\beta}{y}\right)
 </mrow>
 <mrow>
- y> \text{ as a function of }x \left(\text{so that}
+ y \text{ as a function of }x \left(\text{so that}
   y^\prime(x)=\dfdx{y}{x}\right),
 </mrow>
 <intertext>and</intertext>
@@ -1136,8 +1136,9 @@ function composition of the form
 
 Putting this all together we see that
 <me>
-\alpha^\prime(t) =
-\dfdx{\alpha}{\cancel{\beta}}\cdot\dfdx{\cancel{\beta}}{\cancel{y}}\cdot\dfdx{\cancel{y}}{\cancel{x}}\cdot\dfdx{\cancel{x}}{t}
+\alpha^\prime(t) =\frac{\dx{\alpha} }{\cancel{\dx{\beta }}}
+\cdot\frac{\cancel{\dx{\beta}}}{\cancel{\dx{y}}}\cdot\frac{\cancel{\dx{y}}}{\cancel{\dx{x}}}
+\cdot \frac{\cancel{\dx{x} }}{\dx{t} }
 = \dfdx{\alpha}{t}.
 </me>
 </p>
@@ -1152,9 +1153,7 @@ was dropped and this became the
 only Chain Rule. When the limit was used to provide rigor to Calculus
  the name was also applied to <xref ref="EQUATIONChainRule">equation</xref>).
 </p>
-<p>
-END OF DIGRESSION
-</p>
+<p><alert>END OF DIGRESSION</alert></p>
 </paragraphs>
 
 <p>
@@ -1175,7 +1174,7 @@ derivative of <m>\beta</m> with respect to <m>x</m>) we view it as a function.
     <q><m>\Delta\beta\neq0</m> near <m>x</m></q> in the statement of the Chain
     Rule. We will have
     a few comments about this in
-    <xref ref="DIGRESSIONDeltaBetaNotZero">Digression~\</xref> after the proof is completed.
+    <xref ref="DIGRESSIONDeltaBetaNotZero">Digression: Why Assume That <m>\Delta\beta\neq0</m> Near Zero?</xref> after the proof is completed.
 </p>                            
   
 <p> 
@@ -1223,7 +1222,7 @@ and since <m>\beta(x)</m> is differentiable at <m>x</m> we see from
    \beta(x)\amp =\beta(x) +\limit{h}{0}{\Delta\beta}
 </mrow>
 </md>
-  from  which <xref ref="EQUATIONDeltaBetaEq0"></xref>) follows. 
+  from  which <xref ref="EQUATIONDeltaBetaEq0"></xref> follows. 
   
   To prove the Chain Rule recall that 
 
@@ -1238,10 +1237,10 @@ and since <m>\beta(x)</m> is differentiable at <m>x</m> we see from
 <aside>
 <title>Comment</title>
 <p>
-(in the past we
+In the past we
     have called this <q>uncancelling</q> <m>\Delta\beta</m>. Also, notice that
   this is where we use the assumption, <q><m>\Delta\beta\neq0</m> near
-  <m>x</m>.</q>)
+  <m>x</m>.</q>
 </p>
 </aside>
 
@@ -1253,7 +1252,7 @@ and since <m>\beta(x)</m> is differentiable at <m>x</m> we see from
   <!-- \label{eq:UncancelDeltaBeta}  -->
   f^\prime(x)    \amp =\limit{h}{0}{\left(\frac{\alpha(\beta(x+h))-\alpha(\beta(x))}{\textcolor{red}{\Delta\beta}}\cdot\frac{\textcolor{red}{\Delta\beta}}{h}\right)}.
 </mrow>
-<intertext>From <xref ref="EQUATIONChainRule1"></xref>) we see that
+<intertext>From <xref ref="EQUATIONChainRule1"></xref> we see that
     <m>\textcolor{red}{\Delta\beta}=\textcolor{blue}{\beta(x+h)-\beta(x)}</m>
 so</intertext>
 <mrow number="no">
@@ -1264,7 +1263,7 @@ so</intertext>
     \amp =\limit{h}{0}{\left(\frac{\alpha(\beta(x+h))-\alpha(\beta(x))}{\Delta\beta}\right)}\cdot\limit{h}{0}{\left(\frac{\beta(x+h)-\beta(x)}{h}\right)}.
 </mrow>
 <intertext>
-  <xref ref="EQUATIONDeltaBetaEq0"></xref>) says that <m>h\rightarrow 0</m>
+  <xref ref="EQUATIONDeltaBetaEq0"></xref> says that <m>h\rightarrow 0</m>
     is equivalent to
   <m>\Delta\beta\rightarrow 0</m> so we have
 </intertext>
@@ -1306,14 +1305,14 @@ so</intertext>
 </p>
 <p>
   
-  Observe that in <xref ref="EQUATIONChainRuleProof1">equation</xref>) <m>\Delta\beta</m>
+  Observe that in <xref ref="EQUATIONChainRuleProof1">equation</xref> <m>\Delta\beta</m>
   plays the same role the <m>h</m> plays in
-  <xref ref="DEFINITIONDerivative"></xref>). In
-  <xref ref="DEFINITIONDerivative"></xref>) we were careful to insist that <m>h</m>
+  <xref ref="DEFINITIONDerivative"></xref>. In
+  <xref ref="DEFINITIONDerivative"></xref> we were careful to insist that <m>h</m>
   could never equal zero,so if we are going to interpret
   <me>\limit{\Delta\beta}{0}{\left(\frac{\alpha(\beta+\Delta\beta)-\alpha(\beta)}{\Delta\beta}\right)}</me>
   as the derivative of <m>\alpha</m> with respect to <m>\beta</m>, as we did in
-  <xref ref="EQUATIONChainRuleProof1">equation</xref>), we need to know that
+  <xref ref="EQUATIONChainRuleProof1">equation</xref>, we need to know that
   <m>\Delta\beta\neq0</m> when <m>h</m> is near zero.
 </p>
 <p>
@@ -1334,7 +1333,7 @@ so</intertext>
 <p>
 You may be wondering if our choice  to go with a
     weaker form of the Chain Rule means we've given Bishop Berkeley
-    cause for compliant. The answer
+    cause for complaint. The answer
     is no, we haven't. If we'd left off the condition that
     <m>\Delta\beta\neq0</m>, then our proof would not have been rigorous
     because we'd have ended by claiming more than we'd proved. As it
@@ -1464,9 +1463,7 @@ You may be wondering if our choice  to go with a
 
 <!--           \end{enumerate} -->
 <!-- \end{embeddedproblem} -->
-<p>
-END OF DIGRESSION
-</p>
+<p><alert>END OF DIGRESSION</alert></p>
 </paragraphs>
 
 <example xml:id="EXAMPLEDiffByCR">
@@ -2008,13 +2005,13 @@ similar reasons.
 <statement>
 <p>
  First prove the special case of the Quotient Rule where
-    <m>f(x)=\frac{1}{\beta(x)}</m>.
+    <m>g(x)=\frac{1}{\beta(x)}</m>.
     
 <ol marker="i">
     <li>
 <p>
  Use the limit definition to show that
-      <m>\beta^\prime(x)=\limit{h}{0}{\frac{\beta(x)-\beta(x+h)}{h\beta(x)\beta(x+h)}}</m>.
+      <m>g^\prime(x)=\limit{h}{0}{\frac{\beta(x)-\beta(x+h)}{h\beta(x)\beta(x+h)}}</m>.
 </p>
 </li>
     <li>
@@ -2212,9 +2209,7 @@ similar reasons.
   <!--     </me> -->
   <!--   \end{enumerate} -->
   <!-- \end{embeddedproblem} -->
-<p>
-END OF DIGRESSION
-</p>
+<p><alert>END OF DIGRESSION</alert></p>
 </paragraphs>
 
 
@@ -2228,7 +2223,7 @@ END OF DIGRESSION
 </p>
 
 <theorem xml:id="THEOREMSineDeriv">
-<title>\boldmath Derivative of <m>\sin(x)</m></title>
+<title> Derivative of <m>\sin(x)</m></title>
 <p>
   Suppose <m>\alpha(\theta)=\sin(\theta)</m>. Then
   <m> \alpha^\prime(\theta)=\cos(\theta).  </m>
@@ -2243,7 +2238,7 @@ END OF DIGRESSION
   
   Start with the limit definition:
   <me>    \alpha^\prime(\theta) =
-  \limit{h}{0} \frac{\sin(\theta+h)-\sin(\theta)}{h}
+  \limit{h}{0} { \frac{\sin(\theta+h)-\sin(\theta)}{h}}
   </me>
   In the numerator we see the expression <m>\sin(\theta+h)</m>.  Recall the
   sum formula for the Sine:
@@ -2252,23 +2247,37 @@ END OF DIGRESSION
   </me>
   Taking <m>A=\theta</m> and
   <m>B=h</m> we have:
-  \begin{align*}
-    \alpha^\prime(x)  \amp =
-    \limit{h}{0}{\frac{\textcolor{red}{\sin(\theta)}\cos(h)+\cos(\theta)\sin(h)-\textcolor{red}{\sin(\theta)}}{h}}\\
-    \intertext{Next, if we factor \textcolor{red}{<m>\sin(\theta)</m>} out
+
+<md>
+  <mrow>
+    \alpha^\prime(x)  \amp =    \limit{h}{0}{\frac{\textcolor{red}{\sin(\theta)}\cos(h)+\cos(\theta)\sin(h)-\textcolor{red}{\sin(\theta)}}{h}}
+  </mrow> 
+  <intertext>
+Next, if we factor \textcolor{red}{<m>\sin(\theta)</m>} out
     of the terms where it appears and rearrange the numerator a bit we
-    have:}
+    have:
+  </intertext>
+<mrow>    
+\amp =
+    \limit{h}{0}{\frac{\textcolor{red}{\sin(\theta)}(\cos(h)-1)+\cos(\theta)\sin(h)}{h}}.
+</mrow>
+<mrow>
     \amp =
-    \limit{h}{0}{\frac{\textcolor{red}{\sin(\theta)}(\cos(h)-1)+\cos(\theta)\sin(h)}{h}}.\\
+    \limit{h}{0}{\left(\frac{\sin(\theta)(\cos(h)-1)}{h}+\frac{\cos(\theta)\sin(h)}{h}\right)}.
+</mrow>
+<intertext>
+By <xref ref="THEOREMLimSum2"></xref>:
+</intertext>
+<mrow>
     \amp =
-    \limit{h}{0}{\left(\frac{\sin(\theta)(\cos(h)-1)}{h}+\frac{\cos(\theta)\sin(h)}{h}\right)}.\\
-    \intertext{By <xref ref="THEOREMLimSum2"></xref>:}
-    \amp =
-    \limit{h}{0}{\frac{\sin(\theta)(\cos(h)-1)}{h}}+\limit{h}{0}{\frac{\cos(\theta)\sin(h)}{h}}\\
-    \intertext{and by <xref ref="COROLLARYConstMultLimit"></xref>:}
+    \limit{h}{0}{\frac{\sin(\theta)(\cos(h)-1)}{h}}+\limit{h}{0}{\frac{\cos(\theta)\sin(h)}{h}}
+</mrow>
+<intertext>and by <xref ref="COROLLARYConstMultLimit"></xref>:</intertext>
+<mrow>
     \amp =
     \sin(\theta)\underbrace{\left(\limit{h}{0}{\frac{(\cos(h)-1)}{h}}\right)}_{=0}+\cos(\theta)\underbrace{\left(\limit{h}{0}{\frac{\sin(h)}{h}}\right)}_{=1}.
-  \end{align*}
+</mrow>
+</md>
   If the values of the two limits are <m>0</m> and <m>1</m> respectively as we've
   indicated we can conclude that <m>\alpha^\prime(\theta)=\cos(\theta)</m>.
   
@@ -2284,16 +2293,22 @@ END OF DIGRESSION
 </proof>
 
 <p>
-It is tempting to use L<rsq/>Hôpital<rsq/>s Rule to evaluate these limits,
-especially since it is so very easy to do.
+It is tempting to use L<rsq/>Hôpital<rsq/>s Rule to evaluate the two
+limits at the end of <xref ref="PROOFSineDeriv"></xref>,
+especially since it is so very easy to do. See <xref
+ref="DRILLCircularReasoning"></xref> below.
 </p>
 
 <exercise xml:id="DRILLCircularReasoning">
 <statement>
 <p>
-  Use L<rsq/>Hôpital<rsq/>s Rule to show that
-  <m>\tlimit{h}{0}{\frac{(\cos(h)-1)}{h}}=0</m> and that
-  <m>\tlimit{h}{0}{\frac{\sin(h)}{h}}=1</m>.
+  Use L<rsq/>Hôpital<rsq/>s Rule to show
+<ol cols="2" marker="i">
+<li>
+  <m>\tlimit{h}{0}{\frac{(\cos(h)-1)}{h}}=0</m> 
+</li>
+<li><m>\tlimit{h}{0}{\frac{\sin(h)}{h}}=1</m>.</li>
+</ol>
 </p>
 </statement>
 </exercise>
@@ -2313,7 +2328,7 @@ L<rsq/>Hôpital<rsq/>s Rule.
 </lemma>
 
 <proof xml:id="PROOFSinOverh">
-<title></title>
+<title>Proof</title>
   <image source="images/SqueezeThm2.png" width="50%"/>
 <!-- \begin{wrapfigure}[]{r}{3in} -->
 <!--      \vskip-8mm  -->
@@ -2321,9 +2336,14 @@ L<rsq/>Hôpital<rsq/>s Rule.
 <!--     \centerline{\includegraphics*[height=2in,width=3in]{../Figures/SqueezeThm2}} -->
 <!--     \label{fig:SqueezeThm2} -->
 <!--   \end{wrapfigure} -->
+
 <p>
   There are two cases:
-  \underline{  \boldmath Case 1, <m>\theta\ge0</m>:} We will use the
+</p>
+
+
+<p>
+  <alert>Case 1</alert> <m>\theta\ge0</m>: We will use the
   Squeeze Theorem.  Recall that in <xref ref="SECTIONtrig-interl"></xref> we
   observed that the lengths of certain line segments associated with
   the unit circle in the first quadrant are equal to the trigonometric
@@ -2358,7 +2378,9 @@ L<rsq/>Hôpital<rsq/>s Rule.
   <me>
   \rlimit{\theta}{0}{\frac{\sin(\theta)}{\theta}}=1.
   </me>
-  \underline{  \boldmath Case 2, <m>\theta\lt0</m>:} For this case
+</p>
+<p>
+  <alert>Case 2</alert> <m>\theta\lt0</m>: For this case
   notice that <m>\sin(-\theta)=-\sin(\theta)</m> so that
   <m> \frac{\sin(-\theta)}{-\theta}=\frac{\sin(\theta)}{\theta}</m>. We
   make the substitution <m>\theta=-\phi</m> where <m>\phi\gt0</m>.  Therefore
@@ -2370,6 +2392,7 @@ L<rsq/>Hôpital<rsq/>s Rule.
   </me>
   by Case 1.
 </p>
+
 <p>
 <alert><m>\halmos</m></alert>
 </p>
@@ -2395,17 +2418,16 @@ proof that <m>\dfdx{(\sin(x))}{x}= \cos(x)</m> is complete.
 <problem>
 <statement>
 <p>
-  Prove that <m>\dfdx{(\cos(\theta))}{\theta} = -\sin(\theta)</m>, using
-  the proof of <xref ref="THEOREMSineDeriv"></xref> as a guide.
+  Prove that <m>\dfdx{(\cos(\theta))}{\theta} = -\sin(\theta)</m>, using  the proof of <xref ref="THEOREMSineDeriv"></xref> as a guide.
 </p>
 </statement>
 </problem>
 <p>
 Assuming that <m>\tan(\theta)</m>, <m>\cot(\theta)</m>, <m>\sec(\theta)</m>, and
 <m>\csc(\theta)</m> are differentiable we can now use
-<xref ref="THEOREMQR-rigor"></xref> to find their derivatives as
+<xref ref="PROBLEMQR-rigor"></xref> to find their derivatives as
 well. Since this is exactly what we did in
-<xref ref="SUBSECTIONdiff-other-trig"></xref> we have the derivatives of all of
+<xref ref="SECTIONdiff-other-trig"></xref> we have the derivatives of all of
 the trigonometric functions.
 </p>
 
@@ -2417,15 +2439,20 @@ the trigonometric functions.
 Although we have worked with the inverses of some specific functions
 we have not formally defined what we mean by an inverse. We will
 remedy that now. We have seen that not all functions can be inverted
-(see for example, <xref ref="DIGRESSIONDigression:TangentHasNoInverse"></xref>)
+(see for example, <xref ref="DIGRESSIONTangentHasNoInverse"></xref>)
 so the first step is to define which functions are invertible.
 </p>
 <p>
 
 Informally a function that never takes the same value twice is called
-a <term>one-to-one function</term>\aside{They are also called
-  <term>injective</term>.}. Formally we have the following.
+a <term>one-to-one function</term>. Formally we have the following.
 </p>
+<aside>
+<title>Mathematical Terminology</title>
+<p>
+They are also called <term>injective</term>.
+</p>
+</aside>
 
 <definition xml:id="DEFINITIONBijectiveFunctions">
 <title>One-To-One Functions</title>
@@ -2455,20 +2482,29 @@ invert because one-to-one functions are the only functions with inverses.
   <!-- \label{def:FunctionInverse} -->
   Suppose <m>f(x)</m>, with domain <m>D</m> and range, <m>R</m> is a one-to-one
   function. Then the inverse of <m>f(x)</m> is the function <m>\inverse f(x)</m>
-  with domain <m>R</m> and range\aside{Notice that the domain and range
-    have been swapped.} <m>D</m> which satisfies the following properties:
-  \begin{enumerate}
-  \item <m>f\left(\inverse f(x)\right)=x</m>
-  \item <m>\inverse f\left( f(x)\right)=x</m>
-  \end{enumerate}
-  for every value of <m>x</m> in the domain of <m>f</m> (equivalently, in the
-  range of <m>\inverse f</m>).
+  with domain <m>R</m> and range <m>D</m> which satisfies the
+  following properties (Notice that the domain and range
+    have been swapped.):
+    <ol>
+      <li>
+        <p>
+          <m>f\left(\inverse f(x)\right)=x</m>
+        </p>
+      </li>
+      <li>
+        <p>
+          <m>\inverse f\left( f(x)\right)=x</m>
+        </p>
+      </li>
+    </ol>
+    for every value of <m>x</m> in the domain of <m>f</m>
+    (equivalently, in the range of <m>\inverse f</m>).
 
 </p>
 </statement>
 </definition>
-<p>
 
+<p>
 Loosely speaking, <xref ref="DEFINITIONFunctionInverse"></xref> says that two
 functions are mutually inverse if they <q>undo</q> each other.
 </p>
@@ -2497,7 +2533,9 @@ trigonmetric formulas.
 <title>DIGRESSION: Inverse and Derivative Notation</title>
 <p>
 
-  As we saw in <xref ref="DIGRESSIONdigression:inverse-function-notation"></xref> there are some
+  As we saw in <xref
+  ref="DIGRESSIONInverse-function-notation">DIGRESSION: Inverse
+  Function Notation</xref> there are some
   difficulties with the notation we use to indicate inverse
   functions. These problems only get worse when we mix the standard
   derivative notations with the inverse function notation.
@@ -2506,9 +2544,10 @@ trigonmetric formulas.
 <p>
   
   For example if <m>f(x)</m> is an invertible function the
-  derivative of <m>\inverse{f}(x)</m> could be denoted either  as:\\
-  \centerline{<m>\dfdx{(\inverse{f})}{x}</m> \hskip3mm or\hskip3mm
-    <m>{\inverse{f}}^\prime(x)</m>.}
+  derivative of <m>\inverse{f}(x)</m> could be denoted either  as:
+ <me>\dfdx{(\inverse{f})}{x}</me> 
+ or
+    <m>{\inverse{f}}^\prime(x)</m>.
 </p>
 <p>
   
@@ -2538,7 +2577,7 @@ trigonmetric formulas.
     y(x)=x^3.
     <!-- \label{eq:Inv1} -->
   </men>
-  <xref ref="EQUATIONInv1"></xref> defines <m>y</m> as a function of <m>x</m>.
+  <xref ref="EQUATIONInv1">equation</xref> defines <m>y</m> as a function of <m>x</m>.
 </p>
 <p>
   
@@ -2560,9 +2599,9 @@ trigonmetric formulas.
 </p>
 <p>
 
-  For example suppose we choose <m>x=2</m> and use <xref ref="EQUATIONInv1"></xref>
+  For example suppose we choose <m>x=2</m> and use <xref ref="EQUATIONInv1">equation</xref>
   to find <m>y=8</m>. If we then take <m>y=8</m> and use
-  <xref ref="EQUATIONInv2"></xref> we find that <m>x=2</m>. That is, <m>x(y)</m> has
+  <xref ref="EQUATIONInv2">equation</xref> we find that <m>x=2</m>. That is, <m>x(y)</m> has
   <q>undone</q> <m>y(x)</m> for the single
   pair <m>(2,8)</m>. <xref ref="DRILLCubeRoot"></xref> asks you to show that it is
   true for every pair <m>(x, y(x))</m>. This <q>undoing</q> makes <m>y(x)</m> and
@@ -2608,15 +2647,10 @@ mutually inverse by showing that they satisfy the conditions stated in
   The notation for inverse functions is not great. It can be very
   confusing, especially for beginners. Be careful with it.
 </p>
-<p>
-<alert>END OF DIGRESSION</alert>
-</p>
-<p>
-END OF DIGRESSION
-</p>
+<p><alert>END OF DIGRESSION</alert></p>
 </paragraphs>
-<p>
 
+<p>
 Our next task is to show that if <m>f(x)</m> is invertible and
 differentiable, then <m>\inverse{f}</m> is also differentiable\aside{<m>\inverse{f}</m> is
   obviously invertible}. We do this by showing that the limit
@@ -2630,7 +2664,7 @@ exists.
 
 In general this is true but there is one exception that has to be
 addressed. When <m>f</m> is differentiable at <m>a</m> and <m>f^\prime(a) = 0</m>
-then the limit in <xref ref="EQUATIONInvFuncDerivLimit"></xref> does not
+then the limit in <xref ref="EQUATIONInvFuncDerivLimit">equation</xref> does not
 exist. Hence <m>\inverse f</m> is not differentiable at <m>f(a)</m>.
 More formally, we have the following lemma.
 </p>
@@ -2703,8 +2737,8 @@ We include this proof in its full abstraction for two reasons:
 <p>
 
 The strategy behind the following proof follows the same general
-scheme as the Sherlock Holmes Maxim that we referred to in
-<xref ref="PROBLEMMaximalTriangle"></xref>. We will eliminate the
+scheme as the <xref ref="QUOTEHolmesQuote">Sherlock Holmes Maxim</xref> that we referred to in  
+<xref ref="DRILLMaximalTriangle"></xref>. We will eliminate the
 impossible so that <q>whatever remains, however improbable, must be the
 truth.</q>
 </p>
@@ -2721,8 +2755,8 @@ exists or it does not exist. There are two steps:
   </li>
   <li>
     <p>
-      Show that our computed value is impossible. Then \foreign{\'a
-      la} Holme's Maxim the only possibility left will be that the
+      Show that our computed value is impossible. Then <foreign>á
+      la</foreign> Holmes' Maxim the only possibility left will be that the
       derivative of <m>\inverse{f}</m> does not exist at <m>x=b</m>.
     </p>
   </li>
@@ -2732,14 +2766,23 @@ exists or it does not exist. There are two steps:
 
 
 <proof>
+
 <p>
-  Assume that <m>\inverse{f}</m> is differentiable\aside{We don't really
-    believe this assumption. Be sure you are very clear on this
-    point. We make this assumption so that we can use it to derive an
-    absurd result; a contradiction. If there are no errors in our
-    reasoning then the only possible conclusion will be that this
-    assumption is false: <m>\inverse{f}</m> is not differentiable at
-    <m>x=b</m>.} at <m>x=b</m>. Because <m>f</m> and <m>\inverse{f}</m> are mutually
+  Assume that <m>\inverse{f}</m> is differentiable at <m>x=b</m>.
+</p>
+<aside>
+<title>Comment</title>
+<p>
+  To be clear, we don't really believe this assumption. Be sure you
+  are very clear on this point. We make this assumption so that we can
+  use it to derive an absurd result; a contradiction. If there are no
+  errors in our reasoning then the only possible conclusion will be
+  that this assumption is false: <m>\inverse{f}</m> is not
+  differentiable at <m>x=b</m>.
+</p>
+</aside>
+<p>
+ Because <m>f</m> and <m>\inverse{f}</m> are mutually
   inverse we know that
   <me> f\left(\inverse{f}(x)\right)=x.</me>
   Therefore
@@ -2828,26 +2871,47 @@ inverse does in fact exist.
 <title>The Derivative of Inverse Functions</title>
 <p>
   Suppose that
-  \begin{enumerate}
-    \begin{multicols}{2}
-    \item <m>f</m> is differentiable at <m>x=a</m>,
-    \item <m>f(a)=b</m>,
-    \item <m>f^\prime(a)\neq0</m>,
-    \item <m>\inverse{f}</m> is continuous at\aside{In fact, this follows
-        from the continuity of <m>f</m> at <m>x=a</m>. We do not have all of the
-        tools necessary to prove this so we must include it in the
-        assumptions of our theorem.} <m>x=b</m>.
-    \end{multicols}
-  \end{enumerate}
+  
+  <ol cols="2">
+    <li>
+      <p>
+        <m>f</m> is differentiable at <m>x=a</m>,
+      </p>
+    </li>
+    <li>
+      <p>
+        <m>f(a)=b</m>,
+      </p>
+    </li>
+    <li>
+      <p>
+        <m>f^\prime(a)\neq0</m>,
+      </p>
+    </li>
+    <li>
+      <p>
+        <m>\inverse{f}</m> is continuous at <m>x=b</m>.
+      </p>
+    </li>
+  </ol>
+</p>
+
+<aside>
+<title>Comment</title>
+<p>
+  In fact, the continuity of <m>\inverse{f}</m> follows from the
+  continuity of <m>f</m> at <m>x=a</m>. We do not have all of the
+  tools necessary to prove this so we must include it in the
+  assumptions of our theorem.
+</p>
+</aside>
+<p>
   Then the inverse of <m>f</m> is differentiable at <m>x=b</m> and 
   <me>
   \DD\left(\inverse{f}(b)\right)=\frac{1}{f^\prime\left(\inverse{f}(b)\right)}.
   </me>
   </p>
 </theorem>
-
-
-
 
 <p>
 Reading and understanding the notation in <xref
@@ -2856,12 +2920,6 @@ saw in the proof of <xref
 ref="LEMMAInvDerivAtZero"></xref>. Read it carefully.  Be
 patient with yourself and do not rush.
 </p>
-<aside>
-<title>Note to self</title>
-<p>
-I think something is got lost in translation here. The formula <m>(a+k)-a\right</m> was in the title of this proof.
-</p>
-</aside>
 
 <proof>
 <title>Proof of <xref ref="THEOREMDerivInvFunc"></xref></title>
@@ -2872,28 +2930,50 @@ I think something is got lost in translation here. The formula <m>(a+k)-a\right<
   </me>
   Since <m>f(a)=b</m> we know that
   <m>\textcolor{red}{\inverse{f}(b)=a}</m> so that
-  \begin{align*}
-    \limit{h}{0}{\frac{\inverse{f}(b+h)-\textcolor{red}{\inverse{f}(b)}}{h}}
-    \amp = \limit{h}{0}{\frac{\inverse{f}(b+h)-\textcolor{red}{a}}{h}}
-    \intertext{ Observe that if <m>b+h</m> is in the domain of <m>\inverse{f}</m> then it is in the
-    range of <m>f</m>. Thus there is some number in the domain   of
-    <m>f</m> (for convenience we'll call it <m>a+k</m>) such that
-    <m>\textcolor{blue}{b+h}=\textcolor{blue}{f(a+k)}</m>. Thus}
-    \limit{h}{0}{\frac{\inverse{f}(\textcolor{blue}{b+h})-\inverse{f}(b)}{h}}
-    \amp = \limit{h}{0}
-    {\frac{\inverse{f}(\textcolor{blue}{f(a+k)})-a}{h}}.\\
-    \intertext{Again since <m>f</m> and <m>\inverse{f}</m> are mutually inverse
-    they <q>undo</q>y each other, so  <m>\inverse{f}(f(a+k))=a+k</m> so that }
-    \limit{h}{0}{\frac{\inverse{f}(b+h)-\inverse{f}(b)}{h}}       \amp =
-    \limit{h}{0}{\frac{k}{h}}.\\
-    \intertext{ Solving <m>{b+h=f(a+k)}</m> for <m>h</m> gives
-    <m>\textcolor{blue}{h}=\textcolor{blue}{f(a+k)-b}</m> so  }
-    \limit{h}{0}{\frac{k}{h}}\amp = \limit{h}{0}{\frac{k}{\textcolor{blue}{f(a+k)-b}}}\\
-    \intertext{and since <m>b=f(a)</m> we have}
-    \amp = \limit{h}{0}{\frac{k}{f(a+k)-f(a)}}\\
-    \amp = \limit{h}{0} {\frac{1} {\frac{f(a+k)-f(a)}{k}}}.\\
-    \amp =  \frac{1} {\limit{h}{0}{\frac{f(a+k)-f(a)}{k}}}.\\
-  \end{align*}
+  <md>
+    <mrow>
+      \limit{h}{0}{\frac{\inverse{f}(b+h)-\textcolor{red}{\inverse{f}(b)}}{h}}
+      \amp = \limit{h}{0}{\frac{\inverse{f}(b+h)-\textcolor{red}{a}}{h}}
+    </mrow>
+    <intertext>
+      Observe that if <m>b+h</m> is in the domain of <m>\inverse{f}</m> then it is in the
+      range of <m>f</m>. Thus there is some number in the domain   of
+      <m>f</m> (for convenience we'll call it <m>a+k</m>) such that
+      <m>\textcolor{blue}{b+h}=\textcolor{blue}{f(a+k)}</m>. Thus
+    </intertext>
+    <mrow>
+      \limit{h}{0}{\frac{\inverse{f}(\textcolor{blue}{b+h})-\inverse{f}(b)}{h}}
+      \amp = \limit{h}{0}
+      {\frac{\inverse{f}(\textcolor{blue}{f(a+k)})-a}{h}}.
+    </mrow>
+    <intertext>
+      Again since <m>f</m> and <m>\inverse{f}</m> are mutually inverse
+      they <q>undo</q> each other, so  <m>\inverse{f}(f(a+k))=a+k</m> so that
+    </intertext>
+    <mrow>
+      \limit{h}{0}{\frac{\inverse{f}(b+h)-\inverse{f}(b)}{h}} \amp =
+      \limit{h}{0}{\frac{k}{h}}.
+    </mrow>
+    <intertext>
+      Solving <m>{b+h=f(a+k)}</m> for <m>h</m> gives
+      <m>\textcolor{blue}{h}=\textcolor{blue}{f(a+k)-b}</m> so  
+    </intertext>
+    <mrow>
+      \limit{h}{0}{\frac{k}{h}}\amp = \limit{h}{0}{\frac{k}{\textcolor{blue}{f(a+k)-b}}}
+    </mrow>
+    <intertext>
+      and since <m>b=f(a)</m> we have
+    </intertext>
+    <mrow>
+      \amp = \limit{h}{0}{\frac{k}{f(a+k)-f(a)}}
+    </mrow>
+    <mrow>
+      \amp = \limit{h}{0} {\frac{1} {\frac{f(a+k)-f(a)}{k}}}.
+    </mrow>
+    <mrow>
+      \amp =  \frac{1} {\limit{h}{0}{\frac{f(a+k)-f(a)}{k}}}.
+    </mrow>
+  </md>
   
   The expression <m>\limit{h}{0}{\frac{f(a+k)-f(a)}{k}}</m> would be
   <m>f^\prime(a)</m> if only we had <m>k\rightarrow0</m> instead of
@@ -2904,7 +2984,7 @@ I think something is got lost in translation here. The formula <m>(a+k)-a\right<
     \DD\left(\inverse{f}(b)\right) = \frac{1}
     {\limit{k}{0}{\frac{f(a+k)-f(a)}{k}}}=\frac{1}{f^\prime(a)}
   </men>
-  and our proof would be complete
+  and our proof would be complete.
   
   Written a little more carefully, what we need to show is that
   <m>\tlimit{h}{0}{k}=0</m>. Recall that <m>a=\inverse{f}(b)</m>, and that
@@ -2950,16 +3030,26 @@ modern Bishop Berkeley can step in and sew doubt.
 </p>
 
 <example>
-<title>The Derivative of the Inverse Sine</title>
-<p>
-  Suppose <m>f(x)=\sin(x).</m> Then <m>\inverse{f}(x)=\inverse{\sin}(x)</m> so
-  \begin{align*}
-    \DD\left(\inverse{f}(x)\right) =     \DD\left(\inverse\sin(x)\right) 
-    \amp = \frac{1}{\textcolor{red}{f^\prime}(\textcolor{blue}{\inverse{f}}(x))}\\
-    \amp = \frac{1}{\textcolor{red}{\cos}(\textcolor{blue}{\inverse\sin}(x))}\\
-    \DD\left(\inverse{f}(x)\right) \amp =  \frac{1}{\sqrt{1-x^2}}.
-  \end{align*}
-</p>
+  <title>The Derivative of the Inverse Sine</title>
+  <p>
+    Suppose <m>f(x)=\sin(x).</m> Then <m>\inverse{f}(x)=\inverse{\sin}(x)</m> so
+    <md>
+      <mrow>
+        \DD\left(\inverse{f}(x)\right) =     \DD\left(\inverse\sin(x)\right) 
+      </mrow>
+      <mrow>
+        \amp = \frac{1}
+        {\textcolor{red}{f^\prime}(\textcolor{blue}{\inverse{f}}(x))}
+      </mrow>
+      <mrow>
+        \amp = \frac{1}{\textcolor{red}{\cos}(\textcolor{blue}{\inverse\sin}(x))}
+      </mrow>
+      <mrow>
+        \DD\left(\inverse{f}(x)\right) \amp =  \frac{1}{\sqrt{1-x^2}}.
+      </mrow>
+    </md>
+
+  </p>
 </example>
 
 
