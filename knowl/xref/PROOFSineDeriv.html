@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="hiddenproof"><h4 class="heading"><span class="type">Proof</span></h4>
+<div class="para logical">
+<div class="para">Showing that the derivative of <span class="process-math">\(\sin(\theta)\)</span> is <span class="process-math">\(\cos(\theta)\)</span> is mostly straightforward but we’re going to hit a snag partway through. We’ll proceed for a bit to see where the trouble is. Start with the limit definition:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/THEOREMLimSum2.html ./knowl/xref/COROLLARYConstMultLimit.html">
+\begin{equation*}
+\alpha^\prime(\theta) =
+\limit{h}{0} { \frac{\sin(\theta+h)-\sin(\theta)}{h}}
+\end{equation*}
+</div>
+<div class="para">In the numerator we see the expression <span class="process-math">\(\sin(\theta+h)\text{.}\)</span>  Recall the sum formula for the Sine:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/THEOREMLimSum2.html ./knowl/xref/COROLLARYConstMultLimit.html">
+\begin{equation*}
+\sin(A+B)=\sin(A)\cos(B)+\cos(A)\sin(B).
+\end{equation*}
+</div>
+<div class="para">Taking <span class="process-math">\(A=\theta\)</span> and <span class="process-math">\(B=h\)</span> we have:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/THEOREMLimSum2.html ./knowl/xref/COROLLARYConstMultLimit.html">
+\begin{align*}
+\alpha^\prime(x)  \amp =    \limit{h}{0}{\frac{\textcolor{red}{\sin(\theta)}\cos(h)+\cos(\theta)\sin(h)-\textcolor{red}{\sin(\theta)}}{h}}\\
+\end{align*}
+<p class="intertext">Next, if we factor \textcolor{red}{<span class="process-math">\(\sin(\theta)\)</span>} out of the terms where it appears and rearrange the numerator a bit we have:</p>
+\begin{align*}
+\amp =
+\limit{h}{0}{\frac{\textcolor{red}{\sin(\theta)}(\cos(h)-1)+\cos(\theta)\sin(h)}{h}}.\\
+\amp =
+\limit{h}{0}{\left(\frac{\sin(\theta)(\cos(h)-1)}{h}+\frac{\cos(\theta)\sin(h)}{h}\right)}.\\
+\end{align*}
+<p class="intertext">By <a href="" class="xref" data-knowl="./knowl/xref/THEOREMLimSum2.html" title="Theorem 14.1: The Limit of a Sum is the Sum of the Limits">Theorem 14.1</a>:</p>
+\begin{align*}
+\amp =
+\limit{h}{0}{\frac{\sin(\theta)(\cos(h)-1)}{h}}+\limit{h}{0}{\frac{\cos(\theta)\sin(h)}{h}}\\
+\end{align*}
+<p class="intertext">and by <a href="" class="xref" data-knowl="./knowl/xref/COROLLARYConstMultLimit.html" title="Corollary 14.13">Corollary 14.13</a>:</p>
+\begin{align*}
+\amp =
+\sin(\theta)\underbrace{\left(\limit{h}{0}{\frac{(\cos(h)-1)}{h}}\right)}_{=0}+\cos(\theta)\underbrace{\left(\limit{h}{0}{\frac{\sin(h)}{h}}\right)}_{=1}.
+\end{align*}
+</div>
+<div class="para">If the values of the two limits are <span class="process-math">\(0\)</span> and <span class="process-math">\(1\)</span> respectively as we’ve indicated we can conclude that <span class="process-math">\(\alpha^\prime(\theta)=\cos(\theta)\text{.}\)</span> Unfortunately this proof cannot be considered complete until we have shown that these last two limits are what we claim they are. We will do this via the two  lemmas below.</div>
+</div> <div class="para"><em class="alert"><span class="process-math">\(\halmos\)</span></em></div></article><span class="incontext"><a class="internal" href="CHAPTERdiff-rules-with-limits.html#PROOFSineDeriv">in-context</a></span>
+</body>
+</html>
