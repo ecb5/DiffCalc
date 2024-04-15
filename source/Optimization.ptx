@@ -666,7 +666,7 @@ We were very careful to write out, in detail, every algebraic
   <xref ref="DRILLIntuitiveSquareOnCircle"></xref>) that both a maximal and
   a minimal solution exist we set
   <m> \dfdx{A}{x}= 2\left(-2+\frac{3x}{y}\right)=0</m>. Solving this yields
-  <men  xml:id="EQUATION3x=2y">
+  <men  xml:id="EQUATION3xEQ2y">
     <!-- \label{eq:3x=2y} -->
     3x=2y,
 </men>
@@ -2324,7 +2324,7 @@ The color spread in a rainbow occurs because the index of refraction
 seen by shining a beam of light through a triangular prism or, by
 listening to rock music from the 1970s.
 </p>
-<image source="images/DarkSideOfTheMoon.png" width="40%"/>
+<image source="images/DarkSideOfTheMoon.png" width="25%"/>
 <p>
 
 Of course we can only do so much by reasoning from graphs and
@@ -2388,103 +2388,6 @@ Trigonometry is involved it is a good idea to look for, or to create,
 sums of the squares of sines and cosines.
 </p>
 
-<problem>
-<introduction>
-<p>
-</p>
-</introduction>
-<task>
-<statement>
-<p>
- Use <xref ref="EQUATIONTrigTrick">equation</xref> to show that for a given
-    index of refraction <m>k</m>, <m>D(\alpha)</m> is minimized when
-    <m>\sin(\beta)=\sqrt{\frac{4-k^2}{3k^2}}</m> and
-    <m>\sin(\alpha)=\sqrt{\frac{4-k^2}{3}}</m>.
-  </p>
-</statement>
-</task>
-<task>
-<statement>
-<p>
- Use this to complete the following table:
-</p>
-<tabular>
-
-<row bottom="minor">
-<cell>Color</cell>
-<cell><m>\beta{}</m> in degrees</cell>
-<cell><m>\alpha </m> in degrees</cell>
-</row>
-
-<row><cell>Red</cell><cell><m>1.331</m></cell><cell></cell></row>
-<row><cell>Orange</cell><cell> 1.332</cell><cell></cell></row>
-<row><cell>Yellow</cell><cell> 1.333</cell><cell></cell></row>
-<row><cell>Green</cell><cell> 1.335</cell><cell> </cell></row>
-<row><cell>Blue</cell><cell>1.337</cell><cell></cell></row>
-<row><cell>Indigo</cell><cell> 1.340</cell><cell></cell></row>
-<row><cell>Violet</cell><cell>1.344</cell><cell></cell></row>
-</tabular>
-
-</statement>
-</task>
-<task>
-<statement>
-<p>
- How does this explain the order of the colors in the primary
-    rainbow?
-  </p>
-</statement>
-</task>
-</problem>
-<problem>
-<statement>
-<p>
-  Differentiate the objective function, <m>D(\alpha)</m>, and the
-  constraint, <xref ref="EQUATIONSnellConstraint">equation</xref>, and use  <xref ref="THEOREMFermatsTheorem">Fermat<rsq/>s
-  Theorem</xref> to show that when <m>D</m> is
-  a minimum
-  <men  xml:id="EQUATIONMinimumDeflect">
-    <!-- \label{eq:MinimumDeflect} -->
-    \cos(\alpha)=\frac{k}{2}\cos(\beta).
-</men>
-</p>
-</statement>
-</problem>
-<p>
-
-Combining <xref ref="EQUATIONMinimumDeflect">equation</xref> with our constraint, we
-see that we need to solve the following system of two equations in two
-unknowns,
-<md>
-<mrow>
-  \cos(\alpha)\amp =\frac{k}{2}\cos(\beta)
-</mrow>
-<mrow>
-  \sin(\alpha)\amp =k\sin(\beta).
-</mrow>
-</md>
-
-</p>
-<p>
-
-Normally to solve such a system, we would use one of the equations to
-eliminate one of the variables in the other equation.  We could do
-that here but it would require some very messy expressions involving
-inverse trigonometric functions. Instead there is a trick that will be
-cleaner.
-</p>
-<p>
-
-Suppose we square the quantities in each equation and then add the
-resulting equations together. This gives
-<men  xml:id="EQUATIONTrigTrick">
-  <!-- \label{eq:TrigTrick} -->
-  1=\sin^2(\alpha)+\cos^2(\alpha)=\frac{k^2}{4}\cos^2(\beta)+k^2\sin^2(\beta).
-</men>
-You might want to file this trick away in your memory. When
-Trigonometry is involved it is a good idea to look for, or to create,
-sums of the squares of sines and cosines.
-</p>
 
 
 <problem xml:id="PROBLEMRainbowAngle">
@@ -2981,7 +2884,7 @@ Although the largest value can occur more than once, at different
 </p>
 <p>
 
-  Recall from <xref ref="DIGRESSIONTangentHasNoInverse">Digression: The Tangent Function Has No Inverse</xref> that a
+  Recall from <xref ref="DIGRESSIONTangentHasNoInverse" text="custom">Digression: The Tangent Function Has No Inverse</xref> that a
   function has two parts:
   
   <ol>
@@ -3171,7 +3074,7 @@ interval satisfying the inequalities
 </ol>
 </exercise>
 
-<exercise xml:id="no-label">
+<exercise>
 <p>
     Re-express each of the following intervals using inequalities and
     state whether it is open, closed, or neither.
@@ -3906,7 +3809,7 @@ Happy families are all alike; every unhappy family is
 </statement>
 <hint>
 <p>
-Recall <xref ref="DIGRESSIONDivideByZero">Digression: Dividing by Zero.</xref>
+Recall <xref ref="DIGRESSIONDivideByZero" text="custom">Digression: Dividing by Zero.</xref>
 </p>
 </hint>
 
@@ -3929,7 +3832,7 @@ Recall <xref ref="DIGRESSIONDivideByZero">Digression: Dividing by Zero.</xref>
     <!--   \centerline{\includegraphics*[height=1in,width=3in]{../Figures/CubeRoot1}} -->
     <!--   \begin{enumerate}[label={  (\alph*)}] -->
     <!--   \item Show that <m>\eval{\dfdx{y}{x}}{x}{0}</m> is undefined.\\ -->
-    <!--     \hint{Recall <xref ref="DIGRESSIONdigression:DivideByZero"></xref>.} -->
+    <!--     \hint{Recall <xref ref="DIGRESSIONdigression: text="custom"DivideByZero"></xref>.} -->
     <!--   \item Graph <m>\dfdx{y}{x}</m> to verify that <m>\dfdx{y}{x}\gt 0</m> -->
     <!--     when <m>x\ne 0</m>. -->
     <!--   \end{enumerate} -->
@@ -4210,7 +4113,7 @@ Recall <xref ref="DIGRESSIONDivideByZero">Digression: Dividing by Zero.</xref>
   constrained like this it is easy to forget that the constraint is
   present. We tend to think of it as <q>not really there.</q>  This is a
   mistake. Recall from
-  <xref ref="DIGRESSIONTangentHasNoInverse">Digression: The Tangent Function Has No Inverse</xref> that the
+  <xref ref="DIGRESSIONTangentHasNoInverse" text="custom">Digression: The Tangent Function Has No Inverse</xref> that the
   definition of the domain is a part of the definition of a
   function. Think of the function<rsq/>s domain as the <q>universe</q> for
   that particular problem. Nothing exists outside of the domain. Thus
@@ -6920,7 +6823,7 @@ didn<rsq/>t work. You need to try something new.
 <!-- \end{embeddedproblem} -->
 
 
-<problem xml:id="no-label">
+<problem>
 <introduction>
 <p>
   You have a piece of wire <m>100</m> inches long. 
@@ -7028,7 +6931,7 @@ didn<rsq/>t work. You need to try something new.
 <!--   \end{enumerate} -->
 <!-- \end{embeddedproblem} -->
 
-<problem xml:id="no-label">
+<problem>
 <introduction>
 <!-- \begin{wrapfigure}[]{r}{2.2in} -->
 <!--     \vskip-10mm  \captionsetup{labelformat=empty} -->
@@ -7340,7 +7243,7 @@ Find the dimensions of the box that minimize the amount of material
 
 
 
-<problem xml:id="problem:WitchTri1">
+<problem xml:id="PROBLEMWitchTri1">
   <introduction>
     <p>
       <!-- <!-\- \label{problem:WitchTri1} -\-> -->

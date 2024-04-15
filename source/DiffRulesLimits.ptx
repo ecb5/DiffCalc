@@ -1174,7 +1174,7 @@ derivative of <m>\beta</m> with respect to <m>x</m>) we view it as a function.
     <q><m>\Delta\beta\neq0</m> near <m>x</m></q> in the statement of the Chain
     Rule. We will have
     a few comments about this in
-    <xref ref="DIGRESSIONDeltaBetaNotZero">Digression: Why Assume That <m>\Delta\beta\neq0</m> Near Zero?</xref> after the proof is completed.
+    <xref ref="DIGRESSIONDeltaBetaNotZero" text="custom">Digression: Why Assume That <m>\Delta\beta\neq0</m> Near Zero?</xref> after the proof is completed.
 </p>                            
   
 <p> 
@@ -2439,7 +2439,8 @@ the trigonometric functions.
 Although we have worked with the inverses of some specific functions
 we have not formally defined what we mean by an inverse. We will
 remedy that now. We have seen that not all functions can be inverted
-(see for example, <xref ref="DIGRESSIONTangentHasNoInverse"></xref>)
+     (see for example, <xref ref="DIGRESSIONTangentHasNoInverse" text="title"></xref>
+<!-- (see for example, <xref ref="DIGRESSIONTangentHasNoInverse" text="custom"></xref>) -->
 so the first step is to define which functions are invertible.
 </p>
 <p>
@@ -2460,7 +2461,7 @@ They are also called <term>injective</term>.
 <p>
   A function, <m>f(x)</m>, defined on a domain, <m>D</m>, is said to be
   one-to-one if, whenever <m>x_1</m> and <m> x_2</m> are in <m>D</m> and <m>x_1\neq
-  x_2</m> then, <m>f(x_1)\neq f(x_2)</m>. 
+  x_2</m> then, <m>f(x_1)\neq f(x_2)</m>.
 
 </p>
 </statement>
@@ -2472,7 +2473,7 @@ when we tried to invert <m>\tan(x)</m> (which is not one-to-one) in
 <m>\arctan(x)</m>. We had to restrict the domain of the tangent function to
 <m>\frac{-\pi}{2}\le x \le \frac{\pi}{2}</m>, in order to find an
 inverse. That restriction gave us a one-to-one function which we could
-invert because one-to-one functions are the only functions with inverses. 
+invert because one-to-one functions are the only functions with inverses.
 </p>
 
 <definition xml:id="DEFINITIONFunctionInverse">
@@ -2534,7 +2535,7 @@ trigonmetric formulas.
 <p>
 
   As we saw in <xref
-  ref="DIGRESSIONInverse-function-notation">DIGRESSION: Inverse
+  ref="DIGRESSIONInverse-function-notation" text="custom">DIGRESSION: Inverse
   Function Notation</xref> there are some
   difficulties with the notation we use to indicate inverse
   functions. These problems only get worse when we mix the standard
@@ -2545,7 +2546,7 @@ trigonmetric formulas.
   
   For example if <m>f(x)</m> is an invertible function the
   derivative of <m>\inverse{f}(x)</m> could be denoted either  as:
- <me>\dfdx{(\inverse{f})}{x}</me> 
+ <me>\dfdx{(\inverse{f})}{x}</me>
  or
     <m>{\inverse{f}}^\prime(x)</m>.
 </p>
@@ -2643,7 +2644,7 @@ mutually inverse by showing that they satisfy the conditions stated in
 </statement>
 </exercise>
 
-<p>          
+<p>
   The notation for inverse functions is not great. It can be very
   confusing, especially for beginners. Be careful with it.
 </p>
@@ -2699,7 +2700,7 @@ Second, we need to think about the functions <m>f</m> and
 <p>
 
 Third, instead of using the differential notation, <m>\dfdx{f}{x}</m> that we've grown very
-comfortable with 
+comfortable with
 we'll be using the less familiar Lagrange prime notation  and the
 operator notation we just introduced.
 </p>
@@ -2737,7 +2738,7 @@ We include this proof in its full abstraction for two reasons:
 <p>
 
 The strategy behind the following proof follows the same general
-scheme as the <xref ref="QUOTEHolmesQuote">Sherlock Holmes Maxim</xref> that we referred to in  
+scheme as the <xref ref="QUOTEHolmesQuote">Sherlock Holmes Maxim</xref> that we referred to in
 <xref ref="DRILLMaximalTriangle"></xref>. We will eliminate the
 impossible so that <q>whatever remains, however improbable, must be the
 truth.</q>
@@ -2796,7 +2797,7 @@ exists or it does not exist. There are two steps:
     <!-- \label{eq:InvDeriv2} -->
     f^\prime\left(\inverse{f}(x)\right)\cdot\DD\left(\inverse{f}(x)\right)=1.
   </men>
-  But when <m>x=b</m> we find that 
+  But when <m>x=b</m> we find that
   <m>f^\prime\left(\inverse{f}(b)\right)=f^\prime\left(a\right)=0</m>,
   so that
   <me>
@@ -2906,7 +2907,7 @@ inverse does in fact exist.
 </p>
 </aside>
 <p>
-  Then the inverse of <m>f</m> is differentiable at <m>x=b</m> and 
+  Then the inverse of <m>f</m> is differentiable at <m>x=b</m> and
   <me>
   \DD\left(\inverse{f}(b)\right)=\frac{1}{f^\prime\left(\inverse{f}(b)\right)}.
   </me>
@@ -2956,7 +2957,7 @@ patient with yourself and do not rush.
     </mrow>
     <intertext>
       Solving <m>{b+h=f(a+k)}</m> for <m>h</m> gives
-      <m>\textcolor{blue}{h}=\textcolor{blue}{f(a+k)-b}</m> so  
+      <m>\textcolor{blue}{h}=\textcolor{blue}{f(a+k)-b}</m> so
     </intertext>
     <mrow>
       \limit{h}{0}{\frac{k}{h}}\amp = \limit{h}{0}{\frac{k}{\textcolor{blue}{f(a+k)-b}}}
@@ -2992,7 +2993,7 @@ patient with yourself and do not rush.
   <me>
 \tlimit{h}{0}{k}=\limit{h}{0}{\left[(a+k)-a\right]}=  \tlimit{h}{0}{\left[\inverse{f}(b+h)-\inverse{f}(b)\right]} = 0</me> or
         But we assumed that <m>\inverse{f}</m> is continuous at <m>x=b</m> which means
-  that 
+  that
   <me>
   \tlimit{h}{0}{\left[\inverse{f}(b+h)-\inverse{f}(b)\right]}=0,
   </me>
@@ -3035,7 +3036,7 @@ modern Bishop Berkeley can step in and sew doubt.
     Suppose <m>f(x)=\sin(x).</m> Then <m>\inverse{f}(x)=\inverse{\sin}(x)</m> so
     <md>
       <mrow>
-        \DD\left(\inverse{f}(x)\right) =     \DD\left(\inverse\sin(x)\right) 
+        \DD\left(\inverse{f}(x)\right) =     \DD\left(\inverse\sin(x)\right)
       </mrow>
       <mrow>
         \amp = \frac{1}
