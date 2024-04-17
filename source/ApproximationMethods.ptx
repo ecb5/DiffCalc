@@ -701,25 +701,25 @@
       </example>
 
       <exercise  xml:id="DRILLNewtonMethod2">
-<ol marker="i">
-<li>
+        <ol marker="i">
+          <li xml:id="DRILLNewtonMethod2i">
             <p>
               Show that in this example an equation of the line tangent to
               <m>f(x)</m> at <m>r_1=4</m> is
-              <me> y+10=19(x-4).  </me>
+              <men xml:id="EQUATIONNewtonMethod2"> y+10=19(x-4).  </men>
             </p>
-</li>
-<li>
+          </li>
+          <li xml:id="DRILLNewtonMethod2ii">
             <p>
               Our second approximation (<m>r_2</m>) to the root we seek will be
-              the <m>x</m> coordinate of the point where the line in part (a)
+              the <m>x</m> coordinate of the point where the line in <xref ref="DRILLNewtonMethod2i">part</xref> 
               crosses the <m>x-</m>axis. That is, where <m>y=0.</m>
 
-              Set <m>y=0</m> and show that the line in part (a) crosses the
+              Set <m>y=0</m> and show that the line in <xref ref="EQUATIONNewtonMethod2">equation</xref> crosses the
               <m>x-</m>axis at <m>r_2= \frac{10}{19}+4\approx 4.526</m>.
             </p>
-</li>
-</ol>
+          </li>
+        </ol>
       </exercise>
       <!-- begin{ProficiencyDrill} -->
       <!--   \vskip-6mm  -->
@@ -758,7 +758,7 @@
         <introduction>
           <image source="images/NewtonsMethod4.png" width="50%"/>
         </introduction>
-        <task>
+        <task xml:id="PROBLEMTanToCubicA">
           <statement>
             <p>
               Find the equation of the line tangent to the function
@@ -768,17 +768,17 @@
             </p>
           </statement>
         </task>
-        <task>
+        <task xml:id="PROBLEMTanToCubicB">
           <statement>
             <p>
-              Repeat part (a) using the line tangent at <m>r_3=4.436</m> to
+              Repeat <xref ref="PROBLEMTanToCubicA">part</xref> using the line tangent at <m>r_3=4.436</m> to
               obtain the next approximation <m>r_4</m>, but this time round it off to
               <m>6</m> decimal places.
-              \comment{You will need <m>6</m> digits for  part (d).}
+              (You will need <m>6</m> digits for  <xref ref="PROBLEMTanToCubicD">part</xref>.
             </p>
           </statement>
         </task>
-        <task>
+        <task xml:id="PROBLEMTanToCubicC">
           <statement>
             <p>
               If you<rsq/>ve done it correctly, you will notice that <m> r_2\gt r_3\gt r_4</m>.
@@ -786,7 +786,7 @@
             </p>
           </statement>
         </task>
-        <task>
+        <task xml:id="PROBLEMTanToCubicD">
           <statement>
             <p>
               Use your favorite computational software to find an
@@ -859,7 +859,7 @@
           <p>
           </p>
         </introduction>
-        <task>
+        <task xml:id="PROBLEMNewtonsMethod3A">
           <statement>
             <p>
               Find the equation of the line tangent to the curve <m>y=y(x)</m> at
@@ -870,10 +870,10 @@
             </p>
           </statement>
         </task>
-        <task>
+        <task xml:id="PROBLEMNewtonsMethod3B">
           <statement>
             <p>
-              Use your answer to part (a) to show that
+              Use your answer to <xref ref="PROBLEMNewtonsMethod3A">part</xref> to show that
               <men  xml:id="EQUATIONNewtonMethod">
                 r_{n+1}=r_n-\frac{y(r_n)}{y^\prime(r_n)}.
               </men>
@@ -881,7 +881,7 @@
             </p>
           </statement>
         </task>
-        <task>
+        <task xml:id="PROBLEMNewtonsMethod3C">
           <statement>
             <p>
               If we get lucky and <m>r_n</m> is the actual root of the function
@@ -922,8 +922,9 @@
         We summarize the foregoing succinctly as follows:
       </p>
 
-      <algorithm>
+      <algorithm  xml:id="ALGORITHMNewtonsMethod">
         <title>Newton<rsq/>s Method</title>
+        <idx><h>Algorithms</h><h>Newton<rsq/>s Method</h></idx>
         <p>
           Given a differentiable function, <m>y=y(x),</m> with a root at
           <m>x=r</m> we can approximate <m>r</m> as follows.
@@ -1349,7 +1350,7 @@
             example, show that when Newton<rsq/>s Method is used:
           </p>
         </introduction>
-        <task>
+        <task xml:id="PROBLEMNewtMethSignOfIteratesA">
           <statement>
             <p>
               If <m>y(r_n)</m> and <m>y^\prime(r_n)</m> have the same sign then
@@ -1357,7 +1358,7 @@
             </p>
           </statement>
         </task>
-        <task>
+        <task xml:id="PROBLEMNewtMethSignOfIteratesB">
           <statement>
             <p>
               If <m>y(r_n)</m> and <m>y^\prime(r_n)</m> have opposite signs
@@ -1365,14 +1366,14 @@
             </p>
           </statement>
         </task>
-        <task>
+        <task xml:id="PROBLEMNewtMethSignOfIteratesC">
           <statement>
             <p>
               Suppose you are trying to compute a numerical
               approximation of <m>\sqrt{2}</m> using an implementation of
               Newton<rsq/>s Method, but you accidentally enter <m>x^2+2</m> as
-              you<rsq/>re function (instead of <m>x^2-2</m>). Explain how you can
-              use the results of (a) and (b) to know that the algorithm
+              your function (instead of <m>x^2-2</m>). Explain how you can
+              use the results of <xref ref="PROBLEMNewtMethSignOfIteratesA">part </xref> and <xref ref="PROBLEMNewtMethSignOfIteratesB">part </xref> to see that the algorithm
               is failing at the third iteration.
             </p>
           </statement>
@@ -1704,7 +1705,7 @@
 <!-- \end{embeddedproblem-enumerate} -->
 
 
-<problem>
+<problem xml:id="PROBLEMNMByGraphing">
   <introduction>
     <p>
       Do not try to answer the questions in this problem
@@ -1718,7 +1719,7 @@
       has exactly one real root and it is between one and two.
     </p>
   </introduction>
-  <task>
+  <task xml:id="PROBLEMNMByGraphingA">
     <statement>
       <p>
         Show that with an initial guess, <m>r_1 \gt 2</m>,
@@ -1726,10 +1727,10 @@
       </p>
     </statement>
   </task>
-  <task>
+  <task xml:id="PROBLEMNMByGraphingB">
     <statement>
       <p>
-        We said <q>almost never</q> in part (a) because there is a
+        We said <q>almost never</q> in <xref ref="PROBLEMNMByGraphingA">part</xref> because there is a
         small interval of numbers greater than <m>2</m> with the property that Newton<rsq/>s Method
         will converge if <m>r_1</m> is any number in the
         interval. Find an interval that works. (It doesn<rsq/>t have to be
@@ -1737,7 +1738,7 @@
       </p>
     </statement>
   </task>
-  <task>
+  <task xml:id="PROBLEMNMByGraphingC">
     <statement>
       <p>
         Show that if you start with an initial guess of <m>r_1=2</m> or
@@ -2054,8 +2055,9 @@
   <p>
     Formalizing all of this we have:
   </p>
-  <algorithm>
+  <algorithm  xml:id="ALGORITHMEulersMethod">
     <title>Euler<rsq/>s Method</title>
+<idx><h>Algorithms</h><h>Euler<rsq/>s Method</h></idx>
     <p>
       Given an IVP:
       <me>

@@ -988,12 +988,12 @@ Named for
 </aside>
 </example>
 
-<problem>
+<problem xml:id="PROBLEMSineOscill">
   <introduction>
     <p>
     </p>
   </introduction>
-  <task>
+  <task xml:id="PROBLEMSineOscillA">
     <statement>
       <p>
         Mimic the derivation above to determine <m>\omega</m> so that
@@ -1001,10 +1001,10 @@ Named for
       </p>
     </statement>
   </task>
-  <task>
+  <task xml:id="PROBLEMSineOscillB">
     <statement>
       <p>
-        The standard musical pitch is the <m>A440</m> or <m>A_4</m>, the musical
+        The standard musical pitch is  <m>A440</m> or <m>A_4</m>, the musical
         note A above middle C. <m>A_4</m> has a frequency of <m>440</m>
         Hz. Determine <m>\omega</m> so that an <m>A_4</m> note can be modeled by
         <m>y=\sin(\omega t)</m>. Do the same with each of the following notes.
@@ -1044,14 +1044,14 @@ Named for
       </p>
     </statement>
   </task>
-  <task>
+  <task xml:id="PROBLEMSineOscillC">
     <statement>
       <p>
         Musical notes an octave higher have frequencies that are
         doubled. So, <m>A_5</m> (one octave higher than <m>A_4</m>) has a frequency
-        of <m>880</m> Hz.  Repeat part (b) for <m>A_5</m>, <m>C_5</m>, <m>D_5</m>, <m>E_5</m>,
+        of <m>880</m> Hz.  Repeat <xref ref="PROBLEMSineOscillB">part</xref> for <m>A_5</m>, <m>C_5</m>, <m>D_5</m>, <m>E_5</m>,
         <m>F_4</m>, <m>G_5</m>, and <m>B_5</m>, each one octave higher than the
-        corresponding note in part (b).
+        corresponding note in <xref ref="PROBLEMSineOscillB">part</xref>.
       </p>
     </statement>
   </task>
@@ -1403,7 +1403,7 @@ Thinking this way also explains why the
       system to the other.
     </p>
   </introduction>
-  <task>
+  <task xml:id="PROBLEMPolRectConvertA">
     <statement>
       <p>
         Use the diagram above to show that if <m>P=(r,\theta)</m> in polar
@@ -1428,7 +1428,7 @@ Thinking this way also explains why the
       </p>
     </statement>
   </task>
-  <task>
+  <task xml:id="PROBLEMPolRectConvertB">
     <statement>
       <p>
         In Cartesian coordinates the equation of a circle centered at
@@ -1439,7 +1439,7 @@ Thinking this way also explains why the
     </statement>
 <hint>
 <p>
-Use the result from part (a).
+Use the result from <xref ref="PROBLEMPolRectConvertA">part</xref>.
 </p>
 </hint>
   </task>
@@ -1855,7 +1855,7 @@ Letting
 <exercise xml:id="EXERCISEDiffPractice1">
 <statement>
 <p>
-<idx><h></h></idx>
+<idx><h>Drill</h></idx>
   Compute the differential, <m>\dx{y}</m>, of each of the following
   functions:
 <ol cols="2" marker="i">
@@ -2794,7 +2794,7 @@ the centripetal acceleration is given by <m>r\omega^2</m>.
 <!-- \centerline{\includegraphics*[height=2in,width=2.3in]{../Figures/Centripetal1}} -->
   
 </introduction>
-<task>
+<task xml:id="PROBLEMSpinCastCentripetalForceA">
 <statement>
 <p>
  The magnitude of the velocity (speed) in the direction of
@@ -2812,13 +2812,13 @@ Use the Pythagorean Theorem.
 </p>
 <p>
 Note: This result also follows directly from the definition of radian
-      measure. We want you to do it this way in this problem because
-      you will do a similar computation for acceleration in part (b)
-      below.
+measure. We want you to do it this way in this problem because you
+will do a similar computation for acceleration in <xref
+ref="PROBLEMSpinCastCentripetalForceB">part</xref> below.
 </p>
 </hint>
 </task>
-<task>
+<task xml:id="PROBLEMSpinCastCentripetalForceB">
 <statement>
 <p>
  Assume that the angular velocity is constant:
@@ -2979,6 +2979,7 @@ Note: This result also follows directly from the definition of radian
 
 <paragraphs  xml:id="DIGRESSIONCentAndTangForces">
 <title>DIGRESSION: The Centripetal and Tangential Forces</title>
+<idx><h>Digression</h><h>Centripetal and Tangential Forces</h></idx>
 <p>
   In <xref ref="PROBLEMSpinCastCentripetalForce"></xref> we assumed the
   angular velocity, <m>\left(\dfdx{\theta}{t}=\omega\right)</m> was
@@ -3055,7 +3056,7 @@ Note: This result also follows directly from the definition of radian
     <xref ref="EQUATIONVertAccel">and</xref> are the horizontal and vertical components
     of the centripetal acceleration by confirming that they are the
     same as the <m>\dfdxn{x}{t}{2}</m> and <m>\dfdxn{x}{t}{2}</m> that you
-    computed for part (b) of
+    computed for <xref ref="PROBLEMSpinCastCentripetalForceB">part</xref> of
     <xref ref="PROBLEMSpinCastCentripetalForce"></xref>.
   </p>
 </statement>
@@ -3361,6 +3362,7 @@ What is <m>\omega</m> in <xref
 
 <paragraphs  xml:id="DIGRESSIONNeglGrav">
 <title>DIGRESSION: Neglecting Gravity </title>
+<idx><h>Digression</h><h>Neglecting Gravity</h></idx>
 <p>
   You may be wondering why we<rsq/>ve consistently neglected the force due to gravity
   (which will be the weight of the object or <m>mg</m> where <m>m</m> is it<rsq/>s
@@ -4379,7 +4381,7 @@ possible.
 
 <paragraphs  xml:id="DIGRESSIONInverse-function-notation">
 <title>DIGRESSION: Inverse Function Notation</title>
-
+<idx><h>Digression</h><h>Inverse Function Notation</h></idx>
   <!-- \label{DIGRESSION} -->
 <p>  
 The use of <m>-1</m> as an exponent is probably the most common
@@ -4562,6 +4564,7 @@ Obviously, they do not. Otherwise we wouldn<rsq/>t have asked the
 
 <paragraphs  xml:id="DIGRESSIONTangentHasNoInverse">
 <title>DIGRESSION: The Tangent Function Has No Inverse</title>
+<idx><h>Digression</h><h>The Tangent Function Has No Inverse</h></idx>
 <p>
   The function <m>\tan(x)</m> is not invertible. This is because, by
   custom, its domain is all real numbers (except <m>\frac\pi2, \pm\pi,
@@ -5105,12 +5108,12 @@ arccotangent.
 <!-- \end{embeddedproblem-enumerate} -->
 
 
-<problem>
+<problem xml:id="PROBLEMInvTanDiffeq">
 <introduction>
 <p>
 </p>
 </introduction>
-<task>
+<task xml:id="PROBLEMInvTanDiffeqA">
 <statement>
 <p>
  Show that if <m>y=\inverse\tan(x)</m> then <m>y</m> satisfies the
@@ -5121,7 +5124,7 @@ arccotangent.
   </p>
 </statement>
 </task>
-<task>
+<task xml:id="PROBLEMInvTanDiffeqB">
 <statement>
 <p>
  The function <m>y=\inverse\cot(x)</m> satisfies the same
@@ -5130,7 +5133,7 @@ arccotangent.
 <ol cols="2" marker="i">
     <li>
 <p>
- By direct computation, just as you did part (a).
+ By direct computation, just as you did <xref ref="PROBLEMInvTanDiffeqA">part</xref>.
 </p>
 </li>
     <li>
@@ -5526,12 +5529,12 @@ Similarly, if we restrict the range of <m>\inverse\cos(x)</m> to
 </statement>
 </definition>
 
-<problem>
+<problem xml:id="PROBLEMArcSinDiffeq">
 <introduction>
 <p>
 </p>
 </introduction>
-<task>
+<task xml:id="PROBLEMArcSinDiffeqA">
 <statement>
 <p>
  Show that if <m>y=\arcsin(x)</m> then <m>y</m> satisfies the
@@ -5542,16 +5545,16 @@ Similarly, if we restrict the range of <m>\inverse\cos(x)</m> to
   </p>
 </statement>
 </task>
-<task>
+<task xml:id="PROBLEMArcSinDiffeqB">
 <statement>
 <p>
  The function <m>y=\arccos(x)</m> satisfies the same differential
     equation. Show this in two different ways.
     
-<ol marker="i">
+<ol cols="2" marker="i">
     <li>
 <p>
- By direct computation, just as you did part (a).
+ By direct computation, just as you did in <xref ref="PROBLEMArcSinDiffeqA">part</xref>.
 </p>
 </li>
     <li>
@@ -5635,7 +5638,7 @@ so that <me> \dx{y} =\frac{{1}}{\sec(y)\tan(y)}\dx{x}.</me>
 </exercise>
 
 
-<problem>
+<problem xml:id="PROBLEMDiffArcSec">
 <introduction>
 <p>
 </p>
@@ -5672,12 +5675,12 @@ so that <me> \dx{y} =\frac{{1}}{\sec(y)\tan(y)}\dx{x}.</me>
 <!--   \end{enumerate} -->
 <!-- \end{embeddedproblem-enumerate} -->
 
-<problem>
+<problem xml:id="PROBLEMArcSecDiffeq">
 <introduction>
 <p>
 </p>
 </introduction>
-<task>
+<task xml:id="PROBLEMArcSecDiffeqA">
 <statement>
 <p>
  Show that if <m>y=\arcsec(x)</m> then <m>y</m> satisfies the
@@ -5688,16 +5691,16 @@ so that <me> \dx{y} =\frac{{1}}{\sec(y)\tan(y)}\dx{x}.</me>
   </p>
 </statement>
 </task>
-<task>
+<task xml:id="PROBLEMArcSecDiffeqB">
   <statement>
     <p>
       The function <m>y=\arccsc(x)</m> satisfies the same differential
       equation. Show this in two different ways.
       
-      <ol marker="i">
+      <ol cols="2" marker="i">
         <li>
           <p>
-            By direct computation, just as you did part (a).
+            By direct computation, just as you did <xref ref="PROBLEMArcSecDiffeqA">part</xref>.
           </p>
         </li>
         <li>
@@ -6195,26 +6198,22 @@ need them.
 
 
 
-<problem>
-<introduction>
-<p>
-</p>
-</introduction>
-<task>
+<problem xml:id="PROBLEMCotTanSlope">
+<task xml:id="PROBLEMCotTanSlopeA">
 <statement>
 <p>
  Show that
     <m>\dx\left(\inverse\cot\left(\frac{1-x}{1+x}\right)\right)=
-    \dx\left(\inverse\tan(x)\right)</m>.
+    \dx\left(\inverse\tan(x)\right)</m>, if <m>x\neq-1</m>.
   </p>
 </statement>
 </task>
-<task>
+<task xml:id="PROBLEMCotTanSlopeB">
 <statement>
 <p>
- Part (a) says that the graphs of
+ <xref ref="PROBLEMCotTanSlope">Part</xref> says that the graphs of
     <m>y=\inverse\cot\left(\frac{1-x}{1+x}\right)</m> and
-    <m>y=\inverse\tan(x)</m> have the same slope when <m>x\neq-1</m> and that
+    <m>y=\inverse\tan(x)</m> have the same slope when <m>x\neq-1</m> so
     their graphs should differ by a constant. Substitute <m>x=0</m> into
     both to see what this constant should be.
   </p>
@@ -6824,7 +6823,7 @@ constant, but we can still apply <xref ref="EQUATIONCurvatureDef2">formula</xref
 <!--       \end{enumerate} -->
 <!-- \end{embeddedproblem-enumerate} -->
 
-<problem>
+<problem xml:id="PROBLEMEllipseCurv">
 <introduction>
 <p>
   Consider the ellipse given by <m>\frac{x^2}{a^2}+\frac{y^2}{b^2}=1</m>,
@@ -6833,7 +6832,7 @@ constant, but we can still apply <xref ref="EQUATIONCurvatureDef2">formula</xref
 <image source="images/Curvature7.png" width="50%" />
       <!-- \includegraphics*[height=1.7in,width=2.8in]{../Figures/Curvature7} -->
 </introduction>
-<task>
+<task xml:id="PROBLEMEllipseCurvA">
 <statement>
 <p>
  Show that the curvature is given by
@@ -6847,7 +6846,7 @@ Rewrite <m>\frac{x^2}{a^2}+\frac{y^2}{b^2}=1</m> as
 </p>
 </hint>
 </task>
-<task>
+<task xml:id="PROBLEMEllipseCurvB">
 <statement>
 <p>
  Looking at this graph it appears that the curvature at <m>(a,0)</m>
@@ -6856,11 +6855,11 @@ Rewrite <m>\frac{x^2}{a^2}+\frac{y^2}{b^2}=1</m> as
   </p>
 </statement>
 </task>
-<task>
+<task xml:id="PROBLEMEllipseCurvC">
 <statement>
 <p>
  A circle is the special case of an ellipse when <m>a=b</m>. Use the
-    formula from part (a) to compute the curvature of a circle.
+    formula from <xref ref="PROBLEMEllipseCurvA">part</xref> to compute the curvature of a circle.
   </p>
 </statement>
 </task>
