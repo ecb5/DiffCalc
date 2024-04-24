@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h5 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.67</span><span class="period">.</span>
+</h5>
+<div class="para">Suppose a container of water at a temperature of <span class="process-math">\(40^\circ F\)</span> is placed into a freezer maintained at a constant temperature of <span class="process-math">\(5^\circ F.\)</span> We’d like to have a model that will allow us to compute how long it will take for the water to cool down to a temperature of, for example, <span class="process-math">\(32^\circ F\)</span> where it will start to freeze.</div> <div class="para"> In the late <span class="process-math">\(17\)</span>th century Isaac Newton showed experimentally that the rate at which the water cools will be proportional to the difference between its current temperature and the ambient (surrounding) temperature. This is known as Newton’s Law of Cooling and it holds generally, not just for water.</div> <div class="para logical">
+<div class="para">For this problem we see that the ambient temperature is <span class="process-math">\(5^\circ F\)</span> and the initial temperature of the water is <span class="process-math">\(40^\circ F\text{.}\)</span>  We let <span class="process-math">\(T(t)\)</span> represent the temperature of the water at any given time. Then the difference between the current temperature and the ambient temperature is <span class="process-math">\(T-5\text{,}\)</span> and (as always) the rate of change of the temperature of the water with respect to time is <span class="process-math">\(\dfdx{T}{t}\text{,}\)</span> (or <span class="process-math">\(\dot{T}\)</span> if you are Newton). Letting <span class="process-math">\(r\)</span> be the (unknown) constant of proportionality we have the IVP</div>
+<div class="displaymath process-math">
+\begin{align*}
+\dfdx{T}{t}=r(T-5),\amp{}\amp{} T(0)=40.
+\end{align*}
+</div>
+</div> <div class="para logical">
+<div class="para">This differential equation looks like it will be tougher to solve than the IVPs we dealt with earlier. But in fact we can make this problem “easier on the eyes” with the substitution <span class="process-math">\(D=T-5\text{.}\)</span> Notice that <span class="process-math">\(\dfdx{D}{t}=\dfdx{(T-5)}{t}=\dfdx{T}{t}\)</span> so we have the IVP</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQUATIONBacteriaIVP.html">
+\begin{align}
+\dfdx{D}{t}=rD \amp{}\amp{}          D(0)=40-5=35.  \tag{8.26}
+\end{align}
+</div>
+<div class="para">Do you recognize this equation? This has the same form as <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONBacteriaIVP.html" title="Equation 8.18">IVP (8.18)</a> so the solution is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQUATIONBacteriaIVP.html">
+\begin{equation*}
+D(t)=D(0) e^{rt}=35e^{rt}.
+\end{equation*}
+</div>
+<div class="para">Reversing the substitution we see that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQUATIONBacteriaIVP.html">
+\begin{align*}
+T(t)-5\amp =\left(T(0)-5\right)e^{rt}\\
+T(t)\amp =5+35e^{rt}.
+\end{align*}
+</div>
+</div> <div class="para logical">
+<div class="para">To complete our model we need to determine <span class="process-math">\(r\text{.}\)</span> We can find <span class="process-math">\(r\)</span> if we know the temperature of the water at a second time during the cooling.  Assume that we measured the temperature of the water after <span class="process-math">\(10\)</span> minutes and it was <span class="process-math">\(35^\circ F.\)</span> Thus we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+35=T(10) =5+35e^{10r}
+\end{equation*}
+</div>
+<div class="para">so that</div>
+<div class="displaymath process-math">
+\begin{align*}
+\frac{30}{35}\amp =e^{10r}\\
+r\amp =\frac{\ln(6/7)}{10}
+\end{align*}
+</div>
+<div class="para">and our complete model is</div>
+<div class="displaymath process-math">
+\begin{align*}
+T(t)\amp =5+35e^{\frac{\ln(6/7)}{10} t}\\
+\amp =5+35\left(\frac{6}{7}\right)^{\frac{t}{10}}.
+\end{align*}
+</div>
+</div> <div class="para">Newton’s Law of Cooling accurately models the cooling of any object placed in  cooler surroundings. We used water in our example just to be definite.</div></article><span class="incontext"><a class="internal" href="CHAPTERlast-elem-funct.html#SECTIONnewtons-law-cooling-2">in-context</a></span>
+</body>
+</html>
