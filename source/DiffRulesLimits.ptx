@@ -299,6 +299,7 @@ possible we will formalize this by redefining the word
 </p>
 <definition xml:id="DEFINITIONnear">
 <title>Near</title>
+<idx><h>Definition</h><h>Near</h></idx>
 <statement>
 <p>
   <!-- \label{def:near} -->
@@ -631,6 +632,7 @@ Since we need the concept of <q>continuity at a point,</q> we define it.
   
   <definition xml:id="DEFINITIONcontinuity">
 <title>Continuity at a Point</title>
+<idx><h>Definition</h><h>Continuity at a Point</h></idx>
 <statement>
 <p>
     <!-- \label{def:continuity} -->
@@ -675,6 +677,7 @@ theorems have been proven in <xref ref="CHAPTERformal-limits"></xref>.
   
   <lemma xml:id="LEMMADiffImpliesCont">
 <title>Differentiability Implies Continuity</title>
+<idx><h>Lemma</h><h>Differentiability Implies Continuity</h></idx>
 <p>
     If <m>f(x)</m> is differentiable at <m>x=a</m> then <m>f(x)</m> is also
     continuous at <m>x=a.</m>
@@ -702,7 +705,7 @@ theorems have been proven in <xref ref="CHAPTERformal-limits"></xref>.
   
   <theorem xml:id="THEOREMFiniteSqueeze">
 <title>The Squeeze Theorem (The Finite Case)</title>
-<idx><h>Theorem</h><h>Squeeze Theorem (The Finite Case)</h></idx>
+<idx><h>Theorem</h><h>Squeeze Theorem</h><h>at a point</h></idx>
 <p>
     If <m>\alpha(x)\le f(x)\le \beta(x)</m> for <m>x</m> near <m>a</m>
     and <me>\limit{x}{a}{\beta(x)} = \limit{x}{a}{\alpha(x)} = L</me> then
@@ -2337,6 +2340,7 @@ L<rsq/>Hôpital<rsq/>s Rule.
 </p>
 
 <lemma xml:id="LEMMASinOverh">
+<idx><h>Lemma</h><h><m>\limit{h}{0}{\frac{\sin(h)}{h}}=1</m></h></idx>
 <p>
   <m>\limit{h}{0}{\frac{\sin(h)}{h}}=1</m>
 </p>
@@ -2476,6 +2480,7 @@ They are also called <term>injective</term>.
 
 <definition xml:id="DEFINITIONBijectiveFunctions">
 <title>One-To-One Functions</title>
+<idx><h>Definition</h><h>One-To-One Functions</h></idx>
 <statement>
 <p>
   A function, <m>f(x)</m>, defined on a domain, <m>D</m>, is said to be
@@ -2497,6 +2502,7 @@ invert because one-to-one functions are the only functions with inverses.
 
 <definition xml:id="DEFINITIONFunctionInverse">
 <title>Inverse Functions</title>
+<idx><h>Definition</h><h>Inverse Functions</h></idx>
 <statement>
 <p>
   <!-- \label{def:FunctionInverse} -->
@@ -2691,6 +2697,7 @@ More formally, we have the following lemma.
 
 
 <lemma xml:id="LEMMAInvDerivAtZero">
+<idx><h>Lemma</h><h>the derivative of an inverse function</h></idx>
 <p>
   If  <m>f</m> is an invertible function, <m>f(a)=b</m>, <m>f</m> is differentiable
   at <m>x=a</m>, and <m>f^\prime(a)=0</m>, then <m>\inverse f</m> is not
@@ -3054,6 +3061,8 @@ modern Bishop Berkeley can step in and sew doubt.
 
 <example>
   <title>The Derivative of the Inverse Sine</title>
+<idx><h>Inverse Sine</h><h>derivative of</h></idx>
+<idx><h>Derivative</h><h>of <m>\inverse\sin(x){}</m></h></idx>
   <p>
     Suppose <m>f(x)=\sin(x).</m> Then <m>\inverse{f}(x)=\inverse{\sin}(x)</m> so
     <md>
@@ -3063,6 +3072,7 @@ modern Bishop Berkeley can step in and sew doubt.
       <mrow>
         \amp = \frac{1}
         {\textcolor{red}{f^\prime}(\textcolor{blue}{\inverse{f}}(x))}
+
       </mrow>
       <mrow>
         \amp = \frac{1}{\textcolor{red}{\cos}(\textcolor{blue}{\inverse\sin}(x))}
