@@ -12,7 +12,7 @@
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
-<meta property="book:title" content="Differential Calculus">
+<meta property="book:title" content="Calculus">
 <meta property="book:author" content="Eugene Boman">
 <meta property="book:author" content="Robert Rogers">
 <script>
@@ -93,10 +93,10 @@ window.MathJax = {
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
 <a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
-<h1 class="heading"><a href="DiffCalc.html"><span class="title">Differential Calculus:</span> <span class="subtitle">From Practice to Theory</span></a></h1>
+<h1 class="heading"><a href="Calculus.html"><span class="title">Calculus:</span> <span class="subtitle">From Practice to Theory</span></a></h1>
 <p class="byline">Eugene Boman, Robert Rogers</p>
 </div>
-</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="meta_backmatter-4.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="meta_backmatter-5.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
 <div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
 <div class="search-results-controls">
@@ -107,17 +107,37 @@ window.MathJax = {
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="frontmatter-4.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="frontmatter.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="FromPractice.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\def\abs#1{\left|#1\right|}
-\def\CancelToRed#1#2{\textcolor{red}{{\cancelto{#1}{#2}}}}
-\def\approach#1{{\left(\rightarrow{}#1\right)}}
-\def\halmos{\rule[-.1ex]{8pt}{2ex}}
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="frontmatter-4.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="frontmatter.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="DiffCalcFromPractice.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\DeclareMathOperator{\erf}{erf}
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\Arctan}{Arctan}
+\DeclareMathOperator{\Arcsin}{Arcsin}
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\arccsc}{arccsc}
+\DeclareMathOperator{\sech}{sech}
+\DeclareMathOperator{\csch}{csch}
 
-\def\limitX#1#2#3#4{{\displaystyle\lim_{\underset{#4}{#1\rightarrow #2}}#3}}
-\def\tlimitX#1#2#3#4{{\displaystyle\lim_{\underset{#4}{#1\rightarrow #2}}}#3}
-\def\rlimit#1#2#3{{\limitX{#1}{#2}{#3}{#1\gt{}#2}{}}}
-\def\rtlimit#1#2#3{{\tlimitX{#1}{#2}{#3}{#1\gt{}#2}{}}}
-\def\llimit#1#2#3{{\limitX{#1}{#2}{#3}{#1\lt{}#2}{}}}
-\def\ltlimit#1#2#3{{\tlimitX{#1}{#2}{#3}{#1\lt{}#2}{}}}
+
+
+
+
+
+
+
+
+
+\def\abs#1{\left|#1\right|}
+\def\tallstrut{\rule{0mm}{1.1\baselineskip}}
+\def\approach#1{{\left(\rightarrow{}#1\right)}}
+
+\def\CancelToRed#1#2{\textcolor{red}{{\cancelto{#1}{#2}}}}
+
+
+\newcommand{\eps}{\varepsilon}
+\newcommand{\RR}{\mathbb {R}}
+\newcommand{\QQ}{\mathbb {Q}}
+\newcommand{\NN}{\mathbb {N}}
+\newcommand{\ZZ}{\mathbb {Z}}
+\def\DD{{\bf{}D}}
 
 \def\arccot{{\rm{}arccot}{}}
 \def\Arctan{{\rm{}Arctan}{}}
@@ -125,11 +145,58 @@ window.MathJax = {
 \def\arcsec{{\rm{}arcsec}{}}
 \def\arccsc{{\rm{}arccsc}{}}
 
-\newcommand{\eps}{\varepsilon}
-\newcommand{\RR}{\mathbb {R}}
-\newcommand{\QQ}{\mathbb {Q}}
-\newcommand{\NN}{\mathbb {N}}
-\newcommand{\ZZ}{\mathbb {Z}}
+\def\halmos{\mbox{\raggedright\rule{0.1in}{0.1in}}}
+
+
+
+
+\def\eval#1#2#3{\left.\strut{}#1\right|_{#2=#3}}
+\def\geneval#1#2#3{\left.\strut{}#1\right|_{#2#3}}
+\def\mineval#1#2{\left.\strut{}#1\right|_{#2}}
+
+\def\bigeval#1#2#3{\left.\strut{}#1\right|_{#2=#3}}
+
+\def\ftceval#1#2#3#4{\eval{#1}{#2}{#3}^{#4}}
+
+
+
+
+
+
+
+
+
+\def\inverse#1{#1^{-1}}
+
+
+
+
+\def\dx#1{\thinspace{\mathrm d}#1}
+\def\dfdx#1#2{\frac{\dx{#1}}{\dx{#2}}} 
+
+\def\dfdxat#1#2#3{\eval{\dfdx{#1}{#2}}{#2}{#3}}
+
+\def\partialfx#1#2{\frac{\partial{#1}}{\partial{#2}}} 
+\def\partialfxn#1#2#3{\frac{\partial^{#3}{#1}}{\partial{#2}^{#3}}} 
+\def\dfdxn#1#2#3{\frac{\text{d}^{#3}{#1}}{\text{d}{#2}^{#3}}} 
+\def\limit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}#3}}
+\def\tlimit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}}#3}
+\def\tlimitX#1#2#3#4{{\displaystyle\lim_{\underset{#4}{#1\rightarrow #2}}}#3}
+\def\rtlimit#1#2#3{{\tlimitX{#1}{#2}{#3}{#1\gt{}#2}{}}}
+\def\ltlimit#1#2#3{{\tlimitX{#1}{#2}{#3}{#1\lt{}#2}{}}}
+
+\def\limitX#1#2#3#4{{\displaystyle\lim_{\underset{#4}{#1\rightarrow #2}}#3}}
+\def\rlimit#1#2#3{{\limitX{#1}{#2}{#3}{#1\gt{}#2}{}}}
+\def\llimit#1#2#3{{\limitX{#1}{#2}{#3}{#1\lt{}#2}{}}}
+\def\limitatinf#1#2{\limit{#1}{\infty}{#2}}
+\def\limitatninf#1#2{\limit{#1}{-\infty}{#2}}
+
+
+\def\lprime#1{{#1^{\prime}_{\scriptscriptstyle L}}}
+\def\rprime#1{{#1^{\prime}_{\scriptscriptstyle R}}}
+
+
+\def\lhopeq{\stackrel{L'H}{=}}
 
 \newcommand{\ParamEqTwo}[2]
 {
@@ -150,65 +217,6 @@ window.MathJax = {
     \end{array}
   \right\}
 }
-
-
-
-\def\lhopeq{\stackrel{L'H}{=}}
-
-\def\sech{{\rm{}sech}{}}
-\def\csch{{\rm{}csch}{}}
-
-
-\def\DD{{\bf{}D}}
-
-\def\eval#1#2#3{\left.#1\right\rvert_{#2}^{#3}}
-\def\ftceval#1#2#3{\eval#1#2#3}
-\def\geneval#1#2{\eval{#1}{#2}{}}
-\def\bigeval#1#2#3{\eval{#2}{#2}{#3}}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\def\inverse#1{#1^{-1}}
-
-
-
-
-\def\dx#1{\thinspace{\mathrm d}#1}
-\def\dfdx#1#2{\frac{\dx{#1}}{\dx{#2}}} 
-\def\partialfx#1#2{\frac{\partial{#1}}{\partial{#2}}} 
-\def\partialfxn#1#2#3{\frac{\partial^{#3}{#1}}{\partial{#2}^{#3}}} 
-\def\dfdxn#1#2#3{\frac{\text{d}^{#3}{#1}}{\text{d}{#2}^{#3}}} 
-
-
-\def\limitatinf#1#2{\limit{#1}{\infty}{#2}}
-\def\limitatninf#1#2{\limit{#1}{-\infty}{#2}}
-\def\dfdxat#1#2#3{\eval{\dfdx{#1}{#2}}{#2=#3}{}}
-
-\def\limit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}#3}}
-\def\tlimit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}}#3}
-\def\limitX#1#2#3#4{{\displaystyle\lim_{\underset{#4}{#1\rightarrow #2}}#3}}
-\def\rlimit#1#2#3{{\limitX{#1}{#2}{#3}{#1\gt{}#2}{}}}
-\def\llimit#1#2#3{{\limitX{#1}{#2}{#3}{#1\lt{}#2}{}}}
-
-\def\lprime#1{{#1^{\prime}_{\scriptscriptstyle L}}}
-\def\rprime#1{{#1^{\prime}_{\scriptscriptstyle R}}}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -227,7 +235,7 @@ window.MathJax = {
 </ul>
 </li>
 <li class="toc-item toc-part">
-<div class="toc-title-box"><a href="FromPractice.html" class="internal"><span class="codenumber">I</span> <span class="title">From Practice . . .</span></a></div>
+<div class="toc-title-box"><a href="DiffCalcFromPractice.html" class="internal"><span class="codenumber">I</span> <span class="title">Differential Calculus: From Practice</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-chapter"><div class="toc-title-box"><a href="CalculusIsARock.html" class="internal"><span class="codenumber">1</span> <span class="title">Calculus is a Rock</span></a></div></li>
 <li class="toc-item toc-chapter">
@@ -279,21 +287,19 @@ window.MathJax = {
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONVelocitySlopeTangent" class="internal"><span class="codenumber">5.1</span> <span class="title">Slopes and Tangents</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONdefin-tang-line" class="internal"><span class="codenumber">5.2</span> <span class="title">Defining the Tangent Line</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONvomit-comet" class="internal"><span class="codenumber">5.3</span> <span class="title">The Vomit Comet</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONrates-change" class="internal"><span class="codenumber">5.4</span> <span class="title">Galileo Drops the Ball</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONGalileoDrops" class="internal"><span class="codenumber">5.4</span> <span class="title">Galileo Drops the Ball</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECONDBringCalc" class="internal"><span class="codenumber">5.5</span> <span class="title">Bringing in Calculus</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONDerivative" class="internal"><span class="codenumber">5.6</span> <span class="title">The Derivative</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONnewt-flux-dynam" class="internal"><span class="codenumber">5.7</span> <span class="title">Thinking Dynamically</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONFluxions" class="internal"><span class="codenumber">5.8</span> <span class="title">Newton’s Method of Fluxions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONSelfIntersectCurve" class="internal"><span class="codenumber">5.9</span> <span class="title">Self-intersecting Curves and Parametric Equations</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONFluxions" class="internal"><span class="codenumber">5.8</span> <span class="title">Newton’s Method of Fluxions</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONParametricFunctions" class="internal"><span class="codenumber">5.8.1</span> <span class="title">Parametric Functions</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONbridg-chains-telesc" class="internal"><span class="codenumber">5.9</span> <span class="title">Bridges, Chains, Domes, and Telescopes</span></a></div>
+<div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONbridg-chains-telesc" class="internal"><span class="codenumber">5.10</span> <span class="title">Bridges, Chains, Domes, and Telescopes</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONBridges" class="internal"><span class="codenumber">5.9.1</span> <span class="title">Bridges</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONChains" class="internal"><span class="codenumber">5.9.2</span> <span class="title">Chains</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONDomes" class="internal"><span class="codenumber">5.9.3</span> <span class="title">Domes</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONTelescopes" class="internal"><span class="codenumber">5.9.4</span> <span class="title">Telescopes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONBridges" class="internal"><span class="codenumber">5.10.1</span> <span class="title">Bridges</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONChains" class="internal"><span class="codenumber">5.10.2</span> <span class="title">Chains</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONDomes" class="internal"><span class="codenumber">5.10.3</span> <span class="title">Domes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONTelescopes" class="internal"><span class="codenumber">5.10.4</span> <span class="title">Telescopes</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -360,14 +366,14 @@ window.MathJax = {
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html" class="internal"><span class="codenumber">8</span> <span class="title">Exponentials and Logarithms</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONIvps" class="internal"><span class="codenumber">8.1</span> <span class="title">Initial Value Problems (IVPs)</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONDEsandIVPS" class="internal"><span class="codenumber">8.1</span> <span class="title">Initial Value Problems</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONexponential" class="internal"><span class="codenumber">8.2</span> <span class="title">The Natural Exponential</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONexponential-growth" class="internal"><span class="codenumber">8.3</span> <span class="title">Exponential Growth and Exponential Notation</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONhyperb-trig-hang" class="internal"><span class="codenumber">8.4</span> <span class="title">Hyperbolic Trigonometry: The Hanging Chain</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONGatewayArch" class="internal"><span class="codenumber">8.5</span> <span class="title">The Gateway Arch</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#CHAPTERlast-elem-funct-8" class="internal"><span class="codenumber">8.6</span> <span class="title">Exponential Growth</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONExpAndCmpndInt" class="internal"><span class="codenumber">8.7</span> <span class="title">Exponential Functions and Compound Interest</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONnatural-logarithm-1" class="internal"><span class="codenumber">8.8</span> <span class="title">A Short Introduction to Logarithms: John Napier Logs In</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONnatural-logarithm-1" class="internal"><span class="codenumber">8.8</span> <span class="title">John Napier Logs In: A Short Introduction to Logarithms</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONNatLog" class="internal"><span class="codenumber">8.9</span> <span class="title">Logarithms, Natural and Unnatural</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONLogApps" class="internal"><span class="codenumber">8.10</span> <span class="title">Applications of Logarithms</span></a></div>
@@ -379,7 +385,7 @@ window.MathJax = {
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONDerivNatLog" class="internal"><span class="codenumber">8.11</span> <span class="title">The Derivative of the Natural Logarithm</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONgener-logar-expon" class="internal"><span class="codenumber">8.12</span> <span class="title">General Logarithms and Exponentials</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONleonh-euler-harm" class="internal"><span class="codenumber">8.13</span> <span class="title">Leonhard Euler, Harmonic Oscillators, and Complex Numbers</span></a></div>
+<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONEulerHarmonicOsc" class="internal"><span class="codenumber">8.13</span> <span class="title">Leonhard Euler, Harmonic Oscillators, and Complex Numbers</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONHowEulerDidIt" class="internal"><span class="codenumber">8.13.1</span> <span class="title">How Euler Did It</span></a></div></li></ul>
 </li>
 </ul>
@@ -477,7 +483,7 @@ window.MathJax = {
 </ul>
 </li>
 <li class="toc-item toc-part">
-<div class="toc-title-box"><a href="ToTheory.html" class="internal"><span class="codenumber">II</span> <span class="title">To Theory . . .</span></a></div>
+<div class="toc-title-box"><a href="DiffCalcToTheory.html" class="internal"><span class="codenumber">II</span> <span class="title">Differential Calculus: To Theory</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="CHAPTERWhatsWrong.html" class="internal"><span class="codenumber">13</span> <span class="title">What’s Wrong with Differentials?</span></a></div>
@@ -539,10 +545,11 @@ window.MathJax = {
 <li class="toc-item toc-backmatter">
 <div class="toc-title-box"><a href="meta_backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="meta_backmatter-2.html" class="internal"><span class="codenumber">A</span> <span class="title">Selected Solutions</span></a></div></li>
-<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="meta_backmatter-3.html" class="internal"><span class="codenumber">B</span> <span class="title">List of Symbols</span></a></div></li>
-<li class="toc-item toc-index"><div class="toc-title-box"><a href="meta_backmatter-4.html" class="internal"><span class="title">Index</span></a></div></li>
-<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="meta_backmatter-5.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="meta_backmatter-2.html" class="internal"><span class="codenumber">A</span> <span class="title">Selected Hints</span></a></div></li>
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="meta_backmatter-3.html" class="internal"><span class="codenumber">B</span> <span class="title">Selected Solutions</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="meta_backmatter-4.html" class="internal"><span class="codenumber">C</span> <span class="title">List of Symbols</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="meta_backmatter-5.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="meta_backmatter-6.html" class="internal"><span class="title">Colophon</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
@@ -550,7 +557,7 @@ window.MathJax = {
 <span class="type">Preface</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">To the Instructor: Read This First</span>
 </h2>
 <blockquote class="blockquote" id="SECinstructor-2">
-<div class="para" id="SECinstructor-2-1">Teaching is to give a systematic opportunity to the learner to discover.</div> <cite class="attribution">―<a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Polya/" target="_blank">George Polya (1887-1985)</a><a class="xref" id="SECinstructor-2-2-2" href="" data-knowl="./knowl/fn/SECinstructor-2-2-2.html" title="Footnote 0.0.6"><sup> 6 </sup></a></cite>
+<div class="para" id="SECinstructor-2-1">Teaching is to give a systematic opportunity to the learner to discover.</div> <cite class="attribution">―<a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Polya/" target="_blank">George Polya (1887-1985)</a><a class="xref" id="SECinstructor-2-2-2" href="" data-knowl="./knowl/fn/SECinstructor-2-2-2.html" title="Footnote 0.0.7"><sup> 7 </sup></a></cite>
 </blockquote>
 <section class="paragraphs" id="SECinstructor-3"><h2 class="heading"><span class="title">Teaching Calculus, a Personal Perspective.</span></h2> <div class="para" id="SECinstructor-3-2">For many years we (the authors) taught Differential Calculus in what has become in the last century or so, the traditional format. Limit definitions and theorems came first (presented formally when we were young; less so as we gained experience). From there we built up the necessary logical structure piece by piece until we had, after much effort, constructed the tools our students would need to solve the traditional problems of Calculus. It usually took a significant fraction of the semester to reach this point and we often found that for many of our students any bright eyed enthusiasm they might have brought to the course had been washed away in a cascade of unmotivated definitions (limits and continuity, for example), apparently obvious statements made unnecessarily obscure (the limit of a constant is the constant), and rote computations utterly divorced from anything in the real world. We expect that you have encountered similar difficulties.</div> <div class="para" id="SECinstructor-3-3">Even a cursory look at history shows us that new mathematics is almost never created by building it up logically from first principles in this fashion. New mathematics is created to solve a particular problem. It may or may not be a real-world problem, but always some specific problem is the focal point of our efforts. If new methods are needed then we invent, we try, we discard, invent again, try again, and discard again, <i class="foreign">ad nauseum</i> until a viable approach is finally uncovered. Then, and only then, is a rigorous, logical foundation sought.</div> <div class="para" id="SECinstructor-3-4">Think for a moment about how you do your research. First you identify a problem. Are the foundational issues at the front of your mind? Probably not. At first you’re just curious. You kick ideas around, trying to find some workable approach. In short, you play with the problem. You have fun with it as a means to understanding it. When you solve your problem you probably <em class="emphasis">believe</em> your result long before you prove it.  Foundational issues, proofs, come later when you need to show that your results are valid. This is usually less fun.</div> <div class="para" id="SECinstructor-3-5">Creating new mathematics and learning new mathematics are very similar activities.  Think about how you learn new mathematics. When reading a journal article do you plod from definition, to lemma, to proof, to theorem, to proof, entirely absorbing each before moving on to the next?  Probably not. Most likely you read ahead to get an overall sense of the result. Then you backtrack, skip forward, play with the ideas, generate your own examples and counterexamples. When your example is inconsistent with a theorem in the article you examine it closely in order to resolve the discrepancy and better understand the ideas in the article. In short, you begin by playing with the ideas and having fun with them.</div> <div class="para" id="SECinstructor-3-6">Mathematicians rarely focus on rigor when we start to learn new mathematics ourselves because experience has taught us that rigor usually proceeds from a deep intuitive understanding. And as a result of training. It does not come easily, but with effort rigor emerges.  If we force our students to plow through formal definitions, theorems, lemmas, and proofs before showing them the intuitive beauty and usefulness of our topic, before they can see the need for formal definitions, theorems, lemmas, and proofs, then we are demanding of them what we rarely ask of ourselves.  The first job of the teacher is to foster enthusiasm in the student, to pique their curiosity and to show them, in Descartes’ phrase, “the pleasure of discovery.” For those who need it there is time later for the hard work of rigor.</div>      <div class="para" id="SECinstructor-3-7">In the first part of this text (“From Practice . . .”) our audience is the usual mix of students in a typical first semester, college level, Calculus class. <em class="emphasis">All</em> of the students, not just the budding mathematicians, and certainly not the instructor.  (Presumably we have nothing to teach the instructor, although we flatter ourselves that we might, occasionally, do so anyway.)  We begin in part one as Leibniz did, with the highly intuitive — if questionable — notion of the differential.  We do not hide the problems inherent in this approach. We simply don’t dwell on them. We point out the logical problems that accompany the use of differentials whenever we can without breaking up the flow of the text. We do this because it is important for students, <em class="emphasis">all</em> students, to be aware of these issues. But we defer their resolution until part two (“. . .  to Theory”) when, hopefully, they will have gained an appreciation of the need for rigor.</div> <div class="para" id="SECinstructor-3-8">In part two (“To Theory . . .”) our purpose is to put a solid, rigorous foundation under the differentiation techniques derived in part one. Thus our style and approach changes. We become more formal, more “mathematical.” We define and prove limit theorems and use these to derive the differentiation rules. But in contrast with the traditional approach we are not deriving the differentiation techniques in order to use them. In part two the point is to formally, rigorously justify rules with which the student should already be quite conversant.</div> <div class="para" id="SECinstructor-3-9">In part one we address the question, “How can we use Calculus to explore, and explain, our world?”  In part two the question is “Why does Calculus work?”</div> <div class="para" id="SECinstructor-3-10">In this we follow our history. Calculus existed as an intuitive set of computational tools for approximately <span class="process-math">\(200\)</span> years before the limit theory made it rigorous. Surely there is no harm in allowing our students to view it the same way for a few weeks.</div> <div class="para" id="SECinstructor-3-11">Moreover proceeding in this way allows us to present the need for rigor itself as a problem to be solved, rather than an abstract theory untethered from reality. For example we do not pretend that the proof of the statement, “If <span class="process-math">\(\limit{x}{a}{f(x)}\)</span> and <span class="process-math">\(\limit{x}{a}{g(x)}\)</span> both exist then <span class="process-math">\(\limit{x}{a}{\left(f(x)+g(x)\right)}\)</span> also exists and is equal to the obvious sum,” is useful for anything other than establishing with full rigor what we already believe, intuitively, to be true. We make no such pretense because the history of our topic shows that this is in fact the truth. Limits were not invented to create Calculus, they were invented to justify it after the fact, to make it rigorous.</div></section><section class="paragraphs" id="StudentNeed"><h2 class="heading"><span class="title">What Do Students Need From Calculus?</span></h2> <div class="para" id="StudentNeed-2">A mechanical engineer who designs cars for a living must necessarily have a deep understanding of the inner workings of the propulsion, braking, cooling, and other systems built into every automobile.</div> <div class="para" id="StudentNeed-3">A race car driver will understand some, but not necessarily all, of the mechanical principles underlying those systems. But the racer will have a much more comprehensive, and deeply intuitive, understanding of the physics of motion that keep the car on the road under the extreme conditions of a race.</div> <div class="para" id="StudentNeed-4">A mathematician who merely drives to and from their workplace while daydreaming about mathematics needs to understand no more about the car than how to make it move, stop, and change direction.  We may understand more than that, and many of us do, but this is all we need.</div> <div class="para" id="StudentNeed-5">But all of these people start at the same point: They learn how to drive the car.</div> <div class="para" id="StudentNeed-6">Much the same can be said of any tool. Some need to understand it thoroughly at every level. Some need a deep intuitive grasp of its extreme capabilities. And some need only know enough to keep from hurting themselves with it. But all begin by learning how to use the tool properly.</div> <div class="para" id="StudentNeed-7">Calculus is a tool. It was invented to solve real world problems in science and engineering.  The racers in our metaphor are scientists, engineers, and businessfolk. They need, and many frequently have, a deep intuitive feel for the kinds of problems Calculus can be used to solve, and their intuitive understanding enables them to adapt Calculus techniques to novel problems. But their understanding is necessarily qualitatively different from that of a mathematician.</div> <div class="para" id="StudentNeed-8">As mathematicians we have (indeed we must have) a deep understanding of what Calculus is, what it does, and what it can not do. We see and understand the purpose of every nuance in phrasing, the role of every lemma and theorem, every small change in notation. We understand the immense need to state our assumptions, to formulate careful, precise definitions and to rigorously prove our theorems.</div> <aside class="aside aside-like" id="StudentNeed-9"><h3 class="heading"><span class="title">Comment.</span></h3>
 <div class="para" id="StudentNeed-9-2">The ordinary drivers in our metaphor are those, sadly rare, students in the liberal arts who take Calculus out of simple curiosity.</div></aside> <div class="para" id="StudentNeed-10">Because most college level Calculus courses contain students with a wide variety of interests and goals a Calculus textbook must meet the needs of students with a wide variety of interests and goals. This seems like it must be nearly impossible until we think about it for a bit. Just as we can begin the education of engineers, racers, and ordinary drivers at the same point — the location and use of the controls of a car — we can begin the education of engineers, scientists, and mathematicians at the same point — with the computational techniques from Calculus that are most useful and universal, with examples displaying how these techniques can be used to solve technical problems, and with problems and drills designed to develop skill with them. This is what we’ve tried to do in this textbook.</div> <div class="para" id="StudentNeed-11">After learning to drive racers will go on to become more skillful at using the car, and there is no point in bludgeoning them with the details of say, the compressibility characteristics of steering fluid. Certainly they must be familiar with the need for steering fluid, and they should have a passing familiarity with the role of steering fluid in the overall steering system. In short, they need to know that the tools they are using have been carefully designed and that they work. But no more than that is necessary until and unless they need to help design a new steering system for their car.</div> <div class="para" id="StudentNeed-12">In the same way science, engineering and business students need to be aware of the need for rigor, even if it never impinges on their daily lives.  They should be familiar with the need for limits as a means of providing rigor and they should have a passing familiarity with the role of epsilons and deltas. In short, they need to know that the tools they are using have been carefully designed and that they work. But no more than that is necessary until and unless there is some specific need.</div> <div class="para" id="StudentNeed-13">On the other hand mathematics students do need a nuanced understanding of both the practice and theory of Calculus if they are to successfully continue their studies. In addition to the ability to use Calculus, they need to understand limits and they need to understand the role of epsilons and deltas</div> <div class="para" id="StudentNeed-14">Calculus was invented as a problem solving tool, and in our opinion, this is how it is most easily and intuitively understood by the beginning student.  So part one of this text is aimed at all of the students in a typical first year college class. As a result our approach is intuitive and problem oriented.</div> <div class="para" id="StudentNeed-15">While the audience for part two is still all of the students in the class, it is aimed, primarily, at the budding mathematicians. You will see that in part two our language and presentation become more formal, more mathematical. This is deliberate. A young mathematician needs to be exposed to the formalisms of our discipline and this is an appropriate place to begin.</div> <div class="para" id="StudentNeed-16">But this does not mean that part two should be reserved only for honors classes full of mathematics majors. The budding engineer, scientist, or financial analyst will most likely never need to use epsilons and deltas, or even limits, in their daily work. Like the racer who should understand the need for steering fluid, but does not need a detailed understanding of its essential characteristics, these students should understand the need for rigor, even if they do not understand it in the same detail that a mathematician must. Many of these students will probably view this as an unnecessary burden, and will complain about it. But an education should provide students with what they need, not what they enjoy.</div> <div class="para" id="StudentNeed-17">And sometimes, every now and then, some of them will find, much to their surprise, that the beauty and intricacy of a rigorous, well formed argument is as captivating to them as it is to us. We should provide our students with the opportunity to be captivated.</div></section><section class="paragraphs" id="StartlingChoices"><h2 class="heading"><span class="title">Some (Possibly Startling) Choices We’ve Made.</span></h2> <div class="para" id="StartlingChoices-2">You will very likely find some of the choices we’ve made quite startling. We describe some of them here and explain our rationale.</div> <div class="para logical" id="StartlingChoices-3"><dl class="description-list">
@@ -630,11 +637,11 @@ P(t)=
 </dd>
 </dl></div></section><section class="paragraphs" id="TRIUMPS"><h2 class="heading"><span class="title">The TRIUMPHS Project.</span></h2> <aside class="aside aside-like" id="TRIUMPS-2"><h3 class="heading"><span class="title">Comment.</span></h3>
 <div class="para" id="TRIUMPS-2-2">
-<em class="alert">TR</em>ansfoming <em class="alert">I</em>nstruction in <em class="alert">U</em>ndergraduate <em class="alert">M</em>athematics <em class="alert">I</em>nstruction via <em class="alert">P</em>rimary <em class="alert">H</em>istorical <em class="alert">S</em>ources</div></aside> <div class="para" id="TRIUMPS-3">The TRIUMPHS project consists of a collection of over <span class="process-math">\(80\)</span> Primary Source Projects (PSPs) on a wide range of topics from courses across the undergraduate mathematics curriculum and all are freely available for download at the <a class="external" href="https://blogs.ursinus.edu/triumphs/" target="_blank">TRIUMPHS website</a><a class="xref" id="TRIUMPS-3-3" href="" data-knowl="./knowl/fn/TRIUMPS-3-3.html" title="Footnote 0.0.7"><sup> 7 </sup></a>  </div> <div class="para" id="TRIUMPS-4">We quote from the project website:</div> <blockquote class="blockquote" id="TRIUMPS-5"><div class="para" id="TRIUMPS-5-1">The TRIUMPHS project creates materials for use in the undergraduate mathematics classroom which teaches content based around original mathematical sources such as the writings of Poincarè, Euclid, Lobachevsky, Hausdorff, and many others. These materials are freely available and downloadable for use in the clasroom. The goal of the project is to write, develop, disseminate, and test these curricular materials.</div></blockquote> <div class="para" id="TRIUMPS-6">The TRIUMPHS project was ongoing at the same time we were writing this textbook. Since both projects proceed from the premise that history is a useful organizing strategy for teaching mathematics, and both are published under a Creative Commons license it seemed to us that our text can be enhanced by   those TRIUMPHS PSPs which were relevant to Calculus.</div> <div class="para" id="TRIUMPS-7">At those points in the text which correspond to particular PSP a reference (and link) is provided.  </div> <div class="para" id="TRIUMPS-8">We are grateful for the work of the specific TRIUMPHS authors we have included in this text, but we are also grateful for the TRIUMPHS project in general. There are TRIUMPHS PSPs for many, many more topics than we are able to include here and we highly recommend that you take a look at them and consider incorporating any appropriate PSPs into every course you teach.  </div></section><section class="paragraphs" id="Cranky"><h2 class="heading"><span class="title">Rantings From the Cranky Old Guys in the Back of the Room.</span></h2> <div class="para" id="Cranky-2">We (the authors of this text) have watched the following scene play out over and over again at professional meetings. The actors change but the script is surprisingly stable.</div> <div class="para" id="Cranky-3">A speaker is introduced, rises, and talks briefly about a problem they have encountered while teaching Calculus  . . .  or Basic Algebra  . . .  or Trigonometry  . . .  or whatever.  At some point the talk is shanghaied by a <em class="alert">Cranky Old Guy</em> (it is usually a guy) in the back of the room. He has identified the solution to <em class="alert">The Problem</em> with teaching Calculus  . . . or Basic Algebra . . .  or Trigonometry  . . . or whatever, and in order to fix <em class="alert">The Problem</em> all we have to do is follow his recipe. The audience is then treated to a sincere, vehement, wild-eyed, and often spittle-spewn description of his recipe that clearly emanates from the fervor of divine inspiration.</div> <div class="para" id="Cranky-4">We do not criticize the <em class="alert">Cranky Old Guy</em>.  We recognize that when you believe you have found a lighted path in a darkening forest it is hard to contain your excitement. Also we fear we may have more in common with him than we are entirely comfortable with.</div> <div class="para" id="Cranky-5">This text grew from our conviction that an historical approach to Calculus, particularly the use of the highly intuitive notion of the differential, which was used to excellent effect by the likes of Leibniz, the Bernoullis, L’Hopital, and the master, Euler, to name just a few, provides a viable, interesting, and useful framework for teaching Calculus.</div> <div class="para" id="Cranky-6">As we complete our text we are more convinced than ever that this is true.</div> <aside class="aside aside-like" id="Cranky-7"><h3 class="heading"><span class="title">Comment.</span></h3>
+<em class="alert">TR</em>ansfoming <em class="alert">I</em>nstruction in <em class="alert">U</em>ndergraduate <em class="alert">M</em>athematics <em class="alert">I</em>nstruction via <em class="alert">P</em>rimary <em class="alert">H</em>istorical <em class="alert">S</em>ources</div></aside> <div class="para" id="TRIUMPS-3">The TRIUMPHS project consists of a collection of over <span class="process-math">\(80\)</span> Primary Source Projects (PSPs) on a wide range of topics from courses across the undergraduate mathematics curriculum and all are freely available for download at the <a class="external" href="https://blogs.ursinus.edu/triumphs/" target="_blank">TRIUMPHS website</a><a class="xref" id="TRIUMPS-3-3" href="" data-knowl="./knowl/fn/TRIUMPS-3-3.html" title="Footnote 0.0.8"><sup> 8 </sup></a>  </div> <div class="para" id="TRIUMPS-4">We quote from the project website:</div> <blockquote class="blockquote" id="TRIUMPS-5"><div class="para" id="TRIUMPS-5-1">The TRIUMPHS project creates materials for use in the undergraduate mathematics classroom which teaches content based around original mathematical sources such as the writings of Poincarè, Euclid, Lobachevsky, Hausdorff, and many others. These materials are freely available and downloadable for use in the clasroom. The goal of the project is to write, develop, disseminate, and test these curricular materials.</div></blockquote> <div class="para" id="TRIUMPS-6">The TRIUMPHS project was ongoing at the same time we were writing this textbook. Since both projects proceed from the premise that history is a useful organizing strategy for teaching mathematics, and both are published under a Creative Commons license it seemed to us that our text can be enhanced by   those TRIUMPHS PSPs which were relevant to Calculus.</div> <div class="para" id="TRIUMPS-7">At those points in the text which correspond to particular PSP a reference (and link) is provided.  </div> <div class="para" id="TRIUMPS-8">We are grateful for the work of the specific TRIUMPHS authors we have included in this text, but we are also grateful for the TRIUMPHS project in general. There are TRIUMPHS PSPs for many, many more topics than we are able to include here and we highly recommend that you take a look at them and consider incorporating any appropriate PSPs into every course you teach.  </div></section><section class="paragraphs" id="Cranky"><h2 class="heading"><span class="title">Rantings From the Cranky Old Guys in the Back of the Room.</span></h2> <div class="para" id="Cranky-2">We (the authors of this text) have watched the following scene play out over and over again at professional meetings. The actors change but the script is surprisingly stable.</div> <div class="para" id="Cranky-3">A speaker is introduced, rises, and talks briefly about a problem they have encountered while teaching Calculus  . . .  or Basic Algebra  . . .  or Trigonometry  . . .  or whatever.  At some point the talk is shanghaied by a <em class="alert">Cranky Old Guy</em> (it is usually a guy) in the back of the room. He has identified the solution to <em class="alert">The Problem</em> with teaching Calculus  . . . or Basic Algebra . . .  or Trigonometry  . . . or whatever, and in order to fix <em class="alert">The Problem</em> all we have to do is follow his recipe. The audience is then treated to a sincere, vehement, wild-eyed, and often spittle-spewn description of his recipe that clearly emanates from the fervor of divine inspiration.</div> <div class="para" id="Cranky-4">We do not criticize the <em class="alert">Cranky Old Guy</em>.  We recognize that when you believe you have found a lighted path in a darkening forest it is hard to contain your excitement. Also we fear we may have more in common with him than we are entirely comfortable with.</div> <div class="para" id="Cranky-5">This text grew from our conviction that an historical approach to Calculus, particularly the use of the highly intuitive notion of the differential, which was used to excellent effect by the likes of Leibniz, the Bernoullis, L’Hopital, and the master, Euler, to name just a few, provides a viable, interesting, and useful framework for teaching Calculus.</div> <div class="para" id="Cranky-6">As we complete our text we are more convinced than ever that this is true.</div> <aside class="aside aside-like" id="Cranky-7"><h3 class="heading"><span class="title">Comment.</span></h3>
 <div class="para" id="Cranky-7-2">Well, OK, sure. We actually do believe this is the best way. Without that conviction we’d never have finished. But we haven’t completely lost touch with reality. As far-fetched as it seems to us, we recognize the possibility that we might be wrong.</div></aside> <div class="para" id="Cranky-8">But if we’re being honest we must admit the possibility that we’re wrong.  We don’t believe we’ve found the only way to teach Calculus, or even the best, or that everyone should teach this way. What we do have is a way to teach Calculus that is very <em class="emphasis">different</em> from what has been done for the past century or so. You will have to decide whether or not it works for you.</div> <div class="para" id="Cranky-9">It is also possible that in our conviction we may be edging into <em class="alert">Cranky Old Guy</em> territory. But we will leave that judgment to you. We don’t really want to know.</div></section><section class="paragraphs" id="PleaForHelp"><h2 class="heading"><span class="title">A Plea For Help.</span></h2> <div class="para" id="PleaForHelp-2">This text is not finished. No textbook ever is. Eventually the authors simply stop writing.</div> <div class="para" id="PleaForHelp-3">But always there a very illuminating problem, a nice turn of phrase, a revealing metaphor, or a tangential subject which wasn’t known at the time of writing that should have been included. And typos. Always, there are typos.</div> <div class="para" id="PleaForHelp-4">A nice feature of publishing an online Open Educational Resource (OER) text like this one is that it can be revised more-or-less continuously as needed.</div> <aside class="aside aside-like" id="PleaForHelp-5"><h3 class="heading"><span class="title">Comment.</span></h3>
 <div class="para" id="PleaForHelp-5-2">Obviously some care must be taken. We would not, for example, want to insert a new problem — thereby changing the numbers of all subsequent problems — during a semester while the text is being used. But spelling errors and typos can be addressed at any time.</div></aside> <div class="para" id="PleaForHelp-6">Even better, we are not limited to only using the work of the original authors. If you have a favorite problem that you use in your classroom and that you’d be willing to share please share it with us. If yours works better than a problem we already have, we’ll happily swap it in.  If yours simply fills a need that we’ve left unaddressed we’ll be happy to include your problem. Naturally, we will give you credit for your work if you want.</div> <div class="para" id="PleaForHelp-7">If you think we have a good approach but don’t think we’ve really pulled it off you are free to obtain the source and re-write any part of it, or all of it, to suit your needs.</div> <aside class="aside aside-like" id="PleaForHelp-8"><h3 class="heading"><span class="title">Comment.</span></h3>
 <div class="para" id="PleaForHelp-8-2">As of this writing the only way to do that is to ask us for it. Eventually (meaning, as soon as Boman figures out how to do it), the source files will be available in at least one online repository.</div></aside> <div class="para logical" id="PleaForHelp-9">
-<div class="para">We are publishing this book under the Creative Commons <a class="external" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-AS 4.0 License</a><a class="xref" id="PleaForHelp-9-2" href="" data-knowl="./knowl/fn/PleaForHelp-9-2.html" title="Footnote 0.0.8"><sup> 8 </sup></a>   which means, among other things, that you are free use and modify this text as long as you:</div>
+<div class="para">We are publishing this book under the Creative Commons <a class="external" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-AS 4.0 License</a><a class="xref" id="PleaForHelp-9-2" href="" data-knowl="./knowl/fn/PleaForHelp-9-2.html" title="Footnote 0.0.9"><sup> 9 </sup></a>   which means, among other things, that you are free use and modify this text as long as you:</div>
 <ol class="decimal">
 <li id="PleaForHelp-9-3-1"><div class="para" id="PleaForHelp-9-3-1-1">Give us proper attribution as the original authors.</div></li>
 <li id="PleaForHelp-9-3-2"><div class="para" id="PleaForHelp-9-3-2-1">Do not use it for any commercial purpose (don’t try to make money from it).</div></li>
@@ -659,7 +666,7 @@ P(t)=
 </tr>
 </table></div></section></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="frontmatter-4.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="FromPractice.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="frontmatter-4.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="DiffCalcFromPractice.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

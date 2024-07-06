@@ -12,7 +12,7 @@
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
-<meta property="book:title" content="Differential Calculus">
+<meta property="book:title" content="Calculus">
 <meta property="book:author" content="Eugene Boman">
 <meta property="book:author" content="Robert Rogers">
 <script>
@@ -93,10 +93,10 @@ window.MathJax = {
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
 <a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
-<h1 class="heading"><a href="DiffCalc.html"><span class="title">Differential Calculus:</span> <span class="subtitle">From Practice to Theory</span></a></h1>
+<h1 class="heading"><a href="Calculus.html"><span class="title">Calculus:</span> <span class="subtitle">From Practice to Theory</span></a></h1>
 <p class="byline">Eugene Boman, Robert Rogers</p>
 </div>
-</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="meta_backmatter-4.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="meta_backmatter-5.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
 <div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
 <div class="search-results-controls">
@@ -107,17 +107,37 @@ window.MathJax = {
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="ToTheory.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ToTheory.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="CHAPTERdiff-rules-with-limits.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\def\abs#1{\left|#1\right|}
-\def\CancelToRed#1#2{\textcolor{red}{{\cancelto{#1}{#2}}}}
-\def\approach#1{{\left(\rightarrow{}#1\right)}}
-\def\halmos{\rule[-.1ex]{8pt}{2ex}}
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="DiffCalcToTheory.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="DiffCalcToTheory.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="CHAPTERdiff-rules-with-limits.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\DeclareMathOperator{\erf}{erf}
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\Arctan}{Arctan}
+\DeclareMathOperator{\Arcsin}{Arcsin}
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\arccsc}{arccsc}
+\DeclareMathOperator{\sech}{sech}
+\DeclareMathOperator{\csch}{csch}
 
-\def\limitX#1#2#3#4{{\displaystyle\lim_{\underset{#4}{#1\rightarrow #2}}#3}}
-\def\tlimitX#1#2#3#4{{\displaystyle\lim_{\underset{#4}{#1\rightarrow #2}}}#3}
-\def\rlimit#1#2#3{{\limitX{#1}{#2}{#3}{#1\gt{}#2}{}}}
-\def\rtlimit#1#2#3{{\tlimitX{#1}{#2}{#3}{#1\gt{}#2}{}}}
-\def\llimit#1#2#3{{\limitX{#1}{#2}{#3}{#1\lt{}#2}{}}}
-\def\ltlimit#1#2#3{{\tlimitX{#1}{#2}{#3}{#1\lt{}#2}{}}}
+
+
+
+
+
+
+
+
+
+\def\abs#1{\left|#1\right|}
+\def\tallstrut{\rule{0mm}{1.1\baselineskip}}
+\def\approach#1{{\left(\rightarrow{}#1\right)}}
+
+\def\CancelToRed#1#2{\textcolor{red}{{\cancelto{#1}{#2}}}}
+
+
+\newcommand{\eps}{\varepsilon}
+\newcommand{\RR}{\mathbb {R}}
+\newcommand{\QQ}{\mathbb {Q}}
+\newcommand{\NN}{\mathbb {N}}
+\newcommand{\ZZ}{\mathbb {Z}}
+\def\DD{{\bf{}D}}
 
 \def\arccot{{\rm{}arccot}{}}
 \def\Arctan{{\rm{}Arctan}{}}
@@ -125,11 +145,58 @@ window.MathJax = {
 \def\arcsec{{\rm{}arcsec}{}}
 \def\arccsc{{\rm{}arccsc}{}}
 
-\newcommand{\eps}{\varepsilon}
-\newcommand{\RR}{\mathbb {R}}
-\newcommand{\QQ}{\mathbb {Q}}
-\newcommand{\NN}{\mathbb {N}}
-\newcommand{\ZZ}{\mathbb {Z}}
+\def\halmos{\mbox{\raggedright\rule{0.1in}{0.1in}}}
+
+
+
+
+\def\eval#1#2#3{\left.\strut{}#1\right|_{#2=#3}}
+\def\geneval#1#2#3{\left.\strut{}#1\right|_{#2#3}}
+\def\mineval#1#2{\left.\strut{}#1\right|_{#2}}
+
+\def\bigeval#1#2#3{\left.\strut{}#1\right|_{#2=#3}}
+
+\def\ftceval#1#2#3#4{\eval{#1}{#2}{#3}^{#4}}
+
+
+
+
+
+
+
+
+
+\def\inverse#1{#1^{-1}}
+
+
+
+
+\def\dx#1{\thinspace{\mathrm d}#1}
+\def\dfdx#1#2{\frac{\dx{#1}}{\dx{#2}}} 
+
+\def\dfdxat#1#2#3{\eval{\dfdx{#1}{#2}}{#2}{#3}}
+
+\def\partialfx#1#2{\frac{\partial{#1}}{\partial{#2}}} 
+\def\partialfxn#1#2#3{\frac{\partial^{#3}{#1}}{\partial{#2}^{#3}}} 
+\def\dfdxn#1#2#3{\frac{\text{d}^{#3}{#1}}{\text{d}{#2}^{#3}}} 
+\def\limit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}#3}}
+\def\tlimit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}}#3}
+\def\tlimitX#1#2#3#4{{\displaystyle\lim_{\underset{#4}{#1\rightarrow #2}}}#3}
+\def\rtlimit#1#2#3{{\tlimitX{#1}{#2}{#3}{#1\gt{}#2}{}}}
+\def\ltlimit#1#2#3{{\tlimitX{#1}{#2}{#3}{#1\lt{}#2}{}}}
+
+\def\limitX#1#2#3#4{{\displaystyle\lim_{\underset{#4}{#1\rightarrow #2}}#3}}
+\def\rlimit#1#2#3{{\limitX{#1}{#2}{#3}{#1\gt{}#2}{}}}
+\def\llimit#1#2#3{{\limitX{#1}{#2}{#3}{#1\lt{}#2}{}}}
+\def\limitatinf#1#2{\limit{#1}{\infty}{#2}}
+\def\limitatninf#1#2{\limit{#1}{-\infty}{#2}}
+
+
+\def\lprime#1{{#1^{\prime}_{\scriptscriptstyle L}}}
+\def\rprime#1{{#1^{\prime}_{\scriptscriptstyle R}}}
+
+
+\def\lhopeq{\stackrel{L'H}{=}}
 
 \newcommand{\ParamEqTwo}[2]
 {
@@ -150,65 +217,6 @@ window.MathJax = {
     \end{array}
   \right\}
 }
-
-
-
-\def\lhopeq{\stackrel{L'H}{=}}
-
-\def\sech{{\rm{}sech}{}}
-\def\csch{{\rm{}csch}{}}
-
-
-\def\DD{{\bf{}D}}
-
-\def\eval#1#2#3{\left.#1\right\rvert_{#2}^{#3}}
-\def\ftceval#1#2#3{\eval#1#2#3}
-\def\geneval#1#2{\eval{#1}{#2}{}}
-\def\bigeval#1#2#3{\eval{#2}{#2}{#3}}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\def\inverse#1{#1^{-1}}
-
-
-
-
-\def\dx#1{\thinspace{\mathrm d}#1}
-\def\dfdx#1#2{\frac{\dx{#1}}{\dx{#2}}} 
-\def\partialfx#1#2{\frac{\partial{#1}}{\partial{#2}}} 
-\def\partialfxn#1#2#3{\frac{\partial^{#3}{#1}}{\partial{#2}^{#3}}} 
-\def\dfdxn#1#2#3{\frac{\text{d}^{#3}{#1}}{\text{d}{#2}^{#3}}} 
-
-
-\def\limitatinf#1#2{\limit{#1}{\infty}{#2}}
-\def\limitatninf#1#2{\limit{#1}{-\infty}{#2}}
-\def\dfdxat#1#2#3{\eval{\dfdx{#1}{#2}}{#2=#3}{}}
-
-\def\limit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}#3}}
-\def\tlimit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}}#3}
-\def\limitX#1#2#3#4{{\displaystyle\lim_{\underset{#4}{#1\rightarrow #2}}#3}}
-\def\rlimit#1#2#3{{\limitX{#1}{#2}{#3}{#1\gt{}#2}{}}}
-\def\llimit#1#2#3{{\limitX{#1}{#2}{#3}{#1\lt{}#2}{}}}
-
-\def\lprime#1{{#1^{\prime}_{\scriptscriptstyle L}}}
-\def\rprime#1{{#1^{\prime}_{\scriptscriptstyle R}}}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -227,7 +235,7 @@ window.MathJax = {
 </ul>
 </li>
 <li class="toc-item toc-part">
-<div class="toc-title-box"><a href="FromPractice.html" class="internal"><span class="codenumber">I</span> <span class="title">From Practice . . .</span></a></div>
+<div class="toc-title-box"><a href="DiffCalcFromPractice.html" class="internal"><span class="codenumber">I</span> <span class="title">Differential Calculus: From Practice</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-chapter"><div class="toc-title-box"><a href="CalculusIsARock.html" class="internal"><span class="codenumber">1</span> <span class="title">Calculus is a Rock</span></a></div></li>
 <li class="toc-item toc-chapter">
@@ -279,21 +287,19 @@ window.MathJax = {
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONVelocitySlopeTangent" class="internal"><span class="codenumber">5.1</span> <span class="title">Slopes and Tangents</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONdefin-tang-line" class="internal"><span class="codenumber">5.2</span> <span class="title">Defining the Tangent Line</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONvomit-comet" class="internal"><span class="codenumber">5.3</span> <span class="title">The Vomit Comet</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONrates-change" class="internal"><span class="codenumber">5.4</span> <span class="title">Galileo Drops the Ball</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONGalileoDrops" class="internal"><span class="codenumber">5.4</span> <span class="title">Galileo Drops the Ball</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECONDBringCalc" class="internal"><span class="codenumber">5.5</span> <span class="title">Bringing in Calculus</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONDerivative" class="internal"><span class="codenumber">5.6</span> <span class="title">The Derivative</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONnewt-flux-dynam" class="internal"><span class="codenumber">5.7</span> <span class="title">Thinking Dynamically</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONFluxions" class="internal"><span class="codenumber">5.8</span> <span class="title">Newton’s Method of Fluxions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONSelfIntersectCurve" class="internal"><span class="codenumber">5.9</span> <span class="title">Self-intersecting Curves and Parametric Equations</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONFluxions" class="internal"><span class="codenumber">5.8</span> <span class="title">Newton’s Method of Fluxions</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONParametricFunctions" class="internal"><span class="codenumber">5.8.1</span> <span class="title">Parametric Functions</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONbridg-chains-telesc" class="internal"><span class="codenumber">5.9</span> <span class="title">Bridges, Chains, Domes, and Telescopes</span></a></div>
+<div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONbridg-chains-telesc" class="internal"><span class="codenumber">5.10</span> <span class="title">Bridges, Chains, Domes, and Telescopes</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONBridges" class="internal"><span class="codenumber">5.9.1</span> <span class="title">Bridges</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONChains" class="internal"><span class="codenumber">5.9.2</span> <span class="title">Chains</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONDomes" class="internal"><span class="codenumber">5.9.3</span> <span class="title">Domes</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONTelescopes" class="internal"><span class="codenumber">5.9.4</span> <span class="title">Telescopes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONBridges" class="internal"><span class="codenumber">5.10.1</span> <span class="title">Bridges</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONChains" class="internal"><span class="codenumber">5.10.2</span> <span class="title">Chains</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONDomes" class="internal"><span class="codenumber">5.10.3</span> <span class="title">Domes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONTelescopes" class="internal"><span class="codenumber">5.10.4</span> <span class="title">Telescopes</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -360,14 +366,14 @@ window.MathJax = {
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html" class="internal"><span class="codenumber">8</span> <span class="title">Exponentials and Logarithms</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONIvps" class="internal"><span class="codenumber">8.1</span> <span class="title">Initial Value Problems (IVPs)</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONDEsandIVPS" class="internal"><span class="codenumber">8.1</span> <span class="title">Initial Value Problems</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONexponential" class="internal"><span class="codenumber">8.2</span> <span class="title">The Natural Exponential</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONexponential-growth" class="internal"><span class="codenumber">8.3</span> <span class="title">Exponential Growth and Exponential Notation</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONhyperb-trig-hang" class="internal"><span class="codenumber">8.4</span> <span class="title">Hyperbolic Trigonometry: The Hanging Chain</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONGatewayArch" class="internal"><span class="codenumber">8.5</span> <span class="title">The Gateway Arch</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#CHAPTERlast-elem-funct-8" class="internal"><span class="codenumber">8.6</span> <span class="title">Exponential Growth</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONExpAndCmpndInt" class="internal"><span class="codenumber">8.7</span> <span class="title">Exponential Functions and Compound Interest</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONnatural-logarithm-1" class="internal"><span class="codenumber">8.8</span> <span class="title">A Short Introduction to Logarithms: John Napier Logs In</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONnatural-logarithm-1" class="internal"><span class="codenumber">8.8</span> <span class="title">John Napier Logs In: A Short Introduction to Logarithms</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONNatLog" class="internal"><span class="codenumber">8.9</span> <span class="title">Logarithms, Natural and Unnatural</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONLogApps" class="internal"><span class="codenumber">8.10</span> <span class="title">Applications of Logarithms</span></a></div>
@@ -379,7 +385,7 @@ window.MathJax = {
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONDerivNatLog" class="internal"><span class="codenumber">8.11</span> <span class="title">The Derivative of the Natural Logarithm</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONgener-logar-expon" class="internal"><span class="codenumber">8.12</span> <span class="title">General Logarithms and Exponentials</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONleonh-euler-harm" class="internal"><span class="codenumber">8.13</span> <span class="title">Leonhard Euler, Harmonic Oscillators, and Complex Numbers</span></a></div>
+<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONEulerHarmonicOsc" class="internal"><span class="codenumber">8.13</span> <span class="title">Leonhard Euler, Harmonic Oscillators, and Complex Numbers</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONHowEulerDidIt" class="internal"><span class="codenumber">8.13.1</span> <span class="title">How Euler Did It</span></a></div></li></ul>
 </li>
 </ul>
@@ -477,7 +483,7 @@ window.MathJax = {
 </ul>
 </li>
 <li class="toc-item toc-part contains-active">
-<div class="toc-title-box"><a href="ToTheory.html" class="internal"><span class="codenumber">II</span> <span class="title">To Theory . . .</span></a></div>
+<div class="toc-title-box"><a href="DiffCalcToTheory.html" class="internal"><span class="codenumber">II</span> <span class="title">Differential Calculus: To Theory</span></a></div>
 <ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-chapter active">
 <div class="toc-title-box"><a href="CHAPTERWhatsWrong.html" class="internal"><span class="codenumber">13</span> <span class="title">What’s Wrong with Differentials?</span></a></div>
@@ -539,10 +545,11 @@ window.MathJax = {
 <li class="toc-item toc-backmatter">
 <div class="toc-title-box"><a href="meta_backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="meta_backmatter-2.html" class="internal"><span class="codenumber">A</span> <span class="title">Selected Solutions</span></a></div></li>
-<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="meta_backmatter-3.html" class="internal"><span class="codenumber">B</span> <span class="title">List of Symbols</span></a></div></li>
-<li class="toc-item toc-index"><div class="toc-title-box"><a href="meta_backmatter-4.html" class="internal"><span class="title">Index</span></a></div></li>
-<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="meta_backmatter-5.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="meta_backmatter-2.html" class="internal"><span class="codenumber">A</span> <span class="title">Selected Hints</span></a></div></li>
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="meta_backmatter-3.html" class="internal"><span class="codenumber">B</span> <span class="title">Selected Solutions</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="meta_backmatter-4.html" class="internal"><span class="codenumber">C</span> <span class="title">List of Symbols</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="meta_backmatter-5.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="meta_backmatter-6.html" class="internal"><span class="title">Colophon</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
@@ -550,13 +557,13 @@ window.MathJax = {
 <span class="type">Chapter</span><span class="space"> </span><span class="codenumber">13</span><span class="space"> </span><span class="title">What’s Wrong with Differentials?</span>
 </h2>
 <section class="introduction" id="CHAPTERWhatsWrong-2"><h3 class="heading">Introduction.<span></span>
-</h3> <blockquote class="blockquote" id="CHAPTERWhatsWrong-2-2"><div class="para" id="CHAPTERWhatsWrong-2-2-1">“In the pursuit of truth we must beware of being misled by terms which we do not rightly understand. That is the chief point.” <a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Russell/" target="_blank">Bertrand Russell</a><a class="xref" id="CHAPTERWhatsWrong-2-2-1-3" href="" data-knowl="./knowl/fn/CHAPTERWhatsWrong-2-2-1-3.html" title="Footnote 13.1"><sup> 1 </sup></a> (1872-1970)</div></blockquote> <div class="para" id="CHAPTERWhatsWrong-2-3">To see what’s wrong with differentials consider the circle and the differential triangle below.</div> <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/WrongWithDiff2.png" class="contained"></div> <div class="para" id="CHAPTERWhatsWrong-2-5">Suppose that <span class="process-math">\(\dx{s}\)</span> is one of the differentials that makes up the circle. Since <span class="process-math">\(\dx{s}\)</span> is a non-zero increment it has two distinct endpoints so we can draw the two radii shown. Because the two (distinct) endpoints that lie on the circle are <em class="emphasis">infinitely</em> close together the two lines have the same slope. But all of the radii of a circle pass through the center of the circle so these two in particular must also intersect at the center, and we conclude that we have two parallel lines that intersect.</div> <div class="para" id="CHAPTERWhatsWrong-2-6">But the only way that can happen is if they are actually the same line, and if they are the same line then the points on the circle are not really distinct as we’ve drawn them. But if they are not distinct then <span class="process-math">\(\dx{x}\text{,}\)</span> <span class="process-math">\(\dx{y}\text{,}\)</span> and <span class="process-math">\(\dx{s}\)</span> are all actually <em class="emphasis">equal</em> to zero. If <span class="process-math">\(\dx{x}\)</span> =0 then <span class="process-math">\(\dfdx{y}{x}\)</span> is meaningless (why?).</div> <div class="para" id="CHAPTERWhatsWrong-2-7">This simple argument appears to completely destroy the differential foundation upon which we’ve based everything we’ve done up until now. Try as we might we can’t escape the contradictions inherent in the very notion of infinitely small numbers.</div> <div class="para" id="CHAPTERWhatsWrong-2-8">This is very troubling.</div></section><section class="section" id="CalcAndBerkeley"><h3 class="heading hide-type">
+</h3> <blockquote class="blockquote" id="CHAPTERWhatsWrong-2-2"><div class="para" id="CHAPTERWhatsWrong-2-2-1">“In the pursuit of truth we must beware of being misled by terms which we do not rightly understand. That is the chief point.” <a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Russell/" target="_blank">Bertrand Russell</a><a class="xref" id="CHAPTERWhatsWrong-2-2-1-3" href="" data-knowl="./knowl/fn/CHAPTERWhatsWrong-2-2-1-3.html" title="Footnote 13.1"><sup> 1 </sup></a> (1872-1970)</div></blockquote> <div class="para" id="CHAPTERWhatsWrong-2-3">To see what’s wrong with differentials consider the circle and the differential triangle below.</div> <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/DC/WrongWithDiff2.png" class="contained"></div> <div class="para" id="CHAPTERWhatsWrong-2-5">Suppose that <span class="process-math">\(\dx{s}\)</span> is one of the differentials that makes up the circle. Since <span class="process-math">\(\dx{s}\)</span> is a non-zero increment it has two distinct endpoints so we can draw the two radii shown. Because the two (distinct) endpoints that lie on the circle are <em class="emphasis">infinitely</em> close together the two lines have the same slope. But all of the radii of a circle pass through the center of the circle so these two in particular must also intersect at the center, and we conclude that we have two parallel lines that intersect.</div> <div class="para" id="CHAPTERWhatsWrong-2-6">But the only way that can happen is if they are actually the same line, and if they are the same line then the points on the circle are not really distinct as we’ve drawn them. But if they are not distinct then <span class="process-math">\(\dx{x}\text{,}\)</span> <span class="process-math">\(\dx{y}\text{,}\)</span> and <span class="process-math">\(\dx{s}\)</span> are all actually <em class="emphasis">equal</em> to zero. If <span class="process-math">\(\dx{x}\)</span> =0 then <span class="process-math">\(\dfdx{y}{x}\)</span> is meaningless (why?).</div> <div class="para" id="CHAPTERWhatsWrong-2-7">This simple argument appears to completely destroy the differential foundation upon which we’ve based everything we’ve done up until now. Try as we might we can’t escape the contradictions inherent in the very notion of infinitely small numbers.</div> <div class="para" id="CHAPTERWhatsWrong-2-8">This is very troubling.</div></section><section class="section" id="CalcAndBerkeley"><h3 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">13.1</span><span class="space"> </span><span class="title">Calculus and Bishop Berkeley</span>
 </h3>
 <blockquote class="blockquote" id="CalcAndBerkeley-2">
 <div class="para" id="CalcAndBerkeley-2-1">“In my opinion, a mathematician, in so far as he is a mathematician, need not preoccupy himself with philosophy — an opinion, moreover, which has been expressed by many philosophers.”</div> <cite class="attribution">―<a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Lebesgue/" target="_blank">Henri Lebesgue, (1875-1941)</a><a class="xref" id="CalcAndBerkeley-2-2-2" href="" data-knowl="./knowl/fn/CalcAndBerkeley-2-2-2.html" title="Footnote 13.2"><sup> 2 </sup></a></cite>
 </blockquote>
-<figure class="figure figure-like" id="CalcAndBerkeley-3"><div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="external/images/Berkeley.png" class="contained"></div>
+<figure class="figure figure-like" id="CalcAndBerkeley-3"><div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="external/DC/Berkeley.png" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">13.1<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Berkeley/" target="_blank">Bishop George Berkeley</a><a class="xref" id="CalcAndBerkeley-3-1-2" href="" data-knowl="./knowl/fn/CalcAndBerkeley-3-1-2.html" title="Footnote 13.3"><sup> 3 </sup></a></figcaption></figure><aside class="aside aside-like" id="CalcAndBerkeley-4"><h4 class="heading"><span class="title">Pronuciation.</span></h4>
 <div class="para" id="CalcAndBerkeley-4-2">His name is properly pronounced “bark lee,” not "burk lee."</div></aside><div class="para" id="CalcAndBerkeley-5">In <span class="process-math">\(1734\)</span> an even more devastating repudiation of differentials was published by <a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Berkeley" target="_blank">George Berkeley</a><a class="xref" id="CalcAndBerkeley-5-3" href="" data-knowl="./knowl/fn/CalcAndBerkeley-5-3.html" title="Footnote 13.4"><sup> 4 </sup></a> (<span class="process-math">\(1685-1753\)</span>), the Anglican Bishop of the Diocese of Cloyne, Ireland in a treatise ponderously entitled,</div>
 <aside class="aside aside-like" id="CalcAndBerkeley-6"><h4 class="heading"><span class="title">Comment.</span></h4>
@@ -595,17 +602,17 @@ window.MathJax = {
 <blockquote class="blockquote" id="SECTIONsecants-tangents-2">
 <div class="para" id="SECTIONsecants-tangents-2-1">Calculus required continuity, and continuity was supposed to require the infinitely little; but nobody could discover what the infinitely little might be.</div> <cite class="attribution">―<a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Russell/" target="_blank">Bertrand Russell</a><a class="xref" id="SECTIONsecants-tangents-2-2-2" href="" data-knowl="./knowl/fn/SECTIONsecants-tangents-2-2-2.html" title="Footnote 13.7"><sup> 7 </sup></a> (1872-1970)</cite>
 </blockquote>
-<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="external/images/LinesThroughPoint.png" class="contained"></div>
-<div class="para" id="SECTIONsecants-tangents-4">In <a href="FromPractice.html" class="internal" title="Part I: From Practice . . .">Part I</a>  we  defined the derivative of <span class="process-math">\(y=y(x)\)</span> to be the differential ratio <span class="process-math">\(\dfdx{y}{x}\text{,}\)</span> but Berkeley shows in <span class="booktitle">The Analyst</span> that there are considerable difficulties with this approach. How else might we define the derivative? This is our next puzzle.</div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="external/DC/LinesThroughPoint.png" class="contained"></div>
+<div class="para" id="SECTIONsecants-tangents-4">In <a href="DiffCalcFromPractice.html" class="internal" title="Part I: Differential Calculus: From Practice">Part I</a>  we  defined the derivative of <span class="process-math">\(y=y(x)\)</span> to be the differential ratio <span class="process-math">\(\dfdx{y}{x}\text{,}\)</span> but Berkeley shows in <span class="booktitle">The Analyst</span> that there are considerable difficulties with this approach. How else might we define the derivative? This is our next puzzle.</div>
 <div class="para" id="SECTIONsecants-tangents-5">If we want to construct the line tangent at  a particular point, <span class="process-math">\((x_0, y(x_0))\)</span> on a given  curve we immediately have this problem: We only have one point, but there are (infinitely) many lines through that point.  A few of them are shown at the right. How could we possibly pick the tangent line out of this mess?</div>
 <div class="para" id="SECTIONsecants-tangents-6">The only distinguishing feature that the  tangent line has  is that it is in fact tangent to our curve. That is not much to go on. But it is not nothing either.</div>
-<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="external/images/TangentLineCluster4.png" class="contained"></div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="external/DC/TangentLineCluster4.png" class="contained"></div>
 <div class="para" id="SECTIONsecants-tangents-8">To form a line we desperately need another point. But where to find one? The only other points we have to work with are points on the curve itself.</div>
-<div class="para" id="SECTIONsecants-tangents-9">Choose a new point, say <span class="process-math">\((x_1, y(x_1)),\)</span> on our curve but a little to the right of <span class="process-math">\((x_0,y(x_0))\)</span> and draw the line between <span class="process-math">\((x_0,y(x_0))\)</span> and <span class="process-math">\((x_1,y(x_1))\)</span> as shown in  the sketch at the left. Recall from <a href="CHAPTERcalc-trig.html" class="internal" title="Chapter 6: Calculus and Trigonometry">Chapter 6</a> that the trigonometric secant function is so called because it is the length of a line segment which cuts the circle. The brown line in this sketch cuts the curve so it is called a <dfn class="terminology">secant line</dfn>.</div>
-<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="external/images/TangentLineCluster3.png" class="contained"></div>
+<div class="para" id="SECTIONsecants-tangents-9"> Choose a new point, say <span class="process-math">\((x_1, y(x_1)),\)</span> on our curve but a little to the right of <span class="process-math">\((x_0,y(x_0))\)</span> and draw the line between <span class="process-math">\((x_0,y(x_0))\)</span> and <span class="process-math">\((x_1,y(x_1))\)</span> as shown in  the sketch at the left. Recall from <a href="CHAPTERcalc-trig.html" class="internal" title="Chapter 6: Calculus and Trigonometry">Chapter 6</a> that the trigonometric secant function is so called because it is the length of a line segment which cuts the circle. The brown line in this sketch cuts the curve so it is called a <dfn class="terminology">secant line</dfn>.</div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="external/DC/TangentLineCluster3.png" class="contained"></div>
 <div class="para" id="SECTIONsecants-tangents-11">Similarly, if we choose a point a little to the left of <span class="process-math">\((x_0,y(x_0))\)</span> and draw another secant line (shown in purple) it should be clear that the   tangent line will be between the two secant lines in the sketch at the right.</div>
 <div class="para" id="SECTIONsecants-tangents-12">We have eliminated a lot of potential tangent lines, but we haven’t eliminated all of them.  Is there a way we could refine our search to reduce the set of possible tangent lines even further?</div>
-<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="external/images/TangentLineCluster.png" class="contained"></div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="external/DC/TangentLineCluster.png" class="contained"></div>
 <div class="para" id="SECTIONsecants-tangents-14">Sure. Choose <span class="process-math">\(x_3\)</span> between <span class="process-math">\(x_0\)</span> and <span class="process-math">\(x_1\)</span> and draw the (blue) secant line from <span class="process-math">\(x_0\)</span> to <span class="process-math">\(x_3,\)</span> and then choose <span class="process-math">\(x_4\)</span> between <span class="process-math">\(x_0\)</span> and <span class="process-math">\(x_2\)</span> and draw the (green) secant line through them to get the sketch at the left.  It is clear that we have eliminated more potential tangent lines, and that by continuing to choose points even closer to <span class="process-math">\(x_0\)</span> we can eliminate even more of them.</div>
 <div class="para logical" id="SECTIONsecants-tangents-15">
 <div class="para">This approach seems to have some potential but there are at least two difficulties:</div>
@@ -617,7 +624,7 @@ window.MathJax = {
 <li id="SECTIONsecants-tangents-15-1-2"><div class="para" id="SECTIONsecants-tangents-15-1-2-1">We’ve been drawing the tangent lines but we need to keep in mind that the line tangent to the graph of our function at a point is not the derivative of the function.  The derivative is the slope of the tangent line. And slope is a number. The pictures we’ve drawn so far are very suggestive but they don’t give us numbers.</div></li>
 </ol>
 </div>
-<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="external/images/TangentLineCluster2.png" class="contained"></div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="external/DC/TangentLineCluster2.png" class="contained"></div>
 <div class="para" id="SECTIONsecants-tangents-17">For the time being, we will handle the first difficulty by ignoring it. That is, we will continue to use diagrams to motivate our ideas, but when we are done we will have circle back and ask ourselves if our reliance on those diagrams has caused us to miss any special cases which need to be addressed.</div>
 <div class="para logical" id="SECTIONsecants-tangents-18">
 <div class="para">To handle the second difficulty consider the sketch at the right. It is clear that if the tangent line, <span class="process-math">\(T\text{,}\)</span> is caught between lines secant lines <span class="process-math">\(S_1\)</span> and <span class="process-math">\(S_2\text{,}\)</span> then the <em class="emphasis">slope</em> of <span class="process-math">\(T\)</span> is necessarily caught between the <em class="emphasis">slope</em> of <span class="process-math">\(S_1\)</span> and the <em class="emphasis">slope</em> of <span class="process-math">\(S_2.\)</span> Thus we have</div>
@@ -648,7 +655,7 @@ y^\prime(2)=\left.\dfdx{y}{x}\right|_{x=2}=\bigeval{2x}{x}{2}=2\cdot2=4.
 \end{align*}
 </div>
 </div> <div class="para logical" id="EXAMPLEyEQxR2-limits-4">
-<div class="para">So our proposed procedure seems to be heading us in the right direction. If we take <span class="process-math">\(x_3=2.01\)</span> and <span class="process-math">\(x_4=1.99\)</span> we get</div>
+<div class="para"> So our proposed procedure seems to be heading us in the right direction. If we take <span class="process-math">\(x_3=2.01\)</span> and <span class="process-math">\(x_4=1.99\)</span> we get</div>
 <div class="displaymath process-math">
 \begin{equation*}
 4.01\gt y^\prime(2)\gt3.99.
@@ -656,7 +663,7 @@ y^\prime(2)=\left.\dfdx{y}{x}\right|_{x=2}=\bigeval{2x}{x}{2}=2\cdot2=4.
 </div>
 <div class="para">We say that <span class="process-math">\(y^\prime(2)\)</span> is <dfn class="terminology">bounded</dfn>, and that the numbers <span class="process-math">\(4.01\)</span> and <span class="process-math">\(3.99\)</span> are the <dfn class="terminology">bounds</dfn>.</div>
 </div></article><article class="problem example-like" id="PROBLEMBounds"><h4 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">13.3</span><span class="period">.</span>
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">13.3</span><span class="period">.</span>
 </h4>
 <div class="introduction" id="PROBLEMBounds-1"><div class="para logical" id="PROBLEMBounds-1-1">
 <div class="para"> Compute bounds on the derivatives of each function given at <span class="process-math">\(x=2\)</span> by using the values of <span class="process-math">\(x_1\)</span> and <span class="process-math">\(x_2\)</span> given below.</div>
@@ -680,9 +687,9 @@ y^\prime(2)=\left.\dfdx{y}{x}\right|_{x=2}=\bigeval{2x}{x}{2}=2\cdot2=4.
 <div class="para" id="PROBLEMBounds-3-1-1"><span class="process-math">\(y=x^3\text{,}\)</span></div></article><article class="task exercise-like" id="PROBLEMBounds-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
 <div class="para" id="PROBLEMBounds-4-1-1">
 <span class="process-math">\(y=-\frac{1}{x}\text{,}\)</span>  and</div></article><article class="task exercise-like" id="PROBLEMBounds-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
-<div class="para" id="PROBLEMBounds-5-1-1"><span class="process-math">\(y=x^{1/2}\)</span></div></article></article><div class="para" id="SECTIONsecants-tangents-21">The results in <a href="" class="xref" data-knowl="./knowl/xref/PROBLEMBounds.html" title="Problem 13.3">Problem 13.3</a> are looking very promising indeed. Since they are looking so promising we’ll take a few minutes to simplify our notation a bit.</div>
+<div class="para" id="PROBLEMBounds-5-1-1"><span class="process-math">\(y=x^{1/2}\)</span></div></article></article><div class="para" id="SECTIONsecants-tangents-21">The results in <a href="" class="xref" data-knowl="./knowl/xref/PROBLEMBounds.html" title="Drill 13.3">Drill 13.3</a> are looking very promising indeed. Since they are looking so promising we’ll take a few minutes to simplify our notation a bit.</div>
 <div class="para" id="SECTIONsecants-tangents-22">It is tedious to have all of these subscripted <span class="process-math">\(x\)</span> variables (<span class="process-math">\(x_0, x_1, x_2, \cdots\)</span>) so we will define an equivalent, but more useful, notation. The basic idea here is that we move to a new point a little bit away from <span class="process-math">\(x_0\)</span> and form the quotient that gives the slope of the secant line at that point. To construct the first secant line we took <span class="process-math">\(x_1\)</span> to be a number a little to the right of <span class="process-math">\(x_0\text{.}\)</span> However, if we take <span class="process-math">\(h\)</span> to be a positive number near zero then <span class="process-math">\(x_0+h\)</span> expresses the same idea.  Similarly, to construct a secant line a little to the left of <span class="process-math">\(x_0\)</span> we take <span class="process-math">\(h\)</span> to be a negative number near zero so that <span class="process-math">\(x_0+h\)</span> expresses the same idea.</div>
-<div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/images/Secant-h.png" class="contained"></div>
+<div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/DC/Secant-h.png" class="contained"></div>
 <div class="para" id="SECTIONsecants-tangents-24">We can capture both situations notationally by agreeing that <span class="process-math">\(h\)</span> is a number (either positive or negative) which is close to zero. Thus when <span class="process-math">\(h\)</span> is positive the point <span class="process-math">\(x_0+h\)</span> is to the right, and when <span class="process-math">\(h\)</span> is negative the point <span class="process-math">\(x_0+h\)</span> is to the left of <span class="process-math">\(x_0\)</span> as shown in the diagram at the right.</div>
 <div class="para logical" id="SECTIONsecants-tangents-25">
 <div class="para"> When we express the idea this way we no longer need to generate all of the independent variables, <span class="process-math">\(x_1, x_2, x_3, \ldots\text{.}\)</span> We can accomplish the same thing by taking <span class="process-math">\(x_h=x_0+h,\)</span> where <span class="process-math">\(h\)</span> is some arbitrary real number, which is close to zero. Each value of <span class="process-math">\(h\)</span> gives us a different secant line through the point <span class="process-math">\((x_0,y(x_0)),\)</span> and its slope will be</div>
@@ -696,7 +703,7 @@ y^\prime(2)=\left.\dfdx{y}{x}\right|_{x=2}=\bigeval{2x}{x}{2}=2\cdot2=4.
 </div>
 <div class="para" id="SECTIONsecants-tangents-26">There is also a small technical matter we need to think about: Do we really need to consider secant lines on either side of <span class="process-math">\(x_0\)</span> (for both positive and negative values of <span class="process-math">\(h\)</span>)? Would it not be sufficient to consider just the secant lines on the right formed from the sequence <span class="process-math">\(x_1=2.1, x_1=2.01, x_1=2.001,\ \ldots?\)</span> It seems pretty clear that the slopes we get, <span class="process-math">\(4.1, 4.01, 4.001, \ldots\)</span> are getting closer to <span class="process-math">\(4\text{.}\)</span> Isn’t that enough?</div>
 <div class="para" id="SECTIONsecants-tangents-27">No, it is not. But not because there is any inherent logical flaw in doing so. This has more to do with the properties we want the derivative to have than any purely logical consideration, so we’ll hold off  further discussion until <a href="CHAPTERFDT-Redux.html#SECTIONfirst-deriv-test" class="internal" title="Section 15.3: The Proof of the First Derivative Test">Section 15.3</a>.</div>
-<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="external/images/EpsSlope2.png" class="contained"></div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="external/DC/EpsSlope2.png" class="contained"></div>
 <div class="para logical" id="SECTIONsecants-tangents-29">
 <div class="para">Returning to the example  <span class="process-math">\(y=x^2\)</span> at <span class="process-math">\(x=2\text{,}\)</span> we let <span class="process-math">\(h\)</span> be any number except zero and find of the secant line through <span class="process-math">\((2,4)\)</span> and <span class="process-math">\((2+h,(2+h)^2)\text{.}\)</span> We can’t let <span class="process-math">\(h\)</span> be zero because if it is zero then <span class="process-math">\((2,4)\)</span> and <span class="process-math">\((2+h,(2+h)^2)\)</span> are the same point and we can’t construct the secant line. We <em class="emphasis">must</em> have <span class="process-math">\(h\neq0\)</span> just to get started. In that case we have</div>
 <div class="displaymath process-math" id="SECTIONsecants-tangents-29-13">
@@ -750,7 +757,7 @@ f^\prime(x)=\dfdx{f}{x}=\limit{h}{0}{\frac{f(x+h{})-f(x)}{h}}\tag{13.3}
 <div class="para" id="SECTIONsecants-tangents-40">But it is tedious to compute the derivative of a function one specific point at a time. If we leave <span class="process-math">\(x\)</span> unspecified and compute <span class="process-math">\(f^\prime(x)=\limit{h}{0}{\frac{f(x+h)-f(x)}{h}} \)</span> we obtain the value of the derivative of <span class="process-math">\(f\)</span> at the single, but unspecified point <span class="process-math">\(x\text{.}\)</span> We can then find the derivative of <span class="process-math">\(f\)</span> at any point by replacing <span class="process-math">\(x\)</span> with whatever point we are interested in.</div>
 <div class="para" id="SECTIONsecants-tangents-41"></div>
 <article class="problem example-like" id="PROBLEMxIsSingular"><h4 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">13.5</span><span class="period">.</span>
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">13.5</span><span class="period">.</span>
 </h4>
 <div class="introduction" id="PROBLEMxIsSingular-1">
 <div class="para" id="PROBLEMxIsSingular-1-1"> Use the techniques we saw in <a href="CHAPTERlimits-lhop-rule.html" class="internal" title="Chapter 12: Limits and L’Hôpital’s Rule">Chapter 12</a> to compute <span class="process-math">\(f^\prime(x)\)</span> by evaluating a limit. Check your work by differentiating using differentials.</div> <div class="para" id="PROBLEMxIsSingular-1-2">Do not use L’Hôpital’s Rule. L’Hôpital’s Rule as that would be circular reasoning.</div>
@@ -763,13 +770,13 @@ f^\prime(x)=\dfdx{f}{x}=\limit{h}{0}{\frac{f(x+h{})-f(x)}{h}}\tag{13.3}
 <div class="para" id="PROBLEMxIsSingular-6-1-1"><span class="process-math">\(f(x)=\frac{1}{x^3}\)</span></div></article><article class="task exercise-like" id="PROBLEMxIsSingular-7"><h5 class="heading"><span class="codenumber">(f)</span></h5>
 <div class="para" id="PROBLEMxIsSingular-7-1-1"><span class="process-math">\(f(x)=-\frac{1}{x}\)</span></div></article><article class="task exercise-like" id="PROBLEMxIsSingular-8"><h5 class="heading"><span class="codenumber">(g)</span></h5>
 <div class="para" id="PROBLEMxIsSingular-8-1-1"><span class="process-math">\(f(x)=x^{1/2}\)</span></div></article><article class="task exercise-like" id="PROBLEMxIsSingular-9"><h5 class="heading"><span class="codenumber">(h)</span></h5>
-<div class="para" id="PROBLEMxIsSingular-9-1-1"><span class="process-math">\(f(x)=x^{1/3}\)</span></div></article></article><div class="para" id="SECTIONsecants-tangents-43">When a function is differentiable at all  of the points in its domain it is said to be <dfn class="terminology">differentiable on its domain</dfn> or just <dfn class="terminology">differentiable</dfn>.</div>
+<div class="para" id="PROBLEMxIsSingular-9-1-1"><span class="process-math">\(f(x)=x^{1/3}\)</span></div></article></article><div class="para" id="SECTIONsecants-tangents-43"> When a function is differentiable at all  of the points in its domain it is said to be <dfn class="terminology">differentiable on its domain</dfn> or just <dfn class="terminology">differentiable</dfn>.</div>
 <aside class="aside aside-like" id="SECTIONsecants-tangents-44"><h4 class="heading"><span class="title">Comment.</span></h4>
-<div class="para" id="SECTIONsecants-tangents-44-2">In practice we are often quite loose with the term <dfn class="terminology">differentiable</dfn>. Most people would call the functions <span class="process-math">\(f(x)=\sqrt{x}\)</span> and <span class="process-math">\(g(x)=\sqrt[3]{x}\)</span> <dfn class="terminology">differentiable</dfn> even though they both fail to be differentiable at <span class="process-math">\(x=0\text{.}\)</span>
+<div class="para" id="SECTIONsecants-tangents-44-2"> In practice we are often quite loose with the term <dfn class="terminology">differentiable</dfn>. Most people would call the functions <span class="process-math">\(f(x)=\sqrt{x}\)</span> and <span class="process-math">\(g(x)=\sqrt[3]{x}\)</span> <dfn class="terminology">differentiable</dfn> even though they both fail to be differentiable at <span class="process-math">\(x=0\text{.}\)</span>
 </div></aside><article class="exercise exercise-like" id="SECTIONsecants-tangents-45"><h4 class="heading">
-<span class="type">Drill</span><span class="space"> </span><span class="codenumber">13.6</span><span class="period">.</span>
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">13.6</span><span class="period">.</span>
 </h4>
-<div class="para" id="SECTIONsecants-tangents-45-1-1">Which of the functions in <a href="" class="xref" data-knowl="./knowl/xref/PROBLEMxIsSingular.html" title="Problem 13.5">Problem 13.5</a> are <dfn class="terminology">differentiable</dfn> and which are not? Identify all points of non-differentiability.</div></article><aside class="aside aside-like" id="SECTIONsecants-tangents-46"><h4 class="heading"><span class="title">Comment.</span></h4>
+<div class="para" id="SECTIONsecants-tangents-45-1-1"> Which of the functions in <a href="" class="xref" data-knowl="./knowl/xref/PROBLEMxIsSingular.html" title="Drill 13.5">Drill 13.5</a> are <dfn class="terminology">differentiable</dfn> and which are not? Identify all points of non-differentiability.</div></article><aside class="aside aside-like" id="SECTIONsecants-tangents-46"><h4 class="heading"><span class="title">Comment.</span></h4>
 <div class="para" id="SECTIONsecants-tangents-46-2">Newton’s fluxions are nowhere to be seen, however.</div></aside><div class="para logical" id="SECTIONsecants-tangents-47">
 <div class="para">If you look closely at <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONDerivative.html" title="Definition 13.4: The Derivative">Definition 13.4</a> you can see Leibniz’ differentials lurking in the background. If we let <span class="process-math">\(\Delta{}y=f(x+h{})-f(x)\)</span> and <span class="process-math">\(\Delta x = h\)</span> then for values of <span class="process-math">\(h\)</span> very close to zero we have.</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/DEFINITIONDerivative.html ./knowl/xref/DEFINITIONDerivative.html">
@@ -784,7 +791,7 @@ f^\prime(x) \approx \frac{\Delta y}{\Delta x} =
 <div class="para" id="SECTIONsecants-tangents-49">To do this we will need several properties of limits which we will state — without proof — in the next section. Then we will prove that our differentiation rules and the First Derivative Test are valid using <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONDerivative.html" title="Definition 13.4: The Derivative">Definition 13.4</a>. However all of this will be done under the assumption that the limit properties in the next section are actually true.</div>
 <div class="para" id="SECTIONsecants-tangents-50">Our second goal is to prove, rigorously that the limit properties in the next section are actually true. We will do this in <a href="CHAPTERformal-limits.html#SECTIONLimitLaws" class="internal" title="Section 17.4: Limit Laws (Theorems)">Section 17.4</a>.</div></section></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="ToTheory.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="CHAPTERdiff-rules-with-limits.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="DiffCalcToTheory.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="CHAPTERdiff-rules-with-limits.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

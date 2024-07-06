@@ -12,7 +12,7 @@
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
-<meta property="book:title" content="Differential Calculus">
+<meta property="book:title" content="Calculus">
 <meta property="book:author" content="Eugene Boman">
 <meta property="book:author" content="Robert Rogers">
 <script>
@@ -93,10 +93,10 @@ window.MathJax = {
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
 <a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
-<h1 class="heading"><a href="DiffCalc.html"><span class="title">Differential Calculus:</span> <span class="subtitle">From Practice to Theory</span></a></h1>
+<h1 class="heading"><a href="Calculus.html"><span class="title">Calculus:</span> <span class="subtitle">From Practice to Theory</span></a></h1>
 <p class="byline">Eugene Boman, Robert Rogers</p>
 </div>
-</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="meta_backmatter-4.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="meta_backmatter-5.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
 <div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
 <div class="search-results-controls">
@@ -107,17 +107,37 @@ window.MathJax = {
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="CHAPTERwhen-deriv-doesnt.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ToTheory.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="meta_backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\def\abs#1{\left|#1\right|}
-\def\CancelToRed#1#2{\textcolor{red}{{\cancelto{#1}{#2}}}}
-\def\approach#1{{\left(\rightarrow{}#1\right)}}
-\def\halmos{\rule[-.1ex]{8pt}{2ex}}
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="CHAPTERwhen-deriv-doesnt.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="DiffCalcToTheory.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="meta_backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\DeclareMathOperator{\erf}{erf}
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\Arctan}{Arctan}
+\DeclareMathOperator{\Arcsin}{Arcsin}
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\arccsc}{arccsc}
+\DeclareMathOperator{\sech}{sech}
+\DeclareMathOperator{\csch}{csch}
 
-\def\limitX#1#2#3#4{{\displaystyle\lim_{\underset{#4}{#1\rightarrow #2}}#3}}
-\def\tlimitX#1#2#3#4{{\displaystyle\lim_{\underset{#4}{#1\rightarrow #2}}}#3}
-\def\rlimit#1#2#3{{\limitX{#1}{#2}{#3}{#1\gt{}#2}{}}}
-\def\rtlimit#1#2#3{{\tlimitX{#1}{#2}{#3}{#1\gt{}#2}{}}}
-\def\llimit#1#2#3{{\limitX{#1}{#2}{#3}{#1\lt{}#2}{}}}
-\def\ltlimit#1#2#3{{\tlimitX{#1}{#2}{#3}{#1\lt{}#2}{}}}
+
+
+
+
+
+
+
+
+
+\def\abs#1{\left|#1\right|}
+\def\tallstrut{\rule{0mm}{1.1\baselineskip}}
+\def\approach#1{{\left(\rightarrow{}#1\right)}}
+
+\def\CancelToRed#1#2{\textcolor{red}{{\cancelto{#1}{#2}}}}
+
+
+\newcommand{\eps}{\varepsilon}
+\newcommand{\RR}{\mathbb {R}}
+\newcommand{\QQ}{\mathbb {Q}}
+\newcommand{\NN}{\mathbb {N}}
+\newcommand{\ZZ}{\mathbb {Z}}
+\def\DD{{\bf{}D}}
 
 \def\arccot{{\rm{}arccot}{}}
 \def\Arctan{{\rm{}Arctan}{}}
@@ -125,11 +145,58 @@ window.MathJax = {
 \def\arcsec{{\rm{}arcsec}{}}
 \def\arccsc{{\rm{}arccsc}{}}
 
-\newcommand{\eps}{\varepsilon}
-\newcommand{\RR}{\mathbb {R}}
-\newcommand{\QQ}{\mathbb {Q}}
-\newcommand{\NN}{\mathbb {N}}
-\newcommand{\ZZ}{\mathbb {Z}}
+\def\halmos{\mbox{\raggedright\rule{0.1in}{0.1in}}}
+
+
+
+
+\def\eval#1#2#3{\left.\strut{}#1\right|_{#2=#3}}
+\def\geneval#1#2#3{\left.\strut{}#1\right|_{#2#3}}
+\def\mineval#1#2{\left.\strut{}#1\right|_{#2}}
+
+\def\bigeval#1#2#3{\left.\strut{}#1\right|_{#2=#3}}
+
+\def\ftceval#1#2#3#4{\eval{#1}{#2}{#3}^{#4}}
+
+
+
+
+
+
+
+
+
+\def\inverse#1{#1^{-1}}
+
+
+
+
+\def\dx#1{\thinspace{\mathrm d}#1}
+\def\dfdx#1#2{\frac{\dx{#1}}{\dx{#2}}} 
+
+\def\dfdxat#1#2#3{\eval{\dfdx{#1}{#2}}{#2}{#3}}
+
+\def\partialfx#1#2{\frac{\partial{#1}}{\partial{#2}}} 
+\def\partialfxn#1#2#3{\frac{\partial^{#3}{#1}}{\partial{#2}^{#3}}} 
+\def\dfdxn#1#2#3{\frac{\text{d}^{#3}{#1}}{\text{d}{#2}^{#3}}} 
+\def\limit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}#3}}
+\def\tlimit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}}#3}
+\def\tlimitX#1#2#3#4{{\displaystyle\lim_{\underset{#4}{#1\rightarrow #2}}}#3}
+\def\rtlimit#1#2#3{{\tlimitX{#1}{#2}{#3}{#1\gt{}#2}{}}}
+\def\ltlimit#1#2#3{{\tlimitX{#1}{#2}{#3}{#1\lt{}#2}{}}}
+
+\def\limitX#1#2#3#4{{\displaystyle\lim_{\underset{#4}{#1\rightarrow #2}}#3}}
+\def\rlimit#1#2#3{{\limitX{#1}{#2}{#3}{#1\gt{}#2}{}}}
+\def\llimit#1#2#3{{\limitX{#1}{#2}{#3}{#1\lt{}#2}{}}}
+\def\limitatinf#1#2{\limit{#1}{\infty}{#2}}
+\def\limitatninf#1#2{\limit{#1}{-\infty}{#2}}
+
+
+\def\lprime#1{{#1^{\prime}_{\scriptscriptstyle L}}}
+\def\rprime#1{{#1^{\prime}_{\scriptscriptstyle R}}}
+
+
+\def\lhopeq{\stackrel{L'H}{=}}
 
 \newcommand{\ParamEqTwo}[2]
 {
@@ -150,65 +217,6 @@ window.MathJax = {
     \end{array}
   \right\}
 }
-
-
-
-\def\lhopeq{\stackrel{L'H}{=}}
-
-\def\sech{{\rm{}sech}{}}
-\def\csch{{\rm{}csch}{}}
-
-
-\def\DD{{\bf{}D}}
-
-\def\eval#1#2#3{\left.#1\right\rvert_{#2}^{#3}}
-\def\ftceval#1#2#3{\eval#1#2#3}
-\def\geneval#1#2{\eval{#1}{#2}{}}
-\def\bigeval#1#2#3{\eval{#2}{#2}{#3}}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\def\inverse#1{#1^{-1}}
-
-
-
-
-\def\dx#1{\thinspace{\mathrm d}#1}
-\def\dfdx#1#2{\frac{\dx{#1}}{\dx{#2}}} 
-\def\partialfx#1#2{\frac{\partial{#1}}{\partial{#2}}} 
-\def\partialfxn#1#2#3{\frac{\partial^{#3}{#1}}{\partial{#2}^{#3}}} 
-\def\dfdxn#1#2#3{\frac{\text{d}^{#3}{#1}}{\text{d}{#2}^{#3}}} 
-
-
-\def\limitatinf#1#2{\limit{#1}{\infty}{#2}}
-\def\limitatninf#1#2{\limit{#1}{-\infty}{#2}}
-\def\dfdxat#1#2#3{\eval{\dfdx{#1}{#2}}{#2=#3}{}}
-
-\def\limit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}#3}}
-\def\tlimit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}}#3}
-\def\limitX#1#2#3#4{{\displaystyle\lim_{\underset{#4}{#1\rightarrow #2}}#3}}
-\def\rlimit#1#2#3{{\limitX{#1}{#2}{#3}{#1\gt{}#2}{}}}
-\def\llimit#1#2#3{{\limitX{#1}{#2}{#3}{#1\lt{}#2}{}}}
-
-\def\lprime#1{{#1^{\prime}_{\scriptscriptstyle L}}}
-\def\rprime#1{{#1^{\prime}_{\scriptscriptstyle R}}}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -227,7 +235,7 @@ window.MathJax = {
 </ul>
 </li>
 <li class="toc-item toc-part">
-<div class="toc-title-box"><a href="FromPractice.html" class="internal"><span class="codenumber">I</span> <span class="title">From Practice . . .</span></a></div>
+<div class="toc-title-box"><a href="DiffCalcFromPractice.html" class="internal"><span class="codenumber">I</span> <span class="title">Differential Calculus: From Practice</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-chapter"><div class="toc-title-box"><a href="CalculusIsARock.html" class="internal"><span class="codenumber">1</span> <span class="title">Calculus is a Rock</span></a></div></li>
 <li class="toc-item toc-chapter">
@@ -279,21 +287,19 @@ window.MathJax = {
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONVelocitySlopeTangent" class="internal"><span class="codenumber">5.1</span> <span class="title">Slopes and Tangents</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONdefin-tang-line" class="internal"><span class="codenumber">5.2</span> <span class="title">Defining the Tangent Line</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONvomit-comet" class="internal"><span class="codenumber">5.3</span> <span class="title">The Vomit Comet</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONrates-change" class="internal"><span class="codenumber">5.4</span> <span class="title">Galileo Drops the Ball</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONGalileoDrops" class="internal"><span class="codenumber">5.4</span> <span class="title">Galileo Drops the Ball</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECONDBringCalc" class="internal"><span class="codenumber">5.5</span> <span class="title">Bringing in Calculus</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONDerivative" class="internal"><span class="codenumber">5.6</span> <span class="title">The Derivative</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONnewt-flux-dynam" class="internal"><span class="codenumber">5.7</span> <span class="title">Thinking Dynamically</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONFluxions" class="internal"><span class="codenumber">5.8</span> <span class="title">Newton’s Method of Fluxions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONSelfIntersectCurve" class="internal"><span class="codenumber">5.9</span> <span class="title">Self-intersecting Curves and Parametric Equations</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONFluxions" class="internal"><span class="codenumber">5.8</span> <span class="title">Newton’s Method of Fluxions</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONParametricFunctions" class="internal"><span class="codenumber">5.8.1</span> <span class="title">Parametric Functions</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONbridg-chains-telesc" class="internal"><span class="codenumber">5.9</span> <span class="title">Bridges, Chains, Domes, and Telescopes</span></a></div>
+<div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONbridg-chains-telesc" class="internal"><span class="codenumber">5.10</span> <span class="title">Bridges, Chains, Domes, and Telescopes</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONBridges" class="internal"><span class="codenumber">5.9.1</span> <span class="title">Bridges</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONChains" class="internal"><span class="codenumber">5.9.2</span> <span class="title">Chains</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONDomes" class="internal"><span class="codenumber">5.9.3</span> <span class="title">Domes</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONTelescopes" class="internal"><span class="codenumber">5.9.4</span> <span class="title">Telescopes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONBridges" class="internal"><span class="codenumber">5.10.1</span> <span class="title">Bridges</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONChains" class="internal"><span class="codenumber">5.10.2</span> <span class="title">Chains</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONDomes" class="internal"><span class="codenumber">5.10.3</span> <span class="title">Domes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONTelescopes" class="internal"><span class="codenumber">5.10.4</span> <span class="title">Telescopes</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -360,14 +366,14 @@ window.MathJax = {
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html" class="internal"><span class="codenumber">8</span> <span class="title">Exponentials and Logarithms</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONIvps" class="internal"><span class="codenumber">8.1</span> <span class="title">Initial Value Problems (IVPs)</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONDEsandIVPS" class="internal"><span class="codenumber">8.1</span> <span class="title">Initial Value Problems</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONexponential" class="internal"><span class="codenumber">8.2</span> <span class="title">The Natural Exponential</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONexponential-growth" class="internal"><span class="codenumber">8.3</span> <span class="title">Exponential Growth and Exponential Notation</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONhyperb-trig-hang" class="internal"><span class="codenumber">8.4</span> <span class="title">Hyperbolic Trigonometry: The Hanging Chain</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONGatewayArch" class="internal"><span class="codenumber">8.5</span> <span class="title">The Gateway Arch</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#CHAPTERlast-elem-funct-8" class="internal"><span class="codenumber">8.6</span> <span class="title">Exponential Growth</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONExpAndCmpndInt" class="internal"><span class="codenumber">8.7</span> <span class="title">Exponential Functions and Compound Interest</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONnatural-logarithm-1" class="internal"><span class="codenumber">8.8</span> <span class="title">A Short Introduction to Logarithms: John Napier Logs In</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONnatural-logarithm-1" class="internal"><span class="codenumber">8.8</span> <span class="title">John Napier Logs In: A Short Introduction to Logarithms</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONNatLog" class="internal"><span class="codenumber">8.9</span> <span class="title">Logarithms, Natural and Unnatural</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONLogApps" class="internal"><span class="codenumber">8.10</span> <span class="title">Applications of Logarithms</span></a></div>
@@ -379,7 +385,7 @@ window.MathJax = {
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONDerivNatLog" class="internal"><span class="codenumber">8.11</span> <span class="title">The Derivative of the Natural Logarithm</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONgener-logar-expon" class="internal"><span class="codenumber">8.12</span> <span class="title">General Logarithms and Exponentials</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONleonh-euler-harm" class="internal"><span class="codenumber">8.13</span> <span class="title">Leonhard Euler, Harmonic Oscillators, and Complex Numbers</span></a></div>
+<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONEulerHarmonicOsc" class="internal"><span class="codenumber">8.13</span> <span class="title">Leonhard Euler, Harmonic Oscillators, and Complex Numbers</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONHowEulerDidIt" class="internal"><span class="codenumber">8.13.1</span> <span class="title">How Euler Did It</span></a></div></li></ul>
 </li>
 </ul>
@@ -477,7 +483,7 @@ window.MathJax = {
 </ul>
 </li>
 <li class="toc-item toc-part contains-active">
-<div class="toc-title-box"><a href="ToTheory.html" class="internal"><span class="codenumber">II</span> <span class="title">To Theory . . .</span></a></div>
+<div class="toc-title-box"><a href="DiffCalcToTheory.html" class="internal"><span class="codenumber">II</span> <span class="title">Differential Calculus: To Theory</span></a></div>
 <ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="CHAPTERWhatsWrong.html" class="internal"><span class="codenumber">13</span> <span class="title">What’s Wrong with Differentials?</span></a></div>
@@ -539,10 +545,11 @@ window.MathJax = {
 <li class="toc-item toc-backmatter">
 <div class="toc-title-box"><a href="meta_backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="meta_backmatter-2.html" class="internal"><span class="codenumber">A</span> <span class="title">Selected Solutions</span></a></div></li>
-<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="meta_backmatter-3.html" class="internal"><span class="codenumber">B</span> <span class="title">List of Symbols</span></a></div></li>
-<li class="toc-item toc-index"><div class="toc-title-box"><a href="meta_backmatter-4.html" class="internal"><span class="title">Index</span></a></div></li>
-<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="meta_backmatter-5.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="meta_backmatter-2.html" class="internal"><span class="codenumber">A</span> <span class="title">Selected Hints</span></a></div></li>
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="meta_backmatter-3.html" class="internal"><span class="codenumber">B</span> <span class="title">Selected Solutions</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="meta_backmatter-4.html" class="internal"><span class="codenumber">C</span> <span class="title">List of Symbols</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="meta_backmatter-5.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="meta_backmatter-6.html" class="internal"><span class="title">Colophon</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
@@ -625,13 +632,13 @@ f(1) =
 </div>
 </div>
 <article class="exercise exercise-like" id="SECTIONNonIntuitExample-10"><h4 class="heading">
-<span class="type">Drill</span><span class="space"> </span><span class="codenumber">17.1</span><span class="period">.</span>
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">17.1</span><span class="period">.</span>
 </h4>
 <div class="para" id="SECTIONNonIntuitExample-10-1-1">Use your favorite computational tool to find a value of <span class="process-math">\(x\)</span> near <span class="process-math">\(1\)</span> such that <span class="process-math">\(\abs{f(x)}\lt10^{-3}\text{.}\)</span>
 </div></article><div class="para" id="SECTIONNonIntuitExample-11">The problem with our example is that none of the <span class="process-math">\(x\)</span> values in the first column is close enough to <span class="process-math">\(1\text{.}\)</span>  Sure, the numbers <span class="process-math">\(1\)</span> and <span class="process-math">\(1.0001\)</span> are very close together. But to evaluate this limit we don’t just want to get close, we want to get close enough.  For this particular function we’d have to get much closer to <span class="process-math">\(1\)</span> before we start to see the values of <span class="process-math">\(f(x)\)</span> getting close to <span class="process-math">\(0\text{.}\)</span>
 </div>
 <aside class="aside aside-like" id="SECTIONNonIntuitExample-12"><h4 class="heading"><span class="title">Comment.</span></h4>
-<div class="para" id="SECTIONNonIntuitExample-12-2">It should be clear that we’ve contrived this function so that we could make this point. It is unlikely that it is useful for any other purpose.</div></aside><div class="para" id="SECTIONNonIntuitExample-13">And that’s the problem. The nature of the function we’re taking the limit of must be taken into account when we decide what “close enough” means for any particular limit.  This isn’t as bad as it sounds, but as always precision is crucial. We need a definition of <dfn class="terminology">limit</dfn> that doesn’t depend on the nature of the function we’re investigating. A useful definition will also recover the Differentiation Rules in a manner that even Bishop Berkeley would agree is valid.</div>
+<div class="para" id="SECTIONNonIntuitExample-12-2">It should be clear that we’ve contrived this function so that we could make this point. It is unlikely that it is useful for any other purpose.</div></aside><div class="para" id="SECTIONNonIntuitExample-13"> And that’s the problem. The nature of the function we’re taking the limit of must be taken into account when we decide what “close enough” means for any particular limit.  This isn’t as bad as it sounds, but as always precision is crucial. We need a definition of <dfn class="terminology">limit</dfn> that doesn’t depend on the nature of the function we’re investigating. A useful definition will also recover the Differentiation Rules in a manner that even Bishop Berkeley would agree is valid.</div>
 <div class="para" id="SECTIONNonIntuitExample-14">We will begin with limits “at infinity” because, paradoxically, these are often the easiest to understand. As we proceed through examples the question you want to keep in the back of your mind is, “For this problem how close is close enough?”</div></section><section class="section" id="SECTIONlimits-at-infinity"><h3 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">17.2</span><span class="space"> </span><span class="title">Getting Around Infinity</span>
 </h3>
@@ -639,18 +646,18 @@ f(1) =
 <div class="para" id="SECTIONlimits-at-infinity-3">This approach is within well established mathematical tradition. From the time of the ancient Greeks until the sixteenth century, infinity was carefully excluded from serious mathematical consideration. It was the successful exploitation of the infinitely small (infinitesimals) by Galileo and others that eventually forced mathematicians to study infinity seriously.</div>
 <div class="para" id="SECTIONlimits-at-infinity-4">Today we tend to conceive of a straight line in infinite terms; as extending infinitely far in two opposite directions. But when <a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Euclid/" target="_blank">Euclid</a><a class="xref" id="SECTIONlimits-at-infinity-4-2" href="" data-knowl="./knowl/fn/SECTIONlimits-at-infinity-4-2.html" title="Footnote 17.2"><sup> 2 </sup></a> wrote his geometry text <a class="external" href="https://www.maa.org/press/periodicals/convergence/mathematical-treasure-euclid-proposition-on-papyrus" target="_blank"><span class="booktitle">The Elements</span></a><a class="xref" id="SECTIONlimits-at-infinity-4-4" href="" data-knowl="./knowl/fn/SECTIONlimits-at-infinity-4-4.html" title="Footnote 17.3"><sup> 3 </sup></a>, he very carefully avoided allowing the existence of an “infinite line.”  For Euclid a straight line was what today would be called a line segment: the shortest path between two points.</div>
 <div class="para" id="SECTIONlimits-at-infinity-5">But this restriction immediately caused problems for Euclid. For some of his constructions he needed to be able to extend his line segment. In modern mathematics this is not a problem since we allow lines to extend infinitely far in either direction. So we’d just move to a new point on the line wherever it needs to be.</div>
-<div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="external/images/EuclidLineExt.png" class="contained"></div>
+<div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="external/DC/EuclidLineExt.png" class="contained"></div>
 <div class="para" id="SECTIONlimits-at-infinity-7">But when Euclid specified a line segment <span class="process-math">\(\overline{AB}\)</span> he meant that the points <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> were the endpoints of the line segment. To avoid infinite lines he  extended the line segment <span class="process-math">\(\overline{AB}\)</span> by some definite amount out to a point <span class="process-math">\(C\text{,}\)</span> thereby obtaining a new segment <span class="process-math">\(\overline{AC}\text{,}\)</span> which — and this is the point — is still finite in length. In this way Euclid explicitly allowed line segments to be extendable to any finite length without ever allowing an infinitely long line.</div>
 <section class="paragraphs" id="SUBSECTIONEpsDelt1"><h4 class="heading"><span class="title">The Infinitely Large.</span></h4> <div class="para" id="SUBSECTIONEpsDelt1-2">We want to ask, and answer, the question</div> <blockquote class="blockquote" id="SUBSECTIONEpsDelt1-3"><div class="para" id="SUBSECTIONEpsDelt1-3-1">What number does <span class="process-math">\(y\)</span> get close to if <span class="process-math">\(y=\frac1x\)</span> and we allow <span class="process-math">\(x\)</span> to grow infinitely large?</div></blockquote> <div class="para" id="SUBSECTIONEpsDelt1-4">as precisely as we can without invoking the notion of the infinitely large. Does this rephrasing  work for you?</div> <blockquote class="blockquote" id="SUBSECTIONEpsDelt1-5"><div class="para" id="SUBSECTIONEpsDelt1-5-1">If <span class="process-math">\(y=\frac1x\text{,}\)</span> what does <span class="process-math">\(y\)</span> get close to as <span class="process-math">\(x\)</span> grows larger and larger?</div></blockquote> <div class="para" id="SUBSECTIONEpsDelt1-6">This seems to be better. We have side-stepped the issue of the infinitely large by saying “larger and larger.” But unfortunately this rephrasing of the question changes its meaning.  To see what we mean, think of <span class="process-math">\(x\)</span> as the radius of a balloon which we want to inflate as much as we possibly can. Suppose we know that when the radius of the balloon is <span class="process-math">\(8\)</span> it will pop. To avoid popping our balloon, we blow in enough air during the first second to expand the radius to <span class="process-math">\(x(1)=4\text{.}\)</span> In the next second we expand the radius to fill half of the remaining distance to <span class="process-math">\(x(2)=6\text{.}\)</span>  In the third we repeat the process, expanding it to <span class="process-math">\(x(3)=7\text{.}\)</span> And we continue in this fashion. At each second the radius of our balloon expands to half of the remaining distance to <span class="process-math">\(8\text{.}\)</span>
 </div> <div class="para" id="SUBSECTIONEpsDelt1-7">Clearly the balloon’s radius grows larger each second, so <span class="process-math">\(x\)</span> grows “larger and larger” as required. But the intent of our original question was for <span class="process-math">\(x\)</span> to become “infinitely large,” not for <span class="process-math">\(x\)</span> to remain smaller than <span class="process-math">\(8\text{.}\)</span>
 </div> <div class="para" id="SUBSECTIONEpsDelt1-8">And there is nothing special about <span class="process-math">\(8\text{.}\)</span> If <span class="process-math">\(x\)</span> moves half of the distance to <span class="process-math">\(16\)</span> each second, or halfway to <span class="process-math">\(32\text{,}\)</span> or even if it moves halfway to <span class="process-math">\(1,048,576\)</span> at each step we have the same problem.  In each case <span class="process-math">\(x\)</span> is growing “larger and larger” but it is not growing in a manner that reflects what we think we mean when we say that <span class="process-math">\(x\)</span> is growing “infinitely large.”</div> <article class="exercise exercise-like" id="DRILLBoundedGrowth"><h5 class="heading">
-<span class="type">Drill</span><span class="space"> </span><span class="codenumber">17.2</span><span class="period">.</span>
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">17.2</span><span class="period">.</span>
 </h5>
 <div class="para" id="DRILLBoundedGrowth-1-1">Suppose <span class="process-math">\(B\)</span> is a positive real number, and that <span class="process-math">\(x(0)=0\text{.}\)</span> Find a formula for <span class="process-math">\(x\)</span> as a function of time <span class="process-math">\(t\)</span> (in seconds), such that at each integer <span class="process-math">\(t&gt;0\text{,}\)</span> the distance from <span class="process-math">\(x(t)\)</span> to <span class="process-math">\(B\)</span> is half of the distance from <span class="process-math">\(x(t-1)\)</span> to <span class="process-math">\(B\text{.}\)</span>
-</div></article> <div class="para" id="SUBSECTIONEpsDelt1-10">In this situation <span class="process-math">\(x\)</span> is said to be <dfn class="terminology">bounded above</dfn> because there is an upper bound on how large <span class="process-math">\(x\)</span> can be, despite the fact that <span class="process-math">\(x\)</span> is growing “larger and larger.”</div> <div class="para" id="SUBSECTIONEpsDelt1-11">Recall that in <a href="CHAPTERlimits-lhop-rule.html#SECTIONhoriz-asympt-as" class="internal" title='Section 12.1: Horizontal Asymptotes as Limits "at Infinity"'>Section 12.1</a> we mentioned that the notation <span class="process-math">\(x\rightarrow\infty\)</span> should be read aloud as “<span class="process-math">\(x\)</span> increases without bound,” so we rephrase our question as</div> <blockquote class="blockquote" id="SUBSECTIONEpsDelt1-12"><div class="para" id="SUBSECTIONEpsDelt1-12-1">If <span class="process-math">\(y=\frac1x\text{,}\)</span> what does <span class="process-math">\(y\)</span> get close to as <span class="process-math">\(x\)</span> increases without bound?</div></blockquote></section><section class="paragraphs" id="SUBSECTIONFormalLimits"><h4 class="heading"><span class="title">The Infinitely Small.</span></h4> <div class="para" id="SUBSECTIONFormalLimits-2">The answer is very clear: <span class="process-math">\(y\)</span> gets closer and closer to zero.  But of course, the phrase “closer and closer” is also too vague, and for essentially the same reason that “larger and larger” is too vague to be useful.</div>       <div class="para" id="SUBSECTIONFormalLimits-3">Again, it is not our conception of the problem that is the difficulty. It is the language we’re using. As before, we must choose our words more carefully.</div> <div class="para" id="SUBSECTIONFormalLimits-4">To capture the idea that <span class="process-math">\(y=\frac1x\)</span> gets “closer and closer” to zero, without ever getting to zero  let’s think this through, being careful to say exactly what we mean, no more, no less. To begin we ask, “Is there a value of <span class="process-math">\(x\)</span> which forces <span class="process-math">\(y\)</span> to be less than, say <span class="process-math">\(1/2?\)</span>”</div> <div class="para" id="SUBSECTIONFormalLimits-5">Keeping in mind that if <span class="process-math">\(a\lt b\)</span> then <span class="process-math">\(\frac1a\gt\frac1b\text{,}\)</span> if we need <span class="process-math">\(y\lt 1/2\)</span> and  <span class="process-math">\(y=1/x\)</span> that means that <span class="process-math">\(1/x\lt 1/2\text{.}\)</span> Solving for <span class="process-math">\(x\)</span>  we have <span class="process-math">\(x\gt 2\text{.}\)</span>
-</div> <div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="external/images/Epsilon1.png" class="contained"></div>      <div class="para" id="SUBSECTIONFormalLimits-7">So apparently any value of <span class="process-math">\(x\)</span> strictly greater than <span class="process-math">\(2\)</span> will guarantee that <span class="process-math">\(y\)</span> is less than <span class="process-math">\(1/2\text{.}\)</span>
+</div></article> <div class="para" id="SUBSECTIONEpsDelt1-10"> In this situation <span class="process-math">\(x\)</span> is said to be <dfn class="terminology">bounded above</dfn> because there is an upper bound on how large <span class="process-math">\(x\)</span> can be, despite the fact that <span class="process-math">\(x\)</span> is growing “larger and larger.”</div> <div class="para" id="SUBSECTIONEpsDelt1-11">Recall that in <a href="CHAPTERlimits-lhop-rule.html#SECTIONhoriz-asympt-as" class="internal" title='Section 12.1: Horizontal Asymptotes as Limits "at Infinity"'>Section 12.1</a> we mentioned that the notation <span class="process-math">\(x\rightarrow\infty\)</span> should be read aloud as “<span class="process-math">\(x\)</span> increases without bound,” so we rephrase our question as</div> <blockquote class="blockquote" id="SUBSECTIONEpsDelt1-12"><div class="para" id="SUBSECTIONEpsDelt1-12-1">If <span class="process-math">\(y=\frac1x\text{,}\)</span> what does <span class="process-math">\(y\)</span> get close to as <span class="process-math">\(x\)</span> increases without bound?</div></blockquote></section><section class="paragraphs" id="SUBSECTIONFormalLimits"><h4 class="heading"><span class="title">The Infinitely Small.</span></h4> <div class="para" id="SUBSECTIONFormalLimits-2">The answer is very clear: <span class="process-math">\(y\)</span> gets closer and closer to zero.  But of course, the phrase “closer and closer” is also too vague, and for essentially the same reason that “larger and larger” is too vague to be useful.</div>       <div class="para" id="SUBSECTIONFormalLimits-3">Again, it is not our conception of the problem that is the difficulty. It is the language we’re using. As before, we must choose our words more carefully.</div> <div class="para" id="SUBSECTIONFormalLimits-4">To capture the idea that <span class="process-math">\(y=\frac1x\)</span> gets “closer and closer” to zero, without ever getting to zero  let’s think this through, being careful to say exactly what we mean, no more, no less. To begin we ask, “Is there a value of <span class="process-math">\(x\)</span> which forces <span class="process-math">\(y\)</span> to be less than, say <span class="process-math">\(1/2?\)</span>”</div> <div class="para" id="SUBSECTIONFormalLimits-5">Keeping in mind that if <span class="process-math">\(a\lt b\)</span> then <span class="process-math">\(\frac1a\gt\frac1b\text{,}\)</span> if we need <span class="process-math">\(y\lt 1/2\)</span> and  <span class="process-math">\(y=1/x\)</span> that means that <span class="process-math">\(1/x\lt 1/2\text{.}\)</span> Solving for <span class="process-math">\(x\)</span>  we have <span class="process-math">\(x\gt 2\text{.}\)</span>
+</div> <div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="external/DC/Epsilon1.png" class="contained"></div>      <div class="para" id="SUBSECTIONFormalLimits-7">So apparently any value of <span class="process-math">\(x\)</span> strictly greater than <span class="process-math">\(2\)</span> will guarantee that <span class="process-math">\(y\)</span> is less than <span class="process-math">\(1/2\text{.}\)</span>
 </div> <div class="para" id="SUBSECTIONFormalLimits-8">Stop and think about that last sentence. Do you see that we’ve actually discovered more than the original question asked for? Our question was, “Is there a value of <span class="process-math">\(x\)</span> which forces <span class="process-math">\(y\)</span> to be less than <span class="process-math">\(1/2\text{?}\)</span>” But we’ve actually found all of them. We’ve found that if <span class="process-math">\(x\)</span> is any number greater than <span class="process-math">\(2\)</span> then <span class="process-math">\(y=\frac1x\lt \frac12,\)</span> regardless of which number we use.</div> <div class="para" id="SUBSECTIONFormalLimits-9">Can we make <span class="process-math">\(y\lt 1/3?\)</span> Sure. Exactly the same analysis will show that if <span class="process-math">\(x\gt 3\text{,}\)</span> then <span class="process-math">\(y=\frac1x\lt \frac13\text{,}\)</span> or if <span class="process-math">\(x\gt 4\text{,}\)</span> then <span class="process-math">\(y\lt 1/4\text{,}\)</span> and so on.</div> <article class="problem example-like" id="SUBSECTIONFormalLimits-10"><h5 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">17.3</span><span class="period">.</span>
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">17.3</span><span class="period">.</span>
 </h5>
 <div class="introduction" id="SUBSECTIONFormalLimits-10-1"><div class="para" id="SUBSECTIONFormalLimits-10-1-1">If <span class="process-math">\(y=\frac1x\)</span> how large must <span class="process-math">\(x\)</span> be in order to guarantee that</div></div>
 <article class="task exercise-like" id="SUBSECTIONFormalLimits-10-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
@@ -669,7 +676,7 @@ f(1) =
 </dl>
 </div></section><section class="paragraphs" id="SUBSECTIONconvincing-skeptic"><h4 class="heading"><span class="title">Convincing Berkeley.</span></h4> <div class="para" id="SUBSECTIONconvincing-skeptic-2">Is the use of these more precise terms enough to convince Bishop Berkeley?</div> <div class="para" id="SUBSECTIONconvincing-skeptic-3">Clearly not. If we were to show Berkeley that for <span class="process-math">\(y=\frac1x\)</span> we can guarantee that <span class="process-math">\(y\lt 1/2\)</span> by taking <span class="process-math">\(x\gt 2\text{,}\)</span> his response would simply be, “So what? How do I know you can make <span class="process-math">\(y\)</span> less than <span class="process-math">\(1/3\text{.}\)</span>” Nor will it be sufficient to show that we can make less than <span class="process-math">\(1/3, 1/4, 1/10000\)</span> or any particular number. Berkeley will simply come back to us with a  smaller challenge.</div>            <div class="para" id="SUBSECTIONconvincing-skeptic-4">What we have to do is answer all possible challenges at once. This seems like a lot to ask until we think about it a bit. All we really have to do is suppose that we have some small, positive, unspecified number and show that we can find out how large <span class="process-math">\(x\)</span> has to be to make <span class="process-math">\(y=\frac1x\)</span> less than that number. For the sake of being definite we’ll give our number a name. It is traditional to call it <span class="process-math">\(\eps\text{.}\)</span>
 </div> <aside class="aside aside-like" id="SUBSECTIONconvincing-skeptic-5"><h5 class="heading"><span class="title">Mathematical Notation.</span></h5>
-<div class="para" id="SUBSECTIONconvincing-skeptic-5-2">Presumably for “error” since <span class="process-math">\(\eps\)</span> is the Greek version of the letter “e.”</div></aside> <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/Epsilon2.png" class="contained"></div> <div class="para" id="SUBSECTIONconvincing-skeptic-7">Suppose that <span class="process-math">\(\eps\gt 0\)</span> and we want to figure out how large to make <span class="process-math">\(x\)</span> to guarantee that <span class="process-math">\(y=\frac1x\lt \eps.\)</span> If we want <span class="process-math">\(y\lt \eps\text{,}\)</span> first substitute <span class="process-math">\(\frac1x\)</span> for <span class="process-math">\(y\)</span> giving <span class="process-math">\(\frac1x\lt \eps\text{.}\)</span> Solve this for <span class="process-math">\(x\)</span> (remember that if <span class="process-math">\(a\lt b\)</span> then <span class="process-math">\(\frac1a\gt \frac1b\)</span>) so that  <span class="process-math">\(x\gt \frac1\eps\text{.}\)</span>
+<div class="para" id="SUBSECTIONconvincing-skeptic-5-2">Presumably for “error” since <span class="process-math">\(\eps\)</span> is the Greek version of the letter “e.”</div></aside> <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/DC/Epsilon2.png" class="contained"></div> <div class="para" id="SUBSECTIONconvincing-skeptic-7">Suppose that <span class="process-math">\(\eps\gt 0\)</span> and we want to figure out how large to make <span class="process-math">\(x\)</span> to guarantee that <span class="process-math">\(y=\frac1x\lt \eps.\)</span> If we want <span class="process-math">\(y\lt \eps\text{,}\)</span> first substitute <span class="process-math">\(\frac1x\)</span> for <span class="process-math">\(y\)</span> giving <span class="process-math">\(\frac1x\lt \eps\text{.}\)</span> Solve this for <span class="process-math">\(x\)</span> (remember that if <span class="process-math">\(a\lt b\)</span> then <span class="process-math">\(\frac1a\gt \frac1b\)</span>) so that  <span class="process-math">\(x\gt \frac1\eps\text{.}\)</span>
 </div> <div class="para" id="SUBSECTIONconvincing-skeptic-8">Do you see the significance of this? Because we left <span class="process-math">\(\eps\)</span> unspecified (other than requiring it to be positive), we’ve met all possible challenges. If the challenge is to make <span class="process-math">\(y\)</span> less than <span class="process-math">\(10^{-1000000000}\)</span> our response is, “We’ve already done that. Just take <span class="process-math">\(\eps= 10^{-1000000000} \text{.}\)</span>”  Repeating the computation above gives <span class="process-math">\(x\gt10^{1000000000} \text{.}\)</span>
 </div> <div class="para" id="SUBSECTIONconvincing-skeptic-9">Now for some function <span class="process-math">\(f(x)\text{,}\)</span> the statement <span class="process-math">\(\tlimit{x}{\infty}{f(x)}=0\)</span> has the following precise meaning:</div> <blockquote class="blockquote" id="SUBSECTIONconvincing-skeptic-10"><div class="para" id="SUBSECTIONconvincing-skeptic-10-1">If for each <span class="process-math">\(\eps\gt0\)</span> we can make <span class="process-math">\(f(x)\lt \eps\)</span> by taking <span class="process-math">\(x\)</span> sufficiently large, then we say that “the limit as <span class="process-math">\(x\)</span> approaches infinity is zero.”</div></blockquote> <div class="para" id="SUBSECTIONconvincing-skeptic-11">To be sure, when we allow <span class="process-math">\(\eps\gt0\)</span> to be arbitrary, but unspecified we skirt the edge of the infinitely small. But this is the point. If <span class="process-math">\(\eps\)</span> is arbitrary then it can be as small as we need for it to be without ever being infinitely small. This is akin to Euclid allowing lines to be extended to any, unspecified, length without allowing them to be infinite in length.  This is the idea underlying limits and limit notation.</div> <aside class="aside aside-like" id="SUBSECTIONconvincing-skeptic-12"><h5 class="heading"><span class="title">Mathematical Notation.</span></h5>
 <div class="para" id="SUBSECTIONconvincing-skeptic-12-2">Be careful. Unspecified does not mean variable. <span class="process-math">\(\eps\)</span> is a particular, fixed number. We just don’t know which one it is.</div></aside> <div class="para" id="SUBSECTIONconvincing-skeptic-13">Be aware that the meaning of the limit notation and the way we tend to speak about limits are inconsistent. This can present a lot of problems for the beginner.  If we are speaking loosely, among friends, we would read this statement, <span class="process-math">\(\tlimit{x}{\infty}{\frac1x}=0\text{,}\)</span> as: “The limit of one over <span class="process-math">\(x\)</span> as <span class="process-math">\(x\)</span> goes to infinity is equal to zero.”  This is a very poor way to express the idea we are trying to capture. To say that <span class="process-math">\(x\)</span> “approaches” infinity completely undercuts everything we’ve said about infinity so far because it treats infinity as if it is an actual number.</div> <div class="para" id="SUBSECTIONconvincing-skeptic-14">We now understand that <span class="process-math">\(\tlimit{x}{\infty}{\frac1x}=0 \)</span> really means that as <span class="process-math">\(x\)</span> increases without bound, <span class="process-math">\(1/x\)</span> is getting arbitrarily close to zero but what we say is not what the notation means.  That incongruity can be very confusing at first.  In this text we will be very careful not to speak so casually. At least not until we have more experience with limits.</div> <div class="para" id="SUBSECTIONconvincing-skeptic-15">We have only begun, but this is enough for us to offer a first definition of the limit concept. We generalize slightly.</div> <article class="definition definition-like" id="DEFINITIONsecond-inad-limit-at-infinity"><h5 class="heading">
@@ -686,7 +693,7 @@ f(x)= \frac{1}{x^2}\lt \eps.
 \end{equation*}
 </div>
 </div></article> <article class="problem example-like" id="SUBSECTIONconvincing-skeptic-19"><h5 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">17.6</span><span class="period">.</span>
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">17.6</span><span class="period">.</span>
 </h5>
 <div class="introduction" id="SUBSECTIONconvincing-skeptic-19-1"><div class="para" id="SUBSECTIONconvincing-skeptic-19-1-1">Use <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONsecond-inad-limit-at-infinity.html" title="Definition 17.4: Positive Function With Limit Zero at Infinity">Definition 17.4</a> to prove that for each of the functions below <span class="process-math">\(\limit{x}{\infty}{f(x)}=0\text{.}\)</span>  That is, assume <span class="process-math">\(\eps\gt0\)</span> is given and find a lower bound <span class="process-math">\(B\)</span> such that if <span class="process-math">\(x\gt B\)</span> then <span class="process-math">\(f(x)\lt\eps\text{.}\)</span>
 </div></div>
@@ -717,7 +724,7 @@ f(x) = -2-\frac1x \lt  0 \lt  \eps,
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">17.9</span><span class="period">.</span><span class="space"> </span><span class="title">First:.</span>
 </h5> <div class="para" id="EXAMPLEFormalLimitProof1-2">Suppose <span class="process-math">\(f(x) = -\frac1{x}\text{.}\)</span> We want to prove  rigorously that <span class="process-math">\(\tlimit{x}{\infty}{f(x)}=0\text{.}\)</span>
 </div></article> <article class="investigation project-like" id="SECTIONlimits-at-infinity-11-10"><h5 class="heading">
-<span class="type">Scrapwork</span><span class="space"> </span><span class="codenumber">17.1</span><span class="period">.</span>
+<span class="type">Puzzle</span><span class="space"> </span><span class="codenumber">17.1</span><span class="period">.</span>
 </h5>
 <div class="para" id="SECTIONlimits-at-infinity-11-10-1">Let <span class="process-math">\(\eps\gt0\)</span> be given.</div> <div class="para" id="SECTIONlimits-at-infinity-11-10-2">As we did in <a href="" class="xref" data-knowl="./knowl/xref/EXAMPLELimPosFuncInf.html" title="Example 17.5">Example 17.5</a> we find the bound <span class="process-math">\(B\)</span> by working the problem backwards. We want to end with <span class="process-math">\(\abs{f(x)}\lt\eps\text{,}\)</span> so that’s where we start.</div> <div class="para logical" id="SECTIONlimits-at-infinity-11-10-3">
 <div class="para">Since we are only interested in what happens to <span class="process-math">\(f(x)\)</span> as <span class="process-math">\(x\rightarrow\infty\text{,}\)</span> we can safely assume that <span class="process-math">\(x\gt0\text{.}\)</span> In that case if</div>
@@ -761,7 +768,7 @@ x \gt\frac{1}{\eps}.
 </div>
 <div class="para">Therefore, by <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONlimit-at-infinity-nearly-adequate.html" title="Definition 17.8: Zero Limit at Infinity">Definition 17.8</a> <span class="process-math">\(\tlimit{x}{\infty}{f(x)}=0\text{.}\)</span>
 </div>
-</div> <div class="para" id="SECTIONlimits-at-infinity-11-11-2"><em class="alert"><span class="process-math">\(\halmos\)</span></em></div></article></details> <div class="para logical" id="SECTIONlimits-at-infinity-11-12">
+</div></article></details> <div class="para logical" id="SECTIONlimits-at-infinity-11-12">
 <div class="para">This example displays the format of a limit proof that you need to adhere to. Below is an outline of the format. Do not depart from this format. This is not a course in creative writing.</div>
 <dl class="description-list">
 <dt id="SECTIONlimits-at-infinity-11-12-1-1">First:</dt>
@@ -776,14 +783,14 @@ x \gt\frac{1}{\eps}.
 <dd><div class="para" id="SECTIONlimits-at-infinity-11-12-1-4-2">State your conclusion.</div></dd>
 </dl>
 </div> <article class="exercise exercise-like" id="SECTIONlimits-at-infinity-11-13"><h5 class="heading">
-<span class="type">Drill</span><span class="space"> </span><span class="codenumber">17.10</span><span class="period">.</span>
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">17.10</span><span class="period">.</span>
 </h5>
 <div class="para" id="SECTIONlimits-at-infinity-11-13-1-1">Identify which statements in the proof in <a href="" class="xref" data-knowl="./knowl/xref/EXAMPLEFormalLimitProof1.html" title="Example 17.9: First:">Example 17.9</a> correspond to the first, second, third, and fourth parts of the format presented above.</div></article> <article class="example example-like" id="EXAMPLEFormalLimitProof2"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">17.11</span><span class="period">.</span>
 </h5>
 <div class="para" id="EXAMPLEFormalLimitProof2-1">Our previous examples and problems in this section were fairly simple as formal limit problems go. This one is more complex.</div> <div class="para" id="EXAMPLEFormalLimitProof2-2">Use  <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONlimit-at-infinity-nearly-adequate.html" title="Definition 17.8: Zero Limit at Infinity">Definition 17.8</a> to show that <span class="process-math">\(\tlimit{x}{\infty}{\frac{1}{5x-x^2}}=0\text{.}\)</span>
 </div></article> <article class="investigation project-like" id="SECTIONlimits-at-infinity-11-15"><h5 class="heading">
-<span class="type">Scrapwork</span><span class="space"> </span><span class="codenumber">17.2</span><span class="period">.</span>
+<span class="type">Puzzle</span><span class="space"> </span><span class="codenumber">17.2</span><span class="period">.</span>
 </h5>
 <div class="para logical" id="SECTIONlimits-at-infinity-11-15-1">
 <div class="para">For a given <span class="process-math">\(\eps\gt0\text{,}\)</span> we want to end up with</div>
@@ -823,11 +830,11 @@ x \gt\frac{1}{\eps}.
 \limit{x}{\infty}{\frac{1}{5x-x^2}}=0.
 \end{equation*}
 </div>
-</div> <div class="para" id="SECTIONlimits-at-infinity-11-16-2"><em class="alert"><span class="process-math">\(\halmos\)</span></em></div></article></details> <article class="problem example-like" id="PROBLEMProofPractice1"><h5 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">17.12</span><span class="period">.</span>
+</div></article></details> <article class="problem example-like" id="PROBLEMProofPractice1"><h5 class="heading">
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">17.12</span><span class="period">.</span>
 </h5>
 <div class="para" id="PROBLEMProofPractice1-1-1">Explain carefully, and in detail, the reasoning that supports the claims made in Equations <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONProofPractice1.html" title="Equation 17.1">(17.1)</a> and <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONProofPractice2.html" title="Equation 17.2">(17.2)</a>.</div></article> <div class="para" id="SECTIONlimits-at-infinity-11-18">Notice that in <a href="" class="xref" data-knowl="./knowl/xref/EXAMPLEFormalLimitProof1.html" title="Example 17.9: First:">Example 17.9</a> and <a href="" class="xref" data-knowl="./knowl/xref/EXAMPLEFormalLimitProof2.html" title="Example 17.11">Example 17.11</a> that the scrapwork was an essential part of the solution, but in the formal proof the results of the scrapwork were so abbreviated as to almost not be present. This is part of the formalism of mathematical writing. We try to make sure that everything that needs to be said is said — and absolutely nothing more.  In this instance in particular, we are not obligated to explain where the bound <span class="process-math">\(B\)</span> came from, only that it works. It can take time to become comfortable with this presentation style.</div> <div class="para" id="SECTIONlimits-at-infinity-11-19">Even with practice very few people can read a formal proof without doing the computations necessary to show that all of the claims made are actually true. Keep paper and pencil handy at all times to help you follow the argument.</div> <article class="problem example-like" id="SECTIONlimits-at-infinity-11-20"><h5 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">17.13</span><span class="period">.</span>
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">17.13</span><span class="period">.</span>
 </h5>
 <div class="introduction" id="SECTIONlimits-at-infinity-11-20-1"><div class="para" id="SECTIONlimits-at-infinity-11-20-1-1">For each of the following show that <span class="process-math">\(\tlimit{x}{\infty}{f(x)}=0\text{.}\)</span>
 </div></div>
@@ -857,7 +864,7 @@ x \gt\frac{1}{\eps}.
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">17.15</span><span class="period">.</span>
 </h5>
 <div class="para" id="SECTIONlimits-at-infinity-11-24-1">Suppose <span class="process-math">\(f(x)=1-\frac1x\text{.}\)</span> Intuitively, it is clear that <span class="process-math">\(\tlimit{x}{\infty}{f(x)}=1\)</span> but we need to prove that this is so.</div></article> <article class="investigation project-like" id="SECTIONlimits-at-infinity-11-25"><h5 class="heading">
-<span class="type">Scrapwork</span><span class="space"> </span><span class="codenumber">17.3</span><span class="period">.</span>
+<span class="type">Puzzle</span><span class="space"> </span><span class="codenumber">17.3</span><span class="period">.</span>
 </h5>
 <div class="para logical" id="SECTIONlimits-at-infinity-11-25-1">
 <div class="para">Suppose <span class="process-math">\(\eps\gt0\)</span> is given.  We need to specify a number <span class="process-math">\(B\)</span> (probably in terms of <span class="process-math">\(\eps\)</span>), with the property that if <span class="process-math">\(x\gt B\)</span> then <span class="process-math">\(\abs{f(x) - 1}\lt \eps.\)</span> So we will work backwards from   this inequality.</div>
@@ -886,7 +893,7 @@ x \gt\frac{1}{\eps}.
 \limit{x}{\infty}{f(x)}=1.
 \end{equation*}
 </div>
-</div> <div class="para" id="SECTIONlimits-at-infinity-11-26-2"><em class="alert"><span class="process-math">\(\halmos\)</span></em></div></article></details> <article class="example example-like" id="SECTIONlimits-at-infinity-11-27"><h5 class="heading">
+</div></article></details> <article class="example example-like" id="SECTIONlimits-at-infinity-11-27"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">17.16</span><span class="period">.</span>
 </h5> <div class="para logical" id="SECTIONlimits-at-infinity-11-27-1">
 <div class="para">In <a href="CHAPTERlimits-lhop-rule.html#SECTIONhoriz-asympt-as" class="internal" title='Section 12.1: Horizontal Asymptotes as Limits "at Infinity"'>Section 12.1</a> we approached the problem of finding  a horizontal asymptote of <span class="process-math">\(f(x)=\frac{5x}{x+1}\)</span> in the following highly intuitive manner, using the “<span class="process-math">\(\approach{\infty}\)</span>” notation.</div>
@@ -902,7 +909,7 @@ x \gt\frac{1}{\eps}.
 <div class="para">So we see that this limit must be equal to five. To prove this rigorously, without referring to infinity, we use <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONlimit-at-posinfinity.html" title="Definition 17.14: A Limit at +\infty">Definition 17.14</a>
 </div>
 </div></article> <article class="investigation project-like" id="SECTIONlimits-at-infinity-11-28"><h5 class="heading">
-<span class="type">Scrapwork</span><span class="space"> </span><span class="codenumber">17.4</span><span class="period">.</span>
+<span class="type">Puzzle</span><span class="space"> </span><span class="codenumber">17.4</span><span class="period">.</span>
 </h5>
 <div class="para logical" id="SECTIONlimits-at-infinity-11-28-1">
 <div class="para">Let <span class="process-math">\(\eps\gt0 \)</span> be given. As before we work backwards from our goal, <span class="process-math">\(\abs{\frac{5x}{x+1}-5}\lt\eps\text{.}\)</span>
@@ -924,7 +931,7 @@ x \gt\frac{1}{\eps}.
 <div class="para">so we will stipulate that <span class="process-math">\(B\)</span> (and therefore <span class="process-math">\(x\)</span>) must be  at least greater than <span class="process-math">\(-1\text{.}\)</span> Solving <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONLimAtInfExample1.html" title="Equation 17.3">equation (17.3)</a> for <span class="process-math">\(x\)</span> we see that <span class="process-math">\(x\gt \frac5\eps-1\)</span> also. So we take <span class="process-math">\(B\)</span> to be the greater of <span class="process-math">\(-1\)</span> and <span class="process-math">\(\frac5\eps-1\text{.}\)</span> We capture this idea with the notation,  <span class="process-math">\(B=\max\left(-1, \frac5\eps-1\right)\text{.}\)</span>
 </div>
 </div> <div class="para" id="SECTIONlimits-at-infinity-11-28-2"><em class="alert">END OF SCRAPWORK</em></div></article> <article class="problem example-like" id="SECTIONlimits-at-infinity-11-29"><h5 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">17.17</span><span class="period">.</span>
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">17.17</span><span class="period">.</span>
 </h5>
 <div class="introduction" id="SECTIONlimits-at-infinity-11-29-1"><div class="para" id="SECTIONlimits-at-infinity-11-29-1-1"></div></div>
 <article class="task exercise-like" id="SECTIONlimits-at-infinity-11-29-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
@@ -932,7 +939,7 @@ x \gt\frac{1}{\eps}.
 </div></article><article class="task exercise-like" id="SECTIONlimits-at-infinity-11-29-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>
 <div class="para" id="SECTIONlimits-at-infinity-11-29-3-1-1">Suppose that <span class="process-math">\(\eps\gt0\)</span> and <span class="process-math">\(B=\frac5\eps-1\text{.}\)</span> Prove that if <span class="process-math">\(x&gt;B\)</span> then <span class="process-math">\(\abs{\frac{5x}{x+1}-5}\lt \eps.\)</span>
 </div></article></article>                               <article class="problem example-like" id="SECTIONlimits-at-infinity-11-30"><h5 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">17.18</span><span class="period">.</span>
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">17.18</span><span class="period">.</span>
 </h5>
 <div class="introduction" id="SECTIONlimits-at-infinity-11-30-1"><div class="para" id="SECTIONlimits-at-infinity-11-30-1-1">We want to give a  rigorous proof that <span class="process-math">\(\tlimit{x}{\infty}{\frac{x^2+100}{4x^2}}=\frac14\text{.}\)</span> Let <span class="process-math">\(\eps\gt0\)</span> be given.</div></div>
 <article class="task exercise-like" id="SECTIONlimits-at-infinity-11-30-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
@@ -941,7 +948,7 @@ x \gt\frac{1}{\eps}.
 </div></article><article class="task exercise-like" id="SECTIONlimits-at-infinity-11-30-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>
 <div class="para" id="SECTIONlimits-at-infinity-11-30-3-1-1">Show that if <span class="process-math">\(x\gt B = \frac{5}{\sqrt{\eps}}\)</span> then <span class="process-math">\(\abs{\frac{x^2+100}{4x^2}-\frac14}\lt\eps.\)</span>
 </div></article></article>              <article class="problem example-like" id="SECTIONlimits-at-infinity-11-31"><h5 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">17.19</span><span class="period">.</span>
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">17.19</span><span class="period">.</span>
 </h5>
 <div class="introduction" id="SECTIONlimits-at-infinity-11-31-1"><div class="para" id="SECTIONlimits-at-infinity-11-31-1-1">Do the scrapwork, and provide a rigorous proof of each of the limits below.</div></div>
 <article class="task exercise-like" id="SECTIONlimits-at-infinity-11-31-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
@@ -959,7 +966,7 @@ x \gt\frac{1}{\eps}.
 <div class="para">if and only if for every <span class="process-math">\(\eps\gt 0\)</span> we can find a real number <span class="process-math">\(B\)</span> with the property that whenever <span class="process-math">\(x\lt B,\)</span> <span class="process-math">\(\abs{f(x)-L}\lt \eps.\)</span>
 </div>
 </div></article> <article class="problem example-like" id="SECTIONlimits-at-infinity-11-34"><h5 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">17.21</span><span class="period">.</span>
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">17.21</span><span class="period">.</span>
 </h5>
 <div class="introduction" id="SECTIONlimits-at-infinity-11-34-1"><div class="para" id="SECTIONlimits-at-infinity-11-34-1-1">Do the scrapwork, and provide a rigorous proof of each of the limits below.</div></div>
 <article class="task exercise-like" id="SECTIONlimits-at-infinity-11-34-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
@@ -995,7 +1002,7 @@ x \gt\frac{1}{\eps}.
 <div class="para" id="SECTIONlimits-at-real-8">The sketch below  depicts the situation when <span class="process-math">\(\limit{x}{a}{f(x)}=L\)</span> visually.  We have indicated that <span class="process-math">\(f(x)\)</span> is not defined at <span class="process-math">\(a\text{,}\)</span> but it could be. Limits don’t care what happens at <span class="process-math">\(a\text{,}\)</span> only what happens near <span class="process-math">\(a\text{.}\)</span> To emphasize this point we will usually say that <span class="process-math">\(0\lt\abs{x-a}\lt\delta\text{,}\)</span> rather than <span class="process-math">\(\abs{x-a}\lt\delta\text{.}\)</span> Because the inequality on the left is strict, we do not consider what happens when <span class="process-math">\(x=a\text{.}\)</span>
 </div>
 <aside class="aside aside-like" id="SECTIONlimits-at-real-9"><h4 class="heading"><span class="title">Comment.</span></h4>
-<div class="para" id="SECTIONlimits-at-real-9-2"> The graph of <span class="process-math">\(f(x)\)</span> appears to be a straight line because we are zoomed in very close to the point <span class="process-math">\((a,L)\)</span> and the Principle of Local Linearity is in play.</div></aside><div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="external/images/EpsDelta2.png" class="contained"></div>
+<div class="para" id="SECTIONlimits-at-real-9-2"> The graph of <span class="process-math">\(f(x)\)</span> appears to be a straight line because we are zoomed in very close to the point <span class="process-math">\((a,L)\)</span> and the Principle of Local Linearity is in play.</div></aside><div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="external/DC/EpsDelta2.png" class="contained"></div>
 <div class="para" id="SECTIONlimits-at-real-11">As before <span class="process-math">\(\eps \)</span> is the challenge. To show that the limit exists and is equal to <span class="process-math">\(L\)</span> as claimed our task is to find a value of <span class="process-math">\(\delta\)</span> such that, as long   as <span class="process-math">\(% \overbrace{x \text{ is between } a-\delta \text{ and }a+\delta}^{x
 % \text{ is  within } \delta \text{ of } a, x\neq a}
 x \)</span> is between <span class="process-math">\(a-\delta \text{ and }a+\delta\)</span> the corresponding      <span class="process-math">\(f(x)\)</span> will be between <span class="process-math">\(L-\eps \)</span> and <span class="process-math">\(L+\eps \text{.}\)</span>
@@ -1006,7 +1013,7 @@ x \)</span> is between <span class="process-math">\(a-\delta \text{ and }a+\delt
 <div class="para" id="SECTIONlimits-at-real-14">
 <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONlimits-at-real.html" title="Definition 17.22: The Limit at a Point">Definition 17.22</a> is the culmination of approximately <span class="process-math">\(200\)</span> years of attempts by some very brilliant people to provide a rigorous foundation for Calculus. Don’t expect to absorb this easily. It will take time and effort to fully understand and be able to use it.  We will start simply.</div>
 <article class="exercise exercise-like" id="DRILLLimAtZero-LimAtA"><h4 class="heading">
-<span class="type">Drill</span><span class="space"> </span><span class="codenumber">17.23</span><span class="period">.</span>
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">17.23</span><span class="period">.</span>
 </h4>
 <div class="para logical" id="DRILLLimAtZero-LimAtA-1-1">
 <div class="para"> Use <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONlimit-at-infinity-nearly-adequate.html" title="Definition 17.8: Zero Limit at Infinity">Definition 17.8</a>, <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONlimit-at-posinfinity.html" title="Definition 17.14: A Limit at +\infty">Definition 17.14</a>, <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONlimit-at-neginfinity.html" title="Definition 17.20: A Limit at -\infty">Definition 17.20</a>, and <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONlimits-at-real.html" title="Definition 17.22: The Limit at a Point">Definition 17.22</a> to explain that the following are “obviously” true.</div>
@@ -1033,7 +1040,7 @@ x \)</span> is between <span class="process-math">\(a-\delta \text{ and }a+\delt
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">17.24</span><span class="period">.</span>
 </h4>
 <div class="para" id="SECTIONlimits-at-real-16-1">Observe that it is intuitively clear that if <span class="process-math">\(f(x)=-x^2+2\)</span> then <span class="process-math">\(\limit{x}{0}{f(x)}=2\text{.}\)</span> We wish to prove this rigorously.</div></article><article class="investigation project-like" id="SECTIONlimits-at-real-17"><h4 class="heading">
-<span class="type">Scrapwork</span><span class="space"> </span><span class="codenumber">17.5</span><span class="period">.</span>
+<span class="type">Puzzle</span><span class="space"> </span><span class="codenumber">17.5</span><span class="period">.</span>
 </h4>
 <div class="para logical" id="SECTIONlimits-at-real-17-1">
 <div class="para">Suppose <span class="process-math">\(\eps\gt0\)</span> is given. Our goal is to find a <span class="process-math">\(\delta\gt0\)</span> such that if <span class="process-math">\(0\lt\abs{x-0}\lt\delta\)</span> (or just <span class="process-math">\(0\lt\abs{x}\lt\delta\)</span>) then <span class="process-math">\(p \abs{f(x)-2}\lt \eps\text{.}\)</span> Solving this for <span class="process-math">\(x\)</span> we have</div>
@@ -1067,11 +1074,11 @@ x^2 \amp \lt \eps\\
 </div>
 <div class="para">Therefore <span class="process-math">\(\limit{x}{0}{f(x)}=2\text{.}\)</span>
 </div>
-</div> <div class="para" id="SECTIONlimits-at-real-19-3"><em class="alert"><span class="process-math">\(\halmos\)</span></em></div></article></details><div class="para" id="SECTIONlimits-at-real-20">Notice that our proof does not give us any new information since it is intuitively clear that <span class="process-math">\(\limit{x}{0}{(-x^2+2)}=2\text{.}\)</span> The formalism of a limit merely confirms, in a manner even Bishop Berkeley would accept, what we already know to be true.</div>
+</div></article></details><div class="para" id="SECTIONlimits-at-real-20">Notice that our proof does not give us any new information since it is intuitively clear that <span class="process-math">\(\limit{x}{0}{(-x^2+2)}=2\text{.}\)</span> The formalism of a limit merely confirms, in a manner even Bishop Berkeley would accept, what we already know to be true.</div>
 <div class="para" id="SECTIONlimits-at-real-21">Incidentally, since <span class="process-math">\(f(0)=-0^2+2=2\)</span> we have also just proved that <span class="process-math">\(f(x)\)</span> is continuous at <span class="process-math">\(x=0\text{.}\)</span> See <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONcontinuity.html" title="Definition 14.15: Continuity at a Point">Definition 14.15</a>.</div>
 <div class="para" id="SECTIONlimits-at-real-22">For simple problems like this one the proof consisted of writing the algebraic steps from our <dfn class="terminology">Scrapwork</dfn>  backwards, as you see. This worked because every algebraic step in the <dfn class="terminology">Scrapwork</dfn>  was reversible. But don’t jump to conclusions. This will not always be the case.</div>
 <div class="para" id="SECTIONlimits-at-real-23">Clearly the <dfn class="terminology">Scrapwork</dfn>  is the most important part of the solution process for this problem. In a very real sense it actually is the solution. We call it <dfn class="terminology">Scrapwork</dfn>  because it is the part of the work that you don’t show anyone else because it is messy and not well organized\aside{We kept it clean and orderly here so you could see the reasoning.}.  The scrapwork is like the scaffolding used to construct a building. The proof is the building.</div>
-<div class="para" id="SECTIONlimits-at-real-24">It is absolutely necessary to have the scaffolding while construction is ongoing but you tear it down and clean everything up before you move in. In the same way your proof should be a cleaned up version of your scrapwork.  If this example were a homework problem, your solution would be the part that appears between <em class="alert">Proof</em> and the little black square, <span class="process-math">\(\halmos\text{,}\)</span> at the end.</div>
+<div class="para" id="SECTIONlimits-at-real-24">It is absolutely necessary to have the scaffolding while construction is ongoing but you tear it down and clean everything up before you move in. In the same way your proof should be a cleaned up version of your scrapwork.  If this example were a homework problem, your solution would be the part that appears after <em class="alert">Proof</em>.</div>
 <aside class="aside aside-like" id="SECTIONlimits-at-real-25"><h4 class="heading"><span class="title">Historical Background.</span></h4>
 <div class="para" id="SECTIONlimits-at-real-25-2">When Latin was the language of scholarship a mathematical proof ended with the letters <a class="external" href="https://en.wikipedia.org/wiki/Q.E.D." target="_blank"><i class="foreign">Q.E.D.</i></a><a class="xref" id="SECTIONlimits-at-real-25-2-2" href="" data-knowl="./knowl/fn/SECTIONlimits-at-real-25-2-2.html" title="Footnote 17.4"><sup> 4 </sup></a>, which are the initials of the phrase <i class="foreign">quod erat demonstrandum</i>, meaning “which was to be demonstrated.” Contrary to a popular joke it does not mean “Quite Easily Done.” In the late twentieth century this traditional ending began to be replaced by the black square we’re using (or some variation of it). It is called a “Halmos” in honor of <a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Halmos/" target="_blank">Paul Halmos</a><a class="xref" id="SECTIONlimits-at-real-25-2-9" href="" data-knowl="./knowl/fn/SECTIONlimits-at-real-25-2-9.html" title="Footnote 17.5"><sup> 5 </sup></a>, a preeminent mathematician of the <span class="process-math">\(20\)</span>th century, who popularized it.</div></aside><article class="example example-like" id="EXAMPLEDiscontLimit2"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">17.25</span><span class="period">.</span>
@@ -1082,7 +1089,7 @@ x^2 \amp \lt \eps\\
 \begin{equation*}
 f(x)=
 \begin{cases}
-3x \amp  \text{if } x\neq2
+3x \amp  \text{if } x\neq2\\
 10  \amp  \text{if } x=2.
 \end{cases}
 \end{equation*}
@@ -1111,14 +1118,14 @@ f(x)=
 </div>
 <div class="para">Therefore <span class="process-math">\(\tlimit{x}{2}{f(x)}=6.\)</span>
 </div>
-</div> <div class="para" id="SECTIONlimits-at-real-27-2"><em class="alert"><span class="process-math">\(\halmos\)</span></em></div></article></details><div class="para" id="SECTIONlimits-at-real-28">Notice that it is again irrelevant that <span class="process-math">\(f(2)=10\text{.}\)</span>
+</div></article></details><div class="para" id="SECTIONlimits-at-real-28">Notice that it is again irrelevant that <span class="process-math">\(f(2)=10\text{.}\)</span>
 </div>
 <article class="problem example-like" id="SECTIONlimits-at-real-29"><h4 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">17.26</span><span class="period">.</span>
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">17.26</span><span class="period">.</span>
 </h4>
 <div class="para" id="SECTIONlimits-at-real-29-1-1">Use the proof above to recreate the scrapwork that we did before we wrote the proof.</div></article><article class="example example-like" id="EXAMPLEConcrete1"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">17.27</span><span class="period">.</span><span class="space"> </span><span class="title">4.</span>
-</h4>  <div class="para" id="EXAMPLEConcrete1-2">We would like to find the value of <span class="process-math">\(\limit{x}{\frac12}{\frac{4x^2-1}{2x-1}}\text{,}\)</span> and prove that the value we find is correct.</div> <div class="para" id="EXAMPLEConcrete1-3">Remember that none of our limit definitions tell us how to find the value of a limit, only how to prove that it has a particular value after we’ve found it. In our examples so far the value of the limits have been intuitively clear so we haven’t concerned ourselves with this part of the problem.  But before we can prove that a limit has a particular value we obviously need to decide what we believe the limit value is.</div> <div class="para" id="EXAMPLEConcrete1-4">We have several options for doing this. The simplest is guessing, but guessing works best if we have some intuition about the problem. Guessing blindly is usually a waste of time. Nevertheless, guessing is always an option. Can you guess the value of this limit?</div> <div class="para" id="EXAMPLEConcrete1-5">Another simple option is to use a calculator and plug the value of the limit point, in this case <span class="process-math">\(x=\frac12\text{,}\)</span> and see what the calculator comes up with. This will work if the function is continuous at the limit point. But <span class="process-math">\(\frac{4x^2-1}{2x-1}\)</span> is not continuous at <span class="process-math">\(x=\frac12\)</span> so that won’t help with this problem. Try it and see.</div> <div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="external/images/EpsDelta4.png" class="contained"></div>       <div class="para" id="EXAMPLEConcrete1-7">A third, and much more useful option is to sketch the graph of <span class="process-math">\(f(x)\)</span> to see what <span class="process-math">\(f(x)\)</span> is close to near the limit point.  The graph of <span class="process-math">\(f(x)=\frac{4x^2-1}{2x-1}\)</span> is given at the right. It is not defined at <span class="process-math">\(x=1/2\)</span> because when <span class="process-math">\(x=1/2\)</span> we get zero in the denominator. Nevertheless the limit at <span class="process-math">\(x=1/2\)</span> seems to exist. As you can see as <span class="process-math">\(x\)</span> approaches <span class="process-math">\(1/2\text{,}\)</span> <span class="process-math">\(f(x)\)</span> appears to approach <span class="process-math">\(2\text{.}\)</span> Based on this graph it seems likely that the value of the limit is <span class="process-math">\(2\text{.}\)</span>
+</h4>  <div class="para" id="EXAMPLEConcrete1-2">We would like to find the value of <span class="process-math">\(\limit{x}{\frac12}{\frac{4x^2-1}{2x-1}}\text{,}\)</span> and prove that the value we find is correct.</div> <div class="para" id="EXAMPLEConcrete1-3">Remember that none of our limit definitions tell us how to find the value of a limit, only how to prove that it has a particular value after we’ve found it. In our examples so far the value of the limits have been intuitively clear so we haven’t concerned ourselves with this part of the problem.  But before we can prove that a limit has a particular value we obviously need to decide what we believe the limit value is.</div> <div class="para" id="EXAMPLEConcrete1-4">We have several options for doing this. The simplest is guessing, but guessing works best if we have some intuition about the problem. Guessing blindly is usually a waste of time. Nevertheless, guessing is always an option. Can you guess the value of this limit?</div> <div class="para" id="EXAMPLEConcrete1-5">Another simple option is to use a calculator and plug the value of the limit point, in this case <span class="process-math">\(x=\frac12\text{,}\)</span> and see what the calculator comes up with. This will work if the function is continuous at the limit point. But <span class="process-math">\(\frac{4x^2-1}{2x-1}\)</span> is not continuous at <span class="process-math">\(x=\frac12\)</span> so that won’t help with this problem. Try it and see.</div> <div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="external/DC/EpsDelta4.png" class="contained"></div>       <div class="para" id="EXAMPLEConcrete1-7">A third, and much more useful option is to sketch the graph of <span class="process-math">\(f(x)\)</span> to see what <span class="process-math">\(f(x)\)</span> is close to near the limit point.  The graph of <span class="process-math">\(f(x)=\frac{4x^2-1}{2x-1}\)</span> is given at the right. It is not defined at <span class="process-math">\(x=1/2\)</span> because when <span class="process-math">\(x=1/2\)</span> we get zero in the denominator. Nevertheless the limit at <span class="process-math">\(x=1/2\)</span> seems to exist. As you can see as <span class="process-math">\(x\)</span> approaches <span class="process-math">\(1/2\text{,}\)</span> <span class="process-math">\(f(x)\)</span> appears to approach <span class="process-math">\(2\text{.}\)</span> Based on this graph it seems likely that the value of the limit is <span class="process-math">\(2\text{.}\)</span>
 </div> <div class="para logical" id="EXAMPLEConcrete1-8">
 <div class="para">As we saw in <a href="CHAPTERlimits-lhop-rule.html" class="internal" title="Chapter 12: Limits and L’Hôpital’s Rule">Chapter 12</a>, Algebra can also be very helpful. In this case we see that</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CHAPTERlimits-lhop-rule.html">
@@ -1144,14 +1151,14 @@ f(x)=
 \end{align*}
 </div>
 </div></article><article class="problem example-like" id="SECTIONlimits-at-real-31"><h4 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">17.28</span><span class="period">.</span>
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">17.28</span><span class="period">.</span>
 </h4>
 <div class="para" id="SECTIONlimits-at-real-31-1-1">Identify where we used <a href="" class="xref" data-knowl="./knowl/xref/THEOREMLimSum2.html" title="Theorem 14.1: The Limit of a Sum is the Sum of the Limits">Theorem 14.1</a>, <a href="" class="xref" data-knowl="./knowl/xref/THEOREMLimProd2.html" title="Theorem 14.2: The Limit of a Product is the Product of the Limits">Theorem 14.2</a>, and <a href="" class="xref" data-knowl="./knowl/xref/THEOREMConstLimit.html" title="Theorem 14.7: The Limit of a Constant is the Constant">Theorem 14.7</a> in the development above.</div></article><div class="para" id="SECTIONlimits-at-real-32">Because we haven’t yet rigorously proved <a href="" class="xref" data-knowl="./knowl/xref/THEOREMLimSum2.html" title="Theorem 14.1: The Limit of a Sum is the Sum of the Limits">Theorem 14.1</a>, <a href="" class="xref" data-knowl="./knowl/xref/THEOREMLimProd2.html" title="Theorem 14.2: The Limit of a Product is the Product of the Limits">Theorem 14.2</a>, or <a href="" class="xref" data-knowl="./knowl/xref/THEOREMConstLimit.html" title="Theorem 14.7: The Limit of a Constant is the Constant">Theorem 14.7</a> we can’t use them to construct a rigorous proof. Until they are proved they are not known, they are just believed. Belief is not knowledge.</div>
 <div class="para" id="SECTIONlimits-at-real-33">But there is no problem with using them to gather evidence. So far we have strong evidence that this limit is <span class="process-math">\(2\text{.}\)</span>
 </div>
 <div class="para" id="SECTIONlimits-at-real-34">Having gathered our evidence, we now believe that <span class="process-math">\(\limit{x}{\frac12}{\frac{4x^2-1}{2x-1}}=2\text{.}\)</span> Next we need to do the scrapwork for our proof.</div>
 <article class="investigation project-like" id="SECTIONlimits-at-real-35"><h4 class="heading">
-<span class="type">Scrapwork</span><span class="space"> </span><span class="codenumber">17.6</span><span class="period">.</span>
+<span class="type">Puzzle</span><span class="space"> </span><span class="codenumber">17.6</span><span class="period">.</span>
 </h4>
 <div class="para logical" id="SECTIONlimits-at-real-35-1">
 <div class="para">As always we work backwards from our goal. We need to show that   <span class="process-math">\(\abs{f(x)-2}\lt \eps\)</span> so</div>
@@ -1211,7 +1218,7 @@ f(x)=
 \limit{x}{\frac12}{\frac{4x^2-1}{2x+1}}=2\text{.}
 \end{equation*}
 </div>
-</div> <div class="para" id="PROOFProofExample-2"><em class="alert"><span class="process-math">\(\halmos\)</span></em></div></article></details><div class="para" id="SECTIONlimits-at-real-37">A long list of inequalities like those in <a href="" class="xref" data-knowl="./knowl/xref/PROOFProofExample.html" title="Proof 17.3.3">Proof 17.3.3</a> can be a little intimidating. Don’t let that stop you. Verify each transition from one inequality to the next. If you don’t see why a particular transition  is valid refer back to the scrapwork.</div>
+</div></article></details><div class="para" id="SECTIONlimits-at-real-37">A long list of inequalities like those in <a href="" class="xref" data-knowl="./knowl/xref/PROOFProofExample.html" title="Proof 17.3.3">Proof 17.3.3</a> can be a little intimidating. Don’t let that stop you. Verify each transition from one inequality to the next. If you don’t see why a particular transition  is valid refer back to the scrapwork.</div>
 <section class="paragraphs" id="DIGRESSIONWhyProveTheorems"><h4 class="heading"><span class="title">DIGRESSION: Why We Prove Theorems.</span></h4>    <div class="para" id="DIGRESSIONWhyProveTheorems-3">The proof of any theorem will follow logically from the relevant definitions, lemmas, corollaries, and previously proved theorems. However, as we’ve seen proving that <span class="process-math">\(\limit{x}{\frac12}{\frac{4x^2-1}{2x+1}}=2\)</span> from <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONlimits-at-real.html" title="Definition 17.22: The Limit at a Point">Definition 17.22</a> was very delicate and troublesome, and it only gave us one relatively insignificant limit. We’d really like to work more generally than this if we can.</div> <div class="para logical" id="DIGRESSIONWhyProveTheorems-4">
 <div class="para">We prove general theorems so that we can use them as tools. Do we have any tools (theorems) that would have made the proof of</div>
 <div class="displaymath process-math">
@@ -1221,7 +1228,7 @@ f(x)=
 </div>
 <div class="para">simpler?</div>
 </div> <article class="problem example-like" id="DIGRESSIONWhyProveTheorems-5"><h5 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">17.29</span><span class="period">.</span>
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">17.29</span><span class="period">.</span>
 </h5>
 <div class="introduction" id="DIGRESSIONWhyProveTheorems-5-1"><div class="para" id="DIGRESSIONWhyProveTheorems-5-1-1"></div></div>
 <article class="task exercise-like" id="DIGRESSIONWhyProveTheorems-5-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
@@ -1241,7 +1248,7 @@ f(x)=
 <div class="para">Recall that differentiation is a local property so we are thinking of <span class="process-math">\(x\)</span> as a fixed, but unspecified real number. The variable in this example is <span class="process-math">\(h\text{.}\)</span>
 </div>
 </div></article><article class="investigation project-like" id="SECTIONlimits-at-real-40"><h4 class="heading">
-<span class="type">Scrapwork</span><span class="space"> </span><span class="codenumber">17.7</span><span class="period">.</span>
+<span class="type">Puzzle</span><span class="space"> </span><span class="codenumber">17.7</span><span class="period">.</span>
 </h4>
 <div class="para logical" id="SECTIONlimits-at-real-40-1">
 <div class="para">For <span class="process-math">\(\eps\gt0\)</span> we need to find <span class="process-math">\(\delta\gt 0\)</span> such that if <span class="process-math">\(0\lt\abs{h}\lt\delta\text{,}\)</span> then <span class="process-math">\(\abs{\frac{f(x+h)-f(x)}{h}-2x}\lt
@@ -1259,13 +1266,13 @@ f(x)=
 <div class="para">so we choose <span class="process-math">\(\delta=\eps\text{.}\)</span>
 </div>
 </div> <div class="para" id="SECTIONlimits-at-real-40-2"><em class="alert">END OF SCRAPWORK</em></div></article><article class="problem example-like" id="SECTIONlimits-at-real-41"><h4 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">17.31</span><span class="period">.</span>
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">17.31</span><span class="period">.</span>
 </h4>
 <div class="para" id="SECTIONlimits-at-real-41-1-1">Use the scrapwork above to write down a rigorous proof  that if <span class="process-math">\(f(x)=x^2\)</span> then <span class="process-math">\(f^\prime(x)=2x\text{.}\)</span>
 </div></article></section><section class="section" id="SECTIONLimitLaws"><h3 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">17.4</span><span class="space"> </span><span class="title">Limit Laws (Theorems)</span>
 </h3>
-<section class="introduction" id="SECTIONLimitLaws-2"><div class="para" id="SECTIONLimitLaws-2-1">If we can prove each of the limit laws in <a href="CHAPTERdiff-rules-with-limits.html" class="internal" title="Chapter 14: The Differentiation Rules via Limits">Chapter 14</a> rigorously (i.e, using <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONlimits-at-real.html" title="Definition 17.22: The Limit at a Point">Definition 17.22</a>) we will have provided a rigorous foundation for Differential Calculus. We will address these now.</div> <div class="para" id="SECTIONLimitLaws-2-2">To prove the limit laws we will need to make extensive use of what is called the <dfn class="terminology">Triangle Inequality</dfn>. We  state and prove the Triangle Inequality here so that we can cite it as needed.</div> <article class="theorem theorem-like" id="THEOREMTriangIneq"><h4 class="heading">
+<section class="introduction" id="SECTIONLimitLaws-2"><div class="para" id="SECTIONLimitLaws-2-1">If we can prove each of the limit laws in <a href="CHAPTERdiff-rules-with-limits.html" class="internal" title="Chapter 14: The Differentiation Rules via Limits">Chapter 14</a> rigorously (i.e, using <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONlimits-at-real.html" title="Definition 17.22: The Limit at a Point">Definition 17.22</a>) we will have provided a rigorous foundation for Differential Calculus. We will address these now.</div> <div class="para" id="SECTIONLimitLaws-2-2"> To prove the limit laws we will need to make extensive use of what is called the <dfn class="terminology">Triangle Inequality</dfn>. We  state and prove the Triangle Inequality here so that we can cite it as needed.</div> <article class="theorem theorem-like" id="THEOREMTriangIneq"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">17.32</span><span class="period">.</span><span class="space"> </span><span class="title">The Triangle Inequality.</span>
 </h4>
 <div class="para" id="THEOREMTriangIneq-3"> For any real numbers <span class="process-math">\(x\text{,}\)</span> and <span class="process-math">\(y\text{,}\)</span> <span class="process-math">\(\abs{x+y} \leq
@@ -1281,7 +1288,7 @@ f(x)=
 </div>
 <div class="para">so by <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONAltDefAbsVal.html" title="Equation 17.4">(17.4)</a> we have <span class="process-math">\(\abs{x+y} \leq \abs{x}+\abs{y}\text{.}\)</span>
 </div>
-</div> <div class="para" id="PROOFTriIneq-3"><em class="alert"><span class="process-math">\(\halmos\)</span></em></div></article></details> <div class="para logical" id="SECTIONLimitLaws-2-6">
+</div></article></details> <div class="para logical" id="SECTIONLimitLaws-2-6">
 <div class="para">The Limit Laws we need to prove are:</div>
 <dl class="description-list">
 <dt id="SECTIONLimitLaws-2-6-1-1">Theorem 14.7:</dt>
@@ -1312,19 +1319,19 @@ f(x)=
 \limit{x}{\infty}{f(x)}=K.
 \end{equation*}
 </div>
-</div> <div class="para" id="SECTIONLimitLaws-2-9-2"><em class="alert"><span class="process-math">\(\halmos\)</span></em></div></article></details> <div class="para" id="SECTIONLimitLaws-2-10">The formalism we’re using requires that we specify some value for <span class="process-math">\(B\text{.}\)</span> It was convenient to specify <span class="process-math">\(B=L\text{,}\)</span> but in this proof any value for <span class="process-math">\(B\ge L\)</span> would have worked as well.</div> <article class="theorem theorem-like" id="THEOREMLimConstNegInf"><h4 class="heading">
+</div></article></details> <div class="para" id="SECTIONLimitLaws-2-10">The formalism we’re using requires that we specify some value for <span class="process-math">\(B\text{.}\)</span> It was convenient to specify <span class="process-math">\(B=L\text{,}\)</span> but in this proof any value for <span class="process-math">\(B\ge L\)</span> would have worked as well.</div> <article class="theorem theorem-like" id="THEOREMLimConstNegInf"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">17.34</span><span class="period">.</span><span class="space"> </span><span class="title">The Limit at Negative Infinity of a Constant Function is the Constant.</span>
 </h4>
 <div class="para" id="THEOREMLimConstNegInf-3">Suppose <span class="process-math">\(U\)</span> and <span class="process-math">\(K\)</span> are real numbers.  If <span class="process-math">\(f(x)=K\)</span> for all <span class="process-math">\(x\lt U\)</span> then <span class="process-math">\(\limit{x}{-\infty}{f(x)}=K.\)</span>
 </div></article> <article class="problem example-like" id="SECTIONLimitLaws-2-12"><h4 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">17.35</span><span class="period">.</span>
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">17.35</span><span class="period">.</span>
 </h4>
 <div class="para" id="SECTIONLimitLaws-2-12-1-1">Use the proof of <a href="" class="xref" data-knowl="./knowl/xref/THEOREMLimConstInf.html" title="Theorem 17.33: The Limit at Infinity of a Constant Function is the Constant">Theorem 17.33</a> as a model to construct a proof of   <a href="" class="xref" data-knowl="./knowl/xref/THEOREMLimConstNegInf.html" title="Theorem 17.34: The Limit at Negative Infinity of a Constant Function is the Constant">Theorem 17.34</a>.</div></article> <article class="theorem theorem-like" id="THEOREMLimConstPoint"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">17.36</span><span class="period">.</span><span class="space"> </span><span class="title">The Limit at a Point of a Constant Function is the Constant.</span>
 </h4>
 <div class="para" id="THEOREMLimConstPoint-3">Suppose <span class="process-math">\(K\)</span> is a real number and <span class="process-math">\(a\)</span> is a point in the domain of <span class="process-math">\(f(x)\)</span> .  If <span class="process-math">\(f(x)=K\)</span> near <span class="process-math">\(a\)</span> then <span class="process-math">\(\limit{x}{a}{f(x)}=K.\)</span>
 </div></article> <article class="problem example-like" id="SECTIONLimitLaws-2-14"><h4 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">17.37</span><span class="period">.</span>
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">17.37</span><span class="period">.</span>
 </h4>
 <div class="para" id="SECTIONLimitLaws-2-14-1-1">Use the proof of <a href="" class="xref" data-knowl="./knowl/xref/THEOREMLimConstInf.html" title="Theorem 17.33: The Limit at Infinity of a Constant Function is the Constant">Theorem 17.33</a> as a model to construct a proof of   <a href="" class="xref" data-knowl="./knowl/xref/THEOREMLimConstPoint.html" title="Theorem 17.36: The Limit at a Point of a Constant Function is the Constant">Theorem 17.36</a>.</div>
 <div class="solutions"><details id="SECTIONLimitLaws-2-14-2" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="SECTIONLimitLaws-2-14-2-1">Despite the apparent simplicity of this problem there is a lot going on here. Recall that “near” means that <span class="process-math">\(f(x)=K\)</span> on some open interval, say <span class="process-math">\((c,d)\text{,}\)</span> containing <span class="process-math">\(a\)</span> except possibly at <span class="process-math">\(a\)</span> (see <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONnear.html" title="Definition 14.6: Near">Definition 14.6</a>). You need to find a <span class="process-math">\(\delta\gt0\)</span> such that if <span class="process-math">\(-\delta\lt x-a \lt\delta\)</span> then <span class="process-math">\(f(x)=K\text{.}\)</span> That is, you need an interval of length <span class="process-math">\(2\delta\)</span> with <span class="process-math">\(a\)</span> as the midpoint where <span class="process-math">\(f(x)=K\text{.}\)</span> But there is no guarantee that <span class="process-math">\(a\)</span> is the midpoint of the interval <span class="process-math">\((c,d)\text{.}\)</span> This would be an excellent time to engage your visual intuition by drawing a sketch so you can “see” the problem.</div></div></details></div></article></section><section class="subsection" id="SUBSECTIONlimit-sum-at"><h4 class="heading hide-type">
@@ -1335,7 +1342,7 @@ f(x)=
 </h5>
 <div class="para" id="THEOREMLimSumInf-3"> If <span class="process-math">\(\limit{x}{\infty}{f(x)}=L_f\)</span> and <span class="process-math">\(\limit{x}{\infty}{g(x)}=L_g\)</span> then <span class="process-math">\(\limit{x}{\infty}{\left(f(x)+g(x)\right)}=L_f+L_g.\)</span>
 </div></article><article class="investigation project-like" id="SUBSECTIONlimit-sum-at-3"><h5 class="heading">
-<span class="type">Scrapwork</span><span class="space"> </span><span class="codenumber">17.8</span><span class="period">.</span>
+<span class="type">Puzzle</span><span class="space"> </span><span class="codenumber">17.8</span><span class="period">.</span>
 </h5>
 <div class="para" id="SUBSECTIONlimit-sum-at-3-1">As always  we begin by assuming that <span class="process-math">\(\eps\gt 0\)</span> has been given.</div> <div class="para logical" id="SUBSECTIONlimit-sum-at-3-2">
 <div class="para">We want to show that if <span class="process-math">\(x\)</span> is large enough (larger than some specified <span class="process-math">\(B\)</span>) then</div>
@@ -1352,7 +1359,7 @@ f(x)=
 }\limit{x}{\infty}{g(x)}=L_g,
 \end{equation*}
 </div>
-<div class="para">which means that we can make <span class="process-math">\(\abs{f(x)-L_f}\)</span> and <span class="process-math">\(\abs{g(x)-L_g}\)</span> as close to zero as we wish, provided we make <span class="process-math">\(x\)</span> large enough. Rewriting the left-hand side of <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONDerivSumInf.html" title="Equation 17.5">Equation (17.5)</a> and invoking the Triangle Inequality we see that</div>
+<div class="para">which means that we can make <span class="process-math">\(\abs{f(x)-L_f}\)</span> and <span class="process-math">\(\abs{g(x)-L_g}\)</span> as close to zero as we wish, provided we make <span class="process-math">\(x\)</span> large enough. Rewriting the left-hand side of <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONDerivSumInf.html" title="Equation 17.5">equation (17.5)</a> and invoking the Triangle Inequality we see that</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQUATIONDerivSumInf.html" id="SUBSECTIONlimit-sum-at-3-2-9">
 \begin{align*}
 \abs{(\textcolor{red}{f(x)}
@@ -1379,15 +1386,15 @@ f(x)=
 </div>
 <div class="para">Therefore <span class="process-math">\(\limit{x}{\infty}{\left(f(x)+g(x)\right)}=L_f+L_g.\)</span>
 </div>
-</div> <div class="para" id="SUBSECTIONlimit-sum-at-4-2"><em class="alert"><span class="process-math">\(\halmos\)</span></em></div></article></details><article class="problem example-like" id="SUBSECTIONlimit-sum-at-5"><h5 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">17.39</span><span class="period">.</span>
+</div></article></details><article class="problem example-like" id="SUBSECTIONlimit-sum-at-5"><h5 class="heading">
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">17.39</span><span class="period">.</span>
 </h5>
 <div class="para" id="SUBSECTIONlimit-sum-at-5-1-1">Use the proof of <a href="" class="xref" data-knowl="./knowl/xref/THEOREMLimSumInf.html" title="Theorem 17.38: The Limit of a Sum at Infinity">Theorem 17.38</a> as a model to construct a proof of   <a href="" class="xref" data-knowl="./knowl/xref/THEOREMLimSumNegInf.html" title="Theorem 17.40: The Limit of a Sum at Negative Infinity">Theorem 17.40</a> below.</div></article><article class="theorem theorem-like" id="THEOREMLimSumNegInf"><h5 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">17.40</span><span class="period">.</span><span class="space"> </span><span class="title">The Limit of a Sum at Negative Infinity.</span>
 </h5>
 <div class="para" id="THEOREMLimSumNegInf-3"> If <span class="process-math">\(\limit{x}{-\infty}{f(x)}=L_f\)</span> and <span class="process-math">\(\limit{x}{-\infty}{g(x)}=L_g\)</span> then <span class="process-math">\(\limit{x}{-\infty}{\left(f(x)+g(x)\right)}=L_f+L_g.\)</span>
 </div></article><article class="problem example-like" id="SUBSECTIONlimit-sum-at-7"><h5 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">17.41</span><span class="period">.</span>
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">17.41</span><span class="period">.</span>
 </h5>
 <div class="para" id="SUBSECTIONlimit-sum-at-7-1-1">Use the proof of <a href="" class="xref" data-knowl="./knowl/xref/THEOREMLimSumInf.html" title="Theorem 17.38: The Limit of a Sum at Infinity">Theorem 17.38</a> as a model to construct a proof of   <a href="" class="xref" data-knowl="./knowl/xref/THEOREMLimSumPoint.html" title="Theorem 17.42: Limit of a Sum at a Point">Theorem 17.42</a> below.</div></article><article class="theorem theorem-like" id="THEOREMLimSumPoint"><h5 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">17.42</span><span class="period">.</span><span class="space"> </span><span class="title">Limit of a Sum at a Point.</span>
@@ -1439,8 +1446,8 @@ B_\alpha, B_\beta)\text{.}\)</span> Then if <span class="process-math">\(x\gt B\
 </div>
 <div class="para">In particular, <span class="process-math">\(-\eps \lt  f(x)-L \lt  \eps \)</span> so from <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONAltDefAbsVal.html" title="Equation 17.4">(17.4)</a> we see that <span class="process-math">\(\abs{f(x)-L}\lt \eps \text{.}\)</span> Therefore <span class="process-math">\(\limit{x}{\infty}{f(x)} = L\text{.}\)</span>
 </div>
-</div> <div class="para" id="SUBSECTIONsqueeze-theorem-3-2"><em class="alert"><span class="process-math">\(\halmos\)</span></em></div></article></details><article class="problem example-like" id="SUBSECTIONsqueeze-theorem-4"><h5 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">17.44</span><span class="period">.</span>
+</div></article></details><article class="problem example-like" id="SUBSECTIONsqueeze-theorem-4"><h5 class="heading">
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">17.44</span><span class="period">.</span>
 </h5>
 <div class="para" id="SUBSECTIONsqueeze-theorem-4-1-1">Use  the proof of <a href="" class="xref" data-knowl="./knowl/xref/THEOREMSqThmInfinity.html" title="Theorem 17.43: The Squeeze  Theorem at Infinity">Theorem 17.43</a> as a model to prove <a href="" class="xref" data-knowl="./knowl/xref/THEOREMSqThmNegInfinity.html" title="Theorem 17.45: The Squeeze  Theorem at Negative Infinity">Theorem 17.45</a> below.</div></article><article class="theorem theorem-like" id="THEOREMSqThmNegInfinity"><h5 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">17.45</span><span class="period">.</span><span class="space"> </span><span class="title">The Squeeze  Theorem at Negative Infinity.</span>
@@ -1467,7 +1474,7 @@ B_\alpha, B_\beta)\text{.}\)</span> Then if <span class="process-math">\(x\gt B\
 </div>
 <div class="para">also.</div>
 </div></article><article class="problem example-like" id="SUBSECTIONsqueeze-theorem-6"><h5 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">17.46</span><span class="period">.</span>
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">17.46</span><span class="period">.</span>
 </h5>
 <div class="para" id="SUBSECTIONsqueeze-theorem-6-1-1">Use  the proof of <a href="" class="xref" data-knowl="./knowl/xref/THEOREMSqThmInfinity.html" title="Theorem 17.43: The Squeeze  Theorem at Infinity">Theorem 17.43</a> as a model to prove <a href="" class="xref" data-knowl="./knowl/xref/THEOREMSqThmFinite.html" title="Theorem 17.47: The Squeeze  Theorem, at a Point">Theorem 17.47</a> below.</div></article><article class="theorem theorem-like" id="THEOREMSqThmFinite"><h5 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">17.47</span><span class="period">.</span><span class="space"> </span><span class="title">The Squeeze  Theorem, at a Point.</span>
@@ -1515,10 +1522,10 @@ f\left(\tlimit{x}{\infty}{g(x)}\right).
 \end{equation*}
 </div>
 </div></article><article class="investigation project-like" id="SECTIONlimit-composition-6"><h5 class="heading">
-<span class="type">Scrapwork</span><span class="space"> </span><span class="codenumber">17.9</span><span class="period">.</span>
-</h5>          <div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="external/images/LimComp2.png" class="contained"></div> <div class="para" id="SECTIONlimit-composition-6-2">It will be  helpful to have a visual guide for this proof so we will rely on diagrams here in the scrapwork. Our finalized  proof below will not.</div> <div class="para" id="SECTIONlimit-composition-6-3">Let <span class="process-math">\(\eps\gt0\)</span> be given. We need to show that we can find a <span class="process-math">\(B\gt0\)</span> such that if <span class="process-math">\(x\gt B\)</span> then <span class="process-math">\(\abs{f(g(x))-f(L_g)}\lt\eps\text{.}\)</span>
+<span class="type">Puzzle</span><span class="space"> </span><span class="codenumber">17.9</span><span class="period">.</span>
+</h5>          <div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="external/DC/LimComp2.png" class="contained"></div> <div class="para" id="SECTIONlimit-composition-6-2">It will be  helpful to have a visual guide for this proof so we will rely on diagrams here in the scrapwork. Our finalized  proof below will not.</div> <div class="para" id="SECTIONlimit-composition-6-3">Let <span class="process-math">\(\eps\gt0\)</span> be given. We need to show that we can find a <span class="process-math">\(B\gt0\)</span> such that if <span class="process-math">\(x\gt B\)</span> then <span class="process-math">\(\abs{f(g(x))-f(L_g)}\lt\eps\text{.}\)</span>
 </div> <div class="para" id="SECTIONlimit-composition-6-4">Since <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(y=L_g\)</span> <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONcontinuity.html" title="Definition 14.15: Continuity at a Point">Definition 14.15</a> tells us that <span class="process-math">\(\tlimit{y}{L_g}{f(y)}=f(L_g)\)</span>
-</div> <div class="para" id="SECTIONlimit-composition-6-5">Thus <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONlimits-at-real.html" title="Definition 17.22: The Limit at a Point">Definition 17.22</a>  tells us that there there is a real number <span class="process-math">\(\delta&gt;0\)</span> such that if <span class="process-math">\(\abs{y-L_g}\lt\delta\)</span> then <span class="process-math">\(\abs{f(y)-f(L_g)}\lt\eps\text{,}\)</span> as visualized in the sketch at the right.</div> <div class="para" id="SECTIONlimit-composition-6-6">Next, consider what it means to say that <span class="process-math">\(\tlimit{x}{\infty}{g(x)}=L_g\text{.}\)</span> It means that if we take <span class="process-math">\(x\)</span> large enough we can make <span class="process-math">\(g(x)\)</span> as close to <span class="process-math">\(L_g\)</span> as we would like. In particular, we would like for <span class="process-math">\(\abs{g(x)-L_g}\lt\delta\)</span> as in the sketch below.</div> <div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/images/LimComp1.png" class="contained"></div>  <div class="para" id="SECTIONlimit-composition-6-8">Therefore, we can find a number <span class="process-math">\(B\)</span> such that for every <span class="process-math">\(x\gt B\text{,}\)</span> <span class="process-math">\(\abs{g(x)-L_g}\lt\delta\text{.}\)</span> If we take  <span class="process-math">\(y=g(x)\text{,}\)</span> then we have <span class="process-math">\(\abs{y-L_g}\lt\delta\text{.}\)</span>
+</div> <div class="para" id="SECTIONlimit-composition-6-5">Thus <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONlimits-at-real.html" title="Definition 17.22: The Limit at a Point">Definition 17.22</a>  tells us that there there is a real number <span class="process-math">\(\delta&gt;0\)</span> such that if <span class="process-math">\(\abs{y-L_g}\lt\delta\)</span> then <span class="process-math">\(\abs{f(y)-f(L_g)}\lt\eps\text{,}\)</span> as visualized in the sketch at the right.</div> <div class="para" id="SECTIONlimit-composition-6-6">Next, consider what it means to say that <span class="process-math">\(\tlimit{x}{\infty}{g(x)}=L_g\text{.}\)</span> It means that if we take <span class="process-math">\(x\)</span> large enough we can make <span class="process-math">\(g(x)\)</span> as close to <span class="process-math">\(L_g\)</span> as we would like. In particular, we would like for <span class="process-math">\(\abs{g(x)-L_g}\lt\delta\)</span> as in the sketch below.</div> <div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/DC/LimComp1.png" class="contained"></div>  <div class="para" id="SECTIONlimit-composition-6-8">Therefore, we can find a number <span class="process-math">\(B\)</span> such that for every <span class="process-math">\(x\gt B\text{,}\)</span> <span class="process-math">\(\abs{g(x)-L_g}\lt\delta\text{.}\)</span> If we take  <span class="process-math">\(y=g(x)\text{,}\)</span> then we have <span class="process-math">\(\abs{y-L_g}\lt\delta\text{.}\)</span>
 </div> <div class="para logical" id="SECTIONlimit-composition-6-9">
 <div class="para">From the continuity of <span class="process-math">\(f\)</span> at <span class="process-math">\(L_g\)</span> we know  that <span class="process-math">\(\abs{g(x)-L_g}=\abs{y-L_g}\lt\delta\)</span> means that</div>
 <div class="displaymath process-math">
@@ -1549,8 +1556,8 @@ f\left(\tlimit{x}{\infty}{g(x)}\right).
 <div class="para">and since  <span class="process-math">\(\abs{y-L_g}\lt\delta\)</span> we see, from the continuity of <span class="process-math">\(f\)</span> at <span class="process-math">\(L_g\)</span> that <span class="process-math">\(\abs{f(y)-f(L_g)}\lt\eps\text{.}\)</span> Therefore <span class="process-math">\(\limit{x}{\infty}{f(g(x))} = f(L_g) =
 f\left(\tlimit{x}{\infty}{g(x)}\right).\)</span>
 </div>
-</div> <div class="para" id="SECTIONlimit-composition-7-2"><em class="alert"><span class="process-math">\(\halmos\)</span></em></div></article></details><article class="problem example-like" id="SECTIONlimit-composition-8"><h5 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">17.50</span><span class="period">.</span>
+</div></article></details><article class="problem example-like" id="SECTIONlimit-composition-8"><h5 class="heading">
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">17.50</span><span class="period">.</span>
 </h5>
 <div class="para" id="SECTIONlimit-composition-8-1-1">Use the proof of <a href="" class="xref" data-knowl="./knowl/xref/THEOREMLimCompInf.html" title="Theorem 17.49: The Limit of a Composition at Infinity">Theorem 17.49</a> as a model to construct a proof of <a href="" class="xref" data-knowl="./knowl/xref/THEOREMLimCompNegInf.html" title="Theorem 17.51: The Limit of a Composition at Negative Infinity">Theorem 17.51</a> below.</div></article><article class="theorem theorem-like" id="THEOREMLimCompNegInf"><h5 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">17.51</span><span class="period">.</span><span class="space"> </span><span class="title">The Limit of a Composition at Negative Infinity.</span>
@@ -1564,7 +1571,7 @@ f\left(\tlimit{x}{-\infty}{g(x)}\right).
 \end{equation*}
 </div>
 </div></article><article class="problem example-like" id="SECTIONlimit-composition-10"><h5 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">17.52</span><span class="period">.</span>
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">17.52</span><span class="period">.</span>
 </h5>
 <div class="para" id="SECTIONlimit-composition-10-1-1">Use the proof of <a href="" class="xref" data-knowl="./knowl/xref/THEOREMLimCompInf.html" title="Theorem 17.49: The Limit of a Composition at Infinity">Theorem 17.49</a> as a model to construct a proof of <a href="" class="xref" data-knowl="./knowl/xref/THEOREMLimCompPoint.html" title="Theorem 17.53: The Limit of a Composition at a Point">Theorem 17.53</a> below.</div></article><article class="theorem theorem-like" id="THEOREMLimCompPoint"><h5 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">17.53</span><span class="period">.</span><span class="space"> </span><span class="title">The Limit of a Composition at a Point.</span>
@@ -1643,7 +1650,7 @@ f\left(\tlimit{x}{-\infty}{g(x)}\right).
 <div class="para">Therefore <span class="process-math">\(\limit{x}{\infty}{f(x)\cdot
 g(x)}=\limit{x}{\infty}{f(x)}\cdot\limit{x}{\infty}{g(x)}\text{.}\)</span>
 </div>
-</div> <div class="para" id="PROOFLemmaLimProd1-4"><em class="alert"><span class="process-math">\(\halmos\)</span></em></div></article></details><section class="paragraphs" id="SUBSECTIONlimit-product-at-7"><h5 class="heading"><span class="title">Proving Lemma 17.55.</span></h5>  <div class="para logical" id="SUBSECTIONlimit-product-at-7-2">
+</div></article></details><section class="paragraphs" id="SUBSECTIONlimit-product-at-7"><h5 class="heading"><span class="title">Proving Lemma 17.55.</span></h5>  <div class="para logical" id="SUBSECTIONlimit-product-at-7-2">
 <div class="para">To prove <a href="" class="xref" data-knowl="./knowl/xref/LEMMALimProd1.html" title="Lemma 17.55">Lemma 17.55</a> we need to guarantee that if <span class="process-math">\(x\)</span> is large enough then</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/LEMMALimProd1.html">
 \begin{equation*}
@@ -1673,8 +1680,8 @@ L_f-1\amp\lt f(x)\lt L_f+1.
 </div>
 <div class="para">and it follows that if <span class="process-math">\(x\gt\beta\)</span> then <span class="process-math">\(\abs{f(x)}\lt N\text{.}\)</span>
 </div>
-</div> <div class="para" id="SUBSECTIONlimit-product-at-7-6-2"><em class="alert"><span class="process-math">\(\halmos\)</span></em></div></article></details> <article class="exercise exercise-like" id="SUBSECTIONlimit-product-at-7-7"><h6 class="heading">
-<span class="type">Drill</span><span class="space"> </span><span class="codenumber">17.58</span><span class="period">.</span>
+</div></article></details> <article class="exercise exercise-like" id="SUBSECTIONlimit-product-at-7-7"><h6 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">17.58</span><span class="period">.</span>
 </h6>
 <div class="para" id="SUBSECTIONlimit-product-at-7-7-1-1">Draw a convincing diagram of <a href="" class="xref" data-knowl="./knowl/xref/LEMMABounded1.html" title="Lemma 17.57">Lemma 17.57</a> and its proof.</div></article> <details id="SUBSECTIONlimit-product-at-7-8" class="hiddenproof born-hidden-knowl"><summary><h6 class="heading"><span class="title">Proof of Lemma 17.55.</span></h6></summary><article class="hiddenproof"> <div class="para logical" id="SUBSECTIONlimit-product-at-7-8-2">
 <div class="para">From <a href="" class="xref" data-knowl="./knowl/xref/LEMMABounded1.html" title="Lemma 17.57">Lemma 17.57</a> we see that there are positive real numbers <span class="process-math">\(N\)</span> and <span class="process-math">\(\beta\text{,}\)</span> such that for all <span class="process-math">\(x\gt\beta\)</span>
@@ -1702,7 +1709,7 @@ L_f-1\amp\lt f(x)\lt L_f+1.
 </div>
 <div class="para">Therefore    <span class="process-math">\(\tlimit{x}{\infty}{\left(f(x)\cdot g(x)-f(x)\cdot L_g\right)}=0.\)</span>
 </div>
-</div> <div class="para" id="SUBSECTIONlimit-product-at-7-8-3"><em class="alert"><span class="process-math">\(\halmos\)</span></em></div></article></details></section><section class="paragraphs" id="SUBSECTIONlimit-product-at-8"><h5 class="heading"><span class="title">Proving Lemma 17.56.</span></h5> <div class="para logical" id="SUBSECTIONlimit-product-at-8-2">
+</div></article></details></section><section class="paragraphs" id="SUBSECTIONlimit-product-at-8"><h5 class="heading"><span class="title">Proving Lemma 17.56.</span></h5> <div class="para logical" id="SUBSECTIONlimit-product-at-8-2">
 <div class="para">To prove <a href="" class="xref" data-knowl="./knowl/xref/LEMMALimProd2.html" title="Lemma 17.56">Lemma 17.56</a> we need to guarantee that if <span class="process-math">\(x\)</span> is large enough then</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/LEMMALimProd2.html ./knowl/xref/LEMMALimProd1.html">
 \begin{equation*}
@@ -1724,7 +1731,6 @@ L_f-1\amp\lt f(x)\lt L_f+1.
 </div>
 <div class="para" id="PROOFLemmaLimProd2-3-1-1-5">Therefore <span class="process-math">\(\tlimit{x}{\infty}{\left(L_gf(x)-L_gL_f\right)}=0\)</span> when <span class="process-math">\(L_g\neq0\text{.}\)</span>
 </div>
-<div class="para" id="PROOFLemmaLimProd2-3-1-1-6"><em class="alert"><span class="process-math">\(\halmos\)</span> (Case 1)</em></div>
 </dd>
 <dt id="PROOFLemmaLimProd2-3-1-2">Case 2:</dt>
 <dd>
@@ -1733,34 +1739,31 @@ L_f-1\amp\lt f(x)\lt L_f+1.
 </div>
 <div class="para" id="PROOFLemmaLimProd2-3-1-2-4">Therefore <span class="process-math">\(\tlimit{x}{\infty}{\left(L_gf(x)-L_gL_f\right)}=0\)</span> when <span class="process-math">\(L_g=0\text{.}\)</span>
 </div>
-<div class="para" id="PROOFLemmaLimProd2-3-1-2-5"><em class="alert"><span class="process-math">\(\halmos\)</span> Case 2</em></div>
 </dd>
 </dl>
 <div class="para">Since the limit is zero in both cases we see that <span class="process-math">\(\tlimit{x}{\infty}{\left(L_gf(x)-L_gL_f\right)}=0\text{.}\)</span>
 </div>
-</div> <div class="para" id="PROOFLemmaLimProd2-4"><em class="alert"><span class="process-math">\(\halmos\)</span></em></div></article></details> <div class="para" id="SUBSECTIONlimit-product-at-8-6">Having completed the proofs of <a href="" class="xref" data-knowl="./knowl/xref/LEMMALimProd1.html" title="Lemma 17.55">Lemma 17.55</a> and <a href="" class="xref" data-knowl="./knowl/xref/LEMMALimProd1.html" title="Lemma 17.55">Lemma 17.55</a> our proof of <a href="" class="xref" data-knowl="./knowl/xref/THEOREMlimit-product-infinity.html" title="Theorem 17.54: The Limit of a Product at Infinity">Theorem 17.54</a> is now also complete.</div> <div class="para" id="SUBSECTIONlimit-product-at-8-7">The proofs of these two lemmas was not for the faint of heart.  None of the individual pieces was difficult to follow, but putting them all together in the right order was delicate.</div> <div class="para" id="SUBSECTIONlimit-product-at-8-8">On the other hand, once <a href="" class="xref" data-knowl="./knowl/xref/LEMMALimProd1.html" title="Lemma 17.55">Lemma 17.55</a> and   <a href="" class="xref" data-knowl="./knowl/xref/LEMMALimProd2.html" title="Lemma 17.56">Lemma 17.56</a> are known the proof of <a href="" class="xref" data-knowl="./knowl/xref/THEOREMlimit-product-infinity.html" title="Theorem 17.54: The Limit of a Product at Infinity">Theorem 17.54</a> becomes even simpler as the next drill shows.</div> <article class="problem example-like" id="SUBSECTIONlimit-product-at-8-9"><h6 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">17.59</span><span class="period">.</span>
+</div></article></details> <div class="para" id="SUBSECTIONlimit-product-at-8-6">Having completed the proofs of <a href="" class="xref" data-knowl="./knowl/xref/LEMMALimProd1.html" title="Lemma 17.55">Lemma 17.55</a> and <a href="" class="xref" data-knowl="./knowl/xref/LEMMALimProd1.html" title="Lemma 17.55">Lemma 17.55</a> our proof of <a href="" class="xref" data-knowl="./knowl/xref/THEOREMlimit-product-infinity.html" title="Theorem 17.54: The Limit of a Product at Infinity">Theorem 17.54</a> is now also complete.</div> <div class="para" id="SUBSECTIONlimit-product-at-8-7">The proofs of these two lemmas was not for the faint of heart.  None of the individual pieces was difficult to follow, but putting them all together in the right order was delicate.</div> <div class="para" id="SUBSECTIONlimit-product-at-8-8">On the other hand, once <a href="" class="xref" data-knowl="./knowl/xref/LEMMALimProd1.html" title="Lemma 17.55">Lemma 17.55</a> and   <a href="" class="xref" data-knowl="./knowl/xref/LEMMALimProd2.html" title="Lemma 17.56">Lemma 17.56</a> are known the proof of <a href="" class="xref" data-knowl="./knowl/xref/THEOREMlimit-product-infinity.html" title="Theorem 17.54: The Limit of a Product at Infinity">Theorem 17.54</a> becomes even simpler as the next drill shows.</div> <article class="problem example-like" id="SUBSECTIONlimit-product-at-8-9"><h6 class="heading">
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">17.59</span><span class="period">.</span>
 </h6>
 <div class="introduction" id="SUBSECTIONlimit-product-at-8-9-1"><div class="para" id="SUBSECTIONlimit-product-at-8-9-1-1">As you’ve seen using the limit definition (using <span class="process-math">\(\eps\)</span> and <span class="process-math">\(\delta\)</span>) to prove theorems is hard. But, as we said in <a href="" class="xref" data-knowl="./knowl/xref/DIGRESSIONWhyProveTheorems.html" title="Paragraphs: DIGRESSION: Why We Prove Theorems">DIGRESSION: Why We Prove Theorems</a>, the whole point of proving theorems is to give ourselves more refined tools that we can use instead of resorting to definitions.</div></div>
 <article class="task exercise-like" id="SUBSECTIONlimit-product-at-8-9-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
 <div class="para logical" id="SUBSECTIONlimit-product-at-8-9-2-1-1">
 <div class="para">Now that we have <a href="" class="xref" data-knowl="./knowl/xref/LEMMALimProd1.html" title="Lemma 17.55">Lemma 17.55</a> and <a href="" class="xref" data-knowl="./knowl/xref/LEMMALimProd2.html" title="Lemma 17.56">Lemma 17.56</a> there is actually a simpler way to prove <a href="" class="xref" data-knowl="./knowl/xref/THEOREMlimit-product-infinity.html" title="Theorem 17.54: The Limit of a Product at Infinity">Theorem 17.54</a>. Observe that</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/LEMMALimProd1.html ./knowl/xref/LEMMALimProd2.html ./knowl/xref/THEOREMlimit-product-infinity.html ./knowl/xref/LEMMALimProd1.html ./knowl/xref/LEMMALimProd2.html" id="EQUATIONLimProd3">
-\begin{equation}
-\begin{split}
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/LEMMALimProd1.html ./knowl/xref/LEMMALimProd2.html ./knowl/xref/THEOREMlimit-product-infinity.html ./knowl/xref/LEMMALimProd1.html ./knowl/xref/LEMMALimProd2.html" id="SUBSECTIONlimit-product-at-8-9-2-1-1-4">
+\begin{align}
 \underbrace{f(x)\cdot g(x) - L_g\cdot L_f}_{\Gamma(x)} = \amp{}\underbrace{\left[f(x)\cdot g(x)-f(x)\cdot
-L_g\right]}_{\alpha(x)}\\
+L_g\right]}_{\alpha(x)}\notag\\
 \amp{}+\underbrace{\left[f(x)\cdot L_g - L_f\cdot
-L_g\right]}_{\beta(x)}
-\end{split}\tag{17.6}
-\end{equation}
+L_g\right]}_{\beta(x)}\tag{17.6}
+\end{align}
 </div>
 <div class="para">and complete the proof by citing <a href="" class="xref" data-knowl="./knowl/xref/LEMMALimProd1.html" title="Lemma 17.55">Lemma 17.55</a> and <a href="" class="xref" data-knowl="./knowl/xref/LEMMALimProd2.html" title="Lemma 17.56">Lemma 17.56</a> and the appropriate, previously proven, limit theorem.</div>
 </div>
 <div class="solutions"><details id="SUBSECTIONlimit-product-at-8-9-2-2" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="SUBSECTIONlimit-product-at-8-9-2-2-1">The right side of <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONLimProd3.html" title="Equation 17.6">equation (17.6)</a> is a sum.</div></div></details></div></article><article class="task exercise-like" id="SUBSECTIONlimit-product-at-8-9-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>
 <div class="para" id="SUBSECTIONlimit-product-at-8-9-3-1-1">
 <a href="" class="xref" data-knowl="./knowl/xref/LEMMALimProd2.html" title="Lemma 17.56">Lemma 17.56</a> can also be proved without resorting to the limit definition (using <span class="process-math">\(\eps\)</span> and <span class="process-math">\(\delta\)</span>).  Prove it by citing <a href="" class="xref" data-knowl="./knowl/xref/LEMMALimProd1.html" title="Lemma 17.55">Lemma 17.55</a> and the appropriate, previously proved, limit theorems.</div></article></article>                              <div class="para" id="SUBSECTIONlimit-product-at-8-10">If you find yourself becoming completely absorbed in, and possibly even enjoying the details of these arguments you are surely a mathematician by inclination, if not by training (yet). There are more, and more interesting, results where these came from.  Change your major and come join us. Sometimes we bring cookies.</div> <article class="problem example-like" id="SUBSECTIONlimit-product-at-8-11"><h6 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">17.60</span><span class="period">.</span>
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">17.60</span><span class="period">.</span>
 </h6>
 <div class="para" id="SUBSECTIONlimit-product-at-8-11-1-1">Use our proof of <a href="" class="xref" data-knowl="./knowl/xref/THEOREMlimit-product-infinity.html" title="Theorem 17.54: The Limit of a Product at Infinity">Theorem 17.54</a> as a model to prove <a href="" class="xref" data-knowl="./knowl/xref/THEOREMlimit-product-negative-infinity.html" title="Theorem 17.61: The Limit of a Product at Negative Infinity">Theorem 17.61</a> below.</div></article> <article class="theorem theorem-like" id="THEOREMlimit-product-negative-infinity"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">17.61</span><span class="period">.</span><span class="space"> </span><span class="title">The Limit of a Product at Negative Infinity.</span>
@@ -1780,7 +1783,7 @@ L_g\right]}_{\beta(x)}
 \end{equation*}
 </div>
 </div></article> <article class="problem example-like" id="SUBSECTIONlimit-product-at-8-13"><h6 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">17.62</span><span class="period">.</span>
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">17.62</span><span class="period">.</span>
 </h6>
 <div class="para" id="SUBSECTIONlimit-product-at-8-13-1-1">Use our proof of <a href="" class="xref" data-knowl="./knowl/xref/THEOREMlimit-product-infinity.html" title="Theorem 17.54: The Limit of a Product at Infinity">Theorem 17.54</a> as a model to prove <a href="" class="xref" data-knowl="./knowl/xref/THEOREMLimProdPoint.html" title="Theorem 17.63: Limit of a Product at a Point">Theorem 17.63</a> below.</div></article> <article class="theorem theorem-like" id="THEOREMLimProdPoint"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">17.63</span><span class="period">.</span><span class="space"> </span><span class="title">Limit of a Product at a Point.</span>
@@ -1799,9 +1802,9 @@ L_g\right]}_{\beta(x)}
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">17.64</span><span class="period">.</span>
 </h5>
 <div class="para" id="LEMMA1overxIsCont-1">The function <span class="process-math">\(f(x)=\frac1x\)</span> is continuous at <span class="process-math">\(a\neq0\text{.}\)</span>
-</div></article><div class="para" id="SUBSECTIONOneOverXIsCont-3">You will need <a href="" class="xref" data-knowl="./knowl/xref/LEMMA1overxIsCont.html" title="Lemma 17.64">Lemma 17.64</a> to solve <a href="" class="xref" data-knowl="./knowl/xref/PROBLEMProofOfQuotLim.html" title="Problem 17.67">Problem 17.67</a> below.  We will provide the scrapwork and leave the formal proof as a problem for you.</div>
+</div></article><div class="para" id="SUBSECTIONOneOverXIsCont-3">You will need <a href="" class="xref" data-knowl="./knowl/xref/LEMMA1overxIsCont.html" title="Lemma 17.64">Lemma 17.64</a> to solve <a href="" class="xref" data-knowl="./knowl/xref/PROBLEMProofOfQuotLim.html" title="Drill 17.67">Problem 17.67</a> below.  We will provide the scrapwork and leave the formal proof as a problem for you.</div>
 <article class="investigation project-like" id="SUBSECTIONOneOverXIsCont-4"><h5 class="heading">
-<span class="type">Scrapwork</span><span class="space"> </span><span class="codenumber">17.10</span><span class="period">.</span>
+<span class="type">Puzzle</span><span class="space"> </span><span class="codenumber">17.10</span><span class="period">.</span>
 </h5>
 <div class="para" id="SUBSECTIONOneOverXIsCont-4-1">To keep things simple (this is scrapwork, after all) we will first assume that <span class="process-math">\(a\gt0\text{.}\)</span> If we have an <span class="process-math">\(\eps\gt0\)</span> then by <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONcontinuity.html" title="Definition 14.15: Continuity at a Point">Theorem 14.15</a> we need to find a <span class="process-math">\(\delta\gt0\)</span> such that if <span class="process-math">\(\abs{x-a}\lt\delta\)</span> then <span class="process-math">\(\abs{\frac1x-\frac1a}\lt\eps\text{.}\)</span> As usual we work backwards.</div> <div class="para logical" id="SUBSECTIONOneOverXIsCont-4-2">
 <div class="para">Combining the fractions we see that</div>
@@ -1851,7 +1854,7 @@ L_g\right]}_{\beta(x)}
 <div class="para" id="SUBSECTIONOneOverXIsCont-4-6-2">Notice that we are using the left side of <a href="" class="xref" data-knowl="./knowl/xref/EQUATION1overXBndFromZero.html" title="Equation 17.7">equation (17.7)</a>
 </div></aside> <div class="para" id="SUBSECTIONOneOverXIsCont-4-7">Therefore <span class="process-math">\(\abs{\frac1x-\frac1a}=\frac{\abs{x-a}}{a}\cdot\frac{1}{\abs{x}}\lt\frac{2}{a^2}\abs{x-a}\text{.}\)</span> Thus if we choose <span class="process-math">\(\delta\)</span> to be  the lesser of <span class="process-math">\(\frac{a}{2}\)</span> and <span class="process-math">\(\frac{\eps a^2}{2}\)</span> we have everything we need to conclude that <span class="process-math">\(\tlimit{x}{a}{\frac1x}=\frac1a\)</span> for <span class="process-math">\(a\gt 0.\)</span>
 </div> <div class="para" id="SUBSECTIONOneOverXIsCont-4-8"><em class="alert">END OF SCRAPWORK</em></div></article><article class="problem example-like" id="PROBLEM1overXIsCont"><h5 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">17.65</span><span class="period">.</span>
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">17.65</span><span class="period">.</span>
 </h5>
 <div class="introduction" id="PROBLEM1overXIsCont-1"><div class="para" id="PROBLEM1overXIsCont-1-1"></div></div>
 <article class="task exercise-like" id="PROBLEM1overXIsCont-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
@@ -1880,7 +1883,7 @@ L_g\right]}_{\beta(x)}
 \end{equation*}
 </div>
 </div></article><article class="problem example-like" id="PROBLEMProofOfQuotLim"><h5 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">17.67</span><span class="period">.</span>
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">17.67</span><span class="period">.</span>
 </h5>
 <div class="introduction" id="PROBLEMProofOfQuotLim-1"><div class="para" id="PROBLEMProofOfQuotLim-1-1"></div></div>
 <article class="task exercise-like" id="PROBLEMProofOfQuotLim-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
@@ -1921,14 +1924,14 @@ L_g\right]}_{\beta(x)}
 <div class="para">provided that for each <span class="process-math">\(\eps\gt0\text{,}\)</span> there is a <span class="process-math">\(\delta\)</span> with <span class="process-math">\(0\lt\delta\lt b-a\)</span> such that if <span class="process-math">\(a\gt x \gt a+\delta\text{,}\)</span> then <span class="process-math">\(\abs{f(x)-L}\lt\eps\text{.}\)</span>
 </div>
 </div></article><article class="problem example-like" id="PROBLEMCodaOneSided"><h5 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">17.69</span><span class="period">.</span>
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">17.69</span><span class="period">.</span>
 </h5>
 <div class="introduction" id="PROBLEMCodaOneSided-1"><div class="para" id="PROBLEMCodaOneSided-1-1"></div></div>
 <article class="task exercise-like" id="PROBLEMCodaOneSided-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
 <div class="para" id="PROBLEMCodaOneSided-2-1-1">Use <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONOneSidedLimits-Formal.html" title="Definition 17.68: Right-Hand Limit">Definition 17.68</a> as a model to state a similar definition for <span class="process-math">\(\ltlimit{x}{a}{f(x)}=L\)</span>
 </div></article><article class="task exercise-like" id="PROBLEMCodaOneSided-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>
 <div class="para" id="PROBLEMCodaOneSided-3-1-1">Prove   <a href="" class="xref" data-knowl="./knowl/xref/THEOREMOneSideLim.html" title="Theorem 16.12: One Sided Derivatives">Theorem 16.12</a> from <a href="CHAPTERwhen-deriv-doesnt.html" class="internal" title="Chapter 16: When the Derivative Doesn’t Exist">Chapter 16</a>.</div></article></article><div class="para" id="SUBSECTIONOneOverXIsCont-12">As you can see, rigorous demonstrations, as necessary as they are, can become complicated and tedious.  Perhaps this explains why the practice of Calculus predated its theory.</div>
-<div class="para" id="SUBSECTIONOneOverXIsCont-13">We have defined the derivative by <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONDerivative.html" title="Definition 13.4: The Derivative">Definition 13.4</a>, derived all of our differentiation rules via this definition, and shown — rigorously — that founding Calculus on the theory of limits gives us all of the properties we found useful in <a href="FromPractice.html" class="internal" title="Part I: From Practice . . .">Part I</a> of this textbook. At long last, this places a solid, logical, and rigorous foundation underneath the Differential Calculus of Newton and Leibniz.</div>
+<div class="para" id="SUBSECTIONOneOverXIsCont-13">We have defined the derivative by <a href="" class="xref" data-knowl="./knowl/xref/DEFINITIONDerivative.html" title="Definition 13.4: The Derivative">Definition 13.4</a>, derived all of our differentiation rules via this definition, and shown — rigorously — that founding Calculus on the theory of limits gives us all of the properties we found useful in <a href="DiffCalcFromPractice.html" class="internal" title="Part I: Differential Calculus: From Practice">Part I</a> of this textbook. At long last, this places a solid, logical, and rigorous foundation underneath the Differential Calculus of Newton and Leibniz.</div>
 <div class="para" id="SUBSECTIONOneOverXIsCont-14">And Bishop Berkeley has nothing left to criticize.</div></section></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="CHAPTERwhen-deriv-doesnt.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="meta_backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>

@@ -21,7 +21,7 @@
 \end{equation}
 </div>
 <div class="para">The diagram below is a visualization of this problem.</div>
-</div> <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/LineDist1.png" class="contained"></div>           <div class="para">We can imagine the blue square growing and shrinking as we move the point <span class="process-math">\((a,b)\)</span> along the line. It seems clear that the square having the least area is the one pictured in black (when <span class="process-math">\((a,b)\)</span> is at <span class="process-math">\((x,y)\text{.}\)</span> It is worth taking a moment to notice this explicitly because not all optimization problems are solvable. If we had asked for the largest possible square there would be no solution because the blue square in our diagram can always be make larger by moving the point <span class="process-math">\((a,b)\)</span> further to the left on the graph of <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONSqOptConst.html" title="Equation 9.1">equation (9.1)</a>.</div> <div class="para">But a convincing picture is not a solution. To complete the solution we’ll need to compute the coordinates of the point <span class="process-math">\((x,y)\)</span> in our sketch and compute the minimal area.</div> <div class="para logical">
+</div> <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/DC/LineDist1.png" class="contained"></div>           <div class="para">We can imagine the blue square growing and shrinking as we move the point <span class="process-math">\((a,b)\)</span> along the line. It seems clear that the square having the least area is the one pictured in black (when <span class="process-math">\((a,b)\)</span> is at <span class="process-math">\((x,y)\text{.}\)</span> It is worth taking a moment to notice this explicitly because not all optimization problems are solvable. If we had asked for the largest possible square there would be no solution because the blue square in our diagram can always be make larger by moving the point <span class="process-math">\((a,b)\)</span> further to the left on the graph of <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONSqOptConst.html" title="Equation 9.1">equation (9.1)</a>.</div> <div class="para">But a convincing picture is not a solution. To complete the solution we’ll need to compute the coordinates of the point <span class="process-math">\((x,y)\)</span> in our sketch and compute the minimal area.</div> <div class="para logical">
 <div class="para">In any optimization problem the first question to ask is, “What do we need to optimize?” In other words, “What is our objective function?”  For this problem the length of the line segment between the point <span class="process-math">\((2,3)\)</span> and any point <span class="process-math">\((x,y)\)</span> is given by the Distance Formula: <span class="process-math">\(\sqrt{(x-2)^2+(y-3)^2}\text{.}\)</span>  Therefore the area of the square constructed from this line segment is given by the function:</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQUATIONSqOptConst.html">
 \begin{equation*}
@@ -90,15 +90,15 @@ x\amp =-\frac12.\tag{9.3}
 <div class="para">To find <span class="process-math">\(y\)</span> we use our constraint and the value of <span class="process-math">\(x\)</span> from <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONLineDist2.html" title="Equation 9.3">equation (9.3)</a>,</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQUATIONLineDist2.html">
 \begin{equation*}
-\geneval{y}{x=-1/2}=\geneval{\frac13(2-5x)}{x=-1/2}=\frac32.
+\eval{y}{x}{-1/2}=\eval{\frac13(2-5x)}{x}{-1/2}=\frac32.
 \end{equation*}
 </div>
 </div> <div class="para logical">
 <div class="para">So we have found that the minimal square occurs when <span class="process-math">\(x=-\frac12\text{,}\)</span> and <span class="process-math">\(y=\frac32\)</span> and it feels like we’re done, doesn’t it? We’re not. The question asked was “What is the area of the smallest possible square?” To find the area we need to put <span class="process-math">\((x,y)=(-1/2, 3/2)\)</span> into our area formula which yields</div>
 <div class="displaymath process-math">
 \begin{align*}
-\geneval{A(x,y)}{(x,y)} {\left(-\frac12, \frac32\right)} \amp
-=\geneval{(x-2)^2+(y-3)^2} {(x,y)}
+\eval{A(x,y)}{(x,y)} {\left(-\frac12, \frac32\right)} \amp
+=\eval{(x-2)^2+(y-3)^2} {(x,y)}
 {\left(-\frac{1}{2},\frac32\right)}\\
 \amp =\left(-\frac12-2\right)^2+\left(\frac12-3\right)^2=\frac{17}{2}\text{ square units.}
 \end{align*}

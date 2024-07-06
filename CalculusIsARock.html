@@ -12,7 +12,7 @@
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
-<meta property="book:title" content="Differential Calculus">
+<meta property="book:title" content="Calculus">
 <meta property="book:author" content="Eugene Boman">
 <meta property="book:author" content="Robert Rogers">
 <script>
@@ -93,10 +93,10 @@ window.MathJax = {
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
 <a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
-<h1 class="heading"><a href="DiffCalc.html"><span class="title">Differential Calculus:</span> <span class="subtitle">From Practice to Theory</span></a></h1>
+<h1 class="heading"><a href="Calculus.html"><span class="title">Calculus:</span> <span class="subtitle">From Practice to Theory</span></a></h1>
 <p class="byline">Eugene Boman, Robert Rogers</p>
 </div>
-</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="meta_backmatter-4.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="meta_backmatter-5.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
 <div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
 <div class="search-results-controls">
@@ -107,17 +107,37 @@ window.MathJax = {
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="FromPractice.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="FromPractice.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="CHAPTERproblem-solving.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\def\abs#1{\left|#1\right|}
-\def\CancelToRed#1#2{\textcolor{red}{{\cancelto{#1}{#2}}}}
-\def\approach#1{{\left(\rightarrow{}#1\right)}}
-\def\halmos{\rule[-.1ex]{8pt}{2ex}}
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="DiffCalcFromPractice.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="DiffCalcFromPractice.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="CHAPTERproblem-solving.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\DeclareMathOperator{\erf}{erf}
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\Arctan}{Arctan}
+\DeclareMathOperator{\Arcsin}{Arcsin}
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\arccsc}{arccsc}
+\DeclareMathOperator{\sech}{sech}
+\DeclareMathOperator{\csch}{csch}
 
-\def\limitX#1#2#3#4{{\displaystyle\lim_{\underset{#4}{#1\rightarrow #2}}#3}}
-\def\tlimitX#1#2#3#4{{\displaystyle\lim_{\underset{#4}{#1\rightarrow #2}}}#3}
-\def\rlimit#1#2#3{{\limitX{#1}{#2}{#3}{#1\gt{}#2}{}}}
-\def\rtlimit#1#2#3{{\tlimitX{#1}{#2}{#3}{#1\gt{}#2}{}}}
-\def\llimit#1#2#3{{\limitX{#1}{#2}{#3}{#1\lt{}#2}{}}}
-\def\ltlimit#1#2#3{{\tlimitX{#1}{#2}{#3}{#1\lt{}#2}{}}}
+
+
+
+
+
+
+
+
+
+\def\abs#1{\left|#1\right|}
+\def\tallstrut{\rule{0mm}{1.1\baselineskip}}
+\def\approach#1{{\left(\rightarrow{}#1\right)}}
+
+\def\CancelToRed#1#2{\textcolor{red}{{\cancelto{#1}{#2}}}}
+
+
+\newcommand{\eps}{\varepsilon}
+\newcommand{\RR}{\mathbb {R}}
+\newcommand{\QQ}{\mathbb {Q}}
+\newcommand{\NN}{\mathbb {N}}
+\newcommand{\ZZ}{\mathbb {Z}}
+\def\DD{{\bf{}D}}
 
 \def\arccot{{\rm{}arccot}{}}
 \def\Arctan{{\rm{}Arctan}{}}
@@ -125,11 +145,58 @@ window.MathJax = {
 \def\arcsec{{\rm{}arcsec}{}}
 \def\arccsc{{\rm{}arccsc}{}}
 
-\newcommand{\eps}{\varepsilon}
-\newcommand{\RR}{\mathbb {R}}
-\newcommand{\QQ}{\mathbb {Q}}
-\newcommand{\NN}{\mathbb {N}}
-\newcommand{\ZZ}{\mathbb {Z}}
+\def\halmos{\mbox{\raggedright\rule{0.1in}{0.1in}}}
+
+
+
+
+\def\eval#1#2#3{\left.\strut{}#1\right|_{#2=#3}}
+\def\geneval#1#2#3{\left.\strut{}#1\right|_{#2#3}}
+\def\mineval#1#2{\left.\strut{}#1\right|_{#2}}
+
+\def\bigeval#1#2#3{\left.\strut{}#1\right|_{#2=#3}}
+
+\def\ftceval#1#2#3#4{\eval{#1}{#2}{#3}^{#4}}
+
+
+
+
+
+
+
+
+
+\def\inverse#1{#1^{-1}}
+
+
+
+
+\def\dx#1{\thinspace{\mathrm d}#1}
+\def\dfdx#1#2{\frac{\dx{#1}}{\dx{#2}}} 
+
+\def\dfdxat#1#2#3{\eval{\dfdx{#1}{#2}}{#2}{#3}}
+
+\def\partialfx#1#2{\frac{\partial{#1}}{\partial{#2}}} 
+\def\partialfxn#1#2#3{\frac{\partial^{#3}{#1}}{\partial{#2}^{#3}}} 
+\def\dfdxn#1#2#3{\frac{\text{d}^{#3}{#1}}{\text{d}{#2}^{#3}}} 
+\def\limit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}#3}}
+\def\tlimit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}}#3}
+\def\tlimitX#1#2#3#4{{\displaystyle\lim_{\underset{#4}{#1\rightarrow #2}}}#3}
+\def\rtlimit#1#2#3{{\tlimitX{#1}{#2}{#3}{#1\gt{}#2}{}}}
+\def\ltlimit#1#2#3{{\tlimitX{#1}{#2}{#3}{#1\lt{}#2}{}}}
+
+\def\limitX#1#2#3#4{{\displaystyle\lim_{\underset{#4}{#1\rightarrow #2}}#3}}
+\def\rlimit#1#2#3{{\limitX{#1}{#2}{#3}{#1\gt{}#2}{}}}
+\def\llimit#1#2#3{{\limitX{#1}{#2}{#3}{#1\lt{}#2}{}}}
+\def\limitatinf#1#2{\limit{#1}{\infty}{#2}}
+\def\limitatninf#1#2{\limit{#1}{-\infty}{#2}}
+
+
+\def\lprime#1{{#1^{\prime}_{\scriptscriptstyle L}}}
+\def\rprime#1{{#1^{\prime}_{\scriptscriptstyle R}}}
+
+
+\def\lhopeq{\stackrel{L'H}{=}}
 
 \newcommand{\ParamEqTwo}[2]
 {
@@ -150,65 +217,6 @@ window.MathJax = {
     \end{array}
   \right\}
 }
-
-
-
-\def\lhopeq{\stackrel{L'H}{=}}
-
-\def\sech{{\rm{}sech}{}}
-\def\csch{{\rm{}csch}{}}
-
-
-\def\DD{{\bf{}D}}
-
-\def\eval#1#2#3{\left.#1\right\rvert_{#2}^{#3}}
-\def\ftceval#1#2#3{\eval#1#2#3}
-\def\geneval#1#2{\eval{#1}{#2}{}}
-\def\bigeval#1#2#3{\eval{#2}{#2}{#3}}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\def\inverse#1{#1^{-1}}
-
-
-
-
-\def\dx#1{\thinspace{\mathrm d}#1}
-\def\dfdx#1#2{\frac{\dx{#1}}{\dx{#2}}} 
-\def\partialfx#1#2{\frac{\partial{#1}}{\partial{#2}}} 
-\def\partialfxn#1#2#3{\frac{\partial^{#3}{#1}}{\partial{#2}^{#3}}} 
-\def\dfdxn#1#2#3{\frac{\text{d}^{#3}{#1}}{\text{d}{#2}^{#3}}} 
-
-
-\def\limitatinf#1#2{\limit{#1}{\infty}{#2}}
-\def\limitatninf#1#2{\limit{#1}{-\infty}{#2}}
-\def\dfdxat#1#2#3{\eval{\dfdx{#1}{#2}}{#2=#3}{}}
-
-\def\limit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}#3}}
-\def\tlimit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}}#3}
-\def\limitX#1#2#3#4{{\displaystyle\lim_{\underset{#4}{#1\rightarrow #2}}#3}}
-\def\rlimit#1#2#3{{\limitX{#1}{#2}{#3}{#1\gt{}#2}{}}}
-\def\llimit#1#2#3{{\limitX{#1}{#2}{#3}{#1\lt{}#2}{}}}
-
-\def\lprime#1{{#1^{\prime}_{\scriptscriptstyle L}}}
-\def\rprime#1{{#1^{\prime}_{\scriptscriptstyle R}}}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -227,7 +235,7 @@ window.MathJax = {
 </ul>
 </li>
 <li class="toc-item toc-part contains-active">
-<div class="toc-title-box"><a href="FromPractice.html" class="internal"><span class="codenumber">I</span> <span class="title">From Practice . . .</span></a></div>
+<div class="toc-title-box"><a href="DiffCalcFromPractice.html" class="internal"><span class="codenumber">I</span> <span class="title">Differential Calculus: From Practice</span></a></div>
 <ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-chapter active"><div class="toc-title-box"><a href="CalculusIsARock.html" class="internal"><span class="codenumber">1</span> <span class="title">Calculus is a Rock</span></a></div></li>
 <li class="toc-item toc-chapter">
@@ -279,21 +287,19 @@ window.MathJax = {
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONVelocitySlopeTangent" class="internal"><span class="codenumber">5.1</span> <span class="title">Slopes and Tangents</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONdefin-tang-line" class="internal"><span class="codenumber">5.2</span> <span class="title">Defining the Tangent Line</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONvomit-comet" class="internal"><span class="codenumber">5.3</span> <span class="title">The Vomit Comet</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONrates-change" class="internal"><span class="codenumber">5.4</span> <span class="title">Galileo Drops the Ball</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONGalileoDrops" class="internal"><span class="codenumber">5.4</span> <span class="title">Galileo Drops the Ball</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECONDBringCalc" class="internal"><span class="codenumber">5.5</span> <span class="title">Bringing in Calculus</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONDerivative" class="internal"><span class="codenumber">5.6</span> <span class="title">The Derivative</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONnewt-flux-dynam" class="internal"><span class="codenumber">5.7</span> <span class="title">Thinking Dynamically</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONFluxions" class="internal"><span class="codenumber">5.8</span> <span class="title">Newton’s Method of Fluxions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONSelfIntersectCurve" class="internal"><span class="codenumber">5.9</span> <span class="title">Self-intersecting Curves and Parametric Equations</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONFluxions" class="internal"><span class="codenumber">5.8</span> <span class="title">Newton’s Method of Fluxions</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONParametricFunctions" class="internal"><span class="codenumber">5.8.1</span> <span class="title">Parametric Functions</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONbridg-chains-telesc" class="internal"><span class="codenumber">5.9</span> <span class="title">Bridges, Chains, Domes, and Telescopes</span></a></div>
+<div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONbridg-chains-telesc" class="internal"><span class="codenumber">5.10</span> <span class="title">Bridges, Chains, Domes, and Telescopes</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONBridges" class="internal"><span class="codenumber">5.9.1</span> <span class="title">Bridges</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONChains" class="internal"><span class="codenumber">5.9.2</span> <span class="title">Chains</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONDomes" class="internal"><span class="codenumber">5.9.3</span> <span class="title">Domes</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONTelescopes" class="internal"><span class="codenumber">5.9.4</span> <span class="title">Telescopes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONBridges" class="internal"><span class="codenumber">5.10.1</span> <span class="title">Bridges</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONChains" class="internal"><span class="codenumber">5.10.2</span> <span class="title">Chains</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONDomes" class="internal"><span class="codenumber">5.10.3</span> <span class="title">Domes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html#SUBSECTIONTelescopes" class="internal"><span class="codenumber">5.10.4</span> <span class="title">Telescopes</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -360,14 +366,14 @@ window.MathJax = {
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html" class="internal"><span class="codenumber">8</span> <span class="title">Exponentials and Logarithms</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONIvps" class="internal"><span class="codenumber">8.1</span> <span class="title">Initial Value Problems (IVPs)</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONDEsandIVPS" class="internal"><span class="codenumber">8.1</span> <span class="title">Initial Value Problems</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONexponential" class="internal"><span class="codenumber">8.2</span> <span class="title">The Natural Exponential</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONexponential-growth" class="internal"><span class="codenumber">8.3</span> <span class="title">Exponential Growth and Exponential Notation</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONhyperb-trig-hang" class="internal"><span class="codenumber">8.4</span> <span class="title">Hyperbolic Trigonometry: The Hanging Chain</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONGatewayArch" class="internal"><span class="codenumber">8.5</span> <span class="title">The Gateway Arch</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#CHAPTERlast-elem-funct-8" class="internal"><span class="codenumber">8.6</span> <span class="title">Exponential Growth</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONExpAndCmpndInt" class="internal"><span class="codenumber">8.7</span> <span class="title">Exponential Functions and Compound Interest</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONnatural-logarithm-1" class="internal"><span class="codenumber">8.8</span> <span class="title">A Short Introduction to Logarithms: John Napier Logs In</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONnatural-logarithm-1" class="internal"><span class="codenumber">8.8</span> <span class="title">John Napier Logs In: A Short Introduction to Logarithms</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONNatLog" class="internal"><span class="codenumber">8.9</span> <span class="title">Logarithms, Natural and Unnatural</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONLogApps" class="internal"><span class="codenumber">8.10</span> <span class="title">Applications of Logarithms</span></a></div>
@@ -379,7 +385,7 @@ window.MathJax = {
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONDerivNatLog" class="internal"><span class="codenumber">8.11</span> <span class="title">The Derivative of the Natural Logarithm</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONgener-logar-expon" class="internal"><span class="codenumber">8.12</span> <span class="title">General Logarithms and Exponentials</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONleonh-euler-harm" class="internal"><span class="codenumber">8.13</span> <span class="title">Leonhard Euler, Harmonic Oscillators, and Complex Numbers</span></a></div>
+<div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SECTIONEulerHarmonicOsc" class="internal"><span class="codenumber">8.13</span> <span class="title">Leonhard Euler, Harmonic Oscillators, and Complex Numbers</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CHAPTERlast-elem-funct.html#SUBSECTIONHowEulerDidIt" class="internal"><span class="codenumber">8.13.1</span> <span class="title">How Euler Did It</span></a></div></li></ul>
 </li>
 </ul>
@@ -477,7 +483,7 @@ window.MathJax = {
 </ul>
 </li>
 <li class="toc-item toc-part">
-<div class="toc-title-box"><a href="ToTheory.html" class="internal"><span class="codenumber">II</span> <span class="title">To Theory . . .</span></a></div>
+<div class="toc-title-box"><a href="DiffCalcToTheory.html" class="internal"><span class="codenumber">II</span> <span class="title">Differential Calculus: To Theory</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="CHAPTERWhatsWrong.html" class="internal"><span class="codenumber">13</span> <span class="title">What’s Wrong with Differentials?</span></a></div>
@@ -539,20 +545,21 @@ window.MathJax = {
 <li class="toc-item toc-backmatter">
 <div class="toc-title-box"><a href="meta_backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="meta_backmatter-2.html" class="internal"><span class="codenumber">A</span> <span class="title">Selected Solutions</span></a></div></li>
-<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="meta_backmatter-3.html" class="internal"><span class="codenumber">B</span> <span class="title">List of Symbols</span></a></div></li>
-<li class="toc-item toc-index"><div class="toc-title-box"><a href="meta_backmatter-4.html" class="internal"><span class="title">Index</span></a></div></li>
-<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="meta_backmatter-5.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="meta_backmatter-2.html" class="internal"><span class="codenumber">A</span> <span class="title">Selected Hints</span></a></div></li>
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="meta_backmatter-3.html" class="internal"><span class="codenumber">B</span> <span class="title">Selected Solutions</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="meta_backmatter-4.html" class="internal"><span class="codenumber">C</span> <span class="title">List of Symbols</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="meta_backmatter-5.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="meta_backmatter-6.html" class="internal"><span class="title">Colophon</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="CalculusIsARock"><h2 class="heading">
 <span class="type">Chapter</span><span class="space"> </span><span class="codenumber">1</span><span class="space"> </span><span class="title">Calculus is a Rock</span>
 </h2>
-<figure class="figure figure-like" id="figure-CountingBoard"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="external/images/CountingBoard.png" class="contained"></div>
+<figure class="figure figure-like" id="figure-CountingBoard"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="external/DC/CountingBoard.png" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.1<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://www.maa.org/press/periodicals/convergence/counting-boards-a-counting-board-in-a-strasbourg-museum" target="_blank">A medieval European counting board.</a><a class="xref" id="figure-CountingBoard-1-2" href="" data-knowl="./knowl/fn/figure-CountingBoard-1-2.html" title="Footnote 1.1"><sup> 1 </sup></a></figcaption></figure><div class="para" id="CalculusIsARock-3">Commercial transactions were hard to do using Roman numerals. So in Europe during the Middle Ages such computations were usually done using pebbles on a small table called a <a class="external" href="https://www.maa.org/press/periodicals/convergence/counting-boards-a-very-brief-history-of-counting-boards" target="_blank">counting board.</a><a class="xref" id="CalculusIsARock-3-2" href="" data-knowl="./knowl/fn/CalculusIsARock-3-2.html" title="Footnote 1.2"><sup> 2 </sup></a> The board was marked off so that placing a pebble here we meant “one,” there meant “ten,” over there meant “a hundred,” and so on. Think of an abacus. Obviously the only computational skills a merchant needed were a thorough knowledge of rules for moving the pebbles and how to read the board afterward.</div>
 <div class="para" id="CalculusIsARock-4">The Latin word for “rock” or “pebble” is “calculus.” Thus the English word “calculus” has come to refer to any computational scheme where it was not really necessary to understand the computations in order to apply them, at least for basic applications.</div>
-<figure class="figure figure-like" id="figure-Suanpan"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="external/images/suanpan.png" class="contained" alt="An abacus"></div>
+<figure class="figure figure-like" id="figure-Suanpan"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="external/DC/suanpan.png" class="contained" alt="An abacus"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.2<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://www.ecb.torontomu.ca/~elf/abacus/history.html" target="_blank">A traditional Chinese <i class="foreign">suanpan</i> (abacus).</a><a class="xref" id="figure-Suanpan-1-2" href="" data-knowl="./knowl/fn/figure-Suanpan-1-2.html" title="Footnote 1.3"><sup> 3 </sup></a></figcaption></figure><div class="para" id="CalculusIsARock-6">Nevertheless it is a calculus in the original sense. That is, it is possible to simply memorize the rules for manipulating symbols (“move the pebbles”) and thereby solve a great many otherwise very difficult problems without any very deep understanding. There is nothing wrong with using Calculus this way.  Indeed, this is precisely what it was invented to do. The difficulty is that those who learn only to manipulate symbols are in a position similar to the merchants of the Middle Ages. They can do the calculations but they only understand how to move the pebbles (use the notation). If a problem comes up that is outside the reach of their pebbles they are completely helpless.</div>
 <div class="para" id="CalculusIsARock-7">This was not a problem for say, Marco Polo. He rarely had to do much mathematics besides add, subtract, multiply and divide. A deep understanding of these operations is not needed for the simple financial transactions of the Middle Ages. However, in the modern era such routine, rudimentary computations are done by machines. The role of humans is to figure out how to apply the fundamental concepts in novel arenas and in novel ways. Simply learning to compute, without a deeper understanding of the principles involved, is not a foundation upon which a modern education can be built. Modern practioners must be flexible, and flexibility comes from a deep understanding of principles.</div>
 <div class="para" id="CalculusIsARock-8">As you will soon see many otherwise very difficult problems become straightforward, even simple if we know how to manipulate Calculus notation (move the pebbles) correctly. So simple in fact, that it is easy to confuse the manipulation of notation with understanding.  Don’t make that mistake.</div>
@@ -564,7 +571,7 @@ window.MathJax = {
 <div class="para" id="CalculusIsARock-14">We will not address the logical underpinnings of the Calculus until the second part (<em class="alert">“. . .  To Theory”</em>) where we will examine the logical support structure that took some the greatest minds our species has known almost <span class="process-math">\(200\)</span> years to develop. Naturally this will require a shift in our focus.  In the first part of this text you will learn how to <em class="emphasis">use</em> Calculus. In the second part you will learn why it works the way that it does.</div>
 <div class="para" id="CalculusIsARock-15">This will be hard.  At times it will be very hard. But it is worth the effort. At the other end, when it all comes together, there is a transcendent beauty to the Calculus which is impossible to convey to the uninitiated. A poet once wrote, <a class="external" href="https://www.poetryfoundation.org/poems/148566/euclid-alone-has-looked-on-beauty-bare" target="_blank">“Euclid alone has looked on beauty bare,”</a><a class="xref" id="CalculusIsARock-15-2" href="" data-knowl="./knowl/fn/CalculusIsARock-15-2.html" title="Footnote 1.4"><sup> 4 </sup></a> but this is not true. Everyone who has studied and understood mathematics beyond the level of moving the pebbles has seen the same beauty that Euclid saw. If you have never seen it this is your chance.</div></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="FromPractice.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="CHAPTERproblem-solving.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="DiffCalcFromPractice.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="CHAPTERproblem-solving.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

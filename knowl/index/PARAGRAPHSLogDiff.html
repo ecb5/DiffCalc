@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<section class="paragraphs"><h4 class="heading"><span class="title">Logarithmic Differentiation.</span></h4> <div class="para">Recall that in <a href="CHAPTERdifferentials.html#SECTIONsome-rules-diff" class="internal" title="Section 4.3: The General Differentiation Rules">Section 4.3</a> we observed that the Power Rule does not easily extend to <span class="process-math">\(y=x^\alpha\text{,}\)</span> where <span class="process-math">\(\alpha\)</span> is an irrational number. The properties of the natural exponential and the natural logarithm functions will (finally) allow us to make this extension.</div> <aside class="aside aside-like"><h5 class="heading"><span class="title">Comment.</span></h5>
+<div class="para">In particular we do not assume that <span class="process-math">\(\alpha\)</span> is rational.</div></aside> <div class="para logical">
+<div class="para">Suppose <span class="process-math">\(\alpha\)</span> is any real number.  Starting with <span class="process-math">\(y=x^\alpha\)</span> we take the logarithm of both sides, obtaining</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/SECTIONsome-rules-diff.html ./knowl/xref/EQUATIONGeneralPowerRule.html">
+\begin{equation*}
+\ln(y)=\alpha\ln(x).
+\end{equation*}
+</div>
+<div class="para">Differentiating gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/SECTIONsome-rules-diff.html ./knowl/xref/EQUATIONGeneralPowerRule.html">
+\begin{equation*}
+\frac1y\dx{y}=\alpha\frac1x\dx{x}.
+\end{equation*}
+</div>
+<div class="para">Solving for <span class="process-math">\(x\)</span> we see that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/SECTIONsome-rules-diff.html ./knowl/xref/EQUATIONGeneralPowerRule.html">
+\begin{equation}
+\dfdx{y}{x}=\frac{\alpha y}{x}=\frac{\alpha
+x^\alpha}{x}=\alpha x^{\alpha-1}\tag{8.30}
+\end{equation}
+</div>
+<div class="para">which  is the Power Rule. Since we did not constraint <span class="process-math">\(\alpha\)</span> except to say that it is a real number the different versions of the Power Rule that we saw in <a href="CHAPTERdifferentials.html#SECTIONsome-rules-diff" class="internal" title="Section 4.3: The General Differentiation Rules">Section 4.3</a> are all special cases of <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONGeneralPowerRule.html" title="Equation 8.30">(8.30)</a>.</div>
+</div> <div class="para">The same trick we just used can make some differentiations much easier to do.</div> <article class="example example-like"><h5 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.88</span><span class="period">.</span>
+</h5>
+<div class="para logical">
+<div class="para">For example, suppose we need to differentiate</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y=\frac{\sqrt{x^3+2x}\cdot \tan(x)}{(x^5-7)^4}.
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">While we can do this using our Differentiation Rules, it will be very tedious.  But nice things happen if we take the natural logarithm of both sides before we differentiate.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\ln(y) =\ln\left(\frac{\sqrt{x^3+2x}\cdot \tan(x)}{(x^5-7)^4} \right)
+\end{equation*}
+</div>
+<div class="para">Since the natural  logarithm changes division into subtraction (Property 5) we can rewrite the right side as:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+=\ln\left[\sqrt{x^3+2x}\cdot\tan(x)\right] -
+\ln\left(\left(x^5-7\right)^4\right).
+\end{equation*}
+</div>
+<div class="para">And since the  natural  logarithm changes multiplication    into addition (Property 4) we can re-express  the right side again. This time as:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+=\ln\left(\sqrt{x^3+2x}\right)+ \ln\left(\tan(x)\right) -
+\ln\left(\left(x^5-7\right)^4\right).
+\end{equation*}
+</div>
+<div class="para">Re-expressing the square root as an exponent gives</div>
+<div class="displaymath process-math">
+\begin{equation*}
+=\ln\left(x^3+2x\right)^{1/2}+ \ln\left(\tan(x)\right) -
+\ln\left(\left(x^5-7\right)^4\right)\text{.}
+\end{equation*}
+</div>
+<div class="para">and we can now bring the exponents down in front (Property 6).</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\ln(y)     =\frac{1}{2}  \ln(x^3+2x)+\ln(\tan(x)) -4 \ln(x^5-7)).
+\end{equation*}
+</div>
+<div class="para">Notice that we have not yet started differentiating. All we’ve done so far is re-express our function using the properties of logarithms.</div>
+</div> <div class="para logical">
+<div class="para">But differentiating is now relatively easy.</div>
+<div class="displaymath process-math">
+\begin{align*}
+\dx{(\ln(y))}\amp =  \frac{1}{2(x^3+2x)}\dx{(x^3+2x)}+\frac{1}{\tan(x)}\dx{(\tan{x})}-\frac{4}{x^5-7}\dx{(x^5-7)}\\\\
+\frac{\dx{y}}{y}\amp =              \frac{1}{2(x^3+2x)}(3x^2+2)\dx{x}+\frac{1}{\tan(x)}\sec^2(x)\dx{x}-\frac{4}{x^5-7}(5x^4)\dx{x}\\
+\\
+\end{align*}
+</div>
+<div class="para">If we multiply by <span class="process-math">\(y\)</span> we get</div>
+<div class="displaymath process-math">
+\begin{align*}
+\dx{y}\amp =
+y\left[\frac{(3x^2+2)}{2(x^3+2x)}\dx{x}+\frac{\sec^2(x)}{\tan(x)}\dx{x}-4\left(\frac{5x^4}{x^5-7}\right)\dx{x}\right]\\\\
+\amp =        \left[\frac{\sqrt{x^3+2x}\cdot \tan(x)}{(x^5-7)^4}\right]\cdot\left[\frac{(3x^2+2)}{2(x^3+2x)}\dx{x}+\frac{\sec^2(x)}{\tan(x)}\dx{x}-4\left(\frac{5x^4}{x^5-7}\right)\dx{x}\right]
+\end{align*}
+</div>
+</div></article> <div class="para">This looks like a lot of work when it’s laid out on the page but it really isn’t. With practice you can differentiate an expression like <span class="process-math">\(\frac{\sqrt{x^3+2x}\cdot \tan(x)}{(x^5-7)^4}\)</span> in your head as fast as you can write it down. Really.  Even if this is not true, would you rather compute this derivative using the Quotient Rule and Product Rule?</div>        <div class="para">Recall that in <a href="" class="xref" data-knowl="./knowl/xref/PROBLEMGeneralPowerRule.html" title="Problem 4.19: Find the Pattern">Problem 4.19</a> you used the Product Rule to compute <span class="process-math">\(\dx\left[(x+1)(x+2)(x+3)\cdots(x+n)\right]\text{.}\)</span> You should  redo this problem before attempting <a href="" class="xref" data-knowl="./knowl/xref/PROBLEMGeneralPowerRule2.html" title="Drill 8.89">Drill 8.89</a>.</div> <article class="problem example-like"><h5 class="heading">
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">8.89</span><span class="period">.</span>
+</h5>
+<div class="introduction"><div class="para">Let <span class="process-math">\(y=(x+1)(x+2)(x+3)\cdots(x+n)\text{.}\)</span>
+</div></div>
+<article class="task exercise-like"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="para logical">
+<div class="para">Take the logarithm of both sides of this formula and use the properties of logarithms to show that for <span class="process-math">\(x\neq-1, -2, -3, \cdots, -n\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dx{y}=(x+1)(x+2)(x+3)\cdots(x+n)\left[\frac{1}{x+1}+\frac{1}{x+2}+\frac{1}{x+3}+\frac{1}{x+n}\right]\dx{x}.
+\end{equation*}
+</div>
+</div></article><article class="task exercise-like"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="para">Show that the result of part (a) is equivalent to the solution of <a href="" class="xref" data-knowl="./knowl/xref/PROBLEMGeneralPowerRule.html" title="Problem 4.19: Find the Pattern">Problem 4.19</a>.</div></article></article>               <div class="para"> The technique of taking the logarithm of both sides of an expression like <span class="process-math">\(y=y(x)\)</span> and then differentiating is called <dfn class="terminology">Logarithmic Differentiation</dfn>.  It can reduce the amount of tedious computation needed considerably, so it is worth knowing how to use it.</div> <article class="problem example-like"><h5 class="heading">
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">8.90</span><span class="period">.</span>
+</h5>
+<div class="introduction"><div class="para logical">
+<div class="para">Show that if <span class="process-math">\(y=\sqrt{e^{x^2+x}\sin(x)}\text{,}\)</span> then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dx{y}= \frac12\sqrt{e^{x^2+x}\sin(x)}\left(2x+1\cot(x)\right)\dx{x}
+\end{equation*}
+</div>
+<div class="para">by</div>
+</div></div>
+<article class="task exercise-like"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="para">Using Logarithmic Differentiation.</div></article><article class="task exercise-like"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="para">Not using Logarithmic Differentiation.</div></article><article class="task exercise-like"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<div class="para">Does either method seem preferable to you? Explain.</div></article></article>             <article class="problem example-like"><h5 class="heading">
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">8.91</span><span class="period">.</span>
+</h5>
+<div class="introduction"><div class="para">Compute the derivative of each of the following  functions.</div></div>
+<article class="task exercise-like"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="para">
+<span class="process-math">\(y=\left[x(x+1)\right]^7\)</span>   </div></article><article class="task exercise-like"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="para"><span class="process-math">\(y=\sqrt{x(x+1)}\)</span></div></article><article class="task exercise-like"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<div class="para"><span class="process-math">\(y= \frac{1}{x(x-1)(x-2)}\)</span></div></article><article class="task exercise-like"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<div class="para"><span class="process-math">\(y= \ln\left({\frac{x\sqrt{x^2+1}}{(x+1)^{2/3}}}\right)\)</span></div></article></article>                  <div class="para">There are some situations where logarithmic differentiation is your only option.  Consider something like <span class="process-math">\(y=x^x.\)</span> Unfortunately, this is not a monomial like <span class="process-math">\(x^2\)</span> nor is it an exponential like <span class="process-math">\(2^x\text{.}\)</span>  This is some strange combination of both and  our existing rules don’t directly apply. But Logarithmic Differentiation will work.</div> <article class="problem example-like"><h5 class="heading">
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">8.92</span><span class="period">.</span>
+</h5>
+<div class="introduction"><div class="para">For each of the following find <span class="process-math">\(\dx{y}\text{,}\)</span> and <span class="process-math">\(\dfdx{y}{x}\text{.}\)</span>
+</div></div>
+<article class="task exercise-like"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="para"><span class="process-math">\(y=x^x\)</span></div></article><article class="task exercise-like"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="para"><span class="process-math">\(y=x^{\ln(x)}\)</span></div></article><article class="task exercise-like"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<div class="para"><span class="process-math">\(y=x^{\frac{1}{\ln(x)}}\)</span></div></article><article class="task exercise-like"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<div class="para"><span class="process-math">\(y=(x^2+1)^{\sin(x)}\)</span></div></article></article>          <div class="para">Finally, because we’ve given it a name it is easy to get the impression that Logarithmic Differentiation is a new differentiation rule, but it isn’t. It is really just a trick as the next problem shows. A handy trick, to be sure, but still a trick.</div> <article class="problem example-like"><h5 class="heading">
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">8.93</span><span class="period">.</span>
+</h5>
+<div class="introduction"><div class="para">Suppose we want to differentiate <span class="process-math">\(y=[\alpha(x)]^{\beta(x)}\)</span> where <span class="process-math">\(\alpha(x)\)</span> and <span class="process-math">\(\beta(x)\)</span>  are two differentiable functions.</div></div>
+<article class="task exercise-like"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="para">Compute <span class="process-math">\(\dfdx{y}{x}\)</span> using Logarithmic Differentiation.</div></article><article class="task exercise-like"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="para">Now express <span class="process-math">\(\alpha(x)\)</span> as <span class="process-math">\(\alpha(x)=e^{\ln\left(\alpha(x)\right)}\)</span> and compute <span class="process-math">\(\dfdx{y}{x}\)</span> again using the ordinary rules of differentiation and show that you get the same thing as in part (a).</div></article></article>             <article class="problem example-like"><h5 class="heading">
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">8.94</span><span class="period">.</span>
+</h5>
+<div class="para">Suppose <span class="process-math">\(x^y=y^x\)</span> and show that  <span class="process-math">\(\dfdx{y}{x}=\frac{y-x\ln(y)}{x-y\ln(x)}\text{.}\)</span>
+</div></article></section><span class="incontext"><a class="internal" href="CHAPTERlast-elem-funct.html#PARAGRAPHSLogDiff">in-context</a></span>
+</body>
+</html>
