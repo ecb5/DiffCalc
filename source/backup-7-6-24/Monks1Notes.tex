@@ -1,0 +1,147 @@
+\section{Fermat's Method for Finding Maxima and Minima}
+\markright{Fermat's Method for Finding Maxima and Minima: Notes to Instructors}
+
+\subsection*{PSP Content: Topics and Goals}
+
+This Primary Source Project (PSP) is intended to enrich an
+introductory Calculus student's grasp on the definition of the
+derivative and how it relates to finding maxima and minima of
+functions.  The key competencies that come up in this project are as
+follows:
+\begin{itemize}
+    \item Definition of the derivative
+    \item Rules for calculating derivatives
+    \item Tangents
+    \item Optimization
+\end{itemize}
+
+
+\subsection*{Student Prerequisites}
+
+In this project, we assume the student has already been exposed to the
+limit definition of the derivative as well as the usual rules for
+calculating derivatives (in particular, chain rule and power rule).
+We also assume the student has been exposed to the Extreme Value
+Theorem.
+
+\subsection*{PSP Design, and Task Commentary}
+
+This PSP will expose the student to the original, more algebraic
+framework for finding extrema of functions.  Hopefully, seeing some of
+the standard textbook exercises on maxima and minima (like Fermat's
+example in Section \ref{First}) approached with a different method and
+with different notation will break students out of recipe-thinking
+with regards to optimization.
+
+Fermat provided many more examples of his method of adequality
+throughout his life, but many of these use rather sophisticated
+constructions from geometry.  While beautiful in and of themselves,
+the author feared that these would be too much of a departure from the
+standard calculus curriculum.  The three examples chosen for this PSP
+were purposefully selected because of their similarity to the types of
+textbook optimization problems that are typically assigned in a
+first-semester calculus course.
+
+Section \ref{Third} is the one section where Fermat's original
+solution via adequality is intentionally not shown.  The hope is that
+by that point, the student can not only confirm Fermat's results using
+the modern method, but can carry out Fermat's method as well!
+
+Note that the final task does not ask for a rigorous proof of the
+equivalence of the modern method to Fermat's method, but rather an
+intuitive justification.  See the section below on Recommendations for
+Further Reading for what such a proof would entail!
+
+\subsection*{Suggestions for Classroom Implementation}
+
+The author strongly suggests the instructor work through the entire
+project before using it in class. In particular, it is easy to make a
+simple error in the mess of Section \ref{Third}.
+
+
+The reading and tasks of Section \ref{Adequality} make an ideal class
+preparation assignment, while completion of the remainder of the PSP
+might be more well-suited for a mix of in-class work and homework.
+
+
+If the instructor desires an interesting wrap-up discussion for this
+project, a peculiar phrase in the first primary source passage
+provokes an interesting question.  While laying out his method, Fermat
+said ``{\sf We will divide all the terms by $e$, {\bf or by a higher
+    power of $e$}, such that on at least one of the sides, $e$ will
+  disappear entirely.}''  This prompts a question: can it ever happen
+that we divide by a higher power of $e$ rather than just $e$ itself?
+Fermat's three examples included here only required division by a
+single power of $e$, and even after further reading of Fermat's work,
+the author was unable to find an example where Fermat divided by any
+higher power of $e$.
+
+The absence of such an example in Fermat's work is perhaps with good
+reason!  Under mild assumptions (like the function in question having
+a convergent power series on an interval containing the max/min one
+seeks) one can show that only a constant function $f(a)$ could result
+in the quantity $f(a+e)-f(a)$ being divisible by $e^2$.  For if it
+were possible to write $f(a+e)-f(a)= e^2\cdot g(a,e)$ for some
+polynomial $g(a,e)$ (possibly of infinite degree), then dividing both
+sides by $e$ would produce $$\frac{f(a+e)-f(a)}{e}=e\cdot g(a,e).$$
+Taking the limit of both sides as $e$ approaches zero
+implies $$f'(a)=0$$ since $\lim_{e\to 0}g(a,e)$ converges to $g(a,0)$.
+Since the derivative of $f$ is identically zero, $f$ must be a
+constant function.
+
+That analysis raises a further interesting question: why did Fermat
+include that phrase regarding dividing by a higher power of $e$?  Was
+Fermat simply unsure that it couldn't happen, and mentioned it in
+passing just in case it ever did?  This seems plausible. Though our
+proof above is not particularly difficult, it uses a heavy tool from a
+toolbox that was unavailable to Fermat, namely the idea of a power
+series expansion of a function.
+
+Though it is unlikely we will be able to definitively resolve the
+question of what Fermat's intents were with that phrase, having a
+discussion like the one above could be a nice way to wrap up the
+project with a class.  If nothing else, it can show the students the
+fascinating thought exercises prompted by looking at primary sources!
+It is hard to imagine such a question coming up in the context of
+reading a polished modern textbook.
+
+Copies of these PSPs are available at the TRIUMPHS website (see URL in
+Acknowledgements).  The author is happy to provide \LaTeX\ code for
+this project.  It was created using Overleaf which makes it convenient
+to copy and share projects and can allow instructors to adapt this
+project in whole or in part as they like for their course.
+
+
+\subsection*{Sample Implementation Schedule (based on a 50 minute class period)}
+
+This miniPSP can easily be implemented in one class period.  The
+author has used this in the following manner, with good results:
+
+\begin{itemize}
+\item Assign students to read and complete tasks through the end of
+  Section \ref{Adequality} as a class preparation assignment.
+\item Begin class with 10 minutes to have students share a few of the
+  observations they came up with when comparing/contrasting the
+  methods. and hold a discussion based on those questions, ideally
+  with the primary source on the projector in front of you.
+\item Allow them to work through the PSP for the next 35 minutes in
+  small groups as you and/or learning assistants walk through the
+  classroom and help.
+\item In the last 5 minutes, it is sometimes nice to call the students
+  together to regroup for a brief discussion.  See if anyone has
+  thoughts on why Fermat's method and the modern method are
+  equivalent!  It may be helpful to call their attention to the idea
+  that $f(x+\Delta x)$ and $f(x)$ are very close to being equal for
+  very small $\Delta x$ if $f(x)$ has a maximum or minimum at $x$ (and
+  perhaps draw a picture to this effect on the board).  It can also be
+  a nice followup to mention that the method does not seem to have a
+  way to distinguish saddle points!
+\item The students can complete all remaining unfinished tasks for
+  homework.  Note that it is likely they will still have most of
+  Sections \ref{Second} and \ref{Third} to complete, but this should
+  be doable for homework if they successfully made it through Section
+  \ref{First}.
+\end{itemize}
+
+ 
+

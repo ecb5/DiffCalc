@@ -1,47 +1,67 @@
 <?xml version='1.0' encoding='utf-8'?>
 
 <pretext xml:lang="en-US" xmlns:xi="http://www.w3.org/2001/XInclude">
-
-  <!-- we first include a file which contains the docinfo element: -->
-  <xi:include href="./meta_docinfo.ptx" />
-
-  <!-- The <book> tags wrap all the content.  Change the @xml:id   -->
-  <!-- to some short (non-spaced) description of your book         -->
-  <book xml:id="DiffCalc">
-    <title>Differential Calculus</title>
+  <xi:include href="./docinfo.ptx" />
+  <book xml:id="Calculus">
+    <title>Calculus</title>
     <subtitle>From Practice to Theory</subtitle>
-
     <xi:include href="./frontmatter.ptx" />
 
-    <part xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="FromPractice">
-      <title>From Practice . . . </title>
-    <xi:include href="./Introduction.ptx" />
-    <xi:include href="./ProblemSolving.ptx" />
-    <xi:include href="./ScienceBeforeCalculus.ptx" />
-    <xi:include href="./GeneralDiffRules.ptx" />
-    <xi:include href="./SlopeVelTan.ptx" />
-    <xi:include href="./CalcTrig.ptx" />
-    <xi:include href="./ApproximationMethods.ptx" />
-    <xi:include href="./ExpLog.ptx" />
-    <xi:include href="./Optimization.ptx" />
-    <xi:include href="./ShapeOfThings.ptx" />
-    <xi:include href="./Modeling.ptx" />
-    <xi:include href="./LimitsAndLhopital.ptx" />
+    <part xml:id="DiffCalcFromPractice">
+      <title>Differential Calculus: From Practice </title>
+      <xi:include href="./Introduction.ptx" />
+      <xi:include href="./ProblemSolving.ptx" />
+      <xi:include href="./ScienceBeforeCalculus.ptx" />
+      <xi:include href="./GeneralDiffRules.ptx" />
+      <xi:include href="./SlopeVelTan.ptx" />
+      <xi:include href="./CalcTrig.ptx" />
+      <xi:include href="./ApproximationMethods.ptx" />
+      <xi:include href="./ExpLog.ptx" />
+      <xi:include href="./Optimization.ptx" />
+      <xi:include href="./ShapeOfThings.ptx" />
+      <xi:include href="./Modeling.ptx" />
+      <xi:include href="./LimitsAndLhopital.ptx" />
 
     </part>
 
 
-    <part xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="ToTheory">
-      <title>To Theory . . . </title>
+    <part xml:id="DiffCalcToTheory">
+      <title>Differential Calculus: To Theory</title>
 
-    <xi:include href="./WhatsWrong.ptx"/>
-    <xi:include href="./DiffRulesLimits.ptx"/>
-    <xi:include href="./DerivativeProperties.ptx"/>
-    <xi:include href="./DerivDoesntExist.ptx"/>
-    <xi:include href="./FormalLimits.ptx"/>
+      <xi:include href="./WhatsWrong.ptx"/>
+      <xi:include href="./DiffRulesLimits.ptx"/>
+      <xi:include href="./DerivativeProperties.ptx"/>
+      <xi:include href="./DerivDoesntExist.ptx"/>
+      <xi:include href="./FormalLimits.ptx"/>
     </part>
 
-    <!-- Finaly we place the backmatter in its own file and inlcude-->
-    <xi:include href="./meta_backmatter.ptx" />
+    <!-- <part xml:id="IntCalc"> -->
+    <!--   <title>Integral Calculus: From Practice </title> -->
+    <!--   <xi:include href="./Integration.ptx" /> -->
+    <!--   <xi:include href="./Diffeqs.ptx" /> -->
+    <!--   <xi:include href="./IntegrationMethods.ptx" /> -->
+    <!--   <xi:include href="./Taylor.ptx" /> -->
+    <!-- </part> -->
+    <!-- <part xml:id="IntCalcToTheory"> -->
+    <!--   <title> Integral Calculus: To Theory</title> -->
+    <!--   <chapter><title>Title Goes Here</title> -->
+    <!--   <p> -->
+    <!--     Text goes here. -->
+    <!--   </p> -->
+    <!--   </chapter> -->
+    <!-- </part> -->
+    <!-- <part xml:id="PARTBobsClasroomProblems"> -->
+    <!--   <title>Bob's Classroom Problems</title> -->
+    <!--   <xi:include href="./Problems.ptx" /> -->
+    <!-- </part> -->
+    <!-- <part xml:id="PARTNoHome"> -->
+    <!--   <title>Stuff Written But Without a Home</title> -->
+    <!--   <xi:include href="./LeftOvers.ptx" /> -->
+    <!-- </part> -->
+    <!-- <part xml:id="PARTQuotes"> -->
+    <!--   <title>Quotations</title> -->
+    <!--   <xi:include href="./Quotes.ptx" /> -->
+    <!-- </part> -->
+    <xi:include href="./backmatter.ptx" />
   </book>
 </pretext>

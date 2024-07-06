@@ -2,34 +2,153 @@
 
 <!-- The docinfo block is the analogue to the latex preamble -->
 <!-- This is where you can define macros and other book-wide -->
-<!-- settings. -->
+<!--  settings.                                              -->
 <docinfo xmlns:xi="http://www.w3.org/2001/XInclude">
-  <!-- A unique name for the book in a catalog; for example, see https://pretextbook.org/catalog.html and https://runestone.academy/ns/books/index. It contains a simple lowercase string with no dashes or other special characters. See https://pretextbook.org/doc/guide/html/sec-publishing-to-runestone-academy.html for more information. -->
-  <document-id>changeme</document-id>
-  <!-- A brief description for the book in a catalog; see the links above. The @shelf is used only when publishing to Runestone; see https://runestone.academy/ns/books/index for a list of valid values. You must copy these @shelf names exactly, including capitalization. -->
-  <blurb shelf="AP Computer Science"> A simple string (no markup is allowed) to describe your book. </blurb>
+
+<!-- The next three lines are likely for mature projects only: -->
+
+<!-- <brandlogo url="" source="images/cover.png"/> -->
+<!-- <covers front="images/front.pdf" back="images/back.pdf"/> -->
+<!-- <document-id>unique-book-id</document-id> -->
+
+<!-- macros for defining latex math shortcuts. It is good practice  -->
+<!-- to define these semantically, so that the macro relates to what-->
+<!-- it defines.                                                    -->
+<macros>
+\DeclareMathOperator{\erf}{erf}
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\Arctan}{Arctan}
+\DeclareMathOperator{\Arcsin}{Arcsin}
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\arccsc}{arccsc}
+\DeclareMathOperator{\sech}{sech}
+\DeclareMathOperator{\csch}{csch}
+<!-- \def\erf{\text{erf}} -->
+<!-- \def\arccot{{\rm{}arccot}{}} -->
+<!-- \def\Arctan{{\rm{}Arctan}{}} -->
+<!-- \def\Arcsin{{\rm{}Arcsin}{}} -->
+<!-- \def\arcsec{{\rm{}arcsec}{}} -->
+<!-- \def\arccsc{{\rm{}arccsc}{}} -->
+<!-- \def\sech{{\rm{}sech}{}} -->
+<!-- \def\csch{{\rm{}csch}{}} -->
 
 
-  <!-- The next three lines are likely for mature projects only: -->
+\def\abs#1{\left|#1\right|}
+\def\tallstrut{\rule{0mm}{1.1\baselineskip}}
+\def\approach#1{{\left(\rightarrow{}#1\right)}}
 
-  <!-- <brandlogo url="" source="images/cover.png"/> -->
-  <!-- <covers front="images/front.pdf" back="images/back.pdf"/> -->
-  <!-- <document-id>unique-book-id</document-id> -->
+\def\CancelToRed#1#2{\textcolor{red}{{\cancelto{#1}{#2}}}}
 
-  <!-- macros for defining latex math shortcuts. It is good practice -->
-  <!-- to define these semantically, so that the macro relates to what-->
-  <!-- it defines. -->
-  <macros> \newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} </macros>
 
-  <!-- If you put any latex-image elements you can include preambles -->
-  <!-- for those in the next element. -->
-  <latex-image-preamble> \usepackage{tikz, pgfplots} \usetikzlibrary{positioning,matrix,arrows} \usetikzlibrary{shapes,decorations,shadows,fadings,patterns} \usetikzlibrary{decorations.markings} </latex-image-preamble>
+\newcommand{\eps}{\varepsilon}
+\newcommand{\RR}{\mathbb {R}}
+\newcommand{\QQ}{\mathbb {Q}}
+\newcommand{\NN}{\mathbb {N}}
+\newcommand{\ZZ}{\mathbb {Z}}
+\def\DD{{\bf{}D}}
 
-  <!-- It is possible to rename elements: -->
-  <!-- <rename element="assemblage" xml:lang="en-US">Summary</rename> -->
+\def\arccot{{\rm{}arccot}{}}
+\def\Arctan{{\rm{}Arctan}{}}
+\def\Arcsin{{\rm{}Arcsin}{}}
+\def\arcsec{{\rm{}arcsec}{}}
+\def\arccsc{{\rm{}arccsc}{}}
 
-  <!-- Specify the default type of cross reference: -->
-  <!-- <cross-references text="type-global" /> -->
+\def\halmos{\mbox{\raggedright\rule{0.1in}{0.1in}}}
 
+<!-- \def\geneval#1#2{\left.#1\right|_{#2}} -->
+<!-- \def\inteval#1#2#3{#1{\sideset{}{_#2}\rule[-3ex]{0.5pt}{7ex}}} -->
+
+\def\eval#1#2#3{\left.\strut{}#1\right|_{#2=#3}}
+\def\geneval#1#2#3{\left.\strut{}#1\right|_{#2#3}}
+\def\mineval#1#2{\left.\strut{}#1\right|_{#2}}
+
+\def\bigeval#1#2#3{\left.\strut{}#1\right|_{#2=#3}}
+<!-- \def\ftceval#1#2#3{#1\hskip.5ex{\llap{\smash{\rule[-3ex]{0.5pt}{7ex}}}_{\raise{-3ex}{\hskip.5ex#2}}^{\raise{-5ex}{\hskip.5ex #3}}}} -->
+\def\ftceval#1#2#3#4{\eval{#1}{#2}{#3}^{#4}}
+
+<!-- \def\inteval#1#2#3{#1\rule[-3ex]{0.5pt}{7ex}_{#2}^{#3}} -->
+
+<!-- \def\eval#1#2#3{\left.#1\right]_{#2}^{#3}} -->
+<!-- \def\brackeval#1#2#3{\left.#1\right]_{#2=#3} -->
+<!-- \def\evallt#1#2#3{\left.#1\right|_{#2<#3}} -->
+<!-- \def\bigevallt#1#2#3{\left.\tallstrut{}#1\right|_{#2<#3}} -->
+<!-- \def\evalgt#1#2#3{\left.#1\right|_{#2>#3}} -->
+<!-- \def\bigevalgt#1#2#3{\left.\tallstrut{}#1\right|_{#2>#3}} -->
+\def\inverse#1{#1^{-1}}
+<!-- \newcommand{\N}{\mathbb N} -->
+<!-- \newcommand{\Z}{\mathbb Z} -->
+<!-- \newcommand{\Q}{\mathbb Q} -->
+<!-- \newcommand{\R}{\mathbb R} -->
+\def\dx#1{\thinspace{\mathrm d}#1}
+\def\dfdx#1#2{\frac{\dx{#1}}{\dx{#2}}} 
+<!-- \def\dfdxat#1#2#3{\left.{}\frac{\text{d}{#1}}{\text{d}{#2}}\right|_{#2=#3}} -->
+\def\dfdxat#1#2#3{\eval{\dfdx{#1}{#2}}{#2}{#3}}
+
+\def\partialfx#1#2{\frac{\partial{#1}}{\partial{#2}}} 
+\def\partialfxn#1#2#3{\frac{\partial^{#3}{#1}}{\partial{#2}^{#3}}} 
+\def\dfdxn#1#2#3{\frac{\text{d}^{#3}{#1}}{\text{d}{#2}^{#3}}} 
+\def\limit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}#3}}
+\def\tlimit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}}#3}%text style
+\def\tlimitX#1#2#3#4{{\displaystyle\lim_{\underset{#4}{#1\rightarrow #2}}}#3}
+\def\rtlimit#1#2#3{{\tlimitX{#1}{#2}{#3}{#1\gt{}#2}{}}}
+\def\ltlimit#1#2#3{{\tlimitX{#1}{#2}{#3}{#1\lt{}#2}{}}}
+
+\def\limitX#1#2#3#4{{\displaystyle\lim_{\underset{#4}{#1\rightarrow #2}}#3}}
+\def\rlimit#1#2#3{{\limitX{#1}{#2}{#3}{#1\gt{}#2}{}}}
+\def\llimit#1#2#3{{\limitX{#1}{#2}{#3}{#1\lt{}#2}{}}}
+\def\limitatinf#1#2{\limit{#1}{\infty}{#2}}
+\def\limitatninf#1#2{\limit{#1}{-\infty}{#2}}
+
+
+\def\lprime#1{{#1^{\prime}_{\scriptscriptstyle L}}}
+\def\rprime#1{{#1^{\prime}_{\scriptscriptstyle R}}}
+
+
+\def\lhopeq{\stackrel{L'H}{=}}
+
+\newcommand{\ParamEqTwo}[2]
+{
+  \left\{
+    \begin{array}{c}
+    {#1}\\
+    {#2}
+    \end{array}
+  \right\}
+}
+\newcommand{\ParamEqThree}[3]
+{
+  \left\{
+    \begin{array}{c}
+    {#1}\\
+    {#2}\\
+    {#3}
+    \end{array}
+  \right\}
+}
+
+</macros>
+
+<!-- If you put any latex-image elements you can include preambles  -->
+<!-- for those in the next element.                                 -->
+<latex-image-preamble>
+\usepackage{cancel}
+
+  <!-- \usepackage{tikz, pgfplots} -->
+  <!-- \usetikzlibrary{positioning,matrix,arrows} -->
+  <!-- \usetikzlibrary{shapes,decorations,shadows,fadings,patterns} -->
+  <!-- \usetikzlibrary{decorations.markings}  -->
+</latex-image-preamble>
+
+<!-- It is possible to rename elements using the tags below -->
+  <rename element="investigation" xml:lang="en-US">Puzzle</rename>
+  <rename element="assemblage" xml:lang="en-US">Digression</rename>
+  <rename element="inlineexercise" xml:lang="en-US">Problem</rename>
+  <rename element="problem"  xml:lang="en-US">Drill</rename>
+  <rename element="remark"  xml:lang="en-US">Comment</rename>
+
+<!-- Specify the default type of cross reference:           -->
+  <cross-references text="type-global" />
+  
 
 </docinfo>
+

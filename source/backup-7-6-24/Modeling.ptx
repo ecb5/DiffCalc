@@ -148,7 +148,7 @@ Of course we'd want
     it appears that we<rsq/>re going to get very rich as soon as we sell of all
     of those fish.
 </p>
-    <image source="DC/Fishery1.png" width="50%"/>
+    <image source="images/Fishery1.png" width="50%"/>
 
 <p>
     Of course, in practice this is not what happens. We made several
@@ -259,10 +259,10 @@ The parameter <m>C</m> would normally be determined experimentally
 (measured), but for purposes of this discussion we will arbitrarily
 assign it the value <m>C=100</m> just to keep the numbers easy to deal
 with. So, our IVP will be
-<mdn>
-<mrow xml:id="EQUATIONLogEq">\dfdx{P}{t}=0.1P\left(1-\frac{P}{100}\right),\amp{}\amp{} P(0)=10.</mrow>
-  <!-- \label{eq:LogEq} -->
-</mdn>
+<me>
+  \label{eq:LogEq}
+  \dfdx{P}{t}=0.1P\left(1-\frac{P}{100}\right),\ \ P(0)=10.
+</me>
 </p>
 <p>
 
@@ -459,7 +459,7 @@ all be
 shown on the vertical axis, not the horizontal as seen below.
 </p>
 
-<image source="DC/IncDecChart2.png" width="100%" />
+<image source="images/IncDecChart2.png" width="100%" />
 <!-- \centerline{\includegraphics*[height=2.7in,width=4in]{../Figures/IncDecChart2}} -->
 <p>
 
@@ -492,7 +492,7 @@ technique we saw in <xref ref="SECTIONgraph-with-form"></xref>.
 <!--   <caption> -->
 <!-- <url href="https://www.britannica.com/biography/Abraham-Cowley" visual="https://www.britannica.com/biography/Abraham-Cowley">This figure needs a caption.</url> -->
 <!-- </caption> -->
-<image source="DC/SlopeField1.png" width="100%"/>
+<image source="images/SlopeField1.png" width="100%"/>
 <!-- </figure> -->
 <!-- \begin{wrapfigure}[14]{l}{4in} -->
 <!-- \captionsetup{labelformat=empty} -->
@@ -668,9 +668,9 @@ of fish over a long period of time?
 <!-- </me> -->
 <!-- \begin{enumerate}[label={  (\alph*)}] -->
 <!-- \item Analyze this model in the same way we analyzed -->
-<!-- <xref ref="EQUATIONFishery2">equation~</xref>. Draw several typical graphs. -->
+<!-- <xref ref="EQUATIONFishery2">Equation~</xref>. Draw several typical graphs. -->
 <!-- \item We can<rsq/>t make any money unless we sell some of our -->
-<!-- fish. Modify <xref ref="EQLogistic2">equation~</xref> to account for -->
+<!-- fish. Modify <xref ref="EQLogistic2">Equation~</xref> to account for -->
 <!-- harvesting at a uniform rate of -->
 <!-- <m>20 \frac{\text{ tons}}{\text{year}}</m>. -->
 <!-- \item Suppose <m>B(0)=150</m> tons.  Sketch a graph of the population.  What does the model predict about the amount of fish in -->
@@ -684,8 +684,6 @@ of fish over a long period of time?
 <!-- \end{enumerate} -->
 <!-- \end{embeddedproblem} -->
 <p>
-<idx><h>Vocabulary</h><h>intrinsic growth rate</h></idx>
-<idx><h>Vocabulary</h><h>carrying capacity</h></idx>
 The general logistic growth equation is
 <men xml:id="EQUATIONGenLogisModel">
   \dfdx{P}{t}= rP\left(1-\frac{P}{C}\right)
@@ -808,7 +806,6 @@ initial value <m>P(0)</m> satisfies each of the following:
 </statement>
 </task>
 <task>
-<idx><h>Vocabulary</h><h>minimum viable population</h></idx>
 <statement>
 <p>
  Explain why <m>m</m> is called the <term>minimum viable population</term> for
@@ -1038,17 +1035,17 @@ In the sketch below  we see from
 <xref ref="EQUATIONCompete2">equation</xref> that on each of the red lines we
 have <m>\dfdx{B}{t}=0</m>.
 </p>
-<image source="DC/CompetingSpeciesModel1.png" width="40%"/>
+<image source="images/CompetingSpeciesModel1.png" width="40%"/>
 <p>
 
 Since the two red lines are the only locations where <m>\dfdx{B}{t}=0</m>,
 it must be that <m>\dfdx{B}{t}</m> is either greater than zero or less that
 zero in any region bounded by them. Choosing the point <m>(1,1)</m> in the
 shaded region we see that
-<me>\eval{\dfdx{B}{t}} {(B,W)}{(1,1)}\gt0.</me>
+<me>\geneval{\dfdx{B}{t}}{(B,W)=(1,1)}\gt0.</me>
  Choosing the point
 <m>(2000,2000)</m> outside the blue region we see that
-<me>\eval{\dfdx{B}{t}}{(B,W)}{(2000,2000)}\lt0.</me>
+<me>\geneval{\dfdx{B}{t}}{(B,W)=(2000,2000)}\lt0.</me>
 So for any bass/walleye pair, <m>(B,W)</m>, the bass population is
 increasing when <m>(B,W)</m> lies below the diagonal line (in the blue
 region), and for any
@@ -1057,7 +1054,7 @@ bass is decreasing.
 </p>
 <p>
 
-Finally, notice that when  <m>W=0</m> the bass population will  increase
+Finally, notice that when  <m>W =0</m> the bass population will  increase
 until it reaches the carrying capacity of the lake for bass
 alone (<m>500</m>), after which it will start to decrease. But if there are
 walleye in the lake the bass population will not reach the carrying
@@ -1088,11 +1085,10 @@ If we superimpose the sketch you (should have) obtained from
 <xref ref="PROBLEMWalleyeAnalysis"></xref> onto the graph we have above,
 we get the <m>4</m> regions seen in the sketch below.
 </p>
-<image source="DC/CompetingSpeciesModel9.png" width="60%" />
+<image source="images/CompetingSpeciesModel9.png" width="60%" />
 <!-- <!-\- \centerline{\includegraphics*[height=2.4 in,width=3in]{../Figures/CompetingSpeciesModel9}} -\-> -->
 
 <p>
-<idx><h>Vocabulary</h><h>equilibrium points</h></idx>
 The points where the green and red lines intersect are called
 <term>equilibrium points</term>. Theoretically, if the two population levels are at
 an equilibrium point then neither population will ever change
@@ -1114,7 +1110,7 @@ again because the growth rates are both zero.
 Show that the coordinates of the equilibrium point
       <m>E</m> are as given in the diagram below.
 </p>
-<image source="DC/CompetingSpeciesModel10.png" width="60%"/>
+<image source="images/CompetingSpeciesModel10.png" width="60%"/>
 </li>
 </ol>
 </exercise>
@@ -1134,7 +1130,7 @@ Show that the coordinates of the equilibrium point
 <!--   <caption> -->
 <!-- <url href="https://www.britannica.com/biography/Abraham-Cowley" visual="https://www.britannica.com/biography/Abraham-Cowley">This figure needs a caption.</url> -->
 <!-- </caption> -->
-<!-- <image source="DC/CompetingSpeciesModel10.png" width="50%"/> -->
+<!-- <image source="images/CompetingSpeciesModel10.png" width="50%"/> -->
 <!-- </figure> -->
 <!-- \begin{wrapfigure}[16]{r}{3in} -->
 <!-- \captionsetup{labelformat=empty} -->
@@ -1173,8 +1169,8 @@ population trajectories that the model predicts for the population
 levels of bass and walleye from various starting points.
 </p>
 <p>
-<idx><h>Vocabulary</h><h>dynamical system</h></idx>
-<idx><h>Vocabulary</h><h>trajectory</h></idx>
+
+
 Notice that these trajectories tend toward the equilibrium point,
 <m>E=\left(437.5, 312.5\right)</m>.
 This says that given these initial levels of bass and walleye, the
@@ -1377,7 +1373,6 @@ They have <q>recovered</q> in
 </statement>
 </exercise>
 <p>
-<idx><h>Vocabulary</h><h>transmission rate</h></idx>
 Since the disease spreads by contact between a susceptible and an
 infected individual, we will assume that the number of susceptible
 population members
@@ -1396,7 +1391,6 @@ called the <term>transmission rate</term>. (Why?)
 </statement>
 </exercise>
 <p>
-<idx><h>Vocabulary</h><h>recovery rate</h></idx>
 Since the only way to become immune is to
 recover from the disease, we also assume that  the rate of change of <m>R</m> is
 proportional to the number of infected individuals present.  This
@@ -1508,7 +1502,7 @@ Truckin<rsq/>, got my chips cashed in
 
 
 
-  <image source="DC/Tractrix.png" width="50%"/>
+  <image source="images/Tractrix.png" width="50%"/>
 <!-- \begin{wrapfigure}[]{r}{4.2in} -->
 <!--     \captionsetup{labelformat=empty} -->
 <!--     \vskip-6mm -->
@@ -1615,7 +1609,7 @@ before you proceed.
 
 <problem xml:id="PROBLEMPursuit2">
 <introduction>
-  <image source="DC/PursuitCurve2.png" width="50%"/>
+  <image source="images/PursuitCurve2.png" width="50%"/>
 <!-- \begin{wrapfigure}[11]{r}{3in} -->
 <!--     \captionsetup{labelformat=empty} -->
 <!--     \vskip-8mm -->
@@ -1661,7 +1655,7 @@ starting  is traveling vertically  up the line <m>x=1</m> at a constant speed
     (1-x)\dfdxn{y}{x}{2}=\frac{1}{k}\dfdx{s}{x}=\frac{1}{k}\sqrt{1+\left(\dfdx{y}{x}\right)^2}
     </me>
     with the initial conditions: <m>y(0)=0</m> and
-    <m>\dfdxat{y}{x}{0}=0</m>.
+    <m>\eval{\dfdx{y}{x}}{x}{0}=0</m>.
   </p>
 </statement>
 </task>
@@ -1689,7 +1683,7 @@ starting  is traveling vertically  up the line <m>x=1</m> at a constant speed
 </problem>
 <!-- \begin{embeddedproblem} -->
 <!--   <!-\- \label{problem:pursuit} -\-> -->
-<!--   <image source="DC/PursuitCurve2.png" width="50%"/> -->
+<!--   <image source="images/PursuitCurve2.png" width="50%"/> -->
 <!-- <!-\- \begin{wrapfigure}[11]{r}{3in} -\-> -->
 <!-- <!-\-     \captionsetup{labelformat=empty} -\-> -->
 <!-- <!-\-     \vskip-8mm -\-> -->

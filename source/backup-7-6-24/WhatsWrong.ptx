@@ -22,7 +22,7 @@ Introduction
 To see what<rsq/>s wrong with differentials consider the circle and the
 differential triangle below.
 </p>
-<image source="DC/WrongWithDiff2.png" width="50%">
+<image source="images/WrongWithDiff2.png" width="50%">
 </image>
 
 <p>
@@ -76,7 +76,7 @@ Calculus and Bishop Berkeley
 <caption>
 <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Berkeley/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Berkeley/">Bishop George Berkeley</url>
 </caption>
-<image source="DC/Berkeley.png" width="25%"/>
+<image source="images/Berkeley.png" width="25%"/>
 </figure>
 
 <aside>
@@ -364,7 +364,7 @@ Calculus required continuity, and continuity was
 </blockquote>
 
 
-  <image source="DC/LinesThroughPoint.png" width="40%"/>
+  <image source="images/LinesThroughPoint.png" width="40%"/>
 <!-- \begin{wrapfigure}[]{r}{1in} -->
 <!-- \captionsetup{labelformat=empty} -->
 <!-- \centerline{\includegraphics*[height=.8in,width=1in]{../Figures/LinesThroughPoint}} -->
@@ -372,7 +372,7 @@ Calculus required continuity, and continuity was
 <!-- \end{wrapfigure} -->
 <p>
 
-In <xref ref="DiffCalcFromPractice"></xref>  we  defined the derivative of <m>y=y(x)</m> to be the differential
+In <xref ref="FromPractice"></xref>  we  defined the derivative of <m>y=y(x)</m> to be the differential
 ratio <m>\dfdx{y}{x}</m>, but Berkeley shows in <pubtitle>The Analyst</pubtitle> that there
 are considerable difficulties with this approach. How else might we
 define the derivative? This is our next puzzle.
@@ -392,7 +392,7 @@ fact tangent to our curve. That is not much to go on. But it is not
 nothing either.
 </p>
 
-<image source="DC/TangentLineCluster4.png" width="40%"/>
+<image source="images/TangentLineCluster4.png" width="40%"/>
 <!-- \begin{wrapfigure}[5]{l}{1in} -->
 <!--   \captionsetup{labelformat=empty} -->
 <!--   \vskip-5mm -->
@@ -407,7 +407,7 @@ one? The only other points we have to work with are points on the
 curve itself.
 </p>
 <p>
-<idx><h>Vocabulary</h><h>secant line</h></idx>
+
  Choose a new point, say <m>(x_1, y(x_1)),</m> on our curve but a
 little to the right of <m>(x_0,y(x_0))</m> and draw the line between
 <m>(x_0,y(x_0))</m> and <m>(x_1,y(x_1))</m> as shown in  the sketch at the left.
@@ -417,7 +417,7 @@ cuts the circle. The brown line in this sketch cuts the curve so it is
 called a <term>secant line</term>.
 </p>
 
-<image source="DC/TangentLineCluster3.png" width="40%"/>
+<image source="images/TangentLineCluster3.png" width="40%"/>
 <!-- \begin{wrapfigure}[]{r}{1.4in} -->
 <!--   \vskip-9mm{} -->
 <!-- \captionsetup{labelformat=empty} -->
@@ -440,7 +440,7 @@ eliminated all of them.  Is there a way we could refine our search to
 reduce the set of possible tangent lines even further?
 </p>
 
-<image source="DC/TangentLineCluster.png" width="40%"/>
+<image source="images/TangentLineCluster.png" width="40%"/>
 <!-- \begin{wrapfigure}[8]{l}{1.4in} -->
 <!--   \vskip-4mm{} -->
 <!--   \captionsetup{labelformat=empty} -->
@@ -490,7 +490,7 @@ difficulties:
 
 </p>
 
-<image source="DC/TangentLineCluster2.png" width="40%"/>
+<image source="images/TangentLineCluster2.png" width="40%"/>
 <!-- \begin{wrapfigure}[]{r}{2in} -->
 <!--   \captionsetup{labelformat=empty} -->
 <!--   \vskip-4mm{} -->
@@ -551,8 +551,7 @@ A specific example will be helpful.
 
 </p>
 <p>
-<idx><h>Vocabulary</h><h>bounded</h></idx>
-<idx><h>Vocabulary</h><h>bound</h></idx>
+
   So our proposed procedure seems to be heading us in the right
   direction. If we take <m>x_3=2.01</m> and <m>x_4=1.99</m> we get
   <me>
@@ -698,7 +697,7 @@ A specific example will be helpful.
   negative number near zero so that <m>x_0+h</m> expresses the same idea.
 </p>
 
-<image source="DC/Secant-h.png" width="60%"/>
+<image source="images/Secant-h.png" width="60%"/>
 <!-- \begin{wrapfigure}[]{r}{2in} -->
 <!--   \captionsetup{labelformat=empty} -->
 <!--   \vskip-6mm{} -->
@@ -753,7 +752,7 @@ hold off  further discussion until
 <xref ref="SECTIONfirst-deriv-test"></xref>.
 </p>
 
-<image source="DC/EpsSlope2.png" width="40%"/>
+<image source="images/EpsSlope2.png" width="40%"/>
 <!-- \begin{wrapfigure}[9]{l}{2in} -->
 <!-- \captionsetup{labelformat=empty} -->
 <!-- \centerline{\includegraphics*[height=1.8in,width=2in]{../Figures/EpsSlope2}} -->
@@ -887,7 +886,7 @@ derivative.
 <idx><h>Definition</h><h>The Derivative</h></idx>
 <statement>
 <p>
-<idx><h>Vocabulary</h><h>differentiable</h></idx> 
+  <!-- \label{def:Derivative} -->
   Suppose <m>f</m> is a function, and that <m>x</m> is a real number. If
   <m>\limit{h}{0}{\frac{f(x+h{})-f(x)}{h}}</m> exists then we say that <m>f</m>
   is <term>differentiable</term> at <m>x</m> and that the derivative of <m>f</m> at
@@ -1042,7 +1041,6 @@ that would be circular reasoning.
  <!--      \end{enumerate} -->
  <!-- \end{embeddedproblem} -->
 <p>
-<idx><h>Vocabulary</h><h>differentiable</h></idx>
  When a function is
  differentiable at all  of the points in its domain it is said to be
  <term>differentiable on its domain</term> or just <term>differentiable</term>.
@@ -1051,7 +1049,6 @@ that would be circular reasoning.
 <aside>
 <title>Comment</title>
 <p>
-<idx><h>Vocabulary</h><h>differentiable</h></idx>
 In practice we are often quite loose with
  the term <term>differentiable</term>. Most people would call the functions 
  <m>f(x)=\sqrt{x}</m> and <m>g(x)=\sqrt[3]{x}</m> <term>differentiable</term> even
@@ -1062,7 +1059,6 @@ though they both fail to be differentiable at <m>x=0</m>.
  <exercise>
 <statement>
 <p>
-<idx><h>Vocabulary</h><h>differentiable</h></idx>
    Which of the functions in <xref ref="PROBLEMxIsSingular"></xref> are
    <term>differentiable</term> and which are not? Identify all points of
    non-differentiability.
