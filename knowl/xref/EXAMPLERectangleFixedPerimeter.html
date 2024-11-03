@@ -11,19 +11,19 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="example example-like"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">9.83</span><span class="period">.</span><span class="space"> </span><span class="title">Example 3.6 revisited again.</span>
-</h4>
-<div class="para">We first solved this problem algebraically in <a href="CHAPTERScienceBeforeCalc.html#EXAMPLEFixedPerimeter" class="xref" data-knowl="./knowl/xref/EXAMPLEFixedPerimeter.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.6: Maximizing Area">Example 3.6</a>.  In <a href="CHAPTERwhat-deriv-tells.html#PROBLEMMaximalSquareRedux1" class="xref" data-knowl="./knowl/xref/PROBLEMMaximalSquareRedux1.html" data-reveal-label="Reveal" data-close-label="Close" title="Drill 9.13">Drill 9.13</a> we solved it again analytically (that is, using Calculus) using Fermat’s Theorem. But Fermat’s Theorem only allows us to find a maximum that we already know exists. Since we did not have the tools necessary to show that we actually had a maximum, we relied on our intuition and assumed that a maximum existed.  We will solve this problem one last time, showing that there must be a maximum this time.</div>
+<article class="example example-like"><h5 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">9.86</span><span class="period">.</span><span class="space"> </span><span class="title">Example 3.6 revisited again.</span>
+</h5>
+<div class="para">We first solved this problem algebraically in <a href="CHAPTERScienceBeforeCalc.html#EXAMPLEFixedPerimeter" class="xref" data-knowl="./knowl/xref/EXAMPLEFixedPerimeter.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.6: Maximizing Area">Example 3.6</a>.  In <a href="CHAPTERwhat-deriv-tells.html#PROBLEMMaximalSquareRedux1" class="xref" data-knowl="./knowl/xref/PROBLEMMaximalSquareRedux1.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 9.13">Problem 9.13</a> we solved it again analytically (that is, using Calculus) using Fermat’s Theorem. But Fermat’s Theorem only allows us to find a maximum that we already know exists. Since we did not have the tools necessary to show that we actually had a maximum, we relied on our intuition and assumed that a maximum existed.  We will solve this problem one last time, showing that there must be a maximum this time.</div>
 <div class="para">Show that of all rectangles with a fixed perimeter, <span class="process-math">\(P\text{,}\)</span> the one with the greatest area is a square.</div>
 <div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="external/DC/PerimeterArea.png" class="contained"></div>
 <div class="para">We will follow the outline above.</div>
 <div class="para logical"><ol class="decimal" id="EXAMPLERectangleFixedPerimeter-6-1">
 <li><div class="para logical">
-<div class="para">The objective function is </div>
+<div class="para">The objective function is</div>
 <div class="displaymath process-math">
 \begin{equation}
-A=xy, \tag{9.25}
+A=xy, \tag{9.26}
 \end{equation}
 </div>
 </div></li>
@@ -31,42 +31,42 @@ A=xy, \tag{9.25}
 <div class="para">The only constraint is</div>
 <div class="displaymath process-math">
 \begin{equation}
-P=2x+2y \tag{9.26}
+P=2x+2y \tag{9.27}
 \end{equation}
 </div>
 <div class="para">where <span class="process-math">\(P\)</span> is constant.</div>
 </div></li>
 <li>
-<div class="para">Since we are talking about a length it must be that <span class="process-math">\(x\ge0\text{.}\)</span> From <a href="CHAPTERwhat-deriv-tells.html#EQUATIONFixedPerimeterConstraint1" class="xref" data-knowl="./knowl/xref/EQUATIONFixedPerimeterConstraint1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 9.26">equation (9.26)</a> we see that <span class="process-math">\(x\)</span> must be less that or equal to <span class="process-math">\(\frac{P}{2}\text{.}\)</span> Otherwise the perimeter will be greater than <span class="process-math">\(P\text{.}\)</span> So the domain of our problem is <span class="process-math">\(0\le x\le \frac{P}{2}\text{.}\)</span>
+<div class="para">Since we are talking about a length it must be that <span class="process-math">\(x\ge0\text{.}\)</span> From <a href="CHAPTERwhat-deriv-tells.html#EQUATIONFixedPerimeterConstraint1" class="xref" data-knowl="./knowl/xref/EQUATIONFixedPerimeterConstraint1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 9.27">equation (9.27)</a> we see that <span class="process-math">\(x\)</span> must be less that or equal to <span class="process-math">\(\frac{P}{2}\text{.}\)</span> Otherwise the perimeter will be greater than <span class="process-math">\(P\text{.}\)</span> So the domain of our problem is <span class="process-math">\(0\le x\le \frac{P}{2}\text{.}\)</span>
 </div>
-<aside class="aside aside-like"><h5 class="heading"><span class="title">Comment.</span></h5>
-<div class="para">Strictly speaking if <span class="process-math">\(x=0\)</span> or <span class="process-math">\(x=\frac{P}{2}\)</span> we don’t actually have a rectangle. But it is simpler to use the Extreme Value Theorem (<a href="CHAPTERwhat-deriv-tells.html#THEOREMmax-min" class="xref" data-knowl="./knowl/xref/THEOREMmax-min.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 9.56: Extreme Value Theorem">Theorem 9.56</a>) than to find the increasing and decreasing intervals using the First Derivative Test. Since the Extreme Value Theorem requires a closed domain we make things simpler by allowing “zero width” (or height) rectangles.</div></aside>
+<aside class="aside aside-like"><h6 class="heading"><span class="title">Comment.</span></h6>
+<div class="para">Strictly speaking if <span class="process-math">\(x=0\)</span> or <span class="process-math">\(x=\frac{P}{2}\)</span> we don’t actually have a rectangle. But it is simpler to use the Extreme Value Theorem (<a href="CHAPTERwhat-deriv-tells.html#THEOREMmax-min" class="xref" data-knowl="./knowl/xref/THEOREMmax-min.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 9.59: Extreme Value Theorem">Theorem 9.59</a>) than to find the increasing and decreasing intervals using the First Derivative Test. Since the Extreme Value Theorem requires a closed domain we make things simpler by allowing “zero width” (or height) rectangles.</div></aside>
 </li>
 <li>
 <div class="para logical">
-<div class="para">Since the problem domain is a closed interval we will use the Extreme Value Theorem (<a href="CHAPTERwhat-deriv-tells.html#THEOREMmax-min" class="xref" data-knowl="./knowl/xref/THEOREMmax-min.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 9.56: Extreme Value Theorem">Theorem 9.56</a>). To find the POTPs we will need <span class="process-math">\(\dfdx{A}{x}\text{.}\)</span> From <a href="CHAPTERwhat-deriv-tells.html#EQUATIONFixedPerimeterObjective" class="xref" data-knowl="./knowl/xref/EQUATIONFixedPerimeterObjective.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 9.25">equation (9.25)</a> we see that</div>
+<div class="para">Since the problem domain is a closed interval we will use the Extreme Value Theorem (<a href="CHAPTERwhat-deriv-tells.html#THEOREMmax-min" class="xref" data-knowl="./knowl/xref/THEOREMmax-min.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 9.59: Extreme Value Theorem">Theorem 9.59</a>). To find the POTPs we will need <span class="process-math">\(\dfdx{A}{x}\text{.}\)</span> From <a href="CHAPTERwhat-deriv-tells.html#EQUATIONFixedPerimeterObjective" class="xref" data-knowl="./knowl/xref/EQUATIONFixedPerimeterObjective.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 9.26">equation (9.26)</a> we see that</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/THEOREMmax-min.html ./knowl/xref/EQUATIONFixedPerimeterObjective.html">
 \begin{equation}
-\dx{A}=x\dx{y}+y\dx{x}.\tag{9.27}
+\dx{A}=x\dx{y}+y\dx{x}.\tag{9.28}
 \end{equation}
 </div>
 </div>
 <div class="para logical">
-<div class="para">From <a href="CHAPTERwhat-deriv-tells.html#EQUATIONFixedPerimeterConstraint1" class="xref" data-knowl="./knowl/xref/EQUATIONFixedPerimeterConstraint1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 9.26">equation (9.26)</a> we have</div>
+<div class="para">From <a href="CHAPTERwhat-deriv-tells.html#EQUATIONFixedPerimeterConstraint1" class="xref" data-knowl="./knowl/xref/EQUATIONFixedPerimeterConstraint1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 9.27">equation (9.27)</a> we have</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQUATIONFixedPerimeterConstraint1.html">
 \begin{equation}
-\dx{y}=-\dx{x}\tag{9.28}
+\dx{y}=-\dx{x}\tag{9.29}
 \end{equation}
 </div>
 <div class="para">and also</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQUATIONFixedPerimeterConstraint1.html">
 \begin{equation}
-y=\frac12\left(P-2x\right)    \tag{9.29}
+y=\frac12\left(P-2x\right)    \tag{9.30}
 \end{equation}
 </div>
 </div>
 <div class="para logical">
-<div class="para">Combining <a href="CHAPTERwhat-deriv-tells.html#EQUATIONFixedPerimeterConstraint1" class="xref" data-knowl="./knowl/xref/EQUATIONFixedPerimeterConstraint1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 9.26">equation (9.26)</a>, <a href="CHAPTERwhat-deriv-tells.html#EQUATIONMaxAreaDiffeq1" class="xref" data-knowl="./knowl/xref/EQUATIONMaxAreaDiffeq1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 9.27">equation (9.27)</a>, and <a href="CHAPTERwhat-deriv-tells.html#EQUATIONFixedPerimeterConstraintDiffeq1" class="xref" data-knowl="./knowl/xref/EQUATIONFixedPerimeterConstraintDiffeq1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 9.29">equation (9.29)</a> we see that</div>
+<div class="para">Combining <a href="CHAPTERwhat-deriv-tells.html#EQUATIONFixedPerimeterConstraint1" class="xref" data-knowl="./knowl/xref/EQUATIONFixedPerimeterConstraint1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 9.27">equation (9.27)</a>, <a href="CHAPTERwhat-deriv-tells.html#EQUATIONMaxAreaDiffeq1" class="xref" data-knowl="./knowl/xref/EQUATIONMaxAreaDiffeq1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 9.28">equation (9.28)</a>, and <a href="CHAPTERwhat-deriv-tells.html#EQUATIONFixedPerimeterConstraintDiffeq1" class="xref" data-knowl="./knowl/xref/EQUATIONFixedPerimeterConstraintDiffeq1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 9.30">equation (9.30)</a> we see that</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQUATIONFixedPerimeterConstraint1.html ./knowl/xref/EQUATIONMaxAreaDiffeq1.html ./knowl/xref/EQUATIONFixedPerimeterConstraintDiffeq1.html">
 \begin{equation*}
 \dfdx{A}{x}=\frac{P}{2}-2x.    
@@ -78,7 +78,7 @@ y=\frac12\left(P-2x\right)    \tag{9.29}
 </li>
 <li><div class="para">The area, <span class="process-math">\(A=xy\text{,}\)</span> will be zero when <span class="process-math">\(x=0\)</span> and when    <span class="process-math">\(x=\frac{P}{2}\)</span> (why?) so by the Extreme Value Theorem the maximum    occurs when <span class="process-math">\(x=\frac{P}{4}\text{.}\)</span>
 </div></li>
-<li><div class="para">This problem asks us to show that the maximal rectangle must be a square, so we need to show that <span class="process-math">\(x=y\text{.}\)</span> We know that the maximum occurs when <span class="process-math">\(x=\frac{P}{4}\text{.}\)</span> Plugging this value into <a href="CHAPTERwhat-deriv-tells.html#EQUATIONFixedPerimeterConstraintDiffeq1" class="xref" data-knowl="./knowl/xref/EQUATIONFixedPerimeterConstraintDiffeq1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 9.29">equation (9.29)</a> we see that <span class="process-math">\(y\)</span> is also equal to <span class="process-math">\(\frac{P}{4}\text{.}\)</span> Thus the maximal rectangle is a square as stated.</div></li>
+<li><div class="para">This problem asks us to show that the maximal rectangle must be a square, so we need to show that <span class="process-math">\(x=y\text{.}\)</span> We know that the maximum occurs when <span class="process-math">\(x=\frac{P}{4}\text{.}\)</span> Plugging this value into <a href="CHAPTERwhat-deriv-tells.html#EQUATIONFixedPerimeterConstraintDiffeq1" class="xref" data-knowl="./knowl/xref/EQUATIONFixedPerimeterConstraintDiffeq1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 9.30">equation (9.30)</a> we see that <span class="process-math">\(y\)</span> is also equal to <span class="process-math">\(\frac{P}{4}\text{.}\)</span> Thus the maximal rectangle is a square as stated.</div></li>
 </ol></div></article><span class="incontext"><a class="internal" href="CHAPTERwhat-deriv-tells.html#EXAMPLERectangleFixedPerimeter">in-context</a></span>
 </body>
 </html>

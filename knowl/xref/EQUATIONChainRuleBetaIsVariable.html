@@ -11,11 +11,11 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQUATIONChainRule1.html ./knowl/xref/THEOREMLimProd2.html ./knowl/xref/EQUATIONDeltaBetaEq0.html ./knowl/xref/EQUATIONChainRuleBetaIsVariable.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/THEOREMLimProd2.html ./knowl/xref/EQUATIONDeltaBetaEq0.html ./knowl/xref/EQUATIONChainRuleBetaIsVariable.html">
 \begin{align}
-f^\prime(x)    \amp =\limit{h}{0}{\left(\frac{\alpha(\beta(x+h))-\alpha(\beta(x))}{\textcolor{red}{\Delta\beta}}\cdot\frac{\textcolor{red}{\Delta\beta}}{h}\right)}.\tag{14.5}\\
+f^\prime(x)    \amp =\limit{h}{0}{\left(\frac{\alpha(\beta(x+h))-\alpha(\beta(x))}{\textcolor{red}{\Delta\beta}}\cdot\frac{\textcolor{red}{\Delta\beta}}{h}\right)}.\tag{14.4}\\
 \end{align}
-<div class="para intertext">From <a href="CHAPTERdiff-rules-with-limits.html#EQUATIONChainRule1" class="xref" data-knowl="./knowl/xref/EQUATIONChainRule1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 14.4">(14.4)</a> we see that <span class="process-math">\(\textcolor{red}{\Delta\beta}=\textcolor{blue}{\beta(x+h)-\beta(x)}\)</span> so</div>
+<div class="para intertext">Since <span class="process-math">\(\textcolor{red}{\Delta\beta}=\textcolor{blue}{\beta(x+h)-\beta(x)}\)</span> we see that</div>
 \begin{align}
 \amp =\limit{h}{0}{\left(\frac{\alpha(\beta(x+h))-\alpha(\beta(x))}{\Delta\beta}\cdot\frac{\textcolor{blue}{\beta(x+h)-\beta(x)}}{h}\right)}.\notag\\
 \end{align}
@@ -24,12 +24,12 @@ f^\prime(x)    \amp =\limit{h}{0}{\left(\frac{\alpha(\beta(x+h))-\alpha(\beta(x)
 \amp =\limit{h}{0}{\left(\frac{\alpha(\beta(x+h))-\alpha(\beta(x))}{\Delta\beta}\right)}\cdot\limit{h}{0}{\left(\frac{\beta(x+h)-\beta(x)}{h}\right)}.\notag\\
 \end{align}
 <div class="para intertext">
-<a href="CHAPTERdiff-rules-with-limits.html#EQUATIONDeltaBetaEq0" class="xref" data-knowl="./knowl/xref/EQUATIONDeltaBetaEq0.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 14.3">(14.3)</a> says that <span class="process-math">\(h\rightarrow 0\)</span> is equivalent to <span class="process-math">\(\Delta\beta\rightarrow 0\)</span> so we have</div>
+<a href="CHAPTERdiff-rules-with-limits.html#EQUATIONDeltaBetaEq0" class="xref" data-knowl="./knowl/xref/EQUATIONDeltaBetaEq0.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 14.3">Equation (14.3)</a> says that <span class="process-math">\(h\rightarrow 0\)</span> which implies that <span class="process-math">\(\Delta\beta\rightarrow 0\)</span> so we have</div>
 \begin{align}
 f^\prime(x)\amp =\lim_{\textcolor{red}{\underset{\Delta\beta\rightarrow0}{\cancel{h\rightarrow0}}}}{\left(\frac{\alpha(\beta+\Delta\beta)-\alpha(\beta)}{\Delta\beta}\right)}\cdot\limit{h}{0}{\left(\frac{\beta(x+h)-\beta(x)}{h}\right)},\notag\\
-f^\prime(x)           \amp =\underbrace{\limit{\Delta\beta}{0}{\left(\frac{\alpha(\beta+\Delta\beta)-\alpha(\beta)}{\Delta\beta}\right)}}_{=\alpha^\prime(\beta)}\cdot\underbrace{\limit{h}{0}{\left(\frac{\beta(x+h)-\beta(x)}{h}\right)}}_{=\beta^\prime(x)}.\tag{14.6}\\
+f^\prime(x)           \amp =\underbrace{\limit{\Delta\beta}{0}{\left(\frac{\alpha(\beta+\Delta\beta)-\alpha(\beta)}{\Delta\beta}\right)}}_{=\alpha^\prime(\beta)}\cdot\underbrace{\limit{h}{0}{\left(\frac{\beta(x+h)-\beta(x)}{h}\right)}}_{=\beta^\prime(x)}.\tag{14.5}\\
 f^\prime(x)
-\amp =\alpha^\prime(\beta)\cdot\beta^\prime(x).\tag{14.7}
+\amp =\alpha^\prime(\beta)\cdot\beta^\prime(x).\tag{14.6}
 \end{align}
 </div>
 <span class="incontext"><a class="internal" href="CHAPTERdiff-rules-with-limits.html#SECTIONChainRule-8-7-3">in-context</a></span>
