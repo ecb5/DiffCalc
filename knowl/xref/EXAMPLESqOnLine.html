@@ -13,7 +13,8 @@
 <body class="ignore-math">
 <article class="example example-like"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">9.4</span><span class="period">.</span><span class="space"> </span><span class="title">Constructing A Square on a Line.</span>
-</h4> <div class="para logical">
+</h4>
+<div class="para logical">
 <div class="para">What is the area of the smallest possible square having one corner at the point <span class="process-math">\((2,3)\)</span> and an adjacent corner on the line</div>
 <div class="displaymath process-math">
 \begin{equation}
@@ -21,17 +22,23 @@
 \end{equation}
 </div>
 <div class="para">The diagram below is a visualization of this problem.</div>
-</div> <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/DC/LineDist1.png" class="contained"></div>           <div class="para">We can imagine the blue square growing and shrinking as we move the point <span class="process-math">\((a,b)\)</span> along the line. It seems clear that the square having the least area is the one pictured in black (when <span class="process-math">\((a,b)\)</span> is at <span class="process-math">\((x,y)\text{.}\)</span> It is worth taking a moment to notice this explicitly because not all optimization problems are solvable. If we had asked for the largest possible square there would be no solution because the blue square in our diagram can always be make larger by moving the point <span class="process-math">\((a,b)\)</span> further to the left on the graph of <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONSqOptConst.html" title="Equation 9.1">equation (9.1)</a>.</div> <div class="para">But a convincing picture is not a solution. To complete the solution we’ll need to compute the coordinates of the point <span class="process-math">\((x,y)\)</span> in our sketch and compute the minimal area.</div> <div class="para logical">
+</div>
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/DC/LineDist1.png" class="contained"></div>
+<div class="para">We can imagine the blue square growing and shrinking as we move the point <span class="process-math">\((a,b)\)</span> along the line. It seems clear that the square having the least area is the one pictured in black (when <span class="process-math">\((a,b)\)</span> is at <span class="process-math">\((x,y)\text{.}\)</span> It is worth taking a moment to notice this explicitly because not all optimization problems are solvable. If we had asked for the largest possible square there would be no solution because the blue square in our diagram can always be make larger by moving the point <span class="process-math">\((a,b)\)</span> further to the left on the graph of <a href="CHAPTERwhat-deriv-tells.html#EQUATIONSqOptConst" class="xref" data-knowl="./knowl/xref/EQUATIONSqOptConst.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 9.1">equation (9.1)</a>.</div>
+<div class="para">But a convincing picture is not a solution. To complete the solution we’ll need to compute the coordinates of the point <span class="process-math">\((x,y)\)</span> in our sketch and compute the minimal area.</div>
+<div class="para logical">
 <div class="para">In any optimization problem the first question to ask is, “What do we need to optimize?” In other words, “What is our objective function?”  For this problem the length of the line segment between the point <span class="process-math">\((2,3)\)</span> and any point <span class="process-math">\((x,y)\)</span> is given by the Distance Formula: <span class="process-math">\(\sqrt{(x-2)^2+(y-3)^2}\text{.}\)</span>  Therefore the area of the square constructed from this line segment is given by the function:</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQUATIONSqOptConst.html">
 \begin{equation*}
 A(x)=\left(\sqrt{(x-2)^2+(y-3)^2}\right)^2=(x-2)^2+(y-3)^2.
 \end{equation*}
 </div>
-<div class="para">So our objective function is <span class="process-math">\(A(x)\text{.}\)</span> Since the point <span class="process-math">\((x,y)\)</span> is constrained to lie on the line <span class="process-math">\(5x+3y=2\text{,}\)</span> <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONSqOptConst.html" title="Equation 9.1">equation (9.1)</a>, is our constraint.</div>
-</div> <div class="para">Notice that we’ve abused our notation a bit. Although the notation <span class="process-math">\(A(x)\)</span> indicates that <span class="process-math">\(A\)</span> depends on <span class="process-math">\(x\)</span> alone, we’ve given <span class="process-math">\(A\)</span> in terms of both <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{.}\)</span> But solving <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONSqOptConst.html" title="Equation 9.1">equation (9.1)</a> gives <span class="process-math">\(y=\frac13(2-5x)\)</span> so it should be clear that <span class="process-math">\(A\)</span> really depends only on <span class="process-math">\(x\text{.}\)</span>
-</div> <aside class="aside aside-like"><h5 class="heading"><span class="title">Comment.</span></h5>
-<div class="para">If we make this substitution immediately we can get the objective function solely in terms of <span class="process-math">\(x\text{:}\)</span> <span class="process-math">\(A(x)=(x-2)^2+\left(\frac13(2-5x)-3\right)^2\text{,}\)</span> But does that really help? Either way we’re going to have to differentiate <span class="process-math">\(A(x)\text{.}\)</span> Which form of <span class="process-math">\(A(x)\)</span> would you rather use? We think using two variables makes this objective function a bit “easier on the eyes.”</div></aside> <div class="para logical">
+<div class="para">So our objective function is <span class="process-math">\(A(x)\text{.}\)</span> Since the point <span class="process-math">\((x,y)\)</span> is constrained to lie on the line <span class="process-math">\(5x+3y=2\text{,}\)</span> <a href="CHAPTERwhat-deriv-tells.html#EQUATIONSqOptConst" class="xref" data-knowl="./knowl/xref/EQUATIONSqOptConst.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 9.1">equation (9.1)</a>, is our constraint.</div>
+</div>
+<div class="para">Notice that we’ve abused our notation a bit. Although the notation <span class="process-math">\(A(x)\)</span> indicates that <span class="process-math">\(A\)</span> depends on <span class="process-math">\(x\)</span> alone, we’ve given <span class="process-math">\(A\)</span> in terms of both <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{.}\)</span> But solving <a href="CHAPTERwhat-deriv-tells.html#EQUATIONSqOptConst" class="xref" data-knowl="./knowl/xref/EQUATIONSqOptConst.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 9.1">equation (9.1)</a> gives <span class="process-math">\(y=\frac13(2-5x)\)</span> so it should be clear that <span class="process-math">\(A\)</span> really depends only on <span class="process-math">\(x\text{.}\)</span>
+</div>
+<aside class="aside aside-like"><h5 class="heading"><span class="title">Comment.</span></h5>
+<div class="para">If we make this substitution immediately we can get the objective function solely in terms of <span class="process-math">\(x\text{:}\)</span> <span class="process-math">\(A(x)=(x-2)^2+\left(\frac13(2-5x)-3\right)^2\text{,}\)</span> But does that really help? Either way we’re going to have to differentiate <span class="process-math">\(A(x)\text{.}\)</span> Which form of <span class="process-math">\(A(x)\)</span> would you rather use? We think using two variables makes this objective function a bit “easier on the eyes.”</div></aside><div class="para logical">
 <div class="para">We’ve seen visually that this problem has a solution and Fermat’s Theorem tells us that the derivative of our objective function will be zero at that solution.  So we differentiate both sides of</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQUATIONSqOptConst.html ./knowl/xref/EQUATIONLineDist1.html">
 \begin{equation*}
@@ -44,7 +51,7 @@ A =(x-2)^2+(y-3)^2
 \dx{A} =2(x-2)\dx{x} + 2(y-3)\textcolor{red}{\dx{y}}.
 \end{equation*}
 </div>
-<div class="para">But recall that <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> are constrained by the <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONSqOptConst.html" title="Equation 9.1">equation (9.1)</a> from which we see that <span class="process-math">\(\textcolor{red}{\dx{y}= -\frac{5}{3}\dx{x}}\text{.}\)</span>  Therefore</div>
+<div class="para">But recall that <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> are constrained by the <a href="CHAPTERwhat-deriv-tells.html#EQUATIONSqOptConst" class="xref" data-knowl="./knowl/xref/EQUATIONSqOptConst.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 9.1">equation (9.1)</a> from which we see that <span class="process-math">\(\textcolor{red}{\dx{y}= -\frac{5}{3}\dx{x}}\text{.}\)</span>  Therefore</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQUATIONSqOptConst.html ./knowl/xref/EQUATIONLineDist1.html">
 \begin{align*}
 \dx{A}\amp = 2(x-2)\dx{x} +
@@ -69,7 +76,7 @@ x-2-\frac53y+5\amp =0.\notag\\
 x+3-\frac53\textcolor{red}{y}\amp =0.\tag{9.2}
 \end{align}
 </div>
-<div class="para">From our constraint we have <span class="process-math">\(\textcolor{red}{y=\frac13(2-5x)}\text{.}\)</span> Inserting this into <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONLineDist1.html" title="Equation 9.2">equation (9.2)</a> we see that</div>
+<div class="para">From our constraint we have <span class="process-math">\(\textcolor{red}{y=\frac13(2-5x)}\text{.}\)</span> Inserting this into <a href="CHAPTERwhat-deriv-tells.html#EXAMPLESqOnLine-9-12" class="xref" data-knowl="./knowl/xref/EQUATIONLineDist1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 9.2">equation (9.2)</a> we see that</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQUATIONSqOptConst.html ./knowl/xref/EQUATIONLineDist1.html">
 \begin{equation*}
 x+3-\frac53\left(\textcolor{red}{\frac13(2-5x)}\right) =0.
@@ -86,14 +93,16 @@ x+3-\frac{10}{9}+\frac{25}{9}x\amp =0,\notag\\
 x\amp =-\frac12.\tag{9.3}
 \end{align}
 </div>
-</div> <div class="para logical">
-<div class="para">To find <span class="process-math">\(y\)</span> we use our constraint and the value of <span class="process-math">\(x\)</span> from <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONLineDist2.html" title="Equation 9.3">equation (9.3)</a>,</div>
+</div>
+<div class="para logical">
+<div class="para">To find <span class="process-math">\(y\)</span> we use our constraint and the value of <span class="process-math">\(x\)</span> from <a href="CHAPTERwhat-deriv-tells.html#EXAMPLESqOnLine-9-17" class="xref" data-knowl="./knowl/xref/EQUATIONLineDist2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 9.3">equation (9.3)</a>,</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQUATIONLineDist2.html">
 \begin{equation*}
 \eval{y}{x}{-1/2}=\eval{\frac13(2-5x)}{x}{-1/2}=\frac32.
 \end{equation*}
 </div>
-</div> <div class="para logical">
+</div>
+<div class="para logical">
 <div class="para">So we have found that the minimal square occurs when <span class="process-math">\(x=-\frac12\text{,}\)</span> and <span class="process-math">\(y=\frac32\)</span> and it feels like we’re done, doesn’t it? We’re not. The question asked was “What is the area of the smallest possible square?” To find the area we need to put <span class="process-math">\((x,y)=(-1/2, 3/2)\)</span> into our area formula which yields</div>
 <div class="displaymath process-math">
 \begin{align*}

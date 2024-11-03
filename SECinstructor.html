@@ -58,7 +58,7 @@ window.MathJax = {
       "[pretext]/mathjaxknowl3.js"
     ],
     "paths": {
-      "pretext": "https://pretextbook.org/js/lib"
+      "pretext": "_static/pretext/js/lib"
     }
   },
   "startup": {
@@ -70,8 +70,8 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.33/pretext_search.js"></script><link href="https://pretextbook.org/css/0.83/pretext_search.css" rel="stylesheet" type="text/css">
-<script>js_version = 0.33</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.33/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.33/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.33/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
@@ -79,16 +79,588 @@ window.MathJax = {
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-<link href="https://pretextbook.org/css/0.83/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/shell_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/banner_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/navbar_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/toc_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/colors_blue_red.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/setcolors.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/pretext.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/shell_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/banner_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/toc_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
+<style>
+#PleaForHelp-9-3 { counter-set: PleaForHelp-9-3 0; }
+#PleaForHelp-9-3 > li::marker { content: ""counter(PleaForHelp-9-3,decimal)"."; }
+#PleaForHelp-9-3 > li { counter-increment: PleaForHelp-9-3; }
+#SECTIONFermMethAedeq-22-2-1-1-1 { counter-set: SECTIONFermMethAedeq-22-2-1-1-1 0; }
+#SECTIONFermMethAedeq-22-2-1-1-1 > li::marker { content: ""counter(SECTIONFermMethAedeq-22-2-1-1-1,lower-roman)""; }
+#SECTIONFermMethAedeq-22-2-1-1-1 > li { counter-increment: SECTIONFermMethAedeq-22-2-1-1-1; }
+#SECTIONFermMethAedeq-22-6-1-1-1 { counter-set: SECTIONFermMethAedeq-22-6-1-1-1 0; }
+#SECTIONFermMethAedeq-22-6-1-1-1 > li::marker { content: ""counter(SECTIONFermMethAedeq-22-6-1-1-1,lower-roman)""; }
+#SECTIONFermMethAedeq-22-6-1-1-1 > li { counter-increment: SECTIONFermMethAedeq-22-6-1-1-1; }
+#SECTIONFermMethAedeq-22-7-1-1-8 { counter-set: SECTIONFermMethAedeq-22-7-1-1-8 0; }
+#SECTIONFermMethAedeq-22-7-1-1-8 > li::marker { content: ""counter(SECTIONFermMethAedeq-22-7-1-1-8,lower-roman)""; }
+#SECTIONFermMethAedeq-22-7-1-1-8 > li { counter-increment: SECTIONFermMethAedeq-22-7-1-1-8; }
+#PROBLEMFermMethX2-2-1-1-1 { counter-set: PROBLEMFermMethX2-2-1-1-1 0; }
+#PROBLEMFermMethX2-2-1-1-1 > li::marker { content: ""counter(PROBLEMFermMethX2-2-1-1-1,lower-roman)""; }
+#PROBLEMFermMethX2-2-1-1-1 > li { counter-increment: PROBLEMFermMethX2-2-1-1-1; }
+#PROBLEMFermMethX2-3-1-1-1 { counter-set: PROBLEMFermMethX2-3-1-1-1 0; }
+#PROBLEMFermMethX2-3-1-1-1 > li::marker { content: ""counter(PROBLEMFermMethX2-3-1-1-1,lower-roman)""; }
+#PROBLEMFermMethX2-3-1-1-1 > li { counter-increment: PROBLEMFermMethX2-3-1-1-1; }
+#SUBSECTIONSpdVelRofC-31-2-1 { counter-set: SUBSECTIONSpdVelRofC-31-2-1 0; }
+#SUBSECTIONSpdVelRofC-31-2-1 > li::marker { content: ""counter(SUBSECTIONSpdVelRofC-31-2-1,lower-roman)""; }
+#SUBSECTIONSpdVelRofC-31-2-1 > li { counter-increment: SUBSECTIONSpdVelRofC-31-2-1; }
+#SUBSECTIONSpdVelRofC-32-2-1 { counter-set: SUBSECTIONSpdVelRofC-32-2-1 0; }
+#SUBSECTIONSpdVelRofC-32-2-1 > li::marker { content: ""counter(SUBSECTIONSpdVelRofC-32-2-1,lower-roman)""; }
+#SUBSECTIONSpdVelRofC-32-2-1 > li { counter-increment: SUBSECTIONSpdVelRofC-32-2-1; }
+#SUBSECTIONSpdVelRofC-33-2-1 { counter-set: SUBSECTIONSpdVelRofC-33-2-1 0; }
+#SUBSECTIONSpdVelRofC-33-2-1 > li::marker { content: ""counter(SUBSECTIONSpdVelRofC-33-2-1,lower-roman)""; }
+#SUBSECTIONSpdVelRofC-33-2-1 > li { counter-increment: SUBSECTIONSpdVelRofC-33-2-1; }
+#SUBSECTIONSpdVelRofC-34-2-1 { counter-set: SUBSECTIONSpdVelRofC-34-2-1 0; }
+#SUBSECTIONSpdVelRofC-34-2-1 > li::marker { content: ""counter(SUBSECTIONSpdVelRofC-34-2-1,lower-roman)""; }
+#SUBSECTIONSpdVelRofC-34-2-1 > li { counter-increment: SUBSECTIONSpdVelRofC-34-2-1; }
+#DRILLConstantRule-2 { counter-set: DRILLConstantRule-2 0; }
+#DRILLConstantRule-2 > li::marker { content: ""counter(DRILLConstantRule-2,lower-roman)""; }
+#DRILLConstantRule-2 > li { counter-increment: DRILLConstantRule-2; }
+#SECTIONsome-rules-diff-26-2 { counter-set: SECTIONsome-rules-diff-26-2 0; }
+#SECTIONsome-rules-diff-26-2 > li::marker { content: ""counter(SECTIONsome-rules-diff-26-2,lower-roman)""; }
+#SECTIONsome-rules-diff-26-2 > li { counter-increment: SECTIONsome-rules-diff-26-2; }
+#PARTGenPwrRule-1-2-1 { counter-set: PARTGenPwrRule-1-2-1 0; }
+#PARTGenPwrRule-1-2-1 > li::marker { content: ""counter(PARTGenPwrRule-1-2-1,lower-roman)""; }
+#PARTGenPwrRule-1-2-1 > li { counter-increment: PARTGenPwrRule-1-2-1; }
+#SECTIONsome-rules-diff-58-2 { counter-set: SECTIONsome-rules-diff-58-2 0; }
+#SECTIONsome-rules-diff-58-2 > li::marker { content: ""counter(SECTIONsome-rules-diff-58-2,lower-roman)""; }
+#SECTIONsome-rules-diff-58-2 > li { counter-increment: SECTIONsome-rules-diff-58-2; }
+#SECTIONsome-rules-diff-79-1-4 { counter-set: SECTIONsome-rules-diff-79-1-4 0; }
+#SECTIONsome-rules-diff-79-1-4 > li::marker { content: ""counter(SECTIONsome-rules-diff-79-1-4,lower-roman)""; }
+#SECTIONsome-rules-diff-79-1-4 > li { counter-increment: SECTIONsome-rules-diff-79-1-4; }
+#SECTIONsome-rules-diff-80-1-4 { counter-set: SECTIONsome-rules-diff-80-1-4 0; }
+#SECTIONsome-rules-diff-80-1-4 > li::marker { content: ""counter(SECTIONsome-rules-diff-80-1-4,lower-roman)""; }
+#SECTIONsome-rules-diff-80-1-4 > li { counter-increment: SECTIONsome-rules-diff-80-1-4; }
+#SECTIONsome-rules-diff-81-1-1 { counter-set: SECTIONsome-rules-diff-81-1-1 0; }
+#SECTIONsome-rules-diff-81-1-1 > li::marker { content: ""counter(SECTIONsome-rules-diff-81-1-1,lower-roman)""; }
+#SECTIONsome-rules-diff-81-1-1 > li { counter-increment: SECTIONsome-rules-diff-81-1-1; }
+#SECTIONsome-rules-diff-82-1-1 { counter-set: SECTIONsome-rules-diff-82-1-1 0; }
+#SECTIONsome-rules-diff-82-1-1 > li::marker { content: ""counter(SECTIONsome-rules-diff-82-1-1,lower-roman)""; }
+#SECTIONsome-rules-diff-82-1-1 > li { counter-increment: SECTIONsome-rules-diff-82-1-1; }
+#SECTIONVelocitySlopeTangent-12-2 { counter-set: SECTIONVelocitySlopeTangent-12-2 0; }
+#SECTIONVelocitySlopeTangent-12-2 > li::marker { content: ""counter(SECTIONVelocitySlopeTangent-12-2,lower-roman)""; }
+#SECTIONVelocitySlopeTangent-12-2 > li { counter-increment: SECTIONVelocitySlopeTangent-12-2; }
+#SECTIONdefin-tang-line-22-1-2 { counter-set: SECTIONdefin-tang-line-22-1-2 0; }
+#SECTIONdefin-tang-line-22-1-2 > li::marker { content: ""counter(SECTIONdefin-tang-line-22-1-2,lower-roman)""; }
+#SECTIONdefin-tang-line-22-1-2 > li { counter-increment: SECTIONdefin-tang-line-22-1-2; }
+#SECTIONdefin-tang-line-31-2-1-1-2 { counter-set: SECTIONdefin-tang-line-31-2-1-1-2 0; }
+#SECTIONdefin-tang-line-31-2-1-1-2 > li::marker { content: ""counter(SECTIONdefin-tang-line-31-2-1-1-2,lower-roman)""; }
+#SECTIONdefin-tang-line-31-2-1-1-2 > li { counter-increment: SECTIONdefin-tang-line-31-2-1-1-2; }
+#SECTIONdefin-tang-line-31-3-1-1-2 { counter-set: SECTIONdefin-tang-line-31-3-1-1-2 0; }
+#SECTIONdefin-tang-line-31-3-1-1-2 > li::marker { content: ""counter(SECTIONdefin-tang-line-31-3-1-1-2,lower-roman)""; }
+#SECTIONdefin-tang-line-31-3-1-1-2 > li { counter-increment: SECTIONdefin-tang-line-31-3-1-1-2; }
+#SECTIONdefin-tang-line-31-4-1-1-2 { counter-set: SECTIONdefin-tang-line-31-4-1-1-2 0; }
+#SECTIONdefin-tang-line-31-4-1-1-2 > li::marker { content: ""counter(SECTIONdefin-tang-line-31-4-1-1-2,lower-roman)""; }
+#SECTIONdefin-tang-line-31-4-1-1-2 > li { counter-increment: SECTIONdefin-tang-line-31-4-1-1-2; }
+#PROBLEMHyperbolaTriangles-3-1-1-6 { counter-set: PROBLEMHyperbolaTriangles-3-1-1-6 0; }
+#PROBLEMHyperbolaTriangles-3-1-1-6 > li::marker { content: ""counter(PROBLEMHyperbolaTriangles-3-1-1-6,lower-roman)""; }
+#PROBLEMHyperbolaTriangles-3-1-1-6 > li { counter-increment: PROBLEMHyperbolaTriangles-3-1-1-6; }
+#PROBLEMHyperbolaTriangles-4-1-1-6 { counter-set: PROBLEMHyperbolaTriangles-4-1-1-6 0; }
+#PROBLEMHyperbolaTriangles-4-1-1-6 > li::marker { content: ""counter(PROBLEMHyperbolaTriangles-4-1-1-6,lower-roman)""; }
+#PROBLEMHyperbolaTriangles-4-1-1-6 > li { counter-increment: PROBLEMHyperbolaTriangles-4-1-1-6; }
+#PROBLEMHyperbolaTriangles-5-1-1-6 { counter-set: PROBLEMHyperbolaTriangles-5-1-1-6 0; }
+#PROBLEMHyperbolaTriangles-5-1-1-6 > li::marker { content: ""counter(PROBLEMHyperbolaTriangles-5-1-1-6,lower-roman)""; }
+#PROBLEMHyperbolaTriangles-5-1-1-6 > li { counter-increment: PROBLEMHyperbolaTriangles-5-1-1-6; }
+#PROBLEMHyperbolaTriangles-6-1-1-4 { counter-set: PROBLEMHyperbolaTriangles-6-1-1-4 0; }
+#PROBLEMHyperbolaTriangles-6-1-1-4 > li::marker { content: ""counter(PROBLEMHyperbolaTriangles-6-1-1-4,lower-roman)""; }
+#PROBLEMHyperbolaTriangles-6-1-1-4 > li { counter-increment: PROBLEMHyperbolaTriangles-6-1-1-4; }
+#SECTIONGalileoDrops-9-2 { counter-set: SECTIONGalileoDrops-9-2 0; }
+#SECTIONGalileoDrops-9-2 > li::marker { content: ""counter(SECTIONGalileoDrops-9-2,decimal)"."; }
+#SECTIONGalileoDrops-9-2 > li { counter-increment: SECTIONGalileoDrops-9-2; }
+#SECONDBringCalc-5-4 { counter-set: SECONDBringCalc-5-4 0; }
+#SECONDBringCalc-5-4 > li::marker { content: ""counter(SECONDBringCalc-5-4,decimal)"."; }
+#SECONDBringCalc-5-4 > li { counter-increment: SECONDBringCalc-5-4; }
+#SECONDBringCalc-11-6 { counter-set: SECONDBringCalc-11-6 0; }
+#SECONDBringCalc-11-6 > li::marker { content: ""counter(SECONDBringCalc-11-6,decimal)"."; }
+#SECONDBringCalc-11-6 > li { counter-increment: SECONDBringCalc-11-6; }
+#PROBLEMGeneralFallingBalls-2-1-1-2 { counter-set: PROBLEMGeneralFallingBalls-2-1-1-2 0; }
+#PROBLEMGeneralFallingBalls-2-1-1-2 > li::marker { content: ""counter(PROBLEMGeneralFallingBalls-2-1-1-2,lower-roman)""; }
+#PROBLEMGeneralFallingBalls-2-1-1-2 > li { counter-increment: PROBLEMGeneralFallingBalls-2-1-1-2; }
+#PROBLEMGeneralFallingBalls-8-1-1-2 { counter-set: PROBLEMGeneralFallingBalls-8-1-1-2 0; }
+#PROBLEMGeneralFallingBalls-8-1-1-2 > li::marker { content: ""counter(PROBLEMGeneralFallingBalls-8-1-1-2,lower-roman)""; }
+#PROBLEMGeneralFallingBalls-8-1-1-2 > li { counter-increment: PROBLEMGeneralFallingBalls-8-1-1-2; }
+#SECTIONDerivative-18-2 { counter-set: SECTIONDerivative-18-2 0; }
+#SECTIONDerivative-18-2 > li::marker { content: ""counter(SECTIONDerivative-18-2,lower-roman)""; }
+#SECTIONDerivative-18-2 > li { counter-increment: SECTIONDerivative-18-2; }
+#PROBLEMDerivProdNEProdDeriv-2-1-1-1 { counter-set: PROBLEMDerivProdNEProdDeriv-2-1-1-1 0; }
+#PROBLEMDerivProdNEProdDeriv-2-1-1-1 > li::marker { content: ""counter(PROBLEMDerivProdNEProdDeriv-2-1-1-1,lower-roman)""; }
+#PROBLEMDerivProdNEProdDeriv-2-1-1-1 > li { counter-increment: PROBLEMDerivProdNEProdDeriv-2-1-1-1; }
+#SECTIONDerivative-21-2 { counter-set: SECTIONDerivative-21-2 0; }
+#SECTIONDerivative-21-2 > li::marker { content: ""counter(SECTIONDerivative-21-2,lower-roman)""; }
+#SECTIONDerivative-21-2 > li { counter-increment: SECTIONDerivative-21-2; }
+#PROBLEMAirlinerSpeed-3-1-1-2 { counter-set: PROBLEMAirlinerSpeed-3-1-1-2 0; }
+#PROBLEMAirlinerSpeed-3-1-1-2 > li::marker { content: ""counter(PROBLEMAirlinerSpeed-3-1-1-2,decimal)"."; }
+#PROBLEMAirlinerSpeed-3-1-1-2 > li { counter-increment: PROBLEMAirlinerSpeed-3-1-1-2; }
+#SECTIONnewt-flux-dynam-13-2-1 { counter-set: SECTIONnewt-flux-dynam-13-2-1 0; }
+#SECTIONnewt-flux-dynam-13-2-1 > li::marker { content: ""counter(SECTIONnewt-flux-dynam-13-2-1,lower-roman)""; }
+#SECTIONnewt-flux-dynam-13-2-1 > li { counter-increment: SECTIONnewt-flux-dynam-13-2-1; }
+#SECTIONFluxions-36-2-1-1-1 { counter-set: SECTIONFluxions-36-2-1-1-1 0; }
+#SECTIONFluxions-36-2-1-1-1 > li::marker { content: ""counter(SECTIONFluxions-36-2-1-1-1,decimal)"."; }
+#SECTIONFluxions-36-2-1-1-1 > li { counter-increment: SECTIONFluxions-36-2-1-1-1; }
+#SECTIONFluxions-36-3-1-1-1 { counter-set: SECTIONFluxions-36-3-1-1-1 0; }
+#SECTIONFluxions-36-3-1-1-1 > li::marker { content: ""counter(SECTIONFluxions-36-3-1-1-1,decimal)"."; }
+#SECTIONFluxions-36-3-1-1-1 > li { counter-increment: SECTIONFluxions-36-3-1-1-1; }
+#PROBLEMadfj-1-1-2-2 { counter-set: PROBLEMadfj-1-1-2-2 0; }
+#PROBLEMadfj-1-1-2-2 > li::marker { content: ""counter(PROBLEMadfj-1-1-2-2,lower-roman)""; }
+#PROBLEMadfj-1-1-2-2 > li { counter-increment: PROBLEMadfj-1-1-2-2; }
+#PROBLEMadfj-2-1-2-2 { counter-set: PROBLEMadfj-2-1-2-2 0; }
+#PROBLEMadfj-2-1-2-2 > li::marker { content: ""counter(PROBLEMadfj-2-1-2-2,lower-roman)""; }
+#PROBLEMadfj-2-1-2-2 > li { counter-increment: PROBLEMadfj-2-1-2-2; }
+#SECTIONSelfIntersectCurve-20-15-2-1-1-2 { counter-set: SECTIONSelfIntersectCurve-20-15-2-1-1-2 0; }
+#SECTIONSelfIntersectCurve-20-15-2-1-1-2 > li::marker { content: ""counter(SECTIONSelfIntersectCurve-20-15-2-1-1-2,lower-roman)""; }
+#SECTIONSelfIntersectCurve-20-15-2-1-1-2 > li { counter-increment: SECTIONSelfIntersectCurve-20-15-2-1-1-2; }
+#PROBLEMUnitCircleParameterization1-1-1-1-1 { counter-set: PROBLEMUnitCircleParameterization1-1-1-1-1 0; }
+#PROBLEMUnitCircleParameterization1-1-1-1-1 > li::marker { content: ""counter(PROBLEMUnitCircleParameterization1-1-1-1-1,lower-roman)""; }
+#PROBLEMUnitCircleParameterization1-1-1-1-1 > li { counter-increment: PROBLEMUnitCircleParameterization1-1-1-1-1; }
+#SECTIONSelfIntersectCurve-20-21-1-1-2 { counter-set: SECTIONSelfIntersectCurve-20-21-1-1-2 0; }
+#SECTIONSelfIntersectCurve-20-21-1-1-2 > li::marker { content: ""counter(SECTIONSelfIntersectCurve-20-21-1-1-2,lower-roman)""; }
+#SECTIONSelfIntersectCurve-20-21-1-1-2 > li { counter-increment: SECTIONSelfIntersectCurve-20-21-1-1-2; }
+#SUBSECTIONradian-measure-19-2 { counter-set: SUBSECTIONradian-measure-19-2 0; }
+#SUBSECTIONradian-measure-19-2 > li::marker { content: ""counter(SUBSECTIONradian-measure-19-2,lower-roman)""; }
+#SUBSECTIONradian-measure-19-2 > li { counter-increment: SUBSECTIONradian-measure-19-2; }
+#SUBSECTIONradian-measure-20-2 { counter-set: SUBSECTIONradian-measure-20-2 0; }
+#SUBSECTIONradian-measure-20-2 > li::marker { content: ""counter(SUBSECTIONradian-measure-20-2,lower-roman)""; }
+#SUBSECTIONradian-measure-20-2 > li { counter-increment: SUBSECTIONradian-measure-20-2; }
+#SUBSECTIONradian-measure-31-2 { counter-set: SUBSECTIONradian-measure-31-2 0; }
+#SUBSECTIONradian-measure-31-2 > li::marker { content: ""counter(SUBSECTIONradian-measure-31-2,lower-roman)""; }
+#SUBSECTIONradian-measure-31-2 > li { counter-increment: SUBSECTIONradian-measure-31-2; }
+#SECTIONtrig-interl-3-12-2-1-1-2 { counter-set: SECTIONtrig-interl-3-12-2-1-1-2 0; }
+#SECTIONtrig-interl-3-12-2-1-1-2 > li::marker { content: ""counter(SECTIONtrig-interl-3-12-2-1-1-2,lower-roman)""; }
+#SECTIONtrig-interl-3-12-2-1-1-2 > li { counter-increment: SECTIONtrig-interl-3-12-2-1-1-2; }
+#SECTIONtrig-interl-3-12-3-1-1-2 { counter-set: SECTIONtrig-interl-3-12-3-1-1-2 0; }
+#SECTIONtrig-interl-3-12-3-1-1-2 > li::marker { content: ""counter(SECTIONtrig-interl-3-12-3-1-1-2,lower-roman)""; }
+#SECTIONtrig-interl-3-12-3-1-1-2 > li { counter-increment: SECTIONtrig-interl-3-12-3-1-1-2; }
+#SECTIONtrig-interl-3-14-2 { counter-set: SECTIONtrig-interl-3-14-2 0; }
+#SECTIONtrig-interl-3-14-2 > li::marker { content: ""counter(SECTIONtrig-interl-3-14-2,lower-roman)""; }
+#SECTIONtrig-interl-3-14-2 > li { counter-increment: SECTIONtrig-interl-3-14-2; }
+#PROBLEMSineOscillB-1-1-8 { counter-set: PROBLEMSineOscillB-1-1-8 0; }
+#PROBLEMSineOscillB-1-1-8 > li::marker { content: ""counter(PROBLEMSineOscillB-1-1-8,lower-roman)""; }
+#PROBLEMSineOscillB-1-1-8 > li { counter-increment: PROBLEMSineOscillB-1-1-8; }
+#SECTIONtrig-interl-5-11-2 { counter-set: SECTIONtrig-interl-5-11-2 0; }
+#SECTIONtrig-interl-5-11-2 > li::marker { content: ""counter(SECTIONtrig-interl-5-11-2,lower-roman)""; }
+#SECTIONtrig-interl-5-11-2 > li { counter-increment: SECTIONtrig-interl-5-11-2; }
+#DRILLPolarQuirks2-2 { counter-set: DRILLPolarQuirks2-2 0; }
+#DRILLPolarQuirks2-2 > li::marker { content: ""counter(DRILLPolarQuirks2-2,lower-roman)""; }
+#DRILLPolarQuirks2-2 > li { counter-increment: DRILLPolarQuirks2-2; }
+#PROBLEMPolRectConvertA-1-1-3 { counter-set: PROBLEMPolRectConvertA-1-1-3 0; }
+#PROBLEMPolRectConvertA-1-1-3 > li::marker { content: ""counter(PROBLEMPolRectConvertA-1-1-3,lower-roman)""; }
+#PROBLEMPolRectConvertA-1-1-3 > li { counter-increment: PROBLEMPolRectConvertA-1-1-3; }
+#PROBLEMPolarGraphs-2 { counter-set: PROBLEMPolarGraphs-2 0; }
+#PROBLEMPolarGraphs-2 > li::marker { content: ""counter(PROBLEMPolarGraphs-2,lower-roman)""; }
+#PROBLEMPolarGraphs-2 > li { counter-increment: PROBLEMPolarGraphs-2; }
+#SUBSECTIONCircularMotion-5-1-2 { counter-set: SUBSECTIONCircularMotion-5-1-2 0; }
+#SUBSECTIONCircularMotion-5-1-2 > li::marker { content: ""counter(SUBSECTIONCircularMotion-5-1-2,lower-roman)""; }
+#SUBSECTIONCircularMotion-5-1-2 > li { counter-increment: SUBSECTIONCircularMotion-5-1-2; }
+#EXERCISEDiffPractice1-1-1-3 { counter-set: EXERCISEDiffPractice1-1-1-3 0; }
+#EXERCISEDiffPractice1-1-1-3 > li::marker { content: ""counter(EXERCISEDiffPractice1-1-1-3,lower-roman)""; }
+#EXERCISEDiffPractice1-1-1-3 > li { counter-increment: EXERCISEDiffPractice1-1-1-3; }
+#SUBSECTIONCircularMotion-12-1-9 { counter-set: SUBSECTIONCircularMotion-12-1-9 0; }
+#SUBSECTIONCircularMotion-12-1-9 > li::marker { content: ""counter(SUBSECTIONCircularMotion-12-1-9,lower-roman)""; }
+#SUBSECTIONCircularMotion-12-1-9 > li { counter-increment: SUBSECTIONCircularMotion-12-1-9; }
+#SUBSECTIONpolar-coord-calc-6-2-1-3-1 { counter-set: SUBSECTIONpolar-coord-calc-6-2-1-3-1 0; }
+#SUBSECTIONpolar-coord-calc-6-2-1-3-1 > li::marker { content: ""counter(SUBSECTIONpolar-coord-calc-6-2-1-3-1,lower-roman)""; }
+#SUBSECTIONpolar-coord-calc-6-2-1-3-1 > li { counter-increment: SUBSECTIONpolar-coord-calc-6-2-1-3-1; }
+#SUBSECTIONpolar-coord-calc-6-3-1-3-1 { counter-set: SUBSECTIONpolar-coord-calc-6-3-1-3-1 0; }
+#SUBSECTIONpolar-coord-calc-6-3-1-3-1 > li::marker { content: ""counter(SUBSECTIONpolar-coord-calc-6-3-1-3-1,lower-roman)""; }
+#SUBSECTIONpolar-coord-calc-6-3-1-3-1 > li { counter-increment: SUBSECTIONpolar-coord-calc-6-3-1-3-1; }
+#SUBSECTIONpolar-coord-calc-6-4-1-3-1 { counter-set: SUBSECTIONpolar-coord-calc-6-4-1-3-1 0; }
+#SUBSECTIONpolar-coord-calc-6-4-1-3-1 > li::marker { content: ""counter(SUBSECTIONpolar-coord-calc-6-4-1-3-1,lower-roman)""; }
+#SUBSECTIONpolar-coord-calc-6-4-1-3-1 > li { counter-increment: SUBSECTIONpolar-coord-calc-6-4-1-3-1; }
+#PROBLEMcycloid2-2-1-1-1 { counter-set: PROBLEMcycloid2-2-1-1-1 0; }
+#PROBLEMcycloid2-2-1-1-1 > li::marker { content: ""counter(PROBLEMcycloid2-2-1-1-1,lower-roman)""; }
+#PROBLEMcycloid2-2-1-1-1 > li { counter-increment: PROBLEMcycloid2-2-1-1-1; }
+#PROBLEMcycloid2-3-1-1-1 { counter-set: PROBLEMcycloid2-3-1-1-1 0; }
+#PROBLEMcycloid2-3-1-1-1 > li::marker { content: ""counter(PROBLEMcycloid2-3-1-1-1,lower-roman)""; }
+#PROBLEMcycloid2-3-1-1-1 > li { counter-increment: PROBLEMcycloid2-3-1-1-1; }
+#SUBSECTIONsimple-harm-oscill-17-3-1-1-4 { counter-set: SUBSECTIONsimple-harm-oscill-17-3-1-1-4 0; }
+#SUBSECTIONsimple-harm-oscill-17-3-1-1-4 > li::marker { content: ""counter(SUBSECTIONsimple-harm-oscill-17-3-1-1-4,lower-roman)""; }
+#SUBSECTIONsimple-harm-oscill-17-3-1-1-4 > li { counter-increment: SUBSECTIONsimple-harm-oscill-17-3-1-1-4; }
+#SECTIONdiff-other-trig-13-1-1 { counter-set: SECTIONdiff-other-trig-13-1-1 0; }
+#SECTIONdiff-other-trig-13-1-1 > li::marker { content: ""counter(SECTIONdiff-other-trig-13-1-1,lower-roman)""; }
+#SECTIONdiff-other-trig-13-1-1 > li { counter-increment: SECTIONdiff-other-trig-13-1-1; }
+#SECTIONdiff-other-trig-14-1-3 { counter-set: SECTIONdiff-other-trig-14-1-3 0; }
+#SECTIONdiff-other-trig-14-1-3 > li::marker { content: ""counter(SECTIONdiff-other-trig-14-1-3,lower-roman)""; }
+#SECTIONdiff-other-trig-14-1-3 > li { counter-increment: SECTIONdiff-other-trig-14-1-3; }
+#PROBLEMDiffFormTan-3-1-3-1 { counter-set: PROBLEMDiffFormTan-3-1-3-1 0; }
+#PROBLEMDiffFormTan-3-1-3-1 > li::marker { content: ""counter(PROBLEMDiffFormTan-3-1-3-1,decimal)"."; }
+#PROBLEMDiffFormTan-3-1-3-1 > li { counter-increment: PROBLEMDiffFormTan-3-1-3-1; }
+#DIGRESSIONInverse-function-notation-7-1-1 { counter-set: DIGRESSIONInverse-function-notation-7-1-1 0; }
+#DIGRESSIONInverse-function-notation-7-1-1 > li::marker { content: ""counter(DIGRESSIONInverse-function-notation-7-1-1,lower-roman)""; }
+#DIGRESSIONInverse-function-notation-7-1-1 > li { counter-increment: DIGRESSIONInverse-function-notation-7-1-1; }
+#PROBLEMInvTanDiffeqB-1-1-2 { counter-set: PROBLEMInvTanDiffeqB-1-1-2 0; }
+#PROBLEMInvTanDiffeqB-1-1-2 > li::marker { content: ""counter(PROBLEMInvTanDiffeqB-1-1-2,lower-roman)""; }
+#PROBLEMInvTanDiffeqB-1-1-2 > li { counter-increment: PROBLEMInvTanDiffeqB-1-1-2; }
+#PROBLEMArcSinDiffeqB-1-1-2 { counter-set: PROBLEMArcSinDiffeqB-1-1-2 0; }
+#PROBLEMArcSinDiffeqB-1-1-2 > li::marker { content: ""counter(PROBLEMArcSinDiffeqB-1-1-2,lower-roman)""; }
+#PROBLEMArcSinDiffeqB-1-1-2 > li { counter-increment: PROBLEMArcSinDiffeqB-1-1-2; }
+#PROBLEMArcSecDiffeqB-1-1-2 { counter-set: PROBLEMArcSecDiffeqB-1-1-2 0; }
+#PROBLEMArcSecDiffeqB-1-1-2 > li::marker { content: ""counter(PROBLEMArcSecDiffeqB-1-1-2,lower-roman)""; }
+#PROBLEMArcSecDiffeqB-1-1-2 > li { counter-increment: PROBLEMArcSecDiffeqB-1-1-2; }
+#InverseSecCsc-11-1 { counter-set: InverseSecCsc-11-1 0; }
+#InverseSecCsc-11-1 > li::marker { content: ""counter(InverseSecCsc-11-1,decimal)"."; }
+#InverseSecCsc-11-1 > li { counter-increment: InverseSecCsc-11-1; }
+#InverseSecCsc-17-1-1 { counter-set: InverseSecCsc-17-1-1 0; }
+#InverseSecCsc-17-1-1 > li::marker { content: ""counter(InverseSecCsc-17-1-1,lower-roman)""; }
+#InverseSecCsc-17-1-1 > li { counter-increment: InverseSecCsc-17-1-1; }
+#InverseSecCsc-20-2-1-1-1 { counter-set: InverseSecCsc-20-2-1-1-1 0; }
+#InverseSecCsc-20-2-1-1-1 > li::marker { content: ""counter(InverseSecCsc-20-2-1-1-1,lower-roman)""; }
+#InverseSecCsc-20-2-1-1-1 > li { counter-increment: InverseSecCsc-20-2-1-1-1; }
+#EXAMPLESqrt2-2-3-1-1-1 { counter-set: EXAMPLESqrt2-2-3-1-1-1 0; }
+#EXAMPLESqrt2-2-3-1-1-1 > li::marker { content: ""counter(EXAMPLESqrt2-2-3-1-1-1,lower-roman)""; }
+#EXAMPLESqrt2-2-3-1-1-1 > li { counter-increment: EXAMPLESqrt2-2-3-1-1-1; }
+#DRILLNewtonMethod2-2 { counter-set: DRILLNewtonMethod2-2 0; }
+#DRILLNewtonMethod2-2 > li::marker { content: ""counter(DRILLNewtonMethod2-2,lower-roman)""; }
+#DRILLNewtonMethod2-2 > li { counter-increment: DRILLNewtonMethod2-2; }
+#ALGORITHMNewtonsMethod-3-4 { counter-set: ALGORITHMNewtonsMethod-3-4 0; }
+#ALGORITHMNewtonsMethod-3-4 > li::marker { content: ""counter(ALGORITHMNewtonsMethod-3-4,decimal)"."; }
+#ALGORITHMNewtonsMethod-3-4 > li { counter-increment: ALGORITHMNewtonsMethod-3-4; }
+#PROBLEMNewtMethCreateFunction-2-3 { counter-set: PROBLEMNewtMethCreateFunction-2-3 0; }
+#PROBLEMNewtMethCreateFunction-2-3 > li::marker { content: ""counter(PROBLEMNewtMethCreateFunction-2-3,lower-roman)""; }
+#PROBLEMNewtMethCreateFunction-2-3 > li { counter-increment: PROBLEMNewtMethCreateFunction-2-3; }
+#PROBLEMNewton-meth-2-8 { counter-set: PROBLEMNewton-meth-2-8 0; }
+#PROBLEMNewton-meth-2-8 > li::marker { content: ""counter(PROBLEMNewton-meth-2-8,lower-roman)""; }
+#PROBLEMNewton-meth-2-8 > li { counter-increment: PROBLEMNewton-meth-2-8; }
+#PROBLEMNewton-meth2-2-2 { counter-set: PROBLEMNewton-meth2-2-2 0; }
+#PROBLEMNewton-meth2-2-2 > li::marker { content: ""counter(PROBLEMNewton-meth2-2-2,lower-roman)""; }
+#PROBLEMNewton-meth2-2-2 > li { counter-increment: PROBLEMNewton-meth2-2-2; }
+#SUBSECTIONSubtleFailure-8-3-1-1-3 { counter-set: SUBSECTIONSubtleFailure-8-3-1-1-3 0; }
+#SUBSECTIONSubtleFailure-8-3-1-1-3 > li::marker { content: ""counter(SUBSECTIONSubtleFailure-8-3-1-1-3,lower-roman)""; }
+#SUBSECTIONSubtleFailure-8-3-1-1-3 > li { counter-increment: SUBSECTIONSubtleFailure-8-3-1-1-3; }
+#SECTIONDEsandIVPS-2-3 { counter-set: SECTIONDEsandIVPS-2-3 0; }
+#SECTIONDEsandIVPS-2-3 > li::marker { content: ""counter(SECTIONDEsandIVPS-2-3,decimal)"."; }
+#SECTIONDEsandIVPS-2-3 > li { counter-increment: SECTIONDEsandIVPS-2-3; }
+#DRILLIVP-sqr-1-1 { counter-set: DRILLIVP-sqr-1-1 0; }
+#DRILLIVP-sqr-1-1 > li::marker { content: ""counter(DRILLIVP-sqr-1-1,lower-roman)""; }
+#DRILLIVP-sqr-1-1 > li { counter-increment: DRILLIVP-sqr-1-1; }
+#SECTIONexponential-growth-23-2 { counter-set: SECTIONexponential-growth-23-2 0; }
+#SECTIONexponential-growth-23-2 > li::marker { content: ""counter(SECTIONexponential-growth-23-2,decimal)"."; }
+#SECTIONexponential-growth-23-2 > li { counter-increment: SECTIONexponential-growth-23-2; }
+#SECTIONexponential-growth-28-2 { counter-set: SECTIONexponential-growth-28-2 0; }
+#SECTIONexponential-growth-28-2 > li::marker { content: ""counter(SECTIONexponential-growth-28-2,lower-roman)""; }
+#SECTIONexponential-growth-28-2 > li { counter-increment: SECTIONexponential-growth-28-2; }
+#SECTIONexponential-growth-29-2 { counter-set: SECTIONexponential-growth-29-2 0; }
+#SECTIONexponential-growth-29-2 > li::marker { content: ""counter(SECTIONexponential-growth-29-2,lower-roman)""; }
+#SECTIONexponential-growth-29-2 > li { counter-increment: SECTIONexponential-growth-29-2; }
+#SECTIONexponential-growth-30-2 { counter-set: SECTIONexponential-growth-30-2 0; }
+#SECTIONexponential-growth-30-2 > li::marker { content: ""counter(SECTIONexponential-growth-30-2,lower-roman)""; }
+#SECTIONexponential-growth-30-2 > li { counter-increment: SECTIONexponential-growth-30-2; }
+#SECTIONexponential-growth-33-3-1-1-2 { counter-set: SECTIONexponential-growth-33-3-1-1-2 0; }
+#SECTIONexponential-growth-33-3-1-1-2 > li::marker { content: ""counter(SECTIONexponential-growth-33-3-1-1-2,lower-roman)""; }
+#SECTIONexponential-growth-33-3-1-1-2 > li { counter-increment: SECTIONexponential-growth-33-3-1-1-2; }
+#SECTIONexponential-growth-37-1-1-1-4 { counter-set: SECTIONexponential-growth-37-1-1-1-4 0; }
+#SECTIONexponential-growth-37-1-1-1-4 > li::marker { content: ""counter(SECTIONexponential-growth-37-1-1-1-4,lower-roman)""; }
+#SECTIONexponential-growth-37-1-1-1-4 > li { counter-increment: SECTIONexponential-growth-37-1-1-1-4; }
+#PROBLEMHyperbolicTrig-2-1-1-1 { counter-set: PROBLEMHyperbolicTrig-2-1-1-1 0; }
+#PROBLEMHyperbolicTrig-2-1-1-1 > li::marker { content: ""counter(PROBLEMHyperbolicTrig-2-1-1-1,lower-roman)""; }
+#PROBLEMHyperbolicTrig-2-1-1-1 > li { counter-increment: PROBLEMHyperbolicTrig-2-1-1-1; }
+#SECTIONGatewayArch-5-4-1-1-3 { counter-set: SECTIONGatewayArch-5-4-1-1-3 0; }
+#SECTIONGatewayArch-5-4-1-1-3 > li::marker { content: ""counter(SECTIONGatewayArch-5-4-1-1-3,lower-roman)""; }
+#SECTIONGatewayArch-5-4-1-1-3 > li { counter-increment: SECTIONGatewayArch-5-4-1-1-3; }
+#PROBLEMBacteriaIVP1-5-1-1-3 { counter-set: PROBLEMBacteriaIVP1-5-1-1-3 0; }
+#PROBLEMBacteriaIVP1-5-1-1-3 > li::marker { content: ""counter(PROBLEMBacteriaIVP1-5-1-1-3,lower-roman)""; }
+#PROBLEMBacteriaIVP1-5-1-1-3 > li { counter-increment: PROBLEMBacteriaIVP1-5-1-1-3; }
+#SECTIONNatLog-4-2 { counter-set: SECTIONNatLog-4-2 0; }
+#SECTIONNatLog-4-2 > li::marker { content: ""counter(SECTIONNatLog-4-2,lower-roman)""; }
+#SECTIONNatLog-4-2 > li { counter-increment: SECTIONNatLog-4-2; }
+#SECTIONNatLog-9-2 { counter-set: SECTIONNatLog-9-2 0; }
+#SECTIONNatLog-9-2 > li::marker { content: ""counter(SECTIONNatLog-9-2,lower-roman)""; }
+#SECTIONNatLog-9-2 > li { counter-increment: SECTIONNatLog-9-2; }
+#SECTIONNatLog-11-2 { counter-set: SECTIONNatLog-11-2 0; }
+#SECTIONNatLog-11-2 > li::marker { content: ""counter(SECTIONNatLog-11-2,lower-roman)""; }
+#SECTIONNatLog-11-2 > li { counter-increment: SECTIONNatLog-11-2; }
+#SECTIONNatLog-12-1-1-1-4 { counter-set: SECTIONNatLog-12-1-1-1-4 0; }
+#SECTIONNatLog-12-1-1-1-4 > li::marker { content: ""counter(SECTIONNatLog-12-1-1-1-4,lower-roman)""; }
+#SECTIONNatLog-12-1-1-1-4 > li { counter-increment: SECTIONNatLog-12-1-1-1-4; }
+#SECTIONNatLog-12-2-1-1-4 { counter-set: SECTIONNatLog-12-2-1-1-4 0; }
+#SECTIONNatLog-12-2-1-1-4 > li::marker { content: ""counter(SECTIONNatLog-12-2-1-1-4,lower-roman)""; }
+#SECTIONNatLog-12-2-1-1-4 > li { counter-increment: SECTIONNatLog-12-2-1-1-4; }
+#SUBSECTIONradioactive-decay-9-1 { counter-set: SUBSECTIONradioactive-decay-9-1 0; }
+#SUBSECTIONradioactive-decay-9-1 > li::marker { content: ""counter(SUBSECTIONradioactive-decay-9-1,lower-roman)""; }
+#SUBSECTIONradioactive-decay-9-1 > li { counter-increment: SUBSECTIONradioactive-decay-9-1; }
+#SECTIONDerivNatLog-4-2 { counter-set: SECTIONDerivNatLog-4-2 0; }
+#SECTIONDerivNatLog-4-2 > li::marker { content: ""counter(SECTIONDerivNatLog-4-2,lower-roman)""; }
+#SECTIONDerivNatLog-4-2 > li { counter-increment: SECTIONDerivNatLog-4-2; }
+#PARAGRAPHSGenExp-16-2 { counter-set: PARAGRAPHSGenExp-16-2 0; }
+#PARAGRAPHSGenExp-16-2 > li::marker { content: ""counter(PARAGRAPHSGenExp-16-2,lower-roman)""; }
+#PARAGRAPHSGenExp-16-2 > li { counter-increment: PARAGRAPHSGenExp-16-2; }
+#PARAGRAPHSGenLog-7-2 { counter-set: PARAGRAPHSGenLog-7-2 0; }
+#PARAGRAPHSGenLog-7-2 > li::marker { content: ""counter(PARAGRAPHSGenLog-7-2,lower-roman)""; }
+#PARAGRAPHSGenLog-7-2 > li { counter-increment: PARAGRAPHSGenLog-7-2; }
+#DIGRESSIONBriggsAndNapier-7-1 { counter-set: DIGRESSIONBriggsAndNapier-7-1 0; }
+#DIGRESSIONBriggsAndNapier-7-1 > li::marker { content: ""counter(DIGRESSIONBriggsAndNapier-7-1,lower-roman)""; }
+#DIGRESSIONBriggsAndNapier-7-1 > li { counter-increment: DIGRESSIONBriggsAndNapier-7-1; }
+#DIGRESSIONBriggsAndNapier-11-2 { counter-set: DIGRESSIONBriggsAndNapier-11-2 0; }
+#DIGRESSIONBriggsAndNapier-11-2 > li::marker { content: ""counter(DIGRESSIONBriggsAndNapier-11-2,lower-roman)""; }
+#DIGRESSIONBriggsAndNapier-11-2 > li { counter-increment: DIGRESSIONBriggsAndNapier-11-2; }
+#DIGRESSIONBriggsAndNapier-12-1-1-1 { counter-set: DIGRESSIONBriggsAndNapier-12-1-1-1 0; }
+#DIGRESSIONBriggsAndNapier-12-1-1-1 > li::marker { content: ""counter(DIGRESSIONBriggsAndNapier-12-1-1-1,lower-roman)""; }
+#DIGRESSIONBriggsAndNapier-12-1-1-1 > li { counter-increment: DIGRESSIONBriggsAndNapier-12-1-1-1; }
+#DRILLIntuitiveSquareOnCircle-2 { counter-set: DRILLIntuitiveSquareOnCircle-2 0; }
+#DRILLIntuitiveSquareOnCircle-2 > li::marker { content: ""counter(DRILLIntuitiveSquareOnCircle-2,lower-roman)""; }
+#DRILLIntuitiveSquareOnCircle-2 > li { counter-increment: DRILLIntuitiveSquareOnCircle-2; }
+#DRILLExtremalSquareCircle-1 { counter-set: DRILLExtremalSquareCircle-1 0; }
+#DRILLExtremalSquareCircle-1 > li::marker { content: ""counter(DRILLExtremalSquareCircle-1,lower-roman)""; }
+#DRILLExtremalSquareCircle-1 > li { counter-increment: DRILLExtremalSquareCircle-1; }
+#PROBLEMMaxOrth1-3-1-3-8 { counter-set: PROBLEMMaxOrth1-3-1-3-8 0; }
+#PROBLEMMaxOrth1-3-1-3-8 > li::marker { content: ""counter(PROBLEMMaxOrth1-3-1-3-8,decimal)"."; }
+#PROBLEMMaxOrth1-3-1-3-8 > li { counter-increment: PROBLEMMaxOrth1-3-1-3-8; }
+#EXAMPLEDiffvsDer-5-1-1-2-1 { counter-set: EXAMPLEDiffvsDer-5-1-1-2-1 0; }
+#EXAMPLEDiffvsDer-5-1-1-2-1 > li::marker { content: ""counter(EXAMPLEDiffvsDer-5-1-1-2-1,decimal)"."; }
+#EXAMPLEDiffvsDer-5-1-1-2-1 > li { counter-increment: EXAMPLEDiffvsDer-5-1-1-2-1; }
+#EXAMPLEDiffvsDer-5-1-2-2-1 { counter-set: EXAMPLEDiffvsDer-5-1-2-2-1 0; }
+#EXAMPLEDiffvsDer-5-1-2-2-1 > li::marker { content: ""counter(EXAMPLEDiffvsDer-5-1-2-2-1,decimal)"."; }
+#EXAMPLEDiffvsDer-5-1-2-2-1 > li { counter-increment: EXAMPLEDiffvsDer-5-1-2-2-1; }
+#SECTIONfive-simil-probl-23-2 { counter-set: SECTIONfive-simil-probl-23-2 0; }
+#SECTIONfive-simil-probl-23-2 > li::marker { content: ""counter(SECTIONfive-simil-probl-23-2,lower-roman)""; }
+#SECTIONfive-simil-probl-23-2 > li { counter-increment: SECTIONfive-simil-probl-23-2; }
+#SECTIONfive-simil-probl-24-2 { counter-set: SECTIONfive-simil-probl-24-2 0; }
+#SECTIONfive-simil-probl-24-2 > li::marker { content: ""counter(SECTIONfive-simil-probl-24-2,lower-roman)""; }
+#SECTIONfive-simil-probl-24-2 > li { counter-increment: SECTIONfive-simil-probl-24-2; }
+#SECTIONrefl-refr-rainb-2-1-2 { counter-set: SECTIONrefl-refr-rainb-2-1-2 0; }
+#SECTIONrefl-refr-rainb-2-1-2 > li::marker { content: ""counter(SECTIONrefl-refr-rainb-2-1-2,decimal)"."; }
+#SECTIONrefl-refr-rainb-2-1-2 > li { counter-increment: SECTIONrefl-refr-rainb-2-1-2; }
+#SECTIONGlobalVsLocalExtrema-18-2 { counter-set: SECTIONGlobalVsLocalExtrema-18-2 0; }
+#SECTIONGlobalVsLocalExtrema-18-2 > li::marker { content: ""counter(SECTIONGlobalVsLocalExtrema-18-2,decimal)"."; }
+#SECTIONGlobalVsLocalExtrema-18-2 > li { counter-increment: SECTIONGlobalVsLocalExtrema-18-2; }
+#DIGRESSIONIntervalNotation-6-2 { counter-set: DIGRESSIONIntervalNotation-6-2 0; }
+#DIGRESSIONIntervalNotation-6-2 > li::marker { content: ""counter(DIGRESSIONIntervalNotation-6-2,lower-roman)""; }
+#DIGRESSIONIntervalNotation-6-2 > li { counter-increment: DIGRESSIONIntervalNotation-6-2; }
+#DIGRESSIONIntervalNotation-7-2 { counter-set: DIGRESSIONIntervalNotation-7-2 0; }
+#DIGRESSIONIntervalNotation-7-2 > li::marker { content: ""counter(DIGRESSIONIntervalNotation-7-2,lower-roman)""; }
+#DIGRESSIONIntervalNotation-7-2 > li { counter-increment: DIGRESSIONIntervalNotation-7-2; }
+#THEOREMFDT-lines-2-1 { counter-set: THEOREMFDT-lines-2-1 0; }
+#THEOREMFDT-lines-2-1 > li::marker { content: ""counter(THEOREMFDT-lines-2-1,decimal)"."; }
+#THEOREMFDT-lines-2-1 > li { counter-increment: THEOREMFDT-lines-2-1; }
+#THEOREMFDT-3-3 { counter-set: THEOREMFDT-3-3 0; }
+#THEOREMFDT-3-3 > li::marker { content: ""counter(THEOREMFDT-3-3,decimal)"."; }
+#THEOREMFDT-3-3 > li { counter-increment: THEOREMFDT-3-3; }
+#LEMMAAdjRoots-1-2 { counter-set: LEMMAAdjRoots-1-2 0; }
+#LEMMAAdjRoots-1-2 > li::marker { content: ""counter(LEMMAAdjRoots-1-2,decimal)"."; }
+#LEMMAAdjRoots-1-2 > li { counter-increment: LEMMAAdjRoots-1-2; }
+#PROBLEMFDT1A-1-2 { counter-set: PROBLEMFDT1A-1-2 0; }
+#PROBLEMFDT1A-1-2 > li::marker { content: ""counter(PROBLEMFDT1A-1-2,lower-roman)""; }
+#PROBLEMFDT1A-1-2 > li { counter-increment: PROBLEMFDT1A-1-2; }
+#DRILLFDT2-2 { counter-set: DRILLFDT2-2 0; }
+#DRILLFDT2-2 > li::marker { content: ""counter(DRILLFDT2-2,lower-roman)""; }
+#DRILLFDT2-2 > li { counter-increment: DRILLFDT2-2; }
+#DEFINITIONOptimalTransitionPoints-4-1-3 { counter-set: DEFINITIONOptimalTransitionPoints-4-1-3 0; }
+#DEFINITIONOptimalTransitionPoints-4-1-3 > li::marker { content: ""counter(DEFINITIONOptimalTransitionPoints-4-1-3,decimal)"."; }
+#DEFINITIONOptimalTransitionPoints-4-1-3 > li { counter-increment: DEFINITIONOptimalTransitionPoints-4-1-3; }
+#DRILLFDT3-3 { counter-set: DRILLFDT3-3 0; }
+#DRILLFDT3-3 > li::marker { content: ""counter(DRILLFDT3-3,lower-roman)""; }
+#DRILLFDT3-3 > li { counter-increment: DRILLFDT3-3; }
+#SUBSECTIONoptim-clos-interv-5-1 { counter-set: SUBSECTIONoptim-clos-interv-5-1 0; }
+#SUBSECTIONoptim-clos-interv-5-1 > li::marker { content: ""counter(SUBSECTIONoptim-clos-interv-5-1,decimal)"."; }
+#SUBSECTIONoptim-clos-interv-5-1 > li { counter-increment: SUBSECTIONoptim-clos-interv-5-1; }
+#THEOREMmax-min-3-2 { counter-set: THEOREMmax-min-3-2 0; }
+#THEOREMmax-min-3-2 > li::marker { content: ""counter(THEOREMmax-min-3-2,decimal)"."; }
+#THEOREMmax-min-3-2 > li { counter-increment: THEOREMmax-min-3-2; }
+#SUBSECTIONoptim-clos-interv-13-2-1-1-2 { counter-set: SUBSECTIONoptim-clos-interv-13-2-1-1-2 0; }
+#SUBSECTIONoptim-clos-interv-13-2-1-1-2 > li::marker { content: ""counter(SUBSECTIONoptim-clos-interv-13-2-1-1-2,lower-roman)""; }
+#SUBSECTIONoptim-clos-interv-13-2-1-1-2 > li { counter-increment: SUBSECTIONoptim-clos-interv-13-2-1-1-2; }
+#SUBSECTIONoptim-clos-interv-13-3-1-1-2 { counter-set: SUBSECTIONoptim-clos-interv-13-3-1-1-2 0; }
+#SUBSECTIONoptim-clos-interv-13-3-1-1-2 > li::marker { content: ""counter(SUBSECTIONoptim-clos-interv-13-3-1-1-2,lower-roman)""; }
+#SUBSECTIONoptim-clos-interv-13-3-1-1-2 > li { counter-increment: SUBSECTIONoptim-clos-interv-13-3-1-1-2; }
+#SUBSECTIONoptim-clos-interv-14-1-1 { counter-set: SUBSECTIONoptim-clos-interv-14-1-1 0; }
+#SUBSECTIONoptim-clos-interv-14-1-1 > li::marker { content: ""counter(SUBSECTIONoptim-clos-interv-14-1-1,lower-roman)""; }
+#SUBSECTIONoptim-clos-interv-14-1-1 > li { counter-increment: SUBSECTIONoptim-clos-interv-14-1-1; }
+#DRILLO1O2-2-1-1-2 { counter-set: DRILLO1O2-2-1-1-2 0; }
+#DRILLO1O2-2-1-1-2 > li::marker { content: ""counter(DRILLO1O2-2-1-1-2,lower-roman)""; }
+#DRILLO1O2-2-1-1-2 > li { counter-increment: DRILLO1O2-2-1-1-2; }
+#THEOREMwhat-second-deriv-3-3 { counter-set: THEOREMwhat-second-deriv-3-3 0; }
+#THEOREMwhat-second-deriv-3-3 > li::marker { content: ""counter(THEOREMwhat-second-deriv-3-3,lower-alpha)""; }
+#THEOREMwhat-second-deriv-3-3 > li { counter-increment: THEOREMwhat-second-deriv-3-3; }
+#THEOREMSecondDerivativeTest-3-4 { counter-set: THEOREMSecondDerivativeTest-3-4 0; }
+#THEOREMSecondDerivativeTest-3-4 > li::marker { content: ""counter(THEOREMSecondDerivativeTest-3-4,lower-alpha)""; }
+#THEOREMSecondDerivativeTest-3-4 > li { counter-increment: THEOREMSecondDerivativeTest-3-4; }
+#DRILLSecondDerivativeTest-2 { counter-set: DRILLSecondDerivativeTest-2 0; }
+#DRILLSecondDerivativeTest-2 > li::marker { content: ""counter(DRILLSecondDerivativeTest-2,lower-roman)""; }
+#DRILLSecondDerivativeTest-2 > li { counter-increment: DRILLSecondDerivativeTest-2; }
+#SUBSECTIONconc-second-deriv-44-2 { counter-set: SUBSECTIONconc-second-deriv-44-2 0; }
+#SUBSECTIONconc-second-deriv-44-2 > li::marker { content: ""counter(SUBSECTIONconc-second-deriv-44-2,lower-roman)""; }
+#SUBSECTIONconc-second-deriv-44-2 > li { counter-increment: SUBSECTIONconc-second-deriv-44-2; }
+#SUBSECTIONconc-second-deriv-45-2 { counter-set: SUBSECTIONconc-second-deriv-45-2 0; }
+#SUBSECTIONconc-second-deriv-45-2 > li::marker { content: ""counter(SUBSECTIONconc-second-deriv-45-2,lower-roman)""; }
+#SUBSECTIONconc-second-deriv-45-2 > li { counter-increment: SUBSECTIONconc-second-deriv-45-2; }
+#SECTIONoptim-probl-2-3-1 { counter-set: SECTIONoptim-probl-2-3-1 0; }
+#SECTIONoptim-probl-2-3-1 > li::marker { content: ""counter(SECTIONoptim-probl-2-3-1,decimal)"."; }
+#SECTIONoptim-probl-2-3-1 > li { counter-increment: SECTIONoptim-probl-2-3-1; }
+#EXAMPLERectangleFixedPerimeter-6-1 { counter-set: EXAMPLERectangleFixedPerimeter-6-1 0; }
+#EXAMPLERectangleFixedPerimeter-6-1 > li::marker { content: ""counter(EXAMPLERectangleFixedPerimeter-6-1,decimal)"."; }
+#EXAMPLERectangleFixedPerimeter-6-1 > li { counter-increment: EXAMPLERectangleFixedPerimeter-6-1; }
+#PROBLEMMaxPerimeter-5-1-1-2 { counter-set: PROBLEMMaxPerimeter-5-1-1-2 0; }
+#PROBLEMMaxPerimeter-5-1-1-2 > li::marker { content: ""counter(PROBLEMMaxPerimeter-5-1-1-2,lower-roman)""; }
+#PROBLEMMaxPerimeter-5-1-1-2 > li { counter-increment: PROBLEMMaxPerimeter-5-1-1-2; }
+#SUBSUBSECTIONFirstSolution-12-1 { counter-set: SUBSUBSECTIONFirstSolution-12-1 0; }
+#SUBSUBSECTIONFirstSolution-12-1 > li::marker { content: ""counter(SUBSUBSECTIONFirstSolution-12-1,lower-roman)""; }
+#SUBSUBSECTIONFirstSolution-12-1 > li { counter-increment: SUBSUBSECTIONFirstSolution-12-1; }
+#SUBSECTIONVarOptProbs-2-2-1-1-1 { counter-set: SUBSECTIONVarOptProbs-2-2-1-1-1 0; }
+#SUBSECTIONVarOptProbs-2-2-1-1-1 > li::marker { content: ""counter(SUBSECTIONVarOptProbs-2-2-1-1-1,lower-roman)""; }
+#SUBSECTIONVarOptProbs-2-2-1-1-1 > li { counter-increment: SUBSECTIONVarOptProbs-2-2-1-1-1; }
+#SUBSECTIONVarOptProbs-2-3-1-1-1 { counter-set: SUBSECTIONVarOptProbs-2-3-1-1-1 0; }
+#SUBSECTIONVarOptProbs-2-3-1-1-1 > li::marker { content: ""counter(SUBSECTIONVarOptProbs-2-3-1-1-1,lower-roman)""; }
+#SUBSECTIONVarOptProbs-2-3-1-1-1 > li { counter-increment: SUBSECTIONVarOptProbs-2-3-1-1-1; }
+#SUBSECTIONVarOptProbs-2-4-1-1-1 { counter-set: SUBSECTIONVarOptProbs-2-4-1-1-1 0; }
+#SUBSECTIONVarOptProbs-2-4-1-1-1 > li::marker { content: ""counter(SUBSECTIONVarOptProbs-2-4-1-1-1,lower-roman)""; }
+#SUBSECTIONVarOptProbs-2-4-1-1-1 > li { counter-increment: SUBSECTIONVarOptProbs-2-4-1-1-1; }
+#SUBSECTIONVarOptProbs-3-3-1-1-1 { counter-set: SUBSECTIONVarOptProbs-3-3-1-1-1 0; }
+#SUBSECTIONVarOptProbs-3-3-1-1-1 > li::marker { content: ""counter(SUBSECTIONVarOptProbs-3-3-1-1-1,lower-roman)""; }
+#SUBSECTIONVarOptProbs-3-3-1-1-1 > li { counter-increment: SUBSECTIONVarOptProbs-3-3-1-1-1; }
+#SUBSECTIONVarOptProbs-3-4-1-1-1 { counter-set: SUBSECTIONVarOptProbs-3-4-1-1-1 0; }
+#SUBSECTIONVarOptProbs-3-4-1-1-1 > li::marker { content: ""counter(SUBSECTIONVarOptProbs-3-4-1-1-1,lower-roman)""; }
+#SUBSECTIONVarOptProbs-3-4-1-1-1 > li { counter-increment: SUBSECTIONVarOptProbs-3-4-1-1-1; }
+#SUBSECTIONVarOptProbs-4-2-1-2-1 { counter-set: SUBSECTIONVarOptProbs-4-2-1-2-1 0; }
+#SUBSECTIONVarOptProbs-4-2-1-2-1 > li::marker { content: ""counter(SUBSECTIONVarOptProbs-4-2-1-2-1,lower-roman)""; }
+#SUBSECTIONVarOptProbs-4-2-1-2-1 > li { counter-increment: SUBSECTIONVarOptProbs-4-2-1-2-1; }
+#PROBLEMWitchTri1-3-1-1-7 { counter-set: PROBLEMWitchTri1-3-1-1-7 0; }
+#PROBLEMWitchTri1-3-1-1-7 > li::marker { content: ""counter(PROBLEMWitchTri1-3-1-1-7,lower-roman)""; }
+#PROBLEMWitchTri1-3-1-1-7 > li { counter-increment: PROBLEMWitchTri1-3-1-1-7; }
+#SUBSECTIONVarOptProbs-14-3-1-3 { counter-set: SUBSECTIONVarOptProbs-14-3-1-3 0; }
+#SUBSECTIONVarOptProbs-14-3-1-3 > li::marker { content: ""counter(SUBSECTIONVarOptProbs-14-3-1-3,lower-roman)""; }
+#SUBSECTIONVarOptProbs-14-3-1-3 > li { counter-increment: SUBSECTIONVarOptProbs-14-3-1-3; }
+#SUBSECTIONVarOptProbs-14-4-1-3 { counter-set: SUBSECTIONVarOptProbs-14-4-1-3 0; }
+#SUBSECTIONVarOptProbs-14-4-1-3 > li::marker { content: ""counter(SUBSECTIONVarOptProbs-14-4-1-3,lower-roman)""; }
+#SUBSECTIONVarOptProbs-14-4-1-3 > li { counter-increment: SUBSECTIONVarOptProbs-14-4-1-3; }
+#SECTIONgraph-with-form-19-2 { counter-set: SECTIONgraph-with-form-19-2 0; }
+#SECTIONgraph-with-form-19-2 > li::marker { content: ""counter(SECTIONgraph-with-form-19-2,decimal)"."; }
+#SECTIONgraph-with-form-19-2 > li { counter-increment: SECTIONgraph-with-form-19-2; }
+#SECTIONgraph-with-form-23-1 { counter-set: SECTIONgraph-with-form-23-1 0; }
+#SECTIONgraph-with-form-23-1 > li::marker { content: ""counter(SECTIONgraph-with-form-23-1,lower-roman)""; }
+#SECTIONgraph-with-form-23-1 > li { counter-increment: SECTIONgraph-with-form-23-1; }
+#SECTIONgraph-with-form-30-1-1 { counter-set: SECTIONgraph-with-form-30-1-1 0; }
+#SECTIONgraph-with-form-30-1-1 > li::marker { content: ""counter(SECTIONgraph-with-form-30-1-1,lower-roman)""; }
+#SECTIONgraph-with-form-30-1-1 > li { counter-increment: SECTIONgraph-with-form-30-1-1; }
+#SUBSECTIONModelingTrout-17-2 { counter-set: SUBSECTIONModelingTrout-17-2 0; }
+#SUBSECTIONModelingTrout-17-2 > li::marker { content: ""counter(SUBSECTIONModelingTrout-17-2,decimal)"."; }
+#SUBSECTIONModelingTrout-17-2 > li { counter-increment: SUBSECTIONModelingTrout-17-2; }
+#SUBSECTIONModelingTrout-24-1-2 { counter-set: SUBSECTIONModelingTrout-24-1-2 0; }
+#SUBSECTIONModelingTrout-24-1-2 > li::marker { content: ""counter(SUBSECTIONModelingTrout-24-1-2,lower-roman)""; }
+#SUBSECTIONModelingTrout-24-1-2 > li { counter-increment: SUBSECTIONModelingTrout-24-1-2; }
+#SUBSECTIONModelingTrout-39-2-1-1-2 { counter-set: SUBSECTIONModelingTrout-39-2-1-1-2 0; }
+#SUBSECTIONModelingTrout-39-2-1-1-2 > li::marker { content: ""counter(SUBSECTIONModelingTrout-39-2-1-1-2,lower-roman)""; }
+#SUBSECTIONModelingTrout-39-2-1-1-2 > li { counter-increment: SUBSECTIONModelingTrout-39-2-1-1-2; }
+#PROBLEMMinViablePop-6-1-1-3 { counter-set: PROBLEMMinViablePop-6-1-1-3 0; }
+#PROBLEMMinViablePop-6-1-1-3 > li::marker { content: ""counter(PROBLEMMinViablePop-6-1-1-3,lower-roman)""; }
+#PROBLEMMinViablePop-6-1-1-3 > li { counter-increment: PROBLEMMinViablePop-6-1-1-3; }
+#SECTIONlittle-healthy-comp-21-1 { counter-set: SECTIONlittle-healthy-comp-21-1 0; }
+#SECTIONlittle-healthy-comp-21-1 > li::marker { content: ""counter(SECTIONlittle-healthy-comp-21-1,lower-roman)""; }
+#SECTIONlittle-healthy-comp-21-1 > li { counter-increment: SECTIONlittle-healthy-comp-21-1; }
+#SECTIONlittle-healthy-comp-28-3-1-1-3 { counter-set: SECTIONlittle-healthy-comp-28-3-1-1-3 0; }
+#SECTIONlittle-healthy-comp-28-3-1-1-3 > li::marker { content: ""counter(SECTIONlittle-healthy-comp-28-3-1-1-3,lower-roman)""; }
+#SECTIONlittle-healthy-comp-28-3-1-1-3 > li { counter-increment: SECTIONlittle-healthy-comp-28-3-1-1-3; }
+#DEFINITIONLimitAtInfinity-Intuitive-3-1-1 { counter-set: DEFINITIONLimitAtInfinity-Intuitive-3-1-1 0; }
+#DEFINITIONLimitAtInfinity-Intuitive-3-1-1 > li::marker { content: ""counter(DEFINITIONLimitAtInfinity-Intuitive-3-1-1,decimal)"."; }
+#DEFINITIONLimitAtInfinity-Intuitive-3-1-1 > li { counter-increment: DEFINITIONLimitAtInfinity-Intuitive-3-1-1; }
+#DEFINITIONHorizontalAsymptotes-3-1-1 { counter-set: DEFINITIONHorizontalAsymptotes-3-1-1 0; }
+#DEFINITIONHorizontalAsymptotes-3-1-1 > li::marker { content: ""counter(DEFINITIONHorizontalAsymptotes-3-1-1,decimal)"."; }
+#DEFINITIONHorizontalAsymptotes-3-1-1 > li { counter-increment: DEFINITIONHorizontalAsymptotes-3-1-1; }
+#DIGRESSIONLimitNotation-47-2 { counter-set: DIGRESSIONLimitNotation-47-2 0; }
+#DIGRESSIONLimitNotation-47-2 > li::marker { content: ""counter(DIGRESSIONLimitNotation-47-2,lower-roman)""; }
+#DIGRESSIONLimitNotation-47-2 > li { counter-increment: DIGRESSIONLimitNotation-47-2; }
+#DIGRESSIONLimitNotation-62-2 { counter-set: DIGRESSIONLimitNotation-62-2 0; }
+#DIGRESSIONLimitNotation-62-2 > li::marker { content: ""counter(DIGRESSIONLimitNotation-62-2,lower-roman)""; }
+#DIGRESSIONLimitNotation-62-2 > li { counter-increment: DIGRESSIONLimitNotation-62-2; }
+#DIGRESSIONLimitNotation-66-2 { counter-set: DIGRESSIONLimitNotation-66-2 0; }
+#DIGRESSIONLimitNotation-66-2 > li::marker { content: ""counter(DIGRESSIONLimitNotation-66-2,lower-roman)""; }
+#DIGRESSIONLimitNotation-66-2 > li { counter-increment: DIGRESSIONLimitNotation-66-2; }
+#THEOREMInfSqueeze-3-1 { counter-set: THEOREMInfSqueeze-3-1 0; }
+#THEOREMInfSqueeze-3-1 > li::marker { content: ""counter(THEOREMInfSqueeze-3-1,decimal)"."; }
+#THEOREMInfSqueeze-3-1 > li { counter-increment: THEOREMInfSqueeze-3-1; }
+#SECTIONvertical-asymptotes-14-2 { counter-set: SECTIONvertical-asymptotes-14-2 0; }
+#SECTIONvertical-asymptotes-14-2 > li::marker { content: ""counter(SECTIONvertical-asymptotes-14-2,lower-roman)""; }
+#SECTIONvertical-asymptotes-14-2 > li { counter-increment: SECTIONvertical-asymptotes-14-2; }
+#PROBLEMFoliumOfDescartes2-6-1-1-1 { counter-set: PROBLEMFoliumOfDescartes2-6-1-1-1 0; }
+#PROBLEMFoliumOfDescartes2-6-1-1-1 > li::marker { content: ""counter(PROBLEMFoliumOfDescartes2-6-1-1-1,decimal)"."; }
+#PROBLEMFoliumOfDescartes2-6-1-1-1 > li { counter-increment: PROBLEMFoliumOfDescartes2-6-1-1-1; }
+#SUBSECTIONLHopitalsRule-33-1 { counter-set: SUBSECTIONLHopitalsRule-33-1 0; }
+#SUBSECTIONLHopitalsRule-33-1 > li::marker { content: ""counter(SUBSECTIONLHopitalsRule-33-1,lower-roman)""; }
+#SUBSECTIONLHopitalsRule-33-1 > li { counter-increment: SUBSECTIONLHopitalsRule-33-1; }
+#SUBSECTIONLHopitalsRule-37-1 { counter-set: SUBSECTIONLHopitalsRule-37-1 0; }
+#SUBSECTIONLHopitalsRule-37-1 > li::marker { content: ""counter(SUBSECTIONLHopitalsRule-37-1,lower-roman)""; }
+#SUBSECTIONLHopitalsRule-37-1 > li { counter-increment: SUBSECTIONLHopitalsRule-37-1; }
+#SUBSECTIONLHopitalsRule-59-1-1 { counter-set: SUBSECTIONLHopitalsRule-59-1-1 0; }
+#SUBSECTIONLHopitalsRule-59-1-1 > li::marker { content: ""counter(SUBSECTIONLHopitalsRule-59-1-1,lower-roman)""; }
+#SUBSECTIONLHopitalsRule-59-1-1 > li { counter-increment: SUBSECTIONLHopitalsRule-59-1-1; }
+#SUBSECTIONlhop-rule-horiz-14-1 { counter-set: SUBSECTIONlhop-rule-horiz-14-1 0; }
+#SUBSECTIONlhop-rule-horiz-14-1 > li::marker { content: ""counter(SUBSECTIONlhop-rule-horiz-14-1,lower-roman)""; }
+#SUBSECTIONlhop-rule-horiz-14-1 > li { counter-increment: SUBSECTIONlhop-rule-horiz-14-1; }
+#SUBSECTIONlhop-rule-horiz-18-2-1-1-1 { counter-set: SUBSECTIONlhop-rule-horiz-18-2-1-1-1 0; }
+#SUBSECTIONlhop-rule-horiz-18-2-1-1-1 > li::marker { content: ""counter(SUBSECTIONlhop-rule-horiz-18-2-1-1-1,lower-roman)""; }
+#SUBSECTIONlhop-rule-horiz-18-2-1-1-1 > li { counter-increment: SUBSECTIONlhop-rule-horiz-18-2-1-1-1; }
+#SUBSECTIONlhop-rule-horiz-18-5-1-1-2 { counter-set: SUBSECTIONlhop-rule-horiz-18-5-1-1-2 0; }
+#SUBSECTIONlhop-rule-horiz-18-5-1-1-2 > li::marker { content: ""counter(SUBSECTIONlhop-rule-horiz-18-5-1-1-2,lower-roman)""; }
+#SUBSECTIONlhop-rule-horiz-18-5-1-1-2 > li { counter-increment: SUBSECTIONlhop-rule-horiz-18-5-1-1-2; }
+#SUBSECTIONlhop-rule-horiz-27-1 { counter-set: SUBSECTIONlhop-rule-horiz-27-1 0; }
+#SUBSECTIONlhop-rule-horiz-27-1 > li::marker { content: ""counter(SUBSECTIONlhop-rule-horiz-27-1,decimal)"."; }
+#SUBSECTIONlhop-rule-horiz-27-1 > li { counter-increment: SUBSECTIONlhop-rule-horiz-27-1; }
+#SUBSECTIONlhop-rule-horiz-29-4 { counter-set: SUBSECTIONlhop-rule-horiz-29-4 0; }
+#SUBSECTIONlhop-rule-horiz-29-4 > li::marker { content: ""counter(SUBSECTIONlhop-rule-horiz-29-4,decimal)"."; }
+#SUBSECTIONlhop-rule-horiz-29-4 > li { counter-increment: SUBSECTIONlhop-rule-horiz-29-4; }
+#SECTIONsecants-tangents-15-1 { counter-set: SECTIONsecants-tangents-15-1 0; }
+#SECTIONsecants-tangents-15-1 > li::marker { content: ""counter(SECTIONsecants-tangents-15-1,decimal)"."; }
+#SECTIONsecants-tangents-15-1 > li { counter-increment: SECTIONsecants-tangents-15-1; }
+#PROBLEMBounds-1-1-4 { counter-set: PROBLEMBounds-1-1-4 0; }
+#PROBLEMBounds-1-1-4 > li::marker { content: ""counter(PROBLEMBounds-1-1-4,lower-roman)""; }
+#PROBLEMBounds-1-1-4 > li { counter-increment: PROBLEMBounds-1-1-4; }
+#SUBSECTIONlimit-comp-cont-5-3 { counter-set: SUBSECTIONlimit-comp-cont-5-3 0; }
+#SUBSECTIONlimit-comp-cont-5-3 > li::marker { content: ""counter(SUBSECTIONlimit-comp-cont-5-3,decimal)"."; }
+#SUBSECTIONlimit-comp-cont-5-3 > li { counter-increment: SUBSECTIONlimit-comp-cont-5-3; }
+#SUBSECTIONlimit-comp-cont-23-1 { counter-set: SUBSECTIONlimit-comp-cont-23-1 0; }
+#SUBSECTIONlimit-comp-cont-23-1 > li::marker { content: ""counter(SUBSECTIONlimit-comp-cont-23-1,lower-roman)""; }
+#SUBSECTIONlimit-comp-cont-23-1 > li { counter-increment: SUBSECTIONlimit-comp-cont-23-1; }
+#SUBSECTIONlimit-comp-cont-24-2 { counter-set: SUBSECTIONlimit-comp-cont-24-2 0; }
+#SUBSECTIONlimit-comp-cont-24-2 > li::marker { content: ""counter(SUBSECTIONlimit-comp-cont-24-2,lower-roman)""; }
+#SUBSECTIONlimit-comp-cont-24-2 > li { counter-increment: SUBSECTIONlimit-comp-cont-24-2; }
+#DIGRESSIONDeltaBetaNotZero-7-3-1-1-5 { counter-set: DIGRESSIONDeltaBetaNotZero-7-3-1-1-5 0; }
+#DIGRESSIONDeltaBetaNotZero-7-3-1-1-5 > li::marker { content: ""counter(DIGRESSIONDeltaBetaNotZero-7-3-1-1-5,lower-roman)""; }
+#DIGRESSIONDeltaBetaNotZero-7-3-1-1-5 > li { counter-increment: DIGRESSIONDeltaBetaNotZero-7-3-1-1-5; }
+#PROBLEMQR-rigor-2-1-1-2 { counter-set: PROBLEMQR-rigor-2-1-1-2 0; }
+#PROBLEMQR-rigor-2-1-1-2 > li::marker { content: ""counter(PROBLEMQR-rigor-2-1-1-2,lower-roman)""; }
+#PROBLEMQR-rigor-2-1-1-2 > li { counter-increment: PROBLEMQR-rigor-2-1-1-2; }
+#DRILLCircularReasoning-1-1-3 { counter-set: DRILLCircularReasoning-1-1-3 0; }
+#DRILLCircularReasoning-1-1-3 > li::marker { content: ""counter(DRILLCircularReasoning-1-1-3,lower-roman)""; }
+#DRILLCircularReasoning-1-1-3 > li { counter-increment: DRILLCircularReasoning-1-1-3; }
+#DEFINITIONFunctionInverse-3-1-8 { counter-set: DEFINITIONFunctionInverse-3-1-8 0; }
+#DEFINITIONFunctionInverse-3-1-8 > li::marker { content: ""counter(DEFINITIONFunctionInverse-3-1-8,decimal)"."; }
+#DEFINITIONFunctionInverse-3-1-8 > li { counter-increment: DEFINITIONFunctionInverse-3-1-8; }
+#SECTIONinverse-functions-21-1 { counter-set: SECTIONinverse-functions-21-1 0; }
+#SECTIONinverse-functions-21-1 > li::marker { content: ""counter(SECTIONinverse-functions-21-1,decimal)"."; }
+#SECTIONinverse-functions-21-1 > li { counter-increment: SECTIONinverse-functions-21-1; }
+#SECTIONinverse-functions-23-2 { counter-set: SECTIONinverse-functions-23-2 0; }
+#SECTIONinverse-functions-23-2 > li::marker { content: ""counter(SECTIONinverse-functions-23-2,decimal)"."; }
+#SECTIONinverse-functions-23-2 > li { counter-increment: SECTIONinverse-functions-23-2; }
+#THEOREMDerivInvFunc-3-1 { counter-set: THEOREMDerivInvFunc-3-1 0; }
+#THEOREMDerivInvFunc-3-1 > li::marker { content: ""counter(THEOREMDerivInvFunc-3-1,decimal)"."; }
+#THEOREMDerivInvFunc-3-1 > li { counter-increment: THEOREMDerivInvFunc-3-1; }
+#DRILLRollesLemma1-1 { counter-set: DRILLRollesLemma1-1 0; }
+#DRILLRollesLemma1-1 > li::marker { content: ""counter(DRILLRollesLemma1-1,lower-roman)""; }
+#DRILLRollesLemma1-1 > li { counter-increment: DRILLRollesLemma1-1; }
+#THEOREMFDTproved-3-8 { counter-set: THEOREMFDTproved-3-8 0; }
+#THEOREMFDTproved-3-8 > li::marker { content: ""counter(THEOREMFDTproved-3-8,decimal)"."; }
+#THEOREMFDTproved-3-8 > li { counter-increment: THEOREMFDTproved-3-8; }
+#PROBLEMAbsValDeriv-1-1-1-5 { counter-set: PROBLEMAbsValDeriv-1-1-1-5 0; }
+#PROBLEMAbsValDeriv-1-1-1-5 > li::marker { content: ""counter(PROBLEMAbsValDeriv-1-1-1-5,decimal)"."; }
+#PROBLEMAbsValDeriv-1-1-1-5 > li { counter-increment: PROBLEMAbsValDeriv-1-1-1-5; }
+#DEFINITIONone-sided-deriv-3-1-3 { counter-set: DEFINITIONone-sided-deriv-3-1-3 0; }
+#DEFINITIONone-sided-deriv-3-1-3 > li::marker { content: ""counter(DEFINITIONone-sided-deriv-3-1-3,decimal)"."; }
+#DEFINITIONone-sided-deriv-3-1-3 > li { counter-increment: DEFINITIONone-sided-deriv-3-1-3; }
+#PROBLEMHeaviTranslate-2-1-1-3 { counter-set: PROBLEMHeaviTranslate-2-1-1-3 0; }
+#PROBLEMHeaviTranslate-2-1-1-3 > li::marker { content: ""counter(PROBLEMHeaviTranslate-2-1-1-3,lower-roman)""; }
+#PROBLEMHeaviTranslate-2-1-1-3 > li { counter-increment: PROBLEMHeaviTranslate-2-1-1-3; }
+#PROBLEMHeaviTranslate-3-1-1-4 { counter-set: PROBLEMHeaviTranslate-3-1-1-4 0; }
+#PROBLEMHeaviTranslate-3-1-1-4 > li::marker { content: ""counter(PROBLEMHeaviTranslate-3-1-1-4,lower-roman)""; }
+#PROBLEMHeaviTranslate-3-1-1-4 > li { counter-increment: PROBLEMHeaviTranslate-3-1-1-4; }
+#SECTIONone-sided-deriv-11-3 { counter-set: SECTIONone-sided-deriv-11-3 0; }
+#SECTIONone-sided-deriv-11-3 > li::marker { content: ""counter(SECTIONone-sided-deriv-11-3,decimal)"."; }
+#SECTIONone-sided-deriv-11-3 > li { counter-increment: SECTIONone-sided-deriv-11-3; }
+</style>
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -107,7 +679,7 @@ window.MathJax = {
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="frontmatter-4.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="frontmatter.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="DiffCalcFromPractice.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\DeclareMathOperator{\erf}{erf}
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="frontmatter-5.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="frontmatter.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="DiffCalcFromPractice.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\DeclareMathOperator{\erf}{erf}
 \DeclareMathOperator{\arccot}{arccot}
 \DeclareMathOperator{\Arctan}{Arctan}
 \DeclareMathOperator{\Arcsin}{Arcsin}
@@ -228,9 +800,9 @@ window.MathJax = {
 <li class="toc-item toc-frontmatter contains-active">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list contains-active">
-<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
-<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
-<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Epigraphs</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-5.html" class="internal"><span class="title">Epigraphs</span></a></div></li>
 <li class="toc-item toc-preface active"><div class="toc-title-box"><a href="SECinstructor.html" class="internal"><span class="title">To the Instructor: Read This First</span></a></div></li>
 </ul>
 </li>
@@ -557,10 +1129,38 @@ window.MathJax = {
 <span class="type">Preface</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">To the Instructor: Read This First</span>
 </h2>
 <blockquote class="blockquote" id="SECinstructor-2">
-<div class="para" id="SECinstructor-2-1">Teaching is to give a systematic opportunity to the learner to discover.</div> <cite class="attribution">―<a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Polya/" target="_blank">George Polya (1887-1985)</a><a class="xref" id="SECinstructor-2-2-2" href="" data-knowl="./knowl/fn/SECinstructor-2-2-2.html" title="Footnote 0.0.7"><sup> 7 </sup></a></cite>
+<div class="para" id="SECinstructor-2-1">Teaching is to give a systematic opportunity to the learner to discover.</div>
+<cite class="attribution">―<a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Polya/" target="_blank">George Polya</a><details class="ptx-footnote" aria-live="polite" id="SECinstructor-2-2-2"><summary class="ptx-footnote__number" title="Footnote 0.0.7"><sup> 7 </sup></summary><div class="ptx-footnote__contents" id="SECinstructor-2-2-2"><code class="code-inline tex2jax_ignore">https://mathshistory.st-andrews.ac.uk/Biographies/Polya/</code></div></details> (1887–1985)</cite>
 </blockquote>
-<section class="paragraphs" id="SECinstructor-3"><h2 class="heading"><span class="title">Teaching Calculus, a Personal Perspective.</span></h2> <div class="para" id="SECinstructor-3-2">For many years we (the authors) taught Differential Calculus in what has become in the last century or so, the traditional format. Limit definitions and theorems came first (presented formally when we were young; less so as we gained experience). From there we built up the necessary logical structure piece by piece until we had, after much effort, constructed the tools our students would need to solve the traditional problems of Calculus. It usually took a significant fraction of the semester to reach this point and we often found that for many of our students any bright eyed enthusiasm they might have brought to the course had been washed away in a cascade of unmotivated definitions (limits and continuity, for example), apparently obvious statements made unnecessarily obscure (the limit of a constant is the constant), and rote computations utterly divorced from anything in the real world. We expect that you have encountered similar difficulties.</div> <div class="para" id="SECinstructor-3-3">Even a cursory look at history shows us that new mathematics is almost never created by building it up logically from first principles in this fashion. New mathematics is created to solve a particular problem. It may or may not be a real-world problem, but always some specific problem is the focal point of our efforts. If new methods are needed then we invent, we try, we discard, invent again, try again, and discard again, <i class="foreign">ad nauseum</i> until a viable approach is finally uncovered. Then, and only then, is a rigorous, logical foundation sought.</div> <div class="para" id="SECinstructor-3-4">Think for a moment about how you do your research. First you identify a problem. Are the foundational issues at the front of your mind? Probably not. At first you’re just curious. You kick ideas around, trying to find some workable approach. In short, you play with the problem. You have fun with it as a means to understanding it. When you solve your problem you probably <em class="emphasis">believe</em> your result long before you prove it.  Foundational issues, proofs, come later when you need to show that your results are valid. This is usually less fun.</div> <div class="para" id="SECinstructor-3-5">Creating new mathematics and learning new mathematics are very similar activities.  Think about how you learn new mathematics. When reading a journal article do you plod from definition, to lemma, to proof, to theorem, to proof, entirely absorbing each before moving on to the next?  Probably not. Most likely you read ahead to get an overall sense of the result. Then you backtrack, skip forward, play with the ideas, generate your own examples and counterexamples. When your example is inconsistent with a theorem in the article you examine it closely in order to resolve the discrepancy and better understand the ideas in the article. In short, you begin by playing with the ideas and having fun with them.</div> <div class="para" id="SECinstructor-3-6">Mathematicians rarely focus on rigor when we start to learn new mathematics ourselves because experience has taught us that rigor usually proceeds from a deep intuitive understanding. And as a result of training. It does not come easily, but with effort rigor emerges.  If we force our students to plow through formal definitions, theorems, lemmas, and proofs before showing them the intuitive beauty and usefulness of our topic, before they can see the need for formal definitions, theorems, lemmas, and proofs, then we are demanding of them what we rarely ask of ourselves.  The first job of the teacher is to foster enthusiasm in the student, to pique their curiosity and to show them, in Descartes’ phrase, “the pleasure of discovery.” For those who need it there is time later for the hard work of rigor.</div>      <div class="para" id="SECinstructor-3-7">In the first part of this text (“From Practice . . .”) our audience is the usual mix of students in a typical first semester, college level, Calculus class. <em class="emphasis">All</em> of the students, not just the budding mathematicians, and certainly not the instructor.  (Presumably we have nothing to teach the instructor, although we flatter ourselves that we might, occasionally, do so anyway.)  We begin in part one as Leibniz did, with the highly intuitive — if questionable — notion of the differential.  We do not hide the problems inherent in this approach. We simply don’t dwell on them. We point out the logical problems that accompany the use of differentials whenever we can without breaking up the flow of the text. We do this because it is important for students, <em class="emphasis">all</em> students, to be aware of these issues. But we defer their resolution until part two (“. . .  to Theory”) when, hopefully, they will have gained an appreciation of the need for rigor.</div> <div class="para" id="SECinstructor-3-8">In part two (“To Theory . . .”) our purpose is to put a solid, rigorous foundation under the differentiation techniques derived in part one. Thus our style and approach changes. We become more formal, more “mathematical.” We define and prove limit theorems and use these to derive the differentiation rules. But in contrast with the traditional approach we are not deriving the differentiation techniques in order to use them. In part two the point is to formally, rigorously justify rules with which the student should already be quite conversant.</div> <div class="para" id="SECinstructor-3-9">In part one we address the question, “How can we use Calculus to explore, and explain, our world?”  In part two the question is “Why does Calculus work?”</div> <div class="para" id="SECinstructor-3-10">In this we follow our history. Calculus existed as an intuitive set of computational tools for approximately <span class="process-math">\(200\)</span> years before the limit theory made it rigorous. Surely there is no harm in allowing our students to view it the same way for a few weeks.</div> <div class="para" id="SECinstructor-3-11">Moreover proceeding in this way allows us to present the need for rigor itself as a problem to be solved, rather than an abstract theory untethered from reality. For example we do not pretend that the proof of the statement, “If <span class="process-math">\(\limit{x}{a}{f(x)}\)</span> and <span class="process-math">\(\limit{x}{a}{g(x)}\)</span> both exist then <span class="process-math">\(\limit{x}{a}{\left(f(x)+g(x)\right)}\)</span> also exists and is equal to the obvious sum,” is useful for anything other than establishing with full rigor what we already believe, intuitively, to be true. We make no such pretense because the history of our topic shows that this is in fact the truth. Limits were not invented to create Calculus, they were invented to justify it after the fact, to make it rigorous.</div></section><section class="paragraphs" id="StudentNeed"><h2 class="heading"><span class="title">What Do Students Need From Calculus?</span></h2> <div class="para" id="StudentNeed-2">A mechanical engineer who designs cars for a living must necessarily have a deep understanding of the inner workings of the propulsion, braking, cooling, and other systems built into every automobile.</div> <div class="para" id="StudentNeed-3">A race car driver will understand some, but not necessarily all, of the mechanical principles underlying those systems. But the racer will have a much more comprehensive, and deeply intuitive, understanding of the physics of motion that keep the car on the road under the extreme conditions of a race.</div> <div class="para" id="StudentNeed-4">A mathematician who merely drives to and from their workplace while daydreaming about mathematics needs to understand no more about the car than how to make it move, stop, and change direction.  We may understand more than that, and many of us do, but this is all we need.</div> <div class="para" id="StudentNeed-5">But all of these people start at the same point: They learn how to drive the car.</div> <div class="para" id="StudentNeed-6">Much the same can be said of any tool. Some need to understand it thoroughly at every level. Some need a deep intuitive grasp of its extreme capabilities. And some need only know enough to keep from hurting themselves with it. But all begin by learning how to use the tool properly.</div> <div class="para" id="StudentNeed-7">Calculus is a tool. It was invented to solve real world problems in science and engineering.  The racers in our metaphor are scientists, engineers, and businessfolk. They need, and many frequently have, a deep intuitive feel for the kinds of problems Calculus can be used to solve, and their intuitive understanding enables them to adapt Calculus techniques to novel problems. But their understanding is necessarily qualitatively different from that of a mathematician.</div> <div class="para" id="StudentNeed-8">As mathematicians we have (indeed we must have) a deep understanding of what Calculus is, what it does, and what it can not do. We see and understand the purpose of every nuance in phrasing, the role of every lemma and theorem, every small change in notation. We understand the immense need to state our assumptions, to formulate careful, precise definitions and to rigorously prove our theorems.</div> <aside class="aside aside-like" id="StudentNeed-9"><h3 class="heading"><span class="title">Comment.</span></h3>
-<div class="para" id="StudentNeed-9-2">The ordinary drivers in our metaphor are those, sadly rare, students in the liberal arts who take Calculus out of simple curiosity.</div></aside> <div class="para" id="StudentNeed-10">Because most college level Calculus courses contain students with a wide variety of interests and goals a Calculus textbook must meet the needs of students with a wide variety of interests and goals. This seems like it must be nearly impossible until we think about it for a bit. Just as we can begin the education of engineers, racers, and ordinary drivers at the same point — the location and use of the controls of a car — we can begin the education of engineers, scientists, and mathematicians at the same point — with the computational techniques from Calculus that are most useful and universal, with examples displaying how these techniques can be used to solve technical problems, and with problems and drills designed to develop skill with them. This is what we’ve tried to do in this textbook.</div> <div class="para" id="StudentNeed-11">After learning to drive racers will go on to become more skillful at using the car, and there is no point in bludgeoning them with the details of say, the compressibility characteristics of steering fluid. Certainly they must be familiar with the need for steering fluid, and they should have a passing familiarity with the role of steering fluid in the overall steering system. In short, they need to know that the tools they are using have been carefully designed and that they work. But no more than that is necessary until and unless they need to help design a new steering system for their car.</div> <div class="para" id="StudentNeed-12">In the same way science, engineering and business students need to be aware of the need for rigor, even if it never impinges on their daily lives.  They should be familiar with the need for limits as a means of providing rigor and they should have a passing familiarity with the role of epsilons and deltas. In short, they need to know that the tools they are using have been carefully designed and that they work. But no more than that is necessary until and unless there is some specific need.</div> <div class="para" id="StudentNeed-13">On the other hand mathematics students do need a nuanced understanding of both the practice and theory of Calculus if they are to successfully continue their studies. In addition to the ability to use Calculus, they need to understand limits and they need to understand the role of epsilons and deltas</div> <div class="para" id="StudentNeed-14">Calculus was invented as a problem solving tool, and in our opinion, this is how it is most easily and intuitively understood by the beginning student.  So part one of this text is aimed at all of the students in a typical first year college class. As a result our approach is intuitive and problem oriented.</div> <div class="para" id="StudentNeed-15">While the audience for part two is still all of the students in the class, it is aimed, primarily, at the budding mathematicians. You will see that in part two our language and presentation become more formal, more mathematical. This is deliberate. A young mathematician needs to be exposed to the formalisms of our discipline and this is an appropriate place to begin.</div> <div class="para" id="StudentNeed-16">But this does not mean that part two should be reserved only for honors classes full of mathematics majors. The budding engineer, scientist, or financial analyst will most likely never need to use epsilons and deltas, or even limits, in their daily work. Like the racer who should understand the need for steering fluid, but does not need a detailed understanding of its essential characteristics, these students should understand the need for rigor, even if they do not understand it in the same detail that a mathematician must. Many of these students will probably view this as an unnecessary burden, and will complain about it. But an education should provide students with what they need, not what they enjoy.</div> <div class="para" id="StudentNeed-17">And sometimes, every now and then, some of them will find, much to their surprise, that the beauty and intricacy of a rigorous, well formed argument is as captivating to them as it is to us. We should provide our students with the opportunity to be captivated.</div></section><section class="paragraphs" id="StartlingChoices"><h2 class="heading"><span class="title">Some (Possibly Startling) Choices We’ve Made.</span></h2> <div class="para" id="StartlingChoices-2">You will very likely find some of the choices we’ve made quite startling. We describe some of them here and explain our rationale.</div> <div class="para logical" id="StartlingChoices-3"><dl class="description-list">
+<section class="paragraphs" id="SECinstructor-3"><h2 class="heading"><span class="title">Teaching Calculus, a Personal Perspective.</span></h2>
+<div class="para" id="SECinstructor-3-2">For many years we (the authors) taught Differential Calculus in what has become in the last century or so, the traditional format. Limit definitions and theorems came first (presented formally when we were young; less so as we gained experience). From there we built up the necessary logical structure piece by piece until we had, after much effort, constructed the tools our students would need to solve the traditional problems of Calculus. It usually took a significant fraction of the semester to reach this point and we often found that for many of our students any bright eyed enthusiasm they might have brought to the course had been washed away in a cascade of unmotivated definitions (limits and continuity, for example), apparently obvious statements made unnecessarily obscure (the limit of a constant is the constant), and rote computations utterly divorced from anything in the real world. We expect that you have encountered similar difficulties.</div>
+<div class="para" id="SECinstructor-3-3">Even a cursory look at history shows us that new mathematics is almost never created by building it up logically from first principles in this fashion. New mathematics is created to solve a particular problem. It may or may not be a real-world problem, but always some specific problem is the focal point of our efforts. If new methods are needed then we invent, we try, we discard, invent again, try again, and discard again, <i class="foreign">ad nauseum</i> until a viable approach is finally uncovered. Then, and only then, is a rigorous, logical foundation sought.</div>
+<div class="para" id="SECinstructor-3-4">Think for a moment about how you do your research. First you identify a problem. Are the foundational issues at the front of your mind? Probably not. At first you’re just curious. You kick ideas around, trying to find some workable approach. In short, you play with the problem. You have fun with it as a means to understanding it. When you solve your problem you probably <em class="emphasis">believe</em> your result long before you prove it.  Foundational issues, proofs, come later when you need to show that your results are valid. This is usually less fun.</div>
+<div class="para" id="SECinstructor-3-5">Creating new mathematics and learning new mathematics are very similar activities.  Think about how you learn new mathematics. When reading a journal article do you plod from definition, to lemma, to proof, to theorem, to proof, entirely absorbing each before moving on to the next?  Probably not. Most likely you read ahead to get an overall sense of the result. Then you backtrack, skip forward, play with the ideas, generate your own examples and counterexamples. When your example is inconsistent with a theorem in the article you examine it closely in order to resolve the discrepancy and better understand the ideas in the article. In short, you begin by playing with the ideas and having fun with them.</div>
+<div class="para" id="SECinstructor-3-6">Mathematicians rarely focus on rigor when we start to learn new mathematics ourselves because experience has taught us that rigor usually proceeds from a deep intuitive understanding. And as a result of training. It does not come easily, but with effort rigor emerges.  If we force our students to plow through formal definitions, theorems, lemmas, and proofs before showing them the intuitive beauty and usefulness of our topic, before they can see the need for formal definitions, theorems, lemmas, and proofs, then we are demanding of them what we rarely ask of ourselves.  The first job of the teacher is to foster enthusiasm in the student, to pique their curiosity and to show them, in Descartes’ phrase, “the pleasure of discovery.” For those who need it there is time later for the hard work of rigor.</div>
+<div class="para" id="SECinstructor-3-7">In the first part of this text (“From Practice . . .”) our audience is the usual mix of students in a typical first semester, college level, Calculus class. <em class="emphasis">All</em> of the students, not just the budding mathematicians, and certainly not the instructor.  (Presumably we have nothing to teach the instructor, although we flatter ourselves that we might, occasionally, do so anyway.)  We begin in part one as Leibniz did, with the highly intuitive — if questionable — notion of the differential.  We do not hide the problems inherent in this approach. We simply don’t dwell on them. We point out the logical problems that accompany the use of differentials whenever we can without breaking up the flow of the text. We do this because it is important for students, <em class="emphasis">all</em> students, to be aware of these issues. But we defer their resolution until part two (“. . .  to Theory”) when, hopefully, they will have gained an appreciation of the need for rigor.</div>
+<div class="para" id="SECinstructor-3-8">In part two (“To Theory . . .”) our purpose is to put a solid, rigorous foundation under the differentiation techniques derived in part one. Thus our style and approach changes. We become more formal, more “mathematical.” We define and prove limit theorems and use these to derive the differentiation rules. But in contrast with the traditional approach we are not deriving the differentiation techniques in order to use them. In part two the point is to formally, rigorously justify rules with which the student should already be quite conversant.</div>
+<div class="para" id="SECinstructor-3-9">In part one we address the question, “How can we use Calculus to explore, and explain, our world?”  In part two the question is “Why does Calculus work?”</div>
+<div class="para" id="SECinstructor-3-10">In this we follow our history. Calculus existed as an intuitive set of computational tools for approximately <span class="process-math">\(200\)</span> years before the limit theory made it rigorous. Surely there is no harm in allowing our students to view it the same way for a few weeks.</div>
+<div class="para" id="SECinstructor-3-11">Moreover proceeding in this way allows us to present the need for rigor itself as a problem to be solved, rather than an abstract theory untethered from reality. For example we do not pretend that the proof of the statement, “If <span class="process-math">\(\limit{x}{a}{f(x)}\)</span> and <span class="process-math">\(\limit{x}{a}{g(x)}\)</span> both exist then <span class="process-math">\(\limit{x}{a}{\left(f(x)+g(x)\right)}\)</span> also exists and is equal to the obvious sum,” is useful for anything other than establishing with full rigor what we already believe, intuitively, to be true. We make no such pretense because the history of our topic shows that this is in fact the truth. Limits were not invented to create Calculus, they were invented to justify it after the fact, to make it rigorous.</div></section><section class="paragraphs" id="StudentNeed"><h2 class="heading"><span class="title">What Do Students Need From Calculus?</span></h2>
+<div class="para" id="StudentNeed-2">A mechanical engineer who designs cars for a living must necessarily have a deep understanding of the inner workings of the propulsion, braking, cooling, and other systems built into every automobile.</div>
+<div class="para" id="StudentNeed-3">A race car driver will understand some, but not necessarily all, of the mechanical principles underlying those systems. But the racer will have a much more comprehensive, and deeply intuitive, understanding of the physics of motion that keep the car on the road under the extreme conditions of a race.</div>
+<div class="para" id="StudentNeed-4">A mathematician who merely drives to and from their workplace while daydreaming about mathematics needs to understand no more about the car than how to make it move, stop, and change direction.  We may understand more than that, and many of us do, but this is all we need.</div>
+<div class="para" id="StudentNeed-5">But all of these people start at the same point: They learn how to drive the car.</div>
+<div class="para" id="StudentNeed-6">Much the same can be said of any tool. Some need to understand it thoroughly at every level. Some need a deep intuitive grasp of its extreme capabilities. And some need only know enough to keep from hurting themselves with it. But all begin by learning how to use the tool properly.</div>
+<div class="para" id="StudentNeed-7">Calculus is a tool. It was invented to solve real world problems in science and engineering.  The racers in our metaphor are scientists, engineers, and businessfolk. They need, and many frequently have, a deep intuitive feel for the kinds of problems Calculus can be used to solve, and their intuitive understanding enables them to adapt Calculus techniques to novel problems. But their understanding is necessarily qualitatively different from that of a mathematician.</div>
+<div class="para" id="StudentNeed-8">As mathematicians we have (indeed we must have) a deep understanding of what Calculus is, what it does, and what it can not do. We see and understand the purpose of every nuance in phrasing, the role of every lemma and theorem, every small change in notation. We understand the immense need to state our assumptions, to formulate careful, precise definitions and to rigorously prove our theorems.</div>
+<aside class="aside aside-like" id="StudentNeed-9"><h3 class="heading"><span class="title">Comment.</span></h3>
+<div class="para" id="StudentNeed-9-2">The ordinary drivers in our metaphor are those, sadly rare, students in the liberal arts who take Calculus out of simple curiosity.</div></aside><div class="para" id="StudentNeed-10">Because most college level Calculus courses contain students with a wide variety of interests and goals a Calculus textbook must meet the needs of students with a wide variety of interests and goals. This seems like it must be nearly impossible until we think about it for a bit. Just as we can begin the education of engineers, racers, and ordinary drivers at the same point — the location and use of the controls of a car — we can begin the education of engineers, scientists, and mathematicians at the same point — with the computational techniques from Calculus that are most useful and universal, with examples displaying how these techniques can be used to solve technical problems, and with problems and drills designed to develop skill with them. This is what we’ve tried to do in this textbook.</div>
+<div class="para" id="StudentNeed-11">After learning to drive racers will go on to become more skillful at using the car, and there is no point in bludgeoning them with the details of say, the compressibility characteristics of steering fluid. Certainly they must be familiar with the need for steering fluid, and they should have a passing familiarity with the role of steering fluid in the overall steering system. In short, they need to know that the tools they are using have been carefully designed and that they work. But no more than that is necessary until and unless they need to help design a new steering system for their car.</div>
+<div class="para" id="StudentNeed-12">In the same way science, engineering and business students need to be aware of the need for rigor, even if it never impinges on their daily lives.  They should be familiar with the need for limits as a means of providing rigor and they should have a passing familiarity with the role of epsilons and deltas. In short, they need to know that the tools they are using have been carefully designed and that they work. But no more than that is necessary until and unless there is some specific need.</div>
+<div class="para" id="StudentNeed-13">On the other hand mathematics students do need a nuanced understanding of both the practice and theory of Calculus if they are to successfully continue their studies. In addition to the ability to use Calculus, they need to understand limits and they need to understand the role of epsilons and deltas</div>
+<div class="para" id="StudentNeed-14">Calculus was invented as a problem solving tool, and in our opinion, this is how it is most easily and intuitively understood by the beginning student.  So part one of this text is aimed at all of the students in a typical first year college class. As a result our approach is intuitive and problem oriented.</div>
+<div class="para" id="StudentNeed-15">While the audience for part two is still all of the students in the class, it is aimed, primarily, at the budding mathematicians. You will see that in part two our language and presentation become more formal, more mathematical. This is deliberate. A young mathematician needs to be exposed to the formalisms of our discipline and this is an appropriate place to begin.</div>
+<div class="para" id="StudentNeed-16">But this does not mean that part two should be reserved only for honors classes full of mathematics majors. The budding engineer, scientist, or financial analyst will most likely never need to use epsilons and deltas, or even limits, in their daily work. Like the racer who should understand the need for steering fluid, but does not need a detailed understanding of its essential characteristics, these students should understand the need for rigor, even if they do not understand it in the same detail that a mathematician must. Many of these students will probably view this as an unnecessary burden, and will complain about it. But an education should provide students with what they need, not what they enjoy.</div>
+<div class="para" id="StudentNeed-17">And sometimes, every now and then, some of them will find, much to their surprise, that the beauty and intricacy of a rigorous, well formed argument is as captivating to them as it is to us. We should provide our students with the opportunity to be captivated.</div></section><section class="paragraphs" id="StartlingChoices"><h2 class="heading"><span class="title">Some (Possibly Startling) Choices We’ve Made.</span></h2>
+<div class="para" id="StartlingChoices-2">You will very likely find some of the choices we’ve made quite startling. We describe some of them here and explain our rationale.</div>
+<div class="para logical" id="StartlingChoices-3"><dl class="description-list">
 <dt id="StartlingChoices-3-1-1">Leibniz’ Differentials</dt>
 <dd>
 <div class="para" id="StartlingChoices-3-1-1-2">We use Leibniz’ differentials almost exclusively throughout part one of the text.  We state the differentiation rules in their differential form (as apposed to their derivative form), and we think of the expression <span class="process-math">\(\dfdx{y}{x}\)</span> as the ratio of the differentials <span class="process-math">\(\dx{y}\)</span> and <span class="process-math">\(\dx{x}\text{,}\)</span> just as Leibniz did. We do this for several reasons.</div>
@@ -569,7 +1169,7 @@ window.MathJax = {
 <div class="para" id="StartlingChoices-3-1-1-5">We believe that the best pedagogy is one which meets the students where they are. In our experience students at this level have only the most tenuous grasp of the function concept but they understand slopes, as fractions, very well. So they will naturally interpret the symbol <span class="process-math">\(\dfdx{y}{x}\)</span> as a slope, just as Leibniz did. Admittedly this is not a mathematically mature understanding, but mathematical maturity is a goal of the first course in Calculus, not its starting point.</div>
 <div class="para" id="StartlingChoices-3-1-1-6">Calling the derivative a “derived function” is not as helpful to beginning students as it would be to a mature mathematician.  In our experience students will generally see <span class="process-math">\(f(x)\)</span> and <span class="process-math">\(f(a)\)</span> as the same thing, even if they are explicitly told that <span class="process-math">\(x\)</span> is a variable and <span class="process-math">\(a\)</span> is a constant. Function notation is not the cause of this misinterpretation, but it doesn’t prevent it either. If you ask a student at this level “If <span class="process-math">\(g(x) =
 f(a)\text{,}\)</span> is <span class="process-math">\(g^\prime(x) = f^\prime(x)?\)</span>” an alarming number will say yes.</div>
-<div class="para" id="StartlingChoices-3-1-1-7">The formula <span class="process-math">\(y=\)</span>(some expression in <span class="process-math">\(x\)</span>) appears frequently and we will refer to it variously as a graph, an equation, or a function. We realize how annoying this lack of precision will be to you, a mature mathematician. But remember that this text is not written for you. Except in the section you are reading now we speak directly to the student, not to you. In our experience most students have only the most tenuous grasp of the distinctions between an equation, its graph, and the underlying function (or functions). For that simple reason we don’t distinguish between them either, at first.</div>
+<div class="para" id="StartlingChoices-3-1-1-7">The formula <span class="process-math">\(y=\)</span>(some expression in <span class="process-math">\(x\)</span>) appears frequently and we will refer to it variously as a graph, an equation, or a function. We realize how annoying this lack of precision will be to you, a mature mathematician. But remember that this text is not written for you. Except in the section you are reading now we speak directly to the student, not to you. In our experience most students at this level have a very only nebulous grasp of the distinctions between an equation, its graph, and the underlying function (or functions). For that simple reason we don’t distinguish between them either, at first.</div>
 <div class="para" id="StartlingChoices-3-1-1-8">You will, no doubt, argue that these distinctions need to be taught. And you are right of course. But taught by whom?</div>
 <div class="para" id="StartlingChoices-3-1-1-9">We do not believe that deep abstractions, the notion of a function for example, are best explained in a written textbook. Teaching an abstract concept requires many examples, drawings, verbal explanations and even, occasionally, vigorous hand waving.</div>
 <div class="para" id="StartlingChoices-3-1-1-10">In short, we believe this is the purview of the instructor who is physically in the classroom with the student — you. If it helps to give the students an impassioned, wild-eyed rant about these lazy, or incompetent authors who aren’t using mathematical terminology correctly then by all means do that. We won’t mind. We think of ourselves as your partners, or co-teachers. In that role we’ve tried to we create teachable moments for you to exploit. This is one such.</div>
@@ -587,7 +1187,7 @@ f(a)\text{,}\)</span> is <span class="process-math">\(g^\prime(x) = f^\prime(x)?
 <div class="para" id="StartlingChoices-3-1-3-2">When we have taught Calculus in the traditional format we have found that students come away believing that slope<span class="process-math">\(=\)</span>derivative with distressing regularity. In order to stress that this is not always the right way to understand the symbol <span class="process-math">\(\dfdx{y}{x}\)</span> we sometimes use the dot notation when the derivative represents a velocity; a change of position with respect to time.  We are also careful to point out that if <span class="process-math">\(y=y(x)\)</span> then <span class="process-math">\(\dfdx{y}{x}\)</span> is properly interpreted as “the rate of change of <span class="process-math">\(y\)</span> with respect to <span class="process-math">\(x\)</span>” and that it is only when <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> represent coordinates in the plane that this should be understood as a slope.</div>
 <div class="para" id="StartlingChoices-3-1-3-3">For Newton the only independent variable was time, and his dot notation reflects that assumption. If <span class="process-math">\(x\)</span> represents a “flowing quantity” (Newton’s phrase) then <span class="process-math">\(\dot{x}\)</span> indicates the velocity with which it flows.  For Leibniz (and most of us) this is represented by <span class="process-math">\(\dfdx{x}{t}\text{.}\)</span> Although the dot notation has fallen out of favor in mathematics, it is still widely used in the sciences and engineering. We believe it is a disservice to students in those majors to pretend that Newton’s dot notation does not exist in the modern world. Worse, since many of our students take introductory physics (where they see dotted derivatives daily) and Calculus at the same time we only make ourselves look insular and dogmatic by pretending that the dot notation doesn’t exist.</div>
 <div class="para" id="StartlingChoices-3-1-3-4">Not only do we use Newton’s notation, but in <a href="CHAPTERPTERVelocitySlopeTangent.html#SECTIONFluxions" class="internal" title="Section 5.8: Newton’s Method of Fluxions">Section 5.8</a> we also use his language. When time is the variable we call <span class="process-math">\(\dot{x}=\dfdx{x}{t}\)</span> the “fluxion” of <span class="process-math">\(x\text{,}\)</span> just as Newton did.</div>
-<div class="para" id="StartlingChoices-3-1-3-5">We did not originally intend to go this far because “fluxion” (and its counterpart “fluent”) are very decidedly archaic words. No one uses them any more. But having decided to use the dot notation we soon realized that we could also use Newton’s language to emphasize that the derivative should not always be interpreted as a slope. And no one is harmed by learning more words.</div>
+<div class="para" id="StartlingChoices-3-1-3-5">We did not originally intend to go this far because “fluxion” (and its counterpart “fluent”) are very decidedly archaic words. No one uses them in this context any more. But having decided to use the dot notation we soon realized that we could also use Newton’s language to emphasize that the derivative should not always be interpreted as a slope. And no one is harmed by learning more words.</div>
 </dd>
 <dt id="StartlingChoices-3-1-4">Polar Coordinates and Parametric Equations</dt>
 <dd>
@@ -618,7 +1218,8 @@ P(t)=
 <div class="para" id="StartlingChoices-3-1-6-4">Second, many Calculus problems can be checked by an appropriately drawn graph. For example, if the problem is to find an equation of the line tangent to the graph of <span class="process-math">\(y=3\sqrt{x} -x^2\)</span> at <span class="process-math">\(x=5\)</span> the student need only graph the function and their solution to see if they have found the correct line. Until now it would have been unreasonable to ask students to check their work by graphing but modern students have access to a dizzying array of graphing tools at the click of a mouse. And this will most likely always be true. In our opinion they should be encouraged to use the resources available to them.</div>
 <div class="para" id="StartlingChoices-3-1-6-5">Third, as much as possible we have written the problems in such a way that the results of any computations needed are part of the problem statement. For example, one problem asks the student to show that if <span class="process-math">\(x^2+y^2=1\)</span> then <span class="process-math">\(\dfdxn{y}{x}{2}=-\frac{1}{y^3}\text{.}\)</span> Notice that the value of the second derivative is given in the problem. As much as possible we want to keep the students focused on understanding the problem, rather than rote computations.</div>
 </dd>
-</dl></div></section><section class="paragraphs" id="SECinstructor-6"><h2 class="heading"><span class="title">Some Practical Advice.</span></h2> <div class="para logical" id="SECinstructor-6-2"><dl class="description-list">
+</dl></div></section><section class="paragraphs" id="SECinstructor-6"><h2 class="heading"><span class="title">Some Practical Advice.</span></h2>
+<div class="para logical" id="SECinstructor-6-2"><dl class="description-list">
 <dt id="SECinstructor-6-2-1-1">Precalculus vs. Pre-Calculus</dt>
 <dd>
 <div class="para" id="SECinstructor-6-2-1-1-2">
@@ -635,19 +1236,41 @@ P(t)=
 <div class="para" id="SECinstructor-6-2-1-2-2">We did not specifically design this to be an IBL text. However we are strong proponents of the idea that interesting and illuminative problems should drive any math course. We therefore believe that this text will work well in an IBL, as well as a more traditional environment.</div>
 <div class="para" id="SECinstructor-6-2-1-2-3">The problems in this book are paramount. We tried very hard to let the problems drive the presentation, and we recommend that you do the same. If you don’t like our problems use your own. We won’t mind. In fact, if you have better problems please share them with us (see “A Plea For Help” below).</div>
 </dd>
-</dl></div></section><section class="paragraphs" id="TRIUMPS"><h2 class="heading"><span class="title">The TRIUMPHS Project.</span></h2> <aside class="aside aside-like" id="TRIUMPS-2"><h3 class="heading"><span class="title">Comment.</span></h3>
+</dl></div></section><section class="paragraphs" id="TRIUMPS"><h2 class="heading"><span class="title">The TRIUMPHS Project.</span></h2>
+<aside class="aside aside-like" id="TRIUMPS-2"><h3 class="heading"><span class="title">Comment.</span></h3>
 <div class="para" id="TRIUMPS-2-2">
-<em class="alert">TR</em>ansfoming <em class="alert">I</em>nstruction in <em class="alert">U</em>ndergraduate <em class="alert">M</em>athematics <em class="alert">I</em>nstruction via <em class="alert">P</em>rimary <em class="alert">H</em>istorical <em class="alert">S</em>ources</div></aside> <div class="para" id="TRIUMPS-3">The TRIUMPHS project consists of a collection of over <span class="process-math">\(80\)</span> Primary Source Projects (PSPs) on a wide range of topics from courses across the undergraduate mathematics curriculum and all are freely available for download at the <a class="external" href="https://blogs.ursinus.edu/triumphs/" target="_blank">TRIUMPHS website</a><a class="xref" id="TRIUMPS-3-3" href="" data-knowl="./knowl/fn/TRIUMPS-3-3.html" title="Footnote 0.0.8"><sup> 8 </sup></a>  </div> <div class="para" id="TRIUMPS-4">We quote from the project website:</div> <blockquote class="blockquote" id="TRIUMPS-5"><div class="para" id="TRIUMPS-5-1">The TRIUMPHS project creates materials for use in the undergraduate mathematics classroom which teaches content based around original mathematical sources such as the writings of Poincarè, Euclid, Lobachevsky, Hausdorff, and many others. These materials are freely available and downloadable for use in the clasroom. The goal of the project is to write, develop, disseminate, and test these curricular materials.</div></blockquote> <div class="para" id="TRIUMPS-6">The TRIUMPHS project was ongoing at the same time we were writing this textbook. Since both projects proceed from the premise that history is a useful organizing strategy for teaching mathematics, and both are published under a Creative Commons license it seemed to us that our text can be enhanced by   those TRIUMPHS PSPs which were relevant to Calculus.</div> <div class="para" id="TRIUMPS-7">At those points in the text which correspond to particular PSP a reference (and link) is provided.  </div> <div class="para" id="TRIUMPS-8">We are grateful for the work of the specific TRIUMPHS authors we have included in this text, but we are also grateful for the TRIUMPHS project in general. There are TRIUMPHS PSPs for many, many more topics than we are able to include here and we highly recommend that you take a look at them and consider incorporating any appropriate PSPs into every course you teach.  </div></section><section class="paragraphs" id="Cranky"><h2 class="heading"><span class="title">Rantings From the Cranky Old Guys in the Back of the Room.</span></h2> <div class="para" id="Cranky-2">We (the authors of this text) have watched the following scene play out over and over again at professional meetings. The actors change but the script is surprisingly stable.</div> <div class="para" id="Cranky-3">A speaker is introduced, rises, and talks briefly about a problem they have encountered while teaching Calculus  . . .  or Basic Algebra  . . .  or Trigonometry  . . .  or whatever.  At some point the talk is shanghaied by a <em class="alert">Cranky Old Guy</em> (it is usually a guy) in the back of the room. He has identified the solution to <em class="alert">The Problem</em> with teaching Calculus  . . . or Basic Algebra . . .  or Trigonometry  . . . or whatever, and in order to fix <em class="alert">The Problem</em> all we have to do is follow his recipe. The audience is then treated to a sincere, vehement, wild-eyed, and often spittle-spewn description of his recipe that clearly emanates from the fervor of divine inspiration.</div> <div class="para" id="Cranky-4">We do not criticize the <em class="alert">Cranky Old Guy</em>.  We recognize that when you believe you have found a lighted path in a darkening forest it is hard to contain your excitement. Also we fear we may have more in common with him than we are entirely comfortable with.</div> <div class="para" id="Cranky-5">This text grew from our conviction that an historical approach to Calculus, particularly the use of the highly intuitive notion of the differential, which was used to excellent effect by the likes of Leibniz, the Bernoullis, L’Hopital, and the master, Euler, to name just a few, provides a viable, interesting, and useful framework for teaching Calculus.</div> <div class="para" id="Cranky-6">As we complete our text we are more convinced than ever that this is true.</div> <aside class="aside aside-like" id="Cranky-7"><h3 class="heading"><span class="title">Comment.</span></h3>
-<div class="para" id="Cranky-7-2">Well, OK, sure. We actually do believe this is the best way. Without that conviction we’d never have finished. But we haven’t completely lost touch with reality. As far-fetched as it seems to us, we recognize the possibility that we might be wrong.</div></aside> <div class="para" id="Cranky-8">But if we’re being honest we must admit the possibility that we’re wrong.  We don’t believe we’ve found the only way to teach Calculus, or even the best, or that everyone should teach this way. What we do have is a way to teach Calculus that is very <em class="emphasis">different</em> from what has been done for the past century or so. You will have to decide whether or not it works for you.</div> <div class="para" id="Cranky-9">It is also possible that in our conviction we may be edging into <em class="alert">Cranky Old Guy</em> territory. But we will leave that judgment to you. We don’t really want to know.</div></section><section class="paragraphs" id="PleaForHelp"><h2 class="heading"><span class="title">A Plea For Help.</span></h2> <div class="para" id="PleaForHelp-2">This text is not finished. No textbook ever is. Eventually the authors simply stop writing.</div> <div class="para" id="PleaForHelp-3">But always there a very illuminating problem, a nice turn of phrase, a revealing metaphor, or a tangential subject which wasn’t known at the time of writing that should have been included. And typos. Always, there are typos.</div> <div class="para" id="PleaForHelp-4">A nice feature of publishing an online Open Educational Resource (OER) text like this one is that it can be revised more-or-less continuously as needed.</div> <aside class="aside aside-like" id="PleaForHelp-5"><h3 class="heading"><span class="title">Comment.</span></h3>
-<div class="para" id="PleaForHelp-5-2">Obviously some care must be taken. We would not, for example, want to insert a new problem — thereby changing the numbers of all subsequent problems — during a semester while the text is being used. But spelling errors and typos can be addressed at any time.</div></aside> <div class="para" id="PleaForHelp-6">Even better, we are not limited to only using the work of the original authors. If you have a favorite problem that you use in your classroom and that you’d be willing to share please share it with us. If yours works better than a problem we already have, we’ll happily swap it in.  If yours simply fills a need that we’ve left unaddressed we’ll be happy to include your problem. Naturally, we will give you credit for your work if you want.</div> <div class="para" id="PleaForHelp-7">If you think we have a good approach but don’t think we’ve really pulled it off you are free to obtain the source and re-write any part of it, or all of it, to suit your needs.</div> <aside class="aside aside-like" id="PleaForHelp-8"><h3 class="heading"><span class="title">Comment.</span></h3>
-<div class="para" id="PleaForHelp-8-2">As of this writing the only way to do that is to ask us for it. Eventually (meaning, as soon as Boman figures out how to do it), the source files will be available in at least one online repository.</div></aside> <div class="para logical" id="PleaForHelp-9">
-<div class="para">We are publishing this book under the Creative Commons <a class="external" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-AS 4.0 License</a><a class="xref" id="PleaForHelp-9-2" href="" data-knowl="./knowl/fn/PleaForHelp-9-2.html" title="Footnote 0.0.9"><sup> 9 </sup></a>   which means, among other things, that you are free use and modify this text as long as you:</div>
-<ol class="decimal">
+<em class="alert">TR</em>ansfoming <em class="alert">I</em>nstruction in <em class="alert">U</em>ndergraduate <em class="alert">M</em>athematics <em class="alert">I</em>nstruction via <em class="alert">P</em>rimary <em class="alert">H</em>istorical <em class="alert">S</em>ources</div></aside><div class="para" id="TRIUMPS-3">The TRIUMPHS project consists of a collection of over <span class="process-math">\(80\)</span> Primary Source Projects (PSPs) on a wide range of topics from courses across the undergraduate mathematics curriculum and all are freely available for download at the <a class="external" href="https://blogs.ursinus.edu/triumphs/" target="_blank">TRIUMPHS website</a><details class="ptx-footnote" aria-live="polite" id="TRIUMPS-3-3"><summary class="ptx-footnote__number" title="Footnote 0.0.8"><sup> 8 </sup></summary><div class="ptx-footnote__contents" id="TRIUMPS-3-3"><code class="code-inline tex2jax_ignore">https://blogs.ursinus.edu/triumphs/</code></div></details>
+</div>
+<div class="para" id="TRIUMPS-4">We quote from the project website:</div>
+<blockquote class="blockquote" id="TRIUMPS-5"><div class="para" id="TRIUMPS-5-1">The TRIUMPHS project creates materials for use in the undergraduate mathematics classroom which teaches content based around original mathematical sources such as the writings of Poincarè, Euclid, Lobachevsky, Hausdorff, and many others. These materials are freely available and downloadable for use in the clasroom. The goal of the project is to write, develop, disseminate, and test these curricular materials.</div></blockquote>
+<div class="para" id="TRIUMPS-6">The TRIUMPHS project was ongoing at the same time we were writing this textbook. Since both projects proceed from the premise that history is a useful organizing strategy for teaching mathematics, and both are published under a Creative Commons license it seemed to us that our text can be enhanced by were relevant to Calculus.</div>
+<div class="para" id="TRIUMPS-7">At those points in the text which correspond to particular PSP a reference (and link) is provided.</div>
+<div class="para" id="TRIUMPS-8">We are grateful for the work of the specific TRIUMPHS authors we have included in this text, but we are also grateful for the TRIUMPHS project in general. There are TRIUMPHS PSPs for many, many more topics than we are able to include here and we highly recommend that you take a look at them and consider incorporating any appropriate PSPs into every course you teach.</div></section><section class="paragraphs" id="Cranky"><h2 class="heading"><span class="title">Rantings From the Cranky Old Guys in the Back of the Room.</span></h2>
+<div class="para" id="Cranky-2">We (the authors of this text) have watched the following scene play out over and over again at professional meetings. The actors change but the script is surprisingly stable.</div>
+<div class="para" id="Cranky-3">A speaker is introduced, rises, and talks briefly about a problem they have encountered while teaching Calculus  . . .  or Basic Algebra  . . .  or Trigonometry  . . .  or whatever.  At some point the talk is shanghaied by a <em class="alert">Cranky Old Guy</em> (it is usually a guy) in the back of the room. He has identified the solution to <em class="alert">The Problem</em> with teaching Calculus  . . . or Basic Algebra . . .  or Trigonometry  . . . or whatever, and in order to fix <em class="alert">The Problem</em> all we have to do is follow his recipe. The audience is then treated to a sincere, vehement, wild-eyed, and often spittle-spewn description of his recipe that clearly emanates from the fervor of divine inspiration.</div>
+<div class="para" id="Cranky-4">We do not criticize the <em class="alert">Cranky Old Guy</em>.  We recognize that when you believe you have found a lighted path in a darkening forest it is hard to contain your excitement. Also we fear we may have more in common with him than we are entirely comfortable with.</div>
+<div class="para" id="Cranky-5">This text grew from our conviction that an historical approach to Calculus, particularly the use of the highly intuitive notion of the differential, which was used to excellent effect by the likes of Leibniz, the Bernoullis, L’Hopital, and the master, Euler, to name just a few, provides a viable, interesting, and useful framework for teaching Calculus.</div>
+<div class="para" id="Cranky-6">As we complete our text we are more convinced than ever that this is true.</div>
+<aside class="aside aside-like" id="Cranky-7"><h3 class="heading"><span class="title">Comment.</span></h3>
+<div class="para" id="Cranky-7-2">Well, OK, sure. We actually do believe this is the best way. Without that conviction we’d never have finished. But we haven’t completely lost touch with reality. As far-fetched as it seems to us, we recognize the possibility that we might be wrong.</div></aside><div class="para" id="Cranky-8">But if we’re being honest we must admit the possibility that we’re wrong.  We don’t believe we’ve found the only way to teach Calculus, or even the best, or that everyone should teach this way. What we do have is a way to teach Calculus that is very <em class="emphasis">different</em> from what has been done for the past century or so. You will have to decide whether or not it works for you.</div>
+<div class="para" id="Cranky-9">It is also possible that in our conviction we may be edging into <em class="alert">Cranky Old Guy</em> territory. But we will leave that judgment to you. We don’t really want to know.</div></section><section class="paragraphs" id="PleaForHelp"><h2 class="heading"><span class="title">A Plea For Help.</span></h2>
+<div class="para" id="PleaForHelp-2">This text is not finished. No textbook ever is. Eventually the authors simply stop writing.</div>
+<div class="para" id="PleaForHelp-3">But always there a very illuminating problem, a nice turn of phrase, a revealing metaphor, or a tangential subject which wasn’t known at the time of writing that should have been included. And typos. Always, there are typos.</div>
+<div class="para" id="PleaForHelp-4">A nice feature of publishing an online Open Educational Resource (OER) text like this one is that it can be revised more-or-less continuously as needed.</div>
+<aside class="aside aside-like" id="PleaForHelp-5"><h3 class="heading"><span class="title">Comment.</span></h3>
+<div class="para" id="PleaForHelp-5-2">Obviously some care must be taken. We would not, for example, want to insert a new problem — thereby changing the numbers of all subsequent problems — during a semester while the text is being used. But spelling errors and typos can be addressed at any time.</div></aside><div class="para" id="PleaForHelp-6">Even better, we are not limited to only using the work of the original authors. If you have a favorite problem that you use in your classroom and that you’d be willing to share please share it with us. If yours works better than a problem we already have, we’ll happily swap it in.  If yours simply fills a need that we’ve left unaddressed we’ll be happy to include your problem. Naturally, we will give you credit for your work if you want.</div>
+<div class="para" id="PleaForHelp-7">If you think we have a good approach but don’t think we’ve really pulled it off you are free to obtain the source and re-write any part of it, or all of it, to suit your needs.</div>
+<aside class="aside aside-like" id="PleaForHelp-8"><h3 class="heading"><span class="title">Comment.</span></h3>
+<div class="para" id="PleaForHelp-8-2">As of this writing the only way to do that is to ask us for it. Eventually (meaning, as soon as Boman figures out how to do it), the source files will be available in at least one online repository.</div></aside><div class="para logical" id="PleaForHelp-9">
+<div class="para">We are publishing this book under the Creative Commons <a class="external" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-AS 4.0 License</a><details class="ptx-footnote" aria-live="polite" id="PleaForHelp-9-2"><summary class="ptx-footnote__number" title="Footnote 0.0.9"><sup> 9 </sup></summary><div class="ptx-footnote__contents" id="PleaForHelp-9-2"><code class="code-inline tex2jax_ignore">https://creativecommons.org/licenses/by-nc-sa/4.0/</code></div></details> and modify this text as long as you:</div>
+<ol class="decimal" id="PleaForHelp-9-3">
 <li id="PleaForHelp-9-3-1"><div class="para" id="PleaForHelp-9-3-1-1">Give us proper attribution as the original authors.</div></li>
 <li id="PleaForHelp-9-3-2"><div class="para" id="PleaForHelp-9-3-2-1">Do not use it for any commercial purpose (don’t try to make money from it).</div></li>
 <li id="PleaForHelp-9-3-3"><div class="para" id="PleaForHelp-9-3-3-1">License any product you create from our text using the same “CC BY-NC-AS 4.0” license we’ve used.</div></li>
 </ol>
-</div> <div class="para" id="PleaForHelp-10">If you find this textbook useful please help us make it better by letting us know when you find an error or a lack of clarity. Any suggested change, from correcting our spelling to a complete re-write of a passage will be welcome.</div> <div class="tabular-box natural-width"><table class="tabular">
+</div>
+<div class="para" id="PleaForHelp-10">If you find this textbook useful please help us make it better by letting us know when you find an error or a lack of clarity. Any suggested change, from correcting our spelling to a complete re-write of a passage will be welcome.</div>
+<div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines"></td>
 <td class="l m b0 r0 l0 t0 lines"></td>
@@ -666,7 +1289,7 @@ P(t)=
 </tr>
 </table></div></section></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="frontmatter-4.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="DiffCalcFromPractice.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="frontmatter-5.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="DiffCalcFromPractice.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

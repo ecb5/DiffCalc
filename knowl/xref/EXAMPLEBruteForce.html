@@ -13,7 +13,8 @@
 <body class="ignore-math">
 <article class="example example-like"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.30</span><span class="period">.</span><span class="space"> </span><span class="title">Brute Force Computation.</span>
-</h4> <div class="para logical">
+</h4>
+<div class="para logical">
 <div class="para">Suppose that we wish to find <span class="process-math">\(\dx{y}\)</span> when <span class="process-math">\(y=5(x^2+x)^3\text{.}\)</span> One way to do this is simple brute force. That is, we compute</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -42,7 +43,9 @@ y=5\textcolor{red}{(x^2+x)^3} = 5\textcolor{red}{(x^6+3x^5+3x^4+x^3)}
 \dx{y}= (30x^5+75x^4+60x^3+15 x^2)\dx{x}.
 \end{equation*}
 </div>
-</div> <div class="para">Brute force works but expanding an expression like <span class="process-math">\((x^2+x)^3\)</span> is dull (and error prone) and mathematicians are like Nature: We are lazy.  We’d really rather avoid doing all of that dull computation if we possibly can. Wouldn’t you?</div> <div class="para logical">
+</div>
+<div class="para">Brute force works but expanding an expression like <span class="process-math">\((x^2+x)^3\)</span> is dull (and error prone) and mathematicians are like Nature: We are lazy.  We’d really rather avoid doing all of that dull computation if we possibly can. Wouldn’t you?</div>
+<div class="para logical">
 <div class="para">Suppose, we make this problem a little “easier on the eyes” with a substitution like we did in <a href="CHAPTERproblem-solving.html#SECTIONAn-easy-problem-alg" class="internal" title='Section 2.2: Substitution, or Making Things "Easy on the Eyes"'>Section 2.2</a>. Let <span class="process-math">\(z=x^2+x\text{.}\)</span>  Then our original problem becomes <span class="process-math">\(y=5z^3\)</span> which is much easier to look at. And now <span class="process-math">\(\dx{y}=15z^2\dx{z}\text{.}\)</span>  Substituting <span class="process-math">\(x^2+x\)</span> back in for <span class="process-math">\(z\)</span> we get <span class="process-math">\(\dx y = 15(x^2+x)^2\dx (x^2+x).\)</span> After computing <span class="process-math">\(\dx (x^2+x) = (2x+1)\dx x\)</span> we see that</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/SECTIONAn-easy-problem-alg.html">
 \begin{equation*}

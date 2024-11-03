@@ -58,7 +58,7 @@ window.MathJax = {
       "[pretext]/mathjaxknowl3.js"
     ],
     "paths": {
-      "pretext": "https://pretextbook.org/js/lib"
+      "pretext": "_static/pretext/js/lib"
     }
   },
   "startup": {
@@ -70,8 +70,8 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.33/pretext_search.js"></script><link href="https://pretextbook.org/css/0.83/pretext_search.css" rel="stylesheet" type="text/css">
-<script>js_version = 0.33</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.33/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.33/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.33/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
@@ -79,16 +79,588 @@ window.MathJax = {
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-<link href="https://pretextbook.org/css/0.83/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/shell_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/banner_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/navbar_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/toc_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/colors_blue_red.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/setcolors.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/pretext.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/shell_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/banner_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/toc_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
+<style>
+#PleaForHelp-9-3 { counter-set: PleaForHelp-9-3 0; }
+#PleaForHelp-9-3 > li::marker { content: ""counter(PleaForHelp-9-3,decimal)"."; }
+#PleaForHelp-9-3 > li { counter-increment: PleaForHelp-9-3; }
+#SECTIONFermMethAedeq-22-2-1-1-1 { counter-set: SECTIONFermMethAedeq-22-2-1-1-1 0; }
+#SECTIONFermMethAedeq-22-2-1-1-1 > li::marker { content: ""counter(SECTIONFermMethAedeq-22-2-1-1-1,lower-roman)""; }
+#SECTIONFermMethAedeq-22-2-1-1-1 > li { counter-increment: SECTIONFermMethAedeq-22-2-1-1-1; }
+#SECTIONFermMethAedeq-22-6-1-1-1 { counter-set: SECTIONFermMethAedeq-22-6-1-1-1 0; }
+#SECTIONFermMethAedeq-22-6-1-1-1 > li::marker { content: ""counter(SECTIONFermMethAedeq-22-6-1-1-1,lower-roman)""; }
+#SECTIONFermMethAedeq-22-6-1-1-1 > li { counter-increment: SECTIONFermMethAedeq-22-6-1-1-1; }
+#SECTIONFermMethAedeq-22-7-1-1-8 { counter-set: SECTIONFermMethAedeq-22-7-1-1-8 0; }
+#SECTIONFermMethAedeq-22-7-1-1-8 > li::marker { content: ""counter(SECTIONFermMethAedeq-22-7-1-1-8,lower-roman)""; }
+#SECTIONFermMethAedeq-22-7-1-1-8 > li { counter-increment: SECTIONFermMethAedeq-22-7-1-1-8; }
+#PROBLEMFermMethX2-2-1-1-1 { counter-set: PROBLEMFermMethX2-2-1-1-1 0; }
+#PROBLEMFermMethX2-2-1-1-1 > li::marker { content: ""counter(PROBLEMFermMethX2-2-1-1-1,lower-roman)""; }
+#PROBLEMFermMethX2-2-1-1-1 > li { counter-increment: PROBLEMFermMethX2-2-1-1-1; }
+#PROBLEMFermMethX2-3-1-1-1 { counter-set: PROBLEMFermMethX2-3-1-1-1 0; }
+#PROBLEMFermMethX2-3-1-1-1 > li::marker { content: ""counter(PROBLEMFermMethX2-3-1-1-1,lower-roman)""; }
+#PROBLEMFermMethX2-3-1-1-1 > li { counter-increment: PROBLEMFermMethX2-3-1-1-1; }
+#SUBSECTIONSpdVelRofC-31-2-1 { counter-set: SUBSECTIONSpdVelRofC-31-2-1 0; }
+#SUBSECTIONSpdVelRofC-31-2-1 > li::marker { content: ""counter(SUBSECTIONSpdVelRofC-31-2-1,lower-roman)""; }
+#SUBSECTIONSpdVelRofC-31-2-1 > li { counter-increment: SUBSECTIONSpdVelRofC-31-2-1; }
+#SUBSECTIONSpdVelRofC-32-2-1 { counter-set: SUBSECTIONSpdVelRofC-32-2-1 0; }
+#SUBSECTIONSpdVelRofC-32-2-1 > li::marker { content: ""counter(SUBSECTIONSpdVelRofC-32-2-1,lower-roman)""; }
+#SUBSECTIONSpdVelRofC-32-2-1 > li { counter-increment: SUBSECTIONSpdVelRofC-32-2-1; }
+#SUBSECTIONSpdVelRofC-33-2-1 { counter-set: SUBSECTIONSpdVelRofC-33-2-1 0; }
+#SUBSECTIONSpdVelRofC-33-2-1 > li::marker { content: ""counter(SUBSECTIONSpdVelRofC-33-2-1,lower-roman)""; }
+#SUBSECTIONSpdVelRofC-33-2-1 > li { counter-increment: SUBSECTIONSpdVelRofC-33-2-1; }
+#SUBSECTIONSpdVelRofC-34-2-1 { counter-set: SUBSECTIONSpdVelRofC-34-2-1 0; }
+#SUBSECTIONSpdVelRofC-34-2-1 > li::marker { content: ""counter(SUBSECTIONSpdVelRofC-34-2-1,lower-roman)""; }
+#SUBSECTIONSpdVelRofC-34-2-1 > li { counter-increment: SUBSECTIONSpdVelRofC-34-2-1; }
+#DRILLConstantRule-2 { counter-set: DRILLConstantRule-2 0; }
+#DRILLConstantRule-2 > li::marker { content: ""counter(DRILLConstantRule-2,lower-roman)""; }
+#DRILLConstantRule-2 > li { counter-increment: DRILLConstantRule-2; }
+#SECTIONsome-rules-diff-26-2 { counter-set: SECTIONsome-rules-diff-26-2 0; }
+#SECTIONsome-rules-diff-26-2 > li::marker { content: ""counter(SECTIONsome-rules-diff-26-2,lower-roman)""; }
+#SECTIONsome-rules-diff-26-2 > li { counter-increment: SECTIONsome-rules-diff-26-2; }
+#PARTGenPwrRule-1-2-1 { counter-set: PARTGenPwrRule-1-2-1 0; }
+#PARTGenPwrRule-1-2-1 > li::marker { content: ""counter(PARTGenPwrRule-1-2-1,lower-roman)""; }
+#PARTGenPwrRule-1-2-1 > li { counter-increment: PARTGenPwrRule-1-2-1; }
+#SECTIONsome-rules-diff-58-2 { counter-set: SECTIONsome-rules-diff-58-2 0; }
+#SECTIONsome-rules-diff-58-2 > li::marker { content: ""counter(SECTIONsome-rules-diff-58-2,lower-roman)""; }
+#SECTIONsome-rules-diff-58-2 > li { counter-increment: SECTIONsome-rules-diff-58-2; }
+#SECTIONsome-rules-diff-79-1-4 { counter-set: SECTIONsome-rules-diff-79-1-4 0; }
+#SECTIONsome-rules-diff-79-1-4 > li::marker { content: ""counter(SECTIONsome-rules-diff-79-1-4,lower-roman)""; }
+#SECTIONsome-rules-diff-79-1-4 > li { counter-increment: SECTIONsome-rules-diff-79-1-4; }
+#SECTIONsome-rules-diff-80-1-4 { counter-set: SECTIONsome-rules-diff-80-1-4 0; }
+#SECTIONsome-rules-diff-80-1-4 > li::marker { content: ""counter(SECTIONsome-rules-diff-80-1-4,lower-roman)""; }
+#SECTIONsome-rules-diff-80-1-4 > li { counter-increment: SECTIONsome-rules-diff-80-1-4; }
+#SECTIONsome-rules-diff-81-1-1 { counter-set: SECTIONsome-rules-diff-81-1-1 0; }
+#SECTIONsome-rules-diff-81-1-1 > li::marker { content: ""counter(SECTIONsome-rules-diff-81-1-1,lower-roman)""; }
+#SECTIONsome-rules-diff-81-1-1 > li { counter-increment: SECTIONsome-rules-diff-81-1-1; }
+#SECTIONsome-rules-diff-82-1-1 { counter-set: SECTIONsome-rules-diff-82-1-1 0; }
+#SECTIONsome-rules-diff-82-1-1 > li::marker { content: ""counter(SECTIONsome-rules-diff-82-1-1,lower-roman)""; }
+#SECTIONsome-rules-diff-82-1-1 > li { counter-increment: SECTIONsome-rules-diff-82-1-1; }
+#SECTIONVelocitySlopeTangent-12-2 { counter-set: SECTIONVelocitySlopeTangent-12-2 0; }
+#SECTIONVelocitySlopeTangent-12-2 > li::marker { content: ""counter(SECTIONVelocitySlopeTangent-12-2,lower-roman)""; }
+#SECTIONVelocitySlopeTangent-12-2 > li { counter-increment: SECTIONVelocitySlopeTangent-12-2; }
+#SECTIONdefin-tang-line-22-1-2 { counter-set: SECTIONdefin-tang-line-22-1-2 0; }
+#SECTIONdefin-tang-line-22-1-2 > li::marker { content: ""counter(SECTIONdefin-tang-line-22-1-2,lower-roman)""; }
+#SECTIONdefin-tang-line-22-1-2 > li { counter-increment: SECTIONdefin-tang-line-22-1-2; }
+#SECTIONdefin-tang-line-31-2-1-1-2 { counter-set: SECTIONdefin-tang-line-31-2-1-1-2 0; }
+#SECTIONdefin-tang-line-31-2-1-1-2 > li::marker { content: ""counter(SECTIONdefin-tang-line-31-2-1-1-2,lower-roman)""; }
+#SECTIONdefin-tang-line-31-2-1-1-2 > li { counter-increment: SECTIONdefin-tang-line-31-2-1-1-2; }
+#SECTIONdefin-tang-line-31-3-1-1-2 { counter-set: SECTIONdefin-tang-line-31-3-1-1-2 0; }
+#SECTIONdefin-tang-line-31-3-1-1-2 > li::marker { content: ""counter(SECTIONdefin-tang-line-31-3-1-1-2,lower-roman)""; }
+#SECTIONdefin-tang-line-31-3-1-1-2 > li { counter-increment: SECTIONdefin-tang-line-31-3-1-1-2; }
+#SECTIONdefin-tang-line-31-4-1-1-2 { counter-set: SECTIONdefin-tang-line-31-4-1-1-2 0; }
+#SECTIONdefin-tang-line-31-4-1-1-2 > li::marker { content: ""counter(SECTIONdefin-tang-line-31-4-1-1-2,lower-roman)""; }
+#SECTIONdefin-tang-line-31-4-1-1-2 > li { counter-increment: SECTIONdefin-tang-line-31-4-1-1-2; }
+#PROBLEMHyperbolaTriangles-3-1-1-6 { counter-set: PROBLEMHyperbolaTriangles-3-1-1-6 0; }
+#PROBLEMHyperbolaTriangles-3-1-1-6 > li::marker { content: ""counter(PROBLEMHyperbolaTriangles-3-1-1-6,lower-roman)""; }
+#PROBLEMHyperbolaTriangles-3-1-1-6 > li { counter-increment: PROBLEMHyperbolaTriangles-3-1-1-6; }
+#PROBLEMHyperbolaTriangles-4-1-1-6 { counter-set: PROBLEMHyperbolaTriangles-4-1-1-6 0; }
+#PROBLEMHyperbolaTriangles-4-1-1-6 > li::marker { content: ""counter(PROBLEMHyperbolaTriangles-4-1-1-6,lower-roman)""; }
+#PROBLEMHyperbolaTriangles-4-1-1-6 > li { counter-increment: PROBLEMHyperbolaTriangles-4-1-1-6; }
+#PROBLEMHyperbolaTriangles-5-1-1-6 { counter-set: PROBLEMHyperbolaTriangles-5-1-1-6 0; }
+#PROBLEMHyperbolaTriangles-5-1-1-6 > li::marker { content: ""counter(PROBLEMHyperbolaTriangles-5-1-1-6,lower-roman)""; }
+#PROBLEMHyperbolaTriangles-5-1-1-6 > li { counter-increment: PROBLEMHyperbolaTriangles-5-1-1-6; }
+#PROBLEMHyperbolaTriangles-6-1-1-4 { counter-set: PROBLEMHyperbolaTriangles-6-1-1-4 0; }
+#PROBLEMHyperbolaTriangles-6-1-1-4 > li::marker { content: ""counter(PROBLEMHyperbolaTriangles-6-1-1-4,lower-roman)""; }
+#PROBLEMHyperbolaTriangles-6-1-1-4 > li { counter-increment: PROBLEMHyperbolaTriangles-6-1-1-4; }
+#SECTIONGalileoDrops-9-2 { counter-set: SECTIONGalileoDrops-9-2 0; }
+#SECTIONGalileoDrops-9-2 > li::marker { content: ""counter(SECTIONGalileoDrops-9-2,decimal)"."; }
+#SECTIONGalileoDrops-9-2 > li { counter-increment: SECTIONGalileoDrops-9-2; }
+#SECONDBringCalc-5-4 { counter-set: SECONDBringCalc-5-4 0; }
+#SECONDBringCalc-5-4 > li::marker { content: ""counter(SECONDBringCalc-5-4,decimal)"."; }
+#SECONDBringCalc-5-4 > li { counter-increment: SECONDBringCalc-5-4; }
+#SECONDBringCalc-11-6 { counter-set: SECONDBringCalc-11-6 0; }
+#SECONDBringCalc-11-6 > li::marker { content: ""counter(SECONDBringCalc-11-6,decimal)"."; }
+#SECONDBringCalc-11-6 > li { counter-increment: SECONDBringCalc-11-6; }
+#PROBLEMGeneralFallingBalls-2-1-1-2 { counter-set: PROBLEMGeneralFallingBalls-2-1-1-2 0; }
+#PROBLEMGeneralFallingBalls-2-1-1-2 > li::marker { content: ""counter(PROBLEMGeneralFallingBalls-2-1-1-2,lower-roman)""; }
+#PROBLEMGeneralFallingBalls-2-1-1-2 > li { counter-increment: PROBLEMGeneralFallingBalls-2-1-1-2; }
+#PROBLEMGeneralFallingBalls-8-1-1-2 { counter-set: PROBLEMGeneralFallingBalls-8-1-1-2 0; }
+#PROBLEMGeneralFallingBalls-8-1-1-2 > li::marker { content: ""counter(PROBLEMGeneralFallingBalls-8-1-1-2,lower-roman)""; }
+#PROBLEMGeneralFallingBalls-8-1-1-2 > li { counter-increment: PROBLEMGeneralFallingBalls-8-1-1-2; }
+#SECTIONDerivative-18-2 { counter-set: SECTIONDerivative-18-2 0; }
+#SECTIONDerivative-18-2 > li::marker { content: ""counter(SECTIONDerivative-18-2,lower-roman)""; }
+#SECTIONDerivative-18-2 > li { counter-increment: SECTIONDerivative-18-2; }
+#PROBLEMDerivProdNEProdDeriv-2-1-1-1 { counter-set: PROBLEMDerivProdNEProdDeriv-2-1-1-1 0; }
+#PROBLEMDerivProdNEProdDeriv-2-1-1-1 > li::marker { content: ""counter(PROBLEMDerivProdNEProdDeriv-2-1-1-1,lower-roman)""; }
+#PROBLEMDerivProdNEProdDeriv-2-1-1-1 > li { counter-increment: PROBLEMDerivProdNEProdDeriv-2-1-1-1; }
+#SECTIONDerivative-21-2 { counter-set: SECTIONDerivative-21-2 0; }
+#SECTIONDerivative-21-2 > li::marker { content: ""counter(SECTIONDerivative-21-2,lower-roman)""; }
+#SECTIONDerivative-21-2 > li { counter-increment: SECTIONDerivative-21-2; }
+#PROBLEMAirlinerSpeed-3-1-1-2 { counter-set: PROBLEMAirlinerSpeed-3-1-1-2 0; }
+#PROBLEMAirlinerSpeed-3-1-1-2 > li::marker { content: ""counter(PROBLEMAirlinerSpeed-3-1-1-2,decimal)"."; }
+#PROBLEMAirlinerSpeed-3-1-1-2 > li { counter-increment: PROBLEMAirlinerSpeed-3-1-1-2; }
+#SECTIONnewt-flux-dynam-13-2-1 { counter-set: SECTIONnewt-flux-dynam-13-2-1 0; }
+#SECTIONnewt-flux-dynam-13-2-1 > li::marker { content: ""counter(SECTIONnewt-flux-dynam-13-2-1,lower-roman)""; }
+#SECTIONnewt-flux-dynam-13-2-1 > li { counter-increment: SECTIONnewt-flux-dynam-13-2-1; }
+#SECTIONFluxions-36-2-1-1-1 { counter-set: SECTIONFluxions-36-2-1-1-1 0; }
+#SECTIONFluxions-36-2-1-1-1 > li::marker { content: ""counter(SECTIONFluxions-36-2-1-1-1,decimal)"."; }
+#SECTIONFluxions-36-2-1-1-1 > li { counter-increment: SECTIONFluxions-36-2-1-1-1; }
+#SECTIONFluxions-36-3-1-1-1 { counter-set: SECTIONFluxions-36-3-1-1-1 0; }
+#SECTIONFluxions-36-3-1-1-1 > li::marker { content: ""counter(SECTIONFluxions-36-3-1-1-1,decimal)"."; }
+#SECTIONFluxions-36-3-1-1-1 > li { counter-increment: SECTIONFluxions-36-3-1-1-1; }
+#PROBLEMadfj-1-1-2-2 { counter-set: PROBLEMadfj-1-1-2-2 0; }
+#PROBLEMadfj-1-1-2-2 > li::marker { content: ""counter(PROBLEMadfj-1-1-2-2,lower-roman)""; }
+#PROBLEMadfj-1-1-2-2 > li { counter-increment: PROBLEMadfj-1-1-2-2; }
+#PROBLEMadfj-2-1-2-2 { counter-set: PROBLEMadfj-2-1-2-2 0; }
+#PROBLEMadfj-2-1-2-2 > li::marker { content: ""counter(PROBLEMadfj-2-1-2-2,lower-roman)""; }
+#PROBLEMadfj-2-1-2-2 > li { counter-increment: PROBLEMadfj-2-1-2-2; }
+#SECTIONSelfIntersectCurve-20-15-2-1-1-2 { counter-set: SECTIONSelfIntersectCurve-20-15-2-1-1-2 0; }
+#SECTIONSelfIntersectCurve-20-15-2-1-1-2 > li::marker { content: ""counter(SECTIONSelfIntersectCurve-20-15-2-1-1-2,lower-roman)""; }
+#SECTIONSelfIntersectCurve-20-15-2-1-1-2 > li { counter-increment: SECTIONSelfIntersectCurve-20-15-2-1-1-2; }
+#PROBLEMUnitCircleParameterization1-1-1-1-1 { counter-set: PROBLEMUnitCircleParameterization1-1-1-1-1 0; }
+#PROBLEMUnitCircleParameterization1-1-1-1-1 > li::marker { content: ""counter(PROBLEMUnitCircleParameterization1-1-1-1-1,lower-roman)""; }
+#PROBLEMUnitCircleParameterization1-1-1-1-1 > li { counter-increment: PROBLEMUnitCircleParameterization1-1-1-1-1; }
+#SECTIONSelfIntersectCurve-20-21-1-1-2 { counter-set: SECTIONSelfIntersectCurve-20-21-1-1-2 0; }
+#SECTIONSelfIntersectCurve-20-21-1-1-2 > li::marker { content: ""counter(SECTIONSelfIntersectCurve-20-21-1-1-2,lower-roman)""; }
+#SECTIONSelfIntersectCurve-20-21-1-1-2 > li { counter-increment: SECTIONSelfIntersectCurve-20-21-1-1-2; }
+#SUBSECTIONradian-measure-19-2 { counter-set: SUBSECTIONradian-measure-19-2 0; }
+#SUBSECTIONradian-measure-19-2 > li::marker { content: ""counter(SUBSECTIONradian-measure-19-2,lower-roman)""; }
+#SUBSECTIONradian-measure-19-2 > li { counter-increment: SUBSECTIONradian-measure-19-2; }
+#SUBSECTIONradian-measure-20-2 { counter-set: SUBSECTIONradian-measure-20-2 0; }
+#SUBSECTIONradian-measure-20-2 > li::marker { content: ""counter(SUBSECTIONradian-measure-20-2,lower-roman)""; }
+#SUBSECTIONradian-measure-20-2 > li { counter-increment: SUBSECTIONradian-measure-20-2; }
+#SUBSECTIONradian-measure-31-2 { counter-set: SUBSECTIONradian-measure-31-2 0; }
+#SUBSECTIONradian-measure-31-2 > li::marker { content: ""counter(SUBSECTIONradian-measure-31-2,lower-roman)""; }
+#SUBSECTIONradian-measure-31-2 > li { counter-increment: SUBSECTIONradian-measure-31-2; }
+#SECTIONtrig-interl-3-12-2-1-1-2 { counter-set: SECTIONtrig-interl-3-12-2-1-1-2 0; }
+#SECTIONtrig-interl-3-12-2-1-1-2 > li::marker { content: ""counter(SECTIONtrig-interl-3-12-2-1-1-2,lower-roman)""; }
+#SECTIONtrig-interl-3-12-2-1-1-2 > li { counter-increment: SECTIONtrig-interl-3-12-2-1-1-2; }
+#SECTIONtrig-interl-3-12-3-1-1-2 { counter-set: SECTIONtrig-interl-3-12-3-1-1-2 0; }
+#SECTIONtrig-interl-3-12-3-1-1-2 > li::marker { content: ""counter(SECTIONtrig-interl-3-12-3-1-1-2,lower-roman)""; }
+#SECTIONtrig-interl-3-12-3-1-1-2 > li { counter-increment: SECTIONtrig-interl-3-12-3-1-1-2; }
+#SECTIONtrig-interl-3-14-2 { counter-set: SECTIONtrig-interl-3-14-2 0; }
+#SECTIONtrig-interl-3-14-2 > li::marker { content: ""counter(SECTIONtrig-interl-3-14-2,lower-roman)""; }
+#SECTIONtrig-interl-3-14-2 > li { counter-increment: SECTIONtrig-interl-3-14-2; }
+#PROBLEMSineOscillB-1-1-8 { counter-set: PROBLEMSineOscillB-1-1-8 0; }
+#PROBLEMSineOscillB-1-1-8 > li::marker { content: ""counter(PROBLEMSineOscillB-1-1-8,lower-roman)""; }
+#PROBLEMSineOscillB-1-1-8 > li { counter-increment: PROBLEMSineOscillB-1-1-8; }
+#SECTIONtrig-interl-5-11-2 { counter-set: SECTIONtrig-interl-5-11-2 0; }
+#SECTIONtrig-interl-5-11-2 > li::marker { content: ""counter(SECTIONtrig-interl-5-11-2,lower-roman)""; }
+#SECTIONtrig-interl-5-11-2 > li { counter-increment: SECTIONtrig-interl-5-11-2; }
+#DRILLPolarQuirks2-2 { counter-set: DRILLPolarQuirks2-2 0; }
+#DRILLPolarQuirks2-2 > li::marker { content: ""counter(DRILLPolarQuirks2-2,lower-roman)""; }
+#DRILLPolarQuirks2-2 > li { counter-increment: DRILLPolarQuirks2-2; }
+#PROBLEMPolRectConvertA-1-1-3 { counter-set: PROBLEMPolRectConvertA-1-1-3 0; }
+#PROBLEMPolRectConvertA-1-1-3 > li::marker { content: ""counter(PROBLEMPolRectConvertA-1-1-3,lower-roman)""; }
+#PROBLEMPolRectConvertA-1-1-3 > li { counter-increment: PROBLEMPolRectConvertA-1-1-3; }
+#PROBLEMPolarGraphs-2 { counter-set: PROBLEMPolarGraphs-2 0; }
+#PROBLEMPolarGraphs-2 > li::marker { content: ""counter(PROBLEMPolarGraphs-2,lower-roman)""; }
+#PROBLEMPolarGraphs-2 > li { counter-increment: PROBLEMPolarGraphs-2; }
+#SUBSECTIONCircularMotion-5-1-2 { counter-set: SUBSECTIONCircularMotion-5-1-2 0; }
+#SUBSECTIONCircularMotion-5-1-2 > li::marker { content: ""counter(SUBSECTIONCircularMotion-5-1-2,lower-roman)""; }
+#SUBSECTIONCircularMotion-5-1-2 > li { counter-increment: SUBSECTIONCircularMotion-5-1-2; }
+#EXERCISEDiffPractice1-1-1-3 { counter-set: EXERCISEDiffPractice1-1-1-3 0; }
+#EXERCISEDiffPractice1-1-1-3 > li::marker { content: ""counter(EXERCISEDiffPractice1-1-1-3,lower-roman)""; }
+#EXERCISEDiffPractice1-1-1-3 > li { counter-increment: EXERCISEDiffPractice1-1-1-3; }
+#SUBSECTIONCircularMotion-12-1-9 { counter-set: SUBSECTIONCircularMotion-12-1-9 0; }
+#SUBSECTIONCircularMotion-12-1-9 > li::marker { content: ""counter(SUBSECTIONCircularMotion-12-1-9,lower-roman)""; }
+#SUBSECTIONCircularMotion-12-1-9 > li { counter-increment: SUBSECTIONCircularMotion-12-1-9; }
+#SUBSECTIONpolar-coord-calc-6-2-1-3-1 { counter-set: SUBSECTIONpolar-coord-calc-6-2-1-3-1 0; }
+#SUBSECTIONpolar-coord-calc-6-2-1-3-1 > li::marker { content: ""counter(SUBSECTIONpolar-coord-calc-6-2-1-3-1,lower-roman)""; }
+#SUBSECTIONpolar-coord-calc-6-2-1-3-1 > li { counter-increment: SUBSECTIONpolar-coord-calc-6-2-1-3-1; }
+#SUBSECTIONpolar-coord-calc-6-3-1-3-1 { counter-set: SUBSECTIONpolar-coord-calc-6-3-1-3-1 0; }
+#SUBSECTIONpolar-coord-calc-6-3-1-3-1 > li::marker { content: ""counter(SUBSECTIONpolar-coord-calc-6-3-1-3-1,lower-roman)""; }
+#SUBSECTIONpolar-coord-calc-6-3-1-3-1 > li { counter-increment: SUBSECTIONpolar-coord-calc-6-3-1-3-1; }
+#SUBSECTIONpolar-coord-calc-6-4-1-3-1 { counter-set: SUBSECTIONpolar-coord-calc-6-4-1-3-1 0; }
+#SUBSECTIONpolar-coord-calc-6-4-1-3-1 > li::marker { content: ""counter(SUBSECTIONpolar-coord-calc-6-4-1-3-1,lower-roman)""; }
+#SUBSECTIONpolar-coord-calc-6-4-1-3-1 > li { counter-increment: SUBSECTIONpolar-coord-calc-6-4-1-3-1; }
+#PROBLEMcycloid2-2-1-1-1 { counter-set: PROBLEMcycloid2-2-1-1-1 0; }
+#PROBLEMcycloid2-2-1-1-1 > li::marker { content: ""counter(PROBLEMcycloid2-2-1-1-1,lower-roman)""; }
+#PROBLEMcycloid2-2-1-1-1 > li { counter-increment: PROBLEMcycloid2-2-1-1-1; }
+#PROBLEMcycloid2-3-1-1-1 { counter-set: PROBLEMcycloid2-3-1-1-1 0; }
+#PROBLEMcycloid2-3-1-1-1 > li::marker { content: ""counter(PROBLEMcycloid2-3-1-1-1,lower-roman)""; }
+#PROBLEMcycloid2-3-1-1-1 > li { counter-increment: PROBLEMcycloid2-3-1-1-1; }
+#SUBSECTIONsimple-harm-oscill-17-3-1-1-4 { counter-set: SUBSECTIONsimple-harm-oscill-17-3-1-1-4 0; }
+#SUBSECTIONsimple-harm-oscill-17-3-1-1-4 > li::marker { content: ""counter(SUBSECTIONsimple-harm-oscill-17-3-1-1-4,lower-roman)""; }
+#SUBSECTIONsimple-harm-oscill-17-3-1-1-4 > li { counter-increment: SUBSECTIONsimple-harm-oscill-17-3-1-1-4; }
+#SECTIONdiff-other-trig-13-1-1 { counter-set: SECTIONdiff-other-trig-13-1-1 0; }
+#SECTIONdiff-other-trig-13-1-1 > li::marker { content: ""counter(SECTIONdiff-other-trig-13-1-1,lower-roman)""; }
+#SECTIONdiff-other-trig-13-1-1 > li { counter-increment: SECTIONdiff-other-trig-13-1-1; }
+#SECTIONdiff-other-trig-14-1-3 { counter-set: SECTIONdiff-other-trig-14-1-3 0; }
+#SECTIONdiff-other-trig-14-1-3 > li::marker { content: ""counter(SECTIONdiff-other-trig-14-1-3,lower-roman)""; }
+#SECTIONdiff-other-trig-14-1-3 > li { counter-increment: SECTIONdiff-other-trig-14-1-3; }
+#PROBLEMDiffFormTan-3-1-3-1 { counter-set: PROBLEMDiffFormTan-3-1-3-1 0; }
+#PROBLEMDiffFormTan-3-1-3-1 > li::marker { content: ""counter(PROBLEMDiffFormTan-3-1-3-1,decimal)"."; }
+#PROBLEMDiffFormTan-3-1-3-1 > li { counter-increment: PROBLEMDiffFormTan-3-1-3-1; }
+#DIGRESSIONInverse-function-notation-7-1-1 { counter-set: DIGRESSIONInverse-function-notation-7-1-1 0; }
+#DIGRESSIONInverse-function-notation-7-1-1 > li::marker { content: ""counter(DIGRESSIONInverse-function-notation-7-1-1,lower-roman)""; }
+#DIGRESSIONInverse-function-notation-7-1-1 > li { counter-increment: DIGRESSIONInverse-function-notation-7-1-1; }
+#PROBLEMInvTanDiffeqB-1-1-2 { counter-set: PROBLEMInvTanDiffeqB-1-1-2 0; }
+#PROBLEMInvTanDiffeqB-1-1-2 > li::marker { content: ""counter(PROBLEMInvTanDiffeqB-1-1-2,lower-roman)""; }
+#PROBLEMInvTanDiffeqB-1-1-2 > li { counter-increment: PROBLEMInvTanDiffeqB-1-1-2; }
+#PROBLEMArcSinDiffeqB-1-1-2 { counter-set: PROBLEMArcSinDiffeqB-1-1-2 0; }
+#PROBLEMArcSinDiffeqB-1-1-2 > li::marker { content: ""counter(PROBLEMArcSinDiffeqB-1-1-2,lower-roman)""; }
+#PROBLEMArcSinDiffeqB-1-1-2 > li { counter-increment: PROBLEMArcSinDiffeqB-1-1-2; }
+#PROBLEMArcSecDiffeqB-1-1-2 { counter-set: PROBLEMArcSecDiffeqB-1-1-2 0; }
+#PROBLEMArcSecDiffeqB-1-1-2 > li::marker { content: ""counter(PROBLEMArcSecDiffeqB-1-1-2,lower-roman)""; }
+#PROBLEMArcSecDiffeqB-1-1-2 > li { counter-increment: PROBLEMArcSecDiffeqB-1-1-2; }
+#InverseSecCsc-11-1 { counter-set: InverseSecCsc-11-1 0; }
+#InverseSecCsc-11-1 > li::marker { content: ""counter(InverseSecCsc-11-1,decimal)"."; }
+#InverseSecCsc-11-1 > li { counter-increment: InverseSecCsc-11-1; }
+#InverseSecCsc-17-1-1 { counter-set: InverseSecCsc-17-1-1 0; }
+#InverseSecCsc-17-1-1 > li::marker { content: ""counter(InverseSecCsc-17-1-1,lower-roman)""; }
+#InverseSecCsc-17-1-1 > li { counter-increment: InverseSecCsc-17-1-1; }
+#InverseSecCsc-20-2-1-1-1 { counter-set: InverseSecCsc-20-2-1-1-1 0; }
+#InverseSecCsc-20-2-1-1-1 > li::marker { content: ""counter(InverseSecCsc-20-2-1-1-1,lower-roman)""; }
+#InverseSecCsc-20-2-1-1-1 > li { counter-increment: InverseSecCsc-20-2-1-1-1; }
+#EXAMPLESqrt2-2-3-1-1-1 { counter-set: EXAMPLESqrt2-2-3-1-1-1 0; }
+#EXAMPLESqrt2-2-3-1-1-1 > li::marker { content: ""counter(EXAMPLESqrt2-2-3-1-1-1,lower-roman)""; }
+#EXAMPLESqrt2-2-3-1-1-1 > li { counter-increment: EXAMPLESqrt2-2-3-1-1-1; }
+#DRILLNewtonMethod2-2 { counter-set: DRILLNewtonMethod2-2 0; }
+#DRILLNewtonMethod2-2 > li::marker { content: ""counter(DRILLNewtonMethod2-2,lower-roman)""; }
+#DRILLNewtonMethod2-2 > li { counter-increment: DRILLNewtonMethod2-2; }
+#ALGORITHMNewtonsMethod-3-4 { counter-set: ALGORITHMNewtonsMethod-3-4 0; }
+#ALGORITHMNewtonsMethod-3-4 > li::marker { content: ""counter(ALGORITHMNewtonsMethod-3-4,decimal)"."; }
+#ALGORITHMNewtonsMethod-3-4 > li { counter-increment: ALGORITHMNewtonsMethod-3-4; }
+#PROBLEMNewtMethCreateFunction-2-3 { counter-set: PROBLEMNewtMethCreateFunction-2-3 0; }
+#PROBLEMNewtMethCreateFunction-2-3 > li::marker { content: ""counter(PROBLEMNewtMethCreateFunction-2-3,lower-roman)""; }
+#PROBLEMNewtMethCreateFunction-2-3 > li { counter-increment: PROBLEMNewtMethCreateFunction-2-3; }
+#PROBLEMNewton-meth-2-8 { counter-set: PROBLEMNewton-meth-2-8 0; }
+#PROBLEMNewton-meth-2-8 > li::marker { content: ""counter(PROBLEMNewton-meth-2-8,lower-roman)""; }
+#PROBLEMNewton-meth-2-8 > li { counter-increment: PROBLEMNewton-meth-2-8; }
+#PROBLEMNewton-meth2-2-2 { counter-set: PROBLEMNewton-meth2-2-2 0; }
+#PROBLEMNewton-meth2-2-2 > li::marker { content: ""counter(PROBLEMNewton-meth2-2-2,lower-roman)""; }
+#PROBLEMNewton-meth2-2-2 > li { counter-increment: PROBLEMNewton-meth2-2-2; }
+#SUBSECTIONSubtleFailure-8-3-1-1-3 { counter-set: SUBSECTIONSubtleFailure-8-3-1-1-3 0; }
+#SUBSECTIONSubtleFailure-8-3-1-1-3 > li::marker { content: ""counter(SUBSECTIONSubtleFailure-8-3-1-1-3,lower-roman)""; }
+#SUBSECTIONSubtleFailure-8-3-1-1-3 > li { counter-increment: SUBSECTIONSubtleFailure-8-3-1-1-3; }
+#SECTIONDEsandIVPS-2-3 { counter-set: SECTIONDEsandIVPS-2-3 0; }
+#SECTIONDEsandIVPS-2-3 > li::marker { content: ""counter(SECTIONDEsandIVPS-2-3,decimal)"."; }
+#SECTIONDEsandIVPS-2-3 > li { counter-increment: SECTIONDEsandIVPS-2-3; }
+#DRILLIVP-sqr-1-1 { counter-set: DRILLIVP-sqr-1-1 0; }
+#DRILLIVP-sqr-1-1 > li::marker { content: ""counter(DRILLIVP-sqr-1-1,lower-roman)""; }
+#DRILLIVP-sqr-1-1 > li { counter-increment: DRILLIVP-sqr-1-1; }
+#SECTIONexponential-growth-23-2 { counter-set: SECTIONexponential-growth-23-2 0; }
+#SECTIONexponential-growth-23-2 > li::marker { content: ""counter(SECTIONexponential-growth-23-2,decimal)"."; }
+#SECTIONexponential-growth-23-2 > li { counter-increment: SECTIONexponential-growth-23-2; }
+#SECTIONexponential-growth-28-2 { counter-set: SECTIONexponential-growth-28-2 0; }
+#SECTIONexponential-growth-28-2 > li::marker { content: ""counter(SECTIONexponential-growth-28-2,lower-roman)""; }
+#SECTIONexponential-growth-28-2 > li { counter-increment: SECTIONexponential-growth-28-2; }
+#SECTIONexponential-growth-29-2 { counter-set: SECTIONexponential-growth-29-2 0; }
+#SECTIONexponential-growth-29-2 > li::marker { content: ""counter(SECTIONexponential-growth-29-2,lower-roman)""; }
+#SECTIONexponential-growth-29-2 > li { counter-increment: SECTIONexponential-growth-29-2; }
+#SECTIONexponential-growth-30-2 { counter-set: SECTIONexponential-growth-30-2 0; }
+#SECTIONexponential-growth-30-2 > li::marker { content: ""counter(SECTIONexponential-growth-30-2,lower-roman)""; }
+#SECTIONexponential-growth-30-2 > li { counter-increment: SECTIONexponential-growth-30-2; }
+#SECTIONexponential-growth-33-3-1-1-2 { counter-set: SECTIONexponential-growth-33-3-1-1-2 0; }
+#SECTIONexponential-growth-33-3-1-1-2 > li::marker { content: ""counter(SECTIONexponential-growth-33-3-1-1-2,lower-roman)""; }
+#SECTIONexponential-growth-33-3-1-1-2 > li { counter-increment: SECTIONexponential-growth-33-3-1-1-2; }
+#SECTIONexponential-growth-37-1-1-1-4 { counter-set: SECTIONexponential-growth-37-1-1-1-4 0; }
+#SECTIONexponential-growth-37-1-1-1-4 > li::marker { content: ""counter(SECTIONexponential-growth-37-1-1-1-4,lower-roman)""; }
+#SECTIONexponential-growth-37-1-1-1-4 > li { counter-increment: SECTIONexponential-growth-37-1-1-1-4; }
+#PROBLEMHyperbolicTrig-2-1-1-1 { counter-set: PROBLEMHyperbolicTrig-2-1-1-1 0; }
+#PROBLEMHyperbolicTrig-2-1-1-1 > li::marker { content: ""counter(PROBLEMHyperbolicTrig-2-1-1-1,lower-roman)""; }
+#PROBLEMHyperbolicTrig-2-1-1-1 > li { counter-increment: PROBLEMHyperbolicTrig-2-1-1-1; }
+#SECTIONGatewayArch-5-4-1-1-3 { counter-set: SECTIONGatewayArch-5-4-1-1-3 0; }
+#SECTIONGatewayArch-5-4-1-1-3 > li::marker { content: ""counter(SECTIONGatewayArch-5-4-1-1-3,lower-roman)""; }
+#SECTIONGatewayArch-5-4-1-1-3 > li { counter-increment: SECTIONGatewayArch-5-4-1-1-3; }
+#PROBLEMBacteriaIVP1-5-1-1-3 { counter-set: PROBLEMBacteriaIVP1-5-1-1-3 0; }
+#PROBLEMBacteriaIVP1-5-1-1-3 > li::marker { content: ""counter(PROBLEMBacteriaIVP1-5-1-1-3,lower-roman)""; }
+#PROBLEMBacteriaIVP1-5-1-1-3 > li { counter-increment: PROBLEMBacteriaIVP1-5-1-1-3; }
+#SECTIONNatLog-4-2 { counter-set: SECTIONNatLog-4-2 0; }
+#SECTIONNatLog-4-2 > li::marker { content: ""counter(SECTIONNatLog-4-2,lower-roman)""; }
+#SECTIONNatLog-4-2 > li { counter-increment: SECTIONNatLog-4-2; }
+#SECTIONNatLog-9-2 { counter-set: SECTIONNatLog-9-2 0; }
+#SECTIONNatLog-9-2 > li::marker { content: ""counter(SECTIONNatLog-9-2,lower-roman)""; }
+#SECTIONNatLog-9-2 > li { counter-increment: SECTIONNatLog-9-2; }
+#SECTIONNatLog-11-2 { counter-set: SECTIONNatLog-11-2 0; }
+#SECTIONNatLog-11-2 > li::marker { content: ""counter(SECTIONNatLog-11-2,lower-roman)""; }
+#SECTIONNatLog-11-2 > li { counter-increment: SECTIONNatLog-11-2; }
+#SECTIONNatLog-12-1-1-1-4 { counter-set: SECTIONNatLog-12-1-1-1-4 0; }
+#SECTIONNatLog-12-1-1-1-4 > li::marker { content: ""counter(SECTIONNatLog-12-1-1-1-4,lower-roman)""; }
+#SECTIONNatLog-12-1-1-1-4 > li { counter-increment: SECTIONNatLog-12-1-1-1-4; }
+#SECTIONNatLog-12-2-1-1-4 { counter-set: SECTIONNatLog-12-2-1-1-4 0; }
+#SECTIONNatLog-12-2-1-1-4 > li::marker { content: ""counter(SECTIONNatLog-12-2-1-1-4,lower-roman)""; }
+#SECTIONNatLog-12-2-1-1-4 > li { counter-increment: SECTIONNatLog-12-2-1-1-4; }
+#SUBSECTIONradioactive-decay-9-1 { counter-set: SUBSECTIONradioactive-decay-9-1 0; }
+#SUBSECTIONradioactive-decay-9-1 > li::marker { content: ""counter(SUBSECTIONradioactive-decay-9-1,lower-roman)""; }
+#SUBSECTIONradioactive-decay-9-1 > li { counter-increment: SUBSECTIONradioactive-decay-9-1; }
+#SECTIONDerivNatLog-4-2 { counter-set: SECTIONDerivNatLog-4-2 0; }
+#SECTIONDerivNatLog-4-2 > li::marker { content: ""counter(SECTIONDerivNatLog-4-2,lower-roman)""; }
+#SECTIONDerivNatLog-4-2 > li { counter-increment: SECTIONDerivNatLog-4-2; }
+#PARAGRAPHSGenExp-16-2 { counter-set: PARAGRAPHSGenExp-16-2 0; }
+#PARAGRAPHSGenExp-16-2 > li::marker { content: ""counter(PARAGRAPHSGenExp-16-2,lower-roman)""; }
+#PARAGRAPHSGenExp-16-2 > li { counter-increment: PARAGRAPHSGenExp-16-2; }
+#PARAGRAPHSGenLog-7-2 { counter-set: PARAGRAPHSGenLog-7-2 0; }
+#PARAGRAPHSGenLog-7-2 > li::marker { content: ""counter(PARAGRAPHSGenLog-7-2,lower-roman)""; }
+#PARAGRAPHSGenLog-7-2 > li { counter-increment: PARAGRAPHSGenLog-7-2; }
+#DIGRESSIONBriggsAndNapier-7-1 { counter-set: DIGRESSIONBriggsAndNapier-7-1 0; }
+#DIGRESSIONBriggsAndNapier-7-1 > li::marker { content: ""counter(DIGRESSIONBriggsAndNapier-7-1,lower-roman)""; }
+#DIGRESSIONBriggsAndNapier-7-1 > li { counter-increment: DIGRESSIONBriggsAndNapier-7-1; }
+#DIGRESSIONBriggsAndNapier-11-2 { counter-set: DIGRESSIONBriggsAndNapier-11-2 0; }
+#DIGRESSIONBriggsAndNapier-11-2 > li::marker { content: ""counter(DIGRESSIONBriggsAndNapier-11-2,lower-roman)""; }
+#DIGRESSIONBriggsAndNapier-11-2 > li { counter-increment: DIGRESSIONBriggsAndNapier-11-2; }
+#DIGRESSIONBriggsAndNapier-12-1-1-1 { counter-set: DIGRESSIONBriggsAndNapier-12-1-1-1 0; }
+#DIGRESSIONBriggsAndNapier-12-1-1-1 > li::marker { content: ""counter(DIGRESSIONBriggsAndNapier-12-1-1-1,lower-roman)""; }
+#DIGRESSIONBriggsAndNapier-12-1-1-1 > li { counter-increment: DIGRESSIONBriggsAndNapier-12-1-1-1; }
+#DRILLIntuitiveSquareOnCircle-2 { counter-set: DRILLIntuitiveSquareOnCircle-2 0; }
+#DRILLIntuitiveSquareOnCircle-2 > li::marker { content: ""counter(DRILLIntuitiveSquareOnCircle-2,lower-roman)""; }
+#DRILLIntuitiveSquareOnCircle-2 > li { counter-increment: DRILLIntuitiveSquareOnCircle-2; }
+#DRILLExtremalSquareCircle-1 { counter-set: DRILLExtremalSquareCircle-1 0; }
+#DRILLExtremalSquareCircle-1 > li::marker { content: ""counter(DRILLExtremalSquareCircle-1,lower-roman)""; }
+#DRILLExtremalSquareCircle-1 > li { counter-increment: DRILLExtremalSquareCircle-1; }
+#PROBLEMMaxOrth1-3-1-3-8 { counter-set: PROBLEMMaxOrth1-3-1-3-8 0; }
+#PROBLEMMaxOrth1-3-1-3-8 > li::marker { content: ""counter(PROBLEMMaxOrth1-3-1-3-8,decimal)"."; }
+#PROBLEMMaxOrth1-3-1-3-8 > li { counter-increment: PROBLEMMaxOrth1-3-1-3-8; }
+#EXAMPLEDiffvsDer-5-1-1-2-1 { counter-set: EXAMPLEDiffvsDer-5-1-1-2-1 0; }
+#EXAMPLEDiffvsDer-5-1-1-2-1 > li::marker { content: ""counter(EXAMPLEDiffvsDer-5-1-1-2-1,decimal)"."; }
+#EXAMPLEDiffvsDer-5-1-1-2-1 > li { counter-increment: EXAMPLEDiffvsDer-5-1-1-2-1; }
+#EXAMPLEDiffvsDer-5-1-2-2-1 { counter-set: EXAMPLEDiffvsDer-5-1-2-2-1 0; }
+#EXAMPLEDiffvsDer-5-1-2-2-1 > li::marker { content: ""counter(EXAMPLEDiffvsDer-5-1-2-2-1,decimal)"."; }
+#EXAMPLEDiffvsDer-5-1-2-2-1 > li { counter-increment: EXAMPLEDiffvsDer-5-1-2-2-1; }
+#SECTIONfive-simil-probl-23-2 { counter-set: SECTIONfive-simil-probl-23-2 0; }
+#SECTIONfive-simil-probl-23-2 > li::marker { content: ""counter(SECTIONfive-simil-probl-23-2,lower-roman)""; }
+#SECTIONfive-simil-probl-23-2 > li { counter-increment: SECTIONfive-simil-probl-23-2; }
+#SECTIONfive-simil-probl-24-2 { counter-set: SECTIONfive-simil-probl-24-2 0; }
+#SECTIONfive-simil-probl-24-2 > li::marker { content: ""counter(SECTIONfive-simil-probl-24-2,lower-roman)""; }
+#SECTIONfive-simil-probl-24-2 > li { counter-increment: SECTIONfive-simil-probl-24-2; }
+#SECTIONrefl-refr-rainb-2-1-2 { counter-set: SECTIONrefl-refr-rainb-2-1-2 0; }
+#SECTIONrefl-refr-rainb-2-1-2 > li::marker { content: ""counter(SECTIONrefl-refr-rainb-2-1-2,decimal)"."; }
+#SECTIONrefl-refr-rainb-2-1-2 > li { counter-increment: SECTIONrefl-refr-rainb-2-1-2; }
+#SECTIONGlobalVsLocalExtrema-18-2 { counter-set: SECTIONGlobalVsLocalExtrema-18-2 0; }
+#SECTIONGlobalVsLocalExtrema-18-2 > li::marker { content: ""counter(SECTIONGlobalVsLocalExtrema-18-2,decimal)"."; }
+#SECTIONGlobalVsLocalExtrema-18-2 > li { counter-increment: SECTIONGlobalVsLocalExtrema-18-2; }
+#DIGRESSIONIntervalNotation-6-2 { counter-set: DIGRESSIONIntervalNotation-6-2 0; }
+#DIGRESSIONIntervalNotation-6-2 > li::marker { content: ""counter(DIGRESSIONIntervalNotation-6-2,lower-roman)""; }
+#DIGRESSIONIntervalNotation-6-2 > li { counter-increment: DIGRESSIONIntervalNotation-6-2; }
+#DIGRESSIONIntervalNotation-7-2 { counter-set: DIGRESSIONIntervalNotation-7-2 0; }
+#DIGRESSIONIntervalNotation-7-2 > li::marker { content: ""counter(DIGRESSIONIntervalNotation-7-2,lower-roman)""; }
+#DIGRESSIONIntervalNotation-7-2 > li { counter-increment: DIGRESSIONIntervalNotation-7-2; }
+#THEOREMFDT-lines-2-1 { counter-set: THEOREMFDT-lines-2-1 0; }
+#THEOREMFDT-lines-2-1 > li::marker { content: ""counter(THEOREMFDT-lines-2-1,decimal)"."; }
+#THEOREMFDT-lines-2-1 > li { counter-increment: THEOREMFDT-lines-2-1; }
+#THEOREMFDT-3-3 { counter-set: THEOREMFDT-3-3 0; }
+#THEOREMFDT-3-3 > li::marker { content: ""counter(THEOREMFDT-3-3,decimal)"."; }
+#THEOREMFDT-3-3 > li { counter-increment: THEOREMFDT-3-3; }
+#LEMMAAdjRoots-1-2 { counter-set: LEMMAAdjRoots-1-2 0; }
+#LEMMAAdjRoots-1-2 > li::marker { content: ""counter(LEMMAAdjRoots-1-2,decimal)"."; }
+#LEMMAAdjRoots-1-2 > li { counter-increment: LEMMAAdjRoots-1-2; }
+#PROBLEMFDT1A-1-2 { counter-set: PROBLEMFDT1A-1-2 0; }
+#PROBLEMFDT1A-1-2 > li::marker { content: ""counter(PROBLEMFDT1A-1-2,lower-roman)""; }
+#PROBLEMFDT1A-1-2 > li { counter-increment: PROBLEMFDT1A-1-2; }
+#DRILLFDT2-2 { counter-set: DRILLFDT2-2 0; }
+#DRILLFDT2-2 > li::marker { content: ""counter(DRILLFDT2-2,lower-roman)""; }
+#DRILLFDT2-2 > li { counter-increment: DRILLFDT2-2; }
+#DEFINITIONOptimalTransitionPoints-4-1-3 { counter-set: DEFINITIONOptimalTransitionPoints-4-1-3 0; }
+#DEFINITIONOptimalTransitionPoints-4-1-3 > li::marker { content: ""counter(DEFINITIONOptimalTransitionPoints-4-1-3,decimal)"."; }
+#DEFINITIONOptimalTransitionPoints-4-1-3 > li { counter-increment: DEFINITIONOptimalTransitionPoints-4-1-3; }
+#DRILLFDT3-3 { counter-set: DRILLFDT3-3 0; }
+#DRILLFDT3-3 > li::marker { content: ""counter(DRILLFDT3-3,lower-roman)""; }
+#DRILLFDT3-3 > li { counter-increment: DRILLFDT3-3; }
+#SUBSECTIONoptim-clos-interv-5-1 { counter-set: SUBSECTIONoptim-clos-interv-5-1 0; }
+#SUBSECTIONoptim-clos-interv-5-1 > li::marker { content: ""counter(SUBSECTIONoptim-clos-interv-5-1,decimal)"."; }
+#SUBSECTIONoptim-clos-interv-5-1 > li { counter-increment: SUBSECTIONoptim-clos-interv-5-1; }
+#THEOREMmax-min-3-2 { counter-set: THEOREMmax-min-3-2 0; }
+#THEOREMmax-min-3-2 > li::marker { content: ""counter(THEOREMmax-min-3-2,decimal)"."; }
+#THEOREMmax-min-3-2 > li { counter-increment: THEOREMmax-min-3-2; }
+#SUBSECTIONoptim-clos-interv-13-2-1-1-2 { counter-set: SUBSECTIONoptim-clos-interv-13-2-1-1-2 0; }
+#SUBSECTIONoptim-clos-interv-13-2-1-1-2 > li::marker { content: ""counter(SUBSECTIONoptim-clos-interv-13-2-1-1-2,lower-roman)""; }
+#SUBSECTIONoptim-clos-interv-13-2-1-1-2 > li { counter-increment: SUBSECTIONoptim-clos-interv-13-2-1-1-2; }
+#SUBSECTIONoptim-clos-interv-13-3-1-1-2 { counter-set: SUBSECTIONoptim-clos-interv-13-3-1-1-2 0; }
+#SUBSECTIONoptim-clos-interv-13-3-1-1-2 > li::marker { content: ""counter(SUBSECTIONoptim-clos-interv-13-3-1-1-2,lower-roman)""; }
+#SUBSECTIONoptim-clos-interv-13-3-1-1-2 > li { counter-increment: SUBSECTIONoptim-clos-interv-13-3-1-1-2; }
+#SUBSECTIONoptim-clos-interv-14-1-1 { counter-set: SUBSECTIONoptim-clos-interv-14-1-1 0; }
+#SUBSECTIONoptim-clos-interv-14-1-1 > li::marker { content: ""counter(SUBSECTIONoptim-clos-interv-14-1-1,lower-roman)""; }
+#SUBSECTIONoptim-clos-interv-14-1-1 > li { counter-increment: SUBSECTIONoptim-clos-interv-14-1-1; }
+#DRILLO1O2-2-1-1-2 { counter-set: DRILLO1O2-2-1-1-2 0; }
+#DRILLO1O2-2-1-1-2 > li::marker { content: ""counter(DRILLO1O2-2-1-1-2,lower-roman)""; }
+#DRILLO1O2-2-1-1-2 > li { counter-increment: DRILLO1O2-2-1-1-2; }
+#THEOREMwhat-second-deriv-3-3 { counter-set: THEOREMwhat-second-deriv-3-3 0; }
+#THEOREMwhat-second-deriv-3-3 > li::marker { content: ""counter(THEOREMwhat-second-deriv-3-3,lower-alpha)""; }
+#THEOREMwhat-second-deriv-3-3 > li { counter-increment: THEOREMwhat-second-deriv-3-3; }
+#THEOREMSecondDerivativeTest-3-4 { counter-set: THEOREMSecondDerivativeTest-3-4 0; }
+#THEOREMSecondDerivativeTest-3-4 > li::marker { content: ""counter(THEOREMSecondDerivativeTest-3-4,lower-alpha)""; }
+#THEOREMSecondDerivativeTest-3-4 > li { counter-increment: THEOREMSecondDerivativeTest-3-4; }
+#DRILLSecondDerivativeTest-2 { counter-set: DRILLSecondDerivativeTest-2 0; }
+#DRILLSecondDerivativeTest-2 > li::marker { content: ""counter(DRILLSecondDerivativeTest-2,lower-roman)""; }
+#DRILLSecondDerivativeTest-2 > li { counter-increment: DRILLSecondDerivativeTest-2; }
+#SUBSECTIONconc-second-deriv-44-2 { counter-set: SUBSECTIONconc-second-deriv-44-2 0; }
+#SUBSECTIONconc-second-deriv-44-2 > li::marker { content: ""counter(SUBSECTIONconc-second-deriv-44-2,lower-roman)""; }
+#SUBSECTIONconc-second-deriv-44-2 > li { counter-increment: SUBSECTIONconc-second-deriv-44-2; }
+#SUBSECTIONconc-second-deriv-45-2 { counter-set: SUBSECTIONconc-second-deriv-45-2 0; }
+#SUBSECTIONconc-second-deriv-45-2 > li::marker { content: ""counter(SUBSECTIONconc-second-deriv-45-2,lower-roman)""; }
+#SUBSECTIONconc-second-deriv-45-2 > li { counter-increment: SUBSECTIONconc-second-deriv-45-2; }
+#SECTIONoptim-probl-2-3-1 { counter-set: SECTIONoptim-probl-2-3-1 0; }
+#SECTIONoptim-probl-2-3-1 > li::marker { content: ""counter(SECTIONoptim-probl-2-3-1,decimal)"."; }
+#SECTIONoptim-probl-2-3-1 > li { counter-increment: SECTIONoptim-probl-2-3-1; }
+#EXAMPLERectangleFixedPerimeter-6-1 { counter-set: EXAMPLERectangleFixedPerimeter-6-1 0; }
+#EXAMPLERectangleFixedPerimeter-6-1 > li::marker { content: ""counter(EXAMPLERectangleFixedPerimeter-6-1,decimal)"."; }
+#EXAMPLERectangleFixedPerimeter-6-1 > li { counter-increment: EXAMPLERectangleFixedPerimeter-6-1; }
+#PROBLEMMaxPerimeter-5-1-1-2 { counter-set: PROBLEMMaxPerimeter-5-1-1-2 0; }
+#PROBLEMMaxPerimeter-5-1-1-2 > li::marker { content: ""counter(PROBLEMMaxPerimeter-5-1-1-2,lower-roman)""; }
+#PROBLEMMaxPerimeter-5-1-1-2 > li { counter-increment: PROBLEMMaxPerimeter-5-1-1-2; }
+#SUBSUBSECTIONFirstSolution-12-1 { counter-set: SUBSUBSECTIONFirstSolution-12-1 0; }
+#SUBSUBSECTIONFirstSolution-12-1 > li::marker { content: ""counter(SUBSUBSECTIONFirstSolution-12-1,lower-roman)""; }
+#SUBSUBSECTIONFirstSolution-12-1 > li { counter-increment: SUBSUBSECTIONFirstSolution-12-1; }
+#SUBSECTIONVarOptProbs-2-2-1-1-1 { counter-set: SUBSECTIONVarOptProbs-2-2-1-1-1 0; }
+#SUBSECTIONVarOptProbs-2-2-1-1-1 > li::marker { content: ""counter(SUBSECTIONVarOptProbs-2-2-1-1-1,lower-roman)""; }
+#SUBSECTIONVarOptProbs-2-2-1-1-1 > li { counter-increment: SUBSECTIONVarOptProbs-2-2-1-1-1; }
+#SUBSECTIONVarOptProbs-2-3-1-1-1 { counter-set: SUBSECTIONVarOptProbs-2-3-1-1-1 0; }
+#SUBSECTIONVarOptProbs-2-3-1-1-1 > li::marker { content: ""counter(SUBSECTIONVarOptProbs-2-3-1-1-1,lower-roman)""; }
+#SUBSECTIONVarOptProbs-2-3-1-1-1 > li { counter-increment: SUBSECTIONVarOptProbs-2-3-1-1-1; }
+#SUBSECTIONVarOptProbs-2-4-1-1-1 { counter-set: SUBSECTIONVarOptProbs-2-4-1-1-1 0; }
+#SUBSECTIONVarOptProbs-2-4-1-1-1 > li::marker { content: ""counter(SUBSECTIONVarOptProbs-2-4-1-1-1,lower-roman)""; }
+#SUBSECTIONVarOptProbs-2-4-1-1-1 > li { counter-increment: SUBSECTIONVarOptProbs-2-4-1-1-1; }
+#SUBSECTIONVarOptProbs-3-3-1-1-1 { counter-set: SUBSECTIONVarOptProbs-3-3-1-1-1 0; }
+#SUBSECTIONVarOptProbs-3-3-1-1-1 > li::marker { content: ""counter(SUBSECTIONVarOptProbs-3-3-1-1-1,lower-roman)""; }
+#SUBSECTIONVarOptProbs-3-3-1-1-1 > li { counter-increment: SUBSECTIONVarOptProbs-3-3-1-1-1; }
+#SUBSECTIONVarOptProbs-3-4-1-1-1 { counter-set: SUBSECTIONVarOptProbs-3-4-1-1-1 0; }
+#SUBSECTIONVarOptProbs-3-4-1-1-1 > li::marker { content: ""counter(SUBSECTIONVarOptProbs-3-4-1-1-1,lower-roman)""; }
+#SUBSECTIONVarOptProbs-3-4-1-1-1 > li { counter-increment: SUBSECTIONVarOptProbs-3-4-1-1-1; }
+#SUBSECTIONVarOptProbs-4-2-1-2-1 { counter-set: SUBSECTIONVarOptProbs-4-2-1-2-1 0; }
+#SUBSECTIONVarOptProbs-4-2-1-2-1 > li::marker { content: ""counter(SUBSECTIONVarOptProbs-4-2-1-2-1,lower-roman)""; }
+#SUBSECTIONVarOptProbs-4-2-1-2-1 > li { counter-increment: SUBSECTIONVarOptProbs-4-2-1-2-1; }
+#PROBLEMWitchTri1-3-1-1-7 { counter-set: PROBLEMWitchTri1-3-1-1-7 0; }
+#PROBLEMWitchTri1-3-1-1-7 > li::marker { content: ""counter(PROBLEMWitchTri1-3-1-1-7,lower-roman)""; }
+#PROBLEMWitchTri1-3-1-1-7 > li { counter-increment: PROBLEMWitchTri1-3-1-1-7; }
+#SUBSECTIONVarOptProbs-14-3-1-3 { counter-set: SUBSECTIONVarOptProbs-14-3-1-3 0; }
+#SUBSECTIONVarOptProbs-14-3-1-3 > li::marker { content: ""counter(SUBSECTIONVarOptProbs-14-3-1-3,lower-roman)""; }
+#SUBSECTIONVarOptProbs-14-3-1-3 > li { counter-increment: SUBSECTIONVarOptProbs-14-3-1-3; }
+#SUBSECTIONVarOptProbs-14-4-1-3 { counter-set: SUBSECTIONVarOptProbs-14-4-1-3 0; }
+#SUBSECTIONVarOptProbs-14-4-1-3 > li::marker { content: ""counter(SUBSECTIONVarOptProbs-14-4-1-3,lower-roman)""; }
+#SUBSECTIONVarOptProbs-14-4-1-3 > li { counter-increment: SUBSECTIONVarOptProbs-14-4-1-3; }
+#SECTIONgraph-with-form-19-2 { counter-set: SECTIONgraph-with-form-19-2 0; }
+#SECTIONgraph-with-form-19-2 > li::marker { content: ""counter(SECTIONgraph-with-form-19-2,decimal)"."; }
+#SECTIONgraph-with-form-19-2 > li { counter-increment: SECTIONgraph-with-form-19-2; }
+#SECTIONgraph-with-form-23-1 { counter-set: SECTIONgraph-with-form-23-1 0; }
+#SECTIONgraph-with-form-23-1 > li::marker { content: ""counter(SECTIONgraph-with-form-23-1,lower-roman)""; }
+#SECTIONgraph-with-form-23-1 > li { counter-increment: SECTIONgraph-with-form-23-1; }
+#SECTIONgraph-with-form-30-1-1 { counter-set: SECTIONgraph-with-form-30-1-1 0; }
+#SECTIONgraph-with-form-30-1-1 > li::marker { content: ""counter(SECTIONgraph-with-form-30-1-1,lower-roman)""; }
+#SECTIONgraph-with-form-30-1-1 > li { counter-increment: SECTIONgraph-with-form-30-1-1; }
+#SUBSECTIONModelingTrout-17-2 { counter-set: SUBSECTIONModelingTrout-17-2 0; }
+#SUBSECTIONModelingTrout-17-2 > li::marker { content: ""counter(SUBSECTIONModelingTrout-17-2,decimal)"."; }
+#SUBSECTIONModelingTrout-17-2 > li { counter-increment: SUBSECTIONModelingTrout-17-2; }
+#SUBSECTIONModelingTrout-24-1-2 { counter-set: SUBSECTIONModelingTrout-24-1-2 0; }
+#SUBSECTIONModelingTrout-24-1-2 > li::marker { content: ""counter(SUBSECTIONModelingTrout-24-1-2,lower-roman)""; }
+#SUBSECTIONModelingTrout-24-1-2 > li { counter-increment: SUBSECTIONModelingTrout-24-1-2; }
+#SUBSECTIONModelingTrout-39-2-1-1-2 { counter-set: SUBSECTIONModelingTrout-39-2-1-1-2 0; }
+#SUBSECTIONModelingTrout-39-2-1-1-2 > li::marker { content: ""counter(SUBSECTIONModelingTrout-39-2-1-1-2,lower-roman)""; }
+#SUBSECTIONModelingTrout-39-2-1-1-2 > li { counter-increment: SUBSECTIONModelingTrout-39-2-1-1-2; }
+#PROBLEMMinViablePop-6-1-1-3 { counter-set: PROBLEMMinViablePop-6-1-1-3 0; }
+#PROBLEMMinViablePop-6-1-1-3 > li::marker { content: ""counter(PROBLEMMinViablePop-6-1-1-3,lower-roman)""; }
+#PROBLEMMinViablePop-6-1-1-3 > li { counter-increment: PROBLEMMinViablePop-6-1-1-3; }
+#SECTIONlittle-healthy-comp-21-1 { counter-set: SECTIONlittle-healthy-comp-21-1 0; }
+#SECTIONlittle-healthy-comp-21-1 > li::marker { content: ""counter(SECTIONlittle-healthy-comp-21-1,lower-roman)""; }
+#SECTIONlittle-healthy-comp-21-1 > li { counter-increment: SECTIONlittle-healthy-comp-21-1; }
+#SECTIONlittle-healthy-comp-28-3-1-1-3 { counter-set: SECTIONlittle-healthy-comp-28-3-1-1-3 0; }
+#SECTIONlittle-healthy-comp-28-3-1-1-3 > li::marker { content: ""counter(SECTIONlittle-healthy-comp-28-3-1-1-3,lower-roman)""; }
+#SECTIONlittle-healthy-comp-28-3-1-1-3 > li { counter-increment: SECTIONlittle-healthy-comp-28-3-1-1-3; }
+#DEFINITIONLimitAtInfinity-Intuitive-3-1-1 { counter-set: DEFINITIONLimitAtInfinity-Intuitive-3-1-1 0; }
+#DEFINITIONLimitAtInfinity-Intuitive-3-1-1 > li::marker { content: ""counter(DEFINITIONLimitAtInfinity-Intuitive-3-1-1,decimal)"."; }
+#DEFINITIONLimitAtInfinity-Intuitive-3-1-1 > li { counter-increment: DEFINITIONLimitAtInfinity-Intuitive-3-1-1; }
+#DEFINITIONHorizontalAsymptotes-3-1-1 { counter-set: DEFINITIONHorizontalAsymptotes-3-1-1 0; }
+#DEFINITIONHorizontalAsymptotes-3-1-1 > li::marker { content: ""counter(DEFINITIONHorizontalAsymptotes-3-1-1,decimal)"."; }
+#DEFINITIONHorizontalAsymptotes-3-1-1 > li { counter-increment: DEFINITIONHorizontalAsymptotes-3-1-1; }
+#DIGRESSIONLimitNotation-47-2 { counter-set: DIGRESSIONLimitNotation-47-2 0; }
+#DIGRESSIONLimitNotation-47-2 > li::marker { content: ""counter(DIGRESSIONLimitNotation-47-2,lower-roman)""; }
+#DIGRESSIONLimitNotation-47-2 > li { counter-increment: DIGRESSIONLimitNotation-47-2; }
+#DIGRESSIONLimitNotation-62-2 { counter-set: DIGRESSIONLimitNotation-62-2 0; }
+#DIGRESSIONLimitNotation-62-2 > li::marker { content: ""counter(DIGRESSIONLimitNotation-62-2,lower-roman)""; }
+#DIGRESSIONLimitNotation-62-2 > li { counter-increment: DIGRESSIONLimitNotation-62-2; }
+#DIGRESSIONLimitNotation-66-2 { counter-set: DIGRESSIONLimitNotation-66-2 0; }
+#DIGRESSIONLimitNotation-66-2 > li::marker { content: ""counter(DIGRESSIONLimitNotation-66-2,lower-roman)""; }
+#DIGRESSIONLimitNotation-66-2 > li { counter-increment: DIGRESSIONLimitNotation-66-2; }
+#THEOREMInfSqueeze-3-1 { counter-set: THEOREMInfSqueeze-3-1 0; }
+#THEOREMInfSqueeze-3-1 > li::marker { content: ""counter(THEOREMInfSqueeze-3-1,decimal)"."; }
+#THEOREMInfSqueeze-3-1 > li { counter-increment: THEOREMInfSqueeze-3-1; }
+#SECTIONvertical-asymptotes-14-2 { counter-set: SECTIONvertical-asymptotes-14-2 0; }
+#SECTIONvertical-asymptotes-14-2 > li::marker { content: ""counter(SECTIONvertical-asymptotes-14-2,lower-roman)""; }
+#SECTIONvertical-asymptotes-14-2 > li { counter-increment: SECTIONvertical-asymptotes-14-2; }
+#PROBLEMFoliumOfDescartes2-6-1-1-1 { counter-set: PROBLEMFoliumOfDescartes2-6-1-1-1 0; }
+#PROBLEMFoliumOfDescartes2-6-1-1-1 > li::marker { content: ""counter(PROBLEMFoliumOfDescartes2-6-1-1-1,decimal)"."; }
+#PROBLEMFoliumOfDescartes2-6-1-1-1 > li { counter-increment: PROBLEMFoliumOfDescartes2-6-1-1-1; }
+#SUBSECTIONLHopitalsRule-33-1 { counter-set: SUBSECTIONLHopitalsRule-33-1 0; }
+#SUBSECTIONLHopitalsRule-33-1 > li::marker { content: ""counter(SUBSECTIONLHopitalsRule-33-1,lower-roman)""; }
+#SUBSECTIONLHopitalsRule-33-1 > li { counter-increment: SUBSECTIONLHopitalsRule-33-1; }
+#SUBSECTIONLHopitalsRule-37-1 { counter-set: SUBSECTIONLHopitalsRule-37-1 0; }
+#SUBSECTIONLHopitalsRule-37-1 > li::marker { content: ""counter(SUBSECTIONLHopitalsRule-37-1,lower-roman)""; }
+#SUBSECTIONLHopitalsRule-37-1 > li { counter-increment: SUBSECTIONLHopitalsRule-37-1; }
+#SUBSECTIONLHopitalsRule-59-1-1 { counter-set: SUBSECTIONLHopitalsRule-59-1-1 0; }
+#SUBSECTIONLHopitalsRule-59-1-1 > li::marker { content: ""counter(SUBSECTIONLHopitalsRule-59-1-1,lower-roman)""; }
+#SUBSECTIONLHopitalsRule-59-1-1 > li { counter-increment: SUBSECTIONLHopitalsRule-59-1-1; }
+#SUBSECTIONlhop-rule-horiz-14-1 { counter-set: SUBSECTIONlhop-rule-horiz-14-1 0; }
+#SUBSECTIONlhop-rule-horiz-14-1 > li::marker { content: ""counter(SUBSECTIONlhop-rule-horiz-14-1,lower-roman)""; }
+#SUBSECTIONlhop-rule-horiz-14-1 > li { counter-increment: SUBSECTIONlhop-rule-horiz-14-1; }
+#SUBSECTIONlhop-rule-horiz-18-2-1-1-1 { counter-set: SUBSECTIONlhop-rule-horiz-18-2-1-1-1 0; }
+#SUBSECTIONlhop-rule-horiz-18-2-1-1-1 > li::marker { content: ""counter(SUBSECTIONlhop-rule-horiz-18-2-1-1-1,lower-roman)""; }
+#SUBSECTIONlhop-rule-horiz-18-2-1-1-1 > li { counter-increment: SUBSECTIONlhop-rule-horiz-18-2-1-1-1; }
+#SUBSECTIONlhop-rule-horiz-18-5-1-1-2 { counter-set: SUBSECTIONlhop-rule-horiz-18-5-1-1-2 0; }
+#SUBSECTIONlhop-rule-horiz-18-5-1-1-2 > li::marker { content: ""counter(SUBSECTIONlhop-rule-horiz-18-5-1-1-2,lower-roman)""; }
+#SUBSECTIONlhop-rule-horiz-18-5-1-1-2 > li { counter-increment: SUBSECTIONlhop-rule-horiz-18-5-1-1-2; }
+#SUBSECTIONlhop-rule-horiz-27-1 { counter-set: SUBSECTIONlhop-rule-horiz-27-1 0; }
+#SUBSECTIONlhop-rule-horiz-27-1 > li::marker { content: ""counter(SUBSECTIONlhop-rule-horiz-27-1,decimal)"."; }
+#SUBSECTIONlhop-rule-horiz-27-1 > li { counter-increment: SUBSECTIONlhop-rule-horiz-27-1; }
+#SUBSECTIONlhop-rule-horiz-29-4 { counter-set: SUBSECTIONlhop-rule-horiz-29-4 0; }
+#SUBSECTIONlhop-rule-horiz-29-4 > li::marker { content: ""counter(SUBSECTIONlhop-rule-horiz-29-4,decimal)"."; }
+#SUBSECTIONlhop-rule-horiz-29-4 > li { counter-increment: SUBSECTIONlhop-rule-horiz-29-4; }
+#SECTIONsecants-tangents-15-1 { counter-set: SECTIONsecants-tangents-15-1 0; }
+#SECTIONsecants-tangents-15-1 > li::marker { content: ""counter(SECTIONsecants-tangents-15-1,decimal)"."; }
+#SECTIONsecants-tangents-15-1 > li { counter-increment: SECTIONsecants-tangents-15-1; }
+#PROBLEMBounds-1-1-4 { counter-set: PROBLEMBounds-1-1-4 0; }
+#PROBLEMBounds-1-1-4 > li::marker { content: ""counter(PROBLEMBounds-1-1-4,lower-roman)""; }
+#PROBLEMBounds-1-1-4 > li { counter-increment: PROBLEMBounds-1-1-4; }
+#SUBSECTIONlimit-comp-cont-5-3 { counter-set: SUBSECTIONlimit-comp-cont-5-3 0; }
+#SUBSECTIONlimit-comp-cont-5-3 > li::marker { content: ""counter(SUBSECTIONlimit-comp-cont-5-3,decimal)"."; }
+#SUBSECTIONlimit-comp-cont-5-3 > li { counter-increment: SUBSECTIONlimit-comp-cont-5-3; }
+#SUBSECTIONlimit-comp-cont-23-1 { counter-set: SUBSECTIONlimit-comp-cont-23-1 0; }
+#SUBSECTIONlimit-comp-cont-23-1 > li::marker { content: ""counter(SUBSECTIONlimit-comp-cont-23-1,lower-roman)""; }
+#SUBSECTIONlimit-comp-cont-23-1 > li { counter-increment: SUBSECTIONlimit-comp-cont-23-1; }
+#SUBSECTIONlimit-comp-cont-24-2 { counter-set: SUBSECTIONlimit-comp-cont-24-2 0; }
+#SUBSECTIONlimit-comp-cont-24-2 > li::marker { content: ""counter(SUBSECTIONlimit-comp-cont-24-2,lower-roman)""; }
+#SUBSECTIONlimit-comp-cont-24-2 > li { counter-increment: SUBSECTIONlimit-comp-cont-24-2; }
+#DIGRESSIONDeltaBetaNotZero-7-3-1-1-5 { counter-set: DIGRESSIONDeltaBetaNotZero-7-3-1-1-5 0; }
+#DIGRESSIONDeltaBetaNotZero-7-3-1-1-5 > li::marker { content: ""counter(DIGRESSIONDeltaBetaNotZero-7-3-1-1-5,lower-roman)""; }
+#DIGRESSIONDeltaBetaNotZero-7-3-1-1-5 > li { counter-increment: DIGRESSIONDeltaBetaNotZero-7-3-1-1-5; }
+#PROBLEMQR-rigor-2-1-1-2 { counter-set: PROBLEMQR-rigor-2-1-1-2 0; }
+#PROBLEMQR-rigor-2-1-1-2 > li::marker { content: ""counter(PROBLEMQR-rigor-2-1-1-2,lower-roman)""; }
+#PROBLEMQR-rigor-2-1-1-2 > li { counter-increment: PROBLEMQR-rigor-2-1-1-2; }
+#DRILLCircularReasoning-1-1-3 { counter-set: DRILLCircularReasoning-1-1-3 0; }
+#DRILLCircularReasoning-1-1-3 > li::marker { content: ""counter(DRILLCircularReasoning-1-1-3,lower-roman)""; }
+#DRILLCircularReasoning-1-1-3 > li { counter-increment: DRILLCircularReasoning-1-1-3; }
+#DEFINITIONFunctionInverse-3-1-8 { counter-set: DEFINITIONFunctionInverse-3-1-8 0; }
+#DEFINITIONFunctionInverse-3-1-8 > li::marker { content: ""counter(DEFINITIONFunctionInverse-3-1-8,decimal)"."; }
+#DEFINITIONFunctionInverse-3-1-8 > li { counter-increment: DEFINITIONFunctionInverse-3-1-8; }
+#SECTIONinverse-functions-21-1 { counter-set: SECTIONinverse-functions-21-1 0; }
+#SECTIONinverse-functions-21-1 > li::marker { content: ""counter(SECTIONinverse-functions-21-1,decimal)"."; }
+#SECTIONinverse-functions-21-1 > li { counter-increment: SECTIONinverse-functions-21-1; }
+#SECTIONinverse-functions-23-2 { counter-set: SECTIONinverse-functions-23-2 0; }
+#SECTIONinverse-functions-23-2 > li::marker { content: ""counter(SECTIONinverse-functions-23-2,decimal)"."; }
+#SECTIONinverse-functions-23-2 > li { counter-increment: SECTIONinverse-functions-23-2; }
+#THEOREMDerivInvFunc-3-1 { counter-set: THEOREMDerivInvFunc-3-1 0; }
+#THEOREMDerivInvFunc-3-1 > li::marker { content: ""counter(THEOREMDerivInvFunc-3-1,decimal)"."; }
+#THEOREMDerivInvFunc-3-1 > li { counter-increment: THEOREMDerivInvFunc-3-1; }
+#DRILLRollesLemma1-1 { counter-set: DRILLRollesLemma1-1 0; }
+#DRILLRollesLemma1-1 > li::marker { content: ""counter(DRILLRollesLemma1-1,lower-roman)""; }
+#DRILLRollesLemma1-1 > li { counter-increment: DRILLRollesLemma1-1; }
+#THEOREMFDTproved-3-8 { counter-set: THEOREMFDTproved-3-8 0; }
+#THEOREMFDTproved-3-8 > li::marker { content: ""counter(THEOREMFDTproved-3-8,decimal)"."; }
+#THEOREMFDTproved-3-8 > li { counter-increment: THEOREMFDTproved-3-8; }
+#PROBLEMAbsValDeriv-1-1-1-5 { counter-set: PROBLEMAbsValDeriv-1-1-1-5 0; }
+#PROBLEMAbsValDeriv-1-1-1-5 > li::marker { content: ""counter(PROBLEMAbsValDeriv-1-1-1-5,decimal)"."; }
+#PROBLEMAbsValDeriv-1-1-1-5 > li { counter-increment: PROBLEMAbsValDeriv-1-1-1-5; }
+#DEFINITIONone-sided-deriv-3-1-3 { counter-set: DEFINITIONone-sided-deriv-3-1-3 0; }
+#DEFINITIONone-sided-deriv-3-1-3 > li::marker { content: ""counter(DEFINITIONone-sided-deriv-3-1-3,decimal)"."; }
+#DEFINITIONone-sided-deriv-3-1-3 > li { counter-increment: DEFINITIONone-sided-deriv-3-1-3; }
+#PROBLEMHeaviTranslate-2-1-1-3 { counter-set: PROBLEMHeaviTranslate-2-1-1-3 0; }
+#PROBLEMHeaviTranslate-2-1-1-3 > li::marker { content: ""counter(PROBLEMHeaviTranslate-2-1-1-3,lower-roman)""; }
+#PROBLEMHeaviTranslate-2-1-1-3 > li { counter-increment: PROBLEMHeaviTranslate-2-1-1-3; }
+#PROBLEMHeaviTranslate-3-1-1-4 { counter-set: PROBLEMHeaviTranslate-3-1-1-4 0; }
+#PROBLEMHeaviTranslate-3-1-1-4 > li::marker { content: ""counter(PROBLEMHeaviTranslate-3-1-1-4,lower-roman)""; }
+#PROBLEMHeaviTranslate-3-1-1-4 > li { counter-increment: PROBLEMHeaviTranslate-3-1-1-4; }
+#SECTIONone-sided-deriv-11-3 { counter-set: SECTIONone-sided-deriv-11-3 0; }
+#SECTIONone-sided-deriv-11-3 > li::marker { content: ""counter(SECTIONone-sided-deriv-11-3,decimal)"."; }
+#SECTIONone-sided-deriv-11-3 > li { counter-increment: SECTIONone-sided-deriv-11-3; }
+</style>
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -228,9 +800,9 @@ window.MathJax = {
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
-<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
-<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Epigraphs</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-5.html" class="internal"><span class="title">Epigraphs</span></a></div></li>
 <li class="toc-item toc-preface"><div class="toc-title-box"><a href="SECinstructor.html" class="internal"><span class="title">To the Instructor: Read This First</span></a></div></li>
 </ul>
 </li>
@@ -560,12 +1132,15 @@ window.MathJax = {
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">11.1</span><span class="space"> </span><span class="title">Population Dynamics</span>
 </h3>
 <section class="introduction" id="SECTIONpopulation-dynamics-2"><blockquote class="blockquote" id="SECTIONpopulation-dynamics-2-1">
-<div class="para" id="SECTIONpopulation-dynamics-2-1-1">The purpose of mathematical models is not to fit to data but to sharpen one’s questions.</div> <cite class="attribution">―<a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Karlin/" target="_blank">Samuel Karlin</a><a class="xref" id="SECTIONpopulation-dynamics-2-1-2-2" href="" data-knowl="./knowl/fn/SECTIONpopulation-dynamics-2-1-2-2.html" title="Footnote 11.1"><sup> 1 </sup></a> (1924-2007)</cite>
-</blockquote> <div class="para" id="SECTIONpopulation-dynamics-2-2">In the introduction to <a href="CHAPTERwhat-deriv-tells.html" class="internal" title="Chapter 9: Optimization: Going to Extremes">Chapter 9</a> we mentioned that the original motivation for the invention of Calculus was optimization. But after it was invented scientists and mathematicians found that Calculus is useful for solving a wide variety of other kinds of problems. In this chapter we will explore how Calculus helps us solve various non-optimization problems. As you will see the ability  to sketch the graph of a function, even if it is only qualitative, is extremely useful.</div></section><section class="subsection" id="SUBSECTIONModelingTrout"><h4 class="heading hide-type">
+<div class="para" id="SECTIONpopulation-dynamics-2-1-1">The purpose of mathematical models is not to fit to data but to sharpen one’s questions.</div>
+<cite class="attribution">―<a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Karlin/" target="_blank">Samuel Karlin</a><details class="ptx-footnote" aria-live="polite" id="SECTIONpopulation-dynamics-2-1-2-2"><summary class="ptx-footnote__number" title="Footnote 11.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="SECTIONpopulation-dynamics-2-1-2-2"><code class="code-inline tex2jax_ignore">https://mathshistory.st-andrews.ac.uk/Biographies/Karlin/</code></div></details> (1924-2007)</cite>
+</blockquote>
+<div class="para" id="SECTIONpopulation-dynamics-2-2">In the introduction to <a href="CHAPTERwhat-deriv-tells.html" class="internal" title="Chapter 9: Optimization: Going to Extremes">Chapter 9</a> we mentioned that the original motivation for the invention of Calculus was optimization. But after it was invented scientists and mathematicians found that Calculus is useful for solving a wide variety of other kinds of problems. In this chapter we will explore how Calculus helps us solve various non-optimization problems. As you will see the ability  to sketch the graph of a function, even if it is only qualitative, is extremely useful.</div></section><section class="subsection" id="SUBSECTIONModelingTrout"><h4 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">11.1.1</span><span class="space"> </span><span class="title">Modeling a Trout Farm</span>
 </h4>
 <blockquote class="blockquote" id="SUBSECTIONModelingTrout-2">
-<div class="para" id="SUBSECTIONModelingTrout-2-1">A man may fish with the worm that hath eat of a king, and eat of the fish that hath fed of that worm.</div> <cite class="attribution">―<a class="external" href="https://www.shakespeare.org.uk/explore-shakespeare/shakespedia/william-shakespeare/william-shakespeare-biography/" target="_blank">William Shakespeare</a><a class="xref" id="SUBSECTIONModelingTrout-2-2-2" href="" data-knowl="./knowl/fn/SUBSECTIONModelingTrout-2-2-2.html" title="Footnote 11.2"><sup> 2 </sup></a> (1564-1616), Hamlet, Act IV, Scene 3</cite>
+<div class="para" id="SUBSECTIONModelingTrout-2-1">A man may fish with the worm that hath eat of a king, and eat of the fish that hath fed of that worm.</div>
+<cite class="attribution">―<a class="external" href="https://www.shakespeare.org.uk/explore-shakespeare/shakespedia/william-shakespeare/william-shakespeare-biography/" target="_blank">William Shakespeare</a><details class="ptx-footnote" aria-live="polite" id="SUBSECTIONModelingTrout-2-2-2"><summary class="ptx-footnote__number" title="Footnote 11.2"><sup> 2 </sup></summary><div class="ptx-footnote__contents" id="SUBSECTIONModelingTrout-2-2-2"><code class="code-inline tex2jax_ignore">https://www.shakespeare.org.uk/explore-shakespeare/shakespedia/william-shakespeare/william-shakespeare-biography/</code></div></details> (1564-1616), Hamlet, Act IV, Scene 3</cite>
 </blockquote>
 <div class="para" id="SUBSECTIONModelingTrout-3">Suppose we are running an industrial trout fishery. There are a number of questions we’d really like to be able to answer at any given time. How large is the current stock? Do we have too few? Too many?  Is our stock of trout in danger of dying off due to under or over population? How frequently can we harvest our stock without endangering it? Even if precise numbers aren’t possible, it would still be useful to have a good, qualitative understanding of the life cycle of our stock of trout so we could make reliable estimates.</div>
 <div class="para" id="SUBSECTIONModelingTrout-4">To gain such an understanding we will build a model of our trout population as a function of time. As a first approximation assume that we have complete control of the lake where we will hold the trout.  We can supply all of the food and space that our trout need to continue reproducing.</div>
@@ -588,10 +1163,10 @@ window.MathJax = {
 \end{align}
 </div>
 </div>
-<div class="para" id="SUBSECTIONModelingTrout-9">This IVP should look familiar. When we were modeling the growth of a bacteria colony in <a href="" class="xref" data-knowl="./knowl/xref/EXAMPLEpopulation-growth.html" title="Example 8.31: Population Growth">Example 8.31</a> <a href="CHAPTERlast-elem-funct.html#SECTIONexponential-growth" class="internal" title="Section 8.3: Exponential Growth and Exponential Notation">Section 8.3</a> we got <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONBacteriaIVP.html" title="Equation 8.18">IVP (8.18)</a>, which is almost the same equation, remember? The only difference between them is that in <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONFishery1.html" title="Equation 11.1">IVP (11.1)</a> the coefficient of <span class="process-math">\(P\)</span> is <span class="process-math">\(0.1\)</span> and in <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONBacteriaIVP.html" title="Equation 8.18">IVP (8.18)</a> the coefficient of <span class="process-math">\(y\)</span> is <span class="process-math">\(0.3\text{.}\)</span>
+<div class="para" id="SUBSECTIONModelingTrout-9">This IVP should look familiar. When we were modeling the growth of a bacteria colony in <a href="CHAPTERlast-elem-funct.html#EXAMPLEpopulation-growth" class="xref" data-knowl="./knowl/xref/EXAMPLEpopulation-growth.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 8.31: Population Growth">Example 8.31</a> <a href="CHAPTERlast-elem-funct.html#SECTIONexponential-growth" class="internal" title="Section 8.3: Exponential Growth and Exponential Notation">Section 8.3</a> we got <a href="CHAPTERlast-elem-funct.html#EXAMPLEpopulation-growth-7-4" class="xref" data-knowl="./knowl/xref/EQUATIONBacteriaIVP.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.18">IVP (8.18)</a>, which is almost the same equation, remember? The only difference between them is that in <a href="CHAPTERmodel-with-calc.html#SUBSECTIONModelingTrout-8-1" class="xref" data-knowl="./knowl/xref/EQUATIONFishery1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 11.1">IVP (11.1)</a> the coefficient of <span class="process-math">\(P\)</span> is <span class="process-math">\(0.1\)</span> and in <a href="CHAPTERlast-elem-funct.html#EXAMPLEpopulation-growth-7-4" class="xref" data-knowl="./knowl/xref/EQUATIONBacteriaIVP.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.18">IVP (8.18)</a> the coefficient of <span class="process-math">\(y\)</span> is <span class="process-math">\(0.3\text{.}\)</span>
 </div>
 <div class="para logical" id="SUBSECTIONModelingTrout-10">
-<div class="para">Since the solution of <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONBacteriaIVP.html" title="Equation 8.18">equation (8.18)</a> was <span class="process-math">\(y(t)=10e^{0.3t}\)</span> it seems reasonable to conclude that the solution of <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONFishery1.html" title="Equation 11.1">equation (11.1)</a> is:</div>
+<div class="para">Since the solution of <a href="CHAPTERlast-elem-funct.html#EXAMPLEpopulation-growth-7-4" class="xref" data-knowl="./knowl/xref/EQUATIONBacteriaIVP.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.18">equation (8.18)</a> was <span class="process-math">\(y(t)=10e^{0.3t}\)</span> it seems reasonable to conclude that the solution of <a href="CHAPTERmodel-with-calc.html#SUBSECTIONModelingTrout-8-1" class="xref" data-knowl="./knowl/xref/EQUATIONFishery1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 11.1">equation (11.1)</a> is:</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQUATIONBacteriaIVP.html ./knowl/xref/EQUATIONFishery1.html">
 \begin{equation*}
 P(t)=10e^{0.1t}.
@@ -601,23 +1176,23 @@ P(t)=10e^{0.1t}.
 <article class="exercise exercise-like" id="SUBSECTIONModelingTrout-11"><h5 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">11.1</span><span class="period">.</span>
 </h5>
-<div class="para" id="SUBSECTIONModelingTrout-11-1-1">Confirm that <span class="process-math">\(P(t)=10e^{0.1t}\)</span> solves <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONFishery1.html" title="Equation 11.1">IVP (11.1)</a>.</div></article><div class="para" id="SUBSECTIONModelingTrout-12">The graph of <span class="process-math">\(P(t)\)</span> is shown below. As you can see our trout population is growing exponentially, so it appears that we’re going to get very rich as soon as we sell of all of those fish.</div>
+<div class="para" id="SUBSECTIONModelingTrout-11-1-1">Confirm that <span class="process-math">\(P(t)=10e^{0.1t}\)</span> solves <a href="CHAPTERmodel-with-calc.html#SUBSECTIONModelingTrout-8-1" class="xref" data-knowl="./knowl/xref/EQUATIONFishery1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 11.1">IVP (11.1)</a>.</div></article><div class="para" id="SUBSECTIONModelingTrout-12">The graph of <span class="process-math">\(P(t)\)</span> is shown below. As you can see our trout population is growing exponentially, so it appears that we’re going to get very rich as soon as we sell of all of those fish.</div>
 <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/DC/Fishery1.png" class="contained"></div>
 <div class="para" id="SUBSECTIONModelingTrout-14">Of course, in practice this is not what happens. We made several simplifying assumptions when we began.  We assumed that (1) we could supply all of the food our growing population needs, and (2) our trout would have all of the room they needed.</div>
 <div class="para" id="SUBSECTIONModelingTrout-15">These assumptions are unrealistic in the long run.  But in the short run they are not completely crazy.</div>
 <div class="para" id="SUBSECTIONModelingTrout-16">Recall that in <a href="CHAPTERlast-elem-funct.html" class="internal" title="Chapter 8: Exponentials and Logarithms">Chapter 8</a> we described a situation in Lake Erie near Toledo, Ohio when, for a few days, the algae population grew exponentially in much the same manner as that suggested by our trout model.  Naturally such growth cannot be sustained. Eventually the algae will consume all of the available nutrients, or will simply run out of space. They will then begin to die off. But our model, simple as it is, gives pretty accurate predictions of the population for small values of <span class="process-math">\(t\text{,}\)</span> be they a population of bacteria, algae, trout, or even humans.</div>
 <div class="para logical" id="SUBSECTIONModelingTrout-17">
 <div class="para">In building a mathematical model of any physical phenomenon we start with the simplest model we can, find out where it goes bad, and then “tweak” it so that we:</div>
-<ol class="decimal">
+<ol class="decimal" id="SUBSECTIONModelingTrout-17-2">
 <li id="SUBSECTIONModelingTrout-17-2-1"><div class="para" id="SUBSECTIONModelingTrout-17-2-1-1">keep those properties of the model that make realistic predictions, and</div></li>
 <li id="SUBSECTIONModelingTrout-17-2-2"><div class="para" id="SUBSECTIONModelingTrout-17-2-2-1">eliminate those properties of the model that make unrealistic    predictions.</div></li>
 </ol>
-<div class="para">Thus we need to tweak <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONFishery1.html" title="Equation 11.1">IVP (11.1)</a> in such a way that <span class="process-math">\(\dfdx{P}{t}=0.1P\)</span> when <span class="process-math">\(P\)</span> is near zero (or, at least, <span class="process-math">\(\dfdx{P}{t}\approx0.1P\)</span>), but which also recognizes that exponential growth is unsustainable.</div>
+<div class="para">Thus we need to tweak <a href="CHAPTERmodel-with-calc.html#SUBSECTIONModelingTrout-8-1" class="xref" data-knowl="./knowl/xref/EQUATIONFishery1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 11.1">IVP (11.1)</a> in such a way that <span class="process-math">\(\dfdx{P}{t}=0.1P\)</span> when <span class="process-math">\(P\)</span> is near zero (or, at least, <span class="process-math">\(\dfdx{P}{t}\approx0.1P\)</span>), but which also recognizes that exponential growth is unsustainable.</div>
 </div>
 <div class="para" id="SUBSECTIONModelingTrout-18">Since exponential growth can’t be maintained indefinitely the population must eventually stop growing and drop to a lower level — or collapse entirely. Thus there must be a maximum population level, <span class="process-math">\(P(t)\text{,}\)</span> where <span class="process-math">\(\dfdx{P}{t}=0\text{.}\)</span> Whatever that level is, we’ll call it <span class="process-math">\(C\text{.}\)</span>
 </div>
 <div class="para logical" id="SUBSECTIONModelingTrout-19">
-<div class="para">One way to tweak <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONFishery1.html" title="Equation 11.1">IVP (11.1)</a> to reflect this fact is to insert the factor <span class="process-math">\((C-P)\)</span> as follows</div>
+<div class="para">One way to tweak <a href="CHAPTERmodel-with-calc.html#SUBSECTIONModelingTrout-8-1" class="xref" data-knowl="./knowl/xref/EQUATIONFishery1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 11.1">IVP (11.1)</a> to reflect this fact is to insert the factor <span class="process-math">\((C-P)\)</span> as follows</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQUATIONFishery1.html" id="EQUATIONFirstTweak">
 \begin{equation}
 \dfdx{P}{t}=0.1P(C-P).\tag{11.2}
@@ -627,7 +1202,7 @@ P(t)=10e^{0.1t}.
 </div>
 <div class="para logical" id="SUBSECTIONModelingTrout-20">
 <div class="para">However, notice that for values of <span class="process-math">\(P\)</span> near zero, <span class="process-math">\(C-P\approx
-C\text{.}\)</span> Thus <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONFirstTweak.html" title="Equation 11.2">equation (11.2)</a> says that when <span class="process-math">\(P\)</span> is near zero</div>
+C\text{.}\)</span> Thus <a href="CHAPTERmodel-with-calc.html#EQUATIONFirstTweak" class="xref" data-knowl="./knowl/xref/EQUATIONFirstTweak.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 11.2">equation (11.2)</a> says that when <span class="process-math">\(P\)</span> is near zero</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQUATIONFirstTweak.html">
 \begin{equation*}
 \dfdx{P}{t}\approx\left(0.1C\right)P
@@ -636,13 +1211,13 @@ C\text{.}\)</span> Thus <a href="" class="xref" data-knowl="./knowl/xref/EQUATIO
 <div class="para">but we needed <span class="process-math">\(\dfdx{P}{t}\approx0.1P\)</span> so this particular tweak won’t quite work because the difference between <span class="process-math">\(\dfdx{P}{t}\approx0.01P\)</span> and <span class="process-math">\(\dfdx{P}{t}\approx\left(0.01C\right)P\)</span> could be substantial,  depending on the value of <span class="process-math">\(C\)</span> (which we don’t know).</div>
 </div>
 <div class="para logical" id="SUBSECTIONModelingTrout-21">
-<div class="para">So we will try a slightly different tweak. Instead of <span class="process-math">\((C-P)\)</span> we will insert the factor <span class="process-math">\(\left(1-\frac{P}{C}\right)\)</span> as in <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONFishery2.html" title="Equation 11.3">IVP (11.3)</a> below.</div>
+<div class="para">So we will try a slightly different tweak. Instead of <span class="process-math">\((C-P)\)</span> we will insert the factor <span class="process-math">\(\left(1-\frac{P}{C}\right)\)</span> as in <a href="CHAPTERmodel-with-calc.html#EQUATIONFishery2" class="xref" data-knowl="./knowl/xref/EQUATIONFishery2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 11.3">IVP (11.3)</a> below.</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQUATIONFishery2.html ./knowl/xref/EQUATIONFishery2.html ./knowl/xref/EQUATIONFishery1.html" id="EQUATIONFishery2">
 \begin{equation}
 \dfdx{P}{t}=0.1P\left(1-\frac{P}{C}\right), \ P(0)=10.\tag{11.3}
 \end{equation}
 </div>
-<div class="para">Notice that we still have <span class="process-math">\(\dfdx{P}{t}=0\)</span> when <span class="process-math">\(P=C\text{.}\)</span> But now we also have <span class="process-math">\(\dfdx{P}{t}\approx0.1P\)</span> when <span class="process-math">\(P\)</span> is close to zero, so this change seems to meet the goal of our tweak. This type of <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONFishery2.html" title="Equation 11.3">IVP (11.3)</a> is called the Logistic Equation (or the Logistic Model) and its solution is a better long-term predictor of population growth than is the solution of <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONFishery1.html" title="Equation 11.1">equation (11.1)</a> as we will see.</div>
+<div class="para">Notice that we still have <span class="process-math">\(\dfdx{P}{t}=0\)</span> when <span class="process-math">\(P=C\text{.}\)</span> But now we also have <span class="process-math">\(\dfdx{P}{t}\approx0.1P\)</span> when <span class="process-math">\(P\)</span> is close to zero, so this change seems to meet the goal of our tweak. This type of <a href="CHAPTERmodel-with-calc.html#EQUATIONFishery2" class="xref" data-knowl="./knowl/xref/EQUATIONFishery2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 11.3">IVP (11.3)</a> is called the Logistic Equation (or the Logistic Model) and its solution is a better long-term predictor of population growth than is the solution of <a href="CHAPTERmodel-with-calc.html#SUBSECTIONModelingTrout-8-1" class="xref" data-knowl="./knowl/xref/EQUATIONFishery1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 11.1">equation (11.1)</a> as we will see.</div>
 </div>
 <div class="para logical" id="SUBSECTIONModelingTrout-22">
 <div class="para">The parameter <span class="process-math">\(C\)</span> would normally be determined experimentally (measured), but for purposes of this discussion we will arbitrarily assign it the value <span class="process-math">\(C=100\)</span> just to keep the numbers easy to deal with. So, our IVP will be</div>
@@ -658,7 +1233,7 @@ C\text{.}\)</span> Thus <a href="" class="xref" data-knowl="./knowl/xref/EQUATIO
 </h5>
 <div class="para logical" id="SUBSECTIONModelingTrout-24-1">
 <div class="para">Compute the  growth rate of the trout population for <span class="process-math">\(P\)</span> equal to</div>
-<ol class="lower-roman cols3">
+<ol class="lower-roman cols3" id="SUBSECTIONModelingTrout-24-1-2">
 <li id="SUBSECTIONModelingTrout-24-1-2-1"><div class="para" id="SUBSECTIONModelingTrout-24-1-2-1-1"><span class="process-math">\(\displaystyle 99\)</span></div></li>
 <li id="SUBSECTIONModelingTrout-24-1-2-2"><div class="para" id="SUBSECTIONModelingTrout-24-1-2-2-1"><span class="process-math">\(\displaystyle 99.9\)</span></div></li>
 <li id="SUBSECTIONModelingTrout-24-1-2-3"><div class="para" id="SUBSECTIONModelingTrout-24-1-2-3-1"><span class="process-math">\(\displaystyle 99.99\)</span></div></li>
@@ -725,7 +1300,7 @@ C\text{.}\)</span> Thus <a href="" class="xref" data-knowl="./knowl/xref/EQUATIO
 <article class="task exercise-like" id="SUBSECTIONModelingTrout-39-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
 <div class="para logical" id="SUBSECTIONModelingTrout-39-2-1-1">
 <div class="para">On the same set of axes, plot reasonable graphs for <span class="process-math">\(P(t)\)</span> with the following initial values:</div>
-<ol class="lower-roman cols2">
+<ol class="lower-roman cols2" id="SUBSECTIONModelingTrout-39-2-1-1-2">
 <li id="SUBSECTIONModelingTrout-39-2-1-1-2-1"><div class="para" id="SUBSECTIONModelingTrout-39-2-1-1-2-1-1"><span class="process-math">\(P(0)=0\text{,}\)</span></div></li>
 <li id="SUBSECTIONModelingTrout-39-2-1-1-2-2"><div class="para" id="SUBSECTIONModelingTrout-39-2-1-1-2-2-1"><span class="process-math">\(P(0)=10\text{,}\)</span></div></li>
 <li id="SUBSECTIONModelingTrout-39-2-1-1-2-3"><div class="para" id="SUBSECTIONModelingTrout-39-2-1-1-2-3-1"><span class="process-math">\(P(0)=75\text{,}\)</span></div></li>
@@ -746,8 +1321,8 @@ tons}}{\text{year}}\tag{11.5}
 </div>
 </div></div>
 <article class="task exercise-like" id="PROBLEMBassModel-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<div class="para" id="PROBLEMBassModel-2-1-1">Analyze this model in the same way we analyzed <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONFishery2.html" title="Equation 11.3">equation (11.3)</a>. Draw several typical graphs.</div></article><article class="task exercise-like" id="PROBLEMBassModel-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<div class="para" id="PROBLEMBassModel-3-1-1">We can’t make any money unless we sell some of our fish. Modify <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONLogistic2.html" title="Equation 11.5">equation (11.5)</a> to account for harvesting at a uniform rate of <span class="process-math">\(20 \frac{\text{ tons}}{\text{year}}\text{.}\)</span>
+<div class="para" id="PROBLEMBassModel-2-1-1">Analyze this model in the same way we analyzed <a href="CHAPTERmodel-with-calc.html#EQUATIONFishery2" class="xref" data-knowl="./knowl/xref/EQUATIONFishery2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 11.3">equation (11.3)</a>. Draw several typical graphs.</div></article><article class="task exercise-like" id="PROBLEMBassModel-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="para" id="PROBLEMBassModel-3-1-1">We can’t make any money unless we sell some of our fish. Modify <a href="CHAPTERmodel-with-calc.html#EQUATIONLogistic2" class="xref" data-knowl="./knowl/xref/EQUATIONLogistic2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 11.5">equation (11.5)</a> to account for harvesting at a uniform rate of <span class="process-math">\(20 \frac{\text{ tons}}{\text{year}}\text{.}\)</span>
 </div></article><article class="task exercise-like" id="PROBLEMBassModel-4"><h6 class="heading"><span class="codenumber">(c)</span></h6>
 <div class="para" id="PROBLEMBassModel-4-1-1">Suppose <span class="process-math">\(B(0)=150\)</span> tons.  Sketch a graph of the population.  What does the model predict about the amount of fish in the lake over a long period of time?</div></article><article class="task exercise-like" id="PROBLEMBassModel-5"><h6 class="heading"><span class="codenumber">(d)</span></h6>
 <div class="para" id="PROBLEMBassModel-5-1-1">Assume that <span class="process-math">\(B(0)\)</span> is still <span class="process-math">\(150\)</span> tons as in part (b), but this time the amount of harvesting is increased from <span class="process-math">\(20 \frac{\text{ tons}}{\text{year}}\)</span> to <span class="process-math">\(30 \frac{\text{ tons}}{\text{year}}\text{.}\)</span> Use a slope field to draw a graph of <span class="process-math">\(B(t)\text{.}\)</span> What does the model predict now about the amount of fish over a long period of time?</div></article></article><div class="para logical" id="SUBSECTIONModelingTrout-41">
@@ -757,14 +1332,14 @@ tons}}{\text{year}}\tag{11.5}
 \dfdx{P}{t}= rP\left(1-\frac{P}{C}\right)\tag{11.6}
 \end{equation}
 </div>
-<div class="para">where <span class="process-math">\(P=P(t)\)</span> is the population at time <span class="process-math">\(t\)</span> and the positive constants <span class="process-math">\(r\)</span> and <span class="process-math">\(C\)</span> are the <dfn class="terminology">intrinsic growth rate</dfn> and <dfn class="terminology">carrying capacity</dfn>, respectively. Recall that we obtained <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONGenLogisModel.html" title="Equation 11.6">equation (11.6)</a> by tweaking <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONFishery1.html" title="Equation 11.1">equation (11.1)</a> (the exponential model) to account for die-off due to overpopulation.</div>
+<div class="para">where <span class="process-math">\(P=P(t)\)</span> is the population at time <span class="process-math">\(t\)</span> and the positive constants <span class="process-math">\(r\)</span> and <span class="process-math">\(C\)</span> are the <dfn class="terminology">intrinsic growth rate</dfn> and <dfn class="terminology">carrying capacity</dfn>, respectively. Recall that we obtained <a href="CHAPTERmodel-with-calc.html#EQUATIONGenLogisModel" class="xref" data-knowl="./knowl/xref/EQUATIONGenLogisModel.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 11.6">equation (11.6)</a> by tweaking <a href="CHAPTERmodel-with-calc.html#SUBSECTIONModelingTrout-8-1" class="xref" data-knowl="./knowl/xref/EQUATIONFishery1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 11.1">equation (11.1)</a> (the exponential model) to account for die-off due to overpopulation.</div>
 </div>
 <article class="problem example-like" id="SUBSECTIONModelingTrout-42"><h5 class="heading">
 <span class="type">Drill</span><span class="space"> </span><span class="codenumber">11.7</span><span class="period">.</span>
 </h5>
 <div class="para" id="SUBSECTIONModelingTrout-42-1-1">Show that in this model <span class="process-math">\(P\)</span> is increasing and concave up when <span class="process-math">\(0\lt P\lt\frac{C}{2},\)</span> <span class="process-math">\(P\)</span> is increasing and concave down when <span class="process-math">\(\frac{C}{2} \lt P \lt C,\)</span> and <span class="process-math">\(P\)</span> is decreasing and concave up when <span class="process-math">\(P\gt C.\)</span>
 </div>
-<div class="solutions"><details id="SUBSECTIONModelingTrout-42-2" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="SUBSECTIONModelingTrout-42-2-1">This is the same analysis we did above.We’re just not assuming that <span class="process-math">\(C=100\)</span> this time.</div></div></details></div></article><div class="para" id="SUBSECTIONModelingTrout-43">Of course there is also a risk from underpopulation which our model does not account for. To catch this effect we tweak <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONGenLogisModel.html" title="Equation 11.6">equation (11.6)</a> by inserting the factor <span class="process-math">\(\left(1-\frac{m}{P}\right)\)</span> where <span class="process-math">\(m\lt C\)</span> is a small positive constant. We justify this tweak in <a href="" class="xref" data-knowl="./knowl/xref/PROBLEMMinViablePop.html" title="Drill 11.8">Drill 11.8</a> below.</div>
+<div class="solutions"><details id="SUBSECTIONModelingTrout-42-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="SUBSECTIONModelingTrout-42-2-1">This is the same analysis we did above.We’re just not assuming that <span class="process-math">\(C=100\)</span> this time.</div></div></details></div></article><div class="para" id="SUBSECTIONModelingTrout-43">Of course there is also a risk from underpopulation which our model does not account for. To catch this effect we tweak <a href="CHAPTERmodel-with-calc.html#EQUATIONGenLogisModel" class="xref" data-knowl="./knowl/xref/EQUATIONGenLogisModel.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 11.6">equation (11.6)</a> by inserting the factor <span class="process-math">\(\left(1-\frac{m}{P}\right)\)</span> where <span class="process-math">\(m\lt C\)</span> is a small positive constant. We justify this tweak in <a href="CHAPTERmodel-with-calc.html#PROBLEMMinViablePop" class="xref" data-knowl="./knowl/xref/PROBLEMMinViablePop.html" data-reveal-label="Reveal" data-close-label="Close" title="Drill 11.8">Drill 11.8</a> below.</div>
 <article class="problem example-like" id="PROBLEMMinViablePop"><h5 class="heading">
 <span class="type">Drill</span><span class="space"> </span><span class="codenumber">11.8</span><span class="period">.</span>
 </h5>
@@ -777,7 +1352,7 @@ tons}}{\text{year}}\tag{11.5}
 </div>
 </div></div>
 <article class="task exercise-like" id="PROBLEMMinViablePop-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<div class="para" id="PROBLEMMinViablePop-2-1-1">Show that when <span class="process-math">\(P\)</span> is very large <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONTweakedLogistic.html" title="Equation 11.7">equation (11.7)</a> reduces (approximately) to <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONGenLogisModel.html" title="Equation 11.6">equation (11.6)</a>.</div></article><article class="task exercise-like" id="PROBLEMMinViablePop-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="para" id="PROBLEMMinViablePop-2-1-1">Show that when <span class="process-math">\(P\)</span> is very large <a href="CHAPTERmodel-with-calc.html#EQUATIONTweakedLogistic" class="xref" data-knowl="./knowl/xref/EQUATIONTweakedLogistic.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 11.7">equation (11.7)</a> reduces (approximately) to <a href="CHAPTERmodel-with-calc.html#EQUATIONGenLogisModel" class="xref" data-knowl="./knowl/xref/EQUATIONGenLogisModel.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 11.6">equation (11.6)</a>.</div></article><article class="task exercise-like" id="PROBLEMMinViablePop-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>
 <div class="para" id="PROBLEMMinViablePop-3-1-1">Show that when <span class="process-math">\(P\lt m\)</span> then <span class="process-math">\(\dfdx{P}{t}\lt0\text{.}\)</span> What does this say about the growth of the population when <span class="process-math">\(P\)</span> is near zero?</div></article><article class="task exercise-like" id="PROBLEMMinViablePop-4"><h6 class="heading"><span class="codenumber">(c)</span></h6>
 <div class="para" id="PROBLEMMinViablePop-4-1-1">Find all values of <span class="process-math">\(P\)</span> for which  the graph of <span class="process-math">\(P=P(t)\)</span> is increasing and the values for which it is decreasing?</div></article><article class="task exercise-like" id="PROBLEMMinViablePop-5"><h6 class="heading"><span class="codenumber">(d)</span></h6>
 <div class="para logical" id="PROBLEMMinViablePop-5-1-1">
@@ -792,7 +1367,7 @@ tons}}{\text{year}}\tag{11.5}
 </div></article><article class="task exercise-like" id="PROBLEMMinViablePop-6"><h6 class="heading"><span class="codenumber">(e)</span></h6>
 <div class="para logical" id="PROBLEMMinViablePop-6-1-1">
 <div class="para">Use the information to plot a sketch of the graph  of <span class="process-math">\(P=P(t)\)</span> where the initial value <span class="process-math">\(P(0)\)</span> satisfies each of the following:</div>
-<ol class="lower-roman cols2">
+<ol class="lower-roman cols2" id="PROBLEMMinViablePop-6-1-1-3">
 <li id="PROBLEMMinViablePop-6-1-1-3-1"><div class="para" id="PROBLEMMinViablePop-6-1-1-3-1-1"><span class="process-math">\(\displaystyle 0\lt P(0)\lt m\)</span></div></li>
 <li id="PROBLEMMinViablePop-6-1-1-3-2"><div class="para" id="PROBLEMMinViablePop-6-1-1-3-2-1"><span class="process-math">\(\displaystyle m\lt P(0)\lt \frac{C+m}{2}\)</span></div></li>
 <li id="PROBLEMMinViablePop-6-1-1-3-3"><div class="para" id="PROBLEMMinViablePop-6-1-1-3-3-1"><span class="process-math">\(\displaystyle \frac{C+m}{2}\lt P(0)\lt C\)</span></div></li>
@@ -804,7 +1379,7 @@ tons}}{\text{year}}\tag{11.5}
 </h4>
 <div class="para" id="SECTIONlittle-healthy-comp-2">When we modeled the populations of trout and bass in an industrial farm we did not have to account for competition between species because we assumed that the two species of fish were kept in separate lakes. For fish living in the wild we cannot make that assumption, but we can tweak our original model to account for competition between species in a natural setting. To do this we’ll have to use two equations, one for each species.</div>
 <div class="para logical" id="SECTIONlittle-healthy-comp-3">
-<div class="para">So let’s introduce a competing species of fish into the same lake. Bass and walleye compete in the wild for the same food source, so each one’s presence affects the other’s growth rate. To model the walleye population take <span class="process-math">\(C=400\)</span> for the carrying capacity,  <span class="process-math">\(r=0.2\)</span> as the intrinsic growth rate of the walleye, and let <span class="process-math">\(W=W(t)\)</span> denote the amount of walleye (in tons) at time <span class="process-math">\(t\text{.}\)</span> Combining this with our model for the bass population from <a href="" class="xref" data-knowl="./knowl/xref/PROBLEMBassModel.html" title="Drill 11.6">Drill 11.6</a> we have the following equations for each species separately:</div>
+<div class="para">So let’s introduce a competing species of fish into the same lake. Bass and walleye compete in the wild for the same food source, so each one’s presence affects the other’s growth rate. To model the walleye population take <span class="process-math">\(C=400\)</span> for the carrying capacity,  <span class="process-math">\(r=0.2\)</span> as the intrinsic growth rate of the walleye, and let <span class="process-math">\(W=W(t)\)</span> denote the amount of walleye (in tons) at time <span class="process-math">\(t\text{.}\)</span> Combining this with our model for the bass population from <a href="CHAPTERmodel-with-calc.html#PROBLEMBassModel" class="xref" data-knowl="./knowl/xref/PROBLEMBassModel.html" data-reveal-label="Reveal" data-close-label="Close" title="Drill 11.6">Drill 11.6</a> we have the following equations for each species separately:</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/PROBLEMBassModel.html" id="SECTIONlittle-healthy-comp-3-7">
 \begin{align}
 % \label{eq:CompSpec1}
@@ -855,7 +1430,7 @@ B=0 \tag{11.10}
 </div>
 </div>
 <div class="para" id="SECTIONlittle-healthy-comp-11">Next we form the (<span class="process-math">\(B\)</span>)ass—(<span class="process-math">\(W\)</span>)alleye plane, where each point <span class="process-math">\((B,W)\)</span> identifies a particular pair of possible populations.  For example the point <span class="process-math">\((200, 500)\)</span> represents the situation when there are <span class="process-math">\(200\)</span> tons of bass and <span class="process-math">\(500\)</span> tons of walleye in the lake.</div>
-<div class="para" id="SECTIONlittle-healthy-comp-12">In the sketch below  we see from <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONCompete1.html" title="Equation 11.10">equation (11.10)</a> and <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONCompete2.html" title="Equation 11.11">equation (11.11)</a> that on each of the red lines we have <span class="process-math">\(\dfdx{B}{t}=0\text{.}\)</span>
+<div class="para" id="SECTIONlittle-healthy-comp-12">In the sketch below  we see from <a href="CHAPTERmodel-with-calc.html#EQUATIONCompete1" class="xref" data-knowl="./knowl/xref/EQUATIONCompete1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 11.10">equation (11.10)</a> and <a href="CHAPTERmodel-with-calc.html#SECTIONlittle-healthy-comp-10-3" class="xref" data-knowl="./knowl/xref/EQUATIONCompete2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 11.11">equation (11.11)</a> that on each of the red lines we have <span class="process-math">\(\dfdx{B}{t}=0\text{.}\)</span>
 </div>
 <div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="external/DC/CompetingSpeciesModel1.png" class="contained"></div>
 <div class="para logical" id="SECTIONlittle-healthy-comp-14">
@@ -886,13 +1461,13 @@ B=0 \tag{11.10}
 \end{equation*}
 </div>
 <div class="para">to determine where <span class="process-math">\(W\)</span> is increasing and where <span class="process-math">\(W\)</span> is decreasing. Plot these regions in the first quadrant of the <span class="process-math">\(B\)</span>-<span class="process-math">\(W\)</span> plane just as we did above for the bass population.</div>
-</div></article><div class="para" id="SECTIONlittle-healthy-comp-18">If we superimpose the sketch you (should have) obtained from <a href="" class="xref" data-knowl="./knowl/xref/PROBLEMWalleyeAnalysis.html" title="Drill 11.9">Drill 11.9</a> onto the graph we have above, we get the <span class="process-math">\(4\)</span> regions seen in the sketch below.</div>
+</div></article><div class="para" id="SECTIONlittle-healthy-comp-18">If we superimpose the sketch you (should have) obtained from <a href="CHAPTERmodel-with-calc.html#PROBLEMWalleyeAnalysis" class="xref" data-knowl="./knowl/xref/PROBLEMWalleyeAnalysis.html" data-reveal-label="Reveal" data-close-label="Close" title="Drill 11.9">Drill 11.9</a> onto the graph we have above, we get the <span class="process-math">\(4\)</span> regions seen in the sketch below.</div>
 <div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/DC/CompetingSpeciesModel9.png" class="contained"></div>
 <div class="para" id="SECTIONlittle-healthy-comp-20"> The points where the green and red lines intersect are called <dfn class="terminology">equilibrium points</dfn>. Theoretically, if the two population levels are at an equilibrium point then neither population will ever change again because the growth rates are both zero.</div>
 <article class="exercise exercise-like" id="SECTIONlittle-healthy-comp-21"><h5 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">11.10</span><span class="period">.</span>
 </h5>
-<ol class="lower-roman">
+<ol class="lower-roman" id="SECTIONlittle-healthy-comp-21-1">
 <li id="SECTIONlittle-healthy-comp-21-1-1"><div class="para" id="SECTIONlittle-healthy-comp-21-1-1-1">Verify that the points <span class="process-math">\((0,0)\text{,}\)</span> <span class="process-math">\((500,0)\text{,}\)</span> and <span class="process-math">\((0,400)\text{,}\)</span> are equilibrium points for our bass/walleye populations.</div></li>
 <li id="SECTIONlittle-healthy-comp-21-1-2">
 <div class="para" id="SECTIONlittle-healthy-comp-21-1-2-1">Show that the coordinates of the equilibrium point <span class="process-math">\(E\)</span> are as given in the diagram below.</div>
@@ -929,20 +1504,21 @@ B=0 \tag{11.10}
 \dfdx{W}{t}\amp=.2W\left(1-\frac{W}{400}\right)-.001BW
 \end{align*}
 </div>
-<ol class="lower-roman">
+<ol class="lower-roman" id="SECTIONlittle-healthy-comp-28-3-1-1-3">
 <li id="SECTIONlittle-healthy-comp-28-3-1-1-3-1"><div class="para" id="SECTIONlittle-healthy-comp-28-3-1-1-3-1-1">Identify how this system of equations is different from the one in part (a), and interpret the difference in terms of the influence of each population on the other.</div></li>
 <li id="SECTIONlittle-healthy-comp-28-3-1-1-3-2"><div class="para" id="SECTIONlittle-healthy-comp-28-3-1-1-3-2-1">Perform a similar graphical analysis to show that the equilibrium points are <span class="process-math">\((0,0)\text{,}\)</span> <span class="process-math">\((500,0)\text{,}\)</span> <span class="process-math">\((0,400)\text{,}\)</span> and <span class="process-math">\((100,200)\text{.}\)</span>  While it is theoretically possible for a trajectory to approach <span class="process-math">\((100,200)\text{,}\)</span> show that most trajectories will either approach <span class="process-math">\((500,0)\)</span> or <span class="process-math">\((0,400)\text{.}\)</span>  What does this mean for the fish populations, and is it consistent with the differential equations?  Explain.</div></li>
 </ol>
 </div></article><article class="task exercise-like" id="SECTIONlittle-healthy-comp-28-4"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<div class="para" id="SECTIONlittle-healthy-comp-28-4-1-1">Compare the results in parts (a) and (b) with the example that started this section (equations <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONCompSpec1.html" title="Equation 11.8">(11.8)</a> and <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONCompSpec2.html" title="Equation 11.9">(11.9)</a>). How does the coefficient of the <span class="process-math">\(BW\)</span> term affect the model?</div></article></article></section></section><section class="section" id="SECTIONselect-model-probl"><h3 class="heading hide-type">
+<div class="para" id="SECTIONlittle-healthy-comp-28-4-1-1">Compare the results in parts (a) and (b) with the example that started this section (equations <a href="CHAPTERmodel-with-calc.html#SECTIONlittle-healthy-comp-3-7" class="xref" data-knowl="./knowl/xref/EQUATIONCompSpec1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 11.8">(11.8)</a> and <a href="CHAPTERmodel-with-calc.html#SECTIONlittle-healthy-comp-3-7" class="xref" data-knowl="./knowl/xref/EQUATIONCompSpec2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 11.9">(11.9)</a>). How does the coefficient of the <span class="process-math">\(BW\)</span> term affect the model?</div></article></article></section></section><section class="section" id="SECTIONselect-model-probl"><h3 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">11.2</span><span class="space"> </span><span class="title">Selected Modeling Problems</span>
 </h3>
 <section class="introduction" id="SECTIONselect-model-probl-2"><blockquote class="blockquote" id="SECTIONselect-model-probl-2-1">
-<div class="para" id="SECTIONselect-model-probl-2-1-1">Life is an incurable disease.</div> <cite class="attribution">―<a class="external" href="https://www.britannica.com/biography/Abraham-Cowley" target="_blank">Abraham Cowley</a><a class="xref" id="SECTIONselect-model-probl-2-1-2-2" href="" data-knowl="./knowl/fn/SECTIONselect-model-probl-2-1-2-2.html" title="Footnote 11.3"><sup> 3 </sup></a> (1618-1667)</cite>
+<div class="para" id="SECTIONselect-model-probl-2-1-1">Life is an incurable disease.</div>
+<cite class="attribution">―<a class="external" href="https://www.britannica.com/biography/Abraham-Cowley" target="_blank">Abraham Cowley</a><details class="ptx-footnote" aria-live="polite" id="SECTIONselect-model-probl-2-1-2-2"><summary class="ptx-footnote__number" title="Footnote 11.3"><sup> 3 </sup></summary><div class="ptx-footnote__contents" id="SECTIONselect-model-probl-2-1-2-2"><code class="code-inline tex2jax_ignore">https://www.britannica.com/biography/Abraham-Cowley</code></div></details> (1618-1667)</cite>
 </blockquote></section><section class="subsection" id="SECTIONepidemic-blues"><h4 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">11.2.1</span><span class="space"> </span><span class="title">Epidemics, The SIR Model</span>
 </h4>
-<div class="para" id="SECTIONepidemic-blues-2">The SIR Model is a fairly simple model that is frequently used to understand the spread of an infectious disease through a population. As with any mathematical model, it is over-simplified but, just like <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONFishery1.html" title="Equation 11.1">IVP (11.1)</a>, it provides a foundation which can be tweaked as needed for better predictions.</div>
+<div class="para" id="SECTIONepidemic-blues-2">The SIR Model is a fairly simple model that is frequently used to understand the spread of an infectious disease through a population. As with any mathematical model, it is over-simplified but, just like <a href="CHAPTERmodel-with-calc.html#SUBSECTIONModelingTrout-8-1" class="xref" data-knowl="./knowl/xref/EQUATIONFishery1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 11.1">IVP (11.1)</a>, it provides a foundation which can be tweaked as needed for better predictions.</div>
 <div class="para" id="SECTIONepidemic-blues-3">We will assume that every member the population falls into one of three categories: (S)usceptible, (I)nfected, or (R)ecovered.  We assume that any population member who has recovered from the disease is immune to it, and those that have not are susceptible to infection.</div>
 <div class="para logical" id="SECTIONepidemic-blues-4">
 <div class="para">We let</div>
@@ -1038,14 +1614,15 @@ S+I+R=1.
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">11.2.2</span><span class="space"> </span><span class="title">The Tractrix</span>
 </h4>
 <blockquote class="blockquote" id="subSECTIONtractrix-2">
-<div class="para" id="subSECTIONtractrix-2-1">Truckin’, got my chips cashed in Keep truckin’, like the do-dah man Together, more or less in line Just keep truckin’ on.</div> <cite class="attribution">―<a class="external" href="https://en.wikipedia.org/wiki/Grateful_Dead" target="_blank">The Grateful Dead</a><a class="xref" id="subSECTIONtractrix-2-2-2" href="" data-knowl="./knowl/fn/subSECTIONtractrix-2-2-2.html" title="Footnote 11.4"><sup> 4 </sup></a>(1967-1995)</cite>
+<div class="para" id="subSECTIONtractrix-2-1">Truckin’, got my chips cashed in Keep truckin’, like the do-dah man Together, more or less in line Just keep truckin’ on.</div>
+<cite class="attribution">―<a class="external" href="https://en.wikipedia.org/wiki/Grateful_Dead" target="_blank">The Grateful Dead</a><details class="ptx-footnote" aria-live="polite" id="subSECTIONtractrix-2-2-2"><summary class="ptx-footnote__number" title="Footnote 11.4"><sup> 4 </sup></summary><div class="ptx-footnote__contents" id="subSECTIONtractrix-2-2-2"><code class="code-inline tex2jax_ignore">https://en.wikipedia.org/wiki/Grateful_Dead</code></div></details>(1967-1995)</cite>
 </blockquote>
 <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/DC/Tractrix.png" class="contained"></div>
-<div class="para" id="subSECTIONtractrix-4">We first looked at the curve called the tractrix <a href="" class="xref" data-knowl="./knowl/xref/PROBLEMTractrix.html" title="Problem 7.34">Problem 7.34</a> of <a href="CHAPTApproximation.html#SECTIONEulersMethod" class="internal" title="Section 7.3: Euler’s Method">Section 7.3</a>. Consider reviewing that problem  before you proceed.</div>
+<div class="para" id="subSECTIONtractrix-4">We first looked at the curve called the tractrix <a href="CHAPTApproximation.html#PROBLEMTractrix" class="xref" data-knowl="./knowl/xref/PROBLEMTractrix.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 7.34">Problem 7.34</a> of <a href="CHAPTApproximation.html#SECTIONEulersMethod" class="internal" title="Section 7.3: Euler’s Method">Section 7.3</a>. Consider reviewing that problem  before you proceed.</div>
 <div class="para" id="subSECTIONtractrix-5">Recall that initially the center of the rear axle of the tractor is at the origin and the center of the rear axle of the trailer is at the point <span class="process-math">\((1,0)\)</span> Also we assumed that the tractor pulls the front wheels vertically up the <span class="process-math">\(y\)</span>-axis and that the rear wheels don’t slip.</div>
 <div class="para logical" id="subSECTIONtractrix-6">
 <div class="para">
-<a href="" class="xref" data-knowl="./knowl/xref/PROBLEMTractrix.html" title="Problem 7.34">Problem 7.34</a> we showed that the path followed by the center of the rear axle of the trailer follows, <span class="process-math">\(y=y(t)\text{,}\)</span> must satisfy the IVP:</div>
+<a href="CHAPTApproximation.html#PROBLEMTractrix" class="xref" data-knowl="./knowl/xref/PROBLEMTractrix.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 7.34">Problem 7.34</a> we showed that the path followed by the center of the rear axle of the trailer follows, <span class="process-math">\(y=y(t)\text{,}\)</span> must satisfy the IVP:</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/PROBLEMTractrix.html" id="EQUATIONTractrixIVP-2">
 \begin{equation}
 \dfdx{y}{x}=-\frac{\sqrt{1-x^2}}{x}, \hskip5mm y(1)=0.\tag{11.12}
@@ -1057,20 +1634,22 @@ S+I+R=1.
 </h5>
 <div class="introduction" id="subSECTIONtractrix-7-1"><div class="para" id="subSECTIONtractrix-7-1-1"></div></div>
 <article class="task exercise-like" id="subSECTIONtractrix-7-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<div class="para" id="subSECTIONtractrix-7-2-1-1">Show that <span class="process-math">\(y=\ln\left(\frac{1+\sqrt{1-x^2}}{x}\right)-\sqrt{1-x^2}\)</span> satisfies the IVP in part (a). Graph this formula. Does it match your intuition about the shape of the curve? Does it match the graph you found using Euler’s Method in <a href="" class="xref" data-knowl="./knowl/xref/PROBLEMTractrix.html" title="Problem 7.34">Problem 7.34</a>? You will learn how to derive this solution from <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONTractrixIVP-2.html" title="Equation 11.12">IVP (11.12)</a> when you take Integral Calculus.</div></article><article class="task exercise-like" id="subSECTIONtractrix-7-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="para" id="subSECTIONtractrix-7-2-1-1">Show that <span class="process-math">\(y=\ln\left(\frac{1+\sqrt{1-x^2}}{x}\right)-\sqrt{1-x^2}\)</span> satisfies the IVP in part (a). Graph this formula. Does it match your intuition about the shape of the curve? Does it match the graph you found using Euler’s Method in <a href="CHAPTApproximation.html#PROBLEMTractrix" class="xref" data-knowl="./knowl/xref/PROBLEMTractrix.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 7.34">Problem 7.34</a>? You will learn how to derive this solution from <a href="CHAPTERmodel-with-calc.html#EQUATIONTractrixIVP-2" class="xref" data-knowl="./knowl/xref/EQUATIONTractrixIVP-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 11.12">IVP (11.12)</a> when you take Integral Calculus.</div></article><article class="task exercise-like" id="subSECTIONtractrix-7-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>
 <div class="para" id="subSECTIONtractrix-7-3-1-1">How far will the tractor have gone (in trailer lengths) before the trailer is within one degree of vertical?</div></article></article></section><section class="subsection" id="SUBSECTIONPursuit"><h4 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">11.2.3</span><span class="space"> </span><span class="title">The  Pursuit Problem</span>
 </h4>
 <blockquote class="blockquote" id="SUBSECTIONPursuit-2">
-<div class="para" id="SUBSECTIONPursuit-2-1">Our scientific power has outrun our spiritual power. We have guided missiles and misguided men.</div> <cite class="attribution">―<a class="external" href="https://en.wikipedia.org/wiki/Martin_Luther_King_Jr." target="_blank">Martin Luther King, Jr.</a><a class="xref" id="SUBSECTIONPursuit-2-2-2" href="" data-knowl="./knowl/fn/SUBSECTIONPursuit-2-2-2.html" title="Footnote 11.5"><sup> 5 </sup></a> (1929-1968)</cite>
+<div class="para" id="SUBSECTIONPursuit-2-1">Our scientific power has outrun our spiritual power. We have guided missiles and misguided men.</div>
+<cite class="attribution">―<a class="external" href="https://en.wikipedia.org/wiki/Martin_Luther_King_Jr." target="_blank">Martin Luther King, Jr.</a><details class="ptx-footnote" aria-live="polite" id="SUBSECTIONPursuit-2-2-2"><summary class="ptx-footnote__number" title="Footnote 11.5"><sup> 5 </sup></summary><div class="ptx-footnote__contents" id="SUBSECTIONPursuit-2-2-2"><code class="code-inline tex2jax_ignore">https://en.wikipedia.org/wiki/Martin_Luther_King_Jr.</code></div></details> (1929-1968)</cite>
 </blockquote>
-<div class="para" id="SUBSECTIONPursuit-3">Like the the tractrix problem above, we first looked at this pursuit curve in <a href="" class="xref" data-knowl="./knowl/xref/PROBLEMPursuit1.html" title="Problem 7.35">Problem 7.35</a> of <a href="CHAPTApproximation.html#SECTIONEulersMethod" class="internal" title="Section 7.3: Euler’s Method">Section 7.3</a>.  Consider reviewing that problem before you proceed.</div>
+<div class="para" id="SUBSECTIONPursuit-3">Like the the tractrix problem above, we first looked at this pursuit curve in <a href="CHAPTApproximation.html#PROBLEMPursuit1" class="xref" data-knowl="./knowl/xref/PROBLEMPursuit1.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 7.35">Problem 7.35</a> of <a href="CHAPTApproximation.html#SECTIONEulersMethod" class="internal" title="Section 7.3: Euler’s Method">Section 7.3</a>.  Consider reviewing that problem before you proceed.</div>
 <article class="problem example-like" id="PROBLEMPursuit2"><h5 class="heading">
 <span class="type">Drill</span><span class="space"> </span><span class="codenumber">11.17</span><span class="period">.</span>
 </h5>
 <div class="introduction" id="PROBLEMPursuit2-1">
-<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/DC/PursuitCurve2.png" class="contained"></div>              <div class="para logical" id="PROBLEMPursuit2-1-2">
-<div class="para">As in   <a href="" class="xref" data-knowl="./knowl/xref/PROBLEMPursuit1.html" title="Problem 7.35">Problem 7.35</a>  we assume that  rocket <span class="process-math">\(R\)</span> starting  is traveling vertically  up the line <span class="process-math">\(x=1\)</span> at a constant speed <span class="process-math">\(v\text{.}\)</span> When the rocket reaches the point  <span class="process-math">\((1,0)\text{,}\)</span> a missile <span class="process-math">\(M\)</span> is fired from the origin directly at the rocket. Assuming that the missile is always aimed directly at the rocket, and that it travels at a speed which is <span class="process-math">\(k\)</span> times the speed of the rocket (<span class="process-math">\(k\gt1\)</span>) we showed in <a href="" class="xref" data-knowl="./knowl/xref/PROBLEMPursuit2.html" title="Drill 11.17">Drill 11.17</a> that the curve described by the path the missile will satisfy the IVP:</div>
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/DC/PursuitCurve2.png" class="contained"></div>
+<div class="para logical" id="PROBLEMPursuit2-1-2">
+<div class="para">As in   <a href="CHAPTApproximation.html#PROBLEMPursuit1" class="xref" data-knowl="./knowl/xref/PROBLEMPursuit1.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 7.35">Problem 7.35</a>  we assume that  rocket <span class="process-math">\(R\)</span> starting  is traveling vertically  up the line <span class="process-math">\(x=1\)</span> at a constant speed <span class="process-math">\(v\text{.}\)</span> When the rocket reaches the point  <span class="process-math">\((1,0)\text{,}\)</span> a missile <span class="process-math">\(M\)</span> is fired from the origin directly at the rocket. Assuming that the missile is always aimed directly at the rocket, and that it travels at a speed which is <span class="process-math">\(k\)</span> times the speed of the rocket (<span class="process-math">\(k\gt1\)</span>) we showed in <a href="CHAPTERmodel-with-calc.html#PROBLEMPursuit2" class="xref" data-knowl="./knowl/xref/PROBLEMPursuit2.html" data-reveal-label="Reveal" data-close-label="Close" title="Drill 11.17">Drill 11.17</a> that the curve described by the path the missile will satisfy the IVP:</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/PROBLEMPursuit1.html ./knowl/xref/PROBLEMPursuit2.html" id="PROBLEMPursuit2-1-2-10">
 \begin{align}
 \dfdx{y}{x}=\frac{\frac{s}{k}-y}{1-x},\amp{}\amp{}       y(0)=0.\tag{11.13}
@@ -1082,7 +1661,7 @@ S+I+R=1.
 </div>
 <article class="task exercise-like" id="PROBLEMPursuit2-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
 <div class="para logical" id="PROBLEMPursuit2-2-1-1">
-<div class="para">Use <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONPursuitIVP.html" title="Equation 11.13">(11.13)</a> to show that the missile’s path must satisfy the (second order) differential equation</div>
+<div class="para">Use <a href="CHAPTERmodel-with-calc.html#PROBLEMPursuit2-1-2-10" class="xref" data-knowl="./knowl/xref/EQUATIONPursuitIVP.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 11.13">(11.13)</a> to show that the missile’s path must satisfy the (second order) differential equation</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQUATIONPursuitIVP.html">
 \begin{equation*}
 (1-x)\dfdxn{y}{x}{2}=\frac{1}{k}\dfdx{s}{x}=\frac{1}{k}\sqrt{1+\left(\dfdx{y}{x}\right)^2}

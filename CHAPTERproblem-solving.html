@@ -58,7 +58,7 @@ window.MathJax = {
       "[pretext]/mathjaxknowl3.js"
     ],
     "paths": {
-      "pretext": "https://pretextbook.org/js/lib"
+      "pretext": "_static/pretext/js/lib"
     }
   },
   "startup": {
@@ -70,8 +70,8 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.33/pretext_search.js"></script><link href="https://pretextbook.org/css/0.83/pretext_search.css" rel="stylesheet" type="text/css">
-<script>js_version = 0.33</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.33/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.33/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.33/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
@@ -79,16 +79,588 @@ window.MathJax = {
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-<link href="https://pretextbook.org/css/0.83/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/shell_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/banner_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/navbar_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/toc_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/colors_blue_red.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/setcolors.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/pretext.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/shell_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/banner_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/toc_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
+<style>
+#PleaForHelp-9-3 { counter-set: PleaForHelp-9-3 0; }
+#PleaForHelp-9-3 > li::marker { content: ""counter(PleaForHelp-9-3,decimal)"."; }
+#PleaForHelp-9-3 > li { counter-increment: PleaForHelp-9-3; }
+#SECTIONFermMethAedeq-22-2-1-1-1 { counter-set: SECTIONFermMethAedeq-22-2-1-1-1 0; }
+#SECTIONFermMethAedeq-22-2-1-1-1 > li::marker { content: ""counter(SECTIONFermMethAedeq-22-2-1-1-1,lower-roman)""; }
+#SECTIONFermMethAedeq-22-2-1-1-1 > li { counter-increment: SECTIONFermMethAedeq-22-2-1-1-1; }
+#SECTIONFermMethAedeq-22-6-1-1-1 { counter-set: SECTIONFermMethAedeq-22-6-1-1-1 0; }
+#SECTIONFermMethAedeq-22-6-1-1-1 > li::marker { content: ""counter(SECTIONFermMethAedeq-22-6-1-1-1,lower-roman)""; }
+#SECTIONFermMethAedeq-22-6-1-1-1 > li { counter-increment: SECTIONFermMethAedeq-22-6-1-1-1; }
+#SECTIONFermMethAedeq-22-7-1-1-8 { counter-set: SECTIONFermMethAedeq-22-7-1-1-8 0; }
+#SECTIONFermMethAedeq-22-7-1-1-8 > li::marker { content: ""counter(SECTIONFermMethAedeq-22-7-1-1-8,lower-roman)""; }
+#SECTIONFermMethAedeq-22-7-1-1-8 > li { counter-increment: SECTIONFermMethAedeq-22-7-1-1-8; }
+#PROBLEMFermMethX2-2-1-1-1 { counter-set: PROBLEMFermMethX2-2-1-1-1 0; }
+#PROBLEMFermMethX2-2-1-1-1 > li::marker { content: ""counter(PROBLEMFermMethX2-2-1-1-1,lower-roman)""; }
+#PROBLEMFermMethX2-2-1-1-1 > li { counter-increment: PROBLEMFermMethX2-2-1-1-1; }
+#PROBLEMFermMethX2-3-1-1-1 { counter-set: PROBLEMFermMethX2-3-1-1-1 0; }
+#PROBLEMFermMethX2-3-1-1-1 > li::marker { content: ""counter(PROBLEMFermMethX2-3-1-1-1,lower-roman)""; }
+#PROBLEMFermMethX2-3-1-1-1 > li { counter-increment: PROBLEMFermMethX2-3-1-1-1; }
+#SUBSECTIONSpdVelRofC-31-2-1 { counter-set: SUBSECTIONSpdVelRofC-31-2-1 0; }
+#SUBSECTIONSpdVelRofC-31-2-1 > li::marker { content: ""counter(SUBSECTIONSpdVelRofC-31-2-1,lower-roman)""; }
+#SUBSECTIONSpdVelRofC-31-2-1 > li { counter-increment: SUBSECTIONSpdVelRofC-31-2-1; }
+#SUBSECTIONSpdVelRofC-32-2-1 { counter-set: SUBSECTIONSpdVelRofC-32-2-1 0; }
+#SUBSECTIONSpdVelRofC-32-2-1 > li::marker { content: ""counter(SUBSECTIONSpdVelRofC-32-2-1,lower-roman)""; }
+#SUBSECTIONSpdVelRofC-32-2-1 > li { counter-increment: SUBSECTIONSpdVelRofC-32-2-1; }
+#SUBSECTIONSpdVelRofC-33-2-1 { counter-set: SUBSECTIONSpdVelRofC-33-2-1 0; }
+#SUBSECTIONSpdVelRofC-33-2-1 > li::marker { content: ""counter(SUBSECTIONSpdVelRofC-33-2-1,lower-roman)""; }
+#SUBSECTIONSpdVelRofC-33-2-1 > li { counter-increment: SUBSECTIONSpdVelRofC-33-2-1; }
+#SUBSECTIONSpdVelRofC-34-2-1 { counter-set: SUBSECTIONSpdVelRofC-34-2-1 0; }
+#SUBSECTIONSpdVelRofC-34-2-1 > li::marker { content: ""counter(SUBSECTIONSpdVelRofC-34-2-1,lower-roman)""; }
+#SUBSECTIONSpdVelRofC-34-2-1 > li { counter-increment: SUBSECTIONSpdVelRofC-34-2-1; }
+#DRILLConstantRule-2 { counter-set: DRILLConstantRule-2 0; }
+#DRILLConstantRule-2 > li::marker { content: ""counter(DRILLConstantRule-2,lower-roman)""; }
+#DRILLConstantRule-2 > li { counter-increment: DRILLConstantRule-2; }
+#SECTIONsome-rules-diff-26-2 { counter-set: SECTIONsome-rules-diff-26-2 0; }
+#SECTIONsome-rules-diff-26-2 > li::marker { content: ""counter(SECTIONsome-rules-diff-26-2,lower-roman)""; }
+#SECTIONsome-rules-diff-26-2 > li { counter-increment: SECTIONsome-rules-diff-26-2; }
+#PARTGenPwrRule-1-2-1 { counter-set: PARTGenPwrRule-1-2-1 0; }
+#PARTGenPwrRule-1-2-1 > li::marker { content: ""counter(PARTGenPwrRule-1-2-1,lower-roman)""; }
+#PARTGenPwrRule-1-2-1 > li { counter-increment: PARTGenPwrRule-1-2-1; }
+#SECTIONsome-rules-diff-58-2 { counter-set: SECTIONsome-rules-diff-58-2 0; }
+#SECTIONsome-rules-diff-58-2 > li::marker { content: ""counter(SECTIONsome-rules-diff-58-2,lower-roman)""; }
+#SECTIONsome-rules-diff-58-2 > li { counter-increment: SECTIONsome-rules-diff-58-2; }
+#SECTIONsome-rules-diff-79-1-4 { counter-set: SECTIONsome-rules-diff-79-1-4 0; }
+#SECTIONsome-rules-diff-79-1-4 > li::marker { content: ""counter(SECTIONsome-rules-diff-79-1-4,lower-roman)""; }
+#SECTIONsome-rules-diff-79-1-4 > li { counter-increment: SECTIONsome-rules-diff-79-1-4; }
+#SECTIONsome-rules-diff-80-1-4 { counter-set: SECTIONsome-rules-diff-80-1-4 0; }
+#SECTIONsome-rules-diff-80-1-4 > li::marker { content: ""counter(SECTIONsome-rules-diff-80-1-4,lower-roman)""; }
+#SECTIONsome-rules-diff-80-1-4 > li { counter-increment: SECTIONsome-rules-diff-80-1-4; }
+#SECTIONsome-rules-diff-81-1-1 { counter-set: SECTIONsome-rules-diff-81-1-1 0; }
+#SECTIONsome-rules-diff-81-1-1 > li::marker { content: ""counter(SECTIONsome-rules-diff-81-1-1,lower-roman)""; }
+#SECTIONsome-rules-diff-81-1-1 > li { counter-increment: SECTIONsome-rules-diff-81-1-1; }
+#SECTIONsome-rules-diff-82-1-1 { counter-set: SECTIONsome-rules-diff-82-1-1 0; }
+#SECTIONsome-rules-diff-82-1-1 > li::marker { content: ""counter(SECTIONsome-rules-diff-82-1-1,lower-roman)""; }
+#SECTIONsome-rules-diff-82-1-1 > li { counter-increment: SECTIONsome-rules-diff-82-1-1; }
+#SECTIONVelocitySlopeTangent-12-2 { counter-set: SECTIONVelocitySlopeTangent-12-2 0; }
+#SECTIONVelocitySlopeTangent-12-2 > li::marker { content: ""counter(SECTIONVelocitySlopeTangent-12-2,lower-roman)""; }
+#SECTIONVelocitySlopeTangent-12-2 > li { counter-increment: SECTIONVelocitySlopeTangent-12-2; }
+#SECTIONdefin-tang-line-22-1-2 { counter-set: SECTIONdefin-tang-line-22-1-2 0; }
+#SECTIONdefin-tang-line-22-1-2 > li::marker { content: ""counter(SECTIONdefin-tang-line-22-1-2,lower-roman)""; }
+#SECTIONdefin-tang-line-22-1-2 > li { counter-increment: SECTIONdefin-tang-line-22-1-2; }
+#SECTIONdefin-tang-line-31-2-1-1-2 { counter-set: SECTIONdefin-tang-line-31-2-1-1-2 0; }
+#SECTIONdefin-tang-line-31-2-1-1-2 > li::marker { content: ""counter(SECTIONdefin-tang-line-31-2-1-1-2,lower-roman)""; }
+#SECTIONdefin-tang-line-31-2-1-1-2 > li { counter-increment: SECTIONdefin-tang-line-31-2-1-1-2; }
+#SECTIONdefin-tang-line-31-3-1-1-2 { counter-set: SECTIONdefin-tang-line-31-3-1-1-2 0; }
+#SECTIONdefin-tang-line-31-3-1-1-2 > li::marker { content: ""counter(SECTIONdefin-tang-line-31-3-1-1-2,lower-roman)""; }
+#SECTIONdefin-tang-line-31-3-1-1-2 > li { counter-increment: SECTIONdefin-tang-line-31-3-1-1-2; }
+#SECTIONdefin-tang-line-31-4-1-1-2 { counter-set: SECTIONdefin-tang-line-31-4-1-1-2 0; }
+#SECTIONdefin-tang-line-31-4-1-1-2 > li::marker { content: ""counter(SECTIONdefin-tang-line-31-4-1-1-2,lower-roman)""; }
+#SECTIONdefin-tang-line-31-4-1-1-2 > li { counter-increment: SECTIONdefin-tang-line-31-4-1-1-2; }
+#PROBLEMHyperbolaTriangles-3-1-1-6 { counter-set: PROBLEMHyperbolaTriangles-3-1-1-6 0; }
+#PROBLEMHyperbolaTriangles-3-1-1-6 > li::marker { content: ""counter(PROBLEMHyperbolaTriangles-3-1-1-6,lower-roman)""; }
+#PROBLEMHyperbolaTriangles-3-1-1-6 > li { counter-increment: PROBLEMHyperbolaTriangles-3-1-1-6; }
+#PROBLEMHyperbolaTriangles-4-1-1-6 { counter-set: PROBLEMHyperbolaTriangles-4-1-1-6 0; }
+#PROBLEMHyperbolaTriangles-4-1-1-6 > li::marker { content: ""counter(PROBLEMHyperbolaTriangles-4-1-1-6,lower-roman)""; }
+#PROBLEMHyperbolaTriangles-4-1-1-6 > li { counter-increment: PROBLEMHyperbolaTriangles-4-1-1-6; }
+#PROBLEMHyperbolaTriangles-5-1-1-6 { counter-set: PROBLEMHyperbolaTriangles-5-1-1-6 0; }
+#PROBLEMHyperbolaTriangles-5-1-1-6 > li::marker { content: ""counter(PROBLEMHyperbolaTriangles-5-1-1-6,lower-roman)""; }
+#PROBLEMHyperbolaTriangles-5-1-1-6 > li { counter-increment: PROBLEMHyperbolaTriangles-5-1-1-6; }
+#PROBLEMHyperbolaTriangles-6-1-1-4 { counter-set: PROBLEMHyperbolaTriangles-6-1-1-4 0; }
+#PROBLEMHyperbolaTriangles-6-1-1-4 > li::marker { content: ""counter(PROBLEMHyperbolaTriangles-6-1-1-4,lower-roman)""; }
+#PROBLEMHyperbolaTriangles-6-1-1-4 > li { counter-increment: PROBLEMHyperbolaTriangles-6-1-1-4; }
+#SECTIONGalileoDrops-9-2 { counter-set: SECTIONGalileoDrops-9-2 0; }
+#SECTIONGalileoDrops-9-2 > li::marker { content: ""counter(SECTIONGalileoDrops-9-2,decimal)"."; }
+#SECTIONGalileoDrops-9-2 > li { counter-increment: SECTIONGalileoDrops-9-2; }
+#SECONDBringCalc-5-4 { counter-set: SECONDBringCalc-5-4 0; }
+#SECONDBringCalc-5-4 > li::marker { content: ""counter(SECONDBringCalc-5-4,decimal)"."; }
+#SECONDBringCalc-5-4 > li { counter-increment: SECONDBringCalc-5-4; }
+#SECONDBringCalc-11-6 { counter-set: SECONDBringCalc-11-6 0; }
+#SECONDBringCalc-11-6 > li::marker { content: ""counter(SECONDBringCalc-11-6,decimal)"."; }
+#SECONDBringCalc-11-6 > li { counter-increment: SECONDBringCalc-11-6; }
+#PROBLEMGeneralFallingBalls-2-1-1-2 { counter-set: PROBLEMGeneralFallingBalls-2-1-1-2 0; }
+#PROBLEMGeneralFallingBalls-2-1-1-2 > li::marker { content: ""counter(PROBLEMGeneralFallingBalls-2-1-1-2,lower-roman)""; }
+#PROBLEMGeneralFallingBalls-2-1-1-2 > li { counter-increment: PROBLEMGeneralFallingBalls-2-1-1-2; }
+#PROBLEMGeneralFallingBalls-8-1-1-2 { counter-set: PROBLEMGeneralFallingBalls-8-1-1-2 0; }
+#PROBLEMGeneralFallingBalls-8-1-1-2 > li::marker { content: ""counter(PROBLEMGeneralFallingBalls-8-1-1-2,lower-roman)""; }
+#PROBLEMGeneralFallingBalls-8-1-1-2 > li { counter-increment: PROBLEMGeneralFallingBalls-8-1-1-2; }
+#SECTIONDerivative-18-2 { counter-set: SECTIONDerivative-18-2 0; }
+#SECTIONDerivative-18-2 > li::marker { content: ""counter(SECTIONDerivative-18-2,lower-roman)""; }
+#SECTIONDerivative-18-2 > li { counter-increment: SECTIONDerivative-18-2; }
+#PROBLEMDerivProdNEProdDeriv-2-1-1-1 { counter-set: PROBLEMDerivProdNEProdDeriv-2-1-1-1 0; }
+#PROBLEMDerivProdNEProdDeriv-2-1-1-1 > li::marker { content: ""counter(PROBLEMDerivProdNEProdDeriv-2-1-1-1,lower-roman)""; }
+#PROBLEMDerivProdNEProdDeriv-2-1-1-1 > li { counter-increment: PROBLEMDerivProdNEProdDeriv-2-1-1-1; }
+#SECTIONDerivative-21-2 { counter-set: SECTIONDerivative-21-2 0; }
+#SECTIONDerivative-21-2 > li::marker { content: ""counter(SECTIONDerivative-21-2,lower-roman)""; }
+#SECTIONDerivative-21-2 > li { counter-increment: SECTIONDerivative-21-2; }
+#PROBLEMAirlinerSpeed-3-1-1-2 { counter-set: PROBLEMAirlinerSpeed-3-1-1-2 0; }
+#PROBLEMAirlinerSpeed-3-1-1-2 > li::marker { content: ""counter(PROBLEMAirlinerSpeed-3-1-1-2,decimal)"."; }
+#PROBLEMAirlinerSpeed-3-1-1-2 > li { counter-increment: PROBLEMAirlinerSpeed-3-1-1-2; }
+#SECTIONnewt-flux-dynam-13-2-1 { counter-set: SECTIONnewt-flux-dynam-13-2-1 0; }
+#SECTIONnewt-flux-dynam-13-2-1 > li::marker { content: ""counter(SECTIONnewt-flux-dynam-13-2-1,lower-roman)""; }
+#SECTIONnewt-flux-dynam-13-2-1 > li { counter-increment: SECTIONnewt-flux-dynam-13-2-1; }
+#SECTIONFluxions-36-2-1-1-1 { counter-set: SECTIONFluxions-36-2-1-1-1 0; }
+#SECTIONFluxions-36-2-1-1-1 > li::marker { content: ""counter(SECTIONFluxions-36-2-1-1-1,decimal)"."; }
+#SECTIONFluxions-36-2-1-1-1 > li { counter-increment: SECTIONFluxions-36-2-1-1-1; }
+#SECTIONFluxions-36-3-1-1-1 { counter-set: SECTIONFluxions-36-3-1-1-1 0; }
+#SECTIONFluxions-36-3-1-1-1 > li::marker { content: ""counter(SECTIONFluxions-36-3-1-1-1,decimal)"."; }
+#SECTIONFluxions-36-3-1-1-1 > li { counter-increment: SECTIONFluxions-36-3-1-1-1; }
+#PROBLEMadfj-1-1-2-2 { counter-set: PROBLEMadfj-1-1-2-2 0; }
+#PROBLEMadfj-1-1-2-2 > li::marker { content: ""counter(PROBLEMadfj-1-1-2-2,lower-roman)""; }
+#PROBLEMadfj-1-1-2-2 > li { counter-increment: PROBLEMadfj-1-1-2-2; }
+#PROBLEMadfj-2-1-2-2 { counter-set: PROBLEMadfj-2-1-2-2 0; }
+#PROBLEMadfj-2-1-2-2 > li::marker { content: ""counter(PROBLEMadfj-2-1-2-2,lower-roman)""; }
+#PROBLEMadfj-2-1-2-2 > li { counter-increment: PROBLEMadfj-2-1-2-2; }
+#SECTIONSelfIntersectCurve-20-15-2-1-1-2 { counter-set: SECTIONSelfIntersectCurve-20-15-2-1-1-2 0; }
+#SECTIONSelfIntersectCurve-20-15-2-1-1-2 > li::marker { content: ""counter(SECTIONSelfIntersectCurve-20-15-2-1-1-2,lower-roman)""; }
+#SECTIONSelfIntersectCurve-20-15-2-1-1-2 > li { counter-increment: SECTIONSelfIntersectCurve-20-15-2-1-1-2; }
+#PROBLEMUnitCircleParameterization1-1-1-1-1 { counter-set: PROBLEMUnitCircleParameterization1-1-1-1-1 0; }
+#PROBLEMUnitCircleParameterization1-1-1-1-1 > li::marker { content: ""counter(PROBLEMUnitCircleParameterization1-1-1-1-1,lower-roman)""; }
+#PROBLEMUnitCircleParameterization1-1-1-1-1 > li { counter-increment: PROBLEMUnitCircleParameterization1-1-1-1-1; }
+#SECTIONSelfIntersectCurve-20-21-1-1-2 { counter-set: SECTIONSelfIntersectCurve-20-21-1-1-2 0; }
+#SECTIONSelfIntersectCurve-20-21-1-1-2 > li::marker { content: ""counter(SECTIONSelfIntersectCurve-20-21-1-1-2,lower-roman)""; }
+#SECTIONSelfIntersectCurve-20-21-1-1-2 > li { counter-increment: SECTIONSelfIntersectCurve-20-21-1-1-2; }
+#SUBSECTIONradian-measure-19-2 { counter-set: SUBSECTIONradian-measure-19-2 0; }
+#SUBSECTIONradian-measure-19-2 > li::marker { content: ""counter(SUBSECTIONradian-measure-19-2,lower-roman)""; }
+#SUBSECTIONradian-measure-19-2 > li { counter-increment: SUBSECTIONradian-measure-19-2; }
+#SUBSECTIONradian-measure-20-2 { counter-set: SUBSECTIONradian-measure-20-2 0; }
+#SUBSECTIONradian-measure-20-2 > li::marker { content: ""counter(SUBSECTIONradian-measure-20-2,lower-roman)""; }
+#SUBSECTIONradian-measure-20-2 > li { counter-increment: SUBSECTIONradian-measure-20-2; }
+#SUBSECTIONradian-measure-31-2 { counter-set: SUBSECTIONradian-measure-31-2 0; }
+#SUBSECTIONradian-measure-31-2 > li::marker { content: ""counter(SUBSECTIONradian-measure-31-2,lower-roman)""; }
+#SUBSECTIONradian-measure-31-2 > li { counter-increment: SUBSECTIONradian-measure-31-2; }
+#SECTIONtrig-interl-3-12-2-1-1-2 { counter-set: SECTIONtrig-interl-3-12-2-1-1-2 0; }
+#SECTIONtrig-interl-3-12-2-1-1-2 > li::marker { content: ""counter(SECTIONtrig-interl-3-12-2-1-1-2,lower-roman)""; }
+#SECTIONtrig-interl-3-12-2-1-1-2 > li { counter-increment: SECTIONtrig-interl-3-12-2-1-1-2; }
+#SECTIONtrig-interl-3-12-3-1-1-2 { counter-set: SECTIONtrig-interl-3-12-3-1-1-2 0; }
+#SECTIONtrig-interl-3-12-3-1-1-2 > li::marker { content: ""counter(SECTIONtrig-interl-3-12-3-1-1-2,lower-roman)""; }
+#SECTIONtrig-interl-3-12-3-1-1-2 > li { counter-increment: SECTIONtrig-interl-3-12-3-1-1-2; }
+#SECTIONtrig-interl-3-14-2 { counter-set: SECTIONtrig-interl-3-14-2 0; }
+#SECTIONtrig-interl-3-14-2 > li::marker { content: ""counter(SECTIONtrig-interl-3-14-2,lower-roman)""; }
+#SECTIONtrig-interl-3-14-2 > li { counter-increment: SECTIONtrig-interl-3-14-2; }
+#PROBLEMSineOscillB-1-1-8 { counter-set: PROBLEMSineOscillB-1-1-8 0; }
+#PROBLEMSineOscillB-1-1-8 > li::marker { content: ""counter(PROBLEMSineOscillB-1-1-8,lower-roman)""; }
+#PROBLEMSineOscillB-1-1-8 > li { counter-increment: PROBLEMSineOscillB-1-1-8; }
+#SECTIONtrig-interl-5-11-2 { counter-set: SECTIONtrig-interl-5-11-2 0; }
+#SECTIONtrig-interl-5-11-2 > li::marker { content: ""counter(SECTIONtrig-interl-5-11-2,lower-roman)""; }
+#SECTIONtrig-interl-5-11-2 > li { counter-increment: SECTIONtrig-interl-5-11-2; }
+#DRILLPolarQuirks2-2 { counter-set: DRILLPolarQuirks2-2 0; }
+#DRILLPolarQuirks2-2 > li::marker { content: ""counter(DRILLPolarQuirks2-2,lower-roman)""; }
+#DRILLPolarQuirks2-2 > li { counter-increment: DRILLPolarQuirks2-2; }
+#PROBLEMPolRectConvertA-1-1-3 { counter-set: PROBLEMPolRectConvertA-1-1-3 0; }
+#PROBLEMPolRectConvertA-1-1-3 > li::marker { content: ""counter(PROBLEMPolRectConvertA-1-1-3,lower-roman)""; }
+#PROBLEMPolRectConvertA-1-1-3 > li { counter-increment: PROBLEMPolRectConvertA-1-1-3; }
+#PROBLEMPolarGraphs-2 { counter-set: PROBLEMPolarGraphs-2 0; }
+#PROBLEMPolarGraphs-2 > li::marker { content: ""counter(PROBLEMPolarGraphs-2,lower-roman)""; }
+#PROBLEMPolarGraphs-2 > li { counter-increment: PROBLEMPolarGraphs-2; }
+#SUBSECTIONCircularMotion-5-1-2 { counter-set: SUBSECTIONCircularMotion-5-1-2 0; }
+#SUBSECTIONCircularMotion-5-1-2 > li::marker { content: ""counter(SUBSECTIONCircularMotion-5-1-2,lower-roman)""; }
+#SUBSECTIONCircularMotion-5-1-2 > li { counter-increment: SUBSECTIONCircularMotion-5-1-2; }
+#EXERCISEDiffPractice1-1-1-3 { counter-set: EXERCISEDiffPractice1-1-1-3 0; }
+#EXERCISEDiffPractice1-1-1-3 > li::marker { content: ""counter(EXERCISEDiffPractice1-1-1-3,lower-roman)""; }
+#EXERCISEDiffPractice1-1-1-3 > li { counter-increment: EXERCISEDiffPractice1-1-1-3; }
+#SUBSECTIONCircularMotion-12-1-9 { counter-set: SUBSECTIONCircularMotion-12-1-9 0; }
+#SUBSECTIONCircularMotion-12-1-9 > li::marker { content: ""counter(SUBSECTIONCircularMotion-12-1-9,lower-roman)""; }
+#SUBSECTIONCircularMotion-12-1-9 > li { counter-increment: SUBSECTIONCircularMotion-12-1-9; }
+#SUBSECTIONpolar-coord-calc-6-2-1-3-1 { counter-set: SUBSECTIONpolar-coord-calc-6-2-1-3-1 0; }
+#SUBSECTIONpolar-coord-calc-6-2-1-3-1 > li::marker { content: ""counter(SUBSECTIONpolar-coord-calc-6-2-1-3-1,lower-roman)""; }
+#SUBSECTIONpolar-coord-calc-6-2-1-3-1 > li { counter-increment: SUBSECTIONpolar-coord-calc-6-2-1-3-1; }
+#SUBSECTIONpolar-coord-calc-6-3-1-3-1 { counter-set: SUBSECTIONpolar-coord-calc-6-3-1-3-1 0; }
+#SUBSECTIONpolar-coord-calc-6-3-1-3-1 > li::marker { content: ""counter(SUBSECTIONpolar-coord-calc-6-3-1-3-1,lower-roman)""; }
+#SUBSECTIONpolar-coord-calc-6-3-1-3-1 > li { counter-increment: SUBSECTIONpolar-coord-calc-6-3-1-3-1; }
+#SUBSECTIONpolar-coord-calc-6-4-1-3-1 { counter-set: SUBSECTIONpolar-coord-calc-6-4-1-3-1 0; }
+#SUBSECTIONpolar-coord-calc-6-4-1-3-1 > li::marker { content: ""counter(SUBSECTIONpolar-coord-calc-6-4-1-3-1,lower-roman)""; }
+#SUBSECTIONpolar-coord-calc-6-4-1-3-1 > li { counter-increment: SUBSECTIONpolar-coord-calc-6-4-1-3-1; }
+#PROBLEMcycloid2-2-1-1-1 { counter-set: PROBLEMcycloid2-2-1-1-1 0; }
+#PROBLEMcycloid2-2-1-1-1 > li::marker { content: ""counter(PROBLEMcycloid2-2-1-1-1,lower-roman)""; }
+#PROBLEMcycloid2-2-1-1-1 > li { counter-increment: PROBLEMcycloid2-2-1-1-1; }
+#PROBLEMcycloid2-3-1-1-1 { counter-set: PROBLEMcycloid2-3-1-1-1 0; }
+#PROBLEMcycloid2-3-1-1-1 > li::marker { content: ""counter(PROBLEMcycloid2-3-1-1-1,lower-roman)""; }
+#PROBLEMcycloid2-3-1-1-1 > li { counter-increment: PROBLEMcycloid2-3-1-1-1; }
+#SUBSECTIONsimple-harm-oscill-17-3-1-1-4 { counter-set: SUBSECTIONsimple-harm-oscill-17-3-1-1-4 0; }
+#SUBSECTIONsimple-harm-oscill-17-3-1-1-4 > li::marker { content: ""counter(SUBSECTIONsimple-harm-oscill-17-3-1-1-4,lower-roman)""; }
+#SUBSECTIONsimple-harm-oscill-17-3-1-1-4 > li { counter-increment: SUBSECTIONsimple-harm-oscill-17-3-1-1-4; }
+#SECTIONdiff-other-trig-13-1-1 { counter-set: SECTIONdiff-other-trig-13-1-1 0; }
+#SECTIONdiff-other-trig-13-1-1 > li::marker { content: ""counter(SECTIONdiff-other-trig-13-1-1,lower-roman)""; }
+#SECTIONdiff-other-trig-13-1-1 > li { counter-increment: SECTIONdiff-other-trig-13-1-1; }
+#SECTIONdiff-other-trig-14-1-3 { counter-set: SECTIONdiff-other-trig-14-1-3 0; }
+#SECTIONdiff-other-trig-14-1-3 > li::marker { content: ""counter(SECTIONdiff-other-trig-14-1-3,lower-roman)""; }
+#SECTIONdiff-other-trig-14-1-3 > li { counter-increment: SECTIONdiff-other-trig-14-1-3; }
+#PROBLEMDiffFormTan-3-1-3-1 { counter-set: PROBLEMDiffFormTan-3-1-3-1 0; }
+#PROBLEMDiffFormTan-3-1-3-1 > li::marker { content: ""counter(PROBLEMDiffFormTan-3-1-3-1,decimal)"."; }
+#PROBLEMDiffFormTan-3-1-3-1 > li { counter-increment: PROBLEMDiffFormTan-3-1-3-1; }
+#DIGRESSIONInverse-function-notation-7-1-1 { counter-set: DIGRESSIONInverse-function-notation-7-1-1 0; }
+#DIGRESSIONInverse-function-notation-7-1-1 > li::marker { content: ""counter(DIGRESSIONInverse-function-notation-7-1-1,lower-roman)""; }
+#DIGRESSIONInverse-function-notation-7-1-1 > li { counter-increment: DIGRESSIONInverse-function-notation-7-1-1; }
+#PROBLEMInvTanDiffeqB-1-1-2 { counter-set: PROBLEMInvTanDiffeqB-1-1-2 0; }
+#PROBLEMInvTanDiffeqB-1-1-2 > li::marker { content: ""counter(PROBLEMInvTanDiffeqB-1-1-2,lower-roman)""; }
+#PROBLEMInvTanDiffeqB-1-1-2 > li { counter-increment: PROBLEMInvTanDiffeqB-1-1-2; }
+#PROBLEMArcSinDiffeqB-1-1-2 { counter-set: PROBLEMArcSinDiffeqB-1-1-2 0; }
+#PROBLEMArcSinDiffeqB-1-1-2 > li::marker { content: ""counter(PROBLEMArcSinDiffeqB-1-1-2,lower-roman)""; }
+#PROBLEMArcSinDiffeqB-1-1-2 > li { counter-increment: PROBLEMArcSinDiffeqB-1-1-2; }
+#PROBLEMArcSecDiffeqB-1-1-2 { counter-set: PROBLEMArcSecDiffeqB-1-1-2 0; }
+#PROBLEMArcSecDiffeqB-1-1-2 > li::marker { content: ""counter(PROBLEMArcSecDiffeqB-1-1-2,lower-roman)""; }
+#PROBLEMArcSecDiffeqB-1-1-2 > li { counter-increment: PROBLEMArcSecDiffeqB-1-1-2; }
+#InverseSecCsc-11-1 { counter-set: InverseSecCsc-11-1 0; }
+#InverseSecCsc-11-1 > li::marker { content: ""counter(InverseSecCsc-11-1,decimal)"."; }
+#InverseSecCsc-11-1 > li { counter-increment: InverseSecCsc-11-1; }
+#InverseSecCsc-17-1-1 { counter-set: InverseSecCsc-17-1-1 0; }
+#InverseSecCsc-17-1-1 > li::marker { content: ""counter(InverseSecCsc-17-1-1,lower-roman)""; }
+#InverseSecCsc-17-1-1 > li { counter-increment: InverseSecCsc-17-1-1; }
+#InverseSecCsc-20-2-1-1-1 { counter-set: InverseSecCsc-20-2-1-1-1 0; }
+#InverseSecCsc-20-2-1-1-1 > li::marker { content: ""counter(InverseSecCsc-20-2-1-1-1,lower-roman)""; }
+#InverseSecCsc-20-2-1-1-1 > li { counter-increment: InverseSecCsc-20-2-1-1-1; }
+#EXAMPLESqrt2-2-3-1-1-1 { counter-set: EXAMPLESqrt2-2-3-1-1-1 0; }
+#EXAMPLESqrt2-2-3-1-1-1 > li::marker { content: ""counter(EXAMPLESqrt2-2-3-1-1-1,lower-roman)""; }
+#EXAMPLESqrt2-2-3-1-1-1 > li { counter-increment: EXAMPLESqrt2-2-3-1-1-1; }
+#DRILLNewtonMethod2-2 { counter-set: DRILLNewtonMethod2-2 0; }
+#DRILLNewtonMethod2-2 > li::marker { content: ""counter(DRILLNewtonMethod2-2,lower-roman)""; }
+#DRILLNewtonMethod2-2 > li { counter-increment: DRILLNewtonMethod2-2; }
+#ALGORITHMNewtonsMethod-3-4 { counter-set: ALGORITHMNewtonsMethod-3-4 0; }
+#ALGORITHMNewtonsMethod-3-4 > li::marker { content: ""counter(ALGORITHMNewtonsMethod-3-4,decimal)"."; }
+#ALGORITHMNewtonsMethod-3-4 > li { counter-increment: ALGORITHMNewtonsMethod-3-4; }
+#PROBLEMNewtMethCreateFunction-2-3 { counter-set: PROBLEMNewtMethCreateFunction-2-3 0; }
+#PROBLEMNewtMethCreateFunction-2-3 > li::marker { content: ""counter(PROBLEMNewtMethCreateFunction-2-3,lower-roman)""; }
+#PROBLEMNewtMethCreateFunction-2-3 > li { counter-increment: PROBLEMNewtMethCreateFunction-2-3; }
+#PROBLEMNewton-meth-2-8 { counter-set: PROBLEMNewton-meth-2-8 0; }
+#PROBLEMNewton-meth-2-8 > li::marker { content: ""counter(PROBLEMNewton-meth-2-8,lower-roman)""; }
+#PROBLEMNewton-meth-2-8 > li { counter-increment: PROBLEMNewton-meth-2-8; }
+#PROBLEMNewton-meth2-2-2 { counter-set: PROBLEMNewton-meth2-2-2 0; }
+#PROBLEMNewton-meth2-2-2 > li::marker { content: ""counter(PROBLEMNewton-meth2-2-2,lower-roman)""; }
+#PROBLEMNewton-meth2-2-2 > li { counter-increment: PROBLEMNewton-meth2-2-2; }
+#SUBSECTIONSubtleFailure-8-3-1-1-3 { counter-set: SUBSECTIONSubtleFailure-8-3-1-1-3 0; }
+#SUBSECTIONSubtleFailure-8-3-1-1-3 > li::marker { content: ""counter(SUBSECTIONSubtleFailure-8-3-1-1-3,lower-roman)""; }
+#SUBSECTIONSubtleFailure-8-3-1-1-3 > li { counter-increment: SUBSECTIONSubtleFailure-8-3-1-1-3; }
+#SECTIONDEsandIVPS-2-3 { counter-set: SECTIONDEsandIVPS-2-3 0; }
+#SECTIONDEsandIVPS-2-3 > li::marker { content: ""counter(SECTIONDEsandIVPS-2-3,decimal)"."; }
+#SECTIONDEsandIVPS-2-3 > li { counter-increment: SECTIONDEsandIVPS-2-3; }
+#DRILLIVP-sqr-1-1 { counter-set: DRILLIVP-sqr-1-1 0; }
+#DRILLIVP-sqr-1-1 > li::marker { content: ""counter(DRILLIVP-sqr-1-1,lower-roman)""; }
+#DRILLIVP-sqr-1-1 > li { counter-increment: DRILLIVP-sqr-1-1; }
+#SECTIONexponential-growth-23-2 { counter-set: SECTIONexponential-growth-23-2 0; }
+#SECTIONexponential-growth-23-2 > li::marker { content: ""counter(SECTIONexponential-growth-23-2,decimal)"."; }
+#SECTIONexponential-growth-23-2 > li { counter-increment: SECTIONexponential-growth-23-2; }
+#SECTIONexponential-growth-28-2 { counter-set: SECTIONexponential-growth-28-2 0; }
+#SECTIONexponential-growth-28-2 > li::marker { content: ""counter(SECTIONexponential-growth-28-2,lower-roman)""; }
+#SECTIONexponential-growth-28-2 > li { counter-increment: SECTIONexponential-growth-28-2; }
+#SECTIONexponential-growth-29-2 { counter-set: SECTIONexponential-growth-29-2 0; }
+#SECTIONexponential-growth-29-2 > li::marker { content: ""counter(SECTIONexponential-growth-29-2,lower-roman)""; }
+#SECTIONexponential-growth-29-2 > li { counter-increment: SECTIONexponential-growth-29-2; }
+#SECTIONexponential-growth-30-2 { counter-set: SECTIONexponential-growth-30-2 0; }
+#SECTIONexponential-growth-30-2 > li::marker { content: ""counter(SECTIONexponential-growth-30-2,lower-roman)""; }
+#SECTIONexponential-growth-30-2 > li { counter-increment: SECTIONexponential-growth-30-2; }
+#SECTIONexponential-growth-33-3-1-1-2 { counter-set: SECTIONexponential-growth-33-3-1-1-2 0; }
+#SECTIONexponential-growth-33-3-1-1-2 > li::marker { content: ""counter(SECTIONexponential-growth-33-3-1-1-2,lower-roman)""; }
+#SECTIONexponential-growth-33-3-1-1-2 > li { counter-increment: SECTIONexponential-growth-33-3-1-1-2; }
+#SECTIONexponential-growth-37-1-1-1-4 { counter-set: SECTIONexponential-growth-37-1-1-1-4 0; }
+#SECTIONexponential-growth-37-1-1-1-4 > li::marker { content: ""counter(SECTIONexponential-growth-37-1-1-1-4,lower-roman)""; }
+#SECTIONexponential-growth-37-1-1-1-4 > li { counter-increment: SECTIONexponential-growth-37-1-1-1-4; }
+#PROBLEMHyperbolicTrig-2-1-1-1 { counter-set: PROBLEMHyperbolicTrig-2-1-1-1 0; }
+#PROBLEMHyperbolicTrig-2-1-1-1 > li::marker { content: ""counter(PROBLEMHyperbolicTrig-2-1-1-1,lower-roman)""; }
+#PROBLEMHyperbolicTrig-2-1-1-1 > li { counter-increment: PROBLEMHyperbolicTrig-2-1-1-1; }
+#SECTIONGatewayArch-5-4-1-1-3 { counter-set: SECTIONGatewayArch-5-4-1-1-3 0; }
+#SECTIONGatewayArch-5-4-1-1-3 > li::marker { content: ""counter(SECTIONGatewayArch-5-4-1-1-3,lower-roman)""; }
+#SECTIONGatewayArch-5-4-1-1-3 > li { counter-increment: SECTIONGatewayArch-5-4-1-1-3; }
+#PROBLEMBacteriaIVP1-5-1-1-3 { counter-set: PROBLEMBacteriaIVP1-5-1-1-3 0; }
+#PROBLEMBacteriaIVP1-5-1-1-3 > li::marker { content: ""counter(PROBLEMBacteriaIVP1-5-1-1-3,lower-roman)""; }
+#PROBLEMBacteriaIVP1-5-1-1-3 > li { counter-increment: PROBLEMBacteriaIVP1-5-1-1-3; }
+#SECTIONNatLog-4-2 { counter-set: SECTIONNatLog-4-2 0; }
+#SECTIONNatLog-4-2 > li::marker { content: ""counter(SECTIONNatLog-4-2,lower-roman)""; }
+#SECTIONNatLog-4-2 > li { counter-increment: SECTIONNatLog-4-2; }
+#SECTIONNatLog-9-2 { counter-set: SECTIONNatLog-9-2 0; }
+#SECTIONNatLog-9-2 > li::marker { content: ""counter(SECTIONNatLog-9-2,lower-roman)""; }
+#SECTIONNatLog-9-2 > li { counter-increment: SECTIONNatLog-9-2; }
+#SECTIONNatLog-11-2 { counter-set: SECTIONNatLog-11-2 0; }
+#SECTIONNatLog-11-2 > li::marker { content: ""counter(SECTIONNatLog-11-2,lower-roman)""; }
+#SECTIONNatLog-11-2 > li { counter-increment: SECTIONNatLog-11-2; }
+#SECTIONNatLog-12-1-1-1-4 { counter-set: SECTIONNatLog-12-1-1-1-4 0; }
+#SECTIONNatLog-12-1-1-1-4 > li::marker { content: ""counter(SECTIONNatLog-12-1-1-1-4,lower-roman)""; }
+#SECTIONNatLog-12-1-1-1-4 > li { counter-increment: SECTIONNatLog-12-1-1-1-4; }
+#SECTIONNatLog-12-2-1-1-4 { counter-set: SECTIONNatLog-12-2-1-1-4 0; }
+#SECTIONNatLog-12-2-1-1-4 > li::marker { content: ""counter(SECTIONNatLog-12-2-1-1-4,lower-roman)""; }
+#SECTIONNatLog-12-2-1-1-4 > li { counter-increment: SECTIONNatLog-12-2-1-1-4; }
+#SUBSECTIONradioactive-decay-9-1 { counter-set: SUBSECTIONradioactive-decay-9-1 0; }
+#SUBSECTIONradioactive-decay-9-1 > li::marker { content: ""counter(SUBSECTIONradioactive-decay-9-1,lower-roman)""; }
+#SUBSECTIONradioactive-decay-9-1 > li { counter-increment: SUBSECTIONradioactive-decay-9-1; }
+#SECTIONDerivNatLog-4-2 { counter-set: SECTIONDerivNatLog-4-2 0; }
+#SECTIONDerivNatLog-4-2 > li::marker { content: ""counter(SECTIONDerivNatLog-4-2,lower-roman)""; }
+#SECTIONDerivNatLog-4-2 > li { counter-increment: SECTIONDerivNatLog-4-2; }
+#PARAGRAPHSGenExp-16-2 { counter-set: PARAGRAPHSGenExp-16-2 0; }
+#PARAGRAPHSGenExp-16-2 > li::marker { content: ""counter(PARAGRAPHSGenExp-16-2,lower-roman)""; }
+#PARAGRAPHSGenExp-16-2 > li { counter-increment: PARAGRAPHSGenExp-16-2; }
+#PARAGRAPHSGenLog-7-2 { counter-set: PARAGRAPHSGenLog-7-2 0; }
+#PARAGRAPHSGenLog-7-2 > li::marker { content: ""counter(PARAGRAPHSGenLog-7-2,lower-roman)""; }
+#PARAGRAPHSGenLog-7-2 > li { counter-increment: PARAGRAPHSGenLog-7-2; }
+#DIGRESSIONBriggsAndNapier-7-1 { counter-set: DIGRESSIONBriggsAndNapier-7-1 0; }
+#DIGRESSIONBriggsAndNapier-7-1 > li::marker { content: ""counter(DIGRESSIONBriggsAndNapier-7-1,lower-roman)""; }
+#DIGRESSIONBriggsAndNapier-7-1 > li { counter-increment: DIGRESSIONBriggsAndNapier-7-1; }
+#DIGRESSIONBriggsAndNapier-11-2 { counter-set: DIGRESSIONBriggsAndNapier-11-2 0; }
+#DIGRESSIONBriggsAndNapier-11-2 > li::marker { content: ""counter(DIGRESSIONBriggsAndNapier-11-2,lower-roman)""; }
+#DIGRESSIONBriggsAndNapier-11-2 > li { counter-increment: DIGRESSIONBriggsAndNapier-11-2; }
+#DIGRESSIONBriggsAndNapier-12-1-1-1 { counter-set: DIGRESSIONBriggsAndNapier-12-1-1-1 0; }
+#DIGRESSIONBriggsAndNapier-12-1-1-1 > li::marker { content: ""counter(DIGRESSIONBriggsAndNapier-12-1-1-1,lower-roman)""; }
+#DIGRESSIONBriggsAndNapier-12-1-1-1 > li { counter-increment: DIGRESSIONBriggsAndNapier-12-1-1-1; }
+#DRILLIntuitiveSquareOnCircle-2 { counter-set: DRILLIntuitiveSquareOnCircle-2 0; }
+#DRILLIntuitiveSquareOnCircle-2 > li::marker { content: ""counter(DRILLIntuitiveSquareOnCircle-2,lower-roman)""; }
+#DRILLIntuitiveSquareOnCircle-2 > li { counter-increment: DRILLIntuitiveSquareOnCircle-2; }
+#DRILLExtremalSquareCircle-1 { counter-set: DRILLExtremalSquareCircle-1 0; }
+#DRILLExtremalSquareCircle-1 > li::marker { content: ""counter(DRILLExtremalSquareCircle-1,lower-roman)""; }
+#DRILLExtremalSquareCircle-1 > li { counter-increment: DRILLExtremalSquareCircle-1; }
+#PROBLEMMaxOrth1-3-1-3-8 { counter-set: PROBLEMMaxOrth1-3-1-3-8 0; }
+#PROBLEMMaxOrth1-3-1-3-8 > li::marker { content: ""counter(PROBLEMMaxOrth1-3-1-3-8,decimal)"."; }
+#PROBLEMMaxOrth1-3-1-3-8 > li { counter-increment: PROBLEMMaxOrth1-3-1-3-8; }
+#EXAMPLEDiffvsDer-5-1-1-2-1 { counter-set: EXAMPLEDiffvsDer-5-1-1-2-1 0; }
+#EXAMPLEDiffvsDer-5-1-1-2-1 > li::marker { content: ""counter(EXAMPLEDiffvsDer-5-1-1-2-1,decimal)"."; }
+#EXAMPLEDiffvsDer-5-1-1-2-1 > li { counter-increment: EXAMPLEDiffvsDer-5-1-1-2-1; }
+#EXAMPLEDiffvsDer-5-1-2-2-1 { counter-set: EXAMPLEDiffvsDer-5-1-2-2-1 0; }
+#EXAMPLEDiffvsDer-5-1-2-2-1 > li::marker { content: ""counter(EXAMPLEDiffvsDer-5-1-2-2-1,decimal)"."; }
+#EXAMPLEDiffvsDer-5-1-2-2-1 > li { counter-increment: EXAMPLEDiffvsDer-5-1-2-2-1; }
+#SECTIONfive-simil-probl-23-2 { counter-set: SECTIONfive-simil-probl-23-2 0; }
+#SECTIONfive-simil-probl-23-2 > li::marker { content: ""counter(SECTIONfive-simil-probl-23-2,lower-roman)""; }
+#SECTIONfive-simil-probl-23-2 > li { counter-increment: SECTIONfive-simil-probl-23-2; }
+#SECTIONfive-simil-probl-24-2 { counter-set: SECTIONfive-simil-probl-24-2 0; }
+#SECTIONfive-simil-probl-24-2 > li::marker { content: ""counter(SECTIONfive-simil-probl-24-2,lower-roman)""; }
+#SECTIONfive-simil-probl-24-2 > li { counter-increment: SECTIONfive-simil-probl-24-2; }
+#SECTIONrefl-refr-rainb-2-1-2 { counter-set: SECTIONrefl-refr-rainb-2-1-2 0; }
+#SECTIONrefl-refr-rainb-2-1-2 > li::marker { content: ""counter(SECTIONrefl-refr-rainb-2-1-2,decimal)"."; }
+#SECTIONrefl-refr-rainb-2-1-2 > li { counter-increment: SECTIONrefl-refr-rainb-2-1-2; }
+#SECTIONGlobalVsLocalExtrema-18-2 { counter-set: SECTIONGlobalVsLocalExtrema-18-2 0; }
+#SECTIONGlobalVsLocalExtrema-18-2 > li::marker { content: ""counter(SECTIONGlobalVsLocalExtrema-18-2,decimal)"."; }
+#SECTIONGlobalVsLocalExtrema-18-2 > li { counter-increment: SECTIONGlobalVsLocalExtrema-18-2; }
+#DIGRESSIONIntervalNotation-6-2 { counter-set: DIGRESSIONIntervalNotation-6-2 0; }
+#DIGRESSIONIntervalNotation-6-2 > li::marker { content: ""counter(DIGRESSIONIntervalNotation-6-2,lower-roman)""; }
+#DIGRESSIONIntervalNotation-6-2 > li { counter-increment: DIGRESSIONIntervalNotation-6-2; }
+#DIGRESSIONIntervalNotation-7-2 { counter-set: DIGRESSIONIntervalNotation-7-2 0; }
+#DIGRESSIONIntervalNotation-7-2 > li::marker { content: ""counter(DIGRESSIONIntervalNotation-7-2,lower-roman)""; }
+#DIGRESSIONIntervalNotation-7-2 > li { counter-increment: DIGRESSIONIntervalNotation-7-2; }
+#THEOREMFDT-lines-2-1 { counter-set: THEOREMFDT-lines-2-1 0; }
+#THEOREMFDT-lines-2-1 > li::marker { content: ""counter(THEOREMFDT-lines-2-1,decimal)"."; }
+#THEOREMFDT-lines-2-1 > li { counter-increment: THEOREMFDT-lines-2-1; }
+#THEOREMFDT-3-3 { counter-set: THEOREMFDT-3-3 0; }
+#THEOREMFDT-3-3 > li::marker { content: ""counter(THEOREMFDT-3-3,decimal)"."; }
+#THEOREMFDT-3-3 > li { counter-increment: THEOREMFDT-3-3; }
+#LEMMAAdjRoots-1-2 { counter-set: LEMMAAdjRoots-1-2 0; }
+#LEMMAAdjRoots-1-2 > li::marker { content: ""counter(LEMMAAdjRoots-1-2,decimal)"."; }
+#LEMMAAdjRoots-1-2 > li { counter-increment: LEMMAAdjRoots-1-2; }
+#PROBLEMFDT1A-1-2 { counter-set: PROBLEMFDT1A-1-2 0; }
+#PROBLEMFDT1A-1-2 > li::marker { content: ""counter(PROBLEMFDT1A-1-2,lower-roman)""; }
+#PROBLEMFDT1A-1-2 > li { counter-increment: PROBLEMFDT1A-1-2; }
+#DRILLFDT2-2 { counter-set: DRILLFDT2-2 0; }
+#DRILLFDT2-2 > li::marker { content: ""counter(DRILLFDT2-2,lower-roman)""; }
+#DRILLFDT2-2 > li { counter-increment: DRILLFDT2-2; }
+#DEFINITIONOptimalTransitionPoints-4-1-3 { counter-set: DEFINITIONOptimalTransitionPoints-4-1-3 0; }
+#DEFINITIONOptimalTransitionPoints-4-1-3 > li::marker { content: ""counter(DEFINITIONOptimalTransitionPoints-4-1-3,decimal)"."; }
+#DEFINITIONOptimalTransitionPoints-4-1-3 > li { counter-increment: DEFINITIONOptimalTransitionPoints-4-1-3; }
+#DRILLFDT3-3 { counter-set: DRILLFDT3-3 0; }
+#DRILLFDT3-3 > li::marker { content: ""counter(DRILLFDT3-3,lower-roman)""; }
+#DRILLFDT3-3 > li { counter-increment: DRILLFDT3-3; }
+#SUBSECTIONoptim-clos-interv-5-1 { counter-set: SUBSECTIONoptim-clos-interv-5-1 0; }
+#SUBSECTIONoptim-clos-interv-5-1 > li::marker { content: ""counter(SUBSECTIONoptim-clos-interv-5-1,decimal)"."; }
+#SUBSECTIONoptim-clos-interv-5-1 > li { counter-increment: SUBSECTIONoptim-clos-interv-5-1; }
+#THEOREMmax-min-3-2 { counter-set: THEOREMmax-min-3-2 0; }
+#THEOREMmax-min-3-2 > li::marker { content: ""counter(THEOREMmax-min-3-2,decimal)"."; }
+#THEOREMmax-min-3-2 > li { counter-increment: THEOREMmax-min-3-2; }
+#SUBSECTIONoptim-clos-interv-13-2-1-1-2 { counter-set: SUBSECTIONoptim-clos-interv-13-2-1-1-2 0; }
+#SUBSECTIONoptim-clos-interv-13-2-1-1-2 > li::marker { content: ""counter(SUBSECTIONoptim-clos-interv-13-2-1-1-2,lower-roman)""; }
+#SUBSECTIONoptim-clos-interv-13-2-1-1-2 > li { counter-increment: SUBSECTIONoptim-clos-interv-13-2-1-1-2; }
+#SUBSECTIONoptim-clos-interv-13-3-1-1-2 { counter-set: SUBSECTIONoptim-clos-interv-13-3-1-1-2 0; }
+#SUBSECTIONoptim-clos-interv-13-3-1-1-2 > li::marker { content: ""counter(SUBSECTIONoptim-clos-interv-13-3-1-1-2,lower-roman)""; }
+#SUBSECTIONoptim-clos-interv-13-3-1-1-2 > li { counter-increment: SUBSECTIONoptim-clos-interv-13-3-1-1-2; }
+#SUBSECTIONoptim-clos-interv-14-1-1 { counter-set: SUBSECTIONoptim-clos-interv-14-1-1 0; }
+#SUBSECTIONoptim-clos-interv-14-1-1 > li::marker { content: ""counter(SUBSECTIONoptim-clos-interv-14-1-1,lower-roman)""; }
+#SUBSECTIONoptim-clos-interv-14-1-1 > li { counter-increment: SUBSECTIONoptim-clos-interv-14-1-1; }
+#DRILLO1O2-2-1-1-2 { counter-set: DRILLO1O2-2-1-1-2 0; }
+#DRILLO1O2-2-1-1-2 > li::marker { content: ""counter(DRILLO1O2-2-1-1-2,lower-roman)""; }
+#DRILLO1O2-2-1-1-2 > li { counter-increment: DRILLO1O2-2-1-1-2; }
+#THEOREMwhat-second-deriv-3-3 { counter-set: THEOREMwhat-second-deriv-3-3 0; }
+#THEOREMwhat-second-deriv-3-3 > li::marker { content: ""counter(THEOREMwhat-second-deriv-3-3,lower-alpha)""; }
+#THEOREMwhat-second-deriv-3-3 > li { counter-increment: THEOREMwhat-second-deriv-3-3; }
+#THEOREMSecondDerivativeTest-3-4 { counter-set: THEOREMSecondDerivativeTest-3-4 0; }
+#THEOREMSecondDerivativeTest-3-4 > li::marker { content: ""counter(THEOREMSecondDerivativeTest-3-4,lower-alpha)""; }
+#THEOREMSecondDerivativeTest-3-4 > li { counter-increment: THEOREMSecondDerivativeTest-3-4; }
+#DRILLSecondDerivativeTest-2 { counter-set: DRILLSecondDerivativeTest-2 0; }
+#DRILLSecondDerivativeTest-2 > li::marker { content: ""counter(DRILLSecondDerivativeTest-2,lower-roman)""; }
+#DRILLSecondDerivativeTest-2 > li { counter-increment: DRILLSecondDerivativeTest-2; }
+#SUBSECTIONconc-second-deriv-44-2 { counter-set: SUBSECTIONconc-second-deriv-44-2 0; }
+#SUBSECTIONconc-second-deriv-44-2 > li::marker { content: ""counter(SUBSECTIONconc-second-deriv-44-2,lower-roman)""; }
+#SUBSECTIONconc-second-deriv-44-2 > li { counter-increment: SUBSECTIONconc-second-deriv-44-2; }
+#SUBSECTIONconc-second-deriv-45-2 { counter-set: SUBSECTIONconc-second-deriv-45-2 0; }
+#SUBSECTIONconc-second-deriv-45-2 > li::marker { content: ""counter(SUBSECTIONconc-second-deriv-45-2,lower-roman)""; }
+#SUBSECTIONconc-second-deriv-45-2 > li { counter-increment: SUBSECTIONconc-second-deriv-45-2; }
+#SECTIONoptim-probl-2-3-1 { counter-set: SECTIONoptim-probl-2-3-1 0; }
+#SECTIONoptim-probl-2-3-1 > li::marker { content: ""counter(SECTIONoptim-probl-2-3-1,decimal)"."; }
+#SECTIONoptim-probl-2-3-1 > li { counter-increment: SECTIONoptim-probl-2-3-1; }
+#EXAMPLERectangleFixedPerimeter-6-1 { counter-set: EXAMPLERectangleFixedPerimeter-6-1 0; }
+#EXAMPLERectangleFixedPerimeter-6-1 > li::marker { content: ""counter(EXAMPLERectangleFixedPerimeter-6-1,decimal)"."; }
+#EXAMPLERectangleFixedPerimeter-6-1 > li { counter-increment: EXAMPLERectangleFixedPerimeter-6-1; }
+#PROBLEMMaxPerimeter-5-1-1-2 { counter-set: PROBLEMMaxPerimeter-5-1-1-2 0; }
+#PROBLEMMaxPerimeter-5-1-1-2 > li::marker { content: ""counter(PROBLEMMaxPerimeter-5-1-1-2,lower-roman)""; }
+#PROBLEMMaxPerimeter-5-1-1-2 > li { counter-increment: PROBLEMMaxPerimeter-5-1-1-2; }
+#SUBSUBSECTIONFirstSolution-12-1 { counter-set: SUBSUBSECTIONFirstSolution-12-1 0; }
+#SUBSUBSECTIONFirstSolution-12-1 > li::marker { content: ""counter(SUBSUBSECTIONFirstSolution-12-1,lower-roman)""; }
+#SUBSUBSECTIONFirstSolution-12-1 > li { counter-increment: SUBSUBSECTIONFirstSolution-12-1; }
+#SUBSECTIONVarOptProbs-2-2-1-1-1 { counter-set: SUBSECTIONVarOptProbs-2-2-1-1-1 0; }
+#SUBSECTIONVarOptProbs-2-2-1-1-1 > li::marker { content: ""counter(SUBSECTIONVarOptProbs-2-2-1-1-1,lower-roman)""; }
+#SUBSECTIONVarOptProbs-2-2-1-1-1 > li { counter-increment: SUBSECTIONVarOptProbs-2-2-1-1-1; }
+#SUBSECTIONVarOptProbs-2-3-1-1-1 { counter-set: SUBSECTIONVarOptProbs-2-3-1-1-1 0; }
+#SUBSECTIONVarOptProbs-2-3-1-1-1 > li::marker { content: ""counter(SUBSECTIONVarOptProbs-2-3-1-1-1,lower-roman)""; }
+#SUBSECTIONVarOptProbs-2-3-1-1-1 > li { counter-increment: SUBSECTIONVarOptProbs-2-3-1-1-1; }
+#SUBSECTIONVarOptProbs-2-4-1-1-1 { counter-set: SUBSECTIONVarOptProbs-2-4-1-1-1 0; }
+#SUBSECTIONVarOptProbs-2-4-1-1-1 > li::marker { content: ""counter(SUBSECTIONVarOptProbs-2-4-1-1-1,lower-roman)""; }
+#SUBSECTIONVarOptProbs-2-4-1-1-1 > li { counter-increment: SUBSECTIONVarOptProbs-2-4-1-1-1; }
+#SUBSECTIONVarOptProbs-3-3-1-1-1 { counter-set: SUBSECTIONVarOptProbs-3-3-1-1-1 0; }
+#SUBSECTIONVarOptProbs-3-3-1-1-1 > li::marker { content: ""counter(SUBSECTIONVarOptProbs-3-3-1-1-1,lower-roman)""; }
+#SUBSECTIONVarOptProbs-3-3-1-1-1 > li { counter-increment: SUBSECTIONVarOptProbs-3-3-1-1-1; }
+#SUBSECTIONVarOptProbs-3-4-1-1-1 { counter-set: SUBSECTIONVarOptProbs-3-4-1-1-1 0; }
+#SUBSECTIONVarOptProbs-3-4-1-1-1 > li::marker { content: ""counter(SUBSECTIONVarOptProbs-3-4-1-1-1,lower-roman)""; }
+#SUBSECTIONVarOptProbs-3-4-1-1-1 > li { counter-increment: SUBSECTIONVarOptProbs-3-4-1-1-1; }
+#SUBSECTIONVarOptProbs-4-2-1-2-1 { counter-set: SUBSECTIONVarOptProbs-4-2-1-2-1 0; }
+#SUBSECTIONVarOptProbs-4-2-1-2-1 > li::marker { content: ""counter(SUBSECTIONVarOptProbs-4-2-1-2-1,lower-roman)""; }
+#SUBSECTIONVarOptProbs-4-2-1-2-1 > li { counter-increment: SUBSECTIONVarOptProbs-4-2-1-2-1; }
+#PROBLEMWitchTri1-3-1-1-7 { counter-set: PROBLEMWitchTri1-3-1-1-7 0; }
+#PROBLEMWitchTri1-3-1-1-7 > li::marker { content: ""counter(PROBLEMWitchTri1-3-1-1-7,lower-roman)""; }
+#PROBLEMWitchTri1-3-1-1-7 > li { counter-increment: PROBLEMWitchTri1-3-1-1-7; }
+#SUBSECTIONVarOptProbs-14-3-1-3 { counter-set: SUBSECTIONVarOptProbs-14-3-1-3 0; }
+#SUBSECTIONVarOptProbs-14-3-1-3 > li::marker { content: ""counter(SUBSECTIONVarOptProbs-14-3-1-3,lower-roman)""; }
+#SUBSECTIONVarOptProbs-14-3-1-3 > li { counter-increment: SUBSECTIONVarOptProbs-14-3-1-3; }
+#SUBSECTIONVarOptProbs-14-4-1-3 { counter-set: SUBSECTIONVarOptProbs-14-4-1-3 0; }
+#SUBSECTIONVarOptProbs-14-4-1-3 > li::marker { content: ""counter(SUBSECTIONVarOptProbs-14-4-1-3,lower-roman)""; }
+#SUBSECTIONVarOptProbs-14-4-1-3 > li { counter-increment: SUBSECTIONVarOptProbs-14-4-1-3; }
+#SECTIONgraph-with-form-19-2 { counter-set: SECTIONgraph-with-form-19-2 0; }
+#SECTIONgraph-with-form-19-2 > li::marker { content: ""counter(SECTIONgraph-with-form-19-2,decimal)"."; }
+#SECTIONgraph-with-form-19-2 > li { counter-increment: SECTIONgraph-with-form-19-2; }
+#SECTIONgraph-with-form-23-1 { counter-set: SECTIONgraph-with-form-23-1 0; }
+#SECTIONgraph-with-form-23-1 > li::marker { content: ""counter(SECTIONgraph-with-form-23-1,lower-roman)""; }
+#SECTIONgraph-with-form-23-1 > li { counter-increment: SECTIONgraph-with-form-23-1; }
+#SECTIONgraph-with-form-30-1-1 { counter-set: SECTIONgraph-with-form-30-1-1 0; }
+#SECTIONgraph-with-form-30-1-1 > li::marker { content: ""counter(SECTIONgraph-with-form-30-1-1,lower-roman)""; }
+#SECTIONgraph-with-form-30-1-1 > li { counter-increment: SECTIONgraph-with-form-30-1-1; }
+#SUBSECTIONModelingTrout-17-2 { counter-set: SUBSECTIONModelingTrout-17-2 0; }
+#SUBSECTIONModelingTrout-17-2 > li::marker { content: ""counter(SUBSECTIONModelingTrout-17-2,decimal)"."; }
+#SUBSECTIONModelingTrout-17-2 > li { counter-increment: SUBSECTIONModelingTrout-17-2; }
+#SUBSECTIONModelingTrout-24-1-2 { counter-set: SUBSECTIONModelingTrout-24-1-2 0; }
+#SUBSECTIONModelingTrout-24-1-2 > li::marker { content: ""counter(SUBSECTIONModelingTrout-24-1-2,lower-roman)""; }
+#SUBSECTIONModelingTrout-24-1-2 > li { counter-increment: SUBSECTIONModelingTrout-24-1-2; }
+#SUBSECTIONModelingTrout-39-2-1-1-2 { counter-set: SUBSECTIONModelingTrout-39-2-1-1-2 0; }
+#SUBSECTIONModelingTrout-39-2-1-1-2 > li::marker { content: ""counter(SUBSECTIONModelingTrout-39-2-1-1-2,lower-roman)""; }
+#SUBSECTIONModelingTrout-39-2-1-1-2 > li { counter-increment: SUBSECTIONModelingTrout-39-2-1-1-2; }
+#PROBLEMMinViablePop-6-1-1-3 { counter-set: PROBLEMMinViablePop-6-1-1-3 0; }
+#PROBLEMMinViablePop-6-1-1-3 > li::marker { content: ""counter(PROBLEMMinViablePop-6-1-1-3,lower-roman)""; }
+#PROBLEMMinViablePop-6-1-1-3 > li { counter-increment: PROBLEMMinViablePop-6-1-1-3; }
+#SECTIONlittle-healthy-comp-21-1 { counter-set: SECTIONlittle-healthy-comp-21-1 0; }
+#SECTIONlittle-healthy-comp-21-1 > li::marker { content: ""counter(SECTIONlittle-healthy-comp-21-1,lower-roman)""; }
+#SECTIONlittle-healthy-comp-21-1 > li { counter-increment: SECTIONlittle-healthy-comp-21-1; }
+#SECTIONlittle-healthy-comp-28-3-1-1-3 { counter-set: SECTIONlittle-healthy-comp-28-3-1-1-3 0; }
+#SECTIONlittle-healthy-comp-28-3-1-1-3 > li::marker { content: ""counter(SECTIONlittle-healthy-comp-28-3-1-1-3,lower-roman)""; }
+#SECTIONlittle-healthy-comp-28-3-1-1-3 > li { counter-increment: SECTIONlittle-healthy-comp-28-3-1-1-3; }
+#DEFINITIONLimitAtInfinity-Intuitive-3-1-1 { counter-set: DEFINITIONLimitAtInfinity-Intuitive-3-1-1 0; }
+#DEFINITIONLimitAtInfinity-Intuitive-3-1-1 > li::marker { content: ""counter(DEFINITIONLimitAtInfinity-Intuitive-3-1-1,decimal)"."; }
+#DEFINITIONLimitAtInfinity-Intuitive-3-1-1 > li { counter-increment: DEFINITIONLimitAtInfinity-Intuitive-3-1-1; }
+#DEFINITIONHorizontalAsymptotes-3-1-1 { counter-set: DEFINITIONHorizontalAsymptotes-3-1-1 0; }
+#DEFINITIONHorizontalAsymptotes-3-1-1 > li::marker { content: ""counter(DEFINITIONHorizontalAsymptotes-3-1-1,decimal)"."; }
+#DEFINITIONHorizontalAsymptotes-3-1-1 > li { counter-increment: DEFINITIONHorizontalAsymptotes-3-1-1; }
+#DIGRESSIONLimitNotation-47-2 { counter-set: DIGRESSIONLimitNotation-47-2 0; }
+#DIGRESSIONLimitNotation-47-2 > li::marker { content: ""counter(DIGRESSIONLimitNotation-47-2,lower-roman)""; }
+#DIGRESSIONLimitNotation-47-2 > li { counter-increment: DIGRESSIONLimitNotation-47-2; }
+#DIGRESSIONLimitNotation-62-2 { counter-set: DIGRESSIONLimitNotation-62-2 0; }
+#DIGRESSIONLimitNotation-62-2 > li::marker { content: ""counter(DIGRESSIONLimitNotation-62-2,lower-roman)""; }
+#DIGRESSIONLimitNotation-62-2 > li { counter-increment: DIGRESSIONLimitNotation-62-2; }
+#DIGRESSIONLimitNotation-66-2 { counter-set: DIGRESSIONLimitNotation-66-2 0; }
+#DIGRESSIONLimitNotation-66-2 > li::marker { content: ""counter(DIGRESSIONLimitNotation-66-2,lower-roman)""; }
+#DIGRESSIONLimitNotation-66-2 > li { counter-increment: DIGRESSIONLimitNotation-66-2; }
+#THEOREMInfSqueeze-3-1 { counter-set: THEOREMInfSqueeze-3-1 0; }
+#THEOREMInfSqueeze-3-1 > li::marker { content: ""counter(THEOREMInfSqueeze-3-1,decimal)"."; }
+#THEOREMInfSqueeze-3-1 > li { counter-increment: THEOREMInfSqueeze-3-1; }
+#SECTIONvertical-asymptotes-14-2 { counter-set: SECTIONvertical-asymptotes-14-2 0; }
+#SECTIONvertical-asymptotes-14-2 > li::marker { content: ""counter(SECTIONvertical-asymptotes-14-2,lower-roman)""; }
+#SECTIONvertical-asymptotes-14-2 > li { counter-increment: SECTIONvertical-asymptotes-14-2; }
+#PROBLEMFoliumOfDescartes2-6-1-1-1 { counter-set: PROBLEMFoliumOfDescartes2-6-1-1-1 0; }
+#PROBLEMFoliumOfDescartes2-6-1-1-1 > li::marker { content: ""counter(PROBLEMFoliumOfDescartes2-6-1-1-1,decimal)"."; }
+#PROBLEMFoliumOfDescartes2-6-1-1-1 > li { counter-increment: PROBLEMFoliumOfDescartes2-6-1-1-1; }
+#SUBSECTIONLHopitalsRule-33-1 { counter-set: SUBSECTIONLHopitalsRule-33-1 0; }
+#SUBSECTIONLHopitalsRule-33-1 > li::marker { content: ""counter(SUBSECTIONLHopitalsRule-33-1,lower-roman)""; }
+#SUBSECTIONLHopitalsRule-33-1 > li { counter-increment: SUBSECTIONLHopitalsRule-33-1; }
+#SUBSECTIONLHopitalsRule-37-1 { counter-set: SUBSECTIONLHopitalsRule-37-1 0; }
+#SUBSECTIONLHopitalsRule-37-1 > li::marker { content: ""counter(SUBSECTIONLHopitalsRule-37-1,lower-roman)""; }
+#SUBSECTIONLHopitalsRule-37-1 > li { counter-increment: SUBSECTIONLHopitalsRule-37-1; }
+#SUBSECTIONLHopitalsRule-59-1-1 { counter-set: SUBSECTIONLHopitalsRule-59-1-1 0; }
+#SUBSECTIONLHopitalsRule-59-1-1 > li::marker { content: ""counter(SUBSECTIONLHopitalsRule-59-1-1,lower-roman)""; }
+#SUBSECTIONLHopitalsRule-59-1-1 > li { counter-increment: SUBSECTIONLHopitalsRule-59-1-1; }
+#SUBSECTIONlhop-rule-horiz-14-1 { counter-set: SUBSECTIONlhop-rule-horiz-14-1 0; }
+#SUBSECTIONlhop-rule-horiz-14-1 > li::marker { content: ""counter(SUBSECTIONlhop-rule-horiz-14-1,lower-roman)""; }
+#SUBSECTIONlhop-rule-horiz-14-1 > li { counter-increment: SUBSECTIONlhop-rule-horiz-14-1; }
+#SUBSECTIONlhop-rule-horiz-18-2-1-1-1 { counter-set: SUBSECTIONlhop-rule-horiz-18-2-1-1-1 0; }
+#SUBSECTIONlhop-rule-horiz-18-2-1-1-1 > li::marker { content: ""counter(SUBSECTIONlhop-rule-horiz-18-2-1-1-1,lower-roman)""; }
+#SUBSECTIONlhop-rule-horiz-18-2-1-1-1 > li { counter-increment: SUBSECTIONlhop-rule-horiz-18-2-1-1-1; }
+#SUBSECTIONlhop-rule-horiz-18-5-1-1-2 { counter-set: SUBSECTIONlhop-rule-horiz-18-5-1-1-2 0; }
+#SUBSECTIONlhop-rule-horiz-18-5-1-1-2 > li::marker { content: ""counter(SUBSECTIONlhop-rule-horiz-18-5-1-1-2,lower-roman)""; }
+#SUBSECTIONlhop-rule-horiz-18-5-1-1-2 > li { counter-increment: SUBSECTIONlhop-rule-horiz-18-5-1-1-2; }
+#SUBSECTIONlhop-rule-horiz-27-1 { counter-set: SUBSECTIONlhop-rule-horiz-27-1 0; }
+#SUBSECTIONlhop-rule-horiz-27-1 > li::marker { content: ""counter(SUBSECTIONlhop-rule-horiz-27-1,decimal)"."; }
+#SUBSECTIONlhop-rule-horiz-27-1 > li { counter-increment: SUBSECTIONlhop-rule-horiz-27-1; }
+#SUBSECTIONlhop-rule-horiz-29-4 { counter-set: SUBSECTIONlhop-rule-horiz-29-4 0; }
+#SUBSECTIONlhop-rule-horiz-29-4 > li::marker { content: ""counter(SUBSECTIONlhop-rule-horiz-29-4,decimal)"."; }
+#SUBSECTIONlhop-rule-horiz-29-4 > li { counter-increment: SUBSECTIONlhop-rule-horiz-29-4; }
+#SECTIONsecants-tangents-15-1 { counter-set: SECTIONsecants-tangents-15-1 0; }
+#SECTIONsecants-tangents-15-1 > li::marker { content: ""counter(SECTIONsecants-tangents-15-1,decimal)"."; }
+#SECTIONsecants-tangents-15-1 > li { counter-increment: SECTIONsecants-tangents-15-1; }
+#PROBLEMBounds-1-1-4 { counter-set: PROBLEMBounds-1-1-4 0; }
+#PROBLEMBounds-1-1-4 > li::marker { content: ""counter(PROBLEMBounds-1-1-4,lower-roman)""; }
+#PROBLEMBounds-1-1-4 > li { counter-increment: PROBLEMBounds-1-1-4; }
+#SUBSECTIONlimit-comp-cont-5-3 { counter-set: SUBSECTIONlimit-comp-cont-5-3 0; }
+#SUBSECTIONlimit-comp-cont-5-3 > li::marker { content: ""counter(SUBSECTIONlimit-comp-cont-5-3,decimal)"."; }
+#SUBSECTIONlimit-comp-cont-5-3 > li { counter-increment: SUBSECTIONlimit-comp-cont-5-3; }
+#SUBSECTIONlimit-comp-cont-23-1 { counter-set: SUBSECTIONlimit-comp-cont-23-1 0; }
+#SUBSECTIONlimit-comp-cont-23-1 > li::marker { content: ""counter(SUBSECTIONlimit-comp-cont-23-1,lower-roman)""; }
+#SUBSECTIONlimit-comp-cont-23-1 > li { counter-increment: SUBSECTIONlimit-comp-cont-23-1; }
+#SUBSECTIONlimit-comp-cont-24-2 { counter-set: SUBSECTIONlimit-comp-cont-24-2 0; }
+#SUBSECTIONlimit-comp-cont-24-2 > li::marker { content: ""counter(SUBSECTIONlimit-comp-cont-24-2,lower-roman)""; }
+#SUBSECTIONlimit-comp-cont-24-2 > li { counter-increment: SUBSECTIONlimit-comp-cont-24-2; }
+#DIGRESSIONDeltaBetaNotZero-7-3-1-1-5 { counter-set: DIGRESSIONDeltaBetaNotZero-7-3-1-1-5 0; }
+#DIGRESSIONDeltaBetaNotZero-7-3-1-1-5 > li::marker { content: ""counter(DIGRESSIONDeltaBetaNotZero-7-3-1-1-5,lower-roman)""; }
+#DIGRESSIONDeltaBetaNotZero-7-3-1-1-5 > li { counter-increment: DIGRESSIONDeltaBetaNotZero-7-3-1-1-5; }
+#PROBLEMQR-rigor-2-1-1-2 { counter-set: PROBLEMQR-rigor-2-1-1-2 0; }
+#PROBLEMQR-rigor-2-1-1-2 > li::marker { content: ""counter(PROBLEMQR-rigor-2-1-1-2,lower-roman)""; }
+#PROBLEMQR-rigor-2-1-1-2 > li { counter-increment: PROBLEMQR-rigor-2-1-1-2; }
+#DRILLCircularReasoning-1-1-3 { counter-set: DRILLCircularReasoning-1-1-3 0; }
+#DRILLCircularReasoning-1-1-3 > li::marker { content: ""counter(DRILLCircularReasoning-1-1-3,lower-roman)""; }
+#DRILLCircularReasoning-1-1-3 > li { counter-increment: DRILLCircularReasoning-1-1-3; }
+#DEFINITIONFunctionInverse-3-1-8 { counter-set: DEFINITIONFunctionInverse-3-1-8 0; }
+#DEFINITIONFunctionInverse-3-1-8 > li::marker { content: ""counter(DEFINITIONFunctionInverse-3-1-8,decimal)"."; }
+#DEFINITIONFunctionInverse-3-1-8 > li { counter-increment: DEFINITIONFunctionInverse-3-1-8; }
+#SECTIONinverse-functions-21-1 { counter-set: SECTIONinverse-functions-21-1 0; }
+#SECTIONinverse-functions-21-1 > li::marker { content: ""counter(SECTIONinverse-functions-21-1,decimal)"."; }
+#SECTIONinverse-functions-21-1 > li { counter-increment: SECTIONinverse-functions-21-1; }
+#SECTIONinverse-functions-23-2 { counter-set: SECTIONinverse-functions-23-2 0; }
+#SECTIONinverse-functions-23-2 > li::marker { content: ""counter(SECTIONinverse-functions-23-2,decimal)"."; }
+#SECTIONinverse-functions-23-2 > li { counter-increment: SECTIONinverse-functions-23-2; }
+#THEOREMDerivInvFunc-3-1 { counter-set: THEOREMDerivInvFunc-3-1 0; }
+#THEOREMDerivInvFunc-3-1 > li::marker { content: ""counter(THEOREMDerivInvFunc-3-1,decimal)"."; }
+#THEOREMDerivInvFunc-3-1 > li { counter-increment: THEOREMDerivInvFunc-3-1; }
+#DRILLRollesLemma1-1 { counter-set: DRILLRollesLemma1-1 0; }
+#DRILLRollesLemma1-1 > li::marker { content: ""counter(DRILLRollesLemma1-1,lower-roman)""; }
+#DRILLRollesLemma1-1 > li { counter-increment: DRILLRollesLemma1-1; }
+#THEOREMFDTproved-3-8 { counter-set: THEOREMFDTproved-3-8 0; }
+#THEOREMFDTproved-3-8 > li::marker { content: ""counter(THEOREMFDTproved-3-8,decimal)"."; }
+#THEOREMFDTproved-3-8 > li { counter-increment: THEOREMFDTproved-3-8; }
+#PROBLEMAbsValDeriv-1-1-1-5 { counter-set: PROBLEMAbsValDeriv-1-1-1-5 0; }
+#PROBLEMAbsValDeriv-1-1-1-5 > li::marker { content: ""counter(PROBLEMAbsValDeriv-1-1-1-5,decimal)"."; }
+#PROBLEMAbsValDeriv-1-1-1-5 > li { counter-increment: PROBLEMAbsValDeriv-1-1-1-5; }
+#DEFINITIONone-sided-deriv-3-1-3 { counter-set: DEFINITIONone-sided-deriv-3-1-3 0; }
+#DEFINITIONone-sided-deriv-3-1-3 > li::marker { content: ""counter(DEFINITIONone-sided-deriv-3-1-3,decimal)"."; }
+#DEFINITIONone-sided-deriv-3-1-3 > li { counter-increment: DEFINITIONone-sided-deriv-3-1-3; }
+#PROBLEMHeaviTranslate-2-1-1-3 { counter-set: PROBLEMHeaviTranslate-2-1-1-3 0; }
+#PROBLEMHeaviTranslate-2-1-1-3 > li::marker { content: ""counter(PROBLEMHeaviTranslate-2-1-1-3,lower-roman)""; }
+#PROBLEMHeaviTranslate-2-1-1-3 > li { counter-increment: PROBLEMHeaviTranslate-2-1-1-3; }
+#PROBLEMHeaviTranslate-3-1-1-4 { counter-set: PROBLEMHeaviTranslate-3-1-1-4 0; }
+#PROBLEMHeaviTranslate-3-1-1-4 > li::marker { content: ""counter(PROBLEMHeaviTranslate-3-1-1-4,lower-roman)""; }
+#PROBLEMHeaviTranslate-3-1-1-4 > li { counter-increment: PROBLEMHeaviTranslate-3-1-1-4; }
+#SECTIONone-sided-deriv-11-3 { counter-set: SECTIONone-sided-deriv-11-3 0; }
+#SECTIONone-sided-deriv-11-3 > li::marker { content: ""counter(SECTIONone-sided-deriv-11-3,decimal)"."; }
+#SECTIONone-sided-deriv-11-3 > li { counter-increment: SECTIONone-sided-deriv-11-3; }
+</style>
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -228,9 +800,9 @@ window.MathJax = {
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
-<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
-<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Epigraphs</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-5.html" class="internal"><span class="title">Epigraphs</span></a></div></li>
 <li class="toc-item toc-preface"><div class="toc-title-box"><a href="SECinstructor.html" class="internal"><span class="title">To the Instructor: Read This First</span></a></div></li>
 </ul>
 </li>
@@ -557,10 +1129,15 @@ window.MathJax = {
 <span class="type">Chapter</span><span class="space"> </span><span class="codenumber">2</span><span class="space"> </span><span class="title">Introduction: Some  Advice on Problem Solving</span>
 </h2>
 <section class="introduction" id="CHAPTERproblem-solving-2"><blockquote class="blockquote" id="CHAPTERproblem-solving-2-1">
-<div class="para" id="CHAPTERproblem-solving-2-1-1">The most difficult thing is the decision to act, the rest is merely tenacity.</div> <cite class="attribution">―<a class="external" href="https://en.wikipedia.org/wiki/Amelia_Earhart" target="_blank">Amelia Earhart (1897-1937</a><a class="xref" id="CHAPTERproblem-solving-2-1-2-2" href="" data-knowl="./knowl/fn/CHAPTERproblem-solving-2-1-2-2.html" title="Footnote 2.1"><sup> 1 </sup></a></cite>
-</blockquote> <blockquote class="blockquote" id="CHAPTERproblem-solving-2-2">
-<div class="para" id="CHAPTERproblem-solving-2-2-1">You just keep pushing. You just keep pushing. I made every mistake that could be made. But I just kept pushing.</div> <cite class="attribution">―<a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Descartes/" target="_blank">Renè  Descartes} (<span class="process-math">\(1596-1650\)</span>)</a><a class="xref" id="CHAPTERproblem-solving-2-2-2-2" href="" data-knowl="./knowl/fn/CHAPTERproblem-solving-2-2-2-2.html" title="Footnote 2.2"><sup> 2 </sup></a></cite>
-</blockquote> <div class="para" id="CHAPTERproblem-solving-2-3">Our purpose here is to give you our very best advice on how to succeed in this course and a realistic impression of the level of difficulty of the course material. Please read this carefully and take our advice. We know what we are talking about. Believe us.</div> <div class="para" id="CHAPTERproblem-solving-2-4">Because the topic we will be studying is called <dfn class="terminology">Calculus</dfn> there is a strong tendency to assume that only the concepts and techniques of Calculus are needed to solve the problems you will encounter in this course. That is not true. You will need all of the mathematics you know. And probably more. Really.</div></section><section class="section" id="SECusing-lett-inst"><h3 class="heading hide-type">
+<div class="para" id="CHAPTERproblem-solving-2-1-1">The most difficult thing is the decision to act, the rest is merely tenacity.</div>
+<cite class="attribution">―<a class="external" href="https://en.wikipedia.org/wiki/Amelia_Earhart" target="_blank">Amelia Earhart (1897-1937</a><details class="ptx-footnote" aria-live="polite" id="CHAPTERproblem-solving-2-1-2-2"><summary class="ptx-footnote__number" title="Footnote 2.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="CHAPTERproblem-solving-2-1-2-2"><code class="code-inline tex2jax_ignore">https://en.wikipedia.org/wiki/Amelia_Earhart</code></div></details></cite>
+</blockquote>
+<blockquote class="blockquote" id="CHAPTERproblem-solving-2-2">
+<div class="para" id="CHAPTERproblem-solving-2-2-1">You just keep pushing. You just keep pushing. I made every mistake that could be made. But I just kept pushing.</div>
+<cite class="attribution">―<a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Descartes/" target="_blank">Renè  Descartes} (<span class="process-math">\(1596-1650\)</span>)</a><details class="ptx-footnote" aria-live="polite" id="CHAPTERproblem-solving-2-2-2-2"><summary class="ptx-footnote__number" title="Footnote 2.2"><sup> 2 </sup></summary><div class="ptx-footnote__contents" id="CHAPTERproblem-solving-2-2-2-2"><code class="code-inline tex2jax_ignore">https://mathshistory.st-andrews.ac.uk/Biographies/Descartes/</code></div></details></cite>
+</blockquote>
+<div class="para" id="CHAPTERproblem-solving-2-3">Our purpose here is to give you our very best advice on how to succeed in this course and a realistic impression of the level of difficulty of the course material. Please read this carefully and take our advice. We know what we are talking about. Believe us.</div>
+<div class="para" id="CHAPTERproblem-solving-2-4">Because the topic we will be studying is called <dfn class="terminology">Calculus</dfn> there is a strong tendency to assume that only the concepts and techniques of Calculus are needed to solve the problems you will encounter in this course. That is not true. You will need all of the mathematics you know. And probably more. Really.</div></section><section class="section" id="SECusing-lett-inst"><h3 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">2.1</span><span class="space"> </span><span class="title">Using Letters Instead of Numbers</span>
 </h3>
 <div class="para" id="SECusing-lett-inst-2">Before we begin, a few comments on notation are apropos.</div>
@@ -620,7 +1197,7 @@ a+b &amp;= b+a\\
 \end{equation*}
 </div>
 </div>
-<div class="solutions"><details id="exercise-problem-calculator-3-2" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="exercise-problem-calculator-3-2-1">Using a calculator on <span class="process-math">\(2.93\times 10^{1000}\)</span> would be rather pointless. Try it and see.</div></div></details></div></article><article class="task exercise-like" id="exercise-problem-calculator-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="solutions"><details id="exercise-problem-calculator-3-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="exercise-problem-calculator-3-2-1">Using a calculator on <span class="process-math">\(2.93\times 10^{1000}\)</span> would be rather pointless. Try it and see.</div></div></details></div></article><article class="task exercise-like" id="exercise-problem-calculator-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
 <div class="para logical" id="exercise-problem-calculator-4-1-1">
 <div class="para">Show that it is not always true that if <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are numbers then</div>
 <div class="displaymath process-math" id="EQUATIONTriIneq">
@@ -629,14 +1206,14 @@ a\le a+b.\tag{2.1}
 \end{equation}
 </div>
 </div></article><article class="task exercise-like" id="exercise-problem-calculator-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
-<div class="para" id="exercise-problem-calculator-5-1-1">Find a restriction on the possible values of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> that will guarantee that <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONTriIneq.html" title="Equation 2.1">inequality (2.1)</a>) is true.</div></article></article><div class="para" id="SECusing-lett-inst-8">Keeping things simple is laudable as a goal and we don’t want to suggest that you shouldn’t do it.  It can be very useful to look at a special case of a general statement just to get a sense of the problem. For example, a good way to “trick yourself into abstraction” is to think <span class="process-math">\(23\)</span> and <span class="process-math">\(17\text{,}\)</span> but write down <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{.}\)</span>  As long as you don’t try to do anything that relies on the particular properties of <span class="process-math">\(23\)</span> and <span class="process-math">\(17\text{,}\)</span> you should be fine. But you wouldn’t want to say something like <span class="process-math">\(a+b\)</span> is an even integer (even though <span class="process-math">\(23+17\)</span> is). The sum <span class="process-math">\(23+17\)</span> is an even integer because both <span class="process-math">\(23\)</span> and <span class="process-math">\(17\)</span> are odd integers, but this is special to these numbers and won’t be true for <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> in general.</div>
+<div class="para" id="exercise-problem-calculator-5-1-1">Find a restriction on the possible values of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> that will guarantee that <a href="CHAPTERproblem-solving.html#EQUATIONTriIneq" class="xref" data-knowl="./knowl/xref/EQUATIONTriIneq.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.1">inequality (2.1)</a>) is true.</div></article></article><div class="para" id="SECusing-lett-inst-8">Keeping things simple is laudable as a goal and we don’t want to suggest that you shouldn’t do it.  It can be very useful to look at a special case of a general statement just to get a sense of the problem. For example, a good way to “trick yourself into abstraction” is to think <span class="process-math">\(23\)</span> and <span class="process-math">\(17\text{,}\)</span> but write down <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{.}\)</span>  As long as you don’t try to do anything that relies on the particular properties of <span class="process-math">\(23\)</span> and <span class="process-math">\(17\text{,}\)</span> you should be fine. But you wouldn’t want to say something like <span class="process-math">\(a+b\)</span> is an even integer (even though <span class="process-math">\(23+17\)</span> is). The sum <span class="process-math">\(23+17\)</span> is an even integer because both <span class="process-math">\(23\)</span> and <span class="process-math">\(17\)</span> are odd integers, but this is special to these numbers and won’t be true for <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> in general.</div>
 <article class="exercise exercise-like" id="SECusing-lett-inst-9"><h4 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">2.2</span><span class="period">.</span>
 </h4>
 <article class="task exercise-like" id="SECusing-lett-inst-9-1"><h5 class="heading"><span class="codenumber">(a)</span></h5>
 <div class="para" id="SECusing-lett-inst-9-1-1-1">Suppose <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are both integers.  Find restrictions on the possible values of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> that will guarantee that <span class="process-math">\(a+b\)</span> is an even, positive integer.</div></article><article class="task exercise-like" id="SECusing-lett-inst-9-2"><h5 class="heading"><span class="codenumber">(b)</span></h5>
 <div class="para" id="SECusing-lett-inst-9-2-1-1">Now suppose <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are both numbers. Find restrictions on the possible values of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> that will guarantee that <span class="process-math">\(a+b\)</span> is an even, positive integer.</div>
-<div class="solutions"><details id="SECusing-lett-inst-9-2-2" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="SECusing-lett-inst-9-2-2-1">This is not the same problem as part (a). Read it carefully.</div></div></details></div></article></article><div class="para" id="SECusing-lett-inst-10">When looking at <span class="process-math">\(23\times17\)</span> most people are inclined to compute this to get <span class="process-math">\(391\text{.}\)</span> If the problem is: Find the value of <span class="process-math">\(23\times17\text{,}\)</span> then sure, doing the arithmetic is the correct thing to do. But the last time you were asked to do multiplication for its own sake you were probably <span class="process-math">\(11\)</span> years old. Elementary computations like this will only come up in the context of a more advanced problem.  Before doing this calculation, you should ask yourself if it will help you solve the more advanced problem.</div>
+<div class="solutions"><details id="SECusing-lett-inst-9-2-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="SECusing-lett-inst-9-2-2-1">This is not the same problem as part (a). Read it carefully.</div></div></details></div></article></article><div class="para" id="SECusing-lett-inst-10">When looking at <span class="process-math">\(23\times17\)</span> most people are inclined to compute this to get <span class="process-math">\(391\text{.}\)</span> If the problem is: Find the value of <span class="process-math">\(23\times17\text{,}\)</span> then sure, doing the arithmetic is the correct thing to do. But the last time you were asked to do multiplication for its own sake you were probably <span class="process-math">\(11\)</span> years old. Elementary computations like this will only come up in the context of a more advanced problem.  Before doing this calculation, you should ask yourself if it will help you solve the more advanced problem.</div>
 <div class="para" id="SECusing-lett-inst-11">Now suppose the problem is: Determine  if the number <span class="process-math">\(23\times17\)</span> is divisible by <span class="process-math">\(17\text{.}\)</span> Do you see that computing <span class="process-math">\(23\times17=391\)</span> will only make the problem harder?</div>
 <div class="para" id="SECusing-lett-inst-12">Your college professors will never ask you to do an arithmetic calculation for its own sake. Instead arithmetic problems will come up in the context of a more advanced problem and you will need to use your arithmetic skill to uncover patterns. But doing the arithmetic, boiling everything down to a single number usually hides the patterns!</div>
 <div class="para logical" id="SECusing-lett-inst-13">
@@ -668,13 +1245,15 @@ a\le a+b.\tag{2.1}
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">2.2</span><span class="space"> </span><span class="title">Substitution, or Making Things “Easy on the Eyes”</span>
 </h3>
 <blockquote class="blockquote" id="SECTIONAn-easy-problem-alg-2">
-<div class="para" id="SECTIONAn-easy-problem-alg-2-1">Mathematicians do not study objects, but relations between objects. Thus, they are free to replace some objects by others so long as the relations remain unchanged.</div> <cite class="attribution">―<a class="external" href="https:/mathshistory.st-andrews.ac.uk/Biographies/Poincare/" target="_blank">Henri Poincarè (1854-1912)</a><a class="xref" id="SECTIONAn-easy-problem-alg-2-2-2" href="" data-knowl="./knowl/fn/SECTIONAn-easy-problem-alg-2-2-2.html" title="Footnote 2.3"><sup> 3 </sup></a></cite>
+<div class="para" id="SECTIONAn-easy-problem-alg-2-1">Mathematicians do not study objects, but relations between objects. Thus, they are free to replace some objects by others so long as the relations remain unchanged.</div>
+<cite class="attribution">―<a class="external" href="https:/mathshistory.st-andrews.ac.uk/Biographies/Poincare/" target="_blank">Henri Poincarè (1854-1912)</a><details class="ptx-footnote" aria-live="polite" id="SECTIONAn-easy-problem-alg-2-2-2"><summary class="ptx-footnote__number" title="Footnote 2.3"><sup> 3 </sup></summary><div class="ptx-footnote__contents" id="SECTIONAn-easy-problem-alg-2-2-2"><code class="code-inline tex2jax_ignore">https:/mathshistory.st-andrews.ac.uk/Biographies/Poincare/</code></div></details></cite>
 </blockquote>
 <div class="para" id="SECTIONAn-easy-problem-alg-3">It is a common misconception is mathematicians love complicated formulas. In fact, the opposite is true. We really very much prefer to keep things as simple as possible. We only accept complexity when we are forced to. Moreover, with experience we have learned that complexity is usually borne of an inadequate understanding of the problem.  Better understanding usually results in a simpler formulation.</div>
 <div class="para" id="SECTIONAn-easy-problem-alg-4">This works in reverse too. If we can find a simple way to express what appears to be a complex problem we can usually gain a deeper understanding of the problem and its solution. A judicious substitution is one way to re-express a complex problem.</div>
 <article class="example example-like" id="EXAMPLEHorribleFormula"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.4</span><span class="period">.</span><span class="space"> </span><span class="title">A Horrible Formula.</span>
-</h4> <div class="para logical" id="EXAMPLEHorribleFormula-2">
+</h4>
+<div class="para logical" id="EXAMPLEHorribleFormula-2">
 <div class="para">For example, suppose you were asked to solve the following equation for <span class="process-math">\(x\text{:}\)</span>
 </div>
 <div class="displaymath process-math">
@@ -684,7 +1263,8 @@ a\le a+b.\tag{2.1}
 \end{equation*}
 </div>
 <div class="para">At first glance this looks horribly complicated.  But look at it again.  On the right the coefficient of <span class="process-math">\(x\)</span> is <span class="process-math">\(\pi^3-\sqrt{2}\text{.}\)</span> That’s just a number. It is approximately <span class="process-math">\(29.6\)</span> but who cares? For purposes of algebraically isolating <span class="process-math">\(x\)</span> all we need to know is that it is a number. Rather than calling it <span class="process-math">\(\pi^3-\sqrt{2}\text{,}\)</span> let’s just call it something simple, like <span class="process-math">\(A\text{.}\)</span> Think of it as giving the expression <span class="process-math">\(\pi^3-\sqrt{2}\)</span> a nickname; something shorter, and easier to remember.</div>
-</div> <div class="para logical" id="EXAMPLEHorribleFormula-3">
+</div>
+<div class="para logical" id="EXAMPLEHorribleFormula-3">
 <div class="para">If we make that substitution our equation is now</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -693,7 +1273,8 @@ a\le a+b.\tag{2.1}
 \end{equation*}
 </div>
 <div class="para">which is a bit “easier on the eyes.”</div>
-</div> <div class="para logical" id="EXAMPLEHorribleFormula-4">
+</div>
+<div class="para logical" id="EXAMPLEHorribleFormula-4">
 <div class="para">But wait. The expression <span class="process-math">\(\sqrt[21]{2^{\frac{11}{2}}}\)</span> is also just a number. Let’s make it “easier on the eyes,” too. If we let <span class="process-math">\(B=\sqrt[21]{2^{\frac{11}{2}}}\)</span> we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -722,20 +1303,21 @@ x^{\frac{2}{3}}-4x^{\frac{1}{3}}+3=0\tag{2.2}
 </div>
 <div class="para">solve for <span class="process-math">\(x\text{.}\)</span>
 </div>
-</div> <div class="para logical" id="example-Sub2-2">
-<div class="para">At first glance, this looks like a formidable problem.  However, if we look closer we see that it actually has a very familiar form. Because <span class="process-math">\(x^{\frac{2}{3}}=\left(x^{\frac{1}{3}}\right)^2\)</span> we can rewrite <a href="" class="xref" data-knowl="./knowl/xref/EQQuadInForm1.html" title="Equation 2.2">equation (2.2)</a> as</div>
+</div>
+<div class="para logical" id="example-Sub2-2">
+<div class="para">At first glance, this looks like a formidable problem.  However, if we look closer we see that it actually has a very familiar form. Because <span class="process-math">\(x^{\frac{2}{3}}=\left(x^{\frac{1}{3}}\right)^2\)</span> we can rewrite <a href="CHAPTERproblem-solving.html#EQQuadInForm1" class="xref" data-knowl="./knowl/xref/EQQuadInForm1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.2">equation (2.2)</a> as</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQQuadInForm1.html ./knowl/xref/EQQuadInForm2.html ./knowl/xref/EQQuadInForm2.html ./knowl/xref/EXAMPLEHorribleFormula.html ./knowl/xref/EQQuadInForm2.html" id="EQQuadInForm2">
 \begin{equation}
 \left(x^{\frac{1}{3}}\right)^2-4x^{\frac{1}{3}}+3=0\tag{2.3}
 \end{equation}
 </div>
-<div class="para">and if you look closely you’ll see that <a href="" class="xref" data-knowl="./knowl/xref/EQQuadInForm2.html" title="Equation 2.3">equation~ (2.3)</a>) is “quadratic in form.” That is, it is really a quadratic equation — which we know how to solve — in disguise. However it is still rather difficult to see the quadratic nature of <a href="" class="xref" data-knowl="./knowl/xref/EQQuadInForm2.html" title="Equation 2.3">equation (2.3)</a>. To make this very clear we let</div>
+<div class="para">and if you look closely you’ll see that <a href="CHAPTERproblem-solving.html#EQQuadInForm2" class="xref" data-knowl="./knowl/xref/EQQuadInForm2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.3">equation~ (2.3)</a>) is “quadratic in form.” That is, it is really a quadratic equation — which we know how to solve — in disguise. However it is still rather difficult to see the quadratic nature of <a href="CHAPTERproblem-solving.html#EQQuadInForm2" class="xref" data-knowl="./knowl/xref/EQQuadInForm2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.3">equation (2.3)</a>. To make this very clear we let</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQQuadInForm1.html ./knowl/xref/EQQuadInForm2.html ./knowl/xref/EQQuadInForm2.html ./knowl/xref/EXAMPLEHorribleFormula.html ./knowl/xref/EQQuadInForm2.html">
 \begin{equation*}
 z=x^{\frac{1}{3}}.
 \end{equation*}
 </div>
-<div class="para">That is, just as in <a href="" class="xref" data-knowl="./knowl/xref/EXAMPLEHorribleFormula.html" title="Example 2.4: A Horrible Formula">Example 2.4</a> we give the expression <span class="process-math">\(x^{\frac{1}{3}}\)</span> the nickname, <span class="process-math">\(z\text{,}\)</span> which is shorter, easier to remember, and “easier on the eyes.” Then <a href="" class="xref" data-knowl="./knowl/xref/EQQuadInForm2.html" title="Equation 2.3">equation (2.3)</a> becomes the quadratic equation:</div>
+<div class="para">That is, just as in <a href="CHAPTERproblem-solving.html#EXAMPLEHorribleFormula" class="xref" data-knowl="./knowl/xref/EXAMPLEHorribleFormula.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.4: A Horrible Formula">Example 2.4</a> we give the expression <span class="process-math">\(x^{\frac{1}{3}}\)</span> the nickname, <span class="process-math">\(z\text{,}\)</span> which is shorter, easier to remember, and “easier on the eyes.” Then <a href="CHAPTERproblem-solving.html#EQQuadInForm2" class="xref" data-knowl="./knowl/xref/EQQuadInForm2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.3">equation (2.3)</a> becomes the quadratic equation:</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQQuadInForm1.html ./knowl/xref/EQQuadInForm2.html ./knowl/xref/EQQuadInForm2.html ./knowl/xref/EXAMPLEHorribleFormula.html ./knowl/xref/EQQuadInForm2.html">
 \begin{equation*}
 z^2-4z+3=0.
@@ -755,7 +1337,7 @@ x^{\frac{1}{3}}=3,
 \end{equation*}
 </div>
 <div class="para">yielding the solutions <span class="process-math">\(x=1\)</span> and <span class="process-math">\(x=27\text{,}\)</span> respectively.</div>
-</div></article><div class="para" id="SECTIONAn-easy-problem-alg-8">In making a substitution our goal is always to make the formulas we are dealing with simpler to understand and easier to read.  In <a href="" class="xref" data-knowl="./knowl/xref/EXAMPLEHorribleFormula.html" title="Example 2.4: A Horrible Formula">Examples 2.4</a> <a href="" class="xref" data-knowl="./knowl/xref/example-Sub2.html" title="Example 2.5">and 2.5</a> it was straightforward to see how to do that.  There were expressions that were hard to read so we simply replaced a complicated part of the problem with something simple. It isn’t always that easy.  Sometimes just finding a good substitution presents challenges of its own.</div>
+</div></article><div class="para" id="SECTIONAn-easy-problem-alg-8">In making a substitution our goal is always to make the formulas we are dealing with simpler to understand and easier to read.  In <a href="CHAPTERproblem-solving.html#EXAMPLEHorribleFormula" class="xref" data-knowl="./knowl/xref/EXAMPLEHorribleFormula.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.4: A Horrible Formula">Examples 2.4</a> <a href="CHAPTERproblem-solving.html#example-Sub2" class="xref" data-knowl="./knowl/xref/example-Sub2.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.5">and 2.5</a> it was straightforward to see how to do that.  There were expressions that were hard to read so we simply replaced a complicated part of the problem with something simple. It isn’t always that easy.  Sometimes just finding a good substitution presents challenges of its own.</div>
 <aside class="aside aside-like" id="SECTIONAn-easy-problem-alg-9"><div class="para" id="SECTIONAn-easy-problem-alg-9-1">“Straightforward” is not the same as “easy.”</div></aside><div class="para logical" id="SECTIONAn-easy-problem-alg-10">
 <div class="para">For example,  the Quadratic Formula can be derived by making a very simple substitution that allows us to solve the general quadratic equation</div>
 <div class="displaymath process-math" id="EQQuadEq">
@@ -768,9 +1350,9 @@ ax^2+bx+c=0.\tag{2.4}
 <article class="exercise exercise-like" id="PROBLEMQSub"><h4 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">2.6</span><span class="period">.</span>
 </h4>
-<div class="para" id="PROBLEMQSub-1-1"> Before reading any further see if you can come up with the right substitution for <a href="" class="xref" data-knowl="./knowl/xref/EQQuadEq.html" title="Equation 2.4">equation (2.4)</a>).</div>
-<div class="solutions"><details id="PROBLEMQSub-2" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="PROBLEMQSub-2-1">The goal is to eliminate the linear term, <span class="process-math">\(bx\text{.}\)</span> You can see how this would help. If <span class="process-math">\(bx\)</span> were not present in <a href="" class="xref" data-knowl="./knowl/xref/EQQuadEq.html" title="Equation 2.4">equation (2.4)</a> we could easily solve <span class="process-math">\(ax^2+c=0\text{.}\)</span>
-</div></div></details></div></article><div class="para" id="SECTIONAn-easy-problem-alg-12">Were you able to solve <a href="" class="xref" data-knowl="./knowl/xref/PROBLEMQSub.html" title="Problem 2.6">Problem 2.6</a>? It’s actually very hard to do without some guidance. Here’s another hint. Try the substitution <span class="process-math">\(x=y-\frac{b}{ka}\)</span> where <span class="process-math">\(k\)</span> is a parameter to be determined.  That is, make this substitution and find the value of <span class="process-math">\(k\)</span> that eliminates the linear term.</div>
+<div class="para" id="PROBLEMQSub-1-1"> Before reading any further see if you can come up with the right substitution for <a href="CHAPTERproblem-solving.html#EQQuadEq" class="xref" data-knowl="./knowl/xref/EQQuadEq.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.4">equation (2.4)</a>).</div>
+<div class="solutions"><details id="PROBLEMQSub-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="PROBLEMQSub-2-1">The goal is to eliminate the linear term, <span class="process-math">\(bx\text{.}\)</span> You can see how this would help. If <span class="process-math">\(bx\)</span> were not present in <a href="CHAPTERproblem-solving.html#EQQuadEq" class="xref" data-knowl="./knowl/xref/EQQuadEq.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.4">equation (2.4)</a> we could easily solve <span class="process-math">\(ax^2+c=0\text{.}\)</span>
+</div></div></details></div></article><div class="para" id="SECTIONAn-easy-problem-alg-12">Were you able to solve <a href="CHAPTERproblem-solving.html#PROBLEMQSub" class="xref" data-knowl="./knowl/xref/PROBLEMQSub.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 2.6">Problem 2.6</a>? It’s actually very hard to do without some guidance. Here’s another hint. Try the substitution <span class="process-math">\(x=y-\frac{b}{ka}\)</span> where <span class="process-math">\(k\)</span> is a parameter to be determined.  That is, make this substitution and find the value of <span class="process-math">\(k\)</span> that eliminates the linear term.</div>
 <div class="para" id="SECTIONAn-easy-problem-alg-13">After making this substitution the problem will be given in terms of <span class="process-math">\(y\text{,}\)</span> not <span class="process-math">\(x\text{.}\)</span> That’s OK. Solve the problem in this form, and then unwind your substitution back to the original <span class="process-math">\(x\)</span> variable.</div>
 <article class="exercise exercise-like" id="SECTIONAn-easy-problem-alg-14"><h4 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">2.7</span><span class="period">.</span>
@@ -789,20 +1371,35 @@ a}\right)+c=0.
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">2.3</span><span class="space"> </span><span class="title">An “Easy” Problem From Geometry</span>
 </h3>
 <blockquote class="blockquote" id="SECan-easy-problem-geo-2">
-<div class="para" id="SECan-easy-problem-geo-2-1">Ideas are like rabbits. You get a couple and learn how to handle them, and pretty soon you have a dozen.</div> <cite class="attribution">―<a class="external" href="https://www.nobelprize.org/prizes/literature/1962/steinbeck/biographical/" target="_blank">John Steinbeck (1902-1968)</a><a class="xref" id="SECan-easy-problem-geo-2-2-2" href="" data-knowl="./knowl/fn/SECan-easy-problem-geo-2-2-2.html" title="Footnote 2.4"><sup> 4 </sup></a></cite>
+<div class="para" id="SECan-easy-problem-geo-2-1">Ideas are like rabbits. You get a couple and learn how to handle them, and pretty soon you have a dozen.</div>
+<cite class="attribution">―<a class="external" href="https://www.nobelprize.org/prizes/literature/1962/steinbeck/biographical/" target="_blank">John Steinbeck (1902-1968)</a><details class="ptx-footnote" aria-live="polite" id="SECan-easy-problem-geo-2-2-2"><summary class="ptx-footnote__number" title="Footnote 2.4"><sup> 4 </sup></summary><div class="ptx-footnote__contents" id="SECan-easy-problem-geo-2-2-2"><code class="code-inline tex2jax_ignore">https://www.nobelprize.org/prizes/literature/1962/steinbeck/biographical/</code></div></details></cite>
 </blockquote>
 <div class="para" id="SECan-easy-problem-geo-3">We’ve chosen the following example because it is neither particularly easy nor particularly difficult. It is typical of the kinds of medium level problems that appear in most Calculus textbooks.</div>
 <article class="example example-like" id="EXAMPLEMaxTriangle"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.8</span><span class="period">.</span>
 </h4>
-<div class="para" id="EXAMPLEMaxTriangle-1-1">The lengths of two sides of a triangle are <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{.}\)</span> If the third side is chosen in such a way that the area of the triangle is as large as possible what is the length of the third side?</div> <div class="para" id="EXAMPLEMaxTriangle-1-2">You may be able to intuit the correct answer to this problem. That’s OK, but you should try to solve it, too. By “solve” we mean that you should be able to explain to someone with the same mathematical skills you have at the moment why your answer is correct.</div> <aside class="aside aside-like" id="EXAMPLEMaxTriangle-1-3"><div class="para" id="EXAMPLEMaxTriangle-1-3-1">No, really. Give this problem a serious shot before you go on. It is not important that you succeed. Only that you try.</div></aside> <div class="para" id="EXAMPLEMaxTriangle-1-4">Before reading further do your best to solve this problem in <a href="" class="xref" data-knowl="./knowl/xref/EXAMPLEMaxTriangle.html" title="Example 2.8">Example 2.8</a>. We’ll wait.</div> <div class="para" id="EXAMPLEMaxTriangle-1-5">At first it is difficult to see where to begin. (That’s why it’s called a problem.) Don’t let this stop you! In our experience the most common mistake is giving up too soon.</div> <div class="para" id="EXAMPLEMaxTriangle-1-6">Don’t. Do. That.  Keep thinking.</div>
-<div class="solutions"><details id="EXAMPLEMaxTriangle-2" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span><span class="space"> </span><span class="title">Partial Solution</span></summary><div class="solution solution-like"> <div class="para" id="EXAMPLEMaxTriangle-2-2">Since we know the lengths of the sides <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> of our triangle let’s draw it. The sketch at the right would be typical. The question is, what length for side <span class="process-math">\(c\)</span> makes the total area enclosed by the triangle as large as it can possibly be?</div> <div class="para" id="EXAMPLEMaxTriangle-2-3">Now what?</div> <div class="para" id="EXAMPLEMaxTriangle-2-4">Well, this looks like a right triangle doesn’t it? If it is a right triangle, then we can find the length of <span class="process-math">\(c\)</span> via the Pythagorean Theorem: <span class="process-math">\(c=\sqrt{a^2+b^2},\)</span> right?</div> <div class="para" id="EXAMPLEMaxTriangle-2-5">Before you go on take a moment and really think about this problem. Can it really be that simple? Can you find any flaws in our reasoning.</div> <div class="para" id="EXAMPLEMaxTriangle-2-6">Once you think about it you see that we have no reason to believe that the triangle we seek must be a right triangle. It was completely accidental that we drew our diagram that way. If this seems like a simple-minded mistake, the sort of mistake that you would never make, be careful. It is a mistake to rely too heavily on the diagrams we draw. But it is an easy mistake to make, especially when the problems are more complicated, because as problems get complex we will need to rely on visualization more and more. This was not a dumb mistake. It was just a bit careless, and it is easy to be careless, especially when we first start thinking about a problem.</div>
-</div></details></div></article><section class="paragraphs" id="DIGRESSIONMistakes"><h4 class="heading"><span class="title">DIGRESSION: Making Mistakes.</span></h4>  <blockquote class="blockquote" id="DIGRESSIONMistakes-3">
-<div class="para" id="DIGRESSIONMistakes-3-1">Being wrong isn’t a bad thing like they teach you in school.  It is an opportunity to learn something.</div> <cite class="attribution">―<a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Feynman/" target="_blank">Richard Feynman (1918-1988)</a><a class="xref" id="DIGRESSIONMistakes-3-2-2" href="" data-knowl="./knowl/fn/DIGRESSIONMistakes-3-2-2.html" title="Footnote 2.5"><sup> 5 </sup></a></cite>
-</blockquote> <aside class="aside aside-like" id="DIGRESSIONMistakes-4"><h5 class="heading"><span class="title">Note to self.</span></h5>
-<div class="para" id="DIGRESSIONMistakes-4-2">This needs do be done differently.</div></aside> <blockquote class="blockquote" id="DIGRESSIONMistakes-5">
-<div class="para" id="DIGRESSIONMistakes-5-1">Experience is the name everyone gives to their mistakes.</div> <cite class="attribution">―<a class="external" href="http://www.cmgww.com/historic/wilde/" target="_blank">Oscar Wilde (1854-1900)</a><a class="xref" id="DIGRESSIONMistakes-5-2-2" href="" data-knowl="./knowl/fn/DIGRESSIONMistakes-5-2-2.html" title="Footnote 2.6"><sup> 6 </sup></a></cite>
-</blockquote> <div class="para" id="DIGRESSIONMistakes-6">By definition, mistakes are wrong. A mistake is always obvious after you recognize it as a mistake.  Everyone makes mistakes in the course of solving a problem. The process of making mistakes, recognizing them as mistakes, and figuring out why they are mistakes is called learning. The very smartest people, for example <a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Newton/" target="_blank">Isaac Newton</a><a class="xref" id="DIGRESSIONMistakes-6-2" href="" data-knowl="./knowl/fn/DIGRESSIONMistakes-6-2.html" title="Footnote 2.7"><sup> 7 </sup></a>, <a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Leibniz/" target="_blank">Gottfried Leibniz</a><a class="xref" id="DIGRESSIONMistakes-6-4" href="" data-knowl="./knowl/fn/DIGRESSIONMistakes-6-4.html" title="Footnote 2.8"><sup> 8 </sup></a>, <a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Galileo/" target="_blank">Galileo</a><a class="xref" id="DIGRESSIONMistakes-6-6" href="" data-knowl="./knowl/fn/DIGRESSIONMistakes-6-6.html" title="Footnote 2.9"><sup> 9 </sup></a>, <a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Fermat/" target="_blank">Pierre Fermat</a><a class="xref" id="DIGRESSIONMistakes-6-8" href="" data-knowl="./knowl/fn/DIGRESSIONMistakes-6-8.html" title="Footnote 2.10"><sup> 10 </sup></a>, <a class="external" href="https://www.smithsonianmag.com/history/madame-curies-passion-74183598/" target="_blank">Marie Curie</a><a class="xref" id="DIGRESSIONMistakes-6-10" href="" data-knowl="./knowl/fn/DIGRESSIONMistakes-6-10.html" title="Footnote 2.11"><sup> 11 </sup></a>, <a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Noether_Emmy/" target="_blank">Emmy Nöther</a><a class="xref" id="DIGRESSIONMistakes-6-12" href="" data-knowl="./knowl/fn/DIGRESSIONMistakes-6-12.html" title="Footnote 2.12"><sup> 12 </sup></a>, <a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Einstein/" target="_blank">Albert Einstein</a><a class="xref" id="DIGRESSIONMistakes-6-14" href="" data-knowl="./knowl/fn/DIGRESSIONMistakes-6-14.html" title="Footnote 2.13"><sup> 13 </sup></a>, or <a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Feynman/" target="_blank">Richard Feynman</a><a class="xref" id="DIGRESSIONMistakes-6-16" href="" data-knowl="./knowl/fn/DIGRESSIONMistakes-6-16.html" title="Footnote 2.14"><sup> 14 </sup></a>, made lots of mistakes. Making mistakes is how they got to be smart.</div> <div class="para" id="DIGRESSIONMistakes-7">Isaac Newton was once asked how he had been able to solve problems that no one before him had solved. His reply: “By thinking, and thinking, and thinking about them.” Of course, when he described his solutions he left out all of the errors like anyone would do, because, who cares about those? Making mistakes doesn’t typically get the attention it deserves.   An expert is someone who has made every possible mistake. This is why your teacher, an expert, will seldom err.</div> <aside class="aside aside-like" id="DIGRESSIONMistakes-8"><div class="para" id="DIGRESSIONMistakes-8-1">And will be embarrassed when they do.</div></aside> <div class="para" id="DIGRESSIONMistakes-9">Each mistake you make reflects the level of your current understanding of the problem. Each mistake you make takes you a little closer to expertise.  Embrace your mistakes and make lots of them!  They are proof that you are making progress.  But make no mistake (Gasp!) about it,  making and embracing a mistake is just the first step. You also have to figure out what went wrong.</div> <div class="para" id="DIGRESSIONMistakes-10">Sadly, mistakes are too often seen as a source of embarrassment. Too many students will berate themselves as stupid every time they make a mistake. Don’t do that. It is pointless and counter-productive. All it will do is destroy your self confidence. Don’t do it. Learning Calculus can be hard, but you would not have made it this far if you couldn’t do it. So keep making mistakes. Ask for help when you need it. And don’t give up. You have not failed until you stop trying.</div> <aside class="aside aside-like" id="DIGRESSIONMistakes-11"><div class="para" id="DIGRESSIONMistakes-11-1">Did we mention that you shouldn’t berate yourself when you make a mistake?  You really shouldn’t.</div></aside> <div class="para" id="DIGRESSIONMistakes-12"><em class="alert">END OF DIGRESSION</em></div></section><div class="para" id="SECan-easy-problem-geo-6">Let’s look at this problem again.  The triangle we seek might look like the first one we drew, or it might look like either of the ones drawn in the diagram below, or myriad others. We simply don’t have enough information to decide at this point.</div>
+<div class="para" id="EXAMPLEMaxTriangle-1-1">The lengths of two sides of a triangle are <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{.}\)</span> If the third side is chosen in such a way that the area of the triangle is as large as possible what is the length of the third side?</div> <div class="para" id="EXAMPLEMaxTriangle-1-2">You may be able to intuit the correct answer to this problem. That’s OK, but you should try to solve it, too. By “solve” we mean that you should be able to explain to someone with the same mathematical skills you have at the moment why your answer is correct.</div> <aside class="aside aside-like" id="EXAMPLEMaxTriangle-1-3"><div class="para" id="EXAMPLEMaxTriangle-1-3-1">No, really. Give this problem a serious shot before you go on. It is not important that you succeed. Only that you try.</div></aside> <div class="para" id="EXAMPLEMaxTriangle-1-4">Before reading further do your best to solve this problem in <a href="CHAPTERproblem-solving.html#EXAMPLEMaxTriangle" class="xref" data-knowl="./knowl/xref/EXAMPLEMaxTriangle.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.8">Example 2.8</a>. We’ll wait.</div> <div class="para" id="EXAMPLEMaxTriangle-1-5">At first it is difficult to see where to begin. (That’s why it’s called a problem.) Don’t let this stop you! In our experience the most common mistake is giving up too soon.</div> <div class="para" id="EXAMPLEMaxTriangle-1-6">Don’t. Do. That.  Keep thinking.</div>
+<div class="solutions"><details id="EXAMPLEMaxTriangle-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span><span class="space"> </span><span class="title">Partial Solution</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="EXAMPLEMaxTriangle-2-2">Since we know the lengths of the sides <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> of our triangle let’s draw it. The sketch at the right would be typical. The question is, what length for side <span class="process-math">\(c\)</span> makes the total area enclosed by the triangle as large as it can possibly be?</div>
+<div class="para" id="EXAMPLEMaxTriangle-2-3">Now what?</div>
+<div class="para" id="EXAMPLEMaxTriangle-2-4">Well, this looks like a right triangle doesn’t it? If it is a right triangle, then we can find the length of <span class="process-math">\(c\)</span> via the Pythagorean Theorem: <span class="process-math">\(c=\sqrt{a^2+b^2},\)</span> right?</div>
+<div class="para" id="EXAMPLEMaxTriangle-2-5">Before you go on take a moment and really think about this problem. Can it really be that simple? Can you find any flaws in our reasoning.</div>
+<div class="para" id="EXAMPLEMaxTriangle-2-6">Once you think about it you see that we have no reason to believe that the triangle we seek must be a right triangle. It was completely accidental that we drew our diagram that way. If this seems like a simple-minded mistake, the sort of mistake that you would never make, be careful. It is a mistake to rely too heavily on the diagrams we draw. But it is an easy mistake to make, especially when the problems are more complicated, because as problems get complex we will need to rely on visualization more and more. This was not a dumb mistake. It was just a bit careless, and it is easy to be careless, especially when we first start thinking about a problem.</div>
+</div></details></div></article><section class="paragraphs" id="DIGRESSIONMistakes"><h4 class="heading"><span class="title">DIGRESSION: Making Mistakes.</span></h4>
+<blockquote class="blockquote" id="DIGRESSIONMistakes-3">
+<div class="para" id="DIGRESSIONMistakes-3-1">Being wrong isn’t a bad thing like they teach you in school.  It is an opportunity to learn something.</div>
+<cite class="attribution">―<a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Feynman/" target="_blank">Richard Feynman (1918-1988)</a><details class="ptx-footnote" aria-live="polite" id="DIGRESSIONMistakes-3-2-2"><summary class="ptx-footnote__number" title="Footnote 2.5"><sup> 5 </sup></summary><div class="ptx-footnote__contents" id="DIGRESSIONMistakes-3-2-2"><code class="code-inline tex2jax_ignore">https://mathshistory.st-andrews.ac.uk/Biographies/Feynman/</code></div></details></cite>
+</blockquote>
+<aside class="aside aside-like" id="DIGRESSIONMistakes-4"><h5 class="heading"><span class="title">Note to self.</span></h5>
+<div class="para" id="DIGRESSIONMistakes-4-2">This needs do be done differently.</div></aside><blockquote class="blockquote" id="DIGRESSIONMistakes-5">
+<div class="para" id="DIGRESSIONMistakes-5-1">Experience is the name everyone gives to their mistakes.</div>
+<cite class="attribution">―<a class="external" href="http://www.cmgww.com/historic/wilde/" target="_blank">Oscar Wilde (1854-1900)</a><details class="ptx-footnote" aria-live="polite" id="DIGRESSIONMistakes-5-2-2"><summary class="ptx-footnote__number" title="Footnote 2.6"><sup> 6 </sup></summary><div class="ptx-footnote__contents" id="DIGRESSIONMistakes-5-2-2"><code class="code-inline tex2jax_ignore">http://www.cmgww.com/historic/wilde/</code></div></details></cite>
+</blockquote>
+<div class="para" id="DIGRESSIONMistakes-6">By definition, mistakes are wrong. A mistake is always obvious after you recognize it as a mistake.  Everyone makes mistakes in the course of solving a problem. The process of making mistakes, recognizing them as mistakes, and figuring out why they are mistakes is called learning. The very smartest people, for example <a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Newton/" target="_blank">Isaac Newton</a><details class="ptx-footnote" aria-live="polite" id="DIGRESSIONMistakes-6-2"><summary class="ptx-footnote__number" title="Footnote 2.7"><sup> 7 </sup></summary><div class="ptx-footnote__contents" id="DIGRESSIONMistakes-6-2"><code class="code-inline tex2jax_ignore">https://mathshistory.st-andrews.ac.uk/Biographies/Newton/</code></div></details>, <a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Leibniz/" target="_blank">Gottfried Leibniz</a><details class="ptx-footnote" aria-live="polite" id="DIGRESSIONMistakes-6-4"><summary class="ptx-footnote__number" title="Footnote 2.8"><sup> 8 </sup></summary><div class="ptx-footnote__contents" id="DIGRESSIONMistakes-6-4"><code class="code-inline tex2jax_ignore">https://mathshistory.st-andrews.ac.uk/Biographies/Leibniz/</code></div></details>, <a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Galileo/" target="_blank">Galileo</a><details class="ptx-footnote" aria-live="polite" id="DIGRESSIONMistakes-6-6"><summary class="ptx-footnote__number" title="Footnote 2.9"><sup> 9 </sup></summary><div class="ptx-footnote__contents" id="DIGRESSIONMistakes-6-6"><code class="code-inline tex2jax_ignore">https://mathshistory.st-andrews.ac.uk/Biographies/Galileo/</code></div></details>, <a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Fermat/" target="_blank">Pierre Fermat</a><details class="ptx-footnote" aria-live="polite" id="DIGRESSIONMistakes-6-8"><summary class="ptx-footnote__number" title="Footnote 2.10"><sup> 10 </sup></summary><div class="ptx-footnote__contents" id="DIGRESSIONMistakes-6-8"><code class="code-inline tex2jax_ignore">https://mathshistory.st-andrews.ac.uk/Biographies/Fermat/</code></div></details>, <a class="external" href="https://www.smithsonianmag.com/history/madame-curies-passion-74183598/" target="_blank">Marie Curie</a><details class="ptx-footnote" aria-live="polite" id="DIGRESSIONMistakes-6-10"><summary class="ptx-footnote__number" title="Footnote 2.11"><sup> 11 </sup></summary><div class="ptx-footnote__contents" id="DIGRESSIONMistakes-6-10"><code class="code-inline tex2jax_ignore">https://www.smithsonianmag.com/history/madame-curies-passion-74183598/</code></div></details>, <a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Noether_Emmy/" target="_blank">Emmy Nöther</a><details class="ptx-footnote" aria-live="polite" id="DIGRESSIONMistakes-6-12"><summary class="ptx-footnote__number" title="Footnote 2.12"><sup> 12 </sup></summary><div class="ptx-footnote__contents" id="DIGRESSIONMistakes-6-12"><code class="code-inline tex2jax_ignore">https://mathshistory.st-andrews.ac.uk/Biographies/Noether_Emmy/</code></div></details>, <a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Einstein/" target="_blank">Albert Einstein</a><details class="ptx-footnote" aria-live="polite" id="DIGRESSIONMistakes-6-14"><summary class="ptx-footnote__number" title="Footnote 2.13"><sup> 13 </sup></summary><div class="ptx-footnote__contents" id="DIGRESSIONMistakes-6-14"><code class="code-inline tex2jax_ignore">https://mathshistory.st-andrews.ac.uk/Biographies/Einstein/</code></div></details>, or <a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Feynman/" target="_blank">Richard Feynman</a><details class="ptx-footnote" aria-live="polite" id="DIGRESSIONMistakes-6-16"><summary class="ptx-footnote__number" title="Footnote 2.14"><sup> 14 </sup></summary><div class="ptx-footnote__contents" id="DIGRESSIONMistakes-6-16"><code class="code-inline tex2jax_ignore">https://mathshistory.st-andrews.ac.uk/Biographies/Feynman/</code></div></details>, made lots of mistakes. Making mistakes is how they got to be smart.</div>
+<div class="para" id="DIGRESSIONMistakes-7">Isaac Newton was once asked how he had been able to solve problems that no one before him had solved. His reply: “By thinking, and thinking, and thinking about them.” Of course, when he described his solutions he left out all of the errors like anyone would do, because, who cares about those? Making mistakes doesn’t typically get the attention it deserves.   An expert is someone who has made every possible mistake. This is why your teacher, an expert, will seldom err.</div>
+<aside class="aside aside-like" id="DIGRESSIONMistakes-8"><div class="para" id="DIGRESSIONMistakes-8-1">And will be embarrassed when they do.</div></aside><div class="para" id="DIGRESSIONMistakes-9">Each mistake you make reflects the level of your current understanding of the problem. Each mistake you make takes you a little closer to expertise.  Embrace your mistakes and make lots of them!  They are proof that you are making progress.  But make no mistake (Gasp!) about it,  making and embracing a mistake is just the first step. You also have to figure out what went wrong.</div>
+<div class="para" id="DIGRESSIONMistakes-10">Sadly, mistakes are too often seen as a source of embarrassment. Too many students will berate themselves as stupid every time they make a mistake. Don’t do that. It is pointless and counter-productive. All it will do is destroy your self confidence. Don’t do it. Learning Calculus can be hard, but you would not have made it this far if you couldn’t do it. So keep making mistakes. Ask for help when you need it. And don’t give up. You have not failed until you stop trying.</div>
+<aside class="aside aside-like" id="DIGRESSIONMistakes-11"><div class="para" id="DIGRESSIONMistakes-11-1">Did we mention that you shouldn’t berate yourself when you make a mistake?  You really shouldn’t.</div></aside><div class="para" id="DIGRESSIONMistakes-12"><em class="alert">END OF DIGRESSION</em></div></section><div class="para" id="SECan-easy-problem-geo-6">Let’s look at this problem again.  The triangle we seek might look like the first one we drew, or it might look like either of the ones drawn in the diagram below, or myriad others. We simply don’t have enough information to decide at this point.</div>
 <div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="external/DC/Advice3.png" class="contained"></div>
 <div class="para" id="SECan-easy-problem-geo-8">But from the diagrams we’ve drawn so far we can see that one end of side <span class="process-math">\(a\)</span> must be pinned to one end of side <span class="process-math">\(b\)</span> and for each angle between <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> we have a different possible triangle.  We don’t have to think of both of them as in motion. We can think of one of them, say <span class="process-math">\(b\text{,}\)</span> as fixed while the other swings around their common endpoint. The circle in our diagram indicates all of the possible positions <span class="process-math">\(a\text{.}\)</span>
 </div>
@@ -821,10 +1418,12 @@ a}\right)+c=0.
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">2.4</span><span class="space"> </span><span class="title">Our advice, a synopsis</span>
 </h3>
 <blockquote class="blockquote" id="SECour-advice-synopsis-2">
-<div class="para" id="SECour-advice-synopsis-2-1">There are times when I feel like I’m in a big forest and don’t know where I’m going. But then somehow I come to the top of a hill and can see everything more clearly. When that happens it’s really exciting.</div> <cite class="attribution">―<a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Mirzakhani/" target="_blank">Maryam Mirzakhani (1977-2017)</a><a class="xref" id="SECour-advice-synopsis-2-2-2" href="" data-knowl="./knowl/fn/SECour-advice-synopsis-2-2-2.html" title="Footnote 2.15"><sup> 15 </sup></a></cite>
+<div class="para" id="SECour-advice-synopsis-2-1">There are times when I feel like I’m in a big forest and don’t know where I’m going. But then somehow I come to the top of a hill and can see everything more clearly. When that happens it’s really exciting.</div>
+<cite class="attribution">―<a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Mirzakhani/" target="_blank">Maryam Mirzakhani (1977-2017)</a><details class="ptx-footnote" aria-live="polite" id="SECour-advice-synopsis-2-2-2"><summary class="ptx-footnote__number" title="Footnote 2.15"><sup> 15 </sup></summary><div class="ptx-footnote__contents" id="SECour-advice-synopsis-2-2-2"><code class="code-inline tex2jax_ignore">https://mathshistory.st-andrews.ac.uk/Biographies/Mirzakhani/</code></div></details></cite>
 </blockquote>
 <blockquote class="blockquote" id="SECour-advice-synopsis-3">
-<div class="para" id="SECour-advice-synopsis-3-1">If you see a whole thing — it seems that it’s always beautiful. Planets, lives  . . .  But up close a world’s all dirt and rocks. And day to day, life’s a hard job, you get tired, you lose the pattern.</div> <cite class="attribution">―<a class="external" href="https://www.ursulakleguin.com/biography" target="_blank">Ursula K. Le Guin (1929-2018)</a><a class="xref" id="SECour-advice-synopsis-3-2-2" href="" data-knowl="./knowl/fn/SECour-advice-synopsis-3-2-2.html" title="Footnote 2.16"><sup> 16 </sup></a></cite>
+<div class="para" id="SECour-advice-synopsis-3-1">If you see a whole thing — it seems that it’s always beautiful. Planets, lives  . . .  But up close a world’s all dirt and rocks. And day to day, life’s a hard job, you get tired, you lose the pattern.</div>
+<cite class="attribution">―<a class="external" href="https://www.ursulakleguin.com/biography" target="_blank">Ursula K. Le Guin (1929-2018)</a><details class="ptx-footnote" aria-live="polite" id="SECour-advice-synopsis-3-2-2"><summary class="ptx-footnote__number" title="Footnote 2.16"><sup> 16 </sup></summary><div class="ptx-footnote__contents" id="SECour-advice-synopsis-3-2-2"><code class="code-inline tex2jax_ignore">https://www.ursulakleguin.com/biography</code></div></details></cite>
 </blockquote>
 <div class="para logical" id="SECour-advice-synopsis-4">
 <div class="para">In order to solve a problem, any problem, you must:</div>
@@ -842,7 +1441,7 @@ a}\right)+c=0.
 <div class="para" id="SECour-advice-synopsis-4-1-2-2">OK, we hear you say, but what if I don’t have any good ideas? What do I do then?</div>
 <div class="para" id="SECour-advice-synopsis-4-1-2-3">Easy. Use a not-so-good idea.</div>
 <div class="para" id="SECour-advice-synopsis-4-1-2-4">This is what you’ve been doing all of your life anyway isn’t it? You just didn’t tell anyone because you were sure you were doing something wrong, right?  You weren’t.</div>
-<div class="para" id="SECour-advice-synopsis-4-1-2-5">The most important thing you can do is get started. That’s what having an idea is for, getting started. All we did to start the problem in <a href="" class="xref" data-knowl="./knowl/xref/EXAMPLEMaxTriangle.html" title="Example 2.8">Example 2.8</a> was draw the lines <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{.}\)</span> Look back up at  our partial solution and see. The first thing we did was make the drawing below:</div>
+<div class="para" id="SECour-advice-synopsis-4-1-2-5">The most important thing you can do is get started. That’s what having an idea is for, getting started. All we did to start the problem in <a href="CHAPTERproblem-solving.html#EXAMPLEMaxTriangle" class="xref" data-knowl="./knowl/xref/EXAMPLEMaxTriangle.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.8">Example 2.8</a> was draw the lines <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{.}\)</span> Look back up at  our partial solution and see. The first thing we did was make the drawing below:</div>
 <div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="external/DC/Advice1.png" class="contained"></div>
 <div class="para" id="SECour-advice-synopsis-4-1-2-7">Can you think of anything more simple-minded? And yet it worked. It didn’t work right away, but it got us moving in the right direction.</div>
 </dd>
@@ -863,7 +1462,7 @@ a}\right)+c=0.
 <div class="para" id="SECour-advice-synopsis-4-1-5-2">After you’ve solved a problem, pause for a moment, take a sip of coffee, or tea, or whatever and think about the problem you just solved. This is like the difference between looking at a mountain from its base, when all you can see is the tangle of brush in your way, and looking at it from the peak. From the peak all of the obstacles you overcame getting there look small and unimportant. You can see the broad outlines of the mountain and the path you took climbing it. Frequently you will also see a better path than the one you took.</div>
 <div class="para" id="SECour-advice-synopsis-4-1-5-3">This kind of reflection is the most neglected aspect of problem solving. After you’ve been struggling with a problem you probably don’t ever want to see it again.  This is a natural response. However, before you put the problem away reflect on your solution and make this part of your knowledge base. Think about which ideas you had that worked, and which ideas you had that didn’t work. Think about why they did, or didn’t work. Do this immediately, while the problem is still in your mind. Later, if something reminds you of this problem, think about it some more to see why you were reminded of it.</div>
 <div class="para" id="SECour-advice-synopsis-4-1-5-4">The difference between the teacher and the student is not intelligence, but experience.  The more problems you solve, the more experience you gain. But you need to be able to use that experience for subsequent problems. Reflecting on a problem after you solve it is how you make the knowledge you gained from the problem available for later use.</div>
-<div class="para" id="SECour-advice-synopsis-4-1-5-5">For example, see if you can use what you learned from the triangle problem to solve <a href="" class="xref" data-knowl="./knowl/xref/DRILLMaxPara.html" title="Drill 2.10">Drill 2.10</a>.</div>
+<div class="para" id="SECour-advice-synopsis-4-1-5-5">For example, see if you can use what you learned from the triangle problem to solve <a href="CHAPTERproblem-solving.html#DRILLMaxPara" class="xref" data-knowl="./knowl/xref/DRILLMaxPara.html" data-reveal-label="Reveal" data-close-label="Close" title="Drill 2.10">Drill 2.10</a>.</div>
 </dd>
 <dt id="SECour-advice-synopsis-4-1-6">Use your intuition, but don’t trust it.</dt>
 <dd>
@@ -880,7 +1479,9 @@ a}\right)+c=0.
 <span class="type">Drill</span><span class="space"> </span><span class="codenumber">2.11</span><span class="period">.</span><span class="space"> </span><span class="title">Some possibly deceptive problems.</span>
 </h4>
 <div class="introduction" id="exercise-IntuitionDeceivers-2">
-<div class="para" id="exercise-IntuitionDeceivers-2-1"> All of the problems below refer to the following diagram:</div> <div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="external/DC/ParabolicSection1.png" class="contained"></div>  <div class="para" id="exercise-IntuitionDeceivers-2-3">You will probably have a strong insight, or intuition, about each of the following claims. Do your best to explain why each is true, or why it is false. Read each problem carefully and take care not to add assumptions that are not in the problem. Back up your claim with reasoning, not intuition.</div>
+<div class="para" id="exercise-IntuitionDeceivers-2-1"> All of the problems below refer to the following diagram:</div>
+<div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="external/DC/ParabolicSection1.png" class="contained"></div>
+<div class="para" id="exercise-IntuitionDeceivers-2-3">You will probably have a strong insight, or intuition, about each of the following claims. Do your best to explain why each is true, or why it is false. Read each problem carefully and take care not to add assumptions that are not in the problem. Back up your claim with reasoning, not intuition.</div>
 </div>
 <article class="task exercise-like" id="exercise-IntuitionDeceivers-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
 <div class="para" id="exercise-IntuitionDeceivers-3-1-1">Given a regular polygon inscribed in a fixed circle, if you double the number of sides, then the area inside the polygon becomes larger.</div></article><article class="task exercise-like" id="exercise-IntuitionDeceivers-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>

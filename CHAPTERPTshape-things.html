@@ -58,7 +58,7 @@ window.MathJax = {
       "[pretext]/mathjaxknowl3.js"
     ],
     "paths": {
-      "pretext": "https://pretextbook.org/js/lib"
+      "pretext": "_static/pretext/js/lib"
     }
   },
   "startup": {
@@ -70,8 +70,8 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.33/pretext_search.js"></script><link href="https://pretextbook.org/css/0.83/pretext_search.css" rel="stylesheet" type="text/css">
-<script>js_version = 0.33</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.33/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.33/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.33/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
@@ -79,16 +79,588 @@ window.MathJax = {
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-<link href="https://pretextbook.org/css/0.83/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/shell_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/banner_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/navbar_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/toc_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/colors_blue_red.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/setcolors.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/pretext.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/shell_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/banner_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/toc_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
+<style>
+#PleaForHelp-9-3 { counter-set: PleaForHelp-9-3 0; }
+#PleaForHelp-9-3 > li::marker { content: ""counter(PleaForHelp-9-3,decimal)"."; }
+#PleaForHelp-9-3 > li { counter-increment: PleaForHelp-9-3; }
+#SECTIONFermMethAedeq-22-2-1-1-1 { counter-set: SECTIONFermMethAedeq-22-2-1-1-1 0; }
+#SECTIONFermMethAedeq-22-2-1-1-1 > li::marker { content: ""counter(SECTIONFermMethAedeq-22-2-1-1-1,lower-roman)""; }
+#SECTIONFermMethAedeq-22-2-1-1-1 > li { counter-increment: SECTIONFermMethAedeq-22-2-1-1-1; }
+#SECTIONFermMethAedeq-22-6-1-1-1 { counter-set: SECTIONFermMethAedeq-22-6-1-1-1 0; }
+#SECTIONFermMethAedeq-22-6-1-1-1 > li::marker { content: ""counter(SECTIONFermMethAedeq-22-6-1-1-1,lower-roman)""; }
+#SECTIONFermMethAedeq-22-6-1-1-1 > li { counter-increment: SECTIONFermMethAedeq-22-6-1-1-1; }
+#SECTIONFermMethAedeq-22-7-1-1-8 { counter-set: SECTIONFermMethAedeq-22-7-1-1-8 0; }
+#SECTIONFermMethAedeq-22-7-1-1-8 > li::marker { content: ""counter(SECTIONFermMethAedeq-22-7-1-1-8,lower-roman)""; }
+#SECTIONFermMethAedeq-22-7-1-1-8 > li { counter-increment: SECTIONFermMethAedeq-22-7-1-1-8; }
+#PROBLEMFermMethX2-2-1-1-1 { counter-set: PROBLEMFermMethX2-2-1-1-1 0; }
+#PROBLEMFermMethX2-2-1-1-1 > li::marker { content: ""counter(PROBLEMFermMethX2-2-1-1-1,lower-roman)""; }
+#PROBLEMFermMethX2-2-1-1-1 > li { counter-increment: PROBLEMFermMethX2-2-1-1-1; }
+#PROBLEMFermMethX2-3-1-1-1 { counter-set: PROBLEMFermMethX2-3-1-1-1 0; }
+#PROBLEMFermMethX2-3-1-1-1 > li::marker { content: ""counter(PROBLEMFermMethX2-3-1-1-1,lower-roman)""; }
+#PROBLEMFermMethX2-3-1-1-1 > li { counter-increment: PROBLEMFermMethX2-3-1-1-1; }
+#SUBSECTIONSpdVelRofC-31-2-1 { counter-set: SUBSECTIONSpdVelRofC-31-2-1 0; }
+#SUBSECTIONSpdVelRofC-31-2-1 > li::marker { content: ""counter(SUBSECTIONSpdVelRofC-31-2-1,lower-roman)""; }
+#SUBSECTIONSpdVelRofC-31-2-1 > li { counter-increment: SUBSECTIONSpdVelRofC-31-2-1; }
+#SUBSECTIONSpdVelRofC-32-2-1 { counter-set: SUBSECTIONSpdVelRofC-32-2-1 0; }
+#SUBSECTIONSpdVelRofC-32-2-1 > li::marker { content: ""counter(SUBSECTIONSpdVelRofC-32-2-1,lower-roman)""; }
+#SUBSECTIONSpdVelRofC-32-2-1 > li { counter-increment: SUBSECTIONSpdVelRofC-32-2-1; }
+#SUBSECTIONSpdVelRofC-33-2-1 { counter-set: SUBSECTIONSpdVelRofC-33-2-1 0; }
+#SUBSECTIONSpdVelRofC-33-2-1 > li::marker { content: ""counter(SUBSECTIONSpdVelRofC-33-2-1,lower-roman)""; }
+#SUBSECTIONSpdVelRofC-33-2-1 > li { counter-increment: SUBSECTIONSpdVelRofC-33-2-1; }
+#SUBSECTIONSpdVelRofC-34-2-1 { counter-set: SUBSECTIONSpdVelRofC-34-2-1 0; }
+#SUBSECTIONSpdVelRofC-34-2-1 > li::marker { content: ""counter(SUBSECTIONSpdVelRofC-34-2-1,lower-roman)""; }
+#SUBSECTIONSpdVelRofC-34-2-1 > li { counter-increment: SUBSECTIONSpdVelRofC-34-2-1; }
+#DRILLConstantRule-2 { counter-set: DRILLConstantRule-2 0; }
+#DRILLConstantRule-2 > li::marker { content: ""counter(DRILLConstantRule-2,lower-roman)""; }
+#DRILLConstantRule-2 > li { counter-increment: DRILLConstantRule-2; }
+#SECTIONsome-rules-diff-26-2 { counter-set: SECTIONsome-rules-diff-26-2 0; }
+#SECTIONsome-rules-diff-26-2 > li::marker { content: ""counter(SECTIONsome-rules-diff-26-2,lower-roman)""; }
+#SECTIONsome-rules-diff-26-2 > li { counter-increment: SECTIONsome-rules-diff-26-2; }
+#PARTGenPwrRule-1-2-1 { counter-set: PARTGenPwrRule-1-2-1 0; }
+#PARTGenPwrRule-1-2-1 > li::marker { content: ""counter(PARTGenPwrRule-1-2-1,lower-roman)""; }
+#PARTGenPwrRule-1-2-1 > li { counter-increment: PARTGenPwrRule-1-2-1; }
+#SECTIONsome-rules-diff-58-2 { counter-set: SECTIONsome-rules-diff-58-2 0; }
+#SECTIONsome-rules-diff-58-2 > li::marker { content: ""counter(SECTIONsome-rules-diff-58-2,lower-roman)""; }
+#SECTIONsome-rules-diff-58-2 > li { counter-increment: SECTIONsome-rules-diff-58-2; }
+#SECTIONsome-rules-diff-79-1-4 { counter-set: SECTIONsome-rules-diff-79-1-4 0; }
+#SECTIONsome-rules-diff-79-1-4 > li::marker { content: ""counter(SECTIONsome-rules-diff-79-1-4,lower-roman)""; }
+#SECTIONsome-rules-diff-79-1-4 > li { counter-increment: SECTIONsome-rules-diff-79-1-4; }
+#SECTIONsome-rules-diff-80-1-4 { counter-set: SECTIONsome-rules-diff-80-1-4 0; }
+#SECTIONsome-rules-diff-80-1-4 > li::marker { content: ""counter(SECTIONsome-rules-diff-80-1-4,lower-roman)""; }
+#SECTIONsome-rules-diff-80-1-4 > li { counter-increment: SECTIONsome-rules-diff-80-1-4; }
+#SECTIONsome-rules-diff-81-1-1 { counter-set: SECTIONsome-rules-diff-81-1-1 0; }
+#SECTIONsome-rules-diff-81-1-1 > li::marker { content: ""counter(SECTIONsome-rules-diff-81-1-1,lower-roman)""; }
+#SECTIONsome-rules-diff-81-1-1 > li { counter-increment: SECTIONsome-rules-diff-81-1-1; }
+#SECTIONsome-rules-diff-82-1-1 { counter-set: SECTIONsome-rules-diff-82-1-1 0; }
+#SECTIONsome-rules-diff-82-1-1 > li::marker { content: ""counter(SECTIONsome-rules-diff-82-1-1,lower-roman)""; }
+#SECTIONsome-rules-diff-82-1-1 > li { counter-increment: SECTIONsome-rules-diff-82-1-1; }
+#SECTIONVelocitySlopeTangent-12-2 { counter-set: SECTIONVelocitySlopeTangent-12-2 0; }
+#SECTIONVelocitySlopeTangent-12-2 > li::marker { content: ""counter(SECTIONVelocitySlopeTangent-12-2,lower-roman)""; }
+#SECTIONVelocitySlopeTangent-12-2 > li { counter-increment: SECTIONVelocitySlopeTangent-12-2; }
+#SECTIONdefin-tang-line-22-1-2 { counter-set: SECTIONdefin-tang-line-22-1-2 0; }
+#SECTIONdefin-tang-line-22-1-2 > li::marker { content: ""counter(SECTIONdefin-tang-line-22-1-2,lower-roman)""; }
+#SECTIONdefin-tang-line-22-1-2 > li { counter-increment: SECTIONdefin-tang-line-22-1-2; }
+#SECTIONdefin-tang-line-31-2-1-1-2 { counter-set: SECTIONdefin-tang-line-31-2-1-1-2 0; }
+#SECTIONdefin-tang-line-31-2-1-1-2 > li::marker { content: ""counter(SECTIONdefin-tang-line-31-2-1-1-2,lower-roman)""; }
+#SECTIONdefin-tang-line-31-2-1-1-2 > li { counter-increment: SECTIONdefin-tang-line-31-2-1-1-2; }
+#SECTIONdefin-tang-line-31-3-1-1-2 { counter-set: SECTIONdefin-tang-line-31-3-1-1-2 0; }
+#SECTIONdefin-tang-line-31-3-1-1-2 > li::marker { content: ""counter(SECTIONdefin-tang-line-31-3-1-1-2,lower-roman)""; }
+#SECTIONdefin-tang-line-31-3-1-1-2 > li { counter-increment: SECTIONdefin-tang-line-31-3-1-1-2; }
+#SECTIONdefin-tang-line-31-4-1-1-2 { counter-set: SECTIONdefin-tang-line-31-4-1-1-2 0; }
+#SECTIONdefin-tang-line-31-4-1-1-2 > li::marker { content: ""counter(SECTIONdefin-tang-line-31-4-1-1-2,lower-roman)""; }
+#SECTIONdefin-tang-line-31-4-1-1-2 > li { counter-increment: SECTIONdefin-tang-line-31-4-1-1-2; }
+#PROBLEMHyperbolaTriangles-3-1-1-6 { counter-set: PROBLEMHyperbolaTriangles-3-1-1-6 0; }
+#PROBLEMHyperbolaTriangles-3-1-1-6 > li::marker { content: ""counter(PROBLEMHyperbolaTriangles-3-1-1-6,lower-roman)""; }
+#PROBLEMHyperbolaTriangles-3-1-1-6 > li { counter-increment: PROBLEMHyperbolaTriangles-3-1-1-6; }
+#PROBLEMHyperbolaTriangles-4-1-1-6 { counter-set: PROBLEMHyperbolaTriangles-4-1-1-6 0; }
+#PROBLEMHyperbolaTriangles-4-1-1-6 > li::marker { content: ""counter(PROBLEMHyperbolaTriangles-4-1-1-6,lower-roman)""; }
+#PROBLEMHyperbolaTriangles-4-1-1-6 > li { counter-increment: PROBLEMHyperbolaTriangles-4-1-1-6; }
+#PROBLEMHyperbolaTriangles-5-1-1-6 { counter-set: PROBLEMHyperbolaTriangles-5-1-1-6 0; }
+#PROBLEMHyperbolaTriangles-5-1-1-6 > li::marker { content: ""counter(PROBLEMHyperbolaTriangles-5-1-1-6,lower-roman)""; }
+#PROBLEMHyperbolaTriangles-5-1-1-6 > li { counter-increment: PROBLEMHyperbolaTriangles-5-1-1-6; }
+#PROBLEMHyperbolaTriangles-6-1-1-4 { counter-set: PROBLEMHyperbolaTriangles-6-1-1-4 0; }
+#PROBLEMHyperbolaTriangles-6-1-1-4 > li::marker { content: ""counter(PROBLEMHyperbolaTriangles-6-1-1-4,lower-roman)""; }
+#PROBLEMHyperbolaTriangles-6-1-1-4 > li { counter-increment: PROBLEMHyperbolaTriangles-6-1-1-4; }
+#SECTIONGalileoDrops-9-2 { counter-set: SECTIONGalileoDrops-9-2 0; }
+#SECTIONGalileoDrops-9-2 > li::marker { content: ""counter(SECTIONGalileoDrops-9-2,decimal)"."; }
+#SECTIONGalileoDrops-9-2 > li { counter-increment: SECTIONGalileoDrops-9-2; }
+#SECONDBringCalc-5-4 { counter-set: SECONDBringCalc-5-4 0; }
+#SECONDBringCalc-5-4 > li::marker { content: ""counter(SECONDBringCalc-5-4,decimal)"."; }
+#SECONDBringCalc-5-4 > li { counter-increment: SECONDBringCalc-5-4; }
+#SECONDBringCalc-11-6 { counter-set: SECONDBringCalc-11-6 0; }
+#SECONDBringCalc-11-6 > li::marker { content: ""counter(SECONDBringCalc-11-6,decimal)"."; }
+#SECONDBringCalc-11-6 > li { counter-increment: SECONDBringCalc-11-6; }
+#PROBLEMGeneralFallingBalls-2-1-1-2 { counter-set: PROBLEMGeneralFallingBalls-2-1-1-2 0; }
+#PROBLEMGeneralFallingBalls-2-1-1-2 > li::marker { content: ""counter(PROBLEMGeneralFallingBalls-2-1-1-2,lower-roman)""; }
+#PROBLEMGeneralFallingBalls-2-1-1-2 > li { counter-increment: PROBLEMGeneralFallingBalls-2-1-1-2; }
+#PROBLEMGeneralFallingBalls-8-1-1-2 { counter-set: PROBLEMGeneralFallingBalls-8-1-1-2 0; }
+#PROBLEMGeneralFallingBalls-8-1-1-2 > li::marker { content: ""counter(PROBLEMGeneralFallingBalls-8-1-1-2,lower-roman)""; }
+#PROBLEMGeneralFallingBalls-8-1-1-2 > li { counter-increment: PROBLEMGeneralFallingBalls-8-1-1-2; }
+#SECTIONDerivative-18-2 { counter-set: SECTIONDerivative-18-2 0; }
+#SECTIONDerivative-18-2 > li::marker { content: ""counter(SECTIONDerivative-18-2,lower-roman)""; }
+#SECTIONDerivative-18-2 > li { counter-increment: SECTIONDerivative-18-2; }
+#PROBLEMDerivProdNEProdDeriv-2-1-1-1 { counter-set: PROBLEMDerivProdNEProdDeriv-2-1-1-1 0; }
+#PROBLEMDerivProdNEProdDeriv-2-1-1-1 > li::marker { content: ""counter(PROBLEMDerivProdNEProdDeriv-2-1-1-1,lower-roman)""; }
+#PROBLEMDerivProdNEProdDeriv-2-1-1-1 > li { counter-increment: PROBLEMDerivProdNEProdDeriv-2-1-1-1; }
+#SECTIONDerivative-21-2 { counter-set: SECTIONDerivative-21-2 0; }
+#SECTIONDerivative-21-2 > li::marker { content: ""counter(SECTIONDerivative-21-2,lower-roman)""; }
+#SECTIONDerivative-21-2 > li { counter-increment: SECTIONDerivative-21-2; }
+#PROBLEMAirlinerSpeed-3-1-1-2 { counter-set: PROBLEMAirlinerSpeed-3-1-1-2 0; }
+#PROBLEMAirlinerSpeed-3-1-1-2 > li::marker { content: ""counter(PROBLEMAirlinerSpeed-3-1-1-2,decimal)"."; }
+#PROBLEMAirlinerSpeed-3-1-1-2 > li { counter-increment: PROBLEMAirlinerSpeed-3-1-1-2; }
+#SECTIONnewt-flux-dynam-13-2-1 { counter-set: SECTIONnewt-flux-dynam-13-2-1 0; }
+#SECTIONnewt-flux-dynam-13-2-1 > li::marker { content: ""counter(SECTIONnewt-flux-dynam-13-2-1,lower-roman)""; }
+#SECTIONnewt-flux-dynam-13-2-1 > li { counter-increment: SECTIONnewt-flux-dynam-13-2-1; }
+#SECTIONFluxions-36-2-1-1-1 { counter-set: SECTIONFluxions-36-2-1-1-1 0; }
+#SECTIONFluxions-36-2-1-1-1 > li::marker { content: ""counter(SECTIONFluxions-36-2-1-1-1,decimal)"."; }
+#SECTIONFluxions-36-2-1-1-1 > li { counter-increment: SECTIONFluxions-36-2-1-1-1; }
+#SECTIONFluxions-36-3-1-1-1 { counter-set: SECTIONFluxions-36-3-1-1-1 0; }
+#SECTIONFluxions-36-3-1-1-1 > li::marker { content: ""counter(SECTIONFluxions-36-3-1-1-1,decimal)"."; }
+#SECTIONFluxions-36-3-1-1-1 > li { counter-increment: SECTIONFluxions-36-3-1-1-1; }
+#PROBLEMadfj-1-1-2-2 { counter-set: PROBLEMadfj-1-1-2-2 0; }
+#PROBLEMadfj-1-1-2-2 > li::marker { content: ""counter(PROBLEMadfj-1-1-2-2,lower-roman)""; }
+#PROBLEMadfj-1-1-2-2 > li { counter-increment: PROBLEMadfj-1-1-2-2; }
+#PROBLEMadfj-2-1-2-2 { counter-set: PROBLEMadfj-2-1-2-2 0; }
+#PROBLEMadfj-2-1-2-2 > li::marker { content: ""counter(PROBLEMadfj-2-1-2-2,lower-roman)""; }
+#PROBLEMadfj-2-1-2-2 > li { counter-increment: PROBLEMadfj-2-1-2-2; }
+#SECTIONSelfIntersectCurve-20-15-2-1-1-2 { counter-set: SECTIONSelfIntersectCurve-20-15-2-1-1-2 0; }
+#SECTIONSelfIntersectCurve-20-15-2-1-1-2 > li::marker { content: ""counter(SECTIONSelfIntersectCurve-20-15-2-1-1-2,lower-roman)""; }
+#SECTIONSelfIntersectCurve-20-15-2-1-1-2 > li { counter-increment: SECTIONSelfIntersectCurve-20-15-2-1-1-2; }
+#PROBLEMUnitCircleParameterization1-1-1-1-1 { counter-set: PROBLEMUnitCircleParameterization1-1-1-1-1 0; }
+#PROBLEMUnitCircleParameterization1-1-1-1-1 > li::marker { content: ""counter(PROBLEMUnitCircleParameterization1-1-1-1-1,lower-roman)""; }
+#PROBLEMUnitCircleParameterization1-1-1-1-1 > li { counter-increment: PROBLEMUnitCircleParameterization1-1-1-1-1; }
+#SECTIONSelfIntersectCurve-20-21-1-1-2 { counter-set: SECTIONSelfIntersectCurve-20-21-1-1-2 0; }
+#SECTIONSelfIntersectCurve-20-21-1-1-2 > li::marker { content: ""counter(SECTIONSelfIntersectCurve-20-21-1-1-2,lower-roman)""; }
+#SECTIONSelfIntersectCurve-20-21-1-1-2 > li { counter-increment: SECTIONSelfIntersectCurve-20-21-1-1-2; }
+#SUBSECTIONradian-measure-19-2 { counter-set: SUBSECTIONradian-measure-19-2 0; }
+#SUBSECTIONradian-measure-19-2 > li::marker { content: ""counter(SUBSECTIONradian-measure-19-2,lower-roman)""; }
+#SUBSECTIONradian-measure-19-2 > li { counter-increment: SUBSECTIONradian-measure-19-2; }
+#SUBSECTIONradian-measure-20-2 { counter-set: SUBSECTIONradian-measure-20-2 0; }
+#SUBSECTIONradian-measure-20-2 > li::marker { content: ""counter(SUBSECTIONradian-measure-20-2,lower-roman)""; }
+#SUBSECTIONradian-measure-20-2 > li { counter-increment: SUBSECTIONradian-measure-20-2; }
+#SUBSECTIONradian-measure-31-2 { counter-set: SUBSECTIONradian-measure-31-2 0; }
+#SUBSECTIONradian-measure-31-2 > li::marker { content: ""counter(SUBSECTIONradian-measure-31-2,lower-roman)""; }
+#SUBSECTIONradian-measure-31-2 > li { counter-increment: SUBSECTIONradian-measure-31-2; }
+#SECTIONtrig-interl-3-12-2-1-1-2 { counter-set: SECTIONtrig-interl-3-12-2-1-1-2 0; }
+#SECTIONtrig-interl-3-12-2-1-1-2 > li::marker { content: ""counter(SECTIONtrig-interl-3-12-2-1-1-2,lower-roman)""; }
+#SECTIONtrig-interl-3-12-2-1-1-2 > li { counter-increment: SECTIONtrig-interl-3-12-2-1-1-2; }
+#SECTIONtrig-interl-3-12-3-1-1-2 { counter-set: SECTIONtrig-interl-3-12-3-1-1-2 0; }
+#SECTIONtrig-interl-3-12-3-1-1-2 > li::marker { content: ""counter(SECTIONtrig-interl-3-12-3-1-1-2,lower-roman)""; }
+#SECTIONtrig-interl-3-12-3-1-1-2 > li { counter-increment: SECTIONtrig-interl-3-12-3-1-1-2; }
+#SECTIONtrig-interl-3-14-2 { counter-set: SECTIONtrig-interl-3-14-2 0; }
+#SECTIONtrig-interl-3-14-2 > li::marker { content: ""counter(SECTIONtrig-interl-3-14-2,lower-roman)""; }
+#SECTIONtrig-interl-3-14-2 > li { counter-increment: SECTIONtrig-interl-3-14-2; }
+#PROBLEMSineOscillB-1-1-8 { counter-set: PROBLEMSineOscillB-1-1-8 0; }
+#PROBLEMSineOscillB-1-1-8 > li::marker { content: ""counter(PROBLEMSineOscillB-1-1-8,lower-roman)""; }
+#PROBLEMSineOscillB-1-1-8 > li { counter-increment: PROBLEMSineOscillB-1-1-8; }
+#SECTIONtrig-interl-5-11-2 { counter-set: SECTIONtrig-interl-5-11-2 0; }
+#SECTIONtrig-interl-5-11-2 > li::marker { content: ""counter(SECTIONtrig-interl-5-11-2,lower-roman)""; }
+#SECTIONtrig-interl-5-11-2 > li { counter-increment: SECTIONtrig-interl-5-11-2; }
+#DRILLPolarQuirks2-2 { counter-set: DRILLPolarQuirks2-2 0; }
+#DRILLPolarQuirks2-2 > li::marker { content: ""counter(DRILLPolarQuirks2-2,lower-roman)""; }
+#DRILLPolarQuirks2-2 > li { counter-increment: DRILLPolarQuirks2-2; }
+#PROBLEMPolRectConvertA-1-1-3 { counter-set: PROBLEMPolRectConvertA-1-1-3 0; }
+#PROBLEMPolRectConvertA-1-1-3 > li::marker { content: ""counter(PROBLEMPolRectConvertA-1-1-3,lower-roman)""; }
+#PROBLEMPolRectConvertA-1-1-3 > li { counter-increment: PROBLEMPolRectConvertA-1-1-3; }
+#PROBLEMPolarGraphs-2 { counter-set: PROBLEMPolarGraphs-2 0; }
+#PROBLEMPolarGraphs-2 > li::marker { content: ""counter(PROBLEMPolarGraphs-2,lower-roman)""; }
+#PROBLEMPolarGraphs-2 > li { counter-increment: PROBLEMPolarGraphs-2; }
+#SUBSECTIONCircularMotion-5-1-2 { counter-set: SUBSECTIONCircularMotion-5-1-2 0; }
+#SUBSECTIONCircularMotion-5-1-2 > li::marker { content: ""counter(SUBSECTIONCircularMotion-5-1-2,lower-roman)""; }
+#SUBSECTIONCircularMotion-5-1-2 > li { counter-increment: SUBSECTIONCircularMotion-5-1-2; }
+#EXERCISEDiffPractice1-1-1-3 { counter-set: EXERCISEDiffPractice1-1-1-3 0; }
+#EXERCISEDiffPractice1-1-1-3 > li::marker { content: ""counter(EXERCISEDiffPractice1-1-1-3,lower-roman)""; }
+#EXERCISEDiffPractice1-1-1-3 > li { counter-increment: EXERCISEDiffPractice1-1-1-3; }
+#SUBSECTIONCircularMotion-12-1-9 { counter-set: SUBSECTIONCircularMotion-12-1-9 0; }
+#SUBSECTIONCircularMotion-12-1-9 > li::marker { content: ""counter(SUBSECTIONCircularMotion-12-1-9,lower-roman)""; }
+#SUBSECTIONCircularMotion-12-1-9 > li { counter-increment: SUBSECTIONCircularMotion-12-1-9; }
+#SUBSECTIONpolar-coord-calc-6-2-1-3-1 { counter-set: SUBSECTIONpolar-coord-calc-6-2-1-3-1 0; }
+#SUBSECTIONpolar-coord-calc-6-2-1-3-1 > li::marker { content: ""counter(SUBSECTIONpolar-coord-calc-6-2-1-3-1,lower-roman)""; }
+#SUBSECTIONpolar-coord-calc-6-2-1-3-1 > li { counter-increment: SUBSECTIONpolar-coord-calc-6-2-1-3-1; }
+#SUBSECTIONpolar-coord-calc-6-3-1-3-1 { counter-set: SUBSECTIONpolar-coord-calc-6-3-1-3-1 0; }
+#SUBSECTIONpolar-coord-calc-6-3-1-3-1 > li::marker { content: ""counter(SUBSECTIONpolar-coord-calc-6-3-1-3-1,lower-roman)""; }
+#SUBSECTIONpolar-coord-calc-6-3-1-3-1 > li { counter-increment: SUBSECTIONpolar-coord-calc-6-3-1-3-1; }
+#SUBSECTIONpolar-coord-calc-6-4-1-3-1 { counter-set: SUBSECTIONpolar-coord-calc-6-4-1-3-1 0; }
+#SUBSECTIONpolar-coord-calc-6-4-1-3-1 > li::marker { content: ""counter(SUBSECTIONpolar-coord-calc-6-4-1-3-1,lower-roman)""; }
+#SUBSECTIONpolar-coord-calc-6-4-1-3-1 > li { counter-increment: SUBSECTIONpolar-coord-calc-6-4-1-3-1; }
+#PROBLEMcycloid2-2-1-1-1 { counter-set: PROBLEMcycloid2-2-1-1-1 0; }
+#PROBLEMcycloid2-2-1-1-1 > li::marker { content: ""counter(PROBLEMcycloid2-2-1-1-1,lower-roman)""; }
+#PROBLEMcycloid2-2-1-1-1 > li { counter-increment: PROBLEMcycloid2-2-1-1-1; }
+#PROBLEMcycloid2-3-1-1-1 { counter-set: PROBLEMcycloid2-3-1-1-1 0; }
+#PROBLEMcycloid2-3-1-1-1 > li::marker { content: ""counter(PROBLEMcycloid2-3-1-1-1,lower-roman)""; }
+#PROBLEMcycloid2-3-1-1-1 > li { counter-increment: PROBLEMcycloid2-3-1-1-1; }
+#SUBSECTIONsimple-harm-oscill-17-3-1-1-4 { counter-set: SUBSECTIONsimple-harm-oscill-17-3-1-1-4 0; }
+#SUBSECTIONsimple-harm-oscill-17-3-1-1-4 > li::marker { content: ""counter(SUBSECTIONsimple-harm-oscill-17-3-1-1-4,lower-roman)""; }
+#SUBSECTIONsimple-harm-oscill-17-3-1-1-4 > li { counter-increment: SUBSECTIONsimple-harm-oscill-17-3-1-1-4; }
+#SECTIONdiff-other-trig-13-1-1 { counter-set: SECTIONdiff-other-trig-13-1-1 0; }
+#SECTIONdiff-other-trig-13-1-1 > li::marker { content: ""counter(SECTIONdiff-other-trig-13-1-1,lower-roman)""; }
+#SECTIONdiff-other-trig-13-1-1 > li { counter-increment: SECTIONdiff-other-trig-13-1-1; }
+#SECTIONdiff-other-trig-14-1-3 { counter-set: SECTIONdiff-other-trig-14-1-3 0; }
+#SECTIONdiff-other-trig-14-1-3 > li::marker { content: ""counter(SECTIONdiff-other-trig-14-1-3,lower-roman)""; }
+#SECTIONdiff-other-trig-14-1-3 > li { counter-increment: SECTIONdiff-other-trig-14-1-3; }
+#PROBLEMDiffFormTan-3-1-3-1 { counter-set: PROBLEMDiffFormTan-3-1-3-1 0; }
+#PROBLEMDiffFormTan-3-1-3-1 > li::marker { content: ""counter(PROBLEMDiffFormTan-3-1-3-1,decimal)"."; }
+#PROBLEMDiffFormTan-3-1-3-1 > li { counter-increment: PROBLEMDiffFormTan-3-1-3-1; }
+#DIGRESSIONInverse-function-notation-7-1-1 { counter-set: DIGRESSIONInverse-function-notation-7-1-1 0; }
+#DIGRESSIONInverse-function-notation-7-1-1 > li::marker { content: ""counter(DIGRESSIONInverse-function-notation-7-1-1,lower-roman)""; }
+#DIGRESSIONInverse-function-notation-7-1-1 > li { counter-increment: DIGRESSIONInverse-function-notation-7-1-1; }
+#PROBLEMInvTanDiffeqB-1-1-2 { counter-set: PROBLEMInvTanDiffeqB-1-1-2 0; }
+#PROBLEMInvTanDiffeqB-1-1-2 > li::marker { content: ""counter(PROBLEMInvTanDiffeqB-1-1-2,lower-roman)""; }
+#PROBLEMInvTanDiffeqB-1-1-2 > li { counter-increment: PROBLEMInvTanDiffeqB-1-1-2; }
+#PROBLEMArcSinDiffeqB-1-1-2 { counter-set: PROBLEMArcSinDiffeqB-1-1-2 0; }
+#PROBLEMArcSinDiffeqB-1-1-2 > li::marker { content: ""counter(PROBLEMArcSinDiffeqB-1-1-2,lower-roman)""; }
+#PROBLEMArcSinDiffeqB-1-1-2 > li { counter-increment: PROBLEMArcSinDiffeqB-1-1-2; }
+#PROBLEMArcSecDiffeqB-1-1-2 { counter-set: PROBLEMArcSecDiffeqB-1-1-2 0; }
+#PROBLEMArcSecDiffeqB-1-1-2 > li::marker { content: ""counter(PROBLEMArcSecDiffeqB-1-1-2,lower-roman)""; }
+#PROBLEMArcSecDiffeqB-1-1-2 > li { counter-increment: PROBLEMArcSecDiffeqB-1-1-2; }
+#InverseSecCsc-11-1 { counter-set: InverseSecCsc-11-1 0; }
+#InverseSecCsc-11-1 > li::marker { content: ""counter(InverseSecCsc-11-1,decimal)"."; }
+#InverseSecCsc-11-1 > li { counter-increment: InverseSecCsc-11-1; }
+#InverseSecCsc-17-1-1 { counter-set: InverseSecCsc-17-1-1 0; }
+#InverseSecCsc-17-1-1 > li::marker { content: ""counter(InverseSecCsc-17-1-1,lower-roman)""; }
+#InverseSecCsc-17-1-1 > li { counter-increment: InverseSecCsc-17-1-1; }
+#InverseSecCsc-20-2-1-1-1 { counter-set: InverseSecCsc-20-2-1-1-1 0; }
+#InverseSecCsc-20-2-1-1-1 > li::marker { content: ""counter(InverseSecCsc-20-2-1-1-1,lower-roman)""; }
+#InverseSecCsc-20-2-1-1-1 > li { counter-increment: InverseSecCsc-20-2-1-1-1; }
+#EXAMPLESqrt2-2-3-1-1-1 { counter-set: EXAMPLESqrt2-2-3-1-1-1 0; }
+#EXAMPLESqrt2-2-3-1-1-1 > li::marker { content: ""counter(EXAMPLESqrt2-2-3-1-1-1,lower-roman)""; }
+#EXAMPLESqrt2-2-3-1-1-1 > li { counter-increment: EXAMPLESqrt2-2-3-1-1-1; }
+#DRILLNewtonMethod2-2 { counter-set: DRILLNewtonMethod2-2 0; }
+#DRILLNewtonMethod2-2 > li::marker { content: ""counter(DRILLNewtonMethod2-2,lower-roman)""; }
+#DRILLNewtonMethod2-2 > li { counter-increment: DRILLNewtonMethod2-2; }
+#ALGORITHMNewtonsMethod-3-4 { counter-set: ALGORITHMNewtonsMethod-3-4 0; }
+#ALGORITHMNewtonsMethod-3-4 > li::marker { content: ""counter(ALGORITHMNewtonsMethod-3-4,decimal)"."; }
+#ALGORITHMNewtonsMethod-3-4 > li { counter-increment: ALGORITHMNewtonsMethod-3-4; }
+#PROBLEMNewtMethCreateFunction-2-3 { counter-set: PROBLEMNewtMethCreateFunction-2-3 0; }
+#PROBLEMNewtMethCreateFunction-2-3 > li::marker { content: ""counter(PROBLEMNewtMethCreateFunction-2-3,lower-roman)""; }
+#PROBLEMNewtMethCreateFunction-2-3 > li { counter-increment: PROBLEMNewtMethCreateFunction-2-3; }
+#PROBLEMNewton-meth-2-8 { counter-set: PROBLEMNewton-meth-2-8 0; }
+#PROBLEMNewton-meth-2-8 > li::marker { content: ""counter(PROBLEMNewton-meth-2-8,lower-roman)""; }
+#PROBLEMNewton-meth-2-8 > li { counter-increment: PROBLEMNewton-meth-2-8; }
+#PROBLEMNewton-meth2-2-2 { counter-set: PROBLEMNewton-meth2-2-2 0; }
+#PROBLEMNewton-meth2-2-2 > li::marker { content: ""counter(PROBLEMNewton-meth2-2-2,lower-roman)""; }
+#PROBLEMNewton-meth2-2-2 > li { counter-increment: PROBLEMNewton-meth2-2-2; }
+#SUBSECTIONSubtleFailure-8-3-1-1-3 { counter-set: SUBSECTIONSubtleFailure-8-3-1-1-3 0; }
+#SUBSECTIONSubtleFailure-8-3-1-1-3 > li::marker { content: ""counter(SUBSECTIONSubtleFailure-8-3-1-1-3,lower-roman)""; }
+#SUBSECTIONSubtleFailure-8-3-1-1-3 > li { counter-increment: SUBSECTIONSubtleFailure-8-3-1-1-3; }
+#SECTIONDEsandIVPS-2-3 { counter-set: SECTIONDEsandIVPS-2-3 0; }
+#SECTIONDEsandIVPS-2-3 > li::marker { content: ""counter(SECTIONDEsandIVPS-2-3,decimal)"."; }
+#SECTIONDEsandIVPS-2-3 > li { counter-increment: SECTIONDEsandIVPS-2-3; }
+#DRILLIVP-sqr-1-1 { counter-set: DRILLIVP-sqr-1-1 0; }
+#DRILLIVP-sqr-1-1 > li::marker { content: ""counter(DRILLIVP-sqr-1-1,lower-roman)""; }
+#DRILLIVP-sqr-1-1 > li { counter-increment: DRILLIVP-sqr-1-1; }
+#SECTIONexponential-growth-23-2 { counter-set: SECTIONexponential-growth-23-2 0; }
+#SECTIONexponential-growth-23-2 > li::marker { content: ""counter(SECTIONexponential-growth-23-2,decimal)"."; }
+#SECTIONexponential-growth-23-2 > li { counter-increment: SECTIONexponential-growth-23-2; }
+#SECTIONexponential-growth-28-2 { counter-set: SECTIONexponential-growth-28-2 0; }
+#SECTIONexponential-growth-28-2 > li::marker { content: ""counter(SECTIONexponential-growth-28-2,lower-roman)""; }
+#SECTIONexponential-growth-28-2 > li { counter-increment: SECTIONexponential-growth-28-2; }
+#SECTIONexponential-growth-29-2 { counter-set: SECTIONexponential-growth-29-2 0; }
+#SECTIONexponential-growth-29-2 > li::marker { content: ""counter(SECTIONexponential-growth-29-2,lower-roman)""; }
+#SECTIONexponential-growth-29-2 > li { counter-increment: SECTIONexponential-growth-29-2; }
+#SECTIONexponential-growth-30-2 { counter-set: SECTIONexponential-growth-30-2 0; }
+#SECTIONexponential-growth-30-2 > li::marker { content: ""counter(SECTIONexponential-growth-30-2,lower-roman)""; }
+#SECTIONexponential-growth-30-2 > li { counter-increment: SECTIONexponential-growth-30-2; }
+#SECTIONexponential-growth-33-3-1-1-2 { counter-set: SECTIONexponential-growth-33-3-1-1-2 0; }
+#SECTIONexponential-growth-33-3-1-1-2 > li::marker { content: ""counter(SECTIONexponential-growth-33-3-1-1-2,lower-roman)""; }
+#SECTIONexponential-growth-33-3-1-1-2 > li { counter-increment: SECTIONexponential-growth-33-3-1-1-2; }
+#SECTIONexponential-growth-37-1-1-1-4 { counter-set: SECTIONexponential-growth-37-1-1-1-4 0; }
+#SECTIONexponential-growth-37-1-1-1-4 > li::marker { content: ""counter(SECTIONexponential-growth-37-1-1-1-4,lower-roman)""; }
+#SECTIONexponential-growth-37-1-1-1-4 > li { counter-increment: SECTIONexponential-growth-37-1-1-1-4; }
+#PROBLEMHyperbolicTrig-2-1-1-1 { counter-set: PROBLEMHyperbolicTrig-2-1-1-1 0; }
+#PROBLEMHyperbolicTrig-2-1-1-1 > li::marker { content: ""counter(PROBLEMHyperbolicTrig-2-1-1-1,lower-roman)""; }
+#PROBLEMHyperbolicTrig-2-1-1-1 > li { counter-increment: PROBLEMHyperbolicTrig-2-1-1-1; }
+#SECTIONGatewayArch-5-4-1-1-3 { counter-set: SECTIONGatewayArch-5-4-1-1-3 0; }
+#SECTIONGatewayArch-5-4-1-1-3 > li::marker { content: ""counter(SECTIONGatewayArch-5-4-1-1-3,lower-roman)""; }
+#SECTIONGatewayArch-5-4-1-1-3 > li { counter-increment: SECTIONGatewayArch-5-4-1-1-3; }
+#PROBLEMBacteriaIVP1-5-1-1-3 { counter-set: PROBLEMBacteriaIVP1-5-1-1-3 0; }
+#PROBLEMBacteriaIVP1-5-1-1-3 > li::marker { content: ""counter(PROBLEMBacteriaIVP1-5-1-1-3,lower-roman)""; }
+#PROBLEMBacteriaIVP1-5-1-1-3 > li { counter-increment: PROBLEMBacteriaIVP1-5-1-1-3; }
+#SECTIONNatLog-4-2 { counter-set: SECTIONNatLog-4-2 0; }
+#SECTIONNatLog-4-2 > li::marker { content: ""counter(SECTIONNatLog-4-2,lower-roman)""; }
+#SECTIONNatLog-4-2 > li { counter-increment: SECTIONNatLog-4-2; }
+#SECTIONNatLog-9-2 { counter-set: SECTIONNatLog-9-2 0; }
+#SECTIONNatLog-9-2 > li::marker { content: ""counter(SECTIONNatLog-9-2,lower-roman)""; }
+#SECTIONNatLog-9-2 > li { counter-increment: SECTIONNatLog-9-2; }
+#SECTIONNatLog-11-2 { counter-set: SECTIONNatLog-11-2 0; }
+#SECTIONNatLog-11-2 > li::marker { content: ""counter(SECTIONNatLog-11-2,lower-roman)""; }
+#SECTIONNatLog-11-2 > li { counter-increment: SECTIONNatLog-11-2; }
+#SECTIONNatLog-12-1-1-1-4 { counter-set: SECTIONNatLog-12-1-1-1-4 0; }
+#SECTIONNatLog-12-1-1-1-4 > li::marker { content: ""counter(SECTIONNatLog-12-1-1-1-4,lower-roman)""; }
+#SECTIONNatLog-12-1-1-1-4 > li { counter-increment: SECTIONNatLog-12-1-1-1-4; }
+#SECTIONNatLog-12-2-1-1-4 { counter-set: SECTIONNatLog-12-2-1-1-4 0; }
+#SECTIONNatLog-12-2-1-1-4 > li::marker { content: ""counter(SECTIONNatLog-12-2-1-1-4,lower-roman)""; }
+#SECTIONNatLog-12-2-1-1-4 > li { counter-increment: SECTIONNatLog-12-2-1-1-4; }
+#SUBSECTIONradioactive-decay-9-1 { counter-set: SUBSECTIONradioactive-decay-9-1 0; }
+#SUBSECTIONradioactive-decay-9-1 > li::marker { content: ""counter(SUBSECTIONradioactive-decay-9-1,lower-roman)""; }
+#SUBSECTIONradioactive-decay-9-1 > li { counter-increment: SUBSECTIONradioactive-decay-9-1; }
+#SECTIONDerivNatLog-4-2 { counter-set: SECTIONDerivNatLog-4-2 0; }
+#SECTIONDerivNatLog-4-2 > li::marker { content: ""counter(SECTIONDerivNatLog-4-2,lower-roman)""; }
+#SECTIONDerivNatLog-4-2 > li { counter-increment: SECTIONDerivNatLog-4-2; }
+#PARAGRAPHSGenExp-16-2 { counter-set: PARAGRAPHSGenExp-16-2 0; }
+#PARAGRAPHSGenExp-16-2 > li::marker { content: ""counter(PARAGRAPHSGenExp-16-2,lower-roman)""; }
+#PARAGRAPHSGenExp-16-2 > li { counter-increment: PARAGRAPHSGenExp-16-2; }
+#PARAGRAPHSGenLog-7-2 { counter-set: PARAGRAPHSGenLog-7-2 0; }
+#PARAGRAPHSGenLog-7-2 > li::marker { content: ""counter(PARAGRAPHSGenLog-7-2,lower-roman)""; }
+#PARAGRAPHSGenLog-7-2 > li { counter-increment: PARAGRAPHSGenLog-7-2; }
+#DIGRESSIONBriggsAndNapier-7-1 { counter-set: DIGRESSIONBriggsAndNapier-7-1 0; }
+#DIGRESSIONBriggsAndNapier-7-1 > li::marker { content: ""counter(DIGRESSIONBriggsAndNapier-7-1,lower-roman)""; }
+#DIGRESSIONBriggsAndNapier-7-1 > li { counter-increment: DIGRESSIONBriggsAndNapier-7-1; }
+#DIGRESSIONBriggsAndNapier-11-2 { counter-set: DIGRESSIONBriggsAndNapier-11-2 0; }
+#DIGRESSIONBriggsAndNapier-11-2 > li::marker { content: ""counter(DIGRESSIONBriggsAndNapier-11-2,lower-roman)""; }
+#DIGRESSIONBriggsAndNapier-11-2 > li { counter-increment: DIGRESSIONBriggsAndNapier-11-2; }
+#DIGRESSIONBriggsAndNapier-12-1-1-1 { counter-set: DIGRESSIONBriggsAndNapier-12-1-1-1 0; }
+#DIGRESSIONBriggsAndNapier-12-1-1-1 > li::marker { content: ""counter(DIGRESSIONBriggsAndNapier-12-1-1-1,lower-roman)""; }
+#DIGRESSIONBriggsAndNapier-12-1-1-1 > li { counter-increment: DIGRESSIONBriggsAndNapier-12-1-1-1; }
+#DRILLIntuitiveSquareOnCircle-2 { counter-set: DRILLIntuitiveSquareOnCircle-2 0; }
+#DRILLIntuitiveSquareOnCircle-2 > li::marker { content: ""counter(DRILLIntuitiveSquareOnCircle-2,lower-roman)""; }
+#DRILLIntuitiveSquareOnCircle-2 > li { counter-increment: DRILLIntuitiveSquareOnCircle-2; }
+#DRILLExtremalSquareCircle-1 { counter-set: DRILLExtremalSquareCircle-1 0; }
+#DRILLExtremalSquareCircle-1 > li::marker { content: ""counter(DRILLExtremalSquareCircle-1,lower-roman)""; }
+#DRILLExtremalSquareCircle-1 > li { counter-increment: DRILLExtremalSquareCircle-1; }
+#PROBLEMMaxOrth1-3-1-3-8 { counter-set: PROBLEMMaxOrth1-3-1-3-8 0; }
+#PROBLEMMaxOrth1-3-1-3-8 > li::marker { content: ""counter(PROBLEMMaxOrth1-3-1-3-8,decimal)"."; }
+#PROBLEMMaxOrth1-3-1-3-8 > li { counter-increment: PROBLEMMaxOrth1-3-1-3-8; }
+#EXAMPLEDiffvsDer-5-1-1-2-1 { counter-set: EXAMPLEDiffvsDer-5-1-1-2-1 0; }
+#EXAMPLEDiffvsDer-5-1-1-2-1 > li::marker { content: ""counter(EXAMPLEDiffvsDer-5-1-1-2-1,decimal)"."; }
+#EXAMPLEDiffvsDer-5-1-1-2-1 > li { counter-increment: EXAMPLEDiffvsDer-5-1-1-2-1; }
+#EXAMPLEDiffvsDer-5-1-2-2-1 { counter-set: EXAMPLEDiffvsDer-5-1-2-2-1 0; }
+#EXAMPLEDiffvsDer-5-1-2-2-1 > li::marker { content: ""counter(EXAMPLEDiffvsDer-5-1-2-2-1,decimal)"."; }
+#EXAMPLEDiffvsDer-5-1-2-2-1 > li { counter-increment: EXAMPLEDiffvsDer-5-1-2-2-1; }
+#SECTIONfive-simil-probl-23-2 { counter-set: SECTIONfive-simil-probl-23-2 0; }
+#SECTIONfive-simil-probl-23-2 > li::marker { content: ""counter(SECTIONfive-simil-probl-23-2,lower-roman)""; }
+#SECTIONfive-simil-probl-23-2 > li { counter-increment: SECTIONfive-simil-probl-23-2; }
+#SECTIONfive-simil-probl-24-2 { counter-set: SECTIONfive-simil-probl-24-2 0; }
+#SECTIONfive-simil-probl-24-2 > li::marker { content: ""counter(SECTIONfive-simil-probl-24-2,lower-roman)""; }
+#SECTIONfive-simil-probl-24-2 > li { counter-increment: SECTIONfive-simil-probl-24-2; }
+#SECTIONrefl-refr-rainb-2-1-2 { counter-set: SECTIONrefl-refr-rainb-2-1-2 0; }
+#SECTIONrefl-refr-rainb-2-1-2 > li::marker { content: ""counter(SECTIONrefl-refr-rainb-2-1-2,decimal)"."; }
+#SECTIONrefl-refr-rainb-2-1-2 > li { counter-increment: SECTIONrefl-refr-rainb-2-1-2; }
+#SECTIONGlobalVsLocalExtrema-18-2 { counter-set: SECTIONGlobalVsLocalExtrema-18-2 0; }
+#SECTIONGlobalVsLocalExtrema-18-2 > li::marker { content: ""counter(SECTIONGlobalVsLocalExtrema-18-2,decimal)"."; }
+#SECTIONGlobalVsLocalExtrema-18-2 > li { counter-increment: SECTIONGlobalVsLocalExtrema-18-2; }
+#DIGRESSIONIntervalNotation-6-2 { counter-set: DIGRESSIONIntervalNotation-6-2 0; }
+#DIGRESSIONIntervalNotation-6-2 > li::marker { content: ""counter(DIGRESSIONIntervalNotation-6-2,lower-roman)""; }
+#DIGRESSIONIntervalNotation-6-2 > li { counter-increment: DIGRESSIONIntervalNotation-6-2; }
+#DIGRESSIONIntervalNotation-7-2 { counter-set: DIGRESSIONIntervalNotation-7-2 0; }
+#DIGRESSIONIntervalNotation-7-2 > li::marker { content: ""counter(DIGRESSIONIntervalNotation-7-2,lower-roman)""; }
+#DIGRESSIONIntervalNotation-7-2 > li { counter-increment: DIGRESSIONIntervalNotation-7-2; }
+#THEOREMFDT-lines-2-1 { counter-set: THEOREMFDT-lines-2-1 0; }
+#THEOREMFDT-lines-2-1 > li::marker { content: ""counter(THEOREMFDT-lines-2-1,decimal)"."; }
+#THEOREMFDT-lines-2-1 > li { counter-increment: THEOREMFDT-lines-2-1; }
+#THEOREMFDT-3-3 { counter-set: THEOREMFDT-3-3 0; }
+#THEOREMFDT-3-3 > li::marker { content: ""counter(THEOREMFDT-3-3,decimal)"."; }
+#THEOREMFDT-3-3 > li { counter-increment: THEOREMFDT-3-3; }
+#LEMMAAdjRoots-1-2 { counter-set: LEMMAAdjRoots-1-2 0; }
+#LEMMAAdjRoots-1-2 > li::marker { content: ""counter(LEMMAAdjRoots-1-2,decimal)"."; }
+#LEMMAAdjRoots-1-2 > li { counter-increment: LEMMAAdjRoots-1-2; }
+#PROBLEMFDT1A-1-2 { counter-set: PROBLEMFDT1A-1-2 0; }
+#PROBLEMFDT1A-1-2 > li::marker { content: ""counter(PROBLEMFDT1A-1-2,lower-roman)""; }
+#PROBLEMFDT1A-1-2 > li { counter-increment: PROBLEMFDT1A-1-2; }
+#DRILLFDT2-2 { counter-set: DRILLFDT2-2 0; }
+#DRILLFDT2-2 > li::marker { content: ""counter(DRILLFDT2-2,lower-roman)""; }
+#DRILLFDT2-2 > li { counter-increment: DRILLFDT2-2; }
+#DEFINITIONOptimalTransitionPoints-4-1-3 { counter-set: DEFINITIONOptimalTransitionPoints-4-1-3 0; }
+#DEFINITIONOptimalTransitionPoints-4-1-3 > li::marker { content: ""counter(DEFINITIONOptimalTransitionPoints-4-1-3,decimal)"."; }
+#DEFINITIONOptimalTransitionPoints-4-1-3 > li { counter-increment: DEFINITIONOptimalTransitionPoints-4-1-3; }
+#DRILLFDT3-3 { counter-set: DRILLFDT3-3 0; }
+#DRILLFDT3-3 > li::marker { content: ""counter(DRILLFDT3-3,lower-roman)""; }
+#DRILLFDT3-3 > li { counter-increment: DRILLFDT3-3; }
+#SUBSECTIONoptim-clos-interv-5-1 { counter-set: SUBSECTIONoptim-clos-interv-5-1 0; }
+#SUBSECTIONoptim-clos-interv-5-1 > li::marker { content: ""counter(SUBSECTIONoptim-clos-interv-5-1,decimal)"."; }
+#SUBSECTIONoptim-clos-interv-5-1 > li { counter-increment: SUBSECTIONoptim-clos-interv-5-1; }
+#THEOREMmax-min-3-2 { counter-set: THEOREMmax-min-3-2 0; }
+#THEOREMmax-min-3-2 > li::marker { content: ""counter(THEOREMmax-min-3-2,decimal)"."; }
+#THEOREMmax-min-3-2 > li { counter-increment: THEOREMmax-min-3-2; }
+#SUBSECTIONoptim-clos-interv-13-2-1-1-2 { counter-set: SUBSECTIONoptim-clos-interv-13-2-1-1-2 0; }
+#SUBSECTIONoptim-clos-interv-13-2-1-1-2 > li::marker { content: ""counter(SUBSECTIONoptim-clos-interv-13-2-1-1-2,lower-roman)""; }
+#SUBSECTIONoptim-clos-interv-13-2-1-1-2 > li { counter-increment: SUBSECTIONoptim-clos-interv-13-2-1-1-2; }
+#SUBSECTIONoptim-clos-interv-13-3-1-1-2 { counter-set: SUBSECTIONoptim-clos-interv-13-3-1-1-2 0; }
+#SUBSECTIONoptim-clos-interv-13-3-1-1-2 > li::marker { content: ""counter(SUBSECTIONoptim-clos-interv-13-3-1-1-2,lower-roman)""; }
+#SUBSECTIONoptim-clos-interv-13-3-1-1-2 > li { counter-increment: SUBSECTIONoptim-clos-interv-13-3-1-1-2; }
+#SUBSECTIONoptim-clos-interv-14-1-1 { counter-set: SUBSECTIONoptim-clos-interv-14-1-1 0; }
+#SUBSECTIONoptim-clos-interv-14-1-1 > li::marker { content: ""counter(SUBSECTIONoptim-clos-interv-14-1-1,lower-roman)""; }
+#SUBSECTIONoptim-clos-interv-14-1-1 > li { counter-increment: SUBSECTIONoptim-clos-interv-14-1-1; }
+#DRILLO1O2-2-1-1-2 { counter-set: DRILLO1O2-2-1-1-2 0; }
+#DRILLO1O2-2-1-1-2 > li::marker { content: ""counter(DRILLO1O2-2-1-1-2,lower-roman)""; }
+#DRILLO1O2-2-1-1-2 > li { counter-increment: DRILLO1O2-2-1-1-2; }
+#THEOREMwhat-second-deriv-3-3 { counter-set: THEOREMwhat-second-deriv-3-3 0; }
+#THEOREMwhat-second-deriv-3-3 > li::marker { content: ""counter(THEOREMwhat-second-deriv-3-3,lower-alpha)""; }
+#THEOREMwhat-second-deriv-3-3 > li { counter-increment: THEOREMwhat-second-deriv-3-3; }
+#THEOREMSecondDerivativeTest-3-4 { counter-set: THEOREMSecondDerivativeTest-3-4 0; }
+#THEOREMSecondDerivativeTest-3-4 > li::marker { content: ""counter(THEOREMSecondDerivativeTest-3-4,lower-alpha)""; }
+#THEOREMSecondDerivativeTest-3-4 > li { counter-increment: THEOREMSecondDerivativeTest-3-4; }
+#DRILLSecondDerivativeTest-2 { counter-set: DRILLSecondDerivativeTest-2 0; }
+#DRILLSecondDerivativeTest-2 > li::marker { content: ""counter(DRILLSecondDerivativeTest-2,lower-roman)""; }
+#DRILLSecondDerivativeTest-2 > li { counter-increment: DRILLSecondDerivativeTest-2; }
+#SUBSECTIONconc-second-deriv-44-2 { counter-set: SUBSECTIONconc-second-deriv-44-2 0; }
+#SUBSECTIONconc-second-deriv-44-2 > li::marker { content: ""counter(SUBSECTIONconc-second-deriv-44-2,lower-roman)""; }
+#SUBSECTIONconc-second-deriv-44-2 > li { counter-increment: SUBSECTIONconc-second-deriv-44-2; }
+#SUBSECTIONconc-second-deriv-45-2 { counter-set: SUBSECTIONconc-second-deriv-45-2 0; }
+#SUBSECTIONconc-second-deriv-45-2 > li::marker { content: ""counter(SUBSECTIONconc-second-deriv-45-2,lower-roman)""; }
+#SUBSECTIONconc-second-deriv-45-2 > li { counter-increment: SUBSECTIONconc-second-deriv-45-2; }
+#SECTIONoptim-probl-2-3-1 { counter-set: SECTIONoptim-probl-2-3-1 0; }
+#SECTIONoptim-probl-2-3-1 > li::marker { content: ""counter(SECTIONoptim-probl-2-3-1,decimal)"."; }
+#SECTIONoptim-probl-2-3-1 > li { counter-increment: SECTIONoptim-probl-2-3-1; }
+#EXAMPLERectangleFixedPerimeter-6-1 { counter-set: EXAMPLERectangleFixedPerimeter-6-1 0; }
+#EXAMPLERectangleFixedPerimeter-6-1 > li::marker { content: ""counter(EXAMPLERectangleFixedPerimeter-6-1,decimal)"."; }
+#EXAMPLERectangleFixedPerimeter-6-1 > li { counter-increment: EXAMPLERectangleFixedPerimeter-6-1; }
+#PROBLEMMaxPerimeter-5-1-1-2 { counter-set: PROBLEMMaxPerimeter-5-1-1-2 0; }
+#PROBLEMMaxPerimeter-5-1-1-2 > li::marker { content: ""counter(PROBLEMMaxPerimeter-5-1-1-2,lower-roman)""; }
+#PROBLEMMaxPerimeter-5-1-1-2 > li { counter-increment: PROBLEMMaxPerimeter-5-1-1-2; }
+#SUBSUBSECTIONFirstSolution-12-1 { counter-set: SUBSUBSECTIONFirstSolution-12-1 0; }
+#SUBSUBSECTIONFirstSolution-12-1 > li::marker { content: ""counter(SUBSUBSECTIONFirstSolution-12-1,lower-roman)""; }
+#SUBSUBSECTIONFirstSolution-12-1 > li { counter-increment: SUBSUBSECTIONFirstSolution-12-1; }
+#SUBSECTIONVarOptProbs-2-2-1-1-1 { counter-set: SUBSECTIONVarOptProbs-2-2-1-1-1 0; }
+#SUBSECTIONVarOptProbs-2-2-1-1-1 > li::marker { content: ""counter(SUBSECTIONVarOptProbs-2-2-1-1-1,lower-roman)""; }
+#SUBSECTIONVarOptProbs-2-2-1-1-1 > li { counter-increment: SUBSECTIONVarOptProbs-2-2-1-1-1; }
+#SUBSECTIONVarOptProbs-2-3-1-1-1 { counter-set: SUBSECTIONVarOptProbs-2-3-1-1-1 0; }
+#SUBSECTIONVarOptProbs-2-3-1-1-1 > li::marker { content: ""counter(SUBSECTIONVarOptProbs-2-3-1-1-1,lower-roman)""; }
+#SUBSECTIONVarOptProbs-2-3-1-1-1 > li { counter-increment: SUBSECTIONVarOptProbs-2-3-1-1-1; }
+#SUBSECTIONVarOptProbs-2-4-1-1-1 { counter-set: SUBSECTIONVarOptProbs-2-4-1-1-1 0; }
+#SUBSECTIONVarOptProbs-2-4-1-1-1 > li::marker { content: ""counter(SUBSECTIONVarOptProbs-2-4-1-1-1,lower-roman)""; }
+#SUBSECTIONVarOptProbs-2-4-1-1-1 > li { counter-increment: SUBSECTIONVarOptProbs-2-4-1-1-1; }
+#SUBSECTIONVarOptProbs-3-3-1-1-1 { counter-set: SUBSECTIONVarOptProbs-3-3-1-1-1 0; }
+#SUBSECTIONVarOptProbs-3-3-1-1-1 > li::marker { content: ""counter(SUBSECTIONVarOptProbs-3-3-1-1-1,lower-roman)""; }
+#SUBSECTIONVarOptProbs-3-3-1-1-1 > li { counter-increment: SUBSECTIONVarOptProbs-3-3-1-1-1; }
+#SUBSECTIONVarOptProbs-3-4-1-1-1 { counter-set: SUBSECTIONVarOptProbs-3-4-1-1-1 0; }
+#SUBSECTIONVarOptProbs-3-4-1-1-1 > li::marker { content: ""counter(SUBSECTIONVarOptProbs-3-4-1-1-1,lower-roman)""; }
+#SUBSECTIONVarOptProbs-3-4-1-1-1 > li { counter-increment: SUBSECTIONVarOptProbs-3-4-1-1-1; }
+#SUBSECTIONVarOptProbs-4-2-1-2-1 { counter-set: SUBSECTIONVarOptProbs-4-2-1-2-1 0; }
+#SUBSECTIONVarOptProbs-4-2-1-2-1 > li::marker { content: ""counter(SUBSECTIONVarOptProbs-4-2-1-2-1,lower-roman)""; }
+#SUBSECTIONVarOptProbs-4-2-1-2-1 > li { counter-increment: SUBSECTIONVarOptProbs-4-2-1-2-1; }
+#PROBLEMWitchTri1-3-1-1-7 { counter-set: PROBLEMWitchTri1-3-1-1-7 0; }
+#PROBLEMWitchTri1-3-1-1-7 > li::marker { content: ""counter(PROBLEMWitchTri1-3-1-1-7,lower-roman)""; }
+#PROBLEMWitchTri1-3-1-1-7 > li { counter-increment: PROBLEMWitchTri1-3-1-1-7; }
+#SUBSECTIONVarOptProbs-14-3-1-3 { counter-set: SUBSECTIONVarOptProbs-14-3-1-3 0; }
+#SUBSECTIONVarOptProbs-14-3-1-3 > li::marker { content: ""counter(SUBSECTIONVarOptProbs-14-3-1-3,lower-roman)""; }
+#SUBSECTIONVarOptProbs-14-3-1-3 > li { counter-increment: SUBSECTIONVarOptProbs-14-3-1-3; }
+#SUBSECTIONVarOptProbs-14-4-1-3 { counter-set: SUBSECTIONVarOptProbs-14-4-1-3 0; }
+#SUBSECTIONVarOptProbs-14-4-1-3 > li::marker { content: ""counter(SUBSECTIONVarOptProbs-14-4-1-3,lower-roman)""; }
+#SUBSECTIONVarOptProbs-14-4-1-3 > li { counter-increment: SUBSECTIONVarOptProbs-14-4-1-3; }
+#SECTIONgraph-with-form-19-2 { counter-set: SECTIONgraph-with-form-19-2 0; }
+#SECTIONgraph-with-form-19-2 > li::marker { content: ""counter(SECTIONgraph-with-form-19-2,decimal)"."; }
+#SECTIONgraph-with-form-19-2 > li { counter-increment: SECTIONgraph-with-form-19-2; }
+#SECTIONgraph-with-form-23-1 { counter-set: SECTIONgraph-with-form-23-1 0; }
+#SECTIONgraph-with-form-23-1 > li::marker { content: ""counter(SECTIONgraph-with-form-23-1,lower-roman)""; }
+#SECTIONgraph-with-form-23-1 > li { counter-increment: SECTIONgraph-with-form-23-1; }
+#SECTIONgraph-with-form-30-1-1 { counter-set: SECTIONgraph-with-form-30-1-1 0; }
+#SECTIONgraph-with-form-30-1-1 > li::marker { content: ""counter(SECTIONgraph-with-form-30-1-1,lower-roman)""; }
+#SECTIONgraph-with-form-30-1-1 > li { counter-increment: SECTIONgraph-with-form-30-1-1; }
+#SUBSECTIONModelingTrout-17-2 { counter-set: SUBSECTIONModelingTrout-17-2 0; }
+#SUBSECTIONModelingTrout-17-2 > li::marker { content: ""counter(SUBSECTIONModelingTrout-17-2,decimal)"."; }
+#SUBSECTIONModelingTrout-17-2 > li { counter-increment: SUBSECTIONModelingTrout-17-2; }
+#SUBSECTIONModelingTrout-24-1-2 { counter-set: SUBSECTIONModelingTrout-24-1-2 0; }
+#SUBSECTIONModelingTrout-24-1-2 > li::marker { content: ""counter(SUBSECTIONModelingTrout-24-1-2,lower-roman)""; }
+#SUBSECTIONModelingTrout-24-1-2 > li { counter-increment: SUBSECTIONModelingTrout-24-1-2; }
+#SUBSECTIONModelingTrout-39-2-1-1-2 { counter-set: SUBSECTIONModelingTrout-39-2-1-1-2 0; }
+#SUBSECTIONModelingTrout-39-2-1-1-2 > li::marker { content: ""counter(SUBSECTIONModelingTrout-39-2-1-1-2,lower-roman)""; }
+#SUBSECTIONModelingTrout-39-2-1-1-2 > li { counter-increment: SUBSECTIONModelingTrout-39-2-1-1-2; }
+#PROBLEMMinViablePop-6-1-1-3 { counter-set: PROBLEMMinViablePop-6-1-1-3 0; }
+#PROBLEMMinViablePop-6-1-1-3 > li::marker { content: ""counter(PROBLEMMinViablePop-6-1-1-3,lower-roman)""; }
+#PROBLEMMinViablePop-6-1-1-3 > li { counter-increment: PROBLEMMinViablePop-6-1-1-3; }
+#SECTIONlittle-healthy-comp-21-1 { counter-set: SECTIONlittle-healthy-comp-21-1 0; }
+#SECTIONlittle-healthy-comp-21-1 > li::marker { content: ""counter(SECTIONlittle-healthy-comp-21-1,lower-roman)""; }
+#SECTIONlittle-healthy-comp-21-1 > li { counter-increment: SECTIONlittle-healthy-comp-21-1; }
+#SECTIONlittle-healthy-comp-28-3-1-1-3 { counter-set: SECTIONlittle-healthy-comp-28-3-1-1-3 0; }
+#SECTIONlittle-healthy-comp-28-3-1-1-3 > li::marker { content: ""counter(SECTIONlittle-healthy-comp-28-3-1-1-3,lower-roman)""; }
+#SECTIONlittle-healthy-comp-28-3-1-1-3 > li { counter-increment: SECTIONlittle-healthy-comp-28-3-1-1-3; }
+#DEFINITIONLimitAtInfinity-Intuitive-3-1-1 { counter-set: DEFINITIONLimitAtInfinity-Intuitive-3-1-1 0; }
+#DEFINITIONLimitAtInfinity-Intuitive-3-1-1 > li::marker { content: ""counter(DEFINITIONLimitAtInfinity-Intuitive-3-1-1,decimal)"."; }
+#DEFINITIONLimitAtInfinity-Intuitive-3-1-1 > li { counter-increment: DEFINITIONLimitAtInfinity-Intuitive-3-1-1; }
+#DEFINITIONHorizontalAsymptotes-3-1-1 { counter-set: DEFINITIONHorizontalAsymptotes-3-1-1 0; }
+#DEFINITIONHorizontalAsymptotes-3-1-1 > li::marker { content: ""counter(DEFINITIONHorizontalAsymptotes-3-1-1,decimal)"."; }
+#DEFINITIONHorizontalAsymptotes-3-1-1 > li { counter-increment: DEFINITIONHorizontalAsymptotes-3-1-1; }
+#DIGRESSIONLimitNotation-47-2 { counter-set: DIGRESSIONLimitNotation-47-2 0; }
+#DIGRESSIONLimitNotation-47-2 > li::marker { content: ""counter(DIGRESSIONLimitNotation-47-2,lower-roman)""; }
+#DIGRESSIONLimitNotation-47-2 > li { counter-increment: DIGRESSIONLimitNotation-47-2; }
+#DIGRESSIONLimitNotation-62-2 { counter-set: DIGRESSIONLimitNotation-62-2 0; }
+#DIGRESSIONLimitNotation-62-2 > li::marker { content: ""counter(DIGRESSIONLimitNotation-62-2,lower-roman)""; }
+#DIGRESSIONLimitNotation-62-2 > li { counter-increment: DIGRESSIONLimitNotation-62-2; }
+#DIGRESSIONLimitNotation-66-2 { counter-set: DIGRESSIONLimitNotation-66-2 0; }
+#DIGRESSIONLimitNotation-66-2 > li::marker { content: ""counter(DIGRESSIONLimitNotation-66-2,lower-roman)""; }
+#DIGRESSIONLimitNotation-66-2 > li { counter-increment: DIGRESSIONLimitNotation-66-2; }
+#THEOREMInfSqueeze-3-1 { counter-set: THEOREMInfSqueeze-3-1 0; }
+#THEOREMInfSqueeze-3-1 > li::marker { content: ""counter(THEOREMInfSqueeze-3-1,decimal)"."; }
+#THEOREMInfSqueeze-3-1 > li { counter-increment: THEOREMInfSqueeze-3-1; }
+#SECTIONvertical-asymptotes-14-2 { counter-set: SECTIONvertical-asymptotes-14-2 0; }
+#SECTIONvertical-asymptotes-14-2 > li::marker { content: ""counter(SECTIONvertical-asymptotes-14-2,lower-roman)""; }
+#SECTIONvertical-asymptotes-14-2 > li { counter-increment: SECTIONvertical-asymptotes-14-2; }
+#PROBLEMFoliumOfDescartes2-6-1-1-1 { counter-set: PROBLEMFoliumOfDescartes2-6-1-1-1 0; }
+#PROBLEMFoliumOfDescartes2-6-1-1-1 > li::marker { content: ""counter(PROBLEMFoliumOfDescartes2-6-1-1-1,decimal)"."; }
+#PROBLEMFoliumOfDescartes2-6-1-1-1 > li { counter-increment: PROBLEMFoliumOfDescartes2-6-1-1-1; }
+#SUBSECTIONLHopitalsRule-33-1 { counter-set: SUBSECTIONLHopitalsRule-33-1 0; }
+#SUBSECTIONLHopitalsRule-33-1 > li::marker { content: ""counter(SUBSECTIONLHopitalsRule-33-1,lower-roman)""; }
+#SUBSECTIONLHopitalsRule-33-1 > li { counter-increment: SUBSECTIONLHopitalsRule-33-1; }
+#SUBSECTIONLHopitalsRule-37-1 { counter-set: SUBSECTIONLHopitalsRule-37-1 0; }
+#SUBSECTIONLHopitalsRule-37-1 > li::marker { content: ""counter(SUBSECTIONLHopitalsRule-37-1,lower-roman)""; }
+#SUBSECTIONLHopitalsRule-37-1 > li { counter-increment: SUBSECTIONLHopitalsRule-37-1; }
+#SUBSECTIONLHopitalsRule-59-1-1 { counter-set: SUBSECTIONLHopitalsRule-59-1-1 0; }
+#SUBSECTIONLHopitalsRule-59-1-1 > li::marker { content: ""counter(SUBSECTIONLHopitalsRule-59-1-1,lower-roman)""; }
+#SUBSECTIONLHopitalsRule-59-1-1 > li { counter-increment: SUBSECTIONLHopitalsRule-59-1-1; }
+#SUBSECTIONlhop-rule-horiz-14-1 { counter-set: SUBSECTIONlhop-rule-horiz-14-1 0; }
+#SUBSECTIONlhop-rule-horiz-14-1 > li::marker { content: ""counter(SUBSECTIONlhop-rule-horiz-14-1,lower-roman)""; }
+#SUBSECTIONlhop-rule-horiz-14-1 > li { counter-increment: SUBSECTIONlhop-rule-horiz-14-1; }
+#SUBSECTIONlhop-rule-horiz-18-2-1-1-1 { counter-set: SUBSECTIONlhop-rule-horiz-18-2-1-1-1 0; }
+#SUBSECTIONlhop-rule-horiz-18-2-1-1-1 > li::marker { content: ""counter(SUBSECTIONlhop-rule-horiz-18-2-1-1-1,lower-roman)""; }
+#SUBSECTIONlhop-rule-horiz-18-2-1-1-1 > li { counter-increment: SUBSECTIONlhop-rule-horiz-18-2-1-1-1; }
+#SUBSECTIONlhop-rule-horiz-18-5-1-1-2 { counter-set: SUBSECTIONlhop-rule-horiz-18-5-1-1-2 0; }
+#SUBSECTIONlhop-rule-horiz-18-5-1-1-2 > li::marker { content: ""counter(SUBSECTIONlhop-rule-horiz-18-5-1-1-2,lower-roman)""; }
+#SUBSECTIONlhop-rule-horiz-18-5-1-1-2 > li { counter-increment: SUBSECTIONlhop-rule-horiz-18-5-1-1-2; }
+#SUBSECTIONlhop-rule-horiz-27-1 { counter-set: SUBSECTIONlhop-rule-horiz-27-1 0; }
+#SUBSECTIONlhop-rule-horiz-27-1 > li::marker { content: ""counter(SUBSECTIONlhop-rule-horiz-27-1,decimal)"."; }
+#SUBSECTIONlhop-rule-horiz-27-1 > li { counter-increment: SUBSECTIONlhop-rule-horiz-27-1; }
+#SUBSECTIONlhop-rule-horiz-29-4 { counter-set: SUBSECTIONlhop-rule-horiz-29-4 0; }
+#SUBSECTIONlhop-rule-horiz-29-4 > li::marker { content: ""counter(SUBSECTIONlhop-rule-horiz-29-4,decimal)"."; }
+#SUBSECTIONlhop-rule-horiz-29-4 > li { counter-increment: SUBSECTIONlhop-rule-horiz-29-4; }
+#SECTIONsecants-tangents-15-1 { counter-set: SECTIONsecants-tangents-15-1 0; }
+#SECTIONsecants-tangents-15-1 > li::marker { content: ""counter(SECTIONsecants-tangents-15-1,decimal)"."; }
+#SECTIONsecants-tangents-15-1 > li { counter-increment: SECTIONsecants-tangents-15-1; }
+#PROBLEMBounds-1-1-4 { counter-set: PROBLEMBounds-1-1-4 0; }
+#PROBLEMBounds-1-1-4 > li::marker { content: ""counter(PROBLEMBounds-1-1-4,lower-roman)""; }
+#PROBLEMBounds-1-1-4 > li { counter-increment: PROBLEMBounds-1-1-4; }
+#SUBSECTIONlimit-comp-cont-5-3 { counter-set: SUBSECTIONlimit-comp-cont-5-3 0; }
+#SUBSECTIONlimit-comp-cont-5-3 > li::marker { content: ""counter(SUBSECTIONlimit-comp-cont-5-3,decimal)"."; }
+#SUBSECTIONlimit-comp-cont-5-3 > li { counter-increment: SUBSECTIONlimit-comp-cont-5-3; }
+#SUBSECTIONlimit-comp-cont-23-1 { counter-set: SUBSECTIONlimit-comp-cont-23-1 0; }
+#SUBSECTIONlimit-comp-cont-23-1 > li::marker { content: ""counter(SUBSECTIONlimit-comp-cont-23-1,lower-roman)""; }
+#SUBSECTIONlimit-comp-cont-23-1 > li { counter-increment: SUBSECTIONlimit-comp-cont-23-1; }
+#SUBSECTIONlimit-comp-cont-24-2 { counter-set: SUBSECTIONlimit-comp-cont-24-2 0; }
+#SUBSECTIONlimit-comp-cont-24-2 > li::marker { content: ""counter(SUBSECTIONlimit-comp-cont-24-2,lower-roman)""; }
+#SUBSECTIONlimit-comp-cont-24-2 > li { counter-increment: SUBSECTIONlimit-comp-cont-24-2; }
+#DIGRESSIONDeltaBetaNotZero-7-3-1-1-5 { counter-set: DIGRESSIONDeltaBetaNotZero-7-3-1-1-5 0; }
+#DIGRESSIONDeltaBetaNotZero-7-3-1-1-5 > li::marker { content: ""counter(DIGRESSIONDeltaBetaNotZero-7-3-1-1-5,lower-roman)""; }
+#DIGRESSIONDeltaBetaNotZero-7-3-1-1-5 > li { counter-increment: DIGRESSIONDeltaBetaNotZero-7-3-1-1-5; }
+#PROBLEMQR-rigor-2-1-1-2 { counter-set: PROBLEMQR-rigor-2-1-1-2 0; }
+#PROBLEMQR-rigor-2-1-1-2 > li::marker { content: ""counter(PROBLEMQR-rigor-2-1-1-2,lower-roman)""; }
+#PROBLEMQR-rigor-2-1-1-2 > li { counter-increment: PROBLEMQR-rigor-2-1-1-2; }
+#DRILLCircularReasoning-1-1-3 { counter-set: DRILLCircularReasoning-1-1-3 0; }
+#DRILLCircularReasoning-1-1-3 > li::marker { content: ""counter(DRILLCircularReasoning-1-1-3,lower-roman)""; }
+#DRILLCircularReasoning-1-1-3 > li { counter-increment: DRILLCircularReasoning-1-1-3; }
+#DEFINITIONFunctionInverse-3-1-8 { counter-set: DEFINITIONFunctionInverse-3-1-8 0; }
+#DEFINITIONFunctionInverse-3-1-8 > li::marker { content: ""counter(DEFINITIONFunctionInverse-3-1-8,decimal)"."; }
+#DEFINITIONFunctionInverse-3-1-8 > li { counter-increment: DEFINITIONFunctionInverse-3-1-8; }
+#SECTIONinverse-functions-21-1 { counter-set: SECTIONinverse-functions-21-1 0; }
+#SECTIONinverse-functions-21-1 > li::marker { content: ""counter(SECTIONinverse-functions-21-1,decimal)"."; }
+#SECTIONinverse-functions-21-1 > li { counter-increment: SECTIONinverse-functions-21-1; }
+#SECTIONinverse-functions-23-2 { counter-set: SECTIONinverse-functions-23-2 0; }
+#SECTIONinverse-functions-23-2 > li::marker { content: ""counter(SECTIONinverse-functions-23-2,decimal)"."; }
+#SECTIONinverse-functions-23-2 > li { counter-increment: SECTIONinverse-functions-23-2; }
+#THEOREMDerivInvFunc-3-1 { counter-set: THEOREMDerivInvFunc-3-1 0; }
+#THEOREMDerivInvFunc-3-1 > li::marker { content: ""counter(THEOREMDerivInvFunc-3-1,decimal)"."; }
+#THEOREMDerivInvFunc-3-1 > li { counter-increment: THEOREMDerivInvFunc-3-1; }
+#DRILLRollesLemma1-1 { counter-set: DRILLRollesLemma1-1 0; }
+#DRILLRollesLemma1-1 > li::marker { content: ""counter(DRILLRollesLemma1-1,lower-roman)""; }
+#DRILLRollesLemma1-1 > li { counter-increment: DRILLRollesLemma1-1; }
+#THEOREMFDTproved-3-8 { counter-set: THEOREMFDTproved-3-8 0; }
+#THEOREMFDTproved-3-8 > li::marker { content: ""counter(THEOREMFDTproved-3-8,decimal)"."; }
+#THEOREMFDTproved-3-8 > li { counter-increment: THEOREMFDTproved-3-8; }
+#PROBLEMAbsValDeriv-1-1-1-5 { counter-set: PROBLEMAbsValDeriv-1-1-1-5 0; }
+#PROBLEMAbsValDeriv-1-1-1-5 > li::marker { content: ""counter(PROBLEMAbsValDeriv-1-1-1-5,decimal)"."; }
+#PROBLEMAbsValDeriv-1-1-1-5 > li { counter-increment: PROBLEMAbsValDeriv-1-1-1-5; }
+#DEFINITIONone-sided-deriv-3-1-3 { counter-set: DEFINITIONone-sided-deriv-3-1-3 0; }
+#DEFINITIONone-sided-deriv-3-1-3 > li::marker { content: ""counter(DEFINITIONone-sided-deriv-3-1-3,decimal)"."; }
+#DEFINITIONone-sided-deriv-3-1-3 > li { counter-increment: DEFINITIONone-sided-deriv-3-1-3; }
+#PROBLEMHeaviTranslate-2-1-1-3 { counter-set: PROBLEMHeaviTranslate-2-1-1-3 0; }
+#PROBLEMHeaviTranslate-2-1-1-3 > li::marker { content: ""counter(PROBLEMHeaviTranslate-2-1-1-3,lower-roman)""; }
+#PROBLEMHeaviTranslate-2-1-1-3 > li { counter-increment: PROBLEMHeaviTranslate-2-1-1-3; }
+#PROBLEMHeaviTranslate-3-1-1-4 { counter-set: PROBLEMHeaviTranslate-3-1-1-4 0; }
+#PROBLEMHeaviTranslate-3-1-1-4 > li::marker { content: ""counter(PROBLEMHeaviTranslate-3-1-1-4,lower-roman)""; }
+#PROBLEMHeaviTranslate-3-1-1-4 > li { counter-increment: PROBLEMHeaviTranslate-3-1-1-4; }
+#SECTIONone-sided-deriv-11-3 { counter-set: SECTIONone-sided-deriv-11-3 0; }
+#SECTIONone-sided-deriv-11-3 > li::marker { content: ""counter(SECTIONone-sided-deriv-11-3,decimal)"."; }
+#SECTIONone-sided-deriv-11-3 > li { counter-increment: SECTIONone-sided-deriv-11-3; }
+</style>
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -228,9 +800,9 @@ window.MathJax = {
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
-<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
-<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Epigraphs</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-5.html" class="internal"><span class="title">Epigraphs</span></a></div></li>
 <li class="toc-item toc-preface"><div class="toc-title-box"><a href="SECinstructor.html" class="internal"><span class="title">To the Instructor: Read This First</span></a></div></li>
 </ul>
 </li>
@@ -560,7 +1132,8 @@ window.MathJax = {
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">10.1</span><span class="space"> </span><span class="title">Graphing with a Formula for  <span class="process-math">\(y(x)\)</span></span>
 </h3>
 <blockquote class="blockquote" id="SECTIONgraph-with-form-2">
-<div class="para" id="SECTIONgraph-with-form-2-1">Mankind invented a system to cope with the fact that we are so intrinsically lousy at manipulating numbers. It’s called a graph.</div> <cite class="attribution">―<a class="external" href="https://en.wikipedia.org/wiki/Charlie_Munger" target="_blank">Charlie Munger (x)</a><a class="xref" id="SECTIONgraph-with-form-2-2-2" href="" data-knowl="./knowl/fn/SECTIONgraph-with-form-2-2-2.html" title="Footnote 10.1"><sup> 1 </sup></a></cite>
+<div class="para" id="SECTIONgraph-with-form-2-1">Mankind invented a system to cope with the fact that we are so intrinsically lousy at manipulating numbers. It’s called a graph.</div>
+<cite class="attribution">―<a class="external" href="https://en.wikipedia.org/wiki/Charlie_Munger" target="_blank">Charlie Munger (x)</a><details class="ptx-footnote" aria-live="polite" id="SECTIONgraph-with-form-2-2-2"><summary class="ptx-footnote__number" title="Footnote 10.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="SECTIONgraph-with-form-2-2-2"><code class="code-inline tex2jax_ignore">https://en.wikipedia.org/wiki/Charlie_Munger</code></div></details></cite>
 </blockquote>
 <div class="para logical" id="SECTIONgraph-with-form-3">
 <div class="para">In an age when everyone can open their cell phone and graph, for example, the function</div>
@@ -572,10 +1145,10 @@ y(x) =x^4 - 400.5 x^3 + 40099.49 x^2 + 4.005 x - 400.995,\tag{10.1}
 <div class="para">literally in seconds it may not seem important to understand the nature of functions at any deeper level. After all, if you have a formula you know everything there is to know about a function, right?</div>
 </div>
 <div class="para" id="SECTIONgraph-with-form-4">Well, yes  . . . and no.</div>
-<div class="para" id="SECTIONgraph-with-form-5">In a sense, obtaining a formula that describes whatever real-world phenomena you might be investigating is the <a class="external" href="https://en.wikipedia.org/wiki/Holy_Grail" target="_blank">Holy Grail</a><a class="xref" id="SECTIONgraph-with-form-5-2" href="" data-knowl="./knowl/fn/SECTIONgraph-with-form-5-2.html" title="Footnote 10.2"><sup> 2 </sup></a>, of science. And for exactly the reason you would expect.  Formulas can tell us a great deal about the phenomenon. But they don’t tell us everything.</div>
-<div class="para" id="SECTIONgraph-with-form-6">For example, suppose <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONHolyGrail.html" title="Equation 10.1">equation (10.1)</a>) describes some real world phenomenon. Does reading the formula give you any sense of the essential qualities of <span class="process-math">\(y(x)\text{?}\)</span> No, of course not.  Because pictures are easier to understand than formulas we usually look at the graph of a function to get a sense of it. We used one of the many graphing systems available to generate the graph of <span class="process-math">\(y(x)\)</span> seen in <a href="" class="xref" data-knowl="./knowl/xref/FIGUREUnusableGraph.html" title="Figure 10.1">Figure 10.1</a> below. Impressive, isn’t it?</div>
+<div class="para" id="SECTIONgraph-with-form-5">In a sense, obtaining a formula that describes whatever real-world phenomena you might be investigating is the <a class="external" href="https://en.wikipedia.org/wiki/Holy_Grail" target="_blank">Holy Grail</a><details class="ptx-footnote" aria-live="polite" id="SECTIONgraph-with-form-5-2"><summary class="ptx-footnote__number" title="Footnote 10.2"><sup> 2 </sup></summary><div class="ptx-footnote__contents" id="SECTIONgraph-with-form-5-2"><code class="code-inline tex2jax_ignore">https://en.wikipedia.org/wiki/Holy_Grail</code></div></details>, of science. And for exactly the reason you would expect.  Formulas can tell us a great deal about the phenomenon. But they don’t tell us everything.</div>
+<div class="para" id="SECTIONgraph-with-form-6">For example, suppose <a href="CHAPTERPTshape-things.html#EQUATIONHolyGrail" class="xref" data-knowl="./knowl/xref/EQUATIONHolyGrail.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 10.1">equation (10.1)</a>) describes some real world phenomenon. Does reading the formula give you any sense of the essential qualities of <span class="process-math">\(y(x)\text{?}\)</span> No, of course not.  Because pictures are easier to understand than formulas we usually look at the graph of a function to get a sense of it. We used one of the many graphing systems available to generate the graph of <span class="process-math">\(y(x)\)</span> seen in <a href="CHAPTERPTshape-things.html#FIGUREUnusableGraph" class="xref" data-knowl="./knowl/xref/FIGUREUnusableGraph.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 10.1">Figure 10.1</a> below. Impressive, isn’t it?</div>
 <figure class="figure figure-like" id="FIGUREUnusableGraph"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/DC/HolyGrail1.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">10.1<span class="period">.</span></span><span class="space"> </span>A useless graph of <span class="process-math">\(y(x) =x^4 - 400.5 x^3 + 40099.49 x^2 + 4.005 x - 400.995\)</span></figcaption></figure><div class="para" id="SECTIONgraph-with-form-8">Because we simply  used the default settings of our graphing tool this picture  doesn’t really help much either. We’ll have to modify the viewing window to see anything useful. Take out your favorite graphing utility and adjust the settings until you find  settings that give you a more useful display like the one in <a href="" class="xref" data-knowl="./knowl/xref/FIGUREUsaableGraph.html" title="Figure 10.2">Figure 10.2</a> below.</div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">10.1<span class="period">.</span></span><span class="space"> </span>A useless graph of <span class="process-math">\(y(x) =x^4 - 400.5 x^3 + 40099.49 x^2 + 4.005 x - 400.995\)</span></figcaption></figure><div class="para" id="SECTIONgraph-with-form-8">Because we simply  used the default settings of our graphing tool this picture  doesn’t really help much either. We’ll have to modify the viewing window to see anything useful. Take out your favorite graphing utility and adjust the settings until you find  settings that give you a more useful display like the one in <a href="CHAPTERPTshape-things.html#FIGUREUsaableGraph" class="xref" data-knowl="./knowl/xref/FIGUREUsaableGraph.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 10.2">Figure 10.2</a> below.</div>
 <figure class="figure figure-like" id="FIGUREUsaableGraph"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/DC/HolyGrail3.png" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">10.2<span class="period">.</span></span><span class="space"> </span>A more usefull graph of <span class="process-math">\(y(x) =x^4 - 400.5 x^3 + 40099.49 x^2 + 4.005 x - 400.995\)</span></figcaption></figure><div class="para" id="SECTIONgraph-with-form-10">To be sure, this graph does tell us great deal about the qualitative behavior of <span class="process-math">\(y(x)\text{.}\)</span>  Visualizing the graph in this way is a good thing. But getting more detailed information can be tricky. For example, what are the exact values of the <span class="process-math">\(x\)</span> coordinates of the two places where the graph appears to graze the <span class="process-math">\(x\)</span> axis? One appears to be <span class="process-math">\(x=0\)</span> and the other appears to be <span class="process-math">\(x=200\text{,}\)</span> but is that right? Notice the horizontal and vertical scales. Can we be sure that at these scales all of the important bumps an wiggles on the graph are visible? When the top of the graph is at <span class="process-math">\(y=\)</span> ten million can we tell, just by looking, if <span class="process-math">\(y(0)=y(200)=0\text{?}\)</span>
 </div>
@@ -584,16 +1157,16 @@ y(x) =x^4 - 400.5 x^3 + 40099.49 x^2 + 4.005 x - 400.995,\tag{10.1}
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">10.3</span><span class="period">.</span>
 </h4>
 <div class="para" id="DRILLHolyGrail1-1-1">Compute <span class="process-math">\(y(0)\)</span> and <span class="process-math">\(y(200)\)</span> to see if they are really near zero.</div>
-<div class="solutions"><details id="DRILLHolyGrail1-2" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="DRILLHolyGrail1-2-1">Use a calculator for <span class="process-math">\(y(200)\text{,}\)</span> not for <span class="process-math">\(y(0)\text{.}\)</span>
+<div class="solutions"><details id="DRILLHolyGrail1-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="DRILLHolyGrail1-2-1">Use a calculator for <span class="process-math">\(y(200)\text{,}\)</span> not for <span class="process-math">\(y(0)\text{.}\)</span>
 </div></div></details></div></article><div class="para" id="SECTIONgraph-with-form-13">The fact is that it is hard to get good quantitative information from anything but very simple graphs.  But does that matter? From the graph above we can see very plainly what is happening over a very large interval. Isn’t that enough?</div>
 <div class="para" id="SECTIONgraph-with-form-14">Well, that  depends.</div>
-<div class="para" id="SECTIONgraph-with-form-15">Suppose you are a nuclear engineer and you’ve invented a simple process that requires an external source of energy. Suppose further that the graph above shows the rate of energy consumption, <span class="process-math">\(y\text{,}\)</span> of your process as a function of the ambient temperature, <span class="process-math">\(x\text{.}\)</span> Then any temperature at which <span class="process-math">\(y\lt 0\)</span> is a temperature where the process is producing energy, not consuming it. Depending on rate of production and how simple the process is, being able to identify the temperature range where <span class="process-math">\(y(x)\lt 0\)</span> could be the difference between winning the <a class="external" href="https://www.nobelprize.org/" target="_blank">Nobel Prize</a><a class="xref" id="SECTIONgraph-with-form-15-7" href="" data-knowl="./knowl/fn/SECTIONgraph-with-form-15-7.html" title="Footnote 10.3"><sup> 3 </sup></a>, and becoming a laughing stock.</div>
+<div class="para" id="SECTIONgraph-with-form-15">Suppose you are a nuclear engineer and you’ve invented a simple process that requires an external source of energy. Suppose further that the graph above shows the rate of energy consumption, <span class="process-math">\(y\text{,}\)</span> of your process as a function of the ambient temperature, <span class="process-math">\(x\text{.}\)</span> Then any temperature at which <span class="process-math">\(y\lt 0\)</span> is a temperature where the process is producing energy, not consuming it. Depending on rate of production and how simple the process is, being able to identify the temperature range where <span class="process-math">\(y(x)\lt 0\)</span> could be the difference between winning the <a class="external" href="https://www.nobelprize.org/" target="_blank">Nobel Prize</a><details class="ptx-footnote" aria-live="polite" id="SECTIONgraph-with-form-15-7"><summary class="ptx-footnote__number" title="Footnote 10.3"><sup> 3 </sup></summary><div class="ptx-footnote__contents" id="SECTIONgraph-with-form-15-7"><code class="code-inline tex2jax_ignore">https://www.nobelprize.org/</code></div></details>, and becoming a laughing stock.</div>
 <div class="para" id="SECTIONgraph-with-form-16">You would want to know.</div>
 <div class="para" id="SECTIONgraph-with-form-17">In this chapter we will explore some techniques that will help you win your Nobel Prize.</div>
 <aside class="aside aside-like" id="SECTIONgraph-with-form-18"><h4 class="heading"><span class="title">Comment.</span></h4>
 <div class="para" id="SECTIONgraph-with-form-18-2">All you have to do is invent the process. Good luck. Please mention us in your acceptance speech.</div></aside><div class="para logical" id="SECTIONgraph-with-form-19">
 <div class="para">In <a href="CHAPTERwhat-deriv-tells.html" class="internal" title="Chapter 9: Optimization: Going to Extremes">Chapter 9</a> we saw that the First and Second Derivative Tests are exactly the tools necessary to answer each of the following questions:</div>
-<ol class="decimal">
+<ol class="decimal" id="SECTIONgraph-with-form-19-2">
 <li id="SECTIONgraph-with-form-19-2-1"><div class="para" id="SECTIONgraph-with-form-19-2-1-1">On what intervals is the function increasing and on what  intervals is it decreasing?</div></li>
 <li id="SECTIONgraph-with-form-19-2-2"><div class="para" id="SECTIONgraph-with-form-19-2-2-1">Where are the local extrema located?</div></li>
 <li id="SECTIONgraph-with-form-19-2-3"><div class="para" id="SECTIONgraph-with-form-19-2-3-1">What are the values of the local extrema?</div></li>
@@ -643,7 +1216,8 @@ y(x) =x^4 - 400.5 x^3 + 40099.49 x^2 + 4.005 x - 400.995,\tag{10.1}
 </h4>
 <div class="para" id="SECTIONgraph-with-form-21-1-1">Use your favorite graphing tool to graph <span class="process-math">\(y=\frac{x}{1+x^2}\)</span> and confirm our conclusions.</div></article><article class="example example-like" id="EXAMPLEAsym1"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">10.6</span><span class="period">.</span><span class="space"> </span><span class="title">.</span>
-</h4> <div class="para logical" id="EXAMPLEAsym1-2">
+</h4>
+<div class="para logical" id="EXAMPLEAsym1-2">
 <div class="para"> The previous example was fairly simple so it was easy to keep all of the important information in mind at the same time. This will not always be the case so we will need ways to organize the data we collect. This will ensure that it is not overwhelming.  Below we demonstrate one way to do this. It is not the only way. Let’s sketch the graph of</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -653,7 +1227,9 @@ y=\frac{2+2x^2+2x^4}{1+x^4}
 <div class="para">using Calculus.   To use the First Derivative Test we’ll need  the derivative     <span class="process-math">\(\dfdx{y}{x} =y^\prime(x)= \frac{4x(1-x^4)}{(1+x^4)^2}
 \text{.}\)</span>
 </div>
-</div> <div class="para" id="EXAMPLEAsym1-3">Setting the first derivative equal to zero and solving we see that we have a POTP at <span class="process-math">\(x=-1\text{,}\)</span> <span class="process-math">\(x=0\text{,}\)</span> and at <span class="process-math">\(x=1\text{.}\)</span>  To make all of this easier to see we arrange this data in the following table.  Notice that we have organized our POTPs (and hence the intervals that we are testing) from left to right, just as they would appear on a number line.</div> <figure class="table table-like" id="FDTChart1"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">10.7<span class="period">.</span></span><span class="space"> </span>The First Derivative Test Analysis</figcaption><div class="tabular-box natural-width"><table class="tabular">
+</div>
+<div class="para" id="EXAMPLEAsym1-3">Setting the first derivative equal to zero and solving we see that we have a POTP at <span class="process-math">\(x=-1\text{,}\)</span> <span class="process-math">\(x=0\text{,}\)</span> and at <span class="process-math">\(x=1\text{.}\)</span>  To make all of this easier to see we arrange this data in the following table.  Notice that we have organized our POTPs (and hence the intervals that we are testing) from left to right, just as they would appear on a number line.</div>
+<figure class="table table-like" id="FDTChart1"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">10.7<span class="period">.</span></span><span class="space"> </span>The First Derivative Test Analysis</figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="c m b3 r0 l0 t0 lines">Interval</td>
 <td class="c m b3 r0 l0 t0 lines"><span class="process-math">\((-\infty, -1)\)</span></td>
@@ -675,12 +1251,16 @@ y=\frac{2+2x^2+2x^4}{1+x^4}
 <td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(\nearrow\)</span></td>
 <td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(\searrow\)</span></td>
 </tr>
-</table></div></figure> <div class="para" id="EXAMPLEAsym1-5">From the table above we see that we have a local maximum at <span class="process-math">\(x=-1\)</span> and <span class="process-math">\(x=1\)</span> and a local minimum at <span class="process-math">\(x=0\text{.}\)</span> Based on this information we could reasonably infer that the graph might might have the shape shown below.</div> <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/DC/GraphingWith11.png" class="contained"></div> <div class="para" id="EXAMPLEAsym1-7">The next step is to locate this graph on the <span class="process-math">\(x\)</span>-<span class="process-math">\(y\)</span> plane. From our table above we see that the local minimum is at <span class="process-math">\(y(0)=2\text{,}\)</span> and the two local maxima are at <span class="process-math">\(y(-1)=y(1)=3\text{.}\)</span>       Thus we can, again reasonably, infer that the graph of <span class="process-math">\(y(x)\)</span> is located on the plane as shown below.</div> <div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="external/DC/GraphingWith12.png" class="contained"></div> <div class="para" id="EXAMPLEAsym1-9">Unfortunately, we don’t know that our graph is correct (in fact, it is not) because we’ve made assumptions regarding its concavity that we haven’t justified. This is the same error we made in the discussion following <a href="" class="xref" data-knowl="./knowl/xref/EXAMPLEMaxTriangle.html" title="Example 2.8">Example 2.8</a>, back in <a href="CHAPTERproblem-solving.html" class="internal" title="Chapter 2: Introduction: Some  Advice on Problem Solving">Chapter 2</a> when we drew a right triangle because it “seemed to be” correct. It is very easy to make this sort of mistake. Be careful. We can analyze the concavity of the graph using the second derivative in a manner very similar to what we did earlier with first derivative.</div></article><article class="exercise exercise-like" id="SECTIONgraph-with-form-23"><h4 class="heading">
+</table></div></figure><div class="para" id="EXAMPLEAsym1-5">From the table above we see that we have a local maximum at <span class="process-math">\(x=-1\)</span> and <span class="process-math">\(x=1\)</span> and a local minimum at <span class="process-math">\(x=0\text{.}\)</span> Based on this information we could reasonably infer that the graph might might have the shape shown below.</div>
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/DC/GraphingWith11.png" class="contained"></div>
+<div class="para" id="EXAMPLEAsym1-7">The next step is to locate this graph on the <span class="process-math">\(x\)</span>-<span class="process-math">\(y\)</span> plane. From our table above we see that the local minimum is at <span class="process-math">\(y(0)=2\text{,}\)</span> and the two local maxima are at <span class="process-math">\(y(-1)=y(1)=3\text{.}\)</span>       Thus we can, again reasonably, infer that the graph of <span class="process-math">\(y(x)\)</span> is located on the plane as shown below.</div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="external/DC/GraphingWith12.png" class="contained"></div>
+<div class="para" id="EXAMPLEAsym1-9">Unfortunately, we don’t know that our graph is correct (in fact, it is not) because we’ve made assumptions regarding its concavity that we haven’t justified. This is the same error we made in the discussion following <a href="CHAPTERproblem-solving.html#EXAMPLEMaxTriangle" class="xref" data-knowl="./knowl/xref/EXAMPLEMaxTriangle.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.8">Example 2.8</a>, back in <a href="CHAPTERproblem-solving.html" class="internal" title="Chapter 2: Introduction: Some  Advice on Problem Solving">Chapter 2</a> when we drew a right triangle because it “seemed to be” correct. It is very easy to make this sort of mistake. Be careful. We can analyze the concavity of the graph using the second derivative in a manner very similar to what we did earlier with first derivative.</div></article><article class="exercise exercise-like" id="SECTIONgraph-with-form-23"><h4 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">10.8</span><span class="period">.</span>
 </h4>
-<ol class="lower-roman">
+<ol class="lower-roman" id="SECTIONgraph-with-form-23-1">
 <li id="SECTIONgraph-with-form-23-1-1"><div class="para logical" id="SECTIONgraph-with-form-23-1-1-1">
-<div class="para">Confirm that the derivative of the function in <a href="" class="xref" data-knowl="./knowl/xref/EXAMPLEAsym1.html" title="Example 10.6: ">Example 10.6</a> is</div>
+<div class="para">Confirm that the derivative of the function in <a href="CHAPTERPTshape-things.html#EXAMPLEAsym1" class="xref" data-knowl="./knowl/xref/EXAMPLEAsym1.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 10.6: ">Example 10.6</a> is</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EXAMPLEAsym1.html">
 \begin{equation*}
 \dfdx{y}{x} =y^\prime(x)= \frac{4x(1-x^4)}{(1+x^4)^2}.
@@ -688,7 +1268,7 @@ y=\frac{2+2x^2+2x^4}{1+x^4}
 </div>
 </div></li>
 <li id="SECTIONgraph-with-form-23-1-2"><div class="para logical" id="SECTIONgraph-with-form-23-1-2-1">
-<div class="para">Confirm that the second derivative of the function in <a href="" class="xref" data-knowl="./knowl/xref/EXAMPLEAsym1.html" title="Example 10.6: ">Example 10.6</a> is:</div>
+<div class="para">Confirm that the second derivative of the function in <a href="CHAPTERPTshape-things.html#EXAMPLEAsym1" class="xref" data-knowl="./knowl/xref/EXAMPLEAsym1.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 10.6: ">Example 10.6</a> is:</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EXAMPLEAsym1.html">
 \begin{equation*}
 \dfdxn{y}{x}{2} =
@@ -726,7 +1306,7 @@ y^{\prime\prime}(x)= \frac{4(1-12x^4+3x^8)}{(1+x^4)^3}\text{.}
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\bigcap\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\bigcup\)</span></td>
 </tr>
-</table></div></figure><div class="para" id="SECTIONgraph-with-form-26">From <a href="" class="xref" data-knowl="./knowl/xref/TABLESDTChart1.html" title="Table 10.9: The Second Derivative Test Analysis">Table 10.9</a> we see that <span class="process-math">\(y(x)\)</span> has inflection points at <span class="process-math">\(x=-1.41\text{,}\)</span> <span class="process-math">\(x=-0.54\text{,}\)</span> <span class="process-math">\(0.54\text{,}\)</span> and <span class="process-math">\(x=1.41\text{.}\)</span>
+</table></div></figure><div class="para" id="SECTIONgraph-with-form-26">From <a href="CHAPTERPTshape-things.html#TABLESDTChart1" class="xref" data-knowl="./knowl/xref/TABLESDTChart1.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 10.9: The Second Derivative Test Analysis">Table 10.9</a> we see that <span class="process-math">\(y(x)\)</span> has inflection points at <span class="process-math">\(x=-1.41\text{,}\)</span> <span class="process-math">\(x=-0.54\text{,}\)</span> <span class="process-math">\(0.54\text{,}\)</span> and <span class="process-math">\(x=1.41\text{.}\)</span>
 </div>
 <div class="para" id="SECTIONgraph-with-form-27">      Combining the data in this table with the data in our previous table it would seem reasonable to infer that the graph of our function looks like the one below.</div>
 <div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/DC/GraphingWith14.png" class="contained"></div>
@@ -736,7 +1316,7 @@ y^{\prime\prime}(x)= \frac{4(1-12x^4+3x^8)}{(1+x^4)^3}\text{.}
 </h4>
 <div class="para logical" id="SECTIONgraph-with-form-30-1">
 <div class="para">Use the first and second derivatives to sketch the  graph of each of the following functions, then  sketch it again using graphing software. Resolve any discrepancies between the two graphs.</div>
-<ol class="lower-roman cols2">
+<ol class="lower-roman cols2" id="SECTIONgraph-with-form-30-1-1">
 <li id="SECTIONgraph-with-form-30-1-1-1"><div class="para" id="SECTIONgraph-with-form-30-1-1-1-1"><span class="process-math">\(\displaystyle y=e^x \)</span></div></li>
 <li id="SECTIONgraph-with-form-30-1-1-2"><div class="para" id="SECTIONgraph-with-form-30-1-1-2-1"><span class="process-math">\(\displaystyle y=\ln(x) \)</span></div></li>
 <li id="SECTIONgraph-with-form-30-1-1-3"><div class="para" id="SECTIONgraph-with-form-30-1-1-3-1"><span class="process-math">\(\displaystyle y=\sin(x) \)</span></div></li>
@@ -762,7 +1342,7 @@ y^{\prime\prime}(x)= \frac{4(1-12x^4+3x^8)}{(1+x^4)^3}\text{.}
 </h4>
 <div class="para logical" id="EXAMPLEGraphWOFormula-1">
 <div class="para">For example, suppose we have the following information about a certain function.  Can we sketch a reasonable graph of the function?</div>
-<ul class="disc cols3">
+<ul class="disc cols3" id="EXAMPLEGraphWOFormula-1-1">
 <li id="EXAMPLEGraphWOFormula-1-1-1"><div class="para" id="p-derived-EXAMPLEGraphWOFormula-1-1-1"><span class="process-math">\(\displaystyle y(1)=2 \)</span></div></li>
 <li id="EXAMPLEGraphWOFormula-1-1-2"><div class="para" id="p-derived-EXAMPLEGraphWOFormula-1-1-2"><span class="process-math">\(\displaystyle \dfdxat{y}{x}{1}=0\)</span></div></li>
 <li id="EXAMPLEGraphWOFormula-1-1-3"><div class="para" id="p-derived-EXAMPLEGraphWOFormula-1-1-3"><span class="process-math">\(\displaystyle \dfdxat{y}{x}{5}=0\)</span></div></li>
@@ -794,7 +1374,8 @@ y^{\prime\prime}(x)= \frac{4(1-12x^4+3x^8)}{(1+x^4)^3}\text{.}
 </li>
 </ul>
 <div class="para">In a sense this is easier than the previous problems, since intervals of increase, decrease, concave up, and concave down have already been determined for us.  For example, here are the tables for each.</div>
-</div> <figure class="table table-like" id="TABLEFDerivTest"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">10.12<span class="period">.</span></span><span class="space"> </span>POTPs</figcaption><div class="tabular-box natural-width"><table class="tabular">
+</div>
+<figure class="table table-like" id="TABLEFDerivTest"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">10.12<span class="period">.</span></span><span class="space"> </span>POTPs</figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="c m b3 r0 l0 t0 lines">Interval</td>
 <td class="c m b3 r0 l0 t0 lines"><span class="process-math">\((-\infty, 1)\)</span></td>
@@ -813,7 +1394,7 @@ y^{\prime\prime}(x)= \frac{4(1-12x^4+3x^8)}{(1+x^4)^3}\text{.}
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\searrow\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\searrow\)</span></td>
 </tr>
-</table></div></figure> <figure class="table table-like" id="TABLESDerivTest"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">10.13<span class="period">.</span></span><span class="space"> </span>PITPs</figcaption><div class="tabular-box natural-width"><table class="tabular">
+</table></div></figure><figure class="table table-like" id="TABLESDerivTest"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">10.13<span class="period">.</span></span><span class="space"> </span>PITPs</figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="c m b3 r0 l0 t0 lines">Interval</td>
 <td class="c m b3 r0 l0 t0 lines"><span class="process-math">\((-\infty, 3)\)</span></td>
@@ -832,10 +1413,10 @@ y^{\prime\prime}(x)= \frac{4(1-12x^4+3x^8)}{(1+x^4)^3}\text{.}
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\bigcup\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\bigcap\)</span></td>
 </tr>
-</table></div></figure>                              </article><article class="problem example-like" id="SECTIONgraph-without-form-5"><h4 class="heading">
+</table></div></figure></article><article class="problem example-like" id="SECTIONgraph-without-form-5"><h4 class="heading">
 <span class="type">Drill</span><span class="space"> </span><span class="codenumber">10.14</span><span class="period">.</span>
 </h4>
-<div class="para" id="SECTIONgraph-without-form-5-1-1">In <a href="" class="xref" data-knowl="./knowl/xref/EXAMPLEGraphWOFormula.html" title="Example 10.11">Example 10.11</a> we have <span class="process-math">\(\dfdxat{y}{x}{5}=0\)</span> and <span class="process-math">\(\dfdx{y}{x}\lt 0\)</span> on the intervals <span class="process-math">\((1,5)\)</span> and <span class="process-math">\((5,\infty)\text{.}\)</span> Given that <span class="process-math">\(\dfdxat{y}{x}{5}=0\)</span> and <span class="process-math">\(\dfdxn{y}{x}{2}\lt 0\)</span> when <span class="process-math">\(x\gt 5\text{,}\)</span> did we really need to specify that <span class="process-math">\(\dfdx{y}{x}\lt0\)</span> on the interval <span class="process-math">\((5,\infty)\text{?}\)</span>
+<div class="para" id="SECTIONgraph-without-form-5-1-1">In <a href="CHAPTERPTshape-things.html#EXAMPLEGraphWOFormula" class="xref" data-knowl="./knowl/xref/EXAMPLEGraphWOFormula.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 10.11">Example 10.11</a> we have <span class="process-math">\(\dfdxat{y}{x}{5}=0\)</span> and <span class="process-math">\(\dfdx{y}{x}\lt 0\)</span> on the intervals <span class="process-math">\((1,5)\)</span> and <span class="process-math">\((5,\infty)\text{.}\)</span> Given that <span class="process-math">\(\dfdxat{y}{x}{5}=0\)</span> and <span class="process-math">\(\dfdxn{y}{x}{2}\lt 0\)</span> when <span class="process-math">\(x\gt 5\text{,}\)</span> did we really need to specify that <span class="process-math">\(\dfdx{y}{x}\lt0\)</span> on the interval <span class="process-math">\((5,\infty)\text{?}\)</span>
 </div></article><div class="para" id="SECTIONgraph-without-form-6">Based on the information given, the function <span class="process-math">\(y=y(x)\)</span> has a local maximum at <span class="process-math">\(x=1\)</span> and inflection points at <span class="process-math">\(x=3\)</span> and <span class="process-math">\(x=5.\)</span> A sketch of the graph might look something  like  this:</div>
 <div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="external/DC/Optimization6.png" class="contained"></div>
 <article class="problem example-like" id="SECTIONgraph-without-form-8"><h4 class="heading">
@@ -843,14 +1424,14 @@ y^{\prime\prime}(x)= \frac{4(1-12x^4+3x^8)}{(1+x^4)^3}\text{.}
 </h4>
 <div class="introduction" id="SECTIONgraph-without-form-8-1"><div class="para" id="SECTIONgraph-without-form-8-1-1">Sketch the graph of <span class="process-math">\(y=y(x)\)</span> which satisfies the given requirements.</div></div>
 <article class="task exercise-like" id="SECTIONgraph-without-form-8-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para logical" id="SECTIONgraph-without-form-8-2-1-1"><ul class="disc cols2">
+<div class="para logical" id="SECTIONgraph-without-form-8-2-1-1"><ul class="disc cols2" id="SECTIONgraph-without-form-8-2-1-1-1">
 <li id="SECTIONgraph-without-form-8-2-1-1-1-1"><div class="para" id="p-derived-SECTIONgraph-without-form-8-2-1-1-1-1"><span class="process-math">\(y(-8)=10\text{,}\)</span></div></li>
 <li id="SECTIONgraph-without-form-8-2-1-1-1-2"><div class="para" id="p-derived-SECTIONgraph-without-form-8-2-1-1-1-2">
 <span class="process-math">\(\dfdx{y}{x}\lt0\)</span> for all <span class="process-math">\(x\)</span>
 </div></li>
 <li id="SECTIONgraph-without-form-8-2-1-1-1-3"><div class="para" id="p-derived-SECTIONgraph-without-form-8-2-1-1-1-3"><span class="process-math">\(\displaystyle \dfdxn{y}{x}{2}\gt0\)</span></div></li>
 </ul></div></article><article class="task exercise-like" id="SECTIONgraph-without-form-8-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para logical" id="SECTIONgraph-without-form-8-3-1-1"><ul class="disc cols2">
+<div class="para logical" id="SECTIONgraph-without-form-8-3-1-1"><ul class="disc cols2" id="SECTIONgraph-without-form-8-3-1-1-1">
 <li id="SECTIONgraph-without-form-8-3-1-1-1-1"><div class="para" id="p-derived-SECTIONgraph-without-form-8-3-1-1-1-1"><span class="process-math">\(y(0)=0\text{,}\)</span></div></li>
 <li id="SECTIONgraph-without-form-8-3-1-1-1-2"><div class="para" id="p-derived-SECTIONgraph-without-form-8-3-1-1-1-2"><span class="process-math">\(\eval{\dfdx{y}{x}}{x}{0}=0\text{,}\)</span></div></li>
 <li id="SECTIONgraph-without-form-8-3-1-1-1-3"><div class="para" id="p-derived-SECTIONgraph-without-form-8-3-1-1-1-3"><span class="process-math">\(\geneval{\dfdx{y}{x}}{x}{\neq0}\gt0\text{,}\)</span></div></li>
@@ -861,7 +1442,7 @@ y^{\prime\prime}(x)= \frac{4(1-12x^4+3x^8)}{(1+x^4)^3}\text{.}
 <span class="process-math">\(\dfdxn{y}{x}{2}\gt0\)</span> for <span class="process-math">\(x\gt0\text{,}\)</span>
 </div></li>
 </ul></div></article><article class="task exercise-like" id="SECTIONgraph-without-form-8-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<div class="para logical" id="SECTIONgraph-without-form-8-4-1-1"><ul class="disc cols2">
+<div class="para logical" id="SECTIONgraph-without-form-8-4-1-1"><ul class="disc cols2" id="SECTIONgraph-without-form-8-4-1-1-1">
 <li id="SECTIONgraph-without-form-8-4-1-1-1-1"><div class="para" id="p-derived-SECTIONgraph-without-form-8-4-1-1-1-1">
 <span class="process-math">\(-\frac{\pi}{2}\lt y\lt\frac{\pi}{2}\)</span> for all <span class="process-math">\(x\text{,}\)</span>
 </div></li>
@@ -877,7 +1458,7 @@ y^{\prime\prime}(x)= \frac{4(1-12x^4+3x^8)}{(1+x^4)^3}\text{.}
 <span class="process-math">\(\dfdxn{y}{x}{2}\lt0\text{,}\)</span> for <span class="process-math">\(x\gt0\text{,}\)</span>
 </div></li>
 </ul></div></article><article class="task exercise-like" id="SECTIONgraph-without-form-8-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
-<div class="para logical" id="SECTIONgraph-without-form-8-5-1-1"><ul class="disc cols2">
+<div class="para logical" id="SECTIONgraph-without-form-8-5-1-1"><ul class="disc cols2" id="SECTIONgraph-without-form-8-5-1-1-1">
 <li id="SECTIONgraph-without-form-8-5-1-1-1-1"><div class="para" id="p-derived-SECTIONgraph-without-form-8-5-1-1-1-1"><span class="process-math">\(y(0)=0\text{,}\)</span></div></li>
 <li id="SECTIONgraph-without-form-8-5-1-1-1-2"><div class="para" id="p-derived-SECTIONgraph-without-form-8-5-1-1-1-2">
 <span class="process-math">\(\dfdxat{y}{x}{0}\)</span>  does not exist,</div></li>
@@ -889,7 +1470,7 @@ y^{\prime\prime}(x)= \frac{4(1-12x^4+3x^8)}{(1+x^4)^3}\text{.}
 <span class="process-math">\(\dfdxn{y}{x}{2}\lt0\text{,}\)</span> for <span class="process-math">\(x\gt0\)</span>
 </div></li>
 </ul></div></article><article class="task exercise-like" id="SECTIONgraph-without-form-8-6"><h5 class="heading"><span class="codenumber">(e)</span></h5>
-<div class="para logical" id="SECTIONgraph-without-form-8-6-1-1"><ul class="disc cols2">
+<div class="para logical" id="SECTIONgraph-without-form-8-6-1-1"><ul class="disc cols2" id="SECTIONgraph-without-form-8-6-1-1-1">
 <li id="SECTIONgraph-without-form-8-6-1-1-1-1"><div class="para" id="p-derived-SECTIONgraph-without-form-8-6-1-1-1-1">
 <span class="process-math">\(y\gt0\)</span> for all <span class="process-math">\(x\text{,}\)</span>
 </div></li>
@@ -901,7 +1482,7 @@ y^{\prime\prime}(x)= \frac{4(1-12x^4+3x^8)}{(1+x^4)^3}\text{.}
 <span class="process-math">\(\dfdxn{y}{x}{2}\gt0\)</span> for all <span class="process-math">\(x\text{.}\)</span>
 </div></li>
 </ul></div></article><article class="task exercise-like" id="SECTIONgraph-without-form-8-7"><h5 class="heading"><span class="codenumber">(f)</span></h5>
-<div class="para logical" id="SECTIONgraph-without-form-8-7-1-1"><ul class="disc cols2">
+<div class="para logical" id="SECTIONgraph-without-form-8-7-1-1"><ul class="disc cols2" id="SECTIONgraph-without-form-8-7-1-1-1">
 <li id="SECTIONgraph-without-form-8-7-1-1-1-1"><div class="para" id="p-derived-SECTIONgraph-without-form-8-7-1-1-1-1"><span class="process-math">\(y(0)=0\text{,}\)</span></div></li>
 <li id="SECTIONgraph-without-form-8-7-1-1-1-2"><div class="para" id="p-derived-SECTIONgraph-without-form-8-7-1-1-1-2"><span class="process-math">\(\dfdxat{y}{x}{0}=0\text{,}\)</span></div></li>
 <li id="SECTIONgraph-without-form-8-7-1-1-1-3"><div class="para" id="p-derived-SECTIONgraph-without-form-8-7-1-1-1-3"><span class="process-math">\(\displaystyle \dfdxat{y}{x}{2}=0,\)</span></div></li>
@@ -926,7 +1507,7 @@ y^{\prime\prime}(x)= \frac{4(1-12x^4+3x^8)}{(1+x^4)^3}\text{.}
 <span class="process-math">\(\dfdxn{y}{x}{2}\lt0\)</span> for <span class="process-math">\(x\)</span> in <span class="process-math">\((1,\infty)\text{,}\)</span>
 </div></li>
 </ul></div></article><article class="task exercise-like" id="SECTIONgraph-without-form-8-8"><h5 class="heading"><span class="codenumber">(g)</span></h5>
-<div class="para logical" id="SECTIONgraph-without-form-8-8-1-1"><ul class="disc cols2">
+<div class="para logical" id="SECTIONgraph-without-form-8-8-1-1"><ul class="disc cols2" id="SECTIONgraph-without-form-8-8-1-1-1">
 <li id="SECTIONgraph-without-form-8-8-1-1-1-1"><div class="para" id="p-derived-SECTIONgraph-without-form-8-8-1-1-1-1"><span class="process-math">\(y(3)=7\text{,}\)</span></div></li>
 <li id="SECTIONgraph-without-form-8-8-1-1-1-2"><div class="para" id="p-derived-SECTIONgraph-without-form-8-8-1-1-1-2">
 <span class="process-math">\(\dfdx{y}{x}=1\text{,}\)</span> for <span class="process-math">\(x\lt 3\text{,}\)</span>
@@ -935,7 +1516,7 @@ y^{\prime\prime}(x)= \frac{4(1-12x^4+3x^8)}{(1+x^4)^3}\text{.}
 <span class="process-math">\(\dfdx{y}{x}=-1\text{,}\)</span> for <span class="process-math">\(x\gt 3\)</span>
 </div></li>
 </ul></div></article><article class="task exercise-like" id="SECTIONgraph-without-form-8-9"><h5 class="heading"><span class="codenumber">(h)</span></h5>
-<div class="para logical" id="SECTIONgraph-without-form-8-9-1-1"><ul class="disc cols2">
+<div class="para logical" id="SECTIONgraph-without-form-8-9-1-1"><ul class="disc cols2" id="SECTIONgraph-without-form-8-9-1-1-1">
 <li id="SECTIONgraph-without-form-8-9-1-1-1-1"><div class="para" id="p-derived-SECTIONgraph-without-form-8-9-1-1-1-1">
 <span class="process-math">\(y(-x)=y(x)\)</span> for all <span class="process-math">\(x\text{,}\)</span>
 </div></li>
@@ -956,7 +1537,7 @@ y^{\prime\prime}(x)= \frac{4(1-12x^4+3x^8)}{(1+x^4)^3}\text{.}
 <span class="process-math">\(\dfdxn{y}{x}{2}\lt0\)</span> for <span class="process-math">\(x\)</span> in <span class="process-math">\((1,\infty)\)</span>
 </div></li>
 </ul></div></article><article class="task exercise-like" id="SECTIONgraph-without-form-8-10"><h5 class="heading"><span class="codenumber">(i)</span></h5>
-<div class="para logical" id="SECTIONgraph-without-form-8-10-1-1"><ul class="disc cols2">
+<div class="para logical" id="SECTIONgraph-without-form-8-10-1-1"><ul class="disc cols2" id="SECTIONgraph-without-form-8-10-1-1-1">
 <li id="SECTIONgraph-without-form-8-10-1-1-1-1"><div class="para" id="p-derived-SECTIONgraph-without-form-8-10-1-1-1-1">
 <span class="process-math">\(y(-x)=-y(x)\text{,}\)</span> for all <span class="process-math">\(x\text{,}\)</span>
 </div></li>
@@ -975,7 +1556,7 @@ y^{\prime\prime}(x)= \frac{4(1-12x^4+3x^8)}{(1+x^4)^3}\text{.}
 </div></li>
 </ul></div></article><article class="task exercise-like" id="SECTIONgraph-without-form-8-11"><h5 class="heading"><span class="codenumber">(j)</span></h5>
 <div class="para" id="SECTIONgraph-without-form-8-11-1-1">For this problem we restrict the domain to the interval            <span class="process-math">\([0,2\pi]\text{.}\)</span>
-</div> <div class="para logical" id="SECTIONgraph-without-form-8-11-1-2"><ul class="disc cols2">
+</div> <div class="para logical" id="SECTIONgraph-without-form-8-11-1-2"><ul class="disc cols2" id="SECTIONgraph-without-form-8-11-1-2-1">
 <li id="SECTIONgraph-without-form-8-11-1-2-1-1"><div class="para" id="p-derived-SECTIONgraph-without-form-8-11-1-2-1-1"><span class="process-math">\(y(0)=y(2\pi)=-2\text{,}\)</span></div></li>
 <li id="SECTIONgraph-without-form-8-11-1-2-1-2"><div class="para" id="p-derived-SECTIONgraph-without-form-8-11-1-2-1-2"><span class="process-math">\(y(\pi)=2\text{,}\)</span></div></li>
 <li id="SECTIONgraph-without-form-8-11-1-2-1-3"><div class="para" id="p-derived-SECTIONgraph-without-form-8-11-1-2-1-3">
@@ -996,7 +1577,11 @@ y^{\prime\prime}(x)= \frac{4(1-12x^4+3x^8)}{(1+x^4)^3}\text{.}
 <li id="SECTIONgraph-without-form-8-11-1-2-1-9"><div class="para" id="p-derived-SECTIONgraph-without-form-8-11-1-2-1-9">
 <span class="process-math">\(\dfdxn{y}{x}{2}\lt0\)</span> for <span class="process-math">\(\frac{\pi}{2}\lt x \lt \frac{3\pi}{2}\)</span>
 </div></li>
-</ul></div></article></article><section class="paragraphs" id="SECTIONgraph-without-form-9"><h4 class="heading"><span class="title">Graphing <span class="process-math">\(y(x)\)</span> from the Graph of <span class="process-math">\(\dfdx{y}{x} \)</span>.</span></h4> <div class="para" id="SECTIONgraph-without-form-9-2">In <a href="CHAPTERcalc-trig.html#SECTIONwitch-agnesi-inverse" class="internal" title="Section 6.5: The Witch of Agnesi and the Inverse Tangent Function">Section 6.5</a> we found tphe graph of <span class="process-math">\(\inverse\tan(x)\)</span> by examining the graph of its derivative, the Witch of Agnesi, The procedure we used in <a href="CHAPTERcalc-trig.html#SECTIONwitch-agnesi-inverse" class="internal" title="Section 6.5: The Witch of Agnesi and the Inverse Tangent Function">Section 6.5</a> is quite general. For example, suppose the graph of <span class="process-math">\(\dfdx{y}{x}\)</span> is given below.</div> <div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/DC/Graphing1.png" class="contained"></div>  <div class="para" id="SECTIONgraph-without-form-9-4">Recall that with a graph for <span class="process-math">\(\dfdx{y}{x}\text{,}\)</span> finding where <span class="process-math">\(y\)</span> is increasing or <span class="process-math">\(y\)</span> is decreasing is just a matter of determining where the derivative is positive (above the <span class="process-math">\(x\)</span> axis) or negative (below the <span class="process-math">\(x\)</span> axis). Similarly the concavity of the graph of <span class="process-math">\(y(x)\)</span> can be determined by finding where <span class="process-math">\(\dfdx{y}{x} = y^\prime(x)\)</span> is increasing (concave upward) and decreasing (concave downward). Given the graph of <span class="process-math">\(\dfdx{y}{x}\)</span> at the right, we can produce the following tables.</div> <figure class="table table-like" id="TABLEGraphFromDerivGraph1"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">10.16<span class="period">.</span></span><span class="space"> </span>POTPs</figcaption><div class="tabular-box natural-width"><table class="tabular">
+</ul></div></article></article><section class="paragraphs" id="SECTIONgraph-without-form-9"><h4 class="heading"><span class="title">Graphing <span class="process-math">\(y(x)\)</span> from the Graph of <span class="process-math">\(\dfdx{y}{x} \)</span>.</span></h4>
+<div class="para" id="SECTIONgraph-without-form-9-2">In <a href="CHAPTERcalc-trig.html#SECTIONwitch-agnesi-inverse" class="internal" title="Section 6.5: The Witch of Agnesi and the Inverse Tangent Function">Section 6.5</a> we found tphe graph of <span class="process-math">\(\inverse\tan(x)\)</span> by examining the graph of its derivative, the Witch of Agnesi, The procedure we used in <a href="CHAPTERcalc-trig.html#SECTIONwitch-agnesi-inverse" class="internal" title="Section 6.5: The Witch of Agnesi and the Inverse Tangent Function">Section 6.5</a> is quite general. For example, suppose the graph of <span class="process-math">\(\dfdx{y}{x}\)</span> is given below.</div>
+<div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/DC/Graphing1.png" class="contained"></div>
+<div class="para" id="SECTIONgraph-without-form-9-4">Recall that with a graph for <span class="process-math">\(\dfdx{y}{x}\text{,}\)</span> finding where <span class="process-math">\(y\)</span> is increasing or <span class="process-math">\(y\)</span> is decreasing is just a matter of determining where the derivative is positive (above the <span class="process-math">\(x\)</span> axis) or negative (below the <span class="process-math">\(x\)</span> axis). Similarly the concavity of the graph of <span class="process-math">\(y(x)\)</span> can be determined by finding where <span class="process-math">\(\dfdx{y}{x} = y^\prime(x)\)</span> is increasing (concave upward) and decreasing (concave downward). Given the graph of <span class="process-math">\(\dfdx{y}{x}\)</span> at the right, we can produce the following tables.</div>
+<figure class="table table-like" id="TABLEGraphFromDerivGraph1"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">10.16<span class="period">.</span></span><span class="space"> </span>POTPs</figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="c m b3 r0 l0 t0 lines">Interval</td>
 <td class="c m b3 r0 l0 t0 lines"><span class="process-math">\((-\infty, 0)\)</span></td>
@@ -1015,7 +1600,7 @@ y^{\prime\prime}(x)= \frac{4(1-12x^4+3x^8)}{(1+x^4)^3}\text{.}
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\searrow \)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\nearrow \)</span></td>
 </tr>
-</table></div></figure> <figure class="table table-like" id="TABLEGraphFromDerivGraph2"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">10.17<span class="period">.</span></span><span class="space"> </span>PITPs</figcaption><div class="tabular-box natural-width"><table class="tabular">
+</table></div></figure><figure class="table table-like" id="TABLEGraphFromDerivGraph2"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">10.17<span class="period">.</span></span><span class="space"> </span>PITPs</figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="c m b3 r0 l0 t0 lines">Interval</td>
 <td class="c m b3 r0 l0 t0 lines"><span class="process-math">\((-\infty, 1)\)</span></td>
@@ -1031,7 +1616,8 @@ y^{\prime\prime}(x)= \frac{4(1-12x^4+3x^8)}{(1+x^4)^3}\text{.}
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\bigcap \)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\bigcup \)</span></td>
 </tr>
-</table></div></figure>   <div class="para" id="SECTIONgraph-without-form-9-7">From the data in our tables we see that the graph of <span class="process-math">\(y\)</span> looks something like this.</div>   <article class="problem example-like" id="SECTIONgraph-without-form-9-8"><h5 class="heading">
+</table></div></figure><div class="para" id="SECTIONgraph-without-form-9-7">From the data in our tables we see that the graph of <span class="process-math">\(y\)</span> looks something like this.</div>
+<article class="problem example-like" id="SECTIONgraph-without-form-9-8"><h5 class="heading">
 <span class="type">Drill</span><span class="space"> </span><span class="codenumber">10.18</span><span class="period">.</span>
 </h5>
 <div class="introduction" id="SECTIONgraph-without-form-9-8-1"><div class="para" id="SECTIONgraph-without-form-9-8-1-1">Each of the following graphs is the derivative of some function. Find the shape of the graph of the function.</div></div>
@@ -1047,10 +1633,11 @@ y^{\prime\prime}(x)= \frac{4(1-12x^4+3x^8)}{(1+x^4)^3}\text{.}
 <div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/DC/Dgraph9.png" class="contained"></div> </article><article class="task exercise-like" id="SECTIONgraph-without-form-9-8-11"><h6 class="heading"><span class="codenumber">(j)</span></h6>
 <div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/DC/Dgraph10.png" class="contained"></div> </article><article class="task exercise-like" id="SECTIONgraph-without-form-9-8-12"><h6 class="heading"><span class="codenumber">(k)</span></h6>
 <div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/DC/Dgraph11.png" class="contained"></div> </article><article class="task exercise-like" id="SECTIONgraph-without-form-9-8-13"><h6 class="heading"><span class="codenumber">(l)</span></h6>
-<div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/DC/Dgraph12.png" class="contained"></div> </article></article>                  </section></section><section class="section" id="SECTIONGraphingWithDeriv"><h3 class="heading hide-type">
+<div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/DC/Dgraph12.png" class="contained"></div> </article></article></section></section><section class="section" id="SECTIONGraphingWithDeriv"><h3 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">10.3</span><span class="space"> </span><span class="title">Graphing with a Formula for  <span class="process-math">\(\dfdx{y}{t}\)</span></span>
 </h3>
-<section class="paragraphs" id="PARAGRAPHSDerivDepOnxAlone"><h4 class="heading"><span class="title">When  <span class="process-math">\(\dfdx{y}{t}\)</span> Depends on <span class="process-math">\(t\)</span> alone.</span></h4>        <article class="example example-like" id="PARAGRAPHSDerivDepOnxAlone-2"><h5 class="heading">
+<section class="paragraphs" id="PARAGRAPHSDerivDepOnxAlone"><h4 class="heading"><span class="title">When  <span class="process-math">\(\dfdx{y}{t}\)</span> Depends on <span class="process-math">\(t\)</span> alone.</span></h4>
+<article class="example example-like" id="PARAGRAPHSDerivDepOnxAlone-2"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">10.19</span><span class="period">.</span>
 </h5>
 <div class="para logical" id="PARAGRAPHSDerivDepOnxAlone-2-1">
@@ -1061,7 +1648,8 @@ y^{\prime\prime}(x)= \frac{4(1-12x^4+3x^8)}{(1+x^4)^3}\text{.}
 \end{align*}
 </div>
 <div class="para">In Integral Calculus (probably your next math course) you will learn how to find <span class="process-math">\(y(t)\)</span> explicitly. For now we will be satisfied with sketching an approximate graph of <span class="process-math">\(y(t)\text{.}\)</span> Setting <span class="process-math">\(\dfdx{y}{t}=0\)</span> and solving we see that <span class="process-math">\(t=0\)</span> and <span class="process-math">\(t=4\)</span> are the POTPs for <span class="process-math">\(y(t)\text{.}\)</span>  Thus on each of the intervals <span class="process-math">\((-\infty,0)\text{,}\)</span> <span class="process-math">\((0,4)\text{,}\)</span> and <span class="process-math">\((4,\infty)\)</span> the graph of <span class="process-math">\(y(t)\)</span> is either always increasing or always decreasing. We tabulate this information as follows:</div>
-</div> <figure class="table table-like" id="TABLEIVPPOTP1"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">10.20<span class="period">.</span></span><span class="space"> </span>POTPs</figcaption><div class="tabular-box natural-width"><table class="tabular">
+</div>
+<figure class="table table-like" id="TABLEIVPPOTP1"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">10.20<span class="period">.</span></span><span class="space"> </span>POTPs</figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="c m b3 r0 l0 t0 lines">Interval</td>
 <td class="c m b3 r0 l0 t0 lines"><span class="process-math">\((-\infty, 0)\)</span></td>
@@ -1080,7 +1668,8 @@ y^{\prime\prime}(x)= \frac{4(1-12x^4+3x^8)}{(1+x^4)^3}\text{.}
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\nearrow\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\searrow\)</span></td>
 </tr>
-</table></div></figure>           <div class="para" id="PARAGRAPHSDerivDepOnxAlone-2-3">Based on this table, we can see that <span class="process-math">\(y(0)=0\)</span> is a local minimum and <span class="process-math">\(y(4)\)</span> is a local maximum. Observe that we do not know the value of <span class="process-math">\(y(4)\text{,}\)</span> only that it must be a local maximum. Nor do we have any way to determine the value of <span class="process-math">\(y(4)\)</span> in this problem.</div> <div class="para logical" id="PARAGRAPHSDerivDepOnxAlone-2-4">
+</table></div></figure><div class="para" id="PARAGRAPHSDerivDepOnxAlone-2-3">Based on this table, we can see that <span class="process-math">\(y(0)=0\)</span> is a local minimum and <span class="process-math">\(y(4)\)</span> is a local maximum. Observe that we do not know the value of <span class="process-math">\(y(4)\text{,}\)</span> only that it must be a local maximum. Nor do we have any way to determine the value of <span class="process-math">\(y(4)\)</span> in this problem.</div>
+<div class="para logical" id="PARAGRAPHSDerivDepOnxAlone-2-4">
 <div class="para">We  proceed in a similar fashion to determine concavity. The second derivative is</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1088,7 +1677,8 @@ y^{\prime\prime}(x)= \frac{4(1-12x^4+3x^8)}{(1+x^4)^3}\text{.}
 \end{equation*}
 </div>
 <div class="para">Setting <span class="process-math">\(\dfdxn{y}{t}{2}=0\)</span> and solving, we see that <span class="process-math">\(t=2\)</span> is a PITP for <span class="process-math">\(y(t)\text{.}\)</span>  Making a table as before we have</div>
-</div> <figure class="table table-like" id="TABLEIVPPITP1"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">10.21<span class="period">.</span></span><span class="space"> </span>PITPs</figcaption><div class="tabular-box natural-width"><table class="tabular">
+</div>
+<figure class="table table-like" id="TABLEIVPPITP1"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">10.21<span class="period">.</span></span><span class="space"> </span>PITPs</figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="c m b3 r0 l0 t0 lines">Interval</td>
 <td class="c m b3 r0 l0 t0 lines"><span class="process-math">\((-\infty, 2)\)</span></td>
@@ -1104,17 +1694,24 @@ y^{\prime\prime}(x)= \frac{4(1-12x^4+3x^8)}{(1+x^4)^3}\text{.}
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\bigcup\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\bigcap\)</span></td>
 </tr>
-</table></div></figure> <div class="para" id="PARAGRAPHSDerivDepOnxAlone-2-6">         Based on the table we see that the point <span class="process-math">\((2,y(2))\)</span> is an inflection point. We want to make a reasonable sketch of the graph of <span class="process-math">\(y=y(t)\)</span> based on this information. But there is a lot of information in <a href="" class="xref" data-knowl="./knowl/xref/TABLEIVPPOTP1.html" title="Table 10.20: POTPs">Table 10.20</a> and <a href="" class="xref" data-knowl="./knowl/xref/TABLEIVPPITP1.html" title="Table 10.21: PITPs">Table 10.21</a> and our graph needs to be consistent with all of it.  So we first organize all of our conclusions by plotting the transition points (both optimal and inflective) on the <span class="process-math">\(t\)</span> axis and identifying the intervals where <span class="process-math">\(y\)</span> is increasing, decreasing, concave up, or concave down.</div> <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/DC/IncDecChart1.png" class="contained"></div>  <div class="para" id="PARAGRAPHSDerivDepOnxAlone-2-8">This information, along with the initial value, <span class="process-math">\(y(0)=0\)</span> allows us to provide a reasonable graph of <span class="process-math">\(y(t)\text{.}\)</span>
-</div> <div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/DC/Optimization4.png" class="contained"></div>  <div class="para" id="PARAGRAPHSDerivDepOnxAlone-2-10">From the initial condition in the IVP we know that <span class="process-math">\(y(0)=0\)</span> but we have no information about the vertical coordinate of any other point on the graph. Thus, from the information given the scale of this graph is unknowable. But we know that the graph above is reasonable because it is consistent with the data given in the IVP. This sort of graphical, qualitative analysis is the best we can do with the information we have but, as you see, we can glean a great deal of information about the “shape” of the graph of a function from its derivative alone.</div></article> <article class="problem example-like" id="PARAGRAPHSDerivDepOnxAlone-3"><h5 class="heading">
+</table></div></figure><div class="para" id="PARAGRAPHSDerivDepOnxAlone-2-6">         Based on the table we see that the point <span class="process-math">\((2,y(2))\)</span> is an inflection point. We want to make a reasonable sketch of the graph of <span class="process-math">\(y=y(t)\)</span> based on this information. But there is a lot of information in <a href="CHAPTERPTshape-things.html#TABLEIVPPOTP1" class="xref" data-knowl="./knowl/xref/TABLEIVPPOTP1.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 10.20: POTPs">Table 10.20</a> and <a href="CHAPTERPTshape-things.html#TABLEIVPPITP1" class="xref" data-knowl="./knowl/xref/TABLEIVPPITP1.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 10.21: PITPs">Table 10.21</a> and our graph needs to be consistent with all of it.  So we first organize all of our conclusions by plotting the transition points (both optimal and inflective) on the <span class="process-math">\(t\)</span> axis and identifying the intervals where <span class="process-math">\(y\)</span> is increasing, decreasing, concave up, or concave down.</div>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/DC/IncDecChart1.png" class="contained"></div>
+<div class="para" id="PARAGRAPHSDerivDepOnxAlone-2-8">This information, along with the initial value, <span class="process-math">\(y(0)=0\)</span> allows us to provide a reasonable graph of <span class="process-math">\(y(t)\text{.}\)</span>
+</div>
+<div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/DC/Optimization4.png" class="contained"></div>
+<div class="para" id="PARAGRAPHSDerivDepOnxAlone-2-10">From the initial condition in the IVP we know that <span class="process-math">\(y(0)=0\)</span> but we have no information about the vertical coordinate of any other point on the graph. Thus, from the information given the scale of this graph is unknowable. But we know that the graph above is reasonable because it is consistent with the data given in the IVP. This sort of graphical, qualitative analysis is the best we can do with the information we have but, as you see, we can glean a great deal of information about the “shape” of the graph of a function from its derivative alone.</div></article><article class="problem example-like" id="PARAGRAPHSDerivDepOnxAlone-3"><h5 class="heading">
 <span class="type">Drill</span><span class="space"> </span><span class="codenumber">10.22</span><span class="period">.</span>
 </h5>
 <div class="introduction" id="PARAGRAPHSDerivDepOnxAlone-3-1"><div class="para" id="PARAGRAPHSDerivDepOnxAlone-3-1-1">For each of the following  IVPs:</div></div>
 <article class="task exercise-like" id="PARAGRAPHSDerivDepOnxAlone-3-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
 <div class="para" id="PARAGRAPHSDerivDepOnxAlone-3-2-1-1">Find the intervals on which the graph of the solution is increasing and decreasing.  Identify the location all local extrema.</div></article><article class="task exercise-like" id="PARAGRAPHSDerivDepOnxAlone-3-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>
 <div class="para" id="PARAGRAPHSDerivDepOnxAlone-3-3-1-1">Find the intervals on which the graph of the solution is concave upward and concave downward.  Identify the location of all inflection points.</div></article><article class="task exercise-like" id="PARAGRAPHSDerivDepOnxAlone-3-4"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<div class="para" id="PARAGRAPHSDerivDepOnxAlone-3-4-1-1">Plot a reasonable sketch of the graph for <span class="process-math">\(y=y(t).\)</span> Approximate transition points using the appropriate technology or Newton’s Method as necessary.</div></article></article>                                                                                       </section><section class="paragraphs" id="PARAGRAPHSDfdxDependsOnYAlone"><h4 class="heading"><span class="title">When  <span class="process-math">\(\dfdx{y}{t}\)</span> depends on <span class="process-math">\(y\)</span> alone.</span></h4> <blockquote class="blockquote" id="PARAGRAPHSDfdxDependsOnYAlone-2">
-<div class="para" id="PARAGRAPHSDfdxDependsOnYAlone-2-1">To see a World in a Grain of Sand And a Heaven in a Wild Flower Hold Infinity in the palm of your hand And Eternity in an hour</div> <cite class="attribution">―<a class="external" href="https://www.poetryfoundation.org/poets/william-blake" target="_blank">William Blake</a><a class="xref" id="PARAGRAPHSDfdxDependsOnYAlone-2-2-2" href="" data-knowl="./knowl/fn/PARAGRAPHSDfdxDependsOnYAlone-2-2-2.html" title="Footnote 10.4"><sup> 4 </sup></a> (1757–1827)</cite>
-</blockquote> <div class="para logical" id="PARAGRAPHSDfdxDependsOnYAlone-3">
+<div class="para" id="PARAGRAPHSDerivDepOnxAlone-3-4-1-1">Plot a reasonable sketch of the graph for <span class="process-math">\(y=y(t).\)</span> Approximate transition points using the appropriate technology or Newton’s Method as necessary.</div></article></article></section><section class="paragraphs" id="PARAGRAPHSDfdxDependsOnYAlone"><h4 class="heading"><span class="title">When  <span class="process-math">\(\dfdx{y}{t}\)</span> depends on <span class="process-math">\(y\)</span> alone.</span></h4>
+<blockquote class="blockquote" id="PARAGRAPHSDfdxDependsOnYAlone-2">
+<div class="para" id="PARAGRAPHSDfdxDependsOnYAlone-2-1">To see a World in a Grain of Sand And a Heaven in a Wild Flower Hold Infinity in the palm of your hand And Eternity in an hour</div>
+<cite class="attribution">―<a class="external" href="https://www.poetryfoundation.org/poets/william-blake" target="_blank">William Blake</a><details class="ptx-footnote" aria-live="polite" id="PARAGRAPHSDfdxDependsOnYAlone-2-2-2"><summary class="ptx-footnote__number" title="Footnote 10.4"><sup> 4 </sup></summary><div class="ptx-footnote__contents" id="PARAGRAPHSDfdxDependsOnYAlone-2-2-2"><code class="code-inline tex2jax_ignore">https://www.poetryfoundation.org/poets/william-blake</code></div></details> (1757–1827)</cite>
+</blockquote>
+<div class="para logical" id="PARAGRAPHSDfdxDependsOnYAlone-3">
 <div class="para">Consider the IVP</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/SECTIONEulersMethod.html" id="PARAGRAPHSDfdxDependsOnYAlone-3-1">
 \begin{align}
@@ -1122,14 +1719,29 @@ y^{\prime\prime}(x)= \frac{4(1-12x^4+3x^8)}{(1+x^4)^3}\text{.}
 \end{align}
 </div>
 <div class="para">This is the same IVP we approximated in <a href="CHAPTApproximation.html#SECTIONEulersMethod" class="internal" title="Section 7.3: Euler’s Method">Section 7.3</a>. The analysis we will do here is related so you may find it useful to review that section before proceeding.</div>
-</div> <div class="para" id="PARAGRAPHSDfdxDependsOnYAlone-4">As we’ve seen every IVP has two parts: a differential equation (in this case, <span class="process-math">\(\dfdx{y}{t}=y\text{,}\)</span> and an initial value (in this case, <span class="process-math">\(y(0)=1\)</span> or equivalently, <span class="process-math">\((0,1)\)</span>).</div>          <div class="para" id="PARAGRAPHSDfdxDependsOnYAlone-5">We will focus on the differential equation first.  The differential equation <span class="process-math">\(\dfdx{y}{t}=y\)</span> says that at each point on the graph of <span class="process-math">\(y(t)\)</span> the slope of the graph is equal to the vertical coordinate at that point.  For example if <span class="process-math">\((0,1)\)</span> is a point on the graph of <span class="process-math">\(y(t)\text{,}\)</span> then nearby the graph of <span class="process-math">\(y(t)\)</span> will look like the orange part of the sketch below.  On the other hand, if <span class="process-math">\((1,1)\)</span> is a point on the graph of <span class="process-math">\(y(t)\)</span> then near the point <span class="process-math">\((1,1)\text{,}\)</span> graph of <span class="process-math">\(y(t)\)</span> will look like the red graph in the sketch below.</div> <div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="external/DC/DEGraph2.png" class="contained"></div> <div class="para" id="PARAGRAPHSDfdxDependsOnYAlone-7">In fact, for any value of <span class="process-math">\(t\text{,}\)</span> we know that if <span class="process-math">\((t,1)\)</span> is a point on the graph of <span class="process-math">\(y(t)\)</span> then the slope of the graph which passes through that point will be parallel to the orange and red lines above (that is, if a solution of the differential equation passes through a point <span class="process-math">\((t,1)\)</span> then its slope will be equal to <span class="process-math">\(1\)</span> at <span class="process-math">\((t,1)\)</span>).</div>          <div class="para" id="PARAGRAPHSDfdxDependsOnYAlone-8">This is seen in the figure below where each black dot represents a point with vertical coordinate equal to <span class="process-math">\(1\)</span> and each orange segment represents the graph of the curve that both satisfies the differential equation from <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONExpIVP2.html" title="Equation 10.2">IVP (10.2)</a>, and passes through that point.</div> <div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="external/DC/DEGraph5.png" class="contained"></div> <div class="para" id="PARAGRAPHSDfdxDependsOnYAlone-10">Similarly, if we know that <span class="process-math">\((t,2)\)</span> is a point on the graph of <span class="process-math">\(y(t)\text{,}\)</span> where <span class="process-math">\(y(t)\)</span> both solves the differential equation from <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONExpIVP2.html" title="Equation 10.2">IVP (10.2)</a> and passes through that point, then the slope at <span class="process-math">\((t,2)\)</span> will be <span class="process-math">\(2\text{,}\)</span> as seen in the following sketch.</div> <div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/DC/DEGraph7.png" class="contained"></div>  <div class="para" id="PARAGRAPHSDfdxDependsOnYAlone-12">By tagging more  points in the plane in the same way we get the image below.</div> <div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="external/DC/DEGraph9.png" class="contained"></div>  <aside class="aside aside-like" id="PARAGRAPHSDfdxDependsOnYAlone-14"><h5 class="heading"><span class="title">Comment.</span></h5>
+</div>
+<div class="para" id="PARAGRAPHSDfdxDependsOnYAlone-4">As we’ve seen every IVP has two parts: a differential equation (in this case, <span class="process-math">\(\dfdx{y}{t}=y\text{,}\)</span> and an initial value (in this case, <span class="process-math">\(y(0)=1\)</span> or equivalently, <span class="process-math">\((0,1)\)</span>).</div>
+<div class="para" id="PARAGRAPHSDfdxDependsOnYAlone-5">We will focus on the differential equation first.  The differential equation <span class="process-math">\(\dfdx{y}{t}=y\)</span> says that at each point on the graph of <span class="process-math">\(y(t)\)</span> the slope of the graph is equal to the vertical coordinate at that point.  For example if <span class="process-math">\((0,1)\)</span> is a point on the graph of <span class="process-math">\(y(t)\text{,}\)</span> then nearby the graph of <span class="process-math">\(y(t)\)</span> will look like the orange part of the sketch below.  On the other hand, if <span class="process-math">\((1,1)\)</span> is a point on the graph of <span class="process-math">\(y(t)\)</span> then near the point <span class="process-math">\((1,1)\text{,}\)</span> graph of <span class="process-math">\(y(t)\)</span> will look like the red graph in the sketch below.</div>
+<div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="external/DC/DEGraph2.png" class="contained"></div>
+<div class="para" id="PARAGRAPHSDfdxDependsOnYAlone-7">In fact, for any value of <span class="process-math">\(t\text{,}\)</span> we know that if <span class="process-math">\((t,1)\)</span> is a point on the graph of <span class="process-math">\(y(t)\)</span> then the slope of the graph which passes through that point will be parallel to the orange and red lines above (that is, if a solution of the differential equation passes through a point <span class="process-math">\((t,1)\)</span> then its slope will be equal to <span class="process-math">\(1\)</span> at <span class="process-math">\((t,1)\)</span>).</div>
+<div class="para" id="PARAGRAPHSDfdxDependsOnYAlone-8">This is seen in the figure below where each black dot represents a point with vertical coordinate equal to <span class="process-math">\(1\)</span> and each orange segment represents the graph of the curve that both satisfies the differential equation from <a href="CHAPTERPTshape-things.html#PARAGRAPHSDfdxDependsOnYAlone-3-1" class="xref" data-knowl="./knowl/xref/EQUATIONExpIVP2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 10.2">IVP (10.2)</a>, and passes through that point.</div>
+<div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="external/DC/DEGraph5.png" class="contained"></div>
+<div class="para" id="PARAGRAPHSDfdxDependsOnYAlone-10">Similarly, if we know that <span class="process-math">\((t,2)\)</span> is a point on the graph of <span class="process-math">\(y(t)\text{,}\)</span> where <span class="process-math">\(y(t)\)</span> both solves the differential equation from <a href="CHAPTERPTshape-things.html#PARAGRAPHSDfdxDependsOnYAlone-3-1" class="xref" data-knowl="./knowl/xref/EQUATIONExpIVP2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 10.2">IVP (10.2)</a> and passes through that point, then the slope at <span class="process-math">\((t,2)\)</span> will be <span class="process-math">\(2\text{,}\)</span> as seen in the following sketch.</div>
+<div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/DC/DEGraph7.png" class="contained"></div>
+<div class="para" id="PARAGRAPHSDfdxDependsOnYAlone-12">By tagging more  points in the plane in the same way we get the image below.</div>
+<div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="external/DC/DEGraph9.png" class="contained"></div>
+<aside class="aside aside-like" id="PARAGRAPHSDfdxDependsOnYAlone-14"><h5 class="heading"><span class="title">Comment.</span></h5>
 <div class="para" id="PARAGRAPHSDfdxDependsOnYAlone-14-2"> Actually the Principle of Local Linearity applies so it is a short section of the line tangent at <span class="process-math">\((a,b)\text{.}\)</span>
-</div></aside> <div class="para" id="PARAGRAPHSDfdxDependsOnYAlone-15"> A sketch like this is called a <dfn class="terminology">slope field</dfn>. The short line segment at each point, <span class="process-math">\((a,b)\text{,}\)</span> is a short section of the graph of the function which satisfies the differential equation <span class="process-math">\(\dfdx{y}{t}=y\text{.}\)</span>
-</div> <div class="para" id="PARAGRAPHSDfdxDependsOnYAlone-16">If we know where to start (i.e., if we have an initial condition) the slope field allows us to determine the shape of the entire graph.</div> <div class="para" id="PARAGRAPHSDfdxDependsOnYAlone-17">For example to  sketch the graph of <span class="process-math">\(y(t)\)</span> if it passes through the point <span class="process-math">\((2,3)\text{,}\)</span> we simply follow the line segments in our slope field starting at that point. This is the black graph in the sketch below. The graph of the <span class="process-math">\(y(t)\)</span> that passes through the point <span class="process-math">\((5,5)\)</span> is shown in red below, and the graph that passes through the point <span class="process-math">\((-1,-1.25)\)</span> is shown in blue.</div> <div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="external/DC/DEGraph8.png" class="contained"></div>  <article class="exercise exercise-like" id="PARAGRAPHSDfdxDependsOnYAlone-19"><h5 class="heading">
+</div></aside><div class="para" id="PARAGRAPHSDfdxDependsOnYAlone-15"> A sketch like this is called a <dfn class="terminology">slope field</dfn>. The short line segment at each point, <span class="process-math">\((a,b)\text{,}\)</span> is a short section of the graph of the function which satisfies the differential equation <span class="process-math">\(\dfdx{y}{t}=y\text{.}\)</span>
+</div>
+<div class="para" id="PARAGRAPHSDfdxDependsOnYAlone-16">If we know where to start (i.e., if we have an initial condition) the slope field allows us to determine the shape of the entire graph.</div>
+<div class="para" id="PARAGRAPHSDfdxDependsOnYAlone-17">For example to  sketch the graph of <span class="process-math">\(y(t)\)</span> if it passes through the point <span class="process-math">\((2,3)\text{,}\)</span> we simply follow the line segments in our slope field starting at that point. This is the black graph in the sketch below. The graph of the <span class="process-math">\(y(t)\)</span> that passes through the point <span class="process-math">\((5,5)\)</span> is shown in red below, and the graph that passes through the point <span class="process-math">\((-1,-1.25)\)</span> is shown in blue.</div>
+<div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="external/DC/DEGraph8.png" class="contained"></div>
+<article class="exercise exercise-like" id="PARAGRAPHSDfdxDependsOnYAlone-19"><h5 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">10.23</span><span class="period">.</span>
 </h5>
 <div class="para" id="PARAGRAPHSDfdxDependsOnYAlone-19-1-1">
-<a href="" class="xref" data-knowl="./knowl/xref/EQUATIONExpIVP2.html" title="Equation 10.2">IVP (10.2)</a> has the initial condition, <span class="process-math">\(y(0)=1.\)</span> Plot the point <span class="process-math">\((0,1)\)</span> and use this slope field to sketch the solution of <a href="" class="xref" data-knowl="./knowl/xref/EQUATIONExpIVP2.html" title="Equation 10.2">IVP (10.2)</a>. Compare your solution with the  approximation we obtained in <a href="CHAPTApproximation.html#SECTIONEulersMethod" class="internal" title="Section 7.3: Euler’s Method">Section 7.3</a>. Do they look like the same solution?</div></article> <article class="problem example-like" id="PARAGRAPHSDfdxDependsOnYAlone-20"><h5 class="heading">
+<a href="CHAPTERPTshape-things.html#PARAGRAPHSDfdxDependsOnYAlone-3-1" class="xref" data-knowl="./knowl/xref/EQUATIONExpIVP2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 10.2">IVP (10.2)</a> has the initial condition, <span class="process-math">\(y(0)=1.\)</span> Plot the point <span class="process-math">\((0,1)\)</span> and use this slope field to sketch the solution of <a href="CHAPTERPTshape-things.html#PARAGRAPHSDfdxDependsOnYAlone-3-1" class="xref" data-knowl="./knowl/xref/EQUATIONExpIVP2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 10.2">IVP (10.2)</a>. Compare your solution with the  approximation we obtained in <a href="CHAPTApproximation.html#SECTIONEulersMethod" class="internal" title="Section 7.3: Euler’s Method">Section 7.3</a>. Do they look like the same solution?</div></article><article class="problem example-like" id="PARAGRAPHSDfdxDependsOnYAlone-20"><h5 class="heading">
 <span class="type">Drill</span><span class="space"> </span><span class="codenumber">10.24</span><span class="period">.</span>
 </h5>
 <div class="introduction" id="PARAGRAPHSDfdxDependsOnYAlone-20-1"><div class="para" id="PARAGRAPHSDfdxDependsOnYAlone-20-1-1"></div></div>
@@ -1137,11 +1749,13 @@ y^{\prime\prime}(x)= \frac{4(1-12x^4+3x^8)}{(1+x^4)^3}\text{.}
 <div class="para" id="PARAGRAPHSDfdxDependsOnYAlone-20-2-1-1">Confirm that <span class="process-math">\(y(t)=3e^{t-2}\)</span> is the solution of the IVP <span class="process-math">\(\dfdx{y}{t}=y\text{,}\)</span> <span class="process-math">\(y(2)=3\text{.}\)</span> (This is the black graph above.)</div></article><article class="task exercise-like" id="PARAGRAPHSDfdxDependsOnYAlone-20-3"><h6 class="heading"><span class="codenumber">(b)</span></h6>
 <div class="para" id="PARAGRAPHSDfdxDependsOnYAlone-20-3-1-1">Confirm that <span class="process-math">\(y(t)=5e^{t-5}\)</span> is the solution of the IVP <span class="process-math">\(\dfdx{y}{t}=y\text{,}\)</span> <span class="process-math">\(y(5)=5\text{.}\)</span> (This is the red graph above.)</div></article><article class="task exercise-like" id="PARAGRAPHSDfdxDependsOnYAlone-20-4"><h6 class="heading"><span class="codenumber">(c)</span></h6>
 <div class="para" id="PARAGRAPHSDfdxDependsOnYAlone-20-4-1-1">Based on parts (a) and (b) guess what the solution of the IVP <span class="process-math">\(\dfdx{y}{t}=y\text{,}\)</span> <span class="process-math">\(y(-1)=-2\)</span> will be. Confirm that your guess is correct. {If you guess wrong, guess again.}</div></article><article class="task exercise-like" id="PARAGRAPHSDfdxDependsOnYAlone-20-5"><h6 class="heading"><span class="codenumber">(d)</span></h6>
-<div class="para" id="PARAGRAPHSDfdxDependsOnYAlone-20-5-1-1">Based on parts (a) and (b), and (c) make a conjecture what the solution of the IVP <span class="process-math">\(\dfdx{y}{t}=y\text{,}\)</span> <span class="process-math">\(y(a)=b\)</span> will be. Confirm that your guess is correct.</div></article></article>               <div class="para" id="PARAGRAPHSDfdxDependsOnYAlone-21"> To sketch the graph of the solution of a given  IVP  begin by drawing  the <dfn class="terminology">slope field</dfn> for the differential equation. Then plot the  value and follow the slope field to sketch the graph.</div> <article class="problem example-like" id="PARAGRAPHSDfdxDependsOnYAlone-22"><h5 class="heading">
+<div class="para" id="PARAGRAPHSDfdxDependsOnYAlone-20-5-1-1">Based on parts (a) and (b), and (c) make a conjecture what the solution of the IVP <span class="process-math">\(\dfdx{y}{t}=y\text{,}\)</span> <span class="process-math">\(y(a)=b\)</span> will be. Confirm that your guess is correct.</div></article></article><div class="para" id="PARAGRAPHSDfdxDependsOnYAlone-21"> To sketch the graph of the solution of a given  IVP  begin by drawing  the <dfn class="terminology">slope field</dfn> for the differential equation. Then plot the  value and follow the slope field to sketch the graph.</div>
+<article class="problem example-like" id="PARAGRAPHSDfdxDependsOnYAlone-22"><h5 class="heading">
 <span class="type">Drill</span><span class="space"> </span><span class="codenumber">10.25</span><span class="period">.</span>
 </h5>
 <div class="introduction" id="PARAGRAPHSDfdxDependsOnYAlone-22-1">
-<div class="para" id="PARAGRAPHSDfdxDependsOnYAlone-22-1-1"> For each of the following IVPs sketch the <dfn class="terminology">slope field</dfn> in the ranges given and use your slope field to sketch the solution of the IVP.</div> <aside class="aside aside-like" id="PARAGRAPHSDfdxDependsOnYAlone-22-1-2"><h6 class="heading"><span class="title">Advice.</span></h6>
+<div class="para" id="PARAGRAPHSDfdxDependsOnYAlone-22-1-1"> For each of the following IVPs sketch the <dfn class="terminology">slope field</dfn> in the ranges given and use your slope field to sketch the solution of the IVP.</div>
+<aside class="aside aside-like" id="PARAGRAPHSDfdxDependsOnYAlone-22-1-2"><h6 class="heading"><span class="title">Advice.</span></h6>
 <div class="para" id="PARAGRAPHSDfdxDependsOnYAlone-22-1-2-2">It is simplest to begin by sketching slopes at integer coordinate points and then to fill in between them to get a clearer sense of the graphs.}</div></aside>
 </div>
 <article class="task exercise-like" id="PARAGRAPHSDfdxDependsOnYAlone-22-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
@@ -1162,7 +1776,8 @@ y^{\prime\prime}(x)= \frac{4(1-12x^4+3x^8)}{(1+x^4)^3}\text{.}
 </div></article><article class="task exercise-like" id="PARAGRAPHSDfdxDependsOnYAlone-22-7"><h6 class="heading"><span class="codenumber">(f)</span></h6>
 <div class="para" id="PARAGRAPHSDfdxDependsOnYAlone-22-7-1-1">
 <span class="process-math">\(\dfdx{y}{t}=(y^2-1)\text{,}\)</span> <span class="process-math">\(y(0)=1\text{,}\)</span> <span class="process-math">\(-2\le t\le 2\text{,}\)</span> <span class="process-math">\(-2\le y\le 2\)</span>
-</div></article></article>                                   </section><section class="paragraphs" id="PARAGRAPHSDfdxDependsOnYAndt"><h4 class="heading"><span class="title">When  <span class="process-math">\(\dfdx{y}{t}\)</span> Depends on <span class="process-math">\(y\)</span> and <span class="process-math">\(t\)</span>.</span></h4> <div class="para logical" id="PARAGRAPHSDfdxDependsOnYAndt-2">
+</div></article></article></section><section class="paragraphs" id="PARAGRAPHSDfdxDependsOnYAndt"><h4 class="heading"><span class="title">When  <span class="process-math">\(\dfdx{y}{t}\)</span> Depends on <span class="process-math">\(y\)</span> and <span class="process-math">\(t\)</span>.</span></h4>
+<div class="para logical" id="PARAGRAPHSDfdxDependsOnYAndt-2">
 <div class="para">So far we’ve examined the situation when <span class="process-math">\(\dfdx{y}{t}\)</span> depends on <span class="process-math">\(t\)</span> alone:</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1183,7 +1798,8 @@ y^{\prime\prime}(x)= \frac{4(1-12x^4+3x^8)}{(1+x^4)^3}\text{.}
 \end{equation*}
 </div>
 <div class="para">Analytically, this is a more complex situation. However it is possible, and quite useful, to get a qualitative sketch of the solution of an IVP from the slope field.</div>
-</div> <article class="problem example-like" id="PARAGRAPHSDfdxDependsOnYAndt-3"><h5 class="heading">
+</div>
+<article class="problem example-like" id="PARAGRAPHSDfdxDependsOnYAndt-3"><h5 class="heading">
 <span class="type">Drill</span><span class="space"> </span><span class="codenumber">10.26</span><span class="period">.</span>
 </h5>
 <div class="introduction" id="PARAGRAPHSDfdxDependsOnYAndt-3-1"><div class="para" id="PARAGRAPHSDfdxDependsOnYAndt-3-1-1"> For each of the following IVPs draw The <dfn class="terminology">slope field</dfn> in the ranges given and use your slope field to sketch the solution of the IVP.</div></div>
@@ -1199,7 +1815,7 @@ y^{\prime\prime}(x)= \frac{4(1-12x^4+3x^8)}{(1+x^4)^3}\text{.}
 </div></article><article class="task exercise-like" id="PARAGRAPHSDfdxDependsOnYAndt-3-5"><h6 class="heading"><span class="codenumber">(d)</span></h6>
 <div class="para" id="PARAGRAPHSDfdxDependsOnYAndt-3-5-1-1">
 <span class="process-math">\(\dfdx{y}{t}=ye^{-x}\text{,}\)</span> <span class="process-math">\(y(0)=2\text{,}\)</span> <span class="process-math">\(0\le t\le 5\text{,}\)</span> <span class="process-math">\(-5\le y\le 5\)</span>
-</div></article></article>                       </section></section></section></div>
+</div></article></article></section></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="CHAPTERwhat-deriv-tells.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="CHAPTERmodel-with-calc.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
