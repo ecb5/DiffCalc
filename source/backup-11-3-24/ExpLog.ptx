@@ -24,7 +24,7 @@
 
         <dl>
           <li>
-              <title>Polynomials:</title> 
+              <title>Polynomials:</title>
             <p>
               Polynomials are functions of the
               form: <m>f(x) = c_0+c_1x+c_2x^2+c_3x^3+\ldots+c_{n-1}x^{n-1}+c_nx^n,</m>
@@ -80,8 +80,9 @@
       </p>
 
       <p>
+<idx><h>Vocabulary</h><h>analytic functions</h></idx>
         Functions which require Calculus for their definition are (usually)
-        called <term>analytic</term> functions.
+        called <term>analytic functions</term>.
       </p>
       <aside>
         <title>Mathematical Terminology</title>
@@ -103,15 +104,115 @@
           Calculus so we will start there.
         </p>
       </aside>
-
     </introduction>
 
 
+<!--     <section xml:id="SECTIONIvps"> -->
+<!--       <title>Initial Value Problems (IVPs)</title> -->
+<!--       <p> -->
+<!--         Let<rsq/>s step back for a moment.  Recall  the definition of an Initial Value Problem from <xref ref="DEFINITIONIVP"></xref>.  An IVP consists of two parts: -->
 
-    <section xml:id="SECTIONIvps">
-      <title>Initial Value Problems (IVPs)</title>
+<!--         <ol> -->
+<!--           <li> -->
+<!--             <p> -->
+<!--               The differential equation (for example, <m>\dfdx{y}{x}=2x</m>), -->
+<!--             </p> -->
+<!--           </li> -->
+<!--           <li> -->
+<!--             <p> -->
+<!--               The initial value. (So called because when the -->
+<!--               independent variable is time  we usually know the value of our -->
+<!--               function initially.) -->
+<!--             </p> -->
+<!--           </li> -->
+<!--         </ol> -->
+<!--       </p> -->
+
+<!--       <p> -->
+<!--         A common way to create new functions using Calculus is by -->
+<!--         defining the new function to be the solution(s) of a specified -->
+<!--         IVP. -->
+<!--       </p> -->
+
+<!--       <example> -->
+<!-- <idx><h>Differential Equations</h><h>defining functions via</h></idx> -->
+<!--         <p>  We<rsq/>ve seen that when we differentiate the formula <m>y=x^2</m> we get the -->
+<!--         <term>differential equation</term> <m>\dx{y} = 2x\dx{x},</m> or -->
+<!--         <men  xml:id="EQUATIONx2diffeq"> -->
+<!--           \dfdx{y}{x}=2x. -->
+<!-- <!-\- \label{eq:x2diffeq} -\-> -->
+<!--         </men> -->
+<!--         If we did not already know that the function <m>y(x)=x^2</m> satisfies -->
+<!--         <xref ref="EQUATIONx2diffeq">equation</xref> we could give a name to the solution -->
+<!--         (sqr<m>(x)</m>, perhaps?) and by fiat, define sqr<m>(x)</m> to be -->
+<!--         whatever function solves this equation. -->
+<!--         But there is a problem. The solution of <xref ref="EQUATIONx2diffeq">equation</xref> -->
+<!--         is a multifunction, remember? To choose a single branch we need to -->
+<!--         impose an initial condition. -->
+<!--         </p> -->
+<!--       </example> -->
+
+<!--       <exercise xml:id="DRILLIVP-sqr"> -->
+<!--           <p> -->
+<!--             Solve each of the following IVPs. Graph your solutions: -->
+<!--             <ol cols="2" marker="i"> -->
+<!--               <li> -->
+<!--                 <p> -->
+<!--                   <m>\dfdx{y}{x}=2x,\ \ \ y(0)=0</m> -->
+<!--                 </p> -->
+<!--               </li> -->
+<!--             <li> -->
+<!--             <p> -->
+<!--               <m>\dfdx{y}{x}=2x,\ \ \ y(0)=1</m> -->
+<!--             </p> -->
+<!--           </li> -->
+<!--         <li> -->
+<!--             <p> -->
+<!--               <m>\dfdx{y}{x}=2x,\ \ \ y(0)=-10</m> -->
+<!--             </p> -->
+<!--           </li> -->
+<!--         <li> -->
+<!--             <p> -->
+<!--               <m>\dfdx{y}{x}=2x,\ \ \ y(1)=2</m> -->
+<!--             </p> -->
+<!--           </li> -->
+<!--         <li> -->
+<!--             <p> -->
+<!--               <m>\dfdx{y}{x}=2x,\ \ \ y(-1)=1</m> -->
+<!--             </p> -->
+<!--           </li> -->
+<!--         <li> -->
+<!--             <p> -->
+<!--               <m>\dfdx{y}{x}=x,\ \ \ y(0)=1</m> -->
+<!--             </p> -->
+<!--           </li> -->
+<!--         <li> -->
+<!--             <p> -->
+<!--               <m>\dfdx{y}{x}=2x,\ \ \ y(x_0)=y_0</m> where <m>x_0</m> and <m>y_0</m> are -->
+<!--               fixed, but unspecified constants. -->
+<!--             </p> -->
+<!--         </li> -->
+<!--             </ol> -->
+<!--           </p> -->
+<!--       </exercise> -->
+<!-- <p> -->
+<!--         Simply naming the function tells us nothing about it. However the IVP -->
+<!--         itself can give us a some insight into the nature of the solution. -->
+<!--         For example since <m>2x\lt 0</m> when <m>x\lt 0</m>, the slope of the graph of -->
+<!--         <m>y(x)</m> is clearly also negative when <m>x\lt 0</m>, Similarly, the slope -->
+<!--         of the graph of <m>y(x)</m> is positive when <m>x\gt 0</m>. -->
+<!--       </p> -->
+<!--       <p> -->
+
+<!--         Of course we already knew that since we have a formula for -->
+<!--         <m>y(x)=\text{sqr}(x)=x^2</m>. This won<rsq/>t be true in the next section. -->
+<!--       </p> -->
+<!--   </section> -->
+
+<section  xml:id="SECTIONDEsandIVPS">
+<title>Initial Value Problems</title>
       <p>
-        Let<rsq/>s step back for a moment.  Recall  the definition of an Initial Value Problem from <xref ref="DEFINITIONIVP"></xref>.  An IVP consists of two parts:
+        Let<rsq/>s step back for a moment.  Recall the  <xref ref="DEFINITIONIVP">definition of an Initial Value Problem</xref>.  An IVP consists of two parts:
 
         <ol>
           <li>
@@ -128,15 +229,15 @@
           </li>
         </ol>
       </p>
-
       <p>
         A common way to create new functions using Calculus is by
         defining the new function to be the solution(s) of a specified
         IVP.
       </p>
 
-      <example>
+      <example xml:id="EXAMPLEDifferentialEquation">
 <idx><h>Differential Equations</h><h>defining functions via</h></idx>
+<idx><h>Vocabulary</h><h>Differential Equations</h></idx>
         <p>  We<rsq/>ve seen that when we differentiate the formula <m>y=x^2</m> we get the
         <term>differential equation</term> <m>\dx{y} = 2x\dx{x},</m> or
         <men  xml:id="EQUATIONx2diffeq">
@@ -152,7 +253,6 @@
         impose an initial condition.
         </p>
       </example>
-
       <exercise xml:id="DRILLIVP-sqr">
           <p>
             Solve each of the following IVPs. Graph your solutions:
@@ -208,7 +308,7 @@
         Of course we already knew that since we have a formula for
         <m>y(x)=\text{sqr}(x)=x^2</m>. This won<rsq/>t be true in the next section.
       </p>
-  </section>
+</section>
 
   <section xml:id="SECTIONexponential">
     <title>The Natural Exponential</title>
@@ -224,6 +324,7 @@
     <definition xml:id="DEFINITIONnatural-exponential-ivp">
       <title>The Natural Exponential Function</title>
 <idx><h>Definition</h><h>The Natural Exponential Function</h></idx>
+<idx><h>Vocabulary</h><h>natural exponential function</h></idx>
       <statement>
         <p>
           <!-- \label{def:natural-exponential-ivp} -->
@@ -608,6 +709,7 @@ Newton wrote his
             </p>
       
             <p>
+<idx><h>Vocabulary</h><h>infinite series</h></idx>
               You would expect a polynomial that doesn<rsq/>t end to be called an
               infinite polynomial but it is not. Such an expression is called an
               <term>infinite series.</term> Usually we  just call it a series. A
@@ -688,7 +790,7 @@ Newton wrote his
             <!--      the Gateway Arch Got its Shape" visual="https://link.springer.com/content/pdf/10.1007/s00004-010-0030-8.pdf</pubtitle>{How -->
             <!--      the Gateway Arch Got its Shape">This figure needs a caption.</url> -->
             <!--      </caption> -->
-            <!--      <image source="images/ExpFifty.png" width="50%"/> -->
+            <!--      <image source="DC/ExpFifty.png" width="50%"/> -->
             <!--      </figure> -->
             <!-- \begin{wrapfigure}[12]{l}{2in}  -->
             <!--   \captionsetup{labelformat=empty} -->
@@ -711,7 +813,7 @@ Newton wrote his
               What now?
             </p>
 
-              <image source="images/ExpFifty.png" width="30%"/>
+              <image source="DC/ExpFifty.png" width="30%"/>
             <p>
               The sketch above shows the graph of the polynomial
               <m>y= 1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+ \cdots + \frac{x^{50}}{50!}</m>
@@ -722,18 +824,19 @@ Newton wrote his
               graph should be a reasonable approximation to the solution of
               <xref ref="IVPExpDiffeq">IVP</xref> in the interval shown.
             </p>
-            <image source="images/FiftiethExp.png" width="40%" />
-            <!--         <image source="images/FiftiethExp.png" width="60%" /> -->
+            <image source="DC/FiftiethExp.png" width="40%" />
+            <!--         <image source="DC/FiftiethExp.png" width="60%" /> -->
             <!-- \centerline{\includegraphics*[height=2in,width=2.5in]{../Figures/FiftiethExp}}  -->
 
             <p>
+<idx><h>Vocabulary</h><h>exponential functions</h></idx>
               In your earlier math courses you may have seen graphs that looked like
               this before. If not, then consider the following graphs of the
               <term>exponential functions</term>, <m>y=2^x</m> and <m>y=3^x</m>
               and notice that they are very similar to the graph of <m>y=
               1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+ \cdots + \frac{x^{50}}{50!}</m>.
             </p>
-            <image source="images/2^xAnd3^x.png" width="40%" />
+            <image source="DC/2^xAnd3^x.png" width="40%" />
             <p>
               This
               is much clearer  when we graph all three functions
@@ -741,12 +844,12 @@ Newton wrote his
             </p>
 
             <!-- \centerline{\includegraphics*[height=2in,width=2.5in]{../Figures/2^xAnd3^x}} -->
-            <image source="images/Exp2and3.png" width="40%" />
+            <image source="DC/Exp2and3.png" width="40%" />
             <!-- \centerline{\includegraphics*[height=2in,width=2.5in]{../Figures/Exp2and3}} -->
             <p>
               As you can plainly see near <m>x=0</m> they are indeed very similar.
             </p>
-            <image source="images/Exp2and3.png" width="40%" />
+            <image source="DC/Exp2and3.png" width="40%" />
 
             <p>
               Since the polynomial <m>y= 1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+
@@ -1080,6 +1183,7 @@ In
 
 
       <p>
+<idx><h>Vocabulary</h><h>natural exponential function</h></idx>
       The function <m>y(x)=e^x</m> is called the <term>natural exponential</term>
       function and <m>e</m> is its
       base just as <m>2</m> is the base of the exponential function <m>y(x)=2^x</m> and
@@ -1638,13 +1742,13 @@ Point: <m>(1,e/2)</m>
         it is the key to the solution.
       </p>
 
-      <problem  xml:id="PROBLEMHangingChain">
+      <exercise  xml:id="PROBLEMHangingChain">
         <title>The Shape of a Hanging Chain</title>
         <introduction>
           <p>
             The Calculus in this problem is pretty straightforward but the
-            Algebra gets a bit messy. To avoid some of this mess in <xref ref="PROBLEMHangChainA"> part</xref>, <xref ref="PROBLEMHangChainB"> part</xref>, and <xref ref="PROBLEMHangChainC"> part</xref> we will solve the special case where <m>\frac{w}{H}=1</m>
-            in  <xref ref="PROBLEMHangChainD"> part</xref> we<rsq/>ll use our solution of this special case to solve
+            Algebra gets a bit messy. To avoid some of this mess in <xref ref="PROBLEMHangChainA"> part</xref>, <xref ref="PROBLEMHangChainB"> part</xref>, and <xref ref="PROBLEMHangChainC"> part</xref> we will solve the special case where <m>\frac{w}{H}=1</m>.
+            In  <xref ref="PROBLEMHangChainD"> part</xref> we<rsq/>ll use our solution of this special case to solve
             the original problem.
           </p>
           <p>
@@ -1657,7 +1761,7 @@ Point: <m>(1,e/2)</m>
           <statement>
             <p>
               Show that
-              <m>1+\left(\frac{e^X-e^{-X}}{2}\right)^2=\left(\frac{e^X+e^{-X}}{2}\right)^2.</m>
+              <me>1+\left(\frac{e^X-e^{-X}}{2}\right)^2=\left(\frac{e^X+e^{-X}}{2}\right)^2</me>.
             </p>
           </statement>
           <hint>
@@ -1724,14 +1828,14 @@ Point: <m>(1,e/2)</m>
           <statement>
             <p>
               Assume that <m>w=1 </m>, and <m>H=1</m> and graph the curve given in
-              <xref ref="EQUATIONCatSol"></xref>. Does it look like a hanging chain? What
+              <xref ref="EQUATIONCatSol">equation</xref>. Does it look like a hanging chain? What
               happens to the graph if we use <m>w=1</m> and <m>H=2</m>, or
               <m>w=2</m> and <m>H=1</m>? Does this make sense physically? Why or why
               not?
             </p>
           </statement>
         </task>
-      </problem>
+      </exercise>
 
       <!--   \begin{embeddedproblem}[The Shape of a Hanging Chain]  ;;; MULTILEVEL PROBLEM -->
       <!--   <!-\- <!-\\- \label{problem:HangingChain} -\\-> -\-> -->
@@ -1795,6 +1899,10 @@ Point: <m>(1,e/2)</m>
       <!-- \end{embeddedproblem} -->
 
       <p>
+<idx><h>Hyberbolic Functions</h><h>hyberbolic cosine</h></idx>
+<idx><h>Hyberbolic Functions</h><h>hyberbolic sine</h></idx>
+<idx><h>Vocabulary</h><h>Hyberbolic Functions</h><h>hyberbolic cosine</h></idx>
+<idx><h>Vocabulary</h><h>Hyberbolic Functions</h><h>hyberbolic sine</h></idx>
         The expressions <m>\frac12\left(e^x+e^{-x}\right)</m> and
         <m>\frac12\left(e^x-e^{-x}\right)</m> arise frequently in many scientific
         and engineering problems and have been named the <term>hyberbolic
@@ -1844,7 +1952,7 @@ Traditionally, <m>\sinh</m> is read aloud as <q>cinch</q> and <m>\cosh{}</m> is 
         </statement>
       </problem>
       <p>
-
+<idx><h>Vocabulary</h><h>Hyperbolic Trigonometric Functions</h></idx>
         The obvious similarity between the formulas
         <me>
           \cos^2(x)+\sin^2(x)=1
@@ -2022,7 +2130,7 @@ Traditionally, <m>\sinh</m> is read aloud as <q>cinch</q> and <m>\cosh{}</m> is 
         <caption>
           <url href="https://link.springer.com/content/pdf/10.1007/s00004-010-0030-8.pdf" visual="https://link.springer.com/content/pdf/10.1007/s00004-010-0030-8.pdf">The Gateway Arch in St. Louis</url>
         </caption>
-        <image source="images/GatewayArch.png" width="50%"/>
+        <image source="DC/GatewayArch.png" width="50%"/>
       </figure>
       <!--  <!-\- <figure> -\-> -->
       <!--  <!-\-    <caption> -\-> -->
@@ -2030,7 +2138,7 @@ Traditionally, <m>\sinh</m> is read aloud as <q>cinch</q> and <m>\cosh{}</m> is 
       <!--  <!-\-    the Gateway Arch Got its Shape" visual="https://link.springer.com/content/pdf/10.1007/s00004-010-0030-8.pdf</pubtitle>{How -\-> -->
       <!--  <!-\-    the Gateway Arch Got its Shape">\textcolor{black}{The Gateway Arch in St. Louis}</url> -\-> -->
       <!--  <!-\-    </caption> -\-> -->
-      <!--  <!-\-    <image source="images/GatewayArch.png" width="50%"/> -\-> -->
+      <!--  <!-\-    <image source="DC/GatewayArch.png" width="50%"/> -\-> -->
       <!--  <!-\-    </figure> -\-> -->
       <!-- <!-\- \begin{wrapfigure}[{]{l}{3in} -\-> -->
       <!-- <!-\-   \captionsetup{labelformat=empty} -\-> -->
@@ -2106,7 +2214,7 @@ For more information on the
                     perpendicular distance from <m>P</m> to one side is
                     <m>\frac{s}{2\sqrt{3}}</m>.
                   </p>
-<image source="images/CentroidArch.png" width="30%" />
+<image source="DC/CentroidArch.png" width="30%" />
 <!-- \centerline{\includegraphics*[height=.8in,width=1in]{../Figures/CentroidArch}} -->
                 </li>
                 <li>
@@ -2120,6 +2228,7 @@ For more information on the
           </statement>
         </task>
         <task>
+<idx><h>Vocabulary</h><h>Catenary</h><h>weighted catenary</h></idx>
           <statement>
             <p>
               The curve Saarinen used is called a <term>weighted catenary</term>.
@@ -2151,10 +2260,10 @@ For more information on the
           Suppose we start with a colony of <m>10</m> grams of bacteria in a Petri
           dish and we wish to model the growth of the population as a function
           of time. In order to keep our initial discussion simple we begin by
-          assuming that <m>30</m>% of our bacteria divide once per day at the same
-          time.  Such a population is growing at a rate of <m>30</m>% per day.  If
+          assuming that <m>30\%</m> of our bacteria divide once per day at the same
+          time.  Such a population is growing at a rate of <m>30\%</m> per day.  If
           we start with <m>10</m> grams of bacteria on day zero, then on day one
-          we<rsq/>ll have <m>30%</m> more, or <m>13</m> grams. On day two we<rsq/>ll have <m>30\%</m>
+          we<rsq/>ll have <m>30\%</m> more, or <m>13</m> grams. On day two we<rsq/>ll have <m>30\%</m>
           more than on day one, or <m>16.9</m> grams. It should be clear that the
           rate of growth from day <m>n</m> to day <m>n+1</m> is proportional to how many
           bacteria we have on day <m>n</m>. Thus from any one day to the next we
@@ -2167,17 +2276,17 @@ For more information on the
 
         </p>
         <p>
-
-          But we assumed that <m>30</m>% of the bacteria were dividing in sync
+<idx><h>Vocabulary</h><h>nominal growth rate</h></idx>
+          But we assumed that <m>30\%</m> of the bacteria were dividing in sync
           once per day, which is unrealistic. To get closer to reality suppose
           next that enough of them divide during any one hour so that at the
-          end of one day the population has still grown by <m>30</m>%. Then from
+          end of one day the population has still grown by <m>30\%</m>. Then from
           any one hour to the next we again have
           <xref ref="EQUATIONDiscBacterModel">equation</xref> but this time <m>\Delta t</m> is
           equal to one hour, or <m>\frac{1}{24}</m> day.  However, we don<rsq/>t have to
           measure time in days. If we measure it in hours instead we again
           have <m>\Delta t=1 \text{ hour } = \frac{1}{24} \text{ day}</m>. The constant factor is still <m>0.3</m> because we assumed that the
-          population was growing at <m>30%</m> per day, and this is still
+          population was growing at <m>30\%</m> per day, and this is still
           true. That factor is called the <term>nominal</term> growth rate.
         </p>
 
@@ -2207,7 +2316,7 @@ The word
         </p>
         <p>
 <idx><h>Local Linearity</h></idx>
-
+<idx><h>Vocabulary</h><h>nominal growth rate</h></idx>
           Notice that we are using the Principle of Local Linearity here. In this
           infinitesimal time interval the <term>nominal</term> growth rate, <m>0.3P </m>,
           is virtually constant and so we are treating it as linear
@@ -2227,21 +2336,22 @@ The word
           <xref ref="EQUATIONBacteriaIVP">IVP</xref> expresses the idea
           that the rate of change of the population, <m>\dfdx{P}{t}</m>, is
           proportional to the size of the population, <m>P</m>. The constant of
-          proportionality is <m>0.3</m>, or <m>30%</m>.
+          proportionality is <m>0.3</m>, or <m>30\%</m>.
         </p>
 
 
 
         <p>
+<idx><h>Vocabulary</h><h>nominal growth rate</h></idx>
           Clearly there is nothing particularly special about the number <m>0.3.</m>
-          If our colony had been increasing at a <term>nominal</term> rate of <m>15%</m>
-          we<rsq/>d have arrived at the IVP:
+          If our colony had been increasing at a <term>nominal</term> rate of <m>15\%</m>          we<rsq/>d have arrived at the IVP:
           <me>
             \dfdx{P}{t}=0.15P,\ \ P(0)=10.
           </me>
         </p>
       </example>
       <exercise xml:id="DRILLExpGrowth1">
+<idx><h>Vocabulary</h><h>Differential Equations</h></idx>
         <statement>
           <p>
             To begin solving <xref ref="EQUATIONBacteriaIVP">IVP</xref> show that one solution of
@@ -2334,7 +2444,7 @@ The word
           <statement>
             <p>
               According to the model in part (a), how much did the colony grow over the
-              first day and how does this compare to the growth rate of <m>30%</m>?
+              first day and how does this compare to the growth rate of <m>30\%</m>?
             </p>
           </statement>
         </task>
@@ -2350,9 +2460,9 @@ The word
         <task>
           <statement>
             <p>
-              Suppose our  growth rate was <m>15%</m>
+              Suppose our  growth rate was <m>15\%</m>
               per day.  Would the bacteria have grown half as
-              much in the first day as it did when the growth rate was <m>30%</m>
+              much in the first day as it did when the growth rate was <m>30\%</m>
               per day?
               <ol cols="2" marker="i">
                 <li>
@@ -2368,6 +2478,8 @@ The word
       </problem>
 
       <p>
+<idx><h>Vocabulary</h><h>nominal growth rate</h></idx>
+<idx><h>Vocabulary</h><h>relative growth rate</h></idx>
         In general, if we start with a population of, say <m>P_0</m>, and the rate
         of change of <m>P(t)</m> is proportional to <m>P</m> itself then it will satisfy
         an IVP of the form:
@@ -2423,7 +2535,7 @@ The word
       </p>
 
       <p>
-        Clearly the bacteria can not sustain a growth rate of <m>30%</m>
+        Clearly the bacteria can not sustain a growth rate of <m>30\%</m>
         indefinitely.  If nothing else, they will eventually run out of
         food. Our point here is that this model, like all models, is
         limited. To use a mathematical model effectively we need to stay
@@ -2440,7 +2552,7 @@ below  shows the surface of Lake Erie during  what is called
       <!--   <caption> -->
       <!--     <url href="https://www.youtube.com/watch?v=wlbuGdoAFek" visual="https://www.youtube.com/watch?v=wlbuGdoAFek">This figure needs a caption.</url> -->
       <!--   </caption> -->
-        <image source="images/AlgaeBloomNOAA2.png" width="80%"/>
+        <image source="DC/AlgaeBloomNOAA2.png" width="80%"/>
       <!-- </figure> -->
 <p>
 The green discoloration on the western side of the
@@ -2498,11 +2610,13 @@ Except that the nominal
       <title>Exponential Functions and Compound Interest</title>
 
       <p>
+<idx><h>Vocabulary</h><h>nominal growth rate</h></idx>
+<idx><h>Vocabulary</h><h>compound interest</h></idx>
         The natural exponential function also arises naturally in financial
         mathematics.  If we invest money in a bond which pays a <term>nominal
-        interest</term> rate of <m>5%</m> annually, and the interest is
+        interest</term> rate of <m>5\%</m> annually, and the interest is
         <term>compounded</term> quarterly then the <term>effective yield</term> will be
-        <m>5.09%</m>.
+        <m>5.09\%</m>.
       </p>
 
       <p>
@@ -2513,6 +2627,7 @@ Except that the nominal
       </p>
 
       <p>
+<idx><h>Vocabulary</h><h>compound interest</h><h>nominal yield</h></idx>
         To start, the effective yield represents the actual amount of money
         earned at the end of one year <mdash/> how much money the investment
         actually pays out.  For example, if the investment was not
@@ -2530,7 +2645,7 @@ Except that the nominal
         in the table below.
         <!-- \begin{center} -->
         <!-- \begin{tabular}[h]{|c|l|} -->
-        <!-- \multicolumn{2}{c}{\textcolor{blue}{<m>5%</m> nominal interest compounded semiannually}}\\\hline -->
+        <!-- \multicolumn{2}{c}{\textcolor{blue}{<m>5\%</m> nominal interest compounded semiannually}}\\\hline -->
         <!-- Time <m>t</m> in years \amp Amount investment is worth in -->
         <!-- dollars\bigstrut \\\hline -->
         <!-- <m>0</m>\amp <m>1</m>\bigstrut \\ -->
@@ -2541,10 +2656,10 @@ Except that the nominal
         <!-- \end{tabular} -->
         <!-- \end{center} -->
 
-       The effective yield in this case is approximately <m>5.06%</m>.
+       The effective yield in this case is approximately <m>5.06\%</m>.
       </p>
 <table  xml:id="TABLE5percenCompSemiAn">
-<title><m>5</m>% nominal interest compounded semiannually</title>
+<title><m>5\%</m> nominal interest compounded semiannually</title>
 <tabular>
 
 <row bottom="minor" halign="center">
@@ -2569,9 +2684,8 @@ Except that the nominal
 <!-- </cell> -->
 <cell>
 <m>
-\begin{split}
-     \$1\left(1+\frac{0.05}{2}\right)\amp{}+\$1\left(1+\frac{0.05}{2}\right)\left(\frac{0.05}{2}\right)\\
-\amp{}=\$1\left(1+\frac{0.05}{2}\right)^2=\$1.050625   \end{split}
+     \$1\left(1+\frac{0.05}{2}\right)+\$1\left(1+\frac{0.05}{2}\right)\left(\frac{0.05}{2}\right)
+=\$1\left(1+\frac{0.05}{2}\right)^2=\$1.050625   
 </m>
 
    </cell>
@@ -2840,12 +2954,13 @@ Except that the nominal
       <p>
         A natural question to ask is, <q>How long will it take for my money to
         double?</q> Would an investment compounding continuously
-        at a nominal rate of <m>10%</m> double in half the time as one growing at
-        a nominal rate of <m>5</m>%. Take a guess and write it down for later
+        at a nominal rate of <m>10\%</m> double in half the time as one growing at
+        a nominal rate of <m>5\%</m>. Take a guess and write it down for later
         reference.
       </p>
 
       <p>
+<idx><h>Vocabulary</h><h>natural logarithm</h></idx>
         To answer this question we<rsq/>d need solve <m> e^{0.05t}=2</m>, for <m>t</m> and
         compare this to the solution of <m> e^{0.1t}=2 </m>.   To
         solve either equation we need a way to <q>undo</q> the natural
@@ -2857,7 +2972,7 @@ Except that the nominal
     </section>
 
   <section xml:id="SECTIONnatural-logarithm-1">
-      <title>A Short Introduction to Logarithms: John Napier Logs In</title>
+      <title>John Napier Logs In: A Short Introduction to Logarithms </title>
 <!--       <subsubsection> -->
 <!-- <title></title> -->
 
@@ -2880,7 +2995,7 @@ Except that the nominal
         <caption>
           <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Napier/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Napier/">John Napier</url> (1555<mdash/>1617)
         </caption>
-        <image source="images/Napier.png" width="30%"/>
+        <image source="DC/Napier.png" width="30%"/>
       </figure>
       <!-- \begin{wrapfigure}[19]{r}{2in} -->
       <!-- \captionsetup{labelformat=empty} -->
@@ -2951,6 +3066,8 @@ We<rsq/>re taking liberties with the history here. Napier<rsq/>s
 </aside>
 
       <p>
+<idx><h>Vocabulary</h><h>base 10 logarithm</h></idx>
+<idx><h>Vocabulary</h><h>common logarithm</h></idx>
         Today we call <m>2.0907</m> and <m>1.6418</m> the <term>base 10</term>, or
         <term>common logarithms</term>, of <m>123.2387</m> , and <m>43.8378</m>,
         respectively. Notationally we have
@@ -2972,7 +3089,8 @@ We<rsq/>re taking liberties with the history here. Napier<rsq/>s
       </p>
       <p>
 
-
+<idx><h>Vocabulary</h><h>natural exponential</h></idx>
+<idx><h>Vocabulary</h><h>natural logarithm</h></idx>
         To use a table of base <m>10</m> logarithms to find the product of two
         numbers we would first look up the logarithm of each number, then add
         the logarithms.  The resulting sum is the base <m>10</m> logarithm of the
@@ -2990,7 +3108,7 @@ We<rsq/>re taking liberties with the history here. Napier<rsq/>s
         and mathematical.
       </p>
 
-      <image source="images/ExpLog1.png" width="50%"/>
+      <image source="DC/ExpLog1.png" width="50%"/>
       <!-- \begin{wrapfigure}[]{r}{2.7in} -->
       <!-- \captionsetup{labelformat=empty} -->
       <!-- \centerline{\includegraphics*[height=2in,width=2.7in]{../Figures/ExpLog1}} -->
@@ -3008,7 +3126,7 @@ We<rsq/>re taking liberties with the history here. Napier<rsq/>s
         the diagram at the right.
       </p>
       <p>
-
+<idx><h>Vocabulary</h><h>natural logarithm</h></idx>
         In the same way that <m>\log_{10}(x)</m> is the functional inverse of the
         base ten exponential, <m>10^x</m>, the <term>natural logarithm</term> - usually
         denoted  <m>\ln(x)</m> <mdash/> is the functional inverse of the
@@ -3116,7 +3234,8 @@ We<rsq/>re taking liberties with the history here. Napier<rsq/>s
       <xref ref="DIGRESSIONInverse-function-notation" text="custom">DIGRESSION: Inverse Function Notation</xref>. It will probably help.
 </p>
 <p>
-
+<idx><h>Vocabulary</h><h>natural logarithm</h></idx>
+<idx><h>Vocabulary</h><h>natural exponential</h></idx>
       As we<rsq/>ve observed the <term>natural logarithm</term> function is, by
       definition, the inverse of the <term>natural exponential</term> in
       precisely the same way that <m>\inverse\tan(x)</m> is, by definition, the
@@ -3249,6 +3368,7 @@ Find a way to express <m>a/b</m> as a product.
 
 
       <p>
+<idx><h>Vocabulary</h><h>natural logarithm</h></idx>
         The simplest use to which we can put a <term>natural logarithm</term> is to
         aid in solving an equation like:
         <me>
@@ -3550,7 +3670,7 @@ Find a way to express <m>a/b</m> as a product.
             <p>
               Suppose that <m>P_0</m> dollars are invested in two separate
               accounts, <m>A</m> and <m>B</m>, where the interest in compounded
-              continuously at the nominal rates of <m>5%</m> and <m>10%</m>,
+              continuously at the nominal rates of <m>5\%</m> and <m>10\%</m>,
               respectively. Let <m>t_A</m> be the time it takes for the initial
               investment in account <m>A</m> to double, and let <m>t_B</m> be the time it
               takes for the initial investment in account <m>B</m> to double. Is
@@ -3586,7 +3706,7 @@ Find a way to express <m>a/b</m> as a product.
       <!-- \begin{enumerate}[label={  (\alph*)}] -->
       <!-- \item Suppose that <m>P_0</m> dollars are invested in two separate -->
       <!-- accounts, <m>A</m> and <m>B</m>, where the interest in compounded -->
-      <!-- continuously at the nominal rates of <m>5%</m> and <m>10%</m>, -->
+      <!-- continuously at the nominal rates of <m>5\%</m> and <m>10\%</m>, -->
       <!-- respectively. Let <m>t_A</m> be the time it takes for the initial -->
       <!-- investment in account <m>A</m> to double, and let <m>t_B</m> be the time it -->
       <!-- takes for the initial investment in account <m>B</m> to double. Is -->
@@ -3812,6 +3932,7 @@ Find a way to express <m>a/b</m> as a product.
       <title>Radioactive Dating</title>
 
       <p>
+<idx><h>Vocabulary</h><h>radioactive decay</h></idx>
         Radioactive isotopes have the curious property that in time they break
         down into other, more stable, substances. This process is known as
         <term>radioactive decay</term>.
@@ -3845,9 +3966,11 @@ Find a way to express <m>a/b</m> as a product.
 
       <example xml:id="EXAMPLEradioactive-dating">
         <p>
+<idx><h>Vocabulary</h><h>relative rate of growth</h></idx>
+<idx><h>Vocabulary</h><h>nominal rate of growth</h></idx>
           For the sake of being definite suppose that our
           isotope is decaying (shrinking) at a <term>relative</term>
-          (<term>nominal</term>) rate of  <m>25%</m>. Then if we start
+          (<term>nominal</term>) rate of  <m>25\%</m>. Then if we start
           with <m>20</m>Kg, the IVP to be solved is
           <men  xml:id="IVPRadioactiveDecay-Wrong">
             <!-- \label{IVPRadioactiveDecay-Wrong} -->
@@ -3969,8 +4092,9 @@ or
 
 
       <p>
+<idx><h>Vocabulary</h><h>half<ndash/>life</h></idx>
         The length of time that it takes for a quantity of a radioactive
-        isotope to decay by one-half is called the <term>half-life</term> of the isotope.
+        isotope to decay by one-half is called the <term>half<ndash/>life</term> of the isotope.
         Each substance has its own half-life.
         The half-life for Carbon-14 is roughly <m>5,730</m> years; for Fluorine-18,
         it is <m>110</m> minutes; for Potassium-<m>40</m>, it is <m>1.25</m> billion years.
@@ -4062,7 +4186,7 @@ or
         of <m>C_{14}</m>
       </p>
       <p>
-
+<idx><h>Vocabulary</h><h>radiocarbon dating</h></idx>
         By measuring the amount of <m>C_{14}</m> in a sample from a dead plant or
         animal such as a piece of wood or a fragment of bone we can calculate,
         approximately when the plant or animal died. This is called
@@ -4097,7 +4221,7 @@ or
             where <m>t=0</m> represents when the shroud was used.  Let <m>A(0)=A_0</m> be
             the initial amount of <m>C_{14}</m> present in the sample.
           </p>
-          <image source="images/ShroudOfTurin.png" width="30%"/>
+          <image source="DC/ShroudOfTurin.png" width="30%"/>
         </introduction>
         <task>
           <statement>
@@ -4209,7 +4333,7 @@ reversal.
             of the lava flows, scientists can date these reversals.
             There are limitations to this dating method, as the
             smallest percentage of <m>K_{40}</m> that can be detected is
-            about <m>0.0053</m>%.
+            about <m>0.0053\%</m>.
           </p>
         </introduction>
         <task>
@@ -4218,7 +4342,7 @@ reversal.
               According to the Wikipedia article we referenced above
               the the Brunhes-Matuyama reversal occured approximately
               <m>781,000</m> years ago. A rock sample which appears to have a magnetic reversal  contains between
-              <m>99.9541</m>% and <m>99.9593</m>% of the <m>K_{40}</m>
+              <m>99.9541\%</m> and <m>99.9593\%</m> of the <m>K_{40}</m>
               that it originally contained. Is this consistent with the 
               Brunhes-Matuyama reversal?
             </p>
@@ -4250,7 +4374,7 @@ reversal.
 
       <!-- \begin{enumerate}[label={  (\alph*)}] -->
       <!-- \item A rock sample which appears to have a reversed magnetic field -->
-      <!-- is determined to contain between <m>99.9541%</m> and <m>99.9593%</m> of -->
+      <!-- is determined to contain between <m>99.9541\%</m> and <m>99.9593\%</m> of -->
       <!-- the <m>K_{40}</m> that it originally contained.  Approximately how old -->
       <!-- is the rock?  (This is the latest geomagnetic reversal called the -->
       <!-- Brunhes-Matuyama reversal.) -->
@@ -4532,6 +4656,8 @@ reversal.
 <title>The Derivative of the Natural Logarithm</title>
 
 <p>
+<idx><h>Vocabulary</h><h>natural logarithm</h></idx>
+<idx><h>Vocabulary</h><h>natural exponential</h></idx>
   Since the <term>natural logarithm</term> is the inverse of the <term>natural
   exponential</term> we can find its derivative using the same trick that we
   used to find the derivatives of the inverse trig functions.  Start
@@ -4854,7 +4980,7 @@ Friederich Gauss (1777-1855)</url>
 
 <paragraphs xml:id="PARAGRAPHSGenExp">
 <title>General Exponentials</title>
-
+<idx><h>Vocabulary</h><h>general exponential</h></idx>
 <p>
   So far we<rsq/>ve focused on the <term>natural</term> exponential and logarithm
   functions even though we started our discussion of logarithms by
@@ -5238,7 +5364,7 @@ It is a well worn truism among research mathematicians that the
   useful.
 </p>
 <p>
-
+<idx><h>Vocabulary</h><h>common logarithm</h></idx>
   Napier had had the same idea himself, but was unable to pursue it
   <q>on account of ill-health.</q> As a result, Briggs took on the task
   of computing tables of base-<m>10</m> logarithms, collaborating with
@@ -5257,7 +5383,8 @@ It is a well worn truism among research mathematicians that the
   doing arithmetic.
 </p>
 <p>
-
+<idx><h>Vocabulary</h><h>common logarithm</h></idx>
+<idx><h>Vocabulary</h><h>natural logarithm</h></idx>
 Most modern scientific calculators have both the natural and the
 common logarithms built in.  The <q><term>ln</term></q> button on a calculator
 computes natural logarithms while the <q><term>log</term></q> computes common
@@ -5548,10 +5675,11 @@ Napier defined his original logarithms as follows.  Consider a point
 <m>C</m> moving along line segment <m>AB</m> and a point <m>F</m> moving along an
 infinite ray <m>DE</m> as seen below.
 </p>
-<image source="images/NapierLog1.png" width="40%" />
+<image source="DC/NapierLog1.png" width="40%" />
 
 <!-- \includegraphics*[height=.5in,width=1.5in]{../Figures/NapierLog1} -->
 <p>
+<idx><h>Vocabulary</h><h>Naperian logarithm</h></idx>
 At the beginnning both <m>C</m> and <m>F</m> are moving at the same speed, and
 <m>F</m> continues to move at that initial speed. But the speed of <m>C</m> is
 always equal to the distance from <m>C</m> to <m>B</m>.  If we let <m>CB=x</m> and
@@ -5796,6 +5924,7 @@ If we multiply by <m>y</m> we get
 <!--          \end{enumerate} -->
 <!-- \end{embeddedproblem} -->
 <p>
+<idx><h>Vocabulary</h><h>Logarithmic Differentiation</h></idx>
   The technique of taking the logarithm of both sides of an expression
   like <m>y=y(x)</m> and then differentiating is called <term>Logarithmic
   Differentiation</term>.  It can reduce the amount of tedious computation
@@ -6013,7 +6142,7 @@ If we multiply by <m>y</m> we get
 
 </section>
 
-<section xml:id="SECTIONleonh-euler-harm">
+<section xml:id="SECTIONEulerHarmonicOsc">
   <title>Leonhard Euler, Harmonic Oscillators, and Complex Numbers</title>
   <introduction>
     <blockquote>
@@ -6051,7 +6180,7 @@ If we multiply by <m>y</m> we get
     </p>
     <p>
 
-      <xref ref="EQUATIONSHOSpringSolution1">Equation</xref> is
+      <xref ref="EQUATIONSHOSpringSolution1">equation</xref> is
       unrealisitic because the oscillations described never vary.  In
       the real world, as a result of friction, the spring<rsq/>s
       oscillations will get shorter and shorter, eventually stopping
@@ -6091,7 +6220,7 @@ or
   \dfdxn{y}{t}{2}+\frac{b}{m}\dfdx{y}{t}+\frac{k}{m}y = 0.
 <!-- \label{eq:DampedOscillator1} -->
 </men>
-<xref ref="EQUATIONDampedOscillator1">Equation</xref> is a little scary to look at, let alone
+<xref ref="EQUATIONDampedOscillator1">equation</xref> is a little scary to look at, let alone
 try to solve.  We<rsq/>ll begin with a simplified version where
 <m>b=k=m</m>:
 <men  xml:id="EQUATIONDampedProblem1">
@@ -6169,7 +6298,7 @@ Sandifer, of Western Connecticut State University
   <caption>
     <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Euler" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Euler">Leonhard Euler</url>
 </caption>
-<image source="images/Euler.png" width="30%"/>
+<image source="DC/Euler.png" width="30%"/>
 </figure>
 <!-- \begin{wrapfigure}[]{r}{2.3in} -->
 <!--   \vskip-7mm -->
@@ -6438,7 +6567,8 @@ first.
 <!--   \end{enumerate} -->
 <!-- \end{embeddedproblem-enumerate} -->
 <p>
-
+<idx><h>Vocabulary</h><h>Euler<rsq/>s Identity</h></idx>
+<idx><h>Vocabulary</h><h>complex numbers</h></idx>
   From part (a) of <xref ref="PROBLEMEulersFormula"></xref> we get the
   formula,
   <men  xml:id="EQUATIONEulerIdentity">

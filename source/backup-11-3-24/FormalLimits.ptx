@@ -196,7 +196,7 @@ It should be clear that we<rsq/>ve contrived this
 
 
 <p>
-
+<idx><h>Vocabulary</h><h>limit</h></idx>
 And that<rsq/>s the problem. The nature of the function we<rsq/>re taking the
 limit of must be taken into account when we decide what <q>close
 enough</q> means for any particular limit.  This isn<rsq/>t as bad as it
@@ -264,7 +264,7 @@ infinity seriously.
 <!-- <caption> -->
 <!-- <url href="https://en.wikipedia.org/wiki/Q.E.D." visual="https://en.wikipedia.org/wiki/Q.E.D.">This figure needs a caption.</url> -->
 <!-- </caption> -->
-<image source="images/EuclidLineExt.png" width="80%"/>
+<image source="DC/EuclidLineExt.png" width="80%"/>
 <!-- </figure> -->
 <!-- \begin{wrapfigure}[3]{r}{4in} -->
 <!--   \vskip-5mm  \captionsetup{labelformat=empty} -->
@@ -349,7 +349,7 @@ growing <q>infinitely large.</q>
 </statement>
 </exercise>
 <p>
-
+<idx><h>Vocabulary</h><h>bounded above</h></idx>
 In this situation <m>x</m> is said to be <term>bounded above</term> because there
 is an upper bound on how large <m>x</m> can be, despite the fact that <m>x</m>
 is growing <q>larger and larger.</q>
@@ -409,7 +409,7 @@ Keeping in mind that if <m>a\lt b</m> then <m>\frac1a\gt\frac1b</m>, if we need
 <m> 1/x\lt 1/2</m>. Solving for <m>x</m>  we have <m> x\gt 2</m>.
 </p>
 
-<image source="images/Epsilon1.png" width="40%"/>
+<image source="DC/Epsilon1.png" width="40%"/>
 <!-- \begin{wrapfigure}[]{r}{2.8in} -->
 <!--   \captionsetup{labelformat=empty} -->
 <!--   \centerline{\includegraphics*[height=1.7in,width=2.8in]{../Figures/Epsilon1}} -->
@@ -577,7 +577,7 @@ the letter <q>e.</q>
 </aside>
 
 
-<image source="images/Epsilon2.png" width="50%"/>
+<image source="DC/Epsilon2.png" width="50%"/>
 <p>
 
 Suppose that <m>\eps\gt 0</m> and we want to figure out how large to make
@@ -934,9 +934,6 @@ So
   <xref ref="DEFINITIONlimit-at-infinity-nearly-adequate"></xref>
   <m>\tlimit{x}{\infty}{f(x)}=0</m>.
 </p>
-<p>
-<alert><m>\halmos</m></alert>
-</p>
 </proof>
 
 <p>
@@ -1060,9 +1057,6 @@ State your conclusion.
     \limit{x}{\infty}{\frac{1}{5x-x^2}}=0.
     </me>
   </p>
-<p>
-<alert><m>\halmos</m></alert>
-</p>
 </proof>
 
 
@@ -1265,9 +1259,6 @@ Notice that if <m>L=0</m> this
       \limit{x}{\infty}{f(x)}=1.
       </me>
     </p>
-<p>
-<alert><m>\halmos</m></alert>
-</p>
 </proof>
 
 <example>
@@ -1655,7 +1646,7 @@ play.
 </p>
 </aside>
 
-<image source="images/EpsDelta2.png" width="30%"/>
+<image source="DC/EpsDelta2.png" width="30%"/>
 
 <p>
 As before <m>\eps </m> is the challenge. To show that the limit exists and
@@ -1784,9 +1775,6 @@ We are not looking for a formal proof, just a reasonable
 
     Therefore <m>\limit{x}{0}{f(x)}=2</m>.
 </p>
-<p>
-<alert><m>\halmos</m></alert>
-</p>
 </proof>
 
 <p>
@@ -1827,8 +1815,8 @@ We are not looking for a formal proof, just a reasonable
   construction is ongoing but you tear it down and clean everything up
   before you move in. In the same way your proof should be a cleaned
   up version of your scrapwork.  If this example were a homework
-  problem, your solution would be the part that appears between
-  <alert>Proof</alert> and the little black square, <m>\halmos</m>, at the end.
+  problem, your solution would be the part that appears after
+  <alert>Proof</alert>.
 </p>
 
 
@@ -1863,7 +1851,7 @@ Returning <xref ref="EXAMPLEDiscontLimit1"></xref> from
 <me>
   f(x)=
   \begin{cases}
-    3x \amp  \text{if } x\neq2
+    3x \amp  \text{if } x\neq2\\
     10  \amp  \text{if } x=2.
   \end{cases}
   </me>
@@ -1893,9 +1881,6 @@ Observe that <m>f(x)=3x</m> since <m>x\neq2</m>. Therefore
     and so
     <me>\abs{f(x)-6}\lt\eps.</me>
 Therefore <m>\tlimit{x}{2}{f(x)}=6.</m>
-</p>
-<p>
-<alert><m>\halmos</m></alert>
 </p>
 </proof>
 <p>
@@ -1950,7 +1935,7 @@ continuous at <m>x=\frac12</m> so that won<rsq/>t help with this problem. Try it
 and see.
 </p>
 
-<image source="images/EpsDelta4.png" width="30%"/>
+<image source="DC/EpsDelta4.png" width="30%"/>
 <!-- \begin{wrapfigure}[]{r}{1.8in} -->
 <!--     \captionsetup{labelformat=empty} -->
 <!--     \vskip-3mm -->
@@ -2084,9 +2069,6 @@ Since <m>x\neq\frac12</m> we see that
   </me>
 
   Therefore <me>\limit{x}{\frac12}{\frac{4x^2-1}{2x+1}}=2</me>.
-</p>
-<p>
-<alert><m>\halmos</m></alert>
 </p>
 </proof>
 
@@ -2242,7 +2224,7 @@ rigorous foundation for Differential Calculus. We will address these
 now.
 </p>
 <p>
-
+<idx><h>Vocabulary</h><h>Triangle Inequality</h></idx>
 To prove the limit laws we will need to make extensive use of what is
 called the <term>Triangle Inequality</term>. We  state and prove the
 Triangle Inequality here so that we can cite it as needed.
@@ -2278,9 +2260,6 @@ Triangle Inequality here so that we can cite it as needed.
 <mrow>    \underbrace{-\left(\abs{x}+\abs{y}\right)}_{-B}\amp\leq    \underbrace{x+y}_A \leq \underbrace{\abs{x}+\abs{y}}_{B}.</mrow>
 </md>
   so by <xref ref="EQUATIONAltDefAbsVal"></xref> we have <m>\abs{x+y} \leq \abs{x}+\abs{y}</m>.
-</p>
-<p>
-<alert><m>\halmos</m></alert>
 </p>
 </proof>
 
@@ -2345,9 +2324,6 @@ we provide.
   \abs{f(x)-K}=\abs{K-K}=0\lt \eps.
   </me>
   Therefore <me>\limit{x}{\infty}{f(x)}=K.</me>
-</p>
-<p>
-<alert><m>\halmos</m></alert>
 </p>
 </proof>
 <p>
@@ -2445,7 +2421,7 @@ Despite the apparent simplicity of this problem there is a lot
   </me>
 which means that we can make <m>\abs{f(x)-L_f}</m> and <m>\abs{g(x)-L_g}</m>
   as close to zero as we wish, provided we make <m>x</m> large enough.
-Rewriting the left-hand side of <xref ref="EQUATIONDerivSumInf">Equation</xref> and
+Rewriting the left-hand side of <xref ref="EQUATIONDerivSumInf">equation</xref> and
 invoking the Triangle Inequality we see that
 <md>
   <mrow>
@@ -2501,9 +2477,6 @@ value of <m>x</m> is one where <m>x\gt B_f</m> and <m>x\gt B_g</m>.
 
 
   Therefore <m>\limit{x}{\infty}{\left(f(x)+g(x)\right)}=L_f+L_g.</m>
-</p>
-<p>
-<alert><m>\halmos</m></alert>
 </p>
 </proof>
 
@@ -2596,9 +2569,6 @@ Suppose that <m>a</m> is some real number, <m>\limit{x}{a}{f(x)}=L_f</m> and
   <m>\abs{f(x)-L}\lt \eps </m>.
 
   Therefore <m>\limit{x}{\infty}{f(x)} = L</m>.
-</p>
-<p>
-<alert><m>\halmos</m></alert>
 </p>
 </proof>
 
@@ -2719,7 +2689,7 @@ continuous at  <m>g(a)</m>.
 <!-- \centerline{\includegraphics*[height=1.2in,width=1.6in]{../Figures/LimComp2}} -->
 <!-- \label{fig:LimComp2} -->
 <!-- \end{wrapfigure} -->
-<image source="images/LimComp2.png" width="30%"/>
+<image source="DC/LimComp2.png" width="30%"/>
 
 <p>
 It will be  helpful to have a visual guide for this proof so we
@@ -2752,7 +2722,7 @@ particular, we would like for <m>\abs{g(x)-L_g}\lt\delta</m> as in the
 sketch below.
 </p>
 
-<image source="images/LimComp1.png" width="70%" />
+<image source="DC/LimComp1.png" width="70%" />
 <!-- \centerline{\includegraphics*[height=1.3in,width=3.5in]{../Figures/LimComp1}} -->
 <p>
 
@@ -2804,9 +2774,6 @@ From the continuity of <m>f</m> at <m>L_g</m> we know  that
   
 
 
-</p>
-<p>
-<alert><m>\halmos</m></alert>
 </p>
 </proof>
 
@@ -2958,9 +2925,6 @@ Take <m>B=\max\left(B_1, B_2\right)</m>.  If <m>x\gt B</m> then
 Therefore <m>\limit{x}{\infty}{f(x)\cdot
   g(x)}=\limit{x}{\infty}{f(x)}\cdot\limit{x}{\infty}{g(x)}</m>.
 </p>
-<p>
-<alert><m>\halmos</m></alert>
-</p>
 </proof>
 
 <!-- </introduction> -->
@@ -3026,9 +2990,6 @@ Now choose any positive number <m>N</m> with
 <me>        -N\lt L_f-1\lt f(x)\lt L_f+1\lt N,</me>
 and it follows that if <m>x\gt\beta</m> then <m>\abs{f(x)}\lt N</m>.
 </p>
-<p>
-<alert><m>\halmos</m></alert>
-</p>
 </proof>
 
 
@@ -3074,9 +3035,6 @@ have
 
 Therefore    <m>\tlimit{x}{\infty}{\left(f(x)\cdot g(x)-f(x)\cdot L_g\right)}=0.</m>
   </p>
-<p>
-<alert><m>\halmos</m></alert>
-</p>
 </proof>
 
 
@@ -3138,9 +3096,6 @@ Therefore    <m>\tlimit{x}{\infty}{\left(f(x)\cdot g(x)-f(x)\cdot L_g\right)}=0.
       Therefore
       <m>\tlimit{x}{\infty}{\left(L_gf(x)-L_gL_f\right)}=0</m> when <m>L_g\neq0</m>.
 </p>
-<p>
-<alert><m>\halmos</m> (Case 1)</alert>
-</p>
 
 </li>
 <li>
@@ -3157,16 +3112,10 @@ Therefore    <m>\tlimit{x}{\infty}{\left(f(x)\cdot g(x)-f(x)\cdot L_g\right)}=0.
       Therefore
       <m>\tlimit{x}{\infty}{\left(L_gf(x)-L_gL_f\right)}=0</m> when <m>L_g=0</m>.
 </p>
-<p>
-<alert><m>\halmos</m> Case 2</alert> 
-</p>
 </li>
 </dl>
     Since the limit is zero in both cases we see that
     <m>\tlimit{x}{\infty}{\left(L_gf(x)-L_gL_f\right)}=0</m>. 
-</p>
-<p>
-<alert><m>\halmos</m></alert> 
 </p>
 
 </proof>
@@ -3208,15 +3157,17 @@ Therefore    <m>\tlimit{x}{\infty}{\left(f(x)\cdot g(x)-f(x)\cdot L_g\right)}=0.
            <xref ref="LEMMALimProd2"></xref> there is actually a simpler
            way to prove
            <xref ref="THEOREMlimit-product-infinity"></xref>. Observe that
-           <men  xml:id="EQUATIONLimProd3">
+           <mdn>
              <!-- \label{eq:LimProd3} -->
-             \begin{split}
-             \underbrace{f(x)\cdot g(x) - L_g\cdot L_f}_{\Gamma(x)} = \amp{}\underbrace{\left[f(x)\cdot g(x)-f(x)\cdot
-                 L_g\right]}_{\alpha(x)}\\
-                 \amp{}+\underbrace{\left[f(x)\cdot L_g - L_f\cdot
-                 L_g\right]}_{\beta(x)}
-                 \end{split}
-           </men>
+             <mrow number="no"> 
+               \underbrace{f(x)\cdot g(x) - L_g\cdot L_f}_{\Gamma(x)} = \amp{}\underbrace{\left[f(x)\cdot g(x)-f(x)\cdot
+               L_g\right]}_{\alpha(x)}
+             </mrow>
+             <mrow  xml:id="EQUATIONLimProd3">
+               \amp{}+\underbrace{\left[f(x)\cdot L_g - L_f\cdot
+               L_g\right]}_{\beta(x)}
+             </mrow>           
+           </mdn>
            and complete the proof by
            citing <xref ref="LEMMALimProd1"></xref> and
            <xref ref="LEMMALimProd2"></xref> and the appropriate, previously
@@ -3650,13 +3601,14 @@ number. We say that <me>\rtlimit{x}{a}{f(x)}=L</me> provided that for each
 </p>
 <p>
 
- We have defined the derivative by <xref ref="DEFINITIONDerivative">Definition</xref>,
-  derived all of our differentiation rules via this definition,
- and shown <mdash/> rigorously <mdash/> that founding Calculus on the
- theory of limits gives us all of the properties we found useful in
- <xref ref="FromPractice"></xref> of this textbook. At long last, this places a solid,
- logical, and rigorous foundation underneath the Differential Calculus
- of Newton and Leibniz.
+ We have defined the derivative by <xref
+ ref="DEFINITIONDerivative">Definition</xref>, derived all of our
+ differentiation rules via this definition, and shown <mdash/>
+ rigorously <mdash/> that founding Calculus on the theory of limits
+ gives us all of the properties we found useful in <xref
+ ref="DiffCalcFromPractice"></xref> of this textbook. At long last,
+ this places a solid, logical, and rigorous foundation underneath the
+ Differential Calculus of Newton and Leibniz.
 </p>
 <p>
 

@@ -1,7 +1,7 @@
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="CHAPTERFDT-Redux">
   <title>The First Derivative Test, Redux</title>
 
-  <!-- \label{CHAPTERFDT-Redux} -->
+  
   <introduction>
     <blockquote>
       <p>
@@ -15,7 +15,7 @@
         mistakes.
       </p>
       <attribution>
-        <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Rolle/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Rolle/">Michel Rolle</url> (1652-1719)
+        <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Rolle/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Rolle/">Michel Rolle</url> (1652<ndash/>1719)
       </attribution>
     </blockquote>
     
@@ -53,7 +53,7 @@
       </p>
       <attribution>
         <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Poincare/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Poincare/">Henri
-        Poincaré</url> (1854-1912)
+        Poincaré</url> (1854<ndash/>1912)
       </attribution>
     </blockquote>
 
@@ -107,17 +107,17 @@
       the proof.
     </p>
     <investigation>
-      <!--   <figure> -->
-      <!-- <caption> -->
-      <!-- <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Rolle/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Rolle/">This figure needs a caption.</url> -->
-      <!-- </caption> -->
-      <!-- <image source="DC/FermatThm1.png" width="50%"/> -->
-      <!-- </figure> -->
-      <!-- \begin{wrapfigure}[]{r}{2in} -->
-      <!--     \captionsetup{labelformat=empty} -->
-      <!--     \centerline{\includegraphics*[height=1in,width=2in]{../Figures/FermatThm1}} -->
-      <!--     \label{fig:FermatThm1} -->
-      <!--   \end{wrapfigure} -->
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       <p>
         Notice that in <xref ref="DEFINITIONDerivative">Definition</xref> the quantity
         <m>\frac{f(a+h)-f(a)}{h}</m> is the slope of a particular secant line, as
@@ -148,7 +148,7 @@
       We can now rigorously prove Fermat<rsq/>s Theorem.
     </p>
 
-    <proof>
+    <proof xml:id="PROOFFermatMax">
       <title>Proof of Fermat<rsq/>s Theorem</title>
 
       <p>
@@ -161,49 +161,39 @@
         sketch above. If <m>h\lt0</m> then <m>\frac{f(a+h)-f(a)}{h}\geq 0</m> and so
         <men  xml:id="EQUATIONRolle1">
           f^\prime(a)=\limit{h}{0}{\frac{f(a+h)-f(a)}{h}}\ge0.
-          <!-- \label{eq:Rolle1} -->
+          
         </men>
         However if <m>h\gt0</m> then
         <men xml:id="EQUATIONRolle2">
           f^\prime(a)=\limit{h}{0}{\frac{f(a+h)-f(a)}{h}}\le0.
-          <!-- \label{eq:Rolle2} -->
+          
         </men>
         The only way that inequalities in <xref ref="EQUATIONRolle1">Formulas</xref> and <xref ref="EQUATIONRolle2"></xref>) can 
         be both true is if <m>f^\prime(a)=0.</m>
       </p>
     </proof>
 
-
-
-    <problem>
+    <exercise>
       <statement>
         <p>
-          Use our proof of the maximum case as a guide to constructing a proof
+          Use our proof of the maximum case (<xref ref="PROOFFermatMax"></xref>) of Fermat<rsq/>s <xref ref="THEOREMFermatsTheorem2"></xref> as a guide to constructing a proof
           of Fermat<rsq/>s Theorem when <m>f(a)</m> is a local minimum.
         </p>
       </statement>
-    </problem>
+    </exercise>
 
 
   </section>
   <section xml:id="SECTIONrolles-lemma-mean">
     <title>Rolle<rsq/>s Lemma and the Mean Value Theorem</title>
 
-
     <figure>
       <caption>
-        <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Rolle/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Rolle/">Michel Rolle </url>(1659-1719)
+        <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Rolle/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Rolle/">Michel Rolle </url>(1659<ndash/>1719)
       </caption>
       <image source="DC/Rolle.png" width="30%"/>
     </figure>
-    <!-- \begin{wrapfigure}[12]{r}{1.3in} -->
-    <!--   \vskip-5mm  -->
-    <!--   \captionsetup{labelformat=empty} -->
-    <!--    \centerline{\href{https://mathshistory.st-andrews.ac.uk/Biographies/Rolle/}{\includegraphics*[height=1.5in,width=1.3in]{../Figures/Rolle}}} -->
-    <!--   \caption{\centerline{Michel Rolle} \centerline{(1659-1719)}} -->
-    <!--   \label{fig:RollePortrait} -->
-    <!-- \end{wrapfigure} -->
-
+    
     <p>
       Were he alive today <url
       href="https://mathshistory.st-andrews.ac.uk/Biographies/Rolle/"
@@ -214,14 +204,9 @@
       it as a <q>collection of ingenious fallacies.</q>
     </p>
 
-
-
-
-
-
     <lemma xml:id="LEMMArolles-lemma">
       <title>Rolle<rsq/>s Lemma</title>
-<idx><h>Lemma</h><h>Rolle<rsq/>s Lemma</h></idx>
+      <idx><h>Lemma</h><h>Rolle<rsq/>s Lemma</h></idx>
       <p>
         Suppose <m>f</m> is continuous on the closed interval <m>[a,b]</m> and
         differentiable on the open interval <m>(a,b)</m>. Suppose further that
@@ -230,18 +215,8 @@
       </p>
     </lemma>
 
-
-    <!-- <figure> -->
-    <!-- <caption> -->
-    <!-- This figure needs a caption.</caption> -->
     <image source="DC/RollesLemma.png" width="30%"/>
-    <!-- </figure> -->
-    <!-- \begin{wrapfigure}[5]{r}{1.5in} -->
-    <!--   \captionsetup{labelformat=empty} -->
-    <!--   \vskip-7mm -->
-    <!-- \centerline{\includegraphics*[height=1in,width=1.5in]{../Figures/RollesLemma}} -->
-    <!-- \label{fig:RollesLemma} -->
-    <!-- \end{wrapfigure} -->
+    
     <p>
 
       When Rolle<rsq/>s Lemma is visualized, as in the sketch above, it is
@@ -262,7 +237,8 @@
 
 
     <exercise xml:id="DRILLRollesLemma1">
-      <ol marker="i">
+      <idx><h>Lemma</h><h>Rolle<rsq/>s Lemma</h><h>proof of</h></idx>
+      <ol marker="(i)">
         <li>
           <p>
             Sketch the graph of a function (different from the one in
@@ -290,27 +266,7 @@
         </li>
       </ol>
     </exercise>
-    <!-- begin{ProficiencyDrill-enumerate} -->
-    <!--  <!-\- \label{drill:RollesLemma1} -\-> -->
-    <!--       \begin{enumerate}[label={  (\alph*)}]  -->
-    <!--       \item Sketch the graph of a function (different from the one in -->
-    <!--         our sketch) which satisfies all of the conditions of Rolle<rsq/>s -->
-    <!--         Lemma and convince yourself that the conclusion of  Rolle<rsq/>s -->
-    <!--         Lemma must still  be -->
-    <!--         true. -->
-    <!--       \item Show that the condition that <m>f</m> is continuous on <m>[a,b]</m> -->
-    <!--         is necessary by sketching the graph of a function which -->
-    <!--         violates only that  condition and the conclusion of Rolle<rsq/>s -->
-    <!--         Lemma. -->
-    <!--       \item Show that the condition that <m>f</m> is differentiable on -->
-    <!--         <m>(a,b)</m> is necessary by sketching the graph of a function -->
-    <!--         which violates only that condition and the conclusion of -->
-    <!--         Rolle<rsq/>s Lemma. -->
-    <!--       \end{enumerate} -->
-    <!--     \end{ProficiencyDrill-enumerate} -->
-
-
-
+    
     <proof>
       <title>Proof of Roll<rsq/>s Lemma</title>
       <p>
@@ -372,7 +328,7 @@
         The distinction between a theorem and a lemma is very slight and
         rather arbitrary. Typically we call a statement a theorem if it is important
         and requires proof. We call it a lemma if it requires proof itself,
-        and is used to simply the proof of a theorem.  This is not a
+        and is used to simplify the proof of a theorem.  This is not a
         hard-and-fast rule by any means. Sometimes we first prove a lemma as
         an aid to proving a theorem, only to find that the lemma is actually
         more important. However, having been originally dubbed a lemma the
@@ -407,38 +363,39 @@
         <m>c</m> in the open interval <m>(a,b)</m> such that
         <men xml:id="EQUATIONMVT">
           f^\prime(c)=\frac{f(b)-f(a)}{b-a}.
-          <!-- \label{eq:MVT} -->
+          
         </men>
       </p>
     </theorem>
 
     <investigation>
       <p>
-        The Mean Value Theorem (visualized below) says that there is a
+        The Mean Value Theorem (visualized in <xref ref="FIGUREMVT4"></xref> below) says that there is a
         point <m>c</m>, in the interval <m>(a,b)</m> such that the tangent line at <m>c</m>
         and the line through <m>(a,f(a)</m> and <m>(b,f(b))</m> are parallel. Thus in
         the special case where <m>f(a)=f(b)</m> the Mean Value Theorem reduces to
         Rolle<rsq/>s Lemma.  In other words the Mean Value Theorem is a
         generalization of Rolle<rsq/>s Lemma.
       </p>
-      <!-- <figure> -->
-      <!-- <caption> -->
-      <!-- This figure needs a caption.</caption> -->
-      <image source="DC/mvt4.png" width="30%"/>
-      <!-- </figure> -->
-      <!-- \begin{wrapfigure}[8]{l}{2in} -->
-      <!--   \captionsetup{labelformat=empty} -->
-      <!--   \centerline{\includegraphics*[height=.9in,width=2.2in]{../Figures/mvt4}} -->
-      <!--   \label{fig:mvt3} -->
-      <!-- \end{wrapfigure} -->
+      
+
+      <figure  xml:id="FIGUREMVT4">
+        <caption></caption>
+        <image source="DC/mvt4.png" width="40%">
+          <shortdescription></shortdescription>
+        </image>
+      </figure>
+
+
+      
       <p>
-        We said we would use Rolle<rsq/>s Lemma to prove the Mean Value Theorem. To
-        do that we<rsq/>ll need to create a function -- we<rsq/>ll call it <m>\phi(x)</m> --
-        that satisfies all of the conditions of Rolle<rsq/>s Lemma .  From the
-        diagram at the left we have <me>\phi(x)=f(x)-L(x).</me> Do you see that
-        <m>\phi(x)</m> is the function we need?
-      </p>
-    </investigation>
+        We said we would use Rolle<rsq/>s Lemma to prove the Mean Value
+        Theorem. To do that we<rsq/>ll need to create a function --
+        we<rsq/>ll call it <m>\phi(x)</m> -- that satisfies all of the
+        conditions of Rolle<rsq/>s Lemma.  If <m>L(x)</m> is the function whose graph
+        is the line through <m>(a,f(a)</m> and <m>(b,f(b))</m> we see that
+        <me>\phi(x)=f(x)-L(x).</me> Do you see that <m>\phi(x)</m> is the
+    function we need?  </p> </investigation>
 
 
     <exercise>
@@ -455,7 +412,7 @@
       </hint>
     </exercise>
 
-    <problem xml:id="PROBLEMrolles-lemma-mean-2">
+    <exercise xml:id="PROBLEMrolles-lemma-mean-2">
       <introduction>
         <p>
           Show that <m>\phi(x)=f(x)-L(x)</m> from the diagram above satisfies all
@@ -483,19 +440,7 @@
           </p>
         </statement>
       </task>
-    </problem>
-    <!-- \begin{embeddedproblem} -->
-    <!--   <!-\- \label{problem:rolles-lemma-mean-2} -\-> -->
-    <!--   Show that <m>\phi(x)=f(x)-L(x)</m> from the diagram above satisfies all -->
-    <!--   of the conditions of Rolle<rsq/>s Lemma. That is, show that: -->
-    <!--          \begin{enumerate}[label={  (\alph*)}]  -->
-    <!--   \item <m>\phi(x)</m> is continuous on <m>[a,b]</m>. -->
-    <!--   \item <m>\phi(x)</m> is differentiable on <m>(a,b)</m>. -->
-    <!--   \item <m>\phi(a)=\phi(b)=0</m> -->
-    <!-- \end{enumerate} -->
-    <!-- \end{embeddedproblem} -->
-
-    
+    </exercise>
     <proof>
       <title>Proof of the Mean Value Theorem</title>
       <p>
@@ -504,8 +449,11 @@
         <me>
           \phi(x)=f(x)-\frac{f(b)-f(a)}{b-a}(x-a)+f(a)
         </me>
-        satisfies all of the conditions of Rolle<rsq/>s Lemma. Therefore, by Rolle<rsq/>s Lemma there is a point <m>c</m>, between
-        <m>a</m> and <m>b</m> such that <m> \phi^\prime(c)=0</m>. Therefore
+        satisfies all of the conditions of <xref
+        ref="LEMMArolles-lemma">Rolle<rsq/>s Lemma</xref>. Therefore,
+        by Rolle<rsq/>s Lemma there is a point <m>c</m>,
+        between <m>a</m> and <m>b</m> such that <m>
+        \phi^\prime(c)=0</m>. Therefore
         <me>
           f^\prime(c) -\frac{f(b)-f(a)}{b-a} =0
         </me>
@@ -523,7 +471,7 @@
 
       As we mentioned at the beginning of this chapter in French the Mean
       Value Theorem is known as the <foreign>théorème des accroissements
-      finis</foreign> or literally the <q>theorem of the finite increments.</q>
+      finis</foreign>, literally the <q>theorem of the finite increments.</q>
     </p>
     <p>
 
@@ -627,7 +575,7 @@
 
 
 
-    <problem>
+    <exercise>
       <introduction>
         <p>
           Prove <xref ref="THEOREMFDTprovedB">part</xref> of the First Derivative Test in two different ways:
@@ -651,18 +599,8 @@
           </p>
         </statement>
       </task>
-    </problem>
-    <!-- \begin{embeddedproblem} -->
-    <!--   Prove part (b) of the First Derivative Test in two different ways: -->
-    <!--   \begin{enumerate}[label={  (\alph*)}] -->
-    <!--   \item By modifying our proof of part (a) of the First Derivative -->
-    <!--     Test as needed. -->
-    <!--   \item Let <m>g(x)=-f(x)</m> and apply part (a) of this -->
-    <!--     problem.  -->
-    <!--     \comment{Don<rsq/>t forget to show first that <m>g(x)</m> -->
-    <!--       satisfies the conditions of the Mean Value Theorem.} -->
-    <!--   \end{enumerate} -->
-    <!-- \end{embeddedproblem} -->
+    </exercise>
+    
     <p>
       While we are in this frame of mind, we<rsq/>ll take a moment to notice that
       we can use the Mean Value Theorem  to prove, rigorously, something that we have
@@ -670,16 +608,16 @@
       from our differentiation rules that if two functions differ by a
       constant, then they have the same derivative.  We<rsq/>ve mentioned that
       the converse is true, namely if two functions have the same derivative
-      on an interval then they must differ by a constant. %  For example, see
+      on an interval then they must differ by a constant. 
       This can be proved in a
       manner similar to the proof above.
     </p>
-    <problem xml:id="PROBLEMDervEqZeroImpliesConstant">
+    <exercise xml:id="PROBLEMDervEqZeroImpliesConstant">
       <introduction>
         <p>
         </p>
       </introduction>
-      <task>
+      <task xml:id="PROBLEMDervEqZeroImpliesConstantA">
         <statement>
           <p>
             Suppose <m>f^\prime(x)=0</m> on the interval <m>(\alpha,\beta)</m> and
@@ -692,7 +630,7 @@
       <task>
         <statement>
           <p>
-            Explain how the result of part (a) says that <m>f(x)</m> must be
+            Explain how the result of <xref ref="PROBLEMDervEqZeroImpliesConstantA">part</xref>  says that <m>f(x)</m> must be
             constant on <m>(\alpha, \beta)</m>.
           </p>
         </statement>
@@ -718,53 +656,61 @@
           </p>
         </statement>
       </task>
-    </problem>
-    <!-- \begin{embeddedproblem-enumerate} -->
-    <!-- <!-\- \label{problem:DervEqZeroImpliesConstant} -\-> -->
-    <!--   \begin{enumerate}[label={  (\alph*)}]  -->
-    <!--   \item Suppose <m>f^\prime(x)=0</m> on the interval <m>(\alpha,\beta)</m> and -->
-    <!--     that <m>a</m> and  <m>b</m> are two points in that interval.  Use an -->
-    <!--     argument similar to the proof of the first derivative test to show -->
-    <!--     that <m>f(a)=f(b)</m>. -->
-    <!--   \item Explain how the result of part (a) says that <m>f(x)</m> must be -->
-    <!--     constant on <m>(\alpha, \beta)</m>. -->
-    <!--   \item Show that if <m>f^\prime(x)=g^\prime(x)</m> on the interval -->
-    <!--     <m>(\alpha,\beta)</m>, then <me>f(x)=g(x)+c</me> for some constant <m>c</m>. -->
-    <!--     \hint{Consider the function <m>F(x)=f(x)-g(x)</m>.}     -->
-    <!--   \item What can be said if <m>f^\prime(x)=g^\prime(x)</m> for all <m>x</m> in -->
-    <!--     some set <m>S</m> which is not an interval? -->
-    <!--   \end{enumerate} -->
-    <!-- \end{embeddedproblem-enumerate} -->
+    </exercise>
+    
     <p>
       We did not prove  
       <xref ref="THEOREMLHRuleGen">L<rsq/>Hôpital<rsq/>s Rule</xref> in <xref ref="CHAPTERlimits-lhop-rule">Chapter</xref>
       because the general theorem is slightly beyond the scope of this
-      text. But the somewhat simpler 
-      <xref ref="THEOREMLHRule1">special case</xref>, is a straightforward consequence of  the
+      text. But the somewhat simpler special case of
+      <xref ref="THEOREMLHRule1"></xref>, is a straightforward consequence of  the
       Mean Value Theorem.
     </p>
 
-    <problem>
+    <exercise xml:id="PROBLEMMVTSpecialCase">
       <introduction>
         <p>
+          Recall the conditions of <xref ref="THEOREMLHRule1"></xref>:
+          <ol>
+            <li>
+              <p>
+                <m>f(x)</m> and <m>g(x)</m> are differentiable on an open interval
+                containing <m>a</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>f(a)=g(a)=0</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\limit{x}{a}{f^\prime(x)} =L </m> and <m>\limit{x}{a}{g^\prime(x)}
+                \ne 0 </m>.
+              </p>
+            </li>
+          </ol>
         </p>
       </introduction>
-      <task>
+      <task xml:id="PROBLEMMVTSpecialCaseA">
         <statement>
           <p>
-            Under the conditions of <xref ref="THEOREMLHRule1"></xref>
-            explain why
+            Under these conditions explain why
             <me>
               \limit{x}{a}{\frac{f(x)}{g(x)}}=\limit{x}{a}{\frac{f(x)-f(a)}{g(x)-g(a)}}
             </me>
           </p>
         </statement>
       </task>
-      <task>
+      <task xml:id="PROBLEMMVTSpecialCaseB">
         <statement>
           <p>
             Apply the Mean Value Theorem to the numerator and
-            denominator in part (a) and then prove <xref ref="THEOREMLHRule1"></xref>.
+            denominator <xref ref="PROBLEMMVTSpecialCaseA">part</xref>
+            and then prove that
+            <me>
+              \limit{x}{a}{\frac{f(x)}{g(x)}}\lhopeq\frac{L}{M}
+              </me>.
           </p>
         </statement>
         <hint>
@@ -774,22 +720,7 @@
           </p>
         </hint>
       </task>
-    </problem>
-    <!-- \begin{embeddedproblem-enumerate} -->
-    <!--   \begin{enumerate}[label={  (\alph*)}]  -->
-    <!--   \item Under the conditions of <xref ref="THEOREMLHRule1"></xref> -->
-    <!--     explain why -->
-    <!--     <me> -->
-    <!--     \limit{x}{a}{\frac{f(x)}{g(x)}}=\limit{x}{a}{\frac{f(x)-f(a)}{g(x)-g(a)}} -->
-    <!--     </me> -->
-    <!--   \item Apply the Mean Value Theorem to the numerator and -->
-    <!--     denominator in part (a) and then prove <xref ref="THEOREMLHRule1">~</xref>. -->
-    <!--     \hint{Use the fact that  in the statement of <xref ref="THEOREMMVT">~</xref> <m>c</m> is between -->
-    <!--       <m>a</m> and <m>b</m>.} -->
-    <!--   \end{enumerate} -->
-    <!-- \end{embeddedproblem-enumerate} -->
-
-
-
+    </exercise>
+    
   </section>
 </chapter>

@@ -57,7 +57,7 @@ below. Impressive, isn<rsq/>t it?
 <caption>
 A useless graph of <m>y(x) =x^4 - 400.5 x^3 + 40099.49 x^2 + 4.005 x - 400.995</m>
 </caption>
-<image source="images/HolyGrail1.png" width="50%"/>
+<image source="DC/HolyGrail1.png" width="50%"/>
 </figure>
 <!-- \begin{wrapfigure}[9]{r}{1.5in} -->
 <!--   \vskip-6mm  -->
@@ -79,7 +79,7 @@ like the one in <xref ref="FIGUREUsaableGraph"></xref> below.
 <caption>
 A more usefull graph of <m>y(x) =x^4 - 400.5 x^3 + 40099.49 x^2 + 4.005 x - 400.995</m>
 </caption>
-<image source="images/HolyGrail3.png" width="50%"/>
+<image source="DC/HolyGrail3.png" width="50%"/>
 </figure>
 <!-- \begin{wrapfigure}[12]{r}{3.5in} -->
 <!--   \captionsetup{labelformat=empty} -->
@@ -222,11 +222,11 @@ speech.
     Testing a single point in each of these intervals between PITPs we
   see that
   <me>
-   \eval{\dfdxn{y}{x}{2}}{x=-2}{} \lt0,\ \ \ 
-  \eval{\dfdxn{y}{x}{2}}{x=-1}{}  \gt0,\ \ \ 
-   \eval{\dfdxn{y}{x}{2}}{x=1}{} \lt0,\ \ \ 
+   \eval{\dfdxn{y}{x}{2}}{x}{-2} \lt0,\ \ \ 
+  \eval{\dfdxn{y}{x}{2}}{x}{-1}  \gt0,\ \ \ 
+   \eval{\dfdxn{y}{x}{2}}{x}{1} \lt0,\ \ \ 
 \text{  and }
-\eval{\dfdxn{y}{x}{2}}{x=2}{} \gt0,
+\eval{\dfdxn{y}{x}{2}}{x}{2} \gt0,
 </me>
 and conclude that the graph is concave downward on the interval
 <m>\left(-\infty,-\sqrt{3}\right)</m>, concave upward on the interval
@@ -324,7 +324,7 @@ and conclude that the graph is concave downward on the interval
   the graph might might have the shape shown below.
 </p> 
 
-<image source="images/GraphingWith11.png" width="50%"/>
+<image source="DC/GraphingWith11.png" width="50%"/>
 
 <p> 
 The next step is to locate this graph on the <m>x</m>-<m>y</m>
@@ -341,7 +341,7 @@ plane. From our table above we see that the local minimum is at
   Thus we can, again reasonably, infer that the graph of <m>y(x)</m> is
   located on the plane as shown below.
   </p>
-  <image source="images/GraphingWith12.png" width="40%"/>
+  <image source="DC/GraphingWith12.png" width="40%"/>
 
 <p>
   Unfortunately, we don<rsq/>t know that our graph is correct (in
@@ -453,7 +453,7 @@ From <xref ref="TABLESDTChart1"></xref> we see that <m>y(x)</m> has
 inflection points at <m>x=-1.41</m>, <m>x=-0.54</m>, <m>0.54</m>, and
 <m>x=1.41</m>.
 </p>
-<!-- <image source="images/GraphingWith13.png" width="40%" /> -->
+<!-- <image source="DC/GraphingWith13.png" width="40%" /> -->
 <p>
 
 <!-- \includegraphics*[height=1.5in,width=5.5in]{../Figures/GraphingWith13} -->
@@ -471,7 +471,7 @@ Combining the data in this table with the data in our previous table
 it would seem reasonable to infer that the graph of our function looks
 like the one below.
 </p>
-<image source="images/GraphingWith14.png" width="60%"/>
+<image source="DC/GraphingWith14.png" width="60%"/>
 <p>
 Does this graph above seem complete to you now?  Obviously it is not,
 or we would not have asked, but do you see what is missing?  What
@@ -772,7 +772,7 @@ determined for us.  For example, here are the tables for each.
   maximum at <m>x=1</m> and inflection points at <m>x=3</m> and <m>x=5.</m> A sketch
   of the graph might look something  like  this: 
 </p>
-<image source="images/Optimization6.png" width="90%" />
+<image source="DC/Optimization6.png" width="90%" />
 
 <!-- \includegraphics*[height=3in,width=4in]{../Figures/Optimization6} -->
 
@@ -803,8 +803,8 @@ determined for us.  For example, here are the tables for each.
 <p>
 <ul cols="2">
 <li> <m>y(0)=0</m>,</li>
-<li>         <m>\geneval{\dfdx{y}{x}}{x=0}=0</m>,</li>
-<li>         <m>\geneval{\dfdx{y}{x}}{x\neq0}\gt0</m>,</li>
+<li>         <m>\eval{\dfdx{y}{x}}{x}{0}=0</m>,</li>
+<li>         <m>\geneval{\dfdx{y}{x}}{x}{\neq0}\gt0</m>,</li>
 <li>         <m>\dfdxn{y}{x}{2}\lt0</m> for <m>x\lt0</m>,</li>
 <li><m>\dfdxn{y}{x}{2}\gt0</m> for <m>x\gt0</m>,</li>
 </ul>
@@ -853,7 +853,7 @@ determined for us.  For example, here are the tables for each.
 <ul cols="2">
 <li> <m>y(0)=0</m>,</li>
 <li>         <m>\dfdxat{y}{x}{0}</m>  does not exist,</li>
-<li>         <m> \geneval{\dfdx{y}{x}}{x\neq0}\gt0</m>,</li>
+<li>         <m> \geneval{\dfdx{y}{x}}{x}{\neq0}\gt0</m>,</li>
 <li>         <m>  \dfdxn{y}{x}{2}\gt0</m>, for <m>x\lt0</m></li>
 <li>         <m> \dfdxn{y}{x}{2}\lt0</m>, for <m>x\gt0</m></li>
 </ul>
@@ -927,8 +927,8 @@ determined for us.  For example, here are the tables for each.
 <li>           <m>\dfdxat{y}{x}{0}=0</m>,</li>
 <li>           <m>\dfdxat{y}{x}{2}=0</m>,</li>
 <li>           <m>\dfdx{y}{x}\gt0</m>, for <m>0\lt x \lt2</m>,</li>
-<li>           <m>\geneval{\dfdx{y}{x}}{x\gt2}\lt0</m>,</li>
-<li>           <m>\geneval{\dfdxn{y}{x}{2}}{x=1}=0</m>,</li>
+<li>           <m>\geneval{\dfdx{y}{x}}{x}{\gt2}\lt0</m>,</li>
+<li>           <m>\eval{\dfdxn{y}{x}{2}}{x}{1}=0</m>,</li>
 <li>           <m>\dfdxn{y}{x}{2}\gt0</m>, for <m>0\lt x\lt1</m>,</li>
 <li>           <m>\dfdxn{y}{x}{2}\lt0</m> for <m>x\gt1</m>.</li>
 </ul>
@@ -1029,7 +1029,7 @@ determined for us.  For example, here are the tables for each.
   ref="SECTIONwitch-agnesi-inverse"></xref> is quite general. For
   example, suppose the graph of <m>\dfdx{y}{x}</m> is given below.
 </p>
-<image source="images/Graphing1.png" width="60%" />
+<image source="DC/Graphing1.png" width="60%" />
 <!-- \centerline{\includegraphics*[height=1.3in,width=2in]{../Figures/Graphing1}} -->
 
 <p>
@@ -1090,14 +1090,14 @@ determined for us.  For example, here are the tables for each.
 </tabular>
 </table>
 
-<!-- <image source="images/GrWiGrDer.png" width="60%" /> -->
+<!-- <image source="DC/GrWiGrDer.png" width="60%" /> -->
 <!-- \centerline{\includegraphics*[height=2in,width=5in]{../Figures/GrWiGrDer}} -->
 
 <p>
   From the data in our tables we see that the graph of <m>y</m> looks
   something like this.
 </p>
-<!-- <image source="images/Optimization5.png" width="60%" /> -->
+<!-- <image source="DC/Optimization5.png" width="60%" /> -->
 <!-- \centerline{\includegraphics*[height=2.8in,width=4in]{../Figures/Optimization5}} -->
 
 
@@ -1111,7 +1111,7 @@ determined for us.  For example, here are the tables for each.
 <task>
 <statement>
 
-<image source="images/Dgraph1.png" width="60%" />
+<image source="DC/Dgraph1.png" width="60%" />
 
  <!-- \includegraphics*[height=1.4in,width=1.4in]{../Figures/Dgraph1} -->
 </statement>
@@ -1119,7 +1119,7 @@ determined for us.  For example, here are the tables for each.
 <task>
 <statement>
 
-<image source="images/Dgraph2.png" width="60%" />
+<image source="DC/Dgraph2.png" width="60%" />
 
  <!-- \includegraphics*[height=1.4in,width=1.4in]{../Figures/Dgraph2} -->
 
@@ -1128,7 +1128,7 @@ determined for us.  For example, here are the tables for each.
 <task>
 <statement>
 
-<image source="images/Dgraph3.png" width="60%" />
+<image source="DC/Dgraph3.png" width="60%" />
 
  <!-- \includegraphics*[height=1.4in,width=1.4in]{../Figures/Dgraph3} -->
 
@@ -1137,7 +1137,7 @@ determined for us.  For example, here are the tables for each.
 <task>
 <statement>
 
-<image source="images/Dgraph4.png" width="60%" />
+<image source="DC/Dgraph4.png" width="60%" />
 
  <!-- \includegraphics*[height=1.4in,width=1.4in]{../Figures/Dgraph4} -->
 
@@ -1146,7 +1146,7 @@ determined for us.  For example, here are the tables for each.
 <task>
 <statement>
 
-<image source="images/Dgraph5.png" width="60%" />
+<image source="DC/Dgraph5.png" width="60%" />
 
  <!-- \includegraphics*[height=1.4in,width=1.4in]{../Figures/Dgraph5} -->
 
@@ -1155,7 +1155,7 @@ determined for us.  For example, here are the tables for each.
 <task>
 <statement>
 
-<image source="images/Dgraph6.png" width="60%" />
+<image source="DC/Dgraph6.png" width="60%" />
 
  <!-- \includegraphics*[height=1.4in,width=1.4in]{../Figures/Dgraph6} -->
 
@@ -1164,7 +1164,7 @@ determined for us.  For example, here are the tables for each.
 <task>
 <statement>
 
-<image source="images/Dgraph7.png" width="60%" />
+<image source="DC/Dgraph7.png" width="60%" />
 
  <!-- \includegraphics*[height=1.4in,width=1.4in]{../Figures/Dgraph7} -->
 
@@ -1173,7 +1173,7 @@ determined for us.  For example, here are the tables for each.
 <task>
 <statement>
 
-<image source="images/Dgraph8.png" width="60%" />
+<image source="DC/Dgraph8.png" width="60%" />
 
  <!-- \includegraphics*[height=1.4in,width=1.4in]{../Figures/Dgraph8} -->
 
@@ -1182,7 +1182,7 @@ determined for us.  For example, here are the tables for each.
 <task>
 <statement>
 
-<image source="images/Dgraph9.png" width="60%" />
+<image source="DC/Dgraph9.png" width="60%" />
 
  <!-- \includegraphics*[height=1.4in,width=1.4in]{../Figures/Dgraph9} -->
 
@@ -1191,7 +1191,7 @@ determined for us.  For example, here are the tables for each.
 <task>
 <statement>
 
-<image source="images/Dgraph10.png" width="60%" />
+<image source="DC/Dgraph10.png" width="60%" />
 
  <!-- \includegraphics*[height=1.4in,width=1.4in]{../Figures/Dgraph10} -->
 
@@ -1200,7 +1200,7 @@ determined for us.  For example, here are the tables for each.
 <task>
 <statement>
 
-<image source="images/Dgraph11.png" width="60%" />
+<image source="DC/Dgraph11.png" width="60%" />
 
  <!-- \includegraphics*[height=1.4in,width=1.4in]{../Figures/Dgraph11} -->
 
@@ -1209,7 +1209,7 @@ determined for us.  For example, here are the tables for each.
 <task>
 <statement>
 
-<image source="images/Dgraph12.png" width="60%" />
+<image source="DC/Dgraph12.png" width="60%" />
 
  <!-- \includegraphics*[height=1.4in,width=1.4in]{../Figures/Dgraph12} -->
 
@@ -1376,7 +1376,7 @@ Based on this table, we can see that
   intervals where <m>y</m> is increasing, decreasing,
   concave up, or concave down.
 </p>
-<image source="images/IncDecChart1.png" width="100%" />
+<image source="DC/IncDecChart1.png" width="100%" />
 
 <!-- \includegraphics*[height=1in,width=4in]{../Figures/IncDecChart1} -->
   
@@ -1385,7 +1385,7 @@ Based on this table, we can see that
    This information, along with the initial value, <m>y(0)=0</m>
    allows us to provide a reasonable graph of <m>y(t)</m>.
 </p>
-   <image source="images/Optimization4.png" width="70%" />
+   <image source="DC/Optimization4.png" width="70%" />
 
 <!-- \includegraphics*[height=3in,width=5in]{../Figures/Optimization4} -->
   
@@ -1587,7 +1587,7 @@ initial value (in this case, <m>y(0)=1</m> or equivalently, <m>(0,1)</m>).
   near the point <m>(1,1)</m>, graph of <m>y(t)</m> will look like the
   red graph in the sketch below.
 </p>
-<image source="images/DEGraph2.png" width="30%"/>
+<image source="DC/DEGraph2.png" width="30%"/>
 
 <p>
 
@@ -1615,7 +1615,7 @@ represents the graph of the curve that both satisfies the differential
 equation from <xref ref="EQUATIONExpIVP2">IVP</xref>, and
 passes through that point. 
 </p>
-<image source="images/DEGraph5.png" width="90%"/>
+<image source="DC/DEGraph5.png" width="90%"/>
 
  
 <p>
@@ -1625,7 +1625,7 @@ where <m>y(t)</m> both solves the differential equation from
 at <m>(t,2)</m> will be <m>2</m>, as seen in the following sketch.
 </p>
  
-<image source="images/DEGraph7.png" width="60%" />
+<image source="DC/DEGraph7.png" width="60%" />
 <!-- \centerline{\includegraphics*[height=.7in,width=2in]{../Figures/DEGraph7}} -->
 
 <p>
@@ -1634,7 +1634,7 @@ at <m>(t,2)</m> will be <m>2</m>, as seen in the following sketch.
 By tagging more  points in the plane in the same way we get the image below.
 </p>
 
-<image source="images/DEGraph9.png" width="80%" />
+<image source="DC/DEGraph9.png" width="80%" />
 <!-- \centerline{\includegraphics*[height=2in,width=3.5in]{../Figures/DEGraph9}} -->
 
 <aside>
@@ -1646,6 +1646,7 @@ Actually the Principle of Local Linearity applies so it
 </p>
 </aside>
 <p>
+<idx><h>Vocabulary</h><h>slope field</h></idx>
   A sketch like this is called a <term>slope field</term>. The short
   line segment at each point, <m>(a,b)</m>, is a short section of the
   graph of the function which satisfies the differential equation
@@ -1667,7 +1668,7 @@ and the graph that passes through the point <m>(-1,-1.25)</m> is shown in
 blue.
 </p>
 
-<image source="images/DEGraph8.png" width="80%" />
+<image source="DC/DEGraph8.png" width="80%" />
 <!-- \centerline{\includegraphics*[height=3.3in,width=3.7in]{../Figures/DEGraph8}} -->
 
 
@@ -1740,6 +1741,7 @@ the same solution?
 <!-- \end{embeddedproblem-enumerate} -->
 
 <p>
+<idx><h>Vocabulary</h><h>slope field</h></idx>
 To sketch the graph of the solution of a given  IVP  begin by
 drawing  the <term>slope field</term> for the differential equation. Then
 plot the  value and follow the slope field to sketch the graph.
@@ -1748,6 +1750,7 @@ plot the  value and follow the slope field to sketch the graph.
 <problem>
 <introduction>
 <p>
+<idx><h>Vocabulary</h><h>slope field</h></idx>
   For each of the following IVPs sketch the <term>slope field</term> in the
   ranges given and use your slope field to sketch the solution of the
   IVP.
@@ -1873,6 +1876,7 @@ field.
 <problem>
 <introduction>
 <p>
+<idx><h>Vocabulary</h><h>slope field</h></idx>
   For each of the following IVPs draw The <term>slope field</term> in the
   ranges given and use your slope field to sketch the solution of the
   IVP.

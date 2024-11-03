@@ -41,7 +41,7 @@ asymptotes (lines like the graph of <m>x=5</m>).
   <q>closer and closer</q> to zero. This is the essential idea but the
   phrase <q>closer and closer</q> is too vague for our purpose.
 </p>
-<image source="images/Witch10.png" width="90%"/>
+<image source="DC/Witch10.png" width="90%"/>
 
 
 <p>
@@ -51,7 +51,7 @@ can see <m>x</m> gets <q>closer and closer</q> to <m>a</m>. But it also gets
 to both <m>b</m> and  <m>c</m>.
 </p>
 
-<image source="images/CloserCloser.png" width="60%" />
+<image source="DC/CloserCloser.png" width="60%" />
 <!-- \centerline{\includegraphics*[height=.3in,width=2in]{../Figures/CloserCloser}} -->
 <p>
   While <m>x</m> is getting <q>closer and closer</q> to all three of
@@ -123,7 +123,7 @@ to both <m>b</m> and  <m>c</m>.
     <m>x</m> axis.
 </p>
 <p>
-
+<idx><h>Vocabulary</h><h>limit</h></idx>
   The expression <m>\tlimit{x}{\infty}{\frac{1}{1+x^2}}=0</m> is making a
   very specific statement, one that is difficult to capture in a
   natural language like English. It says that the expression
@@ -426,13 +426,17 @@ quotient of the limits.</q>
       \limit{x}{\infty}{\left(\frac{2}{x}-\frac{3}{x^2}\right)}=\limit{x}{\infty}{\frac{2}{x}}-\limit{x}{\infty}{\frac{3}{x^2}}.
     </me>
     Applying <xref ref="THEOREMLimProd1"></xref> (several times) we have
-    <men  xml:id="EQUATIONLimConst">  
-      <!-- \label{eq:LimConst}  -->
-\begin{split}
-      \limit{x}{\infty}{\left(\frac{2}{x}-\frac{3}{x^2}\right)} =\underbrace{\left(\limit{x}{\infty}{2}\right)}_{=2}\amp{}\cdot\underbrace{\left(\limit{x}{\infty}{\frac{1}{x}}\right)}_{=0}\\\amp{}-\underbrace{\left(\limit{x}{\infty}{3}\right)}_{=3}\cdot\underbrace{\left(\limit{x}{\infty}{\frac{1}{x}}\right)}_{=0}\cdot\underbrace{\left(\limit{x}{\infty}{\frac{1}{x}}\right)}_{=0}\\\amp{}=0.
-\end{split}{}
-    </men>
-    So the  horizontal asymptote will be <m>y=0.</m>
+
+<md>
+<mrow>
+      \limit{x}{\infty}{\left(\frac{2}{x}-\frac{3}{x^2}\right)} 
+      =\amp{}\underbrace{\left(\limit{x}{\infty}{2}\right)}_{=2}\cdot\underbrace{\left(\limit{x}{\infty}{\frac{1}{x}}\right)}_{=0}
+</mrow>
+<mrow>
+      \amp{}-\underbrace{\left(\limit{x}{\infty}{3}\right)}_{=3}\cdot\underbrace{\left(\limit{x}{\infty}{\frac{1}{x}}\right)}_{=0}\cdot\underbrace{\left(\limit{x}{\infty}{\frac{1}{x}}\right)}_{=0}
+</mrow>
+</md>
+    So we see that the  horizontal asymptote will be <m>y=0.</m>
   </p>
 </example>
 
@@ -546,7 +550,7 @@ Of course, not every curve has a horizontal asymptote so not every
 function has a limit as <m>x</m> approaches <m>\pm\infty</m>.  For example,
 consider the curves <m>y=x^2</m> and <m>y=x^3.</m> 
 </p>
-<image source="images/asymptotes3.png" width="90%"/>
+<image source="DC/asymptotes3.png" width="90%"/>
 <p>
 Clearly these curves have no horizontal asymptotes because
 as
@@ -912,6 +916,7 @@ meaningless.
     </statement>
   </exercise>
   <p>
+<idx><h>Vocabulary</h><h>horizontal asymptote</h></idx>
     We can now see that <m>y(x)=\frac{2+2x^2+2x^4}{1+x^4}</m> has a
     <term>horizontal asymptote</term> at <m>y=2</m>. If you haven<rsq/>t
     already done so consider graphing this function to confirm.
@@ -1206,7 +1211,7 @@ particular value as <m>x\rightarrow\infty</m>. It<rsq/>s not even
 <q>approaching</q> <m>+\infty</m> or <m>-\infty</m> since it is
 bounded both above and below.
 </p>
-<image source="images/asymptotes44.png" width="70%"/>
+<image source="DC/asymptotes44.png" width="70%"/>
 
 <p>
 Now how about this limit: <me>\tlimit{x}{\infty}{\frac{\sin(x)}{x}}?</me>
@@ -1225,7 +1230,7 @@ We need a new idea.
 Look at the graph of <m>f(x) = \frac{\sin(x)}{x}</m>:
 </p>
   
-<image source="images/asymptotes5.png" width="90%" />
+<image source="DC/asymptotes5.png" width="90%" />
 <!-- \centerline{\includegraphics*[height=1.2in,width=4.8in]{../Figures/asymptotes5}} -->
 
 <p>
@@ -1257,7 +1262,7 @@ case <m>x\rightarrow-\infty</m> as a drill for you.
 <!-- <caption> -->
 <!-- <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Bernoulli_Johann/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Bernoulli_Johann/">This figure needs a caption.</url> -->
 <!-- </caption> -->
-<!-- <image source="images/asymptotes13.png" width="50%"/> -->
+<!-- <image source="DC/asymptotes13.png" width="50%"/> -->
 <!-- </figure> -->
 <!-- \begin{wrapfigure}[]{r}{2.8in} -->
 <!--   \captionsetup{labelformat=empty} -->
@@ -1281,7 +1286,7 @@ case <m>x\rightarrow-\infty</m> as a drill for you.
   values of <m>x</m> the graph of <m>y=\frac{\sin(x)}{x}</m> is always
   caught between the graph of <m>y=\frac1x</m> and <m>y=-\frac1x</m>, as seen below.
 </p>
-<image source="images/asymptotes13.png" width="50%"/>
+<image source="DC/asymptotes13.png" width="50%"/>
 
 <p>
  We know that both <m>\pm\frac1x\rightarrow0</m> as
@@ -1409,7 +1414,7 @@ case) or <m>(-\infty,c)</m> (negative case) rather than for all values of
 <!--   \end{enumerate} -->
 <!-- \end{embeddedproblem} -->
 <p>
-  Back in <xref ref="SECTIONleonh-euler-harm">Section</xref> you
+  Back in <xref ref="SECTIONEulerHarmonicOsc">Section</xref> you
   showed that
 <m>
 y(t)=e^{-\frac{t}{2}}\left[\cos\left(\frac{\sqrt{3}}{2}t\right)+\sin\left(\frac{\sqrt{3}}{2}t\right)\right]
@@ -1444,7 +1449,7 @@ satisfies the differential equation which models damped oscillation
 <!-- <caption> -->
 <!-- <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Bernoulli_Johann/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Bernoulli_Johann/">This figure needs a caption.</url> -->
 <!-- </caption> -->
-<!-- <image source="images/VerticalAsymp3.png" width="50%"/> -->
+<!-- <image source="DC/VerticalAsymp3.png" width="50%"/> -->
 <!-- </figure> -->
 <!-- \begin{wrapfigure}[9]{r}{1.5in} -->
 <!--   \vskip-6mm  -->
@@ -1458,7 +1463,7 @@ It should be clear from the sketch below that in addition to
 the horizontal asymptote <m>y=0</m>, the graph of <m>y=\frac1x</m> also
 has a vertical asymptote of <m>x=0</m>.
 </p>
-<image source="images/VerticalAsymp3.png" width="50%"/>
+<image source="DC/VerticalAsymp3.png" width="50%"/>
 
 <p>
 We can extend the ideas and the notation we<rsq/>ve developed for
@@ -1488,8 +1493,9 @@ This notation is not universal. The
 </aside>
 
 <p>
+<idx><h>Vocabulary</h><h>limit</h><h>right<ndash/>handed</h></idx>
 The limit in <xref ref="EQUATIONRightHandLimit">equation</xref>) is called a
-<term>right-hand limit</term> and is read aloud as <q>the limit as <m>x</m>
+<term>right<ndash/>hand limit</term> and is read aloud as <q>the limit as <m>x</m>
 approaches zero from the right, of one over <m>x</m> equals infinity.</q>
 </p>
 <p>
@@ -1513,10 +1519,8 @@ This should probably be written as
 </aside>
 
 <p>
-
-
-
-
+<idx><h>Vocabulary</h><h>limit</h><h>left<ndash/>handed</h></idx>
+<idx><h>Vocabulary</h><h>limit</h><h>one<ndash/>sided</h></idx>
 If we restrict <m>x</m>  to negative values then we see that\aside{Note
   that the sense of the  inequality has changed from
   <xref ref="EQUATIONRightHandLimit">equation</xref>). It is now <q>less than.</q>}
@@ -1525,7 +1529,7 @@ If we restrict <m>x</m>  to negative values then we see that\aside{Note
   \limitX{x}{0}{\frac1x}{x\lt 0}=-\infty.
 </men>
 The limit in <xref ref="EQUATIONLeftHandLimit">equation</xref>) is called a
-<term>left-hand limit</term> and is read aloud as <q>the limit as <m>x</m>
+<term>left<ndash/>hand limit</term> and is read aloud as <q>the limit as <m>x</m>
 approaches zero from the left, of one over <m>x</m> equals negative infinity.</q> Right-
 and left-hand limits are generically called <term>one-sided
   limits</term>. One-sided limits are important theoretical tools but their
@@ -1757,6 +1761,7 @@ in the following definition.
 </statement>
 </exercise>
 <p>
+<idx><h>Vocabulary</h><h>Indeterminate Form</h></idx>
   Observe that this limit has the form
   <m>\limit{x}{2}{\frac{x-2}{x^2-4}}=\frac{\approach{0}}{\approach{0}}</m>.
   A limit of this form is called an <term>Indeterminate
@@ -1856,7 +1861,7 @@ bound. Speaking colloquially, we say that it
   <m>f(x)=\frac{1}{x+2}</m> we see that there is a small difference
   between them:
 </p>
-<image source="images/lhopital2.png" width="80%" />
+<image source="DC/lhopital2.png" width="80%" />
 
   <!-- \includegraphics*[height=2.4in,width=5.4in]{../Figures/lhopital2} -->
 <p>
@@ -1924,7 +1929,7 @@ Do you see the difference?  The value of <m>g(2)</m> is
    In <xref ref="PROBLEMFoliumOfDescartes1"></xref> we looked at the
    Folium of Descartes from Newton<rsq/>s dynamic point of view.
 </p>
-<!-- <image source="images/FoliumOfDescartes.png" width="60%" /> -->
+<!-- <image source="DC/FoliumOfDescartes.png" width="60%" /> -->
 <!-- \centerline{\includegraphics*[height=2in,width=2in]{../Figures/FoliumOfDescartes}} -->
   
 <p>
@@ -2116,7 +2121,7 @@ Do you see the difference?  The value of <m>g(2)</m> is
 <!-- <caption> -->
 <!-- <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Bernoulli_Johann/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Bernoulli_Johann/">This figure needs a caption.</url> -->
 <!-- </caption> -->
-<!-- <image source="images/lhopital3.png" width="50%"/> -->
+<!-- <image source="DC/lhopital3.png" width="50%"/> -->
 <!-- </figure> -->
 <!-- \begin{wrapfigure}[6]{r}{2in} -->
 <!--   \vskip-5mm  -->
@@ -2132,7 +2137,7 @@ Do you see the difference?  The value of <m>g(2)</m> is
   wary of relying on graphs.  It would be best to evaluate the limit
   by another technique if possible.
 </p>
-<image source="images/lhopital4.png" width="70%"/>
+<image source="DC/lhopital4.png" width="70%"/>
 
 <p>
 Can we apply some algebraic trick like we did in <xref ref="EXAMPLEVertAsymp"></xref>?
@@ -2343,8 +2348,7 @@ numerator and denominator with their tangent lines at <m>x=2</m>:
 <p>
 <idx><h>Local Linearity</h></idx>
   If we replace <m>f(x)</m> and <m>g(x)</m> with their tangent lines
-  at <m>x=a</m> we have\aside{We need to assume that
-  <m>g^\prime(a)\neq0</m>. Do you see why?}
+  at <m>x=a</m> we have
 
 
   <mdn>
@@ -2362,6 +2366,8 @@ numerator and denominator with their tangent lines at <m>x=2</m>:
     <!-- \label{eq:LHV1} -->
     </mrow>
   </mdn>
+(We need to assume that
+  <m>g^\prime(a)\neq0</m>. Do you see why?)
 
 This is consistent with all of our examples above so it appears that
 the Principle of Local Linearity has led us in the right direction.
@@ -2393,7 +2399,7 @@ and denominator with their tangent lines will work.
     <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Bernoulli_Johann/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Bernoulli_Johann/">Johann
     Bernoulli </url>(1667-1748)
   </caption>
-  <image source="images/Bernoulli-Johann.png" width="30%"/>
+  <image source="DC/Bernoulli-Johann.png" width="30%"/>
 </figure>
 
 
@@ -2421,10 +2427,11 @@ and denominator with their tangent lines will work.
 <url href="https://mathshistory.st-andrews.ac.uk/Biographies/De_LHopital/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/De_LHopital/">The
           Marquis de L<rsq/>Hôpital </url> (1661-1704)
 </caption>
-<image source="images/De_LHopital.png" width="30%"/>
+<image source="DC/De_LHopital.png" width="30%"/>
 </figure>
 
 <p>
+<idx><h>Vocabulary</h><h>Hôpital<rsq/>s Rule</h></idx>
   Even though L<rsq/>Hôpital   acknowledged his indebtedness to Johann Bernoulli
   for this procedure it has always been known as
   <term>L<rsq/>Hôpital<rsq/>s Rule</term>.
@@ -2495,6 +2502,7 @@ text would do in the following century.
 </theorem>
 
 <p>
+<idx><h>Vocabulary</h><h>Hôpital  Indeterminate</h></idx>
 Because L<rsq/>Hôpital<rsq/>s Rule applies directly to the indeterminate form
 <m>\frac{(\rightarrow0)}{(\rightarrow0)}</m> we will refer to this as a
 <term>L<rsq/>Hôpital  Indeterminate</term>. Not all indeterminate forms can be
@@ -2538,7 +2546,7 @@ wrong. You have to be watchful for this potential pitfall.
   <m>
   \limit{x}{1}{\frac{x+1}{x+2}}
   </m> we
-  will obtain <m>\limit{x}{1}{1/1}=1</m>, but this  is obviously
+  will obtain <m>\limit{x}{1}{\frac{1}{1}}=1</m>, but this  is obviously
   incorrect.
 </p>
 </example>
@@ -2555,95 +2563,72 @@ wrong. You have to be watchful for this potential pitfall.
 
 
 <problem>
-<introduction>
 <p>
   Compute each of the following limits:
-</p>
-</introduction>
-<task>
-<statement>
-<p>
- <m>\tlimit{x}{\frac12}{\frac{6x^2+5x-4}{4x^2+16x-9}}</m>
-    </p>
-</statement>
-</task>
-<task>
-<statement>
+<ol cols="3" marker="i">
+<li>
 <p>
  <m>\tlimit{x}{1}{\frac{x(x-1)}{x^2-1}}</m>
     </p>
-</statement>
-</task>
-<task>
-<statement>
+</li>
+<li>
 <p>
  <m>\tlimit{x}{2}{\frac{x(x-1)}{x^2-1}}</m>
     </p>
-</statement>
-</task>
-<task>
-<statement>
+</li>
+<li>
+<p>
+ <m>\tlimit{x}{\frac12}{\frac{6x^2+5x-4}{4x^2+16x-9}}</m>
+    </p>
+</li>
+<li>
 <p>
  <m>\tlimit{x}{0}{\frac{\cos(x) -1}{x}}</m>
     </p>
-</statement>
-</task>
-<task>
-<statement>
+</li>
+<li>
 <p>
  <m>\tlimit{x}{1}{\frac{\ln(x) }{x-1}}</m>
     </p>
-</statement>
-</task>
-<task>
-<statement>
+</li>
+<li>
 <p>
  <m>\tlimit{x}{e}{\frac{\ln(x^2) }{x+e}}</m>
     </p>
-</statement>
-</task>
-<task>
-<statement>
+</li>
+<li>
 <p>
  <m>\tlimit{x}{1}{\frac{t^3-1}{t^4-1}}</m>
     </p>
-</statement>
-</task>
-<task>
-<statement>
+</li>
+<li>
 <p>
  <m>\tlimit{x}{0}{\frac{\sin(3 x)}{\sin(7 x)}}</m>
     </p>
-</statement>
-</task>
-<task>
-<statement>
+</li>
+<li>
 <p>
  <m>\tlimit{x}{0}{\frac{\cos(3 x)}{\cos(7 x)}}</m>
     </p>
-</statement>
-</task>
-<task>
-<statement>
+</li>
+<li>
 <p>
  <m>\tlimit{x}{0}{\frac{\sin(4 x)}{\tan(5 x)}}</m>
     </p>
-</statement>
-</task>
-<task>
-<statement>
+</li>
+<li>
 <p>
  <m>\tlimit{x}{0}{\frac{\inverse\tan(x)}{x}}</m>
     </p>
-</statement>
-</task>
-<task>
-<statement>
+</li>
+<li>
 <p>
  <m>\tlimit{x}{0}{\frac{\inverse\cot(x)}{x}}</m>
   </p>
-</statement>
-</task>
+</li>
+</ol>
+</p>
+
 </problem>
 <!-- \begin{embeddedproblem} -->
 <!--   Compute each of the following limits: -->
@@ -2921,7 +2906,7 @@ right side. Now we can use L<rsq/>Hôpital<rsq/>s Rule with <m>z</m> as the vari
 A similar development would work for <m>x\rightarrow-\infty.</m>
 </p>
 <p>
-
+<idx><h>Vocabulary</h><h>Hôpital  Indeterminate</h></idx>
 Although we have not discussed it, it is also true that L<rsq/>Hôpital<rsq/>s  Rule
 applies directly to the indeterminate form
 <m>\frac{\approach{\pm\infty}}{\approach{\pm\infty}}</m>, so in addition to
@@ -3075,7 +3060,7 @@ increase without bound, but which one increases faster?  Take a
 quick look at the graphs below.
 </p>
 
-<image source="images/lhopital5.png" width="50%" />
+<image source="DC/lhopital5.png" width="50%" />
 
   <!-- \includegraphics*[height=1.5in,width=2.5in]{../Figures/lhopital5} -->
 <p>
@@ -3462,7 +3447,7 @@ very large values of <m>m</m>.
 <p>
 As a result of that investigation we accumulated considerable
 numerical evidence that in one year an investment of <m>1</m> growing at
-a nominal rate of <m>5%</m>, compounded continuously would grow to
+a nominal rate of <m>5\%</m>, compounded continuously would grow to
 <m>e^{0.05}\approx 1.0513</m>, but we were unable to do more than
 gather evidence. It was pretty convincing evidence but it was not
 proof since we didn<rsq/>t yet have the mathematical technique necessary to
@@ -3529,9 +3514,9 @@ Now we do.
 
     In fact, it is not true generally that
     <md>
-<mrow>\textcolor{blue}{\tlimit{x}{a}{\textcolor{red}{f(g(x))}}} \text{ is equal to }
-\textcolor{red}{f}\textcolor{blue}{\left(\tlimit{x}{a}{g(x)}\right)}.</mrow>
-</md>
+      <mrow>\textcolor{blue}{\tlimit{x}{a}{\textcolor{red}{f(g(x))}}} \text{ is equal to }
+      \textcolor{red}{f}\textcolor{blue}{\left(\tlimit{x}{a}{g(x)}\right)}.</mrow>
+    </md>
     But it is true for this problem.
 <!-- . -->
     <!-- (We have not yet discussed values of <m>a</m> that are not either <m>0</m> or -->
@@ -3579,7 +3564,7 @@ Let <m>n=mt</m> and manipulate this limit until it looks
 <statement>
 <p>
  Suppose we have an investment of <m>10,000</m> compounded
-    continuously with a relative annual rate of <m>5%.</m> How much
+    continuously with a relative annual rate of <m>5\%</m>. How much
     would the investment be worth in <m>20</m> years?  How would this
     compare to an investment which is compounded quarterly?
 

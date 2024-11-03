@@ -542,7 +542,7 @@
 
   <section xml:id="SECTIONnewtons-method-1">
     <title>Newton<rsq/>s Method</title>
-
+<idx><h>Newton, Isaac</h><h>Newton<rsq/>s Method</h></idx>
     <introduction>
       <p>
 
@@ -625,7 +625,7 @@
           set of axes and look for the value of <m>x</m> where the two graphs
           intersect as in the figure below.
         </p>
-        <image source="images/nm1.png" width="40%"/>
+        <image source="DC/nm1.png" width="40%"/>
         <p>
           This seems like a
           good idea until we actually try it.  Immediately we realize that
@@ -656,7 +656,7 @@
         <!--   <caption> -->
         <!--     <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/">This figure needs a caption.</url> -->
         <!--   </caption> -->
-          <image source="images/nm5.png" width="50%"/>
+          <image source="DC/nm5.png" width="50%"/>
         <!-- </figure> -->
         <!-- \begin{wrapfigure}[]{l}{2in} -->
         <!--     \vskip-4mm  -->
@@ -703,6 +703,7 @@
       </example>
 
       <exercise  xml:id="DRILLNewtonMethod2">
+        <idx><h>Algorithms</h><h>Newton<rsq/>s Method</h></idx>
         <ol marker="i">
           <li xml:id="DRILLNewtonMethod2i">
             <p>
@@ -758,7 +759,7 @@
 
       <problem xml:id="PROBLEMTanToCubic">
         <introduction>
-          <image source="images/NewtonsMethod4.png" width="50%"/>
+          <image source="DC/NewtonsMethod4.png" width="50%"/>
         </introduction>
         <task xml:id="PROBLEMTanToCubicA">
           <statement>
@@ -784,7 +785,7 @@
           <statement>
             <p>
               If you<rsq/>ve done it correctly, you will notice that <m> r_2\gt r_3\gt r_4</m>.
-              Does this surprise to you? Explain.
+              Does this surprise you? Explain.
             </p>
           </statement>
         </task>
@@ -828,7 +829,7 @@
       <!--   <caption> -->
       <!-- <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/">This figure needs a caption.</url> -->
       <!-- </caption> -->
-      <!-- <image source="images/NewtonsMethod4.png" width="50%"/> -->
+      <!-- <image source="DC/NewtonsMethod4.png" width="50%"/> -->
       <!-- </figure> -->
       <!-- \begin{wrapfigure}[]{r}{3.5in} -->
       <!--   \captionsetup{labelformat=empty} -->
@@ -914,8 +915,8 @@
         <men  xml:id="EQUATIONLineWDiff">
           y=y(r_n)+\eval{\dfdx{y}{x}}{x}{r_n}(x-r_n).
         </men>
-        We still prefer differential notation seen in <xref ref="EQUATIONLineWDiff">Equation</xref> for most purposes so in
-        the next chapter we will switch back to it, but the prime notation used in <xref ref="EQUATIONLineWPrime">Equation</xref>
+        We still prefer differential notation seen in <xref ref="EQUATIONLineWDiff">equation</xref> for most purposes so in
+        the next chapter we will switch back to it, but the prime notation used in <xref ref="EQUATIONLineWPrime">equation</xref>
         is a little smoother for our present purpose.
       </p>
 
@@ -985,6 +986,7 @@
         estimate is accurate to four decimal places.
       </p>
       <exercise xml:id="EXERCISESqrt2InitGuess">
+        <idx><h>Algorithms</h><h>Newton<rsq/>s Method</h></idx>
         <statement>
           <p>
             Obviously, <m>f(x) = x-\sqrt{2}</m> has a root at <m>x=\sqrt{2}.</m> But if we
@@ -996,198 +998,119 @@
       </exercise>
 
       <problem xml:id="PROBLEMNewtMethCreateFunction">
-        <introduction>
+        <idx><h>Algorithms</h><h>Newton<rsq/>s Method</h></idx>
           <p>
             Create a function which has a root at each of the following numbers
             and use your function to compute each to <m>5</m> decimals using Newton<rsq/>s
             Method.
-          </p>
-        </introduction>
-        <task>
-          <statement>
+<ol cols="3" marker="i">
+<li>
             <p>
               <m>\sqrt[5]{7}</m>
             </p>
-          </statement>
-        </task>
-        <task>
-          <statement>
+</li>
+<li>
             <p>
               <m>\sqrt[3]{5} </m>
             </p>
-          </statement>
-        </task>
-        <task>
-          <statement>
+</li>
+<li>
             <p>
               <m>6^{2/3}</m>
             </p>
-          </statement>
-        </task>
-        <task>
-          <statement>
+</li>
+<li>
             <p>
               <m>\sqrt{27}</m>
             </p>
-          </statement>
-        </task>
-        <task>
-          <statement>
+</li>
+<li>
             <p>
               <m>\sqrt[7]{2}</m>
             </p>
-          </statement>
-        </task>
-        <task>
-          <statement>
+</li>
+<li>
             <p>
               <m>\pi</m>
             </p>
-          </statement>
-        </task>
-      </problem>
-      <!-- \begin{embeddedproblem-1line}  -->
-      <!--   <!-\- \label{PROBLEMNewtMethCreateFunction} -\-> -->
-      <!--   Create a function which has a root at each of the following numbers -->
-      <!--   and use your function to compute each to <m>5</m> decimals using Newton<rsq/>s -->
-      <!--   Method. -->
-      <!--   \begin{enumerate}[label={  (\alph*)}] -->
-      <!--     \item <m>\sqrt[5]{7}</m> -->
-      <!--     \item <m>\sqrt[3]{5} </m> -->
-      <!--     \item <m>6^{2/3}</m> -->
-      <!--     \item  <m>\sqrt{27}</m>  -->
-      <!--     \item  <m>\sqrt[7]{2}</m> -->
-      <!--     \item <m>\pi</m> -->
-      <!--   \end{enumerate} -->
-      <!-- \end{embeddedproblem-1line} -->
+</li>
+</ol>
+          </p>
+</problem>
 
       <problem xml:id="PROBLEMNewton-meth">
-        <introduction>
+        <idx><h>Algorithms</h><h>Newton<rsq/>s Method</h></idx>
           <p>
             Start with <m>r_1=4</m> and use Newton<rsq/>s Method to compute the next four
             approximations (<m>r_2</m>, <m>r_3</m>, <m>r_4</m>, and <m>r_5</m>) of the roots of each
             of the following functions. Compare these with your results in
             <xref ref="PROBLEMbisect-meth"></xref>. Which algorithm seems to be more
             accurate after four iterations?
-          </p>
-        </introduction>
-        <task>
-          <statement>
+<ol cols="2" marker="i">
+<li>
             <p>
               <m>f(x)=x^2-5</m>
             </p>
-          </statement>
-        </task>
-        <task>
-          <statement>
+</li>
+<li>
             <p>
               <m>f(x)=x^2-10</m>
             </p>
-          </statement>
-        </task>
-        <task>
-          <statement>
+</li>
+<li>
             <p>
               <m>f(x)=x^3-7</m>
             </p>
-          </statement>
-        </task>
-        <task>
-          <statement>
+</li>
+<li>
             <p>
               <m>f(x)=x^9-11</m>
             </p>
-          </statement>
-        </task>
-        <task>
-          <statement>
+</li>
+<li>
             <p>
               <m>f(x)=x^5-x^2-8</m>
             </p>
-          </statement>
-        </task>
-        <task>
-          <statement>
+</li>
+<li>
             <p>
               <m>f(x) = x^3+3x^2-17x+6</m>
             </p>
-          </statement>
-        </task>
-      </problem>
-      <!-- \begin{embeddedproblem} -->
-      <!--   <!-\- \label{PROBLEMNewton-meth} -\-> -->
-      <!--   Start with <m>r_1=4</m> and use Newton<rsq/>s Method to compute the next four -->
-      <!--   approximations (<m>r_2</m>, <m>r_3</m>, <m>r_4</m>, and <m>r_5</m>) of the roots of each -->
-      <!--   of the following functions. Compare these with your results in -->
-      <!--   <xref ref="PROBbisect-meth">Problem~\#</xref>. Which algorithm seems to be more -->
-      <!--   accurate after four iterations? -->
-      <!--   \begin{enumerate}[label={  (\alph*)}] -->
-      <!--     \item <m>f(x)=x^2-5</m> -->
-      <!--     \item <m>f(x)=x^2-10</m> -->
-      <!--     \item <m>f(x)=x^3-7</m> -->
-      <!--     \item <m>f(x)=x^9-11</m> -->
-      <!--     \item <m>f(x)=x^5-x^2-8</m> -->
-      <!--     \item <m>f(x) = x^3+3x^2-17x+6</m>  -->
-      <!--   \end{enumerate} -->
-      <!-- \end{embeddedproblem} -->
-
-
+</li>
+</ol>
+          </p>
+</problem>
 
       <problem xml:id="PROBLEMNewton-meth2">
-        <introduction>
+        <idx><h>Algorithms</h><h>Newton<rsq/>s Method</h></idx>
           <p>
             Use Newton<rsq/>s Method to approximate the root of each of the following
             functions to at least four decimal places on the interval given.
-          </p>
-        </introduction>
-        <task>
-          <statement>
+<ol cols="2" marker="i">
+<li>
             <p>
               <m>f(x) = \frac{x^2-x+2}{x^2(x-1)}-3</m> on <m>[0,2]</m>
             </p>
-          </statement>
-        </task>
-        <task>
-          <statement>
+</li>
+<li>
             <p>
               <m>f(x) = x^\frac13+\cos(2x) -1/2</m> on <m>[0,3/2]</m>
             </p>
-          </statement>
-        </task>
-        <task>
-          <statement>
+</li>
+<li>
             <p>
               <m>f(x) = (x-1/2)\cos\left(x^2+2x\right)+1</m> on <m>[-2,0]</m>
             </p>
-          </statement>
-        </task>
-      </problem>
-      <!-- \begin{embeddedproblem} -->
-      <!--   <!-\- \label{PROBLEMNewton-meth2} -\-> -->
-      <!--   Use Newton<rsq/>s Method to approximate the root of each of the following -->
-      <!--   functions to at least four decimal places on the interval given. -->
-      <!--   \begin{enumerate}[label={  (\alph*)}] -->
-      <!--       \item <m>f(x) = \frac{x^2-x+2}{x^2(x-1)}-3</m> on <m>[0,2]</m>   -->
-      <!--       \item <m>f(x) = x^\frac13+\cos(2x) -1/2</m> on <m>[0,3/2]</m> -->
-      <!--   \item <m>f(x) = (x-1/2)\cos\left(x^2+2x\right)+1</m> on <m>[-2,0]</m>   -->
-      <!--       \end{enumerate} -->
-      <!-- \end{embeddedproblem} -->
+</li>
+</ol>
+          </p>
+</problem>
 
 
       <problem xml:id="PROBLEMXCosx">
+        <idx><h>Algorithms</h><h>Newton<rsq/>s Method</h></idx>
         <statement>
-          <!-- <figure> -->
-          <!--   <caption> -->
-          <!--     <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/">This figure needs a caption.</url> -->
-          <!--   </caption> -->
-            <image source="images/NewtonsMethod3.png" width="40%"/>
-          <!-- </figure> -->
-          <!-- \begin{wrapfigure}[]{r}{3.6in} -->
-          <!--     \vskip-6mm  -->
-          <!--     \captionsetup{labelformat=empty} -->
-          <!--         \centerline{\includegraphics*[height=1.8in,width=2.8in]{../Figures/NewtonsMethod3}} -->
-          <!--     \label{fig:NewtonsMethod3} -->
-          <!--   \end{wrapfigure} -->
+            <image source="DC/NewtonsMethod3.png" width="40%"/>
           <p>
             As you can see from the sketch above, the graphs of <m>y=x</m> and
             <m>y=\cos(x)</m> intersect exactly once. We want to use Newton<rsq/>s Method to find an
@@ -1207,10 +1130,11 @@
 
 
 
-      <problem xml:id="PROBLEMSqrta">
+      <exercise xml:id="PROBLEMSqrta">
         <title>Find the Pattern</title>
+        <idx><h>Algorithms</h><h>Newton<rsq/>s Method</h></idx>
         <introduction>
-          <image source="images/NewtonsMethod1.png" width="50%"/>
+          <image source="DC/NewtonsMethod1.png" width="50%"/>
         </introduction>
         <task>
           <statement>
@@ -1259,53 +1183,9 @@
             </p>
           </statement>
         </task>
-      </problem>
-      <!-- \begin{embeddedproblem-enumerate}[Find the pattern] -->
-      <!--   \begin{enumerate}[label={  (\alph*)}] -->
-      <!--   \item   Apply Newton<rsq/>s Method to the function <m>f(x)=x^2-a</m>  to -->
-      <!--     determine the iteration formula for approximating <m>\sqrt{a}</m>. Show -->
-      <!--     that this is precisely the <m>(n+1)</m>st iteration you get when using -->
-      <!--     the Babylonian method. -->
-      <!--                 <m>\sqrt{a}:</m> -->
-      <!--     <m>\displaystyle -->
-      <!--     r_{n+1}=\frac{1}{2} \left(r_n+\frac{a}{r_n} \right). -->
-      <!--     </m> -->
-      <!--   \item Use Newton<rsq/>s Method on the function <m>f(x)=x^3-a</m> to obtain -->
-      <!--     the iteration formula: -->
-      <!--     <m>\displaystyle -->
-      <!--     r_{n+1}=\frac{1}{3} \left(2r_n+\frac{a}{r_n^2} \right) -->
-      <!--     </m> -->
-      <!--     for  approximating <m>\sqrt[3]{a}</m>. -->
-
-      <!--     Notice that <m>\frac{1}{3} \left(2r_n+\frac{a}{r_n^2} \right)</m> -->
-      <!--     is the average of <m>r_n, r_n</m>, and <m>\frac{a}{r_n^2}</m>. -->
-      <!--   \item Obtain the iteration scheme -->
-      <!--     <m>\displaystyle -->
-      <!--     r_{n+1}=\frac{1}{4} \left(3r_n+\frac{a}{r_n^3} \right) -->
-      <!--     </m> -->
-      <!--     for approximating the fourth root of <m>a.</m> -->
-
-      <!--     Is this also an average? Of what? -->
-      <!--   \item Now find an iteration scheme to find the <m>k</m>th root of <m>a,</m> if -->
-      <!--     <m>a</m> is a positive number, and <m>k</m> is a positive integer. -->
-      <!--   \end{enumerate} -->
-      <!-- \end{embeddedproblem-enumerate} -->
-
-      <!-- <figure> -->
-      <!--   <caption> -->
-      <!-- <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/">This figure needs a caption.</url> -->
-      <!-- </caption> -->
-      <!-- <image source="images/NewtonsMethod1.png" width="50%"/> -->
-      <!-- </figure> -->
-      <!-- \begin{wrapfigure}[14]{r}{2.5in} -->
-      <!--   \vskip-8mm  -->
-      <!--   \captionsetup{labelformat=empty} -->
-      <!--   \centerline{\includegraphics*[height=2.3in,width=2.5in]{../Figures/NewtonsMethod1}} -->
-      <!--   \label{fig:NewtonsMethod1} -->
-      <!-- \end{wrapfigure} -->
+      </exercise>
 
       <p>
-
         If the initial guess is reasonably close to the root Newton<rsq/>s Method
         finds a very accurate approximation to the root of a function in just
         a few iterations most of the time. This made it extremely useful in
@@ -1323,7 +1203,6 @@
         we get <m>r_5=1.4141</m> which is correct to three decimals.
       </p>
       <p>
-
         But this paper-and-pencil procedure is not as simple as handing
         the problem off to your favorite computational software so a natural
         question to ask is, <q>Why bother? why should we learn this?</q>
@@ -1345,12 +1224,14 @@
        <mdash/>if you are designing a control procedure for a self-driving car.
       </p>
 
-      <problem xml:id="PROBLEMNewtMethSignOfIterates">
+      <exercise xml:id="PROBLEMNewtMethSignOfIterates">
+        <idx><h>Algorithms</h><h>Newton<rsq/>s Method</h></idx>
         <introduction>
           <p>
-            Even if you don<rsq/>t have any intuition into the problem a more than
-            cursory understanding of the algorithm itself can be helpful.  For
-            example, show that when Newton<rsq/>s Method is used:
+            Even if you don<rsq/>t have any intuition into a given
+            problem a more than cursory understanding of the algorithm
+            itself can be helpful.  For example, show that when
+            Newton<rsq/>s Method is used:
           </p>
         </introduction>
         <task xml:id="PROBLEMNewtMethSignOfIteratesA">
@@ -1381,24 +1262,7 @@
             </p>
           </statement>
         </task>
-      </problem>
-      <!-- \begin{embeddedproblem} -->
-      <!--   Even if you don<rsq/>t have any intuition into the problem a more than -->
-      <!--   cursory understanding of the algorithm itself can be helpful.  For -->
-      <!--   example, show that when Newton<rsq/>s Method is used: -->
-      <!--   \begin{enumerate}[label={  (\alph*)}]  -->
-      <!--   \item If <m>y(r_n)</m> and <m>y^\prime(r_n)</m> have the same sign then -->
-      <!--     <m>r_{n+1}\le r_n</m>. -->
-      <!--   \item If <m>y(r_n)</m> and <m>y^\prime(r_n)</m> have opposite signs -->
-      <!--     then <m>r_{n+1}\ge r_n</m>. -->
-      <!--   \item Suppose you are trying to compute a numerical -->
-      <!--     approximation of <m>\sqrt{2}</m> using an implementation of -->
-      <!--     Newton<rsq/>s Method, but you accidentally enter <m>x^2+2</m> as -->
-      <!--     you<rsq/>re function (instead of <m>x^2-2</m>). Explain how you can -->
-      <!--     use the results of (a) and (b) to know that the algorithm -->
-      <!--     is failing at the third iteration. -->
-      <!--   \end{enumerate} -->
-      <!-- \end{embeddedproblem} -->
+      </exercise>
 
       <p>
         So, how do you know if you should trust the approximation you get back
@@ -1414,9 +1278,6 @@
         Subtle and Spectacular. Let<rsq/>s take a look at them.
           </p>
 
-
-
-
         </subsection>
 
         <subsection xml:id="SUBSECTIONSpectacularFailure">
@@ -1428,7 +1289,8 @@
             The first is very easy to spot.
           </p>
 
-          <problem xml:id="PROBLEMNewtMethAlgGeom">
+          <exercise xml:id="PROBLEMNewtMethAlgGeom">
+            <idx><h>Algorithms</h><h>Newton<rsq/>s Method</h></idx>
             <statement>
               <p>
                 Suppose we want to find the root of <m>y=x^2-4x+7</m> and our initial
@@ -1438,7 +1300,7 @@
                 
               </p>
             </statement>
-          </problem>
+          </exercise>
           <p>
 
             Because Newton<rsq/>s Method requires that we divide by <m>y^\prime(r_n)</m> we
@@ -1455,7 +1317,8 @@
           </p>
 
 
-          <problem xml:id="PROBLEMNewtonsMethodOneThird">
+          <exercise xml:id="PROBLEMNewtonsMethodOneThird">
+            <idx><h>Algorithms</h><h>Newton<rsq/>s Method</h></idx>
             <introduction>
               <p>
                 The only root of the function <m>f(x)=x^{1/3}</m> is zero.
@@ -1483,20 +1346,7 @@
                 </p>
               </statement>
             </task>
-          </problem>
-          <!-- \begin{embeddedproblem}  -->
-          <!--   <!-\- \label{problem:NewtonsMethodOneThird} -\-> -->
-          <!--   The only root of the function <m>f(x)=x^{1/3}</m> is zero.   -->
-          <!--   \begin{enumerate}[label={  (\alph*)}] -->
-          <!--   \item Use Newton<rsq/>s Method with the initial guess, <m>r_1=1</m> to -->
-          <!--     see if it converges to zero.  -->
-          <!--     \hint{It won<rsq/>t.}  -->
-          <!--   \item Write down the iteration step (step 2) from Newton<rsq/>s -->
-          <!--     Method for this function. Use this to explain why the method will -->
-          <!--     not converge no matter what non-zero initial guess is used. -->
-          <!--   \end{enumerate} -->
-
-          <!-- \end{embeddedproblem} -->
+          </exercise>
           <p>
             Obviously we don<rsq/>t need to use Newton<rsq/>s Method to compute the root of
             <m>f(x)=x^{1/3}.</m> The point of this example is that Newton<rsq/>s Method will
@@ -1541,7 +1391,7 @@
               intended to find. The figure below shows what the
               difficulty is.
             </p>
-              <image source="images/NewtonsMethodFail1.png" width="40%"/>
+              <image source="DC/NewtonsMethodFail1.png" width="40%"/>
             <p>
 
               In a nutshell, our initial guess was too far away from the
@@ -1557,30 +1407,31 @@
               intended to find.
             </p>
             <p>
-              
-              We call this a subtle failure because Newton<rsq/>s Method will converge
-              without complaint. None of the computations will seem suspicious. A
-              software implementation of Newton<rsq/>s Method for this problem using
-              this initial guess will return a reasonable looking, but wrong,
-              number.  Although it is glaringly obvious what goes wrong when we
-              draw a picture of each successive approximation the fact is if we
-              use a software to compute the root most of the time there would be
-              no pictures. Notice that, unlike the spectacular failure above there
-              is nothing in the calculations being performed that could be
-              detected in software to let the human in charge know that things
-              have gone wrong. So, if you rely on software it is essential that
-              you take the time to consider the <q>reasonableness</q> of the answer
-              you obtain. If this is not understood there is a real risk that you
-              could accept a
-              ridiculous answer as correct.
+              We call this a subtle failure because Newton's Method
+              will converge without complaint. None of the
+              computations will seem suspicious. A software
+              implementation of Newton's Method for this problem using
+              this initial guess will return a reasonable looking, but
+              wrong, number.  It is glaringly obvious what goes wrong
+              when we draw the pictures. But when we use software to
+              compute the root most of the time there will be no
+              pictures. Notice that, unlike the spectacular failure
+              above there is nothing in the calculations being
+              performed that could be detected in software to let the
+              human in charge know that things have gone wrong. So, if
+              you rely on software it is essential that you take the
+              time to consider the <q>reasonableness</q> of the answer
+              you obtain. If this is not understood there is a real
+              risk that you could accept a ridiculous answer as
+              correct.
             </p>
             <aside>
               <title>Comment</title>
               <p>
                 This is embarrassing at best, deadly at
                 worst. Seriously. If what you are calculating is the
-                embedded software for, say the autopilot system, of an
-                airliner accepting the wrong answer midflight could
+                embedded software for, say the autopilot system of an
+                airliner, then accepting the wrong answer midflight could
                 easily be deadly. Don<rsq/>t take this lightly.
               </p>
             </aside>
@@ -1591,7 +1442,8 @@
             when a function has two roots which are very close together, for
             example if <m>f(x) = (10x^2-21x+11)(x-0.05)(x^3+7).</m>
           </p>
-          <problem xml:id="PROBLEMNewtMethHardCubic">
+          <exercise xml:id="PROBLEMNewtMethHardCubic">
+            <idx><h>Algorithms</h><h>Newton<rsq/>s Method</h></idx>
             <statement>
               <p>
                 Find approximations to all real roots of
@@ -1601,17 +1453,18 @@
                 </me>
               </p>
             </statement>
-          </problem>
+          </exercise>
           <p>
-
-            From the previous examples it should be clear that it is important
-            that the initial guess be sufficiently close to the root we seek that the
-            iterations will converge to the desired root. This, of course, begs
-            the question, <q>How close should our initial guess be?</q> This is
-            actually a hard question. Since we don<rsq/>t yet possess all of the
-            knowledge and skills needed we can<rsq/>t answer it in any definite way. So
-            we<rsq/>ll just say that in general your initial guess should be as close
-            as you can make it.
+            From the previous examples it should be clear that it is
+            important that the initial guess be close enough to the
+            root we seek to guarantee that the iterations will
+            converge to that root. This, of course, begs the question,
+            <q>How close should our initial guess be?</q> This is
+            actually a hard question. Since we don<rsq/>t yet possess
+            all of the knowledge and skills needed we can<rsq/>t
+            answer it in any definite way. So we<rsq/>ll just say that
+            in general your initial guess should be as close as you
+            can make it.
           </p>
           <p>
 
@@ -1621,7 +1474,8 @@
           </p>
 
 
-          <problem>
+          <exercise>
+            <idx><h>Algorithms</h><h>Newton<rsq/>s Method</h></idx>
             <introduction>
               <p>
               </p>
@@ -1669,46 +1523,9 @@
             </p>
           </statement>
         </task>
-</problem>
-<!-- \begin{embeddedproblem-enumerate}  ;;; MULTILEVEL PROBLEM -->
-<!--   \begin{enumerate}[label={  (\alph*)}] -->
-<!--   \item Use Newton<rsq/>s Method to find approximations to the -->
-<!--     positive roots closest to zero of each of the following functions. -->
-<!--     \comment{Yes, we know you can find them exactly using -->
-<!--       Algebra and Trigonometry. The point here is to see how good our -->
-<!--       guesses have to be sometimes for Newton<rsq/>s Method to work.} -->
+          </exercise>
 
-<!--       <ol> -->
-<!--         <li> -->
-<!--           <p> -->
-<!--             <m>y(x)=x(x^2-.01)</m> -->
-<!--           </p> -->
-<!--         </li> -->
-<!--         <li> -->
-<!--           <p> -->
-<!--             <m>y(x)=(x^2-9)(x^2-.01)</m> -->
-<!--           </p> -->
-<!--         </li> -->
-<!--         <li> -->
-<!--           <p> -->
-<!--             <m>y(x)=x^2\sin(4x)</m> -->
-<!--           </p> -->
-<!--         </li> -->
-<!--         <li> -->
-<!--           <p> -->
-<!--             <m>y(x)=x^2\cos(4x)</m> -->
-<!--           </p> -->
-<!--         </li> -->
-<!--       </ol> -->
-
-<!--   \item If we were to next ask you to find approximations of the -->
-<!--     negative roots closest to zero of each of these functions would you -->
-<!--     need to use Newton<rsq/>s Method again? Explain. -->
-<!--   \end{enumerate} -->
-<!-- \end{embeddedproblem-enumerate} -->
-
-
-<problem xml:id="PROBLEMNMByGraphing">
+<exercise xml:id="PROBLEMNMByGraphing">
   <introduction>
     <p>
       Do not try to answer the questions in this problem
@@ -1736,8 +1553,8 @@
         We said <q>almost never</q> in <xref ref="PROBLEMNMByGraphingA">part</xref> because there is a
         small interval of numbers greater than <m>2</m> with the property that Newton<rsq/>s Method
         will converge if <m>r_1</m> is any number in the
-        interval. Find an interval that works. (It doesn<rsq/>t have to be
-        the largest possible interval.)
+        interval. Find an interval that works. It doesn<rsq/>t have to be
+        the largest possible interval.
       </p>
     </statement>
   </task>
@@ -1750,33 +1567,10 @@
       </p>
     </statement>
   </task>
-</problem>
-<!-- \begin{embeddedproblem} -->
-<!--   Do not try to answer the questions in this problem -->
-<!--   analytically. Use a graphing calculator, or graphing software to -->
-<!--   explore these questions visually. -->
+</exercise>
 
-<!--   The function -->
-<!--   <me> -->
-<!--   f(x)=4x^{3}-30x^{2}+72x-52. -->
-<!--   </me> -->
-<!--   has exactly one real root and it is between one and two. -->
-<!--   \begin{enumerate}[label={  (\alph*)}] -->
-<!--   \item Show that with an initial guess, <m>r_1 \gt 2</m>, -->
-<!--     Newton<rsq/>s Method almost never converges to the root. -->
-<!--   \item We said <q>almost never</q> in part (a) because there is a -->
-<!--     small interval of numbers greater than <m>2</m> with the property that Newton<rsq/>s Method -->
-<!--     will converge if <m>r_1</m> is any number in the -->
-<!--     interval. Find an interval that works. \comment{It doesn<rsq/>t have to be -->
-<!--       the largest possible interval.} -->
-<!--   \item Show that if you start with an initial guess of <m>r_1=2</m> or -->
-<!--     <m>r_1=3</m> Newton<rsq/>s Method will not even generate the first iterate: -->
-<!--     <m>r_2.</m> Explain. -->
-<!--   \end{enumerate} -->
-<!-- \end{embeddedproblem} -->
-
-
-<problem>
+<exercise  xml:id="PROBLEMNMThirdRootCubic">
+  <idx><h>Algorithms</h><h>Newton<rsq/>s Method</h></idx>
   <statement>
     <p>
       Suppose that a cubic polynomial has three real roots, <m>a</m>, <m>b</m>,
@@ -1786,7 +1580,7 @@
       value of the third root, <m>c</m>, in one iteration.
     </p>
   </statement>
-</problem>
+</exercise>
 
 
 </subsection>
@@ -1800,7 +1594,7 @@
   <!--   <caption> -->
   <!--     <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/">This figure needs a caption.</url> -->
   <!--   </caption> -->
-    <image source="images/EulerFig1.png" width="40%"/>
+    <image source="DC/EulerFig1.png" width="40%"/>
   <!-- </figure> -->
   <!-- \begin{wrapfigure}[10]{r}{2in} -->
   <!--   \captionsetup{labelformat=empty} -->
@@ -1855,6 +1649,7 @@
       \dfdx{y}{x} = y, \amp{}\amp{}\text{and}\amp{}\amp{}  y(0)=1.
 </mrow>  
     </mdn>
+<idx><h>Vocabulary</h><h>Initial Value Problem</h></idx>
     A problem like the one stated in <xref ref="IVPExpDiffeq1">Formula</xref> is
     called an <term>Initial Value Problem</term>, or IVP. We will give a formal
     definition below (<xref ref="DEFINITIONIVP">Definition</xref>).
@@ -1876,13 +1671,13 @@
     passes through the point <m>(0,1)</m>.  From the differential equation in
     <xref ref="IVPExpDiffeq1">IVP</xref>)  we see that
     <me>
-      \eval{\dfdx{y}{x}}{x}{0} = y(0) =1.
+      \dfdxat{y}{x}{0} = y(0) =1.
     </me>
     which means that the curve passes through the point <m>(0,1)</m> with a
     slope equal to <m>1</m>.  So the equation of the line
     tangent to our curve is
     <me>
-      y-1=\underbrace{\left[\eval{\dfdx{y}{x}}{x}{0}\right]}_{=y(0)=1}(x-0)
+      y-1=\underbrace{\left[\dfdxat{y}{x}{0}\right]}_{=y(0)=1}(x-0)
       \text{ or }
       y=x+1.
     </me>
@@ -1907,7 +1702,7 @@
   <!--   <caption> -->
   <!--     <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/">This figure needs a caption.</url> -->
   <!--   </caption> -->
-    <image source="images/exp-piecewise-linear2.png" width="60%"/>
+    <image source="DC/exp-piecewise-linear2.png" width="60%"/>
   <!-- </figure> -->
   <!-- \begin{wrapfigure}[]{r}{3in} -->
   <!-- \captionsetup{labelformat=empty} -->
@@ -1984,7 +1779,7 @@
     </p>
   </aside>
 
-  <image source="images/exp-piecewise-linear3.png" width="50%"/>
+  <image source="DC/exp-piecewise-linear3.png" width="50%"/>
   <p>
     The solution of this particular IVP  turns out to be
     incredibly useful in mathematics, theoretical physics, engineering,
@@ -2007,6 +1802,8 @@
   <definition xml:id="DEFINITIONIVP">
     <title>Initial Value Problem (IVP)</title>
 <idx><h>Definition</h><h>Initial Value Problem (IVP)</h></idx>
+<idx><h>Vocabulary</h><h>Initial Value Problem (IVP)</h></idx>
+<idx><h>Vocabulary</h><h>Initial Value</h></idx>
     <statement>
       <p>
         <!-- \label{def:IVP} -->
@@ -2019,9 +1816,10 @@
 
     Don<rsq/>t let the formalism of this definition scare you. All it says is
     that at every point <m>(x,y)</m> the slope of <m>y(x)</m>,
-    <m>\left(\dfdx{y}{x}\right)</m>, is given by some formula, <m>f(x,y)</m>,
-    which may involve both <m>x</m> and <m>y</m> and that we know the value of <m>y(x)</m> for a
-    single value of <m>x</m>. Specifically, at  <m>x=x_0</m>.
+    <m>\left( \text{that is, } \dfdx{y}{x}\right)</m>, is given by some formula, <m>f(x,y)</m>,
+    which may involve both <m>x</m> and <m>y</m>.  And  that at a
+    particular value of <m>x</m> (specifically, at  <m>x=x_0</m>) we
+    know the value of <m>y(x)</m>: <m>y(x_0)=y_0</m>.
   </p>
 <aside>
 <title>Comment</title>
@@ -2085,13 +1883,13 @@
       to the curve <m>y=y(x)</m>. The next two
       problems demonstrate this.
     </p>
-    <problem xml:id="PROBLEMEulerSine">
+    <exercise xml:id="PROBLEMEulerSine">
       <statement>
         <p>
           Observe that <m>y=\sin(x)</m> satisfies the IVP
-          <me>
-            \dfdx{y}{x}=\cos(x),\ \ \  y(0)=0.
-          </me>
+          <md>
+            <mrow>\dfdx{y}{x}\amp{}=\cos(x), \amp{} y(0)=0.</mrow>
+          </md>.
 
           Use Euler<rsq/>s Method on this IVP to complete the table. Then plot the
           points you generated and the graph of <m>y=\sin(x)</m> on the same
@@ -2125,19 +1923,16 @@
 
 
 
-<!-- <image source="images/EulerTable1.png" width="60%" /> -->
-<!-- \centerline{\includegraphics*[height=1.4in,width=5.1in]{../Figures/EulerTable1}} -->
 </statement>
-</problem>
+    </exercise>
 
-
-<problem xml:id="PROBLEMEulerCosine">
+<exercise xml:id="PROBLEMEulerCosine">
   <statement>
     <p>
       Observe that <m>y=\cos(x)</m> satisfies the IVP
-      <me>
-        \dfdx{y}{x}=-\sin(x),\ \ \  y(0)=1.
-</me>
+      <md>
+<mrow>        \dfdx{y}{x}\amp{}=-\sin(x), \amp{} y(0)=1</mrow>
+      </md>.
 
 Use Euler<rsq/>s Method on this IVP to complete the following table.
 Then plot the points you generated and the graph of <m>y=\cos(x)</m> on
@@ -2168,13 +1963,13 @@ set of axes so you can compare them.
 <row><cell><m>15</m></cell><cell right="minor"><m>1.5</m></cell><cell><m></m></cell></row>
 
 </tabular>
-<!-- <image source="images/EulerTable2.png" width="60%" /> -->
+<!-- <image source="DC/EulerTable2.png" width="60%" /> -->
 <!-- \centerline{\includegraphics*[height=1.5in,width=5.1in]{../Figures/EulerTable2}} -->
 </statement>
-</problem>
+</exercise>
 
 
-<problem>
+<exercise>
   <introduction>
     <p>
       Use Euler<rsq/>s Method to approximate the solutions of the given IVPs
@@ -2212,7 +2007,7 @@ connecting them with straight line segments.
 </p>
 </statement>
 </task>
-</problem>
+</exercise>
 <!-- \begin{embeddedproblem} -->
 <!--   Use Euler<rsq/>s Method to approximate the solutions of the given IVPs -->
 <!--   by constructing a table like the ones in -->
@@ -2227,7 +2022,7 @@ connecting them with straight line segments.
 <!--   \end{enumerate} -->
 <!-- \end{embeddedproblem} -->
 
-<problem>
+<exercise>
   <introduction>
     <p>
       Use Euler<rsq/>s Method to approximate the solutions of the given IVPs
@@ -2265,23 +2060,10 @@ connecting them with straight line segments.
 </p>
 </statement>
 </task>
-</problem>
-<!-- \begin{embeddedproblem} -->
-<!--   Use Euler<rsq/>s Method to approximate the solutions of the given IVPs -->
-<!--   by constructing a table like the ones in -->
-<!--   <xref ref="PROBLEMEulerSine">Problems</xref> -->
-<!--   <xref ref="PROBLEMEulerCosine">and</xref>. Then plot the points you found, -->
-<!--   connecting them with straight line segments. -->
-<!--   \begin{enumerate}[label={  (\alph*)}] -->
-<!--     \item <m>\dfdx{y}{x}=\frac{1}{y},\ \ \ y(1)=1</m> -->
-<!--     \item <m>\dfdx{y}{x}=\frac{1}{y^2},\ \ \ y(1)=1</m> -->
-<!--     \item <m>\dfdx{y}{x}=\frac{1}{y^3},\ \ \ y(1)=1</m> -->
-<!--     \item <m>\dfdx{y}{x}=\frac{1}{y^4},\ \ \ y(1)=1</m>  -->
-<!--   \end{enumerate} -->
-<!-- \end{embeddedproblem} -->
+</exercise>
 
 
-<problem>
+<exercise>
   <introduction>
     <p>
       Use Euler<rsq/>s Method to approximate the solutions of the given IVPs
@@ -2354,31 +2136,11 @@ connecting them with straight line segments.
 </p>
 </statement>
 </task>
-</problem>
-<!-- \begin{embeddedproblem}  -->
-<!--   Use Euler<rsq/>s Method to approximate the solutions of the given IVPs -->
-<!--   by constructing a table like the ones in -->
-<!--   <xref ref="PROBLEMEulerSine">Problems</xref> -->
-<!--   <xref ref="PROBLEMEulerCosine">and</xref>. Then plot the points you found, -->
-<!--   connecting them with straight line segments. -->
-<!--   \begin{enumerate}[label={  (\alph*)}] -->
-<!--     \item <m>\dfdx{y}{x}=xy,\ \ \ y(0)=1</m> -->
-<!--     \item <m>\dfdx{y}{x}=x^2y,\ \ \ y(0)=1</m> -->
-<!--     \item <m>\dfdx{y}{x}=xy^2,\ \ \ y(0)=1</m> -->
-<!--     \item <m>\dfdx{y}{x}=x^2y^2,\ \ \ y(0)=1</m>  -->
-<!--     \item <m>\dfdx{y}{x}=\frac{x}{y},\ \ \ y(1)=1</m> -->
-<!--     \item <m>\dfdx{y}{x}=\frac{x^2}{y},\ \ \ y(1)=1</m> -->
-<!--     \item <m>\dfdx{y}{x}=\frac{x}{y^2},\ \ \ y(1)=1</m> -->
-<!--     \item <m>\dfdx{y}{x}=\frac{x^2}{y^2},\ \ \ y(1)=1</m> -->
-<!--     \item <m>\dfdx{y}{x}=\frac{x^2}{y^2},\ \ \ y(1)=2</m> -->
-<!--   \end{enumerate} -->
-<!-- \end{embeddedproblem}     -->
+</exercise>
 
-
-
-<problem xml:id="PROBLEMTractrix">
+<exercise xml:id="PROBLEMTractrix">
   <introduction>
-    <image source="images/Tractrix.png" width="40%"/>
+    <image source="DC/Tractrix.png" width="40%"/>
     <!-- \begin{wrapfigure}[10]{r}{2.5in} -->
     <!--       \captionsetup{labelformat=empty} -->
     <!--       \vskip-4mm -->
@@ -2449,7 +2211,7 @@ are proportional.
 <row><cell><m>15</m></cell><cell right="minor"><m>1.5</m></cell><cell><m></m></cell></row>
 
 </tabular>
-<!-- <image source="images/EulerTable3.png" width="40%" /> -->
+<!-- <image source="DC/EulerTable3.png" width="40%" /> -->
 
 <!-- \includegraphics*[height=1.25in,width=5in]{../Figures/EulerTable3} -->
 </statement>
@@ -2462,15 +2224,15 @@ are proportional.
 </p>
 </statement>
 </task>
-</problem>
+</exercise>
 
-<problem xml:id="PROBLEMPursuit1">
+<exercise xml:id="PROBLEMPursuit1">
   <introduction>
-    <figure>
-      <caption>
-This figure needs a caption.</caption>
-<image source="images/PursuitCurve2.png" width="50%"/>
-</figure>
+<!--     <figure> -->
+<!--       <caption> -->
+<!-- This figure needs a caption.</caption> -->
+<image source="DC/PursuitCurve2.png" width="50%"/>
+<!-- </figure> -->
 <!-- \begin{wrapfigure}[11]{r}{3in} -->
 <!--     \captionsetup{labelformat=empty} -->
 <!--     \vskip-8mm -->
@@ -2500,9 +2262,9 @@ This figure needs a caption.</caption>
   <statement>
     <p>
       Show that the missile<rsq/>s path must satisfy the IVP
-      <me>
-        \dfdx{y}{x}=\frac{\frac{2s}{3}-y}{1-x},\ \       y(0)=0.r
-</me>
+      <md>
+    <mrow>    \dfdx{y}{x}\amp{}=\frac{\frac{2s}{3}-y}{1-x},\amp{}       y(0)=0.</mrow>
+</md>
 
 </p>
 </statement>
@@ -2546,7 +2308,7 @@ This figure needs a caption.</caption>
 <row><cell><m>15</m></cell><cell right="minor"><m>1.5</m></cell><cell><m></m></cell></row>
 
 </tabular>
-<image source="images/EulerTable4.png" width="40%" />
+<!-- <image source="DC/EulerTable4.png" width="40%" /> -->
 
 <!-- \includegraphics*[height=1.25in,width=5in]{../Figures/EulerTable4} -->
 
@@ -2563,42 +2325,7 @@ This figure needs a caption.</caption>
 </p>
 </statement>
 </task>
-</problem>
-<!-- \begin{embeddedproblem}  -->
-<!--   <!-\- \label{PROBLEMpursuit} -\-> -->
-<!--   \begin{wrapfigure}[11]{r}{3in} -->
-<!--     \captionsetup{labelformat=empty} -->
-<!--     \vskip-8mm  -->
-<!--   \centerline{\includegraphics*[height=2in,width=3in]{../Figures/PursuitCurve2}} -->
-<!-- \label{fig:PursuitCurve2Euler} -->
-<!-- \end{wrapfigure} -->
-<!-- Suppose a rocket <m>R</m> travels up the line <m>x=1</m> at a constant speed -->
-<!-- <m>v</m>. As the rocket passes through the point <m>(1,0)</m>, a  missile -->
-<!-- <m>M</m> is fired from the origin directly at the rocket.  Assume that the -->
-<!-- missile travels at a speed which is <m>\frac32</m> times the speed of the -->
-<!-- rocket and is always aimed directly at the rocket. At time <m>t</m> the -->
-<!-- missile is at the point <m>M(x,y)</m> and the rocket is at the point -->
-<!-- <m>R(1,vt)</m> We want to find the path the missile will follow.  The -->
-<!-- diagram at the right shows the situation at time <m>t</m>.%  -->
-<!--     \begin{enumerate}[label={  (\alph*)}] -->
-<!--   \item Find <m>s</m> if <m>s</m> denotes the length of the the missile<rsq/>s path -->
-<!--     at time <m>t</m>. -->
-<!--   \item Show that the missile<rsq/>s path must satisfy the IVP -->
-<!--     <me> -->
-<!--     \dfdx{y}{x}=\frac{\frac{2s}{3}-y}{1-x},\ \       y(0)=0.r -->
-<!--     </me> -->
-<!--     \hint{Find a triangle which is proportional to the differential -->
-<!--       triangle shown.} -->
-<!--   \item Apply Euler<rsq/>s Method to fill in the following -->
-<!--     table. -->
-<!--     \leftline{\includegraphics*[height=1.25in,width=5in]{../Figures/EulerTable4}} -->
-
-<!--                                                       \item Plot the points obtained in part b to see if this resembles the -->
-<!--     path you think the missile would follow. -->
-<!--   \end{enumerate} -->
-<!--   We will re-visit this problem and find the exact solution in <xref ref="SUBSECpursuit">Section~</xref> -->
-<!-- \end{embeddedproblem} -->
-
+</exercise>
 
 </section>
 <section xml:id="SECTIONmore-high-deriv">
@@ -2617,7 +2344,7 @@ This figure needs a caption.</caption>
 <!--   \label{fig:HigherLagr1} -->
 <!-- \end{wrapfigure} -->
 <p>
-
+<idx><h>Vocabulary</h><h>Simple Harmonic Oscillator (SHO)</h></idx>
   In the diagram below we see a pendulum of length <m>l</m> with an
   object of mass <m>m</m> at the end. If the object is moved away from its
   equilibrium point the pendulum will begin to swing back and
@@ -2626,12 +2353,12 @@ This figure needs a caption.</caption>
 manner very like the motion of the <term>Simple Harmonic Oscillators</term>
 (SHO) that we saw in <xref ref="SUBSECTIONsimple-harm-oscill">Section</xref>.
 </p>
-<image source="images/HigherLagr1.png" width="40%"/>
+<image source="DC/HigherLagr1.png" width="40%"/>
 
 
 <p>
   If the motion of the pendulum actually is an SHO then it will
-  necessarily satisfy <xref ref="EQUATIONSHO">Equation</xref>. In this case that means
+  necessarily satisfy <xref ref="EQUATIONSHO">equation</xref>. In this case that means
   that
   <me>
     \dfdxn{\theta}{t}{2}=-\omega^2\theta,
@@ -2650,7 +2377,7 @@ We<rsq/>ll investigate to see if that is true.
   motion. We will focus our attention on the tangential force.
 </p>
 <p>
-
+<idx><h>Newton, Isaac</h><h>Second Law of Motion</h></idx>
   If <m>\theta</m> is measured in radians then the length of the arc traced
   by the object is <m>s=l\theta</m>.  Thus we see that the tangential
   component of the force due to gravity is given by <m>mg\sin(\theta)</m> as
@@ -2677,22 +2404,11 @@ swinging pendulum is not a Simple Harmonic Oscillator. Its
 motion is slightly more complex.
 </p>
 
-<!-- <figure> -->
-<!--   <caption> -->
-<!-- <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/">This figure needs a caption.</url> -->
-<!-- </caption> -->
-<!-- </figure> -->
-<!-- \begin{wrapfigure}[7]{r}{2.4in} -->
-<!--   \vskip-4mm  -->
-<!--   \captionsetup{labelformat=empty} -->
-<!--   \centerline{\includegraphics*[height=1.2in,width=2.4in]{../Figures/SinApprox1}} -->
-<!--   \label{fig:SinApprox1} -->
-<!-- \end{wrapfigure} -->
 <p>
 
   But only slightly.
 </p>
-<image source="images/SinApprox1.png" width="50%"/>
+<image source="DC/SinApprox1.png" width="50%"/>
 <p>
 
   By examining the graphs of <m>y=\sin(x)</m> and <m>y=x</m> we can see the that
@@ -2710,20 +2426,20 @@ which we recognize as <xref ref="EQUATIONSHO">equation</xref> with <m>\omega^2 =
 </p>
 
 
-<exercise>
+<problem>
   <statement>
     <p>
 Show that the equation of the line tangent to <m>y=\sin(x)</m> at <m>x=0</m>
 is <m>y=x</m>.
 </p>
+<image source="DC/HigherLagr4.png" width="50%"/>
 </statement>
-</exercise>
+</problem>
 
 <!-- <figure> -->
 <!--   <caption> -->
 <!-- <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/" visual="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/">This figure needs a caption.</url> -->
 <!-- </caption> -->
-<!-- <image source="images/HigherLagr4.png" width="50%"/> -->
 <!-- </figure> -->
 <!-- \begin{wrapfigure}[]{l}{2.3in} -->
 <!--   \captionsetup{labelformat=empty} -->
@@ -2781,10 +2497,10 @@ notation in the first place.
   <md>
     <mrow>  \dfdx{y}{x}\amp = f^\prime(x) \text{ (first derivative)}</mrow>
     <intertext>Extending this further, we have</intertext>
-    <mrow>  \dfdxn{y}{x}{2} \amp = f^{\prime\prime}(x)=f^{(2)}(x) \text{
+    <mrow>  \dfdxn{y}{x}{2} =\amp  f^{\prime\prime}(x)=f^{(2)}(x) \text{
     (second derivative)}</mrow>
-    <mrow>  \dfdxn{y}{x}{3} \amp = f^{\prime\prime\prime}(x)=f^{(3)}(x) \text{ (third derivative)}</mrow>
-    <mrow>  \dfdxn{y}{x}{4} \amp = f^{\prime\prime\prime\prime}(x)=f^{(4)}(x) \text{ (fourth
+    <mrow>  \dfdxn{y}{x}{3} =\amp  f^{\prime\prime\prime}(x)=f^{(3)}(x) \text{ (third derivative)}</mrow>
+    <mrow>  \dfdxn{y}{x}{4} =\amp  f^{\prime\prime\prime\prime}(x)=f^{(4)}(x) \text{ (fourth
     derivative)}</mrow>
     <mrow>  \amp  \vdots</mrow>
   </md>
@@ -2802,7 +2518,7 @@ notation in the first place.
   </statement>
 </exercise>
 <p>
-  Applying the result of <xref ref="EXERCISEGenTan">Drill</xref> to <m>f(x)=\sin(x)
+  Applying the result of <xref ref="EXERCISEGenTan"></xref> to <m>f(x)=\sin(x)
   </m> we see that the equation of the line tangent to the graph of
   <m>y=\sin(x)</m> at <m>(0,0)</m> is given by
   <me>
@@ -2871,14 +2587,13 @@ notation in the first place.
   <m>x=0</m>. That is,
   <me>
     f^\prime(0)=\eval{\dfdx{q}{x}}{x}{0}
-    =\bigeval{B+2Cx}{x}{0}
-    B.
+    =\eval{B+2Cx}{x}{0}=  B.
   </me>
   So <m>f^\prime(0)=B</m>.
 </p>
 
 
-<problem>
+<exercise>
   <introduction>
     <p>
     </p>
@@ -2916,28 +2631,10 @@ notation in the first place.
       </p>
     </statement>
   </task>
-</problem>
-<!-- \begin{embeddedproblem-enumerate} -->
-<!--   \begin{enumerate}[label={  (\alph*)}] -->
-<!--   \item Differentiate again and set the second derivatives at <m>x=0</m> equal -->
-<!--     to one another  to show that -->
-<!--     <me> -->
-<!--     C= \frac{f^{\prime\prime}(0)}{2}. -->
-<!--     </me> -->
-<!--   \item Show that if the cubic <m>c(x)=A+Bx+Cx^2+Dx^3</m> has the same -->
-<!--     third derivative as <m>f(x)</m> at <m>x=0</m> then -->
-<!--     <me> -->
-<!--     D=\frac{f^{\prime\prime\prime}(0)}{3\cdot2} = \frac{f^{(3)}(0)}{3\cdot2}. -->
-<!--     </me> -->
-<!--   \item Show that if the quartic <m>q(x)=A+Bx+Cx^2+Dx^3+Ex^4</m> has the -->
-<!--     same fourth derivative as <m>f(x)</m> at <m>x=0</m> then -->
-<!--     <me> -->
-<!--     E=\frac{f^{(4)}(0)}{4\cdot 3\cdot2}. -->
-<!--     </me> -->
-<!--   \end{enumerate} -->
-<!-- \end{embeddedproblem-enumerate} -->
+</exercise>
 
 <p>
+<idx><h>Vocabulary</h><h>Taylor Polynomial</h></idx>
   It seems clear that we could use this procedure in a
   <q>machine-like</q> way to produce a polynomial approximation of any
   degree.  In fact, this <q>machine</q> for producing approximating
@@ -2952,7 +2649,8 @@ notation in the first place.
   Taylor</url> (<m>1685-1731</m>), but was known to mathematiciasn before Taylor
   (including Newton and Leibniz).
 </p>
-<problem>
+
+<exercise>
   <introduction>
     <p>
       This is the process we used to generate our cubic approximation to the
@@ -2995,27 +2693,9 @@ notation in the first place.
       </p>
     </statement>
   </task>
-</problem>
-<!-- \begin{embeddedproblem} -->
-<!--   This is the process we used to generate our cubic approximation to the -->
-<!--   sine function just before <xref ref="EQUATIONSHO5">Equation~\#</xref>. -->
-<!--   \begin{enumerate}[label={  (\alph*)}] -->
-<!--   \item Show that using this process on <m>y=\sin(x)</m> will generate -->
-<!--     the polynomial that we showed you earlier: -->
-<!--     <m>\sin(x)\approx x-\frac{x^3}{6}</m>. -->
-<!--   \item Find the fourth degree Taylor Polynomial approximation for -->
-<!--     <m>f(x)=\sin(x)</m>.      -->
-<!--                 \comment{You may find this puzzling for a moment or two. Make sure -->
-<!--       you do all the calculations correctly and then believe -->
-<!--         your calculations.} -->
-<!--   \item Find the fifth degree Taylor Polynomial approximation for -->
-<!--     <m>f(x)=\sin(x)</m> and graph both functions on the same set of axes. -->
-<!--   \item Find the sixth degree Taylor Polynomial approximation for -->
-<!--     <m>f(x)=\sin(x)</m>. -->
-<!--   \end{enumerate} -->
-<!-- \end{embeddedproblem} -->
+</exercise>
 
-<problem>
+<exercise>
   <statement>
     <p>
       Find the second and fourth degree Taylor Polynomial approximations
@@ -3024,7 +2704,7 @@ notation in the first place.
       this case?  Explain.
     </p>
   </statement>
-</problem>
+</exercise>
 
 <p>
   In general the Taylor Polynomial, of degree <m>n</m>, that approximates a

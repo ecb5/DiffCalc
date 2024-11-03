@@ -28,6 +28,8 @@ Actually, a physicist would say that soap bubbles are
 </aside>
 
 <p>
+<idx><h>Vocabulary</h><h>objective function</h></idx>
+<idx><h>Vocabulary</h><h>constraints</h></idx>
 Mathematically speaking all optimization starts in the same place: We
 have some quantity (revenue, tax liability, temperature, resource
 consumption, travel time, potential energy, volume, surface area,
@@ -54,7 +56,7 @@ called . . . well, they<rsq/>re called the <term>constraints</term>.
 <p>
   If a function, <m>f(x)</m>, is differentiable at <m>x=a</m> and
   <m>f(a)</m> is either a maximum or a minimum then
-  <m>\geneval{\dfdx{f}{x}}{x=a}=0</m>.
+  <m>\dfdxat{f}{x}{a}=0</m>.
 </p>
 </theorem>
 
@@ -63,7 +65,7 @@ In view of Fermat<rsq/>s Theorem it appears that a likely strategy for
 attacking optimization problems is to find an expression, say <m>f(x)</m>,
 for the objective function and then solve the equation
 <m>\dfdx{f}{x} = 0</m>. In fact, this is precisely the strategy we used in
-<xref ref="SECTIONrates-change">Section</xref> to find the maximal height attained by
+<xref ref="SECTIONGalileoDrops">Section</xref> to find the maximal height attained by
 a tossed ball. If we toss a ball upward we know that it will reach a
 maximal height.  At the top of its flight, when the ball transitions
 from upward movement to downward movement, there is a moment when its
@@ -104,13 +106,13 @@ To begin, take careful note of what Fermat<rsq/>s Theorem says and, just as
 important, what it does not say: It says that if <m>(a, f(a))</m> is a
 point on the graph of a differentiable function <m>f(x)</m>, and if <m>f(a)</m>
 is known to be an extremum (either a maximum or a minimum) then
-<m>\geneval{\dfdx{f}{x}}{x=a}=0</m>.
+<m>\\dfdxat{f}{x}{a}=0</m>.
 </p>
 
 <p>
-Fermat<rsq/>s Theorem does not say that if <m>\geneval{\dfdx{f}{x}}{x=a}=0</m>
+Fermat<rsq/>s Theorem does not say that if <m>\dfdxat{f}{x}{a}=0</m>
 then <m>f(a)</m> must be an extremum. In fact, that is not necessarily
-true.  For example, if <m>f(x)=x^3</m> then <m>\geneval{\dfdx{f}{x}}{x=0}=0</m>
+true.  For example, if <m>f(x)=x^3</m> then <m>\\dfdxat{f}{x}{0}=0</m>
 but the graph has neither a maximum or a minimum at <m>(0, f(0))</m>.
 Confirm this by graphing it.
 </p>
@@ -204,11 +206,11 @@ means to that end, not an end in themselves.
 
   The diagram below is a visualization of this problem. 
 </p>
-<image source="images/LineDist1.png" width="50%"/><!--   <figure> -->
+<image source="DC/LineDist1.png" width="50%"/><!--   <figure> -->
 <!-- <caption> -->
 <!-- <url href="https://echengphoto.com/" visual="https://echengphoto.com/">This figure needs a caption.</url> -->
 <!-- </caption> -->
-<!-- <image source="images/LineDist1.png" width="50%"/> -->
+<!-- <image source="DC/LineDist1.png" width="50%"/> -->
 <!-- </figure> -->
 <!-- \begin{wrapfigure}[]{r}{1.7in} -->
 <!--     \captionsetup{labelformat=empty} -->
@@ -340,7 +342,7 @@ Solving for <m>x</m> gives
 <p>
   To find <m>y</m> we use our constraint and the value of <m>x</m> from
   <xref ref="EQUATIONLineDist2">equation</xref>,
-  <me> \geneval{y}{x=-1/2}=\geneval{\frac13(2-5x)}{x=-1/2}=\frac32.</me>
+  <me> \eval{y}{x}{-1/2}=\eval{\frac13(2-5x)}{x}{-1/2}=\frac32.</me>
 </p>
 <p>
 
@@ -351,8 +353,8 @@ Solving for <m>x</m> gives
   our area formula which yields
   <md>
 <mrow>
-    \geneval{A(x,y)}{(x,y)} {\left(-\frac12, \frac32\right)} \amp
-    =\geneval{(x-2)^2+(y-3)^2} {(x,y)}
+    \eval{A(x,y)}{(x,y)} {\left(-\frac12, \frac32\right)} \amp
+    =\eval{(x-2)^2+(y-3)^2} {(x,y)}
     {\left(-\frac{1}{2},\frac32\right)}
 </mrow>
 <mrow>
@@ -848,7 +850,7 @@ trickier.
   Notice that for both the maximal and the minimal square one of the
   sides appears to be orthogonal to (the line tangent to) the ellipse.
 </p>
-  <image source="images/EllipseWithSquares.png" width="60%" />
+  <image source="DC/EllipseWithSquares.png" width="60%" />
 <!-- \centerline{\includegraphics*[height=2in,width=2.8in]{../Figures/EllipseWithSquares}} -->
 </introduction>
 <task>
@@ -867,7 +869,7 @@ trickier.
     The figure below shows an arbitrary, differentiable curve,
     <m>C</m>, and an arbitrary point <m>(a,b)</m>.
 </p>
-<image source="images/MaxOrth1.png" width="30%" />
+<image source="DC/MaxOrth1.png" width="30%" />
 <p>
     <!-- \includegraphics*[height=1in,width=1.5in]{../Figures/MaxOrth1} -->
     Suppose that the area of a square with one corner at <m>(a,b)</m> and
@@ -887,7 +889,7 @@ trickier.
     </li>
     <li>
     <p>
-    Use the fact that <m>\geneval{\dfdx{A}{x}}{(x_0,y_0)}=0</m> to      find the slope of <m>C</m> at <m>(x_0,y_0)</m>.
+    Use the fact that <m>\mineval{\dfdx{A}{x}}{(x_0,y_0)}=0</m> to      find the slope of <m>C</m> at <m>(x_0,y_0)</m>.
     </p>
     </li>
     <li>
@@ -1108,7 +1110,7 @@ Adequality to solve the following problem which is closely related to
 <problem>
 <introduction>
         
-      <image source="images/Lagrange1.png" width="40%"/>
+      <image source="DC/Lagrange1.png" width="40%"/>
 <!-- \begin{wrapfigure}[6]{r}{1.75in} -->
 <!--     \captionsetup{labelformat=empty} \vskip-6mm  -->
 <!--     \centerline{\includegraphics*[height=1.3in,width=1.75in]{../Figures/Lagrange1}} -->
@@ -1392,7 +1394,7 @@ There is usually more than one way to solve a given
 <figure  xml:id="FIGURETriFixedBase">
 <caption></caption>
         
-<image source="images/Optimization3.png" width="40%" />
+<image source="DC/Optimization3.png" width="40%" />
 </figure>
 <!-- \centerline{\includegraphics*[height=1.2in,width=2.5in]{../Figures/Optimization3}} -->
 <p>    
@@ -1509,12 +1511,14 @@ Use an appropriate trigonometric function.
 <aside>
 <title>Mathematical Nomenclature</title>
 <p>
+<idx><h>Vocabulary</h><h><foreign>Reductio Ad Absurdum</foreign></h></idx>
+<idx><h>Vocabulary</h><h>Proof by Contradiction</h></idx>
 Holmes is using a tried and true
     mathematical proof technique, known colloquially as <q>the process
     of elimination.</q> In mathematics it goes by its Latin name
-    <foreign><term>Reduction Ad Absurdum</term></foreign> (RAA). If only one of two
-    statements can be true -- for example a triangle is either
-    equilateral or it is not -- we show logically that one of them is
+    <foreign><term>Reductio Ad Absurdum</term></foreign> (RAA). If only one of two
+    statements can be true <mdash/> for example a triangle is either
+    equilateral or it is not <mdash/> we show logically that one of them is
     impossible under the constraints of the problem. We then conclude
     that the other statement must be true. In this way we <q>eliminate
     the
@@ -1642,7 +1646,7 @@ equals the angle of reflection.  We did this by reasoning
 geometrically from the figure below to show that the minimal path must
 satisfy the condition <m>\alpha=\gamma</m>.
 </p>
-<image source="images/ReflectingMirror4.png" width="40%"/>
+<image source="DC/ReflectingMirror4.png" width="40%"/>
 
 <p>
 
@@ -1662,7 +1666,7 @@ suit the needs of Calculus. In particular, the relevant quantities
 need names as shown below.
 </p>
 
-<image source="images/ReflectingMirror5.png" width="80%" />
+<image source="DC/ReflectingMirror5.png" width="80%" />
 <!-- \centerline{ -->
 <!--   \includegraphics*[height=2in,width=5in]{../Figures/ReflectingMirror5}} -->
 <p>
@@ -1713,7 +1717,7 @@ Differentiating <xref ref="EQUATIONRefMir2">equation</xref> gives
 </p>
 <p>
 
-Differentiating <xref ref="EQUATIONRefMir3">Equation</xref>
+Differentiating <xref ref="EQUATIONRefMir3">equation</xref>
 gives<m>\dx{w}=\frac{y}{w}\dx{y}</m>, so
 <me>
 \dx{L} = \frac{x}{z}\dx{x}+\frac{y}{w}\dx{y}.
@@ -1810,7 +1814,7 @@ and assuming that the velocity of light in Medium 1 is <m>v_1</m>, and the
 velocity of light in
 Medium 2 is <m>v_2</m>.
 </p>
-<image source="images/Refraction4.png" width="60%" />
+<image source="DC/Refraction4.png" width="60%" />
 <!-- \centerline{\includegraphics*[height=2.2in,width=3.7in]{../Figures/Refraction4}} -->
 <p>
 In <xref ref="PROBLEMFermatSnell"></xref>
@@ -1893,7 +1897,7 @@ carefully.
     of possible angles for <m>\beta</m> as <m>\alpha</m> ranges from <m>0</m> to
     <m>\pi/2</m>.
   </p>
-<image source="images/RangeBeta.png" width="60%" />
+<image source="DC/RangeBeta.png" width="60%" />
 
     <!-- \includegraphics*[height=.8in,width=1.9in]{../Figures/RangeBeta} -->
 </statement>
@@ -1953,7 +1957,7 @@ is called Snell<rsq/>s Window and is illustrated in the image below.
 <caption>
 <url href="https://echengphoto.com/" visual="https://echengphoto.com/">Snell<rsq/>s window. Photo courtesy of Eric Cheng.</url>
 </caption>
-<image source="images/SnellsWindowFoliage-EricChen.png" width="50%"/>
+<image source="DC/SnellsWindowFoliage-EricChen.png" width="50%"/>
 </figure>
 <p>
 
@@ -1970,7 +1974,7 @@ similar to the one we used to prove Snell<rsq/>s Law.
   on the other side <m>10</m> km
   downstream. The river is <m>1</m> km wide.
 </p>
-<image source="images/FiberOptic1.png" width="60%" />
+<image source="DC/FiberOptic1.png" width="60%" />
 
 <!-- \includegraphics*[height=1.8in,width=4.5in]{../Figures/FiberOptic1} -->
 </introduction>
@@ -2105,7 +2109,7 @@ that the order of the colors is reversed from the primary (brighter)
 to the secondary rainbow?  Why do you think this
 happens?
 </p>
-<image source="images/SavageEnariRainbow.png" width="90%" />
+<image source="DC/SavageEnariRainbow.png" width="90%" />
 <!-- \centerline{\includegraphics*[height=3in,width=5.6in]{../Figures/SavageEnariRainbow}} -->
 <p>
 
@@ -2133,7 +2137,7 @@ role. To keep things simple we assume the drop is spherical.
 <!-- <caption> -->
 <!-- <url href="https://en.wikipedia.org/wiki/Leo_Tolstoy" visual="https://en.wikipedia.org/wiki/Leo_Tolstoy">This figure needs a caption.</url> -->
 <!-- </caption> -->
-<image source="images/Refraction7.png" width="60%"/>
+<image source="DC/Refraction7.png" width="60%"/>
 <!-- </figure> -->
 <!-- \begin{wrapfigure}[13]{r}{3in} -->
 <!--   \captionsetup{labelformat=empty} -->
@@ -2173,7 +2177,7 @@ about their respective points.
 <!-- <caption> -->
 <!-- <url href="https://en.wikipedia.org/wiki/Leo_Tolstoy" visual="https://en.wikipedia.org/wiki/Leo_Tolstoy">This figure needs a caption.</url> -->
 <!-- </caption> -->
-<image source="images/Droplet1.png" width="70%"/>
+<image source="DC/Droplet1.png" width="70%"/>
 <!-- </figure> -->
 <!-- \begin{wrapfigure}[11]{r}{3in} -->
 <!--   \captionsetup{labelformat=empty} -->
@@ -2192,7 +2196,7 @@ then exits the raindrop, and once again the angles are governed by
 Snell<rsq/>s Law.
 </p>
 <p>
-
+<idx><h>Vocabulary</h><h>deviation angle</h></idx>
 
 The total amount of (clockwise) rotation in this process is called the
 <term>deviation angle</term>, denoted <m>D(\alpha)</m>. This is shown in the
@@ -2208,6 +2212,7 @@ sketch above.
 </statement>
 </problem>
 <p>
+<idx><h>Vocabulary</h><h>index of refraction</h></idx>
 Remember that the angles <m>\alpha</m> and <m>\beta</m> are not
 independent. They are related by Snell<rsq/>s Law which we will rewrite as
 <men  xml:id="EQUATIONSnellConstraint">
@@ -2224,7 +2229,7 @@ about  <m>\frac43</m> (This is an average. <m>k</m> actually varies with the fre
 <!-- <caption> -->
 <!-- <url href="https://en.wikipedia.org/wiki/Leo_Tolstoy" visual="https://en.wikipedia.org/wiki/Leo_Tolstoy">\textcolor{black} </url> -->
 <!-- </caption> -->
-<image source="images/DoubleRainbow3.png" width="65%"/>
+<image source="DC/DoubleRainbow3.png" width="65%"/>
 <!-- </figure> -->
 <!-- \begin{wrapfigure}[16]{l}{3.7in} -->
 <!--   \captionsetup{labelformat=empty} \vskip-5mm  -->
@@ -2256,7 +2261,7 @@ rays that we see as a rainbow.
 </p>
 <p>
 
-
+<idx><h>Vocabulary</h><h>rainbow angle</h></idx>
 The angle supplementary to <m>D(\alpha)</m> is called the <term>rainbow
   angle</term>, denoted <m>R(\alpha)</m>. Thus
 <me>
@@ -2285,7 +2290,7 @@ R(1.03)=\pi-2.41\approx0.732 \text{ radians }\approx42^\circ
 </me>
 as seen below.
 </p>
-<image source="images/Rainbow4.png" width="50%"/>
+<image source="DC/Rainbow4.png" width="50%"/>
 <p>
 
 So you will see a rainbow when the air is filled with water droplets,
@@ -2310,7 +2315,7 @@ we have not analyzed those.
 <!-- <caption> -->
 <!-- <url href="https://en.wikipedia.org/wiki/Leo_Tolstoy" visual="https://en.wikipedia.org/wiki/Leo_Tolstoy">This figure needs a caption.</url> -->
 <!-- </caption> -->
-<!-- <image source="images/DarkSideOfTheMoon.png" width="50%"/> -->
+<!-- <image source="DC/DarkSideOfTheMoon.png" width="50%"/> -->
 <!-- </figure> -->
 <!-- \begin{wrapfigure}[13]{l}{1.75in} -->
 <!--   \vskip-4mm  -->
@@ -2327,7 +2332,7 @@ The color spread in a rainbow occurs because the index of refraction
 seen by shining a beam of light through a triangular prism or, by
 listening to rock music from the 1970s.
 </p>
-<image source="images/DarkSideOfTheMoon.png" width="25%"/>
+<image source="DC/DarkSideOfTheMoon.png" width="25%"/>
 <p>
 
 Of course we can only do so much by reasoning from graphs and
@@ -2531,7 +2536,7 @@ droplets at various angles.
 <!-- <caption> -->
 <!-- <url href="https://en.wikipedia.org/wiki/Leo_Tolstoy" visual="https://en.wikipedia.org/wiki/Leo_Tolstoy">This figure needs a caption.</url> -->
 <!-- </caption> -->
-<!-- <image source="images/Droplet2.png" width="50%"/> -->
+<!-- <image source="DC/Droplet2.png" width="50%"/> -->
 <!-- </figure> -->
 <!-- \begin{wrapfigure}[]{r}{3in} -->
 <!-- \captionsetup{labelformat=empty} -->
@@ -2547,7 +2552,7 @@ entering the lower portion and exiting the upper portion of the
 droplet as in
 the diagram below.
 </p>
-<image source="images/Droplet2.png" width="50%"/>
+<image source="DC/Droplet2.png" width="50%"/>
 
 <p>
 For the secondary rainbow the deviation angle <m>D(\alpha)</m> is the total
@@ -2794,7 +2799,7 @@ A(-1.32)\amp \approx 12.6,
 </mrow>
 </md>
  </p>
-<image source="images/ParabolaThreeSquares.png" width="40%"/>
+<image source="DC/ParabolaThreeSquares.png" width="40%"/>
 <p>
 
 From these numbers, and
@@ -2821,7 +2826,7 @@ From these numbers, and
   To begin addressing these questions let<rsq/>s look at the graph of our
   objective function, <m>A(x) = (x-2)^2 + (x^2-3)^2</m>. 
 </p>
-<image source="images/ParabolaThreeSquares2.png" width="50%"/>
+<image source="DC/ParabolaThreeSquares2.png" width="50%"/>
 <p>
  The first
   coordinate of each point on the graph at the left corresponds to the
@@ -2870,7 +2875,7 @@ Although the largest value can occur more than once, at different
 </p>
 </aside>
 
-<!-- <image source="images/ParabolaThreeSquares4.png" width="30%"/> -->
+<!-- <image source="DC/ParabolaThreeSquares4.png" width="30%"/> -->
 
 <p>
   However, if we confine our attention to the part of the graph inside
@@ -2946,17 +2951,18 @@ rectangle above.
 <!-- \label{fig:LocalGlobalDef} -->
 <!-- \end{wrapfigure} -->
 <p>
-
-The existence of local extrema really complicates things for us
-because it means we have to find all of the <term>local</term> extrema and
+<idx><h>Vocabulary</h><h>local extrema</h></idx>
+The existence of <term>local extrema</term> really complicates things for us
+because it means we have to find all of the <term>local extrema</term> and
 then figure out which of them, if any, are global.  If we don<rsq/>t get
 organized we<rsq/>re likely to have a lot of trouble keeping this all
 straight.
 </p>
 
-<image source="images/LocalGlobalDef.png" width="50%"/>
+<image source="DC/LocalGlobalDef.png" width="50%"/>
 <p>
-In the sketch above <m>y(a)</m> is the <term>global</term> minimum of <m>y</m>
+<idx><h>Vocabulary</h><h>global minimum</h></idx>
+In the sketch above <m>y(a)</m> is the <term>global minimum</term> of <m>y</m>
 since it is the lowest point on the graph of <m>y(x)</m>, whereas <m>y(c)</m> is
 a local minimum because it is the lowest point on the graph when the
 domain of <m>y(x)</m> is restricted to the interval <m>(c-\eps, c+\eps)</m>
@@ -2981,6 +2987,7 @@ We have the following definitions.
 <idx><h>Definition</h><h>Global Minimum</h></idx>
 <statement>
 <p>
+<idx><h>Vocabulary</h><h>global minimum</h></idx>
   Suppose that <m>g</m> is a number in the domain of <m>y</m> such
   that
   <m>y(g)\le y(x)</m> for every <m>x</m> in the domain of <m>y</m>.  Then <m>y(g)</m> is
@@ -3019,6 +3026,8 @@ To define local extrema we need the concept of an open interval, so we
 <!-- \begin{Digression}[Interval Notation] -->
 <!--   \label{digress:IntervalNotation} -->
 <p>
+<idx><h>Vocabulary</h><h>interval</h></idx>
+<idx><h>Vocabulary</h><h>interval</h><h>open</h></idx>
   An <term>interval</term> is a contiguous set of real numbers. For example,
   the set of numbers strictly between zero and one is an
   interval. Because the endpoints are not included it is called an
@@ -3040,6 +3049,7 @@ interval satisfying the inequalities
 </p>
 
 <p>
+<idx><h>Vocabulary</h><h>interval</h><h>closed</h></idx>
   If we include the endpoints we have a <term>closed interval</term>,
   denoted by the ordered pair <m>[a,b]</m>.  Think of this as an
   abbreviated form of the two inequalities
@@ -3150,7 +3160,7 @@ Now we can define local extrema.
 <idx><h>Definition</h><h>Local Minimum</h></idx>
 <statement>
 <p>
-  <!-- \label{def:LocalMin} -->
+<idx><h>Vocabulary</h><h>local minimum</h></idx>
   Suppose that <m>l</m> is a number in the domain of <m>y(x)</m>. Then <m>y(l)</m> is
   a <term>local minimum</term> of <m>y</m> if there is an open interval, <m>I</m>, such
   that <m>y(l)\le y(x)</m> for every <m>x</m> in the interval <m>I</m> and in the
@@ -3174,8 +3184,10 @@ Now we can define local extrema.
 <exercise>
 <statement>
 <p>
-  Explain why we can find a <term>global</term> maximum (minimum) by finding
-  all of the <term>local</term> maxima (minima) and selecting the largest
+<idx><h>Vocabulary</h><h>global maximum</h></idx>
+<idx><h>Vocabulary</h><h>global minimum</h></idx>
+  Explain why we can find a <term>global maximum (minimum)</term> by finding
+  all of the <term>local maxima (minima)</term> and selecting the largest
   (smallest) among these.
 </p>
 </statement>
@@ -3327,14 +3339,14 @@ This is a rather naive statement of this theorem, but
 </p>
 <p>
 
-
+<idx><h>Vocabulary</h><h>optimal transition points</h></idx>
   Similarly, to find a local minimum, we need to find a place where
   the derivative transitions from negative to positive.  We call such
   points <term>optimal transition points</term> because they are the places
   where (local) optima must occur.
 </p>
 <p>
-
+<idx><h>Vocabulary</h><h>possible optimal transition points (POTPs)</h></idx>
   The simplest way for <m>O^\prime(x)=\dfdx{O}{x}</m> to make either
   transition is for it to pass through zero. Thus the solutions of
   <m>O^\prime(x) = \dfdx{O}{x} =0</m> are <term>possible optimal transition
@@ -3788,6 +3800,7 @@ Happy families are all alike; every unhappy family is
 
   <example xml:id="EXAMPLEPOTP-WhereDerivIsUndef">
 <p>
+<idx><h>Vocabulary</h><h>undefined derivative</h></idx>
     No, they won<rsq/>t.  We can also have a transition point wherever
     <m>\dfdxat{O}{x}{a}</m> is meaningless. That is, when
     <m>\dfdxat{O}{x}{a}</m> is
@@ -3805,7 +3818,7 @@ Happy families are all alike; every unhappy family is
       </me>
       The graph of <m>y(x)</m> looks like this:
 </p>
-<image source="images/CubeRoot1.png" width="60%" />
+<image source="DC/CubeRoot1.png" width="60%" />
 
 <!-- \includegraphics*[height=1in,width=3in]{../Figures/CubeRoot1} -->
 </introduction>
@@ -3867,8 +3880,16 @@ Recall <xref ref="DIGRESSIONDivideByZero" text="custom">Digression: Dividing by 
   <m>x=0</m>. Can you see what they all have in common?\\
 </p>
   
-<image source="images/NonDiff3.png" width="100%" />
-<!-- \centerline{\includegraphics*[height=1.5in,width=5in]{../Figures/NonDiff3}} -->
+
+<figure  xml:id="FIGURENonDiffFuncs">
+<caption>Some non-differentiable functions</caption>
+<image source="DC/NonDiff3.png" width="100%">
+<shortdescription></shortdescription>
+</image>
+</figure>
+
+<!-- <image source="DC/NonDiff3.png" width="100%" /> -->
+<!-- <!-\- \centerline{\includegraphics*[height=1.5in,width=5in]{../Figures/NonDiff3}} -\-> -->
 <p>
 <idx><h>Local Linearity</h></idx>
   In our comments just before <xref ref="DEFINITIONLocalLinearity"></xref> we
@@ -3887,19 +3908,20 @@ Recall <xref ref="DIGRESSIONDivideByZero" text="custom">Digression: Dividing by 
 <p>
 <idx><h>Local Linearity</h><h>and discontinuous functions</h></idx>
 
-  Take another look at graph (a) above, <m>y(x) = \abs{x}</m>.  Do you see
+  Take another look at graph of  <m>y(x) = \abs{x}</m> in <xref ref="FIGURENonDiffFuncs"></xref>.  Do you see
   that the Principle of Local Linearity is not in play near the point
   <m>(0,0)</m>? No matter how much we zoom in on this point the graph will
   never resemble a straight line,  any straight line. It looks like
   the sketch below at every scale.
 </p>
-<image source="images/NonDiff2.png" width="20%"/>
+<image source="DC/NonDiff2.png" width="20%"/>
 <p>
 <idx><h>Local Linearity</h><h>and discontinuous functions</h></idx>
 
-  The same is true of every function given above. They all violate the
-  Principle of Local Linearity. Near <m>x=0</m> none of them looks like a
-  straight line no matter what viewing scale we use.
+  The same is true of every function shown in <xref
+  ref="FIGURENonDiffFuncs"></xref>. They all violate the Principle of
+  Local Linearity. Near <m>x=0</m> none of them looks like a straight
+  line no matter what viewing scale we use.
 </p>
 <p>
 
@@ -3918,6 +3940,7 @@ Recall <xref ref="DIGRESSIONDivideByZero" text="custom">Digression: Dividing by 
 <definition xml:id="DEFINITIONOptimalTransitionPoints">
   <title>Possible Optimal Transition Points (POTPs)</title>
 <idx><h>Definition</h><h>Possible Optimal Transition Points (POTPs)</h></idx>
+<idx><h>Vocabulary</h><h>Possible Optimum Transition Points (POTPs)</h></idx>
   <statement>
     <p>
       <!-- \label{def:OptimalTransitionPoints} -->
@@ -4074,7 +4097,7 @@ Recall <xref ref="DIGRESSIONDivideByZero" text="custom">Digression: Dividing by 
 <!-- <caption> -->
 <!-- <url href="https://en.wikipedia.org/wiki/Achilles%27_heel" visual="https://en.wikipedia.org/wiki/Achilles%27_heel">This figure needs a caption.</url> -->
 <!-- </caption> -->
-<!-- <image source="images/ObjSqr.png" width="30%"/> -->
+<!-- <image source="DC/ObjSqr.png" width="30%"/> -->
 <!-- </figure> -->
 <!-- \begin{wrapfigure}[8]{r}{1.5in} -->
 <!--     \captionsetup{labelformat=empty} \vskip-8mm  -->
@@ -4093,7 +4116,7 @@ Recall <xref ref="DIGRESSIONDivideByZero" text="custom">Digression: Dividing by 
   <m>(-1,1)</m> and global maximum at <m>(2,4)</m>, and nothing we<rsq/>ve done so
   far would identify these two points as possible extrema.
 </p>
-<image source="images/ObjSqr.png" width="30%"/>
+<image source="DC/ObjSqr.png" width="30%"/>
 
 <p>
   It is clear from the graph what is happening, though. If we hadn<rsq/>t
@@ -4162,9 +4185,16 @@ consists entirely of closed intervals all we need to do is
 
 And that<rsq/>s it. When the domain of our function is a closed interval
 (or the union of closed intervals) optimization really is that
-straightforward\aside{Remember that <q>straightforward</q> does not mean
-  <q>easy.</q>}.
+straightforward.
 </p>
+<aside>
+<title>Comment</title>
+<p>
+Remember that <q>straightforward</q> does not mean
+  <q>easy.</q>
+</p>
+</aside>
+
 <p>
 
 We formalize all of this in <xref ref="THEOREMmax-min">Theorem</xref> below.
@@ -4745,9 +4775,6 @@ expect to have extrema do not.
     leaving the interval <m>(-1,1)?</m> Sure. Just take the number halfway
     between <m>x</m> and <m>1.</m>
 </p>
-<p>
-<alert><m>\halmos</m></alert>
-</p>
 </proof>
 
   <exercise>
@@ -4797,7 +4824,7 @@ at endpoints. So finding these is still the first step.
 </p>
 <p>
 
-  From the information gethered in <xref ref="DRILLO1O2">Drill:</xref> can we
+  From the information gethered in <xref ref="DRILLO1O2">:</xref> can we
   conclude that either <m>O_1(x)</m> or <m>O_2(x)</m> has a global maximum at
   <m>x=-1</m> and a global minimum at <m>x=1</m>?
 </p>
@@ -4921,13 +4948,15 @@ at endpoints. So finding these is still the first step.
 <!--   \label{fig:ConcaveUp} -->
 <!-- \end{wrapfigure} -->
 <p>
+<idx><h>Vocabulary</h><h>concave upward</h></idx>
+<idx><h>Vocabulary</h><h>concave downward</h></idx>
 Just as the First Derivative Test tells us whether
 the graph of a function is increasing or decreasing, the Second
 Derivative Test tells us whether the graph is <term>concave upward</term> or
 <term>concave downward</term>.  We need to begin by explaining the meaning
 of the phrases <term>concave upward</term> and <term>concave downward</term>.
 </p>
-<image source="images/ConcaveUpDown1.png" width="40%"/>
+<image source="DC/ConcaveUpDown1.png" width="40%"/>
 <p>
 The graphs above are illuminative. Loosely speaking concave
 upward means <q>like a bowl that opens up,</q> and concave downward means
@@ -4939,7 +4968,7 @@ true despite the fact that the exponential never turns up on the left,
 and the logarithm never turns down on the right.
 </p>
 
-<image source="images/ExpLog2.png" width="40%" />
+<image source="DC/ExpLog2.png" width="40%" />
 <!-- \centerline{\includegraphics*[height=2in,width=2in]{../Figures/ExpLog2}} -->
 
 
@@ -4957,13 +4986,13 @@ and on the interval <m>(\pi,2\pi)</m> it is concave upward. The concavity
 of a graph, like the property of increasing and decreasing, depends on
 the interval we are looking at.
 </p>
-<image source="images/ConcaveUpDown.png" width="40%"/>
+<image source="DC/ConcaveUpDown.png" width="40%"/>
 <p>
 
 Now what about these two functions?
 </p>
 
-<image source="images/ConcaveUpDownUnclear.png" width="60%" />
+<image source="DC/ConcaveUpDownUnclear.png" width="60%" />
 <!-- \centerline{\includegraphics*[height=1.5in,width=3in]{../Figures/ConcaveUpDownUnclear}} -->
 <p>
 The graph on the right appears to be concave up everywhere, but is it?
@@ -4984,7 +5013,7 @@ Since we<rsq/>re studying Calculus it seems likely that the derivative will
 play an instrumental role, so let<rsq/>s see what we can say about the
 derivative of a function whose graph is concave upward as shown below.
 </p>
-<image source="images/ConcaveUpWithTangent.png" width="50%"/>
+<image source="DC/ConcaveUpWithTangent.png" width="50%"/>
 <p>  In this example notice how the slope of the line tangent to
 the graph (the derivative) changes as <m>x</m> increases. At <m>x</m> the
 tangent line is horizontal (slope is zero), to the left of <m>x</m> the
@@ -5123,7 +5152,7 @@ might transition between increasing and decreasing. So they are
 possible local optimal points.
 </p>
 <p>
-
+<idx><h>Vocabulary</h><h>possible inflective transition points (PITPs)</h></idx>
 We will call the solutions of <m>\dfdxn{y}{x}{2}=0</m> possible inflective
 transition points (PITPs) because they are those places where the
 <term>inflection</term> of the graph of <m>y(x)</m> might transition between
@@ -5812,7 +5841,7 @@ use Calculus to optimize let<rsq/>s revisit this problem.
   the one with the greatest area is a square.
 </p>
       
-<image source="images/PerimeterArea.png" width="40%" />
+<image source="DC/PerimeterArea.png" width="40%" />
 <!-- \centerline{\includegraphics*[height=1.3in,width=2.6in]{../Figures/PerimeterArea}} -->
 <p>
   We will follow the outline above.
@@ -5907,9 +5936,6 @@ we see that    <me>    \dfdx{A}{x}=\frac{P}{2}-2x.    </me>    The only solution
       see that <m>y</m> is also equal to <m>\frac{P}{4}</m>. Thus the
       maximal rectangle is a square as stated.
 </p>
-<p>
-<m>\halmos </m>
-    </p>
   </li>
 </ol>
 </p>
@@ -6149,7 +6175,7 @@ changing the labels on the diagram makes a big difference.
 <!-- <caption> -->
 <!-- <url href="https://en.wikipedia.org/wiki/Candela" visual="https://en.wikipedia.org/wiki/Candela">This figure needs a caption.</url> -->
 <!-- </caption> -->
-<image source="images/LoremIpsum1.png" width="50%"/>
+<image source="DC/LoremIpsum1.png" width="50%"/>
 <!-- </figure> -->
 
 <p>
@@ -6280,7 +6306,7 @@ the smallest possible value of <m>x</m>, the left endpoint of our interval,
 is zero.
 </p>
 
-<exercise xml:id="DRILL">
+<exercise>
   <ol cols="2" marker="i">
     <li>
       <p>
@@ -6325,7 +6351,7 @@ can see at the left, this time we<rsq/>ve let <m>x</m> and <m>y</m> represent,
 respectively, the width and height of the page rather than of
 the printed area.
 </p>
-<image source="images/LoremIpsum2.png" width="50%"/>
+<image source="DC/LoremIpsum2.png" width="50%"/>
 <!-- \begin{wrapfigure}[21]{l}{2.5in} -->
 <!--     \captionsetup{labelformat=empty} -->
 <!--   \centerline{\includegraphics*[height=3in,width=2.5in]{../Figures/LoremIpsum2}} -->
@@ -6714,7 +6740,7 @@ didn<rsq/>t work. You need to try something new.
         as shown in the sketch below. What is the largest area you can
         enclose? What are the dimensions of the pen?
       </p>
-      <image source="images/Corral1.png" width="100%" />
+      <image source="DC/Corral1.png" width="100%" />
 
       <!-- \includegraphics*[height=1.5in,width=2in]{../Figures/Corral1} -->
       <!-- \solution{ <m>250^2/2</m> square feet } -->
@@ -6724,7 +6750,7 @@ didn<rsq/>t work. You need to try something new.
       <p>
         You want to use one side of a building as one partial side      of your pen as shown in the sketch below. What is the largest      area you      can enclose? What are the dimensions of the pen?        
       </p>
-      <image source="images/Corral7.png" width="100%" />
+      <image source="DC/Corral7.png" width="100%" />
 
       <!-- \includegraphics*[height=1.2in,width=2in]{../Figures/Corral7} -->
       <!-- \solution{ <m>250^2/2</m> square feet } -->
@@ -6734,7 +6760,7 @@ didn<rsq/>t work. You need to try something new.
       <p>
         You want to build your pen as shown in the sketch below.      What is the largest area you can enclose? What are the      dimensions of the pen?      
       </p>
-      <image source="images/Corral3.png" width="100%" />
+      <image source="DC/Corral3.png" width="100%" />
 
       <!-- \includegraphics*[height=1.2in,width=2in]{../Figures/Corral3} -->
 
@@ -6743,7 +6769,7 @@ didn<rsq/>t work. You need to try something new.
       <p>
         You want to build your pen as shown in the      sketch below.     What is the largest area you can enclose? What are the dimensions of the pen?
       </p>
-      <image source="images/Corral4.png" width="100%" />
+      <image source="DC/Corral4.png" width="100%" />
 
       <!-- \includegraphics*[height=1.2in,width=2in]{../Figures/Corral4} -->
     </li>
@@ -6751,7 +6777,7 @@ didn<rsq/>t work. You need to try something new.
       <p>
         You want to your pen to be subdivided into three parts as      shown in the      sketch below.     What is the largest area you can enclose? What are the dimensions of the pen?
       </p>
-      <image source="images/Corral5.png" width="100%" />
+      <image source="DC/Corral5.png" width="100%" />
 
       <!-- \includegraphics*[height=1.2in,width=2in]{../Figures/Corral5} -->
 
@@ -6760,7 +6786,7 @@ didn<rsq/>t work. You need to try something new.
       <p>
         You want to build your pen as shown in the      sketch below.     What is the largest area you can enclose? What are the dimensions of the pen?      
       </p>
-      <image source="images/Corral6.png" width="100%" />
+      <image source="DC/Corral6.png" width="100%" />
 
       <!-- \includegraphics*[height=1.6in,width=2in]{../Figures/Corral6} -->
 
@@ -6958,7 +6984,7 @@ Consider the side view of a person at point <m>P</m>
   looking at a <m>20</m> foot tall billboard sign that is <m>10</m> feet off of
   the ground as shown in the diagram below.
 </p>
-  <image source="images/BillBoardProblem.png" width="50%"/>
+  <image source="DC/BillBoardProblem.png" width="50%"/>
 </introduction>
 <task>
 <statement>
@@ -7002,7 +7028,7 @@ Consider the side view of a person at point <m>P</m>
   diagram:
 </p>
 
-<image source="images/ArchimedPump1.png" width="30%" />
+<image source="DC/ArchimedPump1.png" width="30%" />
 <!-- \centerline{\includegraphics*[height=1.2in,width=1.2in]{../Figures/ArchimedPump1}} -->
 
 </statement>
@@ -7045,22 +7071,6 @@ Consider the side view of a person at point <m>P</m>
 </statement>
 </task>
 </problem>
-<!-- \begin{embeddedproblem-enumerate}[(Variations on a theme)] -->
-<!--   \begin{enumerate}[label={  (\alph*)}] -->
-<!--   \item The <term>strength</term> of a rectangular wooden beam is -->
-<!--     proportional to its width times the square of its height.  What is -->
-<!--     the ratio of the height to width of the strongest beam that can be -->
-<!--     cut from a cylindrical log? -->
-<!--   \item The <term>stiffness</term> of a rectangular wooden beam is -->
-<!--     proportional to its width times the cube of its height.  What is -->
-<!--     the ratio of the height to width of the stiffest beam that can be -->
-<!--     cut from a cylindrical log?  Compare this to the answer in the -->
-<!--     previous problem. -->
-<!--   \item Suppose we have an objective function which is proportional to -->
-<!--     the width times the <m>n</m>th power of the height? What would the -->
-<!--     optimal ratio be now? -->
-<!--   \end{enumerate} -->
-<!-- \end{embeddedproblem-enumerate} -->
 
 <problem>
 <statement>
@@ -7068,9 +7078,7 @@ Consider the side view of a person at point <m>P</m>
   A box with a square base and an open top must have a volume
   of <m>32,000</m> square centimeters.
 </p>
-<image source="images/LidlessBox.png" width="30%" />
-<!-- \centerline{\includegraphics*[height=1.1in,width=1in]{../Figures/LidlessBox}} -->
- 
+<image source="DC/LidlessBox.png" width="30%" />
 <p>
 Find the dimensions of the box that minimize the amount of material
   used to make the box.
@@ -7082,7 +7090,7 @@ Find the dimensions of the box that minimize the amount of material
 
 <problem xml:id="PROBLEMRodAroundACorner">
 <introduction>
-  <image source="images/RodRoundCorner5.png" width="50%"/>
+  <image source="DC/RodRoundCorner5.png" width="50%"/>
 <!-- \begin{wrapfigure}[5]{r}{2.5in} -->
 <!--     \vskip-10mm  \captionsetup{labelformat=empty} -->
 <!--     \centerline{\includegraphics*[height=1in,width=2.5in]{../Figures/RodRoundCorner5}} -->
@@ -7164,7 +7172,7 @@ Find the dimensions of the box that minimize the amount of material
         A Norman window has the shape of a rectangle surmounted by a
         semicircle.
       </p>
-      <image source="images/NormanWindow.png" width="10%" />
+      <image source="DC/NormanWindow.png" width="10%" />
       <!-- \includegraphics*[height=1.in,width=.7in]{../Figures/NormanWindow} -->
       <p>
         Find the dimensions of the window that allow the most light to
@@ -7179,7 +7187,7 @@ Find the dimensions of the box that minimize the amount of material
         enter if the window is surmounted by an
         equilateral triangle.
       </p>
-      <image source="images/NormanEquilateral.png" width="10%" />
+      <image source="DC/NormanEquilateral.png" width="10%" />
 
       <!-- \includegraphics*[height=1.2in,width=.7in]{../Figures/NormanEquilateral} -->
     </statement>
@@ -7271,7 +7279,7 @@ Find the dimensions of the box that minimize the amount of material
         origin, <m>(0,0)</m> and ends on the Witch of Agnesi,
         <m>W(x)=\frac{1}{1+x^2}</m>.  The other legs are as shown in
         the figure below:</p>
-      <image source="images/MaxTri.png" width="50%" />
+      <image source="DC/MaxTri.png" width="50%" />
       <!-- \includegraphics*[height=2.1in,width=3.7in]{../Figures/MaxTri} -->
       <p>
         Of all  triangles for which <m>\alpha</m> is in
@@ -7363,7 +7371,7 @@ Find the dimensions of the box that minimize the amount of material
 <!--     <caption> -->
 <!--       <url href="https://en.wikipedia.org/wiki/Candela" visual="https://en.wikipedia.org/wiki/Candela">This figure needs a caption.</url> -->
 <!--     </caption> -->
-    <image source="images/Birdfeeder.png" width="30%"/>
+    <image source="DC/Birdfeeder.png" width="30%"/>
   <!-- </figure> -->
   <!-- \begin{wrapfigure}[]{r}{3in} -->
   <!--     \captionsetup{labelformat=empty} -->
