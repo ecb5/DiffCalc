@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.3.5.32</span><span class="period">.</span>
+</h4>
+<div class="para logical">
+<div class="para">For example, how can we compute <span class="process-math">\(\dx{y}\)</span> given that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQUATIONQuadImpl.html ./knowl/xref/EQUATIONQuadImpl.html">
+\begin{equation}
+2x^2-xy+z^3y^2 = 1+y?\tag{4.11}
+\end{equation}
+</div>
+<div class="para">It is possible to solve <a href="SECTIONsome-rules-diff.html#EQUATIONQuadImpl" class="xref" data-knowl="./knowl/xref/EQUATIONQuadImpl.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 4.11">equation (4.11)</a>  explicitly for <span class="process-math">\(y\)</span> in terms of <span class="process-math">\(x\)</span> but it is difficult to do. Since <a href="SECTIONsome-rules-diff.html#EQUATIONQuadImpl" class="xref" data-knowl="./knowl/xref/EQUATIONQuadImpl.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 4.11">equation (4.11)</a> is quadratic in <span class="process-math">\(y\)</span> (the highest power of <span class="process-math">\(y\)</span> is <span class="process-math">\(2\)</span>) we need only use the Quadratic Formula to get <span class="process-math">\(y\)</span> explicitly in terms of <span class="process-math">\(x\)</span> and <span class="process-math">\(z\)</span> and then differentiate. Try that some time when you have time to kill. Lots of time.</div>
+</div>
+<div class="para logical">
+<div class="para">Instead, we’ll just apply our differentiation rules to <a href="SECTIONsome-rules-diff.html#EQUATIONQuadImpl" class="xref" data-knowl="./knowl/xref/EQUATIONQuadImpl.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 4.11">equation (4.11)</a> as it is. Differentiating we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQUATIONQuadImpl.html">
+\begin{equation}
+4x\dx{x}-(x\textcolor{red}{\dx{y}}+y\dx{x})+\left(z^3(2y\textcolor{red}{\dx{y}})+y^2(3z^2\dx{z})\right)=\textcolor{red}{\dx{y}}.\tag{4.12}
+\end{equation}
+</div>
+<div class="para">At first this may look very difficult to solve for <span class="process-math">\(\dx{y}\)</span> but look again. This differential equation is actually linear in each of the differentials, <span class="process-math">\(\dx{x}\text{,}\)</span> <span class="process-math">\(\dx{y}\text{,}\)</span> and <span class="process-math">\(\dx{z}\text{.}\)</span> That is, each differential only appears raised to the first power. This will always happen. When we differentiate any expression the result will always be linear in the differentials involved.</div>
+</div>
+<div class="para logical">
+<div class="para">The word “linear” has a very specific meaning in mathematics, but the precise definition isn’t relevant at the moment. For our current purpose it simply means that we can rearrange our equation algebraically so that it has the following form.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(\text{stuff})\dx{y} = (\text{more stuff})\dx{x} + (\text{even
+more stuff})\dx{z}.
+\end{equation*}
+</div>
+<div class="para">Solving for <span class="process-math">\(\dx{y}\)</span> gives</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dx{y} = \frac{(\text{more stuff})\dx{x} + (\text{even
+more stuff})\dx{z}}{(\text{stuff})}.
+\end{equation*}
+</div>
+</div>
+<div class="para logical">
+<div class="para">For this example the specific computations are:</div>
+<div class="displaymath process-math">
+\begin{align}
+4x\dx{x}-x\textcolor{red}{\dx{y}}-y\dx{x} +
+2yz^3\textcolor{red}{\dx{y}}+3y^2z^2\dx{z}\amp=\textcolor{red}{\dx{y}}\notag\\
+2yz^3\textcolor{red}{\dx{y}}-x\textcolor{red}{\dx{y}}-\textcolor{red}{\dx{y}}
+\amp=y\dx{x}-4x\dx{x}-3y^2z^2\dx{z}\notag\\
+(2yz^3-x-1)\dx{y}\amp=(y-4x)\dx{x} - 2y^2z^2\dx{z}\notag\\
+\dx{y}\amp=\frac{(y-4x)\dx{x} - 2y^2z^2\dx{z}}{2yz^3-x-1}.\tag{4.13}
+\end{align}
+</div>
+</div>
+<div class="para logical">
+<div class="para">At this point we have solved our problem so we needn’t do any more. But notice that we could also write <a href="SECTIONsome-rules-diff.html#SUBSECTIONPowerRule-45-5-1" class="xref" data-knowl="./knowl/xref/EQUATIONDiffLinear.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 4.13">equation (4.13)</a>  as</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQUATIONDiffLinear.html">
+\begin{equation*}
+\dx{y}=\frac{(y-4x)}{2yz^3-x-1}\dx{x} -
+\frac{2y^2z^2}{2yz^3-x-1}\dx{z} \text{,}
+\end{equation*}
+</div>
+<div class="para">which may be preferable depending on the next step if this is a part of a larger problem.</div>
+</div>
+<div class="para">Some problems are legitimately hard, and some only look hard. So remember that as bleak as things may look sometimes, you should always keep your goal in view. In this case we were trying to isolate <span class="process-math">\(\dx{y}\text{,}\)</span> so we gathered all of the terms that had <span class="process-math">\(\dx{y}\)</span> in them, put all the other terms on the other side of the equation, factored out the <span class="process-math">\(\dx{y}\)</span> and divided by the “stuff” that formed the coefficient of <span class="process-math">\(\dx{y}\text{.}\)</span>  This process is often easier than trying to solve for <span class="process-math">\(y\)</span> before differentiating.</div></article><span class="incontext"><a class="internal" href="SECTIONsome-rules-diff.html#SUBSECTIONPowerRule-45">in-context</a></span>
+</body>
+</html>

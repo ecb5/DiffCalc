@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.1.1.1</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(\sqrt{2}\)</span> via Bisection.</span>
+</h4>
+<div class="para">For the sake of having a definite problem to work with suppose we want to compute a decimal approximation to <span class="process-math">\(\sqrt{2}\text{.}\)</span> The Bisection Method works like this: First pick two numbers, one less than <span class="process-math">\(\sqrt{2}\text{,}\)</span> and one greater than <span class="process-math">\(\sqrt{2}\text{,}\)</span> In this example we’ll choose <span class="process-math">\(1\)</span> and <span class="process-math">\(2\text{.}\)</span>
+</div>
+<div class="para">Next, we take the midpoint of the interval <span class="process-math">\([1,2]\)</span> as our first approximation to <span class="process-math">\(\sqrt{2}\text{.}\)</span> We’ll call this <span class="process-math">\(r_1\text{.}\)</span> The midpoint is the average of the endpoints so in this example <span class="process-math">\(r_1 =
+\frac{1+2}{2}=\frac{3}{2}\text{.}\)</span>  Since <span class="process-math">\(\sqrt{2}\)</span> and <span class="process-math">\(\frac32\)</span> are both in the bracketing interval <span class="process-math">\([1,2]\)</span> we see that the distance between <span class="process-math">\(\sqrt{2}\)</span> and <span class="process-math">\(\frac32\)</span> is less than <span class="process-math">\(1\text{,}\)</span> the length of the interval.</div>
+<div class="para">Now <span class="process-math">\(\sqrt{2}\)</span> must either be in the interval <span class="process-math">\([1,3/2]\)</span> or <span class="process-math">\([3/2,2]\text{.}\)</span> We need to decide which one. Since <span class="process-math">\(2\lt\frac94=\left(\frac32\right)^2\)</span> we see that <span class="process-math">\(\sqrt{2}\lt\frac32\)</span> so that <span class="process-math">\(\sqrt{2}\)</span> must be in the interval <span class="process-math">\([1,3/2]\text{.}\)</span>
+</div>
+<div class="para logical">
+<div class="para">We take our next approximation to be the midpoint of the (smaller) interval <span class="process-math">\([1,3/2]\text{.}\)</span> Thus, <span class="process-math">\(r_2=\frac{1+\frac32}{2}= \frac54=1.25\text{.}\)</span>  Since <span class="process-math">\(\left(\frac54\right)^2\le2\)</span> (confirm this) we have <span class="process-math">\(\sqrt{2}\)</span> bracketed by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac54\le\sqrt{2} \le\frac32.
+\end{equation*}
+</div>
+</div>
+<div class="para">This is really the whole idea. If we are approximating a number, <span class="process-math">\(\alpha\text{,}\)</span> we begin by bracketing <span class="process-math">\(\alpha\)</span> between two known numbers, say <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{.}\)</span> We take the average of these, <span class="process-math">\(r_1=\frac{a+b}{2}\text{,}\)</span> as our first approximation of <span class="process-math">\(\alpha\text{.}\)</span> We know that <span class="process-math">\(r_1\)</span> is within <span class="process-math">\(\abs{b-a}\)</span> (the length of the interval <span class="process-math">\([a,b]\)</span>) of <span class="process-math">\(\alpha\text{.}\)</span> If this is sufficiently accurate we use <span class="process-math">\(r_1\)</span> as our approximation.</div>
+<div class="para">If not we determine if <span class="process-math">\(\alpha\)</span> is in the first half–interval, <span class="process-math">\(\left[a, \frac{a+b}{2}\right]\)</span> or the second, <span class="process-math">\(\left[\frac{a+b}{2},b\right]\text{,}\)</span> and repeat the process, finding a new approximation <span class="process-math">\(r_2\)</span> in an interval half the length of the first.</div>
+<div class="para">The Bisection Method generates a sequence of approximations, <span class="process-math">\(r_1, r_2, r_3, \ldots\)</span> of the root we seek. In our example we have <span class="process-math">\(r_1=\frac32, r_2=\frac54\)</span> and so on. At each step the new approximation is the midpoint of an interval whose length is one–half of the length of the previous interval. So our approximations can be made as close to the target as we would like.</div></article><span class="incontext"><a class="internal" href="SECTIONnewtons-method.html#EXAMPLESqrt2-1">in-context</a></span>
+</body>
+</html>

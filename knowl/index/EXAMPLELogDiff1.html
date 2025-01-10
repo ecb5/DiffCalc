@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.12.0.14</span><span class="period">.</span>
+</h4>
+<div class="para logical">
+<div class="para">For example, suppose we need to differentiate</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y=\frac{\sqrt{x^3+2x}\cdot \tan(x)}{(x^5-7)^4}.
+\end{equation*}
+</div>
+</div>
+<div class="para logical">
+<div class="para">While we can do this using our Differentiation Rules, it will be very tedious.  But nice things happen if we take the natural logarithm of both sides before we differentiate.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\ln(y) =\ln\left(\frac{\sqrt{x^3+2x}\cdot \tan(x)}{(x^5-7)^4} \right)
+\end{equation*}
+</div>
+<div class="para">Since the natural  logarithm changes division into subtraction (Property 5) we can rewrite the right side as:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+=\ln\left(\sqrt{x^3+2x}\cdot\tan(x)\right] -
+\ln\left(\left(x^5-7\right)^4\right).
+\end{equation*}
+</div>
+<div class="para">And since the  natural  logarithm changes multiplication    into addition (Property 4) we can re-express  the right side again. This time as:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+=\ln\left(\sqrt{x^3+2x}\right)+ \ln\left(\tan(x)\right) -
+\ln\left(\left(x^5-7\right)^4\right).
+\end{equation*}
+</div>
+<div class="para">Re-expressing the square root as an exponent gives</div>
+<div class="displaymath process-math">
+\begin{equation*}
+=\ln\left(x^3+2x\right)^{1/2}+ \ln\left(\tan(x)\right) -
+\ln\left(\left(x^5-7\right)^4\right)\text{.}
+\end{equation*}
+</div>
+<div class="para">and we can now bring the exponents down in front (Property 6).</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\ln(y)     =\frac{1}{2}  \ln(x^3+2x)+\ln(\tan(x)) -4 \ln(x^5-7)).
+\end{equation*}
+</div>
+<div class="para">Notice that we have not yet started differentiating. All we’ve done so far is re-express our function using the properties of logarithms.</div>
+</div>
+<div class="para logical">
+<div class="para">But differentiating is now relatively easy.</div>
+<div class="displaymath process-math">
+\begin{align*}
+\dx{(\ln(y))}\amp =  \frac{1}{2(x^3+2x)}\dx{(x^3+2x)}+\frac{1}{\tan(x)}\dx{(\tan{x})}-\frac{4}{x^5-7}\dx{(x^5-7)}\\\\
+\frac{\dx{y}}{y}\amp =              \frac{1}{2(x^3+2x)}(3x^2+2)\dx{x}+\frac{1}{\tan(x)}\sec^2(x)\dx{x}-\frac{4}{x^5-7}(5x^4)\dx{x}\\
+\\
+\end{align*}
+</div>
+<div class="para">If we multiply by <span class="process-math">\(y\)</span> we get</div>
+<div class="displaymath process-math">
+\begin{align*}
+\dx{y}\amp =
+y\left[\frac{(3x^2+2)}{2(x^3+2x)}\dx{x}+\frac{\sec^2(x)}{\tan(x)}\dx{x}-4\left(\frac{5x^4}{x^5-7}\right)\dx{x}\right]\\\\
+\amp =        \left[\frac{\sqrt{x^3+2x}\cdot \tan(x)}{(x^5-7)^4}\right]\cdot\left[\frac{(3x^2+2)}{2(x^3+2x)}\dx{x}+\frac{\sec^2(x)}{\tan(x)}\dx{x}-4\left(\frac{5x^4}{x^5-7}\right)\dx{x}\right]
+\end{align*}
+</div>
+</div></article><span class="incontext"><a class="internal" href="SECTIONgener-logar-expon.html#EXAMPLELogDiff1">in-context</a></span>
+</body>
+</html>

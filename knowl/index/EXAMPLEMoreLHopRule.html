@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">12.4.2.6</span><span class="period">.</span><span class="space"> </span><span class="title">More on L’Hôpital’s Rule.</span>
+</h4>
+<div class="para logical">
+<div class="para">Consider the limit</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\limit{x}{\infty}{ \left[ x \tan\left(\frac1x\right)
+\right]}.
+\end{equation*}
+</div>
+<div class="para">If we want to evaluate this limit (we do) we seem to have few options. This is not a L’Hôpital  Indeterminate, nor is it obvious what the limit might be. Simply letting <span class="process-math">\(x\rightarrow\infty\)</span> we see that <span class="process-math">\(x\rightarrow\infty\)</span> and <span class="process-math">\(\tan\left(\frac1x\right)\rightarrow0\)</span> so our limit has the Indeterminate form <span class="process-math">\(\approach{\infty}\cdot\approach{0}\text{.}\)</span>
+</div>
+</div>
+<div class="para">There is a real temptation to say that this must be zero since anything multiplied by zero is zero.  But is it? Remember that the purpose of the arrow notation, <span class="process-math">\((\rightarrow0)\text{,}\)</span> is to remind us that the expression <span class="process-math">\(\tan\left(\frac{1}{x}\right)\)</span> is never actually equal to zero. It merely approaches zero. At the same time <span class="process-math">\(x\)</span> is increasing without bound (<span class="process-math">\(x\rightarrow\infty\)</span>) so it seems that the value of the limit might depend on the relative speeds with which <span class="process-math">\(x\rightarrow\infty\)</span> and <span class="process-math">\(\tan\left(\frac{1}{x}\right)\rightarrow0\text{.}\)</span>
+</div>
+<div class="para logical">
+<div class="para">But this reasoning feels very uncertain doesn’t it? And, in any case, nothing we’ve said will help us evaluate the limit. We’ll have to find a way to re–express this limit as a L’Hôpital Indeterminate so that L’Hôpital’s Rule does apply.  In the meantime, take your best guess as to the value of this limit and write it down for later reference. Suppose we rewrite this limit as</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/THEOREMLHRuleGen.html">
+\begin{equation*}
+\limit{x}{\infty}{ \left[ x \tan\left(\frac1x\right) \right]} =
+\limit{x}{\infty}{\frac{\tan\left(\frac1x\right)}{\frac1x}}. 
+\end{equation*}
+</div>
+<div class="para">This is a little scary to look at so we’ll make it easier on our eyes with the substitution <span class="process-math">\(z=\frac1x\text{.}\)</span>  As <span class="process-math">\(x\rightarrow\infty\)</span> we see that <span class="process-math">\(z\gt0\)</span> and <span class="process-math">\(z\rightarrow0\text{.}\)</span> Since <span class="process-math">\(\tan(0)=0\)</span> our limit is now <span class="process-math">\(\rlimit{z}{0}{\frac{\tan\left(z\right)}{z}}\)</span> which is the L’Hôpital Indeterminate <span class="process-math">\(\frac{(\rightarrow0)}{(\rightarrow0)}\text{.}\)</span> Thus by <a href="SECTIONIndetFormsAndLhop.html#THEOREMLHRuleGen" class="xref" data-knowl="./knowl/xref/THEOREMLHRuleGen.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 12.4.2.1: L’Hôpital’s Rule">Theorem 12.4.2.1</a> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/THEOREMLHRuleGen.html">
+\begin{equation*}
+\limit{x}{\infty}{x\tan\left(\frac1x\right)}
+=
+\rlimit{z}{0}{\frac{\tan\left(z\right)}{z}}
+\lhopeq\rlimit{z}{0}{\frac{\sec^2\left(z\right)}{1}}= \frac{\sec^2(0)}{1}=1
+\end{equation*}
+</div>
+<div class="para">since <span class="process-math">\(\sec(0)=1\text{.}\)</span>
+</div>
+</div></article><span class="incontext"><a class="internal" href="SECTIONIndetFormsAndLhop.html#EXAMPLEMoreLHopRule">in-context</a></span>
+</body>
+</html>

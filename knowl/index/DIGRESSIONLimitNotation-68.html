@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">12.1.1.24</span><span class="period">.</span>
+</h4>
+<div class="para logical">
+<div class="para">Do you think the function <span class="process-math">\(y(x) = \sqrt{x^2+2}-\sqrt{x^2+x}\)</span> has any horizontal asymptotes? Take your best guess before we begin this example. To find any horizontal asymptotes we have to evaluate the two limits</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\limit{x}{\pm\infty}{\left(\sqrt{x^2+2}-\sqrt{x^2+x}\right)}.
+\end{equation*}
+</div>
+<div class="para">First we’ll find the limit as <span class="process-math">\(x\rightarrow\infty\)</span> and leave the limit as <span class="process-math">\(x\rightarrow-\infty\)</span> as a drill  for you.</div>
+</div>
+<div class="para">As always the trick is to rearrange this expression inside the limit algebraically — without changing its value — until we can see clearly what happens as <span class="process-math">\(x\rightarrow\infty\text{.}\)</span> The square roots seem to be the difficulty here. So we’d like to find a way to make them go away. The standard trick for this is to multiply by the conjugate  of <span class="process-math">\(\sqrt{x^2+2}-\sqrt{x^2+x}\text{,}\)</span> namely <span class="process-math">\(\sqrt{x^2+2}+\sqrt{x^2+x}\text{.}\)</span>
+</div>
+<aside class="aside aside-like"><h5 class="heading"><span class="title">Comment.</span></h5>
+<div class="para">We are using the identity <span class="process-math">\((A-B)(A+B)=A^2-B^2\)</span> to square both terms and get rid of the square roots. The factors <span class="process-math">\(A+B\)</span> and <span class="process-math">\(A-B\)</span> are mutually conjugate.</div></aside><div class="para">Of course, if we do that then we need to divide by the conjugate as well. That way we’ve multiplied by <span class="process-math">\(1\)</span> and have not changed the value of the expression. This won’t actually eliminate the square roots as we will still have them in the denominator. But let’s see what happens.</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\amp{}\limit{x}{\infty}{\left(\sqrt{x^2+2}-\sqrt{x^2+x}\right)}\\
+\amp{} =
+\left[\limit{x}{\infty}{\left(\sqrt{x^2+2}-\sqrt{x^2+x}\right)}\textcolor{red}{\underbrace{\left(\frac{\sqrt{x^2+2}+\sqrt{x^2+x}}{\sqrt{x^2+2}+\sqrt{x^2+x}}\right)}_{=1}}\right]\\
+\amp = \limit{x}{\infty}{\left(\frac{(x^2+2)-
+(x^2+x)}{\sqrt{x^2+2}+\sqrt{x^2+x}}\right)}\\
+\amp{}=    \limit{x}{\infty}{\left(\frac{2-x}{\sqrt{x^2+2}+\sqrt{x^2+x}}\right)}.
+\end{align*}
+</div>
+<div class="para">Factoring the highest power of <span class="process-math">\(x\)</span> out of the numerator and denominator gives</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\limit{x}{\infty}{\left(\sqrt{x^2+2}-\sqrt{x^2+x}\right)} 
+=\limit{x}{\infty}{\frac{\textcolor{red}{x}\left(2/x-1\right)}{\textcolor{red}{\sqrt{x^2}}\left(\sqrt{1+2/x^2}+\sqrt{1+1/x}\right)}}
+\end{equation*}
+</div>
+<div class="para">and since <span class="process-math">\(\sqrt{x^2}=\abs{x}\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\limit{x}{\infty}{\left(\sqrt{x^2+2}-\sqrt{x^2+x}\right)} 
+=\limit{x}{\infty}{\frac{\textcolor{red}{x}\left(2/x-1\right)}{\textcolor{red}{\abs{x}}\left(\sqrt{1+2/x^2}+\sqrt{1+1/x}\right)}}.
+\end{equation*}
+</div>
+<div class="para">But we’re evaluating a limit as <span class="process-math">\(x\rightarrow\infty\text{.}\)</span> So, we’re really only interested in large, positive values of <span class="process-math">\(x\text{.}\)</span> In this case <span class="process-math">\(\abs{x}=x\)</span> so</div>
+<div class="displaymath process-math">
+\begin{align*}
+\limit{x}{\infty}{\left(\sqrt{x^2+2}-\sqrt{x^2+x}\right)} 
+\amp{}=\limit{x}{\infty}{\CancelToRed{=1}{\frac{x}{x}}\ \cdot\
+\left[\frac{\CancelToRed{0}{2/x}-1}{\sqrt{1+\CancelToRed{0}{2/x^2}}+\sqrt{1+\CancelToRed{0}{1/x}}}\right]}\\
+\amp = -\frac12.  
+\end{align*}
+</div>
+</div>
+<div class="para">Did you guess right? If you did, either you have a very strong intuition for these kinds of problems or you just had a moment of blind luck. So don’t just pat yourself on the back and walk away. Be sure to take a moment to figure out whether it was intuition or luck. You don’t want to confuse them.</div>
+<div class="para">If you guessed wrong, or (most likely) were unable to come up with a guess don’t fret about it. You’re normal. But be sure you review and understand the steps to this solution so you can begin to build some intuition about such problems. This problem looked pretty intimidating, but once we got going in the right direction, it was all Algebra from there.  Notice how the absolute value came into play. In this problem it wasn’t an issue since we were considering only positive values of <span class="process-math">\(x\text{.}\)</span> But consider what would happen if <span class="process-math">\(x\)</span> was negative, if <span class="process-math">\(x\rightarrow-\infty\text{.}\)</span> In this case, <span class="process-math">\(\abs{x}=-x.\)</span>
+</div>
+<div class="para">
+<em class="alert">This is important.</em> If you don’t see why <span class="process-math">\(\abs{x}=-x\)</span> when <span class="process-math">\(x\lt0\)</span> ask your teacher about it.</div></article><span class="incontext"><a class="internal" href="SECTIONhoriz-asympt-as.html#DIGRESSIONLimitNotation-68">in-context</a></span>
+</body>
+</html>

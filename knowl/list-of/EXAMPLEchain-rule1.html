@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">14.3.0.1</span><span class="period">.</span>
+</h3>
+<div class="para logical">
+<div class="para">Here’s what we mean: The formula <span class="process-math">\(y=(2x^2-6x)^3\text{,}\)</span> is given entirely in terms of the variables <span class="process-math">\(x\text{,}\)</span> and <span class="process-math">\(y\text{.}\)</span> To differentiate using differentials we would make the (variable) substitution <span class="process-math">\(z=3x^2+6x\)</span> so that <span class="process-math">\(y=z^3\text{.}\)</span> In that case, <span class="process-math">\(\dx{y}=3z\dx{z}=3\left(3x^2+6x\right)^2(6x+6)\dx{x}\text{,}\)</span> and dividing through by <span class="process-math">\(\dx{x}\)</span> gives us the derivative of <span class="process-math">\(y\)</span> with respect to <span class="process-math">\(x\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation}
+\dfdx{y}{x}=3z\dx{z}=3\left(3x^2+6x\right)^2(6x+6).\tag{14.1}
+\end{equation}
+</div>
+</div>
+<div class="para">But <a href="SECTIONsecants-tangents.html#DEFINITIONDerivative" class="xref" data-knowl="./knowl/xref/DEFINITIONDerivative.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 13.2.0.3: The Derivative">Definition 13.2.0.3</a> requires that we think about functions, not variables so let’s translate this problem into the language of functions. If <span class="process-math">\(y=\left(2x^2-6x\right)^3\text{,}\)</span> clearly <span class="process-math">\(y\)</span> is a function of (depends on) <span class="process-math">\(x\text{.}\)</span> Naming that function <span class="process-math">\(f\text{,}\)</span> we have <span class="process-math">\(y=f(x)\text{.}\)</span> Replacing <span class="process-math">\(y\)</span> with <span class="process-math">\(f(x)\text{,}\)</span> we get <span class="process-math">\(f(x)=(2x^2-6x)^3\text{.}\)</span>
+</div>
+<div class="para logical">
+<div class="para">Similarly, if <span class="process-math">\(z=3x^2+6x\)</span> then <span class="process-math">\(z\)</span> is also a function of (depends on) <span class="process-math">\(x\text{,}\)</span> and naming that function <span class="process-math">\(\beta\)</span> we have <span class="process-math">\(z=\beta(x)\text{.}\)</span> Replacing <span class="process-math">\(z\)</span> with <span class="process-math">\(\beta(x)\)</span> we have <span class="process-math">\(f(x)=(\beta(x))^3\text{.}\)</span> If we suppress the “<span class="process-math">\((x)\)</span>” part of <span class="process-math">\(\beta(x)\text{,}\)</span> we see that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(\beta)= \beta^3
+\end{equation*}
+</div>
+<div class="para">is also a valid representation of our function. If we now define <span class="process-math">\(\alpha(\beta)=\beta^3\)</span> we see that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(x)= \alpha(\beta(x).
+\end{equation*}
+</div>
+</div>
+<div class="para logical">
+<div class="para">Looking again at <a href="SECTIONChainRule.html#EQUATIONCR1" class="xref" data-knowl="./knowl/xref/EQUATIONCR1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 14.1">equation (14.1)</a>, and mixing the differential and functional notations a bit we see that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQUATIONCR1.html">
+\begin{equation*}
+f^\prime(x)=\dfdx{y}{x}=3z\dx{z}=\underbrace{3\left(3x^2+6x\right)^2}_{\dfdx{\alpha}{\beta}=\alpha^\prime(\beta(x))}\underbrace{(6x+6)}_{\dfdx{\beta}{x}=\beta^\prime(x)}=\alpha^\prime(\beta(x))\cdot\beta^\prime(x).
+\end{equation*}
+</div>
+</div>
+<div class="para logical">
+<div class="para">Thus if <span class="process-math">\(f(x)=\alpha(\beta(x))\)</span> is the composition of <span class="process-math">\(\alpha(x)\)</span> and <span class="process-math">\(\beta(x)\)</span>  then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f^\prime(x)=\alpha^\prime(\beta(x))\beta^\prime(x).
+\end{equation*}
+</div>
+<div class="para">This is the Chain Rule.  We have expressed the Chain Rule in this form so that we can prove it rigorously, not so that we can use it. The substitution process using differentials still works so there is no reason to stop using substitution when you are actually computing derivatives.</div>
+</div></article><span class="incontext"><a class="internal" href="SECTIONChainRule.html#EXAMPLEchain-rule1">in-context</a></span>
+</body>
+</html>

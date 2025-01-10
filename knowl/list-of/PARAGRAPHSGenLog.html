@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<section class="paragraphs"><h3 class="heading"><span class="title">General Logarithms.</span></h3>
+<div class="para">Just as we computed the derivative of the general exponential, <span class="process-math">\(a^x\)</span> by re-expressing it as a natural exponential, we will compute the derivative of the general logarithm, <span class="process-math">\(\log_a(x)\text{,}\)</span> by re-expressing it as a natural logarithm. This is a bit more difficult, but only a bit.</div>
+<div class="para logical">
+<div class="para">We begin with the exponential. If <span class="process-math">\(y=\log_a(x)\)</span> then <span class="process-math">\(a^y=x\text{.}\)</span> Taking the natural logarithm of both sides of <span class="process-math">\(a^y=x\)</span> and using <a href="SECTIONnatural-logarithm-1.html#LogProp6" class="xref" data-knowl="./knowl/xref/LogProp6.html" data-reveal-label="Reveal" data-close-label="Close" title="Item: Logarithm Property #6">Property 6</a>  we have, <span class="process-math">\(y\ln(a)=\ln(x)\text{,}\)</span>  or <span class="process-math">\(y=\frac{\ln(x)}{\ln(a)}\text{.}\)</span> Since <span class="process-math">\(y=\log_a(x)\)</span> we have successfully re-expressed the base–<span class="process-math">\(a\)</span> logarithm as a natural logarithm:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/LogProp6.html">
+\begin{equation}
+\log_a(x)=\frac{\ln(x)}{\ln(a)}.\tag{8.30}
+\end{equation}
+</div>
+<div class="para">This is why many scientific calculators don’t bother including a <span class="process-math">\(\log_a(x)\)</span> button.</div>
+</div>
+<div class="para">An easy mnemonic for remembering this formula is to simply notice that on both sides of the equation the <span class="process-math">\(a\)</span> appears lower than the <span class="process-math">\(x\text{.}\)</span>
+</div>
+<div class="para logical">
+<div class="para">Since <span class="process-math">\(\ln(a)\)</span> is a constant (why?) we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dx{(\log_a(x))}=\frac{1}{\ln(a)}\cdot\dx\left(\ln(x)\right)=\frac{1}{\ln(a)}\cdot\frac1x\dx{x}.
+\end{equation*}
+</div>
+<div class="para">So we have the differentiation formula:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dfdx{(\log_a(x))}{x}=\frac{1}{x\ln(a)}.
+\end{equation*}
+</div>
+</div>
+<div class="para">As with the differentiation formula for  general exponential functions we (the authors) find it easier to remember this conversion than the differentiation formula. But you are welcome to memorize it if you prefer.</div>
+<article class="problem example-like"><h4 class="heading">
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">8.12.0.5</span><span class="period">.</span>
+</h4>
+<div class="para logical">
+<div class="para">Compute <span class="process-math">\(\dx{y}\)</span> and <span class="process-math">\(\dfdx{y}{x}\)</span> for each of the following.</div>
+<ol class="lower-roman cols2" id="PARAGRAPHSGenLog-7-2-3">
+<li><div class="para"><span class="process-math">\(\displaystyle y=\log_2(7x)\)</span></div></li>
+<li><div class="para"><span class="process-math">\(\displaystyle y=\log_{10}(x^2+1)\)</span></div></li>
+</ol>
+</div></article><article class="exercise exercise-like"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">8.12.0.6</span><span class="period">.</span>
+</h4>
+<div class="para logical">
+<div class="para">Assume <span class="process-math">\(x\neq1, x\gt0\)</span> and let <span class="process-math">\(y=\log_x(2)\text{.}\)</span> Show that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dfdx{y}{x}=-\frac{\ln(2)}{x(\ln(x))^2}.
+\end{equation*}
+</div>
+</div></article><article class="exercise exercise-like"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">8.12.0.7</span><span class="period">.</span>
+</h4>
+<div class="introduction"><div class="para logical">
+<div class="para">For a given sound,  the sound power level <span class="process-math">\(L\text{,}\)</span> in decibels, is given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+L=10\log_{10}\left(\frac{P}{P_0}\right)
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(P\)</span> is the sound power of the source measured in watts and <span class="process-math">\(P_0\)</span> is the sound reference level taken to be <span class="process-math">\(1\)</span> picowatt or <span class="process-math">\(10^{-12}\)</span> watts.</div>
+</div></div>
+<article class="task exercise-like"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para">Suppose that the sound power of the speaker is  <span class="process-math">\(0.0001\)</span> watts. How many decibels does this correspond to?</div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para">Suppose the sound power of a speaker starts at <span class="process-math">\(P=0.0001\)</span> watts and is being raised at a rate of <span class="process-math">\(0.0001\)</span> watts per second. How fast is the sound power level rising?  </div></article></article></section><span class="incontext"><a class="internal" href="SECTIONgener-logar-expon.html#PARAGRAPHSGenLog">in-context</a></span>
+</body>
+</html>

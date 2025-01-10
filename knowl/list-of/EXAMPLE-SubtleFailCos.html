@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.2.3.1</span><span class="period">.</span>
+</h4>
+<div class="para">Suppose we wish to compute <span class="process-math">\(\frac{\pi}{2}\)</span> by finding the smallest positive root of <span class="process-math">\(\cos(x).\)</span> If we start with an initial guess of <span class="process-math">\(r_1=0.1\)</span> (not a great first guess, but it’s not obviously horrible either) we get <span class="process-math">\(r_2=10.07,\)</span> which certainly seems like it might be a problem since <span class="process-math">\(\frac{\pi}{2}\approx 1.7.\)</span> If we ignore this and continue we get <span class="process-math">\(r_3= 11.4,\)</span> and <span class="process-math">\(r_4=10.97.\)</span>
+</div>
+<div class="para">What’s going on here?  The numbers seem to be converging, but they are not converging to the answer we intended to find. The figure below shows what the difficulty is.</div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="external/DC/NewtonsMethodFail1.png" class="contained"></div>
+<div class="para">In a nutshell, our initial guess was too far away from the root. The slope of the tangent line at <span class="process-math">\((0.1, \cos(0.1))\)</span> is <span class="process-math">\(-\sin(0.1)\approx -0.1\)</span> which means that the tangent line (in red) decreases from left to right, but also that its slope is very shallow. Thus the tangent line crosses the <span class="process-math">\(x\)</span>–axis at about <span class="process-math">\(r_2=10.07,\)</span> very far from the root we seek. Now it happens that <span class="process-math">\(10.07\)</span> is actually pretty close to another root of our function: <span class="process-math">\(7\pi/2.\)</span> So continued iterations of Newton’s Method will settle in on the root at <span class="process-math">\(7\pi/2\text{.}\)</span> But the damage has already been done. We’ve found a legitimate root but not he one we intended to find.</div>
+<div class="para">We call this a subtle failure because Newton’s Method will converge without complaint. None of the computations will seem suspicious. A software implementation of Newton’s Method for this problem using this initial guess will return a reasonable looking, but wrong, number.  It is glaringly obvious what goes wrong when we draw the pictures. But when we use software to compute the root most of the time there will be no pictures. Notice that, unlike the spectacular failure above there is nothing in the calculations being performed that could be detected in software to let the human in charge know that things have gone wrong. So, if you rely on software it is essential that you take the time to consider the “reasonableness” of the answer you obtain. If this is not understood there is a real risk that you could accept a ridiculous answer as correct.</div>
+<aside class="aside aside-like"><h5 class="heading"><span class="title">Comment.</span></h5>
+<div class="para">This is embarrassing at best, deadly at worst. Seriously. If what you are calculating is the embedded software for, say the autopilot system of an airliner, then accepting the wrong answer midflight could easily be deadly. Don’t take this lightly.</div></aside></article><span class="incontext"><a class="internal" href="SECTIONnewtons-method-1.html#EXAMPLE-SubtleFailCos">in-context</a></span>
+</body>
+</html>

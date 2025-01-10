@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<section class="paragraphs"><h3 class="heading"><span class="title"><i class="foreign">Hic Sunt Dracones</i> (Here Be Dragons).</span></h3>
+<div class="para">The time has come for us to begin understanding why differentials were abandoned as a foundational concept for Calculus. We are entering dangerous and uncharted waters but we won’t dive into the deep part just yet. We’ll only wade in a little way.</div>
+<div class="para">To indicate dangerous and  uncharted waters on their maps medieval mapmakers would fill in the unexplored regions of their maps with illustrations of dragons and other mythological beasts. The Lennox Globe, in the Rare Book Division of the The New York Public Library (1510 CE), even has the inscription <i class="foreign">Hic Sunt Dracones</i> (Here Be Dragons) along the eastern Asian coast.</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/DC/LennoxGlobe4.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">6.8.0.6<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://en.wikipedia.org/wiki/Hunt-Lenox_Globe" target="_blank">The Lennox Globe</a><details class="ptx-footnote" aria-live="polite" id="DIGRESSIONHereBeDragons-4-1-2"><summary class="ptx-footnote__number" title="Footnote 6.19"><sup> 19 </sup></summary><div class="ptx-footnote__contents" id="DIGRESSIONHereBeDragons-4-1-2"><code class="code-inline tex2jax_ignore">https://en.wikipedia.org/wiki/Hunt-Lenox_Globe</code></div></details> You can see the Latin inscription in the inset at the upper right.</figcaption></figure><div class="para">The concept of the differential of a differential, like <span class="process-math">\(\dx^2x\)</span> or <span class="process-math">\(\dx^2y\text{,}\)</span> is a mathematical dragon of sorts. We will proceed carefully.</div>
+<div class="para">If the entire development from <a href="SECTIONcurvature.html#SECTIONcurvature-21-1" class="xref" data-knowl="./knowl/xref/EQUATIONDiffTheta.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.21">equation (6.21)</a> to <a href="SECTIONcurvature.html#EQUATIONCurvaturePreamble" class="xref" data-knowl="./knowl/xref/EQUATIONCurvaturePreamble.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.24">equation (6.24)</a> feels contrived, it’s because it is contrived. In particular the “uncancelling” step is clearly a trick in the sense that nothing we did before that step seems to motivate the uncancelling. We just pulled it out of the air, and it worked. Clearly we knew that it would work, but why do you suppose we used a trick rather than explaining what we were doing?</div>
+<div class="para">Since everything we did hinged on the observation that <span class="process-math">\(\dfdxn{y}{x}{2}=\dfdx{\left(\dfdx{y}{x}\right)}{x}\)</span> (from <a href="SECTIONcurvature.html#SECTIONcurvature-21-7" class="xref" data-knowl="./knowl/xref/EQUATIONSecondDifferentials.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.23">equation (6.23)</a> and <a href="SECTIONcurvature.html#EQUATIONCurvaturePreamble" class="xref" data-knowl="./knowl/xref/EQUATIONCurvaturePreamble.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.24">equation (6.24)</a>) it would seem more natural to simply apply the Quotient Rule to <span class="process-math">\(\dx{\left(\dfdx{y}{x}\right)}\text{,}\)</span> wouldn’t it?</div>
+<div class="para logical">
+<div class="para">Let’s try that and see what happens. First we get</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dx\left(\dfdx{y}{x}\right) =
+\frac{\dx{x}\textcolor{red}{\dx{(\dx{y})}}-\dx{y}\textcolor{red}{\dx{(\dx{x})}}}{(\dx{x})^2}.
+\end{equation*}
+</div>
+</div>
+<div class="para logical">
+<div class="para">Next we simplify the notation a bit.  Let <span class="process-math">\(\textcolor{red}{\dx(\dx{y})}=\dx^2{y}\)</span> and <span class="process-math">\(\textcolor{red}{\dx(\dx{x})}=\dx^2{x}\)</span> so that,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dx\left(\dfdx{y}{x}\right) =
+\frac{\dx{x}\dx^2{y}-\dx{y}\dx^2{x}}{(\dx{x})^2}.
+\end{equation*}
+</div>
+</div>
+<div class="para">But the expressions <span class="process-math">\(\dx(\dx{x}) =\dx^2x\)</span> and <span class="process-math">\(\dx(\dx{y}) =\dx^2y\)</span> are a problem because to get <a href="SECTIONcurvature.html#EQUATIONCurvaturePreamble" class="xref" data-knowl="./knowl/xref/EQUATIONCurvaturePreamble.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.24">equation (6.24)</a> when we are finished we need to have <span class="process-math">\(\dx^2x =0\text{,}\)</span> but <span class="process-math">\(\dx^2y\neq0\text{,}\)</span> which seems inconsistent. Why would <span class="process-math">\(\dx^2y\)</span> be something, but <span class="process-math">\(\dx^2x\)</span> be nothing? This is very troubling.</div>
+<aside class="aside aside-like"><h4 class="heading"><span class="title">Comment.</span></h4>
+<div class="para logical">
+<div class="para">Note this very carefully:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dx{(\dx{y})}\neq (\dx{y})^2.
+\end{equation*}
+</div>
+<div class="para">This is because <span class="process-math">\((\dx{y})^2\)</span> is the square of <span class="process-math">\((\dx{y})\)</span> whereas <span class="process-math">\(\dx{(\dx{y})}\)</span> is the second differential of <span class="process-math">\(y\text{.}\)</span>
+</div>
+</div></aside><div class="para">We have observed regularly beginning in <a href="CHAPTERdifferentials.html" class="internal" title="Chapter 4: Differentials, Differentiation, and the Derivative">Chapter 4</a> that the concept of a differentials is questionable. But if differentials are problematic, second differentials —   differentials of differentials —  are even moreso, if that is possible.</div>
+<div class="para">The problem here is conceptual so we’ need to think carefully about the meanings of our symbols.</div>
+<div class="para logical"><dl class="description-list">
+<dt>Leibniz’ Conception</dt>
+<dd>
+<div class="para">When we use Leibniz’ differential notation we think of <span class="process-math">\(\dx{y}\)</span> and <span class="process-math">\(\dx{x}\)</span> as infinitesimal increments in the <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> coordinates. Specifically, <span class="process-math">\(\dx{x}=x_2-x_1\)</span> where <span class="process-math">\(x_2\)</span> and <span class="process-math">\(x_1\)</span> are infinitely close together. This is already a difficult thing to accept.</div>
+<div class="para">But if we stick with Leibniz then it must be that <span class="process-math">\(\dx(\dx{x})
+= \dx{x_2}-\dx{x_1}\text{,}\)</span> right? We can write this down and we can read these symbols easily enough. But what they seem to mean is that <span class="process-math">\(\dx(\dx{x})\)</span> is the infinitely small difference of two infinitely small differences. So does that mean that <span class="process-math">\(\dx(\dx{x})\)</span> just another differential? Or is <span class="process-math">\(\dx(\dx{x})\)</span> smaller than <span class="process-math">\(\dx{x}\text{?}\)</span> But <span class="process-math">\(\dx{x}\)</span> is infinitely small so how could <span class="process-math">\(\dx(\dx{x})\)</span> be smaller than that?</div>
+<div class="para">Down that path be dragons. We won’t go there.</div>
+</dd>
+<dt>Newton’s Conception</dt>
+<dd>
+<div class="para">Instead we’ll adopt Newton’s viewpoint and hope that it gives us a meaningful interpretation of our symbols.</div>
+<div class="para">For Newton, time was the only variable, and time always flows forward at a constant rate. He thought of a variable, <span class="process-math">\(x\)</span> for example, as moving, or flowing (<i class="foreign">fluent</i>) in time and <span class="process-math">\(\dot{x}\)</span> was the rate of flow (<i class="foreign">fluxion</i>) of the <i class="foreign">fluent</i> <span class="process-math">\(x\text{.}\)</span> In the simplest example, if <span class="process-math">\(x\)</span> is the position of a point then <span class="process-math">\(\dot{x}\)</span> is its velocity.</div>
+<div class="para">Newton only applied his dot notation to something that was changing in time; something that has a rate of change with respect to time. Can we apply it to time itself?</div>
+<div class="para logical">
+<div class="para">Sure we can. Time itself is “changing in time”, isn’t it? Time flows at a rate of <span class="process-math">\(1\)</span> second per second, or one day per day, or one century per century. The units don’t really matter. Loosely speaking (and mixing the Newtonian and Leibnizian viewpoints a bit), an increment of time now has the same magnitude as an increment of time later, has the same magnitude as an increment of time in the past. That is, every increment of <span class="process-math">\(t\)</span> is the same size.  If we let <span class="process-math">\(t\)</span> represent elapsed time then this means that the infinitesimal increment <span class="process-math">\(\dx{t}\)</span> is constant, so the fluxion of <span class="process-math">\(\dx{t}\)</span> is zero:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dx(\dx{t})=\dx^2{t}=\dot{\dx{t}}=0\text{.}
+\end{equation*}
+</div>
+<div class="para">However, keep in mind</div>
+</div>
+<div class="para">that this is not true of a quantity that is flowing at a variable rate. For example, if <span class="process-math">\(y=t^2\)</span> then <span class="process-math">\(\eval{\dx{y}}{t}{1}=2\dx{t}\)</span> whereas <span class="process-math">\(\eval{\dx{y}}{t}{2}=4\dx{t}\text{.}\)</span>
+</div>
+<div class="para logical">
+<div class="para">This solves our problem. If <span class="process-math">\(\dx{t}\)</span> is constant then by the Constant Rule</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dx^2{t}=\dx(\dx{t})=0.
+\end{equation*}
+</div>
+</div>
+<div class="para logical">
+<div class="para">Moreover we always have the option of adopting Newton’s convention that the only independent variable is time so that when we write <span class="process-math">\(\dfdx{y}{x}\)</span> we are thinking of the independent variable <span class="process-math">\(x\)</span> as time (although we rarely say so out loud), and we are thinking of <span class="process-math">\(y\)</span> as functionally dependent on time (represented by <span class="process-math">\(x\)</span> in this case).  Therefore</div>
+<div class="displaymath process-math">
+\begin{align*}
+\dx^2x=\dx(\dx{x})=0
+\amp{}\amp{}\text{ and } \amp{}\amp{}
+\dx^2y=\dx(\dx{y})\neq0.
+\end{align*}
+</div>
+</div>
+</dd>
+</dl></div>
+<div class="para">As a practical matter we will rarely be interested in second order differentials like <span class="process-math">\(\dx^2x\)</span> or <span class="process-math">\(\dx^2y\text{.}\)</span> As we indicated in <a href="SECTIONHist-intr.html" class="internal" title="Section 4.1: Historical Introduction">Section 4.1</a> the notion of a differential is really just an aid to computation, a convenient fiction. Differentials are a helpful aid but the more important and useful concept is the derivative.  Differentials only serve as a step along the way to finding derivatives.</div>
+<div class="para">On the other hand, we will be very interested in second order derivatives: <span class="process-math">\(\dfdx{\left(\dfdx{y}{x}\right)}{x} =
+\dfdxn{y}{x}{2} \)</span> because these often represent a real, physical quantity like force or acceleration.</div>
+<div class="para">But now there is another difficulty that can’t be ignored.  In order to make sense of the expression <span class="process-math">\(\dx^2{x}\)</span> we had to abandon Leibniz’ conception altogether. It is nice that Newton’s viewpoint gives us a way to make sense of the notation but what this tells us is that taking either viewpoint (Newton’s or Leibniz’) does not get us to the logical heart of the matter. A viewpoint is just a manner of thinking. We adopt a viewpoint in order to build intuition.</div>
+<div class="para">When two viewpoints are at odds it means that we need something deeper and more general. In this case we need a theory that subsumes, and can replace, the views of both Leibniz and Newton. This issue must, eventually, be addressed. But for now we will continue to work intuitively.  When we are done, when we stand at the top of the Calculus mountain we will be able to see the paths that Newton and Leibniz each took to get to the top.  We will begin our own trek to the summit in <a href="CHAPTERWhatsWrong.html" class="internal" title="Chapter 13: What’s Wrong with Differentials?">Chapter 13</a>.</div>
+<div class="para"><em class="alert">END OF DIGRESSION</em></div></section><span class="incontext"><a class="internal" href="SECTIONcurvature.html#DIGRESSIONHereBeDragons">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Using Letters Instead of Numbers</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Differential Calculus">
+<meta property="book:author" content="Eugene Boman">
+<meta property="book:author" content="Robert Rogers">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.5.1';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.87cabc2515250052.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.630d5c4fb4b681eb.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.97f3ae4f7a71ba18.css">
+<style>
+#SECinstructor-54-3 { counter-set: SECinstructor-54-3 0; }
+#SECinstructor-54-3 > li::marker { content: ""counter(SECinstructor-54-3,decimal)"."; }
+#SECinstructor-54-3 > li { counter-increment: SECinstructor-54-3; }
+#SECTIONFermMethAedeq-22-2-1-1-1 { counter-set: SECTIONFermMethAedeq-22-2-1-1-1 0; }
+#SECTIONFermMethAedeq-22-2-1-1-1 > li::marker { content: "("counter(SECTIONFermMethAedeq-22-2-1-1-1,lower-roman)")"; }
+#SECTIONFermMethAedeq-22-2-1-1-1 > li { counter-increment: SECTIONFermMethAedeq-22-2-1-1-1; }
+#SECTIONFermMethAedeq-22-6-1-1-1 { counter-set: SECTIONFermMethAedeq-22-6-1-1-1 0; }
+#SECTIONFermMethAedeq-22-6-1-1-1 > li::marker { content: "("counter(SECTIONFermMethAedeq-22-6-1-1-1,lower-roman)")"; }
+#SECTIONFermMethAedeq-22-6-1-1-1 > li { counter-increment: SECTIONFermMethAedeq-22-6-1-1-1; }
+#SECTIONFermMethAedeq-22-7-1-1-10 { counter-set: SECTIONFermMethAedeq-22-7-1-1-10 0; }
+#SECTIONFermMethAedeq-22-7-1-1-10 > li::marker { content: "("counter(SECTIONFermMethAedeq-22-7-1-1-10,lower-roman)")"; }
+#SECTIONFermMethAedeq-22-7-1-1-10 > li { counter-increment: SECTIONFermMethAedeq-22-7-1-1-10; }
+#PROBLEMPROBLEMFermMethX2A-1-1-1 { counter-set: PROBLEMPROBLEMFermMethX2A-1-1-1 0; }
+#PROBLEMPROBLEMFermMethX2A-1-1-1 > li::marker { content: "("counter(PROBLEMPROBLEMFermMethX2A-1-1-1,lower-roman)")"; }
+#PROBLEMPROBLEMFermMethX2A-1-1-1 > li { counter-increment: PROBLEMPROBLEMFermMethX2A-1-1-1; }
+#PROBLEMFermMethX2B-1-1-1 { counter-set: PROBLEMFermMethX2B-1-1-1 0; }
+#PROBLEMFermMethX2B-1-1-1 > li::marker { content: "("counter(PROBLEMFermMethX2B-1-1-1,lower-roman)")"; }
+#PROBLEMFermMethX2B-1-1-1 > li { counter-increment: PROBLEMFermMethX2B-1-1-1; }
+#SUBSECTIONSpdVelRofC-31-3-1 { counter-set: SUBSECTIONSpdVelRofC-31-3-1 0; }
+#SUBSECTIONSpdVelRofC-31-3-1 > li::marker { content: "("counter(SUBSECTIONSpdVelRofC-31-3-1,lower-roman)")"; }
+#SUBSECTIONSpdVelRofC-31-3-1 > li { counter-increment: SUBSECTIONSpdVelRofC-31-3-1; }
+#SUBSECTIONSpdVelRofC-32-3-1 { counter-set: SUBSECTIONSpdVelRofC-32-3-1 0; }
+#SUBSECTIONSpdVelRofC-32-3-1 > li::marker { content: "("counter(SUBSECTIONSpdVelRofC-32-3-1,lower-roman)")"; }
+#SUBSECTIONSpdVelRofC-32-3-1 > li { counter-increment: SUBSECTIONSpdVelRofC-32-3-1; }
+#SUBSECTIONSpdVelRofC-33-3-1 { counter-set: SUBSECTIONSpdVelRofC-33-3-1 0; }
+#SUBSECTIONSpdVelRofC-33-3-1 > li::marker { content: "("counter(SUBSECTIONSpdVelRofC-33-3-1,lower-roman)")"; }
+#SUBSECTIONSpdVelRofC-33-3-1 > li { counter-increment: SUBSECTIONSpdVelRofC-33-3-1; }
+#SUBSECTIONSpdVelRofC-34-3-1 { counter-set: SUBSECTIONSpdVelRofC-34-3-1 0; }
+#SUBSECTIONSpdVelRofC-34-3-1 > li::marker { content: "("counter(SUBSECTIONSpdVelRofC-34-3-1,lower-roman)")"; }
+#SUBSECTIONSpdVelRofC-34-3-1 > li { counter-increment: SUBSECTIONSpdVelRofC-34-3-1; }
+#DRILLConstantRule-2 { counter-set: DRILLConstantRule-2 0; }
+#DRILLConstantRule-2 > li::marker { content: "("counter(DRILLConstantRule-2,lower-roman)")"; }
+#DRILLConstantRule-2 > li { counter-increment: DRILLConstantRule-2; }
+#SUBSECTIONConstMultRule-5-2 { counter-set: SUBSECTIONConstMultRule-5-2 0; }
+#SUBSECTIONConstMultRule-5-2 > li::marker { content: "("counter(SUBSECTIONConstMultRule-5-2,lower-roman)")"; }
+#SUBSECTIONConstMultRule-5-2 > li { counter-increment: SUBSECTIONConstMultRule-5-2; }
+#PARTGenPwrRule-1-2-1 { counter-set: PARTGenPwrRule-1-2-1 0; }
+#PARTGenPwrRule-1-2-1 > li::marker { content: "("counter(PARTGenPwrRule-1-2-1,lower-roman)")"; }
+#PARTGenPwrRule-1-2-1 > li { counter-increment: PARTGenPwrRule-1-2-1; }
+#SUBSECTIONPowerRule-12-2-1 { counter-set: SUBSECTIONPowerRule-12-2-1 0; }
+#SUBSECTIONPowerRule-12-2-1 > li::marker { content: "("counter(SUBSECTIONPowerRule-12-2-1,lower-roman)")"; }
+#SUBSECTIONPowerRule-12-2-1 > li { counter-increment: SUBSECTIONPowerRule-12-2-1; }
+#SUBSECTIONPowerRule-13-2-1 { counter-set: SUBSECTIONPowerRule-13-2-1 0; }
+#SUBSECTIONPowerRule-13-2-1 > li::marker { content: "("counter(SUBSECTIONPowerRule-13-2-1,lower-roman)")"; }
+#SUBSECTIONPowerRule-13-2-1 > li { counter-increment: SUBSECTIONPowerRule-13-2-1; }
+#SUBSECTIONPowerRule-14-2-2 { counter-set: SUBSECTIONPowerRule-14-2-2 0; }
+#SUBSECTIONPowerRule-14-2-2 > li::marker { content: "("counter(SUBSECTIONPowerRule-14-2-2,lower-roman)")"; }
+#SUBSECTIONPowerRule-14-2-2 > li { counter-increment: SUBSECTIONPowerRule-14-2-2; }
+#SUBSECTIONPowerRule-40-2-4 { counter-set: SUBSECTIONPowerRule-40-2-4 0; }
+#SUBSECTIONPowerRule-40-2-4 > li::marker { content: "("counter(SUBSECTIONPowerRule-40-2-4,lower-roman)")"; }
+#SUBSECTIONPowerRule-40-2-4 > li { counter-increment: SUBSECTIONPowerRule-40-2-4; }
+#SUBSECTIONPowerRule-41-2-1 { counter-set: SUBSECTIONPowerRule-41-2-1 0; }
+#SUBSECTIONPowerRule-41-2-1 > li::marker { content: "("counter(SUBSECTIONPowerRule-41-2-1,lower-roman)")"; }
+#SUBSECTIONPowerRule-41-2-1 > li { counter-increment: SUBSECTIONPowerRule-41-2-1; }
+#SUBSECTIONPowerRule-42-2-1 { counter-set: SUBSECTIONPowerRule-42-2-1 0; }
+#SUBSECTIONPowerRule-42-2-1 > li::marker { content: "("counter(SUBSECTIONPowerRule-42-2-1,lower-roman)")"; }
+#SUBSECTIONPowerRule-42-2-1 > li { counter-increment: SUBSECTIONPowerRule-42-2-1; }
+#DRILLClassicalCurves-2-3 { counter-set: DRILLClassicalCurves-2-3 0; }
+#DRILLClassicalCurves-2-3 > li::marker { content: "("counter(DRILLClassicalCurves-2-3,lower-roman)")"; }
+#DRILLClassicalCurves-2-3 > li { counter-increment: DRILLClassicalCurves-2-3; }
+#SUBSECTIONQuotientRule-9-2-2 { counter-set: SUBSECTIONQuotientRule-9-2-2 0; }
+#SUBSECTIONQuotientRule-9-2-2 > li::marker { content: "("counter(SUBSECTIONQuotientRule-9-2-2,lower-roman)")"; }
+#SUBSECTIONQuotientRule-9-2-2 > li { counter-increment: SUBSECTIONQuotientRule-9-2-2; }
+#SUBSECTIONQuotientRule-10-2-1-1-2 { counter-set: SUBSECTIONQuotientRule-10-2-1-1-2 0; }
+#SUBSECTIONQuotientRule-10-2-1-1-2 > li::marker { content: "("counter(SUBSECTIONQuotientRule-10-2-1-1-2,lower-roman)")"; }
+#SUBSECTIONQuotientRule-10-2-1-1-2 > li { counter-increment: SUBSECTIONQuotientRule-10-2-1-1-2; }
+#SECTIONVelocitySlopeTangent-12-2-4 { counter-set: SECTIONVelocitySlopeTangent-12-2-4 0; }
+#SECTIONVelocitySlopeTangent-12-2-4 > li::marker { content: "("counter(SECTIONVelocitySlopeTangent-12-2-4,lower-roman)")"; }
+#SECTIONVelocitySlopeTangent-12-2-4 > li { counter-increment: SECTIONVelocitySlopeTangent-12-2-4; }
+#SECTIONdefin-tang-line-23-2-2 { counter-set: SECTIONdefin-tang-line-23-2-2 0; }
+#SECTIONdefin-tang-line-23-2-2 > li::marker { content: "("counter(SECTIONdefin-tang-line-23-2-2,lower-roman)")"; }
+#SECTIONdefin-tang-line-23-2-2 > li { counter-increment: SECTIONdefin-tang-line-23-2-2; }
+#SECTIONdefin-tang-line-32-2-1-1-2 { counter-set: SECTIONdefin-tang-line-32-2-1-1-2 0; }
+#SECTIONdefin-tang-line-32-2-1-1-2 > li::marker { content: "("counter(SECTIONdefin-tang-line-32-2-1-1-2,lower-roman)")"; }
+#SECTIONdefin-tang-line-32-2-1-1-2 > li { counter-increment: SECTIONdefin-tang-line-32-2-1-1-2; }
+#SECTIONdefin-tang-line-32-3-1-1-2 { counter-set: SECTIONdefin-tang-line-32-3-1-1-2 0; }
+#SECTIONdefin-tang-line-32-3-1-1-2 > li::marker { content: "("counter(SECTIONdefin-tang-line-32-3-1-1-2,lower-roman)")"; }
+#SECTIONdefin-tang-line-32-3-1-1-2 > li { counter-increment: SECTIONdefin-tang-line-32-3-1-1-2; }
+#SECTIONdefin-tang-line-32-4-1-1-2 { counter-set: SECTIONdefin-tang-line-32-4-1-1-2 0; }
+#SECTIONdefin-tang-line-32-4-1-1-2 > li::marker { content: "("counter(SECTIONdefin-tang-line-32-4-1-1-2,lower-roman)")"; }
+#SECTIONdefin-tang-line-32-4-1-1-2 > li { counter-increment: SECTIONdefin-tang-line-32-4-1-1-2; }
+#PROBLEMHyperbolaTriangles-3-1-1-6 { counter-set: PROBLEMHyperbolaTriangles-3-1-1-6 0; }
+#PROBLEMHyperbolaTriangles-3-1-1-6 > li::marker { content: "("counter(PROBLEMHyperbolaTriangles-3-1-1-6,lower-roman)")"; }
+#PROBLEMHyperbolaTriangles-3-1-1-6 > li { counter-increment: PROBLEMHyperbolaTriangles-3-1-1-6; }
+#PROBLEMHyperbolaTriangles-4-1-1-6 { counter-set: PROBLEMHyperbolaTriangles-4-1-1-6 0; }
+#PROBLEMHyperbolaTriangles-4-1-1-6 > li::marker { content: "("counter(PROBLEMHyperbolaTriangles-4-1-1-6,lower-roman)")"; }
+#PROBLEMHyperbolaTriangles-4-1-1-6 > li { counter-increment: PROBLEMHyperbolaTriangles-4-1-1-6; }
+#PROBLEMHyperbolaTriangles-5-1-1-6 { counter-set: PROBLEMHyperbolaTriangles-5-1-1-6 0; }
+#PROBLEMHyperbolaTriangles-5-1-1-6 > li::marker { content: "("counter(PROBLEMHyperbolaTriangles-5-1-1-6,lower-roman)")"; }
+#PROBLEMHyperbolaTriangles-5-1-1-6 > li { counter-increment: PROBLEMHyperbolaTriangles-5-1-1-6; }
+#PROBLEMHyperbolaTriangles-6-1-1-4 { counter-set: PROBLEMHyperbolaTriangles-6-1-1-4 0; }
+#PROBLEMHyperbolaTriangles-6-1-1-4 > li::marker { content: "("counter(PROBLEMHyperbolaTriangles-6-1-1-4,lower-roman)")"; }
+#PROBLEMHyperbolaTriangles-6-1-1-4 > li { counter-increment: PROBLEMHyperbolaTriangles-6-1-1-4; }
+#SECTIONGalileoDrops-9-2 { counter-set: SECTIONGalileoDrops-9-2 0; }
+#SECTIONGalileoDrops-9-2 > li::marker { content: ""counter(SECTIONGalileoDrops-9-2,decimal)"."; }
+#SECTIONGalileoDrops-9-2 > li { counter-increment: SECTIONGalileoDrops-9-2; }
+#SECTIONGalileoDrops-47-4 { counter-set: SECTIONGalileoDrops-47-4 0; }
+#SECTIONGalileoDrops-47-4 > li::marker { content: "("counter(SECTIONGalileoDrops-47-4,decimal)")"; }
+#SECTIONGalileoDrops-47-4 > li { counter-increment: SECTIONGalileoDrops-47-4; }
+#SECONDBringCalc-6-4 { counter-set: SECONDBringCalc-6-4 0; }
+#SECONDBringCalc-6-4 > li::marker { content: ""counter(SECONDBringCalc-6-4,decimal)"."; }
+#SECONDBringCalc-6-4 > li { counter-increment: SECONDBringCalc-6-4; }
+#SECONDBringCalc-12-6 { counter-set: SECONDBringCalc-12-6 0; }
+#SECONDBringCalc-12-6 > li::marker { content: ""counter(SECONDBringCalc-12-6,decimal)"."; }
+#SECONDBringCalc-12-6 > li { counter-increment: SECONDBringCalc-12-6; }
+#PROBLEMGeneralFallingBalls-2-1-1-2 { counter-set: PROBLEMGeneralFallingBalls-2-1-1-2 0; }
+#PROBLEMGeneralFallingBalls-2-1-1-2 > li::marker { content: "("counter(PROBLEMGeneralFallingBalls-2-1-1-2,lower-roman)")"; }
+#PROBLEMGeneralFallingBalls-2-1-1-2 > li { counter-increment: PROBLEMGeneralFallingBalls-2-1-1-2; }
+#PROBLEMGeneralFallingBalls-8-1-1-2 { counter-set: PROBLEMGeneralFallingBalls-8-1-1-2 0; }
+#PROBLEMGeneralFallingBalls-8-1-1-2 > li::marker { content: "("counter(PROBLEMGeneralFallingBalls-8-1-1-2,lower-roman)")"; }
+#PROBLEMGeneralFallingBalls-8-1-1-2 > li { counter-increment: PROBLEMGeneralFallingBalls-8-1-1-2; }
+#PROBLEMDerivProdNEProdDeriv-2-1-1-1 { counter-set: PROBLEMDerivProdNEProdDeriv-2-1-1-1 0; }
+#PROBLEMDerivProdNEProdDeriv-2-1-1-1 > li::marker { content: "("counter(PROBLEMDerivProdNEProdDeriv-2-1-1-1,lower-roman)")"; }
+#PROBLEMDerivProdNEProdDeriv-2-1-1-1 > li { counter-increment: PROBLEMDerivProdNEProdDeriv-2-1-1-1; }
+#SECTIONDerivative-22-2-3 { counter-set: SECTIONDerivative-22-2-3 0; }
+#SECTIONDerivative-22-2-3 > li::marker { content: "("counter(SECTIONDerivative-22-2-3,lower-roman)")"; }
+#SECTIONDerivative-22-2-3 > li { counter-increment: SECTIONDerivative-22-2-3; }
+#SECTIONThinkingDynamically-11-1-2-1 { counter-set: SECTIONThinkingDynamically-11-1-2-1 0; }
+#SECTIONThinkingDynamically-11-1-2-1 > li::marker { content: "(["counter(SECTIONThinkingDynamically-11-1-2-1,lower-roman)")]"; }
+#SECTIONThinkingDynamically-11-1-2-1 > li { counter-increment: SECTIONThinkingDynamically-11-1-2-1; }
+#PROBLEMAirlinerSpeed-3-1-1-2 { counter-set: PROBLEMAirlinerSpeed-3-1-1-2 0; }
+#PROBLEMAirlinerSpeed-3-1-1-2 > li::marker { content: "("counter(PROBLEMAirlinerSpeed-3-1-1-2,lower-roman)")"; }
+#PROBLEMAirlinerSpeed-3-1-1-2 > li { counter-increment: PROBLEMAirlinerSpeed-3-1-1-2; }
+#SECTIONFluxions-33-2-1-1-1 { counter-set: SECTIONFluxions-33-2-1-1-1 0; }
+#SECTIONFluxions-33-2-1-1-1 > li::marker { content: "("counter(SECTIONFluxions-33-2-1-1-1,lower-roman)")"; }
+#SECTIONFluxions-33-2-1-1-1 > li { counter-increment: SECTIONFluxions-33-2-1-1-1; }
+#SECTIONFluxions-33-3-1-1-1 { counter-set: SECTIONFluxions-33-3-1-1-1 0; }
+#SECTIONFluxions-33-3-1-1-1 > li::marker { content: "("counter(SECTIONFluxions-33-3-1-1-1,lower-roman)")"; }
+#SECTIONFluxions-33-3-1-1-1 > li { counter-increment: SECTIONFluxions-33-3-1-1-1; }
+#PROBLEMadfj-1-1-2-2 { counter-set: PROBLEMadfj-1-1-2-2 0; }
+#PROBLEMadfj-1-1-2-2 > li::marker { content: "("counter(PROBLEMadfj-1-1-2-2,lower-roman)")"; }
+#PROBLEMadfj-1-1-2-2 > li { counter-increment: PROBLEMadfj-1-1-2-2; }
+#PROBLEMadfj-2-1-2-2 { counter-set: PROBLEMadfj-2-1-2-2 0; }
+#PROBLEMadfj-2-1-2-2 > li::marker { content: "("counter(PROBLEMadfj-2-1-2-2,lower-roman)")"; }
+#PROBLEMadfj-2-1-2-2 > li { counter-increment: PROBLEMadfj-2-1-2-2; }
+#SECTIONSelfIntersectCurve-20-15-2-1-1-2 { counter-set: SECTIONSelfIntersectCurve-20-15-2-1-1-2 0; }
+#SECTIONSelfIntersectCurve-20-15-2-1-1-2 > li::marker { content: "("counter(SECTIONSelfIntersectCurve-20-15-2-1-1-2,lower-roman)")"; }
+#SECTIONSelfIntersectCurve-20-15-2-1-1-2 > li { counter-increment: SECTIONSelfIntersectCurve-20-15-2-1-1-2; }
+#PROBLEMUnitCircleParameterization1-1-1-1-1 { counter-set: PROBLEMUnitCircleParameterization1-1-1-1-1 0; }
+#PROBLEMUnitCircleParameterization1-1-1-1-1 > li::marker { content: "("counter(PROBLEMUnitCircleParameterization1-1-1-1-1,lower-roman)")"; }
+#PROBLEMUnitCircleParameterization1-1-1-1-1 > li { counter-increment: PROBLEMUnitCircleParameterization1-1-1-1-1; }
+#SECTIONSelfIntersectCurve-20-21-1-1-2 { counter-set: SECTIONSelfIntersectCurve-20-21-1-1-2 0; }
+#SECTIONSelfIntersectCurve-20-21-1-1-2 > li::marker { content: "("counter(SECTIONSelfIntersectCurve-20-21-1-1-2,lower-roman)")"; }
+#SECTIONSelfIntersectCurve-20-21-1-1-2 > li { counter-increment: SECTIONSelfIntersectCurve-20-21-1-1-2; }
+#SECTIONtrig-interl-3-12-2-1-1-2 { counter-set: SECTIONtrig-interl-3-12-2-1-1-2 0; }
+#SECTIONtrig-interl-3-12-2-1-1-2 > li::marker { content: "("counter(SECTIONtrig-interl-3-12-2-1-1-2,lower-roman)")"; }
+#SECTIONtrig-interl-3-12-2-1-1-2 > li { counter-increment: SECTIONtrig-interl-3-12-2-1-1-2; }
+#SECTIONtrig-interl-3-12-3-1-1-2 { counter-set: SECTIONtrig-interl-3-12-3-1-1-2 0; }
+#SECTIONtrig-interl-3-12-3-1-1-2 > li::marker { content: "("counter(SECTIONtrig-interl-3-12-3-1-1-2,lower-roman)")"; }
+#SECTIONtrig-interl-3-12-3-1-1-2 > li { counter-increment: SECTIONtrig-interl-3-12-3-1-1-2; }
+#PROBLEMSineOscillB-1-1-8 { counter-set: PROBLEMSineOscillB-1-1-8 0; }
+#PROBLEMSineOscillB-1-1-8 > li::marker { content: "("counter(PROBLEMSineOscillB-1-1-8,lower-roman)")"; }
+#PROBLEMSineOscillB-1-1-8 > li { counter-increment: PROBLEMSineOscillB-1-1-8; }
+#SECTIONtrig-interl-5-11-2-1 { counter-set: SECTIONtrig-interl-5-11-2-1 0; }
+#SECTIONtrig-interl-5-11-2-1 > li::marker { content: "("counter(SECTIONtrig-interl-5-11-2-1,lower-roman)")"; }
+#SECTIONtrig-interl-5-11-2-1 > li { counter-increment: SECTIONtrig-interl-5-11-2-1; }
+#DRILLPolarQuirks2-2-1 { counter-set: DRILLPolarQuirks2-2-1 0; }
+#DRILLPolarQuirks2-2-1 > li::marker { content: "("counter(DRILLPolarQuirks2-2-1,lower-roman)")"; }
+#DRILLPolarQuirks2-2-1 > li { counter-increment: DRILLPolarQuirks2-2-1; }
+#DRILLPolRectConvertA-1-1-3 { counter-set: DRILLPolRectConvertA-1-1-3 0; }
+#DRILLPolRectConvertA-1-1-3 > li::marker { content: "("counter(DRILLPolRectConvertA-1-1-3,lower-roman)")"; }
+#DRILLPolRectConvertA-1-1-3 > li { counter-increment: DRILLPolRectConvertA-1-1-3; }
+#DRILLPolarGraphs-2-2 { counter-set: DRILLPolarGraphs-2-2 0; }
+#DRILLPolarGraphs-2-2 > li::marker { content: "("counter(DRILLPolarGraphs-2-2,lower-roman)")"; }
+#DRILLPolarGraphs-2-2 > li { counter-increment: DRILLPolarGraphs-2-2; }
+#SUBSECTIONCircularMotion-5-2-2 { counter-set: SUBSECTIONCircularMotion-5-2-2 0; }
+#SUBSECTIONCircularMotion-5-2-2 > li::marker { content: "("counter(SUBSECTIONCircularMotion-5-2-2,lower-roman)")"; }
+#SUBSECTIONCircularMotion-5-2-2 > li { counter-increment: SUBSECTIONCircularMotion-5-2-2; }
+#EXERCISEDiffPractice1-2-1-2 { counter-set: EXERCISEDiffPractice1-2-1-2 0; }
+#EXERCISEDiffPractice1-2-1-2 > li::marker { content: "("counter(EXERCISEDiffPractice1-2-1-2,lower-roman)")"; }
+#EXERCISEDiffPractice1-2-1-2 > li { counter-increment: EXERCISEDiffPractice1-2-1-2; }
+#SUBSECTIONCircularMotion-12-2-1-9 { counter-set: SUBSECTIONCircularMotion-12-2-1-9 0; }
+#SUBSECTIONCircularMotion-12-2-1-9 > li::marker { content: "("counter(SUBSECTIONCircularMotion-12-2-1-9,lower-roman)")"; }
+#SUBSECTIONCircularMotion-12-2-1-9 > li { counter-increment: SUBSECTIONCircularMotion-12-2-1-9; }
+#SUBSECTIONpolar-coord-calc-6-2-1-3-1 { counter-set: SUBSECTIONpolar-coord-calc-6-2-1-3-1 0; }
+#SUBSECTIONpolar-coord-calc-6-2-1-3-1 > li::marker { content: "("counter(SUBSECTIONpolar-coord-calc-6-2-1-3-1,lower-roman)")"; }
+#SUBSECTIONpolar-coord-calc-6-2-1-3-1 > li { counter-increment: SUBSECTIONpolar-coord-calc-6-2-1-3-1; }
+#SUBSECTIONpolar-coord-calc-6-3-1-3-1 { counter-set: SUBSECTIONpolar-coord-calc-6-3-1-3-1 0; }
+#SUBSECTIONpolar-coord-calc-6-3-1-3-1 > li::marker { content: "("counter(SUBSECTIONpolar-coord-calc-6-3-1-3-1,lower-roman)")"; }
+#SUBSECTIONpolar-coord-calc-6-3-1-3-1 > li { counter-increment: SUBSECTIONpolar-coord-calc-6-3-1-3-1; }
+#SUBSECTIONpolar-coord-calc-6-4-1-3-1 { counter-set: SUBSECTIONpolar-coord-calc-6-4-1-3-1 0; }
+#SUBSECTIONpolar-coord-calc-6-4-1-3-1 > li::marker { content: "("counter(SUBSECTIONpolar-coord-calc-6-4-1-3-1,lower-roman)")"; }
+#SUBSECTIONpolar-coord-calc-6-4-1-3-1 > li { counter-increment: SUBSECTIONpolar-coord-calc-6-4-1-3-1; }
+#PROBLEMcycloid2-2-1-1-1 { counter-set: PROBLEMcycloid2-2-1-1-1 0; }
+#PROBLEMcycloid2-2-1-1-1 > li::marker { content: "("counter(PROBLEMcycloid2-2-1-1-1,lower-roman)")"; }
+#PROBLEMcycloid2-2-1-1-1 > li { counter-increment: PROBLEMcycloid2-2-1-1-1; }
+#PROBLEMcycloid2-3-1-1-1 { counter-set: PROBLEMcycloid2-3-1-1-1 0; }
+#PROBLEMcycloid2-3-1-1-1 > li::marker { content: "("counter(PROBLEMcycloid2-3-1-1-1,lower-roman)")"; }
+#PROBLEMcycloid2-3-1-1-1 > li { counter-increment: PROBLEMcycloid2-3-1-1-1; }
+#SUBSECTIONsimple-harm-oscill-17-3-1-1-4 { counter-set: SUBSECTIONsimple-harm-oscill-17-3-1-1-4 0; }
+#SUBSECTIONsimple-harm-oscill-17-3-1-1-4 > li::marker { content: "("counter(SUBSECTIONsimple-harm-oscill-17-3-1-1-4,lower-roman)")"; }
+#SUBSECTIONsimple-harm-oscill-17-3-1-1-4 > li { counter-increment: SUBSECTIONsimple-harm-oscill-17-3-1-1-4; }
+#SECTIONdiff-other-trig-13-2-1 { counter-set: SECTIONdiff-other-trig-13-2-1 0; }
+#SECTIONdiff-other-trig-13-2-1 > li::marker { content: "("counter(SECTIONdiff-other-trig-13-2-1,lower-roman)")"; }
+#SECTIONdiff-other-trig-13-2-1 > li { counter-increment: SECTIONdiff-other-trig-13-2-1; }
+#SECTIONdiff-other-trig-14-2-3 { counter-set: SECTIONdiff-other-trig-14-2-3 0; }
+#SECTIONdiff-other-trig-14-2-3 > li::marker { content: "("counter(SECTIONdiff-other-trig-14-2-3,lower-roman)")"; }
+#SECTIONdiff-other-trig-14-2-3 > li { counter-increment: SECTIONdiff-other-trig-14-2-3; }
+#PROBLEMDiffFormTan-3-1-3-1 { counter-set: PROBLEMDiffFormTan-3-1-3-1 0; }
+#PROBLEMDiffFormTan-3-1-3-1 > li::marker { content: "("counter(PROBLEMDiffFormTan-3-1-3-1,lower-roman)")"; }
+#PROBLEMDiffFormTan-3-1-3-1 > li { counter-increment: PROBLEMDiffFormTan-3-1-3-1; }
+#DIGRESSIONInverse-function-notation-6-2-1 { counter-set: DIGRESSIONInverse-function-notation-6-2-1 0; }
+#DIGRESSIONInverse-function-notation-6-2-1 > li::marker { content: "("counter(DIGRESSIONInverse-function-notation-6-2-1,lower-roman)")"; }
+#DIGRESSIONInverse-function-notation-6-2-1 > li { counter-increment: DIGRESSIONInverse-function-notation-6-2-1; }
+#PROBLEMInvTanDiffeqB-1-1-3 { counter-set: PROBLEMInvTanDiffeqB-1-1-3 0; }
+#PROBLEMInvTanDiffeqB-1-1-3 > li::marker { content: "("counter(PROBLEMInvTanDiffeqB-1-1-3,lower-roman)")"; }
+#PROBLEMInvTanDiffeqB-1-1-3 > li { counter-increment: PROBLEMInvTanDiffeqB-1-1-3; }
+#PROBLEMArcSinDiffeqB-1-1-3 { counter-set: PROBLEMArcSinDiffeqB-1-1-3 0; }
+#PROBLEMArcSinDiffeqB-1-1-3 > li::marker { content: "("counter(PROBLEMArcSinDiffeqB-1-1-3,lower-roman)")"; }
+#PROBLEMArcSinDiffeqB-1-1-3 > li { counter-increment: PROBLEMArcSinDiffeqB-1-1-3; }
+#PROBLEMArcSecDiffeqB-1-1-3 { counter-set: PROBLEMArcSecDiffeqB-1-1-3 0; }
+#PROBLEMArcSecDiffeqB-1-1-3 > li::marker { content: "("counter(PROBLEMArcSecDiffeqB-1-1-3,lower-roman)")"; }
+#PROBLEMArcSecDiffeqB-1-1-3 > li { counter-increment: PROBLEMArcSecDiffeqB-1-1-3; }
+#InverseSecCsc-11-1 { counter-set: InverseSecCsc-11-1 0; }
+#InverseSecCsc-11-1 > li::marker { content: ""counter(InverseSecCsc-11-1,decimal)"."; }
+#InverseSecCsc-11-1 > li { counter-increment: InverseSecCsc-11-1; }
+#InverseSecCsc-17-2-1 { counter-set: InverseSecCsc-17-2-1 0; }
+#InverseSecCsc-17-2-1 > li::marker { content: "("counter(InverseSecCsc-17-2-1,lower-roman)")"; }
+#InverseSecCsc-17-2-1 > li { counter-increment: InverseSecCsc-17-2-1; }
+#InverseSecCsc-20-2-1-1-1 { counter-set: InverseSecCsc-20-2-1-1-1 0; }
+#InverseSecCsc-20-2-1-1-1 > li::marker { content: "("counter(InverseSecCsc-20-2-1-1-1,lower-roman)")"; }
+#InverseSecCsc-20-2-1-1-1 > li { counter-increment: InverseSecCsc-20-2-1-1-1; }
+#PROBLEMSqrt2-2-4-1-1-1 { counter-set: PROBLEMSqrt2-2-4-1-1-1 0; }
+#PROBLEMSqrt2-2-4-1-1-1 > li::marker { content: "("counter(PROBLEMSqrt2-2-4-1-1-1,lower-roman)")"; }
+#PROBLEMSqrt2-2-4-1-1-1 > li { counter-increment: PROBLEMSqrt2-2-4-1-1-1; }
+#DRILLNewtonMethod2-2 { counter-set: DRILLNewtonMethod2-2 0; }
+#DRILLNewtonMethod2-2 > li::marker { content: "("counter(DRILLNewtonMethod2-2,lower-roman)")"; }
+#DRILLNewtonMethod2-2 > li { counter-increment: DRILLNewtonMethod2-2; }
+#ALGORITHMNewtonsMethod-4-4 { counter-set: ALGORITHMNewtonsMethod-4-4 0; }
+#ALGORITHMNewtonsMethod-4-4 > li::marker { content: ""counter(ALGORITHMNewtonsMethod-4-4,decimal)"."; }
+#ALGORITHMNewtonsMethod-4-4 > li { counter-increment: ALGORITHMNewtonsMethod-4-4; }
+#PROBLEMNewtMethCreateFunction-3-3 { counter-set: PROBLEMNewtMethCreateFunction-3-3 0; }
+#PROBLEMNewtMethCreateFunction-3-3 > li::marker { content: "("counter(PROBLEMNewtMethCreateFunction-3-3,lower-roman)")"; }
+#PROBLEMNewtMethCreateFunction-3-3 > li { counter-increment: PROBLEMNewtMethCreateFunction-3-3; }
+#PROBLEMNewton-meth-3-8 { counter-set: PROBLEMNewton-meth-3-8 0; }
+#PROBLEMNewton-meth-3-8 > li::marker { content: "("counter(PROBLEMNewton-meth-3-8,lower-roman)")"; }
+#PROBLEMNewton-meth-3-8 > li { counter-increment: PROBLEMNewton-meth-3-8; }
+#PROBLEMNewton-meth2-3-2 { counter-set: PROBLEMNewton-meth2-3-2 0; }
+#PROBLEMNewton-meth2-3-2 > li::marker { content: "("counter(PROBLEMNewton-meth2-3-2,lower-roman)")"; }
+#PROBLEMNewton-meth2-3-2 > li { counter-increment: PROBLEMNewton-meth2-3-2; }
+#SUBSECTIONSubtleFailure-8-3-1-1-3 { counter-set: SUBSECTIONSubtleFailure-8-3-1-1-3 0; }
+#SUBSECTIONSubtleFailure-8-3-1-1-3 > li::marker { content: "("counter(SUBSECTIONSubtleFailure-8-3-1-1-3,lower-roman)")"; }
+#SUBSECTIONSubtleFailure-8-3-1-1-3 > li { counter-increment: SUBSECTIONSubtleFailure-8-3-1-1-3; }
+#SECTIONDEsandIVPS-2-3 { counter-set: SECTIONDEsandIVPS-2-3 0; }
+#SECTIONDEsandIVPS-2-3 > li::marker { content: ""counter(SECTIONDEsandIVPS-2-3,decimal)"."; }
+#SECTIONDEsandIVPS-2-3 > li { counter-increment: SECTIONDEsandIVPS-2-3; }
+#DRILLIVP-sqr-3-2 { counter-set: DRILLIVP-sqr-3-2 0; }
+#DRILLIVP-sqr-3-2 > li::marker { content: "("counter(DRILLIVP-sqr-3-2,lower-roman)")"; }
+#DRILLIVP-sqr-3-2 > li { counter-increment: DRILLIVP-sqr-3-2; }
+#SECTIONExponentialFunction-65-2 { counter-set: SECTIONExponentialFunction-65-2 0; }
+#SECTIONExponentialFunction-65-2 > li::marker { content: ""counter(SECTIONExponentialFunction-65-2,decimal)"."; }
+#SECTIONExponentialFunction-65-2 > li { counter-increment: SECTIONExponentialFunction-65-2; }
+#SECTIONExponentialFunction-70-2-2 { counter-set: SECTIONExponentialFunction-70-2-2 0; }
+#SECTIONExponentialFunction-70-2-2 > li::marker { content: "("counter(SECTIONExponentialFunction-70-2-2,lower-roman)")"; }
+#SECTIONExponentialFunction-70-2-2 > li { counter-increment: SECTIONExponentialFunction-70-2-2; }
+#SECTIONExponentialFunction-71-2-2 { counter-set: SECTIONExponentialFunction-71-2-2 0; }
+#SECTIONExponentialFunction-71-2-2 > li::marker { content: "("counter(SECTIONExponentialFunction-71-2-2,lower-roman)")"; }
+#SECTIONExponentialFunction-71-2-2 > li { counter-increment: SECTIONExponentialFunction-71-2-2; }
+#SECTIONExponentialFunction-72-2-1 { counter-set: SECTIONExponentialFunction-72-2-1 0; }
+#SECTIONExponentialFunction-72-2-1 > li::marker { content: "("counter(SECTIONExponentialFunction-72-2-1,lower-roman)")"; }
+#SECTIONExponentialFunction-72-2-1 > li { counter-increment: SECTIONExponentialFunction-72-2-1; }
+#PROBLEMPolyExpA-1-1-2 { counter-set: PROBLEMPolyExpA-1-1-2 0; }
+#PROBLEMPolyExpA-1-1-2 > li::marker { content: "("counter(PROBLEMPolyExpA-1-1-2,lower-roman)")"; }
+#PROBLEMPolyExpA-1-1-2 > li { counter-increment: PROBLEMPolyExpA-1-1-2; }
+#SECTIONExponentialFunction-75-2-7 { counter-set: SECTIONExponentialFunction-75-2-7 0; }
+#SECTIONExponentialFunction-75-2-7 > li::marker { content: "("counter(SECTIONExponentialFunction-75-2-7,lower-roman)")"; }
+#SECTIONExponentialFunction-75-2-7 > li { counter-increment: SECTIONExponentialFunction-75-2-7; }
+#PROBLEMExpSinCos-1-1-1-4 { counter-set: PROBLEMExpSinCos-1-1-1-4 0; }
+#PROBLEMExpSinCos-1-1-1-4 > li::marker { content: "("counter(PROBLEMExpSinCos-1-1-1-4,lower-roman)")"; }
+#PROBLEMExpSinCos-1-1-1-4 > li { counter-increment: PROBLEMExpSinCos-1-1-1-4; }
+#PROBLEMHyperbolicTrig-2-1-1-1 { counter-set: PROBLEMHyperbolicTrig-2-1-1-1 0; }
+#PROBLEMHyperbolicTrig-2-1-1-1 > li::marker { content: "("counter(PROBLEMHyperbolicTrig-2-1-1-1,lower-roman)")"; }
+#PROBLEMHyperbolicTrig-2-1-1-1 > li { counter-increment: PROBLEMHyperbolicTrig-2-1-1-1; }
+#PROBLEMCatenaryTrueC-1-1-2 { counter-set: PROBLEMCatenaryTrueC-1-1-2 0; }
+#PROBLEMCatenaryTrueC-1-1-2 > li::marker { content: "("counter(PROBLEMCatenaryTrueC-1-1-2,lower-roman)")"; }
+#PROBLEMCatenaryTrueC-1-1-2 > li { counter-increment: PROBLEMCatenaryTrueC-1-1-2; }
+#PROBLEMBacteriaIVP1D-1-1-3 { counter-set: PROBLEMBacteriaIVP1D-1-1-3 0; }
+#PROBLEMBacteriaIVP1D-1-1-3 > li::marker { content: "("counter(PROBLEMBacteriaIVP1D-1-1-3,lower-roman)")"; }
+#PROBLEMBacteriaIVP1D-1-1-3 > li { counter-increment: PROBLEMBacteriaIVP1D-1-1-3; }
+#SECTIONNatLog-3-2-1 { counter-set: SECTIONNatLog-3-2-1 0; }
+#SECTIONNatLog-3-2-1 > li::marker { content: "("counter(SECTIONNatLog-3-2-1,lower-roman)")"; }
+#SECTIONNatLog-3-2-1 > li { counter-increment: SECTIONNatLog-3-2-1; }
+#SECTIONNatLog-8-2-1 { counter-set: SECTIONNatLog-8-2-1 0; }
+#SECTIONNatLog-8-2-1 > li::marker { content: "("counter(SECTIONNatLog-8-2-1,lower-roman)")"; }
+#SECTIONNatLog-8-2-1 > li { counter-increment: SECTIONNatLog-8-2-1; }
+#SECTIONNatLog-10-2-1 { counter-set: SECTIONNatLog-10-2-1 0; }
+#SECTIONNatLog-10-2-1 > li::marker { content: "("counter(SECTIONNatLog-10-2-1,lower-roman)")"; }
+#SECTIONNatLog-10-2-1 > li { counter-increment: SECTIONNatLog-10-2-1; }
+#SECTIONNatLog-11-1-1-1-5 { counter-set: SECTIONNatLog-11-1-1-1-5 0; }
+#SECTIONNatLog-11-1-1-1-5 > li::marker { content: "("counter(SECTIONNatLog-11-1-1-1-5,lower-roman)")"; }
+#SECTIONNatLog-11-1-1-1-5 > li { counter-increment: SECTIONNatLog-11-1-1-1-5; }
+#SECTIONNatLog-11-2-1-1-5 { counter-set: SECTIONNatLog-11-2-1-1-5 0; }
+#SECTIONNatLog-11-2-1-1-5 > li::marker { content: "("counter(SECTIONNatLog-11-2-1-1-5,lower-roman)")"; }
+#SECTIONNatLog-11-2-1-1-5 > li { counter-increment: SECTIONNatLog-11-2-1-1-5; }
+#SUBSECTIONradioactive-decay-9-1 { counter-set: SUBSECTIONradioactive-decay-9-1 0; }
+#SUBSECTIONradioactive-decay-9-1 > li::marker { content: "("counter(SUBSECTIONradioactive-decay-9-1,lower-roman)")"; }
+#SUBSECTIONradioactive-decay-9-1 > li { counter-increment: SUBSECTIONradioactive-decay-9-1; }
+#SECTIONDerivNatLog-4-2-3 { counter-set: SECTIONDerivNatLog-4-2-3 0; }
+#SECTIONDerivNatLog-4-2-3 > li::marker { content: "("counter(SECTIONDerivNatLog-4-2-3,lower-roman)")"; }
+#SECTIONDerivNatLog-4-2-3 > li { counter-increment: SECTIONDerivNatLog-4-2-3; }
+#PARAGRAPHSGenExp-13-2-3 { counter-set: PARAGRAPHSGenExp-13-2-3 0; }
+#PARAGRAPHSGenExp-13-2-3 > li::marker { content: "("counter(PARAGRAPHSGenExp-13-2-3,lower-roman)")"; }
+#PARAGRAPHSGenExp-13-2-3 > li { counter-increment: PARAGRAPHSGenExp-13-2-3; }
+#PARAGRAPHSGenLog-7-2-3 { counter-set: PARAGRAPHSGenLog-7-2-3 0; }
+#PARAGRAPHSGenLog-7-2-3 > li::marker { content: "("counter(PARAGRAPHSGenLog-7-2-3,lower-roman)")"; }
+#PARAGRAPHSGenLog-7-2-3 > li { counter-increment: PARAGRAPHSGenLog-7-2-3; }
+#DIGRESSIONBriggsAndNapier-7-2-1 { counter-set: DIGRESSIONBriggsAndNapier-7-2-1 0; }
+#DIGRESSIONBriggsAndNapier-7-2-1 > li::marker { content: "("counter(DIGRESSIONBriggsAndNapier-7-2-1,lower-roman)")"; }
+#DIGRESSIONBriggsAndNapier-7-2-1 > li { counter-increment: DIGRESSIONBriggsAndNapier-7-2-1; }
+#DIGRESSIONBriggsAndNapier-11-3-1 { counter-set: DIGRESSIONBriggsAndNapier-11-3-1 0; }
+#DIGRESSIONBriggsAndNapier-11-3-1 > li::marker { content: "("counter(DIGRESSIONBriggsAndNapier-11-3-1,lower-roman)")"; }
+#DIGRESSIONBriggsAndNapier-11-3-1 > li { counter-increment: DIGRESSIONBriggsAndNapier-11-3-1; }
+#DIGRESSIONBriggsAndNapier-12-1-1-1 { counter-set: DIGRESSIONBriggsAndNapier-12-1-1-1 0; }
+#DIGRESSIONBriggsAndNapier-12-1-1-1 > li::marker { content: "("counter(DIGRESSIONBriggsAndNapier-12-1-1-1,lower-roman)")"; }
+#DIGRESSIONBriggsAndNapier-12-1-1-1 > li { counter-increment: DIGRESSIONBriggsAndNapier-12-1-1-1; }
+#DRILLIntuitiveSquareOnCircle-3-4 { counter-set: DRILLIntuitiveSquareOnCircle-3-4 0; }
+#DRILLIntuitiveSquareOnCircle-3-4 > li::marker { content: "("counter(DRILLIntuitiveSquareOnCircle-3-4,lower-roman)")"; }
+#DRILLIntuitiveSquareOnCircle-3-4 > li { counter-increment: DRILLIntuitiveSquareOnCircle-3-4; }
+#DRILLExtremalSquareCircle-2-1 { counter-set: DRILLExtremalSquareCircle-2-1 0; }
+#DRILLExtremalSquareCircle-2-1 > li::marker { content: "("counter(DRILLExtremalSquareCircle-2-1,lower-roman)")"; }
+#DRILLExtremalSquareCircle-2-1 > li { counter-increment: DRILLExtremalSquareCircle-2-1; }
+#PROBLEMMaxOrth1-4-1-3-8 { counter-set: PROBLEMMaxOrth1-4-1-3-8 0; }
+#PROBLEMMaxOrth1-4-1-3-8 > li::marker { content: ""counter(PROBLEMMaxOrth1-4-1-3-8,decimal)"."; }
+#PROBLEMMaxOrth1-4-1-3-8 > li { counter-increment: PROBLEMMaxOrth1-4-1-3-8; }
+#EXAMPLEDiffvsDer-6-1-1-2-1 { counter-set: EXAMPLEDiffvsDer-6-1-1-2-1 0; }
+#EXAMPLEDiffvsDer-6-1-1-2-1 > li::marker { content: ""counter(EXAMPLEDiffvsDer-6-1-1-2-1,decimal)"."; }
+#EXAMPLEDiffvsDer-6-1-1-2-1 > li { counter-increment: EXAMPLEDiffvsDer-6-1-1-2-1; }
+#EXAMPLEDiffvsDer-6-1-2-2-1 { counter-set: EXAMPLEDiffvsDer-6-1-2-2-1 0; }
+#EXAMPLEDiffvsDer-6-1-2-2-1 > li::marker { content: ""counter(EXAMPLEDiffvsDer-6-1-2-2-1,decimal)"."; }
+#EXAMPLEDiffvsDer-6-1-2-2-1 > li { counter-increment: EXAMPLEDiffvsDer-6-1-2-2-1; }
+#SECTIONfive-simil-probl-22-2-3 { counter-set: SECTIONfive-simil-probl-22-2-3 0; }
+#SECTIONfive-simil-probl-22-2-3 > li::marker { content: "("counter(SECTIONfive-simil-probl-22-2-3,lower-roman)")"; }
+#SECTIONfive-simil-probl-22-2-3 > li { counter-increment: SECTIONfive-simil-probl-22-2-3; }
+#SECTIONfive-simil-probl-23-2-3 { counter-set: SECTIONfive-simil-probl-23-2-3 0; }
+#SECTIONfive-simil-probl-23-2-3 > li::marker { content: "("counter(SECTIONfive-simil-probl-23-2-3,lower-roman)")"; }
+#SECTIONfive-simil-probl-23-2-3 > li { counter-increment: SECTIONfive-simil-probl-23-2-3; }
+#SECTIONrefl-refr-rainb-2-1-3 { counter-set: SECTIONrefl-refr-rainb-2-1-3 0; }
+#SECTIONrefl-refr-rainb-2-1-3 > li::marker { content: ""counter(SECTIONrefl-refr-rainb-2-1-3,decimal)"."; }
+#SECTIONrefl-refr-rainb-2-1-3 > li { counter-increment: SECTIONrefl-refr-rainb-2-1-3; }
+#SUBSECTIONreflection-14-5 { counter-set: SUBSECTIONreflection-14-5 0; }
+#SUBSECTIONreflection-14-5 > li::marker { content: "("counter(SUBSECTIONreflection-14-5,decimal)")"; }
+#SUBSECTIONreflection-14-5 > li { counter-increment: SUBSECTIONreflection-14-5; }
+#SECTIONGlobalVsLocalExtrema-18-2 { counter-set: SECTIONGlobalVsLocalExtrema-18-2 0; }
+#SECTIONGlobalVsLocalExtrema-18-2 > li::marker { content: ""counter(SECTIONGlobalVsLocalExtrema-18-2,decimal)"."; }
+#SECTIONGlobalVsLocalExtrema-18-2 > li { counter-increment: SECTIONGlobalVsLocalExtrema-18-2; }
+#DIGRESSIONIntervalNotation-5-2-1 { counter-set: DIGRESSIONIntervalNotation-5-2-1 0; }
+#DIGRESSIONIntervalNotation-5-2-1 > li::marker { content: "("counter(DIGRESSIONIntervalNotation-5-2-1,lower-roman)")"; }
+#DIGRESSIONIntervalNotation-5-2-1 > li { counter-increment: DIGRESSIONIntervalNotation-5-2-1; }
+#THEOREMFDT-lines-1-1 { counter-set: THEOREMFDT-lines-1-1 0; }
+#THEOREMFDT-lines-1-1 > li::marker { content: ""counter(THEOREMFDT-lines-1-1,decimal)"."; }
+#THEOREMFDT-lines-1-1 > li { counter-increment: THEOREMFDT-lines-1-1; }
+#THEOREMFDT-2-3 { counter-set: THEOREMFDT-2-3 0; }
+#THEOREMFDT-2-3 > li::marker { content: ""counter(THEOREMFDT-2-3,decimal)"."; }
+#THEOREMFDT-2-3 > li { counter-increment: THEOREMFDT-2-3; }
+#LEMMAAdjRoots-1-2 { counter-set: LEMMAAdjRoots-1-2 0; }
+#LEMMAAdjRoots-1-2 > li::marker { content: ""counter(LEMMAAdjRoots-1-2,decimal)"."; }
+#LEMMAAdjRoots-1-2 > li { counter-increment: LEMMAAdjRoots-1-2; }
+#PROBLEMFDT1A-1-2 { counter-set: PROBLEMFDT1A-1-2 0; }
+#PROBLEMFDT1A-1-2 > li::marker { content: "("counter(PROBLEMFDT1A-1-2,lower-roman)")"; }
+#PROBLEMFDT1A-1-2 > li { counter-increment: PROBLEMFDT1A-1-2; }
+#DRILLFDT2-2-1 { counter-set: DRILLFDT2-2-1 0; }
+#DRILLFDT2-2-1 > li::marker { content: "("counter(DRILLFDT2-2-1,lower-roman)")"; }
+#DRILLFDT2-2-1 > li { counter-increment: DRILLFDT2-2-1; }
+#DEFINITIONOptimalTransitionPoints-3-1-3 { counter-set: DEFINITIONOptimalTransitionPoints-3-1-3 0; }
+#DEFINITIONOptimalTransitionPoints-3-1-3 > li::marker { content: ""counter(DEFINITIONOptimalTransitionPoints-3-1-3,decimal)"."; }
+#DEFINITIONOptimalTransitionPoints-3-1-3 > li { counter-increment: DEFINITIONOptimalTransitionPoints-3-1-3; }
+#DRILLFDT3-3-2 { counter-set: DRILLFDT3-3-2 0; }
+#DRILLFDT3-3-2 > li::marker { content: "("counter(DRILLFDT3-3-2,lower-roman)")"; }
+#DRILLFDT3-3-2 > li { counter-increment: DRILLFDT3-3-2; }
+#SUBSECTIONoptim-clos-interv-5-1 { counter-set: SUBSECTIONoptim-clos-interv-5-1 0; }
+#SUBSECTIONoptim-clos-interv-5-1 > li::marker { content: ""counter(SUBSECTIONoptim-clos-interv-5-1,decimal)"."; }
+#SUBSECTIONoptim-clos-interv-5-1 > li { counter-increment: SUBSECTIONoptim-clos-interv-5-1; }
+#THEOREMEVT-2-2 { counter-set: THEOREMEVT-2-2 0; }
+#THEOREMEVT-2-2 > li::marker { content: ""counter(THEOREMEVT-2-2,decimal)"."; }
+#THEOREMEVT-2-2 > li { counter-increment: THEOREMEVT-2-2; }
+#SUBSECTIONoptim-clos-interv-13-2-1-1-2 { counter-set: SUBSECTIONoptim-clos-interv-13-2-1-1-2 0; }
+#SUBSECTIONoptim-clos-interv-13-2-1-1-2 > li::marker { content: "("counter(SUBSECTIONoptim-clos-interv-13-2-1-1-2,lower-roman)")"; }
+#SUBSECTIONoptim-clos-interv-13-2-1-1-2 > li { counter-increment: SUBSECTIONoptim-clos-interv-13-2-1-1-2; }
+#SUBSECTIONoptim-clos-interv-13-3-1-1-2 { counter-set: SUBSECTIONoptim-clos-interv-13-3-1-1-2 0; }
+#SUBSECTIONoptim-clos-interv-13-3-1-1-2 > li::marker { content: "("counter(SUBSECTIONoptim-clos-interv-13-3-1-1-2,lower-roman)")"; }
+#SUBSECTIONoptim-clos-interv-13-3-1-1-2 > li { counter-increment: SUBSECTIONoptim-clos-interv-13-3-1-1-2; }
+#SUBSECTIONoptim-clos-interv-14-2-1 { counter-set: SUBSECTIONoptim-clos-interv-14-2-1 0; }
+#SUBSECTIONoptim-clos-interv-14-2-1 > li::marker { content: "("counter(SUBSECTIONoptim-clos-interv-14-2-1,lower-roman)")"; }
+#SUBSECTIONoptim-clos-interv-14-2-1 > li { counter-increment: SUBSECTIONoptim-clos-interv-14-2-1; }
+#DRILLO1O2-2-1-1-2 { counter-set: DRILLO1O2-2-1-1-2 0; }
+#DRILLO1O2-2-1-1-2 > li::marker { content: "("counter(DRILLO1O2-2-1-1-2,lower-roman)")"; }
+#DRILLO1O2-2-1-1-2 > li { counter-increment: DRILLO1O2-2-1-1-2; }
+#THEOREMwhat-second-deriv-2-3 { counter-set: THEOREMwhat-second-deriv-2-3 0; }
+#THEOREMwhat-second-deriv-2-3 > li::marker { content: "("counter(THEOREMwhat-second-deriv-2-3,lower-alpha)")"; }
+#THEOREMwhat-second-deriv-2-3 > li { counter-increment: THEOREMwhat-second-deriv-2-3; }
+#THEOREMSecondDerivativeTest-2-4 { counter-set: THEOREMSecondDerivativeTest-2-4 0; }
+#THEOREMSecondDerivativeTest-2-4 > li::marker { content: "("counter(THEOREMSecondDerivativeTest-2-4,lower-alpha)")"; }
+#THEOREMSecondDerivativeTest-2-4 > li { counter-increment: THEOREMSecondDerivativeTest-2-4; }
+#DRILLSecondDerivativeTest-2-1 { counter-set: DRILLSecondDerivativeTest-2-1 0; }
+#DRILLSecondDerivativeTest-2-1 > li::marker { content: "("counter(DRILLSecondDerivativeTest-2-1,lower-roman)")"; }
+#DRILLSecondDerivativeTest-2-1 > li { counter-increment: DRILLSecondDerivativeTest-2-1; }
+#SUBSECTIONconc-second-deriv-45-2-1 { counter-set: SUBSECTIONconc-second-deriv-45-2-1 0; }
+#SUBSECTIONconc-second-deriv-45-2-1 > li::marker { content: "("counter(SUBSECTIONconc-second-deriv-45-2-1,lower-roman)")"; }
+#SUBSECTIONconc-second-deriv-45-2-1 > li { counter-increment: SUBSECTIONconc-second-deriv-45-2-1; }
+#SUBSECTIONconc-second-deriv-46-2-1 { counter-set: SUBSECTIONconc-second-deriv-46-2-1 0; }
+#SUBSECTIONconc-second-deriv-46-2-1 > li::marker { content: "("counter(SUBSECTIONconc-second-deriv-46-2-1,lower-roman)")"; }
+#SUBSECTIONconc-second-deriv-46-2-1 > li { counter-increment: SUBSECTIONconc-second-deriv-46-2-1; }
+#SUBSECTIONOptStrat-3-1 { counter-set: SUBSECTIONOptStrat-3-1 0; }
+#SUBSECTIONOptStrat-3-1 > li::marker { content: ""counter(SUBSECTIONOptStrat-3-1,decimal)"."; }
+#SUBSECTIONOptStrat-3-1 > li { counter-increment: SUBSECTIONOptStrat-3-1; }
+#EXAMPLERectangleFixedPerimeter-7-1 { counter-set: EXAMPLERectangleFixedPerimeter-7-1 0; }
+#EXAMPLERectangleFixedPerimeter-7-1 > li::marker { content: ""counter(EXAMPLERectangleFixedPerimeter-7-1,decimal)"."; }
+#EXAMPLERectangleFixedPerimeter-7-1 > li { counter-increment: EXAMPLERectangleFixedPerimeter-7-1; }
+#PROBLEMMaxPerimeter-5-1-1-2 { counter-set: PROBLEMMaxPerimeter-5-1-1-2 0; }
+#PROBLEMMaxPerimeter-5-1-1-2 > li::marker { content: "("counter(PROBLEMMaxPerimeter-5-1-1-2,lower-roman)")"; }
+#PROBLEMMaxPerimeter-5-1-1-2 > li { counter-increment: PROBLEMMaxPerimeter-5-1-1-2; }
+#SUBSUBSECTIONFirstSolution-13-2-1 { counter-set: SUBSUBSECTIONFirstSolution-13-2-1 0; }
+#SUBSUBSECTIONFirstSolution-13-2-1 > li::marker { content: "("counter(SUBSUBSECTIONFirstSolution-13-2-1,lower-roman)")"; }
+#SUBSUBSECTIONFirstSolution-13-2-1 > li { counter-increment: SUBSUBSECTIONFirstSolution-13-2-1; }
+#SUBSECTIONVarOptProbs-2-2-2-1-1 { counter-set: SUBSECTIONVarOptProbs-2-2-2-1-1 0; }
+#SUBSECTIONVarOptProbs-2-2-2-1-1 > li::marker { content: "("counter(SUBSECTIONVarOptProbs-2-2-2-1-1,lower-roman)")"; }
+#SUBSECTIONVarOptProbs-2-2-2-1-1 > li { counter-increment: SUBSECTIONVarOptProbs-2-2-2-1-1; }
+#SUBSECTIONVarOptProbs-2-3-2-1-1 { counter-set: SUBSECTIONVarOptProbs-2-3-2-1-1 0; }
+#SUBSECTIONVarOptProbs-2-3-2-1-1 > li::marker { content: "("counter(SUBSECTIONVarOptProbs-2-3-2-1-1,lower-roman)")"; }
+#SUBSECTIONVarOptProbs-2-3-2-1-1 > li { counter-increment: SUBSECTIONVarOptProbs-2-3-2-1-1; }
+#SUBSECTIONVarOptProbs-2-4-2-1-1 { counter-set: SUBSECTIONVarOptProbs-2-4-2-1-1 0; }
+#SUBSECTIONVarOptProbs-2-4-2-1-1 > li::marker { content: "("counter(SUBSECTIONVarOptProbs-2-4-2-1-1,lower-roman)")"; }
+#SUBSECTIONVarOptProbs-2-4-2-1-1 > li { counter-increment: SUBSECTIONVarOptProbs-2-4-2-1-1; }
+#SUBSECTIONVarOptProbs-3-3-2-1-1 { counter-set: SUBSECTIONVarOptProbs-3-3-2-1-1 0; }
+#SUBSECTIONVarOptProbs-3-3-2-1-1 > li::marker { content: "("counter(SUBSECTIONVarOptProbs-3-3-2-1-1,lower-roman)")"; }
+#SUBSECTIONVarOptProbs-3-3-2-1-1 > li { counter-increment: SUBSECTIONVarOptProbs-3-3-2-1-1; }
+#SUBSECTIONVarOptProbs-3-4-2-1-1 { counter-set: SUBSECTIONVarOptProbs-3-4-2-1-1 0; }
+#SUBSECTIONVarOptProbs-3-4-2-1-1 > li::marker { content: "("counter(SUBSECTIONVarOptProbs-3-4-2-1-1,lower-roman)")"; }
+#SUBSECTIONVarOptProbs-3-4-2-1-1 > li { counter-increment: SUBSECTIONVarOptProbs-3-4-2-1-1; }
+#SUBSECTIONVarOptProbs-4-2-1-2-1 { counter-set: SUBSECTIONVarOptProbs-4-2-1-2-1 0; }
+#SUBSECTIONVarOptProbs-4-2-1-2-1 > li::marker { content: "("counter(SUBSECTIONVarOptProbs-4-2-1-2-1,lower-roman)")"; }
+#SUBSECTIONVarOptProbs-4-2-1-2-1 > li { counter-increment: SUBSECTIONVarOptProbs-4-2-1-2-1; }
+#PROBLEMWitchTri1-3-1-1-7 { counter-set: PROBLEMWitchTri1-3-1-1-7 0; }
+#PROBLEMWitchTri1-3-1-1-7 > li::marker { content: "("counter(PROBLEMWitchTri1-3-1-1-7,lower-roman)")"; }
+#PROBLEMWitchTri1-3-1-1-7 > li { counter-increment: PROBLEMWitchTri1-3-1-1-7; }
+#SUBSECTIONVarOptProbs-14-3-1-3 { counter-set: SUBSECTIONVarOptProbs-14-3-1-3 0; }
+#SUBSECTIONVarOptProbs-14-3-1-3 > li::marker { content: "("counter(SUBSECTIONVarOptProbs-14-3-1-3,lower-roman)")"; }
+#SUBSECTIONVarOptProbs-14-3-1-3 > li { counter-increment: SUBSECTIONVarOptProbs-14-3-1-3; }
+#SUBSECTIONVarOptProbs-14-4-1-3 { counter-set: SUBSECTIONVarOptProbs-14-4-1-3 0; }
+#SUBSECTIONVarOptProbs-14-4-1-3 > li::marker { content: "("counter(SUBSECTIONVarOptProbs-14-4-1-3,lower-roman)")"; }
+#SUBSECTIONVarOptProbs-14-4-1-3 > li { counter-increment: SUBSECTIONVarOptProbs-14-4-1-3; }
+#SECTIONgraph-with-form-19-2 { counter-set: SECTIONgraph-with-form-19-2 0; }
+#SECTIONgraph-with-form-19-2 > li::marker { content: ""counter(SECTIONgraph-with-form-19-2,decimal)"."; }
+#SECTIONgraph-with-form-19-2 > li { counter-increment: SECTIONgraph-with-form-19-2; }
+#SECTIONgraph-with-form-24-2-1 { counter-set: SECTIONgraph-with-form-24-2-1 0; }
+#SECTIONgraph-with-form-24-2-1 > li::marker { content: "("counter(SECTIONgraph-with-form-24-2-1,lower-roman)")"; }
+#SECTIONgraph-with-form-24-2-1 > li { counter-increment: SECTIONgraph-with-form-24-2-1; }
+#SECTIONgraph-with-form-31-2-1 { counter-set: SECTIONgraph-with-form-31-2-1 0; }
+#SECTIONgraph-with-form-31-2-1 > li::marker { content: "("counter(SECTIONgraph-with-form-31-2-1,lower-roman)")"; }
+#SECTIONgraph-with-form-31-2-1 > li { counter-increment: SECTIONgraph-with-form-31-2-1; }
+#SUBSECTIONDerivDepOnxAlone-3-1-1 { counter-set: SUBSECTIONDerivDepOnxAlone-3-1-1 0; }
+#SUBSECTIONDerivDepOnxAlone-3-1-1 > li::marker { content: "("counter(SUBSECTIONDerivDepOnxAlone-3-1-1,upper-roman)")"; }
+#SUBSECTIONDerivDepOnxAlone-3-1-1 > li { counter-increment: SUBSECTIONDerivDepOnxAlone-3-1-1; }
+#SUBSECTIONDerivDepOnxAlone-3-2-1 { counter-set: SUBSECTIONDerivDepOnxAlone-3-2-1 0; }
+#SUBSECTIONDerivDepOnxAlone-3-2-1 > li::marker { content: "("counter(SUBSECTIONDerivDepOnxAlone-3-2-1,lower-alpha)")"; }
+#SUBSECTIONDerivDepOnxAlone-3-2-1 > li { counter-increment: SUBSECTIONDerivDepOnxAlone-3-2-1; }
+#SUBSECTIONModelingTrout-14-1 { counter-set: SUBSECTIONModelingTrout-14-1 0; }
+#SUBSECTIONModelingTrout-14-1 > li::marker { content: ""counter(SUBSECTIONModelingTrout-14-1,decimal)"."; }
+#SUBSECTIONModelingTrout-14-1 > li { counter-increment: SUBSECTIONModelingTrout-14-1; }
+#SUBSECTIONModelingTrout-17-2 { counter-set: SUBSECTIONModelingTrout-17-2 0; }
+#SUBSECTIONModelingTrout-17-2 > li::marker { content: ""counter(SUBSECTIONModelingTrout-17-2,decimal)"."; }
+#SUBSECTIONModelingTrout-17-2 > li { counter-increment: SUBSECTIONModelingTrout-17-2; }
+#SUBSECTIONModelingTrout-22-2-2 { counter-set: SUBSECTIONModelingTrout-22-2-2 0; }
+#SUBSECTIONModelingTrout-22-2-2 > li::marker { content: "("counter(SUBSECTIONModelingTrout-22-2-2,lower-roman)")"; }
+#SUBSECTIONModelingTrout-22-2-2 > li { counter-increment: SUBSECTIONModelingTrout-22-2-2; }
+#SUBSECTIONModelingTrout-37-1-1-1-2 { counter-set: SUBSECTIONModelingTrout-37-1-1-1-2 0; }
+#SUBSECTIONModelingTrout-37-1-1-1-2 > li::marker { content: "("counter(SUBSECTIONModelingTrout-37-1-1-1-2,lower-roman)")"; }
+#SUBSECTIONModelingTrout-37-1-1-1-2 > li { counter-increment: SUBSECTIONModelingTrout-37-1-1-1-2; }
+#PROBLEMMinViablePop-6-1-1-3 { counter-set: PROBLEMMinViablePop-6-1-1-3 0; }
+#PROBLEMMinViablePop-6-1-1-3 > li::marker { content: "("counter(PROBLEMMinViablePop-6-1-1-3,lower-roman)")"; }
+#PROBLEMMinViablePop-6-1-1-3 > li { counter-increment: PROBLEMMinViablePop-6-1-1-3; }
+#SECTIONlittle-healthy-comp-21-2-1 { counter-set: SECTIONlittle-healthy-comp-21-2-1 0; }
+#SECTIONlittle-healthy-comp-21-2-1 > li::marker { content: "("counter(SECTIONlittle-healthy-comp-21-2-1,lower-roman)")"; }
+#SECTIONlittle-healthy-comp-21-2-1 > li { counter-increment: SECTIONlittle-healthy-comp-21-2-1; }
+#SECTIONlittle-healthy-comp-28-3-1-1-3 { counter-set: SECTIONlittle-healthy-comp-28-3-1-1-3 0; }
+#SECTIONlittle-healthy-comp-28-3-1-1-3 > li::marker { content: "("counter(SECTIONlittle-healthy-comp-28-3-1-1-3,lower-roman)")"; }
+#SECTIONlittle-healthy-comp-28-3-1-1-3 > li { counter-increment: SECTIONlittle-healthy-comp-28-3-1-1-3; }
+#subSECTIONtractrix-6-2-1-1-3 { counter-set: subSECTIONtractrix-6-2-1-1-3 0; }
+#subSECTIONtractrix-6-2-1-1-3 > li::marker { content: "("counter(subSECTIONtractrix-6-2-1-1-3,lower-roman)")"; }
+#subSECTIONtractrix-6-2-1-1-3 > li { counter-increment: subSECTIONtractrix-6-2-1-1-3; }
+#DEFINITIONLimitAtInfinity-Intuitive-2-1-1 { counter-set: DEFINITIONLimitAtInfinity-Intuitive-2-1-1 0; }
+#DEFINITIONLimitAtInfinity-Intuitive-2-1-1 > li::marker { content: ""counter(DEFINITIONLimitAtInfinity-Intuitive-2-1-1,decimal)"."; }
+#DEFINITIONLimitAtInfinity-Intuitive-2-1-1 > li { counter-increment: DEFINITIONLimitAtInfinity-Intuitive-2-1-1; }
+#DEFINITIONHorizontalAsymptotes-2-1-1 { counter-set: DEFINITIONHorizontalAsymptotes-2-1-1 0; }
+#DEFINITIONHorizontalAsymptotes-2-1-1 > li::marker { content: ""counter(DEFINITIONHorizontalAsymptotes-2-1-1,decimal)"."; }
+#DEFINITIONHorizontalAsymptotes-2-1-1 > li { counter-increment: DEFINITIONHorizontalAsymptotes-2-1-1; }
+#DIGRESSIONLimitNotation-47-2-7 { counter-set: DIGRESSIONLimitNotation-47-2-7 0; }
+#DIGRESSIONLimitNotation-47-2-7 > li::marker { content: "("counter(DIGRESSIONLimitNotation-47-2-7,lower-roman)")"; }
+#DIGRESSIONLimitNotation-47-2-7 > li { counter-increment: DIGRESSIONLimitNotation-47-2-7; }
+#THEOREMInfSqueeze-2-1 { counter-set: THEOREMInfSqueeze-2-1 0; }
+#THEOREMInfSqueeze-2-1 > li::marker { content: "("counter(THEOREMInfSqueeze-2-1,decimal)")"; }
+#THEOREMInfSqueeze-2-1 > li { counter-increment: THEOREMInfSqueeze-2-1; }
+#SECTIONvertical-asymptotes-14-2-1 { counter-set: SECTIONvertical-asymptotes-14-2-1 0; }
+#SECTIONvertical-asymptotes-14-2-1 > li::marker { content: "("counter(SECTIONvertical-asymptotes-14-2-1,lower-roman)")"; }
+#SECTIONvertical-asymptotes-14-2-1 > li { counter-increment: SECTIONvertical-asymptotes-14-2-1; }
+#PROBLEMFoliumOfDescartes2-6-1-1-1 { counter-set: PROBLEMFoliumOfDescartes2-6-1-1-1 0; }
+#PROBLEMFoliumOfDescartes2-6-1-1-1 > li::marker { content: "("counter(PROBLEMFoliumOfDescartes2-6-1-1-1,lower-roman)")"; }
+#PROBLEMFoliumOfDescartes2-6-1-1-1 > li { counter-increment: PROBLEMFoliumOfDescartes2-6-1-1-1; }
+#SUBSECTIONLHopitalsRule-34-2-1 { counter-set: SUBSECTIONLHopitalsRule-34-2-1 0; }
+#SUBSECTIONLHopitalsRule-34-2-1 > li::marker { content: "("counter(SUBSECTIONLHopitalsRule-34-2-1,lower-roman)")"; }
+#SUBSECTIONLHopitalsRule-34-2-1 > li { counter-increment: SUBSECTIONLHopitalsRule-34-2-1; }
+#SUBSECTIONLHopitalsRule-38-2-1 { counter-set: SUBSECTIONLHopitalsRule-38-2-1 0; }
+#SUBSECTIONLHopitalsRule-38-2-1 > li::marker { content: "("counter(SUBSECTIONLHopitalsRule-38-2-1,lower-roman)")"; }
+#SUBSECTIONLHopitalsRule-38-2-1 > li { counter-increment: SUBSECTIONLHopitalsRule-38-2-1; }
+#THEOREMLHRule1-2-1 { counter-set: THEOREMLHRule1-2-1 0; }
+#THEOREMLHRule1-2-1 > li::marker { content: "("counter(THEOREMLHRule1-2-1,decimal)")"; }
+#THEOREMLHRule1-2-1 > li { counter-increment: THEOREMLHRule1-2-1; }
+#SUBSECTIONLHopitalsRule-62-2-1 { counter-set: SUBSECTIONLHopitalsRule-62-2-1 0; }
+#SUBSECTIONLHopitalsRule-62-2-1 > li::marker { content: "("counter(SUBSECTIONLHopitalsRule-62-2-1,lower-roman)")"; }
+#SUBSECTIONLHopitalsRule-62-2-1 > li { counter-increment: SUBSECTIONLHopitalsRule-62-2-1; }
+#SUBSECTIONlhop-rule-horiz-17-2-1-1-1 { counter-set: SUBSECTIONlhop-rule-horiz-17-2-1-1-1 0; }
+#SUBSECTIONlhop-rule-horiz-17-2-1-1-1 > li::marker { content: "("counter(SUBSECTIONlhop-rule-horiz-17-2-1-1-1,lower-roman)")"; }
+#SUBSECTIONlhop-rule-horiz-17-2-1-1-1 > li { counter-increment: SUBSECTIONlhop-rule-horiz-17-2-1-1-1; }
+#SUBSECTIONlhop-rule-horiz-17-5-1-1-2 { counter-set: SUBSECTIONlhop-rule-horiz-17-5-1-1-2 0; }
+#SUBSECTIONlhop-rule-horiz-17-5-1-1-2 > li::marker { content: "("counter(SUBSECTIONlhop-rule-horiz-17-5-1-1-2,lower-roman)")"; }
+#SUBSECTIONlhop-rule-horiz-17-5-1-1-2 > li { counter-increment: SUBSECTIONlhop-rule-horiz-17-5-1-1-2; }
+#SUBSECTIONlhop-rule-horiz-26-1 { counter-set: SUBSECTIONlhop-rule-horiz-26-1 0; }
+#SUBSECTIONlhop-rule-horiz-26-1 > li::marker { content: ""counter(SUBSECTIONlhop-rule-horiz-26-1,decimal)"."; }
+#SUBSECTIONlhop-rule-horiz-26-1 > li { counter-increment: SUBSECTIONlhop-rule-horiz-26-1; }
+#SUBSECTIONlhop-rule-horiz-28-4 { counter-set: SUBSECTIONlhop-rule-horiz-28-4 0; }
+#SUBSECTIONlhop-rule-horiz-28-4 > li::marker { content: ""counter(SUBSECTIONlhop-rule-horiz-28-4,decimal)"."; }
+#SUBSECTIONlhop-rule-horiz-28-4 > li { counter-increment: SUBSECTIONlhop-rule-horiz-28-4; }
+#SECTIONsecants-tangents-18-1 { counter-set: SECTIONsecants-tangents-18-1 0; }
+#SECTIONsecants-tangents-18-1 > li::marker { content: ""counter(SECTIONsecants-tangents-18-1,decimal)"."; }
+#SECTIONsecants-tangents-18-1 > li { counter-increment: SECTIONsecants-tangents-18-1; }
+#PROBLEMBounds-1-1-4 { counter-set: PROBLEMBounds-1-1-4 0; }
+#PROBLEMBounds-1-1-4 > li::marker { content: "("counter(PROBLEMBounds-1-1-4,lower-roman)")"; }
+#PROBLEMBounds-1-1-4 > li { counter-increment: PROBLEMBounds-1-1-4; }
+#SUBSECTIONlimit-comp-cont-5-3 { counter-set: SUBSECTIONlimit-comp-cont-5-3 0; }
+#SUBSECTIONlimit-comp-cont-5-3 > li::marker { content: ""counter(SUBSECTIONlimit-comp-cont-5-3,decimal)"."; }
+#SUBSECTIONlimit-comp-cont-5-3 > li { counter-increment: SUBSECTIONlimit-comp-cont-5-3; }
+#SUBSECTIONlimit-comp-cont-23-2-1 { counter-set: SUBSECTIONlimit-comp-cont-23-2-1 0; }
+#SUBSECTIONlimit-comp-cont-23-2-1 > li::marker { content: "("counter(SUBSECTIONlimit-comp-cont-23-2-1,lower-roman)")"; }
+#SUBSECTIONlimit-comp-cont-23-2-1 > li { counter-increment: SUBSECTIONlimit-comp-cont-23-2-1; }
+#SUBSECTIONlimit-comp-cont-24-2-2 { counter-set: SUBSECTIONlimit-comp-cont-24-2-2 0; }
+#SUBSECTIONlimit-comp-cont-24-2-2 > li::marker { content: "("counter(SUBSECTIONlimit-comp-cont-24-2-2,lower-roman)")"; }
+#SUBSECTIONlimit-comp-cont-24-2-2 > li { counter-increment: SUBSECTIONlimit-comp-cont-24-2-2; }
+#PROBLEMTopSineFuncB-1-1-6 { counter-set: PROBLEMTopSineFuncB-1-1-6 0; }
+#PROBLEMTopSineFuncB-1-1-6 > li::marker { content: "("counter(PROBLEMTopSineFuncB-1-1-6,lower-roman)")"; }
+#PROBLEMTopSineFuncB-1-1-6 > li { counter-increment: PROBLEMTopSineFuncB-1-1-6; }
+#PROBLEMQRRigorA-1-1-2 { counter-set: PROBLEMQRRigorA-1-1-2 0; }
+#PROBLEMQRRigorA-1-1-2 > li::marker { content: "("counter(PROBLEMQRRigorA-1-1-2,lower-roman)")"; }
+#PROBLEMQRRigorA-1-1-2 > li { counter-increment: PROBLEMQRRigorA-1-1-2; }
+#DRILLCircularReasoning-2-1-3 { counter-set: DRILLCircularReasoning-2-1-3 0; }
+#DRILLCircularReasoning-2-1-3 > li::marker { content: "("counter(DRILLCircularReasoning-2-1-3,lower-roman)")"; }
+#DRILLCircularReasoning-2-1-3 > li { counter-increment: DRILLCircularReasoning-2-1-3; }
+#DEFINITIONFunctionInverse-2-1-8 { counter-set: DEFINITIONFunctionInverse-2-1-8 0; }
+#DEFINITIONFunctionInverse-2-1-8 > li::marker { content: ""counter(DEFINITIONFunctionInverse-2-1-8,decimal)"."; }
+#DEFINITIONFunctionInverse-2-1-8 > li { counter-increment: DEFINITIONFunctionInverse-2-1-8; }
+#SECTIONinverse-functions-21-1 { counter-set: SECTIONinverse-functions-21-1 0; }
+#SECTIONinverse-functions-21-1 > li::marker { content: ""counter(SECTIONinverse-functions-21-1,decimal)"."; }
+#SECTIONinverse-functions-21-1 > li { counter-increment: SECTIONinverse-functions-21-1; }
+#SECTIONinverse-functions-23-2 { counter-set: SECTIONinverse-functions-23-2 0; }
+#SECTIONinverse-functions-23-2 > li::marker { content: ""counter(SECTIONinverse-functions-23-2,decimal)"."; }
+#SECTIONinverse-functions-23-2 > li { counter-increment: SECTIONinverse-functions-23-2; }
+#THEOREMDerivInvFunc-2-1 { counter-set: THEOREMDerivInvFunc-2-1 0; }
+#THEOREMDerivInvFunc-2-1 > li::marker { content: ""counter(THEOREMDerivInvFunc-2-1,decimal)"."; }
+#THEOREMDerivInvFunc-2-1 > li { counter-increment: THEOREMDerivInvFunc-2-1; }
+#DRILLRollesLemma1-1 { counter-set: DRILLRollesLemma1-1 0; }
+#DRILLRollesLemma1-1 > li::marker { content: "("counter(DRILLRollesLemma1-1,lower-roman)")"; }
+#DRILLRollesLemma1-1 > li { counter-increment: DRILLRollesLemma1-1; }
+#THEOREMFDTproved-2-8 { counter-set: THEOREMFDTproved-2-8 0; }
+#THEOREMFDTproved-2-8 > li::marker { content: ""counter(THEOREMFDTproved-2-8,decimal)"."; }
+#THEOREMFDTproved-2-8 > li { counter-increment: THEOREMFDTproved-2-8; }
+#PROBLEMMVTSpecialCase-1-1-2 { counter-set: PROBLEMMVTSpecialCase-1-1-2 0; }
+#PROBLEMMVTSpecialCase-1-1-2 > li::marker { content: ""counter(PROBLEMMVTSpecialCase-1-1-2,decimal)"."; }
+#PROBLEMMVTSpecialCase-1-1-2 > li { counter-increment: PROBLEMMVTSpecialCase-1-1-2; }
+#PROBLEMAbsValDerivA-1-1-5 { counter-set: PROBLEMAbsValDerivA-1-1-5 0; }
+#PROBLEMAbsValDerivA-1-1-5 > li::marker { content: ""counter(PROBLEMAbsValDerivA-1-1-5,decimal)"."; }
+#PROBLEMAbsValDerivA-1-1-5 > li { counter-increment: PROBLEMAbsValDerivA-1-1-5; }
+#DEFINITIONone-sided-deriv-2-1-3 { counter-set: DEFINITIONone-sided-deriv-2-1-3 0; }
+#DEFINITIONone-sided-deriv-2-1-3 > li::marker { content: ""counter(DEFINITIONone-sided-deriv-2-1-3,decimal)"."; }
+#DEFINITIONone-sided-deriv-2-1-3 > li { counter-increment: DEFINITIONone-sided-deriv-2-1-3; }
+#PROBLEMHeaviTranslate-2-1-1-3 { counter-set: PROBLEMHeaviTranslate-2-1-1-3 0; }
+#PROBLEMHeaviTranslate-2-1-1-3 > li::marker { content: "("counter(PROBLEMHeaviTranslate-2-1-1-3,lower-roman)")"; }
+#PROBLEMHeaviTranslate-2-1-1-3 > li { counter-increment: PROBLEMHeaviTranslate-2-1-1-3; }
+#PROBLEMHeaviTranslate-3-1-1-4 { counter-set: PROBLEMHeaviTranslate-3-1-1-4 0; }
+#PROBLEMHeaviTranslate-3-1-1-4 > li::marker { content: "("counter(PROBLEMHeaviTranslate-3-1-1-4,lower-roman)")"; }
+#PROBLEMHeaviTranslate-3-1-1-4 > li { counter-increment: PROBLEMHeaviTranslate-3-1-1-4; }
+#SECTIONone-sided-deriv-11-3 { counter-set: SECTIONone-sided-deriv-11-3 0; }
+#SECTIONone-sided-deriv-11-3 > li::marker { content: ""counter(SECTIONone-sided-deriv-11-3,decimal)"."; }
+#SECTIONone-sided-deriv-11-3 > li { counter-increment: SECTIONone-sided-deriv-11-3; }
+#SUBSECTIONVerticalAsymptotes-26-2 { counter-set: SUBSECTIONVerticalAsymptotes-26-2 0; }
+#SUBSECTIONVerticalAsymptotes-26-2 > li::marker { content: "("counter(SUBSECTIONVerticalAsymptotes-26-2,lower-alpha)")"; }
+#SUBSECTIONVerticalAsymptotes-26-2 > li { counter-increment: SUBSECTIONVerticalAsymptotes-26-2; }
+</style>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
+<h1 class="heading"><a href="Calculus.html"><span class="title">Differential Calculus:</span> <span class="subtitle">From Practice to Theory</span></a></h1>
+<p class="byline">Eugene Boman, Robert Rogers</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="meta_backmatter-3.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="CHAPTERproblem-solving.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="CHAPTERproblem-solving.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="SECTIONAn-easy-problem-alg.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\DeclareMathOperator{\erf}{erf}
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\Arctan}{Arctan}
+\DeclareMathOperator{\Arcsin}{Arcsin}
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\arccsc}{arccsc}
+\DeclareMathOperator{\sech}{sech}
+\DeclareMathOperator{\csch}{csch}
+
+
+
+
+
+
+
+
+
+
+\def\abs#1{\left|#1\right|}
+\def\tallstrut{\rule{0mm}{1.1\baselineskip}}
+\def\approach#1{{\left(\rightarrow{}#1\right)}}
+
+\def\CancelToRed#1#2{\textcolor{red}{{\cancelto{#1}{#2}}}}
+
+
+\newcommand{\eps}{\varepsilon}
+\newcommand{\RR}{\mathbb {R}}
+\newcommand{\QQ}{\mathbb {Q}}
+\newcommand{\NN}{\mathbb {N}}
+\newcommand{\ZZ}{\mathbb {Z}}
+\def\DD{{\bf{}D}}
+
+\def\arccot{{\rm{}arccot}{}}
+\def\Arctan{{\rm{}Arctan}{}}
+\def\Arcsin{{\rm{}Arcsin}{}}
+\def\arcsec{{\rm{}arcsec}{}}
+\def\arccsc{{\rm{}arccsc}{}}
+
+\def\halmos{\mbox{\raggedright\rule{0.1in}{0.1in}}}
+
+
+
+
+\def\eval#1#2#3{\left.\strut{}#1\right|_{#2=#3}}
+\def\geneval#1#2#3{\left.\strut{}#1\right|_{#2#3}}
+\def\mineval#1#2{\left.\strut{}#1\right|_{#2}}
+
+\def\bigeval#1#2#3{\left.\strut{}#1\right|_{#2=#3}}
+
+\def\ftceval#1#2#3#4{\eval{#1}{#2}{#3}^{#4}}
+
+
+
+
+
+
+
+
+
+\def\inverse#1{#1^{-1}}
+
+
+
+
+\def\dx#1{\thinspace{\mathrm d}#1}
+\def\dfdx#1#2{\frac{\dx{#1}}{\dx{#2}}} 
+
+\def\dfdxat#1#2#3{\eval{\dfdx{#1}{#2}}{#2}{#3}}
+
+\def\partialfx#1#2{\frac{\partial{#1}}{\partial{#2}}} 
+\def\partialfxn#1#2#3{\frac{\partial^{#3}{#1}}{\partial{#2}^{#3}}} 
+\def\dfdxn#1#2#3{\frac{\text{d}^{#3}{#1}}{\text{d}{#2}^{#3}}} 
+\def\limit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}#3}}
+\def\tlimit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}}#3}
+\def\tlimitX#1#2#3#4{{\displaystyle\lim_{\underset{#4}{#1\rightarrow #2}}}#3}
+\def\rtlimit#1#2#3{{\tlimitX{#1}{#2}{#3}{#1\gt{}#2}{}}}
+\def\ltlimit#1#2#3{{\tlimitX{#1}{#2}{#3}{#1\lt{}#2}{}}}
+
+\def\limitX#1#2#3#4{{\displaystyle\lim_{\underset{#4}{#1\rightarrow #2}}#3}}
+\def\rlimit#1#2#3{{\limitX{#1}{#2}{#3}{#1\gt{}#2}{}}}
+\def\llimit#1#2#3{{\limitX{#1}{#2}{#3}{#1\lt{}#2}{}}}
+\def\limitatinf#1#2{\limit{#1}{\infty}{#2}}
+\def\limitatninf#1#2{\limit{#1}{-\infty}{#2}}
+
+
+\def\lprime#1{{#1^{\prime}_{\scriptscriptstyle L}}}
+\def\rprime#1{{#1^{\prime}_{\scriptscriptstyle R}}}
+
+
+\def\lhopeq{\stackrel{L'H}{=}}
+
+\newcommand{\ParamEqTwo}[2]
+{
+  \left\{
+    \begin{array}{c}
+    {#1}\\
+    {#2}
+    \end{array}
+  \right\}
+}
+\newcommand{\ParamEqThree}[3]
+{
+  \left\{
+    \begin{array}{c}
+    {#1}\\
+    {#2}\\
+    {#3}
+    \end{array}
+  \right\}
+}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth6 parts focused" data-preexpanded-levels="0" data-max-levels="6"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-5.html" class="internal"><span class="title">Epigraphs</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="SECinstructor.html" class="internal"><span class="title">To the Instructor: Read This First</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-part contains-active">
+<div class="toc-title-box"><a href="DiffCalcFromPractice.html" class="internal"><span class="codenumber">I</span> <span class="title">Differential Calculus: From Practice</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="CalculusIsARock.html" class="internal"><span class="codenumber">1</span> <span class="title">Calculus is a Rock</span></a></div></li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="CHAPTERproblem-solving.html" class="internal"><span class="codenumber">2</span> <span class="title">Introduction: Some  Advice on Problem Solving</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="SECusing-lett-inst.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Using Letters Instead of Numbers</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONAn-easy-problem-alg.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Substitution, or Making Things “Easy on the Eyes”</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECan-easy-problem-geo.html" class="internal"><span class="codenumber">2.3</span> <span class="title">An “Easy” Problem From Geometry</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECour-advice-synopsis.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Our advice, a synopsis</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTERScienceBeforeCalc.html" class="internal"><span class="codenumber">3</span> <span class="title">Science Before Calculus</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Apologia.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Apologia</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONSomePreliminaries.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Some Preliminaries</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-laziness-nature.html" class="internal"><span class="codenumber">3.3</span> <span class="title">The Laziness of Nature</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONFermMethAedeq.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Fermat’s Method of Adequality</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONdescartes-normals.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Descartes’s Method of Normals</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="SECTIONroberv-conic-sect.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Roberval, Conic Sections, and the Dynamic Approach</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONroberv-conic-sect.html#SUBSECTIONSpdVelRofC" class="internal"><span class="codenumber">3.6.1</span> <span class="title">Speed, Velocity, and Rates of Change</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="SECTIONroberv-conic-sect.html#SUBSECTIONTanConicSect" class="internal"><span class="codenumber">3.6.2</span> <span class="title">The Tangent Lines of the Conic Sections</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="SECTIONroberv-conic-sect.html#SUBSECTIONTanParab" class="internal"><span class="title">The Tangent to a Parabola</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="SECTIONroberv-conic-sect.html#SUBSECTIONTanEllipse" class="internal"><span class="title">The Tangent to an Ellipse</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="SECTIONroberv-conic-sect.html#TangentHyperbola" class="internal"><span class="title">The Tangent to an Hyperbola</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONsnells-law-refr.html" class="internal"><span class="codenumber">3.7</span> <span class="title">Snell’s Law and the Limitations of Adequality:</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTERdifferentials.html" class="internal"><span class="codenumber">4</span> <span class="title">Differentials, Differentiation, and the Derivative</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONHist-intr.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Historical Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONWarning.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Warning: Be Sure You Understand  the Purpose of This Chapter</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="SECTIONsome-rules-diff.html" class="internal"><span class="codenumber">4.3</span> <span class="title">The General Differentiation Rules</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONsome-rules-diff.html#SUBSECTIONConstantRule" class="internal"><span class="codenumber">4.3.1</span> <span class="title">The Constant Rule</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONsome-rules-diff.html#SUBSECTIONSumRule" class="internal"><span class="codenumber">4.3.2</span> <span class="title">The Sum Rule</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONsome-rules-diff.html#SUBSECTIONConstMultRule" class="internal"><span class="codenumber">4.3.3</span> <span class="title">The Constant Multiple Rule</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONsome-rules-diff.html#SUBSECTIONProductRule" class="internal"><span class="codenumber">4.3.4</span> <span class="title">The Product Rule</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONsome-rules-diff.html#SUBSECTIONPowerRule" class="internal"><span class="codenumber">4.3.5</span> <span class="title">The Power Rule</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONsome-rules-diff.html#SUBSECTIONQuotientRule" class="internal"><span class="codenumber">4.3.6</span> <span class="title">The Quotient Rule</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTERPTERVelocitySlopeTangent.html" class="internal"><span class="codenumber">5</span> <span class="title">Slopes, Tangents, and Rates of Change</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONVelocitySlopeTangent.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Slopes and Tangents</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONdefin-tang-line.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Defining the Tangent Line</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONvomit-comet.html" class="internal"><span class="codenumber">5.3</span> <span class="title">The Vomit Comet</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONGalileoDrops.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Galileo Drops the Ball</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECONDBringCalc.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Bringing in Calculus</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONDerivative.html" class="internal"><span class="codenumber">5.6</span> <span class="title">The Derivative</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONThinkingDynamically.html" class="internal"><span class="codenumber">5.7</span> <span class="title">Thinking Dynamically</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONFluxions.html" class="internal"><span class="codenumber">5.8</span> <span class="title">Newton’s Method of Fluxions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONSelfIntersectCurve.html" class="internal"><span class="codenumber">5.9</span> <span class="title">Self–intersecting Curves and Parametric Equations</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="SECTIONbridg-chains-telesc.html" class="internal"><span class="codenumber">5.10</span> <span class="title">Bridges, Chains, Domes, and Telescopes</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONbridg-chains-telesc.html#SUBSECTIONBridges" class="internal"><span class="codenumber">5.10.1</span> <span class="title">Bridges</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONbridg-chains-telesc.html#SUBSECTIONChains" class="internal"><span class="codenumber">5.10.2</span> <span class="title">Chains</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONbridg-chains-telesc.html#SUBSECTIONDomes" class="internal"><span class="codenumber">5.10.3</span> <span class="title">Domes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONbridg-chains-telesc.html#SUBSECTIONTelescopes" class="internal"><span class="codenumber">5.10.4</span> <span class="title">Telescopes</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTERcalc-trig.html" class="internal"><span class="codenumber">6</span> <span class="title">Calculus and Trigonometry</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="SECTIONtrig-interl.html" class="internal"><span class="codenumber">6.1</span> <span class="title">A Trigonometric Interlude</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONtrig-interl.html#SUBSECTIONradian-measure" class="internal"><span class="codenumber">6.1.1</span> <span class="title">Radian Measure</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONtrig-interl.html#SECTIONtrig-interl-3" class="internal"><span class="codenumber">6.1.2</span> <span class="title">The Trigonometric Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONtrig-interl.html#SUBSECTIONmodel-with-trig" class="internal"><span class="codenumber">6.1.3</span> <span class="title">Modeling with Trigonometric Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONtrig-interl.html#SECTIONtrig-interl-5" class="internal"><span class="codenumber">6.1.4</span> <span class="title">Phase Shifts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONtrig-interl.html#SECTIONpolar-coordinates" class="internal"><span class="codenumber">6.1.5</span> <span class="title">Polar Coordinates</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="SECTIONdiff-sine-cosine.html" class="internal"><span class="codenumber">6.2</span> <span class="title">The Differentials of the Sine and Cosine Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONdiff-sine-cosine.html#SUBSECTIONCircularMotion" class="internal"><span class="codenumber">6.2.1</span> <span class="title">Circular Motion</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONdiff-sine-cosine.html#SUBSECTIONpolar-coord-calc" class="internal"><span class="codenumber">6.2.2</span> <span class="title">Polar Coordinates and Calculus</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONdiff-sine-cosine.html#SECTIONdiff-sine-cosine-4" class="internal"><span class="codenumber">6.2.3</span> <span class="title">The Brachistochrone Problem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONdiff-sine-cosine.html#SECTIONdiff-sine-cosine-5" class="internal"><span class="codenumber">6.2.4</span> <span class="title">Spin Casting, Redux</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONdiff-sine-cosine.html#SUBSECTIONsimple-harm-oscill" class="internal"><span class="codenumber">6.2.5</span> <span class="title">Simple Harmonic Oscillation</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONdiff-other-trig.html" class="internal"><span class="codenumber">6.3</span> <span class="title">The Differentials of the Other Trigonometric Functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONinverse-tan-and-cot.html" class="internal"><span class="codenumber">6.4</span> <span class="title">The Inverse Tangent and Cotangent Functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONwitch-agnesi-inverse.html" class="internal"><span class="codenumber">6.5</span> <span class="title">The Witch of Agnesi and the Inverse Tangent Function</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONdiff-inverse-tancot.html" class="internal"><span class="codenumber">6.6</span> <span class="title">The Differentials of the Inverse Tangent and Inverse Cotangent Functions</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="SECTIONother-inverse-trig.html" class="internal"><span class="codenumber">6.7</span> <span class="title">The Other Inverse Trigonometric Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONother-inverse-trig.html#InverseSine" class="internal"><span class="codenumber">6.7.1</span> <span class="title">The Inverse Sine Function:  <span class="process-math">\(\inverse\sin(x)\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONother-inverse-trig.html#InverseSecCsc" class="internal"><span class="codenumber">6.7.2</span> <span class="title">The Inverse Secant and Inverse Cosecant</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONcurvature.html" class="internal"><span class="codenumber">6.8</span> <span class="title">Curvature</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTApproximation.html" class="internal"><span class="codenumber">7</span> <span class="title">Approximation Methods</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="SECTIONnewtons-method.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Root Finding: Two  Pre–Calculus Approaches</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONnewtons-method.html#SUBSECTIONBisectionMethod" class="internal"><span class="codenumber">7.1.1</span> <span class="title">The Bisection Method</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONnewtons-method.html#SUBSECTIONBabylonianMethod" class="internal"><span class="codenumber">7.1.2</span> <span class="title">The Babylonian Method for Square Roots</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="SECTIONnewtons-method-1.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Newton’s Method</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONnewtons-method-1.html#SUBSECTIONNewtonsMethodBasic" class="internal"><span class="codenumber">7.2.1</span> <span class="title">The Idea Behind Newton’s Method</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONnewtons-method-1.html#SUBSECTIONSpectacularFailure" class="internal"><span class="codenumber">7.2.2</span> <span class="title">Spectacular Failure</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONnewtons-method-1.html#SUBSECTIONSubtleFailure" class="internal"><span class="codenumber">7.2.3</span> <span class="title">Subtle Failure</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONEulersMethod.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Euler’s Method</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONMoreHighDeriv.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Higher Derivatives, Lagrange, and Taylor</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTERLastElemFunc.html" class="internal"><span class="codenumber">8</span> <span class="title">Exponentials and Logarithms</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONDEsandIVPS.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Initial Value Problems</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONexponential.html" class="internal"><span class="codenumber">8.2</span> <span class="title">The Natural Exponential</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONExponentialFunction.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Exponential Growth and Exponential Notation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONhyperb-trig-hang.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Hyperbolic Trigonometry: The Hanging Chain</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONGatewayArch.html" class="internal"><span class="codenumber">8.5</span> <span class="title">The Gateway Arch</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONExponentialGrowth.html" class="internal"><span class="codenumber">8.6</span> <span class="title">Exponential Growth</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONExpAndCmpndInt.html" class="internal"><span class="codenumber">8.7</span> <span class="title">Exponential Functions and Compound Interest</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONnatural-logarithm-1.html" class="internal"><span class="codenumber">8.8</span> <span class="title">John Napier Logs In: A Short Introduction to Logarithms</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONNatLog.html" class="internal"><span class="codenumber">8.9</span> <span class="title">Logarithms, Natural and Unnatural</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="SECTIONLogApps.html" class="internal"><span class="codenumber">8.10</span> <span class="title">Applications of Logarithms</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONLogApps.html#SUBSECTIONradioactive-decay" class="internal"><span class="codenumber">8.10.1</span> <span class="title">Radioactive Dating</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONLogApps.html#SECTIONnewtons-law-cooling" class="internal"><span class="codenumber">8.10.2</span> <span class="title">Chillin’ with Newton: The Law of Cooling</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONDerivNatLog.html" class="internal"><span class="codenumber">8.11</span> <span class="title">The Derivative of the Natural Logarithm</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONgener-logar-expon.html" class="internal"><span class="codenumber">8.12</span> <span class="title">General Logarithms and Exponentials</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONEulerHarmonicOsc.html" class="internal"><span class="codenumber">8.13</span> <span class="title">How Euler Did It:  Harmonic Oscillators, and Complex Numbers</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTERwhat-deriv-tells.html" class="internal"><span class="codenumber">9</span> <span class="title">Optimization: Going to Extremes</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONintroduction.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Introduction: Fermat’s Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONfive-simil-probl.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Preliminaries: Some Simple Optimizations</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="SECTIONrefl-refr-rainb.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Reflections, Refractions, and Rainbows</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONrefl-refr-rainb.html#SUBSECTIONreflection" class="internal"><span class="codenumber">9.3.1</span> <span class="title">Reflection</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONrefl-refr-rainb.html#SUBSECTIONrefraction" class="internal"><span class="codenumber">9.3.2</span> <span class="title">Refraction: Snell’s Law</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONrefl-refr-rainb.html#SUBSECTIONrainbows" class="internal"><span class="codenumber">9.3.3</span> <span class="title">Rainbows</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONrefl-refr-rainb.html#SUBSECTIONRainbow" class="internal"><span class="codenumber">9.3.4</span> <span class="title">The Colors of the Rainbow</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONrefl-refr-rainb.html#SUBSECTIONDoubleRainbows" class="internal"><span class="codenumber">9.3.5</span> <span class="title">Double Rainbows</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONGlobalVsLocalExtrema.html" class="internal"><span class="codenumber">9.4</span> <span class="title">Global vs. Local Extrema</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="SUBSECTIONoptim-abstr-probl.html" class="internal"><span class="codenumber">9.5</span> <span class="title">Optimization, the Abstract Problem</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SUBSECTIONoptim-abstr-probl.html#SECTIONIntroOptim" class="internal"><span class="codenumber">9.5.1</span> <span class="title">An Illustrative Example from <span class="process-math">\(1750\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SUBSECTIONoptim-abstr-probl.html#SUBSECTIONoptim-abstr-probl-4" class="internal"><span class="codenumber">9.5.2</span> <span class="title">Identifying and Distinguishing Maxima and Minima</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SUBSECTIONoptim-abstr-probl.html#SUBSECTIONTransitionPoints" class="internal"><span class="codenumber">9.5.3</span> <span class="title">Transition Points, and Possible Transition Points on Open Intervals</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SUBSECTIONoptim-abstr-probl.html#SUBSECTIONunderl-deriv" class="internal"><span class="codenumber">9.5.4</span> <span class="title">Undefined Derivatives</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SUBSECTIONoptim-abstr-probl.html#SUBSECTIONoptim-clos-interv" class="internal"><span class="codenumber">9.5.5</span> <span class="title">Transition Points on a Closed Interval; the Problem of Endpoints</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="SECTIONconc-second-deriv-1.html" class="internal"><span class="codenumber">9.6</span> <span class="title">Concavity and the Second Derivative Test</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONconc-second-deriv-1.html#SUBSECTIONconc-second-deriv" class="internal"><span class="codenumber">9.6.1</span> <span class="title">The Second Derivative Test</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="SECTIONoptim-probl.html" class="internal"><span class="codenumber">9.7</span> <span class="title">Optimization Problems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONoptim-probl.html#SUBSECTIONOptStrat" class="internal"><span class="codenumber">9.7.1</span> <span class="title">Optimization Strategy</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="SECTIONoptim-probl.html#SUBSECTIONPageOfText" class="internal"><span class="codenumber">9.7.2</span> <span class="title">There’s More Than One Way to Optimize</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="SECTIONoptim-probl.html#SUBSUBSECTIONFirstSolution" class="internal"><span class="title">First Solution:</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="SECTIONoptim-probl.html#SUBSUBSECTIONSecondSolution" class="internal"><span class="title">Second Solution</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONoptim-probl.html#SUBSECTIONVarOptProbs" class="internal"><span class="codenumber">9.7.3</span> <span class="title">Selected Optimization Problems</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTERPTshape-things.html" class="internal"><span class="codenumber">10</span> <span class="title">Graphing with Calculus</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONgraph-with-form.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Graphing with a Formula for  <span class="process-math">\(y(x)\)</span></span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="SECTIONgraph-without-form.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Graphing Without Formulas</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONgraph-without-form.html#SUBSECTIONGraphWithDeriv" class="internal"><span class="codenumber">10.2.1</span> <span class="title">Graphing with Incomplete Information About the Derivative</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONgraph-without-form.html#SUBSECTIONGraphFromDerivGraph" class="internal"><span class="codenumber">10.2.2</span> <span class="title">Graphing <span class="process-math">\(y(x)\)</span> from the Graph of <span class="process-math">\(\dfdx{y}{x} \)</span></span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="SECTIONGraphingWithDeriv.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Graphing with a Formula for  <span class="process-math">\(\dfdx{y}{t}\)</span></span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONGraphingWithDeriv.html#SUBSECTIONDerivDepOnxAlone" class="internal"><span class="codenumber">10.3.1</span> <span class="title">When  <span class="process-math">\(\dfdx{y}{t}\)</span> Depends on <span class="process-math">\(t\)</span> alone</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONGraphingWithDeriv.html#SUBSECTIONDfdxDependsOnYAlone" class="internal"><span class="codenumber">10.3.2</span> <span class="title">When  <span class="process-math">\(\dfdx{y}{t}\)</span> depends on <span class="process-math">\(y\)</span> alone</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONGraphingWithDeriv.html#SUBSECTIONDfdxDependsOnYAndt" class="internal"><span class="codenumber">10.3.3</span> <span class="title">When  <span class="process-math">\(\dfdx{y}{t}\)</span> Depends on <span class="process-math">\(y\)</span> and <span class="process-math">\(t\)</span></span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTERmodel-with-calc.html" class="internal"><span class="codenumber">11</span> <span class="title">Modeling with Calculus</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="SECTIONpopulation-dynamics.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Population Dynamics</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONpopulation-dynamics.html#SUBSECTIONModelingTrout" class="internal"><span class="codenumber">11.1.1</span> <span class="title">Modeling a Trout Farm</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONpopulation-dynamics.html#SECTIONlittle-healthy-comp" class="internal"><span class="codenumber">11.1.2</span> <span class="title">The Competing Species Model</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="SECTIONselect-model-probl.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Selected Modeling Problems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONselect-model-probl.html#SECTIONepidemic-blues" class="internal"><span class="codenumber">11.2.1</span> <span class="title">Epidemics, The SIR Model</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONselect-model-probl.html#subSECTIONtractrix" class="internal"><span class="codenumber">11.2.2</span> <span class="title">The Tractrix</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONselect-model-probl.html#SUBSECTIONPursuit" class="internal"><span class="codenumber">11.2.3</span> <span class="title">The  Pursuit Problem</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTERlimits-lhop-rule.html" class="internal"><span class="codenumber">12</span> <span class="title">Limits and L’Hôpital’s Rule</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="SECTIONhoriz-asympt-as.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Horizontal Asymptotes: Limits “at Infinity”</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONhoriz-asympt-as.html#DIGRESSIONLimitNotation" class="internal"><span class="codenumber">12.1.1</span> <span class="title">Limit Notation</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONsqueeze-theorem-informal.html" class="internal"><span class="codenumber">12.2</span> <span class="title">The Squeeze Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONvertical-asymptotes.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Vertical Asymptotes: “Infinite” Limits</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="SECTIONIndetFormsAndLhop.html" class="internal"><span class="codenumber">12.4</span> <span class="title">Indeterminate Forms and L’Hôpital’s Rule</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONIndetFormsAndLhop.html#SUBSECTIONLHopitalsRule" class="internal"><span class="codenumber">12.4.1</span> <span class="title">L’Hôpital’s Rule</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONIndetFormsAndLhop.html#SUBSECTIONlhop-rule-horiz" class="internal"><span class="codenumber">12.4.2</span> <span class="title">L’Hôpital’s Rule and Horizontal Asymptotes</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-part">
+<div class="toc-title-box"><a href="DiffCalcToTheory.html" class="internal"><span class="codenumber">II</span> <span class="title">Differential Calculus: To Theory</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTERWhatsWrong.html" class="internal"><span class="codenumber">13</span> <span class="title">What’s Wrong with Differentials?</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CalcAndBerkeley.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Calculus and Bishop Berkeley</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONsecants-tangents.html" class="internal"><span class="codenumber">13.2</span> <span class="title">Secants and Tangents</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTERdiff-rules-with-limits.html" class="internal"><span class="codenumber">14</span> <span class="title">The Differentiation Rules via Limits</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="SECTIONlimit-theorems-laws.html" class="internal"><span class="codenumber">14.1</span> <span class="title">The Limit Rules (Theorems)</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONlimit-theorems-laws.html#SUBSECTIONlimit-comp-cont" class="internal"><span class="codenumber">14.1.1</span> <span class="title">The Limit of a Composition and Continuity at a Point</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONdiff-rules-via.html" class="internal"><span class="codenumber">14.2</span> <span class="title">The General Differentiation Theorems, via Limits</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONChainRule.html" class="internal"><span class="codenumber">14.3</span> <span class="title">The Chain Rule</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONproduct-rule-limits.html" class="internal"><span class="codenumber">14.4</span> <span class="title">The Product Rule</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONother-gener-diff.html" class="internal"><span class="codenumber">14.5</span> <span class="title">The Other General Differentiation Rules</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONdiff-trig-funct.html" class="internal"><span class="codenumber">14.6</span> <span class="title">Derivatives of the Trigonometric Functions, via Limits</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONinverse-functions.html" class="internal"><span class="codenumber">14.7</span> <span class="title">Inverse Functions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTERFDT-Redux.html" class="internal"><span class="codenumber">15</span> <span class="title">The First Derivative Test, Redux</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONfermats-theorem.html" class="internal"><span class="codenumber">15.1</span> <span class="title">Fermat’s Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONrolles-lemma-mean.html" class="internal"><span class="codenumber">15.2</span> <span class="title">Rolle’s Lemma and the Mean Value Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONfirst-deriv-test.html" class="internal"><span class="codenumber">15.3</span> <span class="title">The Proof of the First Derivative Test</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTERwhen-deriv-doesnt.html" class="internal"><span class="codenumber">16</span> <span class="title">When the Derivative Doesn’t Exist</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CHAPTERwhen-deriv-doesnt-2.html" class="internal"><span class="codenumber">16.1</span> <span class="title">One Sided Limits</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONone-sided-deriv.html" class="internal"><span class="codenumber">16.2</span> <span class="title">One Sided Derivatives</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CHAPTERformal-limits.html" class="internal"><span class="codenumber">17</span> <span class="title">Formal Limits</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONNonIntuitExample.html" class="internal"><span class="codenumber">17.1</span> <span class="title">A Non-Intuitive Limit</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="SECTIONlimits-at-infinity.html" class="internal"><span class="codenumber">17.2</span> <span class="title">Getting Around Infinity</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONlimits-at-infinity.html#SUBSECTIONEpsDelt1" class="internal"><span class="codenumber">17.2.1</span> <span class="title">Horizontal Asymptotes, Redux</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONlimits-at-infinity.html#SUBSECTIONconvincing-skeptic" class="internal"><span class="codenumber">17.2.2</span> <span class="title">Convincing Berkeley</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONlimits-at-infinity.html#SUBSECTIONRefiningDerivative" class="internal"><span class="codenumber">17.2.3</span> <span class="title">Refining the Definition of a Limit</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONlimits-at-infinity.html#SUBSECTIONVerticalAsymptotes" class="internal"><span class="codenumber">17.2.4</span> <span class="title">Vertical Asymptotes, Redux</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONlimits-at-real.html" class="internal"><span class="codenumber">17.3</span> <span class="title">Finite Limits at a Real Number</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="SECTIONLimitLaws.html" class="internal"><span class="codenumber">17.4</span> <span class="title">Limit Laws (Theorems)</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONLimitLaws.html#SUBSECTIONlimit-sum-at" class="internal"><span class="codenumber">17.4.1</span> <span class="title">The Limit of a Sum</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONLimitLaws.html#SUBSECTIONsqueeze-theorem" class="internal"><span class="codenumber">17.4.2</span> <span class="title">The Squeeze Theorem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONLimitLaws.html#SECTIONlimit-composition" class="internal"><span class="codenumber">17.4.3</span> <span class="title">The Limit of a Composition</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONLimitLaws.html#SUBSECTIONlimit-product-at" class="internal"><span class="codenumber">17.4.4</span> <span class="title">The Limit of a Product</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONLimitLaws.html#SUBSECTIONOneOverXIsCont" class="internal"><span class="codenumber">17.4.5</span> <span class="title">The Function    <span class="process-math">\(f(x)=\frac1x\)</span> is Continuous Wherever  It Is Defined</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="meta_backmatter.html" class="internal"><span class="title">Appendices</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-list-results.html" class="internal"><span class="codenumber">A</span> <span class="title">List of Theorems, Lemmas, Corollaries, Examples, Exercises, and Definitions</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="meta_backmatter-3.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="meta_backmatter-4.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="SECusing-lett-inst"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">2.1</span><span class="space"> </span><span class="title">Using Letters Instead of Numbers</span>
+</h2>
+<div class="para" id="SECusing-lett-inst-2">Before we begin, a few comments on notation are apropos.</div>
+<div class="para" id="SECusing-lett-inst-3">Suppose your teacher starts a lecture with the statement, “Suppose <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are two positive numbers. Then <span class="process-math">\(a \lt{} a+b\)</span> and <span class="process-math">\(b \lt{} a+b\text{.}\)</span>” A common complaint is that we’re making the problem harder. This is often accompanied with a request to replace <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> with numbers, just to make it easier to understand. For example, if <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are numbers why not just say that <span class="process-math">\(a\)</span> is <span class="process-math">\(23\)</span> and <span class="process-math">\(b\)</span> is <span class="process-math">\(17\text{?}\)</span> In that case it is clear that <span class="process-math">\(23 \lt{} 40\ (=23+17)\)</span> and <span class="process-math">\(17
+\lt{} 40\text{.}\)</span> Why do we have to make it more complicated?</div>
+<div class="para logical" id="SECusing-lett-inst-4">
+<div class="para">This seems like a reasonable point until you think about it a bit more. Suppose we use the numbers <span class="process-math">\(a=\frac{\sqrt{11}-\pi}{4}\)</span> and <span class="process-math">\(b=2.93\times 10^{1000}\)</span> instead? Is it obvious to you that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{\sqrt{11}-\pi}{4}\lt{}\left(\frac{\sqrt{11}-\pi}{4}\right)+\left(2.93\times
+10^{1000}\right)
+\end{equation*}
+</div>
+<div class="para">or</div>
+<div class="displaymath process-math">
+\begin{equation*}
+2.93\times
+10^{1000}\lt{}\left(\frac{\sqrt{11}-\pi}{4}\right)+\left(2.93\times
+10^{1000}\right)?
+\end{equation*}
+</div>
+</div>
+<div class="para logical" id="SECusing-lett-inst-5">
+<div class="para">Our point here is that the symbol <span class="process-math">\(a\)</span> is no different than the symbol <span class="process-math">\(23\text{.}\)</span>  Or the symbol <span class="process-math">\(\frac{\sqrt{11}-\pi}{4}\text{.}\)</span>  These are all valid symbols representing numbers. So we treat them all the same. For example, all of the following are valid statements:</div>
+<div class="displaymath process-math" id="SECusing-lett-inst-5-4">
+\begin{align*}
+a+b &amp;= b+a\\
+23+17 &amp;=17+23, \text{ and }\\
+\left(\frac{\sqrt{11}-\pi}{4}\right) +\left(2.93\times 10^{1000}\right) &amp;= \left(2.93\times 10^{1000}\right) +\left(\frac{\sqrt{11}-\pi}{4}\right).
+\end{align*}
+</div>
+<div class="para">The difference is this: If <span class="process-math">\(a=23\)</span> and <span class="process-math">\(b=17\)</span> the first statement includes the second as a specific case. Similarly if <span class="process-math">\(a=\frac{(\sqrt{11}-\pi)}{4}\)</span> and <span class="process-math">\(b=2.93\times 10^{1000}\)</span> the first statement includes the third.  The first statement is more general. It is true no matter what <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are.</div>
+</div>
+<article class="exercise exercise-like" id="ProblemCalculator"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">2.1.0.1</span><span class="period">.</span>
+</h3>
+<article class="task exercise-like" id="ProblemCalculator-1"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="ProblemCalculator-1-1-1">Use the fact‘ that <span class="process-math">\(\sqrt{7}\lt{}\sqrt{9}\)</span> to show that <span class="process-math">\(\frac{\sqrt{7}-\pi}{5}\lt{}0\text{.}\)</span> Do not use a calculator.</div></article><article class="task exercise-like" id="ProblemCalculator-2"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para logical" id="ProblemCalculator-2-1-1">
+<div class="para">Check the validity of the following statements. Are they true?</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{\sqrt{7}-\pi}{5}\lt{}\left(\frac{\sqrt{7}-\pi}{5}\right)+2.93\times 10^{1000}
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+2.93\times 10^{1000}\lt{}\left(\frac{\sqrt{7}-\pi}{5}\right)+2.93\times
+10^{1000}
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+2.93\times 10^{1000}\lt{}\left(\frac{\sqrt{7}-\pi}{5}\right)+2.93\times
+10^{1000}
+\end{equation*}
+</div>
+</div>
+<div class="solutions"><details id="ProblemCalculator-2-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="ProblemCalculator-2-2-1">Using a calculator on <span class="process-math">\(2.93\times 10^{1000}\)</span> would be rather pointless. Try it and see.</div></div></details></div></article><article class="task exercise-like" id="ProblemCalculator-3"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para logical" id="ProblemCalculator-3-1-1">
+<div class="para">Show that it is not always true that if <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are numbers then</div>
+<div class="displaymath process-math" id="EQUATIONTriIneq">
+\begin{equation}
+a\le a+b.\tag{2.1}
+\end{equation}
+</div>
+</div></article><article class="task exercise-like" id="ProblemCalculator-4"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="ProblemCalculator-4-1-1">Find a restriction on the possible values of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> that will guarantee that <a href="SECusing-lett-inst.html#EQUATIONTriIneq" class="xref" data-knowl="./knowl/xref/EQUATIONTriIneq.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.1">inequality (2.1)</a> is true.</div></article></article><div class="para" id="SECusing-lett-inst-7">Keeping things simple is laudable as a goal and we don’t want to suggest that you shouldn’t do it.  It can be very useful to look at a special case of a general statement just to get a sense of the problem. For example, a good way to “trick yourself into abstraction” is to think <span class="process-math">\(23\)</span> and <span class="process-math">\(17\text{,}\)</span> but write down <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{.}\)</span>  As long as you don’t try to do anything that relies on the particular properties of <span class="process-math">\(23\)</span> and <span class="process-math">\(17\text{,}\)</span> you should be fine. But you wouldn’t want to say something like <span class="process-math">\(a+b\)</span> is an even integer (even though <span class="process-math">\(23+17\)</span> is). The sum <span class="process-math">\(23+17\)</span> is an even integer because both <span class="process-math">\(23\)</span> and <span class="process-math">\(17\)</span> are odd integers, but this is special to these numbers and won’t be true for <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> in general.</div>
+<article class="exercise exercise-like" id="SECusing-lett-inst-8"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">2.1.0.2</span><span class="period">.</span>
+</h3>
+<article class="task exercise-like" id="SECusing-lett-inst-8-1"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="SECusing-lett-inst-8-1-1-1">Suppose <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are both integers.  Find restrictions on the possible values of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> that will guarantee that <span class="process-math">\(a+b\)</span> is an even, positive integer.</div></article><article class="task exercise-like" id="SECusing-lett-inst-8-2"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="SECusing-lett-inst-8-2-1-1">Now suppose <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are both numbers. Find restrictions on the possible values of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> that will guarantee that <span class="process-math">\(a+b\)</span> is an even, positive integer.</div>
+<div class="solutions"><details id="SECusing-lett-inst-8-2-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="SECusing-lett-inst-8-2-2-1">This is not the same problem as part (a). Read it carefully.</div></div></details></div></article></article><div class="para" id="SECusing-lett-inst-9">When looking at <span class="process-math">\(23\times17\)</span> most people are inclined to compute this to get <span class="process-math">\(391\text{.}\)</span> If the problem is: Find the value of <span class="process-math">\(23\times17\text{,}\)</span> then sure, doing the arithmetic is the correct thing to do. But the last time you were asked to do multiplication for its own sake you were probably <span class="process-math">\(11\)</span> years old. Elementary computations like this will only come up in the context of a more advanced problem.  Before doing this calculation, you should ask yourself if it will help you solve the more advanced problem.</div>
+<div class="para" id="SECusing-lett-inst-10">Now suppose the problem is: Determine  if the number <span class="process-math">\(23\times17\)</span> is divisible by <span class="process-math">\(17\text{.}\)</span> Do you see that computing <span class="process-math">\(23\times17=391\)</span> will only make the problem harder?</div>
+<div class="para" id="SECusing-lett-inst-11">Your college professors will never ask you to do an arithmetic calculation for its own sake. Instead arithmetic problems will come up in the context of a more advanced problem and you will need to use your arithmetic skill to uncover patterns. But doing the arithmetic, boiling everything down to a single number, usually hides the patterns!</div>
+<div class="para logical" id="SECusing-lett-inst-12">
+<div class="para">For example, is it easier to see the pattern in the following list of numbers when they are presented like this:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+1, 2, 10, 110, 220, 1100, 12100, 24200, 121000, 1331000, \ldots 
+\end{equation*}
+</div>
+<div class="para">or like this:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(2^05^011^0), (2^15^011^0),
+(2^15^111^0), (2^15^111^1),
+(2^25^111^1),
+(2^25^211^1), (2^25^211^2), \ldots\text{.}
+\end{equation*}
+</div>
+</div>
+<article class="exercise exercise-like" id="PROBLEMExerciseLiberating"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">2.1.0.3</span><span class="period">.</span>
+</h3>
+<div class="introduction" id="PROBLEMExerciseLiberating-1"><div class="para" id="PROBLEMExerciseLiberating-1-1"> Actually, there is something rather liberating about using letters to represent a broad class of numbers. Consider the following questions:</div></div>
+<article class="task exercise-like" id="PROBLEMExerciseLiberating-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="PROBLEMExerciseLiberating-2-1-1">Is the number <span class="process-math">\(2^{24}5^{49}11^{1002}\)</span> a perfect square?  If so, what is its square root?</div></article><article class="task exercise-like" id="PROBLEMExerciseLiberating-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="PROBLEMExerciseLiberating-3-1-1">What about <span class="process-math">\(2^{24}5^{50}11^{1002}\text{?}\)</span>  Was your calculator of any use on this?  Notice that these numbers were completely factored into their prime factorizations.  Did that help? How?</div></article><article class="task exercise-like" id="PROBLEMExerciseLiberating-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="PROBLEMExerciseLiberating-4-1-1">Now suppose that <span class="process-math">\(n\)</span> is a positive integer. Is <span class="process-math">\(2^{2n}5^{3n}11^{4n}\)</span> always a perfect square? If not, for which values of <span class="process-math">\(n\)</span> will it be a perfect square?</div></article><article class="task exercise-like" id="PROBLEMExerciseLiberating-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="PROBLEMExerciseLiberating-5-1-1">What can you say, in general, about whether or not an integer greater than one is a perfect square in terms of its prime factorization?</div></article></article></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="CHAPTERproblem-solving.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="SECTIONAn-easy-problem-alg.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

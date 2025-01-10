@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">12.4.2.9</span><span class="period">.</span>
+</h4>
+<div class="para logical">
+<div class="para">Consider <span class="process-math">\(\rlimit{t}{0}{t^t}\text{.}\)</span> Notice we are only considering positive values of <span class="process-math">\(t.\)</span> (Why?)  Proceeding in the same manner as before, let <span class="process-math">\(y=t^t,\)</span> so that <span class="process-math">\(\ln{(y)}=\ln(t^t)=t\ln(t).\)</span> Thus</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\limitX{t}{0}{\ln(y)}{t\gt0}= \limitX{t}{0}{t\ln(t)}{t\gt0}=
+\limitX{t}{0}{\frac{\ln(t)}{\frac{1}{t}}}{t\gt0}.
+\end{equation*}
+</div>
+<div class="para">This is a L’Hôpital  Indeterminate so we apply L’Hôpital’s Rule:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\limitX{t}{0}{\ln(y)}{t\gt0} =
+\limitX{t}{0}{\frac{\ln(t)}{t^{-1}}}{t\gt0} \lhopeq
+\limitX{t}{0}{\frac{t^{-1}}{-t^{-2}}}{t\gt0} =
+\limitX{t}{0}{(-t)}{t\gt0} = 0.
+\end{equation*}
+</div>
+<div class="para">Thus</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\limitX{t}{0}{t^t}{t\gt0}  = e^0=1.
+\end{equation*}
+</div>
+</div></article><span class="incontext"><a class="internal" href="SECTIONIndetFormsAndLhop.html#SUBSECTIONlhop-rule-horiz-25">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<section class="paragraphs"><h3 class="heading"><span class="title">Parametric Functions.</span></h3>
+<div class="para logical">
+<div class="para">When we switched to Newton’s dynamical viewpoint, we changed the nature of our representations of the curves. For example the Folium of Descartes can be represented by the formula as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x^3+y^3=3xy.
+\end{equation*}
+</div>
+<div class="para">This formula is complex and can be hard to work with, mainly because the relationship between <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> is difficult to see and understand.</div>
+</div>
+<div class="para logical">
+<div class="para">In the representation</div>
+<div class="displaymath process-math">
+\begin{align*}
+x(t)\amp{}=\frac{3t}{1+t^3},\\
+y(t)\amp{}=\frac{3t^2}{1+t^3}
+\end{align*}
+</div>
+<div class="para">the relationship between <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> is still difficult but since <span class="process-math">\(x(t)\)</span> and <span class="process-math">\(y(t)\)</span> are both functions the relationship between <span class="process-math">\(x\)</span> and <span class="process-math">\(t\)</span> and between <span class="process-math">\(y\)</span> and <span class="process-math">\(t\)</span> is a bit simpler. We know how to work with functions.</div>
+</div>
+<div class="para"> This second representation is usually called the <dfn class="terminology">parametric functions</dfn> or <dfn class="terminology">parametric equation</dfn> representation, because the <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> coordinates are given in terms of a parameter. In this case the parameter <span class="process-math">\(t\)</span> represents time. This is common but by no means required. The parameter might represent anything, just as any variable might.</div>
+<div class="para">In fact, you might be wondering where we got the parameterization for the Folium.  It may not seem obvious, but as long as <span class="process-math">\((x,y)\neq(0,0)\text{,}\)</span> the parameter <span class="process-math">\(t\)</span> actually represents the slope of the line joining the origin to the point <span class="process-math">\((x,y)\)</span> on the Folium.</div>
+<article class="exercise exercise-like"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">5.9.0.4</span><span class="period">.</span>
+</h4>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\((x,y)\)</span> represent any point on the Folium <span class="process-math">\(x^3+y^3=3xy\)</span> which is not the origin.  Let <span class="process-math">\(t\)</span> represent the slope of the line joining the origin to <span class="process-math">\((x,y)\text{;}\)</span> that is, <span class="process-math">\(\frac{y}{x}=t\)</span> or <span class="process-math">\(y=tx\text{.}\)</span>  Use this to show that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x=\frac{3t}{1+t^3},\text{ and } y=\frac{3t^2}{1+t^3}.
+\end{equation*}
+</div>
+</div> <div class="para">The difference between this problem and <a href="SECTIONSelfIntersectCurve.html#PROBLEMFoliumOfDescartes1" class="xref" data-knowl="./knowl/xref/PROBLEMFoliumOfDescartes1.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 5.9.0.3">Problem 5.9.0.3</a> is this: In <a href="SECTIONSelfIntersectCurve.html#PROBLEMFoliumOfDescartes1" class="xref" data-knowl="./knowl/xref/PROBLEMFoliumOfDescartes1.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 5.9.0.3">Problem 5.9.0.3</a> we gave you <span class="process-math">\(x(t)\)</span> and <span class="process-math">\(y(t)\)</span> and asked you to show that it satisfies the equation of the Folium. Here we start with the equation of the Folium and you need to find <span class="process-math">\(x(t)\)</span> and <span class="process-math">\(y(t)\text{.}\)</span>
+</div></article><div class="para">Of course, it is not wrong to also think of this parameter as time. We are just stipulating that the point is moving so that its position at time <span class="process-math">\(t\)</span> is such that the slope of the line joining the origin to the point matches <span class="process-math">\(t\text{.}\)</span>  Mathematically, what the parameter represents is usually not at issue. It is just a parameter.</div>
+<div class="para">Recall that when we looked at Roberval’s treatment of the conic sections in <a href="SECTIONroberv-conic-sect.html" class="internal" title="Section 3.6: Roberval, Conic Sections, and the Dynamic Approach">Section 3.6</a> we found it handy to think of our curves as being traced out by the motion of a point and we created the notation <span class="process-math">\(\ParamEqTwo{x(t)}{y(t)}    \)</span> to reflect that point of view. With one slight modification this notation suits our current needs as well.</div>
+<div class="para logical">
+<div class="para">First, since the coordinates of our point are, individually, functions of <span class="process-math">\(t\)</span> it follows that the position of the point <span class="process-math">\(P\)</span> itself depends on (is a function of) <span class="process-math">\(t\)</span> as well:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+P(t)=
+\ParamEqTwo
+{x(t)}{y(t)}.
+\end{equation*}
+</div>
+</div>
+<div class="para logical">
+<div class="para">Second, it is useful for us to have a convenient way to specify the domain of the function. So we add a third component to do that. For example, if the domain of our function is all values of <span class="process-math">\(t\)</span> strictly between zero and one we would write.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+P(t)=
+\ParamEqThree
+{x(t)}{y(t)}{0\lt t\lt1}.
+\end{equation*}
+</div>
+</div>
+<div class="para">“Dynamic” and “static” are only words we use to describe the way we’re thinking about a problem. There is nothing inherently dynamic or static in either representation so there is no <i class="foreign">a priori</i> reason to prefer one over the other. They describe the same set of points in the plane.</div>
+<div class="para">For example if <span class="process-math">\(y=x^2\)</span> then <span class="process-math">\(\dx{y}=2x\dx{x}\text{.}\)</span> Time (<span class="process-math">\(t\)</span>) does not appear in these formulas so we tend to think of them statically. However if we want to think of them dynamically we divide by <span class="process-math">\(\dx{t}\)</span> to get <span class="process-math">\(\dfdx{y}{t}=2x\dfdx{x}{t}\)</span> and interpret this to say that at any given time <span class="process-math">\(t\text{,}\)</span> the position of a point is <span class="process-math">\(\ParamEqTwo
+{x(t)}
+{y(t)}\)</span> and the vertical velocity, <span class="process-math">\(\dfdx{y}{t}\)</span> is twice the value of the <span class="process-math">\(x\)</span> coordinate times the horizontal velocity, <span class="process-math">\(\dfdx{x}{t}\text{.}\)</span>
+</div>
+<article class="exercise exercise-like"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">5.9.0.5</span><span class="period">.</span>
+</h4>
+<div class="introduction"><div class="para"></div></div>
+<article class="task exercise-like"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para logical">
+<div class="para">Use your favorite graphing technology to show that the parameterization</div>
+<div class="displaymath process-math">
+\begin{equation*}
+P(t)=
+\ParamEqThree
+{t^2+1}
+{t^4+2t^2+1}
+{-\infty\lt t\lt \infty}
+\end{equation*}
+</div>
+<div class="para">traces out part of the parabola <span class="process-math">\(y=x^2\text{.}\)</span> Which part?</div>
+</div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para">The parameterization <span class="process-math">\(P(t)=
+\ParamEqThree
+{-(t^2+1)}
+{t^4+2t^2+1}
+{-\infty\lt t\lt \infty}\)</span> traces out  different part of the same parabola. How else is this parameterization different from the one in part (a)?</div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para">Explain why neither of these parameterizations traces the part of the curve <span class="process-math">\(y=x^2\)</span> where <span class="process-math">\(-1\lt x\lt1\text{.}\)</span>
+</div></article></article><article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.9.0.6</span><span class="period">.</span>
+</h4>
+<div class="para">Moving between the equation and parametric forms can be very hard to do depending on the complexity of the equation.  The simplest situation is when you have <span class="process-math">\(y\)</span> as a function of <span class="process-math">\(x\text{;}\)</span> for example <span class="process-math">\(y(x)=x^2\text{.}\)</span> To find a parametric representation we observe that we need to specify both <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> as functions of a third parameter, <span class="process-math">\(t\text{.}\)</span> This can be puzzling until we realize that <span class="process-math">\(x\)</span> is completely free. All we need to do is ensure that <span class="process-math">\(y=x^2\text{.}\)</span>  So if we take <span class="process-math">\(x(t)=t\)</span> and <span class="process-math">\(y=x^2=t^2\)</span> we <em class="emphasis">almost</em> have our parameterization.</div>
+<div class="para logical">
+<div class="para">When faced with a formula like <span class="process-math">\(y=x^2\)</span> you have learned to always assume that <span class="process-math">\(x\)</span> could be any real number that makes sense in the formula. But with parametric equations this assumption can lead to problems. We’ll need to specify the allowable values of the parameter <span class="process-math">\(t\)</span> explicitly. This is why we said we <em class="emphasis">almost</em> have our parameterization. A complete parameterization must specify the values of <span class="process-math">\(t\)</span> that are available to us, so in this case</div>
+<div class="displaymath process-math">
+\begin{equation*}
+P(t)= \ParamEqThree { x(t)= t} { y(t)= t^2} {
+-\infty\lt t\lt \infty}.
+\end{equation*}
+</div>
+</div>
+<div class="para logical">
+<div class="para">We can <em class="emphasis">always</em> parameterize the graph of a function the same way we just parameterized <span class="process-math">\(y=x^2\text{.}\)</span> A parameterization of <span class="process-math">\(y=y(x)\text{,}\)</span> with domain <span class="process-math">\(a\le x\le b\)</span> is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+P(t)=
+\ParamEqThree
+{  x(t)=t}
+{  y(t)=y(t)}
+{  t\in [a,b]}.
+\end{equation*}
+</div>
+</div>
+<div class="para">This parameterization is  equivalent to working with the function <span class="process-math">\(y=y(x)\)</span> so it may or may not be particularly useful, but it can always be done.</div></article><article class="exercise exercise-like"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">5.9.0.7</span><span class="period">.</span>
+</h4>
+<div class="introduction"><div class="para"></div></div>
+<article class="task exercise-like"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para logical">
+<div class="para">Use your favorite graphing technology to show that each of the following is a parameterization of part of the graph of <span class="process-math">\(y=x^2\text{.}\)</span>
+</div>
+<ol class="lower-roman cols2" id="SECTIONSelfIntersectCurve-20-15-2-1-1-2">
+<li><div class="para"><span class="process-math">\(\displaystyle P(t)=
+\ParamEqThree
+{3t}
+{9t^2}
+{t\gt0}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(\displaystyle P(t)=
+\ParamEqThree
+{-t}
+{t^2}
+{t\le0}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(\displaystyle P(t)=
+\ParamEqThree
+{\sqrt{t}}
+{t}
+{t\ge0}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(\displaystyle P(t)=
+\ParamEqThree
+{-\sqrt{t}}
+{t}
+{t\ge 0}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(\displaystyle P(t)=
+\ParamEqThree
+{1/t}
+{1/t^2}
+{\abs{t}\gt 0}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(\displaystyle P(t)=
+\ParamEqThree
+{t^{1/3}}
+{t^{2/3}}
+{t\gt 0}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(\displaystyle P(t)=
+\ParamEqThree
+{t^3-1}
+{t^6-2t^3+1}
+{-\infty\lt t\lt \infty}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(\displaystyle P(t)=
+\ParamEqThree
+{t+1}
+{t^2+2t+1}
+{-20\lt t\lt 20}\)</span></div></li>
+</ol>
+</div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para">Sketch only the part of the curve included in each parameterization in part (a).  Be sure to indicate the direction of travel in each case, assuming <span class="process-math">\(t\)</span> is increasing.</div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para">Compute <span class="process-math">\(\frac{\dot{y}}{\dot{x}}\)</span> and show that this yields <span class="process-math">\(\dfdx{y}{x}=2x\)</span> for each of the parameterizations in part (a).</div></article></article><article class="exercise exercise-like"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">5.9.0.8</span><span class="period">.</span>
+</h4>
+<article class="task exercise-like"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para logical">
+<div class="para">Show that each of the following is a parameterization of part of the unit circle.</div>
+<ol class="lower-roman cols2" id="PROBLEMUnitCircleParameterization1-1-1-1-1">
+<li><div class="para"><span class="process-math">\(\displaystyle P(t)=
+\ParamEqThree
+{          t}
+{          \sqrt{1-t^2}}
+{          -1\le t\lt  1}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(\displaystyle P(t)=
+\ParamEqThree
+{          t}
+{          -\sqrt{1-t^2}}
+{          0\le t\lt  1}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(\displaystyle P(t)=
+\ParamEqThree
+{          \sqrt{1-t^2}}
+{          t}
+{          -1\le t\lt  1}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(\displaystyle P(t)=
+\ParamEqThree
+{          \sqrt{1-t^2}}
+{          t}
+{          0\le t\lt  1}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(\displaystyle P(t)=
+\ParamEqThree
+{          t^2}
+{          \sqrt{1-t^4}}
+{          -1\le t\lt  1}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(\displaystyle P(t)=
+\ParamEqThree
+{          t-2}
+{          \sqrt{4t-(3+t^2)}}
+{          1\le t\lt  2}\)</span></div></li>
+</ol>
+</div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para">Sketch <em class="emphasis">only</em> the part of the curve included in each parameterization in part (a).  Be sure to indicate the direction of travel in each case.</div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para logical">
+<div class="para">Compute <span class="process-math">\(\frac{\dot{y}}{\dot{x}}\)</span> and show that this yields</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dfdx{y}{x}=-\frac{x}{y}
+\end{equation*}
+</div>
+<div class="para">for each of the parameterizations in part (a).</div>
+</div></article></article><div class="para">As we’ve seen we can always parameterize the graph of a function, but the reverse is not true.  A parameterized curve will not always be the graph of some function.  For example the curves in <a href="SECTIONdefin-tang-line.html#PROBLEMClassicalCurves1" class="xref" data-knowl="./knowl/xref/PROBLEMClassicalCurves1.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 5.2.0.11">Problem 5.2.0.11</a> are not  graphs of  functions, but all of these curves can be parameterized.</div>
+<div class="para">Because  it can’t always be accomplished there is no general strategy for expressing a parameterized curve as the graph of a function. One strategy that sometimes works is to find <span class="process-math">\(\dfdx{y}{x}\)</span> and “undifferentiate”  as in the following example.</div>
+<aside class="aside aside-like"><h4 class="heading"><span class="title">Comment.</span></h4>
+<div class="para">Not necessarily the best.  In general there is no best way.</div></aside><article class="exercise exercise-like"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">5.9.0.9</span><span class="period">.</span>
+</h4>
+<div class="introduction">
+<div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="external/DC/Parametric4.png" class="contained"></div>
+<div class="para logical">
+<div class="para">The red curve  in the sketch above is  parameterized by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+P(t)=
+\ParamEqThree{\frac{1}{\sqrt{t^2-1}}}
+{\frac{t^2-2\sqrt{t^2-1}}{\sqrt{t^2-1}}}
+{1\lt  t\lt \infty}.
+\end{equation*}
+</div>
+<div class="para">Differentiating <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> gives</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dfdx{x}{t}= \frac{-t}{(t^2-1)^{\frac32}}
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dfdx{y}{t}= \frac{t^3-2t}{(t^2-1)^{\frac32}}
+\end{equation*}
+</div>
+<div class="para">so that <span class="process-math">\(\dfdx{y}{x}
+= 1-(t^2-1)\text{.}\)</span>
+</div>
+</div>
+</div>
+<article class="task exercise-like"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para">Fill in the details of the computation of <span class="process-math">\(\dfdx{x}{t}\text{,}\)</span> <span class="process-math">\(\dfdx{y}{t}\text{,}\)</span> and show that  <span class="process-math">\(\dfdx{y}{x} = 1-\frac{1}{x^2}\text{.}\)</span>
+</div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para">Let <span class="process-math">\(y=x+\frac{1}{x}\)</span> and show that  <span class="process-math">\(\dfdx{y}{x} = 1-\frac{1}{x^2}\text{.}\)</span>
+</div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para">Sketch the graph of <span class="process-math">\(y(x)= x+\frac1x\)</span> to see that this is <em class="emphasis">not</em> the same as the parameterized curve above.  Can you tell what went wrong?</div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para">Show that the point <span class="process-math">\(\left(1,0\right)\)</span> is on our parameterized curve. Use this to find the function, <span class="process-math">\(y(x)\text{,}\)</span> that has the same graph as <span class="process-math">\(P(t))\text{.}\)</span>
+</div></article></article><article class="exercise exercise-like"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">5.9.0.10</span><span class="period">.</span>
+</h4>
+<div class="introduction"><div class="para logical">
+<div class="para">For each of the given parameterizations find <span class="process-math">\(\dfdx{y}{x}\)</span> two different ways:</div>
+<ol class="lower-roman" id="SECTIONSelfIntersectCurve-20-21-1-1-2">
+<li><div class="para">Compute <span class="process-math">\(\dx{x}\)</span> and <span class="process-math">\(\dx{y}\)</span> and find their ratio, <span class="process-math">\(\dfdx{y}{x}\text{.}\)</span>
+</div></li>
+<li><div class="para">Solve for <span class="process-math">\(t\)</span> in terms of <span class="process-math">\(x\)</span> (or <span class="process-math">\(y\)</span>), substitute the result into <span class="process-math">\(y\)</span> (or <span class="process-math">\(x\)</span>), and then compute <span class="process-math">\(\dfdx{y}{x}\)</span> directly.</div></li>
+</ol>
+<div class="para">And then find <span class="process-math">\(y(x)\text{.}\)</span>
+</div>
+</div></div>
+<article class="task exercise-like"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para"><span class="process-math">\(P(t)=
+\ParamEqThree
+{t-1}
+{t+1}
+{t\in\RR}\)</span></div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para"><span class="process-math">\(P(t)=
+\ParamEqThree
+{        3t-2}
+{        -5t+7}
+{        t\in\RR}\)</span></div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para"><span class="process-math">\(P(t)=
+\ParamEqThree
+{        1/\sqrt{t}}
+{        \sqrt{t}}
+{        0\lt t}\)</span></div></article></article></section><span class="incontext"><a class="internal" href="SECTIONSelfIntersectCurve.html#SECTIONSelfIntersectCurve-20">in-context</a></span>
+</body>
+</html>

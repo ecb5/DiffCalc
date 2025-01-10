@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">17.3.0.7</span><span class="period">.</span><span class="space"> </span><span class="title">4.</span>
+</h3>
+<div class="para">We would like to find the value of <span class="process-math">\(\limit{x}{\frac12}{\frac{4x^2-1}{2x-1}}\text{,}\)</span> and prove that the value we find is correct.</div>
+<div class="para">Remember that none of our limit definitions tell us how to find the value of a limit, only how to prove that it has a particular value after we’ve found it. In our examples so far the value of the limits have been intuitively clear so we haven’t concerned ourselves with this part of the problem.  But before we can prove that a limit has a particular value we obviously need to decide what we believe the limit value is.</div>
+<div class="para">We have several options for doing this. The simplest is guessing, but guessing works best if we have some intuition about the problem. Guessing blindly is usually a waste of time. Nevertheless, guessing is always an option. Can you guess the value of this limit?</div>
+<div class="para">Another simple option is to use a calculator and plug the value of the limit point, in this case <span class="process-math">\(x=\frac12\text{,}\)</span> and see what the calculator comes up with. This will work if the function is continuous at the limit point. But <span class="process-math">\(\frac{4x^2-1}{2x-1}\)</span> is not continuous at <span class="process-math">\(x=\frac12\)</span> so that won’t help with this problem. Try it and see.</div>
+<div class="para">A third, and much more useful option is to sketch the graph of <span class="process-math">\(f(x)\)</span> to see what <span class="process-math">\(f(x)\)</span> is close to near the limit point.  The graph of <span class="process-math">\(f(x)=\frac{4x^2-1}{2x-1}\)</span> is given below. It is not defined at <span class="process-math">\(x=1/2\)</span> because when <span class="process-math">\(x=1/2\)</span> we get zero in the denominator. Nevertheless the limit at <span class="process-math">\(x=1/2\)</span> seems to exist. As you can see as <span class="process-math">\(x\)</span> approaches <span class="process-math">\(1/2\text{,}\)</span> <span class="process-math">\(f(x)\)</span> appears to approach <span class="process-math">\(2\text{.}\)</span> Based on this graph it seems likely that the value of the limit is <span class="process-math">\(2\text{.}\)</span>
+</div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="external/DC/EpsDelta4.png" class="contained"></div>
+<div class="para logical">
+<div class="para">As we saw in <a href="CHAPTERlimits-lhop-rule.html" class="internal" title="Chapter 12: Limits and L’Hôpital’s Rule">Chapter 12</a>, Algebra can also be very helpful. In this case we see that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CHAPTERlimits-lhop-rule.html">
+\begin{equation*}
+\frac{4x^2-1}{2x-1}= {\frac{(2x+1)(2x-1)}{2x-1}}=
+(2x+1)\cdot\CancelToRed{=1}{\frac{2x-1}{2x-1}}=
+(2x+1)
+\end{equation*}
+</div>
+<div class="para">where the cancellation in red is only valid when <span class="process-math">\(x\neq\frac12\text{.}\)</span> Our limit point is <span class="process-math">\(x=\frac12\)</span> so it is not under consideration.</div>
+</div>
+<div class="para logical">
+<div class="para">In fact, once we have rigorously proved <a href="SECTIONlimit-theorems-laws.html#THEOREMLimProd2" class="xref" data-knowl="./knowl/xref/THEOREMLimProd2.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 14.1.1.2: The Limit of a Product is the Product of the Limits">Theorem 14.1.1.2</a>, and <a href="SECTIONlimit-theorems-laws.html#THEOREMConstLimit" class="xref" data-knowl="./knowl/xref/THEOREMConstLimit.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 14.1.1.7: The Limit of a Constant is the Constant">Theorem 14.1.1.7</a> from <a href="SECTIONlimit-theorems-laws.html" class="internal" title="Section 14.1: The Limit Rules (Theorems)">Section 14.1</a> (We will do this in <a href="SECTIONLimitLaws.html" class="internal" title="Section 17.4: Limit Laws (Theorems)">Section 17.4</a>) the following will be a valid proof:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/THEOREMLimProd2.html ./knowl/xref/THEOREMConstLimit.html ./knowl/xref/SECTIONlimit-theorems-laws.html ./knowl/xref/SECTIONLimitLaws.html">
+\begin{align*}
+\limit{x}{\frac12}{\frac{4x^2-1}{2x-1}}\amp =
+\limit{x}{\frac12}{\frac{(2x+1)(2x-1)}{2x-1}}\\
+\amp =
+\left[\limit{x}{\frac12}{(2x+1)}\right]\left[\limit{x}{\frac12}{\CancelToRed{=1}{\frac{2x-1}{2x-1}}}\
+\ \ \ \ \ \right]\\
+\amp =
+\limit{x}{\frac12}{(2x+1)}\\
+\amp = 2.
+\end{align*}
+</div>
+</div></article><span class="incontext"><a class="internal" href="SECTIONlimits-at-real.html#EXAMPLEConcrete1">in-context</a></span>
+</body>
+</html>

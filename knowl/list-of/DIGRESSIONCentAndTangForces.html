@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<section class="paragraphs"><h4 class="heading"><span class="title">The Centripetal and Tangential Forces.</span></h4>
+<div class="para">In <a href="SECTIONdiff-sine-cosine.html#PROBLEMSpinCastCentripetalForce" class="xref" data-knowl="./knowl/xref/PROBLEMSpinCastCentripetalForce.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 6.2.4.1">Problem 6.2.4.1</a> we assumed the angular velocity, <span class="process-math">\(\left(\dfdx{\theta}{t}=\omega\right)\)</span> was constant, so that we could focus our attention on the centripetal force that keeps the point <span class="process-math">\(P\)</span> moving in a circle. In <a href="SECTIONdiff-sine-cosine.html#PROBLEMSpinCastCentripetalForce" class="xref" data-knowl="./knowl/xref/PROBLEMSpinCastCentripetalForce.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 6.2.4.1">Problem 6.2.4.1</a> only the centripetal force was in play.  But consider a model airplane flying at the end of a cord, as in the sketch below.</div>
+<div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="external/DC/CentAccDecomp3.png" class="contained"></div>
+<div class="para">Now we have two forces to contend with. The tension in the cord (shown in red) supplies the centripetal (center seeking) force, while the force of the engine (thrust) will always be in the direction of motion, tangential to the path at <span class="process-math">\(P\)</span> (shown in blue). Since the airplane will speed up or slow down depending on the magnitude of the thrust, the airplane is no longer constrained to fly at a constant angular velocity.</div>
+<div class="para">Finding an expression for the centripetal and tangential acceleration is a straightforward, though somewhat daunting, exercise in differentiation.</div>
+<article class="exercise exercise-like"><h5 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">6.2.4.2</span><span class="period">.</span>
+</h5>
+<div class="para logical">
+<div class="para">Show that if a point, <span class="process-math">\(P=
+\ParamEqTwo
+{x(t)}
+{y(t)}
+\text{,}\)</span> is constrained to move in a circle (so that <span class="process-math">\(x=r\cos(\theta)\)</span> and <span class="process-math">\(y=r\sin(\theta)\)</span>) but that <span class="process-math">\(\dfdx{\theta}{t}\)</span> is no longer constant,  then the horizontal acceleration <span class="process-math">\(\left(\dfdxn{x}{t}{2}\right)\)</span> and the vertical acceleration   <span class="process-math">\(\left(\dfdxn{y}{t}{2}\right)\)</span> are given by,</div>
+<div class="displaymath process-math">
+\begin{align}
+\dfdxn{x}{t}{2}\amp =      \textcolor{blue}{-r\dfdxn{\theta}{t}{2}\sin(\theta)}\textcolor{red}{-r\left(\dfdx{\theta}{t}\right)^2\cos(\theta)}\tag{6.7}\\
+\dfdxn{y}{t}{2} \amp{}=    \textcolor{blue}{r\dfdxn{\theta}{t}{2}\cos(\theta)}\textcolor{red}{-r\left(\dfdx{\theta}{t}\right)^2\sin(\theta)}.\tag{6.8}
+\end{align}
+</div>
+</div></article><div class="para">From Newton’s Second Law of Motion, (<span class="process-math">\(\text{force}=\text{mass}\times\text{acceleration}\)</span>), we see that the horizontal and vertical forces acting on the airplane are <span class="process-math">\(m\dfdxn{x}{t}{2}\)</span> and <span class="process-math">\(m\dfdxn{y}{t}{2}\text{.}\)</span> We’d like to resolve these into their centripetal and tangential components.</div>
+<article class="exercise exercise-like"><h5 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">6.2.4.3</span><span class="period">.</span>
+</h5>
+<div class="para">Show that the red terms in <a href="SECTIONdiff-sine-cosine.html#PROBLEMCentAcclDecomp-1-1-7" class="xref" data-knowl="./knowl/xref/EQUATIONHorizAccel.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.7">equations (6.7)</a> <a href="SECTIONdiff-sine-cosine.html#PROBLEMCentAcclDecomp-1-1-7" class="xref" data-knowl="./knowl/xref/EQUATIONVertAccel.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.8">and (6.8)</a> are the horizontal and vertical components of the centripetal acceleration by confirming that they are the same as the <span class="process-math">\(\dfdxn{x}{t}{2}\)</span> and <span class="process-math">\(\dfdxn{x}{t}{2}\)</span> that you computed for part (b) of <a href="SECTIONdiff-sine-cosine.html#PROBLEMSpinCastCentripetalForce" class="xref" data-knowl="./knowl/xref/PROBLEMSpinCastCentripetalForce.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 6.2.4.1">Problem 6.2.4.1</a>.</div></article><div class="para logical">
+<div class="para">
+<a href="SECTIONdiff-sine-cosine.html#PROBLEMCentripetaAcclDecomposition" class="xref" data-knowl="./knowl/xref/PROBLEMCentripetaAcclDecomposition.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 6.2.4.3">Problem 6.2.4.3</a> suggests that the red terms in <a href="SECTIONdiff-sine-cosine.html#PROBLEMCentAcclDecomp-1-1-7" class="xref" data-knowl="./knowl/xref/EQUATIONHorizAccel.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.7">equations (6.7)</a> <a href="SECTIONdiff-sine-cosine.html#PROBLEMCentAcclDecomp-1-1-7" class="xref" data-knowl="./knowl/xref/EQUATIONVertAccel.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.8">and (6.8)</a> are the horizontal and vertical components of the centripetal acceleration. If that is true (it is) then the blue terms must represent the tangential acceleration.  Thus, by Newton’s Second Law, we obtain the horizontal and vertical components of the tangential force by multiplying the horizontal and vertical accelerations by <span class="process-math">\(m\text{.}\)</span>  This gives us</div>
+<dl class="description-list">
+<dt>Horizontal Force:</dt>
+<dd><div class="para"><span class="process-math">\(\displaystyle -mr\dfdxn{\theta}{t}{2}\sin(\theta)\)</span></div></dd>
+<dt>Vertical Force:</dt>
+<dd><div class="para"><span class="process-math">\(\displaystyle mr\dfdxn{\theta}{t}{2}\cos(\theta)\)</span></div></dd>
+</dl>
+<div class="para">All of our results so far are depicted in  the sketch below.</div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="external/DC/VectorDirection3.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">6.2.4.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure><div class="para logical">
+<div class="para">Finally, we let <span class="process-math">\(s(t)\)</span> represent the length of the circular arc traced by <span class="process-math">\(P\)</span> at time <span class="process-math">\(t\text{.}\)</span> Since <span class="process-math">\(\theta\)</span> is measured in radians we know that the length of a circular arc, <span class="process-math">\(s\)</span> is <span class="process-math">\(s=r\theta\text{.}\)</span> Applying the Constant Multiple Rule  we see that <span class="process-math">\(\dx{s}=r\dfdx{\theta}{t}\dx{t}.\)</span> Since <span class="process-math">\(\dx{s}\)</span> represents an infinitesimal  displacement tangent to the circle we see that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dfdx{s}{t}=r\dfdx{\theta}{t}
+\end{equation*}
+</div>
+<div class="para">is the tangential velocity of the airplane.</div>
+</div>
+<div class="para logical">
+<div class="para">Differentiating again using the Constant Multiple Rule we see that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQUATIONHorizAccel.html ./knowl/xref/EQUATIONVertAccel.html">
+\begin{equation*}
+\dfdxn{s}{t}{2}=\dfdxn{(r\theta)}{t}{2} =r\dfdxn{\theta}{t}{2}.
+\end{equation*}
+</div>
+<div class="para">is the tangential acceleration.  So <a href="SECTIONdiff-sine-cosine.html#PROBLEMCentAcclDecomp-1-1-7" class="xref" data-knowl="./knowl/xref/EQUATIONHorizAccel.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.7">equations (6.7)</a> <a href="SECTIONdiff-sine-cosine.html#PROBLEMCentAcclDecomp-1-1-7" class="xref" data-knowl="./knowl/xref/EQUATIONVertAccel.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.8">and (6.8)</a> can be expressed as</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQUATIONHorizAccel.html ./knowl/xref/EQUATIONVertAccel.html">
+\begin{align*}
+\dfdxn{x}{t}{2}\amp =
+\textcolor{blue}{-\dfdxn{s}{t}{2}\sin(\theta)}\textcolor{red}{-r\left(\dfdx{\theta}{t}\right)^2\cos(\theta)}\\
+\dfdxn{y}{t}{2}\amp =
+\textcolor{blue}{\dfdxn{s}{t}{2}\cos(\theta)}\textcolor{red}{-r\left(\dfdx{\theta}{t}\right)^2\sin(\theta)}.
+\end{align*}
+</div>
+</div>
+<div class="para">In this form these equations express the relationship between the various accelerations in play (horizontal, vertical, centripetal, and tangential). The forces are obtained from Newton’s Second Law by multiplying both sides of both equations by the mass, <span class="process-math">\(m\text{.}\)</span> We, the authors, think of this as “uncancelling” <span class="process-math">\(m\text{.}\)</span>
+</div>
+<article class="problem example-like"><h5 class="heading">
+<span class="type">Drill</span><span class="space"> </span><span class="codenumber">6.2.4.5</span><span class="period">.</span>
+</h5>
+<div class="para logical">
+<div class="para">Use the diagram in <a href="SECTIONdiff-sine-cosine.html#FIGURECentripetalSummary" class="xref" data-knowl="./knowl/xref/FIGURECentripetalSummary.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 6.2.4.4">Figure 6.2.4.4</a> to show that the magnitude of the thrust, <span class="process-math">\(m\abs{\dfdxn{s}{t}{2}}\text{,}\)</span> is given by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/FIGURECentripetalSummary.html">
+\begin{equation*}
+\sqrt{\left(-m\dfdxn{s}{t}{2}\sin(\theta)\right)^2+\left(m\dfdxn{s}{t}{2}\cos(\theta)\right)^2}.
+\end{equation*}
+</div>
+</div></article></section><span class="incontext"><a class="internal" href="SECTIONdiff-sine-cosine.html#DIGRESSIONCentAndTangForces">in-context</a></span>
+</body>
+</html>

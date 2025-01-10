@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<section class="paragraphs"><h4 class="heading"><span class="title">DIGRESSION: Inverse and Derivative Notation.</span></h4>
+<div class="para">As we saw in <a href="CHAPTERcalc-trig.html#DIGRESSIONInverse-function-notation" class="xref" data-knowl="./knowl/xref/DIGRESSIONInverse-function-notation.html" data-reveal-label="Reveal" data-close-label="Close" title="Paragraphs: DIGRESSION: Inverse Function Notation">DIGRESSION: Inverse Function Notation</a> there are some difficulties with the notation we use to indicate inverse functions. These problems only get worse when we mix the standard derivative notations with the inverse function notation. Lagrange’s prime notation is especially problematic.</div>
+<div class="para logical">
+<div class="para">For example if <span class="process-math">\(f(x)\)</span> is an invertible function the derivative of <span class="process-math">\(\inverse{f}(x)\)</span> could be denoted either  as:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dfdx{(\inverse{f})}{x}
+\end{equation*}
+</div>
+<div class="para">or <span class="process-math">\({\inverse{f}}^\prime(x)\text{.}\)</span>
+</div>
+</div>
+<div class="para logical">
+<div class="para"> But both of these are somewhat awkward. Mathematicians also sometimes use the <dfn class="terminology">operator notation</dfn>:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\DD(f(x)) =  f^\prime(x)=\dfdx{f}{x}
+\end{equation*}
+</div>
+<div class="para">and in this situation it minimizes the awkwardness a bit.</div>
+</div>
+<div class="para logical">
+<div class="para">As we’ve seen there can also be some vagueness involving the distinction between functions and variables. For example  suppose we want to sketch a graph of this relation between <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{:}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQUATIONInv1.html">
+\begin{equation*}
+y-x^3=0.
+\end{equation*}
+</div>
+<div class="para">The simplest thing to do is to choose a value for either <span class="process-math">\(x\)</span> or <span class="process-math">\(y\)</span> and then figure out what the corresponding <span class="process-math">\(y\)</span> or <span class="process-math">\(x\)</span> is. This is simpler to do that if we rearrange the relation so that we have one variable strictly in terms of (“as a function of”) the other. For this particular relation it is easiest to choose a value for <span class="process-math">\(x\)</span> and compute the corresponding <span class="process-math">\(y\)</span> value so we would normally rearrange it as</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQUATIONInv1.html">
+\begin{equation}
+y(x)=x^3.\tag{14.10}
+\end{equation}
+</div>
+<div class="para">
+<a href="CHAPTERdiff-rules-with-limits.html#EQUATIONInv1" class="xref" data-knowl="./knowl/xref/EQUATIONInv1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 14.10">equation (14.10)</a> defines <span class="process-math">\(y\)</span> as a function of <span class="process-math">\(x\text{.}\)</span>
+</div>
+</div>
+<div class="para logical">
+<div class="para">But we only solved for <span class="process-math">\(y\)</span> because we could see it was a little easier to do. Otherwise our choice was completely arbitrary. We could also have solved for <span class="process-math">\(x\)</span> giving,</div>
+<div class="displaymath process-math">
+\begin{equation}
+x(y)=\sqrt[3]{y}.\tag{14.11}
+\end{equation}
+</div>
+<div class="para">In this case we have <span class="process-math">\(x\)</span> as a function of <span class="process-math">\(y\text{.}\)</span>
+</div>
+</div>
+<div class="para">The two functions, <span class="process-math">\(y(x)\text{,}\)</span> (“cube”) and <span class="process-math">\(x(y)\)</span> (“cube root”), clearly contain the same information as the original relation  <span class="process-math">\(y-x^3=0\text{.}\)</span> But they are different, related, functions. They are in fact mutually inverse.</div>
+<div class="para">For example suppose we choose <span class="process-math">\(x=2\)</span> and use <a href="CHAPTERdiff-rules-with-limits.html#EQUATIONInv1" class="xref" data-knowl="./knowl/xref/EQUATIONInv1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 14.10">equation (14.10)</a> to find <span class="process-math">\(y=8\text{.}\)</span> If we then take <span class="process-math">\(y=8\)</span> and use <a href="CHAPTERdiff-rules-with-limits.html#EQUATIONInv2" class="xref" data-knowl="./knowl/xref/EQUATIONInv2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 14.11">equation (14.11)</a> we find that <span class="process-math">\(x=2\text{.}\)</span> That is, <span class="process-math">\(x(y)\)</span> has “undone” <span class="process-math">\(y(x)\)</span> for the single pair <span class="process-math">\((2,8)\text{.}\)</span> <a href="CHAPTERdiff-rules-with-limits.html#DRILLCubeRoot" class="xref" data-knowl="./knowl/xref/DRILLCubeRoot.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 14.50">Problem 14.50</a> asks you to show that it is true for every pair <span class="process-math">\((x, y(x))\text{.}\)</span> This “undoing” makes <span class="process-math">\(y(x)\)</span> and <span class="process-math">\(x(y)\)</span> a pair of mutually inverse functions.</div>
+<div class="para">But in function notation the variable (frequently <span class="process-math">\(x\)</span> or <span class="process-math">\(t\)</span>) is a placeholder. For example, each of <span class="process-math">\(y(x)=x^3,\)</span> <span class="process-math">\(y(t)=t^3\text{,}\)</span> <span class="process-math">\(f(\alpha)=\alpha^3\text{,}\)</span> or even <span class="process-math">\(f(\circ)=\circ^3\)</span> defines exactly the same function: The function which cubes its input. It doesn’t matter what we call the variable. It just holds a place in the formula that tells us what the input  is and what to do with it. Since it doesn’t matter what we call the variable we usually call it <span class="process-math">\(x\)</span> unless there is some compelling reason to use something else.</div>
+<div class="para">To avoid confusing variable names with function names we usually denote <span class="process-math">\(y(x)\)</span> as <span class="process-math">\(f(x)\text{.}\)</span> It’s inverse, <span class="process-math">\(x(y)\)</span> should probably be denoted as <span class="process-math">\(\inverse{f}(y)\text{.}\)</span>  But sadly, recognizing that the variable is just a placeholder in function notation we use the same variable name in both the function and it’s inverse. So we denote the inverse of <span class="process-math">\(f(x)\)</span> as <span class="process-math">\(\inverse{f}(x)\text{,}\)</span> even though it would probably make it easier for beginners to use <span class="process-math">\(\inverse{f}(y)\text{,}\)</span> as a reminder that both functions come from the same original relation.</div>
+<article class="exercise exercise-like"><h5 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">14.50</span><span class="period">.</span>
+</h5>
+<div class="para">Prove that <span class="process-math">\(f(x)=x^3\)</span> and     <span class="process-math">\(\inverse{f}(x)=\sqrt[3]{x}\)</span> are mutually inverse by showing that they satisfy the conditions stated in <a href="CHAPTERdiff-rules-with-limits.html#DEFINITIONFunctionInverse" class="xref" data-knowl="./knowl/xref/DEFINITIONFunctionInverse.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 14.49: Inverse Functions">Definition 14.49</a>
+</div></article><div class="para">The notation for inverse functions is not great. It can be very confusing, especially for beginners. Be careful with it.</div>
+<div class="para"><em class="alert">END OF DIGRESSION</em></div></section><span class="incontext"><a class="internal" href="CHAPTERdiff-rules-with-limits.html#SECTIONinverse-functions-11">in-context</a></span>
+</body>
+</html>

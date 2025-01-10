@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.10.1.1</span><span class="period">.</span>
+</h4>
+<div class="para logical">
+<div class="para"> For the sake of being definite suppose that our isotope is decaying (shrinking) at a <dfn class="terminology">relative</dfn> (<dfn class="terminology">nominal</dfn>) rate of  <span class="process-math">\(25\%\text{.}\)</span> Then if we start with <span class="process-math">\(20\)</span>Kg, the IVP to be solved is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/IVPExpGeneral.html">
+\begin{align}
+\dfdx{A}{t}= 0.25A, \amp{}\amp{} A(0)=20.\tag{8.23}
+\end{align}
+</div>
+<div class="para">which we recognize as a special case of <a href="SECTIONExponentialGrowth.html#SECTIONExponentialGrowth-7-6" class="xref" data-knowl="./knowl/xref/IVPExpGeneral.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.19">IVP (8.19)</a>, so it seems that the solution must be</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/IVPExpGeneral.html">
+\begin{equation*}
+A(t)=20e^{0.25t}
+\end{equation*}
+</div>
+<div class="para">right?</div>
+</div>
+<div class="para">Wait a minute! This can’t be right. It says that the number of isotopes is increasing, not decreasing. Graph it and see.</div>
+<div class="para">So what did we do wrong? What does your intuition say?</div>
+<div class="para logical">
+<div class="para">The derivative of <span class="process-math">\(A(t)\)</span> is its rate of change. If <span class="process-math">\(A(t)\)</span> is increasing then its rate of change is going to be positive. If it is decreasing then its rate of change will be negative. We seem to have committed one of the classic blunders of mathematics: We got the sign wrong. We should have been solving  the IVP</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/IVPRadioactiveDecay-Wrong.html ./knowl/xref/IVPRadioactiveDecay-Correct.html ./knowl/xref/IVPExpGeneral.html">
+\begin{equation}
+\dfdx{A}{t}= -0.25A,\ A(0)=20.\tag{8.24}
+\end{equation}
+</div>
+<div class="para">instead of <a href="SECTIONLogApps.html#EXAMPLEradioactive-dating-2-7" class="xref" data-knowl="./knowl/xref/IVPRadioactiveDecay-Wrong.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.23">IVP (8.23)</a>. Since <a href="SECTIONLogApps.html#IVPRadioactiveDecay-Correct" class="xref" data-knowl="./knowl/xref/IVPRadioactiveDecay-Correct.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.24">IVP (8.24)</a> also has the same form as <a href="SECTIONExponentialGrowth.html#SECTIONExponentialGrowth-7-6" class="xref" data-knowl="./knowl/xref/IVPExpGeneral.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.19">IVP (8.19)</a>,  the correct solution is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/IVPRadioactiveDecay-Wrong.html ./knowl/xref/IVPRadioactiveDecay-Correct.html ./knowl/xref/IVPExpGeneral.html">
+\begin{equation}
+A(t)=20e^{-0.25t}\tag{8.25}
+\end{equation}
+</div>
+</div></article><span class="incontext"><a class="internal" href="SECTIONLogApps.html#EXAMPLEradioactive-dating">in-context</a></span>
+</body>
+</html>
