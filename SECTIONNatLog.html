@@ -407,9 +407,9 @@ eBookConfig.enable_chatcodes =  false;
 #SECTIONDerivNatLog-4-2-3 { counter-set: SECTIONDerivNatLog-4-2-3 0; }
 #SECTIONDerivNatLog-4-2-3 > li::marker { content: "("counter(SECTIONDerivNatLog-4-2-3,lower-roman)")"; }
 #SECTIONDerivNatLog-4-2-3 > li { counter-increment: SECTIONDerivNatLog-4-2-3; }
-#PARAGRAPHSGenExp-13-2-3 { counter-set: PARAGRAPHSGenExp-13-2-3 0; }
-#PARAGRAPHSGenExp-13-2-3 > li::marker { content: "("counter(PARAGRAPHSGenExp-13-2-3,lower-roman)")"; }
-#PARAGRAPHSGenExp-13-2-3 > li { counter-increment: PARAGRAPHSGenExp-13-2-3; }
+#PARAGRAPHSGenExp-14-2-3 { counter-set: PARAGRAPHSGenExp-14-2-3 0; }
+#PARAGRAPHSGenExp-14-2-3 > li::marker { content: "("counter(PARAGRAPHSGenExp-14-2-3,lower-roman)")"; }
+#PARAGRAPHSGenExp-14-2-3 > li { counter-increment: PARAGRAPHSGenExp-14-2-3; }
 #PARAGRAPHSGenLog-7-2-3 { counter-set: PARAGRAPHSGenLog-7-2-3 0; }
 #PARAGRAPHSGenLog-7-2-3 > li::marker { content: "("counter(PARAGRAPHSGenLog-7-2-3,lower-roman)")"; }
 #PARAGRAPHSGenLog-7-2-3 > li { counter-increment: PARAGRAPHSGenLog-7-2-3; }
@@ -998,7 +998,15 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONDerivNatLog.html" class="internal"><span class="codenumber">8.11</span> <span class="title">The Derivative of the Natural Logarithm</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONgener-logar-expon.html" class="internal"><span class="codenumber">8.12</span> <span class="title">General Logarithms and Exponentials</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="SECTIONgener-logar-expon.html" class="internal"><span class="codenumber">8.12</span> <span class="title">General Logarithms and Exponentials</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONgener-logar-expon.html#PARAGRAPHSGenExp" class="internal"><span class="codenumber">8.12.1</span> <span class="title">General Exponentials</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONgener-logar-expon.html#PARAGRAPHSGenLog" class="internal"><span class="codenumber">8.12.2</span> <span class="title">General Logarithms</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONgener-logar-expon.html#DIGRESSIONBriggsAndNapier" class="internal"><span class="codenumber">8.12.3</span> <span class="title">Common and Napierian Logarithms</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONgener-logar-expon.html#SUBSECTIONLogDiff" class="internal"><span class="codenumber">8.12.4</span> <span class="title">Logarithmic Differentiation</span></a></div></li>
+</ul>
+</li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONEulerHarmonicOsc.html" class="internal"><span class="codenumber">8.13</span> <span class="title">How Euler Did It:  Harmonic Oscillators, and Complex Numbers</span></a></div></li>
 </ul>
 </li>
@@ -1189,8 +1197,8 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="SECTIONNatLog"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">8.9</span><span class="space"> </span><span class="title">Logarithms, Natural and Unnatural</span>
 </h2>
-<section class="paragraphs" id="DIGRESSIONLogNatUnNat"><h3 class="heading"><span class="title">Exponential and Logarithmic Notation.</span></h3>
-<div class="para" id="DIGRESSIONLogNatUnNat-2">Before  reading further consider reviewing <a href="SECTIONinverse-tan-and-cot.html#DIGRESSIONInverse-function-notation" class="xref" data-knowl="./knowl/xref/DIGRESSIONInverse-function-notation.html" data-reveal-label="Reveal" data-close-label="Close" title="Digression: Inverse Function Notation">Inverse Function Notation</a>. It will probably help.</div>
+<section class="paragraphs" id="DIGRESSIONLogNatUnNat"><h3 class="heading"><span class="title">DIGRESSION:  Exponential and Logarithmic Notation.</span></h3>
+<div class="para" id="DIGRESSIONLogNatUnNat-2">Before  reading further consider reviewing <a href="SECTIONinverse-tan-and-cot.html#DIGRESSIONInverse-function-notation" class="xref" data-knowl="./knowl/xref/DIGRESSIONInverse-function-notation.html" data-reveal-label="Reveal" data-close-label="Close" title="Digression: DIGRESSION: Inverse Function Notation">Inverse Function Notation</a>. It will probably help.</div>
 <div class="para" id="DIGRESSIONLogNatUnNat-3"> As we’ve observed the <dfn class="terminology">natural logarithm</dfn> function is, by definition, the inverse of the <dfn class="terminology">natural exponential</dfn> in precisely the same way that <span class="process-math">\(\inverse\tan(x)\)</span> is, by definition, the inverse of <span class="process-math">\(\tan(x)\)</span> .  Unfortunately the notation that is used for the <dfn class="terminology">natural exponential</dfn> and the <dfn class="terminology">natural logarithm</dfn> is not helpful.</div>
 <div class="para logical" id="DIGRESSIONLogNatUnNat-4">
 <div class="para">It has become standard practice to notate a function using the first three letters of its name. That is why the trigonometric functions are denoted</div>
@@ -1210,7 +1218,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para" id="DIGRESSIONLogNatUnNat-7">Sometimes there are reasons to use logarithms with bases other than <span class="process-math">\(10\)</span> or <span class="process-math">\(e\text{.}\)</span> For example, computer scientists frequently use logarithms with a base of <span class="process-math">\(2\)</span> which they denote <span class="process-math">\(\text{lb}(x)\)</span> (binary logarithm).</div>
 <div class="para" id="DIGRESSIONLogNatUnNat-8">None of this affects what the natural logarithm is, how we use it, or how we think about it. Only how we write it. We only bring this up to warn you that because of this wide variation in usage logarithmic notation can be hard to get comfortable with. Be careful. The generic notation is <span class="process-math">\(\log_b(x)\)</span> where <span class="process-math">\(b\)</span> indicates the base. In this scheme the natural logarithm is <span class="process-math">\(\log_{e}(x)\text{,}\)</span> the common logarithm is <span class="process-math">\(\log_{10}(x)\text{,}\)</span> and the binary logarithm is <span class="process-math">\(\log_{2}(x)\text{.}\)</span> If you find yourself getting confused it can help to revert to this generic notation.</div>
 <div class="para" id="DIGRESSIONLogNatUnNat-9">It is, after all, just notation. Do not confuse the name of a concept with the concept itself. Conceptually the natural logarithm  is the inverse of the natural exponential and you should think of it as such.</div>
-<div class="para" id="DIGRESSIONLogNatUnNat-10">It is often helpful to think of <span class="process-math">\(\ln(x)\)</span> as the function that peels the exponent off of <span class="process-math">\(e^x\)</span> as in <a href="SECTIONnatural-logarithm-1.html#LogProp1" class="xref" data-knowl="./knowl/xref/LogProp1.html" data-reveal-label="Reveal" data-close-label="Close" title="Item: Logarithm Property #1">Logarithm Property #1</a>  <span class="process-math">\(\ln(e^x)=x\text{.}\)</span>
+<div class="para" id="DIGRESSIONLogNatUnNat-10">It is often helpful to think of <span class="process-math">\(\ln(x)\)</span> as the function that peels the exponent off of <span class="process-math">\(e^x\)</span> as in <a href="SECTIONnatural-logarithm-1.html#LogProp1" class="xref" data-knowl="./knowl/xref/LogProp1.html" data-reveal-label="Reveal" data-close-label="Close" title="Logarithm Property 8.8.0.3">Logarithm Property #1</a>  <span class="process-math">\(\ln(e^x)=x\text{.}\)</span>
 </div>
 <div class="para" id="DIGRESSIONLogNatUnNat-11"><em class="alert">END OF DIGRESSION</em></div></section><article class="problem example-like" id="SECTIONNatLog-3"><h3 class="heading">
 <span class="type">Drill</span><span class="space"> </span><span class="codenumber">8.9.0.1</span><span class="period">.</span>
@@ -1227,7 +1235,7 @@ eBookConfig.enable_chatcodes =  false;
 <article class="exercise exercise-like" id="SECTIONNatLog-5"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">8.9.0.2</span><span class="period">.</span>
 </h3>
-<div class="para" id="SECTIONNatLog-5-1-1">Like <a href="SECTIONnatural-logarithm-1.html#LogProp3" class="xref" data-knowl="./knowl/xref/LogProp3.html" data-reveal-label="Reveal" data-close-label="Close" title="Item: Logarithm Property #3">Logarithm Property #3</a>,  <a href="SECTIONnatural-logarithm-1.html#LogProp5" class="xref" data-knowl="./knowl/xref/LogProp5.html" data-reveal-label="Reveal" data-close-label="Close" title="Item: Logarithm Property #5">Logarithm  Property #5</a>  is really just a convenience. Show that it is really an immediate consequence of <a href="SECTIONnatural-logarithm-1.html#LogProp4" class="xref" data-knowl="./knowl/xref/LogProp4.html" data-reveal-label="Reveal" data-close-label="Close" title="Item: Logarithm Property #4">Logarithm Property #4</a>  and  <a href="SECTIONnatural-logarithm-1.html#LogProp6" class="xref" data-knowl="./knowl/xref/LogProp6.html" data-reveal-label="Reveal" data-close-label="Close" title="Item: Logarithm Property #6">Property #6</a>.</div>
+<div class="para" id="SECTIONNatLog-5-1-1">Like <a href="SECTIONnatural-logarithm-1.html#LogProp3" class="xref" data-knowl="./knowl/xref/LogProp3.html" data-reveal-label="Reveal" data-close-label="Close" title="Logarithm Property 8.8.0.5">Logarithm Property #3</a>,  <a href="SECTIONnatural-logarithm-1.html#LogProp5" class="xref" data-knowl="./knowl/xref/LogProp5.html" data-reveal-label="Reveal" data-close-label="Close" title="Logarithm Property 8.8.0.7">Logarithm  Property #5</a>  is really just a convenience. Show that it is really an immediate consequence of <a href="SECTIONnatural-logarithm-1.html#LogProp4" class="xref" data-knowl="./knowl/xref/LogProp4.html" data-reveal-label="Reveal" data-close-label="Close" title="Logarithm Property 8.8.0.6">Logarithm Property #4</a>  and  <a href="SECTIONnatural-logarithm-1.html#LogProp6" class="xref" data-knowl="./knowl/xref/LogProp6.html" data-reveal-label="Reveal" data-close-label="Close" title="Logarithm Property 8.8.0.8">Property #6</a>.</div>
 <div class="solutions"><details id="SECTIONNatLog-5-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="SECTIONNatLog-5-2-1">Find a way to express <span class="process-math">\(\frac{a}{b}\)</span> as a product.</div></div></details></div></article><div class="para logical" id="SECTIONNatLog-6">
 <div class="para"> The simplest use to which we can put a <dfn class="terminology">natural logarithm</dfn> is to aid in solving an equation like:</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/LogProp6.html">
@@ -1235,7 +1243,7 @@ eBookConfig.enable_chatcodes =  false;
 3^x=17.
 \end{equation*}
 </div>
-<div class="para">The difficulty here is that the variable <span class="process-math">\(x\)</span> is in the exponent so to isolate it we have to “undo” an exponential. This is exactly what logarithms do!  By <a href="SECTIONnatural-logarithm-1.html#LogProp6" class="xref" data-knowl="./knowl/xref/LogProp6.html" data-reveal-label="Reveal" data-close-label="Close" title="Item: Logarithm Property #6">Logarithm Property #6</a> , <span class="process-math">\(\ln(3^x)=x\ln(3)\text{,}\)</span> so we can solve our equation like this:</div>
+<div class="para">The difficulty here is that the variable <span class="process-math">\(x\)</span> is in the exponent so to isolate it we have to “undo” an exponential. This is exactly what logarithms do!  By <a href="SECTIONnatural-logarithm-1.html#LogProp6" class="xref" data-knowl="./knowl/xref/LogProp6.html" data-reveal-label="Reveal" data-close-label="Close" title="Logarithm Property 8.8.0.8">Logarithm Property #6</a> , <span class="process-math">\(\ln(3^x)=x\ln(3)\text{,}\)</span> so we can solve our equation like this:</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/LogProp6.html" id="SECTIONNatLog-6-8">
 \begin{align*}
 3^x\amp=17\\
@@ -1270,7 +1278,7 @@ x\amp=\frac{\ln(17)}{\ln(3)}.
 <li id="SECTIONNatLog-8-2-1-11"><div class="para" id="SECTIONNatLog-8-2-1-11-1"><span class="process-math">\(\displaystyle \sin(e^x)=\frac{1}{\sqrt{2}}\)</span></div></li>
 </ol>
 </div></article><div class="para logical" id="SECTIONNatLog-9">
-<div class="para">Similarly if we needed to solve the equation <span class="process-math">\(\ln(2x-4)=0\)</span> we would  take advantage of <a href="SECTIONnatural-logarithm-1.html#LogProp2" class="xref" data-knowl="./knowl/xref/LogProp2.html" data-reveal-label="Reveal" data-close-label="Close" title="Item: Logarithm Property #2">Logarithm Property #2</a>. Taking the exponential of both side we see that:</div>
+<div class="para">Similarly if we needed to solve the equation <span class="process-math">\(\ln(2x-4)=0\)</span> we would  take advantage of <a href="SECTIONnatural-logarithm-1.html#LogProp2" class="xref" data-knowl="./knowl/xref/LogProp2.html" data-reveal-label="Reveal" data-close-label="Close" title="Logarithm Property 8.8.0.4">Logarithm Property #2</a>. Taking the exponential of both side we see that:</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/LogProp2.html" id="SECTIONNatLog-9-3">
 \begin{align*}
 e^{\ln(2x-4)}\amp =e^{0}\\\\

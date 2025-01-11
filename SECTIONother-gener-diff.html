@@ -407,9 +407,9 @@ eBookConfig.enable_chatcodes =  false;
 #SECTIONDerivNatLog-4-2-3 { counter-set: SECTIONDerivNatLog-4-2-3 0; }
 #SECTIONDerivNatLog-4-2-3 > li::marker { content: "("counter(SECTIONDerivNatLog-4-2-3,lower-roman)")"; }
 #SECTIONDerivNatLog-4-2-3 > li { counter-increment: SECTIONDerivNatLog-4-2-3; }
-#PARAGRAPHSGenExp-13-2-3 { counter-set: PARAGRAPHSGenExp-13-2-3 0; }
-#PARAGRAPHSGenExp-13-2-3 > li::marker { content: "("counter(PARAGRAPHSGenExp-13-2-3,lower-roman)")"; }
-#PARAGRAPHSGenExp-13-2-3 > li { counter-increment: PARAGRAPHSGenExp-13-2-3; }
+#PARAGRAPHSGenExp-14-2-3 { counter-set: PARAGRAPHSGenExp-14-2-3 0; }
+#PARAGRAPHSGenExp-14-2-3 > li::marker { content: "("counter(PARAGRAPHSGenExp-14-2-3,lower-roman)")"; }
+#PARAGRAPHSGenExp-14-2-3 > li { counter-increment: PARAGRAPHSGenExp-14-2-3; }
 #PARAGRAPHSGenLog-7-2-3 { counter-set: PARAGRAPHSGenLog-7-2-3 0; }
 #PARAGRAPHSGenLog-7-2-3 > li::marker { content: "("counter(PARAGRAPHSGenLog-7-2-3,lower-roman)")"; }
 #PARAGRAPHSGenLog-7-2-3 > li { counter-increment: PARAGRAPHSGenLog-7-2-3; }
@@ -998,7 +998,15 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONDerivNatLog.html" class="internal"><span class="codenumber">8.11</span> <span class="title">The Derivative of the Natural Logarithm</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONgener-logar-expon.html" class="internal"><span class="codenumber">8.12</span> <span class="title">General Logarithms and Exponentials</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="SECTIONgener-logar-expon.html" class="internal"><span class="codenumber">8.12</span> <span class="title">General Logarithms and Exponentials</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONgener-logar-expon.html#PARAGRAPHSGenExp" class="internal"><span class="codenumber">8.12.1</span> <span class="title">General Exponentials</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONgener-logar-expon.html#PARAGRAPHSGenLog" class="internal"><span class="codenumber">8.12.2</span> <span class="title">General Logarithms</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONgener-logar-expon.html#DIGRESSIONBriggsAndNapier" class="internal"><span class="codenumber">8.12.3</span> <span class="title">Common and Napierian Logarithms</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONgener-logar-expon.html#SUBSECTIONLogDiff" class="internal"><span class="codenumber">8.12.4</span> <span class="title">Logarithmic Differentiation</span></a></div></li>
+</ul>
+</li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONEulerHarmonicOsc.html" class="internal"><span class="codenumber">8.13</span> <span class="title">How Euler Did It:  Harmonic Oscillators, and Complex Numbers</span></a></div></li>
 </ul>
 </li>
@@ -1268,7 +1276,7 @@ f^\prime(x)=\frac{\beta(x)\alpha^\prime(x)-\alpha(x)\beta^\prime(x)}{\left[\beta
 </div>
 </div></article><div class="para" id="SECTIONother-gener-diff-12">In the statement of <a href="SECTIONother-gener-diff.html#THEOREMQuotientRuleLimit" class="xref" data-knowl="./knowl/xref/THEOREMQuotientRuleLimit.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 14.5.0.1: The Quotient Rule for Differentiation">Theorem 14.5.0.1</a> we explicitly assumed that the quotient, <span class="process-math">\(\frac{\alpha(x)}{\beta(x)}\text{,}\)</span> is differentiable at <span class="process-math">\(x\text{.}\)</span> This has the effect that the theorem does not necessarily apply to all possible quotients, in the same way that when we add <span class="process-math">\(\Delta\beta\neq0\)</span> to the statement of the Chain Rule, the theorem applies to fewer compositions. And just like the Chain Rule the functions that <a href="SECTIONother-gener-diff.html#THEOREMQuotientRuleLimit" class="xref" data-knowl="./knowl/xref/THEOREMQuotientRuleLimit.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 14.5.0.1: The Quotient Rule for Differentiation">Theorem 14.5.0.1</a> does not apply to are mostly pathological, and of no use to us right now.</div>
 <div class="para" id="SECTIONother-gener-diff-13">We added the same assumption to <a href="SECTIONother-gener-diff.html#THEOREMPowerRuleLimit" class="xref" data-knowl="./knowl/xref/THEOREMPowerRuleLimit.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 14.5.0.5: The Power Rule for Rational Exponents">Theorem 14.5.0.5</a> for similar reasons.</div>
-<section class="paragraphs" id="DIGRESSIONRUAMathematician"><h3 class="heading"><span class="title">Are You a Mathematician?</span></h3>
+<section class="paragraphs" id="DIGRESSIONRUAMathematician"><h3 class="heading"><span class="title">DIGRESSION:  Are You a Mathematician?</span></h3>
 <div class="para" id="DIGRESSIONRUAMathematician-2">If leaving these theorems incomplete in this way is troubling to you then you are almost certainly a mathematician by temperament. If you haven’t decided on a major yet, consider mathematics. You obviously like it. Why not learn more?</div>
 <div class="para" id="DIGRESSIONRUAMathematician-3">If you find that you simply don’t care about completing all of the details and you are not majoring in mathematics, congratulations! You’ve made the right choice.</div>
 <div class="para" id="DIGRESSIONRUAMathematician-4">

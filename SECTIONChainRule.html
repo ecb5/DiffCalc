@@ -407,9 +407,9 @@ eBookConfig.enable_chatcodes =  false;
 #SECTIONDerivNatLog-4-2-3 { counter-set: SECTIONDerivNatLog-4-2-3 0; }
 #SECTIONDerivNatLog-4-2-3 > li::marker { content: "("counter(SECTIONDerivNatLog-4-2-3,lower-roman)")"; }
 #SECTIONDerivNatLog-4-2-3 > li { counter-increment: SECTIONDerivNatLog-4-2-3; }
-#PARAGRAPHSGenExp-13-2-3 { counter-set: PARAGRAPHSGenExp-13-2-3 0; }
-#PARAGRAPHSGenExp-13-2-3 > li::marker { content: "("counter(PARAGRAPHSGenExp-13-2-3,lower-roman)")"; }
-#PARAGRAPHSGenExp-13-2-3 > li { counter-increment: PARAGRAPHSGenExp-13-2-3; }
+#PARAGRAPHSGenExp-14-2-3 { counter-set: PARAGRAPHSGenExp-14-2-3 0; }
+#PARAGRAPHSGenExp-14-2-3 > li::marker { content: "("counter(PARAGRAPHSGenExp-14-2-3,lower-roman)")"; }
+#PARAGRAPHSGenExp-14-2-3 > li { counter-increment: PARAGRAPHSGenExp-14-2-3; }
 #PARAGRAPHSGenLog-7-2-3 { counter-set: PARAGRAPHSGenLog-7-2-3 0; }
 #PARAGRAPHSGenLog-7-2-3 > li::marker { content: "("counter(PARAGRAPHSGenLog-7-2-3,lower-roman)")"; }
 #PARAGRAPHSGenLog-7-2-3 > li { counter-increment: PARAGRAPHSGenLog-7-2-3; }
@@ -998,7 +998,15 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONDerivNatLog.html" class="internal"><span class="codenumber">8.11</span> <span class="title">The Derivative of the Natural Logarithm</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONgener-logar-expon.html" class="internal"><span class="codenumber">8.12</span> <span class="title">General Logarithms and Exponentials</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="SECTIONgener-logar-expon.html" class="internal"><span class="codenumber">8.12</span> <span class="title">General Logarithms and Exponentials</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONgener-logar-expon.html#PARAGRAPHSGenExp" class="internal"><span class="codenumber">8.12.1</span> <span class="title">General Exponentials</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONgener-logar-expon.html#PARAGRAPHSGenLog" class="internal"><span class="codenumber">8.12.2</span> <span class="title">General Logarithms</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONgener-logar-expon.html#DIGRESSIONBriggsAndNapier" class="internal"><span class="codenumber">8.12.3</span> <span class="title">Common and Napierian Logarithms</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SECTIONgener-logar-expon.html#SUBSECTIONLogDiff" class="internal"><span class="codenumber">8.12.4</span> <span class="title">Logarithmic Differentiation</span></a></div></li>
+</ul>
+</li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="SECTIONEulerHarmonicOsc.html" class="internal"><span class="codenumber">8.13</span> <span class="title">How Euler Did It:  Harmonic Oscillators, and Complex Numbers</span></a></div></li>
 </ul>
 </li>
@@ -1250,7 +1258,7 @@ f(x) = \alpha(\beta(x))
 f^\prime(x) =\alpha^\prime(\beta(x))\cdot\beta^\prime(x).\tag{14.2}
 \end{equation}
 </div>
-</div></article><section class="paragraphs" id="DIGRESSIONCROrigins"><h3 class="heading"><span class="title">The Origins of the Chain Rule.</span></h3>
+</div></article><section class="paragraphs" id="DIGRESSIONCROrigins"><h3 class="heading"><span class="title">DIGRESSION:  The Origins of the Chain Rule.</span></h3>
 <div class="para logical" id="DIGRESSIONCROrigins-2">
 <div class="para">Before the invention of Calculus, arithmetic primers gave the name “The Chain Rule” to the computational technique that is used to, among other things, convert money from one currency to another. For example if we need to convert <span class="process-math">\(30\)</span> American dollars ($) to British pounds (£) but we only know their values ie euros (€). Specifically we know that</div>
 <div class="displaymath process-math" id="DIGRESSIONCROrigins-2-3">
@@ -1324,7 +1332,7 @@ y^\prime(x)=\dfdx{x}{t}\right).
 <div class="para" id="DIGRESSIONCROrigins-8"><em class="alert">END OF DIGRESSION</em></div></section><div class="para" id="SECTIONChainRule-6">Understanding the Chain Rule in this form requires that we blur the distinction between function and variable a bit. When we compute <span class="process-math">\(\dfdx{\alpha}{\beta}=\alpha^\prime(\beta)\)</span> (the derivative of <span class="process-math">\(\alpha\)</span> with with respect to <span class="process-math">\(\beta\)</span>)  we view <span class="process-math">\(\beta\)</span> as a variable, but when we compute <span class="process-math">\(\dfdx{\beta}{x}=\beta^\prime(x)\)</span> (the derivative of <span class="process-math">\(\beta\)</span> with respect to <span class="process-math">\(x\)</span>) we view it as a function.</div>
 <div class="para" id="SECTIONChainRule-7">As far as the Chain Rule is concerned it is both.</div>
 <article class="proof" id="SECTIONChainRule-8"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3>
-<div class="para" id="SECTIONChainRule-8-1">Before we begin take specific notice of the assumption “<span class="process-math">\(\Delta\beta\neq0\)</span> near <span class="process-math">\(x\)</span>” in the statement of the Chain Rule. We will have a few comments about this in <a href="SECTIONChainRule.html#DIGRESSIONDeltaBetaNotZero" class="xref" data-knowl="./knowl/xref/DIGRESSIONDeltaBetaNotZero.html" data-reveal-label="Reveal" data-close-label="Close" title="Digression: Why Assume That \Delta\beta\neq0 Near Zero?">Digression: Why Assume That <span class="process-math">\(\Delta\beta\neq0\)</span> Near Zero?</a> after the proof is completed.</div>
+<div class="para" id="SECTIONChainRule-8-1">Before we begin take specific notice of the assumption “<span class="process-math">\(\Delta\beta\neq0\)</span> near <span class="process-math">\(x\)</span>” in the statement of the Chain Rule. We will have a few comments about this in <a href="SECTIONChainRule.html#DIGRESSIONDeltaBetaNotZero" class="xref" data-knowl="./knowl/xref/DIGRESSIONDeltaBetaNotZero.html" data-reveal-label="Reveal" data-close-label="Close" title="Digression: DIGRESSION:  Why Assume That \Delta\beta\neq0 Near Zero?">Digression: Why Assume That <span class="process-math">\(\Delta\beta\neq0\)</span> Near Zero?</a> after the proof is completed.</div>
 <div class="para logical" id="SECTIONChainRule-8-2">
 <div class="para">We will first establish that</div>
 <div class="displaymath process-math" id="EQUATIONDeltaBetaEq0">
@@ -1386,7 +1394,7 @@ f^\prime(x) =\alpha^\prime(\beta(x))\cdot\beta^\prime(x)
 \end{equation*}
 </div>
 <div class="para">to emphasize that <span class="process-math">\(x\text{,}\)</span> not <span class="process-math">\(\beta\text{,}\)</span> is the variable.</div>
-</div></article><section class="paragraphs" id="DIGRESSIONDeltaBetaNotZero"><h3 class="heading"><span class="title">Why Assume That <span class="process-math">\(\Delta\beta\neq0\)</span> Near Zero?</span></h3>
+</div></article><section class="paragraphs" id="DIGRESSIONDeltaBetaNotZero"><h3 class="heading"><span class="title">DIGRESSION:  Why Assume That <span class="process-math">\(\Delta\beta\neq0\)</span> Near Zero?</span></h3>
 <div class="para" id="DIGRESSIONDeltaBetaNotZero-2">Do you see why we had to assume that <span class="process-math">\(\Delta\beta\neq0\)</span> near <span class="process-math">\(x\text{?}\)</span>
 </div>
 <div class="para logical" id="DIGRESSIONDeltaBetaNotZero-3">
