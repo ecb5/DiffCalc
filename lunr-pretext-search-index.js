@@ -50,7 +50,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "CalculusIsARock.html#figure-CountingBoard",
   "type": "Figure",
-  "number": "1.0.0.1",
+  "number": "1.0.1",
   "title": "",
   "body": "  A medieval European counting board.     "
 },
@@ -59,7 +59,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "CalculusIsARock.html#figure-Suanpan",
   "type": "Figure",
-  "number": "1.0.0.2",
+  "number": "1.0.2",
   "title": "",
   "body": "  A traditional Chinese suanpan (abacus).    An abacus   "
 },
@@ -86,7 +86,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECusing-lett-inst.html#ProblemCalculator",
   "type": "Problem",
-  "number": "2.1.0.1",
+  "number": "2.1.1",
   "title": "",
   "body": " Use the fact that to show that . Do not use a calculator.   Check the validity of the following statements. Are they true?      Using a calculator on would be rather pointless. Try it and see.   Show that it is not always true that if and are numbers then    Find a restriction on the possible values of and that will guarantee that inequality is true.  "
 },
@@ -95,7 +95,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECusing-lett-inst.html#SECusing-lett-inst-8",
   "type": "Problem",
-  "number": "2.1.0.2",
+  "number": "2.1.2",
   "title": "",
   "body": " Suppose and are both integers. Find restrictions on the possible values of and that will guarantee that is an even, positive integer.   Now suppose and are both numbers. Find restrictions on the possible values of and that will guarantee that is an even, positive integer.   This is not the same problem as part (a). Read it carefully.  "
 },
@@ -104,7 +104,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECusing-lett-inst.html#PROBLEMExerciseLiberating",
   "type": "Problem",
-  "number": "2.1.0.3",
+  "number": "2.1.3",
   "title": "",
   "body": "  Actually, there is something rather liberating about using letters to represent a broad class of numbers. Consider the following questions:   Is the number a perfect square? If so, what is its square root?   What about ? Was your calculator of any use on this? Notice that these numbers were completely factored into their prime factorizations. Did that help? How?   Now suppose that is a positive integer. Is always a perfect square? If not, for which values of will it be a perfect square?   What can you say, in general, about whether or not an integer greater than one is a perfect square in terms of its prime factorization?  "
 },
@@ -122,7 +122,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONAn-easy-problem-alg.html#EXAMPLEHorribleFormula",
   "type": "Example",
-  "number": "2.2.0.1",
+  "number": "2.2.1",
   "title": "A Horrible Formula.",
   "body": " A Horrible Formula  For example, suppose you were asked to solve the following equation for : At first glance this looks horribly complicated. But look at it again. On the right the coefficient of is . That s just a number. It is approximately but who cares? For purposes of algebraically isolating all we need to know is that it is a number. Rather than calling it , let s just call it something simple, like . Think of it as giving the expression a nickname; something shorter, and easier to remember.  If we make that substitution our equation is now which is a bit easier on the eyes.   But wait. The expression is also just a number. Let s make it easier on the eyes, too. If we let we have which is even easier to look at. By now you see where this is going. If we let then our equation is which is much easier on the eyes than the original equation was. In fact, we can now see that this is really a very simple equation and the solution is . Of course we inserted , , and into the problem so now we need to unwind our substitutions. When we do that we get If a decimal number is required we could enter this formula into whatever computational tool we re using. Good luck with that.  "
 },
@@ -131,7 +131,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONAn-easy-problem-alg.html#example-Sub2",
   "type": "Example",
-  "number": "2.2.0.2",
+  "number": "2.2.2",
   "title": "",
   "body": " Examples quadratic in form  When you were learning Algebra you almost certainly encountered problems like this: Given solve for .  At first glance, this looks like a formidable problem. However, if we look closer we see that it actually has a very familiar form. Because we can rewrite equation as and if you look closely you ll see that equation is quadratic in form. That is, it is really a quadratic equation which we know how to solve in disguise. However it is still rather difficult to see the quadratic nature of equation . To make this very clear we let That is, just as in Example we give the expression the nickname, , which is shorter, easier to remember, and easier on the eyes. Then equation becomes the quadratic equation: Our problem is not solved. Indeed, we haven t even tried to solve it yet. But it is much more simply expressed. And because it is more simply expressed we can now see how to solve it. Factoring, we have so we have and . But, of course, these are not solutions of our problem. We have found (which we inserted into the problem) not (which is what we need to find). To complete the solution we need to unwind the substitution we made and solve the two equations yielding the solutions and , respectively.  "
 },
@@ -140,7 +140,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONAn-easy-problem-alg.html#PROBLEMQSub",
   "type": "Problem",
-  "number": "2.2.0.3",
+  "number": "2.2.3",
   "title": "",
   "body": "  Before reading any further see if you can come up with the right substitution for equation .   The goal is to eliminate the linear term, . You can see how this would help. If were not present in equation we could easily solve .  "
 },
@@ -149,7 +149,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONAn-easy-problem-alg.html#SECTIONAn-easy-problem-alg-14",
   "type": "Problem",
-  "number": "2.2.0.4",
+  "number": "2.2.4",
   "title": "",
   "body": " Notice that after making our substitution we get: which is more complicated, not less. Of course it is. Sometimes you have to complicate before you can simplify. Don t give up. Multiply everything out to see what you ve got.  Once you ve found make the substitution and eliminate the linear term that was the objective, remember? At that point you should see the Quadratic Formula starting to emerge. Don t forget to unwind the substitution and solve for .  "
 },
@@ -167,7 +167,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECan-easy-problem-geo.html#EXAMPLEMaxTriangle",
   "type": "Example",
-  "number": "2.3.0.1",
+  "number": "2.3.1",
   "title": "",
   "body": " Examples maximal triangle   The lengths of two sides of a triangle are and . If the third side is chosen in such a way that the area of the triangle is as large as possible what is the length of the third side?  You may be able to intuit the correct answer to this problem. That s OK, but you should try to solve it, too. By solve we mean that you should be able to explain to someone with the same mathematical skills you have at the moment why your answer is correct.   Comment  No, really. Give this problem a serious shot before you go on. It is not important that you succeed. Only that you try.   Before reading further do your best to solve this problem. We ll wait.  At first it is difficult to see where to begin. (That s why it s called a problem.) Don t let this stop you! In our experience the most common mistake is giving up too soon.  Don t. Do. That. Keep thinking.    (Partial)  Since we know the lengths of the sides and of our triangle let s draw it. The sketch below would be typical. The question is, what length for side makes the total area enclosed by the triangle as large as it can possibly be?     Now what?  Well, this looks like a right triangle doesn t it? If it is a right triangle, then we can find the length of via the Pythagorean Theorem: right?  Before you go on take a moment and really think about this problem. Can it really be that simple? Can you find any flaws in our reasoning.  Once you think about it you see that we have no reason to believe that the triangle we seek must be a right triangle. It was completely accidental that we drew our diagram that way. If this seems like a simple-minded mistake, the sort of mistake that you would never make, be careful. It is a mistake to rely too heavily on the diagrams we draw. But it is an easy mistake to make, especially when the problems are more complicated, because as problems get complex we will need to rely on visualization more and more. This was not a dumb mistake. It was just a bit careless, and it is easy to be careless, especially when we first start thinking about a problem.   "
 },
@@ -176,7 +176,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECan-easy-problem-geo.html#SECan-easy-problem-geo-15",
   "type": "Problem",
-  "number": "2.3.0.2",
+  "number": "2.3.2",
   "title": "",
   "body": "  Replace with in the diagram above. Use the Pythagorean Theorem to reason that if then . How does this apply to the problem of maximizing the area of the triangle?  "
 },
@@ -194,7 +194,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECour-advice-synopsis.html#DRILLMaxPara",
   "type": "Drill",
-  "number": "2.4.0.1",
+  "number": "2.4.1",
   "title": "",
   "body": " Drills optimization maximal parallelogram   Out of all parallelograms with sides and , which on has the largest area?   "
 },
@@ -203,7 +203,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECour-advice-synopsis.html#EXERCISEIntuitionDeceivers",
   "type": "Problem",
-  "number": "2.4.0.2",
+  "number": "2.4.2",
   "title": "Some possibly deceptive problems.",
   "body": "Some possibly deceptive problems  You will probably have a strong intuition, or insight, about each of the following claims. Do your best to explain why each is true, or why it is false. Read each problem carefully and take care not to add assumptions that are not in the problem. Back up your claim with reasoning, not intuition.   Given a regular polygon inscribed in a fixed circle, if you double the number of sides, then the area inside the polygon becomes larger.   Given a polygon inscribed in a fixed circle, the more sides there are, the bigger the area inside the polygon is.   Given a polygon inscribed in a fixed circle, the more sides there are, the bigger the perimeter is.   Given the following parabola with axis , is the midpoint of .    In part (d), what if we insist that is perpendicular to ?  "
 },
@@ -221,7 +221,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Apologia.html#Apologia-15",
   "type": "Figure",
-  "number": "3.1.0.1",
+  "number": "3.1.1",
   "title": "",
   "body": "  Bernhard Bolzano (1781 1848)   "
 },
@@ -239,7 +239,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONSomePreliminaries.html#SECTIONSomePreliminaries-2",
   "type": "Figure",
-  "number": "3.2.0.1",
+  "number": "3.2.1",
   "title": "",
   "body": "  Niccolo Fontana (The Stutterer) (1500 1557)   "
 },
@@ -275,7 +275,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-laziness-nature.html#PROBLEMReflectingMirror",
   "type": "Problem",
-  "number": "3.3.0.1",
+  "number": "3.3.1",
   "title": "",
   "body": "    Suppose we label the angles in the previous diagram as follows:   Explain why .   Explain why .   And finally, conclude that .  "
 },
@@ -284,7 +284,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-laziness-nature.html#sec-laziness-nature-16",
   "type": "Problem",
-  "number": "3.3.0.2",
+  "number": "3.3.2",
   "title": "",
   "body": "  If a spotlight is mounted at point , how far from point must point be so that the light will be reflected to point ? Justify your answer.  "
 },
@@ -293,7 +293,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-laziness-nature.html#sec-laziness-nature-17",
   "type": "Problem",
-  "number": "3.3.0.3",
+  "number": "3.3.3",
   "title": "",
   "body": " As long as it is not spinning sideways a billiard ball will bounce just like a beam of light. In the sketch below what must be to sink the ball into the side pocket at ? Make sure that you explain how you obtained your answer.   "
 },
@@ -302,7 +302,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-laziness-nature.html#EXAMPLEFixedPerimeter",
   "type": "Example",
-  "number": "3.3.0.4",
+  "number": "3.3.4",
   "title": "Maximizing the Area of a Rectangle.",
   "body": " Maximizing the Area of a Rectangle  Examples optimization maximal rectangle  Out of all rectangles with a given fixed perimeter, which one encompasses the greatest area?  A reasonable guess is that the correct shape is a square. But a guess, no matter how much it feels right, is just a guess. We need a convincing demonstration.  To see that this actually is the correct shape, consider a square whose side is . If is the length of one side then the perimeter of our square is (the fixed value) and the area is (also fixed). Suppose we now increase the length of one of the two pairs of opposite sides by . To maintain the same perimeter, we must also decrease the length of the other pair of sides by the same . The area of this new rectangle is but its perimeter is still .  Thus the square has a larger area than the rectangle with the same perimeter. Moreover, since we didn t specify a value for our conclusion holds for all possible values of . That is, every rectangle with perimeter has a smaller area than the square with perimeter .  "
 },
@@ -320,7 +320,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-laziness-nature.html#PROBLEMScienceBeforeCalc1",
   "type": "Problem",
-  "number": "3.3.0.5",
+  "number": "3.3.5",
   "title": "",
   "body": "Out of all rectangles with a fixed perimeter, which one has the shortest diagonal? Justify your answer. "
 },
@@ -329,7 +329,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-laziness-nature.html#EXAMPLEScienceBeforeCalc2",
   "type": "Example",
-  "number": "3.3.0.6",
+  "number": "3.3.6",
   "title": "",
   "body": " Examples optimization  Consider all square based boxes with a fixed surface area . Does the cube enclose the largest volume?  To do this problem in the same manner as Example , observe that a cube with side would have a volume of and a surface area of . Suppose we change the lengths on the base from to . Notice that if then we will be increasing the lengths on the base and if then we will be decreasing the lengths. The only restriction is that so as to be a length. This says that . (In theory, we can make the lengths of the base as long as we wish.) To maintain a surface area of , we will need to adjust our height appropriately. Let’s call this new height .  "
 },
@@ -338,7 +338,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-laziness-nature.html#PROBLEMMaximalCube1",
   "type": "Problem",
-  "number": "3.3.0.7",
+  "number": "3.3.7",
   "title": "",
   "body": " Proceed as in Example to show that in order to maintain a surface area of , must be . Use this to show that the volume of this new box is How does this address the original question about the cube having the largest volume?   Why did we write in this rather peculiar way?  "
 },
@@ -356,7 +356,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONFermMethAedeq.html#SECTIONFermMethAedeq-2",
   "type": "Figure",
-  "number": "3.4.0.1",
+  "number": "3.4.1",
   "title": "",
   "body": "  Pierre de Fermat (1601 1665)   "
 },
@@ -365,7 +365,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONFermMethAedeq.html#SECTIONFermMethAedeq-3",
   "type": "TRIUMPHS Project",
-  "number": "3.4.0.2",
+  "number": "3.4.2",
   "title": "",
   "body": " TRIUMPHS, Primary Source Project Fermat s Method for Finding Maxima and Minima   Fermat s Method for Finding Maxima and Minima by Kenneth M. Monks  "
 },
@@ -383,7 +383,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONFermMethAedeq.html#EXAMPLESquareMinimalPerimeter",
   "type": "Example",
-  "number": "3.4.0.3",
+  "number": "3.4.3",
   "title": "",
   "body": " Examples optimization minimal perimeter  In Example , we showed that out of all rectangles with a fixed perimeter, the one with the largest area is a square. Next we will use Fermat s Method of Adequality to examine the related question: Out of all rectangles with a fixed area, does a square have the smallest perimeter?  Consider a rectangle whose length is and whose width is . The area of the rectangle is given by and the perimeter is given by .   The problem is to minimize while holding constant. More precisely, our objective is to minimize the function , subject to the constraint that the area, , is fixed. First, we will use our constraint to eliminate one of the variables and substitute into . Solving for we get . Then, We have used function notation for to emphasize that is a function of alone. (Remember that is constant or fixed. )  Fermat s method says to first set This gives: Rearranging a bit, we get so that Adding the fractions gives Finally, and crucially, dividing both sides by gives   Earlier we had made the mistake of setting (knowing that this is not true). Now we make it correct by setting . This gives: Substituting this into we get .  Thus is minimum when which is to say, when the rectangle is actually a square. A moment s thought should make it clear that there is no maximum value for .  Fermat s method is very slick. However it contains an inherent logical flaw. We begin by setting equal to , even though we know we are making an error. This seems like it might be a flaw but it really isn t. When we set we are asking, What happens if they are equal? The computations leading up to equation are the answer to that question.  But notice that we got from equation to equation by dividing by . But we know that we can only divide by if is not zero. Fortunately it is clear that since the whole point of introducing is for and to be two different values. However, in the final step, after equation , we took to make it correct but if is zero then we couldn t have divided by . We seem to be chasing our tails. We need for to be equal to zero and not be equal to zero at the same time!  This is the logical flaw.  Since we began with the assumption that we can t just change our minds later. We can t have both and .  "
 },
@@ -392,7 +392,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONFermMethAedeq.html#DRILLMethAdeq",
   "type": "Problem",
-  "number": "3.4.0.4",
+  "number": "3.4.4",
   "title": "",
   "body": " Apply Fermat s Method of Adequality to find all maxima or minima of the following functions. In each case examine a graph of the function to see if Fermat s Method provides the correct answer.              "
 },
@@ -401,7 +401,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONFermMethAedeq.html#PROBLEMRectSolid",
   "type": "Problem",
-  "number": "3.4.0.5",
+  "number": "3.4.5",
   "title": "",
   "body": " Consider a rectangular box with a square base, as seen here.    Find a formula for the volume, , and the surface area, , of the box.   Suppose we want to determine which box has the least surface area, given a fixed volume. What is our objective and what is our constraint? Use Fermat s Method of Adequality to find the dimensions of the box that solves this problem. Is the minimal box a cube?  "
 },
@@ -410,7 +410,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONFermMethAedeq.html#SECTIONFermMethAedeq-22",
   "type": "Problem",
-  "number": "3.4.0.6",
+  "number": "3.4.6",
   "title": "",
   "body": "    Use the appropriate formula for the equation of a line to find an equation of each of the following lines:   with slope and intercept     with slope and intercept     with slope and intercept     with slope and passing through the point     with slope and passing through the point     passing through the points and     passing through the points and       Show that the Point Slope formula follows from the fact that the slope of a line can be determined using any two points on the line.   Show that the Slope Intercept formula is really a rearrangement of the Point Slope formula.   Show that the Point Slope formula follows from the Two-Point formula.      What does the two point formula reduce to if ?    What does the two point formula reduce to if ?  Notice that in the two point formula, as given we need to assume that . Can you rearrange the formula so that this is not a problem?      Show that the equation of the line with intercept and intercept can be written in the form: Notice that this equation is only valid if and .   Determine the equation of the line if .    Determine the equation of the line if .     "
 },
@@ -419,7 +419,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONFermMethAedeq.html#SECTIONFermMethAedeq-23",
   "type": "Problem",
-  "number": "3.4.0.7",
+  "number": "3.4.7",
   "title": "",
   "body": "   In the diagram below is obtained from by translating (but not rotating) , as indicated by the arrows. Use the diagram to show that parallel lines have the same slope. In the diagram below we have taken from the previous figure, and rotated by . Use this diagram to show that perpendicular lines have slopes that are negative reciprocals of each other. "
 },
@@ -428,7 +428,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONFermMethAedeq.html#SECTIONFermMethAedeq-24",
   "type": "Problem",
-  "number": "3.4.0.8",
+  "number": "3.4.8",
   "title": "",
   "body": " Find the equation of the line:   parallel to and passing through    perpendicular to and passing through    parallel to with intercept    perpendicular to and passing through the point   "
 },
@@ -437,7 +437,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONFermMethAedeq.html#PROBLEMPerpendicularDistance",
   "type": "Drill",
-  "number": "3.4.0.9",
+  "number": "3.4.9",
   "title": "",
   "body": " Drills lines perpendicular   Find the equations of the two lines such that each one is a perpendicular distance of units away from the line and parallel to it.   "
 },
@@ -446,7 +446,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONFermMethAedeq.html#PROBLEMFermMethX2",
   "type": "Problem",
-  "number": "3.4.0.10",
+  "number": "3.4.10",
   "title": "",
   "body": "    Use Fermat s method for tangents to compute the slope of the line tangent to at the generic point .    First plot the graph . Then, on the same set of axes, plot the line through the point , and tangent to the graph of , for each of .    What is the relationship between the slopes at and ? Is this consistent with what you see when you plot the graph of ?         Use Fermat s method for tangents to compute the slope of the line tangent to at the point .    First plot the graph . Then, on the same set of axes, plot the line through the point , and tangent to the graph of , for each of .You should notice something interesting about the tangent lines at and .    What can you say about the tangent lines at and ?     "
 },
@@ -455,7 +455,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONFermMethAedeq.html#PROBLEMferm-meth-aedeq-1",
   "type": "Problem",
-  "number": "3.4.0.11",
+  "number": "3.4.11",
   "title": "",
   "body": "Use Fermat s method to find a formula for the slope of the tangent line to at the point . How does this answer compare with the results from ? What, if anything, would change if we used Fermat s method to find the slope of the tangent line to at the point where is any constant? Use the graph of to explain. "
 },
@@ -473,7 +473,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdescartes-normals.html#SECTIONdescartes-normals-3",
   "type": "Figure",
-  "number": "3.5.0.1",
+  "number": "3.5.1",
   "title": "",
   "body": "  Renè Descartes (1596 1650)   "
 },
@@ -482,7 +482,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdescartes-normals.html#EXAMPLEDescartesNormal1",
   "type": "Example",
-  "number": "3.5.0.2",
+  "number": "3.5.2",
   "title": "",
   "body": " Examples normal line  To find the slope of the normal (and, eventually the tangent) line to the graph of the curve at the point Descartes approach was to look at the family of circles with centers on the -axis and passing through the point . The sketch below displays several members of of that family of circles.   Notice that each circle crosses the parabola at the point . We are searching for the center of the solid black circle which touches (is tangent to) the parabola at . If we can find the center of the black circle then the radial line through the point will be normal to the parabola at and the slope of the tangent line will be the negative reciprocal of the slope of the normal.   Historical Background  Descartes and Fermat are generally credited with the invention of Analytic Geometry which is a technique that allows us to move problems from Algebra to Geometry or, as in this problem, from Geometry to Algebra.   We now want to turn the geometric problem of finding the intersection of our circle and parabola into an algebraic problem. Let denote the coordinates of the center of a circle in that family, then the equation of the circle with center is where is the length of the radius of the circle and is a parameter. Since we require our circle to pass through the point the length of this radius will be the distance from to , . Thus we have .  Since we are looking for the point where and the circle intersect, we substitute into equation ) to get .  At this point it is tempting to use the Quadratic Formula to solve for and get (typically) two distinct solutions for in terms of . But the fact is we really don t care about the variable . We want to find the value of which ensures that the circle and the curve intersect exactly once.  Think about this for a moment. When we use the Quadratic Formula to solve this equation we get a single solution precisely when the discriminant (the part under the square root) is zero.  "
 },
@@ -491,7 +491,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdescartes-normals.html#DRILLHuddeDiscriminant",
   "type": "Problem",
-  "number": "3.5.0.3",
+  "number": "3.5.3",
   "title": "",
   "body": " Use the Quadratic Formula to show that the discriminant of equation is . Setting this equal to zero and solving, we get So the center of the circle touching the curve only once is at and the line segment from to is normal (perpendicular) to the graph of .  "
 },
@@ -500,7 +500,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdescartes-normals.html#SECTIONdescartes-normals-9",
   "type": "Problem",
-  "number": "3.5.0.4",
+  "number": "3.5.4",
   "title": "",
   "body": " Descartes would not have approached this problem using the idea of a discriminant as we just did. He knew that the only way the circle and the parabola could be tangent at is if is a double root of equation . Since a quadratic polynomial only has two roots, this means that equation must be . By comparing the coefficients of equation ) and the right side of equation show that .  "
 },
@@ -509,7 +509,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdescartes-normals.html#PROBLEMExtraneousRoots",
   "type": "Problem",
-  "number": "3.5.0.5",
+  "number": "3.5.5",
   "title": "Extraneous Roots.",
   "body": "Extraneous Roots  Show that the roots of are and . Notice that when and the parabola and circle will have two intersection points (as seen in the graph in Example ). When we get one positive and one negative root, but the parabola and the circle cross only at . How do we make peace with this apparent contradiction?   Look closely at the equation for the parabola. Can be negative?  "
 },
@@ -518,7 +518,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdescartes-normals.html#EXERCISEDescartesNormals2",
   "type": "Problem",
-  "number": "3.5.0.6",
+  "number": "3.5.6",
   "title": "",
   "body": " Now that we ve found the center of the circle tangent to the curve at , use this to find the equation of the lines normal and tangent to the curve at that point. Plot the curve and these two lines on the same set of axes to see if they really are normal and tangent to the curve.  "
 },
@@ -527,7 +527,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdescartes-normals.html#PROBLEMDescartesNormals1",
   "type": "Problem",
-  "number": "3.5.0.7",
+  "number": "3.5.7",
   "title": "",
   "body": " Use Descartes Method of Normals to find the slope of the line tangent to the curve at the point .  "
 },
@@ -536,7 +536,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdescartes-normals.html#SECTIONdescartes-normals-15",
   "type": "Problem",
-  "number": "3.5.0.8",
+  "number": "3.5.8",
   "title": "",
   "body": " Use Descartes Method of Normals to find the slope of the line tangent to the curve at the point and compare with Problem .   You may want to use circles that are centered on the axis instead of the axis.  "
 },
@@ -545,7 +545,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdescartes-normals.html#SECTIONdescartes-normals-16",
   "type": "Problem",
-  "number": "3.5.0.9",
+  "number": "3.5.9",
   "title": "",
   "body": " Apply Descartes Method of Normals to the line at the point . What equation did you find for the tangent line? Does this make sense to you?  "
 },
@@ -581,7 +581,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONroberv-conic-sect.html#FIGUREVector1",
   "type": "Figure",
-  "number": "3.6.1.1",
+  "number": "3.6.1",
   "title": "",
   "body": "     "
 },
@@ -608,7 +608,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONroberv-conic-sect.html#EXERCISEVectorAddition",
   "type": "Problem",
-  "number": "3.6.1.2",
+  "number": "3.6.2",
   "title": "",
   "body": "   In the diagram above what does the length of the black arrow represent physically?   What is the length of the black arrow?  "
 },
@@ -617,7 +617,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONroberv-conic-sect.html#FIGUREVectorAddition",
   "type": "Figure",
-  "number": "3.6.1.3",
+  "number": "3.6.3",
   "title": "",
   "body": "    "
 },
@@ -626,7 +626,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONroberv-conic-sect.html#EXAMPLERectilinearMotion",
   "type": "Example",
-  "number": "3.6.1.4",
+  "number": "3.6.4",
   "title": "",
   "body": " Suppose a point is moving in the plane so that its horizontal speed is unit per second and its vertical velocity is units per second as in the diagram below.   Clearly our point is moving along the line . If represents time in seconds and if the point starts at the origin, then its coordinates are given by and . Since both and are needed to locate the point we will join them together notationally like this:    Comment  Observe that is the algebraic representation of a horizontal arrow with length , and is the algebraic representation of a vertical arrow with length . Translating statements and concepts between Algebra and Geometry is the essence of Analytic Geometry.   You might quite reasonably ask why we ve gone to all this bother just to have two different ways to represent a particular line: , and The difference is in how we think about the graph. When we write we are thinking of the entire graph. When we write there is an implicit understanding that ( )ime is passing and we are thinking about the motion of the point. Thus when the point is at when it s at .  Think of the line as a road. The formula describes the entire road, whereas the expression tells us the point s location on the road at any given time, .   Vocabulary vectors  Vocabulary vectors Vector Addition  Vocabulary vectors Parallelogram Rule The idea of representing velocities with arrows is quite a powerful and common technique for representing non-linear motion. Roberval used this technique to find the tangent lines of the conic sections (as we will soon see) as well as more general curves. Since Roberval s time this idea has been developed considerably beyond what Roberval did. In fact we are skirting the edge of some very deep ideas here. In modern terms these arrows would be called vectors . Using this terminology Vector Addition is then done by the Parallelogram Rule , which is essentially what we did in : Form the parallelogram and find its diagonal. The full force of vector analysis was not available to Roberval, and we won t need it either so we will not take you any further down this path but we encourage you visualize velocities, and any other directed quantity, as composed of horizontal and vertical components whenever you can. You will see this representation in more detail later in your education and it will help if you have already begun thinking in these terms.  "
 },
@@ -635,7 +635,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONroberv-conic-sect.html#SUBSECTIONSpdVelRofC-31",
   "type": "Drill",
-  "number": "3.6.1.5",
+  "number": "3.6.5",
   "title": "",
   "body": " Drills velocity  Suppose the position of a point in the plane is given by .     What is the horizontal speed of the point?    What is the vertical speed of the point?    What is the speed of the point in the direction of motion?    Compare the motion of the point in this problem to the motion of the point in Example .     "
 },
@@ -644,7 +644,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONroberv-conic-sect.html#SUBSECTIONSpdVelRofC-32",
   "type": "Drill",
-  "number": "3.6.1.6",
+  "number": "3.6.6",
   "title": "",
   "body": " Drills speed  Suppose a point is moving along the line with a horizontal speed of unit per second.     Find a representation of the point s position in the form .  There are a many correct representations. You re task is to find one of theme and to show that it is correct.    What is the speed of the point in the vertical direction?    What is the speed of the point in the direction of motion?     "
 },
@@ -653,7 +653,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONroberv-conic-sect.html#SUBSECTIONSpdVelRofC-33",
   "type": "Drill",
-  "number": "3.6.1.7",
+  "number": "3.6.7",
   "title": "",
   "body": " Drills speed  Suppose a point is moving along the line with a horizontal speed of units per second.     What is the speed of the point in the vertical direction?    What is the speed of the point in the direction of motion?     "
 },
@@ -662,7 +662,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONroberv-conic-sect.html#SUBSECTIONSpdVelRofC-34",
   "type": "Drill",
-  "number": "3.6.1.8",
+  "number": "3.6.8",
   "title": "",
   "body": " Drills velocity  Suppose the position of a point in the plane is given by .     What is the horizontal velocity of the point?    What is the vertical velocity of the point?    What is the velocity of in the direction of motion?     "
 },
@@ -671,7 +671,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONroberv-conic-sect.html#PROBLEMHelicopterFall",
   "type": "Problem",
-  "number": "3.6.1.9",
+  "number": "3.6.9",
   "title": "",
   "body": " We drop an object from a helicopter which is traveling horizontally with a constant velocity of meter per second. After it leaves the helicopter the vertical velocity of the object at time will be meters per second as in the following diagram:   Comment  This is because the acceleration due to gravity at the surface of the earth has been determined (by Galileo) to be . We ll discuss this in more depth in Section .    If Roberval s method works then the speed of the point at any time, , will be the length of the diagonal of parallelogram of velocity arrows at time . Find a formula for the speed of the point and any time .  "
 },
@@ -680,7 +680,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONroberv-conic-sect.html#figure-ParabTanRoberval",
   "type": "Figure",
-  "number": "3.6.2.1",
+  "number": "3.6.10",
   "title": "",
   "body": " Roberval s view of the tangent to a parabola     "
 },
@@ -698,7 +698,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONroberv-conic-sect.html#PROBLEMparall-rhombus",
   "type": "Problem",
-  "number": "3.6.2.2",
+  "number": "3.6.11",
   "title": "",
   "body": " Use to explain why it must be that the speed at which moves away from must equal the speed at which moves away from .   Suppose these speeds were not equal. What would this say about the distances from to and from to ?   If represents the velocity of the motion of away from , and represents the velocity of the motion of away from , then according to Roberval, the diagonal, of the parallelogram is tangent to the parabola. Use the result of part to explain why this parallelogram is a rhombus. (A rhombus is a parallelogram where the four sides have equal length.)   In the angle is between the arrows and . We have also extended the arrow downward to form the angle with . Given that the parallelogram in the previous figure is a rhombus, show that the two angles,  are congruent.  "
 },
@@ -707,7 +707,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONroberv-conic-sect.html#PROBLEMEllipseRhombus",
   "type": "Problem",
-  "number": "3.6.2.3",
+  "number": "3.6.12",
   "title": "",
   "body": " Explain why the parallelogram in the sketch above must be a rhombus and use this to show that angle is congruent to angle .   An argument very similar to the one used in Problem will work.  "
 },
@@ -716,7 +716,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONroberv-conic-sect.html#TangentHyperbola-5",
   "type": "Problem",
-  "number": "3.6.2.4",
+  "number": "3.6.13",
   "title": "",
   "body": " Explain why the parallelogram in the sketch above must be a rhombus and use this to show that angle is congruent to angle . As before in our diagram the red arrows represent the velocity of in the direction from to and from to .  "
 },
@@ -734,7 +734,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsnells-law-refr.html#SnellsLaw",
   "type": "Theorem",
-  "number": "3.7.0.1",
+  "number": "3.7.1",
   "title": "Snell’s Law of Refraction.",
   "body": " Snell s Law of Refraction  Suppose that light travels with a velocity of in the first medium and velocity in second medium, and that and are as seen in the diagram below.   Then the path that light follows satisfies Notice that if this says that and the path of the line would be a straight line.  "
 },
@@ -743,7 +743,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsnells-law-refr.html#PROBLEMFermatSnell",
   "type": "Problem",
-  "number": "3.7.0.2",
+  "number": "3.7.2",
   "title": "",
   "body": " Assuming that the velocity of light is in the first medium and in the second, use the following diagram to show the time, , for light to travel along the path from to to is    "
 },
@@ -761,7 +761,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONHist-intr.html#SECTIONHist-intr-3",
   "type": "Figure",
-  "number": "4.1.0.1",
+  "number": "4.1.1",
   "title": "",
   "body": "  Woolsthorpe Manor as it appears today    "
 },
@@ -770,7 +770,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONHist-intr.html#SECTIONHist-intr-9",
   "type": "Figure",
-  "number": "4.1.0.2",
+  "number": "4.1.2",
   "title": "",
   "body": "  Isaac Newton (1642 1727)   "
 },
@@ -779,7 +779,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONHist-intr.html#SECTIONHist-intr-16",
   "type": "Figure",
-  "number": "4.1.0.3",
+  "number": "4.1.3",
   "title": "",
   "body": "  Gottfried Wilhelm Leibniz (1646 1716)   "
 },
@@ -806,7 +806,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONHist-intr.html#SECTIONHist-intr-35",
   "type": "Figure",
-  "number": "4.1.0.4",
+  "number": "4.1.4",
   "title": "",
   "body": "  Abraham Robinson (1918 1974)   "
 },
@@ -824,7 +824,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONWarning.html#TABLEGenDiffRules",
   "type": "Table",
-  "number": "4.2.0.1",
+  "number": "4.2.1",
   "title": "General Differentiation Rules",
   "body": " General Differentiation Rules  Table Differentiation Rules General     The Constant Rule   If is a constant then       The Sum Rule          The Constant    Multiple Rule     If is a constant then         The Product Rule         The Power Rule    If is a rational number then       The Quotient Rule       "
 },
@@ -851,7 +851,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsome-rules-diff.html#THEOREMConstRule",
   "type": "Logarithm Property",
-  "number": "4.3.1.1",
+  "number": "4.3.1",
   "title": "The Constant Rule.",
   "body": " The Constant Rule  If is a constant, then .  "
 },
@@ -860,7 +860,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsome-rules-diff.html#DRILLConstantRule",
   "type": "Problem",
-  "number": "4.3.1.2",
+  "number": "4.3.2",
   "title": "",
   "body": "Compute the differential of the following.                                "
 },
@@ -869,7 +869,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsome-rules-diff.html#PROBLEMConstRuleName",
   "type": "Drill",
-  "number": "4.3.1.3",
+  "number": "4.3.3",
   "title": "",
   "body": " Drills variable names don t matter   In we stated the Constant Rule using as the constant, in we used , and in we used . Does it matter what symbol we use? Explain.   "
 },
@@ -878,7 +878,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsome-rules-diff.html#SUBSECTIONSumRule-3",
   "type": "Logarithm Property",
-  "number": "4.3.2.1",
+  "number": "4.3.4",
   "title": "The Sum Rule.",
   "body": " The Sum Rule     "
 },
@@ -896,7 +896,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsome-rules-diff.html#SUBSECTIONSumRule-8",
   "type": "Problem",
-  "number": "4.3.2.2",
+  "number": "4.3.5",
   "title": "",
   "body": " Show that    Notice how we placed the parentheses.   Show that    Explain how you would show that where is an arbitrary positive, integer.  "
 },
@@ -905,7 +905,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsome-rules-diff.html#SUBSECTIONConstMultRule-2",
   "type": "Logarithm Property",
-  "number": "4.3.3.1",
+  "number": "4.3.6",
   "title": "The Constant Multiple Rule.",
   "body": " The Constant Multiple Rule  If is a constant then   "
 },
@@ -923,7 +923,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsome-rules-diff.html#EXAMPLEDifferentialRatioIsSlope",
   "type": "Example",
-  "number": "4.3.3.2",
+  "number": "4.3.7",
   "title": "",
   "body": " Examples differentials  To get a sense of how we will be using differentials consider the line which is the graph of the equation . Let s differentiate both sides of this formula using the tools we have so far. Obviously if two quantities are equal then their differentials are also equal. So, . From the Sum Rule and the Constant Rule we have, and from the Constant Multiple Rule we see that,    Vocabulary differential ratio Notice that equation can be rearranged as follows: So it appears that the differential ratio  is the slope of our line. This makes sense since is the (infinitesimal) change in divided by the (infinitesimal) change in . From your study of lines in Algebra you know that the change in divided by the change in is the definition of slope. It continues to be the slope even if the changes in and are infinitesimal.  "
 },
@@ -932,7 +932,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsome-rules-diff.html#SUBSECTIONConstMultRule-5",
   "type": "Problem",
-  "number": "4.3.3.3",
+  "number": "4.3.8",
   "title": "",
   "body": "Compute for each of the following:                                                                   "
 },
@@ -941,7 +941,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsome-rules-diff.html#THEOREMProdRule",
   "type": "Logarithm Property",
-  "number": "4.3.4.1",
+  "number": "4.3.9",
   "title": "The Product Rule.",
   "body": " The Product Rule     "
 },
@@ -959,7 +959,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsome-rules-diff.html#PROBLEMdydxIsSlope",
   "type": "Problem",
-  "number": "4.3.4.2",
+  "number": "4.3.10",
   "title": "",
   "body": " Use the Product Rule to show that if , then .  "
 },
@@ -977,7 +977,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsome-rules-diff.html#PROBLEMCircleDifferential",
   "type": "Problem",
-  "number": "4.3.4.3",
+  "number": "4.3.11",
   "title": "",
   "body": " When a rock is tossed into a quiet lake it generates an expanding, circular wave, as in the diagram below.   The area enclosed by the wave at any time is given by the formula: , where is the expanding radius of the circle. As time advances the radius of the circular wave expands and, as a consequence, the area enclosed by the wave also grows.   Use the Constant Multiple Rule and the Product Rule to show that    Explain why be the area of the yellow ring in the diagram is also equal to .   Find by cutting the yellow region at the dotted line, reshaping the ring into a rectangle. How does this compare with what we obtained using our Calculus rules. Do you see any logical issues with this solution? Specifically, why is it important that must be infinitely small?  "
 },
@@ -986,7 +986,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsome-rules-diff.html#SUBSECTIONProductRule-17",
   "type": "Drill",
-  "number": "4.3.4.4",
+  "number": "4.3.12",
   "title": "",
   "body": " Drills differentiation Constant, Sum, and Product rules are fundamental   We mentioned earlier that the Constant Rule, the Sum Rule, and the Product Rule are fundamental, and that the other three can be proved using these three. Show that the Constant Multiple Rule follows from the Constant Rule and the Product Rule.   "
 },
@@ -995,7 +995,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsome-rules-diff.html#PROBLEMGeneralPowerRule",
   "type": "Problem",
-  "number": "4.3.5.1",
+  "number": "4.3.13",
   "title": "Find the Pattern.",
   "body": "Find the Pattern  Compute each of the following differentials.                                     Do you see a pattern in the computations you did in part ? Assume is an unknown positive integer and use the pattern to compute:   "
 },
@@ -1004,7 +1004,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsome-rules-diff.html#PROBLEMPR-integer",
   "type": "Problem",
-  "number": "4.3.5.2",
+  "number": "4.3.14",
   "title": "The Product Rule for Positive Integers.",
   "body": "The Product Rule for Positive Integers  By custom, differentials are written at the end of each term where they appear in a given computation so the Product Rule is usually written as But this is just a custom so it is not strictly necessary. We could also use the Product Rule in the form    Use the Product Rule twice to show that    The Product Rule requires two factors. But we have three: , , and . We can fix this with the substitution . Then Now use the Product Rule.   Emulate the computations in part to show that.    What does the Product Rule look like for    Use the result of part (c) with to show that   "
 },
@@ -1022,7 +1022,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsome-rules-diff.html#EXAMPLEDiffRulesInConcert1",
   "type": "Example",
-  "number": "4.3.5.3",
+  "number": "4.3.15",
   "title": "",
   "body": " Examples differentials  From the Sum Rule we have, Next, the Constant Rule, and the Constant Multiple Rule give, and by the Power Rule for Positive Integers we have, Finally, factoring out the differential of gives,   Did you notice that the differential appeared in every term allowing us to factor it out at the end? This will always happen when there is only one independent variable involved ( in this case). So it provides an easy way to check your computations. If you end with an expression where the differential of the independent variable cannot be factored out then you have made a mistake in your computations. You should find your mistake before going on. Or just begin again.  "
 },
@@ -1031,7 +1031,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsome-rules-diff.html#EXAMPLEDiffRulesInConcert2",
   "type": "Example",
-  "number": "4.3.5.4",
+  "number": "4.3.16",
   "title": "",
   "body": " Examples differentials  Here is another example without all the details spelled out. Make sure you see which rule is being invoked at each step.   "
 },
@@ -1040,7 +1040,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsome-rules-diff.html#SUBSECTIONPowerRule-10",
   "type": "Drill",
-  "number": "4.3.5.5",
+  "number": "4.3.17",
   "title": "",
   "body": " Drills differentiation   Identify each of the rules used in each step of .   "
 },
@@ -1049,7 +1049,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsome-rules-diff.html#SUBSECTIONPowerRule-12",
   "type": "Drill",
-  "number": "4.3.5.6",
+  "number": "4.3.18",
   "title": "",
   "body": " Drills differentiation  Compute each of the following:                             Assume that is a constant.          "
 },
@@ -1058,7 +1058,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsome-rules-diff.html#SUBSECTIONPowerRule-13",
   "type": "Drill",
-  "number": "4.3.5.7",
+  "number": "4.3.19",
   "title": "",
   "body": " Drills differentiation  Compute each of the following:              Assume that and are all constant.          "
 },
@@ -1067,7 +1067,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsome-rules-diff.html#SUBSECTIONPowerRule-14",
   "type": "Drill",
-  "number": "4.3.5.8",
+  "number": "4.3.20",
   "title": "",
   "body": " Drills differentiation  Compute for each of the following:                                                                "
 },
@@ -1076,7 +1076,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsome-rules-diff.html#EXAMPLELocalLinearityCircle",
   "type": "Example",
-  "number": "4.3.5.9",
+  "number": "4.3.21",
   "title": "",
   "body": " Examples the Principle of Local Linearity       Principle of Local Linearity  Vocabulary Differential Equations Differentiating both sides of an ordinary algebraic equation yields a Differential Equation  an equation which relates the differentials of the quantities involved. For example, suppose we have a point lying on the unit circle so that the quantities and are related by the equation .  Differentiating, we have the differential equation   Let s look at this geometrically and focus on the first quadrant. The sketch above shows what happens to the quantities and as the point changes its position on the circle.   Vocabulary differential triangle The smaller triangle is called a differential triangle and it is infinitely small. Differential triangles were a favorite tool of Leibniz. He assumed without justification (as we will, for now) that they are just like ordinary (finite) triangles.  Notice that is negative since the coordinate is moving to the left, and that is positive since the coordinate is moving upward. We need positive quantities to represent the length of the triangle s legs. Therefore we use to represent a positive length for the horizontal leg of our differential triangle.  A little more mysterious is the (correct) observation that the smaller triangle isn t really a triangle at all. Because it is part of the circle the line connecting and  the hypotenuse of the triangle is curved. But there is nothing lost by thinking of the hypotenuse as a straight line because according to the Principle of Local Linearity at an infinitely small scale lines and curves are indistinguishable. At least in part, this why Newton, Leibniz, and their contemporaries worked with differentials. At that scale they could replace curves with straight lines.  "
 },
@@ -1085,7 +1085,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsome-rules-diff.html#SUBSECTIONPowerRule-16",
   "type": "Problem",
-  "number": "4.3.5.11",
+  "number": "4.3.23",
   "title": "",
   "body": " Show that the two triangles in are similar. Use this to show that   Notice that this problem specifically asks you to use the triangles, not differentiation to show that    After we observed that the ratio must represent the slope of both the curve and its tangent line at a given point. Notice that the differential equation for the circle can be written as Explain how this is related to the geometric fact that the tangent to a circle at a point is perpendicular to the radius through that point.  "
 },
@@ -1094,7 +1094,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsome-rules-diff.html#EXAMPLEBruteForce",
   "type": "Example",
-  "number": "4.3.5.12",
+  "number": "4.3.24",
   "title": "Brute Force Computation.",
   "body": " Brute Force Computation  Examples differentials brute force  Suppose that we wish to find when . One way to do this is simple brute force. That is, we compute Applying the Sum Rule we see that Next we use the Constant Multiple Rule to get In the end we have,   Brute force works but expanding an expression like is dull (and error prone) and mathematicians are like Nature: We are lazy. We d really rather avoid doing all of that dull computation if we possibly can. Wouldn t you?  Suppose, we make this problem a little easier on the eyes with a substitution like we did in . Let . Then our original problem becomes which is much easier to look at. And now . Substituting back in for we get After computing we see that   "
 },
@@ -1103,7 +1103,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsome-rules-diff.html#PROBLEMBruteForce",
   "type": "Problem",
-  "number": "4.3.5.13",
+  "number": "4.3.25",
   "title": "",
   "body": " Complete by showing that we get the same both ways.   Compute if and then solve the equation for .  "
 },
@@ -1112,7 +1112,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsome-rules-diff.html#REMARKContrivedBrute",
   "type": "Comment",
-  "number": "4.3.5.14",
+  "number": "4.3.26",
   "title": "",
   "body": "  Problem is completely contrived. There is no obvious reason that we would want or need to solve this equation. However, in the near future this will be the next step in many of the problems we will encounter.  "
 },
@@ -1121,7 +1121,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsome-rules-diff.html#EXAMPLEEOE1",
   "type": "Example",
-  "number": "4.3.5.15",
+  "number": "4.3.27",
   "title": "Making Things “Easier on the Eyes”.",
   "body": " Making Things Easier on the Eyes  Examples differentials  Suppose we wish to find when Once again we could just apply brute force by multiplying out the expression But this is a lot of work and it is very error prone.  Instead notice that is the product of and so the Product Rule seems a likely place to begin. But first we make it easier on the eyes with the substitutions, , and . Thus: Using the Product Rule we now have and so   Not only does this involve considerably less Algebra (and is thus less prone to error) it also gives us in a form that is easy to factor. This is important because, as we mentioned in , many of the problems to come will involve finding a differential, setting it equal to zero, and then solving the resulting equation. If we had computed this by brute force we would have to find the roots of a fully expanded fourth degree polynomial. That would be hard. The form given above is much easier to work with. Let s go ahead and set and solve the resulting equation: just for practice.  The prospects for solving the equation, even in this form seem pretty glum at first, but it really isn t so bad once we notice that and appear as factors in both terms on the left hand side. Factoring these out gives   "
 },
@@ -1130,7 +1130,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsome-rules-diff.html#DRILLSolveEx",
   "type": "Drill",
-  "number": "4.3.5.16",
+  "number": "4.3.28",
   "title": "",
   "body": " Drills differentiation brute force   Complete by finding all solutions of equation .   "
 },
@@ -1139,7 +1139,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsome-rules-diff.html#SUBSECTIONPowerRule-22",
   "type": "Drill",
-  "number": "4.3.5.17",
+  "number": "4.3.29",
   "title": "",
   "body": " Drills differentiation   Compute the differential of and solve for .   "
 },
@@ -1148,7 +1148,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsome-rules-diff.html#EXAMPLEPowRuleExtension1",
   "type": "Example",
-  "number": "4.3.5.18",
+  "number": "4.3.30",
   "title": "",
   "body": " Examples differentials  At this point we can find the differentials of a large number of algebraic expressions. But not all. For example suppose Nothing we ve done so far tells us what is.  However, you are surely aware that the radical symbol, , can be expressed as a fractional exponent. For example, It is tempting to simply assert that, by the Power Rule, In fact this is true, but it doesn t follow from the way we have developed the Power Rule because we depended quite explicitly on the assumption that the exponent of is a positive integer.  Here s one way to prove that the Power Rule works when . If then Computing the differential of both sides gives: or which is the Power Rule with .  "
 },
@@ -1157,7 +1157,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsome-rules-diff.html#EXAMPLEPowRuleExtension2",
   "type": "Example",
-  "number": "4.3.5.19",
+  "number": "4.3.31",
   "title": "",
   "body": " Examples differentials the Power Rule  You should be a little bit surprised at this. After all, is a complicated thing, compared to , or even . Nevertheless, essentially the same procedure works here too. If , then . Differentiating both sides gives and solving for leaves us with This is not yet recognizable as the Power Rule primarily because we need to express the right side entirely in terms of . But recall that so that . Making that substitution gives which is the Power Rule with   "
 },
@@ -1166,7 +1166,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsome-rules-diff.html#PROBLEMPRPosRat",
   "type": "Problem",
-  "number": "4.3.5.20",
+  "number": "4.3.32",
   "title": "The Power Rule for Positive, Rational Powers.",
   "body": "The Power Rule for Positive, Rational Powers  Mimic the process in and to show that    Now suppose where and are positive integers and show that   "
 },
@@ -1175,7 +1175,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsome-rules-diff.html#EXAMPLEPowRuleExtension3",
   "type": "Example",
-  "number": "4.3.5.21",
+  "number": "4.3.33",
   "title": "",
   "body": " Examples differentials the Power Rule  Having seen that the Power Rule can be extended to include positive, fractional exponents it is natural to ask if it can be extended to negative exponents Can we find the differential of ?  Of course we can. If then By the Product Rule we have and thus So the Power Rule works for as well.  "
 },
@@ -1184,7 +1184,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsome-rules-diff.html#PROBLEMRecip",
   "type": "Problem",
-  "number": "4.3.5.22",
+  "number": "4.3.34",
   "title": "",
   "body": " Let be a positive rational number and . As in  clear the fraction and use the Product Rule to obtain the Power Rule for negative rational numbers: .  "
 },
@@ -1193,7 +1193,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsome-rules-diff.html#SUBSECTIONPowerRule-30",
   "type": "Drill",
-  "number": "4.3.5.23",
+  "number": "4.3.35",
   "title": "",
   "body": " Drills differentiation   Use the formula you found in to show that .   "
 },
@@ -1211,7 +1211,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsome-rules-diff.html#REMARKPowerRule",
   "type": "Comment",
-  "number": "4.3.5.24",
+  "number": "4.3.36",
   "title": "",
   "body": " Having an irrational exponent is a bigger problem than it seems to be. We have no way (so far) to interpret the meaning of an expression like . So trying to find its differential using the techniques we have is hopeless. Take a moment to consider what an expression like could even mean.   Comment  No! No! No! Wait!  Don t keep reading as if we didn t just tell you to stop. We re serious. Take a moment and think about this. How do you multiply copies of together? Does that even mean anything? If so, what?   In we will find two different ways to assign meaning to when is irrational. (Actually, we will invent a way. Meaning is not something we find, it is something we create.) When we do we will find that the Power Rule still works. In the meantime, we will assume for now that the Power Rule always works, even when the exponent is irrational.  "
 },
@@ -1220,7 +1220,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsome-rules-diff.html#THEOREMGenPowRule",
   "type": "Logarithm Property",
-  "number": "4.3.5.25",
+  "number": "4.3.37",
   "title": "The  Power  Rule.",
   "body": " The Power Rule  Let be any real number. Then .  "
 },
@@ -1229,7 +1229,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsome-rules-diff.html#EXAMPLEComplexDifferentiation1",
   "type": "Example",
-  "number": "4.3.5.26",
+  "number": "4.3.38",
   "title": "",
   "body": " Examples differentiation  To differentiate we begin by re-expressing the radicals as exponents because we have no differentiation rules for radicals.   "
 },
@@ -1238,7 +1238,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsome-rules-diff.html#SUBSECTIONPowerRule-39",
   "type": "Drill",
-  "number": "4.3.5.27",
+  "number": "4.3.39",
   "title": "",
   "body": " Drills differentiation   Show that equation  simplifies to Does this seem simpler to you?   "
 },
@@ -1247,7 +1247,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsome-rules-diff.html#SUBSECTIONPowerRule-40",
   "type": "Drill",
-  "number": "4.3.5.28",
+  "number": "4.3.40",
   "title": "",
   "body": " Drills differentiation  Compute in terms of and     , where      , where      , where , and      "
 },
@@ -1256,7 +1256,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsome-rules-diff.html#SUBSECTIONPowerRule-41",
   "type": "Drill",
-  "number": "4.3.5.29",
+  "number": "4.3.41",
   "title": "",
   "body": " Drills differentiation  Compute each of the following:                                       "
 },
@@ -1265,7 +1265,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsome-rules-diff.html#SUBSECTIONPowerRule-42",
   "type": "Drill",
-  "number": "4.3.5.30",
+  "number": "4.3.42",
   "title": "",
   "body": " Drills differentiation  Compute each of the following.                       "
 },
@@ -1274,7 +1274,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsome-rules-diff.html#PROBLEMspacetime",
   "type": "Problem",
-  "number": "4.3.5.31",
+  "number": "4.3.43",
   "title": "",
   "body": " Compute for each of the following:                                        , where is a constant If , , and are spatial coordinates, is time, and the constant is the speed of light then the expression on the left-hand side represents the square of the distance between the origin and the point in dimensional, relativistic, spacetime. Setting this equal to zero allows us to identify all of the events that an observer at the origin is observing at a given instant. For example, if there is a solar flare happening on the sun million miles away from the earth, then we observe it minutes later. The spacetime distance is zero to allow for the simultaneity of the event happening and us observing it. The closest galaxy to the Milky Way Galaxy is the Andromeda Galaxy which is approximately million light-years away. This means that the light we are observing now originated 2.5 million years ago but the spacetime distance between the two events (called the Minkowski distance) is still zero. .  "
 },
@@ -1283,7 +1283,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsome-rules-diff.html#SUBSECTIONPowerRule-45",
   "type": "Example",
-  "number": "4.3.5.32",
+  "number": "4.3.44",
   "title": "",
   "body": " Examples differentiation  For example, how can we compute given that It is possible to solve equation explicitly for in terms of but it is difficult to do. Since equation is quadratic in (the highest power of is ) we need only use the Quadratic Formula to get explicitly in terms of and and then differentiate. Try that some time when you have time to kill. Lots of time.  Instead, we ll just apply our differentiation rules to equation as it is. Differentiating we have At first this may look very difficult to solve for but look again. This differential equation is actually linear in each of the differentials, , , and . That is, each differential only appears raised to the first power. This will always happen. When we differentiate any expression the result will always be linear in the differentials involved.  The word linear has a very specific meaning in mathematics, but the precise definition isn t relevant at the moment. For our current purpose it simply means that we can rearrange our equation algebraically so that it has the following form. Solving for gives   For this example the specific computations are:   At this point we have solved our problem so we needn’t do any more. But notice that we could also write equation as , which may be preferable depending on the next step if this is a part of a larger problem.  Some problems are legitimately hard, and some only look hard. So remember that as bleak as things may look sometimes, you should always keep your goal in view. In this case we were trying to isolate , so we gathered all of the terms that had in them, put all the other terms on the other side of the equation, factored out the and divided by the stuff that formed the coefficient of . This process is often easier than trying to solve for before differentiating.  "
 },
@@ -1292,7 +1292,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsome-rules-diff.html#SUBSECTIONPowerRule-46",
   "type": "Drill",
-  "number": "4.3.5.33",
+  "number": "4.3.45",
   "title": "",
   "body": " Drills differentiation   Solve equation for and .   "
 },
@@ -1301,7 +1301,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsome-rules-diff.html#DRILLClassicalCurves",
   "type": "Drill",
-  "number": "4.3.5.34",
+  "number": "4.3.46",
   "title": "",
   "body": " Drills differentiation  Compute for each of the following. (You will see these formulas again in  .)                                            "
 },
@@ -1310,7 +1310,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsome-rules-diff.html#EXAMPLEQR1",
   "type": "Example",
-  "number": "4.3.6.1",
+  "number": "4.3.47",
   "title": "",
   "body": " Examples differentiation the Quotient Rule   Suppose we wish to find when . Rewriting this slightly we have . Thus   Now suppose we have . Can we compute ?   Comment  Be sure you see why the previous approach won't work.   There are actually two different approaches to this problem that use the Product Rule. The first is to rewrite as then apply the Product Rule followed by the Power Rule.  The second approach is to clear the fraction so that . From here we can compute the differential of both sides (using the Product Rule on the left side) and solve the result for   "
 },
@@ -1319,7 +1319,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsome-rules-diff.html#PROBLEMQR1",
   "type": "Problem",
-  "number": "4.3.6.2",
+  "number": "4.3.48",
   "title": "",
   "body": "  Compute by each of the two methods indicated in . Verify that your results are equivalent either way.  "
 },
@@ -1328,7 +1328,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsome-rules-diff.html#THEOREMQuotientRule",
   "type": "Logarithm Property",
-  "number": "4.3.6.3",
+  "number": "4.3.49",
   "title": "The Quotient Rule.",
   "body": " The Quotient Rule     "
 },
@@ -1337,7 +1337,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsome-rules-diff.html#SUBSECTIONQuotientRule-6",
   "type": "Problem",
-  "number": "4.3.6.4",
+  "number": "4.3.50",
   "title": "",
   "body": " Derive the Quotient Rule, , in two ways:   By writing and applying the Product Rule and the Power Rule.   By making the substitution , so that . Apply the Product Rule and solve for .  "
 },
@@ -1346,7 +1346,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsome-rules-diff.html#SUBSECTIONQuotientRule-8",
   "type": "Drill",
-  "number": "4.3.6.5",
+  "number": "4.3.51",
   "title": "",
   "body": " Drills differentiation   Show that equation is the same as your solution of .   "
 },
@@ -1355,7 +1355,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsome-rules-diff.html#SUBSECTIONQuotientRule-9",
   "type": "Drill",
-  "number": "4.3.6.6",
+  "number": "4.3.52",
   "title": "",
   "body": " Drills differentiation  Compute for each of the following:                                                 "
 },
@@ -1364,7 +1364,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsome-rules-diff.html#SUBSECTIONQuotientRule-10",
   "type": "Problem",
-  "number": "4.3.6.7",
+  "number": "4.3.53",
   "title": "",
   "body": "    Use the Quotient Rule to show that the differential of each of the following is:                       Can you explain this?   Show that each of the expressions in part (a) is of the form for some constant . Now can you explain it?   Compute the differential of Can you explain why this one is different?  "
 },
@@ -1373,7 +1373,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsome-rules-diff.html#PROBLEMRearrangePRandQR",
   "type": "Problem",
-  "number": "4.3.6.8",
+  "number": "4.3.54",
   "title": "",
   "body": "  Assume that neither nor is zero. Show that each of the following statements is true.   The Product Rule can be rearranged as: .   The Quotient Rule can be rearranged as: .   Why must we assume that neither nor is zero?  "
 },
@@ -1382,7 +1382,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsome-rules-diff.html#SUBSECTIONQuotientRule-13",
   "type": "Problem",
-  "number": "4.3.6.9",
+  "number": "4.3.55",
   "title": "",
   "body": " First compute each of the following using the Quotient Rule, and then find an algebraic simplification that makes the differentiation easier. Verify that you get the same answer either way.                                          "
 },
@@ -1427,7 +1427,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONVelocitySlopeTangent.html#SECTIONVelocitySlopeTangent-12",
   "type": "Drill",
-  "number": "5.1.0.1",
+  "number": "5.1.1",
   "title": "",
   "body": " Drills line tangent  Find an equation of the line tangent to the graph of at each of the following points. Compare these results to those obtained using Fermat s Method in                              "
 },
@@ -1436,7 +1436,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONVelocitySlopeTangent.html#EXAMPLEEvaluationNotation",
   "type": "Example",
-  "number": "5.1.0.2",
+  "number": "5.1.2",
   "title": "",
   "body": " Examples evaluation notation  evaluation notation   For example to compute the slope of the graph of at we use the following three-step process.    First differentiate to obtain the differential equation . This relates and .    Second, from this differential equation we find the ratio This differential ratio tells us the slope of the curve at every point on the curve.    Third, if we need the value of at a single point like , for example we compute    Comment  Obviously this makes no sense if the point is not a point on the curve. You should always make sure your problem makes sense before you try to solve it.   In this case we could just write: , since the coordinate never comes into play.   Principle of Local Linearity Finally, we emphasize that Leibniz notation is deliberately evocative of the notion of slope because when we evaluate the differential ratio at a point it tells us the slope of the curve at that point. In view of the Principle of Local Linearity , this is equivalent to finding the slope of the line tangent to the curve at that point.   "
 },
@@ -1445,7 +1445,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONVelocitySlopeTangent.html#SECTIONVelocitySlopeTangent-17",
   "type": "Problem",
-  "number": "5.1.0.3",
+  "number": "5.1.3",
   "title": "",
   "body": " Explain the difference between and carefully and clearly.   We (the authors) have sometimes had students assert that since , the equation of the line tangent to the graph of at the point is Is this the equation of a line? If you aren t sure try looking at a special case, say when .   Find the correct formula for line tangent to the graph of at the point .  "
 },
@@ -1454,7 +1454,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONVelocitySlopeTangent.html#SECTIONVelocitySlopeTangent-18",
   "type": "Drill",
-  "number": "5.1.0.4",
+  "number": "5.1.4",
   "title": "",
   "body": " Drills slope   Find if and compare this with the slope we obtained in using Descartes Method of Normals.   "
 },
@@ -1463,7 +1463,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONVelocitySlopeTangent.html#PROBLEMDeri",
   "type": "Problem",
-  "number": "5.1.0.5",
+  "number": "5.1.5",
   "title": "",
   "body": " Evaluate for the following functions at each of the given values of .    ,   Compare with Problem .    ,   Compare with Problem .    ,   Compare with Problem .  "
 },
@@ -1481,7 +1481,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdefin-tang-line.html#FIGURETangentLineDef7",
   "type": "Figure",
-  "number": "5.2.0.1",
+  "number": "5.2.1",
   "title": "",
   "body": "     "
 },
@@ -1490,7 +1490,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdefin-tang-line.html#DrillGrazing",
   "type": "Drill",
-  "number": "5.2.0.2",
+  "number": "5.2.2",
   "title": "",
   "body": " Drills line tangent   Show that is the equation of the line tangent to the graph of at and as seen in the sketch below.    "
 },
@@ -1508,7 +1508,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdefin-tang-line.html#FIGUREDifferentialTriangle3",
   "type": "Figure",
-  "number": "5.2.0.3",
+  "number": "5.2.3",
   "title": "",
   "body": " Notice that the scale is so small that the graph of the function (the red curve) and its tangent line (the blue hypotenuse) are nearly the same.     "
 },
@@ -1517,7 +1517,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdefin-tang-line.html#DEFINITIONTangentLine",
   "type": "Definition",
-  "number": "5.2.0.4",
+  "number": "5.2.4",
   "title": "The Line Tangent to a Curve  at a Point.",
   "body": " The Line Tangent to a Curve at a Point    Vocabulary tangent line The line tangent to a curve , at the point is the line which passes through the point with slope .   "
 },
@@ -1535,7 +1535,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdefin-tang-line.html#DEFINITIONLocalLinearity",
   "type": "Definition",
-  "number": "5.2.0.5",
+  "number": "5.2.5",
   "title": "The Principle of Local Linearity.",
   "body": " The Principle of Local Linearity  Principle of Local Linearity   Sufficiently close to a given point every smooth curve is indistinguishable from the line tangent at that point.   "
 },
@@ -1544,7 +1544,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdefin-tang-line.html#SECTIONdefin-tang-line-23",
   "type": "Drill",
-  "number": "5.2.0.6",
+  "number": "5.2.6",
   "title": "",
   "body": " Drills line tangent  Find an equation of the line tangent to the given curve at the indicated values of .      when       when       when        when        when        when        when       when        when        when        when        when        when        when        when        when        when        when        when       when      "
 },
@@ -1553,7 +1553,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdefin-tang-line.html#PROBLEMtanlinedef",
   "type": "Problem",
-  "number": "5.2.0.7",
+  "number": "5.2.7",
   "title": "",
   "body": " Show that the only point on the graph of where the tangent line touches the curve only at the point of tangency is the point and that the line tangent at is horizontal. Now graph the curve and the line tangent at on the same set of axes. Does this look like a tangent line to you?  "
 },
@@ -1562,7 +1562,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdefin-tang-line.html#SECTIONdefin-tang-line-28",
   "type": "Problem",
-  "number": "5.2.0.8",
+  "number": "5.2.8",
   "title": "",
   "body": " Use Definition to find the equation of the line tangent to the graph of the straight line at the point , and show that the tangent line is in fact, the original line.  "
 },
@@ -1571,7 +1571,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdefin-tang-line.html#SECTIONdefin-tang-line-29",
   "type": "Problem",
-  "number": "5.2.0.9",
+  "number": "5.2.9",
   "title": "",
   "body": "    Find the equations of all lines tangent to the graph of that are also parallel to the line .   Find the equations of all lines tangent to the graph of that are also parallel to the line    Find the equations of all lines tangent to the graph of that are also parallel to the line   "
 },
@@ -1580,7 +1580,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdefin-tang-line.html#SECTIONdefin-tang-line-30",
   "type": "Problem",
-  "number": "5.2.0.10",
+  "number": "5.2.10",
   "title": "",
   "body": " Find those points on the graph of the curve where the tangent line is   Parallel to the line: .   Perpendicular to the line: .  "
 },
@@ -1589,7 +1589,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdefin-tang-line.html#PROBLEMClassicalCurves1",
   "type": "Problem",
-  "number": "5.2.0.11",
+  "number": "5.2.11",
   "title": "",
   "body": " Find an equation of the line(s) tangent to and normal to each of the given curves at the specified points. (You have seen all of these curves previously in )    Astroid : at and       An Elliptic Curve: at and .       Cardioid : at and .       Conchoid of Nicomedes : at and        Cassini  oval : at       The Bicorn : at        The Kampyle of Eudoxus : at       The Folium : at and      "
 },
@@ -1598,7 +1598,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdefin-tang-line.html#SECTIONdefin-tang-line-32",
   "type": "Problem",
-  "number": "5.2.0.12",
+  "number": "5.2.12",
   "title": "",
   "body": " Find all points where the line tangent to the curve passes through the indicated points. If no such points exist, explain how you know.    through the points                          through the points                          through the points                        "
 },
@@ -1607,7 +1607,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdefin-tang-line.html#DRILLZeroDenominator1",
   "type": "Drill",
-  "number": "5.2.0.13",
+  "number": "5.2.13",
   "title": "",
   "body": " Drills differentiation   Show that if , then .   "
 },
@@ -1634,7 +1634,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdefin-tang-line.html#SECTIONdefin-tang-line-34",
   "type": "Problem",
-  "number": "5.2.0.14",
+  "number": "5.2.14",
   "title": "",
   "body": " Suppose that the two blue line segments in the figure below are parallel. Show that is exactly halfway between and . (That is, show that .)   "
 },
@@ -1643,7 +1643,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdefin-tang-line.html#PROBLEMHyperbolaTriangles",
   "type": "Problem",
-  "number": "5.2.0.15",
+  "number": "5.2.15",
   "title": "Find the Pattern.",
   "body": "Find the Pattern  Suppose that and are positive numbers. In the following sketch the line is tangent to the curve at the point .    For first show that the coordinates of points and are and , respectively, and then confirm that:   area     area     area     area       For first show that the coordinates of points and are and , respectively, and then confirm that:   area .    area .    area .    area .      For first show that the coordinates of points and are and , respectively and then confirm that:   area .    area .    area .    area .      Find a formula for the coordinates of points and for any value of and then:   Find the the area of for any value of .    Find the the area of for any value of .    Find the the area of for any value of .    Find the the area of for any value of .     "
 },
@@ -1652,7 +1652,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdefin-tang-line.html#PROBLEMunderl-tang-line",
   "type": "Problem",
-  "number": "5.2.0.16",
+  "number": "5.2.16",
   "title": "",
   "body": " Consider the equation .   Find the equation of the line tangent to the graph of when .   Does a line tangent to the graph of this function exist at ? If so, find the equation of the line. If not, explain why not.   Have you looked at the graph yet?  "
 },
@@ -1670,7 +1670,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONvomit-comet.html#PROBLEMFlightPath2",
   "type": "Problem",
-  "number": "5.3.0.1",
+  "number": "5.3.1",
   "title": "",
   "body": " Suppose the following graph depicts the parabolic flight path followed by the Vomit Comet as it starts its maneuver at an altitude of meters and an initial angle of elevation of .   If the equation of this parabola is then determine the values of and .  "
 },
@@ -1679,7 +1679,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONvomit-comet.html#EXAMPLEFlightPath",
   "type": "Example",
-  "number": "5.3.0.2",
+  "number": "5.3.2",
   "title": "Modeling the flight path of an airliner.",
   "body": " Modeling the flight path of an airliner  Examples flight path of an airliner  We want to model the flight path of a plane as it lands and determine the distance from the runway the plane should be when it starts its descent.  A fundamental tenet of mathematically modeling real world phenomena is to keep things as simple as possible. So, the first thing we d be likely to try for is a parabolic descent path: But it is pretty clear that this won t work because the plane should be traveling horizontally at the beginning and at the end of its descent. At the end, because at that point it should be on the ground, and at the beginning because we don t want to terrify the passengers.  "
 },
@@ -1688,7 +1688,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONvomit-comet.html#SECTIONvomit-comet-14",
   "type": "Problem",
-  "number": "5.3.0.3",
+  "number": "5.3.3",
   "title": "",
   "body": " Show that there is only one point on any parabola where the line tangent to the curve is horizontal. Explain why this proves that the flight path of the airliner in cannot be parabolic.   Wherever the flight path is horizontal its slope will be zero.  "
 },
@@ -1697,7 +1697,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONvomit-comet.html#PROBLEMFlightPath1",
   "type": "Problem",
-  "number": "5.3.0.4",
+  "number": "5.3.4",
   "title": "",
   "body": " Below is a section of a cubic polynomial depicting a flight path with the plane starting initially at the point and ending at the airport which we will arbitrarily designate as the origin.    Assuming that the flight path is the graph of equation , compute . Then divide by to obtain .   Show that in equation .   The point is on the graph of equation .   Show that in equation .   The flight path is horizontal at .   Determine the values of and in equation in terms of and .   The point is on the flight path and the flight path is horizontal at .  "
 },
@@ -1715,7 +1715,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONGalileoDrops.html#SECTIONGalileoDrops-2",
   "type": "Figure",
-  "number": "5.4.0.1",
+  "number": "5.4.1",
   "title": "",
   "body": "  Galileo Galilei (1564 1642)   "
 },
@@ -1733,7 +1733,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONGalileoDrops.html#PROBLEMTossedBall1",
   "type": "Problem",
-  "number": "5.4.0.2",
+  "number": "5.4.2",
   "title": "",
   "body": " We all know from experience that if you throw a ball straight up in the air, it will reach some maximum height. But suppose you throw the ball up twice as fast, would it go twice as high?   Comment  We re asking you to guess. Don t worry about being wrong. Just take your best guess.   "
 },
@@ -1742,7 +1742,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONGalileoDrops.html#FIGUREHammerFeather",
   "type": "Figure",
-  "number": "5.4.0.3",
+  "number": "5.4.3",
   "title": "",
   "body": " David Scott dropping a hammer and a feather on the surface of the Moon      "
 },
@@ -1760,7 +1760,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONGalileoDrops.html#FIGUREGalileoRamp",
   "type": "Figure",
-  "number": "5.4.0.4",
+  "number": "5.4.4",
   "title": "",
   "body": "     "
 },
@@ -1769,7 +1769,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONGalileoDrops.html#TABLEGalileoIncline",
   "type": "Table",
-  "number": "5.4.0.5",
+  "number": "5.4.5",
   "title": "Acceleration on an Incline",
   "body": " Acceleration on an Incline      Acceleration     4.9    6.93    8.49    9.47    9.72    9.78    9.795    9.799    9.799   "
 },
@@ -1787,7 +1787,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONGalileoDrops.html#SECTIONGalileoDrops-28",
   "type": "Problem",
-  "number": "5.4.0.6",
+  "number": "5.4.6",
   "title": "",
   "body": " With a little Trigonometry you can deduce that with only one measurement. Use the diagram and the first line of to deduce that     .  "
 },
@@ -1796,7 +1796,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONGalileoDrops.html#SECTIONGalileoDrops-31",
   "type": "Problem",
-  "number": "5.4.0.7",
+  "number": "5.4.7",
   "title": "",
   "body": " Show that if we measure distance in feet, the acceleration constant on the moon is approximately   "
 },
@@ -1814,7 +1814,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECONDBringCalc.html#PROBLEMPositionVelocityAcceleration",
   "type": "Problem",
-  "number": "5.5.0.1",
+  "number": "5.5.1",
   "title": "",
   "body": "  Since we don t (yet) have a procedure for solving differential equations like equation we will make an educated guess, and then confirm that our guess works.  From the Power Rule the differential of a quadratic expression like will be the linear term , so seems like a reasonable guess.   Show that satisfies equation when    Earlier we reasoned that a ball dropped from a height of meters would strike the ground between one and two seconds after being dropped. Use to find out exactly how long it takes.   How long would it take the ball to hit the ground if dropped from the top of the Tower of Pisa (a height of meters?   Evaluate . What does this represent physically?   Remember that is a change in position and is a change in time.  "
 },
@@ -1832,7 +1832,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECONDBringCalc.html#PROBLEMGeneralFallingBalls",
   "type": "Problem",
-  "number": "5.5.0.2",
+  "number": "5.5.2",
   "title": "",
   "body": " Consider a ball moving vertically so that its height at time seconds is given by    Determine the ball s initial   Position       Velocity       Acceleration      Remember to go through the two step process of differentiating and then dividing by We insist.   Is up the positive or the negative direction?   How high will the ball go?   When will the ball hit the ground?   What is the impact velocity?   Describe in words the physical situation being modeled by the formula ?   In general, the height of an object falling near the surface of the earth is given by meters.   Show that the initial height is , the initial velocity is , and the acceleration is .    For simplicity, assume . How high will the ball go?    Suppose we double our initial velocity. Would the ball go twice as high? Compare this to your guess in .     "
 },
@@ -1850,7 +1850,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONDerivative.html#SECTIONDerivative-3",
   "type": "Figure",
-  "number": "5.6.0.1",
+  "number": "5.6.1",
   "title": "",
   "body": "  Joseph Louis Lagrange (1736 1813)   "
 },
@@ -1886,7 +1886,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONDerivative.html#PROBLEMHuddesRule",
   "type": "Problem",
-  "number": "5.6.0.2",
+  "number": "5.6.2",
   "title": "",
   "body": " Recall that in Descartes Method of Normals, we had to find a double root of a polynomial. To deal with this problem, Johann van Waveren Hudde (1628 1704) developed an algebraic tool for determining such double roots. Calculus allows a development of Hudde s Rule that does not require the complex algebraic reasoning that Hudde used and is much easier to follow.   Historical Background  Actually Hudde did considerably more than this. His method for finding double roots was a part of what has been called the Lost Calculus of algebraic functions. If you are interested you can read more about this in Jeff Suzuki s award winning article The Lost Calculus (1637 1670): Tangency and Optimization without Limits    Consider any polynomial . Let and be any real numbers and form the following Hudde Polynomial.  Hudde showed that if is a double root of , then is a root of the Hudde polynomial    Show that if is a double root of the polynomial then it is a root of .   If is a double root of , then for some polynomial .   Show that and use this to prove Hudde s Rule.  "
 },
@@ -1904,7 +1904,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONDerivative.html#EXAMPLEDerivVSDiff",
   "type": "Example",
-  "number": "5.6.0.3",
+  "number": "5.6.3",
   "title": "",
   "body": " Examples differentials  Given we wish to compute . Setting we see that By the Power Rule we have . This would seem to be correct but it is not. Do you see the problem?  The left side of equation indicates that the variable is but there is no on the right side, only . So this can t be right. But what went wrong? We can avoid problems like this by using differentials: At this point if we divide by we recover equation in the form: Thus we see the left side of equation should have been not .  "
 },
@@ -1913,7 +1913,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONDerivative.html#SECTIONDerivative-13",
   "type": "Problem",
-  "number": "5.6.0.4",
+  "number": "5.6.4",
   "title": "",
   "body": " Starting with equation complete the computation of .  "
 },
@@ -1922,7 +1922,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONDerivative.html#SECTIONDerivative-14",
   "type": "Example",
-  "number": "5.6.0.5",
+  "number": "5.6.5",
   "title": "",
   "body": " Examples differentials  Of course, using differentials does not address all of the difficulties. For example, let . Then So far, so good. Next we apply the Product Rule, so    Historical Background  To see why we need to know that Leibniz always considered the differential to be a constant. And the differential of any constant is zero, by the Constant Rule.   The glaring question here is why is equal to zero in equation but is not equal to zero in equation ? Or, at a more fundamental level, what do we mean by the infinitely small change of an infinitely small change? As we will see in Chapter the early critics of Calculus cited this question specifically to argue that Calculus was invalid.  We will address these issues beginning in Chapter . For now we will make the following compromise: We will only differentiate finite quantities, be they functions, or derivatives. Since our ultimate goal is to compute some derivative this will suit our needs without getting caught up in the very problematic question of the nature of higher order differentials. So for this example we have   "
 },
@@ -1931,7 +1931,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONDerivative.html#EXAMPLEHighOrderDerivs",
   "type": "Example",
-  "number": "5.6.0.6",
+  "number": "5.6.6",
   "title": "",
   "body": " Examples differentials  Consider the expression . Differentiating we have You ve probably been taught all of your life to simplify complex looking expressions like and you probably do it without thinking. So you may be wondering why we left the coefficients above in the form we did.  The reason is simple. We were looking for patterns not numbers. Writing the above formulas as  , and obscures the pattern. Keep this in mind as you proceed. Algebraic or arithmetical simplifications often get in the way of recognizing patterns. Don t do them until there is a compelling reason to.  "
 },
@@ -1940,7 +1940,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONDerivative.html#SECTIONDerivative-16",
   "type": "Problem",
-  "number": "5.6.0.7",
+  "number": "5.6.7",
   "title": "Find the Pattern.",
   "body": "Find the Pattern  Find the pattern in . Use this pattern to find directly, without computing all fifty derivatives.  "
 },
@@ -1949,7 +1949,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONDerivative.html#SECTIONDerivative-17",
   "type": "Example",
-  "number": "5.6.0.8",
+  "number": "5.6.8",
   "title": "",
   "body": " Examples differentials  Consider the circle . Differentiating, we have , or . Differentiating again we have   "
 },
@@ -1958,7 +1958,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONDerivative.html#SECTIONDerivative-18",
   "type": "Problem",
-  "number": "5.6.0.9",
+  "number": "5.6.9",
   "title": "",
   "body": "    Continue this example to show that .   Show that and use this to compute .   Do you get the same answer? Which method do you prefer?  "
 },
@@ -1967,7 +1967,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONDerivative.html#SECTIONDerivative-19",
   "type": "Problem",
-  "number": "5.6.0.10",
+  "number": "5.6.10",
   "title": "",
   "body": " For each of the following find in terms of and .       Compare this with part (b).  Compare this with . Which method do you prefer?   "
 },
@@ -1976,7 +1976,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONDerivative.html#PROBLEMDerivProdNEProdDeriv",
   "type": "Problem",
-  "number": "5.6.0.11",
+  "number": "5.6.11",
   "title": "",
   "body": " We know that it is not generally true that even though there are certain exceptions, like , and , or . In the same way, even though the Product Rule makes it very clear that there are certain pairs of functions which are exceptions; for which  is true. For example, show that for each of the following it is true that .                                Find the general pattern in part (a).   Those pairs of functions which fit the pattern you found in part (b) are not the only exceptional pairs. Can you find others?  "
 },
@@ -1985,7 +1985,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONDerivative.html#SECTIONDerivative-22",
   "type": "Drill",
-  "number": "5.6.0.12",
+  "number": "5.6.12",
   "title": "",
   "body": " Drills velocity  Each of the following represents the position of a point on the -axis at time . Find the velocity and acceleration.                                  "
 },
@@ -1994,7 +1994,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONDerivative.html#SECTIONDerivative-23",
   "type": "Problem",
-  "number": "5.6.0.13",
+  "number": "5.6.13",
   "title": "",
   "body": " For each of the following represents the position of a point moving along the -axis. Use the information given to determine if the point is slowing down or speeding up at the instant .                  "
 },
@@ -2012,7 +2012,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONThinkingDynamically.html#SECTIONThinkingDynamically-6",
   "type": "Problem",
-  "number": "5.7.0.1",
+  "number": "5.7.1",
   "title": "",
   "body": " Since we have . Since and we know that Use this to find a formula for and confirm that the arc is a parabola.  "
 },
@@ -2021,7 +2021,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONThinkingDynamically.html#SECTIONThinkingDynamically-11",
   "type": "Problem",
-  "number": "5.7.0.2",
+  "number": "5.7.2",
   "title": "",
   "body": " Suppose are the coordinates of a ball moving along the given curves. If the ball is moving with a constant horizontal velocity of for each curve find the following.     The vertical velocity of the ball at the points indicated.    The horizontal and vertical acceleration of the ball at the points indicated.    The speed in the direction of travel of the ball at the points indicated.      at and   at and   at and  "
 },
@@ -2030,7 +2030,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONThinkingDynamically.html#PROBLEMAirlinerSpeed",
   "type": "Problem",
-  "number": "5.7.0.3",
+  "number": "5.7.3",
   "title": "",
   "body": "  Recall that in we asked you find the equation of this flight path from the data in the figure at the right. You should have found that As we said when we suspended our earlier efforts, the problem with this picture is that it is static. It is a picture of the path the airliner has flown after the flight is finished. We now have the tools we need to address the characteristics of the flight as it occurs.   Use the differential triangle in our figure to show that airspeed of the airplane in its direction of motion, , its horizontal velocity, , and slope of its flight path, , are related by the formula:    Recall that , and are the horizontal and vertical velocities respectively   Assume that the plane s horizontal velocity is constant.   Use equation to explain how we know that the plane is traveling fastest when it is at the point where the curve is steepest (about where the red dot is in our sketch).   Comment  It is possible to find the numerical coordinates of this point but it is rather difficult to see how to proceed at this point. It is worth taking a few minutes of your time to ponder how this might be done.     What is the slowest speed attained by the plane, and where on the flight path does this occcur?     "
 },
@@ -2039,7 +2039,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONThinkingDynamically.html#SECTIONThinkingDynamically-15",
   "type": "Problem",
-  "number": "5.7.0.4",
+  "number": "5.7.4",
   "title": "",
   "body": " The flight path obtained was . We need to put some limitations on the vertical acceleration, , experienced by the passengers in a commercial airliner. To keep things simple we assume that the pilot must maintain a constant horizontal speed of . (That is, set .)   Use the above equation to show that the vertical acceleration is given by    On the interval , what is the largest vertical acceleration and what is the smallest vertical acceleration and where do they occur? Does this make sense physically?   Suppose we put a restriction on the vertical acceleration so that for some constant . Show that with this restriction, .   Suppose that initially meters, , (which is approximately of the acceleration due to gravity). Find what must be (in kilometers).  "
 },
@@ -2048,7 +2048,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONThinkingDynamically.html#SECTIONThinkingDynamically-20",
   "type": "Problem",
-  "number": "5.7.0.5",
+  "number": "5.7.5",
   "title": "",
   "body": "    To determine we need one more fact. At the beginning of the maneuver, the initial airspeed is about (approximately mph). Use the initial airspeed to determine . In turn use this result and the fact that to show that .  Notice that you are not asked to find . The problem is to show that the value we've given is correct.   Now that we've determined all of the coefficients, equation describes the flight path of the Vomit Comet. Use equation to determine the value of when the pilot pulls out of the dive at meters.   Next find the value of when the pilot pulls out of the dive. How does this compare with the second claim?   You may find it helpful to review, part (b) of .   If the pilot wants to maintain a constant horizontal speed what must the airspeed of the plane be in terms of ( representing the start of the maneuver)?  "
 },
@@ -2084,7 +2084,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONFluxions.html#SECTIONFluxions-17",
   "type": "Problem",
-  "number": "5.8.0.1",
+  "number": "5.8.1",
   "title": "",
   "body": " For each of the following equations, find an equation relating their differentials and use this to relate their fluxions (instantaneous rates of change with respect to time).                          "
 },
@@ -2093,7 +2093,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONFluxions.html#EXAMPLECartPulley",
   "type": "Example",
-  "number": "5.8.0.2",
+  "number": "5.8.2",
   "title": "",
   "body": " Examples speed  Consider two carts joined by a foot length of rope passing through a pulley , which is held at a fixed height of feet above where the rope attaches to the carts.   Suppose cart is being pulled to the left at a constant speed of   "
 },
@@ -2102,7 +2102,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONFluxions.html#SECTIONFluxions-19",
   "type": "Problem",
-  "number": "5.8.0.3",
+  "number": "5.8.3",
   "title": "",
   "body": " Make a guess: Is cart moving at a constant speed?  "
 },
@@ -2111,7 +2111,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONFluxions.html#PROBLEMTwoCarts",
   "type": "Problem",
-  "number": "5.8.0.4",
+  "number": "5.8.4",
   "title": "",
   "body": " Differentiate equations to obtain relationships between the differentials , , , and .   Determine the relationship between the fluxions and . Recall that . Is constant? How does this compare with your guess earlier?   Translate your solution into Newton s dot notation.  "
 },
@@ -2120,7 +2120,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONFluxions.html#SECTIONFluxions-24",
   "type": "Problem",
-  "number": "5.8.0.5",
+  "number": "5.8.5",
   "title": "",
   "body": "    Suppose the length of a rectangle is increasing at a rate of and the width is decreasing at a rate of . Make a guess: Will the area remain constant?   Let the length be denoted by the fluent and the width denoted by the fluent . The fluxions of and are and , respectively. Let denote the area of the rectangle and compute the fluxion .   How does your solution in part (b) compare to your guess in part (a)?   Translate your solution into Newton s dot notation.  "
 },
@@ -2129,7 +2129,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONFluxions.html#SECTIONFluxions-25",
   "type": "Problem",
-  "number": "5.8.0.6",
+  "number": "5.8.6",
   "title": "",
   "body": "  The sketch above represents a foot long ladder leaning against a vertical wall. Suppose that the bottom is sliding to the right at a constant rate.   Make a guess: Is the top sliding down at a constant rate?   Find in terms of , and use this to check your guess in part (a).   Translate your solution into Newton s dot notation.  "
 },
@@ -2138,7 +2138,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONFluxions.html#SECTIONFluxions-26",
   "type": "Problem",
-  "number": "5.8.0.7",
+  "number": "5.8.7",
   "title": "",
   "body": " Suppose that at a certain instant of time the price of a certain commodity is increasing at a rate of % per month and the quantity sold is decreasing at a rate of % per month. Would the revenue increase at a rate of % per month? Explain.  "
 },
@@ -2147,7 +2147,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONFluxions.html#SECTIONFluxions-27",
   "type": "Problem",
-  "number": "5.8.0.8",
+  "number": "5.8.8",
   "title": "",
   "body": " The strength of a signal from a cell tower, measured in decibels is inversely proportional to the square of the distance between the tower and the cell phone. Suppose you have a foot tall cell tower and a car driving away from the tower at a rate of (approximately mph). (The icon on your cell phone probably uses bars, but there is no universally agreed upon standard for what one bar means. There is a standard for decibels.)   Find a formula for the rate at which the signal is decreasing in terms of the distance from the car to the base of the tower. (We suggest that you use to denote the constant of proportionality.)   Plot a graph of the formula in part (a) with and use this to approximate the distance from the base of the tower where the signal decreases fastest. (Use . You’ll see why we chose this scale once you’ve plotted it.)   Based on the graph, what is happening to the rate at which the signal is decreasing as the car moves farther away from the tower?  "
 },
@@ -2156,7 +2156,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONFluxions.html#SECTIONFluxions-28",
   "type": "Problem",
-  "number": "5.8.0.9",
+  "number": "5.8.9",
   "title": "",
   "body": " It is reasonable to assume that the rate at which the volume of a spherical raindrop is increasing as it forms is proportional to the surface area of the raindrop. Show that under this assumption, the radius (surprisingly?) grows at a constant rate.  "
 },
@@ -2165,7 +2165,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONFluxions.html#SECTIONFluxions-29",
   "type": "Problem",
-  "number": "5.8.0.10",
+  "number": "5.8.10",
   "title": "",
   "body": " Suppose we have a rectangular box whose length is increasing by , whose width is increasing by and whose height is decreasing by . How fast are the volume and surface area of the box changing when the length is centimeters, width is centimeters, and height is centimeters? Are they increasing or decreasing?  "
 },
@@ -2174,7 +2174,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONFluxions.html#SECTIONFluxions-30",
   "type": "Problem",
-  "number": "5.8.0.11",
+  "number": "5.8.11",
   "title": "",
   "body": " Suppose a point is moving along the curve so that its horizontal velocity is . For which values of is the distance from to the point increasing and for what values is it decreasing? What can you say about the points where the distance transitions from increasing to decreasing or decreasing to increasing?  "
 },
@@ -2183,7 +2183,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONFluxions.html#PROBLEMIdealGas",
   "type": "Problem",
-  "number": "5.8.0.12",
+  "number": "5.8.12",
   "title": "",
   "body": " The ideal gas law ( Boyle s Law) states that the pressure (in Pascals), volume (in cubic meters), and temperature (in degrees Kelvin ) of an ideal gas are related by the formula where is the number of gas molecules and is the Boltzmann constant. What this says is that for a fixed amount of gas, if the volume is held fixed, then the pressure is proportional to the temperature and if the temperature is held fixed, then the pressure is inversely proportional to the volume.   Assuming that we have an enclosed gas, and that is held constant. Find an equation that relates , , and , and use this to find in terms of and .   Suppose we have a piston compressing the gas in a cylinder as in the following sketch.   Show that for the pressure to be held fixed must satisfy (Notice that this is independent of the radius of the cylinder.)   Suppose that when meters the temperature is . If the piston is moving to the right at a rate of , how fast should the temperature be decreasing at that instant to maintain a constant pressure?  "
 },
@@ -2192,7 +2192,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONFluxions.html#SECTIONFluxions-32",
   "type": "Problem",
-  "number": "5.8.0.13",
+  "number": "5.8.13",
   "title": "",
   "body": " A streetlamp is mounted at the top of a foot pole. A foot tall person is walking away from the base of the pole at a constant speed.   Make a guess: Is the length of this person s shadow increasing at a constant rate?   Now compute the rate at which the person s shadow is increasing.  "
 },
@@ -2201,7 +2201,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONFluxions.html#SECTIONFluxions-33",
   "type": "Problem",
-  "number": "5.8.0.14",
+  "number": "5.8.14",
   "title": "",
   "body": " Suppose the position of a point, , on the -axis is given by and the position of another point, , on the -axis is given by . Let represent the distance between and .      If , and show that .    If , and show that .    If , and show that .    If , and show that .    Do you see a pattern yet? If you do, write it down and try to show that it always holds. If you don t, make up some more simple examples and solve them to gather more evidence. when you believe you have see it conjecture a pattern and then show that the pattern always holds.         Show that if , and then . Does this make intuitive sense to you?    Show that if , and , then .    Show that if , and , then .    Do you see a pattern yet? If you do, write it down and try to show that it always holds. If you don t make up some more, simple examples, and solve them to gather more evidence. when you believe you have see it conjecture a pattern and then show that the pattern always holds.      Finally, given any  and any  , find a completely general formula for .  "
 },
@@ -2219,7 +2219,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONSelfIntersectCurve.html#PROBLEMadfj",
   "type": "Problem",
-  "number": "5.9.0.1",
+  "number": "5.9.1",
   "title": "",
   "body": "  For the Folium of Descartes:    Show that .    Locate all of the points where the line tangent to the Folium of Descartes is horizontal.    Locate all of the points where the line tangent to the Folium of Descartes is vertical.       The Tschirnhausen cubic:    Show that     Locate all of the points where the line tangent to the Tschirnhausen cubic is horizontal.    Locate all of the points where the line tangent to the Tschirnhausen cubic is vertical.     "
 },
@@ -2228,7 +2228,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONSelfIntersectCurve.html#PROBLEMTschirnhausenCubic",
   "type": "Problem",
-  "number": "5.9.0.2",
+  "number": "5.9.2",
   "title": "",
   "body": "    Show that if and satisfy then and satisfy the equation of the Tschirnhausen Cubic: .   Compute the fluxions of and .   If we think of as time, with , representing time in the past, will the point traverse the clockwise or counterclockwise as increases?   Consider the values of for which and are moving in the positive and negative directions.   Find the values of for which . Use the result of part (b) to compute at these times. Are your answers consistent with what you obtained in part (c)? Explain.   Show that the equations of the two lines which are tangent to the Tschirnhausen cubic at are   "
 },
@@ -2237,7 +2237,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONSelfIntersectCurve.html#PROBLEMFoliumOfDescartes1",
   "type": "Problem",
-  "number": "5.9.0.3",
+  "number": "5.9.3",
   "title": "",
   "body": " Recall that the Folium of Descartes, , crosses itself at the origin.   Show that if and then and satisfy the equation of the Folium.   Compute the fluxions of and .   For which values of is ?   Find the value of for which . use the result of part (b) to compute at this time. Is this consistent with the graph?   Can you explain why we only found one tangent line at when it is quite clear from the graph that there must be two?  "
 },
@@ -2264,7 +2264,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONSelfIntersectCurve.html#SECTIONSelfIntersectCurve-20-6",
   "type": "Problem",
-  "number": "5.9.0.4",
+  "number": "5.9.4",
   "title": "",
   "body": " Let represent any point on the Folium which is not the origin. Let represent the slope of the line joining the origin to ; that is, or . Use this to show that   The difference between this problem and is this: In Problem we gave you and and asked you to show that it satisfies the equation of the Folium. Here we start with the equation of the Folium and you need to find and .  "
 },
@@ -2273,7 +2273,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONSelfIntersectCurve.html#SECTIONSelfIntersectCurve-20-13",
   "type": "Problem",
-  "number": "5.9.0.5",
+  "number": "5.9.5",
   "title": "",
   "body": "    Use your favorite graphing technology to show that the parameterization traces out part of the parabola . Which part?   The parameterization traces out different part of the same parabola. How else is this parameterization different from the one in part (a)?   Explain why neither of these parameterizations traces the part of the curve where .  "
 },
@@ -2282,7 +2282,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONSelfIntersectCurve.html#SECTIONSelfIntersectCurve-20-14",
   "type": "Example",
-  "number": "5.9.0.6",
+  "number": "5.9.6",
   "title": "",
   "body": " Examples equation vs. parametric form  Moving between the equation and parametric forms can be very hard to do depending on the complexity of the equation. The simplest situation is when you have as a function of ; for example . To find a parametric representation we observe that we need to specify both and as functions of a third parameter, . This can be puzzling until we realize that is completely free. All we need to do is ensure that . So if we take and we almost have our parameterization.  When faced with a formula like you have learned to always assume that could be any real number that makes sense in the formula. But with parametric equations this assumption can lead to problems. We ll need to specify the allowable values of the parameter explicitly. This is why we said we almost have our parameterization. A complete parameterization must specify the values of that are available to us, so in this case   We can always parameterize the graph of a function the same way we just parameterized . A parameterization of , with domain is   This parameterization is equivalent to working with the function so it may or may not be particularly useful, but it can always be done.  "
 },
@@ -2291,7 +2291,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONSelfIntersectCurve.html#SECTIONSelfIntersectCurve-20-15",
   "type": "Problem",
-  "number": "5.9.0.7",
+  "number": "5.9.7",
   "title": "",
   "body": "    Use your favorite graphing technology to show that each of the following is a parameterization of part of the graph of .                                             Sketch only the part of the curve included in each parameterization in part (a). Be sure to indicate the direction of travel in each case, assuming is increasing.   Compute and show that this yields for each of the parameterizations in part (a).  "
 },
@@ -2300,7 +2300,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONSelfIntersectCurve.html#PROBLEMUnitCircleParameterization1",
   "type": "Problem",
-  "number": "5.9.0.8",
+  "number": "5.9.8",
   "title": "",
   "body": " Show that each of the following is a parameterization of part of the unit circle.                                   Sketch only the part of the curve included in each parameterization in part (a). Be sure to indicate the direction of travel in each case.   Compute and show that this yields for each of the parameterizations in part (a).  "
 },
@@ -2309,7 +2309,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONSelfIntersectCurve.html#PROBLEMParametricIVP",
   "type": "Problem",
-  "number": "5.9.0.9",
+  "number": "5.9.9",
   "title": "",
   "body": "  The red curve in the sketch above is parameterized by Differentiating and gives and so that .   Fill in the details of the computation of , , and show that .   Let and show that .   Sketch the graph of to see that this is not the same as the parameterized curve above. Can you tell what went wrong?   Show that the point is on our parameterized curve. Use this to find the function, , that has the same graph as .  "
 },
@@ -2318,7 +2318,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONSelfIntersectCurve.html#SECTIONSelfIntersectCurve-20-21",
   "type": "Problem",
-  "number": "5.9.0.10",
+  "number": "5.9.10",
   "title": "",
   "body": " For each of the given parameterizations find two different ways:   Compute and and find their ratio, .    Solve for in terms of (or ), substitute the result into (or ), and then compute directly.   And then find .              "
 },
@@ -2345,7 +2345,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONbridg-chains-telesc.html#SUBSECTIONBridges-21",
   "type": "Problem",
-  "number": "5.10.1.1",
+  "number": "5.10.1",
   "title": "",
   "body": "    Use the above analysis and schematic drawing of the forces involved to show that the curve representing the cable must satisfy the differential equation    Notice that is pulling in the direction tangent to the cable.   Show that the parabola where is an arbitrary constant, satisfies this differential equation   Let , and plot the parabola for . Does this agree with the idea that indicates how tightly we are winching the cable?  "
 },
@@ -2354,7 +2354,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONbridg-chains-telesc.html#SUBSECTIONChains-6",
   "type": "Drill",
-  "number": "5.10.2.1",
+  "number": "5.10.2",
   "title": "The Hanging Chain.",
   "body": " The Hanging Chain  Drills hanging chain    This problem is very similar to finding the shape of the suspension bridge cable. The difference here is that since there is no deck to support, the only vertical force will be the weight of the chain itself, so we can t ignore the weight of the chain the way we ignored the weight of the cable in the suspension bridge.  Let represent the weight density of the chain in newtons per meter and represent the length of the chain from the lowest point to a point on the chain. Show that the curve represented by the chain must satisfy the differential equation    "
 },
@@ -2363,7 +2363,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONbridg-chains-telesc.html#PROBLEMcatenary",
   "type": "Problem",
-  "number": "5.10.2.2",
+  "number": "5.10.3",
   "title": "",
   "body": " The difficulty is that we have the wrong variable on the right side of . Since depends on we d like to have only the variables and , appearing in our equation. Instead we have , , and . And we really don t know anything about . However, recall that we do know something about .   Use a differential triangle to show that the hanging chain curve must satisfy the differential equation    Recall that represents a differential along the direction of the curve. How is it related to and ?   Show that the general parabola does not satisfy this differential equation (and so Galileo was mistaken!) .   Show that, in fact no nonzero polynomial satisfies equation .   Suppose it did satisfy the equation. If we were to square both sides of the equation, what would the degree of each side be?  "
 },
@@ -2372,7 +2372,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONbridg-chains-telesc.html#FIGUREPantheon",
   "type": "Figure",
-  "number": "5.10.3.1",
+  "number": "5.10.4",
   "title": "",
   "body": "  Drawings of the Pantheon and a cross section of the dome with an inverted catenary superimposed on the arch.    "
 },
@@ -2390,7 +2390,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONbridg-chains-telesc.html#FIGURETelescopeReflecRefrac",
   "type": "Figure",
-  "number": "5.10.4.1",
+  "number": "5.10.5",
   "title": "",
   "body": " Image taken from https:\/\/niaas.co.uk\/choosing-a-telescope-by-andrew-johnston\/      "
 },
@@ -2399,7 +2399,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONbridg-chains-telesc.html#SUBSECTIONTelescopes-8",
   "type": "Figure",
-  "number": "5.10.4.2",
+  "number": "5.10.6",
   "title": "",
   "body": "  The Large Binocular Telescope, Mt. Graham, Arizona    "
 },
@@ -2408,7 +2408,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONbridg-chains-telesc.html#PROBLEMSpinCast1",
   "type": "Problem",
-  "number": "5.10.4.3",
+  "number": "5.10.7",
   "title": "",
   "body": " The only horizontal force is the centripetal force due to the spinning of the furnace, which is . We will derive this formula analytically in when we have extended the scope of our differentiation rules. For now assume this is correct and proceed.   Use the diagram above to show that the curve must satisfy the differential equation    The slope of the line tangent to the parabola at will be . This will be perpendicular to the force acting at that point, represented by the red arrow.   Show that must be a parabola to satisfy this differential equation.   Using the value , graph the parabola from part (b). for . Do these graphs coincide with your intuition about what should happen as the liquid rotates faster?  "
 },
@@ -2417,7 +2417,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONbridg-chains-telesc.html#PROBLEMParabolaDefinition",
   "type": "Problem",
-  "number": "5.10.4.4",
+  "number": "5.10.8",
   "title": "",
   "body": " A parabola may be defined geometrically as the set of points equidistant from a given point, the focus, and a given line, the directrix as shown below. Suppose that the point lies on the parabola with focus and directrix as in the diagram below.    Show that must satisfy the equation:    In , show that in order to spin a mirror with a focus Having the correct focus (and thus the correct focal length) is of paramount importance in the performance of the telescope. To give you a notion of the precision required, it took months to polish the surface of one of the primary mirrors in the Large Binocular Telescope to a precision of nanometers ( times thinner than a human hair). at the angular velocity must be .  "
 },
@@ -2426,7 +2426,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONbridg-chains-telesc.html#PROBLEMParabolaReflectivity",
   "type": "Problem",
-  "number": "5.10.4.5",
+  "number": "5.10.9",
   "title": "",
   "body": " Consider the parabola with equation focus , and directrix as shown below.    Show that the tangent line (in red) is perpendicular to line segment .   Show that .   What do you know about ?  "
 },
@@ -2453,7 +2453,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONtrig-interl.html#FIGUREMerryGoRound",
   "type": "Figure",
-  "number": "6.1.1.1",
+  "number": "6.1.1",
   "title": "",
   "body": "     "
 },
@@ -2462,7 +2462,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONtrig-interl.html#PROBLEMDegreeDemo",
   "type": "Problem",
-  "number": "6.1.1.2",
+  "number": "6.1.2",
   "title": "",
   "body": " Now suppose . Use the sketch above to show that the first child travels slightly less than meters along the red circle while the second travels slightly less than meters along the blue circle.   Why do you suppose we chose rather than something more familiar like or ? It seems an odd choice, doesn t it?   If we travel around a circle, what fraction of the circumference of the circle have we traversed?  "
 },
@@ -2480,7 +2480,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONtrig-interl.html#PROBLEMAnglVel",
   "type": "Problem",
-  "number": "6.1.1.3",
+  "number": "6.1.3",
   "title": "",
   "body": " For each angle, determine the number of revolutions and direction around the circle. Do not convert to degrees first.    radians    radians    radians  "
 },
@@ -2489,7 +2489,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONtrig-interl.html#PROBLEMRadianMeasure",
   "type": "Problem",
-  "number": "6.1.1.4",
+  "number": "6.1.4",
   "title": "",
   "body": " Find the radian measure of each angle described. Do not convert to degrees first.   of a circle in the positive direction.  of a circle in the negative direction. Twice around the circle in the positive direction.  times around the circle in the negative direction.  times around the circle where can be any real number. "
 },
@@ -2534,7 +2534,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONtrig-interl.html#PROBLEMAngularToLinearVelocity",
   "type": "Problem",
-  "number": "6.1.1.5",
+  "number": "6.1.5",
   "title": "",
   "body": " Suppose a point is revolving in a circle with angular velocity . For each situation find the linear speed of the point in the units indicated.  Find the linear speed of in if meters and . Find the linear speed of in if centimeters and . Find the linear speed of in if feet and . Notice that the units are mixed in this problem. Find the linear speed of in mph (miles per hour) if miles and . (This problem describes a physical phenomenon you see daily. Can you identify it?) Find the linear speed of in mph if miles and . (This problem describes a physical phenomenon you see monthly. Can you identify it?) Find the linear speed of in mph if miles and one revolution is completed every days, hours, minutes, and seconds. (Can you identify the physical phenomenon this problem represents?) Our sun appears to revolve around the earth once per day. If that were actually happening, what would the sun s linear speed need to be in miles per second? Assume that the distance from the sun to the earth is million miles. "
 },
@@ -2552,7 +2552,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONtrig-interl.html#FIGURESinChord",
   "type": "Figure",
-  "number": "6.1.2.1",
+  "number": "6.1.6",
   "title": "",
   "body": "     "
 },
@@ -2579,7 +2579,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONtrig-interl.html#SECTIONtrig-interl-3-12",
   "type": "Problem",
-  "number": "6.1.2.2",
+  "number": "6.1.7",
   "title": "",
   "body": "  In the diagram above arc is the unit quarter circle in the first quadrant.   For the angle on the diagram above match the trigonometric function value with the appropriate line segment.                                   You may have wondered why secant is the reciprocal of cosine and not sine. Use the diagram, similar triangles, and the observation that to show that              "
 },
@@ -2588,7 +2588,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONtrig-interl.html#PROBLEMTrigIdentities",
   "type": "Problem",
-  "number": "6.1.2.3",
+  "number": "6.1.8",
   "title": "",
   "body": " Use a unit circle to illustrate and explain the following identities:              "
 },
@@ -2597,7 +2597,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONtrig-interl.html#SECTIONtrig-interl-3-18",
   "type": "Problem",
-  "number": "6.1.2.4",
+  "number": "6.1.9",
   "title": "",
   "body": " A similar development gives us the graph of .   Use the diagram above to explain why the cosine cycles from , to , to , to to . for . What are the precise values of where the cosine takes on those values?  "
 },
@@ -2615,7 +2615,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONtrig-interl.html#DRILLPeriodicFunctions",
   "type": "Problem",
-  "number": "6.1.3.1",
+  "number": "6.1.10",
   "title": "",
   "body": "  Vocabulary periodic functions Because and complete one cycle on an interval of they are called periodic functions. Suppose that , , and are constants. Choose several non zero values for , , and (at least three of each) and graph the function to show graphically that is also a periodic function.  "
 },
@@ -2633,7 +2633,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONtrig-interl.html#DRILLSinusoidalAxis",
   "type": "Problem",
-  "number": "6.1.3.2",
+  "number": "6.1.11",
   "title": "",
   "body": " Suppose we had a sinusoidal wave oscillating between and . What would be the amplitude and what would be the sinusoidal axis of this wave?  "
 },
@@ -2642,7 +2642,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONtrig-interl.html#EXAMPLEHertz",
   "type": "Example",
-  "number": "6.1.3.3",
+  "number": "6.1.12",
   "title": "",
   "body": " Examples pitch of a sound wave, (Hertz)  The pitch of a sound wave is regulated by how fast the wave is oscillating. Faster oscillations mean higher pitches. Suppose we want a wave that oscillates once per second. Our base function, , oscillates once over the interval . Divide by , so that we have one oscillation occurring when . If we let so that then oscillates at a rate of one cycle per second as in the following graph.   Now suppose we want to double the frequency to oscillations per second. Again our base function oscillates once for . We want two oscillations per second or one oscillation per half second. So, we want . Letting we see that oscillates once every half second (or twice every second) as in the following graph.    Vocabulary Hertz The number of cycles per second is referred to as the number of Hertz (Hz). So oscillates at Hz and oscillates at Hz. (Named for Heinrich Rudolf Hertz , (1857 1894)).  "
 },
@@ -2651,7 +2651,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONtrig-interl.html#PROBLEMSineOscill",
   "type": "Problem",
-  "number": "6.1.3.4",
+  "number": "6.1.13",
   "title": "",
   "body": " Mimic the derivation above to determine so that oscillates at Hz.   The standard musical pitch is or , the musical note A above middle C. has a frequency of Hz. Determine so that an note can be modeled by . Do the same with each of the following notes.    , ( Hz)     , ( Hz)     , ( Hz)     , ( Hz)     , ( Hz)     , ( Hz)      Musical notes an octave higher have frequencies that are doubled. So, (one octave higher than ) has a frequency of Hz. Repeat part for , , , , , , and , each one octave higher than the corresponding note in part .  "
 },
@@ -2669,7 +2669,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONtrig-interl.html#FIGURESantaBarbaraDaylight",
   "type": "Figure",
-  "number": "6.1.4.1",
+  "number": "6.1.14",
   "title": "",
   "body": " Hours of daylight over one year in Santa Barbara, California.   "
 },
@@ -2687,7 +2687,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONtrig-interl.html#PROBLEMSantaBarbaraDaylight",
   "type": "Problem",
-  "number": "6.1.4.2",
+  "number": "6.1.15",
   "title": "",
   "body": " Let . Solve this for and use this to find a formula for the number of hours of daylight per day in Santa Barbara, CA on any given day with representing January 1. Graph this and compare your graph with the original graph.  "
 },
@@ -2696,7 +2696,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONtrig-interl.html#PROBLEMSantaBarbaraDaylight2",
   "type": "Problem",
-  "number": "6.1.4.3",
+  "number": "6.1.16",
   "title": "",
   "body": " Suppose we have a sine wave whose amplitude is given by , period is given by , sinusoidal axis is given by , and whose phase shift is given by . Show that the equation of this wave is   "
 },
@@ -2705,7 +2705,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONtrig-interl.html#SECTIONtrig-interl-5-11",
   "type": "Drill",
-  "number": "6.1.4.4",
+  "number": "6.1.17",
   "title": "",
   "body": " Drills amplitude, period, sinusoidal axis, and phase shift  For each of the following waves find the amplitude, period, sinusoidal axis, and phase shift.                                  "
 },
@@ -2714,7 +2714,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONtrig-interl.html#SECTIONtrig-interl-5-12",
   "type": "Drill",
-  "number": "6.1.4.5",
+  "number": "6.1.18",
   "title": "",
   "body": " Drills sine to cosine phase shift   Do you see that the cosine curve is basically the sine curve with a phase shift? What is the value of the phase shift? We usually restrict the phase shift to values between and . Explain why this restriction is useful.   "
 },
@@ -2741,7 +2741,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONtrig-interl.html#DRILLPolarQuirks3x",
   "type": "Drill",
-  "number": "6.1.5.1",
+  "number": "6.1.19",
   "title": "",
   "body": " Drills polar coordinates   Explain why the polar coordinates , , all locate the same point in the plane. Find at least three other sets of polar coordinates that identify the same point. How many are there?   "
 },
@@ -2750,7 +2750,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONtrig-interl.html#DRILLPolarQuirks2",
   "type": "Drill",
-  "number": "6.1.5.2",
+  "number": "6.1.20",
   "title": "",
   "body": " Drills polar coordinates  The following pairs of points are given in polar coordinates. Plot them all on the same set of axes and then check your answers using your favorite graphing software.    and      and      and      and      and      and      "
 },
@@ -2759,7 +2759,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONtrig-interl.html#DRILLPolRectConvert",
   "type": "Problem",
-  "number": "6.1.5.3",
+  "number": "6.1.21",
   "title": "",
   "body": " Of course, we ll need to be able to translate from one coordinate system to the other.   Use the diagram above to show that if in polar coordinates, and in rectangular coordinates then,    ,     ,           In Cartesian coordinates the equation of a circle centered at the origin with radius is . What is the equation of the same circle in polar coordinates?   Use the results from part .  "
 },
@@ -2768,7 +2768,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONtrig-interl.html#DRILLPolarQuirks1",
   "type": "Drill",
-  "number": "6.1.5.4",
+  "number": "6.1.22",
   "title": "",
   "body": " Drills polar coordinates   Plot the points and twice. First assume that they are polar coordinates and then assume that they Cartesian coordinates.   "
 },
@@ -2777,7 +2777,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONtrig-interl.html#DRILLPolarGraphs",
   "type": "Drill",
-  "number": "6.1.5.5",
+  "number": "6.1.23",
   "title": "",
   "body": " Drills polar coordinates  The graph of an equation given in polar coordinates is quite different from one given in Cartesian coordinates. To get a sense of this, sketch the graph of each of the following functions in polar coordinates Most graphing software has a built in polar mode which will do this for you. This can be helpful once you are thoroughly familiar with the polar coordinate system but in the beginning you should do the graphing without the use of graphing software. Use technology to verify your graph after you ve drawn it by hand. .                                                                "
 },
@@ -2786,7 +2786,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONtrig-interl.html#SECTIONpolar-coordinates-17",
   "type": "Problem",
-  "number": "6.1.5.6",
+  "number": "6.1.24",
   "title": "",
   "body": " In polar coordinates the Spiral of Archimedes is the graph of the equation . Convert this to an equation in Cartesian coordinates.   Use the results of   "
 },
@@ -2804,7 +2804,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdiff-sine-cosine.html#FIGURESinDeriv",
   "type": "Figure",
-  "number": "6.2.1.1",
+  "number": "6.2.1",
   "title": "",
   "body": "    "
 },
@@ -2813,7 +2813,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdiff-sine-cosine.html#SUBSECTIONCircularMotion-5",
   "type": "Drill",
-  "number": "6.2.1.2",
+  "number": "6.2.2",
   "title": "",
   "body": " Drills sine and cosine as line segments  Referring to ,   Show that     Show that     Show that and are similar.     "
 },
@@ -2822,7 +2822,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdiff-sine-cosine.html#EXAMPLETrigDerivExamples",
   "type": "Example",
-  "number": "6.2.1.3",
+  "number": "6.2.3",
   "title": "",
   "body": " Examples Derivative of trigonometric functions   We can now use the new rules in conjuction with the General Differentiation Rules from Chapter     Suppose Then     Suppose Letting we have     Suppose Then     Suppose Then     Suppose where is constant. Then    "
 },
@@ -2831,7 +2831,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdiff-sine-cosine.html#SUBSECTIONCircularMotion-10",
   "type": "Problem",
-  "number": "6.2.1.4",
+  "number": "6.2.4",
   "title": "",
   "body": " Part (e) of is more useful than is immediately apparent because the complementary angle identities: allow us to obtain the differential of either or provided only that we have the differential of the other. Use these identities to show the following:   If , then .   If , then .  "
 },
@@ -2840,7 +2840,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdiff-sine-cosine.html#EXERCISEDiffPractice1",
   "type": "Drill",
-  "number": "6.2.1.5",
+  "number": "6.2.5",
   "title": "",
   "body": " Drills differential of trigonometric functions   Compute the differential, , of each of the following functions:                                "
 },
@@ -2849,7 +2849,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdiff-sine-cosine.html#SUBSECTIONCircularMotion-12",
   "type": "Drill",
-  "number": "6.2.1.6",
+  "number": "6.2.6",
   "title": "",
   "body": " Drills differential of trigonometric functions   Assume that and . Find an equation relating and . Use this to compute , , , and                                    "
 },
@@ -2858,7 +2858,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdiff-sine-cosine.html#SUBSECTIONCircularMotion-13",
   "type": "Problem",
-  "number": "6.2.1.7",
+  "number": "6.2.7",
   "title": "",
   "body": " For a fixed value of , what are the largest and smallest possible values for the slope of the tangent line to the curve ?   For which values of will the graph of have horizontal tangent lines?   For which values of will the graph of not have horizontal tangent lines?   Find the values of where the lines tangent to are horizontal. Graph the function to verify your answers.  "
 },
@@ -2867,7 +2867,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdiff-sine-cosine.html#SUBSECTIONCircularMotion-14",
   "type": "Problem",
-  "number": "6.2.1.8",
+  "number": "6.2.8",
   "title": "",
   "body": " Show that for , the coordinates of the points where the tangent line of is horizontal are and .   What are the corresponding coordinates?  "
 },
@@ -2876,7 +2876,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdiff-sine-cosine.html#PROBLEMSinCosDiffeq",
   "type": "Problem",
-  "number": "6.2.1.9",
+  "number": "6.2.9",
   "title": "",
   "body": " Show that, if is constant then satisfies the equation    Show that, if is constant then also satisfies equation   "
 },
@@ -2885,7 +2885,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdiff-sine-cosine.html#SUBSECTIONCircularMotion-16",
   "type": "Problem",
-  "number": "6.2.1.10",
+  "number": "6.2.10",
   "title": "",
   "body": " One of the authors once heard a television weatherperson remark that, We gain and lose daylight faster at the equinoxes than at the solstices. Recall that in you were asked to find a formula for the number of hours of daylight in Santa Barbara, CA. You should have obtained the solution Use this to explain why the weatherperson s claim does, or does not make sense.  "
 },
@@ -2894,7 +2894,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdiff-sine-cosine.html#SUBSECTIONCircularMotion-17",
   "type": "Problem",
-  "number": "6.2.1.11",
+  "number": "6.2.11",
   "title": "",
   "body": " The following sketch represents a Ferris wheel rotating counterclockwise at a rate of one revolution every two minutes.   How fast is a rider rising when his seat is meters above the ground? What is the height of the rider when he is rising the fastest?  "
 },
@@ -2903,7 +2903,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdiff-sine-cosine.html#PROBLEMDiffPolar",
   "type": "Problem",
-  "number": "6.2.2.1",
+  "number": "6.2.12",
   "title": "",
   "body": " Use equations and to find and in terms of and    Show that the slope of the line tangent to the graph of (in polar coordinates) is given by    Find an equation of the line tangent to the Spiral of Archimedes, , , at , , , , and . Graph the Spiral and your tangent lines together to confirm your computations.   Show that the line tangent to the Spiral of Archimedes is horizontal when Explain why this will only ever happen when the terminal side of the angle is in the second or fourth quadrants.   Show that the line tangent to the Spiral of Archimedes is vertical when Explain why this will only ever happen when the terminal side of the angle is in the first or third quadrants.  "
 },
@@ -2912,7 +2912,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdiff-sine-cosine.html#SUBSECTIONpolar-coord-calc-6",
   "type": "Problem",
-  "number": "6.2.2.2",
+  "number": "6.2.13",
   "title": "",
   "body": " Find the equation of the line tangent to the following curves at the given value of                                                                                   .                      "
 },
@@ -2930,7 +2930,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdiff-sine-cosine.html#PROBLEMcycloid2",
   "type": "Problem",
-  "number": "6.2.3.1",
+  "number": "6.2.14",
   "title": "",
   "body": " Let be a point on a circle of radius that is rolling on the -axis and let be the position of when the ball has rolled through an angle of .       Use the diagram above to show that the parameterization of is given by     Compute and in terms of     Find the slope of the tangent line to the cycloid at an arbitrary point in terms of . Use this to confirm that the tangent line is horizontal at the apex of the cycloid.    Show that and use this to examine the slope of the cycloid near the points where it touches the -axis.         Suppose the circle is rolling at an angular speed of and compute the tangential speed, of . What do you notice about the speed of in relation to the circle s radius? Do you find this surprising? (Consider using equation .)    When is moving the fastest and when is it moving the slowest? Does this make intuitive sense to you?     "
 },
@@ -2939,7 +2939,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdiff-sine-cosine.html#PROBLEMSpinCastCentripetalForce",
   "type": "Problem",
-  "number": "6.2.4.1",
+  "number": "6.2.15",
   "title": "",
   "body": " To compute centripetal acceleration, we will consider the point traveling around the circle, with radius , so that its position at time is given by The velocity in the direction of motion, , is tangent to the circle and is composed of the velocity in the direction and the velocity in the direction : as seen below.    The magnitude of the velocity (speed) in the direction of motion is the length of . Show that the speed of is given by:    Use the Pythagorean Theorem.  Note: This result also follows directly from the definition of radian measure. We want you to do it this way in this problem because you will do a similar computation for acceleration in part below.   Assume that the angular velocity is constant: . Acceleration, like velocity, consists of a magnitude and a direction. In this case, the centripetal acceleration, represented by in our diagram below, is composed of the vertical acceleration and horizontal acceleration    The length of the arrow, is the magnitude of the centripetal acceleration. Compute and , and show that the length of the centripetal acceleration is given by which is what we said it was in .  "
 },
@@ -2948,7 +2948,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdiff-sine-cosine.html#PROBLEMCentAcclDecomp",
   "type": "Problem",
-  "number": "6.2.4.2",
+  "number": "6.2.16",
   "title": "",
   "body": " Show that if a point, , is constrained to move in a circle (so that and ) but that is no longer constant, then the horizontal acceleration and the vertical acceleration are given by,   "
 },
@@ -2957,7 +2957,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdiff-sine-cosine.html#PROBLEMCentripetaAcclDecomposition",
   "type": "Problem",
-  "number": "6.2.4.3",
+  "number": "6.2.17",
   "title": "",
   "body": " Show that the red terms in equations  and are the horizontal and vertical components of the centripetal acceleration by confirming that they are the same as the and that you computed for part (b) of .  "
 },
@@ -2966,7 +2966,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdiff-sine-cosine.html#FIGURECentripetalSummary",
   "type": "Figure",
-  "number": "6.2.4.4",
+  "number": "6.2.18",
   "title": "",
   "body": "     "
 },
@@ -2975,7 +2975,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdiff-sine-cosine.html#DRILLThrust",
   "type": "Drill",
-  "number": "6.2.4.5",
+  "number": "6.2.19",
   "title": "",
   "body": " Drills thrust   Use the diagram in to show that the magnitude of the thrust, , is given by    "
 },
@@ -2993,7 +2993,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdiff-sine-cosine.html#SUBSECTIONsimple-harm-oscill-6",
   "type": "Drill",
-  "number": "6.2.5.1",
+  "number": "6.2.20",
   "title": "",
   "body": " Drills simple harmonic oscillators (SHOs)   Find two more SHOs. (Don t overthink this. Build from the two that you already know.)   "
 },
@@ -3002,7 +3002,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdiff-sine-cosine.html#PROBLEMHarmonicOscillator",
   "type": "Problem",
-  "number": "6.2.5.2",
+  "number": "6.2.21",
   "title": "",
   "body": "    Show that satisfies equation . for any constants and .   Determine the values of the constants and if and plot the graph of for these values of and .  "
 },
@@ -3011,7 +3011,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdiff-sine-cosine.html#FIGUREHangingMass",
   "type": "Figure",
-  "number": "6.2.5.3",
+  "number": "6.2.22",
   "title": "",
   "body": " A Simple Harmonic Oscillator: A Hanging Mass   "
 },
@@ -3029,7 +3029,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdiff-sine-cosine.html#SUBSECTIONsimple-harm-oscill-12",
   "type": "Figure",
-  "number": "6.2.5.4",
+  "number": "6.2.23",
   "title": "",
   "body": "  Robert Hooke, (1635 1703)   "
 },
@@ -3047,7 +3047,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdiff-sine-cosine.html#SUBSECTIONsimple-harm-oscill-15",
   "type": "Problem",
-  "number": "6.2.5.5",
+  "number": "6.2.24",
   "title": "",
   "body": " Show that equations and are equivalent as we ve claimed.   What is in equation ?  "
 },
@@ -3056,7 +3056,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdiff-sine-cosine.html#DIGRESSIONNeglGrav-5",
   "type": "Problem",
-  "number": "6.2.5.6",
+  "number": "6.2.25",
   "title": "",
   "body": " Remember that the positive direction is downward. Assume that the weight of the object extends the spring a distance of as shown, and that is the vertical displacement of the object from equilibrium.   Notice that the downward force is the weight of the object and the upward force is the pull of the spring.   Show that the vertical displacement of the object satisfies the equation    Use the fact that when the object is at rest, to conclude that and use this to conclude that the spring-object system still satisfies equation   "
 },
@@ -3065,7 +3065,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdiff-sine-cosine.html#SUBSECTIONsimple-harm-oscill-17",
   "type": "Problem",
-  "number": "6.2.5.7",
+  "number": "6.2.26",
   "title": "",
   "body": " Show that will satisfy equation .   Compute and . If we are modeling a mass spring system, what do these values represent physically?   Compare the graphs of for each of the following choices of and .    , ,     , ,     , .   In particular, how do the values of and affect the frequency of the oscillation? Is this consistent with what and represent physically?   For which values of do the greatest and smallest velocities occur? What is the acceleration at each of these points? Is this consistent with the idea that the mass is transitioning from speeding up to slowing down and vice versa ? Explain.   For which values of is the acceleration the largest and the smallest? Is this consistent with both Newton s Second Law and Hooke s Law? Explain.  "
 },
@@ -3083,7 +3083,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdiff-other-trig.html#SECTIONdiff-other-trig-4",
   "type": "Drill",
-  "number": "6.3.0.1",
+  "number": "6.3.1",
   "title": "",
   "body": " Drills Quotient Rule   Use the Quotient Rule to show that    "
 },
@@ -3092,7 +3092,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdiff-other-trig.html#SECTIONdiff-other-trig-6",
   "type": "Drill",
-  "number": "6.3.0.2",
+  "number": "6.3.2",
   "title": "",
   "body": " Drills differential of trigonometric functions   By similar means show that .   "
 },
@@ -3101,7 +3101,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdiff-other-trig.html#SECTIONdiff-other-trig-8",
   "type": "Example",
-  "number": "6.3.0.3",
+  "number": "6.3.3",
   "title": "",
   "body": " Examples Double Angle Formulas  Consider the double angle formula for the sine function: . Differentiating gives or which is the double angle formula for the cosine function.  "
 },
@@ -3110,7 +3110,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdiff-other-trig.html#Sin2Cos2",
   "type": "Example",
-  "number": "6.3.0.4",
+  "number": "6.3.4",
   "title": "",
   "body": " Examples the unit circle  We know that no matter what value has, so we d expect that differential of to be zero. Let s check.  By the Sum Rule and by the Power Rule we have   "
 },
@@ -3119,7 +3119,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdiff-other-trig.html#SECTIONdiff-other-trig-10",
   "type": "Drill",
-  "number": "6.3.0.5",
+  "number": "6.3.5",
   "title": "",
   "body": " Drills differential of trigonometric functions   Since the sine and cosine functions are both differentiable and we can conclude that is (probably) equal to some constant. If we didn t already know, how could we conclude that the constant is    "
 },
@@ -3128,7 +3128,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdiff-other-trig.html#DiffTrigFunc",
   "type": "Table",
-  "number": "6.3.0.6",
+  "number": "6.3.6",
   "title": "The Differentials of the Trigonometric Functions",
   "body": " The Differentials of the Trigonometric Functions  Tables Differentiation Rules Trigonometric    Function  Differential                                                    "
 },
@@ -3137,7 +3137,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdiff-other-trig.html#SECTIONdiff-other-trig-13",
   "type": "Drill",
-  "number": "6.3.0.7",
+  "number": "6.3.7",
   "title": "",
   "body": " Drills differential of trigonometric functions  Differentiate both sides of each trigonometric identity to get another identity. Verify each identity (including the one you compute) by graphing the expression on both sides of the equals sign.                                  "
 },
@@ -3146,7 +3146,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdiff-other-trig.html#SECTIONdiff-other-trig-14",
   "type": "Drill",
-  "number": "6.3.0.8",
+  "number": "6.3.8",
   "title": "",
   "body": " Drills lines tangent  If possible find an equation of the line tangent to the graphs of and at each of the points below. If no such line exists explain why not.                                  "
 },
@@ -3155,7 +3155,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdiff-other-trig.html#SECTIONdiff-other-trig-15",
   "type": "Problem",
-  "number": "6.3.0.9",
+  "number": "6.3.9",
   "title": "",
   "body": " Show that differentiating each of the identities below leads to the other. Assume is a constant.          "
 },
@@ -3164,7 +3164,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdiff-other-trig.html#SECTIONdiff-other-trig-16",
   "type": "Problem",
-  "number": "6.3.0.10",
+  "number": "6.3.10",
   "title": "",
   "body": " Compute for each of the following functions:                                          "
 },
@@ -3173,7 +3173,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdiff-other-trig.html#SECTIONdiff-other-trig-17",
   "type": "Problem",
-  "number": "6.3.0.11",
+  "number": "6.3.11",
   "title": "",
   "body": " Assume that and . Find an equation relating and . Use this to compute , , , and .                  "
 },
@@ -3182,7 +3182,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdiff-other-trig.html#SECTIONdiff-other-trig-18",
   "type": "Problem",
-  "number": "6.3.0.12",
+  "number": "6.3.12",
   "title": "",
   "body": " Find an equation of the tangent line to each curve at the indicated point.    at     at     at   "
 },
@@ -3191,7 +3191,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdiff-other-trig.html#SECTIONdiff-other-trig-19",
   "type": "Problem",
-  "number": "6.3.0.13",
+  "number": "6.3.13",
   "title": "",
   "body": "    Show that the line tangent to the curve at is parallel to the line tangent to the curve at    Show that the line tangent to the curve at is parallel to the line tangent to the curve at   "
 },
@@ -3200,7 +3200,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdiff-other-trig.html#SECTIONdiff-other-trig-20",
   "type": "Drill",
-  "number": "6.3.0.14",
+  "number": "6.3.14",
   "title": "",
   "body": " Drills lines tangent       Show that there is no line tangent to the graph of which is parallel to any tangent line of the graph of     Show that this is not true of the graphs of and .   "
 },
@@ -3209,7 +3209,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdiff-other-trig.html#SECTIONdiff-other-trig-21",
   "type": "Problem",
-  "number": "6.3.0.15",
+  "number": "6.3.15",
   "title": "",
   "body": " A camera located at at ground level is tracking a rocket which is traveling vertically and took off from a spot meters from the camera.    How fast is the angle of elevation of the camera changing (in radians per second) when the rocket is meters high and traveling at ?   Now suppose the rocket is climbing at an angle radians off of vertical as shown in the diagram below.   How fast is the angle of elevation of the camera changing (in radians per second) when the rocket is meters high and traveling at ?  "
 },
@@ -3218,7 +3218,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdiff-other-trig.html#PROBLEMDiffFormTan",
   "type": "Problem",
-  "number": "6.3.0.16",
+  "number": "6.3.16",
   "title": "",
   "body": "    Use the Difference formulas for the sine and cosine from Trigonometry: to show that    Consider two points, and , moving upward on the line , with above as seen in the sketch below:      Suppose is moving up at a rate of units per second and is moving up at a rate of units per second. How fast is increasing when and     Suppose is moving up at a rate of units per second and we wanted the value of to remain constant. How fast must move?     "
 },
@@ -3245,7 +3245,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONinverse-tan-and-cot.html#FIGUREArctan3",
   "type": "Figure",
-  "number": "6.4.0.1",
+  "number": "6.4.1",
   "title": "",
   "body": " Notice that the and axes have been swapped in the graph at the left.     "
 },
@@ -3272,7 +3272,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONinverse-tan-and-cot.html#DIGRESSIONInverse-function-notation-6",
   "type": "Drill",
-  "number": "6.4.0.2",
+  "number": "6.4.2",
   "title": "",
   "body": " Drills functions inverse  Evaluate each of the following:                        "
 },
@@ -3281,7 +3281,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONinverse-tan-and-cot.html#SECTIONinverse-tan-and-cot-17",
   "type": "Drill",
-  "number": "6.4.0.3",
+  "number": "6.4.3",
   "title": "",
   "body": " Drills functions inverse   Suppose we had chosen . What function (with domain) is that the inverse of?   "
 },
@@ -3290,7 +3290,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONinverse-tan-and-cot.html#SECTIONinverse-tan-and-cot-19",
   "type": "Problem",
-  "number": "6.4.0.4",
+  "number": "6.4.4",
   "title": "",
   "body": " Find all solutions of and . Do they have the same set of solutions?   Obviously, they do not. Otherwise we wouldn t have asked the question. What is the difference between the two sets of solutions?  "
 },
@@ -3308,7 +3308,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONinverse-tan-and-cot.html#SECTIONinverse-tan-and-cot-23",
   "type": "Problem",
-  "number": "6.4.0.5",
+  "number": "6.4.5",
   "title": "",
   "body": " Use the identity to choose an appropriate range for the function .  "
 },
@@ -3326,7 +3326,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONwitch-agnesi-inverse.html#SECTIONwitch-agnesi-inverse-2",
   "type": "Figure",
-  "number": "6.5.0.1",
+  "number": "6.5.1",
   "title": "",
   "body": "  Maria Gaëtana Agnesi (1718 1799)    "
 },
@@ -3335,7 +3335,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONwitch-agnesi-inverse.html#SECTIONwitch-agnesi-inverse-8",
   "type": "Problem",
-  "number": "6.5.0.2",
+  "number": "6.5.2",
   "title": "",
   "body": " In the diagram above show that the coordinates and satisfy the equation, . Thus the Witch is the graph of   "
 },
@@ -3344,7 +3344,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONwitch-agnesi-inverse.html#SECTIONwitch-agnesi-inverse-10",
   "type": "Problem",
-  "number": "6.5.0.3",
+  "number": "6.5.3",
   "title": "",
   "body": " Show that if then   "
 },
@@ -3353,7 +3353,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONwitch-agnesi-inverse.html#DRILLNonUniqueAntiderivative",
   "type": "Problem",
-  "number": "6.5.0.4",
+  "number": "6.5.4",
   "title": "",
   "body": "Vocabulary antiderivative  In the sketch below the red curve is the graph of the Witch and the blue curve is the graph of its derivative. Convince yourself that the blue curve could also be the graph of the derivative of any of the other curves shown as well. As clearly as you can, explain what this suggests about the relationship between a function and its derivative.   "
 },
@@ -3371,7 +3371,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONwitch-agnesi-inverse.html#SECTIONwitch-agnesi-inverse-35",
   "type": "Problem",
-  "number": "6.5.0.5",
+  "number": "6.5.5",
   "title": "",
   "body": " Sketch the graph of the the antiderivative passing through the point , and of the derivative each of the following curves on the same set of axes,          "
 },
@@ -3389,7 +3389,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdiff-inverse-tancot.html#SECTIONdiff-inverse-tancot-10",
   "type": "Problem",
-  "number": "6.6.0.1",
+  "number": "6.6.1",
   "title": "",
   "body": " The inverse cotangent function is defined as if and only if . Proceed as we did above to show that    Derive the same result from the identity .  "
 },
@@ -3398,7 +3398,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdiff-inverse-tancot.html#PROBLEMInvTanDiffeq",
   "type": "Problem",
-  "number": "6.6.0.2",
+  "number": "6.6.2",
   "title": "",
   "body": "    Show that if then satisfies the differential equation    The function also satisfies equation . Show this in two different ways.   By direct computation, just as you did part .    By direct computation, after first observing that .     "
 },
@@ -3407,7 +3407,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdiff-inverse-tancot.html#SECTIONdiff-inverse-tancot-12",
   "type": "Problem",
-  "number": "6.6.0.3",
+  "number": "6.6.3",
   "title": "",
   "body": " Show that each of the following statements is true.                   This is weird isn t it? None of the functions on the left is but they all have the same derivative as . Can you explain this?   Let and . What is ?   Now show that where is an arbitrary constant.  "
 },
@@ -3425,7 +3425,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONother-inverse-trig.html#DRILLInvSin1",
   "type": "Drill",
-  "number": "6.7.1.1",
+  "number": "6.7.1",
   "title": "",
   "body": " Drills functions inverse   Use the diagram below, to show that     "
 },
@@ -3434,7 +3434,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONother-inverse-trig.html#PROBLEMInvCos1",
   "type": "Problem",
-  "number": "6.7.1.2",
+  "number": "6.7.2",
   "title": "",
   "body": "    Use the fact that if and only if and proceed as we did in to show that Notice how this formula differs from the one you found in .   Derive the same result from the identity: .  "
 },
@@ -3443,7 +3443,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONother-inverse-trig.html#FIGUREFIGUREBadDrawing-InvSine",
   "type": "Figure",
-  "number": "6.7.1.3",
+  "number": "6.7.3",
   "title": "",
   "body": " The World s Most Evil Mathematician, by Ben Orlin     "
 },
@@ -3452,7 +3452,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONother-inverse-trig.html#DEFINITIONInvSin",
   "type": "Definition",
-  "number": "6.7.1.4",
+  "number": "6.7.4",
   "title": "The Derivative of the Inverse Sine.",
   "body": " The Derivative of the Inverse Sine   The derivative of the inverse sine function is defined to be, , where .   "
 },
@@ -3461,7 +3461,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONother-inverse-trig.html#InverseSine-18",
   "type": "Problem",
-  "number": "6.7.1.5",
+  "number": "6.7.5",
   "title": "",
   "body": " What function is , as defined in Definition the inverse off?   Naturally, is the inverse of , but with which domain?  "
 },
@@ -3470,7 +3470,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONother-inverse-trig.html#DEFINITIONInvCos",
   "type": "Definition",
-  "number": "6.7.1.6",
+  "number": "6.7.6",
   "title": "The Derivative of the Inverse Cosine.",
   "body": " The Derivative of the Inverse Cosine   The derivative of the inverse cosine function is defined to be, , where .   "
 },
@@ -3479,7 +3479,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONother-inverse-trig.html#PROBLEMArcSinDiffeq",
   "type": "Problem",
-  "number": "6.7.1.7",
+  "number": "6.7.7",
   "title": "",
   "body": " Suppose that . Compute and and use these to show that satisfies the differential equation    The function also satisfies equation . Show this in two different ways.   Just as you did in part (a).    After first observing that .     "
 },
@@ -3488,7 +3488,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONother-inverse-trig.html#InverseSecCsc-4",
   "type": "Drill",
-  "number": "6.7.2.1",
+  "number": "6.7.8",
   "title": "",
   "body": " Drills differential of trigonometric functions   Show that:    "
 },
@@ -3497,7 +3497,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONother-inverse-trig.html#PROBLEMDiffArcSec",
   "type": "Problem",
-  "number": "6.7.2.2",
+  "number": "6.7.9",
   "title": "",
   "body": "    Use the fact that if and only if and proceeding as we did above, show that    Derive the same result from the identity: .  "
 },
@@ -3506,7 +3506,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONother-inverse-trig.html#PROBLEMArcSecDiffeq",
   "type": "Problem",
-  "number": "6.7.2.3",
+  "number": "6.7.10",
   "title": "",
   "body": "    Suppose . Compute and and use them to show that satisfies the differential equation    The function also satisfies equation . Show this in two different ways.   Just as you did part (a).    After first observing that .     "
 },
@@ -3515,7 +3515,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONother-inverse-trig.html#InverseSecCsc-10",
   "type": "Problem",
-  "number": "6.7.2.4",
+  "number": "6.7.11",
   "title": "",
   "body": " The sketch below shows that if we constrain the range of the to be the interval then     Use the identity to show that   Give constraints on the range of which guarantee that its derivative will always be negative. "
 },
@@ -3524,7 +3524,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONother-inverse-trig.html#TABLEInvTrigDerivs",
   "type": "Table",
-  "number": "6.7.2.5",
+  "number": "6.7.12",
   "title": "Derivatives of Inverse Trigonometric Functions",
   "body": " Derivatives of Inverse Trigonometric Functions  Tables Differentiation Rule Inverse Trigonomentric    Function  Domain  Range Derivative       All real numbers          All real numbers                                       and    and          and    and       "
 },
@@ -3533,7 +3533,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONother-inverse-trig.html#InverseSecCsc-17",
   "type": "Drill",
-  "number": "6.7.2.6",
+  "number": "6.7.13",
   "title": "",
   "body": " Drills differential of trigonometric functions  Compute each of the following:                                  "
 },
@@ -3542,7 +3542,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONother-inverse-trig.html#InverseSecCsc-18",
   "type": "Problem",
-  "number": "6.7.2.7",
+  "number": "6.7.14",
   "title": "Find the Pattern.",
   "body": "Find the Pattern  Show that for any constant ,                          "
 },
@@ -3551,7 +3551,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONother-inverse-trig.html#InverseSecCsc-19",
   "type": "Problem",
-  "number": "6.7.2.8",
+  "number": "6.7.15",
   "title": "",
   "body": " Show that   "
 },
@@ -3560,7 +3560,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONother-inverse-trig.html#InverseSecCsc-20",
   "type": "Problem",
-  "number": "6.7.2.9",
+  "number": "6.7.16",
   "title": "",
   "body": "    Show that each of the following statements is true.                         Now compute where Does this problem change if is negative? How?  "
 },
@@ -3569,7 +3569,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONother-inverse-trig.html#InverseSecCsc-21",
   "type": "Problem",
-  "number": "6.7.2.10",
+  "number": "6.7.17",
   "title": "",
   "body": " Show that each of the following statements is true.          "
 },
@@ -3578,7 +3578,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONother-inverse-trig.html#PROBLEMCotTanSlope",
   "type": "Problem",
-  "number": "6.7.2.11",
+  "number": "6.7.18",
   "title": "",
   "body": " Show that , if .   Part (a) says that the graphs of and have the same slope when . So their graphs should differ by a constant (Why?). Substitute into both to see what this constant should be.   Now plot the graphs of both. Do they differ by a constant? Explain why or why not.  "
 },
@@ -3596,7 +3596,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONcurvature.html#SECTIONcurvature-2",
   "type": "TRIUMPHS Project",
-  "number": "6.8.0.1",
+  "number": "6.8.1",
   "title": "",
   "body": " TRIUMPHS, Primary Source Project The Radius of Curvature According to Christiaan Huygens   The Radius of Curvature According to Christiaan Huygens by Jerry Lodder  "
 },
@@ -3623,7 +3623,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONcurvature.html#DEFINITIONCurvature-1",
   "type": "Definition",
-  "number": "6.8.0.2",
+  "number": "6.8.2",
   "title": "Curvature.",
   "body": " Curvature   Suppose the point lies on a curve as in the sketch below.       Let represent the angle formed in the figure above by the line tangent to curve at point , with some fixed line.  Then the curvature is defined to be    "
 },
@@ -3632,7 +3632,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONcurvature.html#PROBLEMCircleCurvature",
   "type": "Problem",
-  "number": "6.8.0.4",
+  "number": "6.8.4",
   "title": "",
   "body": " Use the following sketch of a quarter circle with radius to show that Definition yields a curvature of .   "
 },
@@ -3641,7 +3641,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONcurvature.html#PROBLEMCurvatureDef2",
   "type": "Problem",
-  "number": "6.8.0.5",
+  "number": "6.8.5",
   "title": "",
   "body": " Use equation to show that     .}  "
 },
@@ -3650,7 +3650,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONcurvature.html#DIGRESSIONHereBeDragons-4",
   "type": "Figure",
-  "number": "6.8.0.6",
+  "number": "6.8.6",
   "title": "",
   "body": "  The Lennox Globe You can see the Latin inscription in the inset at the upper right.   "
 },
@@ -3659,7 +3659,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONcurvature.html#SECTIONcurvature-25",
   "type": "Example",
-  "number": "6.8.0.7",
+  "number": "6.8.7",
   "title": "",
   "body": " Examples curvature  Let s apply formula to a circle to see if this agrees with Oresme s definition of the curvature of a circle. Consider the circle of radius given by the graph of . Differentiate to obtain so that Differentiate both sides again to see that or, after dividing both sides by    "
 },
@@ -3668,7 +3668,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONcurvature.html#SECTIONcurvature-26",
   "type": "Drill",
-  "number": "6.8.0.8",
+  "number": "6.8.8",
   "title": "",
   "body": " Drills curvature of a circle   Use the values for and we just computed to show that for a circle of radius , the curvature .   "
 },
@@ -3677,7 +3677,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONcurvature.html#SECTIONcurvature-28",
   "type": "Problem",
-  "number": "6.8.0.9",
+  "number": "6.8.9",
   "title": "",
   "body": "    Show that the curvature of the parabola is given by .   Where does the greatest curvature occur? Does this agree with what you can see on the graph of ?  "
 },
@@ -3686,7 +3686,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONcurvature.html#PROBLEMEllipseCurv",
   "type": "Problem",
-  "number": "6.8.0.10",
+  "number": "6.8.10",
   "title": "",
   "body": " Consider the ellipse given by , .    Show that the curvature is given by .   Rewrite as .   Looking at this graph it appears that the curvature at should be greater than at . Use the formula you just derived to verify this.   A circle is the special case of an ellipse when . Use the formula from part to compute the curvature of a circle.  "
 },
@@ -3695,7 +3695,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONcurvature.html#SECTIONcurvature-30",
   "type": "Problem",
-  "number": "6.8.0.11",
+  "number": "6.8.11",
   "title": "",
   "body": " Recall that in of we used Descartes Method of Normals to find the line tangent to the graph of at the point by finding a circle with its center on the -axis which touches the graph exactly once, as seen in the sketch below.         Compute the curvatures of the parabola and the circle seen in at their point of intersection to show that they are not the same.    Vocabulary osculating, or kissing circle Find the equation of the circle which passes through the point , and also has the same slope and curvature as at the point . This is known as the osculating circle , or kissing circle .   Show that the center of the osculating circle is on the line which passes through and .  "
 },
@@ -3704,7 +3704,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONcurvature.html#SECTIONcurvature-32",
   "type": "Problem",
-  "number": "6.8.0.13",
+  "number": "6.8.13",
   "title": "",
   "body": " Assume that and that is constant. Complete the line of reasoning we began in the previous paragraph to show that for some number . Explain how you know that this is this the equation of a line.  "
 },
@@ -3713,7 +3713,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONcurvature.html#SECTIONcurvature-36",
   "type": "Problem",
-  "number": "6.8.0.14",
+  "number": "6.8.14",
   "title": "",
   "body": "    Complete the line of reasoning we began in the previous paragraph to show that and .   Next show that for some constants and .   And finally, show that the point lies on a circle of radius . What is the equation of the circle?  "
 },
@@ -3731,7 +3731,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONnewtons-method.html#EXAMPLESqrt2-1",
   "type": "Example",
-  "number": "7.1.1.1",
+  "number": "7.1.1",
   "title": "<span class=\"process-math\">\\(\\sqrt{2}\\)<\/span> via Bisection.",
   "body": " via Bisection  Examples approximating via the Bisection Method  For the sake of having a definite problem to work with suppose we want to compute a decimal approximation to . The Bisection Method works like this: First pick two numbers, one less than , and one greater than , In this example we ll choose and .  Next, we take the midpoint of the interval as our first approximation to . We ll call this . The midpoint is the average of the endpoints so in this example . Since and are both in the bracketing interval we see that the distance between and is less than , the length of the interval.  Now must either be in the interval or . We need to decide which one. Since we see that so that must be in the interval .  We take our next approximation to be the midpoint of the (smaller) interval . Thus, . Since (confirm this) we have bracketed by   This is really the whole idea. If we are approximating a number, , we begin by bracketing between two known numbers, say and . We take the average of these, , as our first approximation of . We know that is within (the length of the interval ) of . If this is sufficiently accurate we use as our approximation.  If not we determine if is in the first half interval, or the second, , and repeat the process, finding a new approximation in an interval half the length of the first.  The Bisection Method generates a sequence of approximations, of the root we seek. In our example we have and so on. At each step the new approximation is the midpoint of an interval whose length is one half of the length of the previous interval. So our approximations can be made as close to the target as we would like.  "
 },
@@ -3740,7 +3740,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONnewtons-method.html#PROBLEMSqrt2-2",
   "type": "Problem",
-  "number": "7.1.1.2",
+  "number": "7.1.2",
   "title": "Bisection Method.",
   "body": "Bisection Method  This problem refers to .   Show that the next two iterations are and .   The starting interval matters.   For this example take the initial interval to be and compute and .    Now take the initial interval to be and compute and .   If you had to do these computations with paper and pencil would you use , , or as your starting interval? Explain  "
 },
@@ -3749,7 +3749,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONnewtons-method.html#PROBLEMbisect-meth",
   "type": "Problem",
-  "number": "7.1.1.3",
+  "number": "7.1.3",
   "title": "Bisection Method.",
   "body": "Bisection Method  Notice that for each of the functions below . Find the largest positive integer such that . This says that a positive root for the function lies in the interval . Use the Bisection Method to compute the next four approximations, and .                          "
 },
@@ -3758,7 +3758,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONnewtons-method.html#DRILLBabylonFirstGuess",
   "type": "Problem",
-  "number": "7.1.2.1",
+  "number": "7.1.4",
   "title": "Babylonion (Heron’s) Method.",
   "body": "Babylonion (Heron s) Method  Show that if then , and that if then .  "
 },
@@ -3767,7 +3767,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONnewtons-method.html#EXAMPLESqrt2-3",
   "type": "Problem",
-  "number": "7.1.2.2",
+  "number": "7.1.5",
   "title": "Babylonion (Heron’s) Method.",
   "body": "Babylonion (Heron s) Method  Compute . You should get an approximation within of the correct value. Do you?  "
 },
@@ -3776,7 +3776,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONnewtons-method.html#PROBLEMBabylonianMethod",
   "type": "Problem",
-  "number": "7.1.2.3",
+  "number": "7.1.6",
   "title": "Babylonion (Heron’s) Method.",
   "body": "Babylonion (Heron s) Method  Write down the Babylonian method, as described by Heron, as a step-by-step algorithm.   Choose an initial guess and then use your algorithm to compute an approximation of .   Approximate using the Babylonian method.  "
 },
@@ -3785,7 +3785,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONnewtons-method.html#PROBLEMBabylMeth4",
   "type": "Problem",
-  "number": "7.1.2.4",
+  "number": "7.1.7",
   "title": "Babylonion (Heron’s) Method.",
   "body": "Babylonion (Heron s) Method    Suppose you wanted to use the Babylonian algorithm to approximate and started with an initial guess of . What would happen?  Yes, we know this is is already the square root of . We re making a point. Work with us here.   What would happen in the general case for if you ever got ?  "
 },
@@ -3812,7 +3812,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONnewtons-method-1.html#EXAMPLEnewtons-method1",
   "type": "Example",
-  "number": "7.2.1.1",
+  "number": "7.2.1",
   "title": "",
   "body": " Examples Newton s Method  Most mathematical software will accept the equation , whose graph is shown below, as input and give back the approximate solution at the click of a button. As a result it is easy to get the impression that this is a a simple problem. But, imagine yourself back in the late th century for a moment. The only computation technology available is paper and pencil. How would you solve this problem? How would you even generate an approximate solution?  One possibility is to graph and on the same set of axes and look for the value of where the two graphs intersect as in the figure below.   This seems like a good idea until we actually try it. Immediately we realize that accurately graphing even simple equations would have been an almost insurmountable task in those days. We clearly used modern technology to draw the graph pictured. Drawing it by hand accurately enough to glean useful information from it would have been virtually impossible.  Here s another idea. If we rearrange the equation just a little we get Now define to be the expression on the left of equation ): . The graph of this function, seen below, will cross the axis (that is ) at the same coordinate where the equation is satisfied. This simple observation allows us to think of the problem in a slightly different way: We are looking for the value which is a root of the function .   You wouldn t think such a simple change would help. But it does because now, instead of looking for both the and coordinates of an intersection point we need only search for the value of where the graph of the function crosses the axis. This gives us just a little more information because we know that the coordinate is zero if a point is on the axis.   Principle of Local Linearity and Newton s Method As before we will need an initial guess to get started. Since the root seems to be close to the point where we ll use as our first approximation. Now find and sketch the line tangent to at as seen in the sketch above (in red). If our first guess is close enough to the actual root the Principle of Local Linearity guarantees that the tangent line will cross the axis very near to the actual root. So the value of , whatever it is, where the tangent line crosses seems like it would be a pretty good second approximation , of the root of . If we zoom in on this part of our graph, as in the figure, this is easy to see.  Apparently all we have to do now is determine the slope of the line tangent to the graph at , then find the equation of the line and its intercept.  "
 },
@@ -3821,7 +3821,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONnewtons-method-1.html#DRILLNewtonMethod2",
   "type": "Problem",
-  "number": "7.2.1.2",
+  "number": "7.2.2",
   "title": "",
   "body": "Algorithms Newton s Method   Show that in an equation of the line tangent to at is .    Our second approximation ( ) to the root we seek will be the coordinate of the point where the graph of equation crosses the axis. That is, where Set and show that the line in equation crosses the axis at .   "
 },
@@ -3830,7 +3830,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONnewtons-method-1.html#PROBLEMTanToCubic",
   "type": "Problem",
-  "number": "7.2.1.3",
+  "number": "7.2.3",
   "title": "",
   "body": " Find the equation of the line tangent to the function at and use this to show that our third approximation to the root of is .   Repeat part (a) using the line tangent at to obtain the next approximation , but this time round it off to decimal places. (You will need digits for part (d).   If you ve done it correctly, you will notice that . Does this surprise you? Explain.   Use your favorite computational software to find an approximation to the root of to decimal places. Compare your to this approximation. How close did you come?  "
 },
@@ -3839,7 +3839,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONnewtons-method-1.html#PROBLEMNewtonsMethod3",
   "type": "Problem",
-  "number": "7.2.1.4",
+  "number": "7.2.4",
   "title": "",
   "body": " Suppose we have used Newton s Method repeatedly and found the th approximation, , of the the root (the th iterate) of some generic function as shown in the following figure.        We d like to find a formula to compute the next iterate, , without having to draw the sketch and solve a new equation.   Show that the equation of the line tangent to the curve at the point can be written in the form    Use your answer to part (a) to show that is the general formula for Newton s Method.   If we get lucky and is the actual root of the function (not just an approximation). Explain what happens at the next iteration if is not the root.  "
 },
@@ -3848,7 +3848,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONnewtons-method-1.html#ALGORITHMNewtonsMethod",
   "type": "Algorithm",
-  "number": "7.2.1.6",
+  "number": "7.2.6",
   "title": "Newton’s Method.",
   "body": " Newton s Method  Algorithms Newton s Method  Newton, Isaac Newton s Method  Given a differentiable function, with a root at we can approximate as follows.   Choose     For compute until the desired level of accuracy is obtained.     "
 },
@@ -3857,7 +3857,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONnewtons-method-1.html#EXERCISESqrt2InitGuess",
   "type": "Problem",
-  "number": "7.2.1.7",
+  "number": "7.2.7",
   "title": "",
   "body": "Algorithms Newton s Method  Obviously, has a root at But if we want to compute this is not a good choice of function to apply Newton s Method to. Explain why not. What would be a good choice for if we wish to approximate ?  "
 },
@@ -3866,7 +3866,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONnewtons-method-1.html#PROBLEMNewtMethCreateFunction",
   "type": "Drill",
-  "number": "7.2.1.8",
+  "number": "7.2.8",
   "title": "",
   "body": " Drills approximation  Algorithms Newton s Method  Create a function which has a root at each of the following numbers and use your function to compute each to decimals using Newton s Method.                                  "
 },
@@ -3875,7 +3875,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONnewtons-method-1.html#PROBLEMNewton-meth",
   "type": "Drill",
-  "number": "7.2.1.9",
+  "number": "7.2.9",
   "title": "",
   "body": " Drills Newton Method  Algorithms Newton s Method  Start with and use Newton s Method to compute the next four approximations ( , , , and ) of the roots of each of the following functions. Compare these with your results in . Which algorithm seems to be more accurate after four iterations?                                  "
 },
@@ -3884,7 +3884,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONnewtons-method-1.html#PROBLEMNewton-meth2",
   "type": "Drill",
-  "number": "7.2.1.10",
+  "number": "7.2.10",
   "title": "",
   "body": " Drills Newton s Method  Algorithms Newton s Method  Use Newton s Method to approximate the root of each of the following functions to at least four decimal places on the interval given.    on      on      on      "
 },
@@ -3893,7 +3893,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONnewtons-method-1.html#PROBLEMXCosx",
   "type": "Drill",
-  "number": "7.2.1.11",
+  "number": "7.2.11",
   "title": "",
   "body": " Drills Newton s Method  Algorithms Newton s Method    As you can see from the sketch above, the graphs of and intersect exactly once. We want to use Newton s Method to find an approximation of the coordinates of the point of intersection.  First obtain the iteration formula: Then use this formula to approximate the coordinates of the point of intersection to decimal places.   "
 },
@@ -3902,7 +3902,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONnewtons-method-1.html#PROBLEMSqrta",
   "type": "Problem",
-  "number": "7.2.1.12",
+  "number": "7.2.12",
   "title": "Find the Pattern.",
   "body": "Find the Pattern Algorithms Newton s Method         Apply Newton s Method to the function , shown above, to determine the iteration formula for approximating . Show that this is precisely the st iteration you get when using the Babylonian method:    Use Newton s Method on the function to obtain the iteration formula: for approximating . Notice that is the average of , and .   Obtain the iteration scheme for approximating the fourth root of Is this also an average? Of what?   Now find an iteration scheme to find the th root of if is a positive number, and is a positive integer.  "
 },
@@ -3920,7 +3920,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONnewtons-method-1.html#PROBLEMNewtMethSignOfIterates",
   "type": "Problem",
-  "number": "7.2.1.14",
+  "number": "7.2.14",
   "title": "",
   "body": "Algorithms Newton s Method  Even if you don t have any intuition into a given problem a more than cursory understanding of the algorithm itself can be helpful. For example, show that when Newton s Method is used:   If and have the same sign then .   If and have opposite signs then .   Suppose you are trying to compute a numerical approximation of using an implementation of Newton s Method, but you accidentally enter as your function (instead of ). Explain how you can use the results of part (a) and part (b) to see that the algorithm is failing at the third iteration.  "
 },
@@ -3929,7 +3929,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONnewtons-method-1.html#PROBLEMNewtMethAlgGeom",
   "type": "Problem",
-  "number": "7.2.2.1",
+  "number": "7.2.15",
   "title": "",
   "body": "Algorithms Newton s Method  Suppose we want to find the root of and our initial guess is . Investigate, both algebraically and graphically, what happens when we apply Newton s Method to this problem. Describe the results of your investigations.  "
 },
@@ -3938,7 +3938,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONnewtons-method-1.html#PROBLEMNewtonsMethodOneThird",
   "type": "Problem",
-  "number": "7.2.2.2",
+  "number": "7.2.16",
   "title": "",
   "body": "Algorithms Newton s Method  The only root of the function is zero.   Use Newton s Method with the initial guess, to see if it converges to zero.   It won t.   Write down a formula for the computation in step from Newton s Method for this function. Use this to explain why the method will not converge no matter what non zero initial guess is used.  "
 },
@@ -3947,7 +3947,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONnewtons-method-1.html#EXAMPLE-SubtleFailCos",
   "type": "Example",
-  "number": "7.2.3.1",
+  "number": "7.2.17",
   "title": "",
   "body": " Examples Newton s Method subtle failure of  Suppose we wish to compute by finding the smallest positive root of If we start with an initial guess of (not a great first guess, but it s not obviously horrible either) we get which certainly seems like it might be a problem since If we ignore this and continue we get and   What s going on here? The numbers seem to be converging, but they are not converging to the answer we intended to find. The figure below shows what the difficulty is.   In a nutshell, our initial guess was too far away from the root. The slope of the tangent line at is which means that the tangent line (in red) decreases from left to right, but also that its slope is very shallow. Thus the tangent line crosses the axis at about very far from the root we seek. Now it happens that is actually pretty close to another root of our function: So continued iterations of Newton s Method will settle in on the root at . But the damage has already been done. We ve found a legitimate root but not he one we intended to find.  We call this a subtle failure because Newton's Method will converge without complaint. None of the computations will seem suspicious. A software implementation of Newton's Method for this problem using this initial guess will return a reasonable looking, but wrong, number. It is glaringly obvious what goes wrong when we draw the pictures. But when we use software to compute the root most of the time there will be no pictures. Notice that, unlike the spectacular failure above there is nothing in the calculations being performed that could be detected in software to let the human in charge know that things have gone wrong. So, if you rely on software it is essential that you take the time to consider the reasonableness of the answer you obtain. If this is not understood there is a real risk that you could accept a ridiculous answer as correct.   Comment  This is embarrassing at best, deadly at worst. Seriously. If what you are calculating is the embedded software for, say the autopilot system of an airliner, then accepting the wrong answer midflight could easily be deadly. Don t take this lightly.   "
 },
@@ -3956,7 +3956,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONnewtons-method-1.html#PROBLEMNewtMethHardCubic",
   "type": "Problem",
-  "number": "7.2.3.2",
+  "number": "7.2.18",
   "title": "",
   "body": "Algorithms Newton s Method  Find approximations to all real roots of   "
 },
@@ -3965,7 +3965,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONnewtons-method-1.html#SUBSECTIONSubtleFailure-8",
   "type": "Problem",
-  "number": "7.2.3.3",
+  "number": "7.2.19",
   "title": "",
   "body": "Algorithms Newton s Method     Use Newton s Method to find approximations to the positive roots closest to zero of each of the following functions. (Clearly you can use Algebra and Trigonometry to compute them exactly. The point here is to see how good our guesses must sometimes be in order for Newton s Method to work.}                         If we were to next ask you to find approximations of the negative roots closest to zero of each of these functions would you need to use Newton s Method again? Explain.  "
 },
@@ -3974,7 +3974,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONnewtons-method-1.html#PROBLEMNMByGraphing",
   "type": "Problem",
-  "number": "7.2.3.4",
+  "number": "7.2.20",
   "title": "",
   "body": " Do not try to answer the questions in this problem analytically. Use a graphing calculator, or graphing software to explore these questions visually. The function has exactly one real root and it is between one and two.   Show that with an initial guess, , Newton s Method almost never converges to the root.   We said almost never in part (a) because there is a small interval of numbers greater than with the property that Newton s Method will converge if is any number in the interval. Find an interval that works. It doesn t have to be the largest possible interval.   Show that if you start with an initial guess of or Newton s Method will not even generate the first iterate: Explain.  "
 },
@@ -3983,7 +3983,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONnewtons-method-1.html#PROBLEMNMThirdRootCubic",
   "type": "Problem",
-  "number": "7.2.3.5",
+  "number": "7.2.21",
   "title": "",
   "body": "Algorithms Newton s Method  Suppose that a cubic polynomial has three real roots, , , and and that two of them, and are known. We wish to approximate the third. Show that if we take the average of and as our initial guess, Newton s Method will find the exact value of the third root, , in one iteration.  "
 },
@@ -4019,7 +4019,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONEulersMethod.html#DEFINITIONIVP",
   "type": "Definition",
-  "number": "7.3.0.1",
+  "number": "7.3.1",
   "title": "Initial Value Problem (IVP).",
   "body": " Initial Value Problem (IVP)  Vocabulary Initial Value Problem (IVP)  Vocabulary Initial Value   An Initial Value Problem is a differential equation of the form along with an Initial Value     "
 },
@@ -4028,7 +4028,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONEulersMethod.html#ALGORITHMEulersMethod",
   "type": "Algorithm",
-  "number": "7.3.0.2",
+  "number": "7.3.2",
   "title": "Euler’s Method.",
   "body": " Euler s Method  Algorithms Euler s Method  Given an IVP: approximate points on the graph of by computing:   "
 },
@@ -4037,7 +4037,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONEulersMethod.html#PROBLEMEulerSine",
   "type": "Problem",
-  "number": "7.3.0.3",
+  "number": "7.3.3",
   "title": "",
   "body": " Observe that satisfies the IVP . Use Euler s Method on this IVP to complete the table. Then plot the points you generated and the graph of on the same set of axes so you can compare them.                        "
 },
@@ -4046,7 +4046,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONEulersMethod.html#PROBLEMEulerCosine",
   "type": "Problem",
-  "number": "7.3.0.4",
+  "number": "7.3.4",
   "title": "",
   "body": " Observe that satisfies the IVP . Use Euler s Method on this IVP to complete the following table. Then plot the points you generated and the graph of on the same set of axes so you can compare them.                        "
 },
@@ -4055,7 +4055,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONEulersMethod.html#SECTIONEulersMethod-31",
   "type": "Problem",
-  "number": "7.3.0.5",
+  "number": "7.3.5",
   "title": "",
   "body": " Use Euler s Method to approximate the solutions of the given IVPs by constructing a table like the ones in Problems  and . Then plot the points you found, connecting them with straight line segments.                  "
 },
@@ -4064,7 +4064,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONEulersMethod.html#SECTIONEulersMethod-32",
   "type": "Problem",
-  "number": "7.3.0.6",
+  "number": "7.3.6",
   "title": "",
   "body": " Use Euler s Method to approximate the solutions of the given IVPs by constructing a table like the ones in Problems  and . Then plot the points you found, connecting them with straight line segments.                  "
 },
@@ -4073,7 +4073,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONEulersMethod.html#SECTIONEulersMethod-33",
   "type": "Problem",
-  "number": "7.3.0.7",
+  "number": "7.3.7",
   "title": "",
   "body": " Use Euler s Method to approximate the solutions of the given IVPs by constructing a table like the ones in Problems  and . Then plot the points you found, connecting them with straight line segments.                                      "
 },
@@ -4082,7 +4082,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONEulersMethod.html#PROBLEMTractrix",
   "type": "Problem",
-  "number": "7.3.0.8",
+  "number": "7.3.8",
   "title": "",
   "body": "  Consider the top view of a tractor trailer as it turns, as shown above. Initially, the center of the rear axle of the tractor is at the origin and the center of the rear axle of the trailer is at the point . The tractor pulls the front wheels vertically up the axis and we assume that the rear wheels don t slip. The path that the center of the rear axle follows is called a tractrix from the Latin verb trahere , meaning to drag or pull.    Show that the tractrix must satisfy the Initial Value Problem    Find a differential triangle and an ordinary triangle which are proportional.   Apply Euler s Method to complete the following table to approximate the tractrix.                         Plot the points obtained in part b to see if this looks like the path the rear axle of the trailer would take.  "
 },
@@ -4091,7 +4091,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONEulersMethod.html#PROBLEMPursuit1",
   "type": "Problem",
-  "number": "7.3.0.9",
+  "number": "7.3.9",
   "title": "",
   "body": "  Suppose a rocket travels up the line at a constant speed . As the rocket passes through the point , a missile is fired from the origin directly at the rocket. Assume that the missile travels at a speed which is times the speed of the rocket and is always aimed directly at the rocket. At time the missile is at the point and the rocket is at the point We want to find the path the missile will follow. The diagram above shows the situation at time .   Find if denotes the length of the the missile s path at time .   Show that the missile s path must satisfy the IVP    Find a triangle which is proportional to the differential triangle shown.   Apply Euler s Method to fill in the following table.                         Plot the points obtained in part b to see if this resembles the path you think the missile would follow.  We will re visit this problem and find the exact solution in .  "
 },
@@ -4118,7 +4118,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONMoreHighDeriv.html#SECTIONMoreHighDeriv-10",
   "type": "Drill",
-  "number": "7.4.0.1",
+  "number": "7.4.1",
   "title": "",
   "body": " Drills line tangent   Show that the equation of the line tangent to at is .   "
 },
@@ -4127,7 +4127,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONMoreHighDeriv.html#EXERCISEGenTan",
   "type": "Problem",
-  "number": "7.4.0.2",
+  "number": "7.4.2",
   "title": "",
   "body": "Taylor Polynomial  Show that the equation of the line tangent to the graph of an arbitrary (differentiable) function at is given by   "
 },
@@ -4136,7 +4136,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONMoreHighDeriv.html#SECTIONMoreHighDeriv-19",
   "type": "Problem",
-  "number": "7.4.0.3",
+  "number": "7.4.3",
   "title": "",
   "body": "Taylor Polynomial  This problem demonstrates how we can obtain a first degree polynomial that approximates near . Suppose that is some (differentiable) function and that .   Show that if then    Show that if then   "
 },
@@ -4145,7 +4145,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONMoreHighDeriv.html#PROBLEMTaylorPolyGen",
   "type": "Problem",
-  "number": "7.4.0.4",
+  "number": "7.4.4",
   "title": "",
   "body": "Taylor Polynomial     Differentiate again and set the second derivatives at equal to one another to show that    Show that if the cubic has the same third derivative as at then    Show that if the quartic has the same fourth derivative as at then   "
 },
@@ -4163,7 +4163,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONMoreHighDeriv.html#SECTIONMoreHighDeriv-25",
   "type": "Problem",
-  "number": "7.4.0.5",
+  "number": "7.4.5",
   "title": "",
   "body": "Taylor Polynomial  The process in is how we generated our cubic approximation to the sine function just before equation . In this problem you will replicate and extend that computation.   Use the process in to show that .   Find the fourth degree Taylor Polynomial approximation for .   You may find this puzzling for a moment or two. Make sure you do all the calculations correctly and then believe your calculations.   Find the fifth degree Taylor Polynomial approximation for and graph both functions on the same set of axes.   Find the sixth degree Taylor Polynomial approximation for .  "
 },
@@ -4172,7 +4172,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONMoreHighDeriv.html#SECTIONMoreHighDeriv-26",
   "type": "Problem",
-  "number": "7.4.0.6",
+  "number": "7.4.6",
   "title": "",
   "body": "Taylor Polynomial  Find the second and fourth degree Taylor Polynomial approximations for and graph them all on the same set of axes. Would it make any sense to use the fifth degree Taylor Polynomial in this case? Explain.  "
 },
@@ -4190,7 +4190,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONDEsandIVPS.html#EXAMPLEDifferentialEquation",
   "type": "Example",
-  "number": "8.1.0.1",
+  "number": "8.1.1",
   "title": "",
   "body": " Examples Differential Equations defining functions via  Differential Equations defining functions via  Vocabulary Differential Equations  We ve seen that when we differentiate the formula we get the differential equation  or If we did not already know that the function satisfies equation we could give a name to the solution (sqr , perhaps?) and by fiat, define to be whatever function solves this equation. But there is a problem. The solution of equation is a multifunction, remember? To choose a single branch we need to impose an initial condition.  "
 },
@@ -4199,7 +4199,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONDEsandIVPS.html#DRILLIVP-sqr",
   "type": "Drill",
-  "number": "8.1.0.2",
+  "number": "8.1.2",
   "title": "Find the Pattern.",
   "body": " Find the Pattern  Drills Initial Value Problems (IVPs)  Solve the IVP that consists of the differential equation paired with each initial condition. Graph your solutions.                                  Find the solution of the the IVP based on your solutions in parts (i) through (vi). Assume that and are fixed, but unspecified constants.  "
 },
@@ -4217,7 +4217,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONexponential.html#SECTIONexponential-2",
   "type": "TRIUMPHS Project",
-  "number": "8.2.0.1",
+  "number": "8.2.1",
   "title": "",
   "body": " TRIUMPHS, Primary Source Project Fourier's Infinite Series Proof of the Irrationality of   Fourier's Infinite Series Proof of the Irrationality of by Kenneth M. Monks "
 },
@@ -4226,7 +4226,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONexponential.html#DEFINITIONNatExpIVP",
   "type": "Definition",
-  "number": "8.2.0.2",
+  "number": "8.2.2",
   "title": "The Natural Exponential Function.",
   "body": " The Natural Exponential Function  Vocabulary natural exponential function   The function which satisfies the IVP is called the natural exponential function , denoted .   "
 },
@@ -4235,7 +4235,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONexponential.html#PROBLEMTaylorPolyExp",
   "type": "Problem",
-  "number": "8.2.0.3",
+  "number": "8.2.3",
   "title": "",
   "body": " Let be the th degree Taylor polynomial approximation of .   Use equation and the initial value to show that   On the same set of axes graph for , and . "
 },
@@ -4253,7 +4253,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONExponentialFunction.html#SECTIONExponentialFunction-6",
   "type": "Problem",
-  "number": "8.3.0.1",
+  "number": "8.3.1",
   "title": "",
   "body": " Show that none of the following is a solution of IVP .  The notation is read three factorial and means Similarly and in general        Observe that if is a solution then .              "
 },
@@ -4262,7 +4262,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONExponentialFunction.html#SECTIONExponentialFunction-10",
   "type": "Problem",
-  "number": "8.3.0.2",
+  "number": "8.3.2",
   "title": "",
   "body": " That is, show that there is no (non zero) polynomial that solves the differential equation:    Consider the degree of the polynomial and the degree of its derivative.  "
 },
@@ -4280,7 +4280,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONExponentialFunction.html#PROBLEMTaylorSeries1",
   "type": "Problem",
-  "number": "8.3.0.3",
+  "number": "8.3.3",
   "title": "",
   "body": " Having set aside those deeper questions (for now), we can show that we have found the solution of our IVP.   Differentiate the series term by term to show that .   Show that    Yes, this really is as easy as it looks.  "
 },
@@ -4298,7 +4298,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONExponentialFunction.html#SECTIONExponentialFunction-44",
   "type": "Drill",
-  "number": "8.3.0.4",
+  "number": "8.3.4",
   "title": "",
   "body": " Drills natural exponential   Confirm equation .   "
 },
@@ -4307,7 +4307,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONExponentialFunction.html#SECTIONExponentialFunction-58",
   "type": "Problem",
-  "number": "8.3.0.5",
+  "number": "8.3.5",
   "title": "",
   "body": " For this problem use the approximation    Use equation to show that . Compare this with the numerical value of you get from a calculator.   In equation take    Use equation to show that . Compare this with the numerical value of you get from a calculator.  "
 },
@@ -4325,7 +4325,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONExponentialFunction.html#DRILLComputingE",
   "type": "Problem",
-  "number": "8.3.0.6",
+  "number": "8.3.6",
   "title": "",
   "body": " Since we know that solves IVP , it should be clear that we can approximate by computing the sum of, say fifty, terms of the series. Compute this approximation using your favorite computing technology to confirm that . (If you don t have any computing technology available just compute the sum of the first six terms.)  "
 },
@@ -4334,7 +4334,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONExponentialFunction.html#SECTIONExponentialFunction-69",
   "type": "Example",
-  "number": "8.3.0.7",
+  "number": "8.3.7",
   "title": "",
   "body": " Examples Product Rule  Product Rule  Find the derivative of   Using the Product Rule , we have   "
 },
@@ -4343,7 +4343,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONExponentialFunction.html#SECTIONExponentialFunction-70",
   "type": "Drill",
-  "number": "8.3.0.8",
+  "number": "8.3.8",
   "title": "",
   "body": " Drills differential of the natural exponential  Compute for each of the following, and use this to find the IVP that each one solves. (Use a substitution to make each one easier on your eyes.)            where is an unknown constant.    "
 },
@@ -4352,7 +4352,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONExponentialFunction.html#SECTIONExponentialFunction-71",
   "type": "Drill",
-  "number": "8.3.0.9",
+  "number": "8.3.9",
   "title": "",
   "body": " Drills differential  For each of the following find :                                        "
 },
@@ -4361,7 +4361,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONExponentialFunction.html#SECTIONExponentialFunction-72",
   "type": "Drill",
-  "number": "8.3.0.10",
+  "number": "8.3.10",
   "title": "",
   "body": " Drills lines tangent  Show that the equation of the line tangent to each function below at the given point is the given line.   Function: ,  Point:   Tangent line:     Function: ,  Point:   Tangent line:     Function: ,  Point:   Tangent line:     Function: ,  Point:   Tangent line:      "
 },
@@ -4370,7 +4370,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONExponentialFunction.html#SECTIONExponentialFunction-73",
   "type": "Problem",
-  "number": "8.3.0.11",
+  "number": "8.3.11",
   "title": "",
   "body": " Show that when we use Newton s Method to approximate the coordinates of the intersection point of the curves and , we get the iteration formula    Starting with compute , and . Compare your approximation with a solution obtained from whatever computing technology you prefer.  "
 },
@@ -4379,7 +4379,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONExponentialFunction.html#PROBLEMPolyExp",
   "type": "Problem",
-  "number": "8.3.0.12",
+  "number": "8.3.12",
   "title": "Find the Pattern.",
   "body": "Find the Pattern  Compute for each of the following:                         From your work in part what do you expect to be if Show that your guess is correct or find the correct solution if you guessed wrong.  "
 },
@@ -4388,7 +4388,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONExponentialFunction.html#SECTIONExponentialFunction-75",
   "type": "Drill",
-  "number": "8.3.0.13",
+  "number": "8.3.13",
   "title": "",
   "body": " Drills differential  For each of the following, assume that , , and . Find an equation relating , , and .                                  "
 },
@@ -4397,7 +4397,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONExponentialFunction.html#PROBLEMExpGro",
   "type": "Problem",
-  "number": "8.3.0.14",
+  "number": "8.3.14",
   "title": "The Exponential Sum Property.",
   "body": "The Exponential Sum Property  Since we ve encouraged you to think of the expression as the funny number raised to the power , it seems obvious that the rules of exponents apply so that .  But nothing we ve said so far actually makes this a true statement. names the function and states one of its properties (that it is its own derivative), but that is all. This problem shows that we can use the definition to conclude that must also be true.   Show that satisfies for any constant .   Recall .   Show that also satisfies for any constant .    Part and part imply that . Use this knowledge to to show that   "
 },
@@ -4406,7 +4406,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONExponentialFunction.html#PROBLEMExpSinCos",
   "type": "Problem",
-  "number": "8.3.0.15",
+  "number": "8.3.15",
   "title": "",
   "body": " For , , and compute                         Does it seem significant that for all three functions? What does your intuition say?  "
 },
@@ -4424,7 +4424,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONhyperb-trig-hang.html#PROBLEMHangingChain",
   "type": "Problem",
-  "number": "8.4.0.1",
+  "number": "8.4.1",
   "title": "The Shape of a Hanging Chain.",
   "body": "The Shape of a Hanging Chain  The Calculus in this problem is pretty straightforward but the Algebra gets a bit messy. To avoid some of this mess we will solve the special case where in parts (a), (b), and (c). In part (d) we ll use our solution of this special case to solve the original problem.  So assume that . For this special case we will call our variables and , rather than and . The reasons for this will become clear in part (d).   Show that .   It might help to make the substitution just to make things easier on the eyes. That makes    Show that and that    Show that the curve satisfies the differential equation    Now let s tackle the original problem. Show that satisfies the equation where is the weight density of the chain, and is the constant (magnitude of the) horizontal tension.   This is essentially the same computation you did for the special case, but the Algebra is messier. Consider making it easier on the eyes with the substitutions and We already know from part that . Notice that and use this to show that    Assume that , and and graph the curve given in equation . Does it look like a hanging chain? What happens to the graph if we use and , or and ? Does this make sense physically? Why or why not?  "
 },
@@ -4442,7 +4442,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONhyperb-trig-hang.html#SECTIONhyperb-trig-hang-7",
   "type": "Drill",
-  "number": "8.4.0.2",
+  "number": "8.4.2",
   "title": "",
   "body": " Drills hyperbolic trigonometry  Recall that the unit circle, , is parameterized by since   Analogously, show that the unit hyperbola , is parameterized by That is, show that .  "
 },
@@ -4460,7 +4460,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONhyperb-trig-hang.html#DEFINITIONHypTrigFunc",
   "type": "Definition",
-  "number": "8.4.0.3",
+  "number": "8.4.3",
   "title": "The Hyperbolic Trigonometric Functions.",
   "body": " The Hyperbolic Trigonometric Functions   In addition to and we make the following definitions which are clearly modeled on the definitions of the trigonometric functions:    "
 },
@@ -4469,7 +4469,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONhyperb-trig-hang.html#PROBLEMHyperbolicTrig",
   "type": "Problem",
-  "number": "8.4.0.4",
+  "number": "8.4.4",
   "title": "",
   "body": "    Show that                                   Show that:    Show that:    Show that:    Show that:    Compare each of the identities above with the corresponding trigonometric identity.  "
 },
@@ -4478,7 +4478,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONhyperb-trig-hang.html#PROBLEMSinhCoshDiffeq",
   "type": "Drill",
-  "number": "8.4.0.5",
+  "number": "8.4.5",
   "title": "",
   "body": " Drills hyperbolic trigonometry   Show that and both satisfy the differential equation: and compare this with .   "
 },
@@ -4496,7 +4496,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONGatewayArch.html#SECTIONGatewayArch-2",
   "type": "Figure",
-  "number": "8.5.0.1",
+  "number": "8.5.1",
   "title": "",
   "body": "  The Gateway Arch in St. Louis    "
 },
@@ -4505,7 +4505,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONGatewayArch.html#PROBLEMCatenaryTrue",
   "type": "Problem",
-  "number": "8.5.0.2",
+  "number": "8.5.2",
   "title": "",
   "body": " A true catenary is the graph of any function of the form    Show that is not a true catenary.   Plot the graph of equation , and determine the and intercepts.   Notice that the answers part (b) do not determine an arch whose height and width are exactly feet. This is because this curve represents the centers of the triangular cross sections. (Actually the centroids. You will learn about centroids when you take Integral Calculus.)   The sketch below represents a cross sectional slice of the arch, which is an equilateral triangle. In the sketch each side is equal to , and the point is equidistant from , , and . Show that the perpendicular distance from to one side is .     Use the result in part (i) to determine the height and width of the arch.     Vocabulary Catenary weighted catenary  The curve Saarinen used is called a weighted catenary . It is the shape of a hanging chain whose density is not uniform. Saarinen decided to go with this since the size of the triangles was decreasing as they approached the apex of the arch. A true catenary arch would be something of the form Plot the graphs of equation and equation on the same set of axes and use this to show that they both have the same requisite height and width.  "
 },
@@ -4523,7 +4523,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONExponentialGrowth.html#EXAMPLEpopulation-growth",
   "type": "Example",
-  "number": "8.6.0.1",
+  "number": "8.6.1",
   "title": "Population Growth.",
   "body": " Population Growth  Examples Population Growth  Suppose we start with a colony of grams of bacteria in a Petri dish and we wish to model the growth of the population as a function of time. In order to keep our initial discussion simple we begin by assuming that of our bacteria divide once per day at the same time. Such a population is growing at a rate of per day. If we start with grams of bacteria on day zero, then on day one we ll have more, or grams. On day two we ll have more than on day one, or grams. It should be clear that the rate of growth from day to day is proportional to how many bacteria we have on day . Thus from any one day to the next we see that the change in (that is, ) is given by where day, and is the change in population on that day.   Vocabulary nominal growth rate But we assumed that of the bacteria were dividing in sync once per day, which is unrealistic. To get closer to reality suppose next that enough of them divide during any one hour so that at the end of one day the population has still grown by . Then from any one hour to the next we again have equation but this time is equal to one hour, or day. However, we don t have to measure time in days. If we measure it in hours instead we again have . The constant factor is still because we assumed that the population was growing at per day, and this is still true. That factor is called the nominal growth rate.   Terminology  The word nominal means in name or thought so this is the named growth rate. It is not always the actual growth rate as we will see soon.   If we measure time in seconds the same reasoning will give us equation , with . If we measure in nanoseconds we get equation , with . If we measure time in infinitesimal increments we get    Principle of Local Linearity  Vocabulary nominal growth rate Notice that we are once againusing the Principle of Local Linearity here. In this infinitesimal time interval the nominal growth rate, , is virtually constant and so we are treating it as linear growth.  Since we started with grams of bacteria we have the initial condition . This says that the amount of bacteria at time must satisfy the IVP: Take specific notice that the differential equation in IVP expresses the idea that the rate of change of the population, , is proportional to the size of the population, , and that the constant of proportionality is , or .   Vocabulary nominal growth rate Clearly there is nothing particularly special about the number If our colony had been increasing at a nominal rate of we d have arrived at the IVP   "
 },
@@ -4532,7 +4532,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONExponentialGrowth.html#DRILLExpGrowth1",
   "type": "Problem",
-  "number": "8.6.0.2",
+  "number": "8.6.2",
   "title": "",
   "body": "Vocabulary Differential Equations  To begin solving IVP show that one solution of the differential equation  , is There are other solutions. Find one of them.  "
 },
@@ -4541,7 +4541,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONExponentialGrowth.html#PROBLEMExpGrowth2",
   "type": "Problem",
-  "number": "8.6.0.3",
+  "number": "8.6.3",
   "title": "Find the Pattern.",
   "body": "Find the Pattern  Show that solves the differential equation: . What is ?   Show that solves the differential equation: . What is ?   Show that if is any constant then solves the differential equation . What is ?   Did your answer in part (c) account for the possibility that ? If not, redo it assuming that . What is in this case?  "
 },
@@ -4550,7 +4550,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONExponentialGrowth.html#PROBLEMBacteriaIVP1",
   "type": "Problem",
-  "number": "8.6.0.4",
+  "number": "8.6.4",
   "title": "",
   "body": " Use the results of part and part to show that is the solution of IVP .   According to the model in part (a) how much did the colony grow over the first day and how does this compare to the growth rate of ?   Use the model to predict the size of the colony in days. Is this reasonable? What does it say about our assumptions in this problem?   Suppose our growth rate was per day. Would the bacteria have grown half as much in the first day as it did when the growth rate was per day?  Make your best guess.  Use Calculus to test your guess.    "
 },
@@ -4568,7 +4568,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONExponentialGrowth.html#SECTIONExponentialGrowth-10",
   "type": "Problem",
-  "number": "8.6.0.5",
+  "number": "8.6.5",
   "title": "",
   "body": " Show that is a solution of IVP .  "
 },
@@ -4577,7 +4577,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONExponentialGrowth.html#SECTIONExponentialGrowth-18",
   "type": "Drill",
-  "number": "8.6.0.6",
+  "number": "8.6.6",
   "title": "",
   "body": " Drills exponential growth   Suppose our bacteria population is increasing at a relative rate of 10% per day. If we started with 100 grams, how much would there be after one, two, and three days?   "
 },
@@ -4613,7 +4613,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONExpAndCmpndInt.html#TABLE5percenCompSemiAn",
   "type": "Table",
-  "number": "8.7.0.1",
+  "number": "8.7.1",
   "title": "<span class=\"process-math\">\\(5\\%\\)<\/span> nominal interest compounded semiannually",
   "body": " nominal interest compounded semiannually      Time in years  Amount investment is worth in dollars                                          "
 },
@@ -4622,7 +4622,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONExpAndCmpndInt.html#TABLE5percenCompThreeAn",
   "type": "Table",
-  "number": "8.7.0.2",
+  "number": "8.7.2",
   "title": "<span class=\"process-math\">\\(5\\%\\)<\/span> nominal interest compounded three time per year",
   "body": " nominal interest compounded three time per year    Time in years  Amount investment is worth in dollars                    "
 },
@@ -4631,7 +4631,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONExpAndCmpndInt.html#TABLE5percenCompQuart",
   "type": "Table",
-  "number": "8.7.0.3",
+  "number": "8.7.3",
   "title": "<span class=\"process-math\">\\(5\\%\\)<\/span> nominal interest compounded quarterly",
   "body": " nominal interest compounded quarterly    Time in years  Amount investment is worth in dollars                        "
 },
@@ -4640,7 +4640,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONExpAndCmpndInt.html#TABLE5percenCompCont",
   "type": "Table",
-  "number": "8.7.0.4",
+  "number": "8.7.4",
   "title": "The Expression <span class=\"process-math\">\\(\\left(1+\\frac{1}{m}\\right)^m\\)<\/span> for Large Values of <span class=\"process-math\">\\(m\\)<\/span>",
   "body": " The Expression for Large Values of             2.70481382942    1000  2.71692393224     2.71814592683    100000  2.71826823717    1000000  2.71828046932    10000000  2.71828169255    "
 },
@@ -4649,7 +4649,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONExpAndCmpndInt.html#SECTIONExpAndCmpndInt-19",
   "type": "Problem",
-  "number": "8.7.0.5",
+  "number": "8.7.5",
   "title": "",
   "body": " The function has the same form as our solution of IVP so it must satisfy the differential equation: . Confirm that it does.  "
 },
@@ -4658,7 +4658,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONExpAndCmpndInt.html#PROBLEMContCompound1",
   "type": "Problem",
-  "number": "8.7.0.6",
+  "number": "8.7.6",
   "title": "",
   "body": " What would the effective yield be for a bond nominally rated at 5% annually, compounded continuously? How does this compare to the effective yield of an investment compounded daily?   Suppose we had two investments growing continuously with nominal rates of 5% and 10% annually? After one year would the effective yield of the second investment be twice that of the first? Justify your answer.  "
 },
@@ -4685,7 +4685,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONnatural-logarithm-1.html#SECTIONnatural-logarithm-1-3",
   "type": "Figure",
-  "number": "8.8.0.1",
+  "number": "8.8.1",
   "title": "",
   "body": "  John Napier (1555 1617)   "
 },
@@ -4712,7 +4712,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONnatural-logarithm-1.html#FIGUREExpLog1",
   "type": "Figure",
-  "number": "8.8.0.2",
+  "number": "8.8.2",
   "title": "",
   "body": " Notice that because is always positive, it is meaningless to take the natural logarithm of a non positive number.     "
 },
@@ -4730,7 +4730,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONnatural-logarithm-1.html#LogProp1",
   "type": "Logarithm Property",
-  "number": "8.8.0.3",
+  "number": "8.8.3",
   "title": "",
   "body": "     "
 },
@@ -4739,7 +4739,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONnatural-logarithm-1.html#LogProp2",
   "type": "Logarithm Property",
-  "number": "8.8.0.4",
+  "number": "8.8.4",
   "title": "",
   "body": "     "
 },
@@ -4748,7 +4748,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONnatural-logarithm-1.html#LogProp3",
   "type": "Logarithm Property",
-  "number": "8.8.0.5",
+  "number": "8.8.5",
   "title": "",
   "body": "     Notice that this is a special case of .  "
 },
@@ -4757,7 +4757,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONnatural-logarithm-1.html#LogProp4",
   "type": "Logarithm Property",
-  "number": "8.8.0.6",
+  "number": "8.8.6",
   "title": "",
   "body": "     "
 },
@@ -4766,7 +4766,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONnatural-logarithm-1.html#LogProp5",
   "type": "Logarithm Property",
-  "number": "8.8.0.7",
+  "number": "8.8.7",
   "title": "",
   "body": "     "
 },
@@ -4775,7 +4775,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONnatural-logarithm-1.html#LogProp6",
   "type": "Logarithm Property",
-  "number": "8.8.0.8",
+  "number": "8.8.8",
   "title": "",
   "body": "     "
 },
@@ -4802,7 +4802,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONNatLog.html#SECTIONNatLog-3",
   "type": "Drill",
-  "number": "8.9.0.1",
+  "number": "8.9.1",
   "title": "",
   "body": " Drills functions the natural logarithm  Evaluate each of the following:                        "
 },
@@ -4811,7 +4811,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONNatLog.html#SECTIONNatLog-5",
   "type": "Problem",
-  "number": "8.9.0.2",
+  "number": "8.9.2",
   "title": "",
   "body": " Like Logarithm Property #3 , Logarithm Property #5 is really just a convenience. Show that it is really an immediate consequence of Logarithm Property #4 and Property #6 .   Find a way to express as a product.  "
 },
@@ -4829,7 +4829,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONNatLog.html#SECTIONNatLog-7",
   "type": "Drill",
-  "number": "8.9.0.3",
+  "number": "8.9.3",
   "title": "",
   "body": " Drills differential of the natural exponential   Use your favorite computational tool to confirm that .   "
 },
@@ -4838,7 +4838,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONNatLog.html#SECTIONNatLog-8",
   "type": "Drill",
-  "number": "8.9.0.4",
+  "number": "8.9.4",
   "title": "",
   "body": " Drills differential of the natural exponential  Find approximate solutions for each of the following equations:                                                           "
 },
@@ -4847,7 +4847,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONNatLog.html#SECTIONNatLog-10",
   "type": "Drill",
-  "number": "8.9.0.5",
+  "number": "8.9.5",
   "title": "",
   "body": " Drills functions the natural logarithm  Solve each of the following equations exactly, without the use of technology.                                                      "
 },
@@ -4856,7 +4856,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONNatLog.html#SECTIONNatLog-11",
   "type": "Problem",
-  "number": "8.9.0.6",
+  "number": "8.9.6",
   "title": "",
   "body": " A particle is moving on the axis so that its position at time is given by    When is the first time the particle stops moving forward and starts moving backward?    When does the particle start moving forward again?      A particle is moving on the axis so that its position at time is given by .  Show that this particle never moves backward.  At which times does it stop moving forward?    "
 },
@@ -4865,7 +4865,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONNatLog.html#PROBLEMDoubleYourMoney",
   "type": "Problem",
-  "number": "8.9.0.7",
+  "number": "8.9.7",
   "title": "Find the Pattern.",
   "body": "Find the Pattern     Suppose that dollars are invested in two separate accounts, and , where the interest in compounded continuously at the nominal rates of and , respectively. Let be the time it takes for the initial investment in account to double, and let be the time it takes for the initial investment in account to double. Is ?   At the end of the last section we asked you to guess the answers to part (a). Did you guess correctly? What was the intuition that lead you to your correct, or incorrect, guess?   Suppose that dollars are invested in two separate accounts, and , where the interest in compounded continuously at the rates and , respectively. Let be the time it takes for the initial investment in account to reach , and let be the time it takes for the initial investment in account to reach , were is some positive number. How are and related?  "
 },
@@ -4874,7 +4874,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONNatLog.html#SECTIONNatLog-15",
   "type": "Example",
-  "number": "8.9.0.8",
+  "number": "8.9.8",
   "title": "",
   "body": " Examples exponential growth  Suppose we have a bacteria culture which grows at a rate proportional to the amount of bacteria present. Suppose further that it has been observed that we have grams of the bacteria initially, then hours later we have grams. Can we predict how much would we have in hours?  Let represent the amount of bacteria present. This time our model is   "
 },
@@ -4883,7 +4883,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONNatLog.html#DRILLBacteriaGuess1",
   "type": "Problem",
-  "number": "8.9.0.9",
+  "number": "8.9.9",
   "title": "",
   "body": " Before we proceed, try to guess how much bacteria we will have after hours. Will it be grams? grams? More? Less? Write down your best guess. We will revisit this in , as soon as we have a formula for .  "
 },
@@ -4892,7 +4892,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONNatLog.html#DRILLBacteriaGuess2",
   "type": "Problem",
-  "number": "8.9.0.10",
+  "number": "8.9.10",
   "title": "",
   "body": " How good was your guess in ? Whether it was good or bad isn t really the point. Either way take a moment to hone your guessing skills by considering why you guessed the way you did. What was your intuition telling you about the problem?  "
 },
@@ -4901,7 +4901,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONNatLog.html#SECTIONNatLog-23",
   "type": "Problem",
-  "number": "8.9.0.11",
+  "number": "8.9.11",
   "title": "",
   "body": " Show that   "
 },
@@ -4910,7 +4910,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONNatLog.html#SECTIONNatLog-24",
   "type": "Problem",
-  "number": "8.9.0.12",
+  "number": "8.9.12",
   "title": "",
   "body": " At a certain time a Petri dish contains grams of bacteria. Three hours earlier it contained grams of bacteria.   Find a formula for the function, , which gives the amount of bacteria at any time, .   How long does it take for the dish to contain grams of bacteria?  "
 },
@@ -4919,7 +4919,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONNatLog.html#SECTIONNatLog-25",
   "type": "Problem",
-  "number": "8.9.0.13",
+  "number": "8.9.13",
   "title": "",
   "body": " Starting with an unknown number of bacteria a culture is growing at a nominal (relative) rate of .   How long does it take for the culture to double in size?   How long does it take for the culture to triple in size?  "
 },
@@ -4946,7 +4946,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONLogApps.html#EXAMPLEradioactive-dating",
   "type": "Example",
-  "number": "8.10.1.1",
+  "number": "8.10.1",
   "title": "",
   "body": " Examples exponential decay   Vocabulary relative rate of growth  Vocabulary nominal growth rate For the sake of being definite suppose that our isotope is decaying (shrinking) at a relative ( nominal ) rate of . Then if we start with Kg, the IVP to be solved is which we recognize as a special case of IVP , so it seems that the solution must be right?  Wait a minute! This can t be right. It says that the number of isotopes is increasing, not decreasing. Graph it and see.  So what did we do wrong? What does your intuition say?  The derivative of is its rate of change. If is increasing then its rate of change is going to be positive. If it is decreasing then its rate of change will be negative. We seem to have committed one of the classic blunders of mathematics: We got the sign wrong. We should have been solving the IVP instead of IVP . Since IVP also has the same form as IVP , the correct solution is   "
 },
@@ -4955,7 +4955,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONLogApps.html#SUBSECTIONradioactive-decay-6",
   "type": "Problem",
-  "number": "8.10.1.2",
+  "number": "8.10.2",
   "title": "",
   "body": " Graph to confirm that it is decreasing.  "
 },
@@ -4964,7 +4964,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONLogApps.html#SUBSECTIONradioactive-decay-8",
   "type": "Example",
-  "number": "8.10.1.3",
+  "number": "8.10.3",
   "title": "",
   "body": " Examples exponential decay half life  Suppose we have pounds of a very unstable isotope which is known to lose half of its mass to radioactive decay in hours. If we let be the mass of our isotope sample at any time , then the IVP we need to solve is    Comment  In view of our discussion above about positive versus negative rates of change it is tempting to write the differential equation as . While this is not necessarily wrong, it is not helpful. The variable can be any number, positive or negative. If we do our analysis correctly the correct value will emerge whether we write or .   As always the solution of a differential equation of this form is where and is an unknown constant. To find we must use the additional information given. Half of our isotope s mass is lost in hours, so . Thus or Thus This is correct but again it is cumbersome. Also the lack of an obvious negative in the exponent is a little troubling.  "
 },
@@ -4973,7 +4973,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONLogApps.html#SUBSECTIONradioactive-decay-9",
   "type": "Problem",
-  "number": "8.10.1.4",
+  "number": "8.10.4",
   "title": "",
   "body": "  Use the properties of logarithms and exponentials to show that .    Use the properties of logarithms and exponentials to show that    "
 },
@@ -4991,7 +4991,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONLogApps.html#SUBSECTIONradioactive-decay-12",
   "type": "Problem",
-  "number": "8.10.1.5",
+  "number": "8.10.5",
   "title": "",
   "body": " A certain isotope has a half life of , and is decaying exponentially:    Find the value of in terms of .   Use the result of part (a) to show that the amount of our radioactive material at time is given by    The formula in part (a) is correct but it is a little awkward to use, as written. Use the properties of exponents and logarithms to show that this can be rewritten as What are   and Is this consistent with calling the half life? Explain.  "
 },
@@ -5009,7 +5009,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONLogApps.html#SUBSECTIONradioactive-decay-15",
   "type": "Problem",
-  "number": "8.10.1.6",
+  "number": "8.10.6",
   "title": "",
   "body": " The Shroud of Turin, shown below, is a Christian religious relic which bears an image of a man. Some people believe it is the burial cloth of Jesus and that the image is that of Jesus himself. In the Vatican agreed to subject pieces of the shroud to radiocarbon dating. In this problem we will recreate the computations done to determine the age of the Shroud. Let be the amount of (in mg) at time years, where represents when the shroud was used. Let be the initial amount of present in the sample.    How much would be present if the shroud was 2000 years old?   If one of the samples of the Shroud contained 88.9% of the original . How old would this sample be?   This does not settle the question of the age of the Shroud. The technique of carbon dating is not in dispute, but there are other issues including questions about the quality of the samples. If you are interested you can read more here: https:\/\/www.usatoday.com\/story\/news\/world\/2013\/03\/30\/shroud-turin-display\/2038295\/ .  "
 },
@@ -5018,7 +5018,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONLogApps.html#SUBSECTIONradioactive-decay-16",
   "type": "Drill",
-  "number": "8.10.1.7",
+  "number": "8.10.7",
   "title": "",
   "body": " Drills half life   In medicine, Positron Emission Tomography (PET) scans use radioactive tracers to image body functions. One of the most commonly used radioactive tracers is Fluorine  which has a half life of minutes. Typically is injected into the body and the imaging is done about one hour after the tracer is injected. Suppose that units of must remain in the body for the PET scan results to be useful. How much must be injected into the patient minutes prior?   "
 },
@@ -5027,7 +5027,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONLogApps.html#SUBSECTIONradioactive-decay-17",
   "type": "Drill",
-  "number": "8.10.1.8",
+  "number": "8.10.8",
   "title": "",
   "body": " Drills half life   The half life of limits it to dating artifacts that are no older than years. What percentage of the original amount of would remain in a year-old artifact? How does this explain the limitation on radiocarbon dating?   "
 },
@@ -5036,7 +5036,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONLogApps.html#SUBSECTIONradioactive-decay-18",
   "type": "Problem",
-  "number": "8.10.1.9",
+  "number": "8.10.9",
   "title": "",
   "body": " The radioactive isotope Potassium  has a half life of billion years. Radiometric dating using is especially effective for dating very old volcanic rock as the quickly cooling lava traps the Argon formed by the decaying of This has been used by scientists to study the frequency of geomagnetic reversals. A geomagnetic reversal is a change in the earth s magnetic polarity where the magnetic north and south poles (not to be confused with the geographic north and south poles) are switched. The latest such reversal is called the Brunhes-Matuyama reversal. Basically, the magnetic polarity of the planet is recorded in cooled lava flows. By dating the age of the lava flows, scientists can date these reversals. There are limitations to this dating method, as the smallest percentage of that can be detected is about .   According to the Wikipedia article we referenced above the the Brunhes Matuyama reversal occured approximately years ago. A rock sample which appears to have a magnetic reversal contains between and of the that it originally contained. Is this consistent with the Brunhes Matuyama reversal?   Approximately what is the age of the youngest rock that can be dated using this technique?  "
 },
@@ -5045,7 +5045,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONLogApps.html#SECTIONnewtons-law-cooling-2",
   "type": "Example",
-  "number": "8.10.2.1",
+  "number": "8.10.10",
   "title": "",
   "body": " Examples Newton s Law of Cooling  Suppose a container of water at a temperature of is placed into a freezer maintained at a constant temperature of We d like to have a model that will allow us to compute how long it will take for the water to cool down to a temperature of, for example, where it will start to freeze.   Newton, Isaac and the Law of Cooling In the late th century Isaac Newton showed experimentally that the rate at which the water cools will be proportional to the difference between its current temperature and the ambient (surrounding) temperature. This is known as Newton s Law of Cooling and it holds generally, not just for water.  For this problem we see that the ambient temperature is and the initial temperature of the water is . We let represent the temperature of the water at any given time. Then the difference between the current temperature and the ambient temperature is , and (as always) the rate of change of the temperature of the water with respect to time is , (or if you are Newton). Letting be the (unknown) constant of proportionality we have the IVP   This differential equation looks like it will be tougher to solve than the IVPs we dealt with earlier. But in fact we can make this problem easier on the eyes with the substitution . Notice that so we have the IVP Do you recognize this equation? This has the same form as IVP so the solution is Reversing the substitution we see that   To complete our model we need to determine . We can find if we know the temperature of the water at a second time during the cooling. Assume that we measured the temperature of the water after minutes and it was Then we have so that and our complete model is   Newton s Law of Cooling accurately models the cooling of any object placed in cooler surroundings. We used water in our example just to be definite.  "
 },
@@ -5054,7 +5054,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONLogApps.html#SECTIONnewtons-law-cooling-3",
   "type": "Problem",
-  "number": "8.10.2.2",
+  "number": "8.10.11",
   "title": "",
   "body": " Since the temperature of the water is decreasing we would expect to be less than zero. Show that it is.  "
 },
@@ -5063,7 +5063,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONLogApps.html#SECTIONnewtons-law-cooling-4",
   "type": "Problem",
-  "number": "8.10.2.3",
+  "number": "8.10.12",
   "title": "",
   "body": "    Answer the original question: How long does it take for the water to cool from to    Take a guess: Would it take the same amount of time to cool another from to Check to see if your guess was correct.   What would the initial temperature of the water need to be to take twice as long to cool to as it did for the water?  "
 },
@@ -5072,7 +5072,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONLogApps.html#SECTIONnewtons-law-cooling-5",
   "type": "Problem",
-  "number": "8.10.2.4",
+  "number": "8.10.13",
   "title": "",
   "body": " The rule of thumb forensic scientist use to determine at person s the time of death is to start with a body temperature of and subtract for each hour the person is dead. Of course, this simple linear model isn t as accurate as Newton s Law of Cooling since it does not take into account the surrounding temperature, size of the body, etc. and can only be applied until the temperature of the body reaches the surrounding temperature.   Comment  Notice that we ve switched to measuring temperature in degrees Celsius.    Suppose the ambient temperature is Using the forensic rule of thumb, how long would it take for the body to reach the ambient temperature? Using the forensic rule of thumb, what would the body temperature be halfway through the cooling process.   Use the temperature predicted by the rule of thumb at the halfway point to give a complete model of the body s cooling as predicted by Newton s Law of Cooling.   Of course, in Newton s Law of Cooling, the body temperature will never quite reach the ambient temperature, but just for comparison, substitute the time when the rule of thumb predicts that the body temperature is and see how close it is to the ambient temperature.   Using the answer you obtained in part (c), find the rate of change of the body temperature at the beginning of the time interval and the rate of change of the body temperature at the end of the time interval. How do these compare with the rule of thumb rate of change?  "
 },
@@ -5081,7 +5081,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONLogApps.html#SECTIONnewtons-law-cooling-7",
   "type": "Problem",
-  "number": "8.10.2.5",
+  "number": "8.10.14",
   "title": "",
   "body": " A whole turkey is considered to be safely cooked when the internal temperature is Suppose a turkey is taken out of a refrigerator set at and is put directly into an oven set at . You check it hours later and the internal temperature is How much longer does the turkey need to cook?  "
 },
@@ -5108,7 +5108,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONDerivNatLog.html#SECTIONDerivNatLog-4",
   "type": "Drill",
-  "number": "8.11.0.1",
+  "number": "8.11.1",
   "title": "",
   "body": " Drills differential of the natural logarithm  For each of the following find , and .                                                                     "
 },
@@ -5117,7 +5117,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONDerivNatLog.html#PROBLEMderiv-natur-logar",
   "type": "Problem",
-  "number": "8.11.0.2",
+  "number": "8.11.2",
   "title": "",
   "body": " For each of the following find , and .       Use the properties of logarithms to make these drills easier on the eyes.                  "
 },
@@ -5126,7 +5126,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONDerivNatLog.html#SECTIONDerivNatLog-6",
   "type": "Problem",
-  "number": "8.11.0.3",
+  "number": "8.11.3",
   "title": "",
   "body": " Recall that in we showed the curvature of the graph of a function is given by    Show that the curvature of the graph of is given by . Use the graph of (or use Newton s Method) to approximate the coordinates of the point , where the curvature of the graph of the natural exponential function is the greatest.   Show that the curvature of the graph of the is given by . Use the graph of (or use Newton s Method) to approximate the coordinates of the point , where the curvature of the graph of the natural logarithm is the greatest.   Graph the natural logarithm and the natural exponential functions on the same set of axes and identify the points where the curvature is greatest in parts (a) and (b)? How are these points related? Does this surprise you? Explain.  "
 },
@@ -5153,7 +5153,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONgener-logar-expon.html#PARAGRAPHSGenExp-4",
   "type": "Problem",
-  "number": "8.12.1.1",
+  "number": "8.12.1",
   "title": "",
   "body": " Why do we impose the conditions, and ?  "
 },
@@ -5162,7 +5162,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONgener-logar-expon.html#PARAGRAPHSGenExp-6",
   "type": "Problem",
-  "number": "8.12.1.2",
+  "number": "8.12.2",
   "title": "",
   "body": " Let , ,  and let be any real number.   Show that    Consider and use the properties of exponents to show that this equals    Show that    Consider and use the properties of exponents to show that this equals .  "
 },
@@ -5171,7 +5171,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONgener-logar-expon.html#PARAGRAPHSGenExp-12",
   "type": "Drill",
-  "number": "8.12.1.3",
+  "number": "8.12.3",
   "title": "",
   "body": " Drills functions the natural logarithm   Starting with , take the natural logarithm of both sides and solve for to obtain equation in a different way.   "
 },
@@ -5180,7 +5180,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONgener-logar-expon.html#PARAGRAPHSGenExp-14",
   "type": "Drill",
-  "number": "8.12.1.4",
+  "number": "8.12.4",
   "title": "",
   "body": " Drills differential of an exponential  Find and for each of the following:                                                 "
 },
@@ -5189,7 +5189,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONgener-logar-expon.html#PARAGRAPHSGenLog-7",
   "type": "Drill",
-  "number": "8.12.2.1",
+  "number": "8.12.5",
   "title": "",
   "body": " Drills differential of logarithms  Compute and for each of the following.              "
 },
@@ -5198,7 +5198,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONgener-logar-expon.html#PARAGRAPHSGenLog-8",
   "type": "Problem",
-  "number": "8.12.2.2",
+  "number": "8.12.6",
   "title": "",
   "body": " Assume and let . Show that   "
 },
@@ -5207,7 +5207,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONgener-logar-expon.html#PARAGRAPHSGenLog-9",
   "type": "Problem",
-  "number": "8.12.2.3",
+  "number": "8.12.7",
   "title": "",
   "body": " For a given sound, the sound power level , in decibels, is given by where is the sound power of the source measured in watts and is the sound reference level taken to be picowatt or watts.   Suppose that the sound power of the speaker is watts. How many decibels does this correspond to?   Suppose the sound power of a speaker starts at watts and is being raised at a rate of watts per second. How fast is the sound power level rising?    "
 },
@@ -5234,7 +5234,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONgener-logar-expon.html#DIGRESSIONBriggsAndNapier-7",
   "type": "Drill",
-  "number": "8.12.3.1",
+  "number": "8.12.8",
   "title": "",
   "body": " Drills functions natural logarithms     Use whatever technology you prefer to compute the natural logarithms of the numbers and and their product. Confirm that . If you don t like these numbers use others. We just picked these at random.    Do the same using common logarithms.    Do the same using . Or any other base. Again we just picked at random.     "
 },
@@ -5243,7 +5243,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONgener-logar-expon.html#DIGRESSIONBriggsAndNapier-8",
   "type": "Example",
-  "number": "8.12.3.2",
+  "number": "8.12.9",
   "title": "",
   "body": " Examples logarithms  A calculator is a useful tool, but only if the human operating it understands what to calculate, and why. Blind computation is pointless and wasteful. As powerful and convenient as our modern technology is, there is still no substitution for a deep understanding of basic principles.  For example, how many base digits long do you suppose the number is? You cannot solve this by punching into a calculator and counting the digits. Try it and see. If you can solve this by punching into a calculator, that just means that technology has outpaced this particular problem. In that case use a bigger exponent, say .  This feels like the sort of problem a math professor might make up just for fun (though it often feels like we do it just to torment our students), but it is not. Computer programmers routinely have to allocate space in memory to hold information. If the information being held happens to be the value of a large number like the programmer will need to know how much memory space to allocate to hold the number.  "
 },
@@ -5252,7 +5252,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONgener-logar-expon.html#DIGRESSIONBriggsAndNapier-9",
   "type": "Problem",
-  "number": "8.12.3.3",
+  "number": "8.12.10",
   "title": "",
   "body": " Show that if is a positive integer and then will have digits to the left of the decimal point.  "
 },
@@ -5261,7 +5261,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONgener-logar-expon.html#DIGRESSIONBriggsAndNapier-11",
   "type": "Drill",
-  "number": "8.12.3.4",
+  "number": "8.12.11",
   "title": "",
   "body": " Drills binary digits  Since computers store integers in binary (base ) if we are trying to compute the size of the storage needed to hold what we really need to know is how many binary digits (bits) are needed.  How many bits are needed to allocate to store each of these numbers?                        "
 },
@@ -5270,7 +5270,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONgener-logar-expon.html#DIGRESSIONBriggsAndNapier-12",
   "type": "Problem",
-  "number": "8.12.3.5",
+  "number": "8.12.12",
   "title": "",
   "body": " For each of the following numbers:                         Find the number of binary digits needed to store the number.   Find the number of base digits needed to store the number.   Find the number of base digits needed to store the number.   Find the number of base digits needed to store the number.   Find the number of base digits needed to store the number.  "
 },
@@ -5288,7 +5288,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONgener-logar-expon.html#PROBLEMNapierianLog",
   "type": "Problem",
-  "number": "8.12.3.6",
+  "number": "8.12.13",
   "title": "",
   "body": " It is not altogether clear from the description above that the Napierian logarithm actually is a logarithm, let alone what its base is. This problem explores both of these questions.  For clarity we have suppressed the variable . Remember that and depend on .   Show that , and .   Solve the IVP: , ,   Use the information in parts (a) and (b) to show that Thus the base of Napier s original logarithm was .  "
 },
@@ -5297,7 +5297,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONgener-logar-expon.html#EXAMPLELogDiff1",
   "type": "Example",
-  "number": "8.12.4.1",
+  "number": "8.12.14",
   "title": "",
   "body": " Examples logarithmic differentiation  For example, suppose we need to differentiate   While we can do this using our Differentiation Rules, it will be very tedious. But nice things happen if we take the natural logarithm of both sides before we differentiate. Since the natural logarithm changes division into subtraction (Property 5) we can rewrite the right side as: And since the natural logarithm changes multiplication into addition (Property 4) we can re-express the right side again. This time as: Re-expressing the square root as an exponent gives . and we can now bring the exponents down in front (Property 6). Notice that we have not yet started differentiating. All we ve done so far is re-express our function using the properties of logarithms.  But differentiating is now relatively easy. If we multiply by we get   "
 },
@@ -5306,7 +5306,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONgener-logar-expon.html#SUBSECTIONLogDiff-8",
   "type": "Drill",
-  "number": "8.12.4.2",
+  "number": "8.12.15",
   "title": "",
   "body": " Just before we said we would be using the same trick that we used in equation . Did we? Explain.  "
 },
@@ -5315,7 +5315,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONgener-logar-expon.html#PROBLEMGeneralPowerRule2",
   "type": "Problem",
-  "number": "8.12.4.3",
+  "number": "8.12.16",
   "title": "",
   "body": " Let .   Take the logarithm of both sides of this formula and use the properties of logarithms to show that for     Show that the result of part (a) is equivalent to the solution of .  "
 },
@@ -5333,7 +5333,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONgener-logar-expon.html#PROBLEMLogarithmicDifferentiation1",
   "type": "Problem",
-  "number": "8.12.4.4",
+  "number": "8.12.17",
   "title": "",
   "body": " Compute the derivative of each of the following functions using the Differentiation Rules from , and then again using Logarithmic Differentiation. Does either method seem preferable to you? Explain.                  "
 },
@@ -5342,7 +5342,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONgener-logar-expon.html#SUBSECTIONLogDiff-14",
   "type": "Problem",
-  "number": "8.12.4.5",
+  "number": "8.12.18",
   "title": "",
   "body": " For each of the following find , and .                  "
 },
@@ -5351,7 +5351,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONgener-logar-expon.html#SUBSECTIONLogDiff-15",
   "type": "Drill",
-  "number": "8.12.4.6",
+  "number": "8.12.19",
   "title": "",
   "body": " Drills differentiation logarithmic  Use Logarithmic Differentiation to show that if then .  "
 },
@@ -5360,7 +5360,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONgener-logar-expon.html#PROBLEMGenPR",
   "type": "Problem",
-  "number": "8.12.4.7",
+  "number": "8.12.20",
   "title": "",
   "body": " Suppose that where and are differentiable functions.   Use Logarithmic Differentiation to show that .   Now express as and compute again without using Logarithmic Differentiation to show that you get the same thing as in part (a).   Because we ve given it a name it is easy to get the impression that Logarithmic Differentiation is a new differentiation rule, but it isn t. Part (b) of this problem shows that It is really just a trick. A handy trick, to be sure, but still a trick.  "
 },
@@ -5369,7 +5369,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONgener-logar-expon.html#PROBLEMGenerPowRule",
   "type": "Problem",
-  "number": "8.12.4.8",
+  "number": "8.12.21",
   "title": "The General Power Rule.",
   "body": "The General Power Rule  We are now, finally, in a position to extend the Power Rule for Positive, Rational Exponents to irrational exponents. In fact we ve already done it.   Explain how the results of imply that if and then even when is irrational.   Why did we impose the restriction ?   What happens if and ?   Since we did not constraint except to say that it is a real number the different versions of the Power Rule that we saw in are all special cases of equation .  "
 },
@@ -5387,7 +5387,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONEulerHarmonicOsc.html#SECTIONEulerHarmonicOsc-3",
   "type": "Figure",
-  "number": "8.13.0.1",
+  "number": "8.13.1",
   "title": "",
   "body": "  Leonhard Euler (1707 1783)   "
 },
@@ -5396,7 +5396,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONEulerHarmonicOsc.html#PROBLEMDampedOscillator1",
   "type": "Problem",
-  "number": "8.13.0.2",
+  "number": "8.13.2",
   "title": "",
   "body": " Show that: satisfies equation for any constants and .   Let and plot this solution for and Does this seem to model a damped oscillation?  "
 },
@@ -5405,7 +5405,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONEulerHarmonicOsc.html#SECTIONEulerHarmonicOsc-17",
   "type": "Problem",
-  "number": "8.13.0.3",
+  "number": "8.13.3",
   "title": "",
   "body": " Show that if satisfies the differential equation then must satisfy the quadratic equation    Put the first two derivatives of into the differential equation.  "
 },
@@ -5414,7 +5414,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONEulerHarmonicOsc.html#PROBLEMDampOscExpSol",
   "type": "Problem",
-  "number": "8.13.0.4",
+  "number": "8.13.4",
   "title": "",
   "body": " Assume that is a constant.   Show that  is a solution of equation .   Show that  is also a solution of equation .   Show that if and are constants then is also a solution of equation .  "
 },
@@ -5423,7 +5423,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONEulerHarmonicOsc.html#PROBLEMDampedOscillation1",
   "type": "Drill",
-  "number": "8.13.0.5",
+  "number": "8.13.5",
   "title": "",
   "body": " Drills simple harmonic oscillators (SHOs)   Show that is a solution of the differential equation when or .   "
 },
@@ -5432,7 +5432,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONEulerHarmonicOsc.html#PROBLEMEulersFormula",
   "type": "Problem",
-  "number": "8.13.0.6",
+  "number": "8.13.6",
   "title": "",
   "body": "    Show that if then and    To get substitute To get differentiate first.   Show that if then and   "
 },
@@ -5459,7 +5459,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONEulerHarmonicOsc.html#SECTIONEulerHarmonicOsc-33",
   "type": "Drill",
-  "number": "8.13.0.7",
+  "number": "8.13.7",
   "title": "",
   "body": " Drills Euler s Identity  Euler  Euler s Identity   Show that .  We call this curious because it relates the numbers , and all in one simple formula. If you want to learn more about the complex numbers you ll need to become a mathematics major and take a course in Complex Analysis. It s fun. You should do that.   "
 },
@@ -5468,7 +5468,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONEulerHarmonicOsc.html#SECTIONEulerHarmonicOsc-35",
   "type": "Problem",
-  "number": "8.13.0.8",
+  "number": "8.13.8",
   "title": "",
   "body": "    Show that    Show that .  "
 },
@@ -5477,7 +5477,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONEulerHarmonicOsc.html#SECTIONEulerHarmonicOsc-37",
   "type": "Problem",
-  "number": "8.13.0.9",
+  "number": "8.13.9",
   "title": "",
   "body": "    Assuming that that and that , use Euler s Identity to show that and that .   Show that if satisfies the initial conditions then and .   If what is equal to?   Use and from part (b) to show that and are real numbers.  "
 },
@@ -5504,7 +5504,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONintroduction.html#THEOREMFermatsTheorem",
   "type": "Theorem",
-  "number": "9.1.0.1",
+  "number": "9.1.1",
   "title": "Fermat’s Theorem.",
   "body": " Fermat s Theorem  If a function, , is differentiable at and is either a maximum or a minimum then .  "
 },
@@ -5513,7 +5513,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONintroduction.html#SECTIONintroduction-10",
   "type": "Problem",
-  "number": "9.1.0.2",
+  "number": "9.1.2",
   "title": "",
   "body": " Suppose a ball is tossed vertically from the surface of the earth with an initial velocity of . Show that the ball reaches its maximum height when seconds.   You may want to review .  "
 },
@@ -5522,7 +5522,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONintroduction.html#DRILLFermatThmNeg",
   "type": "Drill",
-  "number": "9.1.0.3",
+  "number": "9.1.3",
   "title": "",
   "body": " Confirm that the converse of Fermat s Theorem is not true graphing and locating the only point where .  "
 },
@@ -5531,7 +5531,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONintroduction.html#DRILLNonTrivialMaxExample",
   "type": "Problem",
-  "number": "9.1.0.4",
+  "number": "9.1.4",
   "title": "",
   "body": " Let    Show that when and when .   Graph . Does it have a maximum? Explain.  "
 },
@@ -5549,7 +5549,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONfive-simil-probl.html#EXAMPLESqOnLine",
   "type": "Example",
-  "number": "9.2.0.1",
+  "number": "9.2.1",
   "title": "Constructing A Square on a Line.",
   "body": " Constructing A Square on a Line  Examples optimization constructing a square on a line  What is the area of the smallest possible square having one corner at the point and an adjacent corner on the line The diagram below is a visualization of this problem.   We can imagine the blue square growing and shrinking as we move the point along the line. It seems clear that the square having the least area is the one pictured in black (when is at . It is worth taking a moment to notice this explicitly because not all optimization problems are solvable. If we had asked for the largest possible square there would be no solution because the blue square in our diagram can always be make larger by moving the point further to the left on the graph of equation .  But a convincing picture is not a solution. To complete the solution we ll need to compute the coordinates of the point in our sketch and compute the minimal area.  In any optimization problem the first question to ask is, What do we need to optimize? In other words, What is our objective function? For this problem the length of the line segment between the point and any point is given by the Distance Formula: . Therefore the area of the square constructed from this line segment is given by the function: So our objective function is . Since the point is constrained to lie on the line , equation , is our constraint.  Notice that we ve abused our notation a bit. Although the notation indicates that depends on alone, we ve given in terms of both and . But solving equation gives so it should be clear that really depends only on .   Comment  If we make this substitution immediately we can get the objective function solely in terms of : , But does that really help? Either way we re going to have to differentiate . Which form of would you rather use? We think using two variables makes this objective function a bit easier on the eyes.    We ve seen visually that this problem has a solution and Fermat s Theorem tells us that the derivative of our objective function will be zero at that solution. So we differentiate both sides of which gives But recall that and are constrained by the equation from which we see that . Therefore or Setting equal to zero we have So finally From our constraint we have . Inserting this into equation we see that Solving for gives   To find we use our constraint and the value of from equation ,   So we have found that the minimal square occurs when , and and it feels like we re done, doesn t it?  We re not.  The question asked was What is the area of the smallest possible square? To find the area we need to put into our area formula which yields Always remember to check that you have actually answered the question which was asked before you stop.  "
 },
@@ -5558,7 +5558,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONfive-simil-probl.html#SECTIONfive-simil-probl-5",
   "type": "Problem",
-  "number": "9.2.0.2",
+  "number": "9.2.2",
   "title": "",
   "body": "    Do you see that the point which minimizes the area of our square in also minimizes the length of the line segment from to ? What objective function would we get if we tried to minimize the length of the segment instead of the area of the square. Does this change the problem? If so, how?   This example specified that and were adjacent corners of the square. What would the objective function look like if those points were diagonally opposite each other. Does this change the problem? If so, how?  "
 },
@@ -5567,7 +5567,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONfive-simil-probl.html#PROBLEMMinSqLine",
   "type": "Problem",
-  "number": "9.2.0.3",
+  "number": "9.2.3",
   "title": "",
   "body": " It seems fairly intuitively clear that the minimal square in occurs when the line through is orthogonal to the graph of the line .   Terminology   Orthogonal is the word mathematicians use when everyone else would say perpendicular. The reasons for this are abstruse.    Verify that our intuition is correct.   Does this remain true if the point on the line and are not adjacent corners of the square?  "
 },
@@ -5576,7 +5576,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONfive-simil-probl.html#EXAMPLECircleDist",
   "type": "Example",
-  "number": "9.2.0.4",
+  "number": "9.2.4",
   "title": "Constructing A Square on a Circle.",
   "body": " Constructing A Square on a Circle  Examples optimization constructing a square on a circle  We want to find the area of the largest and the smallest squares that can be constructed with one corner at the point and an adjacent corner on the unit circle: .  The solution of this problem is very clear once it has been sketched. We will solve it again analytically below.  "
 },
@@ -5585,7 +5585,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONfive-simil-probl.html#DRILLIntuitiveSquareOnCircle",
   "type": "Drill",
-  "number": "9.2.0.5",
+  "number": "9.2.5",
   "title": "",
   "body": " Drills optimization square on a circle  The purpose of this drill is for you to see the solution of intuitively.  Sketch the unit circle, plot the point , and draw the smallest and largest squares you can which have one corner at the point and an adjacent corner on the unit circle: .   Explain how you can tell from your sketch that that there is both a maximal (largest area) and a minimal (smallest area) square.    Explain how you can tell from your sketch, that the second corner of the maximal and minimal squares are at the intersection points of the line and the unit circle.    Show that the areas of the maximal square is units and that the area of the minimal square is units.     "
 },
@@ -5594,7 +5594,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONfive-simil-probl.html#DRILLExtremalSquareCircle",
   "type": "Drill",
-  "number": "9.2.0.6",
+  "number": "9.2.6",
   "title": "",
   "body": " Drills optimization square on a circle     Show that the area of the maximal square is approximately units. Which value of does this correspond to?    Show that the area of the minimal square is approximately units. Which value of does this correspond to?     "
 },
@@ -5603,7 +5603,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONfive-simil-probl.html#PROBLEMEllipseDist",
   "type": "Problem",
-  "number": "9.2.0.7",
+  "number": "9.2.7",
   "title": "",
   "body": " There are two extremal squares with one corner at and an adjacent corner on the ellipse: Find the area of each one of them.  In solving this problem it is possible that you will encounter a sub problem that cannot be easily solved algebraically. In that case use Newton s Method or some computational software as needed to find approximations.  Since a circle is a special case of an ellipse this problem is a slight generalization of so the algebra is a bit trickier.   Draw a sketch of this problem. Explain how you can tell from the sketch that there is one maximal, and one minimal square.   The objective function for this problem is, once again: What is the constraint?   Use the constraint to show that and that    Show that .   Show that if we choose then the only root of is .   Show that if we choose then the only root of is .   Find (approximately) the area of the square associated with both of these points. Which one is the maximal and which is the minimal square?  "
 },
@@ -5612,7 +5612,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONfive-simil-probl.html#PROBLEMMaxOrth1",
   "type": "Problem",
-  "number": "9.2.0.8",
+  "number": "9.2.8",
   "title": "Constructing a Square on an Ellipse.",
   "body": "Constructing a Square on an Ellipse  Here is a sketch of the optimal squares in . Notice that for both the maximal and the minimal square one of the sides appears to be orthogonal to (the line tangent to) the ellipse.    Show that they actually are orthogonal.   It is generally true that the shortest (or longest) line segment from a point to a curve, , will be orthogonal to the line tangent to the curve at their point of intersection. The figure below shows an arbitrary, differentiable curve, , and an arbitrary point .   Suppose that the area of a square with one corner at and an adjacent corner on the curve at is optimal (minimal or maximal) at . Show that the line joining and is orthogonal to the tangent line of at . Try to solve this problem completely on your own, but if you get stuck here is an outline you can follow:   Find the objective function, . (This will be the area of the square on the line from to .)    Use the fact that to find the slope of at .    Find the slope of the line from to .    Compare the two slopes.    What happens if the tangent line is horizontal? If it is vertical?     "
 },
@@ -5621,7 +5621,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONfive-simil-probl.html#EXAMPLEDiffvsDer",
   "type": "Example",
-  "number": "9.2.0.9",
+  "number": "9.2.9",
   "title": "Maximizing the Area of a Rectangle, Redux: Differentials vs. Derivatives.",
   "body": " Maximizing the Area of a Rectangle, Redux: Differentials vs. Derivatives  Examples optimization maximal rectangle  Take a moment to reconsider . Is it clear to you that there must be such a maximal rectangle? If so then, as before, setting the derivative of the objective function equal to zero and solving for the variable will provide all of the values of the variable where the maximal rectangle might occur. If we re lucky there will only be a few such and we can check them one at a time.  Finding the objective function in this case is easy. The area , of any rectangle is its length, , times its width, , so is the objective function.  The perimeter, is and is constrained to be a constant (fixed) value so equation is the constraint. Throughout this example keep in mind that is a fixed constant, not a function of and .  At this point we can complete the problem using Calculus in either of two equivalent ways.   Using Differentials:  In our opinion this is how Leibniz intended for his Calculus to be used so we tend to favor it.   Compute , from the objective function.    Differentiate the constraint, giving the differential form of the constraint:     Set and solve this equation using the constraint and its differential form as needed. In this problem we have so Since we have and thus the square encloses the most area.       Using Derivatives:  The modern approach emphasizes the use of functions and derivatives rather than curves and differentials.   Solve the constraint for either or in terms of the other. For example,     Substitute this into the objective function to rewrite it in terms of a single variable:     Now think of the objective function, , as an abstract function and find its maximum point by setting and solving for .  Proceeding, we have so . Putting this back into our constraint gives we see that is also equal to . Since the square encloses the most area.        As we said, the two approaches are completely equivalent. Use whichever feels most comfortable to you.  "
 },
@@ -5630,7 +5630,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONfive-simil-probl.html#PROBLEMMaximalSquareRedux1",
   "type": "Problem",
-  "number": "9.2.0.10",
+  "number": "9.2.10",
   "title": "",
   "body": " Find the dimensions of the rectangle having the smallest perimeter, given that the area is fixed. Since we are still relying on Fermat s Theorem, the first step is to convince yourself that this problem has a solution. Once you have done that, use both of the approaches outlined in to complete the solution. Which method do you prefer?  "
 },
@@ -5639,7 +5639,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONfive-simil-probl.html#SECTIONfive-simil-probl-21",
   "type": "Problem",
-  "number": "9.2.0.11",
+  "number": "9.2.11",
   "title": "",
   "body": "  Consider all lines connecting the point to an arbitrary point , on the unit circle as pictured. There is clearly one point where the slope of the associated line is maximum and another point where the slope of the associated line is minimum. These are the outermost lines depicted in the figure. Find an equation for each of these lines. If you aren t sure how to begin use the following steps.   Find an appropriate objective function for this problem.   Find the constraint for this problem.   Differentiate both your objective function and your constraint to show that the points where the maximum and minimum slope occur must satisfy    Comment  There is usually more than one way to solve a given problem so it is possible that you came up with a different equation than we did. That s OK. Solve the problem using yours and use ours to check your solution.    Solve equation and the constraint simultaneously to find the equations of the lines with maximal and minimal slope. Verify your answer by graphing both lines and the unit circle.  "
 },
@@ -5648,7 +5648,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONfive-simil-probl.html#SECTIONfive-simil-probl-22",
   "type": "Drill",
-  "number": "9.2.0.12",
+  "number": "9.2.12",
   "title": "",
   "body": " Drills optimization  Sketch the graphs of and and convince yourself that there is a point on each graph which is closest to the origin.   Find the approximate coordinates of the point on the curve that is closest to the origin.    Find the approximate coordinates of the point on the curve that is closest to the origin.    Are the solutions of parts (a) and (b) related? Explain.     "
 },
@@ -5657,7 +5657,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONfive-simil-probl.html#SECTIONfive-simil-probl-23",
   "type": "Drill",
-  "number": "9.2.0.13",
+  "number": "9.2.13",
   "title": "",
   "body": " Drills optimization  Suppose a point is moving in a plane so that its coordinates are given by:    Find the value of where the point, , is closest to the origin. Is it clear that there is such a point?    Find the coordinates of the point s location when it is closest to the origin.     "
 },
@@ -5666,7 +5666,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONfive-simil-probl.html#PROBLEMRectInscEll",
   "type": "Problem",
-  "number": "9.2.0.14",
+  "number": "9.2.14",
   "title": "Find the Pattern.",
   "body": "Find the Pattern     Of all the rectangles that can be inscribed in the unit circle show that the one with the maximum area is a square.   Of all the rectangles that can be inscribed in the ellipse show that the one with the maximum area is three times taller than it is wide.   Of all the rectangles that can be inscribed in the ellipse show that the one with the maximum area is four times wider than it is tall.   Of all the rectangles that can be inscribed in the ellipse show that the one with the maximum area has a height to width ratio of .  "
 },
@@ -5675,7 +5675,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONfive-simil-probl.html#FIGURETriFixedBase",
   "type": "Figure",
-  "number": "9.2.0.15",
+  "number": "9.2.15",
   "title": "",
   "body": "   "
 },
@@ -5684,7 +5684,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONfive-simil-probl.html#PROBLEMMaximalIsoceles1",
   "type": "Problem",
-  "number": "9.2.0.16",
+  "number": "9.2.16",
   "title": "",
   "body": "    Use the sketch in to express as a function of and and show that when is maximal .   Express as a function of and and show that when is maximal .   Use the fact that is constant to find an equation relating and .   Use the fact that the perimeter is constant to find an equation relating and .   Use the results from parts (a), (b), (c), and (d) to show that is maximized when    Use an appropriate trigonometric function.   Use part (e) to conclude that the base angles, and , must be congruent and thus .  "
 },
@@ -5693,7 +5693,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONfive-simil-probl.html#QUOTEHolmesQuote",
   "type": "Principle",
-  "number": "9.2.0.17",
+  "number": "9.2.17",
   "title": "Sherlock Holmes’ Maxim.",
   "body": " Sherlock Holmes Maxim  Sherlock Holmes Maxim statement of       It is an old maxim of mine that when you have excluded the impossible, whatever remains, however improbable, must be the truth.     "
 },
@@ -5711,7 +5711,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONfive-simil-probl.html#DRILLMaximalTriangle",
   "type": "Problem",
-  "number": "9.2.0.18",
+  "number": "9.2.18",
   "title": "The Largest Triangle with a Fixed Perimeter is Equilateral.",
   "body": "The Largest Triangle with a Fixed Perimeter is Equilateral Sherlock Holmes Maxim largest triangle with a fixed perimeter  Observe that every triangle is either equilateral, or it is not equilateral.   Suppose we have a triangle with sides , , and which is not equilateral. Then at least two sides, say and , are not equal. Explain how implies that there must be another triangle with the same perimeter and a larger area.   Use Holmes maxim to explain why a triangle with a fixed perimeter enclosing maximal area must be equilateral.  "
 },
@@ -5729,7 +5729,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONrefl-refr-rainb.html#SUBSECTIONreflection-15",
   "type": "Problem",
-  "number": "9.3.1.1",
+  "number": "9.3.1",
   "title": "",
   "body": " In the figure above suppose that , , and .   Show that .   Show that the solution of is .   Use the result of part (b) to show that .  "
 },
@@ -5738,7 +5738,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONrefl-refr-rainb.html#FIGURESnellsLaw",
   "type": "Figure",
-  "number": "9.3.2.1",
+  "number": "9.3.2",
   "title": "",
   "body": " The velocity of light in Medium 1 is , and the velocity of light in Medium 2 is .     "
 },
@@ -5747,7 +5747,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONrefl-refr-rainb.html#PROBLEMSnellsLawWithCalculus",
   "type": "Problem",
-  "number": "9.3.2.2",
+  "number": "9.3.3",
   "title": "",
   "body": " We know that the total time traveled from to to is given by    Use the sketch in to Write down all of the constraints involving the variables , , , and , and the constants , , and .   Show that when is minimum (that is, when ) we have    Use equation to derive Snell s Law of refraction: .    Assuming that the speed of light in water is about of the speed of light in air, use Snell s Law to determine the range of possible angles for as ranges from to .  "
 },
@@ -5756,7 +5756,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONrefl-refr-rainb.html#SUBSECTIONrefraction-11",
   "type": "Figure",
-  "number": "9.3.2.3",
+  "number": "9.3.4",
   "title": "",
   "body": "  Snell s window. Photo courtesy of Eric Cheng.    "
 },
@@ -5765,7 +5765,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONrefl-refr-rainb.html#PROBLEMsnells-law-variation",
   "type": "Problem",
-  "number": "9.3.2.4",
+  "number": "9.3.5",
   "title": "",
   "body": " Suppose that the cost to run a fiber optic cable underwater is ( ) times the cost to run it on land. We wish to run a fiber optic cable from a point which is km from the river, to a point on the other side km downstream. The river is km wide.    Show that the value of necessary to minimize the cost of running the cable must satisfy the equation    When the formulas we re working with get this complicated it is a good idea to check them against our intuition in simple cases. Explain how this formula makes intuitive sense when .   Use any appropriate technology, or Newton s Method, to provide approximate values for in the following table                  x=    What do these values tell you about the solution of this problem? Explain.                                                    "
 },
@@ -5783,7 +5783,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONrefl-refr-rainb.html#SUBSECTIONrainbows-13",
   "type": "Drill",
-  "number": "9.3.3.1",
+  "number": "9.3.6",
   "title": "",
   "body": " Drills refraction   Show that .   "
 },
@@ -5810,7 +5810,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONrefl-refr-rainb.html#SUBSECTIONRainbow-5",
   "type": "Problem",
-  "number": "9.3.4.1",
+  "number": "9.3.7",
   "title": "",
   "body": " Differentiate the objective function and the constraint, equation , and use Fermat s Theorem to show that when is a minimum   "
 },
@@ -5819,7 +5819,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONrefl-refr-rainb.html#PROBLEMRainbowAngle",
   "type": "Problem",
-  "number": "9.3.4.2",
+  "number": "9.3.8",
   "title": "",
   "body": "    Use equation to show that for a given index of refraction , is minimized when    Use the result in part to complete the following table:    Color   (in degrees)  (in degrees)   (in degrees)   (in degrees)    Red 1.331       Orange 1.332       Yellow 1.333       Green 1.335       Blue 1.337       Indigo 1.340       Violet 1.344        How does the table in part explain the order of the colors in the primary rainbow?  "
 },
@@ -5828,7 +5828,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONrefl-refr-rainb.html#PROBLEMSecondaryRainbow",
   "type": "Problem",
-  "number": "9.3.5.1",
+  "number": "9.3.9",
   "title": "",
   "body": "    Show that in the case of the secondary rainbow, . This is our objective function for the secondary rainbow.   Show that is minimized when    Use part to complete the following table:    Color   (in degrees)  (in degrees)   (in degrees)   (in degrees)    Red 1.331       Orange 1.332       Yellow 1.333       Green 1.335       Blue 1.337       Indigo 1.340       Violet 1.344        Use the table in part of this problem and the table in part of to explain why the secondary rainbow is above the primary rainbow and its colors are reversed.  "
 },
@@ -5846,7 +5846,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONGlobalVsLocalExtrema.html#EXAMPLEParabolaOptSqr",
   "type": "Example",
-  "number": "9.4.0.1",
+  "number": "9.4.1",
   "title": "Constructing a Square on a Parabola.",
   "body": " Constructing a Square on a Parabola  Examples optimization constructing a square on a parabola  We would like to find the area of the smallest square which can be constructed with one corner at the point and an adjacent corner on the graph of . This example is very similar to Problem or Problem so we will proceed in much the same way. The objective function is the same but this time the constraint is   In our previous examples we began by differentiating both the objective function and the constraint. This time substitute the constraint into to obtain the objective function in terms of a single variable. We make this change of strategy simply to demonstrate that the two procedures are equivalent. In fact, for this particular problem they are almost identical. For more complex problems you may find that you prefer one strategy or the other.  "
 },
@@ -5855,7 +5855,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONGlobalVsLocalExtrema.html#DRILLSqParab",
   "type": "Problem",
-  "number": "9.4.0.2",
+  "number": "9.4.2",
   "title": "",
   "body": " Show that when , and . Getting three distinct solutions of is quite unexpected in light of our previous work. Can you explain what s going on here?  "
 },
@@ -5864,7 +5864,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONGlobalVsLocalExtrema.html#FIGUREParabolaThreeSquares2",
   "type": "Figure",
-  "number": "9.4.0.3",
+  "number": "9.4.3",
   "title": "",
   "body": "     "
 },
@@ -5891,7 +5891,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONGlobalVsLocalExtrema.html#DEFINITIONGlobalMin",
   "type": "Definition",
-  "number": "9.4.0.4",
+  "number": "9.4.4",
   "title": "Global Minimum.",
   "body": " Global Minimum    Vocabulary global minimum Suppose that is a number in the domain of such that for every in the domain of . Then is the global minimum of .   "
 },
@@ -5900,7 +5900,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONGlobalVsLocalExtrema.html#PROBLEMMaximaDefinition",
   "type": "Drill",
-  "number": "9.4.0.5",
+  "number": "9.4.5",
   "title": "",
   "body": " Drills optimization definition of global maximum   Provide a definition of Global Maximum modeled on .   "
 },
@@ -5927,7 +5927,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONGlobalVsLocalExtrema.html#DIGRESSIONIntervalNotation-5",
   "type": "Drill",
-  "number": "9.4.0.6",
+  "number": "9.4.6",
   "title": "",
   "body": " Drills intervals, open and closed  Re-express each of the following intervals using inequalities and state whether it is open, closed, or neither.                        "
 },
@@ -5936,7 +5936,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONGlobalVsLocalExtrema.html#DEFINITIONLocalMin",
   "type": "Definition",
-  "number": "9.4.0.7",
+  "number": "9.4.7",
   "title": "Local Minimum.",
   "body": " Local Minimum    Vocabulary local minimum Suppose that is a number in the domain of . Then is a local minimum of if there is an open interval, , such that for every which is in both the interval and the domain of .   "
 },
@@ -5945,7 +5945,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONGlobalVsLocalExtrema.html#PROBLEMLocalMaximaDefinition",
   "type": "Drill",
-  "number": "9.4.0.8",
+  "number": "9.4.8",
   "title": "",
   "body": " Drills optimization definition of local maximum   Provide a definition of Local Maximum modeled on .   "
 },
@@ -5954,7 +5954,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONGlobalVsLocalExtrema.html#SECTIONGlobalVsLocalExtrema-34",
   "type": "Problem",
-  "number": "9.4.0.9",
+  "number": "9.4.9",
   "title": "",
   "body": "Vocabulary global maximum Vocabulary global minimum  Explain why we can find a global maximum (minimum) by finding all of the local maxima (minima) and selecting the largest (smallest) among these.  "
 },
@@ -5972,7 +5972,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SUBSECTIONoptim-abstr-probl.html#PROBLEMSimpsonOpt",
   "type": "Problem",
-  "number": "9.5.1.1",
+  "number": "9.5.1",
   "title": "",
   "body": " In modern parlance the problem is stated as follows: Find the maximum and minimum values of subject to the constraint that , if either exists. We assume as usual that is a constant.  According to Fermat s Theorem , if is differentiable at a point and is a maximum (or a minimum) at that point then the line tangent to the curve will be horizontal at that point. So we will need to compute the derivative of with respect to . Show that . is the derivative of the curve , By setting the numerator of equation equal to zero show that and use these values to show that when , . Conclude that the maximum value of is and the minimum value is . "
 },
@@ -5981,7 +5981,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SUBSECTIONoptim-abstr-probl.html#FIGUREUndefinedDerivOpt",
   "type": "Figure",
-  "number": "9.5.1.2",
+  "number": "9.5.2",
   "title": "",
   "body": "     "
 },
@@ -5990,7 +5990,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SUBSECTIONoptim-abstr-probl.html#THEOREMFDT-lines",
   "type": "Theorem",
-  "number": "9.5.2.1",
+  "number": "9.5.3",
   "title": "",
   "body": "    If a line has positive slope then the coordinate increases as the coordinate increases.    If a line has negative slope then the coordinate decreases as the coordinate increases.     "
 },
@@ -5999,7 +5999,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SUBSECTIONoptim-abstr-probl.html#THEOREMFDT",
   "type": "Theorem",
-  "number": "9.5.2.2",
+  "number": "9.5.4",
   "title": "The First Derivative Test.",
   "body": " The First Derivative Test  Suppose is a function of . The following statements are true:   If , on some interval then is increasing on the interval.    If , on some interval then is decreasing on the interval.     "
 },
@@ -6026,7 +6026,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SUBSECTIONoptim-abstr-probl.html#DRILLTransitionQuestion",
   "type": "Drill",
-  "number": "9.5.3.1",
+  "number": "9.5.5",
   "title": "",
   "body": " Drills derivative changing signs   We said in the simplest cases in the paragraph above. We chose our words carefully. Can you think of another way for to transition from positive to negative, or from negative to positive? Give this some thought. We will come back to it.   "
 },
@@ -6035,7 +6035,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SUBSECTIONoptim-abstr-probl.html#EXAMPLEPPT",
   "type": "Example",
-  "number": "9.5.3.2",
+  "number": "9.5.6",
   "title": "",
   "body": " Examples optimization  Let . The solutions of are and so these are the POTPs. Sketch the graph of and follow along with our reasoning below, confirming our conclusions visually.  To determine if they actually are transition points we proceed as follows:   At :  Pick a number less than , say Since we see that is increasing to the left of   Next pick a number between and the next POTP, . We ll take . Since we see that is decreasing to the right of .  Thus is a local maximum value of .    At :  As we saw above is decreasing to the left of since . (Zero is between and .)  Next choose any number to the right of . We ll choose . Since we see that is increasing to the right of .  Thus is a local minimum of .     In this example we only tested one number between adjacent POTPs. Is that enough? Give this some thought before reading on.  Of course it is. Since the POTPs are precisely those places where might change sign it follows that the sign of must either be always positive or always negative in between POTPs. Therefore, we only need to test at one value of to find the sign of on the entire interval between POTPs.  Similarly, if is the greatest POTP we need only test the sign of one number greater than to determine the sign of for every value of greater than . and if is the least POTP we need only test the sign of one number less than to determine the sign of for every value of less than .      "
 },
@@ -6044,7 +6044,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SUBSECTIONoptim-abstr-probl.html#SUBSECTIONTransitionPoints-11",
   "type": "Problem",
-  "number": "9.5.3.3",
+  "number": "9.5.7",
   "title": "",
   "body": " Does the graph of have a global maximum or minimum? Explain.  "
 },
@@ -6053,7 +6053,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SUBSECTIONoptim-abstr-probl.html#LEMMAAdjRoots",
   "type": "Lemma",
-  "number": "9.5.3.4",
+  "number": "9.5.8",
   "title": "",
   "body": " Let be a differentiable function.   Suppose and are two POTPs of such that there is not another POTP between them. If for some in the domain of between and , then for every in the domain of between and . Similarly, if for some between and , then for every in the domain of between and .    Suppose is the greatest POTP of . If for some then for all , in the domain of .    Suppose is the least POTP of . If for some then for all , in the domain of .     "
 },
@@ -6062,7 +6062,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SUBSECTIONoptim-abstr-probl.html#SUBSECTIONTransitionPoints-14",
   "type": "Problem",
-  "number": "9.5.3.5",
+  "number": "9.5.9",
   "title": "",
   "body": " Read Lemma very carefully and convince yourself that it really does say the same thing as our conclusions at the end of .  "
 },
@@ -6071,7 +6071,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SUBSECTIONoptim-abstr-probl.html#EXAMPLEx5",
   "type": "Example",
-  "number": "9.5.3.6",
+  "number": "9.5.10",
   "title": "",
   "body": " Examples optimization  Find all extrema of the graph of .  Solving we see that is the only POTP. But elsewhere (confirm this) so is positive for every value of except zero. In particular it is positive on the left and on the right of zero. Therefore never transitions between increasing and decreasing, so we conclude that it does not have an extremum at , despite the fact that . This may seem very curious until you graph the function.  "
 },
@@ -6080,7 +6080,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SUBSECTIONoptim-abstr-probl.html#SUBSECTIONTransitionPoints-17",
   "type": "Problem",
-  "number": "9.5.3.7",
+  "number": "9.5.11",
   "title": "",
   "body": " Sketch the graph of and use it to explain how we can have yet not have either a maximum or a minimum at .  "
 },
@@ -6089,7 +6089,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SUBSECTIONoptim-abstr-probl.html#EXAMPLEParabolaSquare-Redux",
   "type": "Example",
-  "number": "9.5.3.8",
+  "number": "9.5.12",
   "title": "Constructing a Square on a Parabola, Redux.",
   "body": " Constructing a Square on a Parabola, Redux  Examples optimization constructing a square on a parabola, redux  Given our new understanding of the distinction between local and global extrema we will revisit . The objective function is still so when we substitute the constraint, , we get the abstract problem of finding the lowest points on the graph of   Solving gives us three POTPs: , , and as before, so the intervals we need are, , , , and . Because our POTPs are approximations these intervals are also approximate.  "
 },
@@ -6098,7 +6098,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SUBSECTIONoptim-abstr-probl.html#PROBLEMFDT1",
   "type": "Problem",
-  "number": "9.5.3.9",
+  "number": "9.5.13",
   "title": "",
   "body": " Now pretend that you don t already know the solution of this problem. Just as in we can use the First Derivative Test to determine which of the POTPs corresponds to a local minimum and which corresponds to a maximum.  For the objective function choose a point in each interval and confirm that the following statements are true.   On the (approximate) interval      On the (approximate) interval      On the (approximate) interval      On the (approximate) interval       Use the First Derivative Test and the data in part to show that there is a local minimum at a local maximum at and a local minimum at .   The data in part (a) is not sufficient to support the conclusion that there is a global minimum at ? Explain why not.   What additional data do we need to conclude that there is a global minimum at ?  "
 },
@@ -6107,7 +6107,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SUBSECTIONoptim-abstr-probl.html#DRILLFDT2",
   "type": "Drill",
-  "number": "9.5.3.10",
+  "number": "9.5.14",
   "title": "",
   "body": " Drills optimization optimal transition points  Identify all possible optimal transition points, and identify the intervals on which each function is increasing and decreasing. Label each possible optimal transition point as a local or global minimum, or a local or global maximum, or neither.                                            "
 },
@@ -6116,7 +6116,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SUBSECTIONoptim-abstr-probl.html#EXAMPLEPOTP-WhereDerivIsUndef",
   "type": "Example",
-  "number": "9.5.4.1",
+  "number": "9.5.15",
   "title": "",
   "body": " Examples optimization transition points   Vocabulary undefined derivative No, they won t. We can also have a transition point wherever is meaningless. That is, when is undefined . below demonstrates one way in which a derivative might be undefined.  "
 },
@@ -6125,7 +6125,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SUBSECTIONoptim-abstr-probl.html#PROBLEMCubeRoot2",
   "type": "Problem",
-  "number": "9.5.4.2",
+  "number": "9.5.16",
   "title": "",
   "body": " Suppose The graph of looks like this:    Show that is undefined.   Recall Digression: Dividing by Zero.    Graph to verify that when .  "
 },
@@ -6134,7 +6134,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SUBSECTIONoptim-abstr-probl.html#FIGURENonDiffFuncs",
   "type": "Figure",
-  "number": "9.5.4.3",
+  "number": "9.5.17",
   "title": "",
   "body": " Some non differentiable functions. Notice that some of them have extrema at their points of non differentiability and some do not.     "
 },
@@ -6143,7 +6143,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SUBSECTIONoptim-abstr-probl.html#DEFINITIONOptimalTransitionPoints",
   "type": "Definition",
-  "number": "9.5.4.4",
+  "number": "9.5.18",
   "title": "Possible Optimal Transition Points (POTPs).",
   "body": " Possible Optimal Transition Points (POTPs)  Vocabulary Possible Optimal Transition Points (POTPs)   The possible optimum transition points of a function, , come in two categories:   Any point, , where is a possible optimal transition point.    Any point, , where is not defined is a possible optimal transition point.      "
 },
@@ -6152,7 +6152,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SUBSECTIONoptim-abstr-probl.html#DRILLFDT3",
   "type": "Drill",
-  "number": "9.5.4.5",
+  "number": "9.5.19",
   "title": "",
   "body": " Drills optimization optimal transition points  For each function identify all POTPs, and identify the intervals on which the function is increasing and decreasing. Label each POTP as a local or global minimum, maximum, or neither.  You will still have to rely on their graphs to find the POTPs of some of these functions. In you will learn how to find them computationally.                                                                "
 },
@@ -6161,7 +6161,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SUBSECTIONoptim-abstr-probl.html#EXAMPLESqrClosed",
   "type": "Example",
-  "number": "9.5.5.1",
+  "number": "9.5.20",
   "title": "",
   "body": " Examples optimization  For example, suppose we need to optimize the function, From the graph below we can see that this function has a global minimum at . We can find this minimum by the methods we are already familiar with. But it also has a local maximum at and global maximum at , and nothing we ve done so far would identify these two points as possible extrema.   It is clear from the graph what is happening, though. If we hadn t restricted the domain of our function then the graph would continue to rise on both sides and there would be no local or global maximum at all. The restriction on the domain forces the graph to stop rising at the endpoints of the interval which makes each of these endpoints a local maximum.  Thus we see that when the domain of our function is a closed interval there is also the possibility that a local or global extremum might occur at the endpoints of the interval as well. As a result, when searching for extrema we must always check the endpoints of the domain interval (if there are any).  To be clear, the end points of a closed interval are not transition points because there can be no transition between increasing and decreasing at an endpoint. It simply stops. However, since it is possible to have extrema at the endpoints they must also be checked whenever they are in play.  Be careful. When the domain of a function is artificially constrained like this it is easy to forget that the constraint is present. We tend to think of it as not really there. This is a mistake. Recall from Digression: The Tangent Function Has No Inverse that the definition of the domain is a part of the definition of a function. Think of the function s domain as the universe for that particular problem. Nothing exists outside of the domain. Thus in this example nothing exists outside of the interval (universe) .  "
 },
@@ -6170,7 +6170,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SUBSECTIONoptim-abstr-probl.html#THEOREMEVT",
   "type": "Theorem",
-  "number": "9.5.5.2",
+  "number": "9.5.21",
   "title": "Extreme Value Theorem.",
   "body": " Extreme Value Theorem  If is a continuous function whose domain consists entirely of closed, bounded intervals then:   There is at least one point in the domain, say such that is the global maximum value of . Moreover will either be an end point of one of the domain intervals, or an optimal transition point.    There is least one point in the domain, say , and is the global minimum of . Moreover will either be an end point of one of the domain intervals, or optimal transition point.     "
 },
@@ -6179,7 +6179,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SUBSECTIONoptim-abstr-probl.html#PROBLEMParabolaSquare-Redux",
   "type": "Problem",
-  "number": "9.5.5.3",
+  "number": "9.5.22",
   "title": "",
   "body": " In we solved the problem of finding the global extrema of over all the real numbers. Solve it again assuming that   "
 },
@@ -6188,7 +6188,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SUBSECTIONoptim-abstr-probl.html#SUBSECTIONoptim-clos-interv-11",
   "type": "Problem",
-  "number": "9.5.5.4",
+  "number": "9.5.23",
   "title": "",
   "body": "    Notice that has no extrema on Explain why this does not violate the Extreme Value Theorem .   Notice that has no extrema on Explain why this does not violate the Extreme Value Theorem .  "
 },
@@ -6197,7 +6197,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SUBSECTIONoptim-abstr-probl.html#PROBLEMSquareOnCircle",
   "type": "Problem",
-  "number": "9.5.5.5",
+  "number": "9.5.24",
   "title": "",
   "body": " If we had known when we first looked at it would have saved us some time. Redo , using the knowledge that the domain of the problem is because the constraint is   "
 },
@@ -6206,7 +6206,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SUBSECTIONoptim-abstr-probl.html#SUBSECTIONoptim-clos-interv-13",
   "type": "Problem",
-  "number": "9.5.5.6",
+  "number": "9.5.25",
   "title": "",
   "body": " Find the global maximum and global minimum of each function with the domain restricted to the given intervals. Verify your solution by graphing the function.                                                                          "
 },
@@ -6215,7 +6215,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SUBSECTIONoptim-abstr-probl.html#SUBSECTIONoptim-clos-interv-14",
   "type": "Drill",
-  "number": "9.5.5.7",
+  "number": "9.5.26",
   "title": "",
   "body": " Drills optimization  Find the global maximum and global minimum of each of the following functions with domains on the given intervals. Verify your solution with graphing software.     on the interval        on the interval        on the interval        on the interval        on the interval        on the interval        on the interval        on the interval        on the interval        on the interval        on the interval        on the interval        on the interval        on the interval        on the interval        on the interval        on the interval        on the interval        on the interval        on the interval      "
 },
@@ -6224,7 +6224,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SUBSECTIONoptim-abstr-probl.html#SUBSECTIONoptim-clos-interv-15",
   "type": "Problem",
-  "number": "9.5.5.8",
+  "number": "9.5.27",
   "title": "",
   "body": " For each of the following functions defined on closed, bounded intervals, find the maximum and minimum of the function on that interval.                          "
 },
@@ -6242,7 +6242,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONconc-second-deriv-1.html#EXAMPLEOpenNoExtrema",
   "type": "Example",
-  "number": "9.6.1.1",
+  "number": "9.6.1",
   "title": "",
   "body": " Examples optimization  For example, suppose our objective function is , and that the domain is the open interval . Do you see why the graph of this function has no extrema of any kind? If not here is one way to prove it.  "
 },
@@ -6260,7 +6260,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONconc-second-deriv-1.html#SUBSECTIONconc-second-deriv-5",
   "type": "Problem",
-  "number": "9.6.1.2",
+  "number": "9.6.2",
   "title": "",
   "body": " Show that the function also has no minimum on the open interval .  "
 },
@@ -6269,7 +6269,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONconc-second-deriv-1.html#EXAMPLEFDT1",
   "type": "Example",
-  "number": "9.6.1.3",
+  "number": "9.6.3",
   "title": "",
   "body": " Examples optimization  For this example we strongly suggest that you do not graph the objective functions first. Yes, we know this goes directly against our previous advice to always visualize your problem when you can, but one purpose of this section is for you to learn to analyze a problem using only your Calculus tools. Much as an airline pilot must train to fly using only the cockpit instruments in case poor visibility gives them no other choice, you should also practice flying blind so you can be successful even when you are not able to draw a useful graph. You will learn more, and you will learn better, that way.  Of course, once we ve moved beyond this section you should visualize your problem if you possibly can. We weren t kidding about that. You don t want to fly blind, you just need to be able to when it is necessary.  From the information gathered in can we conclude that either or has a global maximum at and a global minimum at ?  No we can t. They both have local maxima and minima at those points since both functions increase on , decrease on , and then increase again on . But from the information we have gathered so far we can t tell if the graph of either function rises above its value at or drops below its value at .  When we analyze and using the First Derivative Test we get exactly the same information from both functions. But they are very different functions. In particular, does not have any global extrema, while has both a global maximum and a global minimum. Graph them now and see.  To distinguish, analytically, between and we will need a new tool called the Second Derivative Test.  But before we leave this example we need to address a small issue with our language. The phrase gets farther from zero in the positive (or negative) direction so does is both awkward and a bit imprecise for our purposes. In the future we will usually abbreviate this as: as goes to positive (or negative) infinity, also goes to positive (or negative) infinity.   Do not invest too much in these phrases. They cannot possibly mean what they pretend to mean. Infinity is neither a number nor a place so it is meaningless to say that  goes to infinity. Think of this phrasing as a kind of verbal shorthand, or notation.  "
 },
@@ -6278,7 +6278,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONconc-second-deriv-1.html#DRILLO1O2",
   "type": "Problem",
-  "number": "9.6.1.4",
+  "number": "9.6.4",
   "title": "",
   "body": "    Suppose that .   Show that the POTPs are and .    Show that is increasing on , decreasing on , and increasing again on .      Suppose that . Show that is increasing on , decreasing on , and increasing again on .  "
 },
@@ -6296,7 +6296,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONconc-second-deriv-1.html#FIGUREy",
   "type": "Figure",
-  "number": "9.6.1.5",
+  "number": "9.6.5",
   "title": "",
   "body": " The graph of is concave up. The graph of is concave down.     "
 },
@@ -6305,7 +6305,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONconc-second-deriv-1.html#SUBSECTIONconc-second-deriv-22",
   "type": "Drill",
-  "number": "9.6.1.6",
+  "number": "9.6.6",
   "title": "",
   "body": " Drills concavity   Does that mean that the derivative of a concave downward function will decrease as increases? Yes, of course it does. Look back at the graphs of the other concave up and concave down examples and convince yourself that this is true of them as well.   "
 },
@@ -6314,7 +6314,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONconc-second-deriv-1.html#THEOREMwhat-second-deriv",
   "type": "Theorem",
-  "number": "9.6.1.7",
+  "number": "9.6.7",
   "title": "Concavity.",
   "body": " Concavity  Suppose is a differentiable function of The following statements are true:   If on some open interval then is increasing, and therefore the graph of is concave upward, on the same interval.    If on some open interval then is decreasing, and therefore the graph of is concave downward, on the same interval.     "
 },
@@ -6323,7 +6323,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONconc-second-deriv-1.html#SUBSECTIONconc-second-deriv-29",
   "type": "Example",
-  "number": "9.6.1.8",
+  "number": "9.6.8",
   "title": "",
   "body": " Examples optimization concavity  Let Then and Since the second derivative of is always positive the graph must always be concave upward.  "
 },
@@ -6332,7 +6332,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONconc-second-deriv-1.html#SUBSECTIONconc-second-deriv-30",
   "type": "Drill",
-  "number": "9.6.1.9",
+  "number": "9.6.9",
   "title": "",
   "body": " Drills concavity   Graph and verify that it is always concave upward.   "
 },
@@ -6341,7 +6341,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONconc-second-deriv-1.html#SUBSECTIONconc-second-deriv-31",
   "type": "Example",
-  "number": "9.6.1.10",
+  "number": "9.6.10",
   "title": "",
   "body": " Examples optimization concavity  Let Then and Since the second derivative of is negative on the interval the graph must be concave downward on for . Since the second derivative of is positive on the interval the graph must be concave upward for .  "
 },
@@ -6350,7 +6350,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONconc-second-deriv-1.html#SUBSECTIONconc-second-deriv-32",
   "type": "Drill",
-  "number": "9.6.1.11",
+  "number": "9.6.11",
   "title": "",
   "body": " Drills concavity   Graph and verify that it is always concave downward on the interval , and concave upward on the interval .   "
 },
@@ -6368,7 +6368,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONconc-second-deriv-1.html#PROBLEMEvenFuncConcavity",
   "type": "Problem",
-  "number": "9.6.1.12",
+  "number": "9.6.12",
   "title": "",
   "body": " Suppose that .   Show that the PITPs of are , and .   Show that the graph of is concave upward on the intervals and .   Show that the graph of is concave downward on the interval by showing that for every value of in the interval.  "
 },
@@ -6377,7 +6377,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONconc-second-deriv-1.html#SUBSECTIONconc-second-deriv-40",
   "type": "Problem",
-  "number": "9.6.1.13",
+  "number": "9.6.13",
   "title": "",
   "body": "    Use the observation in the previous paragraph to show that the graph of has local minima at , and at .   What is the value of the minima (the value) of at each , and ?  "
 },
@@ -6386,7 +6386,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONconc-second-deriv-1.html#THEOREMSecondDerivativeTest",
   "type": "Theorem",
-  "number": "9.6.1.14",
+  "number": "9.6.14",
   "title": "The Second Derivative Test.",
   "body": " The Second Derivative Test  Suppose is some differentiable function and that at some point in its domain Then the following statements are true:   If then has a local minimum at     If then has a local maximum at     If then we get no information about possible extrema of at .     "
 },
@@ -6395,7 +6395,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONconc-second-deriv-1.html#DRILLSecondDerivativeTest",
   "type": "Drill",
-  "number": "9.6.1.15",
+  "number": "9.6.15",
   "title": "",
   "body": " Drills the Second Derivative Test  Use the Second Derivative Test to find the local maxima and minima of each function. Also identify any global maxima and minima.                        on the interval      on the interval      on the interval      "
 },
@@ -6404,7 +6404,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONconc-second-deriv-1.html#SUBSECTIONconc-second-deriv-45",
   "type": "Drill",
-  "number": "9.6.1.16",
+  "number": "9.6.16",
   "title": "",
   "body": " Drills concavity  Analyze the concavity of the graphs of each of the following functions.                                  "
 },
@@ -6413,7 +6413,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONconc-second-deriv-1.html#SUBSECTIONconc-second-deriv-46",
   "type": "Drill",
-  "number": "9.6.1.17",
+  "number": "9.6.17",
   "title": "",
   "body": " Drills concavity  Identify all intervals where the given curve is concave upward, concave downward, increasing, and decreasing. Identify all local extrema, and all global extrema, if any. Graph the curve to check your work after you have solved each problem.                                                                                              "
 },
@@ -6422,7 +6422,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONconc-second-deriv-1.html#SUBSECTIONconc-second-deriv-47",
   "type": "Problem",
-  "number": "9.6.1.18",
+  "number": "9.6.18",
   "title": "",
   "body": " Show that has:   both a global and a local minimum if its domain is the interval , and   only a local minimum if its domain is the interval .   Does the graph of this function have a global maximum for either of the domains given in parts (a) or (b)? Explain.  "
 },
@@ -6431,7 +6431,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONconc-second-deriv-1.html#SUBSECTIONconc-second-deriv-48",
   "type": "Problem",
-  "number": "9.6.1.19",
+  "number": "9.6.19",
   "title": "",
   "body": " Does have a global extremum (minimum or maximum) on the interval ? How about on ? On ? Explain.   Use the First Derivative Test .  "
 },
@@ -6440,7 +6440,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONconc-second-deriv-1.html#SUBSECTIONconc-second-deriv-49",
   "type": "Problem",
-  "number": "9.6.1.20",
+  "number": "9.6.20",
   "title": "",
   "body": " Suppose that and that the domain of the problem is all real numbers ( ).   Find all local extrema.   Find all global extrema.  "
 },
@@ -6449,7 +6449,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONconc-second-deriv-1.html#SUBSECTIONconc-second-deriv-50",
   "type": "Problem",
-  "number": "9.6.1.21",
+  "number": "9.6.21",
   "title": "",
   "body": " Consider the polynomial .   Show that    You can save yourself a lot of work on this problem by keeping your eye on the goal. The problem is to show that , not to compute and then simplify it.   Graph near to convince yourself that has neither a maximum nor a minimum at .  "
 },
@@ -6467,7 +6467,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONoptim-probl.html#EXAMPLERectangleFixedPerimeter",
   "type": "Example",
-  "number": "9.7.1.1",
+  "number": "9.7.1",
   "title": "Maximizing the Area of a Rectangle Redux, Redux.",
   "body": " Maximizing the Area of a Rectangle Redux, Redux  Examples optimization maximal rectangle  Show that of all rectangles with a fixed perimeter, , the one with the greatest area is a square.   We first solved this problem algebraically in . We solved it again analytically (that is, using Calculus) using Fermat s Theorem in . But Fermat s Theorem only allows us to find a maximum that we already know exists. Since we did not have the tools necessary to show that we actually had a maximum, we relied on our intuition and assumed that a maximum existed. We will solve this problem one last time, showing that there must be a maximum this time.  We will follow the outline above.     The objective function is     The only constraint is where is constant.    Since we are talking about a length it must be that . From equation we see that must be less that or equal to . Otherwise the perimeter will be greater than . So the domain of our problem is .  Notice that, strictly speaking, if or we don t actually have a rectangle. But it is simpler to use the Extreme Value Theorem than to find the increasing and decreasing intervals using the First Derivative Test . Since the Extreme Value Theorem requires a closed domain we make things simpler by allowing zero width (or height) rectangles.    Since the problem domain is a closed interval we will use the Extreme Value Theorem. To find the POTPs we will need . From equation we see that   From equation we have and also   Combining equation , equation , and equation we see that The only solution of is , so the POTPs for this problem are the end points, and , and .    The area, , will be zero when and when (why?) so by the Extreme Value Theorem the maximum occurs when .    This problem asks us to show that the maximal rectangle must be a square, so we need to show that . We know that the maximum occurs when . Plugging this value into equation we see that is also equal to . Thus the maximal rectangle is a square as stated.     "
 },
@@ -6476,7 +6476,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONoptim-probl.html#SUBSECTIONOptStrat-7",
   "type": "Drill",
-  "number": "9.7.1.2",
+  "number": "9.7.2",
   "title": "",
   "body": " It is still intuitively obvious that when the area in is a maximum. We have always believed this.  But belief is not knowledge. Use the First Derivative Test to show that than maximal area is attained at .  "
 },
@@ -6485,7 +6485,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONoptim-probl.html#PROBLEMMaxPerimeter",
   "type": "Problem",
-  "number": "9.7.1.3",
+  "number": "9.7.3",
   "title": "",
   "body": " Out of all rectangles with a fixed area, find the dimensions of the one with the smallest perimeter.   Identify the objective function and the constraint for this problem.   Find the natural domain of this problem and show that it is not a closed interval.   Show that we have a POTP when .   Show that when we have a minimum by:   Using the first derivative test.    Using the second derivative test.   Note that both tests will require you to use the constraint to reduce the number of variables in the objective to one. Which test was easier to use?  "
 },
@@ -6494,7 +6494,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONoptim-probl.html#SUBSECTIONOptStrat-11",
   "type": "Drill",
-  "number": "9.7.1.4",
+  "number": "9.7.4",
   "title": "",
   "body": " Drills optimization   Redo from Chapter using Calculus. Verify that you get the same answer as before.   "
 },
@@ -6503,7 +6503,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONoptim-probl.html#SUBSUBSECTIONFirstSolution-13",
   "type": "Drill",
-  "number": "9.7.2.1",
+  "number": "9.7.5",
   "title": "",
   "body": " Drills optimization     Show that the largest possible value of is and thus the natural domain for this problem is the closed interval .    Show that the maximal printed area occurs when .     "
 },
@@ -6512,7 +6512,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONoptim-probl.html#SUBSUBSECTIONSecondSolution-9",
   "type": "Problem",
-  "number": "9.7.2.2",
+  "number": "9.7.6",
   "title": "",
   "body": " Determine the natural domain of and show that is a global maximum when . Do you get the same page dimensions as before?  "
 },
@@ -6521,7 +6521,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONoptim-probl.html#SUBSUBSECTIONSecondSolution-14",
   "type": "Problem",
-  "number": "9.7.2.3",
+  "number": "9.7.7",
   "title": "",
   "body": " Did you notice that in equation we actually had in terms of ? That suggests yet another approach to this problem.  Find the derivative of from equation directly and use it to solve this problem again. Solve this problem one last time by computing the derivative of from equation . "
 },
@@ -6530,7 +6530,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONoptim-probl.html#SUBSECTIONVarOptProbs-2",
   "type": "Problem",
-  "number": "9.7.3.1",
+  "number": "9.7.8",
   "title": "Variations on a Theme.",
   "body": "Variations on a Theme Find the Pattern     Find two positive numbers whose sum is 10, and whose product is a maximum. What is the maximum?    Find two positive numbers whose sum is , and whose product is a maximum. What is the maximum?    Find two positive numbers whose sum is , and whose product is a maximum. What is the maximum?     Find the Pattern     Find two positive numbers such that the sum of one of them and twice the other is 10, and whose product is a maximum. What is the maximum?    Find two positive numbers such that the sum of one of them and three times the other is 10, and whose product is a maximum. What is the maximum?    Find two positive numbers such that the sum of one of them and five times the other is 10, and whose product is a maximum. What is the maximum?    Find two positive numbers such that the sum of one of them and times the other is K, and whose product is a maximum. What is the maximum?     Find the Pattern     Find two positive numbers whose product is , and whose sum is a minimum. What is the minimum?    Find two positive numbers whose product is , and whose sum is a minimum. What is the minimum?    Find two positive numbers whose product is , and the sum of one number and three times the other is a minimum. What is the minimum?    Find two positive numbers whose product is , and the sum of one number and times the other is a minimum. What is the minimum?     "
 },
@@ -6539,7 +6539,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONoptim-probl.html#SUBSECTIONVarOptProbs-3",
   "type": "Problem",
-  "number": "9.7.3.2",
+  "number": "9.7.9",
   "title": "Variations on a Theme.",
   "body": "Variations on a Theme  You have meters of fencing with which to build an animal pen.  Find the Pattern     What is the largest area you can enclose with a freestanding rectangular pen?    You want to build a rectangular pen divided into two equally sized internal pens by placing an internal fence parallel to two of the external fences. What is the largest area you can enclose?    You want to build a rectangular pen divided into three equally sized internal pens by placing two internal fences parallel to two of the external fences. What is the largest area you can enclose?    You want to build a rectangular pen divided into equally sized internal pens by placing internal fences parallel to two of the external fences. What is the largest area you can enclose? If is the width and is the length of the external pen what is .     Is there a Pattern?     You want to use one side of a building as one full side of your pen as shown in the sketch below. What is the largest area you can enclose? What are the dimensions of the pen?     You want to use one side of a building as one partial side of your pen as shown in the sketch below. What is the largest area you can enclose? What are the dimensions of the pen?     You want to build your pen as shown in the sketch below. What is the largest area you can enclose? What are the dimensions of the pen?     You want to build your pen as shown in the sketch below. What is the largest area you can enclose? What are the dimensions of the pen?     You want to your pen to be subdivided into three parts as shown in the sketch below. What is the largest area you can enclose? What are the dimensions of the pen?     You want to build your pen as shown in the sketch below. What is the largest area you can enclose? What are the dimensions of the pen?      "
 },
@@ -6548,7 +6548,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONoptim-probl.html#SUBSECTIONVarOptProbs-4",
   "type": "Problem",
-  "number": "9.7.3.3",
+  "number": "9.7.10",
   "title": "",
   "body": " You have a piece of wire inches long.   Find the length of each piece of the wire that yields the least total area bounded by the pieces when:     You cut the wire into two pieces and bend each piece to form a square.    You cut the wire into two pieces and bend each piece to form a circle.    You cut the wire into two pieces and bend one piece to form a square and the second to form a circle.    You cut the wire into two pieces and bend one piece to form a rectangle with one side three times as long as the other. Then bend the second piece to form a square.    You cut the wire into three pieces and form two squares and one circle.      Repeat each problem in part (a), but this time find the length of each piece of the wire that yields the most total area bounded by the pieces.  "
 },
@@ -6557,7 +6557,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONoptim-probl.html#SUBSECTIONVarOptProbs-5",
   "type": "Problem",
-  "number": "9.7.3.4",
+  "number": "9.7.11",
   "title": "",
   "body": " Consider the side view of a person at point looking at a foot tall billboard sign that is feet off of the ground as shown in the diagram below.    Find a formula for the viewing angle in terms of Don t forget to put in the range for possible values for    Find the value of that will maximize the viewing angle .  "
 },
@@ -6566,7 +6566,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONoptim-probl.html#SUBSECTIONVarOptProbs-6",
   "type": "Problem",
-  "number": "9.7.3.5",
+  "number": "9.7.12",
   "title": "",
   "body": " The sketch below depicts water in a circular vessel with a central hub of radius . Notice that the surface of the water is tangent to the top if the hub. Find the value of that maximizes the blue shaded area, , in the following diagram:   "
 },
@@ -6575,7 +6575,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONoptim-probl.html#SUBSECTIONVarOptProbs-7",
   "type": "Problem",
-  "number": "9.7.3.6",
+  "number": "9.7.13",
   "title": "Find the Pattern.",
   "body": "Find the Pattern  The strength of a rectangular wooden beam is proportional to its width times the square of its height. What is the ratio of the height to width of the strongest beam that can be cut from a cylindrical log?   The stiffness of a rectangular wooden beam is proportional to its width times the cube of its height. What is the ratio of the height to width of the stiffest beam that can be cut from a cylindrical log? Compare this to the answer in part (a).   Suppose we have an objective function which is proportional to the width times the th power of the height? What would the optimal ratio be now?  "
 },
@@ -6584,7 +6584,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONoptim-probl.html#SUBSECTIONVarOptProbs-8",
   "type": "Problem",
-  "number": "9.7.3.7",
+  "number": "9.7.14",
   "title": "",
   "body": " A box with a square base and an open top must have a volume of square centimeters.   Find the dimensions of the box that minimize the amount of material used to make the box.  "
 },
@@ -6593,7 +6593,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONoptim-probl.html#PROBLEMRodAroundACorner",
   "type": "Problem",
-  "number": "9.7.3.8",
+  "number": "9.7.15",
   "title": "",
   "body": "  The diagram above depicts the view from above of a pole of length being maneuvered horizontally around the corner of two hallways of widths , and . Find the longest pole which can be turned around the corner.   Show that the maximum value of is .   What would the maximum of be in the special case where ? Does this answer make sense geometrically?   In the problem statement we specified that the pole was being maneuvered horizontally, meaning that the pole is kept parallel to the ground at all times. Suppose we remove that constraint and that the height of the hallway is . What is the longest pole we can get around the corner now?  "
 },
@@ -6602,7 +6602,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONoptim-probl.html#PROBLEMNormanWindow",
   "type": "Problem",
-  "number": "9.7.3.9",
+  "number": "9.7.16",
   "title": "",
   "body": "    A Norman window has the shape of a rectangle surmounted by a semicircle.   Find the dimensions of the window that allow the most light to enter if the perimeter of the window is feet.   Find the dimensions of the window that allow the most light to enter if the window has the shape of a rectangle surmounted by an equilateral triangle.   "
 },
@@ -6611,7 +6611,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONoptim-probl.html#SUBSECTIONVarOptProbs-11",
   "type": "Problem",
-  "number": "9.7.3.10",
+  "number": "9.7.17",
   "title": "",
   "body": " At which points on the curve does the tangent line have the greatest slope?   Find the coordinates of the points on the graph of which are farthest from the point .  "
 },
@@ -6620,7 +6620,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONoptim-probl.html#SUBSECTIONVarOptProbs-12",
   "type": "Problem",
-  "number": "9.7.3.11",
+  "number": "9.7.18",
   "title": "Find the Pattern.",
   "body": "Find the Pattern  Find the area of the smallest triangle formed by the and axes and a line passing through the point    Find the area of the smallest triangle formed by the and axes and a line passing through the point    Find the area of the smallest triangle formed by the and axes and a line passing through the point , where .  "
 },
@@ -6629,7 +6629,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONoptim-probl.html#PROBLEMWitchTri1",
   "type": "Problem",
-  "number": "9.7.3.12",
+  "number": "9.7.19",
   "title": "",
   "body": "    We draw the right triangle whose hypotenuse starts at the origin, and ends on the Witch of Agnesi, . The other legs are as shown in the figure below:   Of all triangles for which is in the interval which one has the largest area?   Now suppose that for each function given below a triangle is constructed in the same manner used in part (a). Assume , , , and are constants. Of all possible such triangles for which is in the interval which one has the largest area?                        "
 },
@@ -6638,7 +6638,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONoptim-probl.html#SUBSECTIONVarOptProbs-14",
   "type": "Problem",
-  "number": "9.7.3.13",
+  "number": "9.7.20",
   "title": "Variations on a Theme.",
   "body": "Variations on a Theme  To prevent squirrels from eating her birdseed a mathematician wants to hang a bird feeder so that its top is feet above the ground. To do this she attaches each end of a wire between two trees at a height of feet above the ground, with the feeder hanging from a second wire, , attached at the midpoint of the first as seen in the sketch below.   Comment  This problem is adapted from Hanging a Bird feeder: Food for Thought , by John W. Dawson, Jr. The College Mathematics Journal , Mar., 1990, Vol. 21, No. 2, pp. 129-130    Find the value of that requires the least amount of wire if the trees are feet apart.   What will the total length of the wire be?    Show that .    Find the value of that requires the least amount of wire if the trees are feet apart.   What will the total length of the wire be?    Show also that .    "
 },
@@ -6656,7 +6656,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONgraph-with-form.html#FIGUREUnusableGraph",
   "type": "Figure",
-  "number": "10.1.0.1",
+  "number": "10.1.1",
   "title": "",
   "body": " A useless graph of    "
 },
@@ -6665,7 +6665,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONgraph-with-form.html#FIGUREUsaableGraph",
   "type": "Figure",
-  "number": "10.1.0.2",
+  "number": "10.1.2",
   "title": "",
   "body": " A more useful graph of    "
 },
@@ -6674,7 +6674,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONgraph-with-form.html#DRILLHolyGrail1",
   "type": "Problem",
-  "number": "10.1.0.3",
+  "number": "10.1.3",
   "title": "",
   "body": " Compute and to see if they are really near zero.   Use a calculator for , not for .  "
 },
@@ -6683,7 +6683,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONgraph-with-form.html#SECTIONgraph-with-form-20",
   "type": "Example",
-  "number": "10.1.0.4",
+  "number": "10.1.4",
   "title": "",
   "body": " Examples graphing  For example consider the following function. . Differentiating we see that This tells us that will have POTPs at and Testing a single point in each of the intervals between POTPs we see that and conclude that the graph is decreasing on the interval , increasing on the interval , and decreasing again on . Computing the second derivative gives: This tells us that will have PITPs at , , and . Testing a single point in each of these intervals between PITPs we see that and conclude that the graph is concave downward on the interval , concave upward on the interval , concave downward on the interval , and concave downward on the interval .  "
 },
@@ -6692,7 +6692,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONgraph-with-form.html#SECTIONgraph-with-form-21",
   "type": "Problem",
-  "number": "10.1.0.5",
+  "number": "10.1.5",
   "title": "",
   "body": " Use your favorite graphing tool to graph and confirm our conclusions.  "
 },
@@ -6701,7 +6701,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONgraph-with-form.html#EXAMPLEAsym1",
   "type": "Example",
-  "number": "10.1.0.6",
+  "number": "10.1.6",
   "title": "",
   "body": " Examples graphing  The previous example was fairly simple so it was easy to keep all of the important information in mind at the same time. This will not always be the case so we will need ways to organize the data we collect. This will ensure that it is not overwhelming. Below we demonstrate one way to do this. It is not the only way. Let s sketch the graph of using Calculus. To use the First Derivative Test we ll need the derivative .  Setting the first derivative equal to zero and solving we see that we have a POTP at , , and at . To make all of this easier to see we arrange this data in the following table. Notice that we have organized our POTPs (and hence the intervals that we are testing) from left to right, just as they would appear on a number line.   The First Derivative Test Analysis  Tables The First Derivative Test Analysis    Interval                       From the table above we see that we have a local maximum at and and a local minimum at . Based on this information we could reasonably infer that the graph might have the shape shown below.   One possible shape of the graph of    The next step is to locate this graph on the plane. From our table above we see that the local minimum is at , and the two local maxima are at . Thus we can, again reasonably, infer that the graph of is located on the plane as shown below.   Unfortunately, we don t know that our graph is correct (in fact, it is not) because we ve made assumptions regarding its concavity that we haven t justified. This is the same error we made in the discussion following , back in when we drew a right triangle because it seemed to be correct. It is very easy to make this sort of mistake. Be careful. We can analyze the concavity of the graph using the second derivative in a manner very similar to what we did earlier with first derivative.  "
 },
@@ -6710,7 +6710,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONgraph-with-form.html#DRILLGraphingWithFuncForm1",
   "type": "Drill",
-  "number": "10.1.0.9",
+  "number": "10.1.9",
   "title": "",
   "body": " Drills Similar graphs due to limited knowlege  The shape seen in is just one possible shape we could infer based on the data we have. Sketch two more distinct graphs that match our data.  "
 },
@@ -6719,7 +6719,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONgraph-with-form.html#SECTIONgraph-with-form-24",
   "type": "Drill",
-  "number": "10.1.0.10",
+  "number": "10.1.10",
   "title": "",
   "body": " Drills differentiation     Confirm that the derivative of the function in is     Confirm that the second derivative of the function in is: .    Use an appropriate computational tool, or Newton s Method, to show that the PITPs of are: , , , and .    The PITPs in part (iii) can actually be computed exactly. Find the exact solutions and confirm the approximations.     "
 },
@@ -6728,7 +6728,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONgraph-with-form.html#TABLESDTChart1",
   "type": "Table",
-  "number": "10.1.0.11",
+  "number": "10.1.11",
   "title": "The Second Derivative Test Analysis",
   "body": " The Second Derivative Test Analysis  Tables The Second Derivative Test Analysis    Interval                         "
 },
@@ -6737,7 +6737,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONgraph-with-form.html#SECTIONgraph-with-form-31",
   "type": "Drill",
-  "number": "10.1.0.12",
+  "number": "10.1.12",
   "title": "",
   "body": " Drills graphing  Use the first and second derivatives to sketch the graph of each of the following functions, then sketch it again using graphing software. Resolve any discrepancies between the two graphs.                                                                          "
 },
@@ -6755,7 +6755,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONgraph-without-form.html#EXAMPLEGraphWOFormula",
   "type": "Example",
-  "number": "10.2.1.1",
+  "number": "10.2.1",
   "title": "",
   "body": " Examples graphing  Suppose we have the following information about a certain function. Can we sketch a reasonable graph of the function?               for all      for  and     for      for  and   In a sense this is easier than the previous problems, since intervals of increase, decrease, concave up, and concave down have already been determined for us. For example, here are the tables for each.   POTPs    Interval                     PITPs    Interval                    "
 },
@@ -6764,7 +6764,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONgraph-without-form.html#SUBSECTIONGraphWithDeriv-4",
   "type": "Drill",
-  "number": "10.2.1.4",
+  "number": "10.2.4",
   "title": "",
   "body": " Drills graphing without a formula   In we have and on the intervals and . Given that and when , did we really need to specify that on the interval ?   "
 },
@@ -6773,7 +6773,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONgraph-without-form.html#SUBSECTIONGraphWithDeriv-7",
   "type": "Problem",
-  "number": "10.2.1.5",
+  "number": "10.2.5",
   "title": "",
   "body": " Sketch the graph of which satisfies the given requirements.      ,  for all          ,   ,   ,   for ,  for ,        for all ,   ,   ,   for all ,   , for ,   , for ,        ,   does not exist,   ,   , for   , for        for all ,   ,   for all ,   for all .        ,   ,     for in ,   for in ,   for ,   ,   ,   for in ,   for in ,   for in ,        ,   , for ,   , for        for all ,   ,   ,   ,   , for   , for      for in ,   for in        , for all ,   ,   ,   , for ,   ,   ,   , for ,   for .     For this problem we restrict the domain to the interval .     ,   ,   , for ,     , for ,   ,   for ,   for ,   for    "
 },
@@ -6782,7 +6782,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONgraph-without-form.html#TABLEGraphFromDerivGraph1",
   "type": "Table",
-  "number": "10.2.2.1",
+  "number": "10.2.6",
   "title": "POTPs",
   "body": " POTPs    Interval                 "
 },
@@ -6791,7 +6791,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONgraph-without-form.html#TABLEGraphFromDerivGraph2",
   "type": "Table",
-  "number": "10.2.2.2",
+  "number": "10.2.7",
   "title": "PITPs",
   "body": " PITPs    Interval              "
 },
@@ -6800,7 +6800,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONgraph-without-form.html#SUBSECTIONGraphFromDerivGraph-8",
   "type": "Problem",
-  "number": "10.2.2.3",
+  "number": "10.2.8",
   "title": "",
   "body": " Each of the following graphs is the derivative of some function. Find the shape of the graph of the function.                          "
 },
@@ -6811,14 +6811,14 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "10.3",
   "title": "Graphing with a Formula for  <span class=\"process-math\">\\(\\dfdx{y}{t}\\)<\/span>",
-  "body": " Graphing with a Formula for   When Depends on alone   Examples graphing  Consider the IVP, In Integral Calculus (probably your next math course) you will learn how to find explicitly. For now we will be satisfied with sketching an approximate graph of . Setting and solving we see that and are the POTPs for . Thus on each of the intervals , , and the graph of is either always increasing or always decreasing. We tabulate this information as follows:   POTPs    Interval                    Based on this table, we can see that is a local minimum and is a local maximum. Observe that we have no way to determine the value of . All we can say is that the value of , whatever it is must be a local maximum.  We proceed in a similar fashion to determine concavity. The second derivative is Setting and solving, we see that is a PITP for . Making a table as before we have   PITPs    Interval                  Based on the table we see that the point is an inflection point. We want to make a reasonable sketch of the graph of based on this information. But we need to be careful. There is a lot of information in and and our graph needs to be consistent with all of it. So we first organize all of our conclusions by plotting the transition points (both optimal and inflective) on the axis and identifying the intervals where is increasing, decreasing, concave up, or concave down.   This information, along with the initial value, allows us to provide a reasonable graph of .   From the initial condition in the IVP we know that but we have no information about the vertical coordinate of any other point on the graph. Thus, from the given information the scale of this graph is unknowable. The graph above is reasonable because it is consistent with the data given in the IVP but that is all we can say about it.  This sort of graphical, qualitative analysis is the best we can do with the information we have but, as you see, we can glean a great deal of information about the shape of the graph of a function from its derivative alone.   For each of the following IVPs:   Find the intervals on which the graph of the solution is increasing and decreasing. Identify the location all local extrema.    Find the intervals on which the graph of the solution is concave upward and concave downward. Identify the location of all inflection points.    Plot a reasonable sketch of the graph for Approximate transition points using the appropriate technology or Newton s Method as necessary.        .     .     .     .     .     .     .     .     .     .     .                 Compare this to problem (m).       When depends on alone    To see a World in a Grain of Sand And a Heaven in a Wild Flower Hold Infinity in the palm of your hand And Eternity in an hour    William Blake (1757 1827)   Consider the IVP This is the same IVP we approximated in . The analysis we will do here is related so you may find it useful to review that section before proceeding.  As we ve seen every IVP has two parts: a differential equation (in this case, , and an initial value (in this case, ).  We will focus on the differential equation first. The differential equation says that at each point on the graph of the slope of the graph is equal to the vertical coordinate at that point. For example if is a point on the graph of , then near that point the graph of will look like the orange part of the sketch below. On the other hand, if is a point on the graph of then near the point the graph of will look like the red graph in the sketch below.   Comment  Note that the curve passing through is not necessarily the same curve that passes through . There is more than one solution of the differential equation in IVP .    In fact, for any value of , we know that if is a point on the graph of then the slope of the graph which passes through that point will be parallel to the orange and red lines above. That is, if a solution of the differential equation passes through a point then its slope will be equal to at for any value of .  This is seen in the figure below where each black dot represents a point with vertical coordinate equal to and each orange segment represents the graph of the curve that both satisfies the differential equation from IVP , and passes through that point.   Similarly, if we know that is a point on the graph of , where both solves the differential equation from IVP and passes through that point, then the slope at will be , as seen in the following sketch.   By tagging more points in the plane in the same way we get the image below.    Vocabulary slope field A sketch like this is called a slope field . The short line segment at each point, , is a short section of the graph of the function which satisfies the differential equation .   Comment   Principle of Local Linearity Actually the Principle of Local Linearity applies so it is a short section of the line tangent at .   If we know where to start (i.e., if we have an initial condition) the slope field allows us to determine the shape of the entire graph.  For example to sketch the graph of if it passes through the point , we simply follow the line segments in our slope field starting at that point. This is the black graph in the sketch below. The graph of the that passes through the point is shown in red below, and the graph that passes through the point is shown in blue.          Drills Initial Value Problems (IVPs)    IVP has the initial condition, Plot the point and use th slope field in to sketch the solution of IVP . Compare your solution with the approximation we obtained in . Do they look like the same solution?     Confirm that is the solution of the IVP (This is the black graph above.)   Confirm that is the solution of the IVP (This is the red graph above.)   Based on parts (a) and (b) guess what the solution of the IVP will be. Confirm that your guess is correct. {If you guess wrong, guess again.}   Based on parts (a) and (b), and (c) guess what the solution of the IVP will be. Confirm that your conjecture is correct.    Vocabulary slope field To sketch the graph of the solution of a given IVP begin by drawing the slope field for the differential equation. Then plot the value and follow the slope field to sketch the graph.    Vocabulary slope field For each of the following IVPs sketch the slope field in the ranges given and use your slope field to sketch the solution of the IVP.       It is often simplest to begin by sketching slopes at integer coordinate points in order to get a clearer sense of the graphs. Then to fill in between them.                         When Depends on and  So far we ve examined the situation when depends on alone: and when depends on alone: . But, of course, it could happen at depends on both and : . Analytically, this is a more complex situation but sketching the graph of the solution of such an IVP from its slope field is still possible.    Vocabulary slope field For each of the following IVPs draw The slope field in the ranges given and use your slope field to sketch the solution of the IVP.                    "
+  "body": " Graphing with a Formula for   When Depends on alone   Examples graphing  Consider the IVP, In Integral Calculus (probably your next math course) you will learn how to find explicitly. For now we will be satisfied with sketching an approximate graph of . Setting and solving we see that and are the POTPs for . Thus on each of the intervals , , and the graph of is either always increasing or always decreasing. We tabulate this information as follows:   POTPs    Interval                    Based on this table, we can see that is a local minimum and is a local maximum. Observe that we have no way to determine the value of . All we can say is that the value of , whatever it is must be a local maximum.  We proceed in a similar fashion to determine concavity. The second derivative is Setting and solving, we see that is a PITP for . Making a table as before we have   PITPs    Interval                  Based on the table we see that the point is an inflection point. We want to make a reasonable sketch of the graph of based on this information. But we need to be careful. There is a lot of information in and and our graph needs to be consistent with all of it. So we first organize all of our conclusions by plotting the transition points (both optimal and inflective) on the axis and identifying the intervals where is increasing, decreasing, concave up, or concave down.   This information, along with the initial value, allows us to provide a reasonable graph of .   From the initial condition in the IVP we know that but we have no information about the vertical coordinate of any other point on the graph. Thus, from the given information the scale of this graph is unknowable. The graph above is reasonable because it is consistent with the data given in the IVP but that is all we can say about it.  This sort of graphical, qualitative analysis is the best we can do with the information we have but, as you see, we can glean a great deal of information about the shape of the graph of a function from its derivative alone.   For each of the following IVPs:   Find the intervals on which the graph of the solution is increasing and decreasing. Identify the locations of all local extrema.    Find the intervals on which the graph of the solution is concave upward and concave downward. Identify the locations of all inflection points.    Plot a reasonable sketch of the graph for Approximate transition points using the appropriate technology or Newton s Method as necessary.        .     .     .     .     .     .     .     .     .     .     .                 Compare this to problem (m).       When depends on alone    To see a World in a Grain of Sand And a Heaven in a Wild Flower Hold Infinity in the palm of your hand And Eternity in an hour    William Blake (1757 1827)   Consider the IVP This is the same IVP we approximated in . The analysis we will do here is related so you may find it useful to review that section before proceeding.  As we ve seen every IVP has two parts: a differential equation (in this case, , and an initial value (in this case, ).  We will focus on the differential equation first. The differential equation says that at each point on the graph of the slope of the graph is equal to the vertical coordinate at that point. For example if is a point on the graph of , then near that point the graph of will look like the orange part of the sketch below. On the other hand, if is a point on the graph of then near the point the graph of will look like the red graph in the sketch below.   Comment  Note that the curve passing through is not necessarily the same curve that passes through . There is more than one solution of the differential equation in IVP .    In fact, for any value of , we know that if is a point on the graph of then the slope of the graph which passes through that point will be parallel to the orange and red lines above. That is, if a solution of the differential equation passes through a point then its slope will be equal to at for any value of .  This is seen in the figure below where each black dot represents a point with vertical coordinate equal to and each orange segment represents the graph of the curve that both satisfies the differential equation from IVP , and passes through that point.   Similarly, if we know that is a point on the graph of , where both solves the differential equation from IVP and passes through that point, then the slope at will be , as seen in the following sketch.   By tagging more points in the plane in the same way we get the image below.    Vocabulary slope field A sketch like this is called a slope field . The short line segment at each point, , is a short section of the graph of the function which satisfies the differential equation .   Comment   Principle of Local Linearity Actually the Principle of Local Linearity applies so it is a short section of the line tangent at .   If we know where to start (i.e., if we have an initial condition) the slope field allows us to determine the shape of the entire graph.  For example to sketch the graph of if it passes through the point , we simply follow the line segments in our slope field starting at that point. This is the black graph in the sketch below. The graph of the that passes through the point is shown in red below, and the graph that passes through the point is shown in blue.          Drills Initial Value Problems (IVPs)    IVP has the initial condition, Plot the point and use th slope field in to sketch the solution of IVP . Compare your solution with the approximation we obtained in . Do they look like the same solution?     Confirm that is the solution of the IVP (This is the black graph above.)   Confirm that is the solution of the IVP (This is the red graph above.)   Based on parts (a) and (b) guess what the solution of the IVP will be. Confirm that your guess is correct. {If you guess wrong, guess again.}   Based on parts (a) and (b), and (c) guess what the solution of the IVP will be. Confirm that your conjecture is correct.    Vocabulary slope field To sketch the graph of the solution of a given IVP begin by drawing the slope field for the differential equation. Then plot the value and follow the slope field to sketch the graph.    Vocabulary slope field For each of the following IVPs sketch the slope field in the ranges given and use your slope field to sketch the solution of the IVP.       It is often simplest to begin by sketching slopes at integer coordinate points in order to get a clearer sense of the graphs. Then to fill in between them.                         When Depends on and  So far we ve examined the situation when depends on alone: and when depends on alone: . But, of course, it could happen at depends on both and : . Analytically, this is a more complex situation but sketching the graph of the solution of such an IVP from its slope field is still possible.    Vocabulary slope field For each of the following IVPs draw The slope field in the ranges given and use your slope field to sketch the solution of the IVP.                    "
 },
 {
   "id": "SUBSECTIONDerivDepOnxAlone-2",
   "level": "2",
   "url": "SECTIONGraphingWithDeriv.html#SUBSECTIONDerivDepOnxAlone-2",
   "type": "Example",
-  "number": "10.3.1.1",
+  "number": "10.3.1",
   "title": "",
   "body": " Examples graphing  Consider the IVP, In Integral Calculus (probably your next math course) you will learn how to find explicitly. For now we will be satisfied with sketching an approximate graph of . Setting and solving we see that and are the POTPs for . Thus on each of the intervals , , and the graph of is either always increasing or always decreasing. We tabulate this information as follows:   POTPs    Interval                    Based on this table, we can see that is a local minimum and is a local maximum. Observe that we have no way to determine the value of . All we can say is that the value of , whatever it is must be a local maximum.  We proceed in a similar fashion to determine concavity. The second derivative is Setting and solving, we see that is a PITP for . Making a table as before we have   PITPs    Interval                  Based on the table we see that the point is an inflection point. We want to make a reasonable sketch of the graph of based on this information. But we need to be careful. There is a lot of information in and and our graph needs to be consistent with all of it. So we first organize all of our conclusions by plotting the transition points (both optimal and inflective) on the axis and identifying the intervals where is increasing, decreasing, concave up, or concave down.   This information, along with the initial value, allows us to provide a reasonable graph of .   From the initial condition in the IVP we know that but we have no information about the vertical coordinate of any other point on the graph. Thus, from the given information the scale of this graph is unknowable. The graph above is reasonable because it is consistent with the data given in the IVP but that is all we can say about it.  This sort of graphical, qualitative analysis is the best we can do with the information we have but, as you see, we can glean a great deal of information about the shape of the graph of a function from its derivative alone.  "
 },
@@ -6827,9 +6827,9 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONGraphingWithDeriv.html#SUBSECTIONDerivDepOnxAlone-3",
   "type": "Problem",
-  "number": "10.3.1.4",
+  "number": "10.3.4",
   "title": "",
-  "body": "For each of the following IVPs:   Find the intervals on which the graph of the solution is increasing and decreasing. Identify the location all local extrema.    Find the intervals on which the graph of the solution is concave upward and concave downward. Identify the location of all inflection points.    Plot a reasonable sketch of the graph for Approximate transition points using the appropriate technology or Newton s Method as necessary.        .     .     .     .     .     .     .     .     .     .     .                 Compare this to problem (m).    "
+  "body": "For each of the following IVPs:   Find the intervals on which the graph of the solution is increasing and decreasing. Identify the locations of all local extrema.    Find the intervals on which the graph of the solution is concave upward and concave downward. Identify the locations of all inflection points.    Plot a reasonable sketch of the graph for Approximate transition points using the appropriate technology or Newton s Method as necessary.        .     .     .     .     .     .     .     .     .     .     .                 Compare this to problem (m).    "
 },
 {
   "id": "SUBSECTIONDfdxDependsOnYAlone-15",
@@ -6845,7 +6845,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONGraphingWithDeriv.html#FIGURESlopeFieldExp",
   "type": "Figure",
-  "number": "10.3.2.1",
+  "number": "10.3.5",
   "title": "",
   "body": "     "
 },
@@ -6854,7 +6854,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONGraphingWithDeriv.html#SUBSECTIONDfdxDependsOnYAlone-20",
   "type": "Drill",
-  "number": "10.3.2.2",
+  "number": "10.3.6",
   "title": "",
   "body": " Drills Initial Value Problems (IVPs)    IVP has the initial condition, Plot the point and use th slope field in to sketch the solution of IVP . Compare your solution with the approximation we obtained in . Do they look like the same solution?   "
 },
@@ -6863,7 +6863,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONGraphingWithDeriv.html#SUBSECTIONDfdxDependsOnYAlone-21",
   "type": "Problem",
-  "number": "10.3.2.3",
+  "number": "10.3.7",
   "title": "",
   "body": " Confirm that is the solution of the IVP (This is the black graph above.)   Confirm that is the solution of the IVP (This is the red graph above.)   Based on parts (a) and (b) guess what the solution of the IVP will be. Confirm that your guess is correct. {If you guess wrong, guess again.}   Based on parts (a) and (b), and (c) guess what the solution of the IVP will be. Confirm that your conjecture is correct.  "
 },
@@ -6881,7 +6881,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONGraphingWithDeriv.html#SUBSECTIONDfdxDependsOnYAlone-23",
   "type": "Problem",
-  "number": "10.3.2.4",
+  "number": "10.3.8",
   "title": "",
   "body": "  Vocabulary slope field For each of the following IVPs sketch the slope field in the ranges given and use your slope field to sketch the solution of the IVP.       It is often simplest to begin by sketching slopes at integer coordinate points in order to get a clearer sense of the graphs. Then to fill in between them.                      "
 },
@@ -6890,7 +6890,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONGraphingWithDeriv.html#SUBSECTIONDfdxDependsOnYAndt-3",
   "type": "Problem",
-  "number": "10.3.3.1",
+  "number": "10.3.9",
   "title": "",
   "body": "  Vocabulary slope field For each of the following IVPs draw The slope field in the ranges given and use your slope field to sketch the solution of the IVP.                  "
 },
@@ -6908,7 +6908,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONpopulation-dynamics.html#SUBSECTIONModelingTrout-11",
   "type": "Drill",
-  "number": "11.1.1.1",
+  "number": "11.1.1",
   "title": "",
   "body": " Drills Initial Value Problems (IVPs)   Confirm that solves IVP .   "
 },
@@ -6917,7 +6917,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONpopulation-dynamics.html#SUBSECTIONModelingTrout-22",
   "type": "Drill",
-  "number": "11.1.1.2",
+  "number": "11.1.2",
   "title": "",
   "body": " Drills exponential growth  Compute the rate of growth of the trout population for equal to                                  "
 },
@@ -6926,7 +6926,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONpopulation-dynamics.html#TABLETroutFarm1",
   "type": "Table",
-  "number": "11.1.1.3",
+  "number": "11.1.3",
   "title": "Trout Population",
   "body": " Trout Population    Interval                "
 },
@@ -6935,7 +6935,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONpopulation-dynamics.html#SUBSECTIONModelingTrout-27",
   "type": "Drill",
-  "number": "11.1.1.4",
+  "number": "11.1.4",
   "title": "",
   "body": " Drills optimization   Suppose we were to use the data in to plot a graph of versus . Would there be a maximum when . Explain why or why not..   "
 },
@@ -6944,7 +6944,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONpopulation-dynamics.html#SUBSECTIONModelingTrout-28",
   "type": "Problem",
-  "number": "11.1.1.5",
+  "number": "11.1.5",
   "title": "",
   "body": " In this problem we analyze the concavity of the graph of . In particular we'd like to find all values of where PITPs occur.   Show that and therefore    Find all values of where a PITP occurs.   Create a table similar to to determine the (vertical) intervals on which is concave up or concave down.  "
 },
@@ -6953,7 +6953,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONpopulation-dynamics.html#SUBSECTIONModelingTrout-37",
   "type": "Problem",
-  "number": "11.1.1.6",
+  "number": "11.1.6",
   "title": "",
   "body": " On the same set of axes, plot reasonable graphs for with the following initial values:    ,     ,     ,     .   Is it clear to you that none of these curves can cross? Think about it a moment, if two of these curves crossed, it would force to take on two different values for some value of . Do you see why this can t happen? This fact should help you graph each function.   Sketch the graph you get if you start by purchasing tons of trout, rather than tons. Is this a good business decision?  "
 },
@@ -6962,7 +6962,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONpopulation-dynamics.html#PROBLEMBassModel",
   "type": "Problem",
-  "number": "11.1.1.7",
+  "number": "11.1.7",
   "title": "",
   "body": " Suppose our fishery has another lake full of bass and that the intrinsic growth rate for the bass is    Analyze this model in the same way we analyzed equation . Draw several typical graphs.   We can t make any money unless we sell some of our fish. Modify equation to account for harvesting at a uniform rate of .   Suppose tons. Sketch a graph of the population assuming that we harvest at a uniform rate of as in part (b). What does the model predict about the amount of fish in the lake over a long period of time?   Assume that is still tons as in part (b), but this time the amount of harvesting is increased from to . Use a slope field to draw a graph of . What does the model predict now about the amount of fish over a long period of time?  "
 },
@@ -6980,7 +6980,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONpopulation-dynamics.html#SUBSECTIONModelingTrout-40",
   "type": "Problem",
-  "number": "11.1.1.8",
+  "number": "11.1.8",
   "title": "",
   "body": " Show that if we use model then is increasing and concave up when  is increasing and concave down when and is decreasing and concave up when    This is the same analysis we did above. We re just not assuming that this time.  "
 },
@@ -6989,7 +6989,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONpopulation-dynamics.html#PROBLEMMinViablePop",
   "type": "Problem",
-  "number": "11.1.1.9",
+  "number": "11.1.9",
   "title": "",
   "body": " Of course there is also a risk from underpopulation which model does not account for. To catch this effect we tweak equation by inserting the factor where is a small positive constant. We justify this tweak in below.  Our new model is then    Show that equation reduces (approximately) to equation when is very large relative to .   Show that when then . What does this say about the growth of the population when is near zero?   Find all values of for which the graph of is increasing and the values for which it is decreasing?   Show that Use this to determine the values of for which the graph of is concave upward and the values for which the graph of is concave downward.   Use the information to plot a sketch of the graph of where the initial value satisfies each of the following:                        Vocabulary minimum viable population  Explain why is called the minimum viable population for the species.  "
 },
@@ -6998,7 +6998,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONpopulation-dynamics.html#FIGUREBassWalleye1",
   "type": "Figure",
-  "number": "11.1.2.1",
+  "number": "11.1.10",
   "title": "",
   "body": "     "
 },
@@ -7007,7 +7007,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONpopulation-dynamics.html#PROBLEMWalleyeAnalysis",
   "type": "Problem",
-  "number": "11.1.2.2",
+  "number": "11.1.11",
   "title": "",
   "body": " Apply the same type of analysis to to determine where is increasing and where is decreasing. Plot these regions in the first quadrant of the plane just as we did above for the bass population.  "
 },
@@ -7016,7 +7016,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONpopulation-dynamics.html#FIGUREBassWalleye2",
   "type": "Figure",
-  "number": "11.1.2.3",
+  "number": "11.1.12",
   "title": "",
   "body": "     "
 },
@@ -7034,7 +7034,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONpopulation-dynamics.html#SECTIONlittle-healthy-comp-21",
   "type": "Drill",
-  "number": "11.1.2.4",
+  "number": "11.1.13",
   "title": "",
   "body": " Drills modeling a fishery     Use to verify that the points , , and , are equilibrium points for our bass\/walleye populations.    Show that the coordinates of the equilibrium point are as given in below.           "
 },
@@ -7052,7 +7052,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONpopulation-dynamics.html#SECTIONlittle-healthy-comp-27",
   "type": "Problem",
-  "number": "11.1.2.6",
+  "number": "11.1.15",
   "title": "",
   "body": " Use to determine if there are any initial conditions where the trajectory approaches the points , , or ? Explain.  "
 },
@@ -7061,7 +7061,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONpopulation-dynamics.html#SECTIONlittle-healthy-comp-28",
   "type": "Problem",
-  "number": "11.1.2.7",
+  "number": "11.1.16",
   "title": "",
   "body": "    Suppose we adjust our differential equations slightly to Perform a similar graphical analysis to show that as long as , then any trajectory will approach the equilibrium point . That is, the walleye will become extinct, and the bass will approach their natural level of tons. How is this consistent with the adjustments we made from the original differential equations? Explain.   Now let s again adjust our differential equations to    Identify how this system of equations is different from the one in part (a), and interpret the difference in terms of the influence of each population on the other.    Perform a similar graphical analysis to show that the equilibrium points are , , , and . While it is theoretically possible for a trajectory to approach , show that most trajectories will either approach or . What does this mean for the fish populations, and is it consistent with the differential equations? Explain.      Compare the results in parts (a) and (b) with the example that started this section (equations and ). How does the coefficient of the term affect the model?  "
 },
@@ -7079,7 +7079,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONselect-model-probl.html#SECTIONepidemic-blues-6",
   "type": "Drill",
-  "number": "11.2.1.1",
+  "number": "11.2.1",
   "title": "",
   "body": " Drills modeling a fishery   Assuming that no members are entering or leaving the population (by births, deaths from other diseases, or migration), explain why    "
 },
@@ -7097,7 +7097,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONselect-model-probl.html#SECTIONepidemic-blues-8",
   "type": "Drill",
-  "number": "11.2.1.2",
+  "number": "11.2.2",
   "title": "",
   "body": " Drills modeling a fishery   Explain how we know that must be negative.   "
 },
@@ -7115,7 +7115,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONselect-model-probl.html#SECTIONepidemic-blues-10",
   "type": "Problem",
-  "number": "11.2.1.3",
+  "number": "11.2.3",
   "title": "",
   "body": "    Explain how we know that must be positive.   Show that    Use the information in part (b) to show that the number of infected is increasing when and decreasing when    Show that and use this to show that when and is positive otherwise.  "
 },
@@ -7124,7 +7124,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONselect-model-probl.html#subSECTIONtractrix-6",
   "type": "Problem",
-  "number": "11.2.2.1",
+  "number": "11.2.4",
   "title": "",
   "body": " In you showed that the path followed by the center of the rear axle of the trailer follows, , must satisfy the IVP:    Show that satisfies IVP .   Graph .    Does your graph in part (a) match your intuition about the shape of the curve?    Does it match the graph you found using Euler s Method in ?      How far will the tractor have gone (in trailer lengths) before the trailer is within one degree of vertical?   You will learn how to derive this solution from IVP when you take Integral Calculus.  "
 },
@@ -7133,7 +7133,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONselect-model-probl.html#PROBLEMPursuit2",
   "type": "Problem",
-  "number": "11.2.3.1",
+  "number": "11.2.5",
   "title": "",
   "body": "  As in we assume that a rocket , is traveling vertically up the line at a constant speed . When the rocket reaches the point , a missile is fired from the origin directly at the rocket. Assuming that the missile is always aimed directly at the rocket, and that it travels at a speed which is times the speed of the rocket ( ) we showed in that the curve the missile follows will satisfy the IVP: where denotes the length of the the missile s path at time .   Use to show that the missile s path must satisfy the (second order) differential equation with the initial conditions: and .   Show that satisfies the differential equation and initial conditions in part (a).   Find how long it takes for the missile to catch the rocket for , , and . Does this make sense to you physically? Explain  "
 },
@@ -7160,7 +7160,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONhoriz-asympt-as.html#DEFINITIONLimitAtInfinity-Intuitive",
   "type": "Definition",
-  "number": "12.1.1.1",
+  "number": "12.1.1",
   "title": "An Intuitive Definition of a Limit at <span class=\"process-math\">\\(\\pm\\infty\\)<\/span>.",
   "body": " An Intuitive Definition of a Limit at      If, as , gets arbitrarily close to some number , we write     If, as , gets arbitrarily close to some number , we write       "
 },
@@ -7169,7 +7169,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONhoriz-asympt-as.html#EXAMPLELimWitch",
   "type": "Example",
-  "number": "12.1.1.2",
+  "number": "12.1.2",
   "title": "",
   "body": " Examples limits at  As we ve observed, for very large positive values of , the function will be close to zero (the larger the value, the closer is to zero). Likewise, for very large, negative values of , will also get close to zero so:   "
 },
@@ -7178,7 +7178,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONhoriz-asympt-as.html#DRILLLimit1OverX",
   "type": "Drill",
-  "number": "12.1.1.3",
+  "number": "12.1.3",
   "title": "",
   "body": " Drills asymptote horizontal   Use the graph of to argue that and .   "
 },
@@ -7187,7 +7187,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONhoriz-asympt-as.html#DEFINITIONHorizontalAsymptotes",
   "type": "Definition",
-  "number": "12.1.1.4",
+  "number": "12.1.4",
   "title": "Horizontal Asymptotes.",
   "body": " Horizontal Asymptotes      If then the graph of the function has the horizontal asymptote,     If then the graph of the function has the horizontal asymptote,       "
 },
@@ -7196,7 +7196,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONhoriz-asympt-as.html#PROBLEMLimConst",
   "type": "Problem",
-  "number": "12.1.1.5",
+  "number": "12.1.5",
   "title": "",
   "body": "    Justify the following assertion as clearly and as carefully as you can: .   Generalize the statement in part (a).  "
 },
@@ -7205,7 +7205,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONhoriz-asympt-as.html#THEOREMLimSum1",
   "type": "Theorem",
-  "number": "12.1.1.6",
+  "number": "12.1.6",
   "title": "The Limit of a Sum “at” Infinity.",
   "body": " The Limit of a Sum at Infinity  If and then   "
 },
@@ -7214,7 +7214,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONhoriz-asympt-as.html#THEOREMLimProd1",
   "type": "Theorem",
-  "number": "12.1.1.7",
+  "number": "12.1.7",
   "title": "The Limit of a Product “at” Infinity.",
   "body": " The Limit of a Product at Infinity  If and then   "
 },
@@ -7223,7 +7223,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONhoriz-asympt-as.html#THEOREMLimQuot1",
   "type": "Theorem",
-  "number": "12.1.1.8",
+  "number": "12.1.8",
   "title": "The Limit of a Quotient “at” Infinity.",
   "body": " The Limit of a Quotient at Infinity  If and then   "
 },
@@ -7232,7 +7232,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONhoriz-asympt-as.html#DIGRESSIONLimitNotation-26",
   "type": "Drill",
-  "number": "12.1.1.9",
+  "number": "12.1.9",
   "title": "",
   "body": " Drills limits at  State the theorem corresponding to each of ,  and  where the limit is taken as goes to negative infinity.  "
 },
@@ -7241,7 +7241,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONhoriz-asympt-as.html#EXAMPLENonexistantLimits",
   "type": "Example",
-  "number": "12.1.1.10",
+  "number": "12.1.10",
   "title": "",
   "body": " Examples limits at  Notice that in we specifically required that . This is necessary because, as we stated quite emphatically in Digression: Dividing by Zero , division by zero is an undefined concept. Thus if is equal to, say , and then appears to be equal to But this is meaningless, so we say that does not exist, or equivalently that it is undefined.  "
 },
@@ -7250,7 +7250,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONhoriz-asympt-as.html#DIGRESSIONLimitNotation-29",
   "type": "Example",
-  "number": "12.1.1.11",
+  "number": "12.1.11",
   "title": "",
   "body": " Examples limits at  We d like to find the horizontal asymptotes of if any exist. In this example we will write down all of the details of our computation. As you get more comfortable, you will probably abbreviate the process by doing much of this in your head. That s good, but also be sure you can fill in all of the details when needed. You will need to be comfortable with all of the details when the problems get more complex. From we see that if horizontal asymptotes exist they will be the lines and so we need to evaluate these limits. For the first limit we see from that Applying (several times) we have So we see that the horizontal asymptote will be   "
 },
@@ -7259,7 +7259,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONhoriz-asympt-as.html#DIGRESSIONLimitNotation-30",
   "type": "Drill",
-  "number": "12.1.1.12",
+  "number": "12.1.12",
   "title": "",
   "body": " Drills limits at   Evaluate . Justify each step by citing the appropriate theorem or fact.   "
 },
@@ -7268,7 +7268,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONhoriz-asympt-as.html#DIGRESSIONLimitNotation-31",
   "type": "Example",
-  "number": "12.1.1.13",
+  "number": "12.1.13",
   "title": "",
   "body": " Examples limits  To find one horizontal asymptote of we evaluate:   "
 },
@@ -7277,7 +7277,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONhoriz-asympt-as.html#DIGRESSIONLimitNotation-32",
   "type": "Drill",
-  "number": "12.1.1.14",
+  "number": "12.1.14",
   "title": "",
   "body": " Drills limits at   Evaluate to find the other horizontal asymptote, if it exists.   "
 },
@@ -7286,7 +7286,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONhoriz-asympt-as.html#DIGRESSIONLimitNotation-33",
   "type": "Problem",
-  "number": "12.1.1.15",
+  "number": "12.1.15",
   "title": "",
   "body": " Find the horizontal asymptotes of the graphs of the following functions.                  "
 },
@@ -7295,7 +7295,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONhoriz-asympt-as.html#DIGRESSIONLimitNotation-41",
   "type": "Drill",
-  "number": "12.1.1.16",
+  "number": "12.1.16",
   "title": "",
   "body": " Drills limits at   Similarly means that as  . How would we say this in words?   "
 },
@@ -7304,7 +7304,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONhoriz-asympt-as.html#DIGRESSIONLimitNotation-42",
   "type": "Example",
-  "number": "12.1.1.17",
+  "number": "12.1.17",
   "title": "",
   "body": " Examples limits at  It is especially important to keep in mind that is not a number when evaluating a limit like:   It is very tempting to attack this problem by noticing that each term is increasing without bound and write but in fact this limit is not zero. Can you see what the limit is? Give it some thought and take your best guess. We ll come back to it shortly.  "
 },
@@ -7313,7 +7313,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONhoriz-asympt-as.html#DIGRESSIONLimitNotation-47",
   "type": "Drill",
-  "number": "12.1.1.18",
+  "number": "12.1.18",
   "title": "",
   "body": " Drills limits at  Find two functions, and such that as both and but is equal to each of the following.                            An arbitrary real number     "
 },
@@ -7331,7 +7331,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONhoriz-asympt-as.html#DRILLNotIndetForms",
   "type": "Drill",
-  "number": "12.1.1.19",
+  "number": "12.1.19",
   "title": "",
   "body": " Drills limits indeterminate forms  Explain why and are not indeterminate forms.  "
 },
@@ -7340,7 +7340,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONhoriz-asympt-as.html#EXAMPLEIndetForm1",
   "type": "Example",
-  "number": "12.1.1.20",
+  "number": "12.1.20",
   "title": "",
   "body": " Examples limits at  Consider . It is tempting to write , but as we have observed, is not a number so this makes no more sense than .  Once again, the key is to re-express the function algebraically. Factoring out the highest power of the variable from both the numerator and the denominator we see that   You may well ask, How did we know to factor out the highest power of the variable? The answer is very unsatisfying. We were taught this technique by our teachers, just as you are being taught now. We d have been hard pressed to come up with it on our own.  "
 },
@@ -7349,7 +7349,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONhoriz-asympt-as.html#EXAMPLEAsym2",
   "type": "Example",
-  "number": "12.1.1.21",
+  "number": "12.1.21",
   "title": "(Continued from Section 10.1 ).",
   "body": " (Continued from )  Examples limits at  Recall that we did not complete because we did not previously have any way to determine what happens to the graph of as or as . We do now. Finding what happens to the graph of as or as is equivalent to evaluating the following limits: We will evaluate the first one and leave the second as a drill. Proceeding as in we see that   "
 },
@@ -7358,7 +7358,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONhoriz-asympt-as.html#DIGRESSIONLimitNotation-65",
   "type": "Problem",
-  "number": "12.1.1.22",
+  "number": "12.1.22",
   "title": "",
   "body": " Show that is also equal to two.  "
 },
@@ -7376,7 +7376,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONhoriz-asympt-as.html#DIGRESSIONLimitNotation-67",
   "type": "Problem",
-  "number": "12.1.1.23",
+  "number": "12.1.23",
   "title": "",
   "body": " Show that each of the following statements is true.                                  "
 },
@@ -7385,7 +7385,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONhoriz-asympt-as.html#DIGRESSIONLimitNotation-68",
   "type": "Example",
-  "number": "12.1.1.24",
+  "number": "12.1.24",
   "title": "",
   "body": " Examples limits at  Do you think the function has any horizontal asymptotes? Take your best guess before we begin this example. To find any horizontal asymptotes we have to evaluate the two limits First we ll find the limit as and leave the limit as as a drill for you.  As always the trick is to rearrange this expression inside the limit algebraically without changing its value until we can see clearly what happens as . The square roots seem to be the difficulty here. So we d like to find a way to make them go away. The standard trick for this is to multiply by the conjugate of , namely .   Comment  We are using the identity to square both terms and get rid of the square roots. The factors and are mutually conjugate.   Of course, if we do that then we need to divide by the conjugate as well. That way we ve multiplied by and have not changed the value of the expression. This won t actually eliminate the square roots as we will still have them in the denominator. But let s see what happens.   Factoring the highest power of out of the numerator and denominator gives and since we have But we re evaluating a limit as . So, we re really only interested in large, positive values of . In this case so   Did you guess right? If you did, either you have a very strong intuition for these kinds of problems or you just had a moment of blind luck. So don t just pat yourself on the back and walk away. Be sure to take a moment to figure out whether it was intuition or luck. You don t want to confuse them.  If you guessed wrong, or (most likely) were unable to come up with a guess don t fret about it. You re normal. But be sure you review and understand the steps to this solution so you can begin to build some intuition about such problems. This problem looked pretty intimidating, but once we got going in the right direction, it was all Algebra from there. Notice how the absolute value came into play. In this problem it wasn t an issue since we were considering only positive values of . But consider what would happen if was negative, if . In this case,    This is important. If you don t see why when ask your teacher about it.  "
 },
@@ -7394,7 +7394,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONhoriz-asympt-as.html#DIGRESSIONLimitNotation-70",
   "type": "Drill",
-  "number": "12.1.1.25",
+  "number": "12.1.25",
   "title": "",
   "body": " Drills limits at   Try to guess the value of and then evaluate the limit to see if you guessed correctly.   "
 },
@@ -7403,7 +7403,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONhoriz-asympt-as.html#DIGRESSIONLimitNotation-71",
   "type": "Problem",
-  "number": "12.1.1.26",
+  "number": "12.1.26",
   "title": "",
   "body": " Determine the following limits.                      "
 },
@@ -7421,7 +7421,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsqueeze-theorem-informal.html#PROBLEMSinOverXSqThmNeg",
   "type": "Problem",
-  "number": "12.2.0.1",
+  "number": "12.2.1",
   "title": "",
   "body": " Show that for negative values of , also, so that as well.  "
 },
@@ -7430,7 +7430,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsqueeze-theorem-informal.html#THEOREMInfSqueeze",
   "type": "Theorem",
-  "number": "12.2.0.2",
+  "number": "12.2.2",
   "title": "The Squeeze  Theorem at Infinity.",
   "body": " The Squeeze Theorem at Infinity  There are two cases:   If on some interval, and then also.    If on some interval, and then also.     "
 },
@@ -7439,7 +7439,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsqueeze-theorem-informal.html#SECTIONsqueeze-theorem-informal-18",
   "type": "Problem",
-  "number": "12.2.0.3",
+  "number": "12.2.3",
   "title": "",
   "body": " Use the Squeeze Theorem to determine each of the following limits:            where represents the greatest integer less than or equal to .   Notation   is called the greatest integer function in mathematics, and the floor function in computer science. It rounds down to the greatest integer less than . For example , , , etc.   "
 },
@@ -7448,7 +7448,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsqueeze-theorem-informal.html#SECTIONsqueeze-theorem-informal-20",
   "type": "Drill",
-  "number": "12.2.0.4",
+  "number": "12.2.4",
   "title": "",
   "body": " Drills Squeeze Theorem   Use the squeeze theorem to compute Is this consistent with your guess? Explain.   "
 },
@@ -7484,7 +7484,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONvertical-asymptotes.html#DEFINITIONVerticalAsymptotes",
   "type": "Definition",
-  "number": "12.3.0.1",
+  "number": "12.3.1",
   "title": "Vertical Asymptotes.",
   "body": " Vertical Asymptotes   If then the line is a vertical asymptote of the graph of .   "
 },
@@ -7493,7 +7493,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONvertical-asymptotes.html#SECTIONvertical-asymptotes-14",
   "type": "Drill",
-  "number": "12.3.0.2",
+  "number": "12.3.2",
   "title": "",
   "body": " Drills limits  Compute each of the following limits. Read the notation carefully.                                            "
 },
@@ -7502,7 +7502,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONvertical-asymptotes.html#SECTIONvertical-asymptotes-15",
   "type": "Problem",
-  "number": "12.3.0.3",
+  "number": "12.3.3",
   "title": "",
   "body": " Find all vertical asymptotes of the graphs of each of the following functions.                          "
 },
@@ -7511,7 +7511,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONvertical-asymptotes.html#DRILLPosNegInfLimitsThrow",
   "type": "Drill",
-  "number": "12.3.0.4",
+  "number": "12.3.4",
   "title": "",
   "body": " Drills limits at  Write down as clearly as you can what you believe the expressions and mean and hold on to your answer. We will return to this topic in . When we get there you can compare your (educated) guess with our definition.  "
 },
@@ -7529,7 +7529,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONIndetFormsAndLhop.html#EXAMPLEVertAsymp",
   "type": "Example",
-  "number": "12.4.1.1",
+  "number": "12.4.1",
   "title": "",
   "body": " Examples limits vertical asymptotes  Consider . Setting the denominator equal to zero yields and , but only one of these is a vertical asymptote. Do you see which one?  Let s take a careful look at this example. By Definition we will have a vertical asymptote when either one-sided limit of a function increases or decreases without bound, so we must evaluate each one-sided limit.  For , we have So the line is indeed a vertical asymptote.  "
 },
@@ -7538,7 +7538,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONIndetFormsAndLhop.html#SUBSECTIONLHopitalsRule-4",
   "type": "Drill",
-  "number": "12.4.1.2",
+  "number": "12.4.2",
   "title": "",
   "body": " Drills limits   Explain how you know the limit in is not .   "
 },
@@ -7547,7 +7547,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONIndetFormsAndLhop.html#SUBSECTIONLHopitalsRule-6",
   "type": "Drill",
-  "number": "12.4.1.3",
+  "number": "12.4.3",
   "title": "",
   "body": " Drills limits   Explain how you know the limit in equation is not .   "
 },
@@ -7556,7 +7556,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONIndetFormsAndLhop.html#SUBSECTIONLHopitalsRule-9",
   "type": "Drill",
-  "number": "12.4.1.4",
+  "number": "12.4.4",
   "title": "",
   "body": " Drills limits   Confirm and .   "
 },
@@ -7574,7 +7574,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONIndetFormsAndLhop.html#PROBLEMvertical-asymptotes",
   "type": "Problem",
-  "number": "12.4.1.5",
+  "number": "12.4.5",
   "title": "",
   "body": " Find all vertical asymptotes of the graphs of each of the following functions.                          "
 },
@@ -7583,7 +7583,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONIndetFormsAndLhop.html#PROBLEMDiffSqLim",
   "type": "Problem",
-  "number": "12.4.1.6",
+  "number": "12.4.6",
   "title": "",
   "body": " Suppose is a real number.   Find all vertical asymptotes of .   Does your solution of part (a) still work when ?  "
 },
@@ -7592,7 +7592,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONIndetFormsAndLhop.html#PROBLEMFoliumOfDescartes2",
   "type": "Problem",
-  "number": "12.4.1.7",
+  "number": "12.4.7",
   "title": "",
   "body": " In we looked at the Folium of Descartes from Newton s dynamic point of view.  In that problem you showed that the fluents, and satisfy the equation of the Folium: and that is the only value of where . How then, can it be that the Folium crosses itself at the origin?   In you determined that when . Determine the values of for which and the which .   Show that    Compute in terms of and compute . Is this consistent with what you see on the graph?   Show that for , so that geometrically, represents the slope of the line joining the origin to the point on the graph of the Folium. Is this consistent with what you obtained in part a? Explain.   Compute each of the following:                                Is this consistent with the graph and the fact that represents the slope from the origin to the point ? Explain.  "
 },
@@ -7601,7 +7601,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONIndetFormsAndLhop.html#EXERCISESync1",
   "type": "Drill",
-  "number": "12.4.1.8",
+  "number": "12.4.8",
   "title": "",
   "body": " Drills lines tangent   Show that the line tangent to at is .   "
 },
@@ -7610,7 +7610,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONIndetFormsAndLhop.html#SUBSECTIONLHopitalsRule-34",
   "type": "Drill",
-  "number": "12.4.1.9",
+  "number": "12.4.9",
   "title": "",
   "body": " Drills line tangent     Show that the equation of the line tangent to at is: .    Show that the equation of the line tangent to at is:      "
 },
@@ -7619,7 +7619,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONIndetFormsAndLhop.html#SUBSECTIONLHopitalsRule-38",
   "type": "Drill",
-  "number": "12.4.1.10",
+  "number": "12.4.10",
   "title": "",
   "body": " Drills line tangent     Show that is the equation of the line tangent to at .    Show that is the equation of the line tangent to at .     "
 },
@@ -7628,7 +7628,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONIndetFormsAndLhop.html#SUBSECTIONLHopitalsRule-40",
   "type": "Drill",
-  "number": "12.4.1.11",
+  "number": "12.4.11",
   "title": "",
   "body": " Drills limits graphs   Graph the equation and zoom in on the portion of the graph near . Does it look like we ve found the correct limit?   "
 },
@@ -7637,7 +7637,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONIndetFormsAndLhop.html#PROBLEMTanLineArbFunc",
   "type": "Problem",
-  "number": "12.4.1.12",
+  "number": "12.4.12",
   "title": "",
   "body": " Show that the equations of the lines tangent to arbitrary differentiable functions, and , at are   "
 },
@@ -7646,7 +7646,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONIndetFormsAndLhop.html#SUBSECTIONLHopitalsRule-45",
   "type": "Figure",
-  "number": "12.4.1.13",
+  "number": "12.4.13",
   "title": "",
   "body": "  Johann Bernoulli (1667 1748)   "
 },
@@ -7655,7 +7655,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONIndetFormsAndLhop.html#SUBSECTIONLHopitalsRule-47",
   "type": "Figure",
-  "number": "12.4.1.14",
+  "number": "12.4.14",
   "title": "",
   "body": "  The Marquis de L Hôpital (1661 1704)   "
 },
@@ -7673,7 +7673,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONIndetFormsAndLhop.html#THEOREMLHRule1",
   "type": "Theorem",
-  "number": "12.4.1.15",
+  "number": "12.4.15",
   "title": "L’Hôpital’s Rule, (First Special Case).",
   "body": " L Hôpital s Rule, (First Special Case)  Suppose  that and are differentiable on an open interval containing ,  that   that and are both defined.  and that ,  Then .  "
 },
@@ -7682,7 +7682,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONIndetFormsAndLhop.html#SUBSECTIONLHopitalsRule-55",
   "type": "Comment",
-  "number": "12.4.1.16",
+  "number": "12.4.16",
   "title": "Mathematical Notation.",
   "body": " Mathematical Notation  We will use the notation to indicate that is equal to as a result of L Hôpital s Rule.  "
 },
@@ -7700,7 +7700,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONIndetFormsAndLhop.html#SUBSECTIONLHopitalsRule-57",
   "type": "Example",
-  "number": "12.4.1.17",
+  "number": "12.4.17",
   "title": "",
   "body": " Examples limits L Hôpital indeterminate  Consider This is a L Hôpital indeterminate so   "
 },
@@ -7709,7 +7709,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONIndetFormsAndLhop.html#SUBSECTIONLHopitalsRule-58",
   "type": "Example",
-  "number": "12.4.1.18",
+  "number": "12.4.18",
   "title": "",
   "body": " Examples limits L Hôpital indeterminate  Consider This is a L Hôpital indeterminate so   "
 },
@@ -7718,7 +7718,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONIndetFormsAndLhop.html#SUBSECTIONLHopitalsRule-60",
   "type": "Example",
-  "number": "12.4.1.19",
+  "number": "12.4.19",
   "title": "",
   "body": " Examples limits L Hôpital s Rule  For example, if we mistakenly try to use L Hôpital s Rule, on we will obtain , but this is obviously incorrect.  "
 },
@@ -7727,7 +7727,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONIndetFormsAndLhop.html#SUBSECTIONLHopitalsRule-61",
   "type": "Drill",
-  "number": "12.4.1.20",
+  "number": "12.4.20",
   "title": "",
   "body": " Drills limits   Show that .   "
 },
@@ -7736,7 +7736,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONIndetFormsAndLhop.html#SUBSECTIONLHopitalsRule-62",
   "type": "Drill",
-  "number": "12.4.1.21",
+  "number": "12.4.21",
   "title": "",
   "body": " Drills limits L Hôpital s Rule  Compute each of the following limits:                                                                "
 },
@@ -7745,7 +7745,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONIndetFormsAndLhop.html#SUBSECTIONLHopitalsRule-63",
   "type": "Example",
-  "number": "12.4.1.22",
+  "number": "12.4.22",
   "title": "",
   "body": " Examples limits L Hôpital indeterminate   is useful but it is much too limited, so to speak. For example, it does not help us with this limit: . Even though it is a L Hôpital indeterminate, when we apply we have This is useless because is still not defined.  We need to think about this again. It is true that is not defined, but if and then is a L Hôpital Indeterminate so we extend as follows:  "
 },
@@ -7754,7 +7754,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONIndetFormsAndLhop.html#THEOREMLHRule2",
   "type": "Theorem",
-  "number": "12.4.1.23",
+  "number": "12.4.23",
   "title": "L’Hôpital’s Rule, (Second Special Case).",
   "body": " L Hôpital s Rule, (Second Special Case)  Suppose is the L Hôpital Indeterminate form . Then   "
 },
@@ -7763,7 +7763,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONIndetFormsAndLhop.html#SUBSECTIONLHopitalsRule-66",
   "type": "Problem",
-  "number": "12.4.1.24",
+  "number": "12.4.24",
   "title": "",
   "body": " Use to compute each of the following limits. If this limit given is not a L Hôpital Indeterminate rearrange it algebraically, without changing its value, until it is a L Hôpital Indeterminate.        . Assume that .    . Assume that .                          "
 },
@@ -7781,7 +7781,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONIndetFormsAndLhop.html#THEOREMLHRuleGen",
   "type": "Theorem",
-  "number": "12.4.2.1",
+  "number": "12.4.25",
   "title": "L’Hôpital’s Rule.",
   "body": " L Hôpital s Rule  Suppose is any L Hôpital Indeterminate. Then We allow the possibility that which we understand to mean that increases or decreases without bound.  "
 },
@@ -7790,7 +7790,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONIndetFormsAndLhop.html#SUBSECTIONlhop-rule-horiz-12",
   "type": "Problem",
-  "number": "12.4.2.2",
+  "number": "12.4.26",
   "title": "",
   "body": " Compute each of the following limits. Use where appropriate.                    ,                               "
 },
@@ -7799,7 +7799,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONIndetFormsAndLhop.html#SUBSECTIONlhop-rule-horiz-13",
   "type": "Example",
-  "number": "12.4.2.3",
+  "number": "12.4.27",
   "title": "",
   "body": " Examples limits L Hôpital s Rule  As both and increase without bound, but which one increases faster? Take a quick look at the graphs below.   As both graphs are flattening out, but it would appear that the natural logarithm function is outgrowing the cube root function. Is it? We can answer this question by looking at the limit, If the limit is then is growing faster. If it is zero then is increasing faster than (Do you see why?)  "
 },
@@ -7808,7 +7808,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONIndetFormsAndLhop.html#SUBSECTIONlhop-rule-horiz-14",
   "type": "Problem",
-  "number": "12.4.2.4",
+  "number": "12.4.28",
   "title": "",
   "body": " Use L Hôpital s Rule to determine which of the following pairs of functions are growing faster as .                                           Based on the limits above write down a general conclusion about the rate of change of the natural logarithm as compared to roots.   Prove that your statement is correct.  "
 },
@@ -7817,7 +7817,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONIndetFormsAndLhop.html#SUBSECTIONlhop-rule-horiz-17",
   "type": "Problem",
-  "number": "12.4.2.5",
+  "number": "12.4.29",
   "title": "",
   "body": "    Show that each of the following limits is zero.                 Explain how this implies that that grows faster than , , or even ?   Would for any positive integer Explain.   Suppose that any polynomial and show that . Do you see that this means that the natural exponential grows faster than any polynomial?   Suppose that any polynomial. Show that each of the following limits is also zero. What do you conclude from this?                        "
 },
@@ -7826,7 +7826,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONIndetFormsAndLhop.html#EXAMPLEMoreLHopRule",
   "type": "Example",
-  "number": "12.4.2.6",
+  "number": "12.4.30",
   "title": "More on L’Hôpital’s Rule.",
   "body": " More on L Hôpital s Rule  Examples limits L Hôpital s Rule  Consider the limit If we want to evaluate this limit (we do) we seem to have few options. This is not a L Hôpital Indeterminate, nor is it obvious what the limit might be. Simply letting we see that and so our limit has the Indeterminate form .  There is a real temptation to say that this must be zero since anything multiplied by zero is zero. But is it? Remember that the purpose of the arrow notation, , is to remind us that the expression is never actually equal to zero. It merely approaches zero. At the same time is increasing without bound ( ) so it seems that the value of the limit might depend on the relative speeds with which and .  But this reasoning feels very uncertain doesn t it? And, in any case, nothing we ve said will help us evaluate the limit. We ll have to find a way to re express this limit as a L Hôpital Indeterminate so that L Hôpital s Rule does apply. In the meantime, take your best guess as to the value of this limit and write it down for later reference. Suppose we rewrite this limit as This is a little scary to look at so we ll make it easier on our eyes with the substitution . As we see that and . Since our limit is now which is the L Hôpital Indeterminate . Thus by Theorem we have since .  "
 },
@@ -7835,7 +7835,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONIndetFormsAndLhop.html#EXAMPLELimComp1",
   "type": "Example",
-  "number": "12.4.2.7",
+  "number": "12.4.31",
   "title": "The Limit <span class=\"process-math\">\\(\\limit{m}{\\infty}{ \\left( 1+\\frac{1}{m}\n\\right)^m}\\)<\/span>.",
   "body": " The Limit  Examples limits L Hôpital s Rule  We need to evaluate the limit: It is tempting to reason as follows. We see that as . That is, we have the indeterminate form and since one raised to any power is equal to one this limit must equal , right? Surely you know better than to jump to that conclusion by now. Not only does all of the evidence of this chapter warn you that limits are more subtle than that, but in our investigations in we saw overwhelming evidence that this limit is not equal to one.  Also, notice that we wrote , not . Why do you think we did that?  The source of our difficulty here is that the variable is in the exponent where we can t get at it. We d like to find a way to bring it out of the exponent. The natural logarithm seems perfect for this task since it has the property that .  Begin by setting . Then Rather than evaluating directly we evaluate the limit of the logarithm of . Thus The limit on the right is an indeterminate form but unfortunately it is not a L Hôpital Indeterminate. So, as before, we ll have to do some algebraic manipulations first. Set so that Since it seems intuitively clear that , doesn t it? In fact, it is not true generally that But it is true for this problem. so it is a detail that needn t trouble us for now.  We will ignore it for now and return to it in when we will have more powerful tools to bring to bear.  "
 },
@@ -7844,7 +7844,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONIndetFormsAndLhop.html#SUBSECTIONlhop-rule-horiz-24",
   "type": "Problem",
-  "number": "12.4.2.8",
+  "number": "12.4.32",
   "title": "",
   "body": " Show that    Show that for .   Let and manipulate this limit until it looks like the limit in part (a) (with different letters, of course).   Suppose we have an investment of compounded continuously with a relative annual rate of . How much would the investment be worth in years? How would this compare to an investment which is compounded quarterly?   You may want to review similar problems in before starting this problem.  "
 },
@@ -7853,7 +7853,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONIndetFormsAndLhop.html#SUBSECTIONlhop-rule-horiz-25",
   "type": "Example",
-  "number": "12.4.2.9",
+  "number": "12.4.33",
   "title": "",
   "body": " Examples limits L Hôpital s Rule  Consider . Notice we are only considering positive values of (Why?) Proceeding in the same manner as before, let so that Thus This is a L Hôpital Indeterminate so we apply L Hôpital s Rule: Thus   "
 },
@@ -7862,7 +7862,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONIndetFormsAndLhop.html#SUBSECTIONlhop-rule-horiz-29",
   "type": "Problem",
-  "number": "12.4.2.10",
+  "number": "12.4.34",
   "title": "",
   "body": " Evaluate each of the following limits.                           Not every indeterminate form requires L Hôpital s Rule.               Set and consider .  "
 },
@@ -7880,7 +7880,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "CalcAndBerkeley.html#CalcAndBerkeley-3",
   "type": "Figure",
-  "number": "13.1.0.1",
+  "number": "13.1.1",
   "title": "",
   "body": "  Bishop George Berkeley (1685 1753)   "
 },
@@ -7907,7 +7907,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsecants-tangents.html#EXAMPLEyEQxR2-limits",
   "type": "Example",
-  "number": "13.2.0.1",
+  "number": "13.2.1",
   "title": "",
   "body": " Examples  Suppose . We would like to compute the derivative (slope of the line tangent to the graph) of at the point by the the procedure indicated above.  Before we start, observe that from our work with differentials we know what we are expecting to get. It is   Taking and gives    Vocabulary bounded  Vocabulary bound So our proposed procedure seems to be heading us in the right direction. If we take and we get We say that is bounded , and that the numbers and are the bounds .  "
 },
@@ -7916,7 +7916,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsecants-tangents.html#PROBLEMBounds",
   "type": "Problem",
-  "number": "13.2.0.2",
+  "number": "13.2.2",
   "title": "",
   "body": " Compute bounds on the derivatives of each function given at by using the values of and given below.                              ,    ,    , and      "
 },
@@ -7925,7 +7925,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsecants-tangents.html#DEFINITIONDerivative",
   "type": "Definition",
-  "number": "13.2.0.3",
+  "number": "13.2.3",
   "title": "The Derivative.",
   "body": " The Derivative    Vocabulary differentiable Suppose is a function, and that is a real number. If exists then we say that is differentiable at and that the derivative of at is given by: if this limit exists. If the limit does not exist then the derivative also does not exist at .   "
 },
@@ -7934,7 +7934,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsecants-tangents.html#PROBLEMxIsSingular",
   "type": "Problem",
-  "number": "13.2.0.4",
+  "number": "13.2.4",
   "title": "",
   "body": " Use the techniques we saw in to compute by evaluating a limit. Check your work by differentiating using differentials.  Do not use L Hôpital s Rule. L Hôpital s Rule as that would be circular reasoning.                                  "
 },
@@ -7961,7 +7961,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONsecants-tangents.html#SECTIONsecants-tangents-49",
   "type": "Problem",
-  "number": "13.2.0.5",
+  "number": "13.2.5",
   "title": "",
   "body": "  Vocabulary differentiable Which of the functions in are differentiable and which are not? Identify all points of non-differentiability.  "
 },
@@ -7979,7 +7979,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimit-theorems-laws.html#THEOREMLimSum2",
   "type": "Theorem",
-  "number": "14.1.1.1",
+  "number": "14.1.1",
   "title": "The Limit of a Sum is the Sum of the Limits.",
   "body": " The Limit of a Sum is the Sum of the Limits  Let be some real number. Suppose that the functions and are defined on some open interval about except, possibly, at itself. Then if and then   "
 },
@@ -7988,7 +7988,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimit-theorems-laws.html#THEOREMLimProd2",
   "type": "Theorem",
-  "number": "14.1.1.2",
+  "number": "14.1.2",
   "title": "The Limit of a Product is the Product of the Limits.",
   "body": " The Limit of a Product is the Product of the Limits  Let be some real number. Suppose that the functions and are defined on some open interval about except, possibly, at itself. If and then   "
 },
@@ -7997,7 +7997,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimit-theorems-laws.html#THEOREMLimQuot2",
   "type": "Theorem",
-  "number": "14.1.1.3",
+  "number": "14.1.3",
   "title": "The Limit of a Quotient is the Quotient of the Limits.",
   "body": " The Limit of a Quotient is the Quotient of the Limits  Let be some real number. Suppose that the functions and are defined on some open interval about except, possibly, at itself. Then if and then   "
 },
@@ -8015,7 +8015,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimit-theorems-laws.html#EXAMPLEDiscontLimit1",
   "type": "Example",
-  "number": "14.1.1.4",
+  "number": "14.1.4",
   "title": "",
   "body": " Examples limits  Suppose Then In particular the limit is not . Here is how we would evaluate this limit using the tools we currently have at our disposal. We re interested in the limit as so in particular we do not need to consider the case when . But as long as we have so As gets close to it is clear that gets close to . Therefore Notice that our reasoning is a little vague in the last step because we had to resort to the phase gets close to, and we know from our work in that this is not a precise phrase. This is the best we can do now because we have not yet rigorously defined a limit. We will do that in .  "
 },
@@ -8024,7 +8024,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimit-theorems-laws.html#SUBSECTIONlimit-comp-cont-15",
   "type": "Problem",
-  "number": "14.1.1.5",
+  "number": "14.1.5",
   "title": "",
   "body": " By reasoning in a manner similar to show that for each function.          "
 },
@@ -8042,7 +8042,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimit-theorems-laws.html#DEFINITIONnear",
   "type": "Definition",
-  "number": "14.1.1.6",
+  "number": "14.1.6",
   "title": "Near.",
   "body": " Near  Vocabulary Definition Near   We say that has some property near  if has that property on an open interval about , except possibly at itself.   "
 },
@@ -8051,7 +8051,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimit-theorems-laws.html#THEOREMConstLimit",
   "type": "Theorem",
-  "number": "14.1.1.7",
+  "number": "14.1.7",
   "title": "The Limit of a Constant is the Constant.",
   "body": " The Limit of a Constant is the Constant  Suppose and are real numbers, and near . Then   "
 },
@@ -8060,7 +8060,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimit-theorems-laws.html#SUBSECTIONlimit-comp-cont-23",
   "type": "Drill",
-  "number": "14.1.1.8",
+  "number": "14.1.8",
   "title": "",
   "body": " Drills intervals     Find an open interval about where .    Find an open interval about where .     "
 },
@@ -8069,7 +8069,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimit-theorems-laws.html#SUBSECTIONlimit-comp-cont-24",
   "type": "Drill",
-  "number": "14.1.1.9",
+  "number": "14.1.9",
   "title": "",
   "body": " Drills Definitions Near  Suppose Determine whether the following statements are true or false.    near .     near .     near .     near .     near .     near .     "
 },
@@ -8078,7 +8078,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimit-theorems-laws.html#SUBSECTIONlimit-comp-cont-25",
   "type": "Problem",
-  "number": "14.1.1.10",
+  "number": "14.1.10",
   "title": "",
   "body": " Explain, that the following statements are true by citing through as needed.                  "
 },
@@ -8087,7 +8087,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimit-theorems-laws.html#SUBSECTIONlimit-comp-cont-26",
   "type": "Problem",
-  "number": "14.1.1.11",
+  "number": "14.1.11",
   "title": "",
   "body": " Notice that neither nor exists. However their sum, does exist. Explain why this does not contradict .  "
 },
@@ -8096,7 +8096,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimit-theorems-laws.html#PROBLEMDiffImpCont",
   "type": "Problem",
-  "number": "14.1.1.12",
+  "number": "14.1.12",
   "title": "",
   "body": " Suppose near and exists. Use to show that if then .   Consider for near .  "
 },
@@ -8105,7 +8105,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimit-theorems-laws.html#COROLLARYConstMultLimit",
   "type": "Corollary",
-  "number": "14.1.1.13",
+  "number": "14.1.13",
   "title": "",
   "body": " If and is a real number then   "
 },
@@ -8114,7 +8114,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimit-theorems-laws.html#SUBSECTIONlimit-comp-cont-31",
   "type": "Problem",
-  "number": "14.1.1.14",
+  "number": "14.1.14",
   "title": "",
   "body": " Prove .  "
 },
@@ -8141,7 +8141,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimit-theorems-laws.html#DEFINITIONcontinuity",
   "type": "Definition",
-  "number": "14.1.1.15",
+  "number": "14.1.15",
   "title": "Continuity at a Point.",
   "body": " Continuity at a Point   A function , whose domain is an interval in , is continuous at in the interval, if and only if , (alternatively, if ).   "
 },
@@ -8150,7 +8150,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimit-theorems-laws.html#THEOREMCompositionLimit",
   "type": "Theorem",
-  "number": "14.1.1.16",
+  "number": "14.1.16",
   "title": "The Limit of a Composition is the Composition of the Limits.",
   "body": " The Limit of a Composition is the Composition of the Limits  Suppose and that is continuous at . Then   "
 },
@@ -8159,7 +8159,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimit-theorems-laws.html#LEMMADiffImpliesCont",
   "type": "Lemma",
-  "number": "14.1.1.17",
+  "number": "14.1.17",
   "title": "Differentiability Implies Continuity.",
   "body": " Differentiability Implies Continuity  If is differentiable at then is also continuous at   "
 },
@@ -8168,7 +8168,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimit-theorems-laws.html#SUBSECTIONlimit-comp-cont-46",
   "type": "Problem",
-  "number": "14.1.1.18",
+  "number": "14.1.18",
   "title": "",
   "body": " Use the result of to prove .  "
 },
@@ -8177,7 +8177,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimit-theorems-laws.html#THEOREMFiniteSqueeze",
   "type": "Theorem",
-  "number": "14.1.1.19",
+  "number": "14.1.19",
   "title": "The Squeeze Theorem (The Finite Case).",
   "body": " The Squeeze Theorem (The Finite Case)  If for near and then also.  "
 },
@@ -8186,7 +8186,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimit-theorems-laws.html#SUBSECTIONlimit-comp-cont-51",
   "type": "Problem",
-  "number": "14.1.1.20",
+  "number": "14.1.20",
   "title": "",
   "body": " Consider the two functions defined in the sketch below:      Use to show that is continuous at .   What functions is caught between?   Use to show that is not continuous at .   Try the substitution for . What would look like in terms of ?  "
 },
@@ -8213,7 +8213,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdiff-rules-via.html#THEOREMLimConstantRule",
   "type": "Theorem",
-  "number": "14.2.0.1",
+  "number": "14.2.1",
   "title": "The Constant Rule for Differentiation.",
   "body": " The Constant Rule for Differentiation  If is some number and for all real values of near (on an open interval around) , then at every real number near (on the same open interval) .  "
 },
@@ -8231,7 +8231,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdiff-rules-via.html#THEOREMSumRule",
   "type": "Theorem",
-  "number": "14.2.0.2",
+  "number": "14.2.2",
   "title": "The Sum Rule for Differentiation.",
   "body": " The Sum Rule for Differentiation  If and are differentiable at and , then is also differentiable at and   "
 },
@@ -8240,7 +8240,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdiff-rules-via.html#SECTIONdiff-rules-via-12",
   "type": "Problem",
-  "number": "14.2.0.3",
+  "number": "14.2.3",
   "title": "",
   "body": " Use to prove the Sum Rule for Differentiation.  "
 },
@@ -8249,7 +8249,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdiff-rules-via.html#THEOREMLimitConstMult",
   "type": "Theorem",
-  "number": "14.2.0.4",
+  "number": "14.2.4",
   "title": "The Constant Multiple Rule for Differentiation.",
   "body": " The Constant Multiple Rule for Differentiation  If is differentiable at and is a constant then is also differentiable and   "
 },
@@ -8258,7 +8258,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdiff-rules-via.html#PROBLEMConstMultRule",
   "type": "Problem",
-  "number": "14.2.0.5",
+  "number": "14.2.5",
   "title": "",
   "body": " Use the to prove the Constant Multiple Rule.  "
 },
@@ -8276,7 +8276,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONChainRule.html#EXAMPLEchain-rule1",
   "type": "Example",
-  "number": "14.3.0.1",
+  "number": "14.3.1",
   "title": "",
   "body": " Examples the Chain Rule  Here s what we mean: The formula , is given entirely in terms of the variables , and . To differentiate using differentials we would make the (variable) substitution so that . In that case, , and dividing through by gives us the derivative of with respect to ,   But requires that we think about functions, not variables so let s translate this problem into the language of functions. If , clearly is a function of (depends on) . Naming that function , we have . Replacing with , we get .  Similarly, if then is also a function of (depends on) , and naming that function we have . Replacing with we have . If we suppress the part of , we see that is also a valid representation of our function. If we now define we see that   Looking again at equation , and mixing the differential and functional notations a bit we see that   Thus if is the composition of and then This is the Chain Rule. We have expressed the Chain Rule in this form so that we can prove it rigorously, not so that we can use it. The substitution process using differentials still works so there is no reason to stop using substitution when you are actually computing derivatives.  "
 },
@@ -8285,7 +8285,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONChainRule.html#THEOREMChainRule",
   "type": "Theorem",
-  "number": "14.3.0.2",
+  "number": "14.3.2",
   "title": "The Chain Rule.",
   "body": " The Chain Rule  Suppose that is differentiable at , that is differentiable at and that near . Then the composition, is also differentiable, and   "
 },
@@ -8303,7 +8303,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONChainRule.html#PROBLEMTopSineFunc",
   "type": "Problem",
-  "number": "14.3.0.3",
+  "number": "14.3.3",
   "title": "",
   "body": " Show that the function does not satisfy the constraint when is near zero.   Recall .   As a result of part  does not apply to any of the following functions at . Nevertheless one of them is differentiable at . Use to find out which one.                   "
 },
@@ -8312,7 +8312,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONChainRule.html#EXAMPLEDiffByCR",
   "type": "Example",
-  "number": "14.3.0.4",
+  "number": "14.3.4",
   "title": "",
   "body": " Examples the Chain Rule  Suppose that . To use the Chain Rule to compute the derivative of we need to recognize that is the composition of , and and then apply as follows.   "
 },
@@ -8321,7 +8321,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONChainRule.html#SECTIONChainRule-12",
   "type": "Drill",
-  "number": "14.3.0.5",
+  "number": "14.3.5",
   "title": "",
   "body": " Drills differential of trigonometric functions   Suppose . Compute the differential and then divide through by to find the derivative . Confirm that it is the same as the derivative we found in .   "
 },
@@ -8330,7 +8330,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONChainRule.html#SECTIONChainRule-13",
   "type": "Problem",
-  "number": "14.3.0.6",
+  "number": "14.3.6",
   "title": "",
   "body": " Compute for each of the following functions by identifying and such that and applying the Chain Rule. You may have to do this more than once for a given problem. In each case confirm that your computation is correct with an appropriate differential substitution.                          "
 },
@@ -8348,7 +8348,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONproduct-rule-limits.html#THEOREMLimitProdRule",
   "type": "Theorem",
-  "number": "14.4.0.1",
+  "number": "14.4.1",
   "title": "The Product Rule for Differentiation.",
   "body": " The Product Rule for Differentiation  If and are differentiable at then is differentiable and   "
 },
@@ -8375,7 +8375,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONother-gener-diff.html#THEOREMQuotientRuleLimit",
   "type": "Theorem",
-  "number": "14.5.0.1",
+  "number": "14.5.1",
   "title": "The Quotient Rule for Differentiation.",
   "body": " The Quotient Rule for Differentiation  We assume that , , and are all differentiable functions Assume further that . Then   "
 },
@@ -8384,7 +8384,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONother-gener-diff.html#SECTIONother-gener-diff-4",
   "type": "Problem",
-  "number": "14.5.0.2",
+  "number": "14.5.2",
   "title": "",
   "body": " Use the Product Rule to derive the Quotient Rule.   First solve for .  "
 },
@@ -8402,7 +8402,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONother-gener-diff.html#PROBLEMPowRulInduction",
   "type": "Problem",
-  "number": "14.5.0.3",
+  "number": "14.5.3",
   "title": "The Power Rule for Positive Integer Exponents.",
   "body": "The Power Rule for Positive Integer Exponents Vocabulary Mathematical Induction  Assume that for any positive integer .   Assume that . Use the limit definition to show that (This says, The Power Rule holds for . )   Now assume that the Power Rule for Positive Integer Exponents holds for , where is an arbitrary, fixed positive integer. Let and show that (This says, If the Power Rule holds for then it must also hold for . )   Do you see how this proves that the Power Rule holds for any positive integer, ? Write a short paragraph explaining the logic behind this.  "
 },
@@ -8420,7 +8420,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONother-gener-diff.html#PROBLEMPRRatAndNegWithLimits",
   "type": "Problem",
-  "number": "14.5.0.4",
+  "number": "14.5.4",
   "title": "The Power Rule for Rational and Negative Exponents.",
   "body": "The Power Rule for Rational and Negative Exponents  Assume is a positive integer and that is differentiable. Show that    Rewrite as and use the Quotient Rule for Differentiation and the Power Rule for positive integers.   Assume that is a non-zero integer and that is differentiable at . Show that    Rewrite as and use the Chain Rule and the Power Rule for positive integers.   Assume that and are integers, , and that is differentiable at . Show that    Rewrite as and use the Chain Rule and part .  "
 },
@@ -8429,7 +8429,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONother-gener-diff.html#THEOREMPowerRuleLimit",
   "type": "Theorem",
-  "number": "14.5.0.5",
+  "number": "14.5.5",
   "title": "The Power Rule for Rational Exponents.",
   "body": " The Power Rule for Rational Exponents  Assume that and are integers, , and that is differentiable at . Then   "
 },
@@ -8438,7 +8438,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONother-gener-diff.html#PROBLEMQRRigor",
   "type": "Problem",
-  "number": "14.5.0.6",
+  "number": "14.5.6",
   "title": "",
   "body": " Assume that and are differentiable and that , but we make no assumption about the differentiability of .   First prove the special case of the Quotient Rule where .   Use the limit definition to show that .    Now evaluate the limit in part to show that .      Use the Product Rule for Differentiation and the Chain Rule (along with the result of part a) to show that is differentiable at and that   "
 },
@@ -8447,7 +8447,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONother-gener-diff.html#PROBLEMPRRigor1",
   "type": "Problem",
-  "number": "14.5.0.7",
+  "number": "14.5.7",
   "title": "",
   "body": " To prove we will first focus on the special case of where is a non-negative integer.  The key to proving this special case is a generalization of the difference of squares formula:    Show that .   Show that .   Now show that in general .  "
 },
@@ -8456,7 +8456,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONother-gener-diff.html#DRILLPRRigor2",
   "type": "Problem",
-  "number": "14.5.0.8",
+  "number": "14.5.8",
   "title": "",
   "body": " Assume that and are integers and that . If we apply to , we get    Use the substitutions , , and part (c) of to show that    Substitute into the result of part (a) to obtain    Use the Chain Rule to show that for    "
 },
@@ -8474,7 +8474,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdiff-trig-funct.html#SECTIONdiff-trig-funct-2",
   "type": "TRIUMPHS Project",
-  "number": "14.6.0.1",
+  "number": "14.6.1",
   "title": "",
   "body": " TRIUMPHS, Primary Source Project The Derivatives of the Sine and Cosine Functions   The Derivatives of the Sine and Cosine Functions by Dominic Klyve  "
 },
@@ -8483,7 +8483,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdiff-trig-funct.html#THEOREMSineDeriv",
   "type": "Theorem",
-  "number": "14.6.0.2",
+  "number": "14.6.2",
   "title": "Derivative of <span class=\"process-math\">\\(\\sin(x)\\)<\/span>.",
   "body": " Derivative of  Suppose . Then   "
 },
@@ -8501,7 +8501,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdiff-trig-funct.html#DRILLCircularReasoning",
   "type": "Drill",
-  "number": "14.6.0.3",
+  "number": "14.6.3",
   "title": "",
   "body": " Drills L Hôpital s Rule   Use L Hôpital s Rule to show     .     "
 },
@@ -8510,7 +8510,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdiff-trig-funct.html#LEMMASinOverh",
   "type": "Lemma",
-  "number": "14.6.0.4",
+  "number": "14.6.4",
   "title": "",
   "body": "    "
 },
@@ -8528,7 +8528,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdiff-trig-funct.html#PROBLEMCosM1Overh",
   "type": "Problem",
-  "number": "14.6.0.6",
+  "number": "14.6.6",
   "title": "",
   "body": " Show that .\\\\   It is tempting to model this proof on the proof of . While this can be done, it is delicate. It is simpler to multiply by in the form . Try that instead.  "
 },
@@ -8537,7 +8537,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONdiff-trig-funct.html#SECTIONdiff-trig-funct-12",
   "type": "Drill",
-  "number": "14.6.0.7",
+  "number": "14.6.7",
   "title": "",
   "body": " Drills derivative of sine   Prove that , using the proof of as a guide.   "
 },
@@ -8573,7 +8573,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONinverse-functions.html#DEFINITIONBijectiveFunctions",
   "type": "Definition",
-  "number": "14.7.0.1",
+  "number": "14.7.1",
   "title": "One-To-One Functions.",
   "body": " One-To-One Functions   A function, , defined on a domain, , is said to be one-to-one if, whenever and are in and then, .   "
 },
@@ -8582,7 +8582,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONinverse-functions.html#DEFINITIONFunctionInverse",
   "type": "Definition",
-  "number": "14.7.0.2",
+  "number": "14.7.2",
   "title": "Inverse Functions.",
   "body": " Inverse Functions   Suppose , with domain and range is a one-to-one function. Then the inverse of is the function with domain and range which satisfies the following properties:    for every value of in .     for every value of in .      "
 },
@@ -8600,7 +8600,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONinverse-functions.html#DRILLCubeRoot",
   "type": "Problem",
-  "number": "14.7.0.3",
+  "number": "14.7.3",
   "title": "",
   "body": " Prove that and are mutually inverse by showing that they satisfy the conditions stated in   "
 },
@@ -8609,7 +8609,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONinverse-functions.html#LEMMAInvDerivAtZero",
   "type": "Lemma",
-  "number": "14.7.0.4",
+  "number": "14.7.4",
   "title": "",
   "body": " If is an invertible function, , is differentiable at , and , then is not differentiable at . That is does not exist.  "
 },
@@ -8627,7 +8627,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONinverse-functions.html#SECTIONinverse-functions-26",
   "type": "Drill",
-  "number": "14.7.0.5",
+  "number": "14.7.5",
   "title": "",
   "body": " Drills functions inverse   Choose a function whose derivative is equal to zero at some point and sketch the graph of your function and its inverse on the same set of axes. Be sure to include the point where the derivative is zero. Use your graph to explain why the derivative of the inverse of your function does not exist.   "
 },
@@ -8636,7 +8636,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONinverse-functions.html#SECTIONinverse-functions-29",
   "type": "Problem",
-  "number": "14.7.0.6",
+  "number": "14.7.6",
   "title": "",
   "body": " Let and explain how the formula above is equivalent to   "
 },
@@ -8645,7 +8645,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONinverse-functions.html#THEOREMDerivInvFunc",
   "type": "Theorem",
-  "number": "14.7.0.7",
+  "number": "14.7.7",
   "title": "The Derivative of Inverse Functions.",
   "body": " The Derivative of Inverse Functions  Suppose that    is differentiable at ,     ,     ,     is continuous at .      Comment  In fact, the continuity of follows from the continuity of at . We do not have all of the tools necessary to prove this so we must include it in the assumptions of our theorem.   Then the inverse of is differentiable at and   "
 },
@@ -8655,7 +8655,7 @@ var ptx_lunr_docs = [
   "url": "SECTIONinverse-functions.html#SECTIONinverse-functions-33",
   "type": "Proof",
   "number": "14.7.2",
-  "title": "Proof of Theorem 14.7.0.7.",
+  "title": "Proof of Theorem 14.7.7.",
   "body": " Proof of  We want to show that the limit Since we know that so that The expression would be if only we had instead of . What we need to show now is that if then . Then we could write and our proof would be complete. Written a little more carefully, what we need to show is that . Recall that , and that so we need to show that or But we assumed that is continuous at which means that and the proof is complete. One last point: On the left side of the variable is and on the right it is . While this is not strictly wrong it is a more useful theorem if we state it in terms of alone. Since we see that so and the proof is complete.  "
 },
 {
@@ -8663,7 +8663,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONinverse-functions.html#SECTIONinverse-functions-35",
   "type": "Example",
-  "number": "14.7.0.8",
+  "number": "14.7.8",
   "title": "The Derivative of the Inverse Sine.",
   "body": " The Derivative of the Inverse Sine  Examples Derivative of  Inverse Sine derivative of  Derivative of  Suppose Then so   "
 },
@@ -8672,7 +8672,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONinverse-functions.html#SECTIONinverse-functions-36",
   "type": "Problem",
-  "number": "14.7.0.9",
+  "number": "14.7.9",
   "title": "",
   "body": " Use to show that each of the following differentiation rules is correct:                          "
 },
@@ -8681,7 +8681,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONinverse-functions.html#SECTIONinverse-functions-38",
   "type": "Drill",
-  "number": "14.7.0.10",
+  "number": "14.7.10",
   "title": "",
   "body": " Drills limits   Look back at and explain why it is not necessary to use limits to show that .   "
 },
@@ -8699,7 +8699,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONfermats-theorem.html#THEOREMFermatsTheorem2",
   "type": "Theorem",
-  "number": "15.1.0.1",
+  "number": "15.1.1",
   "title": "Fermat’s Theorem.",
   "body": " Fermat s Theorem  If is a local extremum (either a maximum or a minimum) of at , and is differentiable at then .  "
 },
@@ -8708,7 +8708,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONfermats-theorem.html#SECTIONfermats-theorem-8",
   "type": "Scrapwork",
-  "number": "15.1.0.1",
+  "number": "15.1",
   "title": "",
   "body": " Notice that in Definition the quantity is the slope of a particular secant line, as in the sketch below.   If is a (local) maximum then the slope of the secant line in our diagram, , must be negative when . Since the slope is less than zero it follows that   "
 },
@@ -8717,7 +8717,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONfermats-theorem.html#SECTIONfermats-theorem-9",
   "type": "Problem",
-  "number": "15.1.0.2",
+  "number": "15.1.2",
   "title": "",
   "body": " Draw a similar diagram to convince yourself that must also be greater than or equal to zero when .  "
 },
@@ -8735,7 +8735,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONfermats-theorem.html#SECTIONfermats-theorem-12",
   "type": "Problem",
-  "number": "15.1.0.3",
+  "number": "15.1.3",
   "title": "",
   "body": " Use our proof of the maximum case ( ) of Fermat s as a guide to constructing a proof of Fermat s Theorem when is a local minimum.  "
 },
@@ -8753,7 +8753,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONrolles-lemma-mean.html#SECTIONrolles-lemma-mean-2",
   "type": "Figure",
-  "number": "15.2.0.1",
+  "number": "15.2.1",
   "title": "",
   "body": "  Michel Rolle (1659 1719)   "
 },
@@ -8762,7 +8762,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONrolles-lemma-mean.html#LEMMArolles-lemma",
   "type": "Lemma",
-  "number": "15.2.0.2",
+  "number": "15.2.2",
   "title": "Rolle’s Lemma.",
   "body": " Rolle s Lemma  Suppose is continuous on the closed interval and differentiable on the open interval . Suppose further that . Then there is at least one number , in the interval such that .  "
 },
@@ -8771,7 +8771,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONrolles-lemma-mean.html#DRILLRollesLemma1",
   "type": "Problem",
-  "number": "15.2.0.3",
+  "number": "15.2.3",
   "title": "",
   "body": "  Sketch the graph of a function (different from the one in our sketch) which satisfies all of the conditions of Rolle s Lemma and convince yourself that the conclusion of Rolle s Lemma must still be true.    Show that the condition that is continuous on is necessary by sketching the graph of a function which violates only that condition and the conclusion of Rolle s Lemma.    Show that the condition that is differentiable on is necessary by sketching the graph of a function which violates only that condition and the conclusion of Rolle s Lemma.   "
 },
@@ -8789,7 +8789,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONrolles-lemma-mean.html#THEOREMMVT",
   "type": "Theorem",
-  "number": "15.2.0.4",
+  "number": "15.2.4",
   "title": "The Mean Value Theorem.",
   "body": " The Mean Value Theorem  Suppose is continuous on some closed interval, , and is differentiable on . Then there is at least one number in the open interval such that   "
 },
@@ -8798,7 +8798,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONrolles-lemma-mean.html#SECTIONrolles-lemma-mean-12",
   "type": "Scrapwork",
-  "number": "15.2.0.1",
+  "number": "15.2",
   "title": "",
   "body": " The Mean Value Theorem (visualized in below) says that there is a point , in the interval such that the tangent line at and the line through and are parallel. Thus in the special case where the Mean Value Theorem reduces to Rolle s Lemma. In other words the Mean Value Theorem is a generalization of Rolle s Lemma.        We said we would use Rolle s Lemma to prove the Mean Value Theorem. To do that we ll need to create a function -- we ll call it  that satisfies all of the conditions of Rolle s Lemma. If is the function whose graph is the line through and we see that Do you see that is the function we need?  "
 },
@@ -8807,7 +8807,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONrolles-lemma-mean.html#SECTIONrolles-lemma-mean-13",
   "type": "Problem",
-  "number": "15.2.0.6",
+  "number": "15.2.6",
   "title": "",
   "body": " Show that .    is a straight line and we have the coordinates of two points, and on the line.  "
 },
@@ -8816,7 +8816,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONrolles-lemma-mean.html#PROBLEMrolles-lemma-mean-2",
   "type": "Problem",
-  "number": "15.2.0.7",
+  "number": "15.2.7",
   "title": "",
   "body": " Show that from the diagram above satisfies all of the conditions of Rolle s Lemma. That is, show that:    is continuous on .    is differentiable on .      "
 },
@@ -8843,7 +8843,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONfirst-deriv-test.html#THEOREMFDTproved",
   "type": "Theorem",
-  "number": "15.3.0.1",
+  "number": "15.3.1",
   "title": "First Derivative Test.",
   "body": " First Derivative Test  Suppose is continuous on the interval , and differentiable on the interval . Suppose further that both and are in the interval and .   If on the interval then . (That is, the function is increasing on .)    If on the interval then . (That is, the function is decreasing on .)     "
 },
@@ -8853,7 +8853,7 @@ var ptx_lunr_docs = [
   "url": "SECTIONfirst-deriv-test.html#SECTIONfirst-deriv-test-5",
   "type": "Proof",
   "number": "15.3.1",
-  "title": "Proof of part (a) of Theorem 15.3.0.1.",
+  "title": "Proof of part (a) of Theorem 15.3.1.",
   "body": " Proof of part (a) of  We want to use the Mean Value Theorem on the interval so we begin by verifying that the conditions of the Mean Value Theorem are satisfied on that interval. Observe that is a subinterval of so is continuous on and differentiable on . By the Mean Value Theorem there is a number, , in the interval such that Since both and are positive, must be positive as well. Therefore   "
 },
 {
@@ -8861,7 +8861,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONfirst-deriv-test.html#SECTIONfirst-deriv-test-6",
   "type": "Problem",
-  "number": "15.3.0.2",
+  "number": "15.3.2",
   "title": "",
   "body": " Prove part (b) of the First Derivative Test in two different ways:   By modifying our proof of part (a) of the First Derivative Test as needed.   Let and apply part (a) of this problem. (Don t forget to show first that satisfies the conditions of the Mean Value Theorem.)  "
 },
@@ -8870,7 +8870,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONfirst-deriv-test.html#PROBLEMDervEqZeroImpliesConstant",
   "type": "Problem",
-  "number": "15.3.0.3",
+  "number": "15.3.3",
   "title": "",
   "body": "    Suppose on the interval and that and are two points in that interval. Use an argument similar to the proof of the first derivative test to show that .   Explain how the result of part (a) says that must be constant on .   Show that if on the interval , then for some constant .   Consider the function .   What can be said if for all in some set which is not an interval?  "
 },
@@ -8879,7 +8879,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONfirst-deriv-test.html#PROBLEMMVTSpecialCase",
   "type": "Problem",
-  "number": "15.3.0.4",
+  "number": "15.3.4",
   "title": "",
   "body": " Recall the conditions of :    and are differentiable on an open interval containing .     .     and .      Under these conditions explain why    Apply the Mean Value Theorem to the numerator and denominator part (a) and then prove that .   Use the fact that in the statement of  is between and .  "
 },
@@ -8897,7 +8897,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "CHAPTERwhen-deriv-doesnt-2.html#EXAMPLEAbsValFunc",
   "type": "Example",
-  "number": "16.1.0.1",
+  "number": "16.1.1",
   "title": "The  Absolute Value Function.",
   "body": " The Absolute Value Function  Examples the Absolute Value Function  The Absolute Value function is usually introduced with some vague statement like, The absolute value of a number is just the positive version of the number,   Or sometimes an appeal is made to the intutive notion of distance, as gives the length of the line segment between and .   These are both true statements and are OK as intuitive definitions, but we will need something more precise from now on.  "
 },
@@ -8906,7 +8906,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "CHAPTERwhen-deriv-doesnt-2.html#DEFINITIONAbsoluteValue",
   "type": "Definition",
-  "number": "16.1.0.2",
+  "number": "16.1.2",
   "title": "The Absolute Value Function.",
   "body": " The Absolute Value Function   The Absolute Value of is:    "
 },
@@ -8915,7 +8915,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "CHAPTERwhen-deriv-doesnt-2.html#FIGUREAbsValGraph",
   "type": "Figure",
-  "number": "16.1.0.3",
+  "number": "16.1.3",
   "title": "",
   "body": "   "
 },
@@ -8924,7 +8924,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "CHAPTERwhen-deriv-doesnt-2.html#CHAPTERwhen-deriv-doesnt-2-19",
   "type": "Drill",
-  "number": "16.1.0.4",
+  "number": "16.1.4",
   "title": "",
   "body": " Drills derivative doesn t exist   According to , since does not exist, the value is a possible transition point for the Absolute Value function. So there might be a local extremum of at . Is there?   "
 },
@@ -8933,7 +8933,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "CHAPTERwhen-deriv-doesnt-2.html#PROBLEMAbsValDeriv",
   "type": "Problem",
-  "number": "16.1.0.5",
+  "number": "16.1.5",
   "title": "",
   "body": " The Absolute Value function is not differentiable at but it is differentiable at every other value of . Let and use to show that:   If then ,    If then .      From the discussion in The Absolute Value Function we know that . Use the differentiation rules you learned in Part 1 of this text to show that if , then How does this compare with your calculations part (a)  "
 },
@@ -8942,7 +8942,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "CHAPTERwhen-deriv-doesnt-2.html#CHAPTERwhen-deriv-doesnt-2-21",
   "type": "Example",
-  "number": "16.1.0.6",
+  "number": "16.1.6",
   "title": "",
   "body": " Examples Derivative doesn t exist  Derivative doesn t exist  A slightly less intuitive example is the function . It is tempting to claim that this is really just since anything divided by itself is one but that claim is not true. As we saw in Dividing By Zero division by zero is undefined, regardless of the numerator. So the expression is undefined, and therefore the function is not defined at . It is also tempting to try to invoke L Hôpital s Rule, since it is true that But this only says that the limit of is equal to one, not that itself is equal to one, at . As we ve seen the statement explicitly excludes the point from consideration. This is why when we discussed indeterminate forms in Section we were very careful to write instead of . We needed to emphasize that we specifically do not allow the denominator to be equal to zero.  "
 },
@@ -8951,7 +8951,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "CHAPTERwhen-deriv-doesnt-2.html#CHAPTERwhen-deriv-doesnt-2-22",
   "type": "Problem",
-  "number": "16.1.0.7",
+  "number": "16.1.7",
   "title": "",
   "body": " It is pretty clear that is undefined, since is undefined. We can't have a derivative where we don't have a point. But this is the kind of vague reasoning we are trying to avoid. Part (a) of this exercise shows unequivocally that the limit which defines is undefined.  Part (b) shows how, in simple cases like this one, we can plug the hole by slightly modifying our function.   Use to show that if then is undefined.   Use to show that if then is defined.  "
 },
@@ -8960,7 +8960,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "CHAPTERwhen-deriv-doesnt-2.html#CHAPTERwhen-deriv-doesnt-2-23",
   "type": "Example",
-  "number": "16.1.0.8",
+  "number": "16.1.8",
   "title": "",
   "body": " Examples Derivative doesn t exist  Derivative doesn t exist   It is intuitively clear that derivative of the function (above) is not defined at . We will confirm our intuition using .  That is, we'll try to compute the derivative of at using and see what goes wrong. The existence of the derivative of at is equivalent to the existence of the limit , so we will try to compute this limit and see what happens.   "
 },
@@ -8969,7 +8969,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "CHAPTERwhen-deriv-doesnt-2.html#PROBLEMLRLim1overAbsh",
   "type": "Problem",
-  "number": "16.1.0.9",
+  "number": "16.1.9",
   "title": "",
   "body": "    Show that .   Show that .  "
 },
@@ -8978,7 +8978,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "CHAPTERwhen-deriv-doesnt-2.html#EXAMPLEHeavisideFunction",
   "type": "Example",
-  "number": "16.1.0.10",
+  "number": "16.1.10",
   "title": "The Heaviside Function.",
   "body": " The Heaviside Function  Examples Derivative of the Heaviside Function   shows that the derivative of the Absolute Value function is: Notice that it is not defined at . We call the Heaviside function in honor of Oliver Heaviside (1850 1925). Simple as it is, Heaviside's function is a fundamental tool in signal processing, control theory, and the solution of differential equations.  "
 },
@@ -8987,7 +8987,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "CHAPTERwhen-deriv-doesnt-2.html#PROBLEMHeavisideDeriv",
   "type": "Problem",
-  "number": "16.1.0.11",
+  "number": "16.1.11",
   "title": "",
   "body": " Use to show that when    Explain why the result in part (a) does not contradict   "
 },
@@ -8996,7 +8996,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "CHAPTERwhen-deriv-doesnt-2.html#DEFINITIONOneSidedLimits",
   "type": "Definition",
-  "number": "16.1.0.12",
+  "number": "16.1.12",
   "title": "One–sided Limits.",
   "body": " One sided Limits   If is a real number (or or ) and we say that is the right hand limit of at . If is a real number (or or ) and we say that is the left hand limit of at .   "
 },
@@ -9005,7 +9005,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "CHAPTERwhen-deriv-doesnt-2.html#THEOREMOneSideLim",
   "type": "Theorem",
-  "number": "16.1.0.13",
+  "number": "16.1.13",
   "title": "",
   "body": "  exists if and only if In that case all three limits are equal.  "
 },
@@ -9023,7 +9023,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONone-sided-deriv.html#DEFINITIONone-sided-deriv",
   "type": "Definition",
-  "number": "16.2.0.1",
+  "number": "16.2.1",
   "title": "One Sided Derivatives.",
   "body": " One Sided Derivatives   Given a function, , defined at a point :    is said to have a right hand derivative at if the limit exists.     is said to have a left hand derivative at if the limit exists.      "
 },
@@ -9032,7 +9032,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONone-sided-deriv.html#COROLLARYDerivEqualLRDeriv",
   "type": "Corollary",
-  "number": "16.2.0.2",
+  "number": "16.2.2",
   "title": "",
   "body": " If , then is differentiable at and .  "
 },
@@ -9041,7 +9041,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONone-sided-deriv.html#SECTIONone-sided-deriv-7",
   "type": "Problem",
-  "number": "16.2.0.3",
+  "number": "16.2.3",
   "title": "",
   "body": " Notice that since the Heaviside function at  , is not defined, neither are , , or .   Which of these derivatives would be defined if we were to arbitrarily define ? Explain.   Which of these derivatives would be defined if we were to arbitrarily define ? Explain.   Is there a value we could assign to so that is defined. Explain.   Review .  "
 },
@@ -9050,7 +9050,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONone-sided-deriv.html#SECTIONone-sided-deriv-8",
   "type": "Problem",
-  "number": "16.2.0.4",
+  "number": "16.2.4",
   "title": "",
   "body": " Compute the right- and left-hand derivative, and the derivative itself, if they exist, of each of the following functions at the and . If any of these derivatives don't exist explain why not.                  "
 },
@@ -9059,7 +9059,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONone-sided-deriv.html#SECTIONone-sided-deriv-9",
   "type": "Problem",
-  "number": "16.2.0.5",
+  "number": "16.2.5",
   "title": "",
   "body": " Use the limit definitions to compute the right and left hand derivative, of the function, , at , , and . At which of these points is differentiable?   "
 },
@@ -9068,7 +9068,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONone-sided-deriv.html#PROBLEMHeaviTranslate",
   "type": "Problem",
-  "number": "16.2.0.6",
+  "number": "16.2.6",
   "title": "",
   "body": "    Let be the Heaviside function and let be a real number.   Sketch .    Use to show that is not differentiable at .      Let also be a real number, distinct from , and define    Sketch .    Use to show that is not differentiable at or .     "
 },
@@ -9086,7 +9086,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONNonIntuitExample.html#SECTIONNonIntuitExample-10",
   "type": "Problem",
-  "number": "17.1.0.1",
+  "number": "17.1.1",
   "title": "",
   "body": " Use your favorite computational tool to find a value of near such that .  "
 },
@@ -9113,7 +9113,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimits-at-infinity.html#DRILLBoundedGrowth",
   "type": "Problem",
-  "number": "17.2.1.1",
+  "number": "17.2.1",
   "title": "",
   "body": " Suppose is a positive real number, and that . Find a formula for as a function of time (in seconds), such that at each integer , the distance from to is half of the distance from to .  "
 },
@@ -9131,7 +9131,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimits-at-infinity.html#SUBSECTIONEpsDelt1-21",
   "type": "Problem",
-  "number": "17.2.1.2",
+  "number": "17.2.2",
   "title": "",
   "body": " If how large must be in order to guarantee that                  "
 },
@@ -9140,7 +9140,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimits-at-infinity.html#DEFINITIONsecond-inad-limit-at-infinity",
   "type": "Definition",
-  "number": "17.2.2.1",
+  "number": "17.2.3",
   "title": "Positive Function With Limit Zero at Infinity.",
   "body": " Positive Function With Limit Zero at Infinity   Suppose for all Then we say that if and only if for every we can find a real number with the property that if , then .   "
 },
@@ -9149,7 +9149,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimits-at-infinity.html#EXAMPLELimPosFuncInf",
   "type": "Example",
-  "number": "17.2.2.2",
+  "number": "17.2.4",
   "title": "",
   "body": " Examples limits at  Show that if then As before take . (Think of epsilon as being handed to you by Bishop Berkeley. You don t get to control it, he does. Moreover all he will tell you about it is that it is a positive number.)  Once epsilon is given your job is to find out how large has to be to guarantee that So we work the problem backwards. That is, we start with and solve for to find that . If we take when then   "
 },
@@ -9158,7 +9158,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimits-at-infinity.html#SUBSECTIONconvincing-skeptic-19",
   "type": "Problem",
-  "number": "17.2.2.3",
+  "number": "17.2.5",
   "title": "",
   "body": " Use to prove that for each of the functions below . That is, assume is given and find a lower bound such that if then .                          "
 },
@@ -9167,7 +9167,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimits-at-infinity.html#EXAMPLElimit1",
   "type": "Example",
-  "number": "17.2.3.1",
+  "number": "17.2.6",
   "title": "",
   "body": " Examples limits  Suppose Can you guess the value of ? Let be given. Then when has any positive value, if we have and by we conclude that since all of the requirements of our definition have been met (except, of course, ). Of course, this is nonsense. As we have noted as increases without bound gets arbitrarily close to . So clearly . That we are able to prove that goes to zero simply means that doesn t capture everything we need. We need a more encompassing definition of a limit.  "
 },
@@ -9176,7 +9176,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimits-at-infinity.html#DEFINITIONlimit-at-infinity-nearly-adequate",
   "type": "Definition",
-  "number": "17.2.3.2",
+  "number": "17.2.7",
   "title": "Zero Limit at Infinity.",
   "body": " Zero Limit at Infinity   Suppose is defined on some interval . Then we say that if and only if for every we can find a real number with the property that whenever     "
 },
@@ -9185,7 +9185,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimits-at-infinity.html#EXAMPLEFormalLimitProof1",
   "type": "Example",
-  "number": "17.2.3.3",
+  "number": "17.2.8",
   "title": "",
   "body": " Examples limits formal proof  Suppose . We want to prove rigorously that .  "
 },
@@ -9194,7 +9194,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimits-at-infinity.html#SUBSECTIONRefiningDerivative-10",
   "type": "Scrapwork",
-  "number": "17.2.3.1",
+  "number": "17.1",
   "title": "",
   "body": " Let be given.  As we did in we find the bound by working the problem backwards. We want to end with , so that s where we start.  Since we are only interested in what happens to as , we can safely assume that . In that case if then it follows that and if then , so apparently to make we need . So we take .   END OF SCRAPWORK   "
 },
@@ -9212,7 +9212,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimits-at-infinity.html#SUBSECTIONRefiningDerivative-13",
   "type": "Problem",
-  "number": "17.2.3.4",
+  "number": "17.2.9",
   "title": "",
   "body": " Identify which statements in the proof in correspond to the first, second, third, and fourth parts of the format presented above.  "
 },
@@ -9221,7 +9221,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimits-at-infinity.html#EXAMPLEFormalLimitProof2",
   "type": "Example",
-  "number": "17.2.3.5",
+  "number": "17.2.10",
   "title": "",
   "body": " Examples limits  Our previous examples and problems in this section were fairly simple as formal limit problems go. This one is more complex.  Use to show that .  "
 },
@@ -9230,7 +9230,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimits-at-infinity.html#SUBSECTIONRefiningDerivative-15",
   "type": "Scrapwork",
-  "number": "17.2.3.2",
+  "number": "17.2",
   "title": "",
   "body": " For a given , we want to end up with Part of what makes this limit more complex is that the part inside the absolute value , is not always positive. We need to deal with that somehow.  First, since we are only concerned about what happens as it is safe to assume that . In that case, . Next, observe that if also, then . Thus , so that . We could now work backwards like before, and solve for . This will work fine, but the Algebra gets very messy. Try it and see.  There is a sneaky way to do this that avoids some of the Algebra. Notice that . Notice further that if , then so that . Putting all of this together we see that for ,   Thus to guarantee that we need , or .   END OF SCRAPWORK   "
 },
@@ -9248,7 +9248,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimits-at-infinity.html#PROBLEMProofPractice1",
   "type": "Problem",
-  "number": "17.2.3.6",
+  "number": "17.2.11",
   "title": "",
   "body": " Explain carefully, and in detail, the reasoning that supports the claims made in Equations and .  "
 },
@@ -9257,7 +9257,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimits-at-infinity.html#SUBSECTIONRefiningDerivative-20",
   "type": "Problem",
-  "number": "17.2.3.7",
+  "number": "17.2.12",
   "title": "",
   "body": " For each of the following show that .                                    .}  "
 },
@@ -9266,7 +9266,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimits-at-infinity.html#DEFINITIONlimit-at-posinfinity",
   "type": "Definition",
-  "number": "17.2.3.8",
+  "number": "17.2.13",
   "title": "A Limit at <span class=\"process-math\">\\(+\\infty\\)<\/span>.",
   "body": " A Limit at   Suppose that is a real number and that is defined on some interval . Then we say that if and only if for every there is a real number with the property that , whenever .   "
 },
@@ -9275,7 +9275,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimits-at-infinity.html#SUBSECTIONRefiningDerivative-24",
   "type": "Example",
-  "number": "17.2.3.9",
+  "number": "17.2.14",
   "title": "",
   "body": " Examples limits  Suppose . Intuitively, it is clear that but we need to prove that this is so.  "
 },
@@ -9284,7 +9284,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimits-at-infinity.html#SUBSECTIONRefiningDerivative-25",
   "type": "Scrapwork",
-  "number": "17.2.3.3",
+  "number": "17.3",
   "title": "",
   "body": " Suppose is given. We need to specify a number (probably in terms of ), with the property that if then So we will work backwards from this inequality.   Thus , and it appears that as long as is greater than    END OF SCRAPWORK   "
 },
@@ -9302,7 +9302,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimits-at-infinity.html#SUBSECTIONRefiningDerivative-27",
   "type": "Example",
-  "number": "17.2.3.10",
+  "number": "17.2.15",
   "title": "",
   "body": " Examples limits  In we approached the problem of finding a horizontal asymptote of in the following highly intuitive manner, using the notation. So we see that this limit must be equal to five. To prove this rigorously, without referring to infinity, we use   "
 },
@@ -9311,7 +9311,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimits-at-infinity.html#SUBSECTIONRefiningDerivative-28",
   "type": "Scrapwork",
-  "number": "17.2.3.4",
+  "number": "17.4",
   "title": "",
   "body": " Let be given. As before we work backwards from our goal, . As long as this is the same as so we will stipulate that (and therefore ) must be at least greater than . Solving equation for we see that also. So we take to be the greater of and . We capture this idea with the notation, .   END OF SCRAPWORK   "
 },
@@ -9320,7 +9320,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimits-at-infinity.html#SUBSECTIONRefiningDerivative-29",
   "type": "Problem",
-  "number": "17.2.3.11",
+  "number": "17.2.16",
   "title": "",
   "body": "    Show that we really only need the condition by showing that implies that .   Suppose that and . Prove that if then   "
 },
@@ -9329,7 +9329,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimits-at-infinity.html#SUBSECTIONRefiningDerivative-30",
   "type": "Problem",
-  "number": "17.2.3.12",
+  "number": "17.2.17",
   "title": "",
   "body": " We want to give a rigorous proof that . Let be given.   Do the scrapwork that shows that we must take .   Show that if then   "
 },
@@ -9338,7 +9338,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimits-at-infinity.html#SUBSECTIONRefiningDerivative-31",
   "type": "Problem",
-  "number": "17.2.3.13",
+  "number": "17.2.18",
   "title": "",
   "body": " Do the scrapwork, and provide a rigorous proof of each of these limits.              "
 },
@@ -9347,7 +9347,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimits-at-infinity.html#DEFINITIONlimit-at-neginfinity",
   "type": "Definition",
-  "number": "17.2.3.14",
+  "number": "17.2.19",
   "title": "A Limit at <span class=\"process-math\">\\(-\\infty\\)<\/span>.",
   "body": " A Limit at   Suppose is defined on some interval . Then we say that if and only if for every we can find a real number with the property that whenever     "
 },
@@ -9356,7 +9356,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimits-at-infinity.html#SUBSECTIONRefiningDerivative-34",
   "type": "Problem",
-  "number": "17.2.3.15",
+  "number": "17.2.20",
   "title": "",
   "body": " Do the scrapwork, and provide a rigorous proof of each of the limits below. Recall that when , .              "
 },
@@ -9365,7 +9365,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimits-at-infinity.html#PROBLEMVertAsym1",
   "type": "Problem",
-  "number": "17.2.4.1",
+  "number": "17.2.21",
   "title": "",
   "body": " Suppose . Show that if then .   Comment  Our assumption that is really just a convenience as we shall see in part (b).    Suppose . Show that for any real number , we have whenever .  "
 },
@@ -9374,7 +9374,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimits-at-infinity.html#DEFINITIONRHInfLim",
   "type": "Definition",
-  "number": "17.2.4.2",
+  "number": "17.2.22",
   "title": "Right–Hand, Positive, Infinite Limits.",
   "body": " Right Hand, Positive, Infinite Limits   Let be a real number and suppose is defined on some interval . Then we say if and only if for every real number , there is a number with the property that whenever , .   "
 },
@@ -9383,7 +9383,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimits-at-infinity.html#SUBSECTIONVerticalAsymptotes-12",
   "type": "Drill",
-  "number": "17.2.4.3",
+  "number": "17.2.23",
   "title": "",
   "body": " Drills limits  Use this definition to prove that .  "
 },
@@ -9392,7 +9392,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimits-at-infinity.html#SUBSECTIONVerticalAsymptotes-13",
   "type": "Example",
-  "number": "17.2.4.4",
+  "number": "17.2.24",
   "title": "",
   "body": " Examples limits  We will use our definition to show that . As before, we will need to do some scrapwork to produce a suitable .  "
 },
@@ -9401,7 +9401,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimits-at-infinity.html#SUBSECTIONVerticalAsymptotes-14",
   "type": "Scrapwork",
-  "number": "17.2.4.1",
+  "number": "17.5",
   "title": "",
   "body": " We want to find a with the property that, for a given , whenever .   Comment  Read this paragraph carefully. It can be very difficult to parse at first.   Working backwards, we start with the inequality . Solving for we see that and thus . This suggests that we should make   "
 },
@@ -9410,7 +9410,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimits-at-infinity.html#SUBSECTIONVerticalAsymptotes-15",
   "type": "Problem",
-  "number": "17.2.4.5",
+  "number": "17.2.25",
   "title": "",
   "body": " Confirm that is in fact positive.   Use part (a) to show that .  "
 },
@@ -9419,7 +9419,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimits-at-infinity.html#SUBSECTIONVerticalAsymptotes-16",
   "type": "Problem",
-  "number": "17.2.4.6",
+  "number": "17.2.26",
   "title": "",
   "body": " Do the scrapwork, and provide a rigorous proof of each of the limits.          "
 },
@@ -9428,7 +9428,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimits-at-infinity.html#DRILLLeftHandLimit",
   "type": "Drill",
-  "number": "17.2.4.7",
+  "number": "17.2.27",
   "title": "",
   "body": " Drills limits one sided, infinite  Using as a guide write down the definition of a right hand, negatively infinite limit. Compare your answer with below. Does your definition work better than ours? Explain.  "
 },
@@ -9437,7 +9437,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimits-at-infinity.html#DEFINITIONLHInfLim",
   "type": "Definition",
-  "number": "17.2.4.8",
+  "number": "17.2.28",
   "title": "Right–Hand, Negative  Infinite Limits.",
   "body": " Right Hand, Negative Infinite Limits   Let be a real number. Suppose we have defined on some interval . Then we say if and only if for any real number , there is a number with the property that whenever , .   "
 },
@@ -9446,7 +9446,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimits-at-infinity.html#SUBSECTIONVerticalAsymptotes-22",
   "type": "Problem",
-  "number": "17.2.4.9",
+  "number": "17.2.29",
   "title": "",
   "body": " Suppose is defined on some interval . Use and to prove that if and only if .  "
 },
@@ -9455,7 +9455,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimits-at-infinity.html#PROBLEMLeftInfLimits",
   "type": "Problem",
-  "number": "17.2.4.10",
+  "number": "17.2.30",
   "title": "",
   "body": " Left hand, infinite limits can be defined in a manner similar to and .   Give a definition like for    Give a definition like for    Use your definitions in parts (a) and (b) to prove that if and only if   "
 },
@@ -9464,7 +9464,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimits-at-infinity.html#EXAMPLEPosInfLimit",
   "type": "Example",
-  "number": "17.2.4.11",
+  "number": "17.2.31",
   "title": "",
   "body": " Examples limits infinite  For example since .  "
 },
@@ -9473,7 +9473,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimits-at-infinity.html#EXERCISEPosInfLimit",
   "type": "Problem",
-  "number": "17.2.4.12",
+  "number": "17.2.32",
   "title": "",
   "body": " Use to show that    Use the appropriate definition from to show that   "
 },
@@ -9482,7 +9482,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimits-at-infinity.html#DEFINITIONInfiniteLimit",
   "type": "Definition",
-  "number": "17.2.4.13",
+  "number": "17.2.33",
   "title": "Positive, Infinite Limits.",
   "body": " Positive, Infinite Limits  Limit infinite   Suppose is defined near . Then we say if and only if .           "
 },
@@ -9491,7 +9491,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimits-at-infinity.html#PROBLEMInfiniteLimits",
   "type": "Problem",
-  "number": "17.2.4.14",
+  "number": "17.2.34",
   "title": "",
   "body": " Prove each of the following statements.            does not exist.    does not exist.  "
 },
@@ -9500,7 +9500,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimits-at-infinity.html#DRILLPosNegInfLimitsCatch",
   "type": "Drill",
-  "number": "17.2.4.15",
+  "number": "17.2.35",
   "title": "",
   "body": " Drills limit infinite  Dig out your the guess you made in response to and compare it with . Were you close? Did you make unjustified assumptions, or ignore some subtlety? Explain.  "
 },
@@ -9509,7 +9509,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimits-at-infinity.html#SUBSECTIONVerticalAsymptotes-36",
   "type": "Problem",
-  "number": "17.2.4.16",
+  "number": "17.2.36",
   "title": "",
   "body": " Provide a definition of similar to and use your definition to show that if and only if .  "
 },
@@ -9518,7 +9518,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimits-at-infinity.html#PROBLEMEpsDeltDefLim",
   "type": "Problem",
-  "number": "17.2.4.17",
+  "number": "17.2.37",
   "title": "Infinite Limits: An Alternate Definition.",
   "body": "Infinite Limits: An Alternate Definition  Suppose is defined near . Show that if for every real number , there is a such that whenever , then .  "
 },
@@ -9527,7 +9527,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimits-at-infinity.html#PROBLEMLimitEquivDef",
   "type": "Problem",
-  "number": "17.2.4.18",
+  "number": "17.2.38",
   "title": "",
   "body": "Complete this equivalence by showing that if then for every real number , there is a such that whenever and . "
 },
@@ -9545,7 +9545,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimits-at-real.html#DEFINITIONlimits-at-real",
   "type": "Definition",
-  "number": "17.3.0.1",
+  "number": "17.3.1",
   "title": "The Limit at a Point.",
   "body": " The Limit at a Point   Suppose is a function, that is a real number, and that is defined near . We say that if and only if for every there is a with the property that whenever , .   "
 },
@@ -9554,7 +9554,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimits-at-real.html#FIGUREEpsDelLim",
   "type": "Figure",
-  "number": "17.3.0.2",
+  "number": "17.3.2",
   "title": "",
   "body": "     "
 },
@@ -9563,7 +9563,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimits-at-real.html#DRILLLimAtZero-LimAtA",
   "type": "Problem",
-  "number": "17.3.0.3",
+  "number": "17.3.3",
   "title": "",
   "body": " Use , , , and to explain that the following are obviously true.   We are not looking for a formal proof, just a reasonable explanation.  "
 },
@@ -9572,7 +9572,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimits-at-real.html#SECTIONlimits-at-real-18",
   "type": "Example",
-  "number": "17.3.0.4",
+  "number": "17.3.4",
   "title": "",
   "body": " Examples limits  Observe that it is intuitively clear that if then . We wish to prove this rigorously.  "
 },
@@ -9581,7 +9581,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimits-at-real.html#SECTIONlimits-at-real-19",
   "type": "Scrapwork",
-  "number": "17.3.0.1",
+  "number": "17.6",
   "title": "",
   "body": " Suppose is given. Our goal is to find a such that if (or just ) then . Solving this for we have Recall from that , so we see that or, equivalently   It appears that as long as , so we take .   END OF SCRAPWORK   "
 },
@@ -9617,7 +9617,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimits-at-real.html#EXAMPLEDiscontLimit2",
   "type": "Example",
-  "number": "17.3.0.5",
+  "number": "17.3.5",
   "title": "",
   "body": " Examples limits at a discontinuity  Returning to from recall that we had We had shown by an intuitive argument that . Our previous proof lacked rigor, especially in the last step. We will provide a fully rigorous proof now.  "
 },
@@ -9635,7 +9635,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimits-at-real.html#SECTIONlimits-at-real-30",
   "type": "Problem",
-  "number": "17.3.0.6",
+  "number": "17.3.6",
   "title": "",
   "body": " Use the proof above to recreate the scrapwork that we did before we wrote the proof.  "
 },
@@ -9644,7 +9644,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimits-at-real.html#EXAMPLEConcrete1",
   "type": "Example",
-  "number": "17.3.0.7",
+  "number": "17.3.7",
   "title": "4.",
   "body": " 4  Examples limits  We would like to find the value of , and prove that the value we find is correct.  Remember that none of our limit definitions tell us how to find the value of a limit, only how to prove that it has a particular value after we ve found it. In our examples so far the value of the limits have been intuitively clear so we haven t concerned ourselves with this part of the problem. But before we can prove that a limit has a particular value we obviously need to decide what we believe the limit value is.  We have several options for doing this. The simplest is guessing, but guessing works best if we have some intuition about the problem. Guessing blindly is usually a waste of time. Nevertheless, guessing is always an option. Can you guess the value of this limit?  Another simple option is to use a calculator and plug the value of the limit point, in this case , and see what the calculator comes up with. This will work if the function is continuous at the limit point. But is not continuous at so that won t help with this problem. Try it and see.  A third, and much more useful option is to sketch the graph of to see what is close to near the limit point. The graph of is given below. It is not defined at because when we get zero in the denominator. Nevertheless the limit at seems to exist. As you can see as approaches , appears to approach . Based on this graph it seems likely that the value of the limit is .   As we saw in , Algebra can also be very helpful. In this case we see that where the cancellation in red is only valid when . Our limit point is so it is not under consideration.  In fact, once we have rigorously proved , and from (We will do this in ) the following will be a valid proof:   "
 },
@@ -9653,7 +9653,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimits-at-real.html#SECTIONlimits-at-real-32",
   "type": "Problem",
-  "number": "17.3.0.8",
+  "number": "17.3.8",
   "title": "",
   "body": " Identify where we used , , and in the development above.  "
 },
@@ -9662,7 +9662,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimits-at-real.html#SECTIONlimits-at-real-36",
   "type": "Scrapwork",
-  "number": "17.3.0.2",
+  "number": "17.7",
   "title": "",
   "body": " As is typical we work backwards from our goal. We need to show that so Since we re not interested in the value of anything at (where the denominator is zero) we can factor and cancel, giving We see that if then or So taking will work for this problem.   END OF SCRAPWORK   "
 },
@@ -9680,7 +9680,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimits-at-real.html#DIGRESSIONWhyProveTheorems-4",
   "type": "Problem",
-  "number": "17.3.0.9",
+  "number": "17.3.9",
   "title": "",
   "body": " Show that satisfies all of the conditions of L Hôpital s Rule .   Use L Hôpital s Rule to prove that .   Is your proof in part (b) rigorous? Why or why not?  "
 },
@@ -9689,7 +9689,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimits-at-real.html#SECTIONlimits-at-real-40",
   "type": "Example",
-  "number": "17.3.0.10",
+  "number": "17.3.10",
   "title": "",
   "body": " Examples Derivative via limits  In this example we will show rigorously that the derivative of is . To do that we need to show that Recall that differentiation is a local property so we are thinking of as a fixed, but unspecified real number. The variable in this example is .  "
 },
@@ -9698,7 +9698,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimits-at-real.html#SECTIONlimits-at-real-41",
   "type": "Scrapwork",
-  "number": "17.3.0.3",
+  "number": "17.8",
   "title": "",
   "body": " For we need to find such that if , then . Working backwards from this we have so we choose .   END OF SCRAPWORK   "
 },
@@ -9707,7 +9707,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONlimits-at-real.html#SECTIONlimits-at-real-42",
   "type": "Problem",
-  "number": "17.3.0.11",
+  "number": "17.3.11",
   "title": "",
   "body": " Use the scrapwork above to write down a rigorous proof that if then .  "
 },
@@ -9734,7 +9734,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONLimitLaws.html#THEOREMTriangIneq",
   "type": "Theorem",
-  "number": "17.4.1.1",
+  "number": "17.4.1",
   "title": "The Triangle Inequality.",
   "body": " The Triangle Inequality  For any real numbers and , .  "
 },
@@ -9752,7 +9752,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONLimitLaws.html#THEOREMLimConstInf",
   "type": "Theorem",
-  "number": "17.4.1.2",
+  "number": "17.4.2",
   "title": "The Limit at Infinity of a Constant Function is the Constant.",
   "body": " The Limit at Infinity of a Constant Function is the Constant  Suppose and are real numbers. If for all then .  "
 },
@@ -9770,7 +9770,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONLimitLaws.html#THEOREMLimConstNegInf",
   "type": "Theorem",
-  "number": "17.4.1.3",
+  "number": "17.4.3",
   "title": "The Limit at Negative Infinity of a Constant Function is the Constant.",
   "body": " The Limit at Negative Infinity of a Constant Function is the Constant  Suppose and are real numbers. If for all then   "
 },
@@ -9779,7 +9779,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONLimitLaws.html#SUBSECTIONlimit-sum-at-12",
   "type": "Problem",
-  "number": "17.4.1.4",
+  "number": "17.4.4",
   "title": "",
   "body": " Use the proof of Theorem as a model to construct a proof of .  "
 },
@@ -9788,7 +9788,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONLimitLaws.html#THEOREMLimConstPoint",
   "type": "Theorem",
-  "number": "17.4.1.5",
+  "number": "17.4.5",
   "title": "The Limit at a Point of a Constant Function is the Constant.",
   "body": " The Limit at a Point of a Constant Function is the Constant  Suppose is a real number. If near then .  "
 },
@@ -9797,7 +9797,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONLimitLaws.html#SUBSECTIONlimit-sum-at-14",
   "type": "Problem",
-  "number": "17.4.1.6",
+  "number": "17.4.6",
   "title": "",
   "body": " Use the proof of Theorem as a model to construct a proof of .   Despite the apparent simplicity of this problem there is a lot going on here. Recall that near means that on some open interval, say , containing except possibly at (see Definition ). You need to find a such that if then . That is, you need an interval of length with as the midpoint where . But there is no guarantee that is the midpoint of the interval . This would be an excellent time to engage your visual intuition by drawing a sketch so you can see the problem.  "
 },
@@ -9806,7 +9806,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONLimitLaws.html#THEOREMLimSumInf",
   "type": "Theorem",
-  "number": "17.4.1.7",
+  "number": "17.4.7",
   "title": "The Limit of a Sum at Infinity.",
   "body": " The Limit of a Sum at Infinity  If and then   "
 },
@@ -9815,7 +9815,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONLimitLaws.html#SUBSECTIONlimit-sum-at-16",
   "type": "Scrapwork",
-  "number": "17.4.1.1",
+  "number": "17.9",
   "title": "",
   "body": " As always we begin by assuming that has been given.  We want to show that if is large enough (larger than some specified ) then The only information we have to work with is the knowledge that which means that we can make and as close to zero as we wish, provided we make large enough. Rewriting the left hand side of equation and invoking the Triangle Inequality we see that But as we ve observed we can make and as close to zero as we wish, provided we take large enough. To be precise, there is a number such that if then . Similarly there is a number such that if then .  Since we need for both of these things to happen a sufficiently large value of is one where and .   END OF SCRAPWORK   "
 },
@@ -9833,7 +9833,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONLimitLaws.html#SUBSECTIONlimit-sum-at-18",
   "type": "Problem",
-  "number": "17.4.1.8",
+  "number": "17.4.8",
   "title": "",
   "body": " Use the proof of Theorem as a model to construct a proof of below.  "
 },
@@ -9842,7 +9842,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONLimitLaws.html#THEOREMLimSumNegInf",
   "type": "Theorem",
-  "number": "17.4.1.9",
+  "number": "17.4.9",
   "title": "The Limit of a Sum at Negative Infinity.",
   "body": " The Limit of a Sum at Negative Infinity  If and then   "
 },
@@ -9851,7 +9851,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONLimitLaws.html#SUBSECTIONlimit-sum-at-20",
   "type": "Problem",
-  "number": "17.4.1.10",
+  "number": "17.4.10",
   "title": "",
   "body": " Use the proof of Theorem as a model to construct a proof of below.  "
 },
@@ -9860,7 +9860,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONLimitLaws.html#THEOREMLimSumPoint",
   "type": "Theorem",
-  "number": "17.4.1.11",
+  "number": "17.4.11",
   "title": "Limit of a Sum at a Point.",
   "body": " Limit of a Sum at a Point  Suppose that is some real number, and . Then   "
 },
@@ -9869,7 +9869,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONLimitLaws.html#THEOREMSqThmInfinity",
   "type": "Theorem",
-  "number": "17.4.2.1",
+  "number": "17.4.12",
   "title": "The Squeeze  Theorem at Infinity.",
   "body": " The Squeeze Theorem at Infinity  If on some interval, and then also.  "
 },
@@ -9887,7 +9887,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONLimitLaws.html#SUBSECTIONsqueeze-theorem-4",
   "type": "Problem",
-  "number": "17.4.2.2",
+  "number": "17.4.13",
   "title": "",
   "body": " Use the proof of Theorem as a model to prove Theorem below.  "
 },
@@ -9896,7 +9896,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONLimitLaws.html#THEOREMSqThmNegInfinity",
   "type": "Theorem",
-  "number": "17.4.2.3",
+  "number": "17.4.14",
   "title": "The Squeeze  Theorem at Negative Infinity.",
   "body": " The Squeeze Theorem at Negative Infinity  If on some interval, and then also.  "
 },
@@ -9905,7 +9905,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONLimitLaws.html#SUBSECTIONsqueeze-theorem-6",
   "type": "Problem",
-  "number": "17.4.2.4",
+  "number": "17.4.15",
   "title": "",
   "body": " Use the proof of Theorem as a model to prove Theorem below.  "
 },
@@ -9914,7 +9914,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONLimitLaws.html#THEOREMSqThmFinite",
   "type": "Theorem",
-  "number": "17.4.2.5",
+  "number": "17.4.16",
   "title": "The Squeeze  Theorem, at a Point.",
   "body": " The Squeeze Theorem, at a Point  If near and then also.  "
 },
@@ -9923,7 +9923,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONLimitLaws.html#EXAMPLELimitComposition",
   "type": "Example",
-  "number": "17.4.3.1",
+  "number": "17.4.17",
   "title": "",
   "body": " Examples limits of composed functions  Let and . Observe that when , that , and that is not continuous at . We have and . Therefore   "
 },
@@ -9932,7 +9932,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONLimitLaws.html#THEOREMLimCompInf",
   "type": "Theorem",
-  "number": "17.4.3.2",
+  "number": "17.4.18",
   "title": "The Limit of a Composition at Infinity.",
   "body": " The Limit of a Composition at Infinity  Suppose and is continuous at . Then   "
 },
@@ -9941,7 +9941,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONLimitLaws.html#SECTIONlimit-composition-6",
   "type": "Scrapwork",
-  "number": "17.4.3.1",
+  "number": "17.10",
   "title": "",
   "body": "  It will be helpful to have a visual guide for this proof so we will rely on diagrams here in the scrapwork. Our finalized proof below will not.  Let be given. We need to show that we can find a such that if then .  Since is continuous at  tells us that   Thus tells us that there there is a real number such that if then , as visualized in the sketch above.  Next, consider what it means to say that . It means that if we take large enough we can make as close to as we would like. In particular, we would like for as in the sketch below.   Therefore, we can find a number such that for every , . If we take , then we have .  From the continuity of at we know that means that    END OF SCRAPWORK   "
 },
@@ -9959,7 +9959,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONLimitLaws.html#SECTIONlimit-composition-8",
   "type": "Problem",
-  "number": "17.4.3.3",
+  "number": "17.4.19",
   "title": "",
   "body": " Use the proof of Theorem as a model to construct a proof of Theorem below.  "
 },
@@ -9968,7 +9968,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONLimitLaws.html#THEOREMLimCompNegInf",
   "type": "Theorem",
-  "number": "17.4.3.4",
+  "number": "17.4.20",
   "title": "The Limit of a Composition at Negative Infinity.",
   "body": " The Limit of a Composition at Negative Infinity  Suppose and is continuous at . Then   "
 },
@@ -9977,7 +9977,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONLimitLaws.html#SECTIONlimit-composition-10",
   "type": "Problem",
-  "number": "17.4.3.5",
+  "number": "17.4.21",
   "title": "",
   "body": " Use the proof of Theorem as a model to construct a proof of Theorem below.  "
 },
@@ -9986,7 +9986,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONLimitLaws.html#THEOREMLimCompPoint",
   "type": "Theorem",
-  "number": "17.4.3.6",
+  "number": "17.4.22",
   "title": "The Limit of a Composition at a Point.",
   "body": " The Limit of a Composition at a Point  Suppose , and that is continuous at . Then   "
 },
@@ -9995,7 +9995,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONLimitLaws.html#THEOREMlimit-product-infinity",
   "type": "Theorem",
-  "number": "17.4.4.1",
+  "number": "17.4.23",
   "title": "The Limit of a Product at Infinity.",
   "body": " The Limit of a Product at Infinity  If then   "
 },
@@ -10004,7 +10004,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONLimitLaws.html#LEMMALimProd1",
   "type": "Lemma",
-  "number": "17.4.4.2",
+  "number": "17.4.24",
   "title": "",
   "body": " If and then   "
 },
@@ -10013,7 +10013,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONLimitLaws.html#LEMMALimProd2",
   "type": "Lemma",
-  "number": "17.4.4.3",
+  "number": "17.4.25",
   "title": "",
   "body": " If and then   "
 },
@@ -10023,7 +10023,7 @@ var ptx_lunr_docs = [
   "url": "SECTIONLimitLaws.html#PROOFLemmaLimProd1",
   "type": "Proof",
   "number": "17.4.4.1",
-  "title": "Proof of Theorem 17.4.4.1.",
+  "title": "Proof of Theorem 17.4.23.",
   "body": " Proof of  Let be given. Observe that Adding and subtracting the same term like this is a highly non-intuitive, but common trick. Most mathematicians call it adding zero since middle terms add to zero. We (the authors) call this uncanceling because the middle terms cancel. It is hard to tell a priori when this trick will work. Sometimes you just have to try something and see what happens.  In this case our uncanceling allows us to use the Triangle Inequality effectively. From the Triangle Inequality we see that By there is a real number such that if then By there is a real number such that if then Take . If then . Therefore .  "
 },
 {
@@ -10031,7 +10031,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONLimitLaws.html#LEMMABounded1",
   "type": "Lemma",
-  "number": "17.4.4.4",
+  "number": "17.4.26",
   "title": "",
   "body": " If then there are positive real numbers and , such that if , then .  "
 },
@@ -10049,7 +10049,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONLimitLaws.html#SUBSECTIONlimit-product-at-12",
   "type": "Problem",
-  "number": "17.4.4.5",
+  "number": "17.4.27",
   "title": "",
   "body": " Draw a convincing diagram of and its proof.  "
 },
@@ -10059,7 +10059,7 @@ var ptx_lunr_docs = [
   "url": "SECTIONLimitLaws.html#SUBSECTIONlimit-product-at-13",
   "type": "Proof",
   "number": "17.4.4.3",
-  "title": "Proof of Lemma 17.4.4.2.",
+  "title": "Proof of Lemma 17.4.24.",
   "body": " Proof of  From we see that there are positive real numbers and , such that for all  Let be given. Since there is a real number such that for all  Take . Then for all we have Therefore   "
 },
 {
@@ -10068,7 +10068,7 @@ var ptx_lunr_docs = [
   "url": "SECTIONLimitLaws.html#PROOFLemmaLimProd2",
   "type": "Proof",
   "number": "17.4.4.4",
-  "title": "Proof of Lemma 17.4.4.3.",
+  "title": "Proof of Lemma 17.4.25.",
   "body": " Proof of  Let be given.  There are two cases.   Case 1:     Because there is a real number such that if then   So if then .  Therefore when .    Case 2:     In this case .  Therefore when .   Since the limit is zero in both cases we see that .  "
 },
 {
@@ -10076,7 +10076,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONLimitLaws.html#PROBLEMLimProdSimpler",
   "type": "Problem",
-  "number": "17.4.4.6",
+  "number": "17.4.28",
   "title": "",
   "body": " As you ve seen using the limit definition (using and ) to prove theorems is hard. But, as we said in Why We Prove Theorems , the whole point of proving theorems is to give ourselves more refined tools that we can use instead of resorting to definitions.   Now that we have and there is actually a simpler way to prove . Observe that and complete the proof by citing and and the appropriate, previously proven, limit theorem.   The right side of equation is a sum.    can also be proved without resorting to the limit definition (using and ). Prove it by citing and the appropriate, previously proved, limit theorems.  "
 },
@@ -10085,7 +10085,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONLimitLaws.html#SUBSECTIONlimit-product-at-23",
   "type": "Problem",
-  "number": "17.4.4.7",
+  "number": "17.4.29",
   "title": "",
   "body": " Use our proof of Theorem as a model to prove Theorem below.  "
 },
@@ -10094,7 +10094,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONLimitLaws.html#THEOREMlimit-product-negative-infinity",
   "type": "Theorem",
-  "number": "17.4.4.8",
+  "number": "17.4.30",
   "title": "The Limit of a Product at Negative Infinity.",
   "body": " The Limit of a Product at Negative Infinity  If then   "
 },
@@ -10103,7 +10103,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONLimitLaws.html#SUBSECTIONlimit-product-at-25",
   "type": "Problem",
-  "number": "17.4.4.9",
+  "number": "17.4.31",
   "title": "",
   "body": " Use our proof of Theorem as a model to prove Theorem below.  "
 },
@@ -10112,7 +10112,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONLimitLaws.html#THEOREMLimProdPoint",
   "type": "Theorem",
-  "number": "17.4.4.10",
+  "number": "17.4.32",
   "title": "Limit of a Product at a Point.",
   "body": " Limit of a Product at a Point  Suppose that and for some real number . Then   "
 },
@@ -10121,7 +10121,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONLimitLaws.html#LEMMA1overxIsCont",
   "type": "Lemma",
-  "number": "17.4.5.1",
+  "number": "17.4.33",
   "title": "",
   "body": " The function is continuous at .  "
 },
@@ -10130,7 +10130,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONLimitLaws.html#SUBSECTIONOneOverXIsCont-4",
   "type": "Scrapwork",
-  "number": "17.4.5.1",
+  "number": "17.11",
   "title": "",
   "body": " To keep things simple (this is scrapwork, after all) we will first assume that . If we have an then by we need to find a such that if then . As usual we work backwards.  Combining the fractions we see that so we need to find a such that ensures that .  At first it appears that all we need to do choose . If we could do that we d have in which case   But of course we ve seen this before. Just as in the proof of Lemma , cannot depend on . So we need to replace with a constant somehow. The Algebra here gets a bit delicate. We strongly recommend that you visualize each step of the following argument with a sketch like the one we used in the scrapwork for Theorem   Suppose that Then we see that or Thus if we make , we see that and so, from the right side of equation . .   Comment  Notice that we are using the left side of equation    Therefore . Thus if we choose to be the lesser of and we have everything we need to conclude that for    END OF SCRAPWORK   "
 },
@@ -10139,7 +10139,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONLimitLaws.html#PROBLEM1overXIsCont",
   "type": "Problem",
-  "number": "17.4.5.2",
+  "number": "17.4.34",
   "title": "",
   "body": "    Use the scrapwork above to show that if then .   If we could replicate the proof in part (a), but keeping track of all of the sign changes will be burdensome. Otherwise it is really the same proof. Instead, notice that if then and so by part (a) Use this observation to prove that if then .   Let .  "
 },
@@ -10148,7 +10148,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONLimitLaws.html#THEOREMLimQuot",
   "type": "Theorem",
-  "number": "17.4.5.3",
+  "number": "17.4.35",
   "title": "The Limit of a Quotient is the Quotient of the Limits.",
   "body": " The Limit of a Quotient is the Quotient of the Limits  Suppose is positive infinity, negative infinity, or some real number, that , and that . Then   "
 },
@@ -10157,7 +10157,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONLimitLaws.html#PROBLEMProofOfQuotLim",
   "type": "Problem",
-  "number": "17.4.5.4",
+  "number": "17.4.36",
   "title": "",
   "body": "    Prove that if and then    Rewrite as . Which of our theorems can you apply?   Prove that if and then    Prove that if is some real number, and , and . Then   "
 },
@@ -10166,7 +10166,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONLimitLaws.html#DEFINITIONOneSidedLimits-Formal",
   "type": "Definition",
-  "number": "17.4.5.5",
+  "number": "17.4.37",
   "title": "Right-Hand Limit.",
   "body": " Right-Hand Limit   Suppose is defined on some interval . Let be a real number. We say that provided that for each , there is a with such that if , then .   "
 },
@@ -10175,7 +10175,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "SECTIONLimitLaws.html#PROBLEMCodaOneSided",
   "type": "Problem",
-  "number": "17.4.5.6",
+  "number": "17.4.38",
   "title": "",
   "body": "    Using as a model, state a similar definition for .   Prove from .  "
 },
