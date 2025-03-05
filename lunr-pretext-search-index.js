@@ -850,7 +850,7 @@ var ptx_lunr_docs = [
   "id": "THEOREMConstRule",
   "level": "2",
   "url": "SECTIONsome-rules-diff.html#THEOREMConstRule",
-  "type": "Logarithm Property",
+  "type": "Rule",
   "number": "4.3.1",
   "title": "The Constant Rule.",
   "body": " The Constant Rule  If is a constant, then .  "
@@ -877,7 +877,7 @@ var ptx_lunr_docs = [
   "id": "SUBSECTIONSumRule-3",
   "level": "2",
   "url": "SECTIONsome-rules-diff.html#SUBSECTIONSumRule-3",
-  "type": "Logarithm Property",
+  "type": "Rule",
   "number": "4.3.4",
   "title": "The Sum Rule.",
   "body": " The Sum Rule     "
@@ -904,7 +904,7 @@ var ptx_lunr_docs = [
   "id": "SUBSECTIONConstMultRule-2",
   "level": "2",
   "url": "SECTIONsome-rules-diff.html#SUBSECTIONConstMultRule-2",
-  "type": "Logarithm Property",
+  "type": "Rule",
   "number": "4.3.6",
   "title": "The Constant Multiple Rule.",
   "body": " The Constant Multiple Rule  If is a constant then   "
@@ -940,7 +940,7 @@ var ptx_lunr_docs = [
   "id": "THEOREMProdRule",
   "level": "2",
   "url": "SECTIONsome-rules-diff.html#THEOREMProdRule",
-  "type": "Logarithm Property",
+  "type": "Rule",
   "number": "4.3.9",
   "title": "The Product Rule.",
   "body": " The Product Rule     "
@@ -1219,7 +1219,7 @@ var ptx_lunr_docs = [
   "id": "THEOREMGenPowRule",
   "level": "2",
   "url": "SECTIONsome-rules-diff.html#THEOREMGenPowRule",
-  "type": "Logarithm Property",
+  "type": "Rule",
   "number": "4.3.37",
   "title": "The  Power  Rule.",
   "body": " The Power Rule  Let be any real number. Then .  "
@@ -1327,7 +1327,7 @@ var ptx_lunr_docs = [
   "id": "THEOREMQuotientRule",
   "level": "2",
   "url": "SECTIONsome-rules-diff.html#THEOREMQuotientRule",
-  "type": "Logarithm Property",
+  "type": "Rule",
   "number": "4.3.49",
   "title": "The Quotient Rule.",
   "body": " The Quotient Rule     "
@@ -4729,7 +4729,7 @@ var ptx_lunr_docs = [
   "id": "LogProp1",
   "level": "2",
   "url": "SECTIONnatural-logarithm-1.html#LogProp1",
-  "type": "Logarithm Property",
+  "type": "Rule",
   "number": "8.8.3",
   "title": "",
   "body": "     "
@@ -4738,7 +4738,7 @@ var ptx_lunr_docs = [
   "id": "LogProp2",
   "level": "2",
   "url": "SECTIONnatural-logarithm-1.html#LogProp2",
-  "type": "Logarithm Property",
+  "type": "Rule",
   "number": "8.8.4",
   "title": "",
   "body": "     "
@@ -4747,7 +4747,7 @@ var ptx_lunr_docs = [
   "id": "LogProp3",
   "level": "2",
   "url": "SECTIONnatural-logarithm-1.html#LogProp3",
-  "type": "Logarithm Property",
+  "type": "Rule",
   "number": "8.8.5",
   "title": "",
   "body": "     Notice that this is a special case of .  "
@@ -4756,7 +4756,7 @@ var ptx_lunr_docs = [
   "id": "LogProp4",
   "level": "2",
   "url": "SECTIONnatural-logarithm-1.html#LogProp4",
-  "type": "Logarithm Property",
+  "type": "Rule",
   "number": "8.8.6",
   "title": "",
   "body": "     "
@@ -4765,7 +4765,7 @@ var ptx_lunr_docs = [
   "id": "LogProp5",
   "level": "2",
   "url": "SECTIONnatural-logarithm-1.html#LogProp5",
-  "type": "Logarithm Property",
+  "type": "Rule",
   "number": "8.8.7",
   "title": "",
   "body": "     "
@@ -4774,7 +4774,7 @@ var ptx_lunr_docs = [
   "id": "LogProp6",
   "level": "2",
   "url": "SECTIONnatural-logarithm-1.html#LogProp6",
-  "type": "Logarithm Property",
+  "type": "Rule",
   "number": "8.8.8",
   "title": "",
   "body": "     "
