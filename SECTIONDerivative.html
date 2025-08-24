@@ -6,15 +6,20 @@
 <!--*                                          *-->
 <!--********************************************-->
 <html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>The Derivative</title>
-<meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:type" content="book">
-<meta property="book:title" content="Differential Calculus">
-<meta property="book:author" content="Eugene Boman">
-<meta property="book:author" content="Robert Rogers">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
 <script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
@@ -70,13 +75,13 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
-<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
-<!--** eBookCongig is necessary to configure interactive       **-->
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Differential Calculus">
+<meta property="book:author" content="Eugene Boman">
+<meta property="book:author" content="Robert Rogers">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -98,19 +103,21 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.5.16';
+eBookConfig.runestone_version = '7.9.8';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.a0c870bab402ccbf.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.97de40e034b535c5.css">
+<script src="_static/prefix-runtime.b215b0da62d655bd.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.28cc3c4821792be5.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8141ae22fd347e48.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
-<h1 class="heading"><a href="Calculus.html"><span class="title">Differential Calculus:</span> <span class="subtitle">From Practice to Theory</span></a></h1>
+<h1 class="heading"><a href="Calculus.html"><span class="title">Differential Calculus</span> <span class="subtitle">From Practice to Theory</span></a></h1>
 <p class="byline">Eugene Boman, Robert Rogers</p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="meta_backmatter-3.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
@@ -607,15 +614,20 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="SECTIONDerivative"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">5.6</span><span class="space"> </span><span class="title">The Derivative</span>
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Derivative</span>
 </h2>
 <figure class="figure figure-like" id="SECTIONDerivative-3"><div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="external/DC/LagrangePortrait.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.6.1<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Lagrange/" target="_blank">Joseph Louis Lagrange</a><details class="ptx-footnote" aria-live="polite" id="SECTIONDerivative-3-1-2"><summary class="ptx-footnote__number" title="Footnote 5.18"><sup> 18 </sup></summary><div class="ptx-footnote__contents" id="SECTIONDerivative-3-1-2"><code class="code-inline tex2jax_ignore">https://mathshistory.st-andrews.ac.uk/Biographies/Lagrange/</code></div></details> (1736–1813)</figcaption></figure><div class="para" id="SECTIONDerivative-4">We have seen how differentials and the rules for computing them can be useful in applications involving slopes, velocities, and accelerations.  The fact that they are infinitely small and difficult to rigorously define does not diminish their value as a problem-solving tool.  Eventually, we will return to these foundational issues in <a href="CHAPTERWhatsWrong.html" class="internal" title="Chapter 13: What’s Wrong with Differentials?">Chapter 13</a>.</div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Lagrange/" target="_blank">Joseph Louis Lagrange</a> (1736–1813)<div class="autopermalink" data-description="Figure 5.6.1"><a href="#SECTIONDerivative-3" title="Copy heading and permalink for Figure 5.6.1" aria-label="Copy heading and permalink for Figure 5.6.1">🔗</a></div></figcaption></figure><div class="para" id="SECTIONDerivative-4">We have seen how differentials and the rules for computing them can be useful in applications involving slopes, velocities, and accelerations.  The fact that they are infinitely small and difficult to rigorously define does not diminish their value as a problem-solving tool.  Eventually, we will return to these foundational issues in <a href="CHAPTERWhatsWrong.html" class="internal" title="Chapter 13: What’s Wrong with Differentials?">Chapter 13</a>.<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONDerivative-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="SECTIONDerivative-5">As subtle as the concept of infinitely small changes such as <span class="process-math">\(\dx{x}\text{,}\)</span> <span class="process-math">\(\dx{y}\text{,}\)</span> or<span class="process-math">\(\dx{t}\)</span> can be, we have seen how their ratios <span class="process-math">\(\dfdx{y}{x}\text{,}\)</span> <span class="process-math">\(\dfdx{x}{t} \text{,}\)</span> or <span class="process-math">\(\dfdxn{y}{x}{2} = \frac{\dx \left( \dfdx{y}{t} \right)
-}{\dx{t}}\)</span> can represent actual finite physical quantities. For later mathematicians, these ratios became the focal point for the understanding of calculus.</div>
-<div class="para" id="SECTIONDerivative-6">Because of concerns regarding the validity of differentials, mathematicians in the <span class="process-math">\(18\)</span>th and <span class="process-math">\(19\)</span>th centuries, had a strong motivation to skip over the differential concept and jump immediately to the more useful, and finite, differential ratio.</div>
-<div class="para" id="SECTIONDerivative-7"> In his 1797 work <a class="external" href="https://old.maa.org/press/periodicals/convergence/mathematical-treasure-lagrange-on-calculus" target="_blank"><i class="foreign">Théorie des Fonctions Analytiques</i></a><details class="ptx-footnote" aria-live="polite" id="SECTIONDerivative-7-4"><summary class="ptx-footnote__number" title="Footnote 5.19"><sup> 19 </sup></summary><div class="ptx-footnote__contents" id="SECTIONDerivative-7-4"><code class="code-inline tex2jax_ignore">https://old.maa.org/press/periodicals/convergence/mathematical-treasure-lagrange-on-calculus</code></div></details> (<span class="booktitle">The Theory of Analytic Functions</span>), <a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Lagrange/" target="_blank">Joseph Louis Lagrange</a><details class="ptx-footnote" aria-live="polite" id="SECTIONDerivative-7-7"><summary class="ptx-footnote__number" title="Footnote 5.20"><sup> 20 </sup></summary><div class="ptx-footnote__contents" id="SECTIONDerivative-7-7"><code class="code-inline tex2jax_ignore">https://mathshistory.st-andrews.ac.uk/Biographies/Lagrange/</code></div></details> attempted to make Calculus more rigorous. He even coined a new term for the differential ratio. He called it the <i class="foreign">fonction dérivée</i> (meaning a function <em class="emphasis">derived</em> from another function). He also replaced the differential ratio <span class="process-math">\(\dfdx{y}{x}\)</span> with the more modern <dfn class="terminology">function</dfn> notation <span class="process-math">\(y^\prime(x)\)</span> (read this aloud as “<span class="process-math">\(y\)</span> prime of <span class="process-math">\(x\)</span>”).</div>
-<div class="para" id="SECTIONDerivative-8">Lagrange’s attempt to make Calculus rigorous was very clever, but ultimately unsuccessful. Full rigor had to wait for another hundred years, so we will not say much about Lagrange’s efforts here.  But we will adopt his terminology and his notation.</div>
+}{\dx{t}}\)</span> can represent actual finite physical quantities. For later mathematicians, these ratios became the focal point for the understanding of calculus.<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONDerivative-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="SECTIONDerivative-6">Because of concerns regarding the validity of differentials, mathematicians in the <span class="process-math">\(18\)</span>th and <span class="process-math">\(19\)</span>th centuries, had a strong motivation to skip over the differential concept and jump immediately to the more useful, and finite, differential ratio.<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONDerivative-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="SECTIONDerivative-7"> In his 1797 work <a class="external" href="https://old.maa.org/press/periodicals/convergence/mathematical-treasure-lagrange-on-calculus" target="_blank"><i class="foreign">Théorie des Fonctions Analytiques</i></a> (<span class="booktitle">The Theory of Analytic Functions</span>), <a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Lagrange/" target="_blank">Joseph Louis Lagrange</a> attempted to make Calculus more rigorous. He even coined a new term for the differential ratio. He called it the <i class="foreign">fonction dérivée</i> (meaning a function <em class="emphasis">derived</em> from another function). He also replaced the differential ratio <span class="process-math">\(\dfdx{y}{x}\)</span> with the more modern <dfn class="terminology">function</dfn> notation <span class="process-math">\(y^\prime(x)\)</span> (read this aloud as “<span class="process-math">\(y\)</span> prime of <span class="process-math">\(x\)</span>”).<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONDerivative-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="SECTIONDerivative-8">Lagrange’s attempt to make Calculus rigorous was very clever, but ultimately unsuccessful. Full rigor had to wait for another hundred years, so we will not say much about Lagrange’s efforts here.  But we will adopt his terminology and his notation.<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONDerivative-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <section class="paragraphs" id="DIGRESSIONVarConFun2"><h3 class="heading"><span class="title">DIGRESSION: Function Notation and Prime Notation.</span></h3>
 <div class="para logical" id="DIGRESSIONVarConFun2-2">
 <div class="para">Suppose that <span class="process-math">\(y=x^3\text{.}\)</span> It is clear that <span class="process-math">\(y\)</span> depends on <span class="process-math">\(x\text{,}\)</span> so we denote this functional dependence with the notation</div>
@@ -624,6 +636,7 @@ eBookConfig.enable_chatcodes =  false;
 y(x)=x^3.
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#DIGRESSIONVarConFun2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="DIGRESSIONVarConFun2-3">
 <div class="para"> Lagrange called the differential ratio <span class="process-math">\(\dfdx{y}{x}\text{,}\)</span> a derived function. The “derived” part seems clear enough. After all, if <span class="process-math">\(y=x^3\)</span> them <span class="process-math">\(\dfdx{y}{x}\)</span> is obtained (derived) from <span class="process-math">\(y\)</span> as follows:</div>
@@ -634,6 +647,7 @@ y\amp =x^3 \\
 \dfdx{y}{x}\amp =3x^2.  
 \end{align*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#DIGRESSIONVarConFun2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="DIGRESSIONVarConFun2-4">
 <div class="para"> Since  <span class="process-math">\(\dfdx{y}{x}\)</span> depends on <span class="process-math">\(3x^2\)</span> as a function it would not be wrong  to denote this functional dependence as</div>
@@ -649,21 +663,28 @@ y^\prime(x)=3x^2
 \end{equation*}
 </div>
 <div class="para">and called <span class="process-math">\(y^\prime(x)\)</span> the  <i class="foreign">fonction dérivée</i> of <span class="process-math">\(y(x)\text{.}\)</span> In English the phrase <i class="foreign">fonction dérivée</i> has been shortened to the <dfn class="terminology">derivative</dfn>.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#DIGRESSIONVarConFun2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="DIGRESSIONVarConFun2-5"> In some contexts Lagrange’s prime notation has several advantages over the differential notation we’ve been using. Over time it has become the most common notation for the <dfn class="terminology">derivative</dfn> in mathematics. But the fact that it took over <span class="process-math">\(100\)</span> years to develop suggests that something more than mere notation is in play here.</div>
-<div class="para" id="DIGRESSIONVarConFun2-6">Using multiple equivalent notations can be very confusing for beginners. Since our current task is simply to master the differentiation rules we will stick to Leibniz’s differential notation as much as possible.  But there will come a time when Lagrange’s prime notation will be much more convenient.  At that point we will casually use the two expressions <span class="process-math">\(\dfdx{y}{x}\)</span> and <span class="process-math">\(y^\prime(x)\)</span> interchangeably and we will think of them both as a function <em class="emphasis">derived from</em> the function <span class="process-math">\(y(x)\text{.}\)</span>
+<div class="para" id="DIGRESSIONVarConFun2-5"> In some contexts Lagrange’s prime notation has several advantages over the differential notation we’ve been using. Over time it has become the most common notation for the <dfn class="terminology">derivative</dfn> in mathematics. But the fact that it took over <span class="process-math">\(100\)</span> years to develop suggests that something more than mere notation is in play here.<div class="autopermalink" data-description="Paragraph"><a href="#DIGRESSIONVarConFun2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="DIGRESSIONVarConFun2-7">When we do this the differential notation we’re currently emphasizing will take on two distinct “personalities.” On the one hand <span class="process-math">\(\dfdx{y}{x}\)</span> represents a ratio of the differentials <span class="process-math">\(\dx{y}\text{,}\)</span> and <span class="process-math">\(\dx{x}\)</span> which are distinct infinitesimal quantities. On the other hand <span class="process-math">\(\dfdx{y}{x}\)</span> is the name of a function -- it is all one symbol. When we are thinking of <span class="process-math">\(\dfdx{y}{x}\)</span> as the derivative function we cannot detach the pieces of <span class="process-math">\(\dfdx{y}{x}\)</span> any more than can delete the letter “n” from <span class="process-math">\(\sin(x)\)</span> because <span class="process-math">\(\text{si}(x)\)</span> has no meaning.</div>
-<div class="para" id="DIGRESSIONVarConFun2-8">Eventually the differentials we’ve been using so casually will become a guilty secret. Given <span class="process-math">\(y=y(x)\)</span> we’ll use them as a helpful aid while we <em class="emphasis">compute</em>. But as soon as we have <span class="process-math">\(\dfdx{y}{x}\)</span> in hand we will view it as a single, complete symbol representing the (finite) derivative function. Often we will simply replace it with <span class="process-math">\(y^\prime(x)\)</span> as if we are ashamed of having used differentials at all.</div>
-<div class="para" id="DIGRESSIONVarConFun2-9">This more advanced viewpoint will become commonplace later, but to give you a preview, consider the following problem.</div>
+<div class="para" id="DIGRESSIONVarConFun2-6">Using multiple equivalent notations can be very confusing for beginners. Since our current task is simply to master the differentiation rules we will stick to Leibniz’s differential notation as much as possible.  But there will come a time when Lagrange’s prime notation will be much more convenient.  At that point we will casually use the two expressions <span class="process-math">\(\dfdx{y}{x}\)</span> and <span class="process-math">\(y^\prime(x)\)</span> interchangeably and we will think of them both as a function <em class="emphasis">derived from</em> the function <span class="process-math">\(y(x)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#DIGRESSIONVarConFun2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="DIGRESSIONVarConFun2-7">When we do this the differential notation we’re currently emphasizing will take on two distinct “personalities.” On the one hand <span class="process-math">\(\dfdx{y}{x}\)</span> represents a ratio of the differentials <span class="process-math">\(\dx{y}\text{,}\)</span> and <span class="process-math">\(\dx{x}\)</span> which are distinct infinitesimal quantities. On the other hand <span class="process-math">\(\dfdx{y}{x}\)</span> is the name of a function -- it is all one symbol. When we are thinking of <span class="process-math">\(\dfdx{y}{x}\)</span> as the derivative function we cannot detach the pieces of <span class="process-math">\(\dfdx{y}{x}\)</span> any more than can delete the letter “n” from <span class="process-math">\(\sin(x)\)</span> because <span class="process-math">\(\text{si}(x)\)</span> has no meaning.<div class="autopermalink" data-description="Paragraph"><a href="#DIGRESSIONVarConFun2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="DIGRESSIONVarConFun2-8">Eventually the differentials we’ve been using so casually will become a guilty secret. Given <span class="process-math">\(y=y(x)\)</span> we’ll use them as a helpful aid while we <em class="emphasis">compute</em>. But as soon as we have <span class="process-math">\(\dfdx{y}{x}\)</span> in hand we will view it as a single, complete symbol representing the (finite) derivative function. Often we will simply replace it with <span class="process-math">\(y^\prime(x)\)</span> as if we are ashamed of having used differentials at all.<div class="autopermalink" data-description="Paragraph"><a href="#DIGRESSIONVarConFun2-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="DIGRESSIONVarConFun2-9">This more advanced viewpoint will become commonplace later, but to give you a preview, consider the following problem.<div class="autopermalink" data-description="Paragraph"><a href="#DIGRESSIONVarConFun2-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="exercise exercise-like" id="PROBLEMHuddesRule"><h4 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">5.6.2</span><span class="period">.</span>
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="introduction" id="PROBLEMHuddesRule-1">
-<div class="para" id="PROBLEMHuddesRule-1-1">Recall that in Descartes’ Method of Normals, we had to find a double root of a polynomial.  To deal with this problem, <a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Hudde/" target="_blank">Johann van Waveren Hudde</a><details class="ptx-footnote" aria-live="polite" id="PROBLEMHuddesRule-1-1-3"><summary class="ptx-footnote__number" title="Footnote 5.21"><sup> 21 </sup></summary><div class="ptx-footnote__contents" id="PROBLEMHuddesRule-1-1-3"><code class="code-inline tex2jax_ignore">https://mathshistory.st-andrews.ac.uk/Biographies/Hudde/</code></div></details> (1628–1704) developed an algebraic tool for determining such double roots.  Calculus allows a development of Hudde’s Rule that does not require the complex algebraic reasoning that Hudde used and is much easier to follow.</div>
-<aside class="aside aside-like" id="PROBLEMHuddesRule-1-2"><h5 class="heading"><span class="title">Historical Background.</span></h5>
-<div class="para" id="PROBLEMHuddesRule-1-2-2">Actually Hudde did considerably more than this. His method for finding double roots was a part of what has been called the “Lost Calculus” of algebraic functions. If you are interested you can read more about this in Jeff Suzuki’s award winning article <span class="booktitle"><a class="external" href="https://old.maa.org/sites/default/files/pdf/upload_library/22/Allendoerfer/suzuki339.pdf" target="_blank">The Lost Calculus (1637–1670): Tangency and Optimization without Limits</a><details class="ptx-footnote" aria-live="polite" id="PROBLEMHuddesRule-1-2-2-3-2"><summary class="ptx-footnote__number" title="Footnote 5.22"><sup> 22 </sup></summary><div class="ptx-footnote__contents" id="PROBLEMHuddesRule-1-2-2-3-2"><code class="code-inline tex2jax_ignore">https://old.maa.org/sites/default/files/pdf/upload_library/22/Allendoerfer/suzuki339.pdf</code></div></details></span>
-</div></aside><div class="para logical" id="PROBLEMHuddesRule-1-3">
+<div class="para" id="PROBLEMHuddesRule-1-1">Recall that in Descartes’ Method of Normals, we had to find a double root of a polynomial.  To deal with this problem, <a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Hudde/" target="_blank">Johann van Waveren Hudde</a> (1628–1704) developed an algebraic tool for determining such double roots.  Calculus allows a development of Hudde’s Rule that does not require the complex algebraic reasoning that Hudde used and is much easier to follow.<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMHuddesRule-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="PROBLEMHuddesRule-1-2" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<span class="type">Aside<span class="colon heading-divison-mark heading-divison-mark__colon">:</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Historical Background.</span>
+</h5></summary><aside class="aside aside-like knowl__content"><div class="para" id="PROBLEMHuddesRule-1-2-2">Actually Hudde did considerably more than this. His method for finding double roots was a part of what has been called the “Lost Calculus” of algebraic functions. If you are interested you can read more about this in Jeff Suzuki’s award winning article <span class="booktitle"><a class="external" href="https://old.maa.org/sites/default/files/pdf/upload_library/22/Allendoerfer/suzuki339.pdf" target="_blank">The Lost Calculus (1637–1670): Tangency and Optimization without Limits</a></span><div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMHuddesRule-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></aside></details><div class="para logical" id="PROBLEMHuddesRule-1-3">
 <div class="para">Consider any polynomial <span class="process-math">\(p(x)=a_0+a_1 x+\cdots+a_n x^n\text{.}\)</span> Let <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> be any real numbers and form the following “Hudde Polynomial.”</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -675,17 +696,29 @@ H\left (x \right ) =a {a} _ {0} + \left (a+b \right ) {a} _
 </div>
 <div class="para">Hudde showed that if <span class="process-math">\(r\)</span> is a double root of <span class="process-math">\(p(x)\text{,}\)</span> then <span class="process-math">\(r\)</span> is a root of the Hudde polynomial <span class="process-math">\(H(x).\)</span>
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMHuddesRule-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 </div>
 <article class="task exercise-like" id="PROBLEMHuddesRule-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="PROBLEMHuddesRule-2-1-1">Show that if <span class="process-math">\(r\)</span> is a double root of the polynomial <span class="process-math">\(p(x)\)</span> then it is a root of <span class="process-math">\(p^\prime(x)=\dfdx{p}{x}\text{.}\)</span>
+<div class="para" id="PROBLEMHuddesRule-2-1-1">Show that if <span class="process-math">\(r\)</span> is a double root of the polynomial <span class="process-math">\(p(x)\)</span> then it is a root of <span class="process-math">\(p^\prime(x)=\dfdx{p}{x}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMHuddesRule-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="PROBLEMHuddesRule-2-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="PROBLEMHuddesRule-2-2-1">If <span class="process-math">\(r\)</span> is a double root of <span class="process-math">\(p(x)\text{,}\)</span> then <span class="process-math">\(p(x) = (x-r)^2q(x)\)</span> for some polynomial <span class="process-math">\(q(x)\text{.}\)</span>
-</div></div></details></div></article><article class="task exercise-like" id="PROBLEMHuddesRule-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="PROBLEMHuddesRule-3-1-1">Show that <span class="process-math">\(H(x) = ap(x)+bxp^\prime(x)\)</span> and use this to prove Hudde’s Rule.</div></article></article><div class="para" id="DIGRESSIONVarConFun2-11"><em class="alert">END OF DIGRESSION</em></div></section><div class="para" id="SECTIONDerivative-10"> The bottom line is that we will adopt the name <dfn class="terminology">derivative</dfn> to indicate the result of  dividing one differential by another. So the expression <span class="process-math">\(\dfdx{y}{x}\)</span> is “the derivative of <span class="process-math">\(y\)</span> with respect to <span class="process-math">\(x\text{.}\)</span>” Although <span class="process-math">\(y^\prime(x) \)</span>  is simpler to write and to read the sheer simplicity of the notation can be a problem for beginners so we will only use it when the prime notation actually clarifies our meaning. The first place this occurs is in <a href="SECTIONnewtons-method-1.html" class="internal" title="Section 7.2: Newton’s Method">Section 7.2</a>.</div>
-<div class="para" id="SECTIONDerivative-11">When computing a derivative you will eventually become sufficiently proficient that you will jump directly to the derivatives. But for now  you should go through the two-step process of differentiating to obtain a differential and then dividing by another differential to obtain a derivative because the computational rules you’ve learned are differentiation rules, not derivative rules.  If you do this, you will avoid some difficulties created by trying compute too much too soon. This can be illustrated in the following example, where we purposely use prime notation to highlight the difficulties involved in the computation.</div>
+<div class="solutions"><details id="PROBLEMHuddesRule-2-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="PROBLEMHuddesRule-2-2-1">If <span class="process-math">\(r\)</span> is a double root of <span class="process-math">\(p(x)\text{,}\)</span> then <span class="process-math">\(p(x) = (x-r)^2q(x)\)</span> for some polynomial <span class="process-math">\(q(x)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMHuddesRule-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 5.6.2.a.1"><a href="#PROBLEMHuddesRule-2-2" title="Copy heading and permalink for Hint 5.6.2.a.1" aria-label="Copy heading and permalink for Hint 5.6.2.a.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 5.6.2.a"><a href="#PROBLEMHuddesRule-2" title="Copy heading and permalink for Task 5.6.2.a" aria-label="Copy heading and permalink for Task 5.6.2.a">🔗</a></div></article><article class="task exercise-like" id="PROBLEMHuddesRule-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="PROBLEMHuddesRule-3-1-1">Show that <span class="process-math">\(H(x) = ap(x)+bxp^\prime(x)\)</span> and use this to prove Hudde’s Rule.<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMHuddesRule-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 5.6.2.b"><a href="#PROBLEMHuddesRule-3" title="Copy heading and permalink for Task 5.6.2.b" aria-label="Copy heading and permalink for Task 5.6.2.b">🔗</a></div></article><div class="autopermalink" data-description="Problem 5.6.2"><a href="#PROBLEMHuddesRule" title="Copy heading and permalink for Problem 5.6.2" aria-label="Copy heading and permalink for Problem 5.6.2">🔗</a></div></article><div class="para" id="DIGRESSIONVarConFun2-11">
+<em class="alert">END OF DIGRESSION</em><div class="autopermalink" data-description="Paragraph"><a href="#DIGRESSIONVarConFun2-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Digression: DIGRESSION: Function Notation and Prime Notation"><a href="#DIGRESSIONVarConFun2" title="Copy heading and permalink for Digression: DIGRESSION: Function Notation and Prime Notation" aria-label="Copy heading and permalink for Digression: DIGRESSION: Function Notation and Prime Notation">🔗</a></div></section><div class="para" id="SECTIONDerivative-10"> The bottom line is that we will adopt the name <dfn class="terminology">derivative</dfn> to indicate the result of  dividing one differential by another. So the expression <span class="process-math">\(\dfdx{y}{x}\)</span> is “the derivative of <span class="process-math">\(y\)</span> with respect to <span class="process-math">\(x\text{.}\)</span>” Although <span class="process-math">\(y^\prime(x) \)</span>  is simpler to write and to read the sheer simplicity of the notation can be a problem for beginners so we will only use it when the prime notation actually clarifies our meaning. The first place this occurs is in <a href="SECTIONnewtons-method-1.html" class="internal" title="Section 7.2: Newton’s Method">Section 7.2</a>.<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONDerivative-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="SECTIONDerivative-11">When computing a derivative you will eventually become sufficiently proficient that you will jump directly to the derivatives. But for now  you should go through the two-step process of differentiating to obtain a differential and then dividing by another differential to obtain a derivative because the computational rules you’ve learned are differentiation rules, not derivative rules.  If you do this, you will avoid some difficulties created by trying compute too much too soon. This can be illustrated in the following example, where we purposely use prime notation to highlight the difficulties involved in the computation.<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONDerivative-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="example example-like" id="EXAMPLEDerivVSDiff"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.6.3</span><span class="period">.</span>
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para logical" id="EXAMPLEDerivVSDiff-2">
 <div class="para">Given <span class="process-math">\(y(x)=(1+x^2)^\frac12\)</span> we wish to compute <span class="process-math">\(y^\prime(x)\text{.}\)</span> Setting <span class="process-math">\(z=1+x^2\)</span> we see that</div>
@@ -701,6 +734,7 @@ y^\prime(x)=\frac12z^{-\frac12}\text{.}\tag{5.6}
 \end{equation}
 </div>
 <div class="para">This would seem to be correct but it is not. Do you see the problem?</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#EXAMPLEDerivVSDiff-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="EXAMPLEDerivVSDiff-3">
 <div class="para">The left side of <a href="SECTIONDerivative.html#EQUATIONPrimeVSDiff" class="xref" data-knowl="./knowl/xref/EQUATIONPrimeVSDiff.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.6">equation (5.6)</a> indicates that the variable is <span class="process-math">\(x\)</span> but there is no <span class="process-math">\(x\)</span> on the right side, only <span class="process-math">\(z\text{.}\)</span> So this can’t be right. But what went wrong? We can  avoid problems like this by using differentials:</div>
@@ -718,12 +752,15 @@ y^\prime(x)=\frac12z^{-\frac12}\text{.}\tag{5.6}
 </div>
 <div class="para">Thus we see  the left side of <a href="SECTIONDerivative.html#EQUATIONPrimeVSDiff" class="xref" data-knowl="./knowl/xref/EQUATIONPrimeVSDiff.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.6">equation (5.6)</a> should have been <span class="process-math">\(y^\prime(z)\)</span> not  <span class="process-math">\(y^\prime(x)\text{.}\)</span>
 </div>
-</div></article><article class="exercise exercise-like" id="SECTIONDerivative-13"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">5.6.4</span><span class="period">.</span>
+<div class="autopermalink" data-description="Paragraph"><a href="#EXAMPLEDerivVSDiff-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 5.6.3"><a href="#EXAMPLEDerivVSDiff" title="Copy heading and permalink for Example 5.6.3" aria-label="Copy heading and permalink for Example 5.6.3">🔗</a></div></article><article class="exercise exercise-like" id="SECTIONDerivative-13"><h3 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<div class="para" id="SECTIONDerivative-13-1-1">Starting with <a href="SECTIONDerivative.html#EQUATIONPrimeVSDiff" class="xref" data-knowl="./knowl/xref/EQUATIONPrimeVSDiff.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.6">equation (5.6)</a> complete the computation of <span class="process-math">\(y^\prime(x)\text{.}\)</span>
-</div></article><article class="example example-like" id="SECTIONDerivative-14"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.6.5</span><span class="period">.</span>
+<div class="para" id="SECTIONDerivative-13-1-1">Starting with <a href="SECTIONDerivative.html#EQUATIONPrimeVSDiff" class="xref" data-knowl="./knowl/xref/EQUATIONPrimeVSDiff.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.6">equation (5.6)</a> complete the computation of <span class="process-math">\(y^\prime(x)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#SECTIONDerivative-13-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 5.6.4"><a href="#SECTIONDerivative-13" title="Copy heading and permalink for Problem 5.6.4" aria-label="Copy heading and permalink for Problem 5.6.4">🔗</a></div></article><article class="example example-like" id="SECTIONDerivative-14"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para logical" id="SECTIONDerivative-14-2">
 <div class="para">Of course, using differentials does not address all of the difficulties. For example, let <span class="process-math">\(y= x^3\text{.}\)</span> Then</div>
@@ -746,9 +783,13 @@ y^\prime(x)=\frac12z^{-\frac12}\text{.}\tag{5.6}
 \dx{(\dx{y})} =    6x\dx{x}\dx{x} \left(\text{Second Derivative: }\frac{\dx(\dx{y})}{\dx{x}\dx{x}}=6x=\dfdxn{y}{x}{2}.\right)\tag{5.8}
 \end{equation}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONDerivative-14-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<aside class="aside aside-like" id="SECTIONDerivative-14-3"><h4 class="heading"><span class="title">Historical Background.</span></h4>
-<div class="para" id="SECTIONDerivative-14-3-2">To see why <span class="process-math">\(\dx(\dx{x})=0\)</span> we need to know that Leibniz always considered the differential <span class="process-math">\(\dx{x}\)</span> to be a constant. And the differential of any constant is zero, by the Constant Rule.</div></aside><div class="para" id="SECTIONDerivative-14-4">The glaring question here is why is <span class="process-math">\(\dx(\dx{x})\)</span> equal to zero in <a href="SECTIONDerivative.html#EQUATIONGlarinQuestion" class="xref" data-knowl="./knowl/xref/EQUATIONGlarinQuestion.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.7">equation (5.7)</a> but <span class="process-math">\(\dx(\dx{y})\)</span> is not equal to zero in <a href="SECTIONDerivative.html#EQUATIONPRNotation" class="xref" data-knowl="./knowl/xref/EQUATIONPRNotation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.8">equation (5.8)</a>? Or, at a more fundamental level, what do we mean by “the infinitely small change of an infinitely small change?” As we will see in <a href="CHAPTERWhatsWrong.html" class="internal" title="Chapter 13: What’s Wrong with Differentials?">Chapter 13</a> the early critics of Calculus cited this question specifically to argue that Calculus was invalid.</div>
+<details id="SECTIONDerivative-14-3" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Aside<span class="colon heading-divison-mark heading-divison-mark__colon">:</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Historical Background.</span>
+</h4></summary><aside class="aside aside-like knowl__content"><div class="para" id="SECTIONDerivative-14-3-2">To see why <span class="process-math">\(\dx(\dx{x})=0\)</span> we need to know that Leibniz always considered the differential <span class="process-math">\(\dx{x}\)</span> to be a constant. And the differential of any constant is zero, by the Constant Rule.<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONDerivative-14-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></aside></details><div class="para" id="SECTIONDerivative-14-4">The glaring question here is why is <span class="process-math">\(\dx(\dx{x})\)</span> equal to zero in <a href="SECTIONDerivative.html#EQUATIONGlarinQuestion" class="xref" data-knowl="./knowl/xref/EQUATIONGlarinQuestion.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.7">equation (5.7)</a> but <span class="process-math">\(\dx(\dx{y})\)</span> is not equal to zero in <a href="SECTIONDerivative.html#EQUATIONPRNotation" class="xref" data-knowl="./knowl/xref/EQUATIONPRNotation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.8">equation (5.8)</a>? Or, at a more fundamental level, what do we mean by “the infinitely small change of an infinitely small change?” As we will see in <a href="CHAPTERWhatsWrong.html" class="internal" title="Chapter 13: What’s Wrong with Differentials?">Chapter 13</a> the early critics of Calculus cited this question specifically to argue that Calculus was invalid.<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONDerivative-14-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para logical" id="SECTIONDerivative-14-5">
 <div class="para">We will address these issues beginning in <a href="CHAPTERWhatsWrong.html" class="internal" title="Chapter 13: What’s Wrong with Differentials?">Chapter 13</a>. For now we will make the following compromise: We will only differentiate finite quantities, be they functions, or derivatives.  Since our ultimate goal is to compute some derivative this will suit our needs without getting caught up in the very problematic question of the nature of higher order differentials.  So for this example we have</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/CHAPTERWhatsWrong.html" id="SECTIONDerivative-14-5-2">
@@ -761,8 +802,10 @@ y\amp =x^3\\
 \text{(Third Derivative) }\dfdxn{y}{x}{3}\amp =\dfdx{\left(\dfdxn{y}{x}{2}\right)}{x}=6.
 \end{align*}
 </div>
-</div></article><article class="example example-like" id="EXAMPLEHighOrderDerivs"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.6.6</span><span class="period">.</span>
+<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONDerivative-14-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 5.6.5"><a href="#SECTIONDerivative-14" title="Copy heading and permalink for Example 5.6.5" aria-label="Copy heading and permalink for Example 5.6.5">🔗</a></div></article><article class="example example-like" id="EXAMPLEHighOrderDerivs"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para logical" id="EXAMPLEHighOrderDerivs-2">
 <div class="para">Consider the expression <span class="process-math">\(y=\frac1x =x^{-1}\text{.}\)</span> Differentiating we have</div>
@@ -775,13 +818,18 @@ y\amp =x^3\\
 \end{align*}
 </div>
 <div class="para">You’ve probably been taught all of your life to “simplify” complex looking expressions like <span class="process-math">\((-1)(-2)(-3)(-4)\)</span> and  you probably do it  without thinking. So you may be wondering why we left the coefficients above in the form we did.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#EXAMPLEHighOrderDerivs-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="EXAMPLEHighOrderDerivs-3">The reason is simple. We were looking for patterns not numbers. Writing the above formulas as <span class="process-math">\(\dfdxn{y}{x}{2} = 2x^{-3},\)</span> <span class="process-math">\(\dfdxn{y}{x}{3} = -6x^{-4}\text{,}\)</span> and <span class="process-math">\(\dfdxn{y}{x}{4} =
-24x^{-5}\)</span> obscures the pattern.  Keep this in mind as you proceed.  Algebraic or arithmetical “simplifications” often get in the way of recognizing patterns. Don’t do them until there is a compelling reason to.</div></article><article class="exercise exercise-like" id="SECTIONDerivative-16"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">5.6.7</span><span class="period">.</span><span class="space"> </span><span class="title">Find the Pattern.</span>
+24x^{-5}\)</span> obscures the pattern.  Keep this in mind as you proceed.  Algebraic or arithmetical “simplifications” often get in the way of recognizing patterns. Don’t do them until there is a compelling reason to.<div class="autopermalink" data-description="Paragraph"><a href="#EXAMPLEHighOrderDerivs-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 5.6.6"><a href="#EXAMPLEHighOrderDerivs" title="Copy heading and permalink for Example 5.6.6" aria-label="Copy heading and permalink for Example 5.6.6">🔗</a></div></article><article class="exercise exercise-like" id="SECTIONDerivative-16"><h3 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Find the Pattern.</span>
 </h3>
-<div class="para" id="SECTIONDerivative-16-2-1">Find the pattern in <a href="SECTIONDerivative.html#EXAMPLEHighOrderDerivs" class="xref" data-knowl="./knowl/xref/EXAMPLEHighOrderDerivs.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 5.6.6">Example 5.6.6</a>. Use this pattern to find <span class="process-math">\(\dfdxn{y}{x}{50}\)</span> directly, without computing all fifty derivatives.</div></article><article class="example example-like" id="SECTIONDerivative-17"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.6.8</span><span class="period">.</span>
+<div class="para" id="SECTIONDerivative-16-2-1">Find the pattern in <a href="SECTIONDerivative.html#EXAMPLEHighOrderDerivs" class="xref" data-knowl="./knowl/xref/EXAMPLEHighOrderDerivs.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 5.6.6">Example 5.6.6</a>. Use this pattern to find <span class="process-math">\(\dfdxn{y}{x}{50}\)</span> directly, without computing all fifty derivatives.<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONDerivative-16-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 5.6.7: Find the Pattern"><a href="#SECTIONDerivative-16" title="Copy heading and permalink for Problem 5.6.7: Find the Pattern" aria-label="Copy heading and permalink for Problem 5.6.7: Find the Pattern">🔗</a></div></article><article class="example example-like" id="SECTIONDerivative-17"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para logical" id="SECTIONDerivative-17-2">
 <div class="para">Consider the circle <span class="process-math">\(x^2+y^2=1\text{.}\)</span> Differentiating, we have <span class="process-math">\(2x\dx{x}+2y\dx{y}=0\text{,}\)</span> or <span class="process-math">\(\dfdx{y}{x}=-\frac{x}{y}\text{.}\)</span> Differentiating again we have</div>
@@ -790,29 +838,48 @@ y\amp =x^3\\
 \dx{\left(\dfdx{y}{x}\right)}=-\frac{y\dx{x}-x\dx{y}}{y^2}.
 \end{equation*}
 </div>
-</div></article><article class="exercise exercise-like" id="SECTIONDerivative-18"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">5.6.9</span><span class="period">.</span>
+<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONDerivative-17-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 5.6.8"><a href="#SECTIONDerivative-17" title="Copy heading and permalink for Example 5.6.8" aria-label="Copy heading and permalink for Example 5.6.8">🔗</a></div></article><article class="exercise exercise-like" id="SECTIONDerivative-18"><h3 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<div class="introduction" id="SECTIONDerivative-18-1"><div class="para" id="SECTIONDerivative-18-1-1"></div></div>
+<div class="introduction" id="SECTIONDerivative-18-1"><div class="para" id="SECTIONDerivative-18-1-1"><div class="autopermalink" data-description="Paragraph"><a href="#SECTIONDerivative-18-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div></div>
 <article class="task exercise-like" id="SECTIONDerivative-18-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="SECTIONDerivative-18-2-1-1">Continue this example to show that <span class="process-math">\(\dfdxn{y}{x}{2}=-\frac{1}{y^3}\text{.}\)</span>
-</div></article><article class="task exercise-like" id="SECTIONDerivative-18-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="SECTIONDerivative-18-3-1-1">Show that <span class="process-math">\(y=\pm\sqrt{1-x^2}\)</span> and use this to compute <span class="process-math">\(\dfdxn{y}{x}{2}\text{.}\)</span>
-</div></article><article class="task exercise-like" id="SECTIONDerivative-18-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="SECTIONDerivative-18-4-1-1">Do you get the same answer? Which method do you prefer?</div></article></article><article class="exercise exercise-like" id="SECTIONDerivative-19"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">5.6.10</span><span class="period">.</span>
+<div class="para" id="SECTIONDerivative-18-2-1-1">Continue this example to show that <span class="process-math">\(\dfdxn{y}{x}{2}=-\frac{1}{y^3}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#SECTIONDerivative-18-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 5.6.9.a"><a href="#SECTIONDerivative-18-2" title="Copy heading and permalink for Task 5.6.9.a" aria-label="Copy heading and permalink for Task 5.6.9.a">🔗</a></div></article><article class="task exercise-like" id="SECTIONDerivative-18-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="SECTIONDerivative-18-3-1-1">Show that <span class="process-math">\(y=\pm\sqrt{1-x^2}\)</span> and use this to compute <span class="process-math">\(\dfdxn{y}{x}{2}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#SECTIONDerivative-18-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 5.6.9.b"><a href="#SECTIONDerivative-18-3" title="Copy heading and permalink for Task 5.6.9.b" aria-label="Copy heading and permalink for Task 5.6.9.b">🔗</a></div></article><article class="task exercise-like" id="SECTIONDerivative-18-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="SECTIONDerivative-18-4-1-1">Do you get the same answer? Which method do you prefer?<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONDerivative-18-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 5.6.9.c"><a href="#SECTIONDerivative-18-4" title="Copy heading and permalink for Task 5.6.9.c" aria-label="Copy heading and permalink for Task 5.6.9.c">🔗</a></div></article><div class="autopermalink" data-description="Problem 5.6.9"><a href="#SECTIONDerivative-18" title="Copy heading and permalink for Problem 5.6.9" aria-label="Copy heading and permalink for Problem 5.6.9">🔗</a></div></article><article class="exercise exercise-like" id="SECTIONDerivative-19"><h3 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<div class="introduction" id="SECTIONDerivative-19-1"><div class="para" id="SECTIONDerivative-19-1-1">For each of the following find <span class="process-math">\(\dfdxn{y}{x}{2}\)</span> in terms of <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{.}\)</span>
+<div class="introduction" id="SECTIONDerivative-19-1"><div class="para" id="SECTIONDerivative-19-1-1">For each of the following find <span class="process-math">\(\dfdxn{y}{x}{2}\)</span> in terms of <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#SECTIONDerivative-19-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></div>
 <article class="task exercise-like" id="SECTIONDerivative-19-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="SECTIONDerivative-19-2-1"><span class="process-math">\(y=3x^4-x^3+2x-7\)</span></div></article><article class="task exercise-like" id="SECTIONDerivative-19-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="SECTIONDerivative-19-3-1"><span class="process-math">\(x=y^2\)</span></div></article><article class="task exercise-like" id="SECTIONDerivative-19-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="SECTIONDerivative-19-2-1">
+<span class="process-math">\(y=3x^4-x^3+2x-7\)</span><div class="autopermalink" data-description="Paragraph"><a href="#SECTIONDerivative-19-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 5.6.10.a"><a href="#SECTIONDerivative-19-2" title="Copy heading and permalink for Task 5.6.10.a" aria-label="Copy heading and permalink for Task 5.6.10.a">🔗</a></div></article><article class="task exercise-like" id="SECTIONDerivative-19-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="SECTIONDerivative-19-3-1">
+<span class="process-math">\(x=y^2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#SECTIONDerivative-19-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 5.6.10.b"><a href="#SECTIONDerivative-19-3" title="Copy heading and permalink for Task 5.6.10.b" aria-label="Copy heading and permalink for Task 5.6.10.b">🔗</a></div></article><article class="task exercise-like" id="SECTIONDerivative-19-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para" id="SECTIONDerivative-19-4-1">
-<span class="process-math">\(y=\sqrt{x}\)</span> Compare this with part (b).</div></article><article class="task exercise-like" id="SECTIONDerivative-19-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<span class="process-math">\(y=\sqrt{x}\)</span> Compare this with part (b).<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONDerivative-19-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 5.6.10.c"><a href="#SECTIONDerivative-19-4" title="Copy heading and permalink for Task 5.6.10.c" aria-label="Copy heading and permalink for Task 5.6.10.c">🔗</a></div></article><article class="task exercise-like" id="SECTIONDerivative-19-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
 <div class="para" id="SECTIONDerivative-19-5-1">
-<span class="process-math">\(xy=1\)</span> Compare this with <a href="SECTIONDerivative.html#EXAMPLEHighOrderDerivs" class="xref" data-knowl="./knowl/xref/EXAMPLEHighOrderDerivs.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 5.6.6">Example 5.6.6</a>. Which method do you prefer?</div></article><article class="task exercise-like" id="SECTIONDerivative-19-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para" id="SECTIONDerivative-19-6-1"><span class="process-math">\(\frac{x^2+y}{3x+y^2}=x-y\)</span></div></article></article><article class="exercise exercise-like" id="PROBLEMDerivProdNEProdDeriv"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">5.6.11</span><span class="period">.</span>
+<span class="process-math">\(xy=1\)</span> Compare this with <a href="SECTIONDerivative.html#EXAMPLEHighOrderDerivs" class="xref" data-knowl="./knowl/xref/EXAMPLEHighOrderDerivs.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 5.6.6">Example 5.6.6</a>. Which method do you prefer?<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONDerivative-19-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 5.6.10.d"><a href="#SECTIONDerivative-19-5" title="Copy heading and permalink for Task 5.6.10.d" aria-label="Copy heading and permalink for Task 5.6.10.d">🔗</a></div></article><article class="task exercise-like" id="SECTIONDerivative-19-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="SECTIONDerivative-19-6-1">
+<span class="process-math">\(\frac{x^2+y}{3x+y^2}=x-y\)</span><div class="autopermalink" data-description="Paragraph"><a href="#SECTIONDerivative-19-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 5.6.10.e"><a href="#SECTIONDerivative-19-6" title="Copy heading and permalink for Task 5.6.10.e" aria-label="Copy heading and permalink for Task 5.6.10.e">🔗</a></div></article><div class="autopermalink" data-description="Problem 5.6.10"><a href="#SECTIONDerivative-19" title="Copy heading and permalink for Problem 5.6.10" aria-label="Copy heading and permalink for Problem 5.6.10">🔗</a></div></article><article class="exercise exercise-like" id="PROBLEMDerivProdNEProdDeriv"><h3 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="introduction" id="PROBLEMDerivProdNEProdDeriv-1"><div class="para logical" id="PROBLEMDerivProdNEProdDeriv-1-1">
 <div class="para">We know that it is not generally true that <span class="process-math">\(a^b=a\cdot b\)</span> even though there are certain exceptions, like <span class="process-math">\(a=b=1\text{,}\)</span> <span class="process-math">\(a=4\)</span> and <span class="process-math">\(b=1/2\text{,}\)</span> or <span class="process-math">\(a=b=2\text{.}\)</span> In the same way, even though the Product Rule makes it very clear that</div>
@@ -823,49 +890,118 @@ y\amp =x^3\\
 </div>
 <div class="para">there are certain pairs of functions which are exceptions; for which <a href="SECTIONDerivative.html#EQUATIONNewbyError1" class="xref" data-knowl="./knowl/xref/EQUATIONNewbyError1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.9">(5.9)</a>  <em class="emphasis">is</em> true. For example, show that for each of the following it is true that <span class="process-math">\(\dfdx{(y\cdot z)}{x}= \dfdx{y}{x}\cdot\dfdx{z}{x}\text{.}\)</span>
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMDerivProdNEProdDeriv-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></div>
 <article class="task exercise-like" id="PROBLEMDerivProdNEProdDeriv-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para logical" id="PROBLEMDerivProdNEProdDeriv-2-1-1"><ol class="lower-roman ol-marker-1 cols3" id="PROBLEMDerivProdNEProdDeriv-2-1-1-1">
+<div class="para logical" id="PROBLEMDerivProdNEProdDeriv-2-1-1">
+<ol class="lower-roman ol-marker-1 cols3" id="PROBLEMDerivProdNEProdDeriv-2-1-1-1">
 <li id="PROBLEMDerivProdNEProdDeriv-2-1-1-1-1">
-<div class="para" id="PROBLEMDerivProdNEProdDeriv-2-1-1-1-1-1"><span class="process-math">\(y=x\)</span></div>
-<div class="para" id="PROBLEMDerivProdNEProdDeriv-2-1-1-1-1-2"><span class="process-math">\(\displaystyle z=\frac{1}{1-x}\)</span></div>
+<div class="para" id="PROBLEMDerivProdNEProdDeriv-2-1-1-1-1-1">
+<span class="process-math">\(y=x\)</span><div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMDerivProdNEProdDeriv-2-1-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="PROBLEMDerivProdNEProdDeriv-2-1-1-1-1-2">
+<span class="process-math">\(\displaystyle z=\frac{1}{1-x}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMDerivProdNEProdDeriv-2-1-1-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 5.6.11.i"><a href="#PROBLEMDerivProdNEProdDeriv-2-1-1-1-1" title="Copy heading and permalink for Item 5.6.11.i" aria-label="Copy heading and permalink for Item 5.6.11.i">🔗</a></div>
 </li>
 <li id="PROBLEMDerivProdNEProdDeriv-2-1-1-1-2">
-<div class="para" id="PROBLEMDerivProdNEProdDeriv-2-1-1-1-2-1"><span class="process-math">\(y=x^2\)</span></div>
-<div class="para" id="PROBLEMDerivProdNEProdDeriv-2-1-1-1-2-2"><span class="process-math">\(\displaystyle z=\frac{1}{(2-x)^{2}}\)</span></div>
+<div class="para" id="PROBLEMDerivProdNEProdDeriv-2-1-1-1-2-1">
+<span class="process-math">\(y=x^2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMDerivProdNEProdDeriv-2-1-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="PROBLEMDerivProdNEProdDeriv-2-1-1-1-2-2">
+<span class="process-math">\(\displaystyle z=\frac{1}{(2-x)^{2}}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMDerivProdNEProdDeriv-2-1-1-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 5.6.11.ii"><a href="#PROBLEMDerivProdNEProdDeriv-2-1-1-1-2" title="Copy heading and permalink for Item 5.6.11.ii" aria-label="Copy heading and permalink for Item 5.6.11.ii">🔗</a></div>
 </li>
 <li id="PROBLEMDerivProdNEProdDeriv-2-1-1-1-3">
-<div class="para" id="PROBLEMDerivProdNEProdDeriv-2-1-1-1-3-1"><span class="process-math">\(y=x^3\)</span></div>
-<div class="para" id="PROBLEMDerivProdNEProdDeriv-2-1-1-1-3-2"><span class="process-math">\(z=(3-x)^{-3}\)</span></div>
+<div class="para" id="PROBLEMDerivProdNEProdDeriv-2-1-1-1-3-1">
+<span class="process-math">\(y=x^3\)</span><div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMDerivProdNEProdDeriv-2-1-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="PROBLEMDerivProdNEProdDeriv-2-1-1-1-3-2">
+<span class="process-math">\(z=(3-x)^{-3}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMDerivProdNEProdDeriv-2-1-1-1-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 5.6.11.iii"><a href="#PROBLEMDerivProdNEProdDeriv-2-1-1-1-3" title="Copy heading and permalink for Item 5.6.11.iii" aria-label="Copy heading and permalink for Item 5.6.11.iii">🔗</a></div>
 </li>
-</ol></div></article><article class="task exercise-like" id="PROBLEMDerivProdNEProdDeriv-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="PROBLEMDerivProdNEProdDeriv-3-1-1">Find the general pattern in part (a).</div></article><article class="task exercise-like" id="PROBLEMDerivProdNEProdDeriv-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="PROBLEMDerivProdNEProdDeriv-4-1-1">Those pairs of functions which fit the pattern you found in part (b) are not the only exceptional pairs. Can you find others?</div></article></article><div class="para" id="SECTIONDerivative-21">Adopting Lagrange’s terminology, but not his notation, we see that if the position of a point moving in a straight line (like the <span class="process-math">\(x\)</span> axis) is given by <span class="process-math">\(x=x(t)\text{,}\)</span> then the first derivative, <span class="process-math">\(\dfdx{x}{t}\text{,}\)</span> will give its velocity, and its second derivative, <span class="process-math">\(\dfdxn{x}{t}{2}\text{,}\)</span> will give its acceleration.</div>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMDerivProdNEProdDeriv-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 5.6.11.a"><a href="#PROBLEMDerivProdNEProdDeriv-2" title="Copy heading and permalink for Task 5.6.11.a" aria-label="Copy heading and permalink for Task 5.6.11.a">🔗</a></div></article><article class="task exercise-like" id="PROBLEMDerivProdNEProdDeriv-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="PROBLEMDerivProdNEProdDeriv-3-1-1">Find the general pattern in part (a).<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMDerivProdNEProdDeriv-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 5.6.11.b"><a href="#PROBLEMDerivProdNEProdDeriv-3" title="Copy heading and permalink for Task 5.6.11.b" aria-label="Copy heading and permalink for Task 5.6.11.b">🔗</a></div></article><article class="task exercise-like" id="PROBLEMDerivProdNEProdDeriv-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="PROBLEMDerivProdNEProdDeriv-4-1-1">Those pairs of functions which fit the pattern you found in part (b) are not the only exceptional pairs. Can you find others?<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMDerivProdNEProdDeriv-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 5.6.11.c"><a href="#PROBLEMDerivProdNEProdDeriv-4" title="Copy heading and permalink for Task 5.6.11.c" aria-label="Copy heading and permalink for Task 5.6.11.c">🔗</a></div></article><div class="autopermalink" data-description="Problem 5.6.11"><a href="#PROBLEMDerivProdNEProdDeriv" title="Copy heading and permalink for Problem 5.6.11" aria-label="Copy heading and permalink for Problem 5.6.11">🔗</a></div></article><div class="para" id="SECTIONDerivative-21">Adopting Lagrange’s terminology, but not his notation, we see that if the position of a point moving in a straight line (like the <span class="process-math">\(x\)</span> axis) is given by <span class="process-math">\(x=x(t)\text{,}\)</span> then the first derivative, <span class="process-math">\(\dfdx{x}{t}\text{,}\)</span> will give its velocity, and its second derivative, <span class="process-math">\(\dfdxn{x}{t}{2}\text{,}\)</span> will give its acceleration.<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONDerivative-21" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="problem example-like" id="SECTIONDerivative-22"><h3 class="heading">
-<span class="type">Drill</span><span class="space"> </span><span class="codenumber">5.6.12</span><span class="period">.</span>
+<span class="type">Drill</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para logical" id="SECTIONDerivative-22-2">
 <div class="para">Each of the following represents the position of a point on the <span class="process-math">\(x\)</span>-axis at time <span class="process-math">\(t\text{.}\)</span>  Find the velocity and acceleration.</div>
 <ol class="lower-roman ol-marker-1 cols2" id="SECTIONDerivative-22-2-3">
-<li id="SECTIONDerivative-22-2-3-1"><div class="para" id="SECTIONDerivative-22-2-3-1-1"><span class="process-math">\(\displaystyle x(t)=12t^3\)</span></div></li>
-<li id="SECTIONDerivative-22-2-3-2"><div class="para" id="SECTIONDerivative-22-2-3-2-1"><span class="process-math">\(\displaystyle x(t)=-4t^4+3t^2+1\)</span></div></li>
-<li id="SECTIONDerivative-22-2-3-3"><div class="para" id="SECTIONDerivative-22-2-3-3-1"><span class="process-math">\(\displaystyle x(t)=5-2\sqrt{t}+t^3\)</span></div></li>
-<li id="SECTIONDerivative-22-2-3-4"><div class="para" id="SECTIONDerivative-22-2-3-4-1"><span class="process-math">\(\displaystyle \displaystyle x(t)=\frac12t^{1/2}+t^{-1/2}\)</span></div></li>
-<li id="SECTIONDerivative-22-2-3-5"><div class="para" id="SECTIONDerivative-22-2-3-5-1"><span class="process-math">\(\displaystyle \displaystyle x(t)=\frac{1}{\sqrt{t^2+t+1}}\)</span></div></li>
-<li id="SECTIONDerivative-22-2-3-6"><div class="para" id="SECTIONDerivative-22-2-3-6-1"><span class="process-math">\(\displaystyle x(t)= t^{2/3}\)</span></div></li>
+<li id="SECTIONDerivative-22-2-3-1">
+<div class="para" id="SECTIONDerivative-22-2-3-1-1">
+<span class="process-math">\(\displaystyle x(t)=12t^3\)</span><div class="autopermalink" data-description="Paragraph"><a href="#SECTIONDerivative-22-2-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item i"><a href="#SECTIONDerivative-22-2-3-1" title="Copy heading and permalink for Item i" aria-label="Copy heading and permalink for Item i">🔗</a></div>
+</li>
+<li id="SECTIONDerivative-22-2-3-2">
+<div class="para" id="SECTIONDerivative-22-2-3-2-1">
+<span class="process-math">\(\displaystyle x(t)=-4t^4+3t^2+1\)</span><div class="autopermalink" data-description="Paragraph"><a href="#SECTIONDerivative-22-2-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item ii"><a href="#SECTIONDerivative-22-2-3-2" title="Copy heading and permalink for Item ii" aria-label="Copy heading and permalink for Item ii">🔗</a></div>
+</li>
+<li id="SECTIONDerivative-22-2-3-3">
+<div class="para" id="SECTIONDerivative-22-2-3-3-1">
+<span class="process-math">\(\displaystyle x(t)=5-2\sqrt{t}+t^3\)</span><div class="autopermalink" data-description="Paragraph"><a href="#SECTIONDerivative-22-2-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item iii"><a href="#SECTIONDerivative-22-2-3-3" title="Copy heading and permalink for Item iii" aria-label="Copy heading and permalink for Item iii">🔗</a></div>
+</li>
+<li id="SECTIONDerivative-22-2-3-4">
+<div class="para" id="SECTIONDerivative-22-2-3-4-1">
+<span class="process-math">\(\displaystyle \displaystyle x(t)=\frac12t^{1/2}+t^{-1/2}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#SECTIONDerivative-22-2-3-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item iv"><a href="#SECTIONDerivative-22-2-3-4" title="Copy heading and permalink for Item iv" aria-label="Copy heading and permalink for Item iv">🔗</a></div>
+</li>
+<li id="SECTIONDerivative-22-2-3-5">
+<div class="para" id="SECTIONDerivative-22-2-3-5-1">
+<span class="process-math">\(\displaystyle \displaystyle x(t)=\frac{1}{\sqrt{t^2+t+1}}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#SECTIONDerivative-22-2-3-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item v"><a href="#SECTIONDerivative-22-2-3-5" title="Copy heading and permalink for Item v" aria-label="Copy heading and permalink for Item v">🔗</a></div>
+</li>
+<li id="SECTIONDerivative-22-2-3-6">
+<div class="para" id="SECTIONDerivative-22-2-3-6-1">
+<span class="process-math">\(\displaystyle x(t)= t^{2/3}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#SECTIONDerivative-22-2-3-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item vi"><a href="#SECTIONDerivative-22-2-3-6" title="Copy heading and permalink for Item vi" aria-label="Copy heading and permalink for Item vi">🔗</a></div>
+</li>
 </ol>
-</div></article><article class="exercise exercise-like" id="SECTIONDerivative-23"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">5.6.13</span><span class="period">.</span>
+<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONDerivative-22-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Drill 5.6.12"><a href="#SECTIONDerivative-22" title="Copy heading and permalink for Drill 5.6.12" aria-label="Copy heading and permalink for Drill 5.6.12">🔗</a></div></article><article class="exercise exercise-like" id="SECTIONDerivative-23"><h3 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<div class="introduction" id="SECTIONDerivative-23-1"><div class="para" id="SECTIONDerivative-23-1-1">For each of the following <span class="process-math">\(x(t)\)</span> represents the position of a point moving along the <span class="process-math">\(x\)</span>-axis. Use the information given to determine if the point is slowing down or speeding up at the instant <span class="process-math">\(t_0\text{.}\)</span>
+<div class="introduction" id="SECTIONDerivative-23-1"><div class="para" id="SECTIONDerivative-23-1-1">For each of the following <span class="process-math">\(x(t)\)</span> represents the position of a point moving along the <span class="process-math">\(x\)</span>-axis. Use the information given to determine if the point is slowing down or speeding up at the instant <span class="process-math">\(t_0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#SECTIONDerivative-23-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></div>
 <article class="task exercise-like" id="SECTIONDerivative-23-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="SECTIONDerivative-23-2-1-1"><span class="process-math">\(\left.\dfdx{x}{t}\right|_{t=t_0}\gt 0, \left.\dfdxn{x}{t}{2}\right|_{t=t_0}\gt 0\)</span></div></article><article class="task exercise-like" id="SECTIONDerivative-23-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="SECTIONDerivative-23-3-1-1"><span class="process-math">\(\left.\dfdx{x}{t}\right|_{t=t_0}\gt 0, \left.\dfdxn{x}{t}{2}\right|_{t=t_0}\lt 0\)</span></div></article><article class="task exercise-like" id="SECTIONDerivative-23-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="SECTIONDerivative-23-4-1-1"><span class="process-math">\(\left.\dfdx{x}{t}\right|_{t=t_0}\lt 0, \left.\dfdxn{x}{t}{2}\right|_{t=t_0}\gt 0\)</span></div></article><article class="task exercise-like" id="SECTIONDerivative-23-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="SECTIONDerivative-23-5-1-1"><span class="process-math">\(\left.\dfdx{x}{t}\right|_{t=t_0}\lt 0,
-\left.\dfdxn{x}{t}{2}\right|_{t=t_0}\lt 0\)</span></div></article></article></section></div>
-<div class="ptx-content-footer">
+<div class="para" id="SECTIONDerivative-23-2-1-1">
+<span class="process-math">\(\left.\dfdx{x}{t}\right|_{t=t_0}\gt 0, \left.\dfdxn{x}{t}{2}\right|_{t=t_0}\gt 0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#SECTIONDerivative-23-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 5.6.13.a"><a href="#SECTIONDerivative-23-2" title="Copy heading and permalink for Task 5.6.13.a" aria-label="Copy heading and permalink for Task 5.6.13.a">🔗</a></div></article><article class="task exercise-like" id="SECTIONDerivative-23-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="SECTIONDerivative-23-3-1-1">
+<span class="process-math">\(\left.\dfdx{x}{t}\right|_{t=t_0}\gt 0, \left.\dfdxn{x}{t}{2}\right|_{t=t_0}\lt 0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#SECTIONDerivative-23-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 5.6.13.b"><a href="#SECTIONDerivative-23-3" title="Copy heading and permalink for Task 5.6.13.b" aria-label="Copy heading and permalink for Task 5.6.13.b">🔗</a></div></article><article class="task exercise-like" id="SECTIONDerivative-23-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="SECTIONDerivative-23-4-1-1">
+<span class="process-math">\(\left.\dfdx{x}{t}\right|_{t=t_0}\lt 0, \left.\dfdxn{x}{t}{2}\right|_{t=t_0}\gt 0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#SECTIONDerivative-23-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 5.6.13.c"><a href="#SECTIONDerivative-23-4" title="Copy heading and permalink for Task 5.6.13.c" aria-label="Copy heading and permalink for Task 5.6.13.c">🔗</a></div></article><article class="task exercise-like" id="SECTIONDerivative-23-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="SECTIONDerivative-23-5-1-1">
+<span class="process-math">\(\left.\dfdx{x}{t}\right|_{t=t_0}\lt 0,
+\left.\dfdxn{x}{t}{2}\right|_{t=t_0}\lt 0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#SECTIONDerivative-23-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 5.6.13.d"><a href="#SECTIONDerivative-23-5" title="Copy heading and permalink for Task 5.6.13.d" aria-label="Copy heading and permalink for Task 5.6.13.d">🔗</a></div></article><div class="autopermalink" data-description="Problem 5.6.13"><a href="#SECTIONDerivative-23" title="Copy heading and permalink for Problem 5.6.13" aria-label="Copy heading and permalink for Problem 5.6.13">🔗</a></div></article><div class="autopermalink" data-description="Section 5.6: The Derivative"><a href="#SECTIONDerivative" title="Copy heading and permalink for Section 5.6: The Derivative" aria-label="Copy heading and permalink for Section 5.6: The Derivative">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="SECONDBringCalc.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="SECTIONThinkingDynamically.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>

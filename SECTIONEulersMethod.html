@@ -6,15 +6,20 @@
 <!--*                                          *-->
 <!--********************************************-->
 <html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Euler’s Method</title>
-<meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:type" content="book">
-<meta property="book:title" content="Differential Calculus">
-<meta property="book:author" content="Eugene Boman">
-<meta property="book:author" content="Robert Rogers">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
 <script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
@@ -70,13 +75,13 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
-<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
-<!--** eBookCongig is necessary to configure interactive       **-->
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Differential Calculus">
+<meta property="book:author" content="Eugene Boman">
+<meta property="book:author" content="Robert Rogers">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -98,19 +103,21 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.5.16';
+eBookConfig.runestone_version = '7.9.8';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.a0c870bab402ccbf.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.97de40e034b535c5.css">
+<script src="_static/prefix-runtime.b215b0da62d655bd.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.28cc3c4821792be5.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8141ae22fd347e48.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
-<h1 class="heading"><a href="Calculus.html"><span class="title">Differential Calculus:</span> <span class="subtitle">From Practice to Theory</span></a></h1>
+<h1 class="heading"><a href="Calculus.html"><span class="title">Differential Calculus</span> <span class="subtitle">From Practice to Theory</span></a></h1>
 <p class="byline">Eugene Boman, Robert Rogers</p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="meta_backmatter-3.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
@@ -607,15 +614,18 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="SECTIONEulersMethod"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">7.3</span><span class="space"> </span><span class="title">Euler’s Method</span>
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Euler’s Method</span>
 </h2>
 <div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="external/DC/EulerFig1.png" class="contained"></div>
-<div class="para" id="SECTIONEulersMethod-3">Suppose <span class="process-math">\(B\)</span> is a point on the graph of an unknown function <span class="process-math">\(y(x)\)</span> (in green in the sketch above). Suppose further that if the line tangent to the graph at <span class="process-math">\(B\)</span> (in red) crosses the <span class="process-math">\(x\)</span>–axis at <span class="process-math">\((a, 0)\)</span> as shown.</div>
+<div class="para" id="SECTIONEulersMethod-3">Suppose <span class="process-math">\(B\)</span> is a point on the graph of an unknown function <span class="process-math">\(y(x)\)</span> (in green in the sketch above). Suppose further that if the line tangent to the graph at <span class="process-math">\(B\)</span> (in red) crosses the <span class="process-math">\(x\)</span>–axis at <span class="process-math">\((a, 0)\)</span> as shown.<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONEulersMethod-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="SECTIONEulersMethod-4">We wish to address the following question: “Is there a curve which passes through the point <span class="process-math">\((0,
-1)\)</span> with the property that the distance from <span class="process-math">\(A\)</span> to <span class="process-math">\(C\)</span> is equal to <span class="process-math">\(1\)</span> regardless of the location of <span class="process-math">\(B\)</span> on the graph.”</div>
-<aside class="aside aside-like" id="SECTIONEulersMethod-5"><h3 class="heading"><span class="title">Historical Context.</span></h3>
-<div class="para" id="SECTIONEulersMethod-5-2">The line segment <span class="process-math">\(AC\)</span> is called the subtangent of the graph. In the seventeenth century mathematics was still strongly tied to Greek geometry so some of the early, pre–Calculus efforts to find the tangent lines were aimed at finding the length of the subtangent of a curve. Finding length of <span class="process-math">\(\overline{CA}\)</span> is equivalent to finding the derivative of <span class="process-math">\(y\)</span> at <span class="process-math">\(B\)</span> because if <span class="process-math">\(B\)</span> and <span class="process-math">\(C\)</span> are known then the slope of the curve at <span class="process-math">\(B\)</span> is equal to <span class="process-math">\(\frac{\overline{BC}}{\overline{AC}}\text{.}\)</span>
-</div></aside><div class="para" id="SECTIONEulersMethod-6">At <span class="process-math">\(B\)</span> form the differential right triangle with the infinitesimal vertical displacement <span class="process-math">\(\dx{y}\)</span> and the infinitesimal horizontal displacement <span class="process-math">\(\dx{x}\text{,}\)</span> as shown. Then the right triangle with sides of length <span class="process-math">\(y\)</span> and <span class="process-math">\(1\)</span> is proportional to the differential triangle. By the properties of proportional triangles this curve must satisfy the differential equation: <span class="process-math">\(\dfdx{y}{x} = y\text{.}\)</span>
+1)\)</span> with the property that the distance from <span class="process-math">\(A\)</span> to <span class="process-math">\(C\)</span> is equal to <span class="process-math">\(1\)</span> regardless of the location of <span class="process-math">\(B\)</span> on the graph.”<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONEulersMethod-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="SECTIONEulersMethod-5" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Aside<span class="colon heading-divison-mark heading-divison-mark__colon">:</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Historical Context.</span>
+</h3></summary><aside class="aside aside-like knowl__content"><div class="para" id="SECTIONEulersMethod-5-2">The line segment <span class="process-math">\(AC\)</span> is called the subtangent of the graph. In the seventeenth century mathematics was still strongly tied to Greek geometry so some of the early, pre–Calculus efforts to find the tangent lines were aimed at finding the length of the subtangent of a curve. Finding length of <span class="process-math">\(\overline{CA}\)</span> is equivalent to finding the derivative of <span class="process-math">\(y\)</span> at <span class="process-math">\(B\)</span> because if <span class="process-math">\(B\)</span> and <span class="process-math">\(C\)</span> are known then the slope of the curve at <span class="process-math">\(B\)</span> is equal to <span class="process-math">\(\frac{\overline{BC}}{\overline{AC}}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#SECTIONEulersMethod-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></aside></details><div class="para" id="SECTIONEulersMethod-6">At <span class="process-math">\(B\)</span> form the differential right triangle with the infinitesimal vertical displacement <span class="process-math">\(\dx{y}\)</span> and the infinitesimal horizontal displacement <span class="process-math">\(\dx{x}\text{,}\)</span> as shown. Then the right triangle with sides of length <span class="process-math">\(y\)</span> and <span class="process-math">\(1\)</span> is proportional to the differential triangle. By the properties of proportional triangles this curve must satisfy the differential equation: <span class="process-math">\(\dfdx{y}{x} = y\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#SECTIONEulersMethod-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="SECTIONEulersMethod-7">
 <div class="para">Since we specified that the curve must pass through the point <span class="process-math">\((0, 1)\)</span> we see that we need to find a function <span class="process-math">\(y(x)\)</span> that satisfies the following two conditions:</div>
@@ -625,8 +635,10 @@ eBookConfig.enable_chatcodes =  false;
 \end{align}
 </div>
 <div class="para"> A problem like the one stated in <a href="SECTIONEulersMethod.html#SECTIONEulersMethod-7-3" class="xref" data-knowl="./knowl/xref/IVPExpDiffeq1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.6">Formula (7.6)</a> is called an <dfn class="terminology">Initial Value Problem (Ivp)</dfn>. We will give a formal definition below (<a href="SECTIONEulersMethod.html#DEFINITIONIVP" class="xref" data-knowl="./knowl/xref/DEFINITIONIVP.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 7.3.1: Initial Value Problem (IVP)">Definition 7.3.1</a>).</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONEulersMethod-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="SECTIONEulersMethod-8">We do not know a formula for <span class="process-math">\(y(x)\)</span> which will satisfy <a href="SECTIONEulersMethod.html#SECTIONEulersMethod-7-3" class="xref" data-knowl="./knowl/xref/IVPExpDiffeq1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.6">IVP (7.6)</a>, nor do we have the tools to find such a formula, yet.  We will return to this question in <a href="CHAPTERLastElemFunc.html" class="internal" title="Chapter 8: Exponentials and Logarithms">Chapter 8</a> where we will solve <a href="SECTIONEulersMethod.html#SECTIONEulersMethod-7-3" class="xref" data-knowl="./knowl/xref/IVPExpDiffeq1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.6">IVP (7.6)</a>) exactly. For the moment we will be satisfied if we can find an approximate graph of the solution.  That will give us a general sense of its shape.</div>
+<div class="para" id="SECTIONEulersMethod-8">We do not know a formula for <span class="process-math">\(y(x)\)</span> which will satisfy <a href="SECTIONEulersMethod.html#SECTIONEulersMethod-7-3" class="xref" data-knowl="./knowl/xref/IVPExpDiffeq1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.6">IVP (7.6)</a>, nor do we have the tools to find such a formula, yet.  We will return to this question in <a href="CHAPTERLastElemFunc.html" class="internal" title="Chapter 8: Exponentials and Logarithms">Chapter 8</a> where we will solve <a href="SECTIONEulersMethod.html#SECTIONEulersMethod-7-3" class="xref" data-knowl="./knowl/xref/IVPExpDiffeq1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.6">IVP (7.6)</a>) exactly. For the moment we will be satisfied if we can find an approximate graph of the solution.  That will give us a general sense of its shape.<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONEulersMethod-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para logical" id="SECTIONEulersMethod-9">
 <div class="para">The initial value in <a href="SECTIONEulersMethod.html#SECTIONEulersMethod-7-3" class="xref" data-knowl="./knowl/xref/IVPExpDiffeq1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.6">IVP (7.6)</a>) shows that  the curve passes through the point <span class="process-math">\((0,1)\text{.}\)</span>  From the differential equation in <a href="SECTIONEulersMethod.html#SECTIONEulersMethod-7-3" class="xref" data-knowl="./knowl/xref/IVPExpDiffeq1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.6">IVP (7.6)</a>)  we see that</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/IVPExpDiffeq1.html ./knowl/xref/IVPExpDiffeq1.html">
@@ -643,24 +655,35 @@ y=x+1.
 \end{equation*}
 </div>
 <div class="para">This is not a lot to work with, but let’s not set our sights too high.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONEulersMethod-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="SECTIONEulersMethod-10"> By the <a href="SECTIONdefin-tang-line.html#DEFINITIONLocalLinearity" class="xref" data-knowl="./knowl/xref/DEFINITIONLocalLinearity.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 5.2.5: The Principle of Local Linearity">Principle of Local Linearity</a> , the line tangent to the curve and the curve itself are going to be nearly indistinguishable near to the point <span class="process-math">\((0,1)\text{.}\)</span> Moreover, we can find any point on the tangent line since we have its equation.  If we increment the <span class="process-math">\(x\)</span>–coordinate just a little bit while staying on the tangent line then the corresponding <span class="process-math">\(y\)</span>–coordinate on the tangent line will be close to the <span class="process-math">\(y\)</span>–coordinate on the curve. So we can use the <span class="process-math">\(y\)</span>–coordinate on the tangent line (which we know) to approximate the <span class="process-math">\(y\)</span>–coordinate on the curve (which we don’t know).</div>
+<div class="para" id="SECTIONEulersMethod-10"> By the <a href="SECTIONdefin-tang-line.html#DEFINITIONLocalLinearity" class="xref" data-knowl="./knowl/xref/DEFINITIONLocalLinearity.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 5.2.5: The Principle of Local Linearity">Principle of Local Linearity</a> , the line tangent to the curve and the curve itself are going to be nearly indistinguishable near to the point <span class="process-math">\((0,1)\text{.}\)</span> Moreover, we can find any point on the tangent line since we have its equation.  If we increment the <span class="process-math">\(x\)</span>–coordinate just a little bit while staying on the tangent line then the corresponding <span class="process-math">\(y\)</span>–coordinate on the tangent line will be close to the <span class="process-math">\(y\)</span>–coordinate on the curve. So we can use the <span class="process-math">\(y\)</span>–coordinate on the tangent line (which we know) to approximate the <span class="process-math">\(y\)</span>–coordinate on the curve (which we don’t know).<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONEulersMethod-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/DC/exp-piecewise-linear2.png" class="contained"></div>
-<div class="para" id="SECTIONEulersMethod-12">Let’s say we increase <span class="process-math">\(x\)</span> by <span class="process-math">\(0.1\)</span> so that <span class="process-math">\(x=0.1\text{.}\)</span>  The <span class="process-math">\(y\)</span>–coordinate on the line tangent to the curve at <span class="process-math">\(x=0.1\)</span> is <span class="process-math">\(1.1\)</span> (since the equation of our tangent line is <span class="process-math">\(y=x+1\)</span>).</div>
-<div class="para" id="SECTIONEulersMethod-13">We now have two points. The point <span class="process-math">\((0,1)\)</span> is on the curve. The point <span class="process-math">\((0.1, 1.1)\)</span> isn’t on the curve, but it’s close. Remember we’re only trying to approximate the curve. Connecting these with a straight line we have the red segment on the graph above.  So far, so good.</div>
+<div class="para" id="SECTIONEulersMethod-12">Let’s say we increase <span class="process-math">\(x\)</span> by <span class="process-math">\(0.1\)</span> so that <span class="process-math">\(x=0.1\text{.}\)</span>  The <span class="process-math">\(y\)</span>–coordinate on the line tangent to the curve at <span class="process-math">\(x=0.1\)</span> is <span class="process-math">\(1.1\)</span> (since the equation of our tangent line is <span class="process-math">\(y=x+1\)</span>).<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONEulersMethod-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="SECTIONEulersMethod-13">We now have two points. The point <span class="process-math">\((0,1)\)</span> is on the curve. The point <span class="process-math">\((0.1, 1.1)\)</span> isn’t on the curve, but it’s close. Remember we’re only trying to approximate the curve. Connecting these with a straight line we have the red segment on the graph above.  So far, so good.<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONEulersMethod-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="SECTIONEulersMethod-14"> Next we increment <span class="process-math">\(x\)</span> by <span class="process-math">\(0.1\)</span> again, to <span class="process-math">\(x=0.2\text{.}\)</span> We would really like to have the equation of the line tangent to the curve at <span class="process-math">\((0.1, y(0.1))\)</span> but we simply have no way to obtain it. All we have is the point <span class="process-math">\((0.1, 1.1)\text{.}\)</span> But we know that <span class="process-math">\(y(0.1)\approx1.1\)</span> so the differential equation from <a href="SECTIONEulersMethod.html#SECTIONEulersMethod-7-3" class="xref" data-knowl="./knowl/xref/IVPExpDiffeq1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.6">IVP (7.6)</a>) tells us that <span class="process-math">\(\eval{\dfdx{y}{x}}{x}{0.1}\approx1.1\)</span> also. Thus we see that the curve will pass (approximately) through the point <span class="process-math">\((0.1,
 1.1)\)</span> with slope (approximately) equal to <span class="process-math">\(1.1\text{.}\)</span> Therefore the equation of the line tangent to the curve at (approximately) <span class="process-math">\((0.1, 1.1)\)</span> will be <span class="process-math">\(y-1.1=1.1(x-0.1)\)</span> and as long as we don’t move too far the <a href="SECTIONdefin-tang-line.html#DEFINITIONLocalLinearity" class="xref" data-knowl="./knowl/xref/DEFINITIONLocalLinearity.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 5.2.5: The Principle of Local Linearity">Principle of Local Linearity</a> guarantees that this line and the curve we seek are close together. So we use the blue line segment from <span class="process-math">\((0.1,
-1.1)\)</span> to <span class="process-math">\((0.2, 1.21)\)</span> in our figure above to approximate the curve on the interval <span class="process-math">\((0.1, 0.2)\text{.}\)</span>
+1.1)\)</span> to <span class="process-math">\((0.2, 1.21)\)</span> in our figure above to approximate the curve on the interval <span class="process-math">\((0.1, 0.2)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#SECTIONEulersMethod-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="SECTIONEulersMethod-15">We now repeat this process to compute the points:<span class="process-math">\((0.3,1.331)\text{,}\)</span> <span class="process-math">\((0.4,1.4641)\text{,}\)</span> <span class="process-math">\((0.5,1.61051)\text{,}\)</span> and so on.  Plotting these points and connecting them with straight line segments gives us the rest of the sketch above.</div>
-<div class="para" id="SECTIONEulersMethod-16">At each step we use the previous approximation to compute the next, so it would be miraculous if we actually found exactly the points on the graph of our curve.  But it should be clear  that the curve we’ve drawn will at least resemble the desired curve, as long as we don’t stray too far from our initial point <span class="process-math">\(x=0\text{.}\)</span> The sketch below shows our approximation and the actual solution on the same set of axes.</div>
-<aside class="aside aside-like" id="SECTIONEulersMethod-17"><h3 class="heading"><span class="title">Comment.</span></h3>
-<div class="para" id="SECTIONEulersMethod-17-2">In practice of course, we wouldn’t know the actual solution—if we knew that there would be no reason to find an approximation—but in this case we (the authors) do know.</div></aside><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/DC/exp-piecewise-linear3.png" class="contained"></div>
-<div class="para" id="SECTIONEulersMethod-19">The solution of this particular IVP  turns out to be incredibly useful in mathematics, theoretical physics, engineering, and science and technology in general.  We will be revisiting it in the next chapter.</div>
-<div class="para" id="SECTIONEulersMethod-20">The procedure we have just outlined is known as <dfn class="terminology">Euler’s Method</dfn>; named for the great eighteenth century mathematician Leonhard Euler. For now we’ll focus on how to use Euler’s Method to find an approximate solution of an arbitrary <dfn class="terminology">Initial Value Problem</dfn>.</div>
-<div class="para" id="SECTIONEulersMethod-21">We define an Initial Value Problem formally as follows.</div>
+<div class="para" id="SECTIONEulersMethod-15">We now repeat this process to compute the points:<span class="process-math">\((0.3,1.331)\text{,}\)</span> <span class="process-math">\((0.4,1.4641)\text{,}\)</span> <span class="process-math">\((0.5,1.61051)\text{,}\)</span> and so on.  Plotting these points and connecting them with straight line segments gives us the rest of the sketch above.<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONEulersMethod-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="SECTIONEulersMethod-16">At each step we use the previous approximation to compute the next, so it would be miraculous if we actually found exactly the points on the graph of our curve.  But it should be clear  that the curve we’ve drawn will at least resemble the desired curve, as long as we don’t stray too far from our initial point <span class="process-math">\(x=0\text{.}\)</span> The sketch below shows our approximation and the actual solution on the same set of axes.<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONEulersMethod-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="SECTIONEulersMethod-17" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Aside<span class="colon heading-divison-mark heading-divison-mark__colon">:</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Comment.</span>
+</h3></summary><aside class="aside aside-like knowl__content"><div class="para" id="SECTIONEulersMethod-17-2">In practice of course, we wouldn’t know the actual solution—if we knew that there would be no reason to find an approximation—but in this case we (the authors) do know.<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONEulersMethod-17-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></aside></details><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/DC/exp-piecewise-linear3.png" class="contained"></div>
+<div class="para" id="SECTIONEulersMethod-19">The solution of this particular IVP  turns out to be incredibly useful in mathematics, theoretical physics, engineering, and science and technology in general.  We will be revisiting it in the next chapter.<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONEulersMethod-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="SECTIONEulersMethod-20">The procedure we have just outlined is known as <dfn class="terminology">Euler’s Method</dfn>; named for the great eighteenth century mathematician Leonhard Euler. For now we’ll focus on how to use Euler’s Method to find an approximate solution of an arbitrary <dfn class="terminology">Initial Value Problem</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONEulersMethod-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="SECTIONEulersMethod-21">We define an Initial Value Problem formally as follows.<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONEulersMethod-21" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="definition definition-like" id="DEFINITIONIVP"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.3.1</span><span class="period">.</span><span class="space"> </span><span class="title">Initial Value Problem (IVP).</span>
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Initial Value Problem (IVP).</span>
 </h3>
 <div class="para logical" id="DEFINITIONIVP-4-1">
 <div class="para">An <dfn class="terminology">Initial Value Problem</dfn> is a differential equation of the form</div>
@@ -676,7 +699,9 @@ y=x+1.
 y(x_0)=y_0.
 \end{equation*}
 </div>
-</div></article><div class="para logical" id="SECTIONEulersMethod-23">
+<div class="autopermalink" data-description="Paragraph"><a href="#DEFINITIONIVP-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 7.3.1: Initial Value Problem (IVP)"><a href="#DEFINITIONIVP" title="Copy heading and permalink for Definition 7.3.1: Initial Value Problem (IVP)" aria-label="Copy heading and permalink for Definition 7.3.1: Initial Value Problem (IVP)">🔗</a></div></article><div class="para logical" id="SECTIONEulersMethod-23">
 <div class="para">Don’t let the formalism of this definition scare you. All it says is that at every point <span class="process-math">\((x,y)\)</span> the slope of <span class="process-math">\(y(x)\text{,}\)</span> <span class="process-math">\(\left( \text{that is, } \dfdx{y}{x}\right)\text{,}\)</span> is given by some formula, <span class="process-math">\(f(x,y)\text{,}\)</span> which may involve both <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{.}\)</span>  And  that at a particular value of <span class="process-math">\(x\)</span> (specifically, at  <span class="process-math">\(x=x_0\)</span>) we know the value of <span class="process-math">\(y\text{:}\)</span>
 </div>
 <div class="displaymath process-math">
@@ -684,10 +709,12 @@ y(x_0)=y_0.
 y(x_0)=y_0\text{.}
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONEulersMethod-23" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<aside class="aside aside-like" id="SECTIONEulersMethod-24"><h3 class="heading"><span class="title">Comment.</span></h3>
-<div class="para" id="SECTIONEulersMethod-24-2">In our problem above we had <span class="process-math">\(\dfdx{y}{x}=f(x,y)=y\text{,}\)</span> <span class="process-math">\(x_0=0\text{,}\)</span> and <span class="process-math">\(y(x_0)=1\text{.}\)</span>
-</div></aside><div class="para logical" id="SECTIONEulersMethod-25">
+<details id="SECTIONEulersMethod-24" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Aside<span class="colon heading-divison-mark heading-divison-mark__colon">:</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Comment.</span>
+</h3></summary><aside class="aside aside-like knowl__content"><div class="para" id="SECTIONEulersMethod-24-2">In our problem above we had <span class="process-math">\(\dfdx{y}{x}=f(x,y)=y\text{,}\)</span> <span class="process-math">\(x_0=0\text{,}\)</span> and <span class="process-math">\(y(x_0)=1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#SECTIONEulersMethod-24-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></aside></details><div class="para logical" id="SECTIONEulersMethod-25">
 <div class="para">We know that the equation of the tangent line to the curve <span class="process-math">\(y=y(x)\)</span> at the point <span class="process-math">\((x_0,y_0)\)</span> is given by</div>
 <div class="displaymath process-math" id="SECTIONEulersMethod-25-3">
 \begin{align*}
@@ -696,10 +723,12 @@ y\amp =y_0+\left(\eval{\dfdx{y}{x}}{(x,y)}{(x_0,y_0)}\right)(x-x_0)\\
 \end{align*}
 </div>
 <div class="para">So if we choose <span class="process-math">\(x_1\)</span> very close to <span class="process-math">\(x_0\)</span> and compute <span class="process-math">\(y_1=y_0+f(x_0,y_0 )(x_1-x_0 )\)</span> then <span class="process-math">\((x_1,y_1)\)</span> would be approximately on the curve. In this way we can generate a sequence of points <span class="process-math">\((x_0,y_0 ), (x_1,y_1 ), (x_2,y_2 ), (x_3,y_3 ),\cdots\)</span> which are approximately on the curve.  Connecting them with straight line segments should provide an approximate graph of the curve.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONEulersMethod-25" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="SECTIONEulersMethod-26">Formalizing all of this we have:</div>
+<div class="para" id="SECTIONEulersMethod-26">Formalizing all of this we have:<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONEulersMethod-26" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="algorithm theorem-like" id="ALGORITHMEulersMethod"><h3 class="heading">
-<span class="type">Algorithm</span><span class="space"> </span><span class="codenumber">7.3.2</span><span class="period">.</span><span class="space"> </span><span class="title">Euler’s Method.</span>
+<span class="type">Algorithm</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Euler’s Method.</span>
 </h3>
 <div class="para logical" id="ALGORITHMEulersMethod-3">
 <div class="para">Given an IVP:</div>
@@ -715,9 +744,12 @@ y_{n+1}=f(x_n,y_n )(x_{n+1}-x_n)+y_n
 \text{ for } n=1, 2, 3, \ldots.
 \end{equation*}
 </div>
-</div></article><div class="para" id="SECTIONEulersMethod-28">At each iteration the value of <span class="process-math">\(y\)</span> has been approximated, so the next approximation is probably not as good. Thus, as we move further from our initial value <span class="process-math">\((x_0, y_0)\)</span> our approximation probably deviates further away from the actual curve.  However,  near to the initial value, <span class="process-math">\((x_0,y_0)\)</span> we should have a reasonable approximation to the curve <span class="process-math">\(y=y(x)\text{.}\)</span> The next two problems demonstrate this.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ALGORITHMEulersMethod-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Algorithm 7.3.2: Euler’s Method"><a href="#ALGORITHMEulersMethod" title="Copy heading and permalink for Algorithm 7.3.2: Euler’s Method" aria-label="Copy heading and permalink for Algorithm 7.3.2: Euler’s Method">🔗</a></div></article><div class="para" id="SECTIONEulersMethod-28">At each iteration the value of <span class="process-math">\(y\)</span> has been approximated, so the next approximation is probably not as good. Thus, as we move further from our initial value <span class="process-math">\((x_0, y_0)\)</span> our approximation probably deviates further away from the actual curve.  However,  near to the initial value, <span class="process-math">\((x_0,y_0)\)</span> we should have a reasonable approximation to the curve <span class="process-math">\(y=y(x)\text{.}\)</span> The next two problems demonstrate this.<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONEulersMethod-28" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="exercise exercise-like" id="PROBLEMEulerSine"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">7.3.3</span><span class="period">.</span>
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para logical" id="PROBLEMEulerSine-1-1">
 <div class="para">Observe that <span class="process-math">\(y=\sin(x)\)</span> satisfies the IVP</div>
@@ -727,6 +759,7 @@ y_{n+1}=f(x_n,y_n )(x_{n+1}-x_n)+y_n
 \end{align*}
 </div>
 <div class="para">Use Euler’s Method on this IVP to complete the table. Then plot the points you generated and the graph of <span class="process-math">\(y=\sin(x)\)</span> on the same set of axes so you can compare them.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMEulerSine-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b1 r0 l0 t0 lines"><span class="process-math">\(n\)</span></td>
@@ -813,8 +846,9 @@ y_{n+1}=f(x_n,y_n )(x_{n+1}-x_n)+y_n
 <td class="l m b0 r1 l0 t0 lines"><span class="process-math">\(1.5\)</span></td>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
 </tr>
-</table></div></article><article class="exercise exercise-like" id="PROBLEMEulerCosine"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">7.3.4</span><span class="period">.</span>
+</table></div>
+<div class="autopermalink" data-description="Problem 7.3.3"><a href="#PROBLEMEulerSine" title="Copy heading and permalink for Problem 7.3.3" aria-label="Copy heading and permalink for Problem 7.3.3">🔗</a></div></article><article class="exercise exercise-like" id="PROBLEMEulerCosine"><h3 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para logical" id="PROBLEMEulerCosine-1-1">
 <div class="para">Observe that <span class="process-math">\(y=\cos(x)\)</span> satisfies the IVP</div>
@@ -824,6 +858,7 @@ y_{n+1}=f(x_n,y_n )(x_{n+1}-x_n)+y_n
 \end{align*}
 </div>
 <div class="para">Use Euler’s Method on this IVP to complete the following table. Then plot the points you generated and the graph of <span class="process-math">\(y=\cos(x)\)</span> on the same set of axes so you can compare them.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMEulerCosine-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b1 r0 l0 t0 lines"><span class="process-math">\(n\)</span></td>
@@ -910,41 +945,97 @@ y_{n+1}=f(x_n,y_n )(x_{n+1}-x_n)+y_n
 <td class="l m b0 r1 l0 t0 lines"><span class="process-math">\(1.5\)</span></td>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
 </tr>
-</table></div></article><article class="exercise exercise-like" id="SECTIONEulersMethod-31"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">7.3.5</span><span class="period">.</span>
+</table></div>
+<div class="autopermalink" data-description="Problem 7.3.4"><a href="#PROBLEMEulerCosine" title="Copy heading and permalink for Problem 7.3.4" aria-label="Copy heading and permalink for Problem 7.3.4">🔗</a></div></article><article class="exercise exercise-like" id="SECTIONEulersMethod-31"><h3 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<div class="introduction" id="SECTIONEulersMethod-31-1"><div class="para" id="SECTIONEulersMethod-31-1-1">Use Euler’s Method to approximate the solutions of the given IVPs by constructing a table like the ones in <a href="SECTIONEulersMethod.html#PROBLEMEulerSine" class="xref" data-knowl="./knowl/xref/PROBLEMEulerSine.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 7.3.3">Problems 7.3.3</a> <a href="SECTIONEulersMethod.html#PROBLEMEulerCosine" class="xref" data-knowl="./knowl/xref/PROBLEMEulerCosine.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 7.3.4">and 7.3.4</a>. Then plot the points you found, connecting them with straight line segments.</div></div>
+<div class="introduction" id="SECTIONEulersMethod-31-1"><div class="para" id="SECTIONEulersMethod-31-1-1">Use Euler’s Method to approximate the solutions of the given IVPs by constructing a table like the ones in <a href="SECTIONEulersMethod.html#PROBLEMEulerSine" class="xref" data-knowl="./knowl/xref/PROBLEMEulerSine.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 7.3.3">Problems 7.3.3</a> <a href="SECTIONEulersMethod.html#PROBLEMEulerCosine" class="xref" data-knowl="./knowl/xref/PROBLEMEulerCosine.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 7.3.4">and 7.3.4</a>. Then plot the points you found, connecting them with straight line segments.<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONEulersMethod-31-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
 <article class="task exercise-like" id="SECTIONEulersMethod-31-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="SECTIONEulersMethod-31-2-1-1"><span class="process-math">\(\dfdx{y}{x}=y^2,\ \ \ y(0)=1\)</span></div></article><article class="task exercise-like" id="SECTIONEulersMethod-31-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="SECTIONEulersMethod-31-3-1-1"><span class="process-math">\(\dfdx{y}{x}=y^3,\ \ \ y(0)=1\)</span></div></article><article class="task exercise-like" id="SECTIONEulersMethod-31-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="SECTIONEulersMethod-31-4-1-1"><span class="process-math">\(\dfdx{y}{x}=y^4,\ \ \ y(0)=1\)</span></div></article><article class="task exercise-like" id="SECTIONEulersMethod-31-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="SECTIONEulersMethod-31-5-1-1"><span class="process-math">\(\dfdx{y}{x}=y^5,\ \ \ y(0)=1\)</span></div></article></article><article class="exercise exercise-like" id="SECTIONEulersMethod-32"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">7.3.6</span><span class="period">.</span>
+<div class="para" id="SECTIONEulersMethod-31-2-1-1">
+<span class="process-math">\(\dfdx{y}{x}=y^2,\ \ \ y(0)=1\)</span><div class="autopermalink" data-description="Paragraph"><a href="#SECTIONEulersMethod-31-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.3.5.a"><a href="#SECTIONEulersMethod-31-2" title="Copy heading and permalink for Task 7.3.5.a" aria-label="Copy heading and permalink for Task 7.3.5.a">🔗</a></div></article><article class="task exercise-like" id="SECTIONEulersMethod-31-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="SECTIONEulersMethod-31-3-1-1">
+<span class="process-math">\(\dfdx{y}{x}=y^3,\ \ \ y(0)=1\)</span><div class="autopermalink" data-description="Paragraph"><a href="#SECTIONEulersMethod-31-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.3.5.b"><a href="#SECTIONEulersMethod-31-3" title="Copy heading and permalink for Task 7.3.5.b" aria-label="Copy heading and permalink for Task 7.3.5.b">🔗</a></div></article><article class="task exercise-like" id="SECTIONEulersMethod-31-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="SECTIONEulersMethod-31-4-1-1">
+<span class="process-math">\(\dfdx{y}{x}=y^4,\ \ \ y(0)=1\)</span><div class="autopermalink" data-description="Paragraph"><a href="#SECTIONEulersMethod-31-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.3.5.c"><a href="#SECTIONEulersMethod-31-4" title="Copy heading and permalink for Task 7.3.5.c" aria-label="Copy heading and permalink for Task 7.3.5.c">🔗</a></div></article><article class="task exercise-like" id="SECTIONEulersMethod-31-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="SECTIONEulersMethod-31-5-1-1">
+<span class="process-math">\(\dfdx{y}{x}=y^5,\ \ \ y(0)=1\)</span><div class="autopermalink" data-description="Paragraph"><a href="#SECTIONEulersMethod-31-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.3.5.d"><a href="#SECTIONEulersMethod-31-5" title="Copy heading and permalink for Task 7.3.5.d" aria-label="Copy heading and permalink for Task 7.3.5.d">🔗</a></div></article><div class="autopermalink" data-description="Problem 7.3.5"><a href="#SECTIONEulersMethod-31" title="Copy heading and permalink for Problem 7.3.5" aria-label="Copy heading and permalink for Problem 7.3.5">🔗</a></div></article><article class="exercise exercise-like" id="SECTIONEulersMethod-32"><h3 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<div class="introduction" id="SECTIONEulersMethod-32-1"><div class="para" id="SECTIONEulersMethod-32-1-1">Use Euler’s Method to approximate the solutions of the given IVPs by constructing a table like the ones in <a href="SECTIONEulersMethod.html#PROBLEMEulerSine" class="xref" data-knowl="./knowl/xref/PROBLEMEulerSine.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 7.3.3">Problems 7.3.3</a> <a href="SECTIONEulersMethod.html#PROBLEMEulerCosine" class="xref" data-knowl="./knowl/xref/PROBLEMEulerCosine.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 7.3.4">and 7.3.4</a>. Then plot the points you found, connecting them with straight line segments.</div></div>
+<div class="introduction" id="SECTIONEulersMethod-32-1"><div class="para" id="SECTIONEulersMethod-32-1-1">Use Euler’s Method to approximate the solutions of the given IVPs by constructing a table like the ones in <a href="SECTIONEulersMethod.html#PROBLEMEulerSine" class="xref" data-knowl="./knowl/xref/PROBLEMEulerSine.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 7.3.3">Problems 7.3.3</a> <a href="SECTIONEulersMethod.html#PROBLEMEulerCosine" class="xref" data-knowl="./knowl/xref/PROBLEMEulerCosine.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 7.3.4">and 7.3.4</a>. Then plot the points you found, connecting them with straight line segments.<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONEulersMethod-32-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
 <article class="task exercise-like" id="SECTIONEulersMethod-32-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="SECTIONEulersMethod-32-2-1-1"><span class="process-math">\(\dfdx{y}{x}=\frac{1}{y},\ \ \ y(1)=1\)</span></div></article><article class="task exercise-like" id="SECTIONEulersMethod-32-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="SECTIONEulersMethod-32-3-1-1"><span class="process-math">\(\dfdx{y}{x}=\frac{1}{y^2},\ \ \ y(1)=1\)</span></div></article><article class="task exercise-like" id="SECTIONEulersMethod-32-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="SECTIONEulersMethod-32-4-1-1"><span class="process-math">\(\dfdx{y}{x}=\frac{1}{y^3},\ \ \ y(1)=1\)</span></div></article><article class="task exercise-like" id="SECTIONEulersMethod-32-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="SECTIONEulersMethod-32-5-1-1"><span class="process-math">\(\dfdx{y}{x}=\frac{1}{y^4},\ \ \ y(1)=1\)</span></div></article></article><article class="exercise exercise-like" id="SECTIONEulersMethod-33"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">7.3.7</span><span class="period">.</span>
+<div class="para" id="SECTIONEulersMethod-32-2-1-1">
+<span class="process-math">\(\dfdx{y}{x}=\frac{1}{y},\ \ \ y(1)=1\)</span><div class="autopermalink" data-description="Paragraph"><a href="#SECTIONEulersMethod-32-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.3.6.a"><a href="#SECTIONEulersMethod-32-2" title="Copy heading and permalink for Task 7.3.6.a" aria-label="Copy heading and permalink for Task 7.3.6.a">🔗</a></div></article><article class="task exercise-like" id="SECTIONEulersMethod-32-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="SECTIONEulersMethod-32-3-1-1">
+<span class="process-math">\(\dfdx{y}{x}=\frac{1}{y^2},\ \ \ y(1)=1\)</span><div class="autopermalink" data-description="Paragraph"><a href="#SECTIONEulersMethod-32-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.3.6.b"><a href="#SECTIONEulersMethod-32-3" title="Copy heading and permalink for Task 7.3.6.b" aria-label="Copy heading and permalink for Task 7.3.6.b">🔗</a></div></article><article class="task exercise-like" id="SECTIONEulersMethod-32-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="SECTIONEulersMethod-32-4-1-1">
+<span class="process-math">\(\dfdx{y}{x}=\frac{1}{y^3},\ \ \ y(1)=1\)</span><div class="autopermalink" data-description="Paragraph"><a href="#SECTIONEulersMethod-32-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.3.6.c"><a href="#SECTIONEulersMethod-32-4" title="Copy heading and permalink for Task 7.3.6.c" aria-label="Copy heading and permalink for Task 7.3.6.c">🔗</a></div></article><article class="task exercise-like" id="SECTIONEulersMethod-32-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="SECTIONEulersMethod-32-5-1-1">
+<span class="process-math">\(\dfdx{y}{x}=\frac{1}{y^4},\ \ \ y(1)=1\)</span><div class="autopermalink" data-description="Paragraph"><a href="#SECTIONEulersMethod-32-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.3.6.d"><a href="#SECTIONEulersMethod-32-5" title="Copy heading and permalink for Task 7.3.6.d" aria-label="Copy heading and permalink for Task 7.3.6.d">🔗</a></div></article><div class="autopermalink" data-description="Problem 7.3.6"><a href="#SECTIONEulersMethod-32" title="Copy heading and permalink for Problem 7.3.6" aria-label="Copy heading and permalink for Problem 7.3.6">🔗</a></div></article><article class="exercise exercise-like" id="SECTIONEulersMethod-33"><h3 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<div class="introduction" id="SECTIONEulersMethod-33-1"><div class="para" id="SECTIONEulersMethod-33-1-1">Use Euler’s Method to approximate the solutions of the given IVPs by constructing a table like the ones in <a href="SECTIONEulersMethod.html#PROBLEMEulerSine" class="xref" data-knowl="./knowl/xref/PROBLEMEulerSine.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 7.3.3">Problems 7.3.3</a> <a href="SECTIONEulersMethod.html#PROBLEMEulerCosine" class="xref" data-knowl="./knowl/xref/PROBLEMEulerCosine.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 7.3.4">and 7.3.4</a>. Then plot the points you found, connecting them with straight line segments.</div></div>
+<div class="introduction" id="SECTIONEulersMethod-33-1"><div class="para" id="SECTIONEulersMethod-33-1-1">Use Euler’s Method to approximate the solutions of the given IVPs by constructing a table like the ones in <a href="SECTIONEulersMethod.html#PROBLEMEulerSine" class="xref" data-knowl="./knowl/xref/PROBLEMEulerSine.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 7.3.3">Problems 7.3.3</a> <a href="SECTIONEulersMethod.html#PROBLEMEulerCosine" class="xref" data-knowl="./knowl/xref/PROBLEMEulerCosine.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 7.3.4">and 7.3.4</a>. Then plot the points you found, connecting them with straight line segments.<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONEulersMethod-33-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
 <article class="task exercise-like" id="SECTIONEulersMethod-33-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="SECTIONEulersMethod-33-2-1-1"><span class="process-math">\(\dfdx{y}{x}=xy,\ \ \ y(0)=1\)</span></div></article><article class="task exercise-like" id="SECTIONEulersMethod-33-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="SECTIONEulersMethod-33-3-1-1"><span class="process-math">\(\dfdx{y}{x}=x^2y,\ \ \ y(0)=1\)</span></div></article><article class="task exercise-like" id="SECTIONEulersMethod-33-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="SECTIONEulersMethod-33-4-1-1"><span class="process-math">\(\dfdx{y}{x}=xy^2,\ \ \ y(0)=1\)</span></div></article><article class="task exercise-like" id="SECTIONEulersMethod-33-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="SECTIONEulersMethod-33-5-1-1"><span class="process-math">\(\dfdx{y}{x}=x^2y^2,\ \ \ y(0)=1\)</span></div></article><article class="task exercise-like" id="SECTIONEulersMethod-33-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para" id="SECTIONEulersMethod-33-6-1-1"><span class="process-math">\(\dfdx{y}{x}=\frac{x}{y},\ \ \ y(1)=1\)</span></div></article><article class="task exercise-like" id="SECTIONEulersMethod-33-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
-<div class="para" id="SECTIONEulersMethod-33-7-1-1"><span class="process-math">\(\dfdx{y}{x}=\frac{x^2}{y},\ \ \ y(1)=1\)</span></div></article><article class="task exercise-like" id="SECTIONEulersMethod-33-8"><h4 class="heading"><span class="codenumber">(g)</span></h4>
-<div class="para" id="SECTIONEulersMethod-33-8-1-1"><span class="process-math">\(\dfdx{y}{x}=\frac{x}{y^2},\ \ \ y(1)=1\)</span></div></article><article class="task exercise-like" id="SECTIONEulersMethod-33-9"><h4 class="heading"><span class="codenumber">(h)</span></h4>
-<div class="para" id="SECTIONEulersMethod-33-9-1-1"><span class="process-math">\(\dfdx{y}{x}=\frac{x^2}{y^2},\ \ \ y(1)=1\)</span></div></article><article class="task exercise-like" id="SECTIONEulersMethod-33-10"><h4 class="heading"><span class="codenumber">(i)</span></h4>
-<div class="para" id="SECTIONEulersMethod-33-10-1-1"><span class="process-math">\(\dfdx{y}{x}=\frac{x^2}{y^2},\ \ \ y(1)=2\)</span></div></article></article><article class="exercise exercise-like" id="PROBLEMTractrix"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">7.3.8</span><span class="period">.</span>
+<div class="para" id="SECTIONEulersMethod-33-2-1-1">
+<span class="process-math">\(\dfdx{y}{x}=xy,\ \ \ y(0)=1\)</span><div class="autopermalink" data-description="Paragraph"><a href="#SECTIONEulersMethod-33-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.3.7.a"><a href="#SECTIONEulersMethod-33-2" title="Copy heading and permalink for Task 7.3.7.a" aria-label="Copy heading and permalink for Task 7.3.7.a">🔗</a></div></article><article class="task exercise-like" id="SECTIONEulersMethod-33-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="SECTIONEulersMethod-33-3-1-1">
+<span class="process-math">\(\dfdx{y}{x}=x^2y,\ \ \ y(0)=1\)</span><div class="autopermalink" data-description="Paragraph"><a href="#SECTIONEulersMethod-33-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.3.7.b"><a href="#SECTIONEulersMethod-33-3" title="Copy heading and permalink for Task 7.3.7.b" aria-label="Copy heading and permalink for Task 7.3.7.b">🔗</a></div></article><article class="task exercise-like" id="SECTIONEulersMethod-33-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="SECTIONEulersMethod-33-4-1-1">
+<span class="process-math">\(\dfdx{y}{x}=xy^2,\ \ \ y(0)=1\)</span><div class="autopermalink" data-description="Paragraph"><a href="#SECTIONEulersMethod-33-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.3.7.c"><a href="#SECTIONEulersMethod-33-4" title="Copy heading and permalink for Task 7.3.7.c" aria-label="Copy heading and permalink for Task 7.3.7.c">🔗</a></div></article><article class="task exercise-like" id="SECTIONEulersMethod-33-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="SECTIONEulersMethod-33-5-1-1">
+<span class="process-math">\(\dfdx{y}{x}=x^2y^2,\ \ \ y(0)=1\)</span><div class="autopermalink" data-description="Paragraph"><a href="#SECTIONEulersMethod-33-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.3.7.d"><a href="#SECTIONEulersMethod-33-5" title="Copy heading and permalink for Task 7.3.7.d" aria-label="Copy heading and permalink for Task 7.3.7.d">🔗</a></div></article><article class="task exercise-like" id="SECTIONEulersMethod-33-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="SECTIONEulersMethod-33-6-1-1">
+<span class="process-math">\(\dfdx{y}{x}=\frac{x}{y},\ \ \ y(1)=1\)</span><div class="autopermalink" data-description="Paragraph"><a href="#SECTIONEulersMethod-33-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.3.7.e"><a href="#SECTIONEulersMethod-33-6" title="Copy heading and permalink for Task 7.3.7.e" aria-label="Copy heading and permalink for Task 7.3.7.e">🔗</a></div></article><article class="task exercise-like" id="SECTIONEulersMethod-33-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
+<div class="para" id="SECTIONEulersMethod-33-7-1-1">
+<span class="process-math">\(\dfdx{y}{x}=\frac{x^2}{y},\ \ \ y(1)=1\)</span><div class="autopermalink" data-description="Paragraph"><a href="#SECTIONEulersMethod-33-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.3.7.f"><a href="#SECTIONEulersMethod-33-7" title="Copy heading and permalink for Task 7.3.7.f" aria-label="Copy heading and permalink for Task 7.3.7.f">🔗</a></div></article><article class="task exercise-like" id="SECTIONEulersMethod-33-8"><h4 class="heading"><span class="codenumber">(g)</span></h4>
+<div class="para" id="SECTIONEulersMethod-33-8-1-1">
+<span class="process-math">\(\dfdx{y}{x}=\frac{x}{y^2},\ \ \ y(1)=1\)</span><div class="autopermalink" data-description="Paragraph"><a href="#SECTIONEulersMethod-33-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.3.7.g"><a href="#SECTIONEulersMethod-33-8" title="Copy heading and permalink for Task 7.3.7.g" aria-label="Copy heading and permalink for Task 7.3.7.g">🔗</a></div></article><article class="task exercise-like" id="SECTIONEulersMethod-33-9"><h4 class="heading"><span class="codenumber">(h)</span></h4>
+<div class="para" id="SECTIONEulersMethod-33-9-1-1">
+<span class="process-math">\(\dfdx{y}{x}=\frac{x^2}{y^2},\ \ \ y(1)=1\)</span><div class="autopermalink" data-description="Paragraph"><a href="#SECTIONEulersMethod-33-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.3.7.h"><a href="#SECTIONEulersMethod-33-9" title="Copy heading and permalink for Task 7.3.7.h" aria-label="Copy heading and permalink for Task 7.3.7.h">🔗</a></div></article><article class="task exercise-like" id="SECTIONEulersMethod-33-10"><h4 class="heading"><span class="codenumber">(i)</span></h4>
+<div class="para" id="SECTIONEulersMethod-33-10-1-1">
+<span class="process-math">\(\dfdx{y}{x}=\frac{x^2}{y^2},\ \ \ y(1)=2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#SECTIONEulersMethod-33-10-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.3.7.i"><a href="#SECTIONEulersMethod-33-10" title="Copy heading and permalink for Task 7.3.7.i" aria-label="Copy heading and permalink for Task 7.3.7.i">🔗</a></div></article><div class="autopermalink" data-description="Problem 7.3.7"><a href="#SECTIONEulersMethod-33" title="Copy heading and permalink for Problem 7.3.7" aria-label="Copy heading and permalink for Problem 7.3.7">🔗</a></div></article><article class="exercise exercise-like" id="PROBLEMTractrix"><h3 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="introduction" id="PROBLEMTractrix-1">
 <div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="external/DC/Tractrix.png" class="contained"></div>
-<div class="para" id="PROBLEMTractrix-1-2">Consider the top view of a tractor–trailer as it turns, as shown above.  Initially, the center of the rear axle of the tractor is at the origin and the center of the rear axle of the trailer is at the point <span class="process-math">\((1,0)\text{.}\)</span>  The tractor pulls the front wheels vertically up the <span class="process-math">\(y\)</span>–axis and we assume that the rear wheels don’t slip. The path that the center of the rear axle follows is called a tractrix from the Latin verb <i class="foreign">trahere</i>, meaning “to drag or pull.”</div>
+<div class="para" id="PROBLEMTractrix-1-2">Consider the top view of a tractor–trailer as it turns, as shown above.  Initially, the center of the rear axle of the tractor is at the origin and the center of the rear axle of the trailer is at the point <span class="process-math">\((1,0)\text{.}\)</span>  The tractor pulls the front wheels vertically up the <span class="process-math">\(y\)</span>–axis and we assume that the rear wheels don’t slip. The path that the center of the rear axle follows is called a tractrix from the Latin verb <i class="foreign">trahere</i>, meaning “to drag or pull.”<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMTractrix-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 </div>
 <article class="task exercise-like" id="PROBLEMTractrix-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para logical" id="PROBLEMTractrix-2-1-1">
@@ -954,9 +1045,16 @@ y_{n+1}=f(x_n,y_n )(x_{n+1}-x_n)+y_n
 \dfdx{y}{x}=-\frac{\sqrt{1-x^2 }}{x}\amp{}\amp{} y(1)=0.\tag{7.7}
 \end{align}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMTractrix-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="PROBLEMTractrix-2-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="PROBLEMTractrix-2-2-1">Find a differential triangle and an ordinary triangle which are proportional.</div></div></details></div></article><article class="task exercise-like" id="PROBLEMTractrix-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="PROBLEMTractrix-3-1-1">Apply Euler’s Method to complete the following table to approximate the tractrix.</div> <div class="tabular-box natural-width"><table class="tabular">
+<div class="solutions"><details id="PROBLEMTractrix-2-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="PROBLEMTractrix-2-2-1">Find a differential triangle and an ordinary triangle which are proportional.<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMTractrix-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 7.3.8.a.1"><a href="#PROBLEMTractrix-2-2" title="Copy heading and permalink for Hint 7.3.8.a.1" aria-label="Copy heading and permalink for Hint 7.3.8.a.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 7.3.8.a"><a href="#PROBLEMTractrix-2" title="Copy heading and permalink for Task 7.3.8.a" aria-label="Copy heading and permalink for Task 7.3.8.a">🔗</a></div></article><article class="task exercise-like" id="PROBLEMTractrix-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="PROBLEMTractrix-3-1-1">Apply Euler’s Method to complete the following table to approximate the tractrix.<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMTractrix-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b1 r0 l0 t0 lines"><span class="process-math">\(n\)</span></td>
 <td class="l m b1 r1 l0 t0 lines"><span class="process-math">\(x_n\)</span></td>
@@ -1042,18 +1140,22 @@ y_{n+1}=f(x_n,y_n )(x_{n+1}-x_n)+y_n
 <td class="l m b0 r1 l0 t0 lines"><span class="process-math">\(1.5\)</span></td>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
 </tr>
-</table></div></article><article class="task exercise-like" id="PROBLEMTractrix-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="PROBLEMTractrix-4-1-1">Plot the points obtained in part b to see if this looks like the path the rear axle of the trailer would take.</div></article></article><article class="exercise exercise-like" id="PROBLEMPursuit1"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">7.3.9</span><span class="period">.</span>
+</table></div>
+<div class="autopermalink" data-description="Task 7.3.8.b"><a href="#PROBLEMTractrix-3" title="Copy heading and permalink for Task 7.3.8.b" aria-label="Copy heading and permalink for Task 7.3.8.b">🔗</a></div></article><article class="task exercise-like" id="PROBLEMTractrix-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="PROBLEMTractrix-4-1-1">Plot the points obtained in part b to see if this looks like the path the rear axle of the trailer would take.<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMTractrix-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.3.8.c"><a href="#PROBLEMTractrix-4" title="Copy heading and permalink for Task 7.3.8.c" aria-label="Copy heading and permalink for Task 7.3.8.c">🔗</a></div></article><div class="autopermalink" data-description="Problem 7.3.8"><a href="#PROBLEMTractrix" title="Copy heading and permalink for Problem 7.3.8" aria-label="Copy heading and permalink for Problem 7.3.8">🔗</a></div></article><article class="exercise exercise-like" id="PROBLEMPursuit1"><h3 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="introduction" id="PROBLEMPursuit1-1">
 <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/DC/PursuitCurve2.png" class="contained"></div>
-<div class="para" id="PROBLEMPursuit1-1-2">Suppose a rocket <span class="process-math">\(R\)</span> travels up the line <span class="process-math">\(x=1\)</span> at a constant speed <span class="process-math">\(v\text{.}\)</span> As the rocket passes through the point <span class="process-math">\((1,0)\text{,}\)</span> a  missile <span class="process-math">\(M\)</span> is fired from the origin directly at the rocket.  Assume that the missile travels at a speed which is <span class="process-math">\(\frac32\)</span> times the speed of the rocket and is always aimed directly at the rocket. At time <span class="process-math">\(t\)</span> the missile is at the point <span class="process-math">\(M(x,y)\)</span> and the rocket is at the point <span class="process-math">\(R(1,vt)\)</span> We want to find the path the missile will follow.  The diagram above shows the situation at time <span class="process-math">\(t\text{.}\)</span>
+<div class="para" id="PROBLEMPursuit1-1-2">Suppose a rocket <span class="process-math">\(R\)</span> travels up the line <span class="process-math">\(x=1\)</span> at a constant speed <span class="process-math">\(v\text{.}\)</span> As the rocket passes through the point <span class="process-math">\((1,0)\text{,}\)</span> a  missile <span class="process-math">\(M\)</span> is fired from the origin directly at the rocket.  Assume that the missile travels at a speed which is <span class="process-math">\(\frac32\)</span> times the speed of the rocket and is always aimed directly at the rocket. At time <span class="process-math">\(t\)</span> the missile is at the point <span class="process-math">\(M(x,y)\)</span> and the rocket is at the point <span class="process-math">\(R(1,vt)\)</span> We want to find the path the missile will follow.  The diagram above shows the situation at time <span class="process-math">\(t\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMPursuit1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 </div>
 <article class="task exercise-like" id="PROBLEMPursuit1-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="PROBLEMPursuit1-2-1-1">Find <span class="process-math">\(s\)</span> if <span class="process-math">\(s\)</span> denotes the length of the the missile’s path at time <span class="process-math">\(t\text{.}\)</span>
-</div></article><article class="task exercise-like" id="PROBLEMPursuit1-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="PROBLEMPursuit1-2-1-1">Find <span class="process-math">\(s\)</span> if <span class="process-math">\(s\)</span> denotes the length of the the missile’s path at time <span class="process-math">\(t\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMPursuit1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.3.9.a"><a href="#PROBLEMPursuit1-2" title="Copy heading and permalink for Task 7.3.9.a" aria-label="Copy heading and permalink for Task 7.3.9.a">🔗</a></div></article><article class="task exercise-like" id="PROBLEMPursuit1-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para logical" id="PROBLEMPursuit1-3-1-1">
 <div class="para">Show that the missile’s path must satisfy the IVP</div>
 <div class="displaymath process-math" id="PROBLEMPursuit1-3-1-1-2">
@@ -1062,9 +1164,16 @@ y_{n+1}=f(x_n,y_n )(x_{n+1}-x_n)+y_n
 y(0)=0.
 \end{align*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMPursuit1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="PROBLEMPursuit1-3-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="PROBLEMPursuit1-3-2-1">Find a triangle which is proportional to the differential triangle shown.</div></div></details></div></article><article class="task exercise-like" id="PROBLEMPursuit1-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="PROBLEMPursuit1-4-1-1">Apply Euler’s Method to fill in the following table.</div> <div class="tabular-box natural-width"><table class="tabular">
+<div class="solutions"><details id="PROBLEMPursuit1-3-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="PROBLEMPursuit1-3-2-1">Find a triangle which is proportional to the differential triangle shown.<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMPursuit1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 7.3.9.b.1"><a href="#PROBLEMPursuit1-3-2" title="Copy heading and permalink for Hint 7.3.9.b.1" aria-label="Copy heading and permalink for Hint 7.3.9.b.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 7.3.9.b"><a href="#PROBLEMPursuit1-3" title="Copy heading and permalink for Task 7.3.9.b" aria-label="Copy heading and permalink for Task 7.3.9.b">🔗</a></div></article><article class="task exercise-like" id="PROBLEMPursuit1-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="PROBLEMPursuit1-4-1-1">Apply Euler’s Method to fill in the following table.<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMPursuit1-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b1 r0 l0 t0 lines"><span class="process-math">\(n\)</span></td>
 <td class="l m b1 r1 l0 t0 lines"><span class="process-math">\(x_n\)</span></td>
@@ -1150,9 +1259,13 @@ y(0)=0.
 <td class="l m b0 r1 l0 t0 lines"><span class="process-math">\(1.5\)</span></td>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
 </tr>
-</table></div></article><article class="task exercise-like" id="PROBLEMPursuit1-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="PROBLEMPursuit1-5-1-1">Plot the points obtained in part b to see if this resembles the path you think the missile would follow.</div> <div class="para" id="PROBLEMPursuit1-5-1-2">We will re–visit this problem and find the exact solution in <a href="SECTIONselect-model-probl.html#SUBSECTIONPursuit" class="internal" title="Subsection 11.2.3: The  Pursuit Problem">Subsection 11.2.3</a>.</div></article></article></section></div>
-<div class="ptx-content-footer">
+</table></div>
+<div class="autopermalink" data-description="Task 7.3.9.c"><a href="#PROBLEMPursuit1-4" title="Copy heading and permalink for Task 7.3.9.c" aria-label="Copy heading and permalink for Task 7.3.9.c">🔗</a></div></article><article class="task exercise-like" id="PROBLEMPursuit1-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="PROBLEMPursuit1-5-1-1">Plot the points obtained in part b to see if this resembles the path you think the missile would follow.<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMPursuit1-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="PROBLEMPursuit1-5-1-2">We will re–visit this problem and find the exact solution in <a href="SECTIONselect-model-probl.html#SUBSECTIONPursuit" class="internal" title="Subsection 11.2.3: The  Pursuit Problem">Subsection 11.2.3</a>.<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMPursuit1-5-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.3.9.d"><a href="#PROBLEMPursuit1-5" title="Copy heading and permalink for Task 7.3.9.d" aria-label="Copy heading and permalink for Task 7.3.9.d">🔗</a></div></article><div class="autopermalink" data-description="Problem 7.3.9"><a href="#PROBLEMPursuit1" title="Copy heading and permalink for Problem 7.3.9" aria-label="Copy heading and permalink for Problem 7.3.9">🔗</a></div></article><div class="autopermalink" data-description="Section 7.3: Euler’s Method"><a href="#SECTIONEulersMethod" title="Copy heading and permalink for Section 7.3: Euler’s Method" aria-label="Copy heading and permalink for Section 7.3: Euler’s Method">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="SECTIONnewtons-method-1.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="SECTIONMoreHighDeriv.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>

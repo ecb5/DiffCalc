@@ -6,15 +6,20 @@
 <!--*                                          *-->
 <!--********************************************-->
 <html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Newton’s Method</title>
-<meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:type" content="book">
-<meta property="book:title" content="Differential Calculus">
-<meta property="book:author" content="Eugene Boman">
-<meta property="book:author" content="Robert Rogers">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
 <script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
@@ -70,13 +75,13 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
-<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
-<!--** eBookCongig is necessary to configure interactive       **-->
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Differential Calculus">
+<meta property="book:author" content="Eugene Boman">
+<meta property="book:author" content="Robert Rogers">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -98,19 +103,21 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.5.16';
+eBookConfig.runestone_version = '7.9.8';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.a0c870bab402ccbf.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.97de40e034b535c5.css">
+<script src="_static/prefix-runtime.b215b0da62d655bd.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.28cc3c4821792be5.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8141ae22fd347e48.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
-<h1 class="heading"><a href="Calculus.html"><span class="title">Differential Calculus:</span> <span class="subtitle">From Practice to Theory</span></a></h1>
+<h1 class="heading"><a href="Calculus.html"><span class="title">Differential Calculus</span> <span class="subtitle">From Practice to Theory</span></a></h1>
 <p class="byline">Eugene Boman, Robert Rogers</p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="meta_backmatter-3.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
@@ -607,23 +614,32 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="SECTIONnewtons-method-1"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">7.2</span><span class="space"> </span><span class="title">Newton’s Method</span>
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Newton’s Method</span>
 </h2>
-<section class="introduction" id="SECTIONnewtons-method-1-4"><div class="para" id="SECTIONnewtons-method-1-4-1">When Calculus came along, Newton realized that his new invention could be used to approximate solutions to equations by a particularly simple method now called, reasonably enough, Newton’s Method.</div>
-<aside class="aside aside-like" id="SECTIONnewtons-method-1-4-2"><h3 class="heading"><span class="title">Historical Context.</span></h3>
-<div class="para" id="SECTIONnewtons-method-1-4-2-2"> This is sometimes also called the Newton–Raphson Method. <a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Raphson/" target="_blank">Joseph Raphson</a><details class="ptx-footnote" aria-live="polite" id="SECTIONnewtons-method-1-4-2-2-4"><summary class="ptx-footnote__number" title="Footnote 7.5"><sup> 5 </sup></summary><div class="ptx-footnote__contents" id="SECTIONnewtons-method-1-4-2-2-4"><code class="code-inline tex2jax_ignore">https://mathshistory.st-andrews.ac.uk/Biographies/Raphson/</code></div></details> (1668–1712) was a younger contemporary of Newton who apparently invented this method independently.</div></aside></section><section class="subsection" id="SUBSECTIONNewtonsMethodBasic"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">7.2.1</span><span class="space"> </span><span class="title">The Idea Behind Newton’s Method</span>
+<section class="introduction" id="SECTIONnewtons-method-1-4"><div class="para" id="SECTIONnewtons-method-1-4-1">When Calculus came along, Newton realized that his new invention could be used to approximate solutions to equations by a particularly simple method now called, reasonably enough, Newton’s Method.<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONnewtons-method-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="SECTIONnewtons-method-1-4-2" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Aside<span class="colon heading-divison-mark heading-divison-mark__colon">:</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Historical Context.</span>
+</h3></summary><aside class="aside aside-like knowl__content"><div class="para" id="SECTIONnewtons-method-1-4-2-2"> This is sometimes also called the Newton–Raphson Method. <a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Raphson/" target="_blank">Joseph Raphson</a> (1668–1712) was a younger contemporary of Newton who apparently invented this method independently.<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONnewtons-method-1-4-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></aside></details></section><section class="subsection" id="SUBSECTIONNewtonsMethodBasic"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.2.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Idea Behind Newton’s Method</span>
 </h3>
-<div class="para" id="SUBSECTIONNewtonsMethodBasic-2"> We will use Newton’s Method to “re–invent” the Babylonian square root algorithm and, more importantly, to generalize it.  Here’s the essential idea: We know how to find the root of a <dfn class="terminology">linear</dfn> equation like <span class="process-math">\(ax+b=0\text{.}\)</span>  We want to use this knowledge to approximate the root of a nonlinear equation.  As with the rest of Calculus this means that the <a href="SECTIONdefin-tang-line.html#DEFINITIONLocalLinearity" class="xref" data-knowl="./knowl/xref/DEFINITIONLocalLinearity.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 5.2.5: The Principle of Local Linearity">Principle of Local Linearity</a>  is the postulate underlying Newton’s Method.</div>
-<div class="para" id="SUBSECTIONNewtonsMethodBasic-3">For our purposes this means that we can approximate the coordinates of points on a curve with the coordinates of points on the line tangent to the curve when the the point of tangency is nearby. Moreover this approximation gets better as we get closer to the point of tangency.</div>
-<div class="para" id="SUBSECTIONNewtonsMethodBasic-4">Before we return to the square root problem we consider the problem of approximation more broadly.</div>
+<div class="para" id="SUBSECTIONNewtonsMethodBasic-2"> We will use Newton’s Method to “re–invent” the Babylonian square root algorithm and, more importantly, to generalize it.  Here’s the essential idea: We know how to find the root of a <dfn class="terminology">linear</dfn> equation like <span class="process-math">\(ax+b=0\text{.}\)</span>  We want to use this knowledge to approximate the root of a nonlinear equation.  As with the rest of Calculus this means that the <a href="SECTIONdefin-tang-line.html#DEFINITIONLocalLinearity" class="xref" data-knowl="./knowl/xref/DEFINITIONLocalLinearity.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 5.2.5: The Principle of Local Linearity">Principle of Local Linearity</a>  is the postulate underlying Newton’s Method.<div class="autopermalink" data-description="Paragraph"><a href="#SUBSECTIONNewtonsMethodBasic-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="SUBSECTIONNewtonsMethodBasic-3">For our purposes this means that we can approximate the coordinates of points on a curve with the coordinates of points on the line tangent to the curve when the the point of tangency is nearby. Moreover this approximation gets better as we get closer to the point of tangency.<div class="autopermalink" data-description="Paragraph"><a href="#SUBSECTIONNewtonsMethodBasic-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="SUBSECTIONNewtonsMethodBasic-4">Before we return to the square root problem we consider the problem of approximation more broadly.<div class="autopermalink" data-description="Paragraph"><a href="#SUBSECTIONNewtonsMethodBasic-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="example example-like" id="EXAMPLEnewtons-method1"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.2.1</span><span class="period">.</span>
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.2.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
-<div class="para" id="EXAMPLEnewtons-method1-2">Most mathematical software will accept the equation <span class="process-math">\(x^3-3x^2=5x+6\text{,}\)</span> whose graph is shown below, as input and give back the approximate solution <span class="process-math">\(x=4.433\)</span> at the click of a button.  As a result it is easy to get the impression that this is a a simple problem.  But, imagine yourself back in the late <span class="process-math">\(17\)</span>th century for a moment. The only computation technology available is paper and pencil. How would you solve this problem?  How would you even generate an approximate solution?</div>
-<div class="para" id="EXAMPLEnewtons-method1-3">One possibility is to graph <span class="process-math">\(y=x^3-3x^2\)</span> and <span class="process-math">\(y=5x+6\)</span> on the same set of axes and look for the value of <span class="process-math">\(x\)</span> where the two graphs intersect as in the figure below.</div>
+<div class="para" id="EXAMPLEnewtons-method1-2">Most mathematical software will accept the equation <span class="process-math">\(x^3-3x^2=5x+6\text{,}\)</span> whose graph is shown below, as input and give back the approximate solution <span class="process-math">\(x=4.433\)</span> at the click of a button.  As a result it is easy to get the impression that this is a a simple problem.  But, imagine yourself back in the late <span class="process-math">\(17\)</span>th century for a moment. The only computation technology available is paper and pencil. How would you solve this problem?  How would you even generate an approximate solution?<div class="autopermalink" data-description="Paragraph"><a href="#EXAMPLEnewtons-method1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="EXAMPLEnewtons-method1-3">One possibility is to graph <span class="process-math">\(y=x^3-3x^2\)</span> and <span class="process-math">\(y=5x+6\)</span> on the same set of axes and look for the value of <span class="process-math">\(x\)</span> where the two graphs intersect as in the figure below.<div class="autopermalink" data-description="Paragraph"><a href="#EXAMPLEnewtons-method1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="external/DC/nm1.png" class="contained"></div>
-<div class="para" id="EXAMPLEnewtons-method1-5">This seems like a good idea until we actually try it.  Immediately we realize that accurately graphing even simple equations would have been an almost insurmountable task in those days. We clearly used modern technology to draw the graph pictured. Drawing it by hand accurately enough to glean useful information from it would have been virtually impossible.</div>
+<div class="para" id="EXAMPLEnewtons-method1-5">This seems like a good idea until we actually try it.  Immediately we realize that accurately graphing even simple equations would have been an almost insurmountable task in those days. We clearly used modern technology to draw the graph pictured. Drawing it by hand accurately enough to glean useful information from it would have been virtually impossible.<div class="autopermalink" data-description="Paragraph"><a href="#EXAMPLEnewtons-method1-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para logical" id="EXAMPLEnewtons-method1-6">
 <div class="para">Here’s another idea. If we rearrange the equation just a little we get</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQUATIONNewtonMethod1.html" id="EQUATIONNewtonMethod1">
@@ -633,44 +649,68 @@ x^3-3x^2-(5x+6)=0.\tag{7.1}
 </div>
 <div class="para">Now define <span class="process-math">\(f(x)\)</span> to be the expression on the left of <a href="SECTIONnewtons-method-1.html#EQUATIONNewtonMethod1" class="xref" data-knowl="./knowl/xref/EQUATIONNewtonMethod1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.1">equation (7.1)</a>): <span class="process-math">\(f(x) = x^3-3x^2-(5x+6)\text{.}\)</span> The graph of this function, seen below, will cross the <span class="process-math">\(x\)</span>–axis (that is <span class="process-math">\(f(x)=0\)</span>) at the same <span class="process-math">\(x\)</span> coordinate where the equation <span class="process-math">\(x^3-3x^2 = 5x+6\)</span> is satisfied. This simple observation allows us to think of the problem in a slightly different way: We are looking for the <span class="process-math">\(x\)</span> value which is a root of the function <span class="process-math">\(f(x)\text{.}\)</span>
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#EXAMPLEnewtons-method1-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/DC/nm5.png" class="contained"></div>
-<div class="para" id="EXAMPLEnewtons-method1-8">You wouldn’t think such a simple change would help. But it does because  now, instead of looking for both the <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> coordinates of an intersection point we need only search for the value of <span class="process-math">\(x\)</span> where the graph of the function <span class="process-math">\(f(x)=x^3-3x^2-(5x+6) \)</span> crosses the <span class="process-math">\(x\)</span>–axis.  This gives us just a little more information because we know that the <span class="process-math">\(y\)</span> coordinate is zero if a point is on the <span class="process-math">\(x\)</span>–axis.</div>
-<div class="para" id="EXAMPLEnewtons-method1-9"> As before we will need an initial guess to get started. Since the root seems to be close to the point where <span class="process-math">\(x=4\)</span> we’ll use <span class="process-math">\(r_1=4\)</span> as our first approximation.  Now find and sketch the line tangent to <span class="process-math">\(f(x)\)</span> at <span class="process-math">\((r_1, f(r_1)=(4,f(4))\)</span> as seen in the sketch above (in red). If our first guess is close enough to the actual root the <a href="SECTIONdefin-tang-line.html#DEFINITIONLocalLinearity" class="xref" data-knowl="./knowl/xref/DEFINITIONLocalLinearity.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 5.2.5: The Principle of Local Linearity">Principle of Local Linearity</a>  guarantees that the tangent line will cross the <span class="process-math">\(x\)</span>–axis very near to the actual root.  So the value of <span class="process-math">\(x\text{,}\)</span> whatever it is, where the tangent line crosses seems like it would be a pretty good second approximation <span class="process-math">\(r_2\text{,}\)</span> of the root of <span class="process-math">\(f(x) = x^3-3x^2-(5x+6)\text{.}\)</span> If we zoom in on this part of our graph, as in the figure, this is easy to see.</div>
+<div class="para" id="EXAMPLEnewtons-method1-8">You wouldn’t think such a simple change would help. But it does because  now, instead of looking for both the <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> coordinates of an intersection point we need only search for the value of <span class="process-math">\(x\)</span> where the graph of the function <span class="process-math">\(f(x)=x^3-3x^2-(5x+6) \)</span> crosses the <span class="process-math">\(x\)</span>–axis.  This gives us just a little more information because we know that the <span class="process-math">\(y\)</span> coordinate is zero if a point is on the <span class="process-math">\(x\)</span>–axis.<div class="autopermalink" data-description="Paragraph"><a href="#EXAMPLEnewtons-method1-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="EXAMPLEnewtons-method1-9"> As before we will need an initial guess to get started. Since the root seems to be close to the point where <span class="process-math">\(x=4\)</span> we’ll use <span class="process-math">\(r_1=4\)</span> as our first approximation.  Now find and sketch the line tangent to <span class="process-math">\(f(x)\)</span> at <span class="process-math">\((r_1, f(r_1)=(4,f(4))\)</span> as seen in the sketch above (in red). If our first guess is close enough to the actual root the <a href="SECTIONdefin-tang-line.html#DEFINITIONLocalLinearity" class="xref" data-knowl="./knowl/xref/DEFINITIONLocalLinearity.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 5.2.5: The Principle of Local Linearity">Principle of Local Linearity</a>  guarantees that the tangent line will cross the <span class="process-math">\(x\)</span>–axis very near to the actual root.  So the value of <span class="process-math">\(x\text{,}\)</span> whatever it is, where the tangent line crosses seems like it would be a pretty good second approximation <span class="process-math">\(r_2\text{,}\)</span> of the root of <span class="process-math">\(f(x) = x^3-3x^2-(5x+6)\text{.}\)</span> If we zoom in on this part of our graph, as in the figure, this is easy to see.<div class="autopermalink" data-description="Paragraph"><a href="#EXAMPLEnewtons-method1-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="EXAMPLEnewtons-method1-10">Apparently all we have to do now is determine the slope of the line tangent to the graph at <span class="process-math">\((r_1, f(r_1))=
-(4,f(4))\text{,}\)</span> then find the equation of the line and its <span class="process-math">\(x\)</span>–intercept.</div></article><article class="exercise exercise-like" id="DRILLNewtonMethod2"><h4 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">7.2.2</span><span class="period">.</span>
+(4,f(4))\text{,}\)</span> then find the equation of the line and its <span class="process-math">\(x\)</span>–intercept.<div class="autopermalink" data-description="Paragraph"><a href="#EXAMPLEnewtons-method1-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 7.2.1"><a href="#EXAMPLEnewtons-method1" title="Copy heading and permalink for Example 7.2.1" aria-label="Copy heading and permalink for Example 7.2.1">🔗</a></div></article><article class="exercise exercise-like" id="DRILLNewtonMethod2"><h4 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.2.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <ol class="lower-roman ol-marker-1" id="DRILLNewtonMethod2-2">
-<li id="DRILLNewtonMethod2i"><div class="para logical" id="DRILLNewtonMethod2i-1">
+<li id="DRILLNewtonMethod2i">
+<div class="para logical" id="DRILLNewtonMethod2i-1">
 <div class="para">Show that in <a href="SECTIONnewtons-method-1.html#EXAMPLEnewtons-method1" class="xref" data-knowl="./knowl/xref/EXAMPLEnewtons-method1.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 7.2.1">Example 7.2.1</a> an equation of the line tangent to <span class="process-math">\(f(x)\)</span> at <span class="process-math">\(r_1=4\)</span> is</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EXAMPLEnewtons-method1.html" id="EQUATIONNewtonMethod2">
 \begin{equation}
 y+10=19(x-4)\text{.}\tag{7.2}
 \end{equation}
 </div>
-</div></li>
-<li id="DRILLNewtonMethod2ii"><div class="para" id="DRILLNewtonMethod2ii-1">Our second approximation (<span class="process-math">\(r_2\)</span>) to the root we seek will be the <span class="process-math">\(x\)</span> coordinate of the point where the graph of <a href="SECTIONnewtons-method-1.html#EQUATIONNewtonMethod2" class="xref" data-knowl="./knowl/xref/EQUATIONNewtonMethod2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.2">equation (7.2)</a> crosses the <span class="process-math">\(x\)</span>–axis. That is, where <span class="process-math">\(y=0.\)</span> Set <span class="process-math">\(y=0\)</span> and show that the line in <a href="SECTIONnewtons-method-1.html#EQUATIONNewtonMethod2" class="xref" data-knowl="./knowl/xref/EQUATIONNewtonMethod2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.2">equation (7.2)</a> crosses the <span class="process-math">\(x\)</span>–axis at <span class="process-math">\(r_2= \frac{10}{19}+4\approx 4.526\text{.}\)</span>
-</div></li>
-</ol></article><div class="para" id="SUBSECTIONNewtonsMethodBasic-7">The approximation we found in <a href="SECTIONnewtons-method-1.html#DRILLNewtonMethod2" class="xref" data-knowl="./knowl/xref/DRILLNewtonMethod2.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 7.2.2">Problem 7.2.2</a> is better than our original guess of <span class="process-math">\(r_1=4\text{,}\)</span> but it is still not great since <span class="process-math">\(f(4.526) \approx 2.6\text{,}\)</span> whereas if we’d found the actual root, <span class="process-math">\(r\text{,}\)</span> we’d have <span class="process-math">\(f(r)=0.\)</span>
+<div class="autopermalink" data-description="Paragraph"><a href="#DRILLNewtonMethod2i-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="SUBSECTIONNewtonsMethodBasic-8">But we don’t have to stop there, and the pattern should be clear. If we wanted a more accurate approximation we could use <span class="process-math">\(r_2\)</span> to generate an <span class="process-math">\(r_3,\)</span> and so on. We stop when our approximation is accurate enough for our purposes.</div>
+<div class="autopermalink" data-description="Item 7.2.2.i"><a href="#DRILLNewtonMethod2i" title="Copy heading and permalink for Item 7.2.2.i" aria-label="Copy heading and permalink for Item 7.2.2.i">🔗</a></div>
+</li>
+<li id="DRILLNewtonMethod2ii">
+<div class="para" id="DRILLNewtonMethod2ii-1">Our second approximation (<span class="process-math">\(r_2\)</span>) to the root we seek will be the <span class="process-math">\(x\)</span> coordinate of the point where the graph of <a href="SECTIONnewtons-method-1.html#EQUATIONNewtonMethod2" class="xref" data-knowl="./knowl/xref/EQUATIONNewtonMethod2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.2">equation (7.2)</a> crosses the <span class="process-math">\(x\)</span>–axis. That is, where <span class="process-math">\(y=0.\)</span> Set <span class="process-math">\(y=0\)</span> and show that the line in <a href="SECTIONnewtons-method-1.html#EQUATIONNewtonMethod2" class="xref" data-knowl="./knowl/xref/EQUATIONNewtonMethod2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.2">equation (7.2)</a> crosses the <span class="process-math">\(x\)</span>–axis at <span class="process-math">\(r_2= \frac{10}{19}+4\approx 4.526\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#DRILLNewtonMethod2ii-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 7.2.2.ii"><a href="#DRILLNewtonMethod2ii" title="Copy heading and permalink for Item 7.2.2.ii" aria-label="Copy heading and permalink for Item 7.2.2.ii">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Problem 7.2.2"><a href="#DRILLNewtonMethod2" title="Copy heading and permalink for Problem 7.2.2" aria-label="Copy heading and permalink for Problem 7.2.2">🔗</a></div></article><div class="para" id="SUBSECTIONNewtonsMethodBasic-7">The approximation we found in <a href="SECTIONnewtons-method-1.html#DRILLNewtonMethod2" class="xref" data-knowl="./knowl/xref/DRILLNewtonMethod2.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 7.2.2">Problem 7.2.2</a> is better than our original guess of <span class="process-math">\(r_1=4\text{,}\)</span> but it is still not great since <span class="process-math">\(f(4.526) \approx 2.6\text{,}\)</span> whereas if we’d found the actual root, <span class="process-math">\(r\text{,}\)</span> we’d have <span class="process-math">\(f(r)=0.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#SUBSECTIONNewtonsMethodBasic-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="SUBSECTIONNewtonsMethodBasic-8">But we don’t have to stop there, and the pattern should be clear. If we wanted a more accurate approximation we could use <span class="process-math">\(r_2\)</span> to generate an <span class="process-math">\(r_3,\)</span> and so on. We stop when our approximation is accurate enough for our purposes.<div class="autopermalink" data-description="Paragraph"><a href="#SUBSECTIONNewtonsMethodBasic-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="exercise exercise-like" id="PROBLEMTanToCubic"><h4 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">7.2.3</span><span class="period">.</span>
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.2.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <article class="task exercise-like" id="PROBLEMTanToCubicA"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="PROBLEMTanToCubicA-1-1">Find the equation of the line tangent to the function <span class="process-math">\(f(x)=x^3-3x^2-(5x+6)\)</span> at <span class="process-math">\(r_2=4.526\)</span> and use this to show that our third approximation to the root of <span class="process-math">\(f(x)\)</span> is <span class="process-math">\(r_3\approx 4.436\text{.}\)</span>
-</div></article><article class="task exercise-like" id="PROBLEMTanToCubicB"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="PROBLEMTanToCubicB-1-1">Repeat part (a) using the line tangent at <span class="process-math">\(r_3=4.436\)</span> to obtain the next approximation <span class="process-math">\(r_4\text{,}\)</span> but this time round it off to <span class="process-math">\(6\)</span> decimal places. (You will need <span class="process-math">\(6\)</span> digits for  part (d).</div></article><article class="task exercise-like" id="PROBLEMTanToCubicC"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<div class="para" id="PROBLEMTanToCubicC-1-1">If you’ve done it correctly, you will notice that <span class="process-math">\(r_2\gt r_3\gt r_4\text{.}\)</span> Does this surprise you? Explain.</div></article><article class="task exercise-like" id="PROBLEMTanToCubicD"><h5 class="heading"><span class="codenumber">(d)</span></h5>
-<div class="para" id="PROBLEMTanToCubicD-1-1">Use your favorite computational software to find an approximation to the root of <span class="process-math">\(f(x)=x^3-x^2-(5x+6)\)</span> to <span class="process-math">\(6\)</span> decimal places. Compare your <span class="process-math">\(r_4\)</span> to this approximation. How close did you come?</div></article></article><div class="para" id="SUBSECTIONNewtonsMethodBasic-10">When computing approximations our goal is to compute good approximations efficiently, not to do a lot of arithmetic. We’d actually like to avoid doing arithmetic as much as possible. So it will be worth the effort needed to organize our computations as much as we can. Fortunately this is not hard to do.</div>
+<div class="para" id="PROBLEMTanToCubicA-1-1">Find the equation of the line tangent to the function <span class="process-math">\(f(x)=x^3-3x^2-(5x+6)\)</span> at <span class="process-math">\(r_2=4.526\)</span> and use this to show that our third approximation to the root of <span class="process-math">\(f(x)\)</span> is <span class="process-math">\(r_3\approx 4.436\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMTanToCubicA-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.2.3.a"><a href="#PROBLEMTanToCubicA" title="Copy heading and permalink for Task 7.2.3.a" aria-label="Copy heading and permalink for Task 7.2.3.a">🔗</a></div></article><article class="task exercise-like" id="PROBLEMTanToCubicB"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="PROBLEMTanToCubicB-1-1">Repeat part (a) using the line tangent at <span class="process-math">\(r_3=4.436\)</span> to obtain the next approximation <span class="process-math">\(r_4\text{,}\)</span> but this time round it off to <span class="process-math">\(6\)</span> decimal places. (You will need <span class="process-math">\(6\)</span> digits for  part (d).<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMTanToCubicB-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.2.3.b"><a href="#PROBLEMTanToCubicB" title="Copy heading and permalink for Task 7.2.3.b" aria-label="Copy heading and permalink for Task 7.2.3.b">🔗</a></div></article><article class="task exercise-like" id="PROBLEMTanToCubicC"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="PROBLEMTanToCubicC-1-1">If you’ve done it correctly, you will notice that <span class="process-math">\(r_2\gt r_3\gt r_4\text{.}\)</span> Does this surprise you? Explain.<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMTanToCubicC-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.2.3.c"><a href="#PROBLEMTanToCubicC" title="Copy heading and permalink for Task 7.2.3.c" aria-label="Copy heading and permalink for Task 7.2.3.c">🔗</a></div></article><article class="task exercise-like" id="PROBLEMTanToCubicD"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="PROBLEMTanToCubicD-1-1">Use your favorite computational software to find an approximation to the root of <span class="process-math">\(f(x)=x^3-x^2-(5x+6)\)</span> to <span class="process-math">\(6\)</span> decimal places. Compare your <span class="process-math">\(r_4\)</span> to this approximation. How close did you come?<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMTanToCubicD-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.2.3.d"><a href="#PROBLEMTanToCubicD" title="Copy heading and permalink for Task 7.2.3.d" aria-label="Copy heading and permalink for Task 7.2.3.d">🔗</a></div></article><div class="autopermalink" data-description="Problem 7.2.3"><a href="#PROBLEMTanToCubic" title="Copy heading and permalink for Problem 7.2.3" aria-label="Copy heading and permalink for Problem 7.2.3">🔗</a></div></article><div class="para" id="SUBSECTIONNewtonsMethodBasic-10">When computing approximations our goal is to compute good approximations efficiently, not to do a lot of arithmetic. We’d actually like to avoid doing arithmetic as much as possible. So it will be worth the effort needed to organize our computations as much as we can. Fortunately this is not hard to do.<div class="autopermalink" data-description="Paragraph"><a href="#SUBSECTIONNewtonsMethodBasic-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="exercise exercise-like" id="PROBLEMNewtonsMethod3"><h4 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">7.2.4</span><span class="period">.</span>
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.2.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="introduction" id="PROBLEMNewtonsMethod3-1">
-<div class="para" id="PROBLEMNewtonsMethod3-1-1">Suppose we have used Newton’s Method repeatedly and found the <span class="process-math">\(n\)</span>th approximation, <span class="process-math">\(r_n\text{,}\)</span> of the the root (the <span class="process-math">\(n\)</span>th iterate) of some generic function <span class="process-math">\(y=y(x)\)</span> as shown in the following figure.</div>
+<div class="para" id="PROBLEMNewtonsMethod3-1-1">Suppose we have used Newton’s Method repeatedly and found the <span class="process-math">\(n\)</span>th approximation, <span class="process-math">\(r_n\text{,}\)</span> of the the root (the <span class="process-math">\(n\)</span>th iterate) of some generic function <span class="process-math">\(y=y(x)\)</span> as shown in the following figure.<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMNewtonsMethod3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <figure class="figure figure-like" id="FIGURENewtonMethodNPlusOne"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/DC/NewtonsMethod4.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">7.2.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure><div class="para" id="PROBLEMNewtonsMethod3-1-3">We’d like to find a formula to compute the next iterate, <span class="process-math">\(r_{n+1}\text{,}\)</span> without having to draw the sketch and solve a new equation.</div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.2.5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" data-description="Figure 7.2.5"><a href="#FIGURENewtonMethodNPlusOne" title="Copy heading and permalink for Figure 7.2.5" aria-label="Copy heading and permalink for Figure 7.2.5">🔗</a></div></figcaption></figure><div class="para" id="PROBLEMNewtonsMethod3-1-3">We’d like to find a formula to compute the next iterate, <span class="process-math">\(r_{n+1}\text{,}\)</span> without having to draw the sketch and solve a new equation.<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMNewtonsMethod3-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 </div>
 <article class="task exercise-like" id="PROBLEMNewtonsMethod3A"><h5 class="heading"><span class="codenumber">(a)</span></h5>
 <div class="para logical" id="PROBLEMNewtonsMethod3A-1-1">
@@ -680,7 +720,9 @@ y+10=19(x-4)\text{.}\tag{7.2}
 y=y(r_n)+\dfdxat{y}{x}{r_n}(x-r_n).
 \end{equation*}
 </div>
-</div></article><article class="task exercise-like" id="PROBLEMNewtonsMethod3B"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMNewtonsMethod3A-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.2.4.a"><a href="#PROBLEMNewtonsMethod3A" title="Copy heading and permalink for Task 7.2.4.a" aria-label="Copy heading and permalink for Task 7.2.4.a">🔗</a></div></article><article class="task exercise-like" id="PROBLEMNewtonsMethod3B"><h5 class="heading"><span class="codenumber">(b)</span></h5>
 <div class="para logical" id="PROBLEMNewtonsMethod3B-1-1">
 <div class="para">Use your answer to part (a)  to show that</div>
 <div class="displaymath process-math" id="EQUATIONNewtonMethod">
@@ -689,8 +731,12 @@ r_{n+1}=r_n-\frac{y(r_n)}{y^\prime(r_n)}.\tag{7.3}
 \end{equation}
 </div>
 <div class="para">is the general formula for Newton’s Method.</div>
-</div></article><article class="task exercise-like" id="PROBLEMNewtonsMethod3C"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<div class="para" id="PROBLEMNewtonsMethod3C-1-1">If we get lucky and <span class="process-math">\(r_n\)</span> is the actual root of the function <span class="process-math">\(y(x)\)</span> (not just an approximation). Explain  what happens at the next iteration if <span class="process-math">\(r_n\)</span> is not the root.</div></article></article><div class="para logical" id="SUBSECTIONNewtonsMethodBasic-12">
+<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMNewtonsMethod3B-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.2.4.b"><a href="#PROBLEMNewtonsMethod3B" title="Copy heading and permalink for Task 7.2.4.b" aria-label="Copy heading and permalink for Task 7.2.4.b">🔗</a></div></article><article class="task exercise-like" id="PROBLEMNewtonsMethod3C"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="PROBLEMNewtonsMethod3C-1-1">If we get lucky and <span class="process-math">\(r_n\)</span> is the actual root of the function <span class="process-math">\(y(x)\)</span> (not just an approximation). Explain  what happens at the next iteration if <span class="process-math">\(r_n\)</span> is not the root.<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMNewtonsMethod3C-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.2.4.c"><a href="#PROBLEMNewtonsMethod3C" title="Copy heading and permalink for Task 7.2.4.c" aria-label="Copy heading and permalink for Task 7.2.4.c">🔗</a></div></article><div class="autopermalink" data-description="Problem 7.2.4"><a href="#PROBLEMNewtonsMethod3" title="Copy heading and permalink for Problem 7.2.4" aria-label="Copy heading and permalink for Problem 7.2.4">🔗</a></div></article><div class="para logical" id="SUBSECTIONNewtonsMethodBasic-12">
 <div class="para">In <a href="SECTIONDerivative.html" class="internal" title="Section 5.6: The Derivative">Section 5.6</a> we introduced Lagrange’s ‘prime’ notation for the derivative:</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/SECTIONDerivative.html" id="SUBSECTIONNewtonsMethodBasic-12-5">
 \begin{align*}
@@ -699,6 +745,7 @@ r_{n+1}=r_n-\frac{y(r_n)}{y^\prime(r_n)}.\tag{7.3}
 \end{align*}
 </div>
 <div class="para">We also commented that when the differential form becomes cumbersome we would switch to Lagrange’s notation.  Such a time has come.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#SUBSECTIONNewtonsMethodBasic-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="SUBSECTIONNewtonsMethodBasic-13">
 <div class="para">Lagrange had conceptual reasons for this change in notation, but we just want to streamline our notation a bit. It will be easier on the eyes to write</div>
@@ -714,17 +761,23 @@ y=y(r_n)+\eval{\dfdx{y}{x}}{x}{r_n}(x-r_n).\tag{7.5}
 \end{equation}
 </div>
 <div class="para">We still prefer differential notation seen in <a href="SECTIONnewtons-method-1.html#EQUATIONLineWDiff" class="xref" data-knowl="./knowl/xref/EQUATIONLineWDiff.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.5">equation (7.5)</a> for most purposes so in the next chapter we will switch back to it, but the prime notation used in <a href="SECTIONnewtons-method-1.html#EQUATIONLineWPrime" class="xref" data-knowl="./knowl/xref/EQUATIONLineWPrime.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.4">equation (7.4)</a> is a little smoother for our present purpose.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#SUBSECTIONNewtonsMethodBasic-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="SUBSECTIONNewtonsMethodBasic-14">We summarize the foregoing succinctly as follows:</div>
+<div class="para" id="SUBSECTIONNewtonsMethodBasic-14">We summarize the foregoing succinctly as follows:<div class="autopermalink" data-description="Paragraph"><a href="#SUBSECTIONNewtonsMethodBasic-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="algorithm theorem-like" id="ALGORITHMNewtonsMethod"><h4 class="heading">
-<span class="type">Algorithm</span><span class="space"> </span><span class="codenumber">7.2.6</span><span class="period">.</span><span class="space"> </span><span class="title">Newton’s Method.</span>
+<span class="type">Algorithm</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.2.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Newton’s Method.</span>
 </h4>
 <div class="para logical" id="ALGORITHMNewtonsMethod-4">
 <div class="para">Given a differentiable function, <span class="process-math">\(y=y(x),\)</span> with a root at <span class="process-math">\(x=r\)</span> we can approximate <span class="process-math">\(r\)</span> as follows.</div>
 <ol class="decimal" id="ALGORITHMNewtonsMethod-4-4">
-<li id="ALGORITHMNewtonsMethod-4-4-1"><div class="para" id="ALGORITHMNewtonsMethod-4-4-1-1">Choose <span class="process-math">\(r_1.\)</span>
-</div></li>
-<li id="NewtIterStep"><div class="para logical" id="NewtIterStep-1">
+<li id="ALGORITHMNewtonsMethod-4-4-1">
+<div class="para" id="ALGORITHMNewtonsMethod-4-4-1-1">Choose <span class="process-math">\(r_1.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ALGORITHMNewtonsMethod-4-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#ALGORITHMNewtonsMethod-4-4-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="NewtIterStep">
+<div class="para logical" id="NewtIterStep-1">
 <div class="para">For <span class="process-math">\(n=2, 3, 4, \ldots\)</span> compute</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -732,62 +785,148 @@ r_{n+1}=r_n-\frac{y(r_n)}{y^\prime(r_n)}
 \end{equation*}
 </div>
 <div class="para">until the desired level of accuracy is obtained.</div>
-</div></li>
+<div class="autopermalink" data-description="Paragraph"><a href="#NewtIterStep-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#NewtIterStep" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
 </ol>
-</div></article><div class="para" id="SUBSECTIONNewtonsMethodBasic-16">One reason for writing down Newton’s Method in this compact form is that this makes it easier to program into a computer.</div>
-<div class="para" id="SUBSECTIONNewtonsMethodBasic-17">As intimidating as the general formula might first appear, remember that ultimately we are simply constructing and solving a single linear equation.  This is clear from the derivation of the formula. The apparent complexity appears only because we have arranged to construct and solve the equation in a single step.</div>
-<div class="para" id="SUBSECTIONNewtonsMethodBasic-18"> Newton’s Method works because the property of being the root of a function is a local, not a global property.  If our approximation, <span class="process-math">\(r_n,\)</span> is quite close to the root we seek then we can safely assume  that the curve and its tangent line are practically the same (at least, most of the time). This is, of course, the <a href="SECTIONdefin-tang-line.html#DEFINITIONLocalLinearity" class="xref" data-knowl="./knowl/xref/DEFINITIONLocalLinearity.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 5.2.5: The Principle of Local Linearity">Principle of Local Linearity</a>  again.</div>
-<div class="para" id="SUBSECTIONNewtonsMethodBasic-19">At the end of  step <span class="process-math">\(2\)</span>  we used the phrase “until the desired level of accuracy is obtained.”  Clearly we are being cagey.  How can we tell when we have an estimate which is accurate to any level of precision, let alone the desired level?  This is a harder question than it probably appears to be. For that reason we will not be looking into it very deeply. For our purposes it will be good enough to assume that if the first four digits to the right of the decimal have not changed from one iteration to the next then our estimate is accurate to four decimal places.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ALGORITHMNewtonsMethod-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Algorithm 7.2.6: Newton’s Method"><a href="#ALGORITHMNewtonsMethod" title="Copy heading and permalink for Algorithm 7.2.6: Newton’s Method" aria-label="Copy heading and permalink for Algorithm 7.2.6: Newton’s Method">🔗</a></div></article><div class="para" id="SUBSECTIONNewtonsMethodBasic-16">One reason for writing down Newton’s Method in this compact form is that this makes it easier to program into a computer.<div class="autopermalink" data-description="Paragraph"><a href="#SUBSECTIONNewtonsMethodBasic-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="SUBSECTIONNewtonsMethodBasic-17">As intimidating as the general formula might first appear, remember that ultimately we are simply constructing and solving a single linear equation.  This is clear from the derivation of the formula. The apparent complexity appears only because we have arranged to construct and solve the equation in a single step.<div class="autopermalink" data-description="Paragraph"><a href="#SUBSECTIONNewtonsMethodBasic-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="SUBSECTIONNewtonsMethodBasic-18"> Newton’s Method works because the property of being the root of a function is a local, not a global property.  If our approximation, <span class="process-math">\(r_n,\)</span> is quite close to the root we seek then we can safely assume  that the curve and its tangent line are practically the same (at least, most of the time). This is, of course, the <a href="SECTIONdefin-tang-line.html#DEFINITIONLocalLinearity" class="xref" data-knowl="./knowl/xref/DEFINITIONLocalLinearity.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 5.2.5: The Principle of Local Linearity">Principle of Local Linearity</a>  again.<div class="autopermalink" data-description="Paragraph"><a href="#SUBSECTIONNewtonsMethodBasic-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="SUBSECTIONNewtonsMethodBasic-19">At the end of  step <span class="process-math">\(2\)</span>  we used the phrase “until the desired level of accuracy is obtained.”  Clearly we are being cagey.  How can we tell when we have an estimate which is accurate to any level of precision, let alone the desired level?  This is a harder question than it probably appears to be. For that reason we will not be looking into it very deeply. For our purposes it will be good enough to assume that if the first four digits to the right of the decimal have not changed from one iteration to the next then our estimate is accurate to four decimal places.<div class="autopermalink" data-description="Paragraph"><a href="#SUBSECTIONNewtonsMethodBasic-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="exercise exercise-like" id="EXERCISESqrt2InitGuess"><h4 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">7.2.7</span><span class="period">.</span>
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.2.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
-<div class="para" id="EXERCISESqrt2InitGuess-2-1">Obviously, <span class="process-math">\(f(x) = x-\sqrt{2}\)</span> has a root at <span class="process-math">\(x=\sqrt{2}.\)</span> But if we want to compute <span class="process-math">\(\sqrt{2}\)</span> this is not a good choice of function to apply Newton’s Method to. Explain why not. What would be a good choice for <span class="process-math">\(f(x)\)</span> if we wish to approximate <span class="process-math">\(\sqrt{2}\text{?}\)</span>
-</div></article><article class="problem example-like" id="PROBLEMNewtMethCreateFunction"><h4 class="heading">
-<span class="type">Drill</span><span class="space"> </span><span class="codenumber">7.2.8</span><span class="period">.</span>
+<div class="para" id="EXERCISESqrt2InitGuess-2-1">Obviously, <span class="process-math">\(f(x) = x-\sqrt{2}\)</span> has a root at <span class="process-math">\(x=\sqrt{2}.\)</span> But if we want to compute <span class="process-math">\(\sqrt{2}\)</span> this is not a good choice of function to apply Newton’s Method to. Explain why not. What would be a good choice for <span class="process-math">\(f(x)\)</span> if we wish to approximate <span class="process-math">\(\sqrt{2}\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#EXERCISESqrt2InitGuess-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 7.2.7"><a href="#EXERCISESqrt2InitGuess" title="Copy heading and permalink for Problem 7.2.7" aria-label="Copy heading and permalink for Problem 7.2.7">🔗</a></div></article><article class="problem example-like" id="PROBLEMNewtMethCreateFunction"><h4 class="heading">
+<span class="type">Drill</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.2.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para logical" id="PROBLEMNewtMethCreateFunction-3">
 <div class="para">Create a function which has a root at each of the following numbers and use your function to compute each to <span class="process-math">\(5\)</span> decimals using Newton’s Method.</div>
 <ol class="lower-roman ol-marker-1 cols3" id="PROBLEMNewtMethCreateFunction-3-3">
-<li id="PROBLEMNewtMethCreateFunction-3-3-1"><div class="para" id="PROBLEMNewtMethCreateFunction-3-3-1-1"><span class="process-math">\(\displaystyle \sqrt[5]{7}\)</span></div></li>
-<li id="PROBLEMNewtMethCreateFunction-3-3-2"><div class="para" id="PROBLEMNewtMethCreateFunction-3-3-2-1"><span class="process-math">\(\displaystyle \sqrt[3]{5} \)</span></div></li>
-<li id="PROBLEMNewtMethCreateFunction-3-3-3"><div class="para" id="PROBLEMNewtMethCreateFunction-3-3-3-1"><span class="process-math">\(\displaystyle 6^{2/3}\)</span></div></li>
-<li id="PROBLEMNewtMethCreateFunction-3-3-4"><div class="para" id="PROBLEMNewtMethCreateFunction-3-3-4-1"><span class="process-math">\(\displaystyle \sqrt{27}\)</span></div></li>
-<li id="PROBLEMNewtMethCreateFunction-3-3-5"><div class="para" id="PROBLEMNewtMethCreateFunction-3-3-5-1"><span class="process-math">\(\displaystyle \sqrt[7]{2}\)</span></div></li>
-<li id="PROBLEMNewtMethCreateFunction-3-3-6"><div class="para" id="PROBLEMNewtMethCreateFunction-3-3-6-1"><span class="process-math">\(\displaystyle \pi\)</span></div></li>
+<li id="PROBLEMNewtMethCreateFunction-3-3-1">
+<div class="para" id="PROBLEMNewtMethCreateFunction-3-3-1-1">
+<span class="process-math">\(\displaystyle \sqrt[5]{7}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMNewtMethCreateFunction-3-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item i"><a href="#PROBLEMNewtMethCreateFunction-3-3-1" title="Copy heading and permalink for Item i" aria-label="Copy heading and permalink for Item i">🔗</a></div>
+</li>
+<li id="PROBLEMNewtMethCreateFunction-3-3-2">
+<div class="para" id="PROBLEMNewtMethCreateFunction-3-3-2-1">
+<span class="process-math">\(\displaystyle \sqrt[3]{5} \)</span><div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMNewtMethCreateFunction-3-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item ii"><a href="#PROBLEMNewtMethCreateFunction-3-3-2" title="Copy heading and permalink for Item ii" aria-label="Copy heading and permalink for Item ii">🔗</a></div>
+</li>
+<li id="PROBLEMNewtMethCreateFunction-3-3-3">
+<div class="para" id="PROBLEMNewtMethCreateFunction-3-3-3-1">
+<span class="process-math">\(\displaystyle 6^{2/3}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMNewtMethCreateFunction-3-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item iii"><a href="#PROBLEMNewtMethCreateFunction-3-3-3" title="Copy heading and permalink for Item iii" aria-label="Copy heading and permalink for Item iii">🔗</a></div>
+</li>
+<li id="PROBLEMNewtMethCreateFunction-3-3-4">
+<div class="para" id="PROBLEMNewtMethCreateFunction-3-3-4-1">
+<span class="process-math">\(\displaystyle \sqrt{27}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMNewtMethCreateFunction-3-3-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item iv"><a href="#PROBLEMNewtMethCreateFunction-3-3-4" title="Copy heading and permalink for Item iv" aria-label="Copy heading and permalink for Item iv">🔗</a></div>
+</li>
+<li id="PROBLEMNewtMethCreateFunction-3-3-5">
+<div class="para" id="PROBLEMNewtMethCreateFunction-3-3-5-1">
+<span class="process-math">\(\displaystyle \sqrt[7]{2}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMNewtMethCreateFunction-3-3-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item v"><a href="#PROBLEMNewtMethCreateFunction-3-3-5" title="Copy heading and permalink for Item v" aria-label="Copy heading and permalink for Item v">🔗</a></div>
+</li>
+<li id="PROBLEMNewtMethCreateFunction-3-3-6">
+<div class="para" id="PROBLEMNewtMethCreateFunction-3-3-6-1">
+<span class="process-math">\(\displaystyle \pi\)</span><div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMNewtMethCreateFunction-3-3-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item vi"><a href="#PROBLEMNewtMethCreateFunction-3-3-6" title="Copy heading and permalink for Item vi" aria-label="Copy heading and permalink for Item vi">🔗</a></div>
+</li>
 </ol>
-</div></article><article class="problem example-like" id="PROBLEMNewton-meth"><h4 class="heading">
-<span class="type">Drill</span><span class="space"> </span><span class="codenumber">7.2.9</span><span class="period">.</span>
+<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMNewtMethCreateFunction-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Drill 7.2.8"><a href="#PROBLEMNewtMethCreateFunction" title="Copy heading and permalink for Drill 7.2.8" aria-label="Copy heading and permalink for Drill 7.2.8">🔗</a></div></article><article class="problem example-like" id="PROBLEMNewton-meth"><h4 class="heading">
+<span class="type">Drill</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.2.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para logical" id="PROBLEMNewton-meth-3">
 <div class="para">Start with <span class="process-math">\(r_1=4\)</span> and use Newton’s Method to compute the next four approximations (<span class="process-math">\(r_2\text{,}\)</span> <span class="process-math">\(r_3\text{,}\)</span> <span class="process-math">\(r_4\text{,}\)</span> and <span class="process-math">\(r_5\)</span>) of the roots of each of the following functions. Compare these with your results in <a href="SECTIONnewtons-method.html#PROBLEMbisect-meth" class="xref" data-knowl="./knowl/xref/PROBLEMbisect-meth.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 7.1.3: Bisection Method">Problem 7.1.3</a>. Which algorithm seems to be more accurate after four iterations?</div>
 <ol class="lower-roman ol-marker-1 cols2" id="PROBLEMNewton-meth-3-8">
-<li id="PROBLEMNewton-meth-3-8-1"><div class="para" id="PROBLEMNewton-meth-3-8-1-1"><span class="process-math">\(\displaystyle f(x)=x^2-5\)</span></div></li>
-<li id="PROBLEMNewton-meth-3-8-2"><div class="para" id="PROBLEMNewton-meth-3-8-2-1"><span class="process-math">\(\displaystyle f(x)=x^2-10\)</span></div></li>
-<li id="PROBLEMNewton-meth-3-8-3"><div class="para" id="PROBLEMNewton-meth-3-8-3-1"><span class="process-math">\(\displaystyle f(x)=x^3-7\)</span></div></li>
-<li id="PROBLEMNewton-meth-3-8-4"><div class="para" id="PROBLEMNewton-meth-3-8-4-1"><span class="process-math">\(\displaystyle f(x)=x^9-11\)</span></div></li>
-<li id="PROBLEMNewton-meth-3-8-5"><div class="para" id="PROBLEMNewton-meth-3-8-5-1"><span class="process-math">\(\displaystyle f(x)=x^5-x^2-8\)</span></div></li>
-<li id="PROBLEMNewton-meth-3-8-6"><div class="para" id="PROBLEMNewton-meth-3-8-6-1"><span class="process-math">\(\displaystyle f(x) = x^3+3x^2-17x+6\)</span></div></li>
+<li id="PROBLEMNewton-meth-3-8-1">
+<div class="para" id="PROBLEMNewton-meth-3-8-1-1">
+<span class="process-math">\(\displaystyle f(x)=x^2-5\)</span><div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMNewton-meth-3-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item i"><a href="#PROBLEMNewton-meth-3-8-1" title="Copy heading and permalink for Item i" aria-label="Copy heading and permalink for Item i">🔗</a></div>
+</li>
+<li id="PROBLEMNewton-meth-3-8-2">
+<div class="para" id="PROBLEMNewton-meth-3-8-2-1">
+<span class="process-math">\(\displaystyle f(x)=x^2-10\)</span><div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMNewton-meth-3-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item ii"><a href="#PROBLEMNewton-meth-3-8-2" title="Copy heading and permalink for Item ii" aria-label="Copy heading and permalink for Item ii">🔗</a></div>
+</li>
+<li id="PROBLEMNewton-meth-3-8-3">
+<div class="para" id="PROBLEMNewton-meth-3-8-3-1">
+<span class="process-math">\(\displaystyle f(x)=x^3-7\)</span><div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMNewton-meth-3-8-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item iii"><a href="#PROBLEMNewton-meth-3-8-3" title="Copy heading and permalink for Item iii" aria-label="Copy heading and permalink for Item iii">🔗</a></div>
+</li>
+<li id="PROBLEMNewton-meth-3-8-4">
+<div class="para" id="PROBLEMNewton-meth-3-8-4-1">
+<span class="process-math">\(\displaystyle f(x)=x^9-11\)</span><div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMNewton-meth-3-8-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item iv"><a href="#PROBLEMNewton-meth-3-8-4" title="Copy heading and permalink for Item iv" aria-label="Copy heading and permalink for Item iv">🔗</a></div>
+</li>
+<li id="PROBLEMNewton-meth-3-8-5">
+<div class="para" id="PROBLEMNewton-meth-3-8-5-1">
+<span class="process-math">\(\displaystyle f(x)=x^5-x^2-8\)</span><div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMNewton-meth-3-8-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item v"><a href="#PROBLEMNewton-meth-3-8-5" title="Copy heading and permalink for Item v" aria-label="Copy heading and permalink for Item v">🔗</a></div>
+</li>
+<li id="PROBLEMNewton-meth-3-8-6">
+<div class="para" id="PROBLEMNewton-meth-3-8-6-1">
+<span class="process-math">\(\displaystyle f(x) = x^3+3x^2-17x+6\)</span><div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMNewton-meth-3-8-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item vi"><a href="#PROBLEMNewton-meth-3-8-6" title="Copy heading and permalink for Item vi" aria-label="Copy heading and permalink for Item vi">🔗</a></div>
+</li>
 </ol>
-</div></article><article class="problem example-like" id="PROBLEMNewton-meth2"><h4 class="heading">
-<span class="type">Drill</span><span class="space"> </span><span class="codenumber">7.2.10</span><span class="period">.</span>
+<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMNewton-meth-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Drill 7.2.9"><a href="#PROBLEMNewton-meth" title="Copy heading and permalink for Drill 7.2.9" aria-label="Copy heading and permalink for Drill 7.2.9">🔗</a></div></article><article class="problem example-like" id="PROBLEMNewton-meth2"><h4 class="heading">
+<span class="type">Drill</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.2.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para logical" id="PROBLEMNewton-meth2-3">
 <div class="para">Use Newton’s Method to approximate the root of each of the following functions to at least four decimal places on the interval given.</div>
 <ol class="lower-roman ol-marker-1 cols2" id="PROBLEMNewton-meth2-3-2">
-<li id="PROBLEMNewton-meth2-3-2-1"><div class="para" id="PROBLEMNewton-meth2-3-2-1-1">
-<span class="process-math">\(f(x) = \frac{x^2-x+2}{x^2(x-1)}-3\)</span> on <span class="process-math">\([0,2]\)</span>
-</div></li>
-<li id="PROBLEMNewton-meth2-3-2-2"><div class="para" id="PROBLEMNewton-meth2-3-2-2-1">
-<span class="process-math">\(f(x) = x^\frac13+\cos(2x) -1/2\)</span> on <span class="process-math">\([0,3/2]\)</span>
-</div></li>
-<li id="PROBLEMNewton-meth2-3-2-3"><div class="para" id="PROBLEMNewton-meth2-3-2-3-1">
-<span class="process-math">\(f(x) = (x-1/2)\cos\left(x^2+2x\right)+1\)</span> on <span class="process-math">\([-2,0]\)</span>
-</div></li>
+<li id="PROBLEMNewton-meth2-3-2-1">
+<div class="para" id="PROBLEMNewton-meth2-3-2-1-1">
+<span class="process-math">\(f(x) = \frac{x^2-x+2}{x^2(x-1)}-3\)</span> on <span class="process-math">\([0,2]\)</span><div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMNewton-meth2-3-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item i"><a href="#PROBLEMNewton-meth2-3-2-1" title="Copy heading and permalink for Item i" aria-label="Copy heading and permalink for Item i">🔗</a></div>
+</li>
+<li id="PROBLEMNewton-meth2-3-2-2">
+<div class="para" id="PROBLEMNewton-meth2-3-2-2-1">
+<span class="process-math">\(f(x) = x^\frac13+\cos(2x) -1/2\)</span> on <span class="process-math">\([0,3/2]\)</span><div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMNewton-meth2-3-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item ii"><a href="#PROBLEMNewton-meth2-3-2-2" title="Copy heading and permalink for Item ii" aria-label="Copy heading and permalink for Item ii">🔗</a></div>
+</li>
+<li id="PROBLEMNewton-meth2-3-2-3">
+<div class="para" id="PROBLEMNewton-meth2-3-2-3-1">
+<span class="process-math">\(f(x) = (x-1/2)\cos\left(x^2+2x\right)+1\)</span> on <span class="process-math">\([-2,0]\)</span><div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMNewton-meth2-3-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item iii"><a href="#PROBLEMNewton-meth2-3-2-3" title="Copy heading and permalink for Item iii" aria-label="Copy heading and permalink for Item iii">🔗</a></div>
+</li>
 </ol>
-</div></article><article class="problem example-like" id="PROBLEMXCosx"><h4 class="heading">
-<span class="type">Drill</span><span class="space"> </span><span class="codenumber">7.2.11</span><span class="period">.</span>
+<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMNewton-meth2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Drill 7.2.10"><a href="#PROBLEMNewton-meth2" title="Copy heading and permalink for Drill 7.2.10" aria-label="Copy heading and permalink for Drill 7.2.10">🔗</a></div></article><article class="problem example-like" id="PROBLEMXCosx"><h4 class="heading">
+<span class="type">Drill</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.2.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
-<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="external/DC/NewtonsMethod3.png" class="contained"></div> <div class="para" id="PROBLEMXCosx-3-2">As you can see from the sketch above, the graphs of <span class="process-math">\(y=x\)</span> and <span class="process-math">\(y=\cos(x)\)</span> intersect exactly once. We want to use Newton’s Method to find an approximation of the coordinates of the  point of intersection.</div> <div class="para logical" id="PROBLEMXCosx-3-3">
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="external/DC/NewtonsMethod3.png" class="contained"></div> <div class="para" id="PROBLEMXCosx-3-2">As you can see from the sketch above, the graphs of <span class="process-math">\(y=x\)</span> and <span class="process-math">\(y=\cos(x)\)</span> intersect exactly once. We want to use Newton’s Method to find an approximation of the coordinates of the  point of intersection.<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMXCosx-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="PROBLEMXCosx-3-3">
 <div class="para">First obtain the iteration formula:</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -795,11 +934,13 @@ r_{n+1}=\dfrac{r_n\sin(r_n)+\cos(r_n)}{\sin(r_n)+1}.
 \end{equation*}
 </div>
 <div class="para">Then use this formula  to approximate the coordinates of the point of intersection to <span class="process-math">\(3\)</span> decimal places.</div>
-</div></article><article class="exercise exercise-like" id="PROBLEMSqrta"><h4 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">7.2.12</span><span class="period">.</span><span class="space"> </span><span class="title">Find the Pattern.</span>
+<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMXCosx-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Drill 7.2.11"><a href="#PROBLEMXCosx" title="Copy heading and permalink for Drill 7.2.11" aria-label="Copy heading and permalink for Drill 7.2.11">🔗</a></div></article><article class="exercise exercise-like" id="PROBLEMSqrta"><h4 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.2.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Find the Pattern.</span>
 </h4>
 <div class="introduction" id="PROBLEMSqrta-3"><figure class="figure figure-like" id="FIGURENewtonsMethodInitGuessClose"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/DC/NewtonsMethod1.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">7.2.13<span class="period">.</span></span><span class="space"> </span></figcaption></figure></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.2.13<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" data-description="Figure 7.2.13"><a href="#FIGURENewtonsMethodInitGuessClose" title="Copy heading and permalink for Figure 7.2.13" aria-label="Copy heading and permalink for Figure 7.2.13">🔗</a></div></figcaption></figure></div>
 <article class="task exercise-like" id="PROBLEMSqrta-4"><h5 class="heading"><span class="codenumber">(a)</span></h5>
 <div class="para logical" id="PROBLEMSqrta-4-1-1">
 <div class="para">Apply Newton’s Method to the function <span class="process-math">\(f(x)=x^2-a\text{,}\)</span> shown above,  to determine the iteration formula for approximating <span class="process-math">\(\sqrt{a}\text{.}\)</span> Show that this is precisely the <span class="process-math">\((n+1)\)</span>st iteration you get when using the Babylonian method:</div>
@@ -808,61 +949,102 @@ r_{n+1}=\dfrac{r_n\sin(r_n)+\cos(r_n)}{\sin(r_n)+1}.
 r_{n+1}=\frac{1}{2} \left(r_n+\frac{a}{r_n} \right).
 \end{equation*}
 </div>
-</div></article><article class="task exercise-like" id="PROBLEMSqrta-5"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="PROBLEMSqrta-5-1-1">Use Newton’s Method on the function <span class="process-math">\(f(x)=x^3-a\)</span> to obtain the iteration formula: <span class="process-math">\(\displaystyle
-r_{n+1}=\frac{1}{3} \left(2r_n+\frac{a}{r_n^2} \right)\)</span> for  approximating <span class="process-math">\(\sqrt[3]{a}\text{.}\)</span> Notice that <span class="process-math">\(\frac{1}{3} \left(2r_n+\frac{a}{r_n^2} \right)\)</span> is the average of <span class="process-math">\(r_n, r_n\text{,}\)</span> and <span class="process-math">\(\frac{a}{r_n^2}\text{.}\)</span>
-</div></article><article class="task exercise-like" id="PROBLEMSqrta-6"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<div class="para" id="PROBLEMSqrta-6-1-1">Obtain the iteration scheme <span class="process-math">\(\displaystyle
-r_{n+1}=\frac{1}{4} \left(3r_n+\frac{a}{r_n^3} \right)\)</span> for approximating the fourth root of <span class="process-math">\(a.\)</span> Is this also an average? Of what?</div></article><article class="task exercise-like" id="PROBLEMSqrta-7"><h5 class="heading"><span class="codenumber">(d)</span></h5>
-<div class="para" id="PROBLEMSqrta-7-1-1">Now find an iteration scheme to find the <span class="process-math">\(k\)</span>th root of <span class="process-math">\(a,\)</span> if <span class="process-math">\(a\)</span> is a positive number, and <span class="process-math">\(k\)</span> is a positive integer.</div></article></article><div class="para" id="SUBSECTIONNewtonsMethodBasic-26">If the initial guess is reasonably close to the root Newton’s Method finds a very accurate approximation to the root of a function in just a few iterations most of the time. This made it extremely useful in the <span class="process-math">\(17\)</span>th century when such computations were done by hand. Indeed, it computes the square root of a number pretty quickly even if the initial guess is very bad. For example in <a href="SECTIONnewtons-method-1.html#FIGURENewtonsMethodInitGuessClose" class="xref" data-knowl="./knowl/xref/FIGURENewtonsMethodInitGuessClose.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 7.2.13">Figure 7.2.13</a> the blue curve is the graph of <span class="process-math">\(f(x)=x^2-2.\)</span> We start with an initial guess of <span class="process-math">\(r_1=5\)</span> (obviously a terrible guess) and find the <span class="process-math">\(x\)</span> intercept of the red tangent line to find the next guess, <span class="process-math">\(r_2=2.7\)</span> which is better but still terrible. Repeating we generate the green tangent line at <span class="process-math">\((r_2,f(r_2))\)</span> which crosses the <span class="process-math">\(x\)</span>–axis at <span class="process-math">\(r_3=
-1.72.\)</span> Finally we generate the orange tangent line at <span class="process-math">\((r_3,f(r_3))\)</span> which crosses the <span class="process-math">\(x\)</span>–axis at <span class="process-math">\(r_4=1.44\)</span> which is correct to one decimal.  If we continue one more iteration (not shown) we get <span class="process-math">\(r_5=1.4141\)</span> which is correct to three decimals.</div>
-<div class="para" id="SUBSECTIONNewtonsMethodBasic-27">But this paper–and–pencil procedure is not as simple as handing the problem off to your favorite computational software so a natural question to ask is, “Why bother? why should we learn this?”</div>
-<div class="para" id="SUBSECTIONNewtonsMethodBasic-28">The answer is that whatever software you end up using will be performing either the computations above or something very like them. And these <dfn class="terminology">Numerical Methods</dfn> are not 100% reliable.</div>
-<div class="para" id="SUBSECTIONNewtonsMethodBasic-29">However if you are familiar with the limitations of the algorithm(s) being used you will also be aware of the limitations of your software. Perhaps more importantly, you are less likely to believe a wrong answer when you get it. Depending on what you are computing an incorrect approximation could mean anything from a minor annoyance (if you are calculating <span class="process-math">\(\sqrt{2}\)</span> just for fun) to a deadly disaster (if you are designing a control procedure for a self–driving car).</div>
-<article class="exercise exercise-like" id="PROBLEMNewtMethSignOfIterates"><h4 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">7.2.14</span><span class="period">.</span>
-</h4>
-<div class="introduction" id="PROBLEMNewtMethSignOfIterates-2"><div class="para" id="PROBLEMNewtMethSignOfIterates-2-1">Even if you don’t have any intuition into a given problem a more than cursory understanding of the algorithm itself can be helpful.  For example, show that when Newton’s Method is used:</div></div>
-<article class="task exercise-like" id="PROBLEMNewtMethSignOfIteratesA"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="PROBLEMNewtMethSignOfIteratesA-1-1">If <span class="process-math">\(y(r_n)\)</span> and <span class="process-math">\(y^\prime(r_n)\)</span> have the same sign then <span class="process-math">\(r_{n+1}\le r_n\text{.}\)</span>
-</div></article><article class="task exercise-like" id="PROBLEMNewtMethSignOfIteratesB"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="PROBLEMNewtMethSignOfIteratesB-1-1">If <span class="process-math">\(y(r_n)\)</span> and <span class="process-math">\(y^\prime(r_n)\)</span> have opposite signs then <span class="process-math">\(r_{n+1}\ge r_n\text{.}\)</span>
-</div></article><article class="task exercise-like" id="PROBLEMNewtMethSignOfIteratesC"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<div class="para" id="PROBLEMNewtMethSignOfIteratesC-1-1">Suppose you are trying to compute a numerical approximation of <span class="process-math">\(\sqrt{2}\)</span> using an implementation of Newton’s Method, but you accidentally enter <span class="process-math">\(x^2+2\)</span> as your function (instead of <span class="process-math">\(x^2-2\)</span>). Explain how you can use the results of part (a) and part (b) to see that the algorithm is failing at the third iteration.</div></article></article><div class="para" id="SUBSECTIONNewtonsMethodBasic-31">So, how do you know if you should trust the approximation you get back from your favorite software? First, be aware of what a reasonable answer should be. In <a href="SECTIONnewtons-method-1.html#EXAMPLEnewtons-method1" class="xref" data-knowl="./knowl/xref/EXAMPLEnewtons-method1.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 7.2.1">Example 7.2.1</a> it is clear that the root must be positive. If software tries to tell you that it is equal to <span class="process-math">\(-2.5\)</span> you know it is lying. Second be aware of the ways that an approximation method might fail.</div>
-<div class="para" id="SUBSECTIONNewtonsMethodBasic-32">For example, Newton’s Method is not perfect. It can fail in two distinct ways that we’ll call Spectacular Failure and Subtle Failure. Let’s take a look at them in turn.</div></section><section class="subsection" id="SUBSECTIONSpectacularFailure"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">7.2.2</span><span class="space"> </span><span class="title">Spectacular Failure</span>
-</h3>
-<div class="para" id="SUBSECTIONSpectacularFailure-2">Newton’s Method can fail spectacularly in two distinct, but related, ways. The first is very easy to spot.</div>
-<article class="exercise exercise-like" id="PROBLEMNewtMethAlgGeom"><h4 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">7.2.15</span><span class="period">.</span>
-</h4>
-<div class="para" id="PROBLEMNewtMethAlgGeom-2-1">Suppose we want to find the root of <span class="process-math">\(y=x^2-4x+7\)</span> and our initial guess is <span class="process-math">\(r_1=2\text{.}\)</span>  Investigate, both algebraically and graphically, what happens when we apply Newton’s Method to this problem. Describe the results of your investigations.</div></article><div class="para" id="SUBSECTIONSpectacularFailure-4">Because Newton’s Method requires that we divide by <span class="process-math">\(y^\prime(r_n)\)</span> we will get an error if it happens that <span class="process-math">\(y^\prime(r_n) =0\text{.}\)</span> We call this a spectacular failure because it is easy to spot whether we do the computation with a computer or with paper and pencil. Indeed, modern computer software is very adept at alerting us to division by zero errors.</div>
-<div class="para" id="SUBSECTIONSpectacularFailure-5">The second kind of spectacular failure is exemplified by the following problem.</div>
-<article class="exercise exercise-like" id="PROBLEMNewtonsMethodOneThird"><h4 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">7.2.16</span><span class="period">.</span>
-</h4>
-<div class="introduction" id="PROBLEMNewtonsMethodOneThird-2"><div class="para" id="PROBLEMNewtonsMethodOneThird-2-1">The only root of the function <span class="process-math">\(f(x)=x^{1/3}\)</span> is zero.</div></div>
-<article class="task exercise-like" id="PROBLEMNewtonsMethodOneThird-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="PROBLEMNewtonsMethodOneThird-3-1-1">Use Newton’s Method with the initial guess, <span class="process-math">\(r_1=1\)</span> to see if it converges to zero.</div>
-<div class="solutions"><details id="PROBLEMNewtonsMethodOneThird-3-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="PROBLEMNewtonsMethodOneThird-3-2-1">It won’t.</div></div></details></div></article><article class="task exercise-like" id="PROBLEMNewtonsMethodOneThird-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="PROBLEMNewtonsMethodOneThird-4-1-1">Write down a formula for the computation in  <a href="SECTIONnewtons-method-1.html#NewtIterStep" class="xref" data-knowl="./knowl/xref/NewtIterStep.html" data-reveal-label="Reveal" data-close-label="Close" title="Item 2">step 2</a> from Newton’s Method for this function. Use this to explain why the method will not converge no matter what non–zero initial guess is used.</div></article></article><div class="para" id="SUBSECTIONSpectacularFailure-7">Obviously we don’t need to use Newton’s Method to compute the root of <span class="process-math">\(f(x)=x^{1/3}.\)</span> The point of <a href="SECTIONnewtons-method-1.html#PROBLEMNewtonsMethodOneThird" class="xref" data-knowl="./knowl/xref/PROBLEMNewtonsMethodOneThird.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 7.2.16">Problem 7.2.16</a> is that Newton’s Method will not find the root no matter how close our initial guess is. Instead it will continue to generate alternately positive and negative “approximations” to zero, that are farther and farther from zero.</div></section><section class="subsection" id="SUBSECTIONSubtleFailure"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">7.2.3</span><span class="space"> </span><span class="title">Subtle Failure</span>
-</h3>
-<div class="para" id="SUBSECTIONSubtleFailure-2">The other way Newton’s Method fails can be quite subtle. The best way to demonstrate this is with an example.</div>
-<article class="example example-like" id="EXAMPLE-SubtleFailCos"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.2.17</span><span class="period">.</span>
-</h4>
-<div class="para" id="EXAMPLE-SubtleFailCos-2">Suppose we wish to compute <span class="process-math">\(\frac{\pi}{2}\)</span> by finding the smallest positive root of <span class="process-math">\(\cos(x).\)</span> If we start with an initial guess of <span class="process-math">\(r_1=0.1\)</span> (not a great first guess, but it’s not obviously horrible either) we get <span class="process-math">\(r_2=10.07,\)</span> which certainly seems like it might be a problem since <span class="process-math">\(\frac{\pi}{2}\approx 1.7.\)</span> If we ignore this and continue we get <span class="process-math">\(r_3= 11.4,\)</span> and <span class="process-math">\(r_4=10.97.\)</span>
+<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMSqrta-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="EXAMPLE-SubtleFailCos-3">What’s going on here?  The numbers seem to be converging, but they are not converging to the answer we intended to find. The figure below shows what the difficulty is.</div>
+<div class="autopermalink" data-description="Task 7.2.12.a"><a href="#PROBLEMSqrta-4" title="Copy heading and permalink for Task 7.2.12.a" aria-label="Copy heading and permalink for Task 7.2.12.a">🔗</a></div></article><article class="task exercise-like" id="PROBLEMSqrta-5"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="PROBLEMSqrta-5-1-1">Use Newton’s Method on the function <span class="process-math">\(f(x)=x^3-a\)</span> to obtain the iteration formula: <span class="process-math">\(\displaystyle
+r_{n+1}=\frac{1}{3} \left(2r_n+\frac{a}{r_n^2} \right)\)</span> for  approximating <span class="process-math">\(\sqrt[3]{a}\text{.}\)</span> Notice that <span class="process-math">\(\frac{1}{3} \left(2r_n+\frac{a}{r_n^2} \right)\)</span> is the average of <span class="process-math">\(r_n, r_n\text{,}\)</span> and <span class="process-math">\(\frac{a}{r_n^2}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMSqrta-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.2.12.b"><a href="#PROBLEMSqrta-5" title="Copy heading and permalink for Task 7.2.12.b" aria-label="Copy heading and permalink for Task 7.2.12.b">🔗</a></div></article><article class="task exercise-like" id="PROBLEMSqrta-6"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="PROBLEMSqrta-6-1-1">Obtain the iteration scheme <span class="process-math">\(\displaystyle
+r_{n+1}=\frac{1}{4} \left(3r_n+\frac{a}{r_n^3} \right)\)</span> for approximating the fourth root of <span class="process-math">\(a.\)</span> Is this also an average? Of what?<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMSqrta-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.2.12.c"><a href="#PROBLEMSqrta-6" title="Copy heading and permalink for Task 7.2.12.c" aria-label="Copy heading and permalink for Task 7.2.12.c">🔗</a></div></article><article class="task exercise-like" id="PROBLEMSqrta-7"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="PROBLEMSqrta-7-1-1">Now find an iteration scheme to find the <span class="process-math">\(k\)</span>th root of <span class="process-math">\(a,\)</span> if <span class="process-math">\(a\)</span> is a positive number, and <span class="process-math">\(k\)</span> is a positive integer.<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMSqrta-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.2.12.d"><a href="#PROBLEMSqrta-7" title="Copy heading and permalink for Task 7.2.12.d" aria-label="Copy heading and permalink for Task 7.2.12.d">🔗</a></div></article><div class="autopermalink" data-description="Problem 7.2.12: Find the Pattern"><a href="#PROBLEMSqrta" title="Copy heading and permalink for Problem 7.2.12: Find the Pattern" aria-label="Copy heading and permalink for Problem 7.2.12: Find the Pattern">🔗</a></div></article><div class="para" id="SUBSECTIONNewtonsMethodBasic-26">If the initial guess is reasonably close to the root Newton’s Method finds a very accurate approximation to the root of a function in just a few iterations most of the time. This made it extremely useful in the <span class="process-math">\(17\)</span>th century when such computations were done by hand. Indeed, it computes the square root of a number pretty quickly even if the initial guess is very bad. For example in <a href="SECTIONnewtons-method-1.html#FIGURENewtonsMethodInitGuessClose" class="xref" data-knowl="./knowl/xref/FIGURENewtonsMethodInitGuessClose.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 7.2.13">Figure 7.2.13</a> the blue curve is the graph of <span class="process-math">\(f(x)=x^2-2.\)</span> We start with an initial guess of <span class="process-math">\(r_1=5\)</span> (obviously a terrible guess) and find the <span class="process-math">\(x\)</span> intercept of the red tangent line to find the next guess, <span class="process-math">\(r_2=2.7\)</span> which is better but still terrible. Repeating we generate the green tangent line at <span class="process-math">\((r_2,f(r_2))\)</span> which crosses the <span class="process-math">\(x\)</span>–axis at <span class="process-math">\(r_3=
+1.72.\)</span> Finally we generate the orange tangent line at <span class="process-math">\((r_3,f(r_3))\)</span> which crosses the <span class="process-math">\(x\)</span>–axis at <span class="process-math">\(r_4=1.44\)</span> which is correct to one decimal.  If we continue one more iteration (not shown) we get <span class="process-math">\(r_5=1.4141\)</span> which is correct to three decimals.<div class="autopermalink" data-description="Paragraph"><a href="#SUBSECTIONNewtonsMethodBasic-26" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="SUBSECTIONNewtonsMethodBasic-27">But this paper–and–pencil procedure is not as simple as handing the problem off to your favorite computational software so a natural question to ask is, “Why bother? why should we learn this?”<div class="autopermalink" data-description="Paragraph"><a href="#SUBSECTIONNewtonsMethodBasic-27" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="SUBSECTIONNewtonsMethodBasic-28">The answer is that whatever software you end up using will be performing either the computations above or something very like them. And these <dfn class="terminology">Numerical Methods</dfn> are not 100% reliable.<div class="autopermalink" data-description="Paragraph"><a href="#SUBSECTIONNewtonsMethodBasic-28" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="SUBSECTIONNewtonsMethodBasic-29">However if you are familiar with the limitations of the algorithm(s) being used you will also be aware of the limitations of your software. Perhaps more importantly, you are less likely to believe a wrong answer when you get it. Depending on what you are computing an incorrect approximation could mean anything from a minor annoyance (if you are calculating <span class="process-math">\(\sqrt{2}\)</span> just for fun) to a deadly disaster (if you are designing a control procedure for a self–driving car).<div class="autopermalink" data-description="Paragraph"><a href="#SUBSECTIONNewtonsMethodBasic-29" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="exercise exercise-like" id="PROBLEMNewtMethSignOfIterates"><h4 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.2.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="introduction" id="PROBLEMNewtMethSignOfIterates-2"><div class="para" id="PROBLEMNewtMethSignOfIterates-2-1">Even if you don’t have any intuition into a given problem a more than cursory understanding of the algorithm itself can be helpful.  For example, show that when Newton’s Method is used:<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMNewtMethSignOfIterates-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<article class="task exercise-like" id="PROBLEMNewtMethSignOfIteratesA"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="PROBLEMNewtMethSignOfIteratesA-1-1">If <span class="process-math">\(y(r_n)\)</span> and <span class="process-math">\(y^\prime(r_n)\)</span> have the same sign then <span class="process-math">\(r_{n+1}\le r_n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMNewtMethSignOfIteratesA-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.2.14.a"><a href="#PROBLEMNewtMethSignOfIteratesA" title="Copy heading and permalink for Task 7.2.14.a" aria-label="Copy heading and permalink for Task 7.2.14.a">🔗</a></div></article><article class="task exercise-like" id="PROBLEMNewtMethSignOfIteratesB"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="PROBLEMNewtMethSignOfIteratesB-1-1">If <span class="process-math">\(y(r_n)\)</span> and <span class="process-math">\(y^\prime(r_n)\)</span> have opposite signs then <span class="process-math">\(r_{n+1}\ge r_n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMNewtMethSignOfIteratesB-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.2.14.b"><a href="#PROBLEMNewtMethSignOfIteratesB" title="Copy heading and permalink for Task 7.2.14.b" aria-label="Copy heading and permalink for Task 7.2.14.b">🔗</a></div></article><article class="task exercise-like" id="PROBLEMNewtMethSignOfIteratesC"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="PROBLEMNewtMethSignOfIteratesC-1-1">Suppose you are trying to compute a numerical approximation of <span class="process-math">\(\sqrt{2}\)</span> using an implementation of Newton’s Method, but you accidentally enter <span class="process-math">\(x^2+2\)</span> as your function (instead of <span class="process-math">\(x^2-2\)</span>). Explain how you can use the results of part (a) and part (b) to see that the algorithm is failing at the third iteration.<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMNewtMethSignOfIteratesC-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.2.14.c"><a href="#PROBLEMNewtMethSignOfIteratesC" title="Copy heading and permalink for Task 7.2.14.c" aria-label="Copy heading and permalink for Task 7.2.14.c">🔗</a></div></article><div class="autopermalink" data-description="Problem 7.2.14"><a href="#PROBLEMNewtMethSignOfIterates" title="Copy heading and permalink for Problem 7.2.14" aria-label="Copy heading and permalink for Problem 7.2.14">🔗</a></div></article><div class="para" id="SUBSECTIONNewtonsMethodBasic-31">So, how do you know if you should trust the approximation you get back from your favorite software? First, be aware of what a reasonable answer should be. In <a href="SECTIONnewtons-method-1.html#EXAMPLEnewtons-method1" class="xref" data-knowl="./knowl/xref/EXAMPLEnewtons-method1.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 7.2.1">Example 7.2.1</a> it is clear that the root must be positive. If software tries to tell you that it is equal to <span class="process-math">\(-2.5\)</span> you know it is lying. Second be aware of the ways that an approximation method might fail.<div class="autopermalink" data-description="Paragraph"><a href="#SUBSECTIONNewtonsMethodBasic-31" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="SUBSECTIONNewtonsMethodBasic-32">For example, Newton’s Method is not perfect. It can fail in two distinct ways that we’ll call Spectacular Failure and Subtle Failure. Let’s take a look at them in turn.<div class="autopermalink" data-description="Paragraph"><a href="#SUBSECTIONNewtonsMethodBasic-32" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 7.2.1: The Idea Behind Newton’s Method"><a href="#SUBSECTIONNewtonsMethodBasic" title="Copy heading and permalink for Subsection 7.2.1: The Idea Behind Newton’s Method" aria-label="Copy heading and permalink for Subsection 7.2.1: The Idea Behind Newton’s Method">🔗</a></div></section><section class="subsection" id="SUBSECTIONSpectacularFailure"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.2.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Spectacular Failure</span>
+</h3>
+<div class="para" id="SUBSECTIONSpectacularFailure-2">Newton’s Method can fail spectacularly in two distinct, but related, ways. The first is very easy to spot.<div class="autopermalink" data-description="Paragraph"><a href="#SUBSECTIONSpectacularFailure-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="exercise exercise-like" id="PROBLEMNewtMethAlgGeom"><h4 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.2.15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="PROBLEMNewtMethAlgGeom-2-1">Suppose we want to find the root of <span class="process-math">\(y=x^2-4x+7\)</span> and our initial guess is <span class="process-math">\(r_1=2\text{.}\)</span>  Investigate, both algebraically and graphically, what happens when we apply Newton’s Method to this problem. Describe the results of your investigations.<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMNewtMethAlgGeom-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 7.2.15"><a href="#PROBLEMNewtMethAlgGeom" title="Copy heading and permalink for Problem 7.2.15" aria-label="Copy heading and permalink for Problem 7.2.15">🔗</a></div></article><div class="para" id="SUBSECTIONSpectacularFailure-4">Because Newton’s Method requires that we divide by <span class="process-math">\(y^\prime(r_n)\)</span> we will get an error if it happens that <span class="process-math">\(y^\prime(r_n) =0\text{.}\)</span> We call this a spectacular failure because it is easy to spot whether we do the computation with a computer or with paper and pencil. Indeed, modern computer software is very adept at alerting us to division by zero errors.<div class="autopermalink" data-description="Paragraph"><a href="#SUBSECTIONSpectacularFailure-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="SUBSECTIONSpectacularFailure-5">The second kind of spectacular failure is exemplified by the following problem.<div class="autopermalink" data-description="Paragraph"><a href="#SUBSECTIONSpectacularFailure-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="exercise exercise-like" id="PROBLEMNewtonsMethodOneThird"><h4 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.2.16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="introduction" id="PROBLEMNewtonsMethodOneThird-2"><div class="para" id="PROBLEMNewtonsMethodOneThird-2-1">The only root of the function <span class="process-math">\(f(x)=x^{1/3}\)</span> is zero.<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMNewtonsMethodOneThird-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<article class="task exercise-like" id="PROBLEMNewtonsMethodOneThird-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="PROBLEMNewtonsMethodOneThird-3-1-1">Use Newton’s Method with the initial guess, <span class="process-math">\(r_1=1\)</span> to see if it converges to zero.<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMNewtonsMethodOneThird-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="PROBLEMNewtonsMethodOneThird-3-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="PROBLEMNewtonsMethodOneThird-3-2-1">It won’t.<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMNewtonsMethodOneThird-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 7.2.16.a.1"><a href="#PROBLEMNewtonsMethodOneThird-3-2" title="Copy heading and permalink for Hint 7.2.16.a.1" aria-label="Copy heading and permalink for Hint 7.2.16.a.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 7.2.16.a"><a href="#PROBLEMNewtonsMethodOneThird-3" title="Copy heading and permalink for Task 7.2.16.a" aria-label="Copy heading and permalink for Task 7.2.16.a">🔗</a></div></article><article class="task exercise-like" id="PROBLEMNewtonsMethodOneThird-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="PROBLEMNewtonsMethodOneThird-4-1-1">Write down a formula for the computation in  <a href="SECTIONnewtons-method-1.html#NewtIterStep" class="xref" data-knowl="./knowl/xref/NewtIterStep.html" data-reveal-label="Reveal" data-close-label="Close" title="Item 2">step 2</a> from Newton’s Method for this function. Use this to explain why the method will not converge no matter what non–zero initial guess is used.<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMNewtonsMethodOneThird-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.2.16.b"><a href="#PROBLEMNewtonsMethodOneThird-4" title="Copy heading and permalink for Task 7.2.16.b" aria-label="Copy heading and permalink for Task 7.2.16.b">🔗</a></div></article><div class="autopermalink" data-description="Problem 7.2.16"><a href="#PROBLEMNewtonsMethodOneThird" title="Copy heading and permalink for Problem 7.2.16" aria-label="Copy heading and permalink for Problem 7.2.16">🔗</a></div></article><div class="para" id="SUBSECTIONSpectacularFailure-7">Obviously we don’t need to use Newton’s Method to compute the root of <span class="process-math">\(f(x)=x^{1/3}.\)</span> The point of <a href="SECTIONnewtons-method-1.html#PROBLEMNewtonsMethodOneThird" class="xref" data-knowl="./knowl/xref/PROBLEMNewtonsMethodOneThird.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 7.2.16">Problem 7.2.16</a> is that Newton’s Method will not find the root no matter how close our initial guess is. Instead it will continue to generate alternately positive and negative “approximations” to zero, that are farther and farther from zero.<div class="autopermalink" data-description="Paragraph"><a href="#SUBSECTIONSpectacularFailure-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 7.2.2: Spectacular Failure"><a href="#SUBSECTIONSpectacularFailure" title="Copy heading and permalink for Subsection 7.2.2: Spectacular Failure" aria-label="Copy heading and permalink for Subsection 7.2.2: Spectacular Failure">🔗</a></div></section><section class="subsection" id="SUBSECTIONSubtleFailure"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.2.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Subtle Failure</span>
+</h3>
+<div class="para" id="SUBSECTIONSubtleFailure-2">The other way Newton’s Method fails can be quite subtle. The best way to demonstrate this is with an example.<div class="autopermalink" data-description="Paragraph"><a href="#SUBSECTIONSubtleFailure-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="EXAMPLE-SubtleFailCos"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.2.17</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="EXAMPLE-SubtleFailCos-2">Suppose we wish to compute <span class="process-math">\(\frac{\pi}{2}\)</span> by finding the smallest positive root of <span class="process-math">\(\cos(x).\)</span> If we start with an initial guess of <span class="process-math">\(r_1=0.1\)</span> (not a great first guess, but it’s not obviously horrible either) we get <span class="process-math">\(r_2=10.07,\)</span> which certainly seems like it might be a problem since <span class="process-math">\(\frac{\pi}{2}\approx 1.7.\)</span> If we ignore this and continue we get <span class="process-math">\(r_3= 11.4,\)</span> and <span class="process-math">\(r_4=10.97.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#EXAMPLE-SubtleFailCos-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="EXAMPLE-SubtleFailCos-3">What’s going on here?  The numbers seem to be converging, but they are not converging to the answer we intended to find. The figure below shows what the difficulty is.<div class="autopermalink" data-description="Paragraph"><a href="#EXAMPLE-SubtleFailCos-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="external/DC/NewtonsMethodFail1.png" class="contained"></div>
-<div class="para" id="EXAMPLE-SubtleFailCos-5">In a nutshell, our initial guess was too far away from the root. The slope of the tangent line at <span class="process-math">\((0.1, \cos(0.1))\)</span> is <span class="process-math">\(-\sin(0.1)\approx -0.1\)</span> which means that the tangent line (in red) decreases from left to right, but also that its slope is very shallow. Thus the tangent line crosses the <span class="process-math">\(x\)</span>–axis at about <span class="process-math">\(r_2=10.07,\)</span> very far from the root we seek. Now it happens that <span class="process-math">\(10.07\)</span> is actually pretty close to another root of our function: <span class="process-math">\(7\pi/2.\)</span> So continued iterations of Newton’s Method will settle in on the root at <span class="process-math">\(7\pi/2\text{.}\)</span> But the damage has already been done. We’ve found a legitimate root but not he one we intended to find.</div>
-<div class="para" id="EXAMPLE-SubtleFailCos-6">We call this a subtle failure because Newton’s Method will converge without complaint. None of the computations will seem suspicious. A software implementation of Newton’s Method for this problem using this initial guess will return a reasonable looking, but wrong, number.  It is glaringly obvious what goes wrong when we draw the pictures. But when we use software to compute the root most of the time there will be no pictures. Notice that, unlike the spectacular failure above there is nothing in the calculations being performed that could be detected in software to let the human in charge know that things have gone wrong. So, if you rely on software it is essential that you take the time to consider the “reasonableness” of the answer you obtain. If this is not understood there is a real risk that you could accept a ridiculous answer as correct.</div>
-<aside class="aside aside-like" id="EXAMPLE-SubtleFailCos-7"><h5 class="heading"><span class="title">Comment.</span></h5>
-<div class="para" id="EXAMPLE-SubtleFailCos-7-2">This is embarrassing at best, deadly at worst. Seriously. If what you are calculating is the embedded software for, say the autopilot system of an airliner, then accepting the wrong answer midflight could easily be deadly. Don’t take this lightly.</div></aside></article><div class="para" id="SUBSECTIONSubtleFailure-4">The problem of converging to a wrong answer is particularly acute when a function has two roots which are very close together, for example if <span class="process-math">\(f(x) = (10x^2-21x+11)(x-0.05)(x^3+7).\)</span>
+<div class="para" id="EXAMPLE-SubtleFailCos-5">In a nutshell, our initial guess was too far away from the root. The slope of the tangent line at <span class="process-math">\((0.1, \cos(0.1))\)</span> is <span class="process-math">\(-\sin(0.1)\approx -0.1\)</span> which means that the tangent line (in red) decreases from left to right, but also that its slope is very shallow. Thus the tangent line crosses the <span class="process-math">\(x\)</span>–axis at about <span class="process-math">\(r_2=10.07,\)</span> very far from the root we seek. Now it happens that <span class="process-math">\(10.07\)</span> is actually pretty close to another root of our function: <span class="process-math">\(7\pi/2.\)</span> So continued iterations of Newton’s Method will settle in on the root at <span class="process-math">\(7\pi/2\text{.}\)</span> But the damage has already been done. We’ve found a legitimate root but not he one we intended to find.<div class="autopermalink" data-description="Paragraph"><a href="#EXAMPLE-SubtleFailCos-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="EXAMPLE-SubtleFailCos-6">We call this a subtle failure because Newton’s Method will converge without complaint. None of the computations will seem suspicious. A software implementation of Newton’s Method for this problem using this initial guess will return a reasonable looking, but wrong, number.  It is glaringly obvious what goes wrong when we draw the pictures. But when we use software to compute the root most of the time there will be no pictures. Notice that, unlike the spectacular failure above there is nothing in the calculations being performed that could be detected in software to let the human in charge know that things have gone wrong. So, if you rely on software it is essential that you take the time to consider the “reasonableness” of the answer you obtain. If this is not understood there is a real risk that you could accept a ridiculous answer as correct.<div class="autopermalink" data-description="Paragraph"><a href="#EXAMPLE-SubtleFailCos-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="EXAMPLE-SubtleFailCos-7" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<span class="type">Aside<span class="colon heading-divison-mark heading-divison-mark__colon">:</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Comment.</span>
+</h5></summary><aside class="aside aside-like knowl__content"><div class="para" id="EXAMPLE-SubtleFailCos-7-2">This is embarrassing at best, deadly at worst. Seriously. If what you are calculating is the embedded software for, say the autopilot system of an airliner, then accepting the wrong answer midflight could easily be deadly. Don’t take this lightly.<div class="autopermalink" data-description="Paragraph"><a href="#EXAMPLE-SubtleFailCos-7-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></aside></details><div class="autopermalink" data-description="Example 7.2.17"><a href="#EXAMPLE-SubtleFailCos" title="Copy heading and permalink for Example 7.2.17" aria-label="Copy heading and permalink for Example 7.2.17">🔗</a></div></article><div class="para" id="SUBSECTIONSubtleFailure-4">The problem of converging to a wrong answer is particularly acute when a function has two roots which are very close together, for example if <span class="process-math">\(f(x) = (10x^2-21x+11)(x-0.05)(x^3+7).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#SUBSECTIONSubtleFailure-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="exercise exercise-like" id="PROBLEMNewtMethHardCubic"><h4 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">7.2.18</span><span class="period">.</span>
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.2.18</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para logical" id="PROBLEMNewtMethHardCubic-2-1">
 <div class="para">Find approximations to all real roots of</div>
@@ -872,24 +1054,52 @@ f(x) =
 (10x^2-21x+11)(x-0.05)(x^3+7).
 \end{equation*}
 </div>
-</div></article><div class="para" id="SUBSECTIONSubtleFailure-6">From the previous examples it should be clear that it is important that the initial guess be close enough to the root we seek to guarantee that the iterations will converge to that root. This, of course, begs the question, “How close should our initial guess be?” This is actually a hard question. Since we don’t yet possess all of the knowledge and skills needed we can’t answer it in any definite way. So we’ll just say that in general your initial guess should be as close as you can make it.</div>
-<div class="para" id="SUBSECTIONSubtleFailure-7">But take care. As we saw in <a href="SECTIONnewtons-method-1.html#PROBLEMNewtonsMethodOneThird" class="xref" data-knowl="./knowl/xref/PROBLEMNewtonsMethodOneThird.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 7.2.16">Problem 7.2.16</a> sometimes even having a very accurate first guess is not sufficient.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMNewtMethHardCubic-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 7.2.18"><a href="#PROBLEMNewtMethHardCubic" title="Copy heading and permalink for Problem 7.2.18" aria-label="Copy heading and permalink for Problem 7.2.18">🔗</a></div></article><div class="para" id="SUBSECTIONSubtleFailure-6">From the previous examples it should be clear that it is important that the initial guess be close enough to the root we seek to guarantee that the iterations will converge to that root. This, of course, begs the question, “How close should our initial guess be?” This is actually a hard question. Since we don’t yet possess all of the knowledge and skills needed we can’t answer it in any definite way. So we’ll just say that in general your initial guess should be as close as you can make it.<div class="autopermalink" data-description="Paragraph"><a href="#SUBSECTIONSubtleFailure-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="SUBSECTIONSubtleFailure-7">But take care. As we saw in <a href="SECTIONnewtons-method-1.html#PROBLEMNewtonsMethodOneThird" class="xref" data-knowl="./knowl/xref/PROBLEMNewtonsMethodOneThird.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 7.2.16">Problem 7.2.16</a> sometimes even having a very accurate first guess is not sufficient.<div class="autopermalink" data-description="Paragraph"><a href="#SUBSECTIONSubtleFailure-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="exercise exercise-like" id="SUBSECTIONSubtleFailure-8"><h4 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">7.2.19</span><span class="period">.</span>
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.2.19</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
-<div class="introduction" id="SUBSECTIONSubtleFailure-8-2"><div class="para" id="SUBSECTIONSubtleFailure-8-2-1"></div></div>
+<div class="introduction" id="SUBSECTIONSubtleFailure-8-2"><div class="para" id="SUBSECTIONSubtleFailure-8-2-1"><div class="autopermalink" data-description="Paragraph"><a href="#SUBSECTIONSubtleFailure-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div></div>
 <article class="task exercise-like" id="SUBSECTIONSubtleFailure-8-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
 <div class="para logical" id="SUBSECTIONSubtleFailure-8-3-1-1">
 <div class="para">Use Newton’s Method to find approximations to the positive roots closest to zero of each of the following functions. (Clearly you can use Algebra and Trigonometry to compute them exactly. The point here is to see how good our guesses must sometimes be in order for Newton’s Method to work.}</div>
 <ol class="lower-roman ol-marker-1 cols2" id="SUBSECTIONSubtleFailure-8-3-1-1-3">
-<li id="SUBSECTIONSubtleFailure-8-3-1-1-3-1"><div class="para" id="SUBSECTIONSubtleFailure-8-3-1-1-3-1-1"><span class="process-math">\(\displaystyle y(x)=x(x^2-.01)\)</span></div></li>
-<li id="SUBSECTIONSubtleFailure-8-3-1-1-3-2"><div class="para" id="SUBSECTIONSubtleFailure-8-3-1-1-3-2-1"><span class="process-math">\(\displaystyle y(x)=(x^2-9)(x^2-.01)\)</span></div></li>
-<li id="SUBSECTIONSubtleFailure-8-3-1-1-3-3"><div class="para" id="SUBSECTIONSubtleFailure-8-3-1-1-3-3-1"><span class="process-math">\(\displaystyle y(x)=x^2\sin(4x)\)</span></div></li>
-<li id="SUBSECTIONSubtleFailure-8-3-1-1-3-4"><div class="para" id="SUBSECTIONSubtleFailure-8-3-1-1-3-4-1"><span class="process-math">\(\displaystyle y(x)=x^2\cos(4x)\)</span></div></li>
+<li id="SUBSECTIONSubtleFailure-8-3-1-1-3-1">
+<div class="para" id="SUBSECTIONSubtleFailure-8-3-1-1-3-1-1">
+<span class="process-math">\(\displaystyle y(x)=x(x^2-.01)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#SUBSECTIONSubtleFailure-8-3-1-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 7.2.19.i"><a href="#SUBSECTIONSubtleFailure-8-3-1-1-3-1" title="Copy heading and permalink for Item 7.2.19.i" aria-label="Copy heading and permalink for Item 7.2.19.i">🔗</a></div>
+</li>
+<li id="SUBSECTIONSubtleFailure-8-3-1-1-3-2">
+<div class="para" id="SUBSECTIONSubtleFailure-8-3-1-1-3-2-1">
+<span class="process-math">\(\displaystyle y(x)=(x^2-9)(x^2-.01)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#SUBSECTIONSubtleFailure-8-3-1-1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 7.2.19.ii"><a href="#SUBSECTIONSubtleFailure-8-3-1-1-3-2" title="Copy heading and permalink for Item 7.2.19.ii" aria-label="Copy heading and permalink for Item 7.2.19.ii">🔗</a></div>
+</li>
+<li id="SUBSECTIONSubtleFailure-8-3-1-1-3-3">
+<div class="para" id="SUBSECTIONSubtleFailure-8-3-1-1-3-3-1">
+<span class="process-math">\(\displaystyle y(x)=x^2\sin(4x)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#SUBSECTIONSubtleFailure-8-3-1-1-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 7.2.19.iii"><a href="#SUBSECTIONSubtleFailure-8-3-1-1-3-3" title="Copy heading and permalink for Item 7.2.19.iii" aria-label="Copy heading and permalink for Item 7.2.19.iii">🔗</a></div>
+</li>
+<li id="SUBSECTIONSubtleFailure-8-3-1-1-3-4">
+<div class="para" id="SUBSECTIONSubtleFailure-8-3-1-1-3-4-1">
+<span class="process-math">\(\displaystyle y(x)=x^2\cos(4x)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#SUBSECTIONSubtleFailure-8-3-1-1-3-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 7.2.19.iv"><a href="#SUBSECTIONSubtleFailure-8-3-1-1-3-4" title="Copy heading and permalink for Item 7.2.19.iv" aria-label="Copy heading and permalink for Item 7.2.19.iv">🔗</a></div>
+</li>
 </ol>
-</div></article><article class="task exercise-like" id="SUBSECTIONSubtleFailure-8-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="SUBSECTIONSubtleFailure-8-4-1-1">If we were to next ask you to find approximations of the negative roots closest to zero of each of these functions would you need to use Newton’s Method again? Explain.</div></article></article><article class="exercise exercise-like" id="PROBLEMNMByGraphing"><h4 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">7.2.20</span><span class="period">.</span>
+<div class="autopermalink" data-description="Paragraph"><a href="#SUBSECTIONSubtleFailure-8-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.2.19.a"><a href="#SUBSECTIONSubtleFailure-8-3" title="Copy heading and permalink for Task 7.2.19.a" aria-label="Copy heading and permalink for Task 7.2.19.a">🔗</a></div></article><article class="task exercise-like" id="SUBSECTIONSubtleFailure-8-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="SUBSECTIONSubtleFailure-8-4-1-1">If we were to next ask you to find approximations of the negative roots closest to zero of each of these functions would you need to use Newton’s Method again? Explain.<div class="autopermalink" data-description="Paragraph"><a href="#SUBSECTIONSubtleFailure-8-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.2.19.b"><a href="#SUBSECTIONSubtleFailure-8-4" title="Copy heading and permalink for Task 7.2.19.b" aria-label="Copy heading and permalink for Task 7.2.19.b">🔗</a></div></article><div class="autopermalink" data-description="Problem 7.2.19"><a href="#SUBSECTIONSubtleFailure-8" title="Copy heading and permalink for Problem 7.2.19" aria-label="Copy heading and permalink for Problem 7.2.19">🔗</a></div></article><article class="exercise exercise-like" id="PROBLEMNMByGraphing"><h4 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.2.20</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="introduction" id="PROBLEMNMByGraphing-1"><div class="para logical" id="PROBLEMNMByGraphing-1-1">
 <div class="para">Do not try to answer the questions in this problem analytically. Use a graphing calculator, or graphing software to explore these questions visually. The function</div>
@@ -899,15 +1109,24 @@ f(x)=4x^{3}-30x^{2}+72x-52.
 \end{equation*}
 </div>
 <div class="para">has exactly one real root and it is between one and two.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMNMByGraphing-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></div>
 <article class="task exercise-like" id="PROBLEMNMByGraphingA"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="PROBLEMNMByGraphingA-1-1">Show that with an initial guess, <span class="process-math">\(r_1 \gt 2\text{,}\)</span> Newton’s Method almost never converges to the root.</div></article><article class="task exercise-like" id="PROBLEMNMByGraphingB"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="PROBLEMNMByGraphingB-1-1">We said “almost never” in part (a) because there is a small interval of numbers greater than <span class="process-math">\(2\)</span> with the property that Newton’s Method will converge if <span class="process-math">\(r_1\)</span> is any number in the interval. Find an interval that works. It doesn’t have to be the largest possible interval.</div></article><article class="task exercise-like" id="PROBLEMNMByGraphingC"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<div class="para" id="PROBLEMNMByGraphingC-1-1">Show that if you start with an initial guess of <span class="process-math">\(r_1=2\)</span> or <span class="process-math">\(r_1=3\)</span> Newton’s Method will not even generate the first iterate: <span class="process-math">\(r_2.\)</span> Explain.</div></article></article><article class="exercise exercise-like" id="PROBLEMNMThirdRootCubic"><h4 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">7.2.21</span><span class="period">.</span>
+<div class="para" id="PROBLEMNMByGraphingA-1-1">Show that with an initial guess, <span class="process-math">\(r_1 \gt 2\text{,}\)</span> Newton’s Method almost never converges to the root.<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMNMByGraphingA-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.2.20.a"><a href="#PROBLEMNMByGraphingA" title="Copy heading and permalink for Task 7.2.20.a" aria-label="Copy heading and permalink for Task 7.2.20.a">🔗</a></div></article><article class="task exercise-like" id="PROBLEMNMByGraphingB"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="PROBLEMNMByGraphingB-1-1">We said “almost never” in part (a) because there is a small interval of numbers greater than <span class="process-math">\(2\)</span> with the property that Newton’s Method will converge if <span class="process-math">\(r_1\)</span> is any number in the interval. Find an interval that works. It doesn’t have to be the largest possible interval.<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMNMByGraphingB-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.2.20.b"><a href="#PROBLEMNMByGraphingB" title="Copy heading and permalink for Task 7.2.20.b" aria-label="Copy heading and permalink for Task 7.2.20.b">🔗</a></div></article><article class="task exercise-like" id="PROBLEMNMByGraphingC"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="PROBLEMNMByGraphingC-1-1">Show that if you start with an initial guess of <span class="process-math">\(r_1=2\)</span> or <span class="process-math">\(r_1=3\)</span> Newton’s Method will not even generate the first iterate: <span class="process-math">\(r_2.\)</span> Explain.<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMNMByGraphingC-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.2.20.c"><a href="#PROBLEMNMByGraphingC" title="Copy heading and permalink for Task 7.2.20.c" aria-label="Copy heading and permalink for Task 7.2.20.c">🔗</a></div></article><div class="autopermalink" data-description="Problem 7.2.20"><a href="#PROBLEMNMByGraphing" title="Copy heading and permalink for Problem 7.2.20" aria-label="Copy heading and permalink for Problem 7.2.20">🔗</a></div></article><article class="exercise exercise-like" id="PROBLEMNMThirdRootCubic"><h4 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.2.21</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
-<div class="para" id="PROBLEMNMThirdRootCubic-2-1">Suppose that a cubic polynomial has three real roots, <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\)</span> and  that two of them, <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are known.  We wish to approximate the third. Show that if we take the average of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> as our initial guess, Newton’s Method will find the exact value of the third root, <span class="process-math">\(c\text{,}\)</span> in one iteration.</div></article></section></section></div>
-<div class="ptx-content-footer">
+<div class="para" id="PROBLEMNMThirdRootCubic-2-1">Suppose that a cubic polynomial has three real roots, <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\)</span> and  that two of them, <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are known.  We wish to approximate the third. Show that if we take the average of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> as our initial guess, Newton’s Method will find the exact value of the third root, <span class="process-math">\(c\text{,}\)</span> in one iteration.<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMNMThirdRootCubic-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 7.2.21"><a href="#PROBLEMNMThirdRootCubic" title="Copy heading and permalink for Problem 7.2.21" aria-label="Copy heading and permalink for Problem 7.2.21">🔗</a></div></article><div class="autopermalink" data-description="Subsection 7.2.3: Subtle Failure"><a href="#SUBSECTIONSubtleFailure" title="Copy heading and permalink for Subsection 7.2.3: Subtle Failure" aria-label="Copy heading and permalink for Subsection 7.2.3: Subtle Failure">🔗</a></div></section><div class="autopermalink" data-description="Section 7.2: Newton’s Method"><a href="#SECTIONnewtons-method-1" title="Copy heading and permalink for Section 7.2: Newton’s Method" aria-label="Copy heading and permalink for Section 7.2: Newton’s Method">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="SECTIONnewtons-method.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="SECTIONEulersMethod.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>

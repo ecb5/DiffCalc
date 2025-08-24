@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -12,7 +19,7 @@
 </head>
 <body class="ignore-math">
 <article class="example example-like"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">9.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Constructing A Square on a Line.</span>
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.2.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Constructing A Square on a Line.</span>
 </h3>
 <div class="para logical">
 <div class="para">What is the area of the smallest possible square having one corner at the point <span class="process-math">\((2,3)\)</span> and an adjacent corner on the line</div>
@@ -22,10 +29,13 @@
 \end{equation}
 </div>
 <div class="para">The diagram below is a visualization of this problem.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#EXAMPLESqOnLine-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/DC/LineDist1.png" class="contained"></div>
-<div class="para">We can imagine the blue square growing and shrinking as we move the point <span class="process-math">\((a,b)\)</span> along the line. It seems clear that the square having the least area is the one pictured in black (when <span class="process-math">\((a,b)\)</span> is at <span class="process-math">\((x,y)\text{.}\)</span> It is worth taking a moment to notice this explicitly because not all optimization problems are solvable. If we had asked for the largest possible square there would be no solution because the blue square in our diagram can always be make larger by moving the point <span class="process-math">\((a,b)\)</span> further to the left on the graph of <a href="SECTIONfive-simil-probl.html#EQUATIONSqOptConst" class="xref" data-knowl="./knowl/xref/EQUATIONSqOptConst.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 9.1">equation (9.1)</a>.</div>
-<div class="para">But a convincing picture is not a solution. To complete the solution we’ll need to compute the coordinates of the point <span class="process-math">\((x,y)\)</span> in our sketch and compute the minimal area.</div>
+<div class="para">We can imagine the blue square growing and shrinking as we move the point <span class="process-math">\((a,b)\)</span> along the line. It seems clear that the square having the least area is the one pictured in black (when <span class="process-math">\((a,b)\)</span> is at <span class="process-math">\((x,y)\text{.}\)</span> It is worth taking a moment to notice this explicitly because not all optimization problems are solvable. If we had asked for the largest possible square there would be no solution because the blue square in our diagram can always be make larger by moving the point <span class="process-math">\((a,b)\)</span> further to the left on the graph of <a href="SECTIONfive-simil-probl.html#EQUATIONSqOptConst" class="xref" data-knowl="./knowl/xref/EQUATIONSqOptConst.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 9.1">equation (9.1)</a>.<div class="autopermalink" data-description="Paragraph"><a href="#EXAMPLESqOnLine-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">But a convincing picture is not a solution. To complete the solution we’ll need to compute the coordinates of the point <span class="process-math">\((x,y)\)</span> in our sketch and compute the minimal area.<div class="autopermalink" data-description="Paragraph"><a href="#EXAMPLESqOnLine-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para logical">
 <div class="para">In any optimization problem the first question to ask is, “What do we need to optimize?” In other words, “What is our objective function?”  For this problem the length of the line segment between the point <span class="process-math">\((2,3)\)</span> and any point <span class="process-math">\((x,y)\)</span> is given by the Distance Formula: <span class="process-math">\(\sqrt{(x-2)^2+(y-3)^2}\text{.}\)</span>  Therefore the area of the square constructed from this line segment is given by the function:</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQUATIONSqOptConst.html">
@@ -34,11 +44,14 @@ A(x)=\left(\sqrt{(x-2)^2+(y-3)^2}\right)^2=(x-2)^2+(y-3)^2.
 \end{equation*}
 </div>
 <div class="para">So our objective function is <span class="process-math">\(A(x)\text{.}\)</span> Since the point <span class="process-math">\((x,y)\)</span> is constrained to lie on the line <span class="process-math">\(5x+3y=2\text{,}\)</span> <a href="SECTIONfive-simil-probl.html#EQUATIONSqOptConst" class="xref" data-knowl="./knowl/xref/EQUATIONSqOptConst.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 9.1">equation (9.1)</a>, is our constraint.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#EXAMPLESqOnLine-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para">Notice that we’ve abused our notation a bit. Although the notation <span class="process-math">\(A(x)\)</span> indicates that <span class="process-math">\(A\)</span> depends on <span class="process-math">\(x\)</span> alone, we’ve given <span class="process-math">\(A\)</span> in terms of both <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{.}\)</span> But solving <a href="SECTIONfive-simil-probl.html#EQUATIONSqOptConst" class="xref" data-knowl="./knowl/xref/EQUATIONSqOptConst.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 9.1">equation (9.1)</a> gives <span class="process-math">\(y=\frac13(2-5x)\)</span> so it should be clear that <span class="process-math">\(A\)</span> really depends only on <span class="process-math">\(x\text{.}\)</span>
+<div class="para">Notice that we’ve abused our notation a bit. Although the notation <span class="process-math">\(A(x)\)</span> indicates that <span class="process-math">\(A\)</span> depends on <span class="process-math">\(x\)</span> alone, we’ve given <span class="process-math">\(A\)</span> in terms of both <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{.}\)</span> But solving <a href="SECTIONfive-simil-probl.html#EQUATIONSqOptConst" class="xref" data-knowl="./knowl/xref/EQUATIONSqOptConst.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 9.1">equation (9.1)</a> gives <span class="process-math">\(y=\frac13(2-5x)\)</span> so it should be clear that <span class="process-math">\(A\)</span> really depends only on <span class="process-math">\(x\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#EXAMPLESqOnLine-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<aside class="aside aside-like"><h4 class="heading"><span class="title">Comment.</span></h4>
-<div class="para">If we make this substitution immediately we can get the objective function solely in terms of <span class="process-math">\(x\text{:}\)</span> <span class="process-math">\(A(x)=(x-2)^2+\left(\frac13(2-5x)-3\right)^2\text{,}\)</span> But does that really help? Either way we’re going to have to differentiate <span class="process-math">\(A(x)\text{.}\)</span> Which form of <span class="process-math">\(A(x)\)</span> would you rather use? We think using two variables makes this objective function a bit “easier on the eyes.”</div></aside><div class="para logical">
+<details class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Aside<span class="colon heading-divison-mark heading-divison-mark__colon">:</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Comment.</span>
+</h4></summary><aside class="aside aside-like knowl__content"><div class="para">If we make this substitution immediately we can get the objective function solely in terms of <span class="process-math">\(x\text{:}\)</span> <span class="process-math">\(A(x)=(x-2)^2+\left(\frac13(2-5x)-3\right)^2\text{,}\)</span> But does that really help? Either way we’re going to have to differentiate <span class="process-math">\(A(x)\text{.}\)</span> Which form of <span class="process-math">\(A(x)\)</span> would you rather use? We think using two variables makes this objective function a bit “easier on the eyes.”<div class="autopermalink" data-description="Paragraph"><a href="#EXAMPLESqOnLine-9-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></aside></details><div class="para logical">
 <div class="para">We’ve seen visually that this problem has a solution and <a href="SECTIONintroduction.html#THEOREMFermatsTheorem" class="xref" data-knowl="./knowl/xref/THEOREMFermatsTheorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 9.1.1: Fermat’s Theorem">Fermat’s Theorem 9.1.1</a> tells us that the derivative of our objective function will be zero at that solution.  So we differentiate both sides of</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/THEOREMFermatsTheorem.html ./knowl/xref/EQUATIONSqOptConst.html ./knowl/xref/EQUATIONLineDist1.html">
 \begin{equation*}
@@ -98,6 +111,7 @@ x+3-\frac{10}{9}+\frac{25}{9}x\amp =0,\notag\\
 x\amp =-\frac12.\tag{9.3}
 \end{align}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#EXAMPLESqOnLine-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical">
 <div class="para">To find <span class="process-math">\(y\)</span> we use our constraint and the value of <span class="process-math">\(x\)</span> from <a href="SECTIONfive-simil-probl.html#EXAMPLESqOnLine-10-18" class="xref" data-knowl="./knowl/xref/EQUATIONLineDist2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 9.3">equation (9.3)</a>,</div>
@@ -106,9 +120,12 @@ x\amp =-\frac12.\tag{9.3}
 \eval{y}{x}{-1/2}=\eval{\frac13(2-5x)}{x}{-1/2}=\frac32.
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#EXAMPLESqOnLine-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para">So we have found that the minimal square occurs when <span class="process-math">\(x=-\frac12\text{,}\)</span> and <span class="process-math">\(y=\frac32\)</span> and it feels like we’re done, doesn’t it?</div>
-<div class="para">We’re not.</div>
+<div class="para">So we have found that the minimal square occurs when <span class="process-math">\(x=-\frac12\text{,}\)</span> and <span class="process-math">\(y=\frac32\)</span> and it feels like we’re done, doesn’t it?<div class="autopermalink" data-description="Paragraph"><a href="#EXAMPLESqOnLine-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">We’re not.<div class="autopermalink" data-description="Paragraph"><a href="#EXAMPLESqOnLine-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para logical">
 <div class="para">The question asked was “What is the area of the smallest possible square?” To find the area we need to put <span class="process-math">\((x,y)=(-1/2, 3/2)\)</span> into our area formula which yields</div>
 <div class="displaymath process-math">
@@ -120,6 +137,8 @@ x\amp =-\frac12.\tag{9.3}
 \end{align*}
 </div>
 <div class="para">Always remember to check that you have actually answered the question which was asked before you stop.</div>
-</div></article><span class="incontext"><a class="internal" href="SECTIONfive-simil-probl.html#EXAMPLESqOnLine">in-context</a></span>
+<div class="autopermalink" data-description="Paragraph"><a href="#EXAMPLESqOnLine-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 9.2.1: Constructing A Square on a Line"><a href="#EXAMPLESqOnLine" title="Copy heading and permalink for Example 9.2.1: Constructing A Square on a Line" aria-label="Copy heading and permalink for Example 9.2.1: Constructing A Square on a Line">🔗</a></div></article><span class="incontext"><a class="internal" href="SECTIONfive-simil-probl.html#EXAMPLESqOnLine">in-context</a></span>
 </body>
 </html>

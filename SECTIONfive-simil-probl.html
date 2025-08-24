@@ -6,15 +6,20 @@
 <!--*                                          *-->
 <!--********************************************-->
 <html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Preliminaries: Some Simple Optimizations</title>
-<meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:type" content="book">
-<meta property="book:title" content="Differential Calculus">
-<meta property="book:author" content="Eugene Boman">
-<meta property="book:author" content="Robert Rogers">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
 <script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
@@ -70,13 +75,13 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
-<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
-<!--** eBookCongig is necessary to configure interactive       **-->
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Differential Calculus">
+<meta property="book:author" content="Eugene Boman">
+<meta property="book:author" content="Robert Rogers">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -98,19 +103,21 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.5.16';
+eBookConfig.runestone_version = '7.9.8';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.a0c870bab402ccbf.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.97de40e034b535c5.css">
+<script src="_static/prefix-runtime.b215b0da62d655bd.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.28cc3c4821792be5.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8141ae22fd347e48.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
-<h1 class="heading"><a href="Calculus.html"><span class="title">Differential Calculus:</span> <span class="subtitle">From Practice to Theory</span></a></h1>
+<h1 class="heading"><a href="Calculus.html"><span class="title">Differential Calculus</span> <span class="subtitle">From Practice to Theory</span></a></h1>
 <p class="byline">Eugene Boman, Robert Rogers</p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="meta_backmatter-3.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
@@ -607,12 +614,14 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="SECTIONfive-simil-probl"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">9.2</span><span class="space"> </span><span class="title">Preliminaries: Some Simple Optimizations</span>
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Preliminaries: Some Simple Optimizations</span>
 </h2>
-<div class="para" id="SECTIONfive-simil-probl-2">Our first goal is to build a set of tools for optimization. By the end of this chapter we want to be able to rely more on the tools of Calculus and less on intuition to solve optimization problems. This does not mean that you should stop using your intuition. But by the end of this chapter you will have a set of tools that will allow you to either confirm your instincts, or refute them.</div>
-<div class="para" id="SECTIONfive-simil-probl-3">To begin we will consider problems that allow us to use our intuition. As a result many of the examples in this section can be solved by more elementary methods than Calculus. If you can see a more fundamental way to solve these problems and examples, that’s great!  Do that. But keep your learning goal in mind. We’re interested in these examples as a means to elucidate the subtleties inherent in optimization problems. These problems are a means to that end, not an end in themselves. Don’t just “get the right answer” and stop. Learn the process and look for where difficulties could arise in a more complex situations.</div>
+<div class="para" id="SECTIONfive-simil-probl-2">Our first goal is to build a set of tools for optimization. By the end of this chapter we want to be able to rely more on the tools of Calculus and less on intuition to solve optimization problems. This does not mean that you should stop using your intuition. But by the end of this chapter you will have a set of tools that will allow you to either confirm your instincts, or refute them.<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONfive-simil-probl-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="SECTIONfive-simil-probl-3">To begin we will consider problems that allow us to use our intuition. As a result many of the examples in this section can be solved by more elementary methods than Calculus. If you can see a more fundamental way to solve these problems and examples, that’s great!  Do that. But keep your learning goal in mind. We’re interested in these examples as a means to elucidate the subtleties inherent in optimization problems. These problems are a means to that end, not an end in themselves. Don’t just “get the right answer” and stop. Learn the process and look for where difficulties could arise in a more complex situations.<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONfive-simil-probl-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="example example-like" id="EXAMPLESqOnLine"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">9.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Constructing A Square on a Line.</span>
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.2.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Constructing A Square on a Line.</span>
 </h3>
 <div class="para logical" id="EXAMPLESqOnLine-3">
 <div class="para">What is the area of the smallest possible square having one corner at the point <span class="process-math">\((2,3)\)</span> and an adjacent corner on the line</div>
@@ -622,10 +631,13 @@ eBookConfig.enable_chatcodes =  false;
 \end{equation}
 </div>
 <div class="para">The diagram below is a visualization of this problem.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#EXAMPLESqOnLine-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/DC/LineDist1.png" class="contained"></div>
-<div class="para" id="EXAMPLESqOnLine-5">We can imagine the blue square growing and shrinking as we move the point <span class="process-math">\((a,b)\)</span> along the line. It seems clear that the square having the least area is the one pictured in black (when <span class="process-math">\((a,b)\)</span> is at <span class="process-math">\((x,y)\text{.}\)</span> It is worth taking a moment to notice this explicitly because not all optimization problems are solvable. If we had asked for the largest possible square there would be no solution because the blue square in our diagram can always be make larger by moving the point <span class="process-math">\((a,b)\)</span> further to the left on the graph of <a href="SECTIONfive-simil-probl.html#EQUATIONSqOptConst" class="xref" data-knowl="./knowl/xref/EQUATIONSqOptConst.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 9.1">equation (9.1)</a>.</div>
-<div class="para" id="EXAMPLESqOnLine-6">But a convincing picture is not a solution. To complete the solution we’ll need to compute the coordinates of the point <span class="process-math">\((x,y)\)</span> in our sketch and compute the minimal area.</div>
+<div class="para" id="EXAMPLESqOnLine-5">We can imagine the blue square growing and shrinking as we move the point <span class="process-math">\((a,b)\)</span> along the line. It seems clear that the square having the least area is the one pictured in black (when <span class="process-math">\((a,b)\)</span> is at <span class="process-math">\((x,y)\text{.}\)</span> It is worth taking a moment to notice this explicitly because not all optimization problems are solvable. If we had asked for the largest possible square there would be no solution because the blue square in our diagram can always be make larger by moving the point <span class="process-math">\((a,b)\)</span> further to the left on the graph of <a href="SECTIONfive-simil-probl.html#EQUATIONSqOptConst" class="xref" data-knowl="./knowl/xref/EQUATIONSqOptConst.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 9.1">equation (9.1)</a>.<div class="autopermalink" data-description="Paragraph"><a href="#EXAMPLESqOnLine-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="EXAMPLESqOnLine-6">But a convincing picture is not a solution. To complete the solution we’ll need to compute the coordinates of the point <span class="process-math">\((x,y)\)</span> in our sketch and compute the minimal area.<div class="autopermalink" data-description="Paragraph"><a href="#EXAMPLESqOnLine-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para logical" id="EXAMPLESqOnLine-7">
 <div class="para">In any optimization problem the first question to ask is, “What do we need to optimize?” In other words, “What is our objective function?”  For this problem the length of the line segment between the point <span class="process-math">\((2,3)\)</span> and any point <span class="process-math">\((x,y)\)</span> is given by the Distance Formula: <span class="process-math">\(\sqrt{(x-2)^2+(y-3)^2}\text{.}\)</span>  Therefore the area of the square constructed from this line segment is given by the function:</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EQUATIONSqOptConst.html">
@@ -634,11 +646,14 @@ A(x)=\left(\sqrt{(x-2)^2+(y-3)^2}\right)^2=(x-2)^2+(y-3)^2.
 \end{equation*}
 </div>
 <div class="para">So our objective function is <span class="process-math">\(A(x)\text{.}\)</span> Since the point <span class="process-math">\((x,y)\)</span> is constrained to lie on the line <span class="process-math">\(5x+3y=2\text{,}\)</span> <a href="SECTIONfive-simil-probl.html#EQUATIONSqOptConst" class="xref" data-knowl="./knowl/xref/EQUATIONSqOptConst.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 9.1">equation (9.1)</a>, is our constraint.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#EXAMPLESqOnLine-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="EXAMPLESqOnLine-8">Notice that we’ve abused our notation a bit. Although the notation <span class="process-math">\(A(x)\)</span> indicates that <span class="process-math">\(A\)</span> depends on <span class="process-math">\(x\)</span> alone, we’ve given <span class="process-math">\(A\)</span> in terms of both <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{.}\)</span> But solving <a href="SECTIONfive-simil-probl.html#EQUATIONSqOptConst" class="xref" data-knowl="./knowl/xref/EQUATIONSqOptConst.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 9.1">equation (9.1)</a> gives <span class="process-math">\(y=\frac13(2-5x)\)</span> so it should be clear that <span class="process-math">\(A\)</span> really depends only on <span class="process-math">\(x\text{.}\)</span>
+<div class="para" id="EXAMPLESqOnLine-8">Notice that we’ve abused our notation a bit. Although the notation <span class="process-math">\(A(x)\)</span> indicates that <span class="process-math">\(A\)</span> depends on <span class="process-math">\(x\)</span> alone, we’ve given <span class="process-math">\(A\)</span> in terms of both <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{.}\)</span> But solving <a href="SECTIONfive-simil-probl.html#EQUATIONSqOptConst" class="xref" data-knowl="./knowl/xref/EQUATIONSqOptConst.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 9.1">equation (9.1)</a> gives <span class="process-math">\(y=\frac13(2-5x)\)</span> so it should be clear that <span class="process-math">\(A\)</span> really depends only on <span class="process-math">\(x\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#EXAMPLESqOnLine-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<aside class="aside aside-like" id="EXAMPLESqOnLine-9"><h4 class="heading"><span class="title">Comment.</span></h4>
-<div class="para" id="EXAMPLESqOnLine-9-2">If we make this substitution immediately we can get the objective function solely in terms of <span class="process-math">\(x\text{:}\)</span> <span class="process-math">\(A(x)=(x-2)^2+\left(\frac13(2-5x)-3\right)^2\text{,}\)</span> But does that really help? Either way we’re going to have to differentiate <span class="process-math">\(A(x)\text{.}\)</span> Which form of <span class="process-math">\(A(x)\)</span> would you rather use? We think using two variables makes this objective function a bit “easier on the eyes.”</div></aside><div class="para logical" id="EXAMPLESqOnLine-10">
+<details id="EXAMPLESqOnLine-9" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Aside<span class="colon heading-divison-mark heading-divison-mark__colon">:</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Comment.</span>
+</h4></summary><aside class="aside aside-like knowl__content"><div class="para" id="EXAMPLESqOnLine-9-2">If we make this substitution immediately we can get the objective function solely in terms of <span class="process-math">\(x\text{:}\)</span> <span class="process-math">\(A(x)=(x-2)^2+\left(\frac13(2-5x)-3\right)^2\text{,}\)</span> But does that really help? Either way we’re going to have to differentiate <span class="process-math">\(A(x)\text{.}\)</span> Which form of <span class="process-math">\(A(x)\)</span> would you rather use? We think using two variables makes this objective function a bit “easier on the eyes.”<div class="autopermalink" data-description="Paragraph"><a href="#EXAMPLESqOnLine-9-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></aside></details><div class="para logical" id="EXAMPLESqOnLine-10">
 <div class="para">We’ve seen visually that this problem has a solution and <a href="SECTIONintroduction.html#THEOREMFermatsTheorem" class="xref" data-knowl="./knowl/xref/THEOREMFermatsTheorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 9.1.1: Fermat’s Theorem">Fermat’s Theorem 9.1.1</a> tells us that the derivative of our objective function will be zero at that solution.  So we differentiate both sides of</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/THEOREMFermatsTheorem.html ./knowl/xref/EQUATIONSqOptConst.html ./knowl/xref/EQUATIONLineDist1.html">
 \begin{equation*}
@@ -698,6 +713,7 @@ x+3-\frac{10}{9}+\frac{25}{9}x\amp =0,\notag\\
 x\amp =-\frac12.\tag{9.3}
 \end{align}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#EXAMPLESqOnLine-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="EXAMPLESqOnLine-11">
 <div class="para">To find <span class="process-math">\(y\)</span> we use our constraint and the value of <span class="process-math">\(x\)</span> from <a href="SECTIONfive-simil-probl.html#EXAMPLESqOnLine-10-18" class="xref" data-knowl="./knowl/xref/EQUATIONLineDist2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 9.3">equation (9.3)</a>,</div>
@@ -706,9 +722,12 @@ x\amp =-\frac12.\tag{9.3}
 \eval{y}{x}{-1/2}=\eval{\frac13(2-5x)}{x}{-1/2}=\frac32.
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#EXAMPLESqOnLine-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="EXAMPLESqOnLine-12">So we have found that the minimal square occurs when <span class="process-math">\(x=-\frac12\text{,}\)</span> and <span class="process-math">\(y=\frac32\)</span> and it feels like we’re done, doesn’t it?</div>
-<div class="para" id="EXAMPLESqOnLine-13">We’re not.</div>
+<div class="para" id="EXAMPLESqOnLine-12">So we have found that the minimal square occurs when <span class="process-math">\(x=-\frac12\text{,}\)</span> and <span class="process-math">\(y=\frac32\)</span> and it feels like we’re done, doesn’t it?<div class="autopermalink" data-description="Paragraph"><a href="#EXAMPLESqOnLine-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="EXAMPLESqOnLine-13">We’re not.<div class="autopermalink" data-description="Paragraph"><a href="#EXAMPLESqOnLine-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para logical" id="EXAMPLESqOnLine-14">
 <div class="para">The question asked was “What is the area of the smallest possible square?” To find the area we need to put <span class="process-math">\((x,y)=(-1/2, 3/2)\)</span> into our area formula which yields</div>
 <div class="displaymath process-math" id="EXAMPLESqOnLine-14-3">
@@ -720,55 +739,106 @@ x\amp =-\frac12.\tag{9.3}
 \end{align*}
 </div>
 <div class="para">Always remember to check that you have actually answered the question which was asked before you stop.</div>
-</div></article><article class="exercise exercise-like" id="SECTIONfive-simil-probl-5"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">9.2.2</span><span class="period">.</span>
+<div class="autopermalink" data-description="Paragraph"><a href="#EXAMPLESqOnLine-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 9.2.1: Constructing A Square on a Line"><a href="#EXAMPLESqOnLine" title="Copy heading and permalink for Example 9.2.1: Constructing A Square on a Line" aria-label="Copy heading and permalink for Example 9.2.1: Constructing A Square on a Line">🔗</a></div></article><article class="exercise exercise-like" id="SECTIONfive-simil-probl-5"><h3 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.2.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<div class="introduction" id="SECTIONfive-simil-probl-5-1"><div class="para" id="SECTIONfive-simil-probl-5-1-1"></div></div>
+<div class="introduction" id="SECTIONfive-simil-probl-5-1"><div class="para" id="SECTIONfive-simil-probl-5-1-1"><div class="autopermalink" data-description="Paragraph"><a href="#SECTIONfive-simil-probl-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div></div>
 <article class="task exercise-like" id="SECTIONfive-simil-probl-5-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="SECTIONfive-simil-probl-5-2-1-1">Do you see that the point <span class="process-math">\((x,y)\)</span> which minimizes the area of our square in <a href="SECTIONfive-simil-probl.html#EXAMPLESqOnLine" class="xref" data-knowl="./knowl/xref/EXAMPLESqOnLine.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 9.2.1: Constructing A Square on a Line">Example 9.2.1</a> also minimizes the length of the line segment from <span class="process-math">\((2,3)\)</span> to <span class="process-math">\((x,y)\text{?}\)</span> What objective function would we get if we tried to minimize the length of the segment instead of the area of the square. Does this change the problem? If so, how?</div></article><article class="task exercise-like" id="SECTIONfive-simil-probl-5-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="SECTIONfive-simil-probl-5-3-1-1">This example specified that <span class="process-math">\((2,3)\)</span> and <span class="process-math">\((x,y)\)</span> were adjacent corners of the square. What would the objective function look like if those points were diagonally opposite each other.  Does this change the problem? If so, how?</div></article></article><article class="exercise exercise-like" id="PROBLEMMinSqLine"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">9.2.3</span><span class="period">.</span>
+<div class="para" id="SECTIONfive-simil-probl-5-2-1-1">Do you see that the point <span class="process-math">\((x,y)\)</span> which minimizes the area of our square in <a href="SECTIONfive-simil-probl.html#EXAMPLESqOnLine" class="xref" data-knowl="./knowl/xref/EXAMPLESqOnLine.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 9.2.1: Constructing A Square on a Line">Example 9.2.1</a> also minimizes the length of the line segment from <span class="process-math">\((2,3)\)</span> to <span class="process-math">\((x,y)\text{?}\)</span> What objective function would we get if we tried to minimize the length of the segment instead of the area of the square. Does this change the problem? If so, how?<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONfive-simil-probl-5-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 9.2.2.a"><a href="#SECTIONfive-simil-probl-5-2" title="Copy heading and permalink for Task 9.2.2.a" aria-label="Copy heading and permalink for Task 9.2.2.a">🔗</a></div></article><article class="task exercise-like" id="SECTIONfive-simil-probl-5-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="SECTIONfive-simil-probl-5-3-1-1">This example specified that <span class="process-math">\((2,3)\)</span> and <span class="process-math">\((x,y)\)</span> were adjacent corners of the square. What would the objective function look like if those points were diagonally opposite each other.  Does this change the problem? If so, how?<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONfive-simil-probl-5-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 9.2.2.b"><a href="#SECTIONfive-simil-probl-5-3" title="Copy heading and permalink for Task 9.2.2.b" aria-label="Copy heading and permalink for Task 9.2.2.b">🔗</a></div></article><div class="autopermalink" data-description="Problem 9.2.2"><a href="#SECTIONfive-simil-probl-5" title="Copy heading and permalink for Problem 9.2.2" aria-label="Copy heading and permalink for Problem 9.2.2">🔗</a></div></article><article class="exercise exercise-like" id="PROBLEMMinSqLine"><h3 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.2.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="introduction" id="PROBLEMMinSqLine-1">
-<div class="para" id="PROBLEMMinSqLine-1-1">It seems fairly intuitively clear that the minimal square in <a href="SECTIONfive-simil-probl.html#EXAMPLESqOnLine" class="xref" data-knowl="./knowl/xref/EXAMPLESqOnLine.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 9.2.1: Constructing A Square on a Line">Example 9.2.1</a> occurs when the line through <span class="process-math">\((2,3)\)</span> is orthogonal  to the graph of the line <span class="process-math">\(5x+3y=2\text{.}\)</span>
+<div class="para" id="PROBLEMMinSqLine-1-1">It seems fairly intuitively clear that the minimal square in <a href="SECTIONfive-simil-probl.html#EXAMPLESqOnLine" class="xref" data-knowl="./knowl/xref/EXAMPLESqOnLine.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 9.2.1: Constructing A Square on a Line">Example 9.2.1</a> occurs when the line through <span class="process-math">\((2,3)\)</span> is orthogonal  to the graph of the line <span class="process-math">\(5x+3y=2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMMinSqLine-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<aside class="aside aside-like" id="PROBLEMMinSqLine-1-2"><h4 class="heading"><span class="title">Mathematical Terminology.</span></h4>
-<div class="para" id="PROBLEMMinSqLine-1-2-2">“Orthogonal” is the word mathematicians use when everyone else would say “perpendicular.” The reasons for this are abstruse.</div></aside>
+<details id="PROBLEMMinSqLine-1-2" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Aside<span class="colon heading-divison-mark heading-divison-mark__colon">:</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Mathematical Terminology.</span>
+</h4></summary><aside class="aside aside-like knowl__content"><div class="para" id="PROBLEMMinSqLine-1-2-2">“Orthogonal” is the word mathematicians use when everyone else would say “perpendicular.” The reasons for this are abstruse.<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMMinSqLine-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></aside></details>
 </div>
 <article class="task exercise-like" id="PROBLEMMinSqLine-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="PROBLEMMinSqLine-2-1-1">Verify that our intuition is correct.</div></article><article class="task exercise-like" id="PROBLEMMinSqLine-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="PROBLEMMinSqLine-3-1-1">Does this remain true if the point on the line and <span class="process-math">\((2,3)\)</span> are not adjacent corners of the square?</div></article></article><div class="para logical" id="SECTIONfive-simil-probl-7">
+<div class="para" id="PROBLEMMinSqLine-2-1-1">Verify that our intuition is correct.<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMMinSqLine-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 9.2.3.a"><a href="#PROBLEMMinSqLine-2" title="Copy heading and permalink for Task 9.2.3.a" aria-label="Copy heading and permalink for Task 9.2.3.a">🔗</a></div></article><article class="task exercise-like" id="PROBLEMMinSqLine-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="PROBLEMMinSqLine-3-1-1">Does this remain true if the point on the line and <span class="process-math">\((2,3)\)</span> are not adjacent corners of the square?<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMMinSqLine-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 9.2.3.b"><a href="#PROBLEMMinSqLine-3" title="Copy heading and permalink for Task 9.2.3.b" aria-label="Copy heading and permalink for Task 9.2.3.b">🔗</a></div></article><div class="autopermalink" data-description="Problem 9.2.3"><a href="#PROBLEMMinSqLine" title="Copy heading and permalink for Problem 9.2.3" aria-label="Copy heading and permalink for Problem 9.2.3">🔗</a></div></article><div class="para logical" id="SECTIONfive-simil-probl-7">
 <div class="para">We have  a few general comments regarding <a href="SECTIONfive-simil-probl.html#EXAMPLESqOnLine" class="xref" data-knowl="./knowl/xref/EXAMPLESqOnLine.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 9.2.1: Constructing A Square on a Line">Example 9.2.1</a>.</div>
 <ul class="disc" id="SECTIONfive-simil-probl-7-2">
-<li id="SECTIONfive-simil-probl-7-2-1"><div class="para" id="SECTIONfive-simil-probl-7-2-1-1">The first step in any optimization problem is to identify the objective function. Sometimes more than one will work. In that case use the simplest one, but without an objective function we can’t even get started.</div></li>
-<li id="SECTIONfive-simil-probl-7-2-2"><div class="para" id="SECTIONfive-simil-probl-7-2-2-1">We need to identify constraint(s) as well, if any exist. (Not all optimization problems will have constraints. Some will have more than one.)  We may not need these immediately, but we will need them sooner or later.</div></li>
-<li id="SECTIONfive-simil-probl-7-2-3"><div class="para" id="SECTIONfive-simil-probl-7-2-3-1">It was intuitively clear from our sketch that there actually is a minimal square in this example; that a solution exists. This will be true often enough that it will be easy to start believing that you can rely on your intuition alone to solve optimization problems. This is a mistake. Intuition is important and we encourage you to use it, especially when you first start thinking about a new problem.  But intuition is based on past experience. It is a way of saying that you expect today to go pretty much the same way yesterday did. Most of the time this is true, but you never know when things will go awry so you must always verify that your intuition is correct by some other means. Calculus, in this case.</div></li>
-<li id="SECTIONfive-simil-probl-7-2-4"><div class="para" id="SECTIONfive-simil-probl-7-2-4-1">Most of the heavy lifting in this problem was done in the Algebra, not the Calculus. This will be true of many of the mathematics problems you will encounter from now on.  There is a strong tendency to think of algebraic manipulations as “just algebra” and to be careless with them. This is  a mistake. Every step toward solving a problem is just as important as every other step, whether it is Algebra, Calculus, Geometry, Arithmetic, or just “thinking about the problem.”  Every step must be successfully completed. Strive to be skillful, and careful, with all of your tools.</div></li>
+<li id="SECTIONfive-simil-probl-7-2-1">
+<div class="para" id="SECTIONfive-simil-probl-7-2-1-1">The first step in any optimization problem is to identify the objective function. Sometimes more than one will work. In that case use the simplest one, but without an objective function we can’t even get started.<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONfive-simil-probl-7-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#SECTIONfive-simil-probl-7-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="SECTIONfive-simil-probl-7-2-2">
+<div class="para" id="SECTIONfive-simil-probl-7-2-2-1">We need to identify constraint(s) as well, if any exist. (Not all optimization problems will have constraints. Some will have more than one.)  We may not need these immediately, but we will need them sooner or later.<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONfive-simil-probl-7-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#SECTIONfive-simil-probl-7-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="SECTIONfive-simil-probl-7-2-3">
+<div class="para" id="SECTIONfive-simil-probl-7-2-3-1">It was intuitively clear from our sketch that there actually is a minimal square in this example; that a solution exists. This will be true often enough that it will be easy to start believing that you can rely on your intuition alone to solve optimization problems. This is a mistake. Intuition is important and we encourage you to use it, especially when you first start thinking about a new problem.  But intuition is based on past experience. It is a way of saying that you expect today to go pretty much the same way yesterday did. Most of the time this is true, but you never know when things will go awry so you must always verify that your intuition is correct by some other means. Calculus, in this case.<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONfive-simil-probl-7-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#SECTIONfive-simil-probl-7-2-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="SECTIONfive-simil-probl-7-2-4">
+<div class="para" id="SECTIONfive-simil-probl-7-2-4-1">Most of the heavy lifting in this problem was done in the Algebra, not the Calculus. This will be true of many of the mathematics problems you will encounter from now on.  There is a strong tendency to think of algebraic manipulations as “just algebra” and to be careless with them. This is  a mistake. Every step toward solving a problem is just as important as every other step, whether it is Algebra, Calculus, Geometry, Arithmetic, or just “thinking about the problem.”  Every step must be successfully completed. Strive to be skillful, and careful, with all of your tools.<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONfive-simil-probl-7-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#SECTIONfive-simil-probl-7-2-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
 <li id="SECTIONfive-simil-probl-7-2-5">
-<div class="para" id="SECTIONfive-simil-probl-7-2-5-1">We were very careful to write out, in detail, every algebraic and arithmetic step in this problem but if we were to do this for every problem this text would become too long to be useful. We don’t want that to happen so we will regularly do several elementary algebraic steps at once. But “elementary” does not mean “easy.” You may not be able to follow all of the steps in your head, especially at first. When you do not see how to get from one line of computation to the next you may be tempted to just skip it.</div>
-<div class="para" id="SECTIONfive-simil-probl-7-2-5-2">Don’t. Do. That.</div>
-<div class="para" id="SECTIONfive-simil-probl-7-2-5-3">Keep a writing pad handy at all times. If there is any question of understanding a given computation take out that pad and do the computation yourself. If you are unable to do the computation yourself, ask for help. Ask a classmate, a friend, your instructor, whomever. Ask for help when you need it.  If you do this habitually you will find that following the steps gets easier over time. If you do not it will remain difficult forever. We’re serious. Do all elementary computations yourself!  It is your responsibility to make sure you understand the computations we show you.</div>
+<div class="para" id="SECTIONfive-simil-probl-7-2-5-1">We were very careful to write out, in detail, every algebraic and arithmetic step in this problem but if we were to do this for every problem this text would become too long to be useful. We don’t want that to happen so we will regularly do several elementary algebraic steps at once. But “elementary” does not mean “easy.” You may not be able to follow all of the steps in your head, especially at first. When you do not see how to get from one line of computation to the next you may be tempted to just skip it.<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONfive-simil-probl-7-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="SECTIONfive-simil-probl-7-2-5-2">Don’t. Do. That.<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONfive-simil-probl-7-2-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="SECTIONfive-simil-probl-7-2-5-3">Keep a writing pad handy at all times. If there is any question of understanding a given computation take out that pad and do the computation yourself. If you are unable to do the computation yourself, ask for help. Ask a classmate, a friend, your instructor, whomever. Ask for help when you need it.  If you do this habitually you will find that following the steps gets easier over time. If you do not it will remain difficult forever. We’re serious. Do all elementary computations yourself!  It is your responsibility to make sure you understand the computations we show you.<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONfive-simil-probl-7-2-5-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#SECTIONfive-simil-probl-7-2-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 </ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONfive-simil-probl-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="example example-like" id="EXAMPLECircleDist"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">9.2.4</span><span class="period">.</span><span class="space"> </span><span class="title">Constructing A Square on a Circle.</span>
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.2.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Constructing A Square on a Circle.</span>
 </h3>
-<div class="para" id="EXAMPLECircleDist-3">We want to find the area of the largest and the smallest squares that can be constructed with one corner at the point <span class="process-math">\((2,3)\)</span> and an adjacent corner on the unit circle: <span class="process-math">\(x^2+y^2=1\text{.}\)</span>
+<div class="para" id="EXAMPLECircleDist-3">We want to find the area of the largest and the smallest squares that can be constructed with one corner at the point <span class="process-math">\((2,3)\)</span> and an adjacent corner on the unit circle: <span class="process-math">\(x^2+y^2=1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#EXAMPLECircleDist-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="EXAMPLECircleDist-4">The solution of this problem is very clear once it has been sketched.  We will solve it again analytically below.</div></article><article class="problem example-like" id="DRILLIntuitiveSquareOnCircle"><h3 class="heading">
-<span class="type">Drill</span><span class="space"> </span><span class="codenumber">9.2.5</span><span class="period">.</span>
+<div class="para" id="EXAMPLECircleDist-4">The solution of this problem is very clear once it has been sketched.  We will solve it again analytically below.<div class="autopermalink" data-description="Paragraph"><a href="#EXAMPLECircleDist-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 9.2.4: Constructing A Square on a Circle"><a href="#EXAMPLECircleDist" title="Copy heading and permalink for Example 9.2.4: Constructing A Square on a Circle" aria-label="Copy heading and permalink for Example 9.2.4: Constructing A Square on a Circle">🔗</a></div></article><article class="problem example-like" id="DRILLIntuitiveSquareOnCircle"><h3 class="heading">
+<span class="type">Drill</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.2.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<div class="para" id="DRILLIntuitiveSquareOnCircle-2">The purpose of this drill is for you to see the solution of <a href="SECTIONfive-simil-probl.html#EXAMPLECircleDist" class="xref" data-knowl="./knowl/xref/EXAMPLECircleDist.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 9.2.4: Constructing A Square on a Circle">Example 9.2.4</a> intuitively.</div>
+<div class="para" id="DRILLIntuitiveSquareOnCircle-2">The purpose of this drill is for you to see the solution of <a href="SECTIONfive-simil-probl.html#EXAMPLECircleDist" class="xref" data-knowl="./knowl/xref/EXAMPLECircleDist.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 9.2.4: Constructing A Square on a Circle">Example 9.2.4</a> intuitively.<div class="autopermalink" data-description="Paragraph"><a href="#DRILLIntuitiveSquareOnCircle-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para logical" id="DRILLIntuitiveSquareOnCircle-3">
 <div class="para">Sketch the unit circle, plot the point <span class="process-math">\((2,3)\text{,}\)</span> and draw the smallest and largest squares you can which have one corner at the point <span class="process-math">\((2,3)\)</span> and an adjacent corner on the unit circle: <span class="process-math">\(x^2+y^2=1\text{.}\)</span>
 </div>
 <ol class="lower-roman ol-marker-1" id="DRILLIntuitiveSquareOnCircle-3-4">
-<li id="DRILLIntuitiveSquareOnCircle-3-4-1"><div class="para" id="DRILLIntuitiveSquareOnCircle-3-4-1-1">Explain how you can tell from your sketch that that there is both a maximal (largest area) and a minimal (smallest area) square.</div></li>
-<li id="DRILLIntuitiveSquareOnCircle-3-4-2"><div class="para" id="DRILLIntuitiveSquareOnCircle-3-4-2-1">Explain how you can tell from your sketch, that the second corner of the maximal and minimal squares are at the intersection points of the line <span class="process-math">\(y=\frac32x\)</span> and the unit circle.</div></li>
-<li id="DRILLIntuitiveSquareOnCircle-3-4-3"><div class="para" id="DRILLIntuitiveSquareOnCircle-3-4-3-1">Show that the areas of the maximal square is <span class="process-math">\(A\approx 21.2\)</span> units and that the area of the minimal square is <span class="process-math">\(A\approx6.8\)</span> units.</div></li>
+<li id="DRILLIntuitiveSquareOnCircle-3-4-1">
+<div class="para" id="DRILLIntuitiveSquareOnCircle-3-4-1-1">Explain how you can tell from your sketch that that there is both a maximal (largest area) and a minimal (smallest area) square.<div class="autopermalink" data-description="Paragraph"><a href="#DRILLIntuitiveSquareOnCircle-3-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item i"><a href="#DRILLIntuitiveSquareOnCircle-3-4-1" title="Copy heading and permalink for Item i" aria-label="Copy heading and permalink for Item i">🔗</a></div>
+</li>
+<li id="DRILLIntuitiveSquareOnCircle-3-4-2">
+<div class="para" id="DRILLIntuitiveSquareOnCircle-3-4-2-1">Explain how you can tell from your sketch, that the second corner of the maximal and minimal squares are at the intersection points of the line <span class="process-math">\(y=\frac32x\)</span> and the unit circle.<div class="autopermalink" data-description="Paragraph"><a href="#DRILLIntuitiveSquareOnCircle-3-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item ii"><a href="#DRILLIntuitiveSquareOnCircle-3-4-2" title="Copy heading and permalink for Item ii" aria-label="Copy heading and permalink for Item ii">🔗</a></div>
+</li>
+<li id="DRILLIntuitiveSquareOnCircle-3-4-3">
+<div class="para" id="DRILLIntuitiveSquareOnCircle-3-4-3-1">Show that the areas of the maximal square is <span class="process-math">\(A\approx 21.2\)</span> units and that the area of the minimal square is <span class="process-math">\(A\approx6.8\)</span> units.<div class="autopermalink" data-description="Paragraph"><a href="#DRILLIntuitiveSquareOnCircle-3-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item iii"><a href="#DRILLIntuitiveSquareOnCircle-3-4-3" title="Copy heading and permalink for Item iii" aria-label="Copy heading and permalink for Item iii">🔗</a></div>
+</li>
 </ol>
-</div></article><div class="para" id="SECTIONfive-simil-probl-10">The solution in <a href="SECTIONfive-simil-probl.html#DRILLIntuitiveSquareOnCircle" class="xref" data-knowl="./knowl/xref/DRILLIntuitiveSquareOnCircle.html" data-reveal-label="Reveal" data-close-label="Close" title="Drill 9.2.5">Drill 9.2.5</a> relies heavily on the intuition gained from sketching the problem. As we have said many times you should use your intuition but not rely on it. To confirm our solution in <a href="SECTIONfive-simil-probl.html#DRILLIntuitiveSquareOnCircle" class="xref" data-knowl="./knowl/xref/DRILLIntuitiveSquareOnCircle.html" data-reveal-label="Reveal" data-close-label="Close" title="Drill 9.2.5">Drill 9.2.5</a> using Calculus tools we will start at the beginning and solve this problem again, relying as much as possible on our computations. Eventually, we would like to rely exclusively on our computations, but this is not quite possible yet.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#DRILLIntuitiveSquareOnCircle-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Drill 9.2.5"><a href="#DRILLIntuitiveSquareOnCircle" title="Copy heading and permalink for Drill 9.2.5" aria-label="Copy heading and permalink for Drill 9.2.5">🔗</a></div></article><div class="para" id="SECTIONfive-simil-probl-10">The solution in <a href="SECTIONfive-simil-probl.html#DRILLIntuitiveSquareOnCircle" class="xref" data-knowl="./knowl/xref/DRILLIntuitiveSquareOnCircle.html" data-reveal-label="Reveal" data-close-label="Close" title="Drill 9.2.5">Drill 9.2.5</a> relies heavily on the intuition gained from sketching the problem. As we have said many times you should use your intuition but not rely on it. To confirm our solution in <a href="SECTIONfive-simil-probl.html#DRILLIntuitiveSquareOnCircle" class="xref" data-knowl="./knowl/xref/DRILLIntuitiveSquareOnCircle.html" data-reveal-label="Reveal" data-close-label="Close" title="Drill 9.2.5">Drill 9.2.5</a> using Calculus tools we will start at the beginning and solve this problem again, relying as much as possible on our computations. Eventually, we would like to rely exclusively on our computations, but this is not quite possible yet.<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONfive-simil-probl-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para logical" id="SECTIONfive-simil-probl-11">
 <div class="para">We have the same objective function as in <a href="SECTIONfive-simil-probl.html#EXAMPLESqOnLine" class="xref" data-knowl="./knowl/xref/EXAMPLESqOnLine.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 9.2.1: Constructing A Square on a Line">Example 9.2.1</a>:</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/EXAMPLESqOnLine.html ./knowl/xref/EQUATIONConstObj1.html">
@@ -795,8 +865,9 @@ x^2+y^2=1\tag{9.5}
 \dfdx{A}{x}\amp = 2\left(-2+\frac{3x}{y}\right)\tag{9.6}
 \end{align}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONfive-simil-probl-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="SECTIONfive-simil-probl-12">In order to use <a href="SECTIONintroduction.html#THEOREMFermatsTheorem" class="xref" data-knowl="./knowl/xref/THEOREMFermatsTheorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 9.1.1: Fermat’s Theorem">Fermat’s Theorem 9.1.1</a>  we must first know that one maximum and one minimum exists. No computation we’ve done guarantees the existence of an extremum, let alone its location. However, as a result of the work you did to solve <a href="SECTIONfive-simil-probl.html#DRILLIntuitiveSquareOnCircle" class="xref" data-knowl="./knowl/xref/DRILLIntuitiveSquareOnCircle.html" data-reveal-label="Reveal" data-close-label="Close" title="Drill 9.2.5">Drill 9.2.5</a> we do know, intuitively, that there are two optimal solutions: one maximal and one minimal. Therefore Fermat’s Theorem does guarantee that at each of these (wherever they are) <span class="process-math">\(\dfdx{A}{x}=0\text{.}\)</span>
+<div class="para" id="SECTIONfive-simil-probl-12">In order to use <a href="SECTIONintroduction.html#THEOREMFermatsTheorem" class="xref" data-knowl="./knowl/xref/THEOREMFermatsTheorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 9.1.1: Fermat’s Theorem">Fermat’s Theorem 9.1.1</a>  we must first know that one maximum and one minimum exists. No computation we’ve done guarantees the existence of an extremum, let alone its location. However, as a result of the work you did to solve <a href="SECTIONfive-simil-probl.html#DRILLIntuitiveSquareOnCircle" class="xref" data-knowl="./knowl/xref/DRILLIntuitiveSquareOnCircle.html" data-reveal-label="Reveal" data-close-label="Close" title="Drill 9.2.5">Drill 9.2.5</a> we do know, intuitively, that there are two optimal solutions: one maximal and one minimal. Therefore Fermat’s Theorem does guarantee that at each of these (wherever they are) <span class="process-math">\(\dfdx{A}{x}=0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#SECTIONfive-simil-probl-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="SECTIONfive-simil-probl-13">
 <div class="para">We proceed as just discussed. Since we know (from <a href="SECTIONfive-simil-probl.html#DRILLIntuitiveSquareOnCircle" class="xref" data-knowl="./knowl/xref/DRILLIntuitiveSquareOnCircle.html" data-reveal-label="Reveal" data-close-label="Close" title="Drill 9.2.5">Drill 9.2.5</a>) that both a maximal and a minimal solution exist we set <span class="process-math">\(\dfdx{A}{x}= 2\left(-2+\frac{3x}{y}\right)=0\text{.}\)</span> Solving this yields</div>
@@ -817,16 +888,30 @@ x^2+y^2=1\tag{9.5}
 13x^2=4.\tag{9.9}
 \end{equation}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONfive-simil-probl-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="SECTIONfive-simil-probl-14">So we have two solutions: <span class="process-math">\(x=\frac{2}{\sqrt{13}}\)</span> and <span class="process-math">\(x=-\frac{2}{\sqrt{13}}\text{.}\)</span>  From <a href="SECTIONfive-simil-probl.html#DRILLIntuitiveSquareOnCircle" class="xref" data-knowl="./knowl/xref/DRILLIntuitiveSquareOnCircle.html" data-reveal-label="Reveal" data-close-label="Close" title="Drill 9.2.5">Drill 9.2.5</a> we know that these must correspond to the maximal and minimal solutions. <a href="SECTIONintroduction.html#THEOREMFermatsTheorem" class="xref" data-knowl="./knowl/xref/THEOREMFermatsTheorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 9.1.1: Fermat’s Theorem">Fermat’s Theorem 9.1.1</a> doesn’t tell us which is which but all we need to do is distinguish between them is evaluate <span class="process-math">\(A(x)\)</span> for each.</div>
+<div class="para" id="SECTIONfive-simil-probl-14">So we have two solutions: <span class="process-math">\(x=\frac{2}{\sqrt{13}}\)</span> and <span class="process-math">\(x=-\frac{2}{\sqrt{13}}\text{.}\)</span>  From <a href="SECTIONfive-simil-probl.html#DRILLIntuitiveSquareOnCircle" class="xref" data-knowl="./knowl/xref/DRILLIntuitiveSquareOnCircle.html" data-reveal-label="Reveal" data-close-label="Close" title="Drill 9.2.5">Drill 9.2.5</a> we know that these must correspond to the maximal and minimal solutions. <a href="SECTIONintroduction.html#THEOREMFermatsTheorem" class="xref" data-knowl="./knowl/xref/THEOREMFermatsTheorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 9.1.1: Fermat’s Theorem">Fermat’s Theorem 9.1.1</a> doesn’t tell us which is which but all we need to do is distinguish between them is evaluate <span class="process-math">\(A(x)\)</span> for each.<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONfive-simil-probl-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="problem example-like" id="DRILLExtremalSquareCircle"><h3 class="heading">
-<span class="type">Drill</span><span class="space"> </span><span class="codenumber">9.2.6</span><span class="period">.</span>
+<span class="type">Drill</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.2.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<div class="para logical" id="DRILLExtremalSquareCircle-2"><ol class="lower-roman ol-marker-1" id="DRILLExtremalSquareCircle-2-1">
-<li id="DRILLExtremalSquareCircle-2-1-1"><div class="para" id="DRILLExtremalSquareCircle-2-1-1-1">Show that the area of the maximal square is approximately <span class="process-math">\(21.2\)</span> units. Which value of <span class="process-math">\(x\)</span> does this correspond to?</div></li>
-<li id="DRILLExtremalSquareCircle-2-1-2"><div class="para" id="DRILLExtremalSquareCircle-2-1-2-1">Show that the area of the minimal square is approximately <span class="process-math">\(6.8\)</span> units. Which value of <span class="process-math">\(x\)</span> does this correspond to?</div></li>
-</ol></div></article><article class="exercise exercise-like" id="PROBLEMEllipseDist"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">9.2.7</span><span class="period">.</span>
+<div class="para logical" id="DRILLExtremalSquareCircle-2">
+<ol class="lower-roman ol-marker-1" id="DRILLExtremalSquareCircle-2-1">
+<li id="DRILLExtremalSquareCircle-2-1-1">
+<div class="para" id="DRILLExtremalSquareCircle-2-1-1-1">Show that the area of the maximal square is approximately <span class="process-math">\(21.2\)</span> units. Which value of <span class="process-math">\(x\)</span> does this correspond to?<div class="autopermalink" data-description="Paragraph"><a href="#DRILLExtremalSquareCircle-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item i"><a href="#DRILLExtremalSquareCircle-2-1-1" title="Copy heading and permalink for Item i" aria-label="Copy heading and permalink for Item i">🔗</a></div>
+</li>
+<li id="DRILLExtremalSquareCircle-2-1-2">
+<div class="para" id="DRILLExtremalSquareCircle-2-1-2-1">Show that the area of the minimal square is approximately <span class="process-math">\(6.8\)</span> units. Which value of <span class="process-math">\(x\)</span> does this correspond to?<div class="autopermalink" data-description="Paragraph"><a href="#DRILLExtremalSquareCircle-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item ii"><a href="#DRILLExtremalSquareCircle-2-1-2" title="Copy heading and permalink for Item ii" aria-label="Copy heading and permalink for Item ii">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#DRILLExtremalSquareCircle-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Drill 9.2.6"><a href="#DRILLExtremalSquareCircle" title="Copy heading and permalink for Drill 9.2.6" aria-label="Copy heading and permalink for Drill 9.2.6">🔗</a></div></article><article class="exercise exercise-like" id="PROBLEMEllipseDist"><h3 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.2.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="introduction" id="PROBLEMEllipseDist-1">
 <div class="para logical" id="PROBLEMEllipseDist-1-1">
@@ -837,12 +922,17 @@ x^2+\frac14y^2=2.
 \end{equation*}
 </div>
 <div class="para">Find the area of each one of them.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMEllipseDist-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="PROBLEMEllipseDist-1-2">In solving this problem it is possible that you will encounter a sub–problem that cannot be easily solved algebraically. In that case use Newton’s Method or some computational software as needed to find approximations.</div>
-<div class="para" id="PROBLEMEllipseDist-1-3">Since a circle is a special case of an ellipse this problem is a slight generalization of <a href="SECTIONfive-simil-probl.html#DRILLIntuitiveSquareOnCircle" class="xref" data-knowl="./knowl/xref/DRILLIntuitiveSquareOnCircle.html" data-reveal-label="Reveal" data-close-label="Close" title="Drill 9.2.5">Drill 9.2.5</a> so the algebra is a bit trickier.</div>
+<div class="para" id="PROBLEMEllipseDist-1-2">In solving this problem it is possible that you will encounter a sub–problem that cannot be easily solved algebraically. In that case use Newton’s Method or some computational software as needed to find approximations.<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMEllipseDist-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="PROBLEMEllipseDist-1-3">Since a circle is a special case of an ellipse this problem is a slight generalization of <a href="SECTIONfive-simil-probl.html#DRILLIntuitiveSquareOnCircle" class="xref" data-knowl="./knowl/xref/DRILLIntuitiveSquareOnCircle.html" data-reveal-label="Reveal" data-close-label="Close" title="Drill 9.2.5">Drill 9.2.5</a> so the algebra is a bit trickier.<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMEllipseDist-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 </div>
 <article class="task exercise-like" id="PROBLEMEllipseDist-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="PROBLEMEllipseDist-2-1-1">Draw a sketch of this problem. Explain how you can tell from the sketch that there is one maximal, and one minimal square.</div></article><article class="task exercise-like" id="PROBLEMEllipseDist-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="PROBLEMEllipseDist-2-1-1">Draw a sketch of this problem. Explain how you can tell from the sketch that there is one maximal, and one minimal square.<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMEllipseDist-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 9.2.7.a"><a href="#PROBLEMEllipseDist-2" title="Copy heading and permalink for Task 9.2.7.a" aria-label="Copy heading and permalink for Task 9.2.7.a">🔗</a></div></article><article class="task exercise-like" id="PROBLEMEllipseDist-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para logical" id="PROBLEMEllipseDist-3-1-1">
 <div class="para">The objective function for this problem is, once again:</div>
 <div class="displaymath process-math">
@@ -851,7 +941,9 @@ A(x) = (x-2)^2+(y-3)^2.
 \end{equation*}
 </div>
 <div class="para">What is the constraint?</div>
-</div></article><article class="task exercise-like" id="PROBLEMEllipseDist-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMEllipseDist-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 9.2.7.b"><a href="#PROBLEMEllipseDist-3" title="Copy heading and permalink for Task 9.2.7.b" aria-label="Copy heading and permalink for Task 9.2.7.b">🔗</a></div></article><article class="task exercise-like" id="PROBLEMEllipseDist-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para logical" id="PROBLEMEllipseDist-4-1-1">
 <div class="para">Use the constraint to show that</div>
 <div class="displaymath process-math">
@@ -865,38 +957,69 @@ A(x) = (x-2)^2+(y-3)^2.
 y=\pm2\sqrt{2-x^2}.
 \end{equation*}
 </div>
-</div></article><article class="task exercise-like" id="PROBLEMEllipseDist-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="PROBLEMEllipseDist-5-1-1">Show that <span class="process-math">\(\dfdx{A}{x}=-6x-4+\frac{24x}{y}\text{.}\)</span>
-</div></article><article class="task exercise-like" id="PROBLEMEllipseDist-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para" id="PROBLEMEllipseDist-6-1-1">Show that if we choose <span class="process-math">\(y=2\sqrt{2-x^2}\)</span> then the only root of <span class="process-math">\(\dfdx{A}{x}=0\)</span> is <span class="process-math">\(x\approx0.86\text{.}\)</span>
-</div></article><article class="task exercise-like" id="PROBLEMEllipseDist-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
-<div class="para" id="PROBLEMEllipseDist-7-1-1">Show that if we choose <span class="process-math">\(y=-2\sqrt{2-x^2}\)</span> then the only root of <span class="process-math">\(\dfdx{A}{x}=0\)</span> is <span class="process-math">\(x\approx-0.28\text{.}\)</span>
-</div></article><article class="task exercise-like" id="PROBLEMEllipseDist-8"><h4 class="heading"><span class="codenumber">(g)</span></h4>
-<div class="para" id="PROBLEMEllipseDist-8-1-1">Find (approximately) the area of the square associated with both of these points. Which one is the maximal and which is the minimal square?</div></article></article><article class="exercise exercise-like" id="PROBLEMMaxOrth1"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">9.2.8</span><span class="period">.</span><span class="space"> </span><span class="title">Constructing a Square on an Ellipse.</span>
+<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMEllipseDist-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 9.2.7.c"><a href="#PROBLEMEllipseDist-4" title="Copy heading and permalink for Task 9.2.7.c" aria-label="Copy heading and permalink for Task 9.2.7.c">🔗</a></div></article><article class="task exercise-like" id="PROBLEMEllipseDist-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="PROBLEMEllipseDist-5-1-1">Show that <span class="process-math">\(\dfdx{A}{x}=-6x-4+\frac{24x}{y}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMEllipseDist-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 9.2.7.d"><a href="#PROBLEMEllipseDist-5" title="Copy heading and permalink for Task 9.2.7.d" aria-label="Copy heading and permalink for Task 9.2.7.d">🔗</a></div></article><article class="task exercise-like" id="PROBLEMEllipseDist-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="PROBLEMEllipseDist-6-1-1">Show that if we choose <span class="process-math">\(y=2\sqrt{2-x^2}\)</span> then the only root of <span class="process-math">\(\dfdx{A}{x}=0\)</span> is <span class="process-math">\(x\approx0.86\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMEllipseDist-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 9.2.7.e"><a href="#PROBLEMEllipseDist-6" title="Copy heading and permalink for Task 9.2.7.e" aria-label="Copy heading and permalink for Task 9.2.7.e">🔗</a></div></article><article class="task exercise-like" id="PROBLEMEllipseDist-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
+<div class="para" id="PROBLEMEllipseDist-7-1-1">Show that if we choose <span class="process-math">\(y=-2\sqrt{2-x^2}\)</span> then the only root of <span class="process-math">\(\dfdx{A}{x}=0\)</span> is <span class="process-math">\(x\approx-0.28\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMEllipseDist-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 9.2.7.f"><a href="#PROBLEMEllipseDist-7" title="Copy heading and permalink for Task 9.2.7.f" aria-label="Copy heading and permalink for Task 9.2.7.f">🔗</a></div></article><article class="task exercise-like" id="PROBLEMEllipseDist-8"><h4 class="heading"><span class="codenumber">(g)</span></h4>
+<div class="para" id="PROBLEMEllipseDist-8-1-1">Find (approximately) the area of the square associated with both of these points. Which one is the maximal and which is the minimal square?<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMEllipseDist-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 9.2.7.g"><a href="#PROBLEMEllipseDist-8" title="Copy heading and permalink for Task 9.2.7.g" aria-label="Copy heading and permalink for Task 9.2.7.g">🔗</a></div></article><div class="autopermalink" data-description="Problem 9.2.7"><a href="#PROBLEMEllipseDist" title="Copy heading and permalink for Problem 9.2.7" aria-label="Copy heading and permalink for Problem 9.2.7">🔗</a></div></article><article class="exercise exercise-like" id="PROBLEMMaxOrth1"><h3 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.2.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Constructing a Square on an Ellipse.</span>
 </h3>
 <div class="introduction" id="PROBLEMMaxOrth1-2">
-<div class="para" id="PROBLEMMaxOrth1-2-1">Here is a   sketch of the optimal squares in <a href="SECTIONfive-simil-probl.html#PROBLEMEllipseDist" class="xref" data-knowl="./knowl/xref/PROBLEMEllipseDist.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 9.2.7">Problem 9.2.7</a>. Notice that for both the maximal and the minimal square one of the sides appears to be orthogonal to (the line tangent to) the ellipse.</div>
+<div class="para" id="PROBLEMMaxOrth1-2-1">Here is a   sketch of the optimal squares in <a href="SECTIONfive-simil-probl.html#PROBLEMEllipseDist" class="xref" data-knowl="./knowl/xref/PROBLEMEllipseDist.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 9.2.7">Problem 9.2.7</a>. Notice that for both the maximal and the minimal square one of the sides appears to be orthogonal to (the line tangent to) the ellipse.<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMMaxOrth1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/DC/EllipseWithSquares.png" class="contained"></div>
 </div>
 <article class="task exercise-like" id="PROBLEMMaxOrth1-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="PROBLEMMaxOrth1-3-1-1">Show that they actually are orthogonal.</div></article><article class="task exercise-like" id="PROBLEMMaxOrth1-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="PROBLEMMaxOrth1-4-1-1">It is generally true that the shortest (or longest) line segment from a point <span class="process-math">\((a,b)\)</span> to a curve, <span class="process-math">\(C\text{,}\)</span> will be orthogonal to the line tangent to the curve at their point of intersection. The figure below shows an arbitrary, differentiable curve, <span class="process-math">\(C\text{,}\)</span> and an arbitrary point <span class="process-math">\((a,b)\text{.}\)</span>
+<div class="para" id="PROBLEMMaxOrth1-3-1-1">Show that they actually are orthogonal.<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMMaxOrth1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 9.2.8.a"><a href="#PROBLEMMaxOrth1-3" title="Copy heading and permalink for Task 9.2.8.a" aria-label="Copy heading and permalink for Task 9.2.8.a">🔗</a></div></article><article class="task exercise-like" id="PROBLEMMaxOrth1-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="PROBLEMMaxOrth1-4-1-1">It is generally true that the shortest (or longest) line segment from a point <span class="process-math">\((a,b)\)</span> to a curve, <span class="process-math">\(C\text{,}\)</span> will be orthogonal to the line tangent to the curve at their point of intersection. The figure below shows an arbitrary, differentiable curve, <span class="process-math">\(C\text{,}\)</span> and an arbitrary point <span class="process-math">\((a,b)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMMaxOrth1-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="external/DC/MaxOrth1.png" class="contained"></div> <div class="para logical" id="PROBLEMMaxOrth1-4-1-3">
 <div class="para">Suppose that the area of a square with one corner at <span class="process-math">\((a,b)\)</span> and an adjacent corner on the curve at <span class="process-math">\((x,y)\)</span> is optimal (minimal or maximal) at <span class="process-math">\((x_0, y_0)\text{.}\)</span> Show that the line joining <span class="process-math">\((a,b)\)</span> and <span class="process-math">\((x_0,y_0)\)</span> is orthogonal to the tangent line of <span class="process-math">\(C\)</span> at <span class="process-math">\((x_0,y_0)\)</span> . Try to solve this problem completely on your own, but if you get stuck here is an outline you can follow:</div>
 <ol class="decimal" id="PROBLEMMaxOrth1-4-1-3-8">
-<li id="PROBLEMMaxOrth1-4-1-3-8-1"><div class="para" id="PROBLEMMaxOrth1-4-1-3-8-1-1">Find the objective function, <span class="process-math">\(A(x)\text{.}\)</span> (This will be the area      of the square on the line from <span class="process-math">\((a,b)\)</span> to <span class="process-math">\((x,y)\text{.}\)</span>)</div></li>
-<li id="PROBLEMMaxOrth1-4-1-3-8-2"><div class="para" id="PROBLEMMaxOrth1-4-1-3-8-2-1">Use the fact that <span class="process-math">\(\mineval{\dfdx{A}{x}}{(x_0,y_0)}=0\)</span> to      find the slope of <span class="process-math">\(C\)</span> at <span class="process-math">\((x_0,y_0)\text{.}\)</span>
-</div></li>
-<li id="PROBLEMMaxOrth1-4-1-3-8-3"><div class="para" id="PROBLEMMaxOrth1-4-1-3-8-3-1">Find the slope of the line from <span class="process-math">\((a,b)\)</span> to <span class="process-math">\((x_0,y_0)\text{.}\)</span>
-</div></li>
-<li id="PROBLEMMaxOrth1-4-1-3-8-4"><div class="para" id="PROBLEMMaxOrth1-4-1-3-8-4-1">Compare the two slopes.</div></li>
-<li id="PROBLEMMaxOrth1-4-1-3-8-5"><div class="para" id="PROBLEMMaxOrth1-4-1-3-8-5-1">What happens if the tangent line is horizontal? If it is      vertical?</div></li>
+<li id="PROBLEMMaxOrth1-4-1-3-8-1">
+<div class="para" id="PROBLEMMaxOrth1-4-1-3-8-1-1">Find the objective function, <span class="process-math">\(A(x)\text{.}\)</span> (This will be the area      of the square on the line from <span class="process-math">\((a,b)\)</span> to <span class="process-math">\((x,y)\text{.}\)</span>)<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMMaxOrth1-4-1-3-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 9.2.8.1"><a href="#PROBLEMMaxOrth1-4-1-3-8-1" title="Copy heading and permalink for Item 9.2.8.1" aria-label="Copy heading and permalink for Item 9.2.8.1">🔗</a></div>
+</li>
+<li id="PROBLEMMaxOrth1-4-1-3-8-2">
+<div class="para" id="PROBLEMMaxOrth1-4-1-3-8-2-1">Use the fact that <span class="process-math">\(\mineval{\dfdx{A}{x}}{(x_0,y_0)}=0\)</span> to      find the slope of <span class="process-math">\(C\)</span> at <span class="process-math">\((x_0,y_0)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMMaxOrth1-4-1-3-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 9.2.8.2"><a href="#PROBLEMMaxOrth1-4-1-3-8-2" title="Copy heading and permalink for Item 9.2.8.2" aria-label="Copy heading and permalink for Item 9.2.8.2">🔗</a></div>
+</li>
+<li id="PROBLEMMaxOrth1-4-1-3-8-3">
+<div class="para" id="PROBLEMMaxOrth1-4-1-3-8-3-1">Find the slope of the line from <span class="process-math">\((a,b)\)</span> to <span class="process-math">\((x_0,y_0)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMMaxOrth1-4-1-3-8-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 9.2.8.3"><a href="#PROBLEMMaxOrth1-4-1-3-8-3" title="Copy heading and permalink for Item 9.2.8.3" aria-label="Copy heading and permalink for Item 9.2.8.3">🔗</a></div>
+</li>
+<li id="PROBLEMMaxOrth1-4-1-3-8-4">
+<div class="para" id="PROBLEMMaxOrth1-4-1-3-8-4-1">Compare the two slopes.<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMMaxOrth1-4-1-3-8-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 9.2.8.4"><a href="#PROBLEMMaxOrth1-4-1-3-8-4" title="Copy heading and permalink for Item 9.2.8.4" aria-label="Copy heading and permalink for Item 9.2.8.4">🔗</a></div>
+</li>
+<li id="PROBLEMMaxOrth1-4-1-3-8-5">
+<div class="para" id="PROBLEMMaxOrth1-4-1-3-8-5-1">What happens if the tangent line is horizontal? If it is      vertical?<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMMaxOrth1-4-1-3-8-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 9.2.8.5"><a href="#PROBLEMMaxOrth1-4-1-3-8-5" title="Copy heading and permalink for Item 9.2.8.5" aria-label="Copy heading and permalink for Item 9.2.8.5">🔗</a></div>
+</li>
 </ol>
-</div></article></article><article class="example example-like" id="EXAMPLEDiffvsDer"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">9.2.9</span><span class="period">.</span><span class="space"> </span><span class="title">Maximizing the Area of a Rectangle, Redux: Differentials vs. Derivatives.</span>
+<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMMaxOrth1-4-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 9.2.8.b"><a href="#PROBLEMMaxOrth1-4" title="Copy heading and permalink for Task 9.2.8.b" aria-label="Copy heading and permalink for Task 9.2.8.b">🔗</a></div></article><div class="autopermalink" data-description="Problem 9.2.8: Constructing a Square on an Ellipse"><a href="#PROBLEMMaxOrth1" title="Copy heading and permalink for Problem 9.2.8: Constructing a Square on an Ellipse" aria-label="Copy heading and permalink for Problem 9.2.8: Constructing a Square on an Ellipse">🔗</a></div></article><article class="example example-like" id="EXAMPLEDiffvsDer"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.2.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Maximizing the Area of a Rectangle, Redux: Differentials vs. Derivatives.</span>
 </h3>
-<div class="para" id="EXAMPLEDiffvsDer-3">Take a moment to reconsider <a href="sec-laziness-nature.html#EXAMPLEFixedPerimeter" class="xref" data-knowl="./knowl/xref/EXAMPLEFixedPerimeter.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.3.4: Maximizing the Area of a Rectangle">Example 3.3.4</a>. Is it clear to you that there must be such a maximal rectangle?  If so then, as before, setting the derivative of the objective function equal to zero and solving for the variable will provide all of the values of the variable where the maximal rectangle might occur. If we’re lucky there will only be a few such and we can check them one at a time.</div>
+<div class="para" id="EXAMPLEDiffvsDer-3">Take a moment to reconsider <a href="sec-laziness-nature.html#EXAMPLEFixedPerimeter" class="xref" data-knowl="./knowl/xref/EXAMPLEFixedPerimeter.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.3.4: Maximizing the Area of a Rectangle">Example 3.3.4</a>. Is it clear to you that there must be such a maximal rectangle?  If so then, as before, setting the derivative of the objective function equal to zero and solving for the variable will provide all of the values of the variable where the maximal rectangle might occur. If we’re lucky there will only be a few such and we can check them one at a time.<div class="autopermalink" data-description="Paragraph"><a href="#EXAMPLEDiffvsDer-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para logical" id="EXAMPLEDiffvsDer-4">
 <div class="para">Finding the objective function in this case is  easy. The area <span class="process-math">\(A\text{,}\)</span> of any rectangle is its length, <span class="process-math">\(l\text{,}\)</span> times its width, <span class="process-math">\(w\text{,}\)</span> so</div>
 <div class="displaymath process-math" id="EQUATIONSquareObjFun">
@@ -905,6 +1028,7 @@ A=lw\tag{9.10}
 \end{equation}
 </div>
 <div class="para">is the objective function.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#EXAMPLEDiffvsDer-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="EXAMPLEDiffvsDer-5">
 <div class="para">The perimeter, <span class="process-math">\(P\)</span> is</div>
@@ -915,18 +1039,28 @@ P=2l +2w\tag{9.11}
 </div>
 <div class="para">and is constrained to be a constant (fixed) value so <a href="SECTIONfive-simil-probl.html#EQUATIONSquareConst" class="xref" data-knowl="./knowl/xref/EQUATIONSquareConst.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 9.11">equation (9.11)</a> is the constraint. Throughout this example keep in mind that <span class="process-math">\(P\)</span> is a fixed constant, not a function of <span class="process-math">\(l\)</span> and <span class="process-math">\(w\text{.}\)</span>
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#EXAMPLEDiffvsDer-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="EXAMPLEDiffvsDer-6">
 <div class="para">At this point we can complete the problem using Calculus in either of two equivalent ways.</div>
 <dl class="description-list">
-<dt id="EXAMPLEDiffvsDer-6-1-1">Using Differentials:</dt>
+<dt id="EXAMPLEDiffvsDer-6-1-1">Using Differentials:<div class="autopermalink" data-description="Item: Using Differentials:"><a href="#EXAMPLEDiffvsDer-6-1-1" title="Copy heading and permalink for Item: Using Differentials:" aria-label="Copy heading and permalink for Item: Using Differentials:">🔗</a></div>
+</dt>
 <dd><div class="para logical" id="EXAMPLEDiffvsDer-6-1-1-2">
 <div class="para">In our opinion this is how Leibniz intended for his Calculus to be used so we tend to favor it.</div>
 <ol class="decimal" id="EXAMPLEDiffvsDer-6-1-1-2-1">
-<li id="EXAMPLEDiffvsDer-6-1-1-2-1-1"><div class="para" id="EXAMPLEDiffvsDer-6-1-1-2-1-1-1">Compute <span class="process-math">\(\dx{A} = l\dx{w}+w\dx{l}\text{,}\)</span> from the objective      function.</div></li>
-<li id="EXAMPLEDiffvsDer-6-1-1-2-1-2"><div class="para" id="EXAMPLEDiffvsDer-6-1-1-2-1-2-1">Differentiate the constraint, giving the differential form      of the constraint: <span class="process-math">\(2\dx{l}+2\dx{w}=0.\)</span>
-</div></li>
-<li id="EXAMPLEDiffvsDer-6-1-1-2-1-3"><div class="para logical" id="EXAMPLEDiffvsDer-6-1-1-2-1-3-1">
+<li id="EXAMPLEDiffvsDer-6-1-1-2-1-1">
+<div class="para" id="EXAMPLEDiffvsDer-6-1-1-2-1-1-1">Compute <span class="process-math">\(\dx{A} = l\dx{w}+w\dx{l}\text{,}\)</span> from the objective      function.<div class="autopermalink" data-description="Paragraph"><a href="#EXAMPLEDiffvsDer-6-1-1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#EXAMPLEDiffvsDer-6-1-1-2-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="EXAMPLEDiffvsDer-6-1-1-2-1-2">
+<div class="para" id="EXAMPLEDiffvsDer-6-1-1-2-1-2-1">Differentiate the constraint, giving the differential form      of the constraint: <span class="process-math">\(2\dx{l}+2\dx{w}=0.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#EXAMPLEDiffvsDer-6-1-1-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#EXAMPLEDiffvsDer-6-1-1-2-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="EXAMPLEDiffvsDer-6-1-1-2-1-3">
+<div class="para logical" id="EXAMPLEDiffvsDer-6-1-1-2-1-3-1">
 <div class="para">Set <span class="process-math">\(\dx{A}=0\)</span> and solve this equation using the constraint      and its differential form as needed. In this problem we have      <span class="process-math">\(\dx{l}=-\dx{w}\)</span> so</div>
 <div class="displaymath process-math" id="EXAMPLEDiffvsDer-6-1-1-2-1-3-1-3">
 \begin{align*}
@@ -936,25 +1070,37 @@ l\dx{w}-w\dx{w} \amp = 0\\
 \end{align*}
 </div>
 <div class="para">Since <span class="process-math">\(\dx{w}\neq0\)</span> we have <span class="process-math">\(l=w\)</span> and thus the square encloses the most area.</div>
-</div></li>
+<div class="autopermalink" data-description="Paragraph"><a href="#EXAMPLEDiffvsDer-6-1-1-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#EXAMPLEDiffvsDer-6-1-1-2-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
 </ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#EXAMPLEDiffvsDer-6-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></dd>
-<dt id="EXAMPLEDiffvsDer-6-1-2">Using Derivatives:</dt>
+<dt id="EXAMPLEDiffvsDer-6-1-2">Using Derivatives:<div class="autopermalink" data-description="Item: Using Derivatives:"><a href="#EXAMPLEDiffvsDer-6-1-2" title="Copy heading and permalink for Item: Using Derivatives:" aria-label="Copy heading and permalink for Item: Using Derivatives:">🔗</a></div>
+</dt>
 <dd><div class="para logical" id="EXAMPLEDiffvsDer-6-1-2-2">
 <div class="para">The modern approach emphasizes the use of functions and derivatives rather than curves and differentials.</div>
 <ol class="decimal" id="EXAMPLEDiffvsDer-6-1-2-2-1">
-<li id="EXAMPLEDiffvsDer-6-1-2-2-1-1"><div class="para" id="EXAMPLEDiffvsDer-6-1-2-2-1-1-1">Solve the constraint for either <span class="process-math">\(w\)</span> or <span class="process-math">\(l\)</span> in terms of the      other. For example, <span class="process-math">\(l=\frac12(P-2w).\)</span>
-</div></li>
-<li id="EXAMPLEDiffvsDer-6-1-2-2-1-2"><div class="para logical" id="EXAMPLEDiffvsDer-6-1-2-2-1-2-1">
+<li id="EXAMPLEDiffvsDer-6-1-2-2-1-1">
+<div class="para" id="EXAMPLEDiffvsDer-6-1-2-2-1-1-1">Solve the constraint for either <span class="process-math">\(w\)</span> or <span class="process-math">\(l\)</span> in terms of the      other. For example, <span class="process-math">\(l=\frac12(P-2w).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#EXAMPLEDiffvsDer-6-1-2-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#EXAMPLEDiffvsDer-6-1-2-2-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="EXAMPLEDiffvsDer-6-1-2-2-1-2">
+<div class="para logical" id="EXAMPLEDiffvsDer-6-1-2-2-1-2-1">
 <div class="para">Substitute this into the objective function to rewrite it in      terms of a single variable:</div>
 <div class="displaymath process-math">
 \begin{equation*}
 A(w)=\frac12(P-2w)\cdot w = \frac12(Pw-w^2).
 \end{equation*}
 </div>
-</div></li>
+<div class="autopermalink" data-description="Paragraph"><a href="#EXAMPLEDiffvsDer-6-1-2-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#EXAMPLEDiffvsDer-6-1-2-2-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
 <li id="EXAMPLEDiffvsDer-6-1-2-2-1-3">
-<div class="para" id="EXAMPLEDiffvsDer-6-1-2-2-1-3-1">Now think of the objective function, <span class="process-math">\(A(w)\text{,}\)</span> as an abstract      function and find its maximum point by setting <span class="process-math">\(\dfdx{A}{w}=0\)</span>      and solving for <span class="process-math">\(w\text{.}\)</span>
+<div class="para" id="EXAMPLEDiffvsDer-6-1-2-2-1-3-1">Now think of the objective function, <span class="process-math">\(A(w)\text{,}\)</span> as an abstract      function and find its maximum point by setting <span class="process-math">\(\dfdx{A}{w}=0\)</span>      and solving for <span class="process-math">\(w\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#EXAMPLEDiffvsDer-6-1-2-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="EXAMPLEDiffvsDer-6-1-2-2-1-3-2">
 <div class="para">Proceeding, we have</div>
@@ -964,26 +1110,40 @@ A(w)=\frac12(P-2w)\cdot w = \frac12(Pw-w^2).
 \end{equation*}
 </div>
 <div class="para">so <span class="process-math">\(w=\frac{P}{4}\text{.}\)</span> Putting this back into our constraint gives <span class="process-math">\(P=2\cdot\frac{P}{4}+2l\)</span> we see that <span class="process-math">\(l\)</span> is also equal to <span class="process-math">\(\frac{P}{4}\text{.}\)</span> Since <span class="process-math">\(l=w=\frac{P}{4}\)</span> the square encloses the most area.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#EXAMPLEDiffvsDer-6-1-2-2-1-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="autopermalink" data-description="Item"><a href="#EXAMPLEDiffvsDer-6-1-2-2-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 </ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#EXAMPLEDiffvsDer-6-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></dd>
 </dl>
+<div class="autopermalink" data-description="Paragraph"><a href="#EXAMPLEDiffvsDer-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="EXAMPLEDiffvsDer-7">As we said, the two approaches are completely equivalent.  Use whichever feels most comfortable to you.</div></article><div class="para" id="SECTIONfive-simil-probl-19">In <a href="CHAPTERScienceBeforeCalc.html" class="internal" title="Chapter 3: Science Before Calculus">Chapter 3</a> we used Fermat’s Method of Adequality to solve the following problem which is closely related to <a href="SECTIONfive-simil-probl.html#EXAMPLEDiffvsDer" class="xref" data-knowl="./knowl/xref/EXAMPLEDiffvsDer.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 9.2.9: Maximizing the Area of a Rectangle, Redux: Differentials vs. Derivatives">Example 9.2.9</a>,</div>
+<div class="para" id="EXAMPLEDiffvsDer-7">As we said, the two approaches are completely equivalent.  Use whichever feels most comfortable to you.<div class="autopermalink" data-description="Paragraph"><a href="#EXAMPLEDiffvsDer-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 9.2.9: Maximizing the Area of a Rectangle, Redux: Differentials vs. Derivatives"><a href="#EXAMPLEDiffvsDer" title="Copy heading and permalink for Example 9.2.9: Maximizing the Area of a Rectangle, Redux: Differentials vs. Derivatives" aria-label="Copy heading and permalink for Example 9.2.9: Maximizing the Area of a Rectangle, Redux: Differentials vs. Derivatives">🔗</a></div></article><div class="para" id="SECTIONfive-simil-probl-19">In <a href="CHAPTERScienceBeforeCalc.html" class="internal" title="Chapter 3: Science Before Calculus">Chapter 3</a> we used Fermat’s Method of Adequality to solve the following problem which is closely related to <a href="SECTIONfive-simil-probl.html#EXAMPLEDiffvsDer" class="xref" data-knowl="./knowl/xref/EXAMPLEDiffvsDer.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 9.2.9: Maximizing the Area of a Rectangle, Redux: Differentials vs. Derivatives">Example 9.2.9</a>,<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONfive-simil-probl-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="exercise exercise-like" id="PROBLEMMaximalSquareRedux1"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">9.2.10</span><span class="period">.</span>
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.2.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<div class="para" id="PROBLEMMaximalSquareRedux1-1-1">Find the dimensions of the rectangle having the smallest perimeter, given that the area is fixed. Since we are still relying on Fermat’s Theorem, the first step is to convince yourself that this problem has a solution.  Once you have done that, use both of the approaches outlined in <a href="SECTIONfive-simil-probl.html#EXAMPLEDiffvsDer" class="xref" data-knowl="./knowl/xref/EXAMPLEDiffvsDer.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 9.2.9: Maximizing the Area of a Rectangle, Redux: Differentials vs. Derivatives">Example 9.2.9</a> to complete the solution. Which method do you prefer?</div></article><article class="exercise exercise-like" id="SECTIONfive-simil-probl-21"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">9.2.11</span><span class="period">.</span>
+<div class="para" id="PROBLEMMaximalSquareRedux1-1-1">Find the dimensions of the rectangle having the smallest perimeter, given that the area is fixed. Since we are still relying on Fermat’s Theorem, the first step is to convince yourself that this problem has a solution.  Once you have done that, use both of the approaches outlined in <a href="SECTIONfive-simil-probl.html#EXAMPLEDiffvsDer" class="xref" data-knowl="./knowl/xref/EXAMPLEDiffvsDer.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 9.2.9: Maximizing the Area of a Rectangle, Redux: Differentials vs. Derivatives">Example 9.2.9</a> to complete the solution. Which method do you prefer?<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMMaximalSquareRedux1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 9.2.10"><a href="#PROBLEMMaximalSquareRedux1" title="Copy heading and permalink for Problem 9.2.10" aria-label="Copy heading and permalink for Problem 9.2.10">🔗</a></div></article><article class="exercise exercise-like" id="SECTIONfive-simil-probl-21"><h3 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.2.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="introduction" id="SECTIONfive-simil-probl-21-1">
 <div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="external/DC/Lagrange1.png" class="contained"></div>
-<div class="para" id="SECTIONfive-simil-probl-21-1-2">Consider all lines connecting the point <span class="process-math">\((-4,-3)\)</span> to an arbitrary point <span class="process-math">\((x,y)\text{,}\)</span> on the unit circle as pictured.  There is clearly one point where the slope of the associated line is maximum and another point where the slope of the associated line is minimum. These are the outermost lines depicted in the figure. Find an equation for each of these lines. If you aren’t sure how to begin use the following steps.</div>
+<div class="para" id="SECTIONfive-simil-probl-21-1-2">Consider all lines connecting the point <span class="process-math">\((-4,-3)\)</span> to an arbitrary point <span class="process-math">\((x,y)\text{,}\)</span> on the unit circle as pictured.  There is clearly one point where the slope of the associated line is maximum and another point where the slope of the associated line is minimum. These are the outermost lines depicted in the figure. Find an equation for each of these lines. If you aren’t sure how to begin use the following steps.<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONfive-simil-probl-21-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 </div>
 <article class="task exercise-like" id="SECTIONfive-simil-probl-21-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="SECTIONfive-simil-probl-21-2-1-1">Find an appropriate objective function for this problem.</div></article><article class="task exercise-like" id="SECTIONfive-simil-probl-21-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="SECTIONfive-simil-probl-21-3-1-1">Find the constraint for this problem.</div></article><article class="task exercise-like" id="SECTIONfive-simil-probl-21-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="SECTIONfive-simil-probl-21-2-1-1">Find an appropriate objective function for this problem.<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONfive-simil-probl-21-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 9.2.11.a"><a href="#SECTIONfive-simil-probl-21-2" title="Copy heading and permalink for Task 9.2.11.a" aria-label="Copy heading and permalink for Task 9.2.11.a">🔗</a></div></article><article class="task exercise-like" id="SECTIONfive-simil-probl-21-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="SECTIONfive-simil-probl-21-3-1-1">Find the constraint for this problem.<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONfive-simil-probl-21-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 9.2.11.b"><a href="#SECTIONfive-simil-probl-21-3" title="Copy heading and permalink for Task 9.2.11.b" aria-label="Copy heading and permalink for Task 9.2.11.b">🔗</a></div></article><article class="task exercise-like" id="SECTIONfive-simil-probl-21-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para logical" id="SECTIONfive-simil-probl-21-4-1-1">
 <div class="para">Differentiate both your objective function and your constraint to show that the points where the maximum and minimum slope occur must satisfy</div>
 <div class="displaymath process-math" id="EQUATIONMaxMinSlope">
@@ -991,20 +1151,39 @@ A(w)=\frac12(P-2w)\cdot w = \frac12(Pw-w^2).
 x^2+y^2=-4x-3y.\tag{9.12}
 \end{equation}
 </div>
-</div> <aside class="aside aside-like" id="SECTIONfive-simil-probl-21-4-1-2"><h5 class="heading"><span class="title">Comment.</span></h5>
-<div class="para" id="SECTIONfive-simil-probl-21-4-1-2-2">There is usually more than one way to solve a given problem so it is possible that you came up with a different equation than we did. That’s OK. Solve the problem using yours and use ours to check your solution.</div></aside></article><article class="task exercise-like" id="SECTIONfive-simil-probl-21-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="SECTIONfive-simil-probl-21-5-1-1">Solve <a href="SECTIONfive-simil-probl.html#EQUATIONMaxMinSlope" class="xref" data-knowl="./knowl/xref/EQUATIONMaxMinSlope.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 9.12">equation (9.12)</a> and the constraint simultaneously to find the equations of the lines with maximal and minimal slope.  Verify your answer by graphing both lines and the unit circle.</div></article></article><article class="problem example-like" id="SECTIONfive-simil-probl-22"><h3 class="heading">
-<span class="type">Drill</span><span class="space"> </span><span class="codenumber">9.2.12</span><span class="period">.</span>
+<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONfive-simil-probl-21-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <details id="SECTIONfive-simil-probl-21-4-1-2" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<span class="type">Aside<span class="colon heading-divison-mark heading-divison-mark__colon">:</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Comment.</span>
+</h5></summary><aside class="aside aside-like knowl__content"><div class="para" id="SECTIONfive-simil-probl-21-4-1-2-2">There is usually more than one way to solve a given problem so it is possible that you came up with a different equation than we did. That’s OK. Solve the problem using yours and use ours to check your solution.<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONfive-simil-probl-21-4-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></aside></details><div class="autopermalink" data-description="Task 9.2.11.c"><a href="#SECTIONfive-simil-probl-21-4" title="Copy heading and permalink for Task 9.2.11.c" aria-label="Copy heading and permalink for Task 9.2.11.c">🔗</a></div></article><article class="task exercise-like" id="SECTIONfive-simil-probl-21-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="SECTIONfive-simil-probl-21-5-1-1">Solve <a href="SECTIONfive-simil-probl.html#EQUATIONMaxMinSlope" class="xref" data-knowl="./knowl/xref/EQUATIONMaxMinSlope.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 9.12">equation (9.12)</a> and the constraint simultaneously to find the equations of the lines with maximal and minimal slope.  Verify your answer by graphing both lines and the unit circle.<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONfive-simil-probl-21-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 9.2.11.d"><a href="#SECTIONfive-simil-probl-21-5" title="Copy heading and permalink for Task 9.2.11.d" aria-label="Copy heading and permalink for Task 9.2.11.d">🔗</a></div></article><div class="autopermalink" data-description="Problem 9.2.11"><a href="#SECTIONfive-simil-probl-21" title="Copy heading and permalink for Problem 9.2.11" aria-label="Copy heading and permalink for Problem 9.2.11">🔗</a></div></article><article class="problem example-like" id="SECTIONfive-simil-probl-22"><h3 class="heading">
+<span class="type">Drill</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.2.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para logical" id="SECTIONfive-simil-probl-22-2">
 <div class="para">Sketch the graphs of <span class="process-math">\(y=e^x\)</span> and <span class="process-math">\(y=\ln(x)\)</span> and convince yourself that there is a point on each graph which is closest to the origin.</div>
 <ol class="lower-roman ol-marker-1" id="SECTIONfive-simil-probl-22-2-3">
-<li id="SECTIONfive-simil-probl-22-2-3-1"><div class="para" id="SECTIONfive-simil-probl-22-2-3-1-1">Find the approximate coordinates of the point on the curve <span class="process-math">\(y=e^x\)</span> that is closest to the origin.</div></li>
-<li id="SECTIONfive-simil-probl-22-2-3-2"><div class="para" id="SECTIONfive-simil-probl-22-2-3-2-1">Find the approximate coordinates of the point on the curve <span class="process-math">\(y=\ln(x)\)</span> that is closest to the origin.</div></li>
-<li id="SECTIONfive-simil-probl-22-2-3-3"><div class="para" id="SECTIONfive-simil-probl-22-2-3-3-1">Are the solutions of parts (a) and (b) related? Explain.</div></li>
+<li id="SECTIONfive-simil-probl-22-2-3-1">
+<div class="para" id="SECTIONfive-simil-probl-22-2-3-1-1">Find the approximate coordinates of the point on the curve <span class="process-math">\(y=e^x\)</span> that is closest to the origin.<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONfive-simil-probl-22-2-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item i"><a href="#SECTIONfive-simil-probl-22-2-3-1" title="Copy heading and permalink for Item i" aria-label="Copy heading and permalink for Item i">🔗</a></div>
+</li>
+<li id="SECTIONfive-simil-probl-22-2-3-2">
+<div class="para" id="SECTIONfive-simil-probl-22-2-3-2-1">Find the approximate coordinates of the point on the curve <span class="process-math">\(y=\ln(x)\)</span> that is closest to the origin.<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONfive-simil-probl-22-2-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item ii"><a href="#SECTIONfive-simil-probl-22-2-3-2" title="Copy heading and permalink for Item ii" aria-label="Copy heading and permalink for Item ii">🔗</a></div>
+</li>
+<li id="SECTIONfive-simil-probl-22-2-3-3">
+<div class="para" id="SECTIONfive-simil-probl-22-2-3-3-1">Are the solutions of parts (a) and (b) related? Explain.<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONfive-simil-probl-22-2-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item iii"><a href="#SECTIONfive-simil-probl-22-2-3-3" title="Copy heading and permalink for Item iii" aria-label="Copy heading and permalink for Item iii">🔗</a></div>
+</li>
 </ol>
-</div></article><article class="problem example-like" id="SECTIONfive-simil-probl-23"><h3 class="heading">
-<span class="type">Drill</span><span class="space"> </span><span class="codenumber">9.2.13</span><span class="period">.</span>
+<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONfive-simil-probl-22-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Drill 9.2.12"><a href="#SECTIONfive-simil-probl-22" title="Copy heading and permalink for Drill 9.2.12" aria-label="Copy heading and permalink for Drill 9.2.12">🔗</a></div></article><article class="problem example-like" id="SECTIONfive-simil-probl-23"><h3 class="heading">
+<span class="type">Drill</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.2.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para logical" id="SECTIONfive-simil-probl-23-2">
 <div class="para">Suppose a point is moving in a plane so that its <span class="process-math">\((x,y)\)</span> coordinates are given by:</div>
@@ -1015,39 +1194,66 @@ P(t)=
 \end{equation*}
 </div>
 <ol class="lower-roman ol-marker-1" id="SECTIONfive-simil-probl-23-2-3">
-<li id="SECTIONfive-simil-probl-23-2-3-1"><div class="para" id="SECTIONfive-simil-probl-23-2-3-1-1">Find the value of <span class="process-math">\(t\)</span> where the point, <span class="process-math">\(P(t)\text{,}\)</span> is closest to the origin.  Is it clear that there is such a point?</div></li>
-<li id="SECTIONfive-simil-probl-23-2-3-2"><div class="para" id="SECTIONfive-simil-probl-23-2-3-2-1">Find the <span class="process-math">\((x,y)\)</span> coordinates of the point’s location when it is closest to the origin.</div></li>
+<li id="SECTIONfive-simil-probl-23-2-3-1">
+<div class="para" id="SECTIONfive-simil-probl-23-2-3-1-1">Find the value of <span class="process-math">\(t\)</span> where the point, <span class="process-math">\(P(t)\text{,}\)</span> is closest to the origin.  Is it clear that there is such a point?<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONfive-simil-probl-23-2-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item i"><a href="#SECTIONfive-simil-probl-23-2-3-1" title="Copy heading and permalink for Item i" aria-label="Copy heading and permalink for Item i">🔗</a></div>
+</li>
+<li id="SECTIONfive-simil-probl-23-2-3-2">
+<div class="para" id="SECTIONfive-simil-probl-23-2-3-2-1">Find the <span class="process-math">\((x,y)\)</span> coordinates of the point’s location when it is closest to the origin.<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONfive-simil-probl-23-2-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item ii"><a href="#SECTIONfive-simil-probl-23-2-3-2" title="Copy heading and permalink for Item ii" aria-label="Copy heading and permalink for Item ii">🔗</a></div>
+</li>
 </ol>
-</div></article><article class="exercise exercise-like" id="PROBLEMRectInscEll"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">9.2.14</span><span class="period">.</span><span class="space"> </span><span class="title">Find the Pattern.</span>
+<div class="autopermalink" data-description="Paragraph"><a href="#SECTIONfive-simil-probl-23-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Drill 9.2.13"><a href="#SECTIONfive-simil-probl-23" title="Copy heading and permalink for Drill 9.2.13" aria-label="Copy heading and permalink for Drill 9.2.13">🔗</a></div></article><article class="exercise exercise-like" id="PROBLEMRectInscEll"><h3 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.2.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Find the Pattern.</span>
 </h3>
-<div class="introduction" id="PROBLEMRectInscEll-2"><div class="para" id="PROBLEMRectInscEll-2-1"></div></div>
+<div class="introduction" id="PROBLEMRectInscEll-2"><div class="para" id="PROBLEMRectInscEll-2-1"><div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMRectInscEll-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div></div>
 <article class="task exercise-like" id="PROBLEMRectInscEll-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="PROBLEMRectInscEll-3-1-1">Of all the rectangles that can be inscribed in the unit circle show that the one with the maximum area is a square.</div></article><article class="task exercise-like" id="PROBLEMRectInscEll-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="PROBLEMRectInscEll-4-1-1">Of all the rectangles that can be inscribed in the ellipse <span class="process-math">\(x^2+\frac{y^2}{9}=1\)</span> show that the one with the maximum area is three times taller than it is wide.</div></article><article class="task exercise-like" id="PROBLEMRectInscEll-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="PROBLEMRectInscEll-5-1-1">Of all the rectangles that can be inscribed in the ellipse <span class="process-math">\(\frac{x^2}{16}+y^2=1\)</span> show that the one with the maximum area is four times wider than it is tall.</div></article><article class="task exercise-like" id="PROBLEMRectInscEll-6"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="PROBLEMRectInscEll-6-1-1">Of all the rectangles that can be inscribed in the ellipse <span class="process-math">\(\frac{x^2}{a^2}+\frac{y^2}{b^2}=1\)</span> show that the one with the maximum area has a height to width ratio of <span class="process-math">\(\frac{b}{a}\text{.}\)</span>
-</div></article></article><section class="paragraphs" id="PARAGRAPHTrianglesWithFixedPerimeters"><h3 class="heading"><span class="title">DIGRESSION:  Triangles With Fixed Perimeters.</span></h3>
-<div class="para" id="PARAGRAPHTrianglesWithFixedPerimeters-2">In <a href="sec-laziness-nature.html#EXAMPLEFixedPerimeter" class="xref" data-knowl="./knowl/xref/EXAMPLEFixedPerimeter.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.3.4: Maximizing the Area of a Rectangle">Examples 3.3.4</a> and  <a href="SECTIONfive-simil-probl.html#EXAMPLEDiffvsDer" class="xref" data-knowl="./knowl/xref/EXAMPLEDiffvsDer.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 9.2.9: Maximizing the Area of a Rectangle, Redux: Differentials vs. Derivatives">Example 9.2.9</a> we saw that of all rectangles with fixed perimeter, the square (an equilateral rectangle) has the largest area. Is this also true of triangles? More precisely, does an equilateral triangle have the largest area out of all triangles with a fixed perimeter?  This may sound like a simpler problem but it is actually a bit harder.</div>
-<div class="para" id="PARAGRAPHTrianglesWithFixedPerimeters-3">Here’s why. With a rectangle each set of parallel sides varied together so we only had two independent parameters to deal with. For triangles all three sides vary independently, giving us three independently varying parameters, which is inherently more complex than two.</div>
-<div class="para" id="PARAGRAPHTrianglesWithFixedPerimeters-4">How might we address this question?</div>
-<div class="para" id="PARAGRAPHTrianglesWithFixedPerimeters-5">A standard ploy for solving difficult problems is to first try a simpler “adjacent” problem. In this case to create an “adjacent” problem we hold one side fixed and only allow two sides of our triangle to vary. We’ll show that when the area of the triangle is maximal the two varying sides must be the same length. We want to use this adjacent problem to gain some insight into how to solve our actual problem.</div>
-<div class="para" id="PARAGRAPHTrianglesWithFixedPerimeters-6">So our adjacent problem is this: Given all triangles with a fixed base and a fixed perimeter, does an isosceles triangle have the largest area?  The sketch below has all of the pertinent parameters labeled.</div>
+<div class="para" id="PROBLEMRectInscEll-3-1-1">Of all the rectangles that can be inscribed in the unit circle show that the one with the maximum area is a square.<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMRectInscEll-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 9.2.14.a"><a href="#PROBLEMRectInscEll-3" title="Copy heading and permalink for Task 9.2.14.a" aria-label="Copy heading and permalink for Task 9.2.14.a">🔗</a></div></article><article class="task exercise-like" id="PROBLEMRectInscEll-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="PROBLEMRectInscEll-4-1-1">Of all the rectangles that can be inscribed in the ellipse <span class="process-math">\(x^2+\frac{y^2}{9}=1\)</span> show that the one with the maximum area is three times taller than it is wide.<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMRectInscEll-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 9.2.14.b"><a href="#PROBLEMRectInscEll-4" title="Copy heading and permalink for Task 9.2.14.b" aria-label="Copy heading and permalink for Task 9.2.14.b">🔗</a></div></article><article class="task exercise-like" id="PROBLEMRectInscEll-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="PROBLEMRectInscEll-5-1-1">Of all the rectangles that can be inscribed in the ellipse <span class="process-math">\(\frac{x^2}{16}+y^2=1\)</span> show that the one with the maximum area is four times wider than it is tall.<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMRectInscEll-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 9.2.14.c"><a href="#PROBLEMRectInscEll-5" title="Copy heading and permalink for Task 9.2.14.c" aria-label="Copy heading and permalink for Task 9.2.14.c">🔗</a></div></article><article class="task exercise-like" id="PROBLEMRectInscEll-6"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="PROBLEMRectInscEll-6-1-1">Of all the rectangles that can be inscribed in the ellipse <span class="process-math">\(\frac{x^2}{a^2}+\frac{y^2}{b^2}=1\)</span> show that the one with the maximum area has a height to width ratio of <span class="process-math">\(\frac{b}{a}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMRectInscEll-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 9.2.14.d"><a href="#PROBLEMRectInscEll-6" title="Copy heading and permalink for Task 9.2.14.d" aria-label="Copy heading and permalink for Task 9.2.14.d">🔗</a></div></article><div class="autopermalink" data-description="Problem 9.2.14: Find the Pattern"><a href="#PROBLEMRectInscEll" title="Copy heading and permalink for Problem 9.2.14: Find the Pattern" aria-label="Copy heading and permalink for Problem 9.2.14: Find the Pattern">🔗</a></div></article><section class="paragraphs" id="PARAGRAPHTrianglesWithFixedPerimeters"><h3 class="heading"><span class="title">DIGRESSION:  Triangles With Fixed Perimeters.</span></h3>
+<div class="para" id="PARAGRAPHTrianglesWithFixedPerimeters-2">In <a href="sec-laziness-nature.html#EXAMPLEFixedPerimeter" class="xref" data-knowl="./knowl/xref/EXAMPLEFixedPerimeter.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.3.4: Maximizing the Area of a Rectangle">Examples 3.3.4</a> and  <a href="SECTIONfive-simil-probl.html#EXAMPLEDiffvsDer" class="xref" data-knowl="./knowl/xref/EXAMPLEDiffvsDer.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 9.2.9: Maximizing the Area of a Rectangle, Redux: Differentials vs. Derivatives">Example 9.2.9</a> we saw that of all rectangles with fixed perimeter, the square (an equilateral rectangle) has the largest area. Is this also true of triangles? More precisely, does an equilateral triangle have the largest area out of all triangles with a fixed perimeter?  This may sound like a simpler problem but it is actually a bit harder.<div class="autopermalink" data-description="Paragraph"><a href="#PARAGRAPHTrianglesWithFixedPerimeters-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="PARAGRAPHTrianglesWithFixedPerimeters-3">Here’s why. With a rectangle each set of parallel sides varied together so we only had two independent parameters to deal with. For triangles all three sides vary independently, giving us three independently varying parameters, which is inherently more complex than two.<div class="autopermalink" data-description="Paragraph"><a href="#PARAGRAPHTrianglesWithFixedPerimeters-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="PARAGRAPHTrianglesWithFixedPerimeters-4">How might we address this question?<div class="autopermalink" data-description="Paragraph"><a href="#PARAGRAPHTrianglesWithFixedPerimeters-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="PARAGRAPHTrianglesWithFixedPerimeters-5">A standard ploy for solving difficult problems is to first try a simpler “adjacent” problem. In this case to create an “adjacent” problem we hold one side fixed and only allow two sides of our triangle to vary. We’ll show that when the area of the triangle is maximal the two varying sides must be the same length. We want to use this adjacent problem to gain some insight into how to solve our actual problem.<div class="autopermalink" data-description="Paragraph"><a href="#PARAGRAPHTrianglesWithFixedPerimeters-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="PARAGRAPHTrianglesWithFixedPerimeters-6">So our adjacent problem is this: Given all triangles with a fixed base and a fixed perimeter, does an isosceles triangle have the largest area?  The sketch below has all of the pertinent parameters labeled.<div class="autopermalink" data-description="Paragraph"><a href="#PARAGRAPHTrianglesWithFixedPerimeters-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <figure class="figure figure-like" id="FIGURETriFixedBase"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="external/DC/Optimization3.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">9.2.15<span class="period">.</span></span><span class="space"> </span></figcaption></figure><div class="para" id="PARAGRAPHTrianglesWithFixedPerimeters-8">If we hold <span class="process-math">\(b\)</span> fixed then minimizing the area, <span class="process-math">\(A=\frac12bh\text{,}\)</span> is equivalent to maximizing <span class="process-math">\(h\text{.}\)</span> So the length of <span class="process-math">\(h\)</span> is the natural objective function for this problem. Also if <span class="process-math">\(h\)</span> is at its maximum then by <a href="SECTIONintroduction.html#THEOREMFermatsTheorem" class="xref" data-knowl="./knowl/xref/THEOREMFermatsTheorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 9.1.1: Fermat’s Theorem">Fermat’s Theorem 9.1.1</a>, <span class="process-math">\(\dx{h}=0\text{.}\)</span> Notice that there are two right triangles in our sketch and <span class="process-math">\(h\)</span> is the height of both of them.</div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.2.15<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" data-description="Figure 9.2.15"><a href="#FIGURETriFixedBase" title="Copy heading and permalink for Figure 9.2.15" aria-label="Copy heading and permalink for Figure 9.2.15">🔗</a></div></figcaption></figure><div class="para" id="PARAGRAPHTrianglesWithFixedPerimeters-8">If we hold <span class="process-math">\(b\)</span> fixed then minimizing the area, <span class="process-math">\(A=\frac12bh\text{,}\)</span> is equivalent to maximizing <span class="process-math">\(h\text{.}\)</span> So the length of <span class="process-math">\(h\)</span> is the natural objective function for this problem. Also if <span class="process-math">\(h\)</span> is at its maximum then by <a href="SECTIONintroduction.html#THEOREMFermatsTheorem" class="xref" data-knowl="./knowl/xref/THEOREMFermatsTheorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 9.1.1: Fermat’s Theorem">Fermat’s Theorem 9.1.1</a>, <span class="process-math">\(\dx{h}=0\text{.}\)</span> Notice that there are two right triangles in our sketch and <span class="process-math">\(h\)</span> is the height of both of them.<div class="autopermalink" data-description="Paragraph"><a href="#PARAGRAPHTrianglesWithFixedPerimeters-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="exercise exercise-like" id="PROBLEMMaximalIsoceles1"><h4 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">9.2.16</span><span class="period">.</span>
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.2.16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
-<div class="introduction" id="PROBLEMMaximalIsoceles1-1"><div class="para" id="PROBLEMMaximalIsoceles1-1-1"></div></div>
+<div class="introduction" id="PROBLEMMaximalIsoceles1-1"><div class="para" id="PROBLEMMaximalIsoceles1-1-1"><div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMMaximalIsoceles1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div></div>
 <article class="task exercise-like" id="PROBLEMMaximalIsoceles1-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="PROBLEMMaximalIsoceles1-2-1-1">Use the sketch in <a href="SECTIONfive-simil-probl.html#FIGURETriFixedBase" class="xref" data-knowl="./knowl/xref/FIGURETriFixedBase.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 9.2.15">Figure 9.2.15</a> to express <span class="process-math">\(h\)</span> as a function of <span class="process-math">\(x\)</span> and <span class="process-math">\(z\)</span> and show that when <span class="process-math">\(h\)</span> is maximal <span class="process-math">\(x\dx{x} - z\dx{z}=0\text{.}\)</span>
-</div></article><article class="task exercise-like" id="PROBLEMMaximalIsoceles1-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="PROBLEMMaximalIsoceles1-3-1-1">Express <span class="process-math">\(h\)</span> as a function of <span class="process-math">\(y\)</span> and <span class="process-math">\(w\)</span> and show that when <span class="process-math">\(h\)</span> is maximal <span class="process-math">\(y\dx{y}-w\dx{w}=0\text{.}\)</span>
-</div></article><article class="task exercise-like" id="PROBLEMMaximalIsoceles1-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<div class="para" id="PROBLEMMaximalIsoceles1-4-1-1">Use the fact that <span class="process-math">\(b\)</span> is constant to find an equation relating <span class="process-math">\(\dx{z}\)</span> and <span class="process-math">\(\dx{w}\text{.}\)</span>
-</div></article><article class="task exercise-like" id="PROBLEMMaximalIsoceles1-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
-<div class="para" id="PROBLEMMaximalIsoceles1-5-1-1">Use the fact that the perimeter <span class="process-math">\(P\)</span> is constant to find an equation relating <span class="process-math">\(\dx{x}\)</span> and <span class="process-math">\(\dx{y}\text{.}\)</span>
-</div></article><article class="task exercise-like" id="PROBLEMMaximalIsoceles1-6"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<div class="para" id="PROBLEMMaximalIsoceles1-2-1-1">Use the sketch in <a href="SECTIONfive-simil-probl.html#FIGURETriFixedBase" class="xref" data-knowl="./knowl/xref/FIGURETriFixedBase.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 9.2.15">Figure 9.2.15</a> to express <span class="process-math">\(h\)</span> as a function of <span class="process-math">\(x\)</span> and <span class="process-math">\(z\)</span> and show that when <span class="process-math">\(h\)</span> is maximal <span class="process-math">\(x\dx{x} - z\dx{z}=0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMMaximalIsoceles1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 9.2.16.a"><a href="#PROBLEMMaximalIsoceles1-2" title="Copy heading and permalink for Task 9.2.16.a" aria-label="Copy heading and permalink for Task 9.2.16.a">🔗</a></div></article><article class="task exercise-like" id="PROBLEMMaximalIsoceles1-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="PROBLEMMaximalIsoceles1-3-1-1">Express <span class="process-math">\(h\)</span> as a function of <span class="process-math">\(y\)</span> and <span class="process-math">\(w\)</span> and show that when <span class="process-math">\(h\)</span> is maximal <span class="process-math">\(y\dx{y}-w\dx{w}=0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMMaximalIsoceles1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 9.2.16.b"><a href="#PROBLEMMaximalIsoceles1-3" title="Copy heading and permalink for Task 9.2.16.b" aria-label="Copy heading and permalink for Task 9.2.16.b">🔗</a></div></article><article class="task exercise-like" id="PROBLEMMaximalIsoceles1-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="PROBLEMMaximalIsoceles1-4-1-1">Use the fact that <span class="process-math">\(b\)</span> is constant to find an equation relating <span class="process-math">\(\dx{z}\)</span> and <span class="process-math">\(\dx{w}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMMaximalIsoceles1-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 9.2.16.c"><a href="#PROBLEMMaximalIsoceles1-4" title="Copy heading and permalink for Task 9.2.16.c" aria-label="Copy heading and permalink for Task 9.2.16.c">🔗</a></div></article><article class="task exercise-like" id="PROBLEMMaximalIsoceles1-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="PROBLEMMaximalIsoceles1-5-1-1">Use the fact that the perimeter <span class="process-math">\(P\)</span> is constant to find an equation relating <span class="process-math">\(\dx{x}\)</span> and <span class="process-math">\(\dx{y}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMMaximalIsoceles1-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 9.2.16.d"><a href="#PROBLEMMaximalIsoceles1-5" title="Copy heading and permalink for Task 9.2.16.d" aria-label="Copy heading and permalink for Task 9.2.16.d">🔗</a></div></article><article class="task exercise-like" id="PROBLEMMaximalIsoceles1-6"><h5 class="heading"><span class="codenumber">(e)</span></h5>
 <div class="para logical" id="PROBLEMMaximalIsoceles1-6-1-1">
 <div class="para">Use the results from parts (a), (b), (c), and (d) to show that <span class="process-math">\(h\)</span> is maximized when</div>
 <div class="displaymath process-math">
@@ -1055,23 +1261,47 @@ P(t)=
 \frac{z}{x}=\dfdx{x}{z}=\frac{w}{y}.
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMMaximalIsoceles1-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="PROBLEMMaximalIsoceles1-6-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="PROBLEMMaximalIsoceles1-6-2-1">Use an appropriate trigonometric function.</div></div></details></div></article><article class="task exercise-like" id="PROBLEMMaximalIsoceles1-7"><h5 class="heading"><span class="codenumber">(f)</span></h5>
-<div class="para" id="PROBLEMMaximalIsoceles1-7-1-1">Use part (e) to conclude that the base angles, <span class="process-math">\(\alpha\)</span> and <span class="process-math">\(\beta\text{,}\)</span> must be congruent and thus <span class="process-math">\(x=y\text{.}\)</span>
-</div></article></article><div class="para" id="PARAGRAPHTrianglesWithFixedPerimeters-10"> To show that the maximal area of an arbitrary triangle with a fixed perimeter must be equilateral we do not need Calculus, only reasoning.  An example of the kind of reasoning we need appears in the Sherlock Holmes short story <span class="booktitle">The Adventure of the Beryl Coronet</span>. Early in the story Holmes makes the following statement to  to Watson.</div>
+<div class="solutions"><details id="PROBLEMMaximalIsoceles1-6-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="PROBLEMMaximalIsoceles1-6-2-1">Use an appropriate trigonometric function.<div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMMaximalIsoceles1-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 9.2.16.e.1"><a href="#PROBLEMMaximalIsoceles1-6-2" title="Copy heading and permalink for Hint 9.2.16.e.1" aria-label="Copy heading and permalink for Hint 9.2.16.e.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 9.2.16.e"><a href="#PROBLEMMaximalIsoceles1-6" title="Copy heading and permalink for Task 9.2.16.e" aria-label="Copy heading and permalink for Task 9.2.16.e">🔗</a></div></article><article class="task exercise-like" id="PROBLEMMaximalIsoceles1-7"><h5 class="heading"><span class="codenumber">(f)</span></h5>
+<div class="para" id="PROBLEMMaximalIsoceles1-7-1-1">Use part (e) to conclude that the base angles, <span class="process-math">\(\alpha\)</span> and <span class="process-math">\(\beta\text{,}\)</span> must be congruent and thus <span class="process-math">\(x=y\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#PROBLEMMaximalIsoceles1-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 9.2.16.f"><a href="#PROBLEMMaximalIsoceles1-7" title="Copy heading and permalink for Task 9.2.16.f" aria-label="Copy heading and permalink for Task 9.2.16.f">🔗</a></div></article><div class="autopermalink" data-description="Problem 9.2.16"><a href="#PROBLEMMaximalIsoceles1" title="Copy heading and permalink for Problem 9.2.16" aria-label="Copy heading and permalink for Problem 9.2.16">🔗</a></div></article><div class="para" id="PARAGRAPHTrianglesWithFixedPerimeters-10"> To show that the maximal area of an arbitrary triangle with a fixed perimeter must be equilateral we do not need Calculus, only reasoning.  An example of the kind of reasoning we need appears in the Sherlock Holmes short story <span class="booktitle">The Adventure of the Beryl Coronet</span>. Early in the story Holmes makes the following statement to  to Watson.<div class="autopermalink" data-description="Paragraph"><a href="#PARAGRAPHTrianglesWithFixedPerimeters-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="principle theorem-like" id="QUOTEHolmesQuote"><h4 class="heading">
-<span class="type">Principle</span><span class="space"> </span><span class="codenumber">9.2.17</span><span class="period">.</span><span class="space"> </span><span class="title">Sherlock Holmes’ Maxim.</span>
+<span class="type">Principle</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.2.17</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Sherlock Holmes’ Maxim.</span>
 </h4>
-<div class="para" id="QUOTEHolmesQuote-3-1"></div> <blockquote class="blockquote" id="QUOTEHolmesQuote-3-2"><div class="para" id="QUOTEHolmesQuote-3-2-1">“It is an old maxim of mine that when you have excluded the impossible, whatever remains, however improbable, must be the truth.”</div></blockquote></article><aside class="aside aside-like" id="PARAGRAPHTrianglesWithFixedPerimeters-12"><h4 class="heading"><span class="title">Mathematical Terminology.</span></h4>
-<div class="para" id="PARAGRAPHTrianglesWithFixedPerimeters-12-2"> Holmes is using a tried and true mathematical proof technique, known colloquially as “the process of elimination.” In mathematics it goes by its Latin name <i class="foreign"><dfn class="terminology">Reductio Ad Absurdum</dfn></i> (RAA). If we know that on of two statements must be true — for example a triangle is either equilateral or it is not — we show logically that one of them is impossible under the constraints of the problem. We then conclude that the other statement must be the true one. In this way we “eliminate the impossible” so what is left “must be the truth.”  If more than two statements are possible and we can eliminate all but one, that one “must be the truth.” If only two statements are possible, as in this problem, the method is also called <dfn class="terminology">Proof by Contradiction</dfn>.</div></aside><div class="para" id="PARAGRAPHTrianglesWithFixedPerimeters-13">Our solution will follow Holmes’ lead: We will eliminate what is impossible leaving only the truth behind.</div>
+<div class="para" id="QUOTEHolmesQuote-3-1"><div class="autopermalink" data-description="Paragraph"><a href="#QUOTEHolmesQuote-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div> <blockquote class="blockquote" id="QUOTEHolmesQuote-3-2">
+<div class="para" id="QUOTEHolmesQuote-3-2-1">“It is an old maxim of mine that when you have excluded the impossible, whatever remains, however improbable, must be the truth.”<div class="autopermalink" data-description="Paragraph"><a href="#QUOTEHolmesQuote-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Quotation"><a href="#QUOTEHolmesQuote-3-2" title="Copy heading and permalink for Quotation" aria-label="Copy heading and permalink for Quotation">🔗</a></div>
+</blockquote>
+<div class="autopermalink" data-description="Principle 9.2.17: Sherlock Holmes’ Maxim"><a href="#QUOTEHolmesQuote" title="Copy heading and permalink for Principle 9.2.17: Sherlock Holmes’ Maxim" aria-label="Copy heading and permalink for Principle 9.2.17: Sherlock Holmes’ Maxim">🔗</a></div></article><details id="PARAGRAPHTrianglesWithFixedPerimeters-12" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Aside<span class="colon heading-divison-mark heading-divison-mark__colon">:</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Mathematical Terminology.</span>
+</h4></summary><aside class="aside aside-like knowl__content"><div class="para" id="PARAGRAPHTrianglesWithFixedPerimeters-12-2"> Holmes is using a tried and true mathematical proof technique, known colloquially as “the process of elimination.” In mathematics it goes by its Latin name <i class="foreign"><dfn class="terminology">Reductio Ad Absurdum</dfn></i> (RAA). If we know that on of two statements must be true — for example a triangle is either equilateral or it is not — we show logically that one of them is impossible under the constraints of the problem. We then conclude that the other statement must be the true one. In this way we “eliminate the impossible” so what is left “must be the truth.”  If more than two statements are possible and we can eliminate all but one, that one “must be the truth.” If only two statements are possible, as in this problem, the method is also called <dfn class="terminology">Proof by Contradiction</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#PARAGRAPHTrianglesWithFixedPerimeters-12-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></aside></details><div class="para" id="PARAGRAPHTrianglesWithFixedPerimeters-13">Our solution will follow Holmes’ lead: We will eliminate what is impossible leaving only the truth behind.<div class="autopermalink" data-description="Paragraph"><a href="#PARAGRAPHTrianglesWithFixedPerimeters-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="exercise exercise-like" id="DRILLMaximalTriangle"><h4 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">9.2.18</span><span class="period">.</span><span class="space"> </span><span class="title">The Largest Triangle with a Fixed Perimeter is Equilateral.</span>
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.2.18</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Largest Triangle with a Fixed Perimeter is Equilateral.</span>
 </h4>
-<div class="introduction" id="DRILLMaximalTriangle-3"><div class="para" id="DRILLMaximalTriangle-3-1">Observe that every triangle is either equilateral, or it is not equilateral.</div></div>
+<div class="introduction" id="DRILLMaximalTriangle-3"><div class="para" id="DRILLMaximalTriangle-3-1">Observe that every triangle is either equilateral, or it is not equilateral.<div class="autopermalink" data-description="Paragraph"><a href="#DRILLMaximalTriangle-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
 <article class="task exercise-like" id="DRILLMaximalTriangle-4"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="DRILLMaximalTriangle-4-1-1">Suppose we have a triangle with sides <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\)</span> which is not equilateral. Then at least two sides, say <span class="process-math">\(a\)</span> and <span class="process-math">\(c\text{,}\)</span> are not equal.  Explain how <a href="SECTIONfive-simil-probl.html#PROBLEMMaximalIsoceles1" class="xref" data-knowl="./knowl/xref/PROBLEMMaximalIsoceles1.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 9.2.16">Problem 9.2.16</a> implies that there must be another triangle with the same perimeter and a larger area.</div></article><article class="task exercise-like" id="DRILLMaximalTriangle-5"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="DRILLMaximalTriangle-5-1-1">Use Holmes’ maxim to explain why a triangle with a fixed perimeter enclosing maximal area must be equilateral.</div></article></article><div class="para" id="PARAGRAPHTrianglesWithFixedPerimeters-15"><em class="alert">END OF DIGRESSION</em></div></section></section></div>
-<div class="ptx-content-footer">
+<div class="para" id="DRILLMaximalTriangle-4-1-1">Suppose we have a triangle with sides <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\)</span> which is not equilateral. Then at least two sides, say <span class="process-math">\(a\)</span> and <span class="process-math">\(c\text{,}\)</span> are not equal.  Explain how <a href="SECTIONfive-simil-probl.html#PROBLEMMaximalIsoceles1" class="xref" data-knowl="./knowl/xref/PROBLEMMaximalIsoceles1.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 9.2.16">Problem 9.2.16</a> implies that there must be another triangle with the same perimeter and a larger area.<div class="autopermalink" data-description="Paragraph"><a href="#DRILLMaximalTriangle-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 9.2.18.a"><a href="#DRILLMaximalTriangle-4" title="Copy heading and permalink for Task 9.2.18.a" aria-label="Copy heading and permalink for Task 9.2.18.a">🔗</a></div></article><article class="task exercise-like" id="DRILLMaximalTriangle-5"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="DRILLMaximalTriangle-5-1-1">Use Holmes’ maxim to explain why a triangle with a fixed perimeter enclosing maximal area must be equilateral.<div class="autopermalink" data-description="Paragraph"><a href="#DRILLMaximalTriangle-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 9.2.18.b"><a href="#DRILLMaximalTriangle-5" title="Copy heading and permalink for Task 9.2.18.b" aria-label="Copy heading and permalink for Task 9.2.18.b">🔗</a></div></article><div class="autopermalink" data-description="Problem 9.2.18: The Largest Triangle with a Fixed Perimeter is Equilateral"><a href="#DRILLMaximalTriangle" title="Copy heading and permalink for Problem 9.2.18: The Largest Triangle with a Fixed Perimeter is Equilateral" aria-label="Copy heading and permalink for Problem 9.2.18: The Largest Triangle with a Fixed Perimeter is Equilateral">🔗</a></div></article><div class="para" id="PARAGRAPHTrianglesWithFixedPerimeters-15">
+<em class="alert">END OF DIGRESSION</em><div class="autopermalink" data-description="Paragraph"><a href="#PARAGRAPHTrianglesWithFixedPerimeters-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Digression: DIGRESSION:  Triangles With Fixed Perimeters"><a href="#PARAGRAPHTrianglesWithFixedPerimeters" title="Copy heading and permalink for Digression: DIGRESSION:  Triangles With Fixed Perimeters" aria-label="Copy heading and permalink for Digression: DIGRESSION:  Triangles With Fixed Perimeters">🔗</a></div></section><div class="autopermalink" data-description="Section 9.2: Preliminaries: Some Simple Optimizations"><a href="#SECTIONfive-simil-probl" title="Copy heading and permalink for Section 9.2: Preliminaries: Some Simple Optimizations" aria-label="Copy heading and permalink for Section 9.2: Preliminaries: Some Simple Optimizations">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="SECTIONintroduction.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="SECTIONrefl-refr-rainb.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
